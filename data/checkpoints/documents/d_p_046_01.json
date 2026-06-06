@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_046_01",
+  "type": "project_readme",
+  "persona_id": "p_046",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "CI/CD pipelines": 3,
+    "GitHub Actions": 3,
+    "Go": 3,
+    "Linux administration": 3,
+    "Message queues": 3,
+    "Microservices architecture": 4,
+    "PostgreSQL": 4,
+    "Prometheus/Grafana": 3,
+    "Python": 4,
+    "REST API design": 4
+  },
+  "text": "# UserAnalyticsPlatform  \n\nA scalable backend system for processing and visualizing user data in a SaaS environment. Built as a microservices architecture to handle high-throughput analytics with reliable data pipelines.  \n\n## Tech Stack  \n- **Backend**: Go (main service), Python (data processing)  \n- **Database**: PostgreSQL (timeseries + user metadata)  \n- **Message queues**: Kafka (event streaming between services)  \n- **Monitoring**: Prometheus + Grafana (service health, query latency)  \n- **CI/CD**: GitHub Actions (automated testing, deployment)  \n- **OS**: Linux (server deployment, containerization)  \n\n## Architecture Overview  \nThe platform is divided into three core services:  \n1. **Data Ingestion Service** (Go): Receives user events via HTTP, validates data, and publishes to Kafka. Handles 10k+ events/sec with rate limiting.  \n2. **Analytics Engine** (Python): Consumes Kafka messages, processes data into aggregated metrics, and stores results in PostgreSQL. Optimized for batch processing with 30% latency reduction.  \n3. **Visualization API** (Go): Exposes REST endpoints for querying metrics. Uses PostgreSQL indexes to return results in <500ms for 95% of requests.  \n\nServices communicate via Kafka topics, with Prometheus tracking CPU, memory, and latency metrics. Grafana dashboards provide real-time insights into system performance.  \n\n## Setup Instructions  \n1. Clone the repo: `git clone https://github.com/alexandra-chen/UserAnalyticsPlatform.git`  \n2. Install dependencies:  \n   - Go (1.21+) and Python 3.10  \n   - PostgreSQL (localhost or remote DB)  \n   - Kafka (local or cloud instance)  \n3. Configure environment variables in `.env.local` (see `.env.example` for format).  \n4. Build and run services:  \n   ```bash  \n   cd data-ingestion  \n   go build  \n   ./data-ingestion  \n   cd ../analytics-engine  \n   pip install -r requirements.txt  \n   python main.py  \n   ```  \n5. Deploy with Docker (scripts in `deploy/`) or use GitHub Actions for CI/CD.  \n\nThis project demonstrates a production-ready microservices setup for handling user analytics at scale. Built and maintained as a solo project with measurable improvements in system reliability and performance."
+}

@@ -1,0 +1,85 @@
+[
+  {
+    "doc_type": "cv",
+    "topic_summary": "A professional CV highlighting Alex Carter's experience as a Senior Platform Engineer in adtech",
+    "title": "Alex Carter - Senior Platform Engineer",
+    "doc_id": "d_p_009_00",
+    "persona_id": "p_009",
+    "hyperparams": {
+      "cv_format": "bullet-heavy",
+      "geographic_convention": "US",
+      "company_type": "startup",
+      "company_size": "small (<50)"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A real-time bidding platform for adtech campaigns using distributed systems",
+    "title": "Real-Time Bidding Platform for AdvertiseX",
+    "doc_id": "d_p_009_01",
+    "persona_id": "p_009",
+    "hyperparams": {
+      "project_scale": "hobby",
+      "project_team_size": "large (15+)",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A data pipeline for ad campaign analytics with Apache Flink and Kafka",
+    "title": "AdTech Data Pipeline for Campaign Analytics",
+    "doc_id": "d_p_009_02",
+    "persona_id": "p_009",
+    "hyperparams": {
+      "project_scale": "production",
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "Microservices architecture for ad serving with GraphQL and Kubernetes",
+    "title": "Microservices Ad Serving Platform",
+    "doc_id": "d_p_009_03",
+    "persona_id": "p_009",
+    "hyperparams": {
+      "project_scale": "academic",
+      "project_team_size": "large (15+)",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation from Alex's manager at AdvertiseX praising his leadership and technical skills",
+    "title": "Recommendation from AdvertiseX CTO",
+    "doc_id": "d_p_009_04",
+    "persona_id": "p_009",
+    "hyperparams": {
+      "recommender_role": "skip-level",
+      "recommender_closeness": "occasional",
+      "company_type": "enterprise",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "linkedin",
+    "topic_summary": "A professional summary showcasing Alex's adtech platform engineering expertise",
+    "title": "LinkedIn Summary - Alex Carter",
+    "doc_id": "d_p_009_05",
+    "persona_id": "p_009",
+    "hyperparams": {
+      "linkedin_completeness": "detailed"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post on building scalable ad tech platforms with cloud-native architectures",
+    "title": "Building Scalable Ad Tech Platforms: Lessons from 7 Years in the Industry",
+    "doc_id": "d_p_009_06",
+    "persona_id": "p_009",
+    "hyperparams": {
+      "blog_depth": "opinion-piece",
+      "jargon_density": "moderate"
+    }
+  }
+]

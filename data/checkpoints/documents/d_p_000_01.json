@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_000_01",
+  "type": "project_readme",
+  "persona_id": "p_000",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Kotlin": 4,
+    "iOS development": 4,
+    "Mobile CI/CD": 3,
+    "Android development": 4,
+    "REST API design": 4,
+    "TypeScript": 3,
+    "Swift": 4,
+    "Flutter": 3,
+    "GraphQL": 3,
+    "React": 2,
+    "React Native": 2,
+    "Webpack/Vite": 3
+  },
+  "text": "# NovaSphere SaaS Mobile Platform  \n\nNovaSphere is a cross-platform SaaS mobile framework designed to enable rapid development of consistent, high-performance apps across iOS and Android. Built with a hybrid architecture combining Flutter for native rendering and React Native for cross-platform UI, it prioritizes type safety, modular architecture, and scalable backend integration.  \n\n## Tech Stack  \n- **Frontend**: Flutter (Dart), React Native (TypeScript), GraphQL, REST APIs  \n- **Backend**: Kotlin (Android), Swift (iOS), Node.js, PostgreSQL  \n- **Tools**: GitHub Actions (CI/CD), Vite, Webpack, Firebase  \n- **Design**: OpenAPI specs, Material Design 3, SwiftUI  \n\n## Architecture  \nNovaSphere employs a layered architecture with:  \n1. **Shared Logic Layer**: TypeScript-based business rules and state management via Redux.  \n2. **Platform-Specific Rendering**: Flutter for Android/iOS performance, React Native for cross-platform UI consistency.  \n3. **Data Layer**: GraphQL for real-time data fetching, REST APIs for legacy integrations.  \n4. **CI/CD Pipeline**: Automated testing (Jest, Flutter Test) and deployment via GitHub Actions, reducing build times by 40%.  \n\n## Setup  \n1. Clone repo: `git clone https://github.com/alexandracen/novasphere.git`  \n2. Install dependencies:  \n   ```bash  \n   npm install  \n   flutter pub get  \n   ```  \n3. Configure environment variables in `.env.local` for API endpoints and secrets.  \n4. Build and run:  \n   ```bash  \n   npm run android  \n   npm run ios  \n   ```  \n\n## Usage  \nNovaSphere abstracts platform-specific code into modular components, enabling 80% code reuse across platforms. The framework’s typed GraphQL layer reduces API-related bugs by 65%, while Kotlin’s coroutines and Swift’s async/await ensure seamless async operations.  \n\n**Key Metrics**:  \n- 30% faster iOS launch times via Swift optimization  \n- 20% reduction in Android memory usage with Kotlin coroutines  \n- 95% test coverage via GitHub Actions  \n\nContribute by extending the shared logic layer or improving Flutter-React Native interoperability."
+}

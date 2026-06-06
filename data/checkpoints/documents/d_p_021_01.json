@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_021_01",
+  "type": "project_readme",
+  "persona_id": "p_021",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "App Store deployment": 3,
+    "Flutter": 4,
+    "GraphQL": 1,
+    "Kotlin": 1,
+    "Mobile CI/CD": 2,
+    "REST API design": 2,
+    "React": 1,
+    "Swift": 1,
+    "TypeScript": 1
+  },
+  "text": "# NovaGameFramework  \n\nA cross-platform game framework enabling rapid mobile game development with Flutter and Unity. Designed for teams needing scalable, maintainable architectures without compromising creative freedom.  \n\n## Tech Stack  \n- **Flutter** (Dart): UI rendering, cross-platform mobile compatibility  \n- **Unity** (C#): 3D game logic, physics, and asset management  \n- **Android/iOS**: Native builds via Unity and Flutter plugins  \n- **Git**: Version control for collaborative workflows  \n\n## Architecture  \nModular, plugin-based design with:  \n1. **Flutter Shell**: Manages UI state, input handling, and cross-platform rendering  \n2. **Unity Engine**: Handles game physics, animations, and complex interactions  \n3. **Bridge Layer**: Dart-C# interop for real-time data synchronization (e.g., player stats, UI events)  \n4. **Asset Pipeline**: Automated texture compression and platform-specific optimization  \n\n## Setup Instructions  \n```bash\n# Clone repo  \ngit clone https://github.com/your-username/NovaGameFramework  \n\n# Flutter setup  \nflutter pub get  \nflutter build apk --release  \n\n# Unity setup  \ncd unity_project  \nUnityBuildScript.sh --platform Android  \n```  \n*Ensure Flutter and Unity versions align with documented compatibility matrix.*  \n\n## Skills & Tools  \n- **Flutter**: Reduced development time by 30% in 3+ projects; managed state synchronization for 50+ concurrent users  \n- **App Store Deployment**: Streamlined submission workflows for 12+ games; automated crash reporting integration  \n- **Mobile CI/CD**: Integrated GitHub Actions for Flutter builds and Unity pipeline triggers  \n- **REST API Design**: Lightweight endpoints for leaderboards and multiplayer sync (used in 2 live titles)  \n\n## Contribution  \nEnhance plugin compatibility, optimize asset pipelines, or refine the bridge layer. All PRs require unit tests and performance benchmarks.  \n\n*Built for speed, not compromise.* 🚀"
+}

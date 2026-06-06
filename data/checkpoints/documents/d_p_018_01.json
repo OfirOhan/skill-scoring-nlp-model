@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_018_01",
+  "type": "project_readme",
+  "persona_id": "p_018",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "Docker": 3,
+    "GCP": 2,
+    "GitHub Actions": 2,
+    "Go": 1,
+    "GraphQL": 3,
+    "Kubernetes": 2,
+    "PostgreSQL": 4,
+    "Prometheus/Grafana": 2,
+    "Python": 2,
+    "REST API design": 4,
+    "React": 4,
+    "Redis": 3,
+    "TypeScript": 4
+  },
+  "text": "# AdTargetPro - Real-Time Ad Targeting Platform  \n\n**AdTargetPro** is a real-time ad targeting platform built for AdVerve Technologies, enabling dynamic audience segmentation and campaign optimization. The system processes 10k+ user events/sec with <100ms latency, reducing ad spend waste by 30% through precision targeting.  \n\n## Tech Stack  \n- **Frontend**: React (TypeScript) - 100% type-safe UI with reusable components  \n- **Backend**: Node.js (TypeScript) - REST API with 99.9% uptime, 500+ endpoints  \n- **Database**: PostgreSQL (v14) - 10k+ queries/sec with 99.99% read consistency  \n- **Caching**: Redis - 200+ cache hits/sec, 95% reduction in DB load  \n- **Deployment**: Docker - containerized microservices with 100% CI/CD parity  \n- **Cloud**: AWS - EC2 auto-scaling, S3 for campaign assets, CloudFront for CDN  \n\n## Architecture Overview  \nThe system uses a microservices architecture:  \n1. **Event Ingestion Layer**: Kafka-backed pipeline for real-time user data ingestion  \n2. **Targeting Engine**: Node.js service with Redis caching for sub-100ms response times  \n3. **Analytics Dashboard**: React app with WebSocket integration for live metrics  \n4. **Database Layer**: PostgreSQL with partitioned tables for 10k+ queries/sec  \n\n## Setup Instructions  \n1. Clone repo: `git clone https://github.com/your-username/adtargetpro.git`  \n2. Install dependencies:  \n   ```bash  \n   cd frontend && npm install  \n   cd backend && npm install  \n   ```  \n3. Configure environment variables in `.env.local` (AWS credentials, Redis endpoints)  \n4. Build frontend: `npm run build`  \n5. Start backend: `npm start`  \n6. Deploy with Docker: `docker-compose up --build`  \n\n## Key Metrics  \n- 30% reduction in ad spend waste via real-time audience scoring  \n- 99.9% system uptime with AWS auto-scaling  \n- 10k+ user events processed/sec with <100ms latency  \n- 95% cache hit rate via Redis with TTL-based eviction  \n\n## Skills Used  \n- **React**: State management, reusable components, type-safe UI  \n- **TypeScript**: Full type coverage, 0 runtime errors in production  \n- **PostgreSQL**: Index optimization, query performance tuning  \n- **Redis**: Cache layer design, TTL-based eviction strategy  \n- **AWS**: EC2 auto-scaling, S3 integration, CloudFront CDN  \n\n*Built for AdVerve Technologies - 2023*"
+}

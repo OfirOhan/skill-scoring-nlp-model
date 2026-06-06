@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_047_01",
+  "type": "project_readme",
+  "persona_id": "p_047",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "API testing": 3,
+    "CI/CD pipelines": 3,
+    "Integration testing": 3,
+    "Java": 1,
+    "Microservices architecture": 1,
+    "Performance testing (JMeter/k6)": 1,
+    "Python": 3,
+    "REST API design": 2,
+    "Selenium/Playwright": 3,
+    "Test automation": 3,
+    "Unit testing": 3
+  },
+  "text": "# AdGuard: Automated Ad Compliance Testing Framework  \n\nAdGuard is a test automation framework designed to validate ad campaigns against compliance standards in the adtech industry. It streamlines the verification of ad content, targeting rules, and regulatory adherence, reducing manual checks and minimizing risks of non-compliance. Built for internal use within a team, this tool ensures consistency in testing workflows and accelerates the validation process for high-volume ad campaigns.  \n\n## Tech Stack  \n- **Programming Language**: Python (for core logic and scripting)  \n- **Testing Tools**: Playwright (for browser automation), pytest (for structured test execution)  \n- **API Testing**: REST API integration for validating ad metadata and campaign endpoints  \n- **CI/CD**: GitHub Actions for automated test execution and reporting  \n- **Reporting**: HTML test summaries with actionable insights for compliance teams  \n\n## Architecture  \nAdGuard operates as a modular framework, separating test logic, data management, and reporting into distinct components. The core module handles ad content validation, while integration tests verify interactions with ad delivery systems. REST API endpoints are mocked for isolated testing, and CI/CD pipelines trigger full compliance checks on campaign deployments. The framework prioritizes reusability, allowing test cases to be adapted across ad platforms and regulatory updates.  \n\n## Setup Instructions  \n1. **Clone the Repository**:  \n   ```bash  \n   git clone https://github.com/your-username/AdGuard.git  \n   cd AdGuard  \n   ```  \n2. **Install Dependencies**:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n3. **Configure Environment Variables**:  \n   Set `AD_PLATFORMS`, `API_KEYS`, and `REPORT_PATH` in `.env` for platform-specific settings.  \n4. **Run Tests**:  \n   ```bash  \n   pytest --html=report.html  \n   ```  \n5. **CI/CD Integration**:  \n   Configure GitHub Actions workflow (`/.github/workflows/test.yml`) to automate test runs on PRs.  \n\n## Key Features  \n- **Ad Content Validation**: Checks for prohibited keywords, misleading claims, and formatting rules.  \n- **Campaign Compliance Checks**: Ensures targeting rules align with GDPR, CCPA, and other regulations.  \n- **Integration Testing**: Validates ad delivery pipelines for real-time compliance.  \n- **Scalable Reports**: Generates detailed HTML reports with pass/fail metrics and error logs.  \n\nAdGuard reduces manual effort by 30% in compliance validation workflows, with 95% test coverage for ad platforms and regulatory rules. It is actively maintained to adapt to evolving adtech standards and internal team requirements."
+}

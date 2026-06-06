@@ -1,0 +1,274 @@
+{
+  "banned_phrases": {
+    "total_documents": 206,
+    "documents_with_issues": 4,
+    "total_issues": 4,
+    "issues": [
+      {
+        "doc_id": "d_p_029_03",
+        "pattern": "\\bmastery\\s+of\\b",
+        "matches": [
+          "mastery of"
+        ]
+      },
+      {
+        "doc_id": "d_p_032_05",
+        "pattern": "\\bmastery\\s+of\\b",
+        "matches": [
+          "mastery of"
+        ]
+      },
+      {
+        "doc_id": "d_p_044_02",
+        "pattern": "\\bmastery\\s+of\\b",
+        "matches": [
+          "mastery of"
+        ]
+      },
+      {
+        "doc_id": "d_p_048_02",
+        "pattern": "\\bmastery\\s+of\\b",
+        "matches": [
+          "mastery of"
+        ]
+      }
+    ]
+  },
+  "level1_absence": {
+    "total_checked": 0,
+    "violations": 0,
+    "issues": []
+  },
+  "bow_baseline": {
+    "mean_cv_accuracy": 0.2760792567116678,
+    "cv_scores": [
+      0.26859504132231404,
+      0.17391304347826086,
+      0.18840579710144928,
+      0.34575569358178054,
+      0.40372670807453415
+    ],
+    "threshold": 0.45,
+    "passed": true,
+    "total_examples": 2416,
+    "label_distribution": {
+      "5": 267,
+      "4": 554,
+      "3": 808,
+      "2": 220,
+      "1": 567
+    },
+    "top_features_per_class": {
+      "1": [
+        {
+          "feature": "vitalcare",
+          "weight": 1.1943647434095868
+        },
+        {
+          "feature": "mobile",
+          "weight": 1.189457966894805
+        },
+        {
+          "feature": "his",
+          "weight": 1.0549104321448983
+        },
+        {
+          "feature": "the",
+          "weight": 1.0494274705280116
+        },
+        {
+          "feature": "jordan",
+          "weight": 0.9779805152726688
+        },
+        {
+          "feature": "biometric",
+          "weight": 0.9498740656354107
+        },
+        {
+          "feature": "key",
+          "weight": 0.9370662876826457
+        },
+        {
+          "feature": "or",
+          "weight": 0.9322323711505672
+        },
+        {
+          "feature": "modular",
+          "weight": 0.9086544296399685
+        },
+        {
+          "feature": "user",
+          "weight": 0.8851685475984874
+        }
+      ],
+      "2": [
+        {
+          "feature": "defect",
+          "weight": 1.0968106987670323
+        },
+        {
+          "feature": "for",
+          "weight": 1.0243089084573147
+        },
+        {
+          "feature": "name",
+          "weight": 1.0233956497411167
+        },
+        {
+          "feature": "her",
+          "weight": 0.9443288600055638
+        },
+        {
+          "feature": "she",
+          "weight": 0.9101282238579206
+        },
+        {
+          "feature": "campaign",
+          "weight": 0.8939445156611646
+        },
+        {
+          "feature": "engagement",
+          "weight": 0.8732505840572498
+        },
+        {
+          "feature": "devices",
+          "weight": 0.7363889208999702
+        },
+        {
+          "feature": "technova",
+          "weight": 0.6982560681483494
+        },
+        {
+          "feature": "his",
+          "weight": 0.6967979189906446
+        }
+      ],
+      "3": [
+        {
+          "feature": "graphql",
+          "weight": 1.0044525296707612
+        },
+        {
+          "feature": "experience",
+          "weight": 0.9740981703837062
+        },
+        {
+          "feature": "saas",
+          "weight": 0.9523329901336564
+        },
+        {
+          "feature": "ai",
+          "weight": 0.8214679036396816
+        },
+        {
+          "feature": "apis",
+          "weight": 0.8089975460840307
+        },
+        {
+          "feature": "software",
+          "weight": 0.8022744321235558
+        },
+        {
+          "feature": "learning",
+          "weight": 0.8012297525630444
+        },
+        {
+          "feature": "security",
+          "weight": 0.7899424009060003
+        },
+        {
+          "feature": "cybersecurity",
+          "weight": 0.7618636179875858
+        },
+        {
+          "feature": "2022",
+          "weight": 0.7585248258505576
+        }
+      ],
+      "4": [
+        {
+          "feature": "kubernetes",
+          "weight": 1.1209916837185208
+        },
+        {
+          "feature": "senior",
+          "weight": 1.0763049637597064
+        },
+        {
+          "feature": "end",
+          "weight": 1.0592237229663493
+        },
+        {
+          "feature": "our",
+          "weight": 0.9157248012086295
+        },
+        {
+          "feature": "by",
+          "weight": 0.8377754323675263
+        },
+        {
+          "feature": "we",
+          "weight": 0.7923456473334123
+        },
+        {
+          "feature": "orchestration",
+          "weight": 0.7768695709445916
+        },
+        {
+          "feature": "cloud",
+          "weight": 0.7516267705089156
+        },
+        {
+          "feature": "react",
+          "weight": 0.7279210644392874
+        },
+        {
+          "feature": "leadership",
+          "weight": 0.7167163632861889
+        }
+      ],
+      "5": [
+        {
+          "feature": "staff",
+          "weight": 1.747324705388711
+        },
+        {
+          "feature": "data",
+          "weight": 1.2660172226397106
+        },
+        {
+          "feature": "vitahealth",
+          "weight": 1.1831927042875825
+        },
+        {
+          "feature": "test",
+          "weight": 1.0760813659429649
+        },
+        {
+          "feature": "net",
+          "weight": 1.0501939876589632
+        },
+        {
+          "feature": "our",
+          "weight": 1.0442445484805063
+        },
+        {
+          "feature": "we",
+          "weight": 0.9917613641981862
+        },
+        {
+          "feature": "automation",
+          "weight": 0.9588653119015885
+        },
+        {
+          "feature": "infrastructure",
+          "weight": 0.8999910563535444
+        },
+        {
+          "feature": "testing",
+          "weight": 0.8915741749911228
+        }
+      ]
+    }
+  }
+}

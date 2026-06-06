@@ -1,0 +1,28 @@
+{
+  "doc_id": "d_p_014_01",
+  "type": "project_readme",
+  "persona_id": "p_014",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "Agile/Scrum": 4,
+    "CI/CD pipelines": 4,
+    "Cloud cost optimization": 3,
+    "Code review": 3,
+    "Cross-team collaboration": 3,
+    "Infrastructure as Code": 4,
+    "Kubernetes": 4,
+    "Mentoring": 3,
+    "Project management": 3,
+    "Stakeholder communication": 3,
+    "System design": 4,
+    "Team leadership": 3,
+    "Technical writing": 3,
+    "Terraform": 3
+  },
+  "text": "# VeloCart InventorySync  \nA real-time inventory management system to optimize e-commerce supply chain operations, reducing stock discrepancies by 42% and improving order fulfillment latency by 35%.  \n\n## 🚀 Overview  \nVeloCart InventorySync synchronizes inventory across 12+ sales channels and 5 regional warehouses, processing 2M+ transactions/day. Built for scalability, it reduces stockouts by 28% and ensures 99.95% SLA through automated reconciliation and predictive restocking.  \n\n## 🧰 Tech Stack  \n- **Cloud**: AWS (EC2, S3, Lambda, DynamoDB, CloudFront)  \n- **Orchestration**: Kubernetes (EKS) with HPA for auto-scaling  \n- **Data Sync**: Apache Kafka for event streaming, Redis for in-memory caching  \n- **IaC**: Terraform for reproducible infrastructure  \n- **CI/CD**: GitHub Actions with parallel testing for 90%+ pipeline success rate  \n- **Monitoring**: Prometheus + Grafana for real-time metrics  \n\n## 📌 Architecture  \nA microservices architecture with:  \n1. **Event Producer**: Kafka topics for inventory updates  \n2. **Sync Engine**: Kubernetes pods handling 10K+ concurrent sync requests  \n3. **Data Store**: DynamoDB with global tables for cross-region consistency  \n4. **Analytics Layer**: Redshift for historical inventory trends  \n5. **Frontend**: CloudFront + S3 for low-latency access to inventory dashboards  \n\n## 📦 Setup  \n1. Clone repo: `git clone https://github.com/your-username/velocart-inventorysync.git`  \n2. Initialize Terraform: `terraform init` (uses AWS credentials from ~/.aws/credentials)  \n3. Deploy infrastructure: `terraform apply` (optimized for 30% lower compute costs via spot instances)  \n4. Configure CI/CD: `./setup-pipelines.sh` (automates testing and deployment)  \n5. Monitor with Prometheus: `kubectl apply -f monitoring/manifests.yaml`  \n\n## 📊 Metrics  \n- 99.95% system uptime (SLA compliance)  \n- 42% reduction in stock discrepancies (Q3 2023)  \n- 35% improvement in order fulfillment latency (vs. legacy systems)  \n- 20% faster sprint delivery via Agile/Scrum practices  \n\n## 🤝 Collaboration  \nDesigned for cross-team integration with logistics, sales, and analytics teams. Regular code reviews (95% code quality score) and stakeholder syncs ensure alignment on KPIs. Mentoring sessions for junior engineers have reduced onboarding time by 25%.  \n\n## 📄 Documentation  \nTechnical specs and architecture diagrams available in `/docs`. Contributions welcome!"
+}

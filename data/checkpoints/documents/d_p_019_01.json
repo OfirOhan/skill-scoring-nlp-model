@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_019_01",
+  "type": "project_readme",
+  "persona_id": "p_019",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "C#/.NET": 5,
+    "CI/CD pipelines": 5,
+    "Docker": 5,
+    "GCP": 4,
+    "Kubernetes": 5,
+    "Microservices architecture": 5,
+    "Monitoring & alerting": 5,
+    "Node.js": 4,
+    "Python": 4,
+    "REST API design": 5,
+    "React": 5,
+    "Rust": 5,
+    "gRPC": 4
+  },
+  "text": "# GameForge: Real-Time Multiplayer Game Prototyping Framework  \n\nGameForge is a full-stack toolchain for rapid prototyping of real-time multiplayer games. Built for game dev teams, it abstracts networking, state synchronization, and scalability challenges, enabling rapid iteration from concept to playable demo. Designed for internal use, it balances flexibility with production-grade reliability, leveraging cloud infrastructure and modular architecture.  \n\n## Tech Stack  \n**Backend:**  \n- C#/.NET for high-performance server logic  \n- gRPC for low-latency, bidirectional communication  \n- Node.js for scalable, event-driven services  \n- Python for data processing and analytics  \n- AWS (EC2, S3, Lambda) for global deployment  \n- GCP (Cloud Run, Firestore) for persistent data storage  \n\n**Frontend:**  \n- React for interactive, responsive UIs  \n- WebSockets for real-time client-server interaction  \n\n**Infrastructure:**  \n- Docker for consistent environment isolation  \n- Kubernetes for dynamic scaling  \n- CI/CD pipelines (GitHub Actions) for automated testing  \n- Prometheus + Grafana for end-to-end monitoring  \n\n## Architecture  \nGameForge uses a microservices architecture, with gRPC serving as the backbone for real-time sync. The backend handles game logic, player state, and matchmaking, while the frontend provides tools for level design and testing. All services are containerized, orchestrated via Kubernetes, and monitored with custom dashboards. AWS and GCP are used for global deployment, with auto-scaling to handle 10k+ concurrent players.  \n\n## Setup  \n```bash  \n# Clone repo  \ngit clone https://github.com/alexcarter/gameforge.git  \n\n# Install dependencies  \ncd backend  \ndotnet restore  \nnpm install  \n\ncd frontend  \nnpm install  \n```  \n\nRun the dev server:  \n```bash  \ncd backend  \ndotnet run  \n\ncd frontend  \nnpm start  \n```  \n\nDeploy to production:  \n```bash  \n# Configure AWS/GCP credentials in .env  \ndocker-compose -f docker-compose.prod.yml up -d  \n```  \n\n## Why Use GameForge?  \n- Reduces deployment time by 40% via pre-configured CI/CD  \n- Supports hybrid cloud deployments (AWS/GCP)  \n- Modular design enables reuse across projects  \n- Built with Rust-inspired safety practices in C#/.NET  \n\n*Internal tool. Production-ready patterns for rapid iteration.*"
+}

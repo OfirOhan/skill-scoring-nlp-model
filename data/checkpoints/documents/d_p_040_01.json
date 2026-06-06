@@ -1,0 +1,28 @@
+{
+  "doc_id": "d_p_040_01",
+  "type": "project_readme",
+  "persona_id": "p_040",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 2,
+    "ArgoCD": 2,
+    "CI/CD pipelines": 3,
+    "Docker": 2,
+    "GCP": 1,
+    "GitHub Actions": 2,
+    "GitLab CI": 1,
+    "Incident management": 3,
+    "Jenkins": 1,
+    "Kubernetes": 2,
+    "Monitoring & alerting": 3,
+    "Prometheus/Grafana": 3,
+    "Python": 3,
+    "SLA/SLO management": 2,
+    "Terraform": 2
+  },
+  "text": "# AdImpulse Analytics Platform  \n\nAdImpulse is a real-time analytics platform designed to process and analyze ad impressions at scale, leveraging distributed computing and fault-tolerant architecture. Built for adtech environments where milliseconds matter, this project balances high-throughput data ingestion with actionable insights, ensuring reliability even under adversarial conditions.  \n\n## Tech Stack  \nThe platform is constructed using a combination of Python for data processing, AWS for scalable cloud infrastructure, Prometheus and Grafana for monitoring, and Docker for containerization. Key components include:  \n- **Python**: For ETL pipelines and anomaly detection logic  \n- **AWS**: EC2 clusters for compute, S3 for storage, and Kinesis for real-time data ingestion  \n- **Prometheus/Grafana**: Centralized monitoring with custom dashboards for latency and error tracking  \n- **Docker**: Lightweight containerization for consistent deployment across environments  \n\n## Architecture Overview  \nThe system operates as a layered pipeline:  \n1. **Ingestion Layer**: Raw impression data is streamed via AWS Kinesis, ensuring low-latency ingestion  \n2. **Processing Layer**: Python-based microservices handle data normalization and metric aggregation, with retries and checkpointing for fault tolerance  \n3. **Storage Layer**: Aggregated metrics are stored in Amazon S3, partitioned by timestamp for efficient querying  \n4. **Monitoring Layer**: Prometheus scrapes metrics from all nodes, while Grafana provides real-time visualizations and alerting for critical thresholds  \n\n## Setup Instructions  \n1. Clone the repository: `git clone https://github.com/alexandra-chen/adimpulse.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure AWS credentials and Prometheus scrape targets in `config.yaml`  \n4. Build Docker containers: `docker-compose up --build`  \n5. Run the pipeline: `python main.py`  \n\n## Operational Insights  \n- **CI/CD**: Automated testing and deployment via GitHub Actions ensures rapid iteration without compromising stability  \n- **Incident Management**: Predefined alerting rules in Prometheus trigger escalations for latency spikes or data loss, with rollback mechanisms to revert to stable states  \n- **Scalability**: The architecture scales horizontally by adding EC2 nodes, with dynamic resource allocation based on incoming impression rates  \n\nThis project exemplifies a pragmatic approach to building resilient, high-performance systems in adtech, balancing technical depth with operational simplicity."
+}

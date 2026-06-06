@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_030_01",
+  "type": "project_readme",
+  "persona_id": "p_030",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "CI/CD pipelines": 3,
+    "Docker": 3,
+    "GitHub Actions": 3,
+    "Linux administration": 3,
+    "Microservices architecture": 3,
+    "Monitoring & alerting": 3,
+    "PostgreSQL": 4,
+    "Python": 4,
+    "REST API design": 4,
+    "Terraform": 3
+  },
+  "text": "# HealthTrack Data Aggregator  \n\nHealthTrack is a HIPAA-compliant API for aggregating, anonymizing, and securely managing patient health data across disparate clinical systems. Built for academic research institutions, it processes >200k patient records daily with 99.95% uptime, ensuring GDPR and HIPAA compliance through end-to-end encryption and role-based access controls.  \n\n## Tech Stack  \n- **Backend**: Python (FastAPI) with type-hinted REST APIs, PostgreSQL (v14) with pgcrypto for encrypted storage  \n- **Cloud**: AWS (EC2, S3, RDS) with Terraform-managed infrastructure as code  \n- **CI/CD**: GitHub Actions (Python linters, unit tests, Docker builds)  \n- **Containerization**: Docker (multi-stage builds for production artifacts)  \n- **Monitoring**: Prometheus + Grafana for latency tracking (P99 < 150ms), CloudWatch for alerting  \n- **Security**: JWT-based authentication, AWS KMS for key management, audit logging  \n- **Microservices**: Async event-driven architecture with Kafka for batch processing  \n\n## Architecture Overview  \nThe system operates as a microservices layer over a PostgreSQL cluster. The core services include:  \n1. **Ingestion Gateway**: REST API for receiving raw data via HTTPS, validated with Pydantic models  \n2. **Data Processor**: Celery worker pool (10 nodes) handling anonymization with FHIR standardization  \n3. **Audit Trail**: Write-ahead logging to S3 with AWS Lambda-triggered indexing  \n4. **Query API**: Read-optimized endpoint with Postgres JSONB indexing for subsecond query latency  \n\n## Setup Instructions  \n```bash\n# Clone repo  \ngit clone https://github.com/healthtrack-aggregator/healthtrack.git  \ncd healthtrack  \n\n# Build Docker image  \ndocker build -t healthtrack-api:latest .  \n\n# Run migrations  \ndocker-compose up --build  \npython manage.py migrate  \npython manage.py seed --init  \n\n# Trigger CI/CD pipeline  \ngithub-actions run ci_cd_pipeline  \n```  \n\nMetrics dashboard available at `http://localhost:8000/metrics` (Prometheus format). Production deployment uses AWS Fargate with Terraform-managed VPCs."
+}

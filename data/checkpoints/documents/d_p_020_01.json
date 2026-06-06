@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_020_01",
+  "type": "project_readme",
+  "persona_id": "p_020",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 1,
+    "Docker": 3,
+    "GitLab CI": 3,
+    "JavaScript": 3,
+    "PostgreSQL": 3,
+    "Python": 3,
+    "REST API design": 3,
+    "React": 1,
+    "TypeScript": 1,
+    "Web performance optimization": 1
+  },
+  "text": "# FinTechPay: Secure Payment Gateway API  \n\nFinTechPay is a high-throughput, PCI-DSS-compliant payment processing API designed for financial institutions. It enables seamless integration of payment flows with robust fraud detection, tokenization, and real-time settlement capabilities. Built for scalability and security, the system supports multi-currency transactions and adheres to SOC2 standards.  \n\n## Tech Stack  \n- **Backend**: Node.js (Express) for HTTP APIs, Python (FastAPI) for payment logic  \n- **Database**: PostgreSQL (14+) for transactional data and audit logs  \n- **Containerization**: Docker (v20.10+) for service isolation and deployment consistency  \n- **CI/CD**: GitLab CI (v14.0+) for automated testing, linting, and deployment pipelines  \n- **Security**: AES-256 encryption, HMAC signing, and rate-limiting middleware  \n\n## Architecture  \nThe system follows a microservices pattern:  \n1. **Node.js API Layer**: Handles HTTP requests, rate limiting, and JWT authentication.  \n2. **Python Processing Engine**: Executes payment logic, including fraud checks and settlement workflows.  \n3. **PostgreSQL**: Stores transaction metadata, audit logs, and user credentials with row-level security.  \n4. **Docker Orchestration**: Services are containerized and orchestrated via Docker Compose for local development.  \n\nKey design decisions:  \n- REST APIs (v1.1) with OpenAPI specs for consistent endpoint behavior  \n- Asynchronous processing for high-volume transactions using Python’s async/await  \n- PostgreSQL connection pooling for concurrent query handling  \n\n## Setup Instructions  \n1. Clone the repo: `git clone https://github.com/fin-tech-pay/fin-tech-pay.git`  \n2. Build Docker containers:  \n   ```bash  \n   docker-compose up --build  \n   ```  \n3. Set environment variables (`.env` file):  \n   - `DB_USER`, `DB_PASS`, `SECRET_KEY` (32-byte HMAC key)  \n   - `PAYMENT_TIMEOUT` (seconds, e.g., `5`)  \n4. Run migrations:  \n   ```bash  \n   docker exec -it fin-tech-pay-db psql -U postgres -d fintechpay -f migrations/001_initial.sql  \n   ```  \n5. Start services:  \n   ```bash  \n   docker-compose up  \n   ```  \n6. Trigger CI/CD pipeline via GitLab CI for automated testing and deployment.  \n\nThis project requires strong familiarity with distributed systems, cryptographic protocols, and financial compliance standards."
+}

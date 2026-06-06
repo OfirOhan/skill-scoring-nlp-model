@@ -1,0 +1,28 @@
+{
+  "doc_id": "d_p_033_01",
+  "type": "project_readme",
+  "persona_id": "p_033",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Python": 1,
+    "Java": 1,
+    "Go": 1,
+    "Node.js": 1,
+    "React": 1,
+    "REST API design": 1,
+    "PostgreSQL": 1,
+    "MongoDB": 1,
+    "Redis": 1,
+    "AWS": 1,
+    "Docker": 1,
+    "Kubernetes": 1,
+    "Terraform": 1,
+    "CI/CD pipelines": 1,
+    "Monitoring & alerting": 1
+  },
+  "text": "# NexaTask: Full-Stack Project Management Tool for Consulting Clients  \n\nNexaTask is a scalable, modular platform designed to streamline task tracking, resource allocation, and real-time collaboration for consulting teams. Built with a focus on flexibility and performance, it reduces administrative overhead by 40% while maintaining granular access controls for multi-client environments.  \n\n## Tech Stack  \n- **Core Layer**: Custom modular framework with async event-driven architecture  \n- **Data Models**: Distributed ledger-inspired schema for audit trails and versioning  \n- **Front-End**: WebAssembly-based UI with declarative component architecture  \n- **API Layer**: Proprietary protocol for secure, low-latency client-server communication  \n- **Storage**: Hybrid sync/async persistence model with conflict resolution logic  \n\n## Architecture Overview  \nThe system employs a layered microservices topology with a central orchestrator managing task dependencies and workflow automation. Key components include:  \n- **Task Engine**: Prioritizes dynamic workload balancing across distributed nodes  \n- **Collaboration Hub**: Enables real-time document co-editing with operational transformation  \n- **Analytics Module**: Aggregates metrics for burn-down tracking and predictive resource planning  \n- **Security Layer**: Implements zero-trust model with contextual access policies  \n\nThe architecture supports horizontal scaling with minimal latency, enabling 10,000+ concurrent sessions without performance degradation. All modules are decoupled via a publish-subscribe bus for efficient event propagation.  \n\n## Setup Instructions  \n1. Clone repository: `git clone https://github.com/alexcarter/nexatask.git`  \n2. Initialize environment: `./setup.sh` (requires 64-bit Linux with 16GB+ RAM)  \n3. Launch core services: `./start-cluster.sh`  \n4. Access dashboard via `http://localhost:8080`  \n\n## Key Features  \n- Auto-escalation alerts for critical task deadlines  \n- AI-driven resource optimization engine  \n- Multi-tenancy with isolated data planes  \n- Customizable workflow templates for consulting projects  \n\nBuilt for high-stakes environments, NexaTask reduces manual coordination by 65% while maintaining full compliance with client-specific governance frameworks. Ideal for consulting firms managing 50+ concurrent projects.  \n\n*Note: This project is maintained by a 15+ developer team with strict code review protocols and automated validation pipelines.*"
+}

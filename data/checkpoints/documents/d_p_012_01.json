@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_012_01",
+  "type": "project_readme",
+  "persona_id": "p_012",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "HTML/CSS": 3,
+    "JavaScript": 3,
+    "Node.js": 1,
+    "REST API design": 2,
+    "React": 3,
+    "Responsive design": 3,
+    "State management (Redux/Zustand)": 2,
+    "TypeScript": 3,
+    "Web accessibility (WCAG)": 2,
+    "Webpack/Vite": 3
+  },
+  "text": "# NexaDashboard: Real-time Analytics UI for SaaS Platforms  \n\nNexaDashboard is a lightweight, team-internal React-based UI toolkit designed to visualize real-time analytics for SaaS platforms. Built with TypeScript, it emphasizes modularity, performance, and accessibility, enabling rapid prototyping of dashboards with minimal boilerplate.  \n\n## Tech Stack  \n- **Frontend**: React 18, TypeScript 4.9, Vite 3  \n- **Styling**: Tailwind CSS 3.3 (custom config), CSS-in-JS for isolated components  \n- **Build**: Vite (production), Vite dev server (local)  \n- **Accessibility**: WCAG 2.1 AA compliance (keyboard navigation, ARIA labels)  \n- **State**: Custom hooks for isolated state logic (no global state managers)  \n- **Responsive**: Mobile-first design with breakpoints for 1x/2x/3x density  \n\n## Architecture  \nThe dashboard follows a component-based architecture with a \"data layer\" abstraction for API integrations. Key components include:  \n- `ChartContainer`: Encapsulates D3.js-based visualizations with dynamic sizing  \n- `MetricsGrid`: Layout system for card-based metrics with CSS grid  \n- `TimeRangePicker`: Custom date range selector with TypeScript type inference  \n- `ThemeSwitcher`: Dark/light mode toggle with CSS variable injection  \n\nPerformance optimizations include:  \n- 30% faster load times via code splitting and lazy loading  \n- 20% smaller bundle size through tree-shaking and type inference  \n- 15ms reduction in re-render latency with React.memo and useMemo  \n\n## Setup  \n```bash  \nnpm install  \nnpm run dev  \n```  \nRuns the Vite dev server with hot reload. For production:  \n```bash  \nnpm run build  \n```  \nGenerates optimized static assets.  \n\n## Skills Demonstrated  \n- **React**: Component composition, hooks, and context API  \n- **TypeScript**: Type safety for props, state, and API responses  \n- **Responsive Design**: CSS media queries and flexible layouts  \n- **Accessibility**: Keyboard focus management and semantic HTML  \n- **Performance**: Code splitting, lazy loading, and bundle optimization  \n\n*Internal tooling for SaaS analytics teams. Not for public deployment.*"
+}

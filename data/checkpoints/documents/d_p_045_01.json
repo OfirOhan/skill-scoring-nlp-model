@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_045_01",
+  "type": "project_readme",
+  "persona_id": "p_045",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "API testing": 5,
+    "BDD/TDD": 3,
+    "Go": 2,
+    "Integration testing": 5,
+    "Java": 2,
+    "Microservices architecture": 3,
+    "Performance testing (JMeter/k6)": 5,
+    "Python": 5,
+    "REST API design": 4,
+    "Security testing": 3,
+    "Selenium/Playwright": 4,
+    "Test automation": 5,
+    "Test strategy design": 3,
+    "Unit testing": 4
+  },
+  "text": "# RealTimePayTest - Automated Payment System Testing Framework  \n\n**RealTimePayTest** is a robust, modular framework for end-to-end testing of real-time payment systems. Designed for fintech teams, it streamlines API, integration, and performance testing while ensuring compliance with security and regulatory standards.  \n\n## Tech Stack  \n- **Language**: Python (central to API and test automation)  \n- **Testing Tools**: Selenium/Playwright (UI), JMeter/k6 (performance), PyTest (unit/integration)  \n- **APIs**: RESTful endpoints (owned and designed for microservices)  \n- **Security**: OWASP ZAP, TLS/SSL validation, token lifecycle testing  \n- **Infrastructure**: Docker, GitHub Actions, Kubernetes (for microservice testing)  \n\n## Architecture Overview  \nThe framework follows a layered architecture:  \n1. **Core API Layer**: Python-based, handles RESTful request/response validation with custom assertions for payment workflows.  \n2. **Integration Layer**: Selenium/Playwright scripts simulate user interactions, validated against backend API responses.  \n3. **Performance Layer**: JMeter/k6 scripts stress-test transaction pipelines, ensuring <200ms latency under 10,000 TPS.  \n4. **Security Layer**: Automated TLS handshake checks, token expiration validation, and OWASP ZAP integration for vulnerability scanning.  \n\n## Setup Instructions  \n1. Clone the repo: `git clone https://github.com/RealTimePayTest`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure environment variables for API endpoints, credentials, and security policies.  \n4. Run tests:  \n   - Unit: `pytest -m unit`  \n   - Integration: `pytest -m integration`  \n   - Performance: `k6 run perf_test.js`  \n\n## Key Features  \n- **API Testing**: 95%+ coverage for payment gateways, with 30% faster test cycles via parallel execution.  \n- **Microservices Compatibility**: Designed for distributed systems, supports 5+ microservices in a single test suite.  \n- **Security**: 100% coverage for PCI DSS compliance, reducing security defects by 40%.  \n- **Performance**: Achieved 99.99% reliability in stress tests, with 15% lower resource consumption than legacy tools.  \n\n## Usage Example  \n```python  \ndef test_payment_success():  \n    payload = {\"amount\": 150, \"currency\": \"USD\", \"token\": \"abc123\"}  \n    response = api_client.post(\"/payments\", json=payload)  \n    assert response.status_code == 200  \n    assert \"transaction_id\" in response.json()  \n```  \n\nCollaborate with teams to refine test strategies, reduce manual overhead, and ensure real-time payment systems meet SLAs. 🚀"
+}

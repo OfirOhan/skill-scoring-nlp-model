@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_025_01",
+  "type": "project_readme",
+  "persona_id": "p_025",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "Apache Airflow": 4,
+    "Apache Kafka": 3,
+    "Apache Spark": 4,
+    "Cloud cost optimization": 3,
+    "Data modeling": 3,
+    "Terraform": 3,
+    "Python": 4,
+    "Snowflake": 1
+  },
+  "text": "# Real-Time Analytics Pipeline for E-commerce  \n\nA scalable, cloud-native data pipeline for processing and analyzing real-time user behavior data in an e-commerce startup. Built to handle high-velocity data streams, batch processing, and cost-efficient storage.  \n\n## Tech Stack  \n- **Data Ingestion**: Apache Kafka (stream processing, fault-tolerant data ingestion)  \n- **Batch Processing**: Apache Spark (distributed ETL, dynamic allocation, partitioning)  \n- **Orchestration**: Apache Airflow (DAG scheduling, error handling, monitoring)  \n- **Storage**: AWS S3 (cold storage), DynamoDB (real-time metrics), Redshift (OLAP)  \n- **Infrastructure**: AWS EC2 (compute), Lambda (serverless transforms), Terraform (IaC)  \n- **Language**: Python (data pipelines, custom operators, DAG definitions)  \n\n## Architecture Overview  \nThe pipeline ingests user events via Kafka, processes them in Spark for aggregation, and stores results in S3/DynamoDB. Airflow orchestrates workflows with retries, timeouts, and alerting. Terraform provisions AWS resources with cost-optimized configurations (e.g., spot instances, reserved capacity).  \n\n## Key Features  \n- **Real-Time Metrics**: Kafka streams processed by Spark with 99.9% latency <500ms  \n- **Cost Optimization**: AWS cost reduction by 40% via spot fleet reservations and S3 lifecycle policies  \n- **Scalability**: Spark clusters auto-scale to 50+ executors during peak traffic  \n- **Fault Tolerance**: Kafka replicas, Airflow retries, and idempotent Spark writes  \n\n## Setup Instructions  \n1. **Install dependencies**: `pip install -r requirements.txt`  \n2. **Configure AWS credentials**: Set `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`  \n3. **Terraform setup**:  \n   ```bash  \n   terraform init  \n   terraform apply -var-file=terraform.tfvars  \n   ```  \n4. **Airflow DAGs**: Place DAG files in `dags/` directory; ensure `airflow.cfg` is configured  \n5. **Run pipeline**: Trigger DAGs via Airflow UI or CLI  \n\n## Production Impact  \n- Reduced ETL latency by 60% through Spark dynamic allocation  \n- Achieved 99.95% SLA for real-time dashboards using Kafka + Airflow  \n- Automated infrastructure provisioning with Terraform, cutting onboarding time by 75%  \n\n*Built for startups needing rapid, cost-effective data pipelines with enterprise-grade reliability.*"
+}

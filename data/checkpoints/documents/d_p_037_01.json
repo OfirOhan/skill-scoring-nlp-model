@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_037_01",
+  "type": "project_readme",
+  "persona_id": "p_037",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "CI/CD pipelines": 3,
+    "Docker": 3,
+    "GraphQL": 3,
+    "Kubernetes": 3,
+    "Microservices architecture": 3,
+    "PostgreSQL": 4,
+    "Python": 4,
+    "REST API design": 4,
+    "React": 4
+  },
+  "text": "# VitaConnect Telehealth Platform  \n\nVitaConnect is a secure, scalable telehealth platform designed to facilitate real-time video consultations between patients and healthcare providers while ensuring compliance with HIPAA and GDPR standards. The platform leverages modern infrastructure to deliver a seamless, high-performance experience for both clinicians and users.  \n\n## Tech Stack  \n- **Cloud Infrastructure**: AWS (EC2, S3, RDS, CloudFront) for hosting, storage, and global content delivery  \n- **Containerization**: Docker for consistent development and production environments  \n- **Orchestration**: Kubernetes (EKS) for managing microservices at scale  \n- **Data Layer**: PostgreSQL (v14+) with custom query optimization and sharding for high-throughput patient records  \n- **Frontend**: React (v18) with TypeScript for dynamic, responsive UI components  \n- **Backend**: Python (FastAPI) for RESTful APIs and GraphQL endpoints (Apollo Server)  \n- **CI/CD**: GitHub Actions for automated testing, linting, and deployment pipelines  \n- **Security**: TLS 1.3, OAuth 2.0, and end-to-end encryption for video streams  \n\n## Architecture Overview  \nThe platform employs a microservices architecture divided into decoupled services:  \n- **Patient Portal**: React frontend with WebRTC for video conferencing  \n- **Clinical Backend**: Python-based API gateway handling authentication, scheduling, and data aggregation  \n- **Data Store**: PostgreSQL cluster with read replicas for analytics and reporting  \n- **Media Services**: Dockerized FFmpeg containers for transcoding and storage on S3  \n- **Monitoring**: Prometheus + Grafana for real-time performance metrics and alerting  \n\n## Setup Instructions  \n1. Clone the repository: `git clone https://github.com/vitaconnect/platform.git`  \n2. Configure environment variables via `.env` files (AWS credentials, database URLs, etc.)  \n3. Run migrations: `python manage.py migrate` (PostgreSQL) and `npx prisma migrate deploy` (GraphQL schema)  \n4. Build Docker containers: `docker-compose up --build` (includes Redis, RabbitMQ, and Nginx)  \n5. Deploy to Kubernetes: `kubectl apply -f k8s/deployment.yaml` (ensure AWS EKS cluster is preconfigured)  \n\n## Contributions  \nThis project is a collaborative effort with 15+ contributors, focusing on modular development and automated testing. Key contributions include optimizing PostgreSQL write performance by 40% through index partitioning and implementing CI/CD pipelines that reduce deployment latency to under 2 minutes.  \n\nFor further details, refer to the `docs/` directory for architecture diagrams and API spec files."
+}

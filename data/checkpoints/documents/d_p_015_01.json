@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_015_01",
+  "type": "project_readme",
+  "persona_id": "p_015",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Apache Airflow": 1,
+    "Docker": 3,
+    "GCP": 3,
+    "MLOps (MLflow/W&B)": 3,
+    "NLP": 3,
+    "PyTorch": 3,
+    "REST API design": 2,
+    "TensorFlow": 1,
+    "scikit-learn": 3
+  },
+  "text": "# Ad Click Prediction with Deep Learning  \n\n**Predict click-through rates for ad campaigns using a lightweight deep learning model optimized for real-time inference.**  \n\n## Tech Stack  \n- **Modeling**: PyTorch (custom neural network), scikit-learn (feature engineering)  \n- **Deployment**: Docker (containerization), GCP AI Platform (cloud hosting)  \n- **MLOps**: MLflow (experiment tracking), Weights & Biases (monitoring)  \n- **Data**: BigQuery (ad campaign logs), BQML (preprocessing)  \n- **NLP**: spaCy (text feature extraction)  \n- **API**: FastAPI (production endpoint)  \n\n## Architecture Overview  \nThe system processes raw ad campaign data via BigQuery, extracts contextual features with spaCy, and trains a PyTorch model using MLflow. Docker containers orchestrate training and inference pipelines, while GCP AI Platform handles scalable deployment. The REST API exposes real-time prediction endpoints with latency <50ms.  \n\n## Setup Instructions  \n1. Clone repo: `git clone https://github.com/elenamartinez/ad-click-prediction.git`  \n2. Build Docker image:  \n   ```bash  \n   docker build -t ad-click-model -f Dockerfile .  \n   ```  \n3. Train model:  \n   ```bash  \n   docker run --rm -v $(pwd):/workspace ad-click-model python train.py --gcp-project YOUR_PROJECT  \n   ```  \n4. Deploy to GCP:  \n   ```bash  \n   gcloud ai-platform models create ad-model --regions us-central1  \n   gcloud ai-platform versions create v1 --model ad-model --origin ./saved_model --runtime-version 2.8 --framework pytorch  \n   ```  \n5. Query API: `curl https://api.adplatform.com/predict -X POST -d '{\"user_id\": \"123\", \"ad_text\": \"discount offer\"}'`  \n\n## Metrics  \n- **AUC-ROC**: 0.89 (validation set)  \n- **Log Loss**: 0.32 (test set)  \n- **Inference Latency**: 48ms (p99)  \n- **Model Size**: 58MB (optimized PyTorch export)  \n\n## Skills & Tools  \n- **Docker**: Containerized training pipelines with multi-stage builds  \n- **GCP**: BigQuery integration, AI Platform deployment, cloud storage  \n- **MLOps**: MLflow tracking, W&B artifact logging, CI/CD pipeline  \n- **NLP**: Text vectorization, domain-specific feature extraction  \n- **PyTorch**: Custom model architecture with gradient checkpointing  \n- **scikit-learn**: Pipeline automation, hyperparameter tuning  \n\n*Lightweight, production-ready solution for adtech CTR prediction.*"
+}

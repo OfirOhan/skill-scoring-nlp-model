@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_010_01",
+  "type": "project_readme",
+  "persona_id": "p_010",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "C/C++ (embedded)": 5,
+    "Firmware development": 5,
+    "GitLab CI": 4,
+    "IoT protocols (MQTT/CoAP)": 5,
+    "Network automation": 2,
+    "Python": 2,
+    "REST API design": 2,
+    "RTOS": 5
+  },
+  "text": "# Smart Home Sensor Network  \n\nA production-grade, low-power IoT sensor network for home automation, built on ARM Cortex-M microcontrollers. Designed for scalability, reliability, and seamless integration with cloud platforms.  \n\n## Tech Stack  \n- **Microcontroller**: ARM Cortex-M4F (STM32F4)  \n- **RTOS**: FreeRTOS (custom real-time task scheduling)  \n- **Communication**: MQTT (TLS 1.2) + CoAP (DTLS 1.2) for hybrid protocol support  \n- **Cloud Integration**: AWS IoT Core (MQTT bridge)  \n- **Build System**: GitLab CI (CI/CD pipelines, automated firmware signing)  \n- **Utilities**: Python (scripting for device provisioning)  \n\n## Architecture Overview  \nThe system comprises three layers:  \n1. **Sensor Nodes**: Cortex-M4-based devices with 16-bit ADCs, temperature/humidity sensors, and sleep-mode power management (avg. 1.2mA active, 0.3mA deep sleep).  \n2. **Gateway**: STM32F4 with dual-stack MQTT/CoAP support, acting as a TLS-encrypted bridge to AWS IoT Core.  \n3. **Cloud Layer**: AWS Lambda for data processing, DynamoDB for storage, and CloudWatch for telemetry.  \n\n## Setup Instructions  \n1. Clone the repo: `git clone https://github.com/jordan-carter/smart-home-sensor-network.git`  \n2. Configure GitLab CI: Set up runners for ARM toolchain (GCC 11.2) and firmware signing (RSA-2048).  \n3. Build firmware: `make flash` (automatically triggers CI/CD pipeline for code quality checks).  \n4. Deploy: Use Python scripts (`flash.py`, `provision.py`) for device OTA updates and certificate management.  \n\n## Key Skills & Contributions  \n- **C/C++ (embedded)**: 3+ years of firmware development, including custom RTOS task scheduling and memory-safe IPC.  \n- **RTOS**: FreeRTOS porting for Cortex-M4, with 98%+ uptime in production (15% faster context switches via custom priority inversion mitigation).  \n- **IoT Protocols**: MQTT/CoAP integration with TLS/DTLS, achieving 95% packet delivery in 300ms latency networks.  \n- **GitLab CI**: Automated CI/CD pipelines reduced deployment time by 40%, with 100% test coverage for firmware updates.  \n- **Power Optimization**: Achieved 30% reduction in active power consumption via dynamic voltage scaling and sleep-state tuning.  \n\n*Contributions welcome! This project is maintained as a solo effort with cross-team impact on 5+ embedded systems in production.*"
+}

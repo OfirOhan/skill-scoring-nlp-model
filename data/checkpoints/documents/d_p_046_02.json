@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_046_02",
+  "type": "project_readme",
+  "persona_id": "p_046",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "CI/CD pipelines": 3,
+    "GitHub Actions": 3,
+    "Go": 3,
+    "Linux administration": 3,
+    "Message queues": 3,
+    "Microservices architecture": 3,
+    "PostgreSQL": 3,
+    "Prometheus/Grafana": 3,
+    "Python": 4,
+    "REST API design": 3
+  },
+  "text": "# RealTimeDataPipeline\n\nRealTimeDataPipeline is a scalable, production-grade data processing system designed to handle high-volume event streams in a startup environment. Built using Apache Kafka for real-time data ingestion and Apache Spark for stream processing, the system supports low-latency analytics, alerting, and dashboard integration. It is deployed across a microservices architecture with automated CI/CD pipelines and monitored via Prometheus/Grafana.\n\n## Tech Stack\n\n- **Data Ingestion**: Apache Kafka (partitioned topics, consumer groups)\n- **Stream Processing**: Apache Spark Structured Streaming (windowed aggregations, stateful operations)\n- **Storage**: PostgreSQL (timeseries indexing, partitioning)\n- **Monitoring**: Prometheus (exporter metrics) + Grafana (dashboards)\n- **APIs**: RESTful endpoints (Go-based, Swagger specs)\n- **Orchestration**: Docker (local dev), Kubernetes (prod)\n- **CI/CD**: GitHub Actions (integration tests, artifact deployment)\n- **Utilities**: Python (data ingestion scripts, ETL pipelines)\n\n## Architecture\n\nThe system ingests raw events via Kafka producers, which are then processed by Spark clusters for real-time aggregations. Key metrics are stored in PostgreSQL with partitioned tables for query efficiency. A Go-based microservice exposes REST APIs for querying processed data, while Prometheus scrapes metrics from Kafka, Spark, and PostgreSQL for observability. All components are containerized for consistent deployment across dev and prod environments.\n\n## Setup\n\n1. Clone repo: `git clone https://github.com/RealTimeDataPipeline.git`\n2. Build Docker containers: `docker-compose up --build`\n3. Initialize Kafka cluster (scripts/bootstrap.sh)\n4. Deploy Spark jobs via `spark-submit` or Kubernetes operator\n5. Run Python ingestion scripts (`python3 ingestor.py --topic events`)\n6. Access REST API at `http://localhost:8080/api/v1/metrics`\n\n## Contribution\n\nThis project requires strong familiarity with distributed systems, SQL optimization, and observability tools. Contributions should align with the architecture and include automated tests via GitHub Actions. Python scripts for data modeling and Go services for API endpoints are critical to the pipeline's performance and scalability."
+}

@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_010_03",
+  "type": "project_readme",
+  "persona_id": "p_010",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "C/C++ (embedded)": 4,
+    "Firmware development": 4,
+    "GitLab CI": 4,
+    "IoT protocols (MQTT/CoAP)": 5,
+    "Network automation": 4,
+    "Python": 4,
+    "REST API design": 4,
+    "RTOS": 4
+  },
+  "text": "# Low-Power Wireless Sensor Gateway  \n\nA self-contained, energy-efficient wireless sensor gateway designed for remote environmental monitoring. Implements adaptive communication protocols to balance data throughput and battery longevity, validated through rigorous testing in field conditions.  \n\n## Key Features  \n- **Dynamic Power Management**: Achieves 10µA sleep mode consumption via adaptive duty cycling and low-power UART.  \n- **Dual-Protocol Support**: MQTT over LoRaWAN (12.5% latency reduction vs. raw LoRa) and CoAP over WiFi (98% packet reliability at 100m range).  \n- **Edge Analytics**: Firmware preprocesses sensor data (temp/humidity/pressure) to reduce cloud transmission by 40%.  \n- **Scalable Architecture**: REST API exposes real-time metrics (200ms response latency) for third-party integration.  \n\n## Tech Stack  \n- **Languages**: C (RTOS firmware), Python (data processing scripts)  \n- **RTOS**: FreeRTOS (task scheduling, interrupt handling)  \n- **Communication**: MQTT (QoS 1), CoAP (blockwise transfer), LoRaWAN 1.0  \n- **CI/CD**: GitLab CI (automated firmware testing, regression checks)  \n- **Hardware**: STM32L476 (ARM Cortex-M4, 128KB RAM)  \n\n## Architecture Overview  \nThe gateway operates as a three-tier system:  \n1. **Edge Layer**: STM32L476 handles sensor input, protocol stacking, and power management.  \n2. **Network Layer**: Dual radios (LoRa + WiFi) enable redundant connectivity.  \n3. **Cloud Layer**: REST API (Node.js) aggregates data and exposes metrics via HTTP/2.  \n\n## Setup Instructions  \n1. Clone repo: `git clone https://gitlab.com/jordan.carter/sensor-gateway.git`  \n2. Build firmware: `cd firmware; make clean; make flash`  \n3. Deploy API: `cd api; npm install; node server.js`  \n4. Validate with CI/CD pipeline: `gitlab-ci-runner --project-id 12345`  \n\n## Performance Metrics  \n- **Battery Life**: 3.5 years on single AA battery (10µA avg)  \n- **Throughput**: 1.2 kbps LoRa, 1.8 Mbps WiFi  \n- **Latency**: 200ms (edge-to-cloud), 50ms (edge-to-edge)  \n- **Reliability**: 99.99% packet delivery (CoAP) / 99.8% (MQTT)  \n\nDesigned for academic research in low-power IoT systems, with production-ready firmware and CI/CD integration."
+}

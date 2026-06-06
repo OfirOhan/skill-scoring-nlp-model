@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_049_01",
+  "type": "project_readme",
+  "persona_id": "p_049",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Agile/Scrum": 1,
+    "Backend development": 3,
+    "CI/CD pipelines": 3,
+    "Cloud infrastructure": 4,
+    "Cross-team collaboration": 1,
+    "Database optimization": 3,
+    "GitHub Actions": 3,
+    "Linux administration": 1,
+    "Monitoring & alerting": 3,
+    "Python": 3,
+    "Shell scripting": 1,
+    "Stakeholder communication": 1,
+    "System design": 1,
+    "Technical writing": 3
+  },
+  "text": "# NexaSync: Real-time Collaboration SaaS Platform  \n\nNexaSync is a high-throughput, low-latency real-time collaboration tool designed for SaaS teams requiring seamless document synchronization across distributed workflows. Built with a focus on scalability, it supports 10k+ concurrent users with <200ms sync latency and 99.95% uptime via AWS auto-scaling.  \n\n## Tech Stack  \n- **Frontend**: React 18 with TypeScript, WebSockets, and Tailwind CSS  \n- **Backend**: Node.js 18 with Express, WebSocket (ws), and Redis pub/sub  \n- **Database**: PostgreSQL 14 with advanced indexing and partitioning  \n- **Cloud**: AWS EC2 (x86-64) with CloudFront, RDS, and ELB  \n- **CI/CD**: GitHub Actions with Dockerized tests and deployment pipelines  \n- **Monitoring**: Prometheus + Grafana for real-time metrics, CloudWatch for alerts  \n\n## Architecture Overview  \nNexaSync employs a distributed architecture to decouple frontend rendering from backend logic. The WebSocket layer (Node.js) handles bidirectional communication, while Redis acts as a pub/sub broker for event distribution. PostgreSQL stores persistent document states with partitioned tables for horizontal scaling. AWS auto-scaling ensures 99.95% SLA compliance under 10k concurrent connections.  \n\n## Key Metrics  \n- **Latency**: <200ms sync round-trip (P99)  \n- **Throughput**: 5k ops/sec per instance (benchmarked with JMeter)  \n- **Cost**: 30% reduction via spot instances and Redis caching  \n- **Uptime**: 99.95% (2023 Q4)  \n\n## Setup Instructions  \n1. Clone repo: `git clone https://github.com/alexj/nexasync.git`  \n2. Install dependencies:  \n   ```bash  \n   npm install --prefix frontend  \n   npm install --prefix backend  \n   ```  \n3. Configure AWS credentials via `~/.aws/credentials` and RDS endpoints in `.env`  \n4. Start services:  \n   ```bash  \n   docker-compose up -d  \n   ```  \n   (Includes PostgreSQL, Redis, and Node.js containers)  \n\n## Contributing  \nThis project uses GitHub Actions for automated testing ( Jest, Cypress, and load testing via Artillery). Pull requests must include benchmark comparisons against baseline metrics.  \n\nNexaSync exemplifies modern SaaS engineering with measurable performance gains and cloud-optimized architecture."
+}

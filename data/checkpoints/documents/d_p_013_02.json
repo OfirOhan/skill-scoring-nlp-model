@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_013_02",
+  "type": "project_readme",
+  "persona_id": "p_013",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Swift": 1,
+    "Kotlin": 1,
+    "React Native": 1,
+    "Flutter": 1,
+    "iOS development": 1,
+    "Android development": 1,
+    "Mobile CI/CD": 1,
+    "REST API design": 1,
+    "GraphQL": 1,
+    "Test automation": 1,
+    "Mobile testing": 1,
+    "Security testing": 1
+  },
+  "text": "# ChainWallet - Fintech Blockchain Wallet  \n\n**ChainWallet** is a production-ready blockchain-based mobile wallet designed for secure, real-time cross-border transactions with integrated fraud detection. Built for fintech use cases, it balances speed, compliance, and scalability while maintaining user privacy.  \n\n## Tech Stack  \n- **Backend**: Node.js with Express for API endpoints  \n- **Database**: PostgreSQL for transaction logging and user data  \n- **Blockchain**: Ethereum-based smart contracts for asset management  \n- **Fraud Detection**: Real-time analytics with Apache Kafka stream processing  \n- **Security**: TLS 1.3, OAuth2.0, and AES-256 encryption for data at rest  \n- **Monitoring**: Prometheus + Grafana for system health tracking  \n\n## Architecture Overview  \nThe system operates as a microservices architecture, decoupling transaction processing, wallet management, and fraud detection into separate modules. Key components include:  \n- **Transaction Router**: Routes cross-border payments via on-chain and off-chain pathways  \n- **Fraud Engine**: Uses machine learning models trained on historical transaction patterns to flag suspicious activity in real time  \n- **Wallet API**: RESTful endpoints for balance checks, send/receive operations, and multi-factor authentication  \n- **Audit Trail**: Immutable ledger entries stored on Ethereum for regulatory compliance  \n\n## Setup Instructions  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/your-username/chainwallet.git  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   npm install  \n   ```  \n3. Configure environment variables in `.env` for database credentials, API keys, and blockchain node endpoints.  \n4. Run database migrations:  \n   ```bash  \n   npx sequelize-cli db:migrate  \n   ```  \n5. Start the service:  \n   ```bash  \n   npm run start  \n   ```  \n\n## Key Features  \n- **Cross-Border Payments**: Instant settlement via blockchain bridges  \n- **Fraud Detection**: Sub-second anomaly detection with 99.8% accuracy  \n- **Compliance**: Automated KYC/AML checks integrated with regulatory APIs  \n- **Scalability**: Horizontal scaling for high-throughput transaction processing  \n\nThis project emphasizes secure, decentralized financial infrastructure while maintaining regulatory compliance. Built for enterprise-grade fintech applications requiring transparency and fraud resilience."
+}

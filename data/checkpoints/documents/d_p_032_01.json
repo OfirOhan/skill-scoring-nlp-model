@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_032_01",
+  "type": "project_readme",
+  "persona_id": "p_032",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Agile/Scrum": 1,
+    "CI/CD pipelines": 3,
+    "Cross-team collaboration": 1,
+    "Database optimization": 2,
+    "GitHub Actions": 3,
+    "Linux administration": 1,
+    "Mentoring": 1,
+    "Monitoring & alerting": 1,
+    "PostgreSQL": 1,
+    "Project management": 1,
+    "Stakeholder communication": 1,
+    "System design": 1,
+    "Team leadership": 1,
+    "Technical debt management": 1
+  },
+  "text": "# Real-Time Ad Bidding Optimization Framework  \n\n**Optimize ad bids in real-time with machine learning and distributed systems**  \n\nThis project delivers a scalable framework for real-time ad bidding optimization, achieving **30% faster decision latency** and **95% bid accuracy** in controlled environments. Built for adtech engineers seeking to balance revenue and cost efficiency without sacrificing performance.  \n\n---\n\n## 🚀 Tech Stack  \n- **Language**: Python 3.9  \n- **ML**: TensorFlow 2.10, Scikit-learn  \n- **Data Pipeline**: Apache Kafka 3.2 (real-time event streaming)  \n- **Caching**: Redis 7.0 (low-latency bid decision storage)  \n- **Containerization**: Docker 20.10 (microservices deployment)  \n- **CI/CD**: GitHub Actions (automated testing, deployment)  \n\n---\n\n## 📌 Architecture Overview  \nThe framework processes bid requests via a Kafka pipeline, where historical and contextual data is ingested and preprocessed. A trained gradient-boosted model (XGBoost) evaluates bid opportunities in parallel, with results cached in Redis for sub-10ms access. Metrics are exported to Prometheus for real-time monitoring.  \n\n---\n\n## 🧰 Setup Instructions  \n1. **Clone the repo**:  \n   ```bash  \n   git clone https://github.com/elenavoss/real-time-bidding-optimization.git  \n   ```  \n2. **Build Docker containers**:  \n   ```bash  \n   docker-compose up --build  \n   ```  \n3. **Run tests via GitHub Actions**:  \n   ```bash  \n   git push origin main  \n   ```  \n   Automated tests validate model performance and system latency.  \n\n---\n\n## 📊 Performance Metrics  \n- **Bid decision latency**: 8.2ms (vs. 12ms baseline)  \n- **Model accuracy**: 95.3% (AUC-ROC score)  \n- **Throughput**: 12,000+ bids/sec (Kafka + Redis pipeline)  \n- **CI/CD success rate**: 99.8% (last 30 days)  \n\n---\n\n## 🛠 Skills & Tools  \n- **CI/CD pipelines**: GitHub Actions automate unit tests, integration checks, and Docker builds  \n- **Database optimization**: Redis caching reduces database load by 60%  \n- **Distributed systems**: Kafka ensures fault-tolerant data ingestion  \n- **Machine learning**: End-to-end pipeline from data preprocessing to model deployment  \n\n---  \n\n**Ready to optimize ad spend?** Dive into the code and benchmark your own strategies."
+}

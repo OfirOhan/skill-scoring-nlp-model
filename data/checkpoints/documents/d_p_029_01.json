@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_029_01",
+  "type": "project_readme",
+  "persona_id": "p_029",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 5,
+    "Apache Airflow": 5,
+    "Apache Spark": 5,
+    "Data modeling": 5,
+    "Data warehousing": 5,
+    "Docker": 4,
+    "Kubernetes": 5,
+    "Python": 5,
+    "Snowflake": 5,
+    "dbt": 5
+  },
+  "text": "# HealthDataFlow  \n\nHealthDataFlow is a real-time data pipeline architecture designed to process, transform, and store patient health data within a scalable, compliant, and high-availability healthtech environment. This project serves as a foundational infrastructure for ingesting heterogeneous clinical data sources, ensuring low-latency processing, and enabling downstream analytics for predictive modeling and operational insights.  \n\n## Tech Stack  \n- **Cloud Infrastructure**: AWS (S3, EC2, IAM, CloudWatch)  \n- **Containerization**: Docker (orchestrated via Kubernetes for production resilience)  \n- **Orchestration**: Apache Airflow (custom DAGs for batch/real-time workflows)  \n- **Processing**: Apache Spark (structured streaming for ETL)  \n- **Data Warehousing**: Snowflake (multi-cloud, ACID-compliant, governed schema)  \n- **Data Modeling**: dbt (transformed models for analytics, lineage tracking)  \n- **Streaming**: Kafka (as a data source for real-time ingestion)  \n- **Language**: Python (custom scripts, Airflow operators, dbt models)  \n\n## Architecture Overview  \nThe pipeline ingests raw patient data from IoT devices and EHR systems via Kafka, where it is partitioned and serialized for parallel processing. Spark Structured Streaming processes these streams, applying schema validation and enrichment logic before writing to intermediate S3 parquet files. Airflow orchestrates batch jobs that load data into Snowflake, leveraging dbt to enforce data governance and semantic layer abstractions. Kubernetes ensures containerized workloads scale elastically, while Docker Compose simplifies local development.  \n\n## Setup Instructions  \n1. **Local Development**:  \n   - `docker-compose up` to spin up Kafka, Spark, and Airflow containers  \n   - Configure AWS credentials via `aws configure` for S3/Snowflake integration  \n   - Deploy dbt models using `dbt run --models analytics.*`  \n\n2. **Production Deployment**:  \n   - Deploy Kubernetes manifests to EKS for container orchestration  \n   - Provision Snowflake warehouses and roles via Terraform  \n   - Schedule Airflow DAGs with dynamic task dependencies  \n\n## Key Contributions  \n- **Docker**: Reduced deployment friction by 40% through standardized containerization  \n- **AWS**: Achieved 99.99% SLA for data ingestion pipelines via auto-scaling and redundancy  \n- **Airflow**: Eliminated manual intervention in ETL workflows, improving reliability  \n- **Snowflake**: Enabled real-time analytics with sub-second query latency  \n\nThis project exemplifies a production-grade architecture for healthtech data pipelines, balancing compliance, scalability, and operational efficiency."
+}

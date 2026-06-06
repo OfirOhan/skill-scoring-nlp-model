@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_041_03",
+  "type": "project_readme",
+  "persona_id": "p_041",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "API testing": 5,
+    "BDD/TDD": 3,
+    "CI/CD pipelines": 4,
+    "GitHub Actions": 4,
+    "Linux administration": 4,
+    "Performance testing (JMeter/k6)": 5,
+    "Prometheus/Grafana": 4,
+    "Selenium/Playwright": 4,
+    "Shell scripting (Bash)": 3,
+    "Test automation": 5,
+    "Test strategy design": 3
+  },
+  "text": "# Enterprise Regression Testing Framework v2.1  \n\nA scalable, enterprise-grade test automation framework designed for regression testing of mission-critical applications. Built to integrate seamlessly with CI/CD pipelines, this framework emphasizes modularity, observability, and cross-team collaboration.  \n\n## Tech Stack  \n- **Test Execution**: Selenium (Web), Playwright (Web), REST Assured (API), JMeter/k6 (Performance)  \n- **CI/CD**: GitHub Actions (pipeline orchestration), Docker (containerization)  \n- **Monitoring**: Prometheus (metrics collection), Grafana (dashboard visualization)  \n- **Infrastructure**: Linux (CentOS 8), Bash scripting (environment setup)  \n- **Test Strategy**: BDD/TDD (Cucumber/JUnit), test pyramid (UI/API/Integration)  \n- **Tooling**: Git (version control), Postman (API validation), ELK Stack (log aggregation)  \n\n## Architecture Overview  \nThe framework is organized into three core modules:  \n1. **API Layer**: Custom Java-based test harness for RESTful services, with dynamic request/response validation.  \n2. **UI Layer**: Playwright-based test suite with parallel execution across browsers, leveraging page object models for maintainability.  \n3. **Performance Layer**: JMeter scripts for load testing, integrated with k6 for distributed stress scenarios.  \n\nAll modules feed into a centralized dashboard via Prometheus, enabling real-time visibility into test health, execution duration, and failure trends. GitHub Actions triggers full regression runs on PRs and scheduled intervals, with results published to Grafana.  \n\n## Setup Instructions  \n1. Clone the repository: `git clone https://github.com/enterprise-testing/framework-v2.1.git`  \n2. Install dependencies:  \n   - Java 17, Maven  \n   - Node.js (for Playwright)  \n   - Docker (for containerized test environments)  \n3. Configure environment variables in `.env` for API endpoints, credentials, and monitoring URLs.  \n4. Run setup script: `./setup.sh` (automates dependency installation and environment provisioning).  \n5. Execute tests: `./run-tests.sh --suite=api` (customizable via command-line flags).  \n\nThis framework has reduced regression test execution time by 40% and improved defect detection rates by 25% since deployment. Designed for teams requiring robust, repeatable testing at scale."
+}

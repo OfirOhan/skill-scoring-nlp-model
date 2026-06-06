@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_003_02",
+  "type": "project_readme",
+  "persona_id": "p_003",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "API testing": 2,
+    "CI/CD pipelines": 2,
+    "Integration testing": 3,
+    "Java": 2,
+    "Performance testing (JMeter/k6)": 2,
+    "Python": 3,
+    "REST API design": 3,
+    "Selenium/Playwright": 2,
+    "Test automation": 3,
+    "Unit testing": 3
+  },
+  "text": "# Consulting Defect Tracker  \n\nA scalable defect tracking system built to manage cross-project issues across 15+ consulting clients, with metrics-driven prioritization and real-time status updates.  \n\n## Key Features  \n- **Multi-project isolation**: 85% faster issue resolution via client-specific workspaces  \n- **Automated severity scoring**: ML-based triage with 92% accuracy in criticality classification  \n- **Cross-team collaboration**: Real-time sync across 12+ stakeholder groups  \n- **Customizable workflows**: 60+ configurable status transitions per client  \n\n## Tech Stack  \n- **Backend**: Python (Django REST Framework) for API-driven architecture  \n- **Database**: PostgreSQL with partitioning for 10M+ defect records  \n- **Frontend**: React with Redux for state management  \n- **Monitoring**: Prometheus + Grafana for 99.95% SLA compliance  \n\n## Architecture Overview  \nA microservices-based design with:  \n1. **Defect API Service**: REST endpoints for issue lifecycle management  \n2. **Analytics Module**: Python-based processing of defect trends  \n3. **Notification Engine**: WebSocket integration for real-time updates  \n4. **Security Layer**: OAuth2 + JWT for 30+ client integrations  \n\n## Setup Instructions  \n```bash  \n# Clone repo  \ngit clone https://github.com/EmilyChen/Consulting-Defect-Tracker.git  \n\n# Install dependencies  \npip install -r requirements.txt  \nnpm install  \n\n# Configure environment  \ncp .env.example .env  \n# Update DATABASE_URL and SECRET_KEY  \n```\n\n## Usage  \n```bash  \n# Run migrations  \npython manage.py migrate  \n\n# Start dev server  \npython manage.py runserver  \nnpm run dev  \n```  \n\n## Skill Integration  \n- **Python**: Used for data pipelines and API validation (e.g., Pydantic models for request validation)  \n- **REST API Design**: Implemented 12+ endpoints with OpenAPI specs for client integration  \n- **Integration Testing**: Mocked 8 external systems using Mocker library for 100% test coverage  \n- **Unit Testing**: 95% coverage for core business logic with pytest  \n\nThis project exemplifies a hobby-level system built for enterprise-scale consulting needs, with a focus on measurable process improvement."
+}

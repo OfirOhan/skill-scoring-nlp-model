@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_042_01",
+  "type": "project_readme",
+  "persona_id": "p_042",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Swift": 1,
+    "Kotlin": 1,
+    "React Native": 1,
+    "Flutter": 1,
+    "iOS development": 1,
+    "Android development": 1,
+    "TypeScript": 1,
+    "React": 1,
+    "REST API design": 1,
+    "GraphQL": 1,
+    "Mobile testing": 1
+  },
+  "text": "# NovaQuest Engine Optimization Toolkit  \n\nNovaQuest Engine Optimization Toolkit is a cross-platform performance enhancement framework designed to refine mobile game engine efficiency through advanced profiling, resource allocation, and real-time analytics. This project targets latency reduction, memory footprint minimization, and CPU/GPU utilization optimization for native and hybrid deployment scenarios.  \n\n## Tech Stack  \n- **Core**: C++ (RTTI-free, memory-mapped I/O)  \n- **Profiling**: CPU/GPU tracing via OpenTelemetry, memory leak detection via Valgrind-compatible hooks  \n- **Asset Pipeline**: Texture compression (ASTC/EAC), mesh LOD streaming, and dynamic asset bundling  \n- **Cross-Platform**: ABI-agnostic code generation (ARM64/AArch64), platform-specific syscall wrappers  \n- **CI/CD**: GitHub Actions with static analysis (Clang-Tidy, UndefinedBehaviorSanitizer)  \n\n## Architecture Overview  \nThe toolkit employs a layered architecture:  \n1. **Profiling Layer**: Integrates with engine debuggers to capture frame-level metrics (GPU time, memory allocation spikes, thread contention).  \n2. **Optimization Engine**: Uses heuristic algorithms to prioritize resource reallocation (e.g., texture streaming prioritization, object pooling).  \n3. **Cross-Platform Abstraction**: Exposes platform-specific syscall wrappers for low-level control (e.g., memory mapping, GPU memory allocation).  \n4. **Analytics Dashboard**: Aggregates real-time telemetry (FPS, memory usage, GC cycles) via WebAssembly-based UI.  \n\n## Setup Instructions  \n1. Clone the repository: `git clone https://github.com/your-username/novaquest-toolkit.git`  \n2. Install dependencies:  \n   - C++20 compiler (GCC 11+/Clang 14+)  \n   - CMake 3.22+  \n   - Valgrind (for memory analysis)  \n3. Configure build:  \n   ```bash  \n   mkdir build && cd build  \n   cmake .. -DCMAKE_BUILD_TYPE=Release  \n   ```  \n4. Run profiling tools:  \n   ```bash  \n   ./novaquest_profiler --target=android --output=profile.json  \n   ```  \n\n## Usage Example  \n```bash  \n# Optimize asset pipeline for iOS  \n./novaquest_optimize --input=assets/ --output=dist/ --platform=ios --compression=astc  \n```  \n\nThis toolkit enables developers to achieve **35%+ memory overhead reduction** and **20%+ frame rate improvements** in benchmark tests. Designed for hobbyist teams, it balances complexity with actionable insights for engine-level optimization."
+}

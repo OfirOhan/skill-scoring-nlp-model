@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_013_03",
+  "type": "project_readme",
+  "persona_id": "p_013",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Swift": 1,
+    "Kotlin": 1,
+    "React Native": 1,
+    "Flutter": 1,
+    "iOS development": 1,
+    "Android development": 1,
+    "Mobile CI/CD": 1,
+    "REST API design": 1,
+    "GraphQL": 1,
+    "Test automation": 1,
+    "Mobile testing": 1,
+    "Security testing": 1
+  },
+  "text": "# BankInsight - Mobile Banking Analytics  \n\nBankInsight is a real-time financial dashboard for mobile banking apps, designed to simplify personal finance tracking. It provides users with intuitive insights into spending patterns, budget adherence, and account health through a clean, mobile-first interface.  \n\n## Key Features  \n- **Real-time analytics**: Syncs with Firebase to display live transaction data and trends.  \n- **Customizable alerts**: Users set thresholds for spending or balance triggers.  \n- **Simplified budgeting**: Visual charts and summaries for monthly/weekly spending.  \n- **Secure data storage**: Firebase Authentication and encryption for user data.  \n\n## Tech Stack  \n- **Frontend**: Flutter (cross-platform mobile UI)  \n- **Backend**: Firebase (real-time database, auth, cloud functions)  \n- **State Management**: Riverpod for dependency injection and state handling  \n- **Design**: Cupertino widgets for iOS-like consistency  \n\n## Architecture Overview  \nThe app uses Firebase as the central hub for data synchronization. Flutter widgets render real-time updates from Firebase Firestore, while local state is managed via Riverpod to ensure responsiveness. Firebase Cloud Functions handle background tasks like data aggregation, reducing client-side processing.  \n\n## Setup Instructions  \n1. Clone the repo:  \n   ```bash  \n   git clone https://github.com/alex-carter/bankinsight.git  \n   ```  \n2. Navigate to the project directory and install dependencies:  \n   ```bash  \n   flutter pub get  \n   ```  \n3. Configure Firebase:  \n   - Add your Firebase project credentials to `lib/firebase_options.dart`.  \n   - Initialize Firebase in `main.dart` using the provided SDK.  \n4. Run the app:  \n   ```bash  \n   flutter run  \n   ```  \n\n## Usage Examples  \n- **View transaction summary**: Open the \"Overview\" tab for live spending stats.  \n- **Set budget alerts**: Tap \"Settings\" > \"Alerts\" to define spending limits.  \n- **Export data**: Use the \"Export\" button to generate CSV reports of monthly transactions.  \n\n## Contributing  \nThis project is a solo effort, but feedback is welcome. Issues and feature requests can be submitted via GitHub.  \n\n---  \n*Built with Flutter and Firebase for seamless financial insights.*"
+}

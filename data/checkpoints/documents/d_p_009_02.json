@@ -1,0 +1,26 @@
+{
+  "doc_id": "d_p_009_02",
+  "type": "project_readme",
+  "persona_id": "p_009",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "CI/CD pipelines": 4,
+    "Cloud cost optimization": 4,
+    "Infrastructure as Code": 5,
+    "Kubernetes": 3,
+    "Load balancing": 3,
+    "Monitoring & alerting": 4,
+    "PostgreSQL": 3,
+    "Prometheus/Grafana": 4,
+    "Python": 3,
+    "Redis": 2,
+    "Serverless": 3,
+    "Terraform": 5
+  },
+  "text": "# AdTech Data Pipeline for Campaign Analytics  \n\nThis project delivers a scalable, real-time data pipeline for ad campaign analytics, leveraging Apache Flink for stream processing and Apache Kafka for event ingestion. Built for production environments, the pipeline processes terabytes of campaign data hourly, enabling actionable insights for ad optimization and performance tracking.  \n\n## Tech Stack  \n- **Streaming Layer**: Apache Kafka (partitioned topic, consumer groups)  \n- **Processing Layer**: Apache Flink (stateful stream processing, windowed aggregations)  \n- **Storage Layer**: PostgreSQL (time-series analytics, join operations)  \n- **Caching Layer**: Redis (low-latency metric retrieval)  \n- **Cloud Infrastructure**: AWS (EC2, S3, VPC, IAM)  \n- **Orchestration**: Kubernetes (statefulset for Flink, daemonset for metrics agents)  \n- **Monitoring**: Prometheus/Grafana (custom dashboards, alert rules)  \n- **CI/CD**: GitHub Actions (automated testing, Terraform apply)  \n- **Infrastructure as Code**: Terraform (multi-region deployment, resource tagging)  \n\n## Architecture Overview  \nThe pipeline ingests campaign data from ad platforms via Kafka, where events are partitioned by campaign ID for parallel processing. Flink processes these streams, performing aggregations and joins with historical data stored in PostgreSQL. Redis caches intermediate results for low-latency querying. Kubernetes manages pod scaling and fault tolerance, while AWS ensures global availability. Prometheus/Grafana monitors latency, throughput, and resource utilization, with alert rules triggered for anomalies.  \n\n## Setup Instructions  \n1. **Clone Repository**:  \n   ```bash  \n   git clone https://github.com/alex-carter/adtech-pipeline.git  \n   cd adtech-pipeline  \n   ```  \n2. **Initialize Infrastructure**:  \n   ```bash  \n   terraform init && terraform apply -var-file=prod.tfvars  \n   ```  \n   This deploys Kafka, Flink, PostgreSQL, and monitoring stacks across AWS regions.  \n\n3. **Deploy to Kubernetes**:  \n   ```bash  \n   kubectl apply -f k8s/manifests.yaml  \n   ```  \n   Verify pod status and service endpoints for Kafka and Flink.  \n\n4. **Configure Pipeline**:  \n   Update `flink-conf.yaml` with Kafka broker addresses and PostgreSQL credentials.  \n\n5. **Run and Monitor**:  \n   Trigger data ingestion via Kafka producers. Monitor metrics in Grafana and adjust autoscaling policies in Kubernetes.  \n\nThis pipeline has reduced campaign latency by 40% and scaled to handle 10M+ events/day, with 99.99% SLA via active health checks and load-balanced endpoints."
+}

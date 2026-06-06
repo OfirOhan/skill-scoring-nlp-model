@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_017_02",
+  "type": "project_readme",
+  "persona_id": "p_017",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 1,
+    "Apache Airflow": 4,
+    "Apache Spark": 4,
+    "Computer vision": 1,
+    "Docker": 4,
+    "Kubernetes": 4,
+    "LLMs/Prompt engineering": 4,
+    "MLOps (MLflow/W&B)": 4,
+    "Model deployment": 4,
+    "NLP": 5,
+    "PyTorch": 5,
+    "RAG systems": 4
+  },
+  "text": "# Clinical Notes Insight Extractor  \n\nA production-grade NLP pipeline for extracting structured insights from unstructured clinical notes, enabling actionable analytics in healthtech workflows.  \n\n## Overview  \nThis project delivers a scalable, team-internal tool for processing and analyzing clinical notes at scale. By leveraging advanced NLP techniques and distributed computing, it transforms raw text into structured metadata, supporting downstream analytics for patient stratification, quality reporting, and research.  \n\n## Tech Stack  \n- **NLP**: PyTorch-based transformer models for named entity recognition and relation extraction  \n- **Data Processing**: Apache Spark for batch and real-time ingestion of structured/unstructured data  \n- **Orchestration**: Apache Airflow for end-to-end pipeline management with dynamic dependencies  \n- **Deployment**: Docker containers with Kubernetes orchestration for scalable, fault-tolerant service  \n- **MLOps**: MLflow for model tracking, Weights & Biases for experiment logging and collaboration  \n- **RAG Systems**: Hybrid retrieval-augmented generation for contextualized insight extraction  \n- **Model Deployment**: RESTful API endpoints for low-latency inference in production environments  \n\n## Architecture  \nThe pipeline ingests raw clinical notes via Kafka, processes them through a PyTorch-based NER model to extract entities (e.g., diagnoses, medications), then uses a RAG system to generate contextualized insights. Spark handles schema enforcement and data enrichment, while Airflow orchestrates batch and real-time workflows. Dockerized services are deployed on Kubernetes, with MLflow tracking model versions and performance metrics.  \n\n## Setup Instructions  \n1. Clone the repository  \n2. Build Docker images with `docker-compose up --build`  \n3. Initialize Airflow DAGs for pipeline scheduling  \n4. Run Spark jobs via CLI or Airflow task  \n5. Monitor model performance in MLflow UI  \n\nThis project has been instrumental in reducing manual data curation efforts by 40% and enabling real-time analytics for clinical teams. The architecture is designed for horizontal scaling, with proven reliability in handling 10M+ notes per day."
+}

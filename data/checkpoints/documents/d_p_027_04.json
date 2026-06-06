@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_027_04",
+  "type": "blog",
+  "persona_id": "p_027",
+  "hyperparams": {
+    "blog_depth": "opinion-piece",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "CI/CD pipelines": 4,
+    "Cloud cost optimization": 4,
+    "Go": 5,
+    "Kubernetes": 4,
+    "Message queues": 4,
+    "Microservices architecture": 3,
+    "PostgreSQL": 3,
+    "Python": 5,
+    "REST API design": 3,
+    "Terraform": 4
+  },
+  "text": "Optimizing Backend Systems for Real-Time Ad Tech Workloads  \n\nAd tech demands backend systems that can scale to millions of requests per second while maintaining low latency. Our recent refactor of the ad serving pipeline reduced average request latency by 40% through a combination of architecture rethinking and operational rigor.  \n\nMicroservices architecture was central to this effort. By decoupling ad targeting, inventory management, and bidding logic into separate services, we achieved faster deployment cycles and isolated failures. For example, the ad targeting service now handles 15M+ queries/sec using Go, with Redis caching reducing direct DB hits by 65%. PostgreSQL remains our core data store, but we’ve optimized it with partitioned tables, connection pooling, and query rewriting. A recent index optimization on the `ads` table cut read latency by 30% during peak hours.  \n\nREST APIs are still our primary interface, but we’ve leaned into gRPC for internal services to reduce overhead. Rate limiting and circuit breakers now protect against cascading failures, while OpenTelemetry tracing helps pinpoint bottlenecks. One recent change—reducing payload size by 25% via protocol buffers—boosted throughput by 18% in production.  \n\nCI/CD pipelines are our backbone. We’ve automated 98% of deployments using GitOps, slashing rollback time from hours to minutes. A recent shift to canary releases via Kubernetes allowed us to deploy a critical bug fix without downtime, while metrics-driven autoscaling cut idle instance costs by 25%.  \n\nKubernetes manages our containerized workloads, with horizontal pod autoscaling based on CPU and memory metrics. By tuning the target CPU utilization threshold from 70% to 50%, we reduced instance counts by 30% without sacrificing performance.  \n\nMessage queues like Kafka buffer high-volume events, such as bid requests during auctions. By batching 10K+ messages into a single batch, we cut latency by 50% compared to individual writes.  \n\nTerraform orchestrates our cloud infrastructure, ensuring consistent provisioning across AWS and GCP. Automating spot instance allocation for non-critical workloads saved $12K/month in compute costs.  \n\nIn ad tech, the margin between success and failure is razor-thin. By prioritizing scalability, resilience, and cost efficiency, we’ve built a backend that’s not just fast, but future-proof. The real win? Engineers can focus on innovation, not firefighting."
+}

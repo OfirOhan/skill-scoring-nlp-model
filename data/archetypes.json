@@ -1,0 +1,137 @@
+{
+  "backend_engineer": {
+    "label": "Backend Engineer",
+    "percentage": 10,
+    "primary_categories": ["backend_development", "databases", "cloud_infrastructure"],
+    "secondary_categories": ["devops_sre", "qa_testing"],
+    "skill_count_range": [8, 14],
+    "primary_skill_levels": [3, 5],
+    "secondary_skill_levels": [1, 3]
+  },
+  "frontend_engineer": {
+    "label": "Frontend Engineer",
+    "percentage": 8,
+    "primary_categories": ["frontend_development"],
+    "secondary_categories": ["backend_development", "qa_testing", "product_design"],
+    "skill_count_range": [8, 13],
+    "primary_skill_levels": [3, 5],
+    "secondary_skill_levels": [1, 3]
+  },
+  "fullstack_developer": {
+    "label": "Full-Stack Developer",
+    "percentage": 8,
+    "primary_categories": ["backend_development", "frontend_development", "databases"],
+    "secondary_categories": ["cloud_infrastructure", "devops_sre"],
+    "skill_count_range": [10, 15],
+    "primary_skill_levels": [2, 4],
+    "secondary_skill_levels": [1, 3]
+  },
+  "mobile_developer": {
+    "label": "Mobile Developer",
+    "percentage": 6,
+    "primary_categories": ["mobile_development"],
+    "secondary_categories": ["frontend_development", "backend_development", "qa_testing"],
+    "skill_count_range": [8, 13],
+    "primary_skill_levels": [3, 5],
+    "secondary_skill_levels": [1, 3]
+  },
+  "devops_sre": {
+    "label": "DevOps / SRE",
+    "percentage": 8,
+    "primary_categories": ["devops_sre", "cloud_infrastructure"],
+    "secondary_categories": ["backend_development", "databases", "networking_systems"],
+    "skill_count_range": [9, 15],
+    "primary_skill_levels": [3, 5],
+    "secondary_skill_levels": [1, 3]
+  },
+  "data_scientist": {
+    "label": "Data Scientist",
+    "percentage": 8,
+    "primary_categories": ["data_science_analytics", "ml_ai"],
+    "secondary_categories": ["backend_development", "data_engineering"],
+    "skill_count_range": [8, 14],
+    "primary_skill_levels": [3, 5],
+    "secondary_skill_levels": [1, 3]
+  },
+  "ml_engineer": {
+    "label": "ML Engineer",
+    "percentage": 7,
+    "primary_categories": ["ml_ai", "backend_development", "cloud_infrastructure"],
+    "secondary_categories": ["data_engineering", "devops_sre"],
+    "skill_count_range": [9, 14],
+    "primary_skill_levels": [3, 5],
+    "secondary_skill_levels": [1, 3]
+  },
+  "data_engineer": {
+    "label": "Data Engineer",
+    "percentage": 7,
+    "primary_categories": ["data_engineering", "databases", "cloud_infrastructure"],
+    "secondary_categories": ["backend_development", "devops_sre"],
+    "skill_count_range": [9, 14],
+    "primary_skill_levels": [3, 5],
+    "secondary_skill_levels": [1, 3]
+  },
+  "security_engineer": {
+    "label": "Security Engineer",
+    "percentage": 6,
+    "primary_categories": ["cybersecurity"],
+    "secondary_categories": ["networking_systems", "devops_sre", "cloud_infrastructure"],
+    "skill_count_range": [8, 13],
+    "primary_skill_levels": [3, 5],
+    "secondary_skill_levels": [1, 3]
+  },
+  "qa_test_engineer": {
+    "label": "QA / Test Engineer",
+    "percentage": 6,
+    "primary_categories": ["qa_testing"],
+    "secondary_categories": ["backend_development", "frontend_development", "devops_sre"],
+    "skill_count_range": [8, 12],
+    "primary_skill_levels": [3, 5],
+    "secondary_skill_levels": [1, 3]
+  },
+  "platform_engineer": {
+    "label": "Platform Engineer",
+    "percentage": 6,
+    "primary_categories": ["cloud_infrastructure", "devops_sre"],
+    "secondary_categories": ["backend_development", "databases", "networking_systems"],
+    "skill_count_range": [9, 14],
+    "primary_skill_levels": [3, 5],
+    "secondary_skill_levels": [1, 3]
+  },
+  "product_manager": {
+    "label": "Product Manager",
+    "percentage": 5,
+    "primary_categories": ["product_design", "non_technical"],
+    "secondary_categories": ["data_science_analytics", "frontend_development"],
+    "skill_count_range": [8, 12],
+    "primary_skill_levels": [3, 5],
+    "secondary_skill_levels": [1, 3]
+  },
+  "embedded_engineer": {
+    "label": "Embedded Engineer",
+    "percentage": 5,
+    "primary_categories": ["embedded_iot"],
+    "secondary_categories": ["backend_development", "networking_systems", "devops_sre"],
+    "skill_count_range": [8, 12],
+    "primary_skill_levels": [3, 5],
+    "secondary_skill_levels": [1, 3]
+  },
+  "game_developer": {
+    "label": "Game Developer",
+    "percentage": 4,
+    "primary_categories": ["game_development"],
+    "secondary_categories": ["backend_development", "frontend_development"],
+    "skill_count_range": [8, 12],
+    "primary_skill_levels": [3, 5],
+    "secondary_skill_levels": [1, 3]
+  },
+  "tech_lead_architect": {
+    "label": "Tech Lead / Architect",
+    "percentage": 6,
+    "primary_categories": ["non_technical", "backend_development", "cloud_infrastructure"],
+    "secondary_categories": ["devops_sre", "databases"],
+    "skill_count_range": [10, 15],
+    "primary_skill_levels": [4, 5],
+    "secondary_skill_levels": [2, 4]
+  }
+}

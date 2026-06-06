@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_045_02",
+  "type": "project_readme",
+  "persona_id": "p_045",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "API testing": 5,
+    "BDD/TDD": 3,
+    "Go": 2,
+    "Integration testing": 5,
+    "Java": 2,
+    "Microservices architecture": 3,
+    "Performance testing (JMeter/k6)": 3,
+    "Python": 5,
+    "REST API design": 3,
+    "Security testing": 5,
+    "Selenium/Playwright": 3,
+    "Test automation": 5,
+    "Test strategy design": 3,
+    "Unit testing": 3
+  },
+  "text": "# FinSecAudit  \nA financial transaction security validator for real-time fraud detection and compliance validation  \n\n---\n\n## 📌 Description  \nFinSecAudit is a security audit tool designed to validate financial transactions against predefined compliance rules and fraud patterns. It processes 10M+ transactions/sec with 99.98% accuracy, reducing false positives by 40% compared to legacy systems. Built for fintech teams requiring real-time validation in high-throughput environments.  \n\n---\n\n## 🛠 Tech Stack  \n- **Core**: Python (central to identity; used for scripting, security validation, and API testing)  \n- **API**: RESTful endpoints (designed for microservices architecture; integrated with payment gateways)  \n- **Testing**: Python-based unit/integration tests (with pytest), Selenium/Playwright for UI validation  \n- **Performance**: k6 for load testing (achieved 99.95% reliability at 10k RPS)  \n- **Security**: OWASP ZAP integration, TLS 1.3, JWT validation, and custom rule engines  \n\n---\n\n## 🧠 Architecture  \nFinSecAudit employs a layered architecture:  \n1. **Input Layer**: Receives transaction data via REST API (designed for scalability in microservices)  \n2. **Validation Engine**: Python-based core with rule-based and machine learning models (trained on 500M+ historical datasets)  \n3. **Output Layer**: Logs results to Kafka and triggers alerts via Slack/Teams  \n4. **Security Modules**: Real-time TLS inspection, PCI DSS compliance checks, and anomaly detection  \n\n---\n\n## 🚀 Setup  \n```bash  \ngit clone https://github.com/alexandra-chen/FinSecAudit  \ncd FinSecAudit  \npip install -r requirements.txt  \npython setup.py install  \n```  \nRun tests:  \n```bash  \npytest -v tests/  \n```  \nStart API:  \n```bash  \npython app.py  \n```  \n\n---\n\n## 📈 Metrics  \n- 99.98% accuracy in fraud detection (F1-score: 0.97)  \n- 40% faster than legacy systems (latency: <150ms)  \n- 99.95% reliability at 10k RPS (k6 benchmark)  \n- 95% reduction in false positives via dynamic rule tuning  \n\n---\n\n## 📚 Test Strategy  \n- **BDD/TDD**: Gherkin scenarios for compliance rules, automated via Cucumber  \n- **Integration Testing**: Validates end-to-end transaction flows (Selenium/Playwright)  \n- **Security Testing**: OWASP ZAP scans, SQL injection tests, and XSS validation  \n- **Performance Testing**: k6 load tests with 99.9% SLA compliance  \n\n---  \n*Built with Python, REST APIs, and a focus on security testing. Designed for fintech teams prioritizing compliance and fraud prevention.*"
+}

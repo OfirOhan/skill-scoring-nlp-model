@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_048_01",
+  "type": "project_readme",
+  "persona_id": "p_048",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 3,
+    "Database optimization": 3,
+    "GitLab CI": 3,
+    "Kubernetes": 4,
+    "Prometheus/Grafana": 3,
+    "Python": 3,
+    "Terraform": 4
+  },
+  "text": "# CloudForge Platform Modernization  \n\nThe CloudForge Platform Modernization project represents a strategic migration of a legacy monolithic application to a cloud-native architecture, leveraging Kubernetes, AWS services, and DevOps automation to achieve scalability, cost optimization, and observability at production scale. This repository encapsulates the full stack implementation, including infrastructure-as-code, CI/CD pipelines, and observability tooling, designed for enterprise-grade deployment.  \n\n## 🚀 Tech Stack  \n- **Orchestration**: Kubernetes (EKS) with Helm for declarative deployments  \n- **Cloud Infrastructure**: AWS (EC2, RDS, S3, CloudFormation, Terraform)  \n- **Observability**: Prometheus + Grafana for metrics, AWS CloudWatch for logging  \n- **CI/CD**: GitLab CI/CD with artifact caching and parallel job execution  \n- **Database**: PostgreSQL (Amazon RDS) with read replicas and connection pooling  \n- **Cost Optimization**: AWS Cost Explorer integration, Python-based cost anomaly detection scripts  \n- **Security**: IAM roles, VPC isolation, encryption at rest/in transit  \n- **Utilities**: Ansible for config management, Terraform for IaC, Python for custom tooling  \n\n## 🧠 Architecture Overview  \nThe architecture decouples stateful and stateless components into microservices orchestrated by Kubernetes. Core services include:  \n1. **API Gateway**: NGINX Ingress Controller with rate limiting and TLS termination  \n2. **Data Plane**: PostgreSQL RDS clusters with automated backups and cross-region replication  \n3. **Compute Plane**: Auto-scaled Kubernetes pods with Horizontal Pod Autoscaler (HPA) tuned for 99th percentile latency  \n4. **Observability**: Prometheus exporters for Kubernetes metrics, custom metrics via ServiceMonitor, and Grafana dashboards for real-time monitoring  \n5. **Cost Control**: Terraform-managed AWS budget alerts and Python scripts for cost anomaly detection  \n\n## 🛠️ Setup Instructions  \n1. **Clone Repository**:  \n   ```bash  \n   git clone https://github.com/leximitchell/cloudforge-modernization.git  \n   cd cloudforge-modernization  \n   ```  \n2. **Initialize Infrastructure**:  \n   ```bash  \n   terraform init && terraform apply -var-file=terraform.vars  \n   ```  \n3. **CI/CD Pipeline**:  \n   Configure GitLab CI with `CI/CD` pipeline definitions in `.gitlab-ci.yml`, ensuring artifact caching for Python dependencies and Terraform state locking.  \n4. **Observability Setup**:  \n   Deploy Prometheus and Grafana using Helm charts, then configure ServiceMonitors for Kubernetes metrics.  \n5. **Cost Analysis**:  \n   Run Python scripts in `scripts/cost_analysis/` to parse AWS Cost Explorer data and generate anomaly reports.  \n\nThis project exemplifies production-grade cloud-native modernization, with measurable outcomes including 40% reduction in compute costs and 3x scaling of API throughput. Deployments are fully automated, with rollback mechanisms and security hardening baked into every layer."
+}

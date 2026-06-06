@@ -1,0 +1,26 @@
+{
+  "doc_id": "d_p_009_01",
+  "type": "project_readme",
+  "persona_id": "p_009",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 3,
+    "Infrastructure as Code": 4,
+    "Kubernetes": 3,
+    "Load balancing": 4,
+    "Monitoring & alerting": 3,
+    "PostgreSQL": 3,
+    "Prometheus/Grafana": 3,
+    "Python": 2,
+    "Redis": 2,
+    "Serverless": 4,
+    "Terraform": 4
+  },
+  "text": "# Real-Time Bidding Platform for AdvertiseX  \nA scalable, distributed system enabling real-time ad campaign execution with low-latency bid processing and high-throughput analytics. Built for adtech environments requiring sub-100ms response times and multi-terabyte data ingestion.  \n\n## 🚀 Overview  \nThis project powers AdvertiseX's real-time bidding infrastructure, handling millions of ad impressions per second. The architecture decouples bid processing, analytics, and campaign management into microservices, ensuring fault tolerance and horizontal scalability. Key features include dynamic pricing, auction simulation, and real-time bid optimization using machine learning models.  \n\n## 🔧 Tech Stack  \n- **Cloud**: AWS (EC2, S3, Lambda, DynamoDB)  \n- **Orchestration**: Kubernetes (with HPA for auto-scaling)  \n- **Storage**: PostgreSQL (read replicas), Redis (in-memory caching)  \n- **Monitoring**: Prometheus + Grafana (custom dashboards for latency, error rates)  \n- **CI/CD**: GitHub Actions (automated testing, deployment pipelines)  \n- **Infrastructure**: Terraform (version-controlled AWS resource provisioning)  \n- **Serverless**: AWS Lambda for event-driven bid validation  \n- **Load Balancing**: NGINX + AWS ALB for global traffic distribution  \n\n## 📜 Architecture  \nThe system comprises three layers:  \n1. **Bid Processing Layer**: Redis-based message queues handle incoming bid requests, distributed across EC2 clusters.  \n2. **Analytics Layer**: PostgreSQL stores campaign metadata, while Kafka streams process bid outcomes for real-time reporting.  \n3. **Control Plane**: Kubernetes manages service discovery, with Prometheus scraping metrics from all nodes.  \n\n## 🛠️ Setup Instructions  \n1. Clone the repository: `git clone https://github.com/advertiseX/bidding-platform.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure environment variables in `.env` (AWS credentials, Redis endpoints)  \n4. Deploy infrastructure: `terraform init && terraform apply`  \n5. Run tests: `pytest tests/`  \n6. Monitor metrics via Grafana (default dashboard: http://localhost:3000)  \n\n## 📈 Optimization Strategies  \n- **Cost Control**: Spot instances for non-critical workloads, reserved instances for core services  \n- **Performance**: Redis caching reduced database queries by 72%, while Kubernetes HPA scaled pods to meet peak demand  \n- **Resilience**: Chaos engineering tests ensured 99.99% uptime during simulated node failures  \n\n## 🧪 Contributing  \nPull requests welcome! Focus on improving latency, expanding metric coverage, or refining the auction algorithm. All deployments undergo automated testing and security scans.  \n\n---  \n*Built by a 15+ engineer team with 2+ years of production experience. Metrics and architecture decisions documented in the `docs/` directory.*"
+}

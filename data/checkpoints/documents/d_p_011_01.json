@@ -1,0 +1,30 @@
+{
+  "doc_id": "d_p_011_01",
+  "type": "project_readme",
+  "persona_id": "p_011",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 5,
+    "CDN management": 4,
+    "Cloud cost optimization": 5,
+    "Cloud networking (VPC/subnets)": 4,
+    "Docker": 5,
+    "Go": 4,
+    "Infrastructure as Code": 5,
+    "Kubernetes": 5,
+    "Load balancing": 4,
+    "Microservices architecture": 4,
+    "PostgreSQL": 4,
+    "Python": 4,
+    "REST API design": 4,
+    "Redis": 4,
+    "Serverless": 3,
+    "Terraform": 5,
+    "Serverless (Lambda/Cloud Functions)": 1
+  },
+  "text": "# EcommerceMicroservicesCI/CD  \n\n## Overview  \nThis project establishes a robust, automated CI/CD pipeline tailored for deploying microservices in a production-grade e-commerce platform. The architecture emphasizes scalability, reliability, and cost efficiency, leveraging AWS infrastructure and modern DevOps tooling to streamline deployment workflows while maintaining strict compliance with operational SLAs.  \n\n## Tech Stack  \n- **Cloud Infrastructure**: AWS (EC2, RDS, ELB, VPC, CloudFront, Route53)  \n- **Containerization**: Docker (multi-stage builds, image optimization)  \n- **Orchestration**: Kubernetes (EKS) with auto-scaling and readiness probes  \n- **Infrastructure as Code**: Terraform (state management, module reuse)  \n- **Databases**: PostgreSQL (read replicas, connection pooling) + Redis (in-memory caching, Redisson integration)  \n- **Networking**: VPC subnets with private/public access control, NAT gateways, and security group policies  \n- **CI/CD**: GitHub Actions (CI) + Jenkins (CD) with parallel test execution and artifact caching  \n- **Monitoring**: Prometheus/Grafana for metrics, CloudWatch for logs, and custom dashboards  \n- **APIs**: RESTful endpoints with OpenAPI specs, rate limiting, and JWT authentication  \n- **Cost Optimization**: Spot instances for batch jobs, reserved instance allocations, and auto-scaling thresholds  \n\n## Architecture  \nThe pipeline decouples microservices into modular components (e.g., user auth, inventory, payment) with dedicated Docker images. Terraform provisions AWS resources, including VPCs, subnets, and load balancers, ensuring network isolation and security. Kubernetes manages container orchestration, with Helm charts for service deployment and rollback capabilities. GitHub Actions handles unit/integration testing, static analysis, and image building, while Jenkins orchestrates deployment to staging/production environments. Redis and PostgreSQL are configured with high availability, and CloudFront caches static assets to reduce latency. Load balancers distribute traffic across zones, and cost optimization strategies (e.g., spot fleet requests) reduce cloud spend by 30% annually.  \n\n## Setup Instructions  \n1. **Initialize Infrastructure**:  \n   - `terraform init` to bootstrap AWS provider and modules  \n   - `terraform apply` with `-var-file=prod.tfvars` for production parameters  \n2. **CI/CD Configuration**:  \n   - Configure GitHub Actions workflows in `.github/workflows/` for test/build stages  \n   - Set up Jenkins pipelines with credentials and artifact storage in S3  \n3. **Deploy Microservices**:  \n   - Use `kubectl apply -f k8s/` to deploy services to EKS  \n   - Validate with `kubectl rollout status` and Prometheus metrics  \n4. **Post-Deployment**:  \n   - Monitor via CloudWatch and Grafana dashboards  \n   - Archive Terraform states securely and rotate credentials  \n\nThis pipeline reduces deployment time by 50% and ensures zero-downtime updates, with measurable improvements in system reliability and cost efficiency."
+}

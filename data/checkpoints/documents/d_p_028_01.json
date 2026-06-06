@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_028_01",
+  "type": "project_readme",
+  "persona_id": "p_028",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "API testing": 3,
+    "BDD/TDD": 2,
+    "GitLab CI": 3,
+    "Integration testing": 2,
+    "JMeter": 3,
+    "Python": 3,
+    "REST API design": 3,
+    "Selenium/Playwright": 3,
+    "Test automation": 3,
+    "Test strategy design": 1,
+    "Web performance optimization": 2
+  },
+  "text": "# Enterprise API Test Automation Framework  \n\nThe **Enterprise API Test Automation Framework** is a robust, scalable solution designed to streamline regression testing for financial services platforms. Built to integrate seamlessly with CI/CD pipelines, this framework reduces manual test execution by 72% while maintaining 98.5% test coverage across core banking APIs. It leverages Python-based test scripts, REST API validation, and distributed execution to ensure reliability under high-throughput scenarios.  \n\n## 🧰 Tech Stack  \n- **Programming Language**: Python 3.9 (pytest, pytest-asyncio)  \n- **API Testing**: Pytest with `requests` for RESTful endpoint validation  \n- **Load Testing**: JMeter 5.5 for concurrent transaction simulation  \n- **CI/CD Integration**: GitLab CI/CD pipelines with parallel job execution  \n- **Browser Automation**: Playwright 1.38 for cross-browser UI validation  \n- **Monitoring**: Prometheus + Grafana for real-time test metric visualization  \n- **Test Data Management**: JSON/YAML fixtures with dynamic parameterization  \n\n## 🧱 Architecture  \nThe framework employs a **modular, microservice-like architecture** with three core layers:  \n1. **Test Orchestration Layer**: Manages test suite execution order, resource allocation, and parallelization across 12+ nodes.  \n2. **Assertion Layer**: Enforces strict schema validation using JSON Schema Draft 7 and custom response normalization.  \n3. **Reporting Layer**: Aggregates test results into HTML/CSV formats with error root-cause analysis via stack trace parsing.  \n\nKey design decisions include:  \n- **Decoupled Test Suites**: Each API endpoint has dedicated test modules with isolated dependencies.  \n- **Dynamic Test Generation**: Code-generated test cases from OpenAPI 3.0 specs reduce maintenance overhead by 40%.  \n- **Rate Limiting Simulation**: JMeter-based stress tests replicate 10k TPS under 99.99% SLA constraints.  \n\n## 🚀 Setup Instructions  \n1. Clone the repository: `git clone https://github.com/enterprise-api-tests/automate.git`  \n2. Install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   npm install -g playwright  \n   ```  \n3. Configure GitLab CI/CD variables for API credentials and environment tags.  \n4. Run initial test suite:  \n   ```bash  \n   pytest -v --html reports/results.html  \n   ```  \n5. Monitor metrics via `http://localhost:9090` (Prometheus dashboard).  \n\n## 🛠 Skills/Tools  \n- **API Testing**: Automated validation of 230+ endpoints with 95%+ success rate in production.  \n- **GitLab CI**: Pipeline stages for unit testing, integration, and load testing with 15-minute median execution time.  \n- **JMeter**: Stress tests achieving 12k TPS with 99.95% error rate under peak load.  \n- **Selenium/Playwright**: Cross-browser UI validation with 92% defect detection in front-end integrations.  \n- **REST API Design**: Test scripts align with OpenAPI 3.0 specs, ensuring 100% compliance with service contracts.  \n- **Test Automation**: Continuous integration with 30+ test suites executed nightly across 4 environments.  \n\n*Note: This framework is tailored for enterprise-grade financial systems requiring strict compliance with PCI-DSS and SOX standards.*"
+}

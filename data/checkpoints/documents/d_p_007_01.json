@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_007_01",
+  "type": "project_readme",
+  "persona_id": "p_007",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 2,
+    "Docker": 2,
+    "GitHub Actions": 1,
+    "GitLab CI": 3,
+    "Linux administration": 2,
+    "Network automation": 1,
+    "Prometheus/Grafana": 1,
+    "Python": 2,
+    "Shell scripting (Bash)": 2,
+    "Terraform": 3
+  },
+  "text": "# AdScaleCI  \n\nAdScaleCI is a CI/CD pipeline tailored for adtech campaign deployment, leveraging Kubernetes for orchestration and Terraform for infrastructure provisioning. Designed for high-throughput environments, it reduces deployment latency by 40% while ensuring consistent, repeatable workflows across 10+ campaigns.  \n\n## Tech Stack  \n- **Kubernetes**: Manages containerized campaign services.  \n- **Terraform**: Automates cloud infrastructure provisioning on AWS.  \n- **GitLab CI**: Executes CI/CD workflows for code validation and deployment.  \n- **AWS**: Hosts compute resources and storage.  \n- **Docker**: Packages campaign microservices for deployment.  \n- **Linux**: Underlying OS for all nodes.  \n- **Python**: Scripting for custom validation logic.  \n- **Shell Scripting**: Automates routine tasks like environment checks.  \n\n## Architecture Overview  \nThe pipeline integrates GitLab CI pipelines with Terraform to provision Kubernetes clusters dynamically. Campaign code is validated in GitLab CI, then deployed to Kubernetes via Terraform-managed manifests. AWS resources are scoped to individual campaigns, ensuring isolation and cost control.  \n\n## Setup Instructions  \n1. **Initialize Terraform**:  \n   ```bash  \n   terraform init -var-file=terraform.tfvars  \n   terraform apply  \n   ```  \n2. **Configure GitLab CI**:  \n   Update `.gitlab-ci.yml` with your project’s build stages (e.g., unit tests, static analysis).  \n3. **Deploy to Kubernetes**:  \n   Run `kubectl apply -f k8s-deployments.yaml` after pipeline success.  \n4. **Monitor**: Use AWS CloudWatch for resource metrics.  \n\n## Skills & Tools  \n- **GitLab CI**: Used for CI/CD workflows and pipeline automation.  \n- **Terraform**: Applied for infrastructure-as-code and cluster management.  \n- **AWS**: Leveraged for compute and storage, with resource tagging for cost tracking.  \n- **Docker**: Employed to containerize campaign services.  \n- **Linux**: Utilized for system-level configuration and debugging.  \n- **Python**: Integrated for custom validation scripts.  \n- **Shell Scripting**: Used for environment setup and pre-deployment checks.  \n\nAdScaleCI streamlines ad campaign deployments with minimal manual intervention, enabling teams to focus on innovation."
+}

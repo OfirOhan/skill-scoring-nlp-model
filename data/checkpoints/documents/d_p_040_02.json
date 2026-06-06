@@ -1,0 +1,28 @@
+{
+  "doc_id": "d_p_040_02",
+  "type": "project_readme",
+  "persona_id": "p_040",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "ArgoCD": 4,
+    "CI/CD pipelines": 4,
+    "Docker": 3,
+    "GCP": 1,
+    "GitHub Actions": 4,
+    "GitLab CI": 1,
+    "Incident management": 2,
+    "Jenkins": 1,
+    "Kubernetes": 4,
+    "Monitoring & alerting": 2,
+    "Prometheus/Grafana": 2,
+    "Python": 2,
+    "SLA/SLO management": 2,
+    "Terraform": 4
+  },
+  "text": "# CloudMigrate AdTech  \n\nCloudMigrate AdTech is a cloud migration tool designed to streamline the transition of adtech systems to Kubernetes-native architectures while leveraging serverless capabilities for scalable, cost-effective operations. Built with a focus on reliability, this project enables teams to modernize legacy adtech pipelines with minimal downtime, ensuring alignment with strict SLA requirements.  \n\n## Tech Stack  \n- **Kubernetes**: Orchestration layer for containerized adtech services, optimized for dynamic scaling and fault tolerance  \n- **Serverless Architecture**: AWS Lambda for event-driven data processing, integrated with S3 for batch transformations  \n- **Terraform**: Infrastructure-as-code for AWS EKS cluster provisioning and VPC configuration  \n- **ArgoCD**: GitOps-driven deployment pipeline with automated canary rollouts for adtech microservices  \n- **GitHub Actions**: CI/CD workflow for unit tests, integration testing, and artifact packaging  \n- **Docker**: Standardized containerization for adtech services, with multi-stage builds for production artifacts  \n- **AWS**: Primary cloud provider for compute (Lambda, EC2), storage (S3), and networking (VPC)  \n\n## Architecture Overview  \nThe system operates as a layered abstraction over AWS infrastructure:  \n1. **Data Ingestion Layer**: Serverless Lambda functions process ad impressions and user events from legacy systems, stored in S3 buckets for batch processing  \n2. **Orchestration Layer**: Kubernetes cluster manages stateful adtech services (e.g., real-time bidding engines) with automated scaling based on queue depth  \n3. **Deployment Layer**: ArgoCD synchronizes Git-repo manifests with cluster state, enabling zero-downtime deployments for critical adtech components  \n4. **Observability Layer**: Prometheus/Grafana (barely mentioned) provides visibility into Lambda invocation rates and Kubernetes pod health metrics  \n\n## Setup Instructions  \n1. Clone repository: `git clone https://github.com/your-org/CloudMigrate-AdTech.git`  \n2. Configure AWS credentials via `~/.aws/credentials` file with IAM permissions for EKS, Lambda, and S3  \n3. Initialize Terraform: `terraform init && terraform apply` (creates EKS cluster and VPC)  \n4. Deploy with ArgoCD: `argocd apply -f manifests/` (automatically syncs Kubernetes resources)  \n5. Run integration tests: `./scripts/test.sh` (verifies Lambda-to-Kubernetes workflow reliability)  \n\n## Skills/Tools  \n- **AWS**: 100% ownership of compute and storage infrastructure, achieving 30% cost savings through spot instance utilization  \n- **ArgoCD**: Reduced deployment time by 95% via automated canary rollouts for adtech microservices  \n- **GitHub Actions**: Ensures 100% test coverage for migration workflows, with 24-hour rollback capabilities  \n- **Kubernetes**: Achieved 99.95% SLA compliance for adtech services through automated autoscaling and health checks  \n- **Terraform**: Standardized infrastructure across 3 regions, with 100% version control for cluster configurations  \n\n*Note: Incident management practices are integrated via automated rollback workflows and alerting rules in Prometheus/Grafana.*"
+}

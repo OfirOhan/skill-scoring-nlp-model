@@ -1,0 +1,26 @@
+{
+  "doc_id": "d_p_001_01",
+  "type": "project_readme",
+  "persona_id": "p_001",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "ArgoCD": 3,
+    "CI/CD pipelines": 4,
+    "Cloud cost optimization": 3,
+    "GitHub Actions": 4,
+    "Jenkins": 4,
+    "Kubernetes": 4,
+    "Message queues": 3,
+    "Monitoring & alerting": 4,
+    "PostgreSQL": 3,
+    "Prometheus/Grafana": 4,
+    "Python": 3,
+    "REST API design": 3,
+    "Redis": 3
+  },
+  "text": "# GameServerOrchestrator  \n\n**Automate game server deployments and real-time scaling for peak player activity**  \n\nA production-ready DevOps toolchain for managing game server infrastructure, designed to handle dynamic workloads, ensure zero-downtime updates, and optimize cloud costs. Built and maintained by a solo DevOps engineer for high-traffic gaming environments.  \n\n## Tech Stack  \n- **Orchestration**: Kubernetes (with HPA for autoscaling)  \n- **CI/CD**: GitHub Actions + Jenkins (parallelized pipeline for binary builds)  \n- **Deployment**: ArgoCD (declarative GitOps for server manifests)  \n- **State Management**: PostgreSQL (for persistent player session data) + Redis (in-memory caching for leaderboards)  \n- **Event Driven**: Kafka (for async scaling triggers and metrics ingestion)  \n- **Monitoring**: Prometheus + Grafana (custom dashboards for latency, CPU, and memory metrics)  \n- **API**: RESTful endpoint for manual overrides and health checks  \n- **Cost Optimization**: Spot instance utilization + dynamic resource allocation  \n\n## Architecture Overview  \nThe system decouples server logic from infrastructure, using Kubernetes Deployments for stateless containers and StatefulSets for persistent game data. ArgoCD syncs manifests from Git, while Kafka streams trigger horizontal scaling based on player count metrics. Prometheus scrapes metrics from kubelet and custom exporters, feeding into Grafana for real-time visibility. Redis caches leaderboard data, reducing database load during spikes.  \n\n## Setup Instructions  \n1. Clone the repo: `git clone https://github.com/aidenclarke/GameServerOrchestrator.git`  \n2. Configure environment variables in `.env` (Kubernetes API token, Kafka bootstrap servers, PostgreSQL credentials)  \n3. Deploy infrastructure:  \n   ```bash  \n   terraform init && terraform apply --auto-approve  \n   kubectl apply -f k8s/deployments.yaml  \n   argocd apply -f argocd/manifests.yaml  \n   ```  \n4. Set up monitoring:  \n   ```bash  \n   helm install prometheus prometheus-community/prometheus  \n   grafana-cli plugins install grafana-piechart-panel  \n   ```  \n5. Validate pipelines: `./run_ci_cd_tests.sh`  \n\n## Key Features  \n- **Zero-downtime rolling updates** via ArgoCD sync  \n- **Auto-scaling triggers** based on Kafka event streams  \n- **Cost-aware resource allocation** using spot instances  \n- **Real-time metrics dashboard** for latency and throughput  \n\nThis project is a production-tested solution for managing game server infrastructure, with active maintenance and monitoring in place."
+}

@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_043_01",
+  "type": "project_readme",
+  "persona_id": "p_043",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 5,
+    "CI/CD pipelines": 5,
+    "Cloud cost optimization": 2,
+    "Cloud networking (VPC/subnets)": 4,
+    "Linux administration": 5,
+    "PostgreSQL": 3,
+    "Prometheus/Grafana": 5,
+    "Python": 3,
+    "Terraform": 5
+  },
+  "text": "# GlobalRetail Microservices Scaling Framework  \n\nA production-grade framework for orchestrating microservices at scale, engineered to deliver sub-100ms latency globally while maintaining 99.99% SLA. Designed for e-commerce platforms with terabytes of daily transactional data and millions of concurrent users.  \n\n## 🚀 Tech Stack  \n- **Cloud**: AWS (VPCs, subnets, EC2, ELB, CloudFormation)  \n- **Infrastructure as Code**: Terraform (modules for global service mesh, regional failover)  \n- **Monitoring**: Prometheus + Grafana (custom exporters for service discovery, latency tracking)  \n- **CI/CD**: Jenkins + GitLab (multi-stage pipelines for canary deployments)  \n- **Database**: PostgreSQL (read replicas, sharding for global cart state)  \n- **Languages**: Python (custom health checks, metrics aggregation)  \n- **OS**: Linux (custom kernel tuning for low-latency networking)  \n\n## 🏗️ Architecture Overview  \nThe framework leverages AWS Global Accelerator for edge routing, with Terraform-managed VPCs segmented by region and AZ. Auto-scaling groups are orchestrated via CloudFormation, with Prometheus scraping metrics from custom exporters to drive dynamic scaling policies. PostgreSQL is horizontally scaled with Citus for global query distribution. Failover is managed via AWS Route 53 latency-based routing and Terraform-managed health check endpoints.  \n\n## 📦 Setup Instructions  \n1. Clone repo: `git clone https://github.com/globalretail/scale-framework.git`  \n2. Initialize Terraform: `terraform init -backend-config=backend.tfrc`  \n3. Deploy infrastructure: `terraform apply --var-file=env-prod.tfvars`  \n4. Configure CI/CD pipelines via Jenkinsfile (pre-validated for multi-region sync)  \n5. Set up Prometheus targets in `prometheus.yml` for service discovery  \n\n## 📈 Performance & Cost Metrics  \n- 30% reduction in cloud costs via spot instance utilization and auto-scaling  \n- 99.999% uptime via dual-region failover with <1s switchover latency  \n- 40% faster deployment cycles via GitLab-Jenkins pipeline optimization  \n- 95th percentile latency <120ms globally (PostgreSQL + Redis caching)  \n\n## 🛠️ Contributing  \nThis framework is production-critical; contributions require approval from SRE lead. Review PRs against [architecture docs](docs/architecture.md) and ensure compliance with AWS Well-Architected Framework.  \n\n*Built for scale, tested at scale.*"
+}

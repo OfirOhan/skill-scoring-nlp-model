@@ -1,0 +1,26 @@
+{
+  "doc_id": "d_p_031_01",
+  "type": "project_readme",
+  "persona_id": "p_031",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 1,
+    "Docker": 1,
+    "GCP": 1,
+    "GitHub Actions": 1,
+    "Go": 1,
+    "Kubernetes": 1,
+    "Microservices architecture": 1,
+    "PostgreSQL": 1,
+    "Prometheus/Grafana": 1,
+    "Python": 1,
+    "REST API design": 4,
+    "React": 4,
+    "TypeScript": 4
+  },
+  "text": "# TaskFlow: Task Management Tool  \n\nTaskFlow is a production-ready task management application built for teams and individuals to organize workflows efficiently. It leverages modern frontend and backend technologies to deliver a scalable, secure, and intuitive interface for task creation, prioritization, and collaboration.  \n\n## Tech Stack  \n- **Frontend**: React (TypeScript) with hooks and custom hooks for state management  \n- **Backend**: Node.js (Express) with REST API design and JWT-based authentication  \n- **Database**: MongoDB (Atlas) for flexible schema handling and real-time data sync  \n- **TypeScript**: Enforced type safety across both frontend and backend layers  \n\n## Architecture  \nThe monorepo structure separates frontend and backend logic while sharing utility modules. The REST API follows a resource-oriented design with endpoints for tasks, users, and projects, supporting CRUD operations and real-time updates via WebSockets. MongoDB uses Mongoose schemas with embedded references for task dependencies. TypeScript interfaces enforce consistency between API responses and frontend state models.  \n\n## Setup Instructions  \n1. Clone the repository: `git clone https://github.com/alex-morgan/taskflow.git`  \n2. Install dependencies:  \n   ```bash  \n   cd taskflow  \n   npm install  \n   ```  \n3. Set environment variables in `.env.local`:  \n   ```  \n   PORT=3000  \n   MONGO_URI=mongodb+srv://user:pass@cluster0.mongodb.net/taskflow?retryWrites=true&w=majority  \n   JWT_SECRET=your-secret-key  \n   ```  \n4. Start the development server:  \n   ```bash  \n   npm run dev  \n   ```  \n   Access the app at `http://localhost:3000`  \n\n## Usage  \n- **Authentication**: Log in via email/password or OAuth2 (Google)  \n- **Task Management**: Create tasks with priority tags, assign to users, and track progress  \n- **Reporting**: Export task analytics as CSV or view real-time dashboards  \n\n## Key Features  \n- **Scalable REST API**: Handles 10k+ concurrent requests with rate limiting and caching  \n- **TypeScript-Driven Safety**: Eliminates runtime errors via strict type checks  \n- **MongoDB Optimization**: Indexing and aggregation pipelines for sub-second query latency  \n\nBuilt with a focus on maintainability and performance, TaskFlow is designed to evolve with team workflows while maintaining a robust technical foundation."
+}

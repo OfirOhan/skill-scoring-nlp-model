@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_025_02",
+  "type": "project_readme",
+  "persona_id": "p_025",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "Apache Airflow": 3,
+    "Apache Kafka": 4,
+    "Apache Spark": 3,
+    "Cloud cost optimization": 2,
+    "Data modeling": 2,
+    "Terraform": 4,
+    "Python": 3,
+    "Snowflake": 1
+  },
+  "text": "# Real-Time Analytics Dashboard  \n\nA scalable solution for processing and visualizing streaming data from IoT devices, built for a mid-sized startup. The project focuses on real-time data ingestion, transformation, and dashboarding using cloud-native tools.  \n\n## Tech Stack  \n- **Data Ingestion**: Apache Kafka (managed cluster, 3-node replication)  \n- **Processing**: Apache Spark (Structured Streaming, batch/real-time pipelines)  \n- **Orchestration**: Apache Airflow (DAGs for ETL workflows, retries, alerts)  \n- **Storage**: AWS S3 (parquet files, partitioned by timestamp)  \n- **Infrastructure**: Terraform (VPC, EC2, IAM roles, cost-optimized spot instances)  \n- **Dashboarding**: Grafana (custom dashboards, Prometheus metrics)  \n- **Language**: Python (dataframe operations, API integrations)  \n\n## Architecture Overview  \nThe system ingests IoT telemetry data via Kafka, which is then processed by Spark for aggregation and anomaly detection. Airflow schedules hourly batch jobs to archive historical data to S3. Terraform provisions a cost-optimized AWS environment with auto-scaling for peak loads. Grafana visualizes real-time metrics, with alerts configured for threshold breaches.  \n\n## Setup Instructions  \n1. **Infrastructure**  \n   - Clone the repo and run `terraform init` to bootstrap AWS resources (VPC, EC2, S3 bucket).  \n   - Configure Kafka cluster via AWS MSK (managed service) with IAM authentication.  \n\n2. **Data Pipelines**  \n   - Deploy Spark clusters using EMR with spot instances for cost efficiency.  \n   - Set up Airflow DAGs to trigger Kafka consumers, Spark jobs, and S3 uploads.  \n\n3. **Dashboard**  \n   - Install Grafana and connect to Kafka topics for real-time visualization.  \n   - Configure Prometheus for Spark metrics and alert rules.  \n\n## Key Design Choices  \n- Kafka’s partitioning strategy ensures low-latency ingestion for 10K+ devices.  \n- Spark’s micro-batch processing balances latency and resource usage.  \n- Terraform modules abstract cloud provider-specific configurations for portability.  \n- Airflow’s retry logic handles transient failures in AWS services.  \n\nThis project demonstrates end-to-end data engineering workflows with focus on reliability and cost-aware scaling. Perfect for teams needing real-time insights without vendor lock-in."
+}

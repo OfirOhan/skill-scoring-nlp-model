@@ -1,0 +1,28 @@
+{
+  "doc_id": "d_p_008_01",
+  "type": "project_readme",
+  "persona_id": "p_008",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 2,
+    "Apache Airflow": 3,
+    "Computer vision": 2,
+    "Docker": 3,
+    "ETL pipeline design": 3,
+    "GCP": 2,
+    "Kubernetes": 2,
+    "MLOps": 3,
+    "Model deployment": 3,
+    "NLP": 2,
+    "PyTorch": 3,
+    "Reinforcement learning": 3,
+    "TensorFlow": 3,
+    "Recommendation systems": 2,
+    "MLOps (MLflow/W&B)": 1
+  },
+  "text": "# Dynamic Difficulty Adjustment for RTS Games  \n\nA scalable AI-driven system to balance player experience in real-time strategy games by dynamically adjusting enemy behavior and resource allocation using reinforcement learning.  \n\n## Tech Stack  \n- **Language**: Python  \n- **Frameworks**: PyTorch, Unity (for game integration)  \n- **Deployment**: Docker, AWS EC2  \n- **Workflow**: Apache Airflow (for data pipelines), Git  \n- **Monitoring**: Prometheus (for training metrics)  \n\n## Architecture Overview  \nThe system operates as a modular pipeline:  \n1. **Game State Sensors**: Extract real-time metrics (player performance, resource usage, unit counts) from the game engine.  \n2. **Reinforcement Learning Agent**: Trained to optimize difficulty parameters (enemy spawn rates, AI aggression, resource caps) via a custom reward function that prioritizes player engagement without frustration.  \n3. **Feedback Loop**: Adjusts difficulty in real-time based on player actions, with overrides for manual intervention.  \n4. **Deployment**: Containerized with Docker for consistent environment management, scaled across AWS EC2 instances.  \n\n## Setup Instructions  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/alex-carter/dynamic-difficulty.git  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n3. Build Docker containers:  \n   ```bash  \n   docker-compose up --build  \n   ```  \n4. Configure AWS credentials via environment variables for EC2 deployment.  \n\n## Skills & Tools  \n- **Reinforcement Learning**: Designed a custom RL agent with PyTorch, balancing exploration and exploitation in dynamic environments.  \n- **Docker**: Containerized training and inference pipelines to ensure cross-platform compatibility.  \n- **Apache Airflow**: Automated data preprocessing workflows for historical game telemetry.  \n- **AWS**: Deployed scalable inference endpoints using EC2 for low-latency response.  \n- **Unity Integration**: Built a middleware layer to inject difficulty adjustments into game logic without modifying core code.  \n\nThis project scales to 15+ developers, with clear separation of concerns between ML training, deployment, and game-specific logic. The system has been tested in live multiplayer environments, maintaining player retention rates within 15% of target benchmarks."
+}

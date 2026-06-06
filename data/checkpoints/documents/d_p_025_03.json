@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_025_03",
+  "type": "project_readme",
+  "persona_id": "p_025",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 2,
+    "Apache Airflow": 1,
+    "Apache Kafka": 1,
+    "Apache Spark": 1,
+    "Cloud cost optimization": 1,
+    "Data modeling": 1,
+    "Terraform": 1,
+    "Python": 2,
+    "Snowflake": 5
+  },
+  "text": "# Data Pipeline for Real-Time Analytics  \n\nA scalable, production-ready data pipeline designed to process and analyze user behavior data for a SaaS startup. The solution focuses on seamless integration between cloud storage and Snowflake, enabling teams to derive actionable insights without compromising performance or cost efficiency.  \n\n## Tech Stack  \n- **Snowflake**: Centralized data warehouse for structured storage, querying, and analytics  \n- **AWS S3**: Raw data storage for unstructured logs and CSV files  \n- **Python**: Scripting for data transformation and automation  \n- **PostgreSQL**: Metadata management for dataset tracking  \n\n## Architecture  \nThe pipeline ingests raw data from AWS S3 into Snowflake via batch ETL workflows. Python scripts handle schema validation and data cleansing before loading into Snowflake tables. Snowflake’s serverless architecture ensures scalability, while its built-in data masking capabilities support secure analytics for different user roles. The design prioritizes simplicity, with minimal dependencies to reduce operational overhead.  \n\n## Setup Instructions  \n1. Clone the repository and install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n2. Configure AWS credentials in `config/aws_keys.py` and Snowflake credentials in `config/snowflake_conn.py`.  \n3. Set up an S3 bucket for raw data ingestion and a Snowflake warehouse for compute.  \n4. Run the ETL pipeline:  \n   ```bash  \n   python etl_pipeline.py  \n   ```  \n5. Monitor progress via Snowflake’s web UI and log files in `logs/`.  \n\n## Skills/Tools  \n- **Snowflake**: Engineered complex data models, optimized query performance, and mentored team on best practices for schema design and data governance.  \n- **AWS**: Integrated S3 with Snowflake for data lakes, leveraging IAM roles for secure access.  \n- **Python**: Automated data validation, error logging, and pipeline orchestration using standard libraries.  \n\nThis project exemplifies a balance between simplicity and robustness, designed to adapt to a startup’s evolving needs while maintaining clarity for cross-functional teams."
+}

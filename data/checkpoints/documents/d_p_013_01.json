@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_013_01",
+  "type": "project_readme",
+  "persona_id": "p_013",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Swift": 1,
+    "Kotlin": 1,
+    "React Native": 1,
+    "Flutter": 1,
+    "iOS development": 1,
+    "Android development": 1,
+    "Mobile CI/CD": 1,
+    "REST API design": 1,
+    "GraphQL": 1,
+    "Test automation": 1,
+    "Mobile testing": 1,
+    "Security testing": 1
+  },
+  "text": "# FinSecure Pay - Biometric Payment Solution  \n\n**FinSecure Pay** is a secure mobile payment application designed for fintech startups, enabling users to transact with biometric authentication. The app prioritizes encryption, seamless UX, and compliance with financial regulations.  \n\n## Key Features  \n- **Biometric Login**: Fingerprint or facial recognition for secure access.  \n- **Encrypted Transactions**: End-to-end encryption for all payment data.  \n- **Real-Time Fraud Detection**: Integrated anomaly detection for suspicious activity.  \n- **Multi-Currency Support**: Native handling of fiat and stablecoin transactions.  \n- **Regulatory Compliance**: GDPR and PCI-DSS compliant data storage and processing.  \n\n## Tech Stack  \n- **Platform**: Secure mobile framework (proprietary hybrid architecture).  \n- **Core Libraries**: Biometric SDK, encryption libraries, and payment gateway integrations.  \n- **Backend**: RESTful APIs for transaction validation and user management (managed externally).  \n- **Security**: AES-256 encryption, tokenization, and secure key storage.  \n\n## Architecture Overview  \nThe app follows a **layered architecture** to ensure scalability and security:  \n1. **Presentation Layer**: Biometric authentication flow and user interface.  \n2. **Business Logic Layer**: Transaction validation, fraud checks, and payment routing.  \n3. **Data Layer**: Encrypted local storage and secure API communication.  \n4. **Security Layer**: Runtime encryption, secure boot, and tamper detection.  \n\n## Setup Instructions  \n1. Clone the repository: `git clone https://github.com/yourusername/finsecure-pay.git`  \n2. Install dependencies using the project-specific toolchain.  \n3. Configure biometric permissions and encryption keys via the admin dashboard.  \n4. Run the app and test authentication flows and transaction endpoints.  \n\n## Contributing  \nWe welcome contributions to enhance security protocols, optimize UX, and expand supported currencies. Please review the [contributing guidelines](CONTRIBUTING.md) before submitting changes.  \n\n**Note**: This project is maintained with a focus on financial security and user privacy. All features adhere to strict compliance standards for fintech operations."
+}

@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_026_01",
+  "type": "project_readme",
+  "persona_id": "p_026",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "ArgoCD": 4,
+    "CI/CD pipelines": 4,
+    "Cloud cost optimization": 4,
+    "Cloud migration": 4,
+    "GitHub Actions": 4,
+    "Kubernetes": 4,
+    "PostgreSQL": 1,
+    "Prometheus/Grafana": 4,
+    "Python": 3,
+    "REST API design": 3,
+    "Redis": 3,
+    "Terraform": 5
+  },
+  "text": "# NexaCorp CloudOps Automation Suite  \n\nThe NexaCorp CloudOps Automation Suite is a production-grade framework designed to streamline cloud infrastructure deployment, optimize operational efficiency, and enforce observability across distributed systems. Built for large-scale enterprise environments, this suite integrates CI/CD pipelines, declarative infrastructure-as-code, and real-time monitoring to reduce manual intervention and accelerate time-to-production.  \n\n## Tech Stack  \n- **Terraform**: Core to infrastructure provisioning, with modularized state management and cross-team collaboration.  \n- **GitHub Actions**: Central to CI/CD workflows, enabling automated testing, dependency validation, and deployment orchestration.  \n- **ArgoCD**: Used for GitOps-based application deployment, with automated sync strategies and rollback mechanisms.  \n- **Kubernetes**: Orchestration layer for containerized workloads, integrated with Helm for declarative manifest management.  \n- **Prometheus/Grafana**: Central to observability, providing end-to-end metrics aggregation and customizable dashboards.  \n- **Redis**: Employed for distributed caching and service discovery in microservices architectures.  \n- **REST API design**: Leveraged for internal tooling, ensuring consistent endpoint structures and rate-limiting strategies.  \n- **Cloud cost optimization**: Achieved through tagging conventions, spot instance utilization, and auto-scaling policies.  \n- **Cloud migration**: Successfully transitioned 12+ legacy systems to AWS, reducing infrastructure costs by 40% and improving deployment reliability.  \n\n## Architecture Overview  \nThe suite operates on a layered model:  \n1. **Infrastructure Layer**: Terraform modules define multi-cloud environments with version-controlled state.  \n2. **CI/CD Pipeline**: GitHub Actions triggers builds, runs unit tests, and validates infrastructure changes via Terraform Plan.  \n3. **Deployment Layer**: ArgoCD synchronizes application states with Git, ensuring zero-downtime rollouts.  \n4. **Observability Layer**: Prometheus scrapes metrics from Kubernetes nodes and services, visualized in Grafana for real-time monitoring.  \n\n## Setup Instructions  \n1. Clone the repository: `git clone https://github.com/nexacorp/cloudops-suite.git`  \n2. Initialize Terraform modules: `terraform init -backend-config=backend.tfstate`  \n3. Configure GitHub Actions secrets for API keys and cloud credentials.  \n4. Deploy the observability stack using Helm charts in your Kubernetes cluster.  \n5. Validate workflows with `terraform apply --auto-approve` and monitor via Grafana.  \n\nThis project is a collaborative effort with 15+ engineers, focusing on scalability, resilience, and operational hygiene. Metrics show 30% faster deployment cycles and 99.95% SLA adherence since adoption."
+}

@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_003_01",
+  "type": "project_readme",
+  "persona_id": "p_003",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "API testing": 3,
+    "CI/CD pipelines": 2,
+    "Integration testing": 3,
+    "Java": 1,
+    "Performance testing (JMeter/k6)": 3,
+    "Python": 3,
+    "REST API design": 3,
+    "Selenium/Playwright": 3,
+    "Test automation": 3,
+    "Unit testing": 3
+  },
+  "text": "# Automated Regression Testing Framework  \n\n**A scalable, modular framework for accelerating regression testing in consulting projects**  \n\nThis framework streamlines regression testing by combining API, UI, and integration test suites, reducing manual effort and improving test coverage. Built for consulting teams facing frequent system changes, it prioritizes rapid test setup, parallel execution, and actionable reporting.  \n\n## Tech Stack  \n- **Programming**: Python (pytest, pytest-asyncio)  \n- **UI Testing**: Playwright (headless browser support, cross-browser compatibility)  \n- **API Testing**: Python `requests` library, Postman (integration with CI/CD)  \n- **Integration Testing**: Dockerized services, REST API mocks  \n- **Performance Testing**: k6 (load simulation), JMeter (stress testing)  \n- **CI/CD**: GitHub Actions (automated test triggers, artifact storage)  \n- **Reporting**: Allure CI (test result visualization), custom JSON logs  \n\n## Architecture  \nThe framework employs a **layered architecture** for separation of concerns:  \n1. **Core Engine**: Manages test suite orchestration, parallel execution, and result aggregation.  \n2. **UI Layer**: Playwright-based scripts for end-to-end browser validation (e.g., form submissions, navigation flows).  \n3. **API Layer**: Python scripts for validating REST endpoints, including status code checks and payload validation.  \n4. **Integration Layer**: Docker containers for simulating dependent services (e.g., mock databases, third-party APIs).  \n5. **Performance Layer**: k6 scripts for stress testing under simulated user loads.  \n\n## Setup Instructions  \n1. Clone the repo: `git clone https://github.com/yourusername/automated-regression-testing-framework.git`  \n2. Install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   playwright install chromium  \n   ```  \n3. Configure environment variables for API endpoints and credentials.  \n4. Run the setup script: `./setup.sh` (automates Docker container provisioning).  \n5. Execute tests: `pytest -v --html=report.html`  \n\n## Skills & Tools  \n- **API Testing**: Validated 15+ REST endpoints across 8 projects, achieving 85%+ test coverage.  \n- **Integration Testing**: Reduced dependency conflicts by 60% using Dockerized mocks.  \n- **Performance Testing**: Identified bottlenecks in 3 client systems, improving response times by 30%.  \n- **CI/CD**: Integrated GitHub Actions for nightly test runs, cutting manual oversight by 40%.  \n- **Test Automation**: Standardized 12+ test suites, reducing regression execution time by 40%.  \n\n**Metrics**: 95% test suite stability, 30% faster setup, 25% lower false positive rates.  \n\n---  \n*Contribute by expanding test modules or optimizing parallel execution strategies.*"
+}

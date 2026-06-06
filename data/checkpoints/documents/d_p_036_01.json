@@ -1,0 +1,26 @@
+{
+  "doc_id": "d_p_036_01",
+  "type": "project_readme",
+  "persona_id": "p_036",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "CI/CD pipelines": 4,
+    "Cloud cost optimization": 2,
+    "Docker": 3,
+    "GitHub Actions": 4,
+    "Kubernetes": 4,
+    "Linux administration": 3,
+    "Monitoring & alerting": 3,
+    "Network automation": 1,
+    "Prometheus/Grafana": 4,
+    "Python": 2,
+    "Shell scripting (Bash)": 3,
+    "Terraform": 3
+  },
+  "text": "# Microservices CI/CD Pipeline with GitOps  \n\n**Automated, scalable, and observable CI/CD for microservices at scale**  \nDeploy 15+ microservices with 99.95% uptime, 40% faster rollback times, and 70% reduced manual intervention via GitOps-driven pipelines.  \n\n## Tech Stack  \n- **CI/CD**: GitHub Actions (custom workflows, parallel jobs)  \n- **Orchestration**: Kubernetes (AWS EKS, 3-node cluster)  \n- **GitOps**: Argo CD (auto-sync, canary deployments)  \n- **Monitoring**: Prometheus + Grafana (30+ metrics, 95% SLA visibility)  \n- **Infrastructure**: Terraform (AWS VPC, EKS, S3 artifact storage)  \n- **Containers**: Docker (multi-stage builds, 25% smaller images)  \n- **Tools**: AWS CLI, kubectl, Bash scripts (CI/CD automation)  \n\n## Architecture Overview  \n- **GitHub Actions** triggers builds on PRs/Tags, pushing containers to ECR.  \n- **Argo CD** syncs manifests from Git, deploying to Kubernetes with blue-green/rolling updates.  \n- **Prometheus** scrapes metrics from kubelet, container runtime, and application endpoints.  \n- **Terraform** manages infrastructure as code, with drift detection enabled.  \n- **Docker** handles image building, tagging, and registry pushes.  \n\n## Setup Instructions  \n1. Clone repo: `git clone https://github.com/your-org/microservices-cicd.git`  \n2. Initialize Terraform: `terraform init && terraform apply` (AWS credentials required)  \n3. Deploy Argo CD: `kubectl apply -f argo-cd.yaml`  \n4. Configure GitHub Actions secrets (AWS ECR, Kubernetes credentials)  \n5. Trigger pipeline via PR/Tag: `github.com/your-org/your-repo`  \n\n## Key Metrics  \n- **Deployment Latency**: 12 min (vs 45 min pre-automation)  \n- **Rollback Success Rate**: 99.95% (30+ rollbacks)  \n- **Infrastructure Cost**: 20% reduction via Terraform optimization  \n- **Error Detection**: 85% faster via Prometheus alerting  \n- **Team Onboarding**: 2-hour setup vs 8-hour manual process  \n\n## Skills & Tools  \n- **CI/CD**: GitHub Actions (ownership of 5+ pipelines), Kubernetes (cluster management)  \n- **Monitoring**: Prometheus/Grafana (custom dashboards, alert rules)  \n- **Cloud**: AWS EKS, S3, CloudFormation (cost tracking via AWS Cost Explorer)  \n- **DevOps**: Docker, Bash, Terraform (infrastructure-as-code)  \n- **Linux**: Systemd, systemd-journald, auditd (node maintenance)  \n\n*Built for scalability, observability, and zero-touch operations in a 15+ dev team.*"
+}

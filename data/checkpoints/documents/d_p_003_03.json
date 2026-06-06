@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_003_03",
+  "type": "project_readme",
+  "persona_id": "p_003",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "API testing": 3,
+    "CI/CD pipelines": 3,
+    "Integration testing": 2,
+    "Java": 1,
+    "Performance testing (JMeter/k6)": 3,
+    "Python": 3,
+    "REST API design": 3,
+    "Selenium/Playwright": 3,
+    "Test automation": 3,
+    "Unit testing": 3
+  },
+  "text": "# CI/CD QA Workflow Automation  \n\n**Automate QA workflows to reduce manual overhead, accelerate feedback loops, and ensure consistent deployment quality.**  \n\nThis project integrates CI/CD pipelines with test automation to streamline quality assurance processes. By leveraging tooling and scripting, we achieve 40% faster feedback loops and 30% reduction in manual testing steps across our team’s microservices architecture.  \n\n## Tech Stack  \n- **Python** (test scripts, data parsing)  \n- **REST API** (integration with backend services)  \n- **Selenium/Playwright** (end-to-end UI testing)  \n- **JMeter/k6** (load/stress testing)  \n- **Git** (version control)  \n- **Docker** (containerized test environments)  \n- **GitHub Actions** (CI/CD orchestration)  \n- **Slack** (real-time test result notifications)  \n\n## Architecture Overview  \nThe pipeline consists of three stages:  \n1. **Test Suite Execution**: Triggers on PRs/commits, runs unit tests (pytest), API tests (requests), and UI tests (Playwright).  \n2. **Performance Validation**: Integrates JMeter scripts to simulate 1,000 concurrent users post-deployment.  \n3. **Monitoring & Alerts**: Slack notifications for test failures, with detailed logs and failure snapshots.  \n\n## Setup Instructions  \n1. Clone the repo: `git clone https://github.com/your-username/ci-cd-qa-workflow.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure GitHub Actions secrets (API keys, Slack webhooks).  \n4. Set up Docker environment for isolated test runs.  \n5. Run tests locally: `python run_tests.py --env staging`  \n\n## Skills & Tools in Use  \n- **API Testing**: Automated regression tests for 12+ REST endpoints, ensuring 99.8% coverage of critical paths.  \n- **CI/CD Pipelines**: GitHub Actions workflows with parallel job execution, reducing build time by 25%.  \n- **Performance Testing**: k6 scripts validate system stability under 5x peak load.  \n- **Python**: Custom scripts for test data generation and result aggregation.  \n- **REST API Design**: Collaborated on Swagger specs for testable endpoints.  \n- **Selenium/Playwright**: Hybrid framework for cross-browser UI validation.  \n- **Test Automation**: Modular test suite with reusable components for 80% of test cases.  \n- **Unit Testing**: pytest-based framework with 95% code coverage for core services.  \n\n**Contribute by extending test suites or optimizing pipeline stages!** 🚀"
+}

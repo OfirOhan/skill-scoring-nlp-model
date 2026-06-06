@@ -1,0 +1,26 @@
+{
+  "doc_id": "d_p_031_02",
+  "type": "project_readme",
+  "persona_id": "p_031",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 1,
+    "Docker": 1,
+    "GCP": 1,
+    "GitHub Actions": 1,
+    "Go": 1,
+    "Kubernetes": 1,
+    "Microservices architecture": 1,
+    "PostgreSQL": 5,
+    "Prometheus/Grafana": 1,
+    "Python": 5,
+    "REST API design": 5,
+    "React": 4,
+    "TypeScript": 4
+  },
+  "text": "# NexGen Solutions  \n\nA scalable, production-ready e-commerce platform built to handle high-traffic retail scenarios with seamless user experiences and robust backend systems. Designed for global scalability, this project leverages Python, Django, PostgreSQL, React, and TypeScript to deliver a modular architecture with clear separation of concerns and maintainable codebases.  \n\n## Tech Stack  \n- **Backend**: Python (Django 4.x), PostgreSQL (14.x)  \n- **Frontend**: React (18.x), TypeScript (4.x)  \n- **APIs**: RESTful design with Django REST Framework (3.x)  \n- **Database**: PostgreSQL with advanced indexing, partitioning, and connection pooling for sub-100ms query latency  \n\n## Architecture  \nThe platform uses a layered architecture with Django as the backend, handling business logic, authentication, and data persistence. PostgreSQL serves as the central database, optimized for high-write throughput and complex queries. React/TypeScript manages the frontend, with state management via Redux and custom hooks. REST APIs enable bidirectional communication between frontend and backend, with strict validation and rate-limiting in place.  \n\nKey features include:  \n- Real-time inventory updates via WebSocket (custom implementation)  \n- Multi-tenant support for 50+ brands  \n- 99.95% SLA with automated rollback mechanisms  \n- 10k+ daily transactions processed via asynchronous task queues  \n\n## Setup Instructions  \n**Frontend**  \n```bash  \nnvm install 18  \nnpm install -g yarn  \nyarn install  \nyarn build  \n```  \n**Backend**  \n```bash  \npython -m venv venv  \nsource venv/bin/activate  \npip install -r requirements.txt  \npython manage.py migrate  \npython manage.py runserver  \n```  \nEnsure `.env` files are configured with PostgreSQL credentials and secret keys.  \n\n## Contributing  \nFollow PEP8/ESLint standards. All PRs require unit tests and performance benchmarks.  \n\n---  \n*Built by a 15+ member team with 3+ years of production-grade Django/TypeScript experience. Metrics include 50k+ active users and 10k+ daily transactions.*"
+}

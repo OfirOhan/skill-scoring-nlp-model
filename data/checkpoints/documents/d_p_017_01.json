@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_017_01",
+  "type": "project_readme",
+  "persona_id": "p_017",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 5,
+    "Apache Airflow": 4,
+    "Apache Spark": 4,
+    "Computer vision": 4,
+    "Docker": 4,
+    "Kubernetes": 4,
+    "LLMs/Prompt engineering": 3,
+    "MLOps (MLflow/W&B)": 5,
+    "Model deployment": 5,
+    "NLP": 5,
+    "PyTorch": 5,
+    "RAG systems": 3
+  },
+  "text": "# Predictive Analytics for Patient Readmission Risk  \n\nA scalable, production-ready framework for predicting inpatient readmission risk using structured and unstructured electronic health records (EHRs). Built with a focus on reproducibility, auditability, and integration with clinical workflows.  \n\n## Key Features  \n- **End-to-end pipeline**: Integrates EHR data cleaning, feature engineering, and model deployment using MLOps best practices  \n- **Hybrid model architecture**: Combines tabular data processing (Apache Spark) with NLP for unstructured clinical notes (transformers + RAG)  \n- **Cloud-native deployment**: Containerized with Docker, orchestrated via Kubernetes, and hosted on AWS  \n- **Monitoring & tracking**: MLflow for experiment tracking, W&B for model versioning, and Prometheus for pipeline metrics  \n\n## Tech Stack  \n- **Data Processing**: Apache Spark (PySpark), Apache Airflow (DAGs)  \n- **Modeling**: PyTorch (transformer-based NLP), scikit-learn (tabular pipelines)  \n- **Deployment**: Docker, Kubernetes, AWS EKS  \n- **Monitoring**: MLflow, Weights & Biases, Prometheus  \n- **Data Storage**: AWS S3, Redshift, PostgreSQL  \n- **NLP**: HuggingFace Transformers, RAG (Retrieval-Augmented Generation)  \n\n## Architecture Overview  \n1. **ETL Pipeline**: Apache Airflow orchestrates data ingestion from CSV/Parquet sources, with Spark for distributed ETL and schema validation  \n2. **Feature Engineering**: PySpark UDFs for temporal feature extraction; BERT-based embeddings for clinical notes via HuggingFace  \n3. **Model Training**: Hybrid pipeline combining XGBoost (tabular) and transformer-based classifiers (PyTorch) with RAG for contextual note analysis  \n4. **Deployment**: Dockerized models pushed to Kubernetes, with MLflow tracking experiment metrics and W&B logging hyperparameters  \n5. **Monitoring**: Prometheus alerts for pipeline failures; AWS CloudWatch for infrastructure metrics  \n\n## Setup Instructions  \n1. Clone repository: `git clone https://github.com/your-username/patient-readmission-prediction.git`  \n2. Install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   docker-compose build  \n   ```  \n3. Configure AWS credentials and Spark cluster specs in `config.yaml`  \n4. Run pipeline:  \n   ```bash  \n   airflow initdb  \n   airflow scheduler  \n   ```  \n5. Monitor experiments via MLflow UI (`http://localhost:5000`) and W&B dashboard  \n\n## Usage  \n- **Training**: `python train.py --config config.yaml`  \n- **Inference**: `python predict.py --model_path models/ final_model.pth`  \n- **Deployment**: Deploy Docker container to EKS using Helm charts  \n\nThis project demonstrates a production-grade approach to clinical predictive analytics, with measurable impact on readmission prediction accuracy (15% improvement in pilot study)."
+}

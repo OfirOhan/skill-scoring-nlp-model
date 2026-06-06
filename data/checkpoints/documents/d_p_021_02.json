@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_021_02",
+  "type": "project_readme",
+  "persona_id": "p_021",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "App Store deployment": 2,
+    "Flutter": 1,
+    "GraphQL": 3,
+    "Kotlin": 1,
+    "Mobile CI/CD": 1,
+    "REST API design": 4,
+    "React": 1,
+    "Swift": 1,
+    "TypeScript": 1
+  },
+  "text": "# MobileSyncPro  \nReal-time multiplayer synchronization system for low-latency mobile gaming experiences  \n\n## Description  \nMobileSyncPro enables seamless, low-latency multiplayer synchronization for mobile games via a distributed architecture optimized for 5G/4G networks. Benchmarked at **<50ms latency** (99.9% packet retention) and **<100ms sync drift** across 100+ concurrent clients. Designed for hobbyist developers seeking production-grade networking infrastructure without framework overhead.  \n\n## Tech Stack  \n- **WebSocket** (binary framing, TLS 1.3)  \n- **REST API** (OpenAPI v3, rate-limited endpoints)  \n- **GraphQL** (subscription-based state sync, 20+ resolvers)  \n- **Redis** (pub/sub for event broadcasting, 500+ QPS)  \n- **C++** (core networking layer, 95% cycle-accurate timing)  \n- **Android NDK** (native client integration, 10ms jitter reduction)  \n\n## Architecture  \n**Client Sync Layer**:  \n- Binary delta-encoding (83% bandwidth reduction)  \n- E2EE with AES-256-GCM (12-rounds)  \n- 32-bit timestamp sync (±1ms precision)  \n\n**Server Orchestration**:  \n- Distributed consensus (Raft-based leader election)  \n- Load-balanced WebSocket pools (10+ nodes)  \n- Dynamic QoS tiering (Gold/Platinum tiers)  \n\n**Data Pipeline**:  \n- Redis pub/sub for event broadcasting (500+ QPS)  \n- REST API for metadata management (200+ endpoints)  \n- GraphQL subscriptions for state deltas  \n\n## Setup  \n```bash  \ngit clone https://github.com/alex-rivera/MobileSyncPro.git  \ncd MobileSyncPro  \n./build.sh # Compiles C++ core + Android NDK modules  \ndocker-compose up -d # Launches Redis + REST API  \n```  \n\n## Skills  \n- **REST API design**: Built 20+ endpoints with 99.95% uptime (2023)  \n- **GraphQL**: Integrated subscription-based state sync (300+ resolvers)  \n- **App Store deployment**: Minimal CI/CD for iOS/macOS (100% pass rate)  \n\n## Contributing  \nPull requests welcome. Focus on latency optimization, protocol robustness, or integration with Unity/Unreal.  \n\n*Metrics: 99.98% packet retention, <50ms latency, 100+ concurrent clients*"
+}

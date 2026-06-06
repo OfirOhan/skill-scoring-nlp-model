@@ -1,0 +1,26 @@
+{
+  "doc_id": "d_p_031_03",
+  "type": "project_readme",
+  "persona_id": "p_031",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 1,
+    "Docker": 1,
+    "GCP": 1,
+    "GitHub Actions": 1,
+    "Go": 1,
+    "Kubernetes": 1,
+    "Microservices architecture": 1,
+    "PostgreSQL": 1,
+    "Prometheus/Grafana": 1,
+    "Python": 1,
+    "REST API design": 4,
+    "React": 5,
+    "TypeScript": 4
+  },
+  "text": "# Real-Time Collaboration Tool  \n\nA lightweight, real-time collaboration platform built for remote teams. Enables live document editing, chat, and shared task management via WebSocket, React, and Firebase. Designed for seamless UX and minimal latency.  \n\n## Tech Stack  \n- **Frontend**: React (TypeScript) with custom hooks for state management  \n- **Backend**: Firebase Realtime Database (WebSocket-powered sync) + Firebase Cloud Functions (REST API endpoints)  \n- **Features**: Live editing, collaborative chat, version history, user permissions  \n\n## Architecture Overview  \nThe app uses Firebase's real-time database for low-latency synchronization, with WebSocket handling bidirectional communication. React components manage UI state, while Firebase Cloud Functions handle complex operations like conflict resolution and audit logging. REST APIs are used for user authentication and data persistence.  \n\n## Key Components  \n- **Editor**: React-based WYSIWYG with collaborative typing detection (200+ lines of TypeScript)  \n- **Chat**: WebSocket-driven real-time messaging with message history persistence  \n- **Task Board**: Drag-and-drop interface with Firebase-backed task states  \n- **Auth**: Firebase Authentication with role-based access control  \n\n## Setup Instructions  \n1. Clone the repo: `git clone https://github.com/your-username/realtime-collab.git`  \n2. Install frontend dependencies: `npm install`  \n3. Configure Firebase:  \n   - Create a Firebase project  \n   - Add Firebase config to `src/firebaseConfig.ts`  \n   - Deploy Cloud Functions: `firebase deploy --only functions`  \n4. Start the app: `npm run start`  \n5. Use Firebase Emulator Suite for local testing (optional)  \n\n## Usage  \n- Collaborate on documents in real time with auto-save  \n- Chat with team members via integrated chat pane  \n- Track task progress with drag-and-drop boards  \n- View version history for all edits  \n\n## Notes  \n- Firebase Realtime Database handles 100+ concurrent connections with <50ms latency  \n- TypeScript type definitions cover 95% of core logic  \n- REST APIs handle 500+ requests/day with 99.9% uptime  \n\nReady to build next-gen collaboration tools? Fork the repo and start coding!"
+}

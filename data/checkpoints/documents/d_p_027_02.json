@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_027_02",
+  "type": "project_readme",
+  "persona_id": "p_027",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 3,
+    "Go": 3,
+    "Kubernetes": 3,
+    "Message queues": 4,
+    "Microservices architecture": 3,
+    "PostgreSQL": 3,
+    "Python": 3,
+    "REST API design": 3,
+    "Terraform": 3
+  },
+  "text": "# Ad Targeting Caching Platform  \n\nA high-throughput, low-latency distributed caching solution for ad targeting workloads, leveraging Redis as the primary cache layer and Kafka for event-driven updates. Designed for adtech environments requiring sub-100ms response times and 99.99% SLA compliance.  \n\n## Tech Stack  \n- **Language**: Go (core service), Python (data pipeline utilities)  \n- **Data Stores**: Redis (in-memory cache), PostgreSQL (metadata store)  \n- **Message Queues**: Apache Kafka (event streaming, 99.95% delivery rate)  \n- **Orchestration**: Kubernetes (auto-scaling, 30% cost reduction via resource optimization)  \n- **Infrastructure**: Terraform (IaC, 20% faster deployment cycles)  \n- **APIs**: RESTful endpoints (OpenAPI spec, 400+ endpoints)  \n- **CI/CD**: GitHub Actions (automated testing, 95% test coverage)  \n\n## Architecture Overview  \nThe platform decouples ad targeting logic from caching layers, using Redis for real-time ad lookup and Kafka for asynchronous updates. Key components:  \n- **Redis Cluster**: Sharded with Redis Sentinel for high availability (99.99% uptime)  \n- **Kafka Producers/Consumers**: Delta updates propagated to cache via Kafka topics, with idempotent replay mechanisms  \n- **PostgreSQL**: Stores ad metadata and user segments (read replicas for query scaling)  \n- **Kubernetes Operator**: Manages Redis shard rebalancing and Kafka topic lifecycle  \n- **Prometheus/Grafana**: End-to-end latency monitoring (95th percentile < 80ms)  \n\n## Setup Instructions  \n1. Install dependencies: Go 1.21, Kafka, Redis, PostgreSQL  \n2. Configure environment variables in `.env` (Redis hosts, Kafka brokers, DB credentials)  \n3. Initialize infrastructure:  \n   ```bash  \n   terraform init && terraform apply --auto-approve  \n   ```  \n4. Spin up services:  \n   ```bash  \n   make build && make up  \n   ```  \n5. Verify health:  \n   ```bash  \n   curl http://localhost:8080/healthz  \n   ```  \n\n## Contribution  \nImplement caching strategies for ad rule evaluation (Redis Lua scripts) and Kafka stream processing (Kafka Streams API). Optimize for 99.99% cache hit rate with 50ms tail latency.  \n\nMetrics: 30% reduction in ad serving latency, 25% lower cloud costs via Terraform resource tagging, and 99.95% Kafka message delivery rate."
+}

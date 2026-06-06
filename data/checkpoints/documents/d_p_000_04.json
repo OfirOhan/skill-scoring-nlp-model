@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_000_04",
+  "type": "blog",
+  "persona_id": "p_000",
+  "hyperparams": {
+    "blog_depth": "tutorial",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Kotlin": 5,
+    "iOS development": 5,
+    "Mobile CI/CD": 5,
+    "Android development": 4,
+    "REST API design": 4,
+    "TypeScript": 4,
+    "Swift": 4,
+    "Flutter": 3,
+    "GraphQL": 3,
+    "React": 3,
+    "React Native": 3,
+    "Webpack/Vite": 3
+  },
+  "text": "At scale, mobile architectures for SaaS platforms demand a balance of abstraction and control. Our recent overhaul of the enterprise collaboration app’s monorepo leveraged Kotlin Multiplatform to unify Android and iOS logic, reducing duplication by 40% while maintaining native performance. Kotlin’s coroutines and Flow became critical for async task management, enabling real-time sync with backend services without blocking UI threads.  \n\nFor Android, we prioritized Jetpack Compose over traditional ViewSystem, achieving 30% faster load times through declarative UI. However, legacy modules required gradual migration, necessitating a hybrid approach with Android Jetpack Compose and legacy XML. This duality highlighted the importance of modular architecture—each feature encapsulated as a composable component, decoupled from business logic.  \n\niOS development focused on Swift’s type safety and memory management. We adopted SwiftUI for new features, leveraging its declarative paradigm to simplify state management. Yet, for complex UIs, we retained UIKit with Swift’s property observers, ensuring backward compatibility. Combine framework became central for reactive data flows, integrating with Apollo Client’s GraphQL subscriptions to sync real-time updates.  \n\nBackend integration relied on REST APIs with OpenAPI specs, ensuring consistent endpoints across platforms. However, GraphQL emerged as a game-changer for nested queries, reducing network calls by 50% in analytics modules. Apollo Client’s caching layer normalized data across devices, mitigating inconsistencies in distributed sessions.  \n\nTooling optimized build pipelines via Vite for frontend bundles and Gradle for Android. Flutter’s hot reload was used sparingly for cross-platform prototyping, but native rendering remained non-negotiable for performance-critical workflows. Webpack’s code-splitting and Tree Shaking minimized bundle sizes, critical for low-end devices.  \n\nCI/CD pipelines enforced strict linting with Ktlint and SwiftLint, while automated testing via Espresso and XCTest ensured reliability. Canary deployments via Firebase allowed gradual rollouts, with Crashlytics tracking regressions.  \n\nThe result? A 25% reduction in feature delivery time, with 99.95% uptime across 15k+ lines of code. Scalability wasn’t just about handling users—it was about designing systems that evolve with business needs, without sacrificing performance or developer productivity."
+}

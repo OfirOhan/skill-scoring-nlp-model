@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_046_03",
+  "type": "project_readme",
+  "persona_id": "p_046",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "CI/CD pipelines": 3,
+    "GitHub Actions": 3,
+    "Go": 3,
+    "Linux administration": 3,
+    "Message queues": 3,
+    "Microservices architecture": 3,
+    "PostgreSQL": 3,
+    "Prometheus/Grafana": 3,
+    "Python": 3,
+    "REST API design": 4
+  },
+  "text": "# SaasApiGateway  \n\nA scalable API gateway built for multi-tenant SaaS applications, enabling secure, rate-limited, and dynamically routed API requests across microservices. Designed for large teams with strict latency and reliability requirements.  \n\n## Tech Stack  \n- **Language**: Go (main service), Python (scripts for config generation)  \n- **Database**: PostgreSQL (tenant metadata, rate limit quotas)  \n- **Monitoring**: Prometheus + Grafana (request latency, error rates, queue depths)  \n- **CI/CD**: GitHub Actions (automated tests, builds, and deployments)  \n- **Message Queues**: Kafka (asynchronous tenant config updates)  \n- **Infrastructure**: Linux-based servers (systemd service management, systemd units provided)  \n- **Networking**: REST API with OpenAPI v3 spec (used in production for client SDKs)  \n\n## Architecture  \nThe gateway acts as a single entry point for all tenant API requests. Key components:  \n- **API Router**: Uses dynamic routing based on tenant ID and path, forwarding to backend microservices.  \n- **Rate Limiter**: Redis-backed, per-tenant and global limits enforced with sliding window algorithm.  \n- **Auth Middleware**: JWT validation with optional OAuth2 support, tenant-specific signing keys.  \n- **Config Store**: PostgreSQL table for tenant-specific settings (e.g., allowed endpoints, custom headers).  \n- **Metrics Exporter**: Exposes Prometheus metrics for endpoint latency, error rates, and queue backlog.  \n\n## Setup  \n1. **Clone repo**: `git clone https://github.com/your-username/saasapigateway.git`  \n2. **Install dependencies**:  \n   - Go 1.21+ (for main service)  \n   - Python 3.10+ (for config generation scripts)  \n   - PostgreSQL (create database and user as per `docker-compose.yml`)  \n3. **Run migrations**:  \n   ```bash  \n   go run cmd/migrate/main.go up  \n   ```  \n4. **Build service**:  \n   ```bash  \n   go build -o saasapigateway cmd/main.go  \n   ```  \n5. **GitHub Actions**: CI/CD pipelines automate testing and deployment to staging.  \n6. **Deploy**: Use systemd unit files (`saasapigateway.service`) for production servers.  \n\n## Contributing  \nIssues and pull requests welcome. Focus on improving scalability, adding support for WebSockets, or refining tenant isolation.  \n\n*Built for teams that need reliability, not just features.*"
+}

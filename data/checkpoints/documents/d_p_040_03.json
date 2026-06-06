@@ -1,0 +1,28 @@
+{
+  "doc_id": "d_p_040_03",
+  "type": "project_readme",
+  "persona_id": "p_040",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 1,
+    "ArgoCD": 1,
+    "CI/CD pipelines": 3,
+    "Docker": 3,
+    "GCP": 1,
+    "GitHub Actions": 3,
+    "GitLab CI": 1,
+    "Incident management": 3,
+    "Jenkins": 1,
+    "Kubernetes": 3,
+    "Monitoring & alerting": 4,
+    "Prometheus/Grafana": 4,
+    "Python": 4,
+    "SLA/SLO management": 2,
+    "Terraform": 2
+  },
+  "text": "# AdMonitor Dashboard  \nA centralized monitoring dashboard for ad tech infrastructure, enabling real-time visibility into custom metrics, alert orchestration, and incident response workflows. Designed for adtech systems requiring granular performance tracking, SLA compliance, and rapid fault detection.  \n\n## Overview  \nThe AdMonitor Dashboard serves as a unified interface for monitoring ad tech infrastructure, including ad serving pipelines, bidirectional communication layers, and third-party integrations. It provides actionable insights through custom metrics, automated alerting, and integration with incident management tools. The system is built to scale with team workflows, offering low-latency data aggregation and intuitive visualization for both engineering and operations teams.  \n\n## Tech Stack  \n- **Language**: Python (for metric collection, alert rule templating, and dashboard logic)  \n- **Monitoring**: Prometheus (for time-series data ingestion) + Grafana (for dashboard visualization)  \n- **Deployment**: Docker (containerization) + Kubernetes (orchestration)  \n- **CI/CD**: GitHub Actions (automated testing, dependency updates)  \n- **Incident Management**: Integration with PagerDuty for alert routing and incident lifecycle tracking  \n- **SLA/SLO**: Custom metrics for tracking service-level agreements and operational performance  \n\n## Architecture  \nThe system follows a layered architecture:  \n1. **Data Ingestion Layer**: Prometheus scrapes metrics from ad tech services (e.g., ad serving, bidding, attribution). Custom exporters are used for proprietary systems.  \n2. **Processing Layer**: Python scripts aggregate metrics, apply alert rules (e.g., 95th percentile latency thresholds), and trigger notifications.  \n3. **Visualization Layer**: Grafana dashboards provide real-time metrics, historical trends, and alert status.  \n4. **Deployment Layer**: Docker containers are orchestrated via Kubernetes, with GitHub Actions managing CI/CD pipelines for rapid updates.  \n\n## Setup Instructions  \n1. Clone the repository: `git clone https://github.com/your-username/AdMonitor-Dashboard.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure Prometheus to scrape metrics from your ad tech services (update `prometheus.yml`).  \n4. Deploy Grafana via Docker: `docker-compose up -d`  \n5. Run the alert rule processor: `python alert_processor.py`  \n6. Automate updates with GitHub Actions (workflow files in `.github/workflows`).  \n\n## Skills & Tools  \n- **Python**: Core for metric processing, alert rule templating, and dashboard integration  \n- **Prometheus/Grafana**: Central to monitoring architecture, with custom dashboards for ad-specific KPIs  \n- **Docker/Kubernetes**: Ensures consistent deployment across dev, staging, and production environments  \n- **GitHub Actions**: Automates testing, dependency updates, and deployment triggers  \n- **Incident Management**: Integrated with PagerDuty for alert routing and post-mortem analysis  \n- **SLA/SLO**: Custom metrics track compliance with service-level agreements for ad tech systems  \n\nThis project reduces mean time to detection (MTTD) by 30% and improves alert fatigue reduction through contextualized notifications."
+}

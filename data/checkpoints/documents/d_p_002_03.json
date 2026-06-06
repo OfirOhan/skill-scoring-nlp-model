@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_002_03",
+  "type": "project_readme",
+  "persona_id": "p_002",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Apache Airflow": 3,
+    "Apache Spark": 3,
+    "Bayesian statistics": 3,
+    "Data warehousing": 4,
+    "Feature engineering": 4,
+    "MLOps (MLflow/W&B)": 4,
+    "PyTorch": 3,
+    "Python": 4,
+    "REST API design": 2,
+    "Statistical modeling": 3,
+    "Time series analysis": 4
+  },
+  "text": "# HealthResource Dashboard: Real-Time Hospital Capacity Monitoring  \n\nA production-grade dashboard built to monitor hospital resource allocation during pandemic surges, enabling real-time decision-making for health authorities. The system aggregates and visualizes critical metrics like ICU bed availability, ventilator usage, and staff workload, leveraging scalable data pipelines and interactive analytics.  \n\n## 🚀 Tech Stack  \n- **Backend**: Python (Flask), Apache Airflow (orchestrating ETL pipelines), Apache Spark (distributed data processing)  \n- **Data Storage**: Snowflake (data warehousing)  \n- **Visualization**: Tableau (interactive dashboards)  \n- **Analytics**: Bayesian statistics, time series forecasting, statistical modeling  \n- **ML Tools**: PyTorch (for predictive models), MLflow (MLOps tracking)  \n- **Utilities**: Pandas, NumPy, Dask (for feature engineering)  \n\n## 🧱 Architecture Overview  \n1. **Data Ingestion**: Raw data from hospitals and public health APIs is ingested via REST endpoints and stored in Snowflake.  \n2. **Processing**: Apache Spark handles batch transformations, while Airflow schedules real-time updates. Feature engineering focuses on time-series alignment and anomaly detection.  \n3. **Modeling**: Bayesian time-series models predict resource demand, informing capacity alerts. PyTorch-based models refine forecasts with historical trends.  \n4. **Visualization**: Tableau connects to a PostgreSQL database layer, enabling drill-down analysis and scenario simulations.  \n\n## 📦 Setup Instructions  \n1. Clone the repo: `git clone https://github.com/healthresource-dashboard/healthresource.git`  \n2. Install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n3. Configure environment variables (e.g., Snowflake credentials, Airflow connections).  \n4. Run Airflow DAGs to trigger data pipelines:  \n   ```bash  \n   airflow dagrun --trigger-date \"$(date --date='yesterday' +%Y-%m-%d)\" --dag-id \"data_pipeline\"  \n   ```  \n5. Launch Tableau workbook (`dashboard.twb`) linked to the PostgreSQL database.  \n\n## 📊 Impact & Results  \n- Reduced response time for critical resource shortages by 40% during peak surges.  \n- Enabled predictive capacity planning with 85% accuracy in ICU bed forecasts.  \n- Scalable architecture handles 1M+ daily data points without performance degradation.  \n\n*Note: Tableau integration requires a valid license. Production deployment leverages cloud-hosted Snowflake and Airflow clusters.*"
+}

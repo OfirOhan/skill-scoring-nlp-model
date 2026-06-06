@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_039_01",
+  "type": "project_readme",
+  "persona_id": "p_039",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Application security (OWASP)": 3,
+    "Encryption & PKI": 3,
+    "Firewall configuration": 2,
+    "IAM/Access control": 3,
+    "Network security": 3,
+    "Penetration testing": 2,
+    "SIEM tools": 2,
+    "Security auditing": 1,
+    "TCP/IP": 1,
+    "Vulnerability management": 3
+  },
+  "text": "# SecureAPI Gateway: Enhanced API Security with OAuth2 and TLS  \n\nA lightweight API gateway for securing client-server communication through OAuth2 and TLS encryption. Designed for developers and consultants needing robust, scalable security without complex infrastructure.  \n\n## Tech Stack  \n- **Backend**: Go (Golang) for high-performance routing  \n- **Frontend**: React for admin dashboard (optional)  \n- **Database**: PostgreSQL for storing tokens and user metadata  \n- **Authentication**: OAuth2 (client credentials + password grant flows)  \n- **Encryption**: TLS 1.3 with automated certificate rotation via cert-manager  \n- **Tools**: Docker for containerization, Envoy for advanced routing (optional)  \n\n## Architecture Overview  \nThe gateway acts as a single point of entry, validating requests against OAuth2 tokens and enforcing TLS encryption. Key components:  \n1. **Client**: Sends requests with bearer tokens  \n2. **API Gateway**: Validates tokens, enforces rate limits, and routes to backend services  \n3. **Auth Server**: Issues and revokes tokens via OAuth2  \n4. **Database**: Stores user credentials and token metadata  \n\nTLS is enforced at the transport layer, with certificate management handled via automated tools. OAuth2 scopes and RBAC are integrated for fine-grained access control.  \n\n## Setup Instructions  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/secureapi-gateway.git  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   go mod tidy  \n   npm install  \n   ```  \n3. Configure environment variables (`config.env`) with client secrets and database credentials.  \n4. Run database migrations:  \n   ```bash  \n   go run migrate.go  \n   ```  \n5. Start the server:  \n   ```bash  \n   go run main.go  \n   ```  \n\n## Skills & Tools  \n- **Application Security (OWASP)**: Implemented input validation and secure token storage to mitigate injection risks.  \n- **Encryption & PKI**: Deployed TLS 1.3 with certificate rotation to ensure end-to-end encryption.  \n- **IAM/Access Control**: Integrated OAuth2 scopes with role-based policies for granular permissions.  \n- **Network Security**: Configured firewall rules to restrict access to the gateway’s API endpoints.  \n- **Vulnerability Management**: Regularly audited dependencies for known vulnerabilities using Snyk.  \n\n## Contributing  \nOpen to contributions! Focus on improving token validation logic or expanding support for additional OAuth2 flows.  \n\n---  \n*Built with security-first principles for modern API ecosystems.*"
+}

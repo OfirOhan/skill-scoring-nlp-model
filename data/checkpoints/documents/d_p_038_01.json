@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_038_01",
+  "type": "project_readme",
+  "persona_id": "p_038",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Agile/Scrum": 3,
+    "CI/CD pipelines": 3,
+    "Chaos engineering": 3,
+    "Cross-team collaboration": 3,
+    "Database optimization": 3,
+    "Linux administration": 3,
+    "Mentoring": 2,
+    "Monitoring & alerting": 4,
+    "Risk assessment": 4,
+    "Stakeholder communication": 2,
+    "System design": 4,
+    "Team leadership": 4
+  },
+  "text": "# Zero-Trust Architecture Implementation at SentinelShield  \n\n**A production-ready framework for enterprise zero-trust security, reducing breach time by 40% and false positives by 30%**  \n\n---  \n\n## Description  \nThis project delivers a zero-trust architecture (ZTA) implementation for enterprise environments, focusing on continuous verification, least-privilege access, and micro-segmentation. The framework integrates policy enforcement, identity validation, and real-time monitoring to mitigate lateral movement and unauthorized access. Key outcomes include a 25% reduction in attack surface and 100% compliance with NIST ZTA guidelines.  \n\n---  \n\n## Tech Stack  \n- **Policy Engine**: Open Policy Agent (OPA) for dynamic access control  \n- **Authentication**: OAuth2 + SAML for multi-factor identity verification  \n- **Networking**: IPsec tunnels + micro-segmentation via Calico  \n- **Monitoring**: Prometheus + Grafana for real-time anomaly detection  \n- **Database**: PostgreSQL with connection pooling for audit logging  \n- **CI/CD**: GitHub Actions for automated policy testing and deployment  \n\n---  \n\n## Architecture Overview  \n1. **Policy Enforcement Layer**: OPA evaluates requests against dynamic policies (e.g., \"user must authenticate before accessing DB\").  \n2. **Identity Verification**: Centralized IAM system with biometric fallback for high-risk actions.  \n3. **Microservices**: Isolated API gateways with mutual TLS for inter-service communication.  \n4. **Monitoring**: Alerts triggered by deviations in access patterns (e.g., 5+ failed logins in 10s).  \n\n---  \n\n## Setup Instructions  \n1. Clone the repo: `git clone https://github.com/sentinelshield/zta-framework.git`  \n2. Set environment variables for secrets (e.g., `export OPA_POLICY_PATH=/policies/zero-trust.rego`)  \n3. Initialize databases: `psql -U admin -d zta_db -f migrations/001_initial.sql`  \n4. Deploy infrastructure: `terraform apply --auto-approve`  \n5. Run tests: `go test -v ./pkg/...`  \n\n---  \n\n## Skills in Action  \n- **Monitoring & Alerting**: Reduced false positives by 30% via anomaly detection rules.  \n- **Risk Assessment**: Identified 15 critical vulnerabilities in legacy systems pre-implementation.  \n- **System Design**: Engineered policy engine to handle 10k+ requests/sec with 99.99% uptime.  \n- **Cross-Team Collaboration**: Integrated with DevOps and compliance teams for policy alignment.  \n- **CI/CD**: Automated policy validation in 200+ pipelines, cutting manual testing by 50%.  \n\n---  \n\n## Contributing  \nFork the repo, submit PRs with test coverage ≥85%. All changes require code review and integration testing."
+}

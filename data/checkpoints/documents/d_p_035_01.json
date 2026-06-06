@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_035_01",
+  "type": "project_readme",
+  "persona_id": "p_035",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "Application security (OWASP)": 3,
+    "Encryption & PKI": 3,
+    "Firewall configuration": 3,
+    "IAM/Access control": 3,
+    "Incident management": 2,
+    "Linux administration": 3,
+    "Network automation": 3,
+    "Network security": 3,
+    "Penetration testing": 3,
+    "Security auditing": 2
+  },
+  "text": "# SecureAPI Gateway - Enterprise Security Solution  \n\nSecureAPI Gateway is a scalable, enterprise-grade API gateway designed to enhance security through threat detection, data encryption, and granular access control. Built for high-traffic environments, it integrates seamlessly with cloud infrastructure to enforce compliance and mitigate risks without compromising performance.  \n\n## Tech Stack  \n- **Cloud**: AWS Lambda, API Gateway, CloudFront, and S3  \n- **Security**: AWS KMS, TLS 1.3, OWASP ZAP, and custom threat intelligence feeds  \n- **Database**: PostgreSQL (SSL-enabled) for audit logging  \n- **Automation**: Ansible for configuration management, Terraform for infrastructure as code  \n- **Networking**: iptables, CloudFront WAF, and VPC peering  \n- **Tools**: Wireshark, Nmap, and custom Python scripts for real-time monitoring  \n\n## Architecture Overview  \nThe gateway operates as a stateless microservices layer, handling request routing, authentication, and encryption. Key components include:  \n- **Threat Detection Module**: Integrates with AWS WAF and custom rules for real-time anomaly detection.  \n- **Encryption Engine**: Enforces TLS 1.3 for in-transit data and AES-256-GCM for at-rest encryption via AWS KMS.  \n- **Access Control Plane**: Leverages IAM roles and custom RBAC policies to enforce least-privilege access.  \n- **Audit Trail**: Logs all API interactions to a secure PostgreSQL database with immutable storage.  \n\n## Setup Instructions  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/secureapi-gateway/secureapi.git  \n   ```  \n2. Configure AWS credentials via `~/.aws/credentials` and set environment variables for KMS keys and DB endpoints.  \n3. Deploy infrastructure using Terraform:  \n   ```bash  \n   terraform init && terraform apply  \n   ```  \n4. Run security audits with OWASP ZAP and validate encryption protocols via Wireshark.  \n5. Test with Postman or `curl` to simulate API requests and verify threat detection rules.  \n\nThis project emphasizes proactive security through automation, encryption, and continuous monitoring, ensuring alignment with enterprise compliance standards. Regular penetration testing and audit trails are integral to maintaining robust defenses."
+}

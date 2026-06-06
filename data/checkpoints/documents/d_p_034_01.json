@@ -1,0 +1,31 @@
+{
+  "doc_id": "d_p_034_01",
+  "type": "project_readme",
+  "persona_id": "p_034",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "microservices architecture": 5,
+    "postgresql": 1,
+    "rest api design": 1,
+    "ci/cd pipelines": 1,
+    "docker": 4,
+    "go": 1,
+    "kubernetes": 1,
+    "redis": 1,
+    "terraform": 1,
+    "Go": 1,
+    "REST API design": 1,
+    "Microservices architecture": 1,
+    "PostgreSQL": 1,
+    "Redis": 1,
+    "Terraform": 1,
+    "Kubernetes": 1,
+    "Docker": 1,
+    "CI/CD pipelines": 1
+  },
+  "text": "# Scalable Microservices for Real-Time Data Processing  \n\nA modular system designed to handle high-throughput data streams with low-latency processing, built for startup environments requiring flexibility and rapid iteration.  \n\n## Tech Stack  \n- **Node.js**: Lightweight, event-driven runtime for building scalable backend services  \n- **Apache Kafka**: Distributed messaging system for real-time data pipelines  \n- **Docker**: Containerization tool for consistent deployment and resource isolation  \n\n## Architecture Overview  \nThe system is organized into decoupled services that communicate via Kafka topics. Each service handles a specific data transformation or processing stage, allowing teams to scale independently. Docker ensures uniform runtime environments across development, testing, and production, reducing configuration drift. Key design choices include:  \n- **Service isolation**: Each microservice runs in its own Docker container, enabling independent scaling and updates  \n- **Kafka as a backbone**: Topics act as buffers between stages, ensuring fault tolerance and asynchronous processing  \n- **Resource management**: Docker's memory and CPU limits prevent single services from impacting others  \n\n## Setup Instructions  \n1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/) and ensure it's running  \n2. Clone the repository: `git clone https://github.com/your-username/scalable-microservices.git`  \n3. Navigate to the project root and build containers:  \n   ```bash  \n   docker-compose up --build  \n   ```  \n   This starts all services, including Kafka brokers and producer/consumer instances.  \n4. Monitor logs via `docker logs <container-name>` to debug data flow  \n\n## Production Impact  \nDocker's consistent environments eliminated deployment errors during our beta phase, reducing incident resolution time by 40%. The microservices architecture allowed us to scale specific pipelines independently, improving overall system throughput by 30% without code changes. Kafka's partitioning model ensured even data distribution, while Docker's resource limits prevented cascading failures during peak loads.  \n\nThis project reflects a balance between simplicity and scalability, designed to evolve with the startup's growth while maintaining operational stability."
+}

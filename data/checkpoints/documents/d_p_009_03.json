@@ -1,0 +1,26 @@
+{
+  "doc_id": "d_p_009_03",
+  "type": "project_readme",
+  "persona_id": "p_009",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 3,
+    "Infrastructure as Code": 5,
+    "Kubernetes": 4,
+    "Load balancing": 3,
+    "Monitoring & alerting": 3,
+    "PostgreSQL": 2,
+    "Prometheus/Grafana": 3,
+    "Python": 2,
+    "Redis": 3,
+    "Serverless": 3,
+    "Terraform": 5
+  },
+  "text": "# Microservices Ad Serving Platform  \n\nThe **Microservices Ad Serving Platform** is a scalable, resilient architecture designed to deliver high-throughput ad campaigns in real-time, leveraging modern cloud-native technologies. Built for adtech environments with stringent latency and reliability requirements, this project demonstrates a production-grade implementation of a distributed ad serving system using GraphQL, Kubernetes, and AWS. The architecture emphasizes decoupled services, automated scaling, and observability to support large-scale ad delivery under dynamic traffic conditions.  \n\n## Tech Stack  \n- **GraphQL API Gateway**: Unified query layer for ad targeting, campaign management, and analytics  \n- **Kubernetes**: Orchestration of microservices with automated scaling and rolling updates  \n- **AWS**: Hosting, storage, and networking with cost-optimized strategies  \n- **PostgreSQL**: Centralized metadata store for ad campaigns and user segments  \n- **Redis**: In-memory cache for ad metadata and session state  \n- **Prometheus/Grafana**: End-to-end monitoring with custom dashboards for latency and error tracking  \n- **Terraform**: Infrastructure-as-Code for multi-environment deployment (dev, staging, prod)  \n- **Serverless**: Lambda-based ad validation and fraud detection functions  \n- **CI/CD Pipelines**: Automated testing, linting, and deployment workflows via GitHub Actions  \n\n## Architecture Overview  \nThe platform is structured into decoupled microservices:  \n1. **GraphQL API Gateway**: Aggregates requests from ad clients, validates queries, and routes to backend services  \n2. **Ad Targeting Service**: Uses Redis for fast ad selection and PostgreSQL for campaign metadata  \n3. **Campaign Management Service**: Orchestrates ad scheduling and bid management via AWS SQS  \n4. **Analytics Service**: Streams metrics to AWS Kinesis for real-time reporting  \n5. **Monitoring Layer**: Prometheus metrics collection, Grafana dashboards, and alerting for service health  \n\nKubernetes ensures fault tolerance through replica sets and service discovery, while AWS Auto Scaling adjusts node counts based on load. Redis caches frequently accessed ad metadata, reducing database load and improving response times. Serverless functions handle ad validation and fraud detection, decoupling compute from the main pipeline.  \n\n## Setup Instructions  \n1. Clone the repository: `git clone https://github.com/your-username/microservices-ad-serving-platform.git`  \n2. Initialize Terraform: `terraform init` (configure AWS credentials via environment variables)  \n3. Deploy infrastructure: `terraform apply` (review outputs for Kubernetes cluster and RDS endpoint)  \n4. Build and push Docker images: `docker build -t ad-serving-api . && docker push your-registry/ad-serving-api`  \n5. Deploy to Kubernetes: `kubectl apply -f k8s/deployment.yaml`  \n6. Configure Prometheus/Grafana: Access dashboards via the provided ingress endpoint  \n\nThis project serves as a blueprint for building high-performance ad serving systems, with emphasis on observability, cost efficiency, and horizontal scalability."
+}

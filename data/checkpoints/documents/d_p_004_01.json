@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_004_01",
+  "type": "project_readme",
+  "persona_id": "p_004",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Apache Spark": 3,
+    "Data modeling": 3,
+    "Feature engineering": 3,
+    "MLOps (MLflow)": 4,
+    "NumPy": 5,
+    "Pandas": 5,
+    "Python": 5,
+    "SQL analytics": 5,
+    "Time series analysis": 3,
+    "scikit-learn": 5
+  },
+  "text": "# FraudGuard: Real-Time Transaction Fraud Detection  \n\nFraudGuard is a real-time fraud detection system designed for fintech platforms, leveraging ensemble machine learning models to identify suspicious transactions with sub-second latency. Built to scale with high-volume transactional data, the system integrates batch and stream processing pipelines, ensuring robustness and adaptability to evolving fraud patterns.  \n\n## Tech Stack  \n- **Data Processing**: Apache Spark (batch pipelines), Pandas (data wrangling)  \n- **Modeling**: scikit-learn (ensemble models), MLflow (experiment tracking)  \n- **Analytics**: NumPy (numerical operations), SQL (schema design)  \n- **Infrastructure**: Cloud-native deployment (Docker/ Kubernetes)  \n\n## Architecture Overview  \nFraudGuard follows a layered architecture:  \n1. **Data Ingestion**: Raw transaction logs are ingested via Spark Streaming, partitioned by timestamp for parallel processing.  \n2. **Feature Engineering**: Pandas and NumPy generate time-based aggregates (e.g., 1-hour transaction frequency) and anomaly scores. Time series analysis identifies irregularities in user behavior.  \n3. **Model Training**: Ensemble models (Random Forest + Isolation Forest) are trained on historical data, with MLflow logging hyperparameters and metrics for reproducibility.  \n4. **Real-Time Inference**: Trained models are deployed as REST APIs, scoring incoming transactions and flagging high-risk cases for review.  \n\n## Setup Instructions  \n1. **Environment**:  \n   - Install Python 3.8+ and dependencies:  \n     ```bash  \n     pip install pandas numpy scikit-learn mlflow pyspark flask  \n     ```  \n   - Set up Spark cluster (local or cloud) and configure `spark-defaults.conf`.  \n\n2. **Data Preparation**:  \n   - Load transaction data from SQL databases or CSV files.  \n   - Preprocess with Pandas: handle missing values, encode categorical features, and normalize numerical fields.  \n\n3. **Model Training**:  \n   - Run `mlflow run <experiment_id>` to train and log models.  \n   - Monitor MLflow UI for tracking metrics like precision and recall.  \n\n4. **Deployment**:  \n   - Deploy inference API using Flask.  \n   - Test with sample transactions: `python app.py` and send POST requests to `/predict`.  \n\nThis project demonstrates scalable fraud detection in fintech, combining batch and stream processing with production-grade MLOps practices. Contributions welcome for improving model robustness or expanding feature sets."
+}

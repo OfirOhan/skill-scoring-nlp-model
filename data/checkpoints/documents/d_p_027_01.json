@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_027_01",
+  "type": "project_readme",
+  "persona_id": "p_027",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 3,
+    "Go": 3,
+    "Kubernetes": 4,
+    "Message queues": 3,
+    "Microservices architecture": 5,
+    "PostgreSQL": 5,
+    "Python": 3,
+    "REST API design": 3,
+    "Terraform": 3
+  },
+  "text": "# Real-Time Ad Bidding System  \n\nA distributed ad bidding platform built for low-latency, high-throughput auctions. Designed for adtech platforms requiring real-time decision-making with microservices and PostgreSQL.  \n\n## Tech Stack  \n- **Backend**: Go (high-performance services), Python (data pipelines)  \n- **Database**: PostgreSQL (distributed, read replicas for scale)  \n- **Orchestration**: Kubernetes (auto-scaling, 99.95% uptime SLA)  \n- **Infrastructure**: Terraform (CI/CD integration, 30% cost reduction via spot instances)  \n- **Message queues**: Kafka (asynchronous bidding events, 5ms avg latency)  \n- **APIs**: RESTful (gRPC for internal services, 200+ endpoints)  \n- **Monitoring**: Prometheus + Grafana (95th percentile latency < 15ms)  \n\n## Architecture Overview  \nThe system splits into three microservices:  \n1. **Bidding Service** (Go): Processes bids in <5ms using Kafka for event-driven workflows  \n2. **Auction Service** (Python): Manages real-time auctions with PostgreSQL's MVCC for consistent state  \n3. **Reporting Service** (Go): Aggregates metrics via Prometheus, exports to BigQuery daily  \n\nKubernetes manages autoscaling across 10+ nodes, with Terraform provisioning 12 clusters across 3 regions. PostgreSQL uses logical replication for cross-datacenter sync.  \n\n## Setup Instructions  \n1. Clone repo: `git clone https://github.com/alexj/real-time-ad-bidding.git`  \n2. Initialize infrastructure:  \n   ```bash  \n   terraform init && terraform apply --var region=us-east-1  \n   ```  \n3. Deploy services:  \n   ```bash  \n   kubectl apply -f k8s/manifests.yaml  \n   ```  \n4. Run tests:  \n   ```bash  \n   go test ./... && python3 tests/data_pipeline.py  \n   ```  \n5. Monitor with:  \n   ```bash  \n   kubectl port-forward service/grafana 3000  \n   ```  \n\nBuilt for adtech platforms needing sub-10ms bid processing. Metrics dashboard available at `http://grafana.local`."
+}
