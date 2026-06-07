@@ -2,8 +2,8 @@
 Main orchestration script for SPE synthetic dataset generation.
 
 Usage:
-    python -m spe.run_generation --num-personas 50 --concurrency 4
-    python -m spe.run_generation --num-personas 300 --concurrency 4 --skip-validation
+    python run_generation.py --num-personas 50 --concurrency 4
+    python run_generation.py --num-personas 300 --concurrency 4 --skip-validation
 """
 
 import argparse
@@ -15,14 +15,14 @@ from pathlib import Path
 
 import aiohttp
 
-from spe.generate.personas import generate_persona
-from spe.generate.planner import plan_documents, allocate_evidence
-from spe.generate.documents import generate_document
-from spe.generate.assembler import assemble_dataset
-from spe.generate.seed_generator import generate_all_seeds
-from spe.validate.shortcut_check import run_shortcut_checks
-from spe.validate.stats import run_stats_checks
-from spe.validate.cross_validate import run_validation_checks
+from generate.personas import generate_persona
+from generate.planner import plan_documents, allocate_evidence
+from generate.documents import generate_document
+from generate.assembler import assemble_dataset
+from generate.seed_generator import generate_all_seeds
+from validate.shortcut_check import run_shortcut_checks
+from validate.stats import run_stats_checks
+from validate.cross_validate import run_validation_checks
 
 # Directories
 BASE_DIR = Path(__file__).resolve().parent

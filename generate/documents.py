@@ -14,7 +14,7 @@ import logging
 import random
 from pathlib import Path
 
-from spe.generate.prompts import (
+from generate.prompts import (
     CV_GENERATION,
     README_GENERATION,
     RECOMMENDATION_GENERATION,
@@ -22,10 +22,10 @@ from spe.generate.prompts import (
     BLOG_GENERATION,
     build_skill_evidence_instructions,
 )
-from spe.generate.personas import llm_call
-from spe.generate.sanitizer import sanitize_document
-from spe.generate.phrase_tracker import PhraseTracker
-from spe.generate.seed_generator import pick_seed, format_seed_for_prompt
+from generate.personas import llm_call
+from generate.sanitizer import sanitize_document
+from generate.phrase_tracker import PhraseTracker
+from generate.seed_generator import pick_seed, format_seed_for_prompt
 
 logger = logging.getLogger(__name__)
 

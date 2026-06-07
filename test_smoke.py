@@ -1,10 +1,10 @@
 """Quick smoke test for SPE pipeline imports."""
-from spe.generate.hyperparams import (
+from generate.hyperparams import (
     get_taxonomy, get_archetypes, get_evidence_profiles,
     sample_archetype, sample_persona_hyperparams, sample_doc_count,
     sample_document_hyperparams, get_skills_by_category,
 )
-from spe.generate.prompts import build_skill_evidence_instructions
+from generate.prompts import build_skill_evidence_instructions
 
 # Test static data loading
 t = get_taxonomy()

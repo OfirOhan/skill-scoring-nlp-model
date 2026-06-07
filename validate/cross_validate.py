@@ -9,8 +9,8 @@ import aiohttp
 import logging
 from pathlib import Path
 
-from spe.generate.prompts import VALIDATION_SKILL_SHOWCASE, VALIDATION_ALLOCATION_RATIONALITY
-from spe.generate.personas import llm_call, _extract_json
+from generate.prompts import VALIDATION_SKILL_SHOWCASE, VALIDATION_ALLOCATION_RATIONALITY
+from generate.personas import llm_call, _extract_json
 
 logger = logging.getLogger(__name__)
 

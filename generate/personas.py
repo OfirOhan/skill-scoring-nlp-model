@@ -9,14 +9,14 @@ import logging
 import random as _random
 from pathlib import Path
 
-from spe.generate.hyperparams import (
+from generate.hyperparams import (
     sample_archetype,
     sample_persona_hyperparams,
     seniority_constraints,
     get_archetypes,
     get_skills_by_category,
 )
-from spe.generate.prompts import PERSONA_GENERATION
+from generate.prompts import PERSONA_GENERATION
 
 logger = logging.getLogger(__name__)
 

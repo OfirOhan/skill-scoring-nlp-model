@@ -9,7 +9,7 @@ import logging
 from pathlib import Path
 from collections import Counter
 
-from spe.generate.sanitizer import COMPILED_PATTERNS
+from generate.sanitizer import COMPILED_PATTERNS
 
 logger = logging.getLogger(__name__)
 

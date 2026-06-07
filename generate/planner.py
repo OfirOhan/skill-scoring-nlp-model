@@ -8,9 +8,9 @@ import aiohttp
 import logging
 from pathlib import Path
 
-from spe.generate.hyperparams import sample_doc_count, sample_document_hyperparams
-from spe.generate.prompts import DOCUMENT_PLANNING, EVIDENCE_ALLOCATION
-from spe.generate.personas import llm_call, _extract_json
+from generate.hyperparams import sample_doc_count, sample_document_hyperparams
+from generate.prompts import DOCUMENT_PLANNING, EVIDENCE_ALLOCATION
+from generate.personas import llm_call, _extract_json
 
 logger = logging.getLogger(__name__)
 
