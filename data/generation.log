@@ -614,3 +614,450 @@
 2026-06-01 20:43:23,291 [WARNING] spe.validate.cross_validate: Allocation rationality check failed for p_008: Expecting value: line 1 column 1 (char 0)
 2026-06-01 20:48:21,836 [INFO] spe.validate.cross_validate: Wrote allocation rationality report: /workspace/candidate_representor_agent/spe/data/reports/allocation_rationality_report.json
 2026-06-01 20:48:21,838 [INFO] __main__: All validation reports written to /workspace/candidate_representor_agent/spe/data/reports
+2026-06-07 19:07:26,852 [INFO] __main__: Starting generation: 50 personas, concurrency=2
+2026-06-07 19:07:26,853 [INFO] generate.seed_generator: Generating document structure seeds...
+2026-06-07 19:08:17,492 [INFO] generate.seed_generator: Generated 10 seeds for cv/junior
+2026-06-07 19:08:44,117 [INFO] generate.seed_generator: Generated 10 seeds for cv/mid
+2026-06-07 19:09:31,673 [INFO] generate.seed_generator: Generated 10 seeds for cv/senior
+2026-06-07 19:10:13,195 [INFO] generate.seed_generator: Generated 10 seeds for cv/staff
+2026-06-07 19:10:13,197 [INFO] generate.seed_generator: Total seeds for cv: 40
+2026-06-07 19:11:06,949 [INFO] generate.seed_generator: Generated 8 seeds for project_readme/all
+2026-06-07 19:11:06,950 [INFO] generate.seed_generator: Total seeds for project_readme: 8
+2026-06-07 19:11:33,499 [INFO] generate.seed_generator: Generated 8 seeds for recommendation/all
+2026-06-07 19:11:33,499 [INFO] generate.seed_generator: Total seeds for recommendation: 8
+2026-06-07 19:12:26,080 [INFO] generate.seed_generator: Generated 6 seeds for linkedin/all
+2026-06-07 19:12:26,081 [INFO] generate.seed_generator: Total seeds for linkedin: 6
+2026-06-07 19:13:06,751 [INFO] generate.seed_generator: Generated 6 seeds for blog/all
+2026-06-07 19:13:06,752 [INFO] generate.seed_generator: Total seeds for blog: 6
+2026-06-07 19:13:06,760 [INFO] generate.seed_generator: All seeds cached to /workspace/skill-scoring-nlp-model/data/structure_seeds.json
+2026-06-07 19:13:06,760 [INFO] __main__: Loaded 68 structure seeds
+2026-06-07 19:13:06,762 [INFO] generate.personas: Skipping p_000 — checkpoint exists
+2026-06-07 19:13:06,766 [INFO] generate.planner: Skipping doc planning for p_000 — checkpoint exists
+2026-06-07 19:13:06,770 [INFO] generate.planner: Skipping allocation for p_000 — checkpoint exists
+2026-06-07 19:13:06,780 [INFO] generate.personas: Skipping p_001 — checkpoint exists
+2026-06-07 19:13:06,784 [INFO] generate.planner: Skipping doc planning for p_001 — checkpoint exists
+2026-06-07 19:13:06,788 [INFO] generate.planner: Skipping allocation for p_001 — checkpoint exists
+2026-06-07 19:13:06,797 [INFO] generate.personas: Skipping p_002 — checkpoint exists
+2026-06-07 19:13:06,805 [INFO] generate.planner: Skipping doc planning for p_002 — checkpoint exists
+2026-06-07 19:13:06,809 [INFO] generate.planner: Skipping allocation for p_002 — checkpoint exists
+2026-06-07 19:13:06,819 [INFO] generate.personas: Skipping p_003 — checkpoint exists
+2026-06-07 19:13:06,823 [INFO] generate.planner: Skipping doc planning for p_003 — checkpoint exists
+2026-06-07 19:13:06,827 [INFO] generate.planner: Skipping allocation for p_003 — checkpoint exists
+2026-06-07 19:13:06,836 [INFO] generate.personas: Skipping p_004 — checkpoint exists
+2026-06-07 19:13:06,840 [INFO] generate.planner: Skipping doc planning for p_004 — checkpoint exists
+2026-06-07 19:13:06,844 [INFO] generate.planner: Skipping allocation for p_004 — checkpoint exists
+2026-06-07 19:13:06,853 [INFO] generate.personas: Skipping p_005 — checkpoint exists
+2026-06-07 19:13:06,858 [INFO] generate.planner: Skipping doc planning for p_005 — checkpoint exists
+2026-06-07 19:13:06,862 [INFO] generate.planner: Skipping allocation for p_005 — checkpoint exists
+2026-06-07 19:13:06,872 [INFO] generate.personas: Skipping p_006 — checkpoint exists
+2026-06-07 19:13:06,876 [INFO] generate.planner: Skipping doc planning for p_006 — checkpoint exists
+2026-06-07 19:13:06,880 [INFO] generate.planner: Skipping allocation for p_006 — checkpoint exists
+2026-06-07 19:13:06,889 [INFO] generate.personas: Skipping p_007 — checkpoint exists
+2026-06-07 19:13:06,893 [INFO] generate.planner: Skipping doc planning for p_007 — checkpoint exists
+2026-06-07 19:13:06,897 [INFO] generate.planner: Skipping allocation for p_007 — checkpoint exists
+2026-06-07 19:13:06,916 [INFO] generate.personas: Skipping p_008 — checkpoint exists
+2026-06-07 19:13:06,919 [INFO] generate.planner: Skipping doc planning for p_008 — checkpoint exists
+2026-06-07 19:13:06,923 [INFO] generate.planner: Skipping allocation for p_008 — checkpoint exists
+2026-06-07 19:13:06,933 [INFO] generate.personas: Skipping p_009 — checkpoint exists
+2026-06-07 19:13:06,938 [INFO] generate.planner: Skipping doc planning for p_009 — checkpoint exists
+2026-06-07 19:13:06,942 [INFO] generate.planner: Skipping allocation for p_009 — checkpoint exists
+2026-06-07 19:13:06,953 [INFO] generate.personas: Skipping p_010 — checkpoint exists
+2026-06-07 19:13:06,957 [INFO] generate.planner: Skipping doc planning for p_010 — checkpoint exists
+2026-06-07 19:13:06,961 [INFO] generate.planner: Skipping allocation for p_010 — checkpoint exists
+2026-06-07 19:13:06,970 [INFO] generate.personas: Skipping p_011 — checkpoint exists
+2026-06-07 19:13:06,974 [INFO] generate.planner: Skipping doc planning for p_011 — checkpoint exists
+2026-06-07 19:13:06,978 [INFO] generate.planner: Skipping allocation for p_011 — checkpoint exists
+2026-06-07 19:13:06,991 [INFO] generate.personas: Skipping p_012 — checkpoint exists
+2026-06-07 19:13:06,995 [INFO] generate.planner: Skipping doc planning for p_012 — checkpoint exists
+2026-06-07 19:13:06,999 [INFO] generate.planner: Skipping allocation for p_012 — checkpoint exists
+2026-06-07 19:13:07,016 [INFO] generate.personas: Skipping p_013 — checkpoint exists
+2026-06-07 19:13:07,020 [INFO] generate.planner: Skipping doc planning for p_013 — checkpoint exists
+2026-06-07 19:13:07,024 [INFO] generate.planner: Skipping allocation for p_013 — checkpoint exists
+2026-06-07 19:13:07,033 [INFO] generate.personas: Skipping p_014 — checkpoint exists
+2026-06-07 19:13:07,038 [INFO] generate.planner: Skipping doc planning for p_014 — checkpoint exists
+2026-06-07 19:13:07,042 [INFO] generate.planner: Skipping allocation for p_014 — checkpoint exists
+2026-06-07 19:13:07,053 [INFO] generate.personas: Skipping p_015 — checkpoint exists
+2026-06-07 19:13:07,057 [INFO] generate.planner: Skipping doc planning for p_015 — checkpoint exists
+2026-06-07 19:13:07,061 [INFO] generate.planner: Skipping allocation for p_015 — checkpoint exists
+2026-06-07 19:13:07,071 [INFO] generate.personas: Skipping p_016 — checkpoint exists
+2026-06-07 19:13:07,075 [INFO] generate.planner: Skipping doc planning for p_016 — checkpoint exists
+2026-06-07 19:13:07,079 [INFO] generate.planner: Skipping allocation for p_016 — checkpoint exists
+2026-06-07 19:13:07,090 [INFO] generate.personas: Skipping p_017 — checkpoint exists
+2026-06-07 19:13:07,094 [INFO] generate.planner: Skipping doc planning for p_017 — checkpoint exists
+2026-06-07 19:13:07,099 [INFO] generate.planner: Skipping allocation for p_017 — checkpoint exists
+2026-06-07 19:13:07,114 [INFO] generate.personas: Skipping p_018 — checkpoint exists
+2026-06-07 19:13:07,118 [INFO] generate.planner: Skipping doc planning for p_018 — checkpoint exists
+2026-06-07 19:13:07,122 [INFO] generate.planner: Skipping allocation for p_018 — checkpoint exists
+2026-06-07 19:13:07,131 [INFO] generate.personas: Skipping p_019 — checkpoint exists
+2026-06-07 19:13:07,135 [INFO] generate.planner: Skipping doc planning for p_019 — checkpoint exists
+2026-06-07 19:13:07,139 [INFO] generate.planner: Skipping allocation for p_019 — checkpoint exists
+2026-06-07 19:13:07,150 [INFO] generate.personas: Skipping p_020 — checkpoint exists
+2026-06-07 19:13:07,154 [INFO] generate.planner: Skipping doc planning for p_020 — checkpoint exists
+2026-06-07 19:13:07,158 [INFO] generate.planner: Skipping allocation for p_020 — checkpoint exists
+2026-06-07 19:13:07,168 [INFO] generate.personas: Skipping p_021 — checkpoint exists
+2026-06-07 19:13:07,172 [INFO] generate.planner: Skipping doc planning for p_021 — checkpoint exists
+2026-06-07 19:13:07,177 [INFO] generate.planner: Skipping allocation for p_021 — checkpoint exists
+2026-06-07 19:13:07,188 [INFO] generate.personas: Skipping p_022 — checkpoint exists
+2026-06-07 19:13:07,192 [INFO] generate.planner: Skipping doc planning for p_022 — checkpoint exists
+2026-06-07 19:13:07,197 [INFO] generate.planner: Skipping allocation for p_022 — checkpoint exists
+2026-06-07 19:13:07,213 [INFO] generate.personas: Skipping p_023 — checkpoint exists
+2026-06-07 19:13:07,218 [INFO] generate.planner: Skipping doc planning for p_023 — checkpoint exists
+2026-06-07 19:13:07,222 [INFO] generate.planner: Skipping allocation for p_023 — checkpoint exists
+2026-06-07 19:13:07,233 [INFO] generate.personas: Skipping p_024 — checkpoint exists
+2026-06-07 19:13:07,238 [INFO] generate.planner: Skipping doc planning for p_024 — checkpoint exists
+2026-06-07 19:13:07,242 [INFO] generate.planner: Skipping allocation for p_024 — checkpoint exists
+2026-06-07 19:13:07,253 [INFO] generate.personas: Skipping p_025 — checkpoint exists
+2026-06-07 19:13:07,258 [INFO] generate.planner: Skipping doc planning for p_025 — checkpoint exists
+2026-06-07 19:13:07,262 [INFO] generate.planner: Skipping allocation for p_025 — checkpoint exists
+2026-06-07 19:13:07,274 [INFO] generate.personas: Skipping p_026 — checkpoint exists
+2026-06-07 19:13:07,279 [INFO] generate.planner: Skipping doc planning for p_026 — checkpoint exists
+2026-06-07 19:13:07,283 [INFO] generate.planner: Skipping allocation for p_026 — checkpoint exists
+2026-06-07 19:13:07,292 [INFO] generate.personas: Skipping p_027 — checkpoint exists
+2026-06-07 19:13:07,296 [INFO] generate.planner: Skipping doc planning for p_027 — checkpoint exists
+2026-06-07 19:13:07,306 [INFO] generate.planner: Skipping allocation for p_027 — checkpoint exists
+2026-06-07 19:13:07,316 [INFO] generate.personas: Skipping p_028 — checkpoint exists
+2026-06-07 19:13:07,321 [INFO] generate.planner: Skipping doc planning for p_028 — checkpoint exists
+2026-06-07 19:13:07,325 [INFO] generate.planner: Skipping allocation for p_028 — checkpoint exists
+2026-06-07 19:13:07,336 [INFO] generate.personas: Skipping p_029 — checkpoint exists
+2026-06-07 19:13:07,341 [INFO] generate.planner: Skipping doc planning for p_029 — checkpoint exists
+2026-06-07 19:13:07,345 [INFO] generate.planner: Skipping allocation for p_029 — checkpoint exists
+2026-06-07 19:13:07,356 [INFO] generate.personas: Skipping p_030 — checkpoint exists
+2026-06-07 19:13:07,360 [INFO] generate.planner: Skipping doc planning for p_030 — checkpoint exists
+2026-06-07 19:13:07,364 [INFO] generate.planner: Skipping allocation for p_030 — checkpoint exists
+2026-06-07 19:13:07,392 [INFO] generate.personas: Skipping p_031 — checkpoint exists
+2026-06-07 19:13:07,397 [INFO] generate.planner: Skipping doc planning for p_031 — checkpoint exists
+2026-06-07 19:13:07,405 [INFO] generate.planner: Skipping allocation for p_031 — checkpoint exists
+2026-06-07 19:13:07,416 [INFO] generate.personas: Skipping p_032 — checkpoint exists
+2026-06-07 19:13:07,420 [INFO] generate.planner: Skipping doc planning for p_032 — checkpoint exists
+2026-06-07 19:13:07,424 [INFO] generate.planner: Skipping allocation for p_032 — checkpoint exists
+2026-06-07 19:13:07,435 [INFO] generate.personas: Skipping p_033 — checkpoint exists
+2026-06-07 19:13:07,439 [INFO] generate.planner: Skipping doc planning for p_033 — checkpoint exists
+2026-06-07 19:13:07,443 [INFO] generate.planner: Skipping allocation for p_033 — checkpoint exists
+2026-06-07 19:13:07,453 [INFO] generate.personas: Skipping p_034 — checkpoint exists
+2026-06-07 19:13:07,457 [INFO] generate.planner: Skipping doc planning for p_034 — checkpoint exists
+2026-06-07 19:13:07,462 [INFO] generate.planner: Skipping allocation for p_034 — checkpoint exists
+2026-06-07 19:13:07,472 [INFO] generate.personas: Skipping p_035 — checkpoint exists
+2026-06-07 19:13:07,476 [INFO] generate.planner: Skipping doc planning for p_035 — checkpoint exists
+2026-06-07 19:13:07,481 [INFO] generate.planner: Skipping allocation for p_035 — checkpoint exists
+2026-06-07 19:13:07,491 [INFO] generate.personas: Skipping p_036 — checkpoint exists
+2026-06-07 19:13:07,496 [INFO] generate.planner: Skipping doc planning for p_036 — checkpoint exists
+2026-06-07 19:13:07,499 [INFO] generate.planner: Skipping allocation for p_036 — checkpoint exists
+2026-06-07 19:13:07,528 [INFO] generate.personas: Skipping p_037 — checkpoint exists
+2026-06-07 19:13:07,533 [INFO] generate.planner: Skipping doc planning for p_037 — checkpoint exists
+2026-06-07 19:13:07,538 [INFO] generate.planner: Skipping allocation for p_037 — checkpoint exists
+2026-06-07 19:13:07,549 [INFO] generate.personas: Skipping p_038 — checkpoint exists
+2026-06-07 19:13:07,554 [INFO] generate.planner: Skipping doc planning for p_038 — checkpoint exists
+2026-06-07 19:13:07,559 [INFO] generate.planner: Skipping allocation for p_038 — checkpoint exists
+2026-06-07 19:13:07,571 [INFO] generate.personas: Skipping p_039 — checkpoint exists
+2026-06-07 19:13:07,576 [INFO] generate.planner: Skipping doc planning for p_039 — checkpoint exists
+2026-06-07 19:13:07,581 [INFO] generate.planner: Skipping allocation for p_039 — checkpoint exists
+2026-06-07 19:13:07,593 [INFO] generate.personas: Skipping p_040 — checkpoint exists
+2026-06-07 19:13:07,598 [INFO] generate.planner: Skipping doc planning for p_040 — checkpoint exists
+2026-06-07 19:13:07,608 [INFO] generate.planner: Skipping allocation for p_040 — checkpoint exists
+2026-06-07 19:13:07,620 [INFO] generate.personas: Skipping p_041 — checkpoint exists
+2026-06-07 19:13:07,625 [INFO] generate.planner: Skipping doc planning for p_041 — checkpoint exists
+2026-06-07 19:13:07,630 [INFO] generate.planner: Skipping allocation for p_041 — checkpoint exists
+2026-06-07 19:13:07,641 [INFO] generate.personas: Skipping p_042 — checkpoint exists
+2026-06-07 19:13:07,646 [INFO] generate.planner: Skipping doc planning for p_042 — checkpoint exists
+2026-06-07 19:13:07,651 [INFO] generate.planner: Skipping allocation for p_042 — checkpoint exists
+2026-06-07 19:13:07,664 [INFO] generate.personas: Skipping p_043 — checkpoint exists
+2026-06-07 19:13:07,669 [INFO] generate.planner: Skipping doc planning for p_043 — checkpoint exists
+2026-06-07 19:13:07,675 [INFO] generate.planner: Skipping allocation for p_043 — checkpoint exists
+2026-06-07 19:13:07,687 [INFO] generate.personas: Skipping p_044 — checkpoint exists
+2026-06-07 19:13:07,691 [INFO] generate.planner: Skipping doc planning for p_044 — checkpoint exists
+2026-06-07 19:13:07,696 [INFO] generate.planner: Skipping allocation for p_044 — checkpoint exists
+2026-06-07 19:13:07,711 [INFO] generate.personas: Skipping p_045 — checkpoint exists
+2026-06-07 19:13:07,716 [INFO] generate.planner: Skipping doc planning for p_045 — checkpoint exists
+2026-06-07 19:13:07,721 [INFO] generate.planner: Skipping allocation for p_045 — checkpoint exists
+2026-06-07 19:13:07,733 [INFO] generate.personas: Skipping p_046 — checkpoint exists
+2026-06-07 19:13:07,737 [INFO] generate.planner: Skipping doc planning for p_046 — checkpoint exists
+2026-06-07 19:13:07,741 [INFO] generate.planner: Skipping allocation for p_046 — checkpoint exists
+2026-06-07 19:13:07,752 [INFO] generate.personas: Skipping p_047 — checkpoint exists
+2026-06-07 19:13:07,757 [INFO] generate.planner: Skipping doc planning for p_047 — checkpoint exists
+2026-06-07 19:13:07,763 [INFO] generate.planner: Skipping allocation for p_047 — checkpoint exists
+2026-06-07 19:13:07,775 [INFO] generate.personas: Skipping p_048 — checkpoint exists
+2026-06-07 19:13:07,781 [INFO] generate.planner: Skipping doc planning for p_048 — checkpoint exists
+2026-06-07 19:13:07,785 [INFO] generate.planner: Skipping allocation for p_048 — checkpoint exists
+2026-06-07 19:13:07,795 [INFO] generate.personas: Skipping p_049 — checkpoint exists
+2026-06-07 19:13:07,800 [INFO] generate.planner: Skipping doc planning for p_049 — checkpoint exists
+2026-06-07 19:13:07,809 [INFO] generate.planner: Skipping allocation for p_049 — checkpoint exists
+2026-06-07 19:13:07,822 [INFO] generate.documents: Skipping d_p_000_00 — checkpoint exists
+2026-06-07 19:13:07,828 [INFO] generate.documents: Skipping d_p_000_01 — checkpoint exists
+2026-06-07 19:13:07,834 [INFO] generate.documents: Skipping d_p_000_02 — checkpoint exists
+2026-06-07 19:13:07,840 [INFO] generate.documents: Skipping d_p_000_03 — checkpoint exists
+2026-06-07 19:13:07,847 [INFO] generate.documents: Skipping d_p_000_04 — checkpoint exists
+2026-06-07 19:13:07,853 [INFO] generate.documents: Skipping d_p_001_00 — checkpoint exists
+2026-06-07 19:13:07,860 [INFO] generate.documents: Skipping d_p_001_01 — checkpoint exists
+2026-06-07 19:13:07,867 [INFO] generate.documents: Skipping d_p_001_02 — checkpoint exists
+2026-06-07 19:13:07,873 [INFO] generate.documents: Skipping d_p_001_03 — checkpoint exists
+2026-06-07 19:13:07,880 [INFO] generate.documents: Skipping d_p_002_00 — checkpoint exists
+2026-06-07 19:13:07,887 [INFO] generate.documents: Skipping d_p_002_01 — checkpoint exists
+2026-06-07 19:13:07,892 [INFO] generate.documents: Skipping d_p_002_02 — checkpoint exists
+2026-06-07 19:13:07,898 [INFO] generate.documents: Skipping d_p_002_03 — checkpoint exists
+2026-06-07 19:13:07,909 [INFO] generate.documents: Skipping d_p_003_00 — checkpoint exists
+2026-06-07 19:13:07,916 [INFO] generate.documents: Skipping d_p_003_01 — checkpoint exists
+2026-06-07 19:13:07,922 [INFO] generate.documents: Skipping d_p_003_02 — checkpoint exists
+2026-06-07 19:13:07,928 [INFO] generate.documents: Skipping d_p_003_03 — checkpoint exists
+2026-06-07 19:13:07,934 [INFO] generate.documents: Skipping d_p_003_04 — checkpoint exists
+2026-06-07 19:13:07,940 [INFO] generate.documents: Skipping d_p_004_00 — checkpoint exists
+2026-06-07 19:13:07,947 [INFO] generate.documents: Skipping d_p_004_01 — checkpoint exists
+2026-06-07 19:13:07,953 [INFO] generate.documents: Skipping d_p_004_02 — checkpoint exists
+2026-06-07 19:13:07,960 [INFO] generate.documents: Skipping d_p_005_00 — checkpoint exists
+2026-06-07 19:13:07,968 [INFO] generate.documents: Skipping d_p_005_01 — checkpoint exists
+2026-06-07 19:13:07,976 [INFO] generate.documents: Skipping d_p_005_02 — checkpoint exists
+2026-06-07 19:13:07,982 [INFO] generate.documents: Skipping d_p_005_03 — checkpoint exists
+2026-06-07 19:13:07,988 [INFO] generate.documents: Skipping d_p_006_00 — checkpoint exists
+2026-06-07 19:13:07,996 [INFO] generate.documents: Skipping d_p_006_01 — checkpoint exists
+2026-06-07 19:13:08,008 [INFO] generate.documents: Skipping d_p_006_02 — checkpoint exists
+2026-06-07 19:13:08,014 [INFO] generate.documents: Skipping d_p_007_00 — checkpoint exists
+2026-06-07 19:13:08,021 [INFO] generate.documents: Skipping d_p_007_01 — checkpoint exists
+2026-06-07 19:13:08,026 [INFO] generate.documents: Skipping d_p_007_02 — checkpoint exists
+2026-06-07 19:13:08,032 [INFO] generate.documents: Skipping d_p_008_00 — checkpoint exists
+2026-06-07 19:13:08,039 [INFO] generate.documents: Skipping d_p_008_01 — checkpoint exists
+2026-06-07 19:13:08,045 [INFO] generate.documents: Skipping d_p_008_02 — checkpoint exists
+2026-06-07 19:13:08,051 [INFO] generate.documents: Skipping d_p_008_03 — checkpoint exists
+2026-06-07 19:13:08,057 [INFO] generate.documents: Skipping d_p_008_04 — checkpoint exists
+2026-06-07 19:13:08,062 [INFO] generate.documents: Skipping d_p_009_00 — checkpoint exists
+2026-06-07 19:13:08,069 [INFO] generate.documents: Skipping d_p_009_01 — checkpoint exists
+2026-06-07 19:13:08,075 [INFO] generate.documents: Skipping d_p_009_02 — checkpoint exists
+2026-06-07 19:13:08,081 [INFO] generate.documents: Skipping d_p_009_03 — checkpoint exists
+2026-06-07 19:13:08,087 [INFO] generate.documents: Skipping d_p_009_04 — checkpoint exists
+2026-06-07 19:13:08,094 [INFO] generate.documents: Skipping d_p_009_05 — checkpoint exists
+2026-06-07 19:13:08,106 [INFO] generate.documents: Skipping d_p_009_06 — checkpoint exists
+2026-06-07 19:13:08,113 [INFO] generate.documents: Skipping d_p_010_00 — checkpoint exists
+2026-06-07 19:13:08,124 [INFO] generate.documents: Skipping d_p_010_01 — checkpoint exists
+2026-06-07 19:13:08,130 [INFO] generate.documents: Skipping d_p_010_02 — checkpoint exists
+2026-06-07 19:13:08,135 [INFO] generate.documents: Skipping d_p_010_03 — checkpoint exists
+2026-06-07 19:13:08,141 [INFO] generate.documents: Skipping d_p_010_04 — checkpoint exists
+2026-06-07 19:13:08,147 [INFO] generate.documents: Skipping d_p_011_00 — checkpoint exists
+2026-06-07 19:13:08,155 [INFO] generate.documents: Skipping d_p_011_01 — checkpoint exists
+2026-06-07 19:13:08,162 [INFO] generate.documents: Skipping d_p_011_02 — checkpoint exists
+2026-06-07 19:13:08,167 [INFO] generate.documents: Skipping d_p_011_03 — checkpoint exists
+2026-06-07 19:13:08,174 [INFO] generate.documents: Skipping d_p_012_00 — checkpoint exists
+2026-06-07 19:13:08,180 [INFO] generate.documents: Skipping d_p_012_01 — checkpoint exists
+2026-06-07 19:13:08,186 [INFO] generate.documents: Skipping d_p_013_00 — checkpoint exists
+2026-06-07 19:13:08,192 [INFO] generate.documents: Skipping d_p_013_01 — checkpoint exists
+2026-06-07 19:13:08,197 [INFO] generate.documents: Skipping d_p_013_02 — checkpoint exists
+2026-06-07 19:13:08,207 [INFO] generate.documents: Skipping d_p_013_03 — checkpoint exists
+2026-06-07 19:13:08,212 [INFO] generate.documents: Skipping d_p_013_04 — checkpoint exists
+2026-06-07 19:13:08,219 [INFO] generate.documents: Skipping d_p_014_00 — checkpoint exists
+2026-06-07 19:13:08,226 [INFO] generate.documents: Skipping d_p_014_01 — checkpoint exists
+2026-06-07 19:13:08,232 [INFO] generate.documents: Skipping d_p_014_02 — checkpoint exists
+2026-06-07 19:13:08,238 [INFO] generate.documents: Skipping d_p_015_00 — checkpoint exists
+2026-06-07 19:13:08,244 [INFO] generate.documents: Skipping d_p_015_01 — checkpoint exists
+2026-06-07 19:13:08,250 [INFO] generate.documents: Skipping d_p_015_02 — checkpoint exists
+2026-06-07 19:13:08,257 [INFO] generate.documents: Skipping d_p_016_00 — checkpoint exists
+2026-06-07 19:13:08,263 [INFO] generate.documents: Skipping d_p_016_01 — checkpoint exists
+2026-06-07 19:13:08,269 [INFO] generate.documents: Skipping d_p_016_02 — checkpoint exists
+2026-06-07 19:13:08,274 [INFO] generate.documents: Skipping d_p_017_00 — checkpoint exists
+2026-06-07 19:13:08,282 [INFO] generate.documents: Skipping d_p_017_01 — checkpoint exists
+2026-06-07 19:13:08,289 [INFO] generate.documents: Skipping d_p_017_02 — checkpoint exists
+2026-06-07 19:13:08,295 [INFO] generate.documents: Skipping d_p_017_03 — checkpoint exists
+2026-06-07 19:13:08,306 [INFO] generate.documents: Skipping d_p_017_04 — checkpoint exists
+2026-06-07 19:13:08,312 [INFO] generate.documents: Skipping d_p_018_00 — checkpoint exists
+2026-06-07 19:13:08,320 [INFO] generate.documents: Skipping d_p_018_01 — checkpoint exists
+2026-06-07 19:13:08,326 [INFO] generate.documents: Skipping d_p_018_02 — checkpoint exists
+2026-06-07 19:13:08,332 [INFO] generate.documents: Skipping d_p_018_03 — checkpoint exists
+2026-06-07 19:13:08,337 [INFO] generate.documents: Skipping d_p_019_00 — checkpoint exists
+2026-06-07 19:13:08,345 [INFO] generate.documents: Skipping d_p_019_01 — checkpoint exists
+2026-06-07 19:13:08,350 [INFO] generate.documents: Skipping d_p_019_02 — checkpoint exists
+2026-06-07 19:13:08,355 [INFO] generate.documents: Skipping d_p_019_03 — checkpoint exists
+2026-06-07 19:13:08,362 [INFO] generate.documents: Skipping d_p_020_00 — checkpoint exists
+2026-06-07 19:13:08,368 [INFO] generate.documents: Skipping d_p_020_01 — checkpoint exists
+2026-06-07 19:13:08,374 [INFO] generate.documents: Skipping d_p_021_00 — checkpoint exists
+2026-06-07 19:13:08,381 [INFO] generate.documents: Skipping d_p_021_01 — checkpoint exists
+2026-06-07 19:13:08,387 [INFO] generate.documents: Skipping d_p_021_02 — checkpoint exists
+2026-06-07 19:13:08,393 [INFO] generate.documents: Skipping d_p_021_03 — checkpoint exists
+2026-06-07 19:13:08,399 [INFO] generate.documents: Skipping d_p_021_04 — checkpoint exists
+2026-06-07 19:13:08,410 [INFO] generate.documents: Skipping d_p_021_05 — checkpoint exists
+2026-06-07 19:13:08,416 [INFO] generate.documents: Skipping d_p_022_00 — checkpoint exists
+2026-06-07 19:13:08,423 [INFO] generate.documents: Skipping d_p_022_01 — checkpoint exists
+2026-06-07 19:13:08,437 [INFO] generate.documents: Skipping d_p_022_02 — checkpoint exists
+2026-06-07 19:13:08,443 [INFO] generate.documents: Skipping d_p_023_00 — checkpoint exists
+2026-06-07 19:13:08,450 [INFO] generate.documents: Skipping d_p_023_01 — checkpoint exists
+2026-06-07 19:13:08,456 [INFO] generate.documents: Skipping d_p_023_02 — checkpoint exists
+2026-06-07 19:13:08,461 [INFO] generate.documents: Skipping d_p_024_00 — checkpoint exists
+2026-06-07 19:13:08,468 [INFO] generate.documents: Skipping d_p_024_01 — checkpoint exists
+2026-06-07 19:13:08,474 [INFO] generate.documents: Skipping d_p_024_02 — checkpoint exists
+2026-06-07 19:13:08,481 [INFO] generate.documents: Skipping d_p_024_03 — checkpoint exists
+2026-06-07 19:13:08,487 [INFO] generate.documents: Skipping d_p_025_00 — checkpoint exists
+2026-06-07 19:13:08,494 [INFO] generate.documents: Skipping d_p_025_01 — checkpoint exists
+2026-06-07 19:13:08,505 [INFO] generate.documents: Skipping d_p_025_02 — checkpoint exists
+2026-06-07 19:13:08,511 [INFO] generate.documents: Skipping d_p_025_03 — checkpoint exists
+2026-06-07 19:13:08,517 [INFO] generate.documents: Skipping d_p_025_04 — checkpoint exists
+2026-06-07 19:13:08,522 [INFO] generate.documents: Skipping d_p_025_05 — checkpoint exists
+2026-06-07 19:13:08,528 [INFO] generate.documents: Skipping d_p_026_00 — checkpoint exists
+2026-06-07 19:13:08,534 [INFO] generate.documents: Skipping d_p_026_01 — checkpoint exists
+2026-06-07 19:13:08,540 [INFO] generate.documents: Skipping d_p_026_02 — checkpoint exists
+2026-06-07 19:13:08,545 [INFO] generate.documents: Skipping d_p_027_00 — checkpoint exists
+2026-06-07 19:13:08,551 [INFO] generate.documents: Skipping d_p_027_01 — checkpoint exists
+2026-06-07 19:13:08,557 [INFO] generate.documents: Skipping d_p_027_02 — checkpoint exists
+2026-06-07 19:13:08,562 [INFO] generate.documents: Skipping d_p_027_03 — checkpoint exists
+2026-06-07 19:13:08,567 [INFO] generate.documents: Skipping d_p_027_04 — checkpoint exists
+2026-06-07 19:13:08,574 [INFO] generate.documents: Skipping d_p_028_00 — checkpoint exists
+2026-06-07 19:13:08,581 [INFO] generate.documents: Skipping d_p_028_01 — checkpoint exists
+2026-06-07 19:13:08,586 [INFO] generate.documents: Skipping d_p_028_02 — checkpoint exists
+2026-06-07 19:13:08,591 [INFO] generate.documents: Skipping d_p_029_00 — checkpoint exists
+2026-06-07 19:13:08,598 [INFO] generate.documents: Skipping d_p_029_01 — checkpoint exists
+2026-06-07 19:13:08,608 [INFO] generate.documents: Skipping d_p_029_02 — checkpoint exists
+2026-06-07 19:13:08,613 [INFO] generate.documents: Skipping d_p_029_03 — checkpoint exists
+2026-06-07 19:13:08,619 [INFO] generate.documents: Skipping d_p_030_00 — checkpoint exists
+2026-06-07 19:13:08,626 [INFO] generate.documents: Skipping d_p_030_01 — checkpoint exists
+2026-06-07 19:13:08,631 [INFO] generate.documents: Skipping d_p_030_02 — checkpoint exists
+2026-06-07 19:13:08,637 [INFO] generate.documents: Skipping d_p_030_03 — checkpoint exists
+2026-06-07 19:13:08,642 [INFO] generate.documents: Skipping d_p_031_00 — checkpoint exists
+2026-06-07 19:13:08,648 [INFO] generate.documents: Skipping d_p_031_01 — checkpoint exists
+2026-06-07 19:13:08,654 [INFO] generate.documents: Skipping d_p_031_02 — checkpoint exists
+2026-06-07 19:13:08,659 [INFO] generate.documents: Skipping d_p_031_03 — checkpoint exists
+2026-06-07 19:13:08,665 [INFO] generate.documents: Skipping d_p_031_04 — checkpoint exists
+2026-06-07 19:13:08,671 [INFO] generate.documents: Skipping d_p_032_00 — checkpoint exists
+2026-06-07 19:13:08,678 [INFO] generate.documents: Skipping d_p_032_01 — checkpoint exists
+2026-06-07 19:13:08,683 [INFO] generate.documents: Skipping d_p_032_02 — checkpoint exists
+2026-06-07 19:13:08,688 [INFO] generate.documents: Skipping d_p_032_03 — checkpoint exists
+2026-06-07 19:13:08,693 [INFO] generate.documents: Skipping d_p_032_04 — checkpoint exists
+2026-06-07 19:13:08,699 [INFO] generate.documents: Skipping d_p_032_05 — checkpoint exists
+2026-06-07 19:13:08,708 [INFO] generate.documents: Skipping d_p_032_06 — checkpoint exists
+2026-06-07 19:13:08,714 [INFO] generate.documents: Skipping d_p_033_00 — checkpoint exists
+2026-06-07 19:13:08,721 [INFO] generate.documents: Skipping d_p_033_01 — checkpoint exists
+2026-06-07 19:13:08,726 [INFO] generate.documents: Skipping d_p_033_02 — checkpoint exists
+2026-06-07 19:13:08,731 [INFO] generate.documents: Skipping d_p_033_03 — checkpoint exists
+2026-06-07 19:13:08,735 [INFO] generate.documents: Skipping d_p_034_00 — checkpoint exists
+2026-06-07 19:13:08,741 [INFO] generate.documents: Skipping d_p_034_01 — checkpoint exists
+2026-06-07 19:13:08,746 [INFO] generate.documents: Skipping d_p_034_02 — checkpoint exists
+2026-06-07 19:13:08,752 [INFO] generate.documents: Skipping d_p_034_03 — checkpoint exists
+2026-06-07 19:13:08,757 [INFO] generate.documents: Skipping d_p_034_04 — checkpoint exists
+2026-06-07 19:13:08,763 [INFO] generate.documents: Skipping d_p_035_00 — checkpoint exists
+2026-06-07 19:13:08,770 [INFO] generate.documents: Skipping d_p_035_01 — checkpoint exists
+2026-06-07 19:13:08,775 [INFO] generate.documents: Skipping d_p_035_02 — checkpoint exists
+2026-06-07 19:13:08,780 [INFO] generate.documents: Skipping d_p_036_00 — checkpoint exists
+2026-06-07 19:13:08,786 [INFO] generate.documents: Skipping d_p_036_01 — checkpoint exists
+2026-06-07 19:13:08,790 [INFO] generate.documents: Skipping d_p_036_02 — checkpoint exists
+2026-06-07 19:13:08,795 [INFO] generate.documents: Skipping d_p_037_00 — checkpoint exists
+2026-06-07 19:13:08,805 [INFO] generate.documents: Skipping d_p_037_01 — checkpoint exists
+2026-06-07 19:13:08,811 [INFO] generate.documents: Skipping d_p_037_02 — checkpoint exists
+2026-06-07 19:13:08,816 [INFO] generate.documents: Skipping d_p_037_03 — checkpoint exists
+2026-06-07 19:13:08,822 [INFO] generate.documents: Skipping d_p_038_00 — checkpoint exists
+2026-06-07 19:13:08,828 [INFO] generate.documents: Skipping d_p_038_01 — checkpoint exists
+2026-06-07 19:13:08,834 [INFO] generate.documents: Skipping d_p_038_02 — checkpoint exists
+2026-06-07 19:13:08,839 [INFO] generate.documents: Skipping d_p_038_03 — checkpoint exists
+2026-06-07 19:13:09,051 [INFO] generate.documents: Skipping d_p_039_00 — checkpoint exists
+2026-06-07 19:13:09,059 [INFO] generate.documents: Skipping d_p_039_01 — checkpoint exists
+2026-06-07 19:13:09,065 [INFO] generate.documents: Skipping d_p_040_00 — checkpoint exists
+2026-06-07 19:13:09,073 [INFO] generate.documents: Skipping d_p_040_01 — checkpoint exists
+2026-06-07 19:13:09,079 [INFO] generate.documents: Skipping d_p_040_02 — checkpoint exists
+2026-06-07 19:13:09,086 [INFO] generate.documents: Skipping d_p_040_03 — checkpoint exists
+2026-06-07 19:13:09,093 [INFO] generate.documents: Skipping d_p_040_04 — checkpoint exists
+2026-06-07 19:13:09,098 [INFO] generate.documents: Skipping d_p_040_05 — checkpoint exists
+2026-06-07 19:13:09,109 [INFO] generate.documents: Skipping d_p_041_00 — checkpoint exists
+2026-06-07 19:13:09,116 [INFO] generate.documents: Skipping d_p_041_01 — checkpoint exists
+2026-06-07 19:13:09,122 [INFO] generate.documents: Skipping d_p_041_02 — checkpoint exists
+2026-06-07 19:13:09,128 [INFO] generate.documents: Skipping d_p_041_03 — checkpoint exists
+2026-06-07 19:13:09,135 [INFO] generate.documents: Skipping d_p_042_00 — checkpoint exists
+2026-06-07 19:13:09,141 [INFO] generate.documents: Skipping d_p_042_01 — checkpoint exists
+2026-06-07 19:13:09,147 [INFO] generate.documents: Skipping d_p_042_02 — checkpoint exists
+2026-06-07 19:13:09,154 [INFO] generate.documents: Skipping d_p_042_03 — checkpoint exists
+2026-06-07 19:13:09,160 [INFO] generate.documents: Skipping d_p_042_04 — checkpoint exists
+2026-06-07 19:13:09,166 [INFO] generate.documents: Skipping d_p_042_05 — checkpoint exists
+2026-06-07 19:13:09,172 [INFO] generate.documents: Skipping d_p_043_00 — checkpoint exists
+2026-06-07 19:13:09,180 [INFO] generate.documents: Skipping d_p_043_01 — checkpoint exists
+2026-06-07 19:13:09,187 [INFO] generate.documents: Skipping d_p_043_02 — checkpoint exists
+2026-06-07 19:13:09,192 [INFO] generate.documents: Skipping d_p_043_03 — checkpoint exists
+2026-06-07 19:13:09,198 [INFO] generate.documents: Skipping d_p_043_04 — checkpoint exists
+2026-06-07 19:13:09,210 [INFO] generate.documents: Skipping d_p_043_05 — checkpoint exists
+2026-06-07 19:13:09,218 [INFO] generate.documents: Skipping d_p_044_00 — checkpoint exists
+2026-06-07 19:13:09,225 [INFO] generate.documents: Skipping d_p_044_01 — checkpoint exists
+2026-06-07 19:13:09,231 [INFO] generate.documents: Skipping d_p_044_02 — checkpoint exists
+2026-06-07 19:13:09,238 [INFO] generate.documents: Skipping d_p_045_00 — checkpoint exists
+2026-06-07 19:13:09,245 [INFO] generate.documents: Skipping d_p_045_01 — checkpoint exists
+2026-06-07 19:13:09,267 [INFO] generate.documents: Skipping d_p_045_02 — checkpoint exists
+2026-06-07 19:13:09,273 [INFO] generate.documents: Skipping d_p_045_03 — checkpoint exists
+2026-06-07 19:13:09,279 [INFO] generate.documents: Skipping d_p_045_04 — checkpoint exists
+2026-06-07 19:13:09,285 [INFO] generate.documents: Skipping d_p_046_00 — checkpoint exists
+2026-06-07 19:13:09,293 [INFO] generate.documents: Skipping d_p_046_01 — checkpoint exists
+2026-06-07 19:13:09,299 [INFO] generate.documents: Skipping d_p_046_02 — checkpoint exists
+2026-06-07 19:13:09,310 [INFO] generate.documents: Skipping d_p_046_03 — checkpoint exists
+2026-06-07 19:13:09,317 [INFO] generate.documents: Skipping d_p_046_04 — checkpoint exists
+2026-06-07 19:13:09,323 [INFO] generate.documents: Skipping d_p_047_00 — checkpoint exists
+2026-06-07 19:13:09,331 [INFO] generate.documents: Skipping d_p_047_01 — checkpoint exists
+2026-06-07 19:13:09,337 [INFO] generate.documents: Skipping d_p_047_02 — checkpoint exists
+2026-06-07 19:13:09,344 [INFO] generate.documents: Skipping d_p_048_00 — checkpoint exists
+2026-06-07 19:13:09,351 [INFO] generate.documents: Skipping d_p_048_01 — checkpoint exists
+2026-06-07 19:13:09,358 [INFO] generate.documents: Skipping d_p_048_02 — checkpoint exists
+2026-06-07 19:13:09,364 [INFO] generate.documents: Skipping d_p_049_00 — checkpoint exists
+2026-06-07 19:13:09,371 [INFO] generate.documents: Skipping d_p_049_01 — checkpoint exists
+2026-06-07 19:13:09,378 [INFO] generate.documents: Skipping d_p_049_02 — checkpoint exists
+2026-06-07 19:13:09,384 [INFO] generate.documents: Skipping d_p_049_03 — checkpoint exists
+2026-06-07 19:13:09,389 [INFO] __main__: Completed p_000: Alexandra Chen — 12 skills, 5 docs
+2026-06-07 19:13:09,390 [INFO] __main__: Completed p_001: Aiden Clarke — 13 skills, 4 docs
+2026-06-07 19:13:09,391 [INFO] __main__: Completed p_002: Emily J. Carter — 11 skills, 4 docs
+2026-06-07 19:13:09,391 [INFO] __main__: Completed p_003: Emily Chen — 10 skills, 5 docs
+2026-06-07 19:13:09,392 [INFO] __main__: Completed p_004: Emily J. Rodriguez — 10 skills, 3 docs
+2026-06-07 19:13:09,393 [INFO] __main__: Completed p_005: Emily Carter — 9 skills, 4 docs
+2026-06-07 19:13:09,393 [INFO] __main__: Completed p_006: Alexandra Chen — 10 skills, 3 docs
+2026-06-07 19:13:09,394 [INFO] __main__: Completed p_007: Alexandra Chen — 10 skills, 3 docs
+2026-06-07 19:13:09,394 [INFO] __main__: Completed p_008: Alex Carter — 14 skills, 5 docs
+2026-06-07 19:13:09,395 [INFO] __main__: Completed p_009: Alex Carter — 13 skills, 7 docs
+2026-06-07 19:13:09,396 [INFO] __main__: Completed p_010: Jordan Carter — 8 skills, 5 docs
+2026-06-07 19:13:09,396 [INFO] __main__: Completed p_011: Elena Voss — 16 skills, 4 docs
+2026-06-07 19:13:09,397 [INFO] __main__: Completed p_012: Alex Chen — 10 skills, 2 docs
+2026-06-07 19:13:09,398 [INFO] __main__: Completed p_013: Alex Carter — 12 skills, 5 docs
+2026-06-07 19:13:09,398 [INFO] __main__: Completed p_014: Aisha Khan — 15 skills, 3 docs
+2026-06-07 19:13:09,399 [INFO] __main__: Completed p_015: Elena Martínez — 9 skills, 3 docs
+2026-06-07 19:13:09,399 [INFO] __main__: Completed p_016: Emily Carter — 10 skills, 3 docs
+2026-06-07 19:13:09,405 [INFO] __main__: Completed p_017: Emily Carter — 12 skills, 5 docs
+2026-06-07 19:13:09,405 [INFO] __main__: Completed p_018: Alex Carter — 14 skills, 4 docs
+2026-06-07 19:13:09,406 [INFO] __main__: Completed p_019: Alex Carter — 14 skills, 4 docs
+2026-06-07 19:13:09,407 [INFO] __main__: Completed p_020: Alex Morgan — 10 skills, 2 docs
+2026-06-07 19:13:09,407 [INFO] __main__: Completed p_021: Alex Rivera — 9 skills, 6 docs
+2026-06-07 19:13:09,408 [INFO] __main__: Completed p_022: Alex Carter — 12 skills, 3 docs
+2026-06-07 19:13:09,409 [INFO] __main__: Completed p_023: Emily Carter — 11 skills, 3 docs
+2026-06-07 19:13:09,409 [INFO] __main__: Completed p_024: Alexandra Chen — 10 skills, 4 docs
+2026-06-07 19:13:09,410 [INFO] __main__: Completed p_025: Emily Johnson — 9 skills, 6 docs
+2026-06-07 19:13:09,411 [INFO] __main__: Completed p_026: Alexandra 'Alex' Chen — 12 skills, 3 docs
+2026-06-07 19:13:09,411 [INFO] __main__: Completed p_027: Alex Johnson — 10 skills, 5 docs
+2026-06-07 19:13:09,412 [INFO] __main__: Completed p_028: Emily Chen — 11 skills, 3 docs
+2026-06-07 19:13:09,412 [INFO] __main__: Completed p_029: Alexandra M. Chen — 10 skills, 4 docs
+2026-06-07 19:13:09,413 [INFO] __main__: Completed p_030: James Carter — 11 skills, 4 docs
+2026-06-07 19:13:09,414 [INFO] __main__: Completed p_031: Alex Morgan — 13 skills, 5 docs
+2026-06-07 19:13:09,414 [INFO] __main__: Completed p_032: Elena Voss — 14 skills, 7 docs
+2026-06-07 19:13:09,415 [INFO] __main__: Completed p_033: Alex Carter — 15 skills, 4 docs
+2026-06-07 19:13:09,416 [INFO] __main__: Completed p_034: Aarav Mehta — 9 skills, 5 docs
+2026-06-07 19:13:09,416 [INFO] __main__: Completed p_035: Emily Carter — 11 skills, 3 docs
+2026-06-07 19:13:09,417 [INFO] __main__: Completed p_036: Alexandra Chen — 13 skills, 3 docs
+2026-06-07 19:13:09,417 [INFO] __main__: Completed p_037: Emily Carter — 10 skills, 4 docs
+2026-06-07 19:13:09,418 [INFO] __main__: Completed p_038: Alexandra 'Alex' Mitchell — 12 skills, 4 docs
+2026-06-07 19:13:09,419 [INFO] __main__: Completed p_039: Liam Carter — 10 skills, 2 docs
+2026-06-07 19:13:09,419 [INFO] __main__: Completed p_040: Alexandra Chen — 15 skills, 6 docs
+2026-06-07 19:13:09,420 [INFO] __main__: Completed p_041: Emily Chen — 11 skills, 4 docs
+2026-06-07 19:13:09,421 [INFO] __main__: Completed p_042: Alex Chen — 11 skills, 6 docs
+2026-06-07 19:13:09,422 [INFO] __main__: Completed p_043: Alex Carter — 9 skills, 6 docs
+2026-06-07 19:13:09,423 [INFO] __main__: Completed p_044: Alex Carter — 11 skills, 3 docs
+2026-06-07 19:13:09,423 [INFO] __main__: Completed p_045: Alexandra Chen — 14 skills, 5 docs
+2026-06-07 19:13:09,424 [INFO] __main__: Completed p_046: Alexandra Chen — 10 skills, 5 docs
+2026-06-07 19:13:09,424 [INFO] __main__: Completed p_047: Alex Morgan — 11 skills, 3 docs
+2026-06-07 19:13:09,425 [INFO] __main__: Completed p_048: Alexandra 'Lexi' Mitchell — 9 skills, 3 docs
+2026-06-07 19:13:09,426 [INFO] __main__: Completed p_049: Alex Johnson — 14 skills, 4 docs
+2026-06-07 19:13:09,426 [INFO] __main__: Generation complete: 50/50 personas succeeded
+2026-06-07 19:13:09,427 [INFO] __main__: Assembling final dataset...
+2026-06-07 19:13:10,315 [INFO] generate.assembler: Wrote 50 personas to /workspace/skill-scoring-nlp-model/data/personas.json
+2026-06-07 19:13:10,343 [INFO] generate.assembler: Wrote 206 documents to /workspace/skill-scoring-nlp-model/data/documents_db.json
+2026-06-07 19:13:10,344 [INFO] generate.assembler: Dataset summary:
+2026-06-07 19:13:10,345 [INFO] generate.assembler:   Personas: 50
+2026-06-07 19:13:10,346 [INFO] generate.assembler:   Total skills: 569
+2026-06-07 19:13:10,346 [INFO] generate.assembler:   Total documents: 206
+2026-06-07 19:13:10,347 [INFO] generate.assembler:     blog: 21
+2026-06-07 19:13:10,347 [INFO] generate.assembler:     cv: 50
+2026-06-07 19:13:10,348 [INFO] generate.assembler:     linkedin: 10
+2026-06-07 19:13:10,348 [INFO] generate.assembler:     project_readme: 79
+2026-06-07 19:13:10,349 [INFO] generate.assembler:     recommendation: 46
+2026-06-07 19:13:10,349 [INFO] __main__: Running validation...
+2026-06-07 19:13:10,396 [INFO] __main__: Running anti-shortcut checks...
+2026-06-07 19:14:02,238 [INFO] validate.shortcut_check: Wrote shortcut check report: /workspace/skill-scoring-nlp-model/data/reports/shortcut_check_report.json
+2026-06-07 19:14:02,239 [INFO] __main__: Running statistical checks...
+2026-06-07 19:14:02,339 [INFO] validate.stats: Wrote stats report: /workspace/skill-scoring-nlp-model/data/reports/stats_report.json
+2026-06-07 19:14:02,340 [INFO] validate.cross_validate: Running LLM Check A: Per-document skill showcase...
+2026-06-07 19:52:56,806 [INFO] validate.cross_validate: Wrote skill showcase report: /workspace/skill-scoring-nlp-model/data/reports/skill_showcase_report.json
+2026-06-07 19:52:56,807 [INFO] validate.cross_validate: Running LLM Check B: Allocation rationality...
+2026-06-07 20:00:14,183 [WARNING] validate.cross_validate: Allocation rationality check failed for p_031: Expecting value: line 1 column 1 (char 0)
+2026-06-07 20:03:19,742 [INFO] validate.cross_validate: Wrote allocation rationality report: /workspace/skill-scoring-nlp-model/data/reports/allocation_rationality_report.json
+2026-06-07 20:03:19,744 [INFO] __main__: All validation reports written to /workspace/skill-scoring-nlp-model/data/reports
