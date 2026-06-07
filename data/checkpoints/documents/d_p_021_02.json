@@ -1,22 +1,28 @@
 {
   "doc_id": "d_p_021_02",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_021",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "solo",
-    "jargon_density": "heavy"
+    "recommender_role": "peer",
+    "recommender_closeness": "occasional",
+    "company_type": "enterprise",
+    "company_size": "large (500+)"
   },
   "skill_evidence": {
-    "App Store deployment": 2,
-    "Flutter": 1,
-    "GraphQL": 3,
-    "Kotlin": 1,
-    "Mobile CI/CD": 1,
-    "REST API design": 4,
-    "React": 1,
-    "Swift": 1,
-    "TypeScript": 1
+    "A/B testing": 1,
+    "Apache Airflow": 1,
+    "Data modeling": 1,
+    "Data visualization (Matplotlib/Plotly)": 1,
+    "ETL pipeline design": 1,
+    "Exploratory data analysis": 1,
+    "Feature engineering": 1,
+    "NumPy": 1,
+    "Pandas": 1,
+    "Python": 1,
+    "REST API design": 1,
+    "SQL analytics": 1,
+    "dbt": 1,
+    "scikit-learn": 1
   },
-  "text": "# MobileSyncPro  \nReal-time multiplayer synchronization system for low-latency mobile gaming experiences  \n\n## Description  \nMobileSyncPro enables seamless, low-latency multiplayer synchronization for mobile games via a distributed architecture optimized for 5G/4G networks. Benchmarked at **<50ms latency** (99.9% packet retention) and **<100ms sync drift** across 100+ concurrent clients. Designed for hobbyist developers seeking production-grade networking infrastructure without framework overhead.  \n\n## Tech Stack  \n- **WebSocket** (binary framing, TLS 1.3)  \n- **REST API** (OpenAPI v3, rate-limited endpoints)  \n- **GraphQL** (subscription-based state sync, 20+ resolvers)  \n- **Redis** (pub/sub for event broadcasting, 500+ QPS)  \n- **C++** (core networking layer, 95% cycle-accurate timing)  \n- **Android NDK** (native client integration, 10ms jitter reduction)  \n\n## Architecture  \n**Client Sync Layer**:  \n- Binary delta-encoding (83% bandwidth reduction)  \n- E2EE with AES-256-GCM (12-rounds)  \n- 32-bit timestamp sync (±1ms precision)  \n\n**Server Orchestration**:  \n- Distributed consensus (Raft-based leader election)  \n- Load-balanced WebSocket pools (10+ nodes)  \n- Dynamic QoS tiering (Gold/Platinum tiers)  \n\n**Data Pipeline**:  \n- Redis pub/sub for event broadcasting (500+ QPS)  \n- REST API for metadata management (200+ endpoints)  \n- GraphQL subscriptions for state deltas  \n\n## Setup  \n```bash  \ngit clone https://github.com/alex-rivera/MobileSyncPro.git  \ncd MobileSyncPro  \n./build.sh # Compiles C++ core + Android NDK modules  \ndocker-compose up -d # Launches Redis + REST API  \n```  \n\n## Skills  \n- **REST API design**: Built 20+ endpoints with 99.95% uptime (2023)  \n- **GraphQL**: Integrated subscription-based state sync (300+ resolvers)  \n- **App Store deployment**: Minimal CI/CD for iOS/macOS (100% pass rate)  \n\n## Contributing  \nPull requests welcome. Focus on latency optimization, protocol robustness, or integration with Unity/Unreal.  \n\n*Metrics: 99.98% packet retention, <50ms latency, 100+ concurrent clients*"
+  "text": "Takeshi and I first collaborated during a campaign to boost customer retention at NijiMart. When our team noticed a 20% drop in repeat purchases during the holiday season, he proposed analyzing user behavior across our app’s onboarding flow. Over two weeks, he mapped pain points by segmenting users into cohorts based on engagement patterns. His findings revealed that 35% of users abandoned the checkout process after the second step, a detail we’d overlooked. By refining the flow and adding a progress tracker, we recovered 12% of lost conversions. It wasn’t a flashy solution, but it felt *right*—data-driven, patient, and grounded in real user needs.  \n\nTakeshi is the kind of person who’ll spend an hour refining a chart’s axis labels to ensure clarity, then double-check with a teammate to confirm it aligns with the audience’s priorities. He’s not the loudest in meetings, but his questions often cut through noise. When our analytics team debated whether to prioritize customer acquisition or retention, he quietly built a model comparing both paths, letting the numbers speak.  \n\nWhat stands out is his quiet persistence. He’ll ask, “What if we tried X?” not as a brainstorm, but as a calculated experiment. His work ethic is unshakable—once he commits to a task, he’ll iterate until it’s solid, even if it means staying late to debug a flawed assumption.  \n\nI’d trust Takeshi to navigate ambiguity with rigor and humility. His approach isn’t just about results—it’s about asking the right questions, and then being stubborn enough to find answers."
 }

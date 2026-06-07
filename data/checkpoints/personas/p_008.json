@@ -1,58 +1,54 @@
 {
   "persona_id": "p_008",
   "hyperparams": {
-    "archetype": "ml_engineer",
-    "years_experience": 4,
-    "seniority": "mid",
-    "industry": "gaming",
-    "writing_style": "modest",
+    "archetype": "backend_engineer",
+    "years_experience": 2,
+    "seniority": "junior",
+    "industry": "adtech",
+    "writing_style": "neutral",
     "language_fluency": "near-native",
-    "self_promotion_level": "humble",
-    "quantification_tendency": "qualitative"
+    "self_promotion_level": "boastful",
+    "quantification_tendency": "metrics-heavy"
   },
-  "name": "Alex Carter",
-  "current_role": "Machine Learning Engineer",
-  "company": "NexaGame Studios",
+  "name": "Priscilla Ferreira",
+  "current_role": "Backend Engineer",
+  "company": "AdVelox Technologies",
   "education": {
-    "degree": "Master of Science in Computer Science",
-    "university": "Massachusetts Institute of Technology",
-    "year": 2020
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "University of São Paulo",
+    "year": 2021
   },
   "career_trajectory": [
     {
-      "role": "Junior ML Engineer",
-      "company": "PixelForge Games",
-      "duration": "2 years",
-      "responsibilities": "Developed AI-driven NPC behaviors for open-world games using reinforcement learning and PyTorch."
+      "role": "Software Engineer Intern",
+      "company": "TechNova Solutions",
+      "year": 2021
     },
     {
-      "role": "ML Engineer",
-      "company": "Vortex Interactive",
-      "duration": "2 years",
-      "responsibilities": "Built recommendation systems for game content personalization using TensorFlow and Apache Airflow."
+      "role": "Backend Developer",
+      "company": "AdClick Media",
+      "year": 2022
+    },
+    {
+      "role": "Backend Engineer",
+      "company": "AdVelox Technologies",
+      "year": 2023
     }
   ],
   "skills": {
-    "PyTorch": 3,
-    "TensorFlow": 3,
-    "NLP": 3,
-    "Computer vision": 3,
-    "Recommendation systems": 4,
-    "MLOps (MLflow/W&B)": 4,
-    "Model deployment": 3,
-    "Reinforcement learning": 3,
-    "AWS": 4,
-    "GCP": 3,
+    "Python": 4,
+    "Go": 3,
+    "REST API design": 3,
+    "PostgreSQL": 3,
+    "AWS": 3,
     "Docker": 3,
     "Kubernetes": 3,
-    "ETL pipeline design": 3,
-    "Apache Airflow": 3
+    "Terraform": 3,
+    "CI/CD pipelines": 3
   },
   "document_ids": [
     "d_p_008_00",
     "d_p_008_01",
-    "d_p_008_02",
-    "d_p_008_03",
-    "d_p_008_04"
+    "d_p_008_02"
   ]
 }

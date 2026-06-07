@@ -1,25 +1,27 @@
 {
   "doc_id": "d_p_035_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_035",
   "hyperparams": {
-    "recommender_role": "direct-manager",
-    "recommender_closeness": "occasional",
-    "company_type": "startup",
-    "company_size": "small (<50)"
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Application security (OWASP)": 2,
-    "Encryption & PKI": 2,
-    "Firewall configuration": 3,
-    "IAM/Access control": 3,
-    "Incident management": 3,
-    "Linux administration": 1,
-    "Network automation": 2,
-    "Network security": 3,
-    "Penetration testing": 1,
-    "Security auditing": 1
+    "A/B testing": 1,
+    "Data visualization (Matplotlib/Plotly)": 3,
+    "Feature engineering": 4,
+    "MLOps (MLflow/W&B)": 3,
+    "Model deployment": 4,
+    "NumPy": 4,
+    "Pandas": 4,
+    "PyTorch": 2,
+    "SQL analytics": 3,
+    "Statistical modeling": 4,
+    "Tableau/Power BI": 3,
+    "TensorFlow": 2,
+    "Time series analysis": 3,
+    "scikit-learn": 4
   },
-  "text": "Emily Carter is a Security Engineer whose dedication to operational excellence and collaborative problem-solving has made her an invaluable asset to GlobalTech Solutions. Her ability to balance technical rigor with clear communication has consistently elevated team outcomes.  \n\nOne standout strength is her strategic approach to AWS infrastructure. When our team faced scalability challenges, Emily rearchitected our cloud environment to optimize costs while maintaining robust security protocols. Her work reduced downtime by 40% and streamlined incident response workflows, enabling the team to focus on innovation rather than firefighting.  \n\nEmily’s expertise in firewall configuration and IAM policies has similarly shaped our security posture. She designed a multi-layered firewall architecture that blocked over 200% of malicious traffic during a critical audit, and her IAM framework now ensures granular access controls across 15+ systems. These solutions have become standard practices within our organization.  \n\nHer incident management skills shine in high-pressure scenarios. During a recent breach attempt, Emily’s rapid identification of the attack vector and coordinated response prevented data loss and minimized business disruption. Colleagues often seek her guidance for her calm, analytical mindset.  \n\nBeyond technical skills, Emily’s proactive attitude and willingness to mentor junior engineers have fostered a culture of shared responsibility. She is a reliable, thoughtful professional whose impact extends far beyond her role."
+  "text": "# Supply Chain Optimization with Machine Learning  \nA production-grade solution for demand forecasting and inventory optimization leveraging advanced statistical modeling and scalable ML pipelines. Deployed successfully in a Fortune 500 logistics ecosystem, achieving a 15% reduction in operational costs through predictive analytics and real-time adjustment mechanisms.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/commit-activity/y/username/repo)](https://github.com/username/repo)  \n[![PyPI](https://img.shields.io/pypi/v/supplychain-ml)](https://pypi.org/project/supplychain-ml/)  \n[![License](https://img.shields.io/github/license/username/repo)](LICENSE)  \n\n## Getting Started / Installation  \n```bash  \npip install -r requirements.txt  \npython -m setup install  \n```  \nEnsure Python 3.9+ is installed. For GPU acceleration, install PyTorch via `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118`. Note that PyTorch is used exclusively for prototyping; production deployment relies on distributed NumPy arrays and scikit-learn's parallel processing.  \n\n## Usage / Examples  \n```python  \nfrom supplychain_ml.pipeline import ForecastingPipeline  \npipeline = ForecastingPipeline(  \n    historical_data='path/to/sales.parquet',  \n    seasonality_window=365,  \n    feature_engineering=True  \n)  \npipeline.fit()  \npipeline.predict()  \n```  \nThis example demonstrates a full end-to-end workflow, including time series decomposition, lag feature generation, and ensemble model stacking. Visualization outputs are automatically generated via Plotly for interactive demand trend analysis.  \n\n## Configuration  \nConfiguration is managed via `config.yaml`, specifying:  \n- Database credentials (PostgreSQL/MySQL)  \n- Feature engineering parameters (e.g., `rolling_window_size=90`)  \n- Model hyperparameters (scikit-learn's `RandomizedSearchCV` settings)  \n- MLOps integration (MLflow tracking URI, Weights & Biases project name)  \n\n## Deployment  \nContainerized using Docker with GPU support. Deploy via Kubernetes with autoscaling enabled for peak demand periods. Model serving is handled by Flask API endpoints, with latency under 200ms for 99th percentile requests.  \n\n## Architecture / Design  \nThe system decouples data preprocessing, model training, and inference layers. Key components:  \n- **Data Layer**: Apache Arrow for efficient schema-on-read processing  \n- **Model Layer**: Ensemble of XGBoost, SARIMA, and LSTM for heterogeneous demand patterns  \n- **Feedback Loop**: Real-time anomaly detection using Z-score thresholds and SQL-based alerting  \n\n## Tech Stack / Built With  \n- **Languages**: Python (3.9+), SQL (PostgreSQL)  \n- **Libraries**: scikit-learn, NumPy, Pandas, Plotly, MLflow  \n- **Tools**: Docker, Kubernetes, Weights & Biases (for experiment tracking)  \n- **Data Formats**: Parquet, JSON, SQL tables  \n\n## Contributing  \nFork the repository and submit pull requests via GitHub. For production-grade contributions, ensure all models are wrapped in `@lru_cache`-decorated functions and include unit tests in `tests/`. All visualizations must adhere to Tableau's data governance policies."
 }

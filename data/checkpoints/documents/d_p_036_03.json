@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_036_03",
+  "type": "project_readme",
+  "persona_id": "p_036",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "Go": 4,
+    "Kubernetes": 3,
+    "Load balancing": 2,
+    "Microservices architecture": 3,
+    "Monitoring & alerting": 3,
+    "PostgreSQL": 5,
+    "Python": 3,
+    "Terraform": 3
+  },
+  "text": "# Distributed Ad Serving Infrastructure  \n\nA production-grade microservices architecture for global ad delivery, engineered for scalability, resilience, and low-latency performance. This system handles over 10M impressions/day with 99.95% uptime, leveraging distributed state and fault-tolerant patterns.  \n\n## Badges  \nCI/CD: ✅  \nTests: 95%  \nDocs: 80%  \n\n## Getting Started / Installation  \nEnsure you have:  \n- Go 1.21+ (for core services)  \n- Python 3.10+ (for analytics pipeline)  \n- Terraform 1.5+ (for AWS infrastructure)  \n- AWS CLI configured with admin permissions  \n\n```bash  \ngit clone https://github.com/your-username/distributed-ad-serving.git  \ncd distributed-ad-serving  \nterraform init  \n```  \n\n## Usage / Examples  \nQuery ad inventory via the API gateway:  \n```bash  \ncurl -X GET https://api.adsvc.example/v1/ads?targeting=mobile  \n```  \n\nDeploy a new microservice:  \n```bash  \nterraform apply -target=aws_lambda_function.ads-targeting  \n```  \n\n## Configuration  \nCore config files:  \n- `terraform.tfvars`: AWS region, VPC settings, and security groups  \n- `config.yaml`: Redis cluster endpoints, PostgreSQL DB credentials  \n- `envvars.sh`: Environment-specific settings for local/dev  \n\n## Deployment  \nInfrastructure is managed via Terraform, deploying to 3 AWS regions with cross-zone load balancing. Kubernetes clusters (EKS) handle service discovery and autoscaling. Health checks are enforced at every microservice layer with exponential backoff retries.  \n\n## Architecture / Design  \nThe system is partitioned into:  \n- **Ad Targeting** (Go): Real-time bidding and audience segmentation  \n- **Billing** (Python): Revenue tracking with Kafka-backed event streams  \n- **Analytics** (Python): Click-through rate analysis using Apache Beam  \n- **PostgreSQL**: Centralized identity store and ad metadata repository  \n\nGlobal load balancing is achieved via AWS Global Accelerator, with edge locations configured for sub-100ms latency. Fault tolerance is baked into every layer, including distributed locks and circuit breakers.  \n\n## Tech Stack / Built With  \n- **Language**: Go (core), Python (analytics), TypeScript (UI)  \n- **Database**: PostgreSQL (centralized), Redis (caching)  \n- **Orchestration**: Kubernetes (EKS) with Helm charts  \n- **Infrastructure**: Terraform, AWS (Lambda, RDS, CloudFront)  \n- **Monitoring**: Prometheus + Grafana, CloudWatch Alarms  \n\n## Contributing  \nWe welcome contributions to improve fault tolerance and reduce latency. Please:  \n1. Fork the repo  \n2. Add tests for new features  \n3. Update documentation for config changes  \n4. Submit a PR with a clear description of your changes  \n\nThis project is maintained by a 15+ person team with active contributions from Sana Patel (lead architecture) and cross-functional collaboration across ad ops, data engineering, and security."
+}

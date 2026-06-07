@@ -1,22 +1,24 @@
 {
   "doc_id": "d_p_025_03",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_025",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "solo",
-    "jargon_density": "plain"
+    "recommender_role": "skip-level",
+    "recommender_closeness": "occasional",
+    "company_type": "enterprise",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "AWS": 2,
-    "Apache Airflow": 1,
-    "Apache Kafka": 1,
-    "Apache Spark": 1,
-    "Cloud cost optimization": 1,
-    "Data modeling": 1,
-    "Terraform": 1,
-    "Python": 2,
-    "Snowflake": 5
+    "AWS": 3,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 3,
+    "Docker": 2,
+    "Microservices architecture": 2,
+    "Node.js": 2,
+    "PostgreSQL": 3,
+    "Python": 4,
+    "REST API design": 4,
+    "React": 2
   },
-  "text": "# Data Pipeline for Real-Time Analytics  \n\nA scalable, production-ready data pipeline designed to process and analyze user behavior data for a SaaS startup. The solution focuses on seamless integration between cloud storage and Snowflake, enabling teams to derive actionable insights without compromising performance or cost efficiency.  \n\n## Tech Stack  \n- **Snowflake**: Centralized data warehouse for structured storage, querying, and analytics  \n- **AWS S3**: Raw data storage for unstructured logs and CSV files  \n- **Python**: Scripting for data transformation and automation  \n- **PostgreSQL**: Metadata management for dataset tracking  \n\n## Architecture  \nThe pipeline ingests raw data from AWS S3 into Snowflake via batch ETL workflows. Python scripts handle schema validation and data cleansing before loading into Snowflake tables. Snowflake’s serverless architecture ensures scalability, while its built-in data masking capabilities support secure analytics for different user roles. The design prioritizes simplicity, with minimal dependencies to reduce operational overhead.  \n\n## Setup Instructions  \n1. Clone the repository and install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n2. Configure AWS credentials in `config/aws_keys.py` and Snowflake credentials in `config/snowflake_conn.py`.  \n3. Set up an S3 bucket for raw data ingestion and a Snowflake warehouse for compute.  \n4. Run the ETL pipeline:  \n   ```bash  \n   python etl_pipeline.py  \n   ```  \n5. Monitor progress via Snowflake’s web UI and log files in `logs/`.  \n\n## Skills/Tools  \n- **Snowflake**: Engineered complex data models, optimized query performance, and mentored team on best practices for schema design and data governance.  \n- **AWS**: Integrated S3 with Snowflake for data lakes, leveraging IAM roles for secure access.  \n- **Python**: Automated data validation, error logging, and pipeline orchestration using standard libraries.  \n\nThis project exemplifies a balance between simplicity and robustness, designed to adapt to a startup’s evolving needs while maintaining clarity for cross-functional teams."
+  "text": "Working Relationship  \nKamila and I crossed paths during a cross-functional project at NexaCloud Solutions, where she served as a Full-Stack Developer on our SaaS platform. While we didn’t collaborate directly, her work on backend systems and API integrations intersected with my team’s efforts. Her approach to problem-solving and attention to architectural clarity left a strong impression, even from a distance.  \n\nDay-to-Day Observations  \nKamila’s routine reflected a blend of technical precision and strategic thinking. She consistently prioritized stability in AWS environments, tweaking configurations to balance performance and cost. Her CI/CD pipelines were a model of reliability, with automated tests catching edge cases others overlooked. During a recent migration, she restructured PostgreSQL queries to reduce latency, which improved dashboard load times by over 40% without significant code changes. Python became her go-to for scripting repetitive tasks, like automating data reconciliation between services. Her REST APIs were clean, well-documented, and rarely required downstream adjustments—a rarity in fast-paced SaaS development.  \n\nStandout Moments  \nOne memorable instance involved a critical outage in our user authentication service. Kamila swiftly diagnosed the issue as a misconfigured load balancer and restored access within 15 minutes. She also led a refactor of a legacy API, replacing ad-hoc endpoints with a standardized framework that simplified future integrations. Her ability to balance immediate fixes with long-term architecture was striking.  \n\nRecommendation  \nKamila is a dependable, solutions-oriented developer with a knack for simplifying complex systems. Her work ethic and technical depth make her a valuable asset to any team. I’d welcome the opportunity to discuss how she might contribute to your goals."
 }

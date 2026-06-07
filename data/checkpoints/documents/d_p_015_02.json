@@ -1,23 +1,23 @@
 {
   "doc_id": "d_p_015_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_015",
   "hyperparams": {
-    "recommender_role": "professor",
-    "recommender_closeness": "brief",
-    "company_type": "agency",
-    "company_size": "mid (50-500)"
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Apache Airflow": 1,
-    "Docker": 1,
-    "GCP": 1,
-    "MLOps (MLflow/W&B)": 1,
-    "NLP": 3,
-    "PyTorch": 3,
-    "REST API design": 1,
-    "TensorFlow": 3,
-    "scikit-learn": 3
+    "AWS": 4,
+    "Cloud cost optimization": 3,
+    "GCP": 4,
+    "Infrastructure as Code": 4,
+    "Kubernetes": 3,
+    "Network troubleshooting": 4,
+    "PostgreSQL": 3,
+    "Python": 4,
+    "REST API design": 4,
+    "Terraform": 3
   },
-  "text": "Elena Martínez is a standout Machine Learning Engineer whose technical rigor and innovative mindset have driven measurable impact at AdVerge. Her expertise in NLP transformed ad targeting strategies: she developed a sentiment analysis model using PyTorch that increased click-through rates by 15% for high-value campaigns, reducing manual oversight by 40 hours monthly.  \n\nIn optimizing real-time bidding systems, Elena leveraged TensorFlow to design scalable architectures, cutting latency by 25% while maintaining 99.9% accuracy. Her ability to balance model complexity with deployment efficiency ensured seamless integration into AdVerge’s production pipelines.  \n\nA key strength is her pragmatic approach to scikit-learn. By refining feature engineering workflows, she boosted campaign performance metrics by 20% without compromising computational resources, enabling faster A/B testing cycles. Her solutions are consistently grounded in data-driven insights, with a knack for simplifying complex problems.  \n\nBeyond technical skills, Elena’s collaborative spirit and attention to detail make her an invaluable teammate. She consistently prioritizes clarity in documentation and proactively identifies edge cases, ensuring robustness in ad-tech systems. Her work ethic—marked by reliability and intellectual curiosity—has elevated team productivity and innovation.  \n\nI wholeheartedly recommend Elena for any opportunity requiring technical excellence, strategic thinking, and a passion for solving real-world challenges. Her contributions at AdVerge exemplify the intersection of skill and impact."
+  "text": "# SecureAPI Gateway  \nA production-ready API gateway for fintech applications, leveraging OAuth2.0, rate limiting, and distributed compliance checks. Built for microservices architectures with AWS/GCP hybrid deployment, optimized for cloud cost efficiency and observability.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/michaeltran/secureapi-gateway.git  \ncd secureapi-gateway  \nterraform init && terraform apply -var-file=dev.tfvars  \n```  \nDeploys a Kubernetes cluster (EKS/GKE) with PostgreSQL (multi-AZ), Redis for rate limiting, and a Python-based API layer. Ensure AWS/GCP credentials are configured via environment variables.  \n\n## Usage / Examples  \n**OAuth2.0 Integration**  \n```python  \n# Configure OAuth2 middleware with JWT validation  \nauth_middleware = OAuth2Middleware(  \n    issuer=\"https://auth.example.com\",  \n    audience=\"secureapi-gateway\",  \n    token_store=RedisTokenStore(host=\"redis-cluster\", ttl=3600)  \n)  \n```  \n**Rate Limiting**  \n```yaml  \n# Kubernetes ConfigMap for rate limiting policies  \nrate_limits:  \n  - endpoint: \"/transfers\"  \n    limit: 1000  \n    window: 1h  \n    burst: 1200  \n```  \n**Hybrid Cloud Deployment**  \n```bash  \n# Terraform module for GCP/AWS integration  \nmodule \"cloud\" {  \n  source = \"github.com/michaeltran/secureapi-gateway//modules/cloud\"  \n  provider = \"aws\"  \n  region = \"us-east-1\"  \n}  \n```  \nMonitors network latency between AWS Lambda and GCP services, with dynamic routing adjustments for fault tolerance.  \n\n## License  \nMIT License  \n© 2023 Michael Tran. See [LICENSE](LICENSE) for details.  \n\n*Built with Python 3.10, Terraform 1.5, and Kubernetes 1.25. Production-grade network isolation and audit logging enforced via AWS WAF and GCP Cloud Armor.*"
 }

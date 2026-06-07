@@ -1,23 +1,34 @@
 {
   "doc_id": "d_p_046_03",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_046",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "large (15+)",
-    "jargon_density": "plain"
+    "recommender_role": "professor",
+    "recommender_closeness": "occasional",
+    "company_type": "enterprise",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "CI/CD pipelines": 3,
+    "AWS": 3,
+    "ArgoCD": 3,
+    "CI/CD pipelines": 4,
+    "Chaos engineering": 3,
+    "Cloud cost optimization": 3,
+    "Cloud networking (VPC/subnets)": 3,
+    "Configuration management (Ansible)": 3,
+    "Docker": 3,
+    "GCP": 4,
     "GitHub Actions": 3,
-    "Go": 3,
-    "Linux administration": 3,
-    "Message queues": 3,
-    "Microservices architecture": 3,
-    "PostgreSQL": 3,
-    "Prometheus/Grafana": 3,
-    "Python": 3,
-    "REST API design": 4
+    "GitLab CI": 4,
+    "Jenkins": 2,
+    "Kubernetes": 4,
+    "Linux administration": 4,
+    "Log management (ELK)": 2,
+    "Monitoring & alerting": 4,
+    "Prometheus/Grafana": 4,
+    "SLA/SLO management": 3,
+    "Shell scripting (Bash)": 3,
+    "Terraform": 4
   },
-  "text": "# SaasApiGateway  \n\nA scalable API gateway built for multi-tenant SaaS applications, enabling secure, rate-limited, and dynamically routed API requests across microservices. Designed for large teams with strict latency and reliability requirements.  \n\n## Tech Stack  \n- **Language**: Go (main service), Python (scripts for config generation)  \n- **Database**: PostgreSQL (tenant metadata, rate limit quotas)  \n- **Monitoring**: Prometheus + Grafana (request latency, error rates, queue depths)  \n- **CI/CD**: GitHub Actions (automated tests, builds, and deployments)  \n- **Message Queues**: Kafka (asynchronous tenant config updates)  \n- **Infrastructure**: Linux-based servers (systemd service management, systemd units provided)  \n- **Networking**: REST API with OpenAPI v3 spec (used in production for client SDKs)  \n\n## Architecture  \nThe gateway acts as a single entry point for all tenant API requests. Key components:  \n- **API Router**: Uses dynamic routing based on tenant ID and path, forwarding to backend microservices.  \n- **Rate Limiter**: Redis-backed, per-tenant and global limits enforced with sliding window algorithm.  \n- **Auth Middleware**: JWT validation with optional OAuth2 support, tenant-specific signing keys.  \n- **Config Store**: PostgreSQL table for tenant-specific settings (e.g., allowed endpoints, custom headers).  \n- **Metrics Exporter**: Exposes Prometheus metrics for endpoint latency, error rates, and queue backlog.  \n\n## Setup  \n1. **Clone repo**: `git clone https://github.com/your-username/saasapigateway.git`  \n2. **Install dependencies**:  \n   - Go 1.21+ (for main service)  \n   - Python 3.10+ (for config generation scripts)  \n   - PostgreSQL (create database and user as per `docker-compose.yml`)  \n3. **Run migrations**:  \n   ```bash  \n   go run cmd/migrate/main.go up  \n   ```  \n4. **Build service**:  \n   ```bash  \n   go build -o saasapigateway cmd/main.go  \n   ```  \n5. **GitHub Actions**: CI/CD pipelines automate testing and deployment to staging.  \n6. **Deploy**: Use systemd unit files (`saasapigateway.service`) for production servers.  \n\n## Contributing  \nIssues and pull requests welcome. Focus on improving scalability, adding support for WebSockets, or refining tenant isolation.  \n\n*Built for teams that need reliability, not just features.*"
+  "text": "Linda Gustafsson once led a high-stakes migration of NordicTech’s legacy systems to Kubernetes, resolving a 90% downtime issue during peak seasons. She orchestrated a phased rollout using ArgoCD, paired with Prometheus/Grafana for real-time monitoring, which slashed incident resolution time by 40% and stabilized SLA compliance. Her ability to balance technical rigor with team collaboration was evident in how she mentored junior engineers through the chaos of the transition.  \n\nLinda is a Senior Site Reliability Engineer at NordicTech, where she architecturally oversees cloud infrastructure spanning AWS and GCP. She designs CI/CD pipelines with GitLab CI, ensuring deployments meet 99.95% uptime targets. Her expertise in cloud cost optimization, achieved through Terraform-driven resource tagging and VPC subnet restructuring, reduced monthly spend by 30% without compromising performance. She also champions Linux administration best practices, embedding Ansible into automation workflows that cut manual tasks by 50%.  \n\nBeyond technical mastery, Linda excels in systemic problem-solving. Her chaos engineering initiatives, which simulated real-world outages, uncovered critical vulnerabilities in the network stack. She also pioneered a monitoring framework integrating ELK for log analysis, enabling proactive issue detection. Her work ethic is marked by relentless attention to detail and a knack for turning complex challenges into streamlined processes.  \n\nLinda’s contributions are indispensable. Her technical depth, strategic thinking, and collaborative spirit make her a rare asset in any enterprise setting. I wholeheartedly endorse her for any role requiring both operational excellence and innovative leadership."
 }

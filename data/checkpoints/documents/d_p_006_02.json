@@ -3,22 +3,23 @@
   "type": "recommendation",
   "persona_id": "p_006",
   "hyperparams": {
-    "recommender_role": "direct-manager",
-    "recommender_closeness": "brief",
-    "company_type": "enterprise",
-    "company_size": "small (<50)"
+    "recommender_role": "skip-level",
+    "recommender_closeness": "worked-daily",
+    "company_type": "academic",
+    "company_size": "large (500+)"
   },
   "skill_evidence": {
-    "Apache Airflow": 3,
-    "Apache Kafka": 3,
-    "ETL pipeline design": 2,
-    "MLOps": 3,
-    "Model deployment": 3,
-    "NLP": 4,
-    "PyTorch": 2,
-    "TensorFlow": 3,
-    "dbt": 2,
-    "scikit-learn": 2
+    "Agile/Scrum": 4,
+    "CI/CD pipelines": 3,
+    "Cross-team collaboration": 3,
+    "Database optimization": 3,
+    "GitHub Actions": 2,
+    "Linux administration": 2,
+    "Prometheus/Grafana": 2,
+    "Stakeholder communication": 3,
+    "System design": 4,
+    "Team leadership": 4,
+    "Technical writing": 3
   },
-  "text": "Alexandra Chen is a rare blend of technical precision and strategic foresight, whose contributions to CyberShield Analytics have fundamentally strengthened our cybersecurity operations. As a Machine Learning Engineer, she has consistently delivered solutions that balance innovation with operational rigor. Her leadership in refining natural language processing (NLP) models for threat intelligence analysis stands out—she designed a system that autonomously parsed unstructured data from dark web forums, reducing false positives by 40% and enabling real-time detection of zero-day vulnerabilities. This work, which she owns end-to-end from data curation to deployment, exemplifies her ability to translate complex challenges into scalable, impactful systems.  \n\nHer expertise in MLOps has similarly transformed our workflow. By architecting a streamlined deployment pipeline using TensorFlow and Apache Airflow, she reduced model iteration cycles by 30%, ensuring rapid adaptation to evolving threats. She also pioneered a Kafka-based pipeline to ingest and process live network traffic, which became a cornerstone of our real-time anomaly detection framework. Alexandra’s ability to integrate disparate systems—from data lakes to production environments—demonstrates her deep understanding of both technical and business priorities.  \n\nBeyond her technical acumen, she embodies a collaborative spirit. Whether mentoring junior engineers or collaborating cross-functionally to align ML initiatives with security strategies, her dedication to excellence is evident. Alexandra’s work has not only elevated CyberShield’s capabilities but also set a standard for innovation in high-stakes cybersecurity environments. I wholeheartedly recommend her for any opportunity where precision, impact, and integrity are paramount."
+  "text": "Dear [Hiring Manager's Name],  \n\nI’ve had the privilege of working closely with Uma Krishnan over the past year as a professor at [Academic Institution], where she served as a senior tech lead at NexaCorp. Her role bridged academic research and enterprise engineering, and her contributions were both impactful and consistent.  \n\nUma’s strengths lie in her ability to translate complex technical challenges into scalable solutions. She led the redesign of NexaCorp’s monolithic architecture, splitting it into microservices that improved system reliability by 40% during peak loads. Her system design decisions prioritized long-term maintainability, which became a reference point for junior engineers. She also spearheaded a cross-team Agile transformation, reducing delivery cycles by 25% through optimized sprint planning and stakeholder alignment.  \n\nA standout example of her leadership occurred during a critical database migration. When a legacy system’s performance bottleneck threatened project timelines, Uma coordinated with DevOps, QA, and business stakeholders to refactor query patterns and implement indexing strategies. The result was a 60% reduction in latency, with minimal downtime. Her ability to communicate technical trade-offs to non-technical leaders ensured alignment across teams.  \n\nBeyond her technical expertise, Uma’s work ethic is unwavering. She consistently mentors junior engineers, often staying late to review code or troubleshoot production issues. Her combination of strategic thinking and hands-on execution makes her a rare asset in any team.  \n\nI’m confident she’ll bring the same level of rigor and collaboration to your organization. Please feel free to reach out for further details.  \n\nSincerely,  \n[Your Full Name]  \n[Your Title]  \n[Academic Institution]"
 }

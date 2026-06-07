@@ -1,72 +1,60 @@
 {
   "persona_id": "p_049",
   "hyperparams": {
-    "archetype": "tech_lead_architect",
+    "archetype": "data_engineer",
     "years_experience": 2,
     "seniority": "junior",
-    "industry": "SaaS",
+    "industry": "startup",
     "writing_style": "confident",
-    "language_fluency": "native",
+    "language_fluency": "near-native",
     "self_promotion_level": "boastful",
-    "quantification_tendency": "metrics-heavy"
+    "quantification_tendency": "mixed"
   },
-  "name": "Alex Johnson",
-  "current_role": "Tech Lead",
-  "company": "NexaCorp",
+  "name": "Pavel Dvorak",
+  "current_role": "Data Engineer",
+  "company": "NexaData Solutions",
   "education": {
-    "degree": "Computer Science",
-    "university": "MIT",
-    "year": 2022
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "University of Toronto",
+    "year": 2021
   },
   "career_trajectory": [
     {
-      "role": "Software Engineer Intern",
-      "company": "ScaleTech",
+      "title": "Data Analyst Intern",
+      "company": "TechNova Analytics",
       "duration": "6 months",
-      "key_achievements": [
-        "Architected a microservices-based pricing engine with 95% uptime",
-        "Reduced deployment time by 40% using CI/CD pipelines"
-      ]
+      "responsibilities": "Processed raw data using Python and SQL, created visualizations for stakeholder reports."
     },
     {
-      "role": "Senior Software Engineer",
-      "company": "NexaCorp",
-      "duration": "1.5 years",
-      "key_achievements": [
-        "Led backend development for SaaS product with 200k+ active users",
-        "Migrated monolith to serverless architecture saving $150k annually"
-      ]
+      "title": "Data Engineering Intern",
+      "company": "DataVerve Inc.",
+      "duration": "6 months",
+      "responsibilities": "Built ETL pipelines with Apache Airflow and optimized PostgreSQL queries for real-time analytics."
     },
     {
-      "role": "Junior Tech Lead",
-      "company": "NexaCorp",
-      "duration": "0.5 years",
-      "key_achievements": [
-        "Designed cloud-native architecture with 99.95% SLA",
-        "Implemented cross-team collaboration framework reducing sprint cycle time by 30%"
-      ]
+      "title": "Junior Data Engineer",
+      "company": "NexaData Solutions",
+      "duration": "2 years",
+      "responsibilities": "Architected cloud-native data pipelines on AWS, integrated Kafka with Snowflake, and automated DBT models."
     }
   ],
   "skills": {
-    "System design": 3,
-    "Cloud infrastructure": 4,
-    "Backend development": 3,
-    "Agile/Scrum": 3,
-    "Cross-team collaboration": 3,
-    "Stakeholder communication": 3,
-    "Technical writing": 3,
-    "Python": 3,
-    "CI/CD pipelines": 4,
-    "GitHub Actions": 3,
-    "Monitoring & alerting": 3,
-    "Linux administration": 3,
-    "Shell scripting": 3,
-    "Database optimization": 3
+    "Apache Spark": 3,
+    "Apache Kafka": 3,
+    "Apache Airflow": 3,
+    "dbt": 3,
+    "ETL pipeline design": 3,
+    "Data warehousing": 3,
+    "Snowflake": 3,
+    "PostgreSQL": 3,
+    "Python": 4,
+    "REST API design": 3,
+    "Docker": 3,
+    "Kubernetes": 2,
+    "Infrastructure as Code": 3,
+    "Cloud cost optimization": 2
   },
   "document_ids": [
-    "d_p_049_00",
-    "d_p_049_01",
-    "d_p_049_02",
-    "d_p_049_03"
+    "d_p_049_00"
   ]
 }

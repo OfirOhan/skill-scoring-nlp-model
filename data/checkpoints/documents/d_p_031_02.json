@@ -3,24 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_031",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "large (15+)",
-    "jargon_density": "moderate"
+    "project_scale": "hobby",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 1,
-    "Docker": 1,
-    "GCP": 1,
-    "GitHub Actions": 1,
-    "Go": 1,
-    "Kubernetes": 1,
-    "Microservices architecture": 1,
-    "PostgreSQL": 5,
-    "Prometheus/Grafana": 1,
-    "Python": 5,
-    "REST API design": 5,
-    "React": 4,
-    "TypeScript": 4
+    "AWS": 3,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 2,
+    "Database optimization": 3,
+    "GCP": 2,
+    "Infrastructure as Code": 3,
+    "Kubernetes": 3,
+    "Linux administration": 1,
+    "Prometheus/Grafana": 3,
+    "Python": 3,
+    "Terraform": 3
   },
-  "text": "# NexGen Solutions  \n\nA scalable, production-ready e-commerce platform built to handle high-traffic retail scenarios with seamless user experiences and robust backend systems. Designed for global scalability, this project leverages Python, Django, PostgreSQL, React, and TypeScript to deliver a modular architecture with clear separation of concerns and maintainable codebases.  \n\n## Tech Stack  \n- **Backend**: Python (Django 4.x), PostgreSQL (14.x)  \n- **Frontend**: React (18.x), TypeScript (4.x)  \n- **APIs**: RESTful design with Django REST Framework (3.x)  \n- **Database**: PostgreSQL with advanced indexing, partitioning, and connection pooling for sub-100ms query latency  \n\n## Architecture  \nThe platform uses a layered architecture with Django as the backend, handling business logic, authentication, and data persistence. PostgreSQL serves as the central database, optimized for high-write throughput and complex queries. React/TypeScript manages the frontend, with state management via Redux and custom hooks. REST APIs enable bidirectional communication between frontend and backend, with strict validation and rate-limiting in place.  \n\nKey features include:  \n- Real-time inventory updates via WebSocket (custom implementation)  \n- Multi-tenant support for 50+ brands  \n- 99.95% SLA with automated rollback mechanisms  \n- 10k+ daily transactions processed via asynchronous task queues  \n\n## Setup Instructions  \n**Frontend**  \n```bash  \nnvm install 18  \nnpm install -g yarn  \nyarn install  \nyarn build  \n```  \n**Backend**  \n```bash  \npython -m venv venv  \nsource venv/bin/activate  \npip install -r requirements.txt  \npython manage.py migrate  \npython manage.py runserver  \n```  \nEnsure `.env` files are configured with PostgreSQL credentials and secret keys.  \n\n## Contributing  \nFollow PEP8/ESLint standards. All PRs require unit tests and performance benchmarks.  \n\n---  \n*Built by a 15+ member team with 3+ years of production-grade Django/TypeScript experience. Metrics include 50k+ active users and 10k+ daily transactions.*"
+  "text": "# Real-Time Fraud Detection Platform  \nA distributed system leveraging machine learning and Kafka for sub-100ms fraud detection in fintech transactions. Achieves 98.7% F1-score on synthetic data with 0.8ms P99 latency.  \n\n[![GitHub](https://badges.tiny.cloud/gh)](https://github.com/erikbergstrom/real-time-fraud-detection)  \n[![Build Status](https://badges.tiny.cloud/bt)](https://github.com/erikbergstrom/real-time-fraud-detection/actions)  \n[![Test Coverage](https://badges.tiny.cloud/ct)](https://github.com/erikbergstrom/real-time-fraud-detection/actions)  \n[![Hobby Project](https://badges.tiny.cloud/hp)](https://github.com/erikbergstrom/real-time-fraud-detection)  \n\n## Getting Started / Installation  \n```bash  \n# Prerequisites  \ndocker --version && docker-compose --version  \npython3 --version  \ncurl -fsSL https://raw.githubusercontent.com/erikbergstrom/real-time-fraud-detection/main/bootstrap.sh | bash  \n```  \nThis installs Kafka, TensorFlow Serving, and Prometheus via Docker. Requires AWS credentials for S3 integration.  \n\n## Usage / Examples  \n```python  \nfrom fraud_detector import FraudPipeline  \npipeline = FraudPipeline()  \nresult = pipeline.process_transaction({  \n    \"amount\": 1250.0,  \n    \"location\": \"US-NY\",  \n    \"device_hash\": \"abc123\"  \n})  \nprint(f\"Fraud score: {result['score']:.2f}\")  \n```  \nProcesses 10k+ transactions/sec with 0.8ms P99 latency. Output includes fraud score, risk category, and model metadata.  \n\n## Architecture / Design  \nA Kafka-driven microservices architecture with:  \n- **Stream Processing**: Apache Kafka for event sourcing  \n- **Model Inference**: TensorFlow Serving with GPU acceleration  \n- **Monitoring**: Prometheus/Grafana for latency and throughput metrics  \n- **Orchestration**: Kubernetes for scalable deployment  \n- **Storage**: AWS S3 for model artifacts and audit logs  \n\n## Tech Stack / Built With  \n- **ML**: TensorFlow, PyTorch (lightweight inference)  \n- **Streaming**: Apache Kafka, Apache Pulsar  \n- **Monitoring**: Prometheus, Grafana, Datadog  \n- **Deployment**: Docker, Kubernetes, Terraform  \n- **Cloud**: AWS S3 (data lake), GCP BigQuery (analytics)  \n\n## Roadmap / Future Work  \n- Add real-time geolocation validation via AWS Lambda  \n- Implement model retraining pipeline with MLflow  \n- Optimize Kafka serialization with Avro  \n- Integrate with GCP's Fraud Detection API for hybrid workflows  \n\n## Acknowledgments  \nBuilt using TensorFlow 2.12, Kafka 3.3, and Terraform 1.3. Special thanks to the open-source community for Kafka's robust streaming capabilities and Prometheus' flexible metrics system.  \n\n## Contributing  \nPull requests welcome! Focus on:  \n1. Model accuracy improvements (F1-score > 99%)  \n2. Infrastructure cost optimization (AWS spot instances)  \n3. Cross-cloud integration (GCP/AWS hybrid workflows)"
 }

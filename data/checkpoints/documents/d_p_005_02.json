@@ -1,23 +1,26 @@
 {
   "doc_id": "d_p_005_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_005",
   "hyperparams": {
-    "recommender_role": "direct-manager",
-    "recommender_closeness": "worked-daily",
-    "company_type": "agency",
-    "company_size": "mid (50-500)"
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "A/B testing": 1,
-    "Agile/Scrum": 4,
-    "Competitive analysis": 3,
-    "Data visualization (Tableau/Power BI)": 1,
-    "Hypothesis testing": 1,
-    "Product management": 4,
-    "Roadmap planning": 4,
-    "SQL analytics": 1,
-    "Stakeholder management": 4
+    "AWS": 3,
+    "ArgoCD": 3,
+    "CI/CD pipelines": 4,
+    "GitHub Actions": 4,
+    "GitLab CI": 3,
+    "Jenkins": 3,
+    "Kubernetes": 3,
+    "Linux administration": 3,
+    "Monitoring & alerting": 4,
+    "Prometheus/Grafana": 4,
+    "Python": 4,
+    "Shell scripting": 4,
+    "Terraform": 3
   },
-  "text": "[Your Name]  \n[Your Title]  \n[Company Name]  \n[Contact Information]  \n[Date]  \n\nTo Whom It May Concern,  \n\nEmily Carter is a rare blend of strategic vision and operational precision, excelling as a Product Manager at CyberShield Technologies. Her ability to balance technical rigor with customer-centricity has been instrumental in driving the company’s cybersecurity solutions to market.  \n\nAs a daily collaborator, I’ve witnessed Emily’s mastery in shaping product roadmaps that align with both business goals and evolving threat landscapes. For example, she spearheaded the development of our cloud-based endpoint detection platform, coordinating cross-functional teams to deliver a solution that reduced customer onboarding time by 40% while enhancing security protocols. Her knack for prioritizing features based on real-world pain points ensured the product met critical market needs.  \n\nEmily’s stakeholder management skills are equally standout. She navigates complex relationships with clients, engineers, and executives with grace, turning potential friction into collaborative momentum. During a recent project to integrate AI-driven threat analytics, she secured buy-in from skeptical stakeholders by presenting a phased rollout plan that minimized risk and demonstrated tangible value early.  \n\nHer competitive analysis expertise has also been pivotal. By dissecting market gaps and competitor weaknesses, she guided CyberShield to launch a proprietary encryption module, positioning the company as an industry leader.  \n\nBeyond her technical prowess, Emily’s work ethic is defined by relentless curiosity and a commitment to excellence. She thrives in ambiguity, often volunteering to tackle high-impact challenges that others avoid. Her impact is felt in every deliverable—from polished specifications to seamless user experiences.  \n\nI wholeheartedly recommend Emily for any opportunity where innovation, leadership, and integrity are paramount.  \n\nSincerely,  \n[Your Name]  \n[Your Title]  \n[Company Name]"
+  "text": "# Automated CI/CD Pipeline with Security Integration  \nA production-grade solution for deploying fintech applications with automated security scanning, reducing deployment time by 40% and achieving 99.99% uptime through rigorous compliance checks and real-time monitoring.  \n\n## Badges  \n[![CI/CD Status](https://img.shields.io/badge/CI%20CD%20Pipeline-passing-green)](https://github.com/umarbello/ci-cd-pipeline/actions)  \n[![Security Scans](https://img.shields.io/badge/Security%20Scans-passed-blue)](https://github.com/umarbello/ci-cd-pipeline/actions?query=workflow%3Asecurity-scans)  \n[![Code Coverage](https://img.shields.io/badge/Code%20Coverage-95%25-yellow)](https://github.com/umarbello/ci-cd-pipeline/actions?query=workflow%3Aunit-tests)  \n\n## Tech Stack / Built With  \n- **AWS**: CodePipeline, EC2, S3 for artifact storage  \n- **CI/CD**: GitLab CI, Jenkins, GitHub Actions for parallelized builds  \n- **Orchestration**: ArgoCD for declarative Kubernetes deployments  \n- **Containers**: Kubernetes with Helm for scalable microservices  \n- **Security**: Trivy for container image scanning, OWASP ZAP for runtime checks  \n- **Monitoring**: Prometheus + Grafana for real-time pipeline metrics  \n- **Scripting**: Python for custom validation, Bash for infrastructure automation  \n\n## Architecture / Design  \nThe pipeline integrates GitLab CI for source control triggers, Jenkins for initial builds, and AWS CodePipeline for orchestration. Kubernetes clusters manage deployments via ArgoCD, while Trivy and OWASP ZAP enforce security compliance. Prometheus monitors pipeline latency, reducing mean time to resolve issues by 35%.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/umarbello/ci-cd-pipeline.git`  \n2. Configure AWS credentials via `~/.aws/credentials`  \n3. Initialize Terraform for infrastructure: `terraform apply -var-file=env.tfvars`  \n4. Set up GitLab CI runners and Jenkins agents for parallel execution  \n\n## Usage / Examples  \n```bash\n# Trigger security scan on push  \ngit push origin main  \n# Deploy to staging via ArgoCD  \nkubectl apply -f k8s/argo.yaml  \n# View real-time metrics  \ncurl http://localhost:9090/api/v1/query?query=ci_pipeline_latency  \n```  \n\n## Configuration  \n- `config/terraform.tfvars`: AWS region and security policies  \n- `ci/.gitlab-ci.yml`: Job definitions for linting, building, and scanning  \n- `security/policies.yaml`: OWASP ZAP rule sets for API validation  \n\n## Deployment  \nDeploy to production using Terraform, with automated rollback on failed scans. Prometheus alerts for pipeline stalls > 500ms, reducing downtime by 25%.  \n\n## License  \nMIT License (see [LICENSE](LICENSE) for details)"
 }

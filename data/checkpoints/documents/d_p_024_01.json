@@ -1,22 +1,29 @@
 {
   "doc_id": "d_p_024_01",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_024",
   "hyperparams": {
-    "blog_depth": "tutorial",
-    "jargon_density": "plain"
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "API testing": 5,
-    "CI/CD pipelines": 5,
-    "Integration testing": 4,
-    "Performance testing (JMeter/k6)": 5,
-    "Problem-solving": 5,
-    "Python": 5,
-    "REST API design": 5,
-    "Selenium/Playwright": 4,
-    "Test automation": 5,
-    "Test strategy design": 5
+    "AWS": 3,
+    "CI/CD pipelines": 3,
+    "Database optimization": 3,
+    "Docker": 4,
+    "GitHub Actions": 3,
+    "JavaScript": 4,
+    "Kubernetes": 3,
+    "MongoDB": 4,
+    "Node.js": 4,
+    "PostgreSQL": 4,
+    "Prometheus/Grafana": 3,
+    "Python": 2,
+    "REST API design": 4,
+    "React": 4,
+    "Responsive design": 3,
+    "Web performance optimization": 3
   },
-  "text": "In adtech, where real-time data and high availability are non-negotiable, integrating CI/CD pipelines with test automation isn’t just beneficial—it’s essential. At [Company], we’ve transformed our testing strategy by aligning automated tests with CI/CD, achieving faster feedback loops and ensuring platform reliability. The result? A 30% reduction in deployment risks and 50% faster issue resolution.  \n\nAdtech platforms face unique challenges—high concurrency, dynamic ad inventories, and strict SLAs. Traditional testing methods couldn’t keep up, leading to delayed issue detection and increased risk. Our solution involved embedding automated tests into the CI/CD pipeline, ensuring every code change triggers a comprehensive test suite. Using GitLab CI, we orchestrated tests across environments, from staging to production, with Python scripts handling API validation and Selenium/Playwright for UI checks.  \n\nAPI testing became a cornerstone, with REST endpoints validated for latency and correctness. JMeter was used to simulate peak loads, ensuring our system could handle 10k+ requests per second without degradation. For example, during a recent campaign rollout, we identified a 200ms latency spike in the ad-serving API, which would have caused a 15% drop in ad impressions. By catching this in CI, we avoided a potential $200K revenue loss.  \n\nPerformance testing with k6 and JMeter ensured reliability under stress. We configured parallel test jobs to mimic global user traffic, identifying bottlenecks in our caching layer. This led to a 40% improvement in ad delivery latency. Meanwhile, Playwright’s headless browser support allowed us to automate end-to-end ad rendering checks, catching layout issues that would have slipped through manual testing.  \n\nThe pipeline’s success hinged on test strategy design. We prioritized critical paths—like ad auction simulations and billing integrations—while using data-driven thresholds to determine test pass/fail criteria. This approach reduced false positives by 35% and aligned testing with business KPIs.  \n\nBeyond metrics, this integration fostered a culture of continuous improvement. By mentoring teams on CI/CD best practices, we’ve elevated the entire QA function, aligning it with engineering goals. The result? Adtech platforms that remain robust, scalable, and ready for the next billion-dollar campaign."
+  "text": "# TaskFlow: Task Management SaaS Application  \nA scalable, team-centric task management platform built for startup workflows, combining React frontend, Node.js backend, and cloud-native infrastructure for real-time collaboration and performance optimization.  \n\n---\n\n## Badges  \n[![React](https://badgen.net/badge/React/764BA2?style=flat)](https://reactjs.org)  \n[![Node.js](https://badgen.net/badge/Node.js/339933?style=flat)](https://nodejs.org)  \n[![Docker](https://badgen.net/badge/Docker/249dd1?style=flat)](https://docker.com)  \n[![AWS](https://badgen.net/badge/AWS/FF9900?style=flat)](https://aws.amazon.com)  \n[![GitHub Actions](https://badgen.net/badge/GitHub%20Actions/0392C9?style=flat)](https://github.com/features/actions)  \n\n---\n\n## Getting Started / Installation  \n```bash\ngit clone https://github.com/your-username/taskflow.git  \ncd taskflow  \nnpm install  \ndocker-compose up -d  \n```  \nEnvironment variables are managed via `.env` and Docker secrets. Ensure PostgreSQL and MongoDB are configured in `config/db.js`.  \n\n---\n\n## Usage / Examples  \n- **Team Collaboration**: Use the `/api/tasks` endpoint to create and assign tasks via REST API.  \n- **Real-Time Sync**: WebSocket integration for live updates in the React dashboard.  \n- **Reporting**: Access analytics via `/api/reports` for team performance metrics.  \n\n---\n\n## Configuration  \n- **Database**: PostgreSQL for relational data, MongoDB for unstructured task metadata.  \n- **Environment**: Set `NODE_ENV`, `AWS_ACCESS_KEY`, and `DATABASE_URL` in `.env`.  \n- **Docker**: Use `docker-compose.override.yml` for production builds.  \n\n---\n\n## Deployment  \n- **AWS ECS**: Containerized Node.js backend with auto-scaling.  \n- **Kubernetes**: Orchestration for microservices, with Prometheus/Grafana for metrics.  \n- **CI/CD**: GitHub Actions handles linting, unit tests, and Docker image builds.  \n\n---\n\n## Architecture / Design  \nA microservices architecture separates frontend (React) and backend (Node.js) with a REST API gateway. Load balancing via Nginx, caching with Redis, and async processing with RabbitMQ. Scalable for 15+ team members with real-time updates.  \n\n---\n\n## Tech Stack / Built With  \n- **Frontend**: React, TypeScript, Webpack  \n- **Backend**: Node.js, Express, REST API  \n- **Database**: PostgreSQL, MongoDB  \n- **Infrastructure**: Docker, Kubernetes, AWS ECS  \n- **Monitoring**: Prometheus, Grafana  \n\n---\n\n## Contributing  \nFork the repo, create a feature branch, and submit a pull request. Ensure tests pass and code adheres to ESLint standards. All contributions require a code review for security and performance compliance."
 }

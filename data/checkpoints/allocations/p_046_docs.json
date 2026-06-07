@@ -1,62 +1,49 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional curriculum vitae highlighting Alexandra Chen's experience as a Backend Engineer at NexaTech Solutions.",
-    "title": "Alexandra Chen - Backend Engineer",
+    "topic_summary": "A professional CV highlighting Linda Gustafsson's 7 years of experience as a Senior Site Reliability Engineer and DevOps Architect in enterprise environments.",
+    "title": "Linda Gustafsson - Senior Site Reliability Engineer",
     "doc_id": "d_p_046_00",
     "persona_id": "p_046",
     "hyperparams": {
-      "cv_format": "hybrid",
-      "geographic_convention": "India",
+      "cv_format": "minimal",
+      "geographic_convention": "Europe",
       "company_type": "enterprise",
-      "company_size": "large (500+)"
+      "company_size": "small (<50)"
     }
   },
   {
-    "doc_type": "project_readme",
-    "topic_summary": "A microservices architecture for a SaaS platform that handles user data and analytics with scalable backend services.",
-    "title": "UserAnalyticsPlatform",
+    "doc_type": "linkedin",
+    "topic_summary": "A LinkedIn summary showcasing Linda's expertise in DevOps, cloud infrastructure, and leadership in enterprise SRE teams.",
+    "title": "Linda Gustafsson | Senior Site Reliability Engineer",
     "doc_id": "d_p_046_01",
     "persona_id": "p_046",
     "hyperparams": {
-      "project_scale": "hobby",
-      "project_team_size": "solo",
-      "jargon_density": "plain"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "Real-time data processing system using Apache Kafka and Spark for handling high-volume event streams in a startup environment.",
-    "title": "RealTimeDataPipeline",
-    "doc_id": "d_p_046_02",
-    "persona_id": "p_046",
-    "hyperparams": {
-      "project_scale": "production",
-      "project_team_size": "large (15+)",
-      "jargon_density": "heavy"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "Scalable API gateway with rate limiting, authentication, and request routing for a multi-tenant SaaS application.",
-    "title": "SaasApiGateway",
-    "doc_id": "d_p_046_03",
-    "persona_id": "p_046",
-    "hyperparams": {
-      "project_scale": "team-internal",
-      "project_team_size": "large (15+)",
-      "jargon_density": "plain"
+      "linkedin_completeness": "standard"
     }
   },
   {
     "doc_type": "blog",
-    "topic_summary": "Exploring strategies for optimizing database performance and ensuring scalability in backend systems within startup environments.",
-    "title": "Optimizing Backend Systems for Startup Growth",
-    "doc_id": "d_p_046_04",
+    "topic_summary": "A technical blog post on implementing observability in cloud-native systems using Prometheus and Grafana.",
+    "title": "Mastering Observability in Cloud-Native Systems",
+    "doc_id": "d_p_046_02",
     "persona_id": "p_046",
     "hyperparams": {
-      "blog_depth": "opinion-piece",
+      "blog_depth": "tutorial",
       "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation letter from Linda's manager praising her leadership and technical contributions to NordicTech Solutions.",
+    "title": "Recommendation for Linda Gustafsson",
+    "doc_id": "d_p_046_03",
+    "persona_id": "p_046",
+    "hyperparams": {
+      "recommender_role": "professor",
+      "recommender_closeness": "occasional",
+      "company_type": "enterprise",
+      "company_size": "mid (50-500)"
     }
   }
 ]

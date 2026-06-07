@@ -3,22 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_042",
   "hyperparams": {
-    "project_scale": "hobby",
+    "project_scale": "academic",
     "project_team_size": "small (2-4)",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Swift": 1,
-    "Kotlin": 1,
-    "React Native": 1,
-    "Flutter": 1,
-    "iOS development": 1,
-    "Android development": 1,
-    "TypeScript": 1,
-    "React": 1,
-    "REST API design": 1,
-    "GraphQL": 1,
-    "Mobile testing": 1
+    "A/B testing": 3,
+    "Agile/Scrum": 3,
+    "Analytics-driven product decisions": 3,
+    "Competitive analysis": 1,
+    "Data visualization (Plotly)": 3,
+    "Hypothesis testing": 3,
+    "Product management": 2,
+    "Roadmap planning": 1,
+    "SQL analytics": 3,
+    "Stakeholder management": 1,
+    "Tableau/Power BI": 1,
+    "UX research": 1
   },
-  "text": "# NovaQuest Engine Optimization Toolkit  \n\nNovaQuest Engine Optimization Toolkit is a cross-platform performance enhancement framework designed to refine mobile game engine efficiency through advanced profiling, resource allocation, and real-time analytics. This project targets latency reduction, memory footprint minimization, and CPU/GPU utilization optimization for native and hybrid deployment scenarios.  \n\n## Tech Stack  \n- **Core**: C++ (RTTI-free, memory-mapped I/O)  \n- **Profiling**: CPU/GPU tracing via OpenTelemetry, memory leak detection via Valgrind-compatible hooks  \n- **Asset Pipeline**: Texture compression (ASTC/EAC), mesh LOD streaming, and dynamic asset bundling  \n- **Cross-Platform**: ABI-agnostic code generation (ARM64/AArch64), platform-specific syscall wrappers  \n- **CI/CD**: GitHub Actions with static analysis (Clang-Tidy, UndefinedBehaviorSanitizer)  \n\n## Architecture Overview  \nThe toolkit employs a layered architecture:  \n1. **Profiling Layer**: Integrates with engine debuggers to capture frame-level metrics (GPU time, memory allocation spikes, thread contention).  \n2. **Optimization Engine**: Uses heuristic algorithms to prioritize resource reallocation (e.g., texture streaming prioritization, object pooling).  \n3. **Cross-Platform Abstraction**: Exposes platform-specific syscall wrappers for low-level control (e.g., memory mapping, GPU memory allocation).  \n4. **Analytics Dashboard**: Aggregates real-time telemetry (FPS, memory usage, GC cycles) via WebAssembly-based UI.  \n\n## Setup Instructions  \n1. Clone the repository: `git clone https://github.com/your-username/novaquest-toolkit.git`  \n2. Install dependencies:  \n   - C++20 compiler (GCC 11+/Clang 14+)  \n   - CMake 3.22+  \n   - Valgrind (for memory analysis)  \n3. Configure build:  \n   ```bash  \n   mkdir build && cd build  \n   cmake .. -DCMAKE_BUILD_TYPE=Release  \n   ```  \n4. Run profiling tools:  \n   ```bash  \n   ./novaquest_profiler --target=android --output=profile.json  \n   ```  \n\n## Usage Example  \n```bash  \n# Optimize asset pipeline for iOS  \n./novaquest_optimize --input=assets/ --output=dist/ --platform=ios --compression=astc  \n```  \n\nThis toolkit enables developers to achieve **35%+ memory overhead reduction** and **20%+ frame rate improvements** in benchmark tests. Designed for hobbyist teams, it balances complexity with actionable insights for engine-level optimization."
+  "text": "# AdInsight: Real-Time Ad Performance Analytics Dashboard  \nA tool for monitoring and optimizing ad campaigns with low-latency metrics, built for adtech teams requiring granular insights and A/B testing capabilities.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/last-commit/hugoramirez/AdInsight)](https://github.com/hugoramirez/AdInsight/commits/main)  \n[![CI/CD](https://img.shields.io/github/actions/workflow/ci/AdInsight.yml)](https://github.com/hugoramirez/AdInsight/actions)  \n[![Python](https://img.shields.io/badge/python-3.9-blue)](https://github.com/hugoramirez/AdInsight)  \n\n## Getting Started / Installation  \n1. Install Node.js (18+) and Python (3.9+).  \n2. Clone the repo: `git clone https://github.com/hugoramirez/AdInsight.git`  \n3. Set up virtual environments:  \n   ```bash  \n   cd backend && python -m venv venv && source venv/bin/activate  \n   cd frontend && npm install  \n   ```  \n4. Configure API keys in `.env` (see `config_example.env` for format).  \n5. Run services:  \n   ```bash  \n   # Backend  \n   cd backend && uvicorn main:app --host 0.0.0.0 --port 8000  \n\n   # Frontend  \n   cd frontend && npm run dev  \n   ```  \n\n## Usage / Examples  \n- Access the dashboard at `http://localhost:3000`.  \n- Navigate to **Campaign Metrics** for real-time CTR, CPC, and conversion rates.  \n- Use the **A/B Test Analyzer** to compare variant performance with confidence intervals.  \n- Query raw data via `/api/v1/metrics` (POST with filters for ad IDs, time ranges, etc.).  \n\n## Architecture / Design  \nThe system decouples frontend (React) and backend (FastAPI) for scalability. Data pipelines use Celery for async processing, with PostgreSQL as the primary store. Redis caches aggregated metrics to reduce DB load. A/B testing logic is embedded in the backend, with results streamed to the frontend via WebSocket.  \n\n## Tech Stack / Built With  \n- **Frontend**: React, TypeScript, Plotly.js (for interactive visualizations)  \n- **Backend**: FastAPI, Python, Celery, PostgreSQL  \n- **Infrastructure**: Redis (caching), Docker (local dev)  \n- **Data**: SQL analytics for historical trends, real-time ingestion via Kafka (optional)  \n\n## Roadmap / Future Work  \n- Expand data pipeline to support third-party ad platforms (Meta, TikTok).  \n- Integrate machine learning models for predictive audience segmentation.  \n- Add drill-down capabilities for campaign-level hypothesis testing.  \n\n## Acknowledgments  \nThank the adtech community for insights on metric prioritization. Special thanks to the team for refining the A/B testing workflow.  \n\n## Contributing  \nOpen to feature requests and bug fixes. Prioritize issues labeled \"good-first-issue\" for onboarding. All contributions must include unit tests and adhere to PEP8/ESLint standards."
 }

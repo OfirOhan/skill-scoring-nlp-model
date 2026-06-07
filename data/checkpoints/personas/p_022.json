@@ -1,45 +1,65 @@
 {
   "persona_id": "p_022",
   "hyperparams": {
-    "archetype": "frontend_engineer",
-    "years_experience": 6,
-    "seniority": "senior",
-    "industry": "fintech",
-    "writing_style": "concise",
-    "language_fluency": "near-native",
-    "self_promotion_level": "boastful",
+    "archetype": "devops_sre",
+    "years_experience": 14,
+    "seniority": "staff",
+    "industry": "cybersecurity",
+    "writing_style": "neutral",
+    "language_fluency": "ESL",
+    "self_promotion_level": "balanced",
     "quantification_tendency": "mixed"
   },
-  "name": "Alex Carter",
-  "current_role": "Senior Frontend Engineer",
-  "company": "FinTech Innovators Inc.",
+  "name": "Sven Lindqvist",
+  "current_role": "Staff DevOps Engineer",
+  "company": "CyberShield Security Solutions",
   "education": {
-    "degree": "Master of Science in Computer Science",
-    "university": "University of Washington",
-    "year": 2018
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "KTH Royal Institute of Technology",
+    "year": 2010
   },
   "career_trajectory": [
-    "Junior Developer (2017-2019) at Blockchain Payments Ltd.",
-    "Mid-Level Frontend Engineer (2019-2021) at WealthTrack Solutions",
-    "Senior Frontend Engineer (2021-2023) at FinTech Innovators Inc."
+    {
+      "role": "Junior Systems Administrator",
+      "company": "SecureNet Technologies",
+      "year_range": "2010-2012"
+    },
+    {
+      "role": "DevOps Engineer",
+      "company": "Sentinel Cybersecurity",
+      "year_range": "2012-2015"
+    },
+    {
+      "role": "Senior Site Reliability Engineer",
+      "company": "Vigilant Security Group",
+      "year_range": "2015-2018"
+    },
+    {
+      "role": "Staff DevOps Engineer",
+      "company": "CyberShield Security Solutions",
+      "year_range": "2018-present"
+    }
   ],
   "skills": {
-    "JavaScript": 4,
-    "TypeScript": 5,
-    "React": 5,
-    "Next.js": 4,
-    "Responsive design": 4,
-    "Web accessibility (WCAG)": 4,
-    "State management (Redux/Zustand)": 4,
-    "Python": 3,
-    "Node.js": 3,
-    "REST API design": 4,
-    "GraphQL": 3,
-    "Stakeholder management": 3
+    "CI/CD pipelines": 5,
+    "GitHub Actions": 4,
+    "Jenkins": 3,
+    "ArgoCD": 4,
+    "Prometheus/Grafana": 4,
+    "Kubernetes": 5,
+    "Terraform": 5,
+    "Python": 4,
+    "Cloud cost optimization": 4,
+    "Network automation": 3,
+    "Database optimization": 3,
+    "Incident management": 4
   },
   "document_ids": [
     "d_p_022_00",
     "d_p_022_01",
-    "d_p_022_02"
+    "d_p_022_02",
+    "d_p_022_03",
+    "d_p_022_04",
+    "d_p_022_05"
   ]
 }

@@ -1,54 +1,63 @@
 {
   "persona_id": "p_039",
   "hyperparams": {
-    "archetype": "security_engineer",
-    "years_experience": 1,
-    "seniority": "junior",
-    "industry": "consulting",
-    "writing_style": "concise",
+    "archetype": "data_scientist",
+    "years_experience": 8,
+    "seniority": "senior",
+    "industry": "enterprise",
+    "writing_style": "verbose",
     "language_fluency": "native",
     "self_promotion_level": "balanced",
-    "quantification_tendency": "mixed"
+    "quantification_tendency": "qualitative"
   },
-  "name": "Liam Carter",
-  "current_role": "Security Engineer",
-  "company": "Verve Consulting",
+  "name": "Rafael Costa",
+  "current_role": "Senior Data Scientist - Enterprise AI Solutions",
+  "company": "NexaTech Solutions",
   "education": {
-    "degree": "Bachelor of Science in Computer Science",
-    "university": "University of Oregon",
-    "year": 2022
+    "degree": "Master of Science in Data Science",
+    "university": "University of Cambridge",
+    "year": 2018
   },
   "career_trajectory": [
     {
-      "role": "Security Analyst Intern",
-      "company": "CyberShield Group",
-      "duration": "6 months"
+      "position": "Data Analyst",
+      "company": "Strategic Analytics Group",
+      "duration": "2015-2017",
+      "responsibilities": "Developed predictive models for customer churn, optimized SQL queries for real-time reporting, and conducted exploratory data analysis on enterprise datasets."
     },
     {
-      "role": "Junior Security Engineer",
-      "company": "Verve Consulting",
-      "duration": "10 months"
+      "position": "Data Scientist",
+      "company": "FinTech Innovators Inc.",
+      "duration": "2017-2019",
+      "responsibilities": "Led A/B testing frameworks for product features, engineered features for fraud detection models, and deployed ML pipelines on AWS."
     },
     {
-      "role": "Security Consultant",
-      "company": "Verve Consulting",
-      "duration": "5 months"
+      "position": "Lead Data Scientist",
+      "company": "HealthInsight Technologies",
+      "duration": "2019-2021",
+      "responsibilities": "Architected MLOps pipelines using MLflow, optimized NLP models for clinical text analysis, and mentored junior data scientists in Bayesian modeling."
+    },
+    {
+      "position": "Senior Data Scientist",
+      "company": "NexaTech Solutions",
+      "duration": "2021-present",
+      "responsibilities": "Designing reinforcement learning systems for dynamic pricing, leading cross-functional teams in model deployment, and optimizing feature stores for real-time analytics."
     }
   ],
   "skills": {
-    "Network security": 3,
-    "Application security (OWASP)": 3,
-    "Penetration testing": 3,
-    "IAM/Access control": 3,
-    "Encryption & PKI": 3,
-    "Security auditing": 2,
-    "SIEM tools": 3,
-    "Vulnerability management": 3,
-    "TCP/IP": 2,
-    "Firewall configuration": 3
+    "scikit-learn": 5,
+    "TensorFlow": 5,
+    "MLOps": 5,
+    "Time series analysis": 5,
+    "Python": 5,
+    "Apache Spark": 4,
+    "Apache Airflow": 4,
+    "Data warehousing": 4
   },
   "document_ids": [
     "d_p_039_00",
-    "d_p_039_01"
+    "d_p_039_01",
+    "d_p_039_02",
+    "d_p_039_03"
   ]
 }

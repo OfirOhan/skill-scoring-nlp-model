@@ -1,30 +1,30 @@
 {
   "proficiency_distribution": {
-    "total_examples": 2416,
+    "total_examples": 2071,
     "distribution": {
       "1": {
-        "count": 567,
-        "percentage": 23.5,
+        "count": 510,
+        "percentage": 24.6,
         "passed": true
       },
       "2": {
-        "count": 220,
-        "percentage": 9.1,
+        "count": 199,
+        "percentage": 9.6,
         "passed": false
       },
       "3": {
-        "count": 808,
-        "percentage": 33.4,
+        "count": 802,
+        "percentage": 38.7,
         "passed": true
       },
       "4": {
-        "count": 554,
-        "percentage": 22.9,
+        "count": 440,
+        "percentage": 21.2,
         "passed": true
       },
       "5": {
-        "count": 267,
-        "percentage": 11.1,
+        "count": 120,
+        "percentage": 5.8,
         "passed": false
       }
     },
@@ -34,8 +34,8 @@
     "total_personas": 50,
     "distribution": {
       "backend_engineer": {
-        "count": 4,
-        "percentage": 8.0,
+        "count": 3,
+        "percentage": 6.0,
         "passed": true
       },
       "data_engineer": {
@@ -44,8 +44,8 @@
         "passed": true
       },
       "data_scientist": {
-        "count": 2,
-        "percentage": 4.0,
+        "count": 5,
+        "percentage": 10.0,
         "passed": true
       },
       "devops_sre": {
@@ -59,8 +59,8 @@
         "passed": false
       },
       "frontend_engineer": {
-        "count": 3,
-        "percentage": 6.0,
+        "count": 4,
+        "percentage": 8.0,
         "passed": true
       },
       "fullstack_developer": {
@@ -69,18 +69,18 @@
         "passed": true
       },
       "ml_engineer": {
-        "count": 4,
-        "percentage": 8.0,
+        "count": 5,
+        "percentage": 10.0,
         "passed": true
       },
       "mobile_developer": {
-        "count": 4,
-        "percentage": 8.0,
+        "count": 3,
+        "percentage": 6.0,
         "passed": true
       },
       "platform_engineer": {
-        "count": 3,
-        "percentage": 6.0,
+        "count": 6,
+        "percentage": 12.0,
         "passed": true
       },
       "product_manager": {
@@ -89,8 +89,8 @@
         "passed": true
       },
       "qa_test_engineer": {
-        "count": 6,
-        "percentage": 12.0,
+        "count": 2,
+        "percentage": 4.0,
         "passed": true
       },
       "security_engineer": {
@@ -99,8 +99,8 @@
         "passed": true
       },
       "tech_lead_architect": {
-        "count": 4,
-        "percentage": 8.0,
+        "count": 2,
+        "percentage": 4.0,
         "passed": true
       }
     },
@@ -110,36 +110,36 @@
     "total_personas": 50,
     "distribution": {
       "0-1": {
-        "count": 5,
-        "percentage": 10.0,
+        "count": 8,
+        "percentage": 16.0,
         "target": 15,
-        "deviation": 5.0,
+        "deviation": 1.0,
         "passed": true
       },
       "2-3": {
-        "count": 10,
-        "percentage": 20.0,
-        "target": 20,
-        "deviation": 0.0,
-        "passed": true
-      },
-      "4-6": {
         "count": 14,
         "percentage": 28.0,
+        "target": 20,
+        "deviation": 8.0,
+        "passed": false
+      },
+      "4-6": {
+        "count": 13,
+        "percentage": 26.0,
         "target": 25,
-        "deviation": 3.0,
+        "deviation": 1.0,
         "passed": true
       },
       "7-9": {
-        "count": 10,
-        "percentage": 20.0,
+        "count": 8,
+        "percentage": 16.0,
         "target": 20,
-        "deviation": 0.0,
+        "deviation": 4.0,
         "passed": true
       },
       "10-12": {
-        "count": 8,
-        "percentage": 16.0,
+        "count": 4,
+        "percentage": 8.0,
         "target": 12,
         "deviation": 4.0,
         "passed": true
@@ -152,38 +152,38 @@
         "passed": true
       }
     },
-    "all_passed": true
+    "all_passed": false
   },
   "doc_type_distribution": {
-    "total_documents": 206,
+    "total_documents": 180,
     "distribution": {
       "blog": {
-        "count": 21,
-        "percentage": 10.2
+        "count": 18,
+        "percentage": 10.0
       },
       "cv": {
         "count": 50,
-        "percentage": 24.3
+        "percentage": 27.8
       },
       "linkedin": {
         "count": 10,
-        "percentage": 4.9
+        "percentage": 5.6
       },
       "project_readme": {
-        "count": 79,
-        "percentage": 38.3
+        "count": 67,
+        "percentage": 37.2
       },
       "recommendation": {
-        "count": 46,
-        "percentage": 22.3
+        "count": 35,
+        "percentage": 19.4
       }
     }
   },
   "length_proficiency_correlation": {
-    "spearman_r": 0.2709,
+    "spearman_r": 0.2472,
     "p_value": 0.0,
     "threshold": 0.3,
     "passed": true,
-    "total_pairs": 2416
+    "total_pairs": 2071
   }
 }

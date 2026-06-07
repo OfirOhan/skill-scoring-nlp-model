@@ -3,23 +3,24 @@
   "type": "recommendation",
   "persona_id": "p_030",
   "hyperparams": {
-    "recommender_role": "skip-level",
+    "recommender_role": "peer",
     "recommender_closeness": "worked-daily",
-    "company_type": "academic",
-    "company_size": "small (<50)"
+    "company_type": "FAANG",
+    "company_size": "large (500+)"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "CI/CD pipelines": 2,
-    "Docker": 2,
-    "GitHub Actions": 2,
-    "Linux administration": 2,
-    "Microservices architecture": 4,
-    "Monitoring & alerting": 2,
-    "PostgreSQL": 3,
+    "API testing": 1,
+    "BDD/TDD": 2,
+    "CI/CD pipelines": 1,
+    "GitHub Actions": 1,
+    "Integration testing": 1,
     "Python": 3,
-    "REST API design": 3,
-    "Terraform": 2
+    "REST API design": 1,
+    "Selenium/Playwright": 1,
+    "Test automation": 3,
+    "Test strategy design": 2,
+    "Unit testing": 2,
+    "Web accessibility (WCAG)": 2
   },
-  "text": "James Carter is a Backend Engineer whose technical rigor and systems thinking have made measurable impacts at HealthTrack Inc. Over his tenure, he designed and scaled a microservices architecture that reduced system latency by 40% while improving fault tolerance during peak usage, directly contributing to a 25% increase in user engagement. His ownership of the AWS infrastructure migration streamlined deployment workflows, cutting environment setup time by 60% and reducing cloud costs by 15% annually.  \n\nA standout strength is his ability to balance high availability with operational simplicity. For example, he rearchitected PostgreSQL data pipelines to handle 10x more concurrent queries without compromising data integrity, enabling real-time analytics for clinical decision support. His Python-based automation scripts for CI/CD pipelines cut deployment errors by 35%, while his REST API designs facilitated seamless integration with third-party health devices, expanding the platform’s interoperability.  \n\nBeyond technical skills, James exemplifies reliability and intellectual curiosity. He proactively troubleshoots edge cases, often mentoring junior engineers on best practices. His work ethic is marked by precision—whether optimizing query performance or ensuring compliance with HIPAA standards, he approaches challenges with methodical clarity.  \n\nI wholeheartedly recommend James for any role requiring scalable systems expertise, architectural vision, and a commitment to operational excellence. His contributions have been instrumental to HealthTrack’s technical success, and I’m confident he will deliver similar value wherever he progresses."
+  "text": "Aiden and I first collided during a chaotic product launch at NexaLogic. The team was racing to fix a critical payment processing bug that was causing user frustration. While others scrambled to reproduce the issue, Aiden quietly dug into the logs, cross-referenced user feedback, and traced the problem to a subtle edge case in the checkout flow. His calm persistence led to a fix that avoided a potential PR disaster. That incident cemented his reputation as someone who doesn’t just find bugs but understands the human impact of them.  \n\nAiden’s role as a QA engineer is less about “testing” and more about being the team’s quality anchor. He’s the one who’ll ask, “What if a user with a screen reader encounters this?” or “How does this behave under low-bandwidth conditions?” His work ethic is unshakable—he’ll spend hours refining test scenarios or mentoring junior engineers, even when no one’s watching.  \n\nWhat stands out is his knack for turning ambiguity into clarity. When our team debated whether to prioritize a flaky UI test or a critical backend check, Aiden built a lightweight Python script to simulate real-world load, proving which issue demanded immediate action. He also quietly championed accessibility checks, ensuring our tools met WCAG standards without fanfare.  \n\nIf you’re looking for someone who blends technical rigor with empathy, Aiden is your person. He’s not just reliable—he’s the kind of teammate who makes everyone better without ever asking for credit."
 }

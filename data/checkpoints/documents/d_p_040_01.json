@@ -3,26 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_040",
   "hyperparams": {
-    "project_scale": "academic",
+    "project_scale": "hobby",
     "project_team_size": "solo",
-    "jargon_density": "plain"
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 2,
-    "ArgoCD": 2,
-    "CI/CD pipelines": 3,
-    "Docker": 2,
-    "GCP": 1,
-    "GitHub Actions": 2,
-    "GitLab CI": 1,
-    "Incident management": 3,
-    "Jenkins": 1,
-    "Kubernetes": 2,
-    "Monitoring & alerting": 3,
-    "Prometheus/Grafana": 3,
-    "Python": 3,
-    "SLA/SLO management": 2,
-    "Terraform": 2
+    "C/C++ (embedded)": 3,
+    "Embedded Linux": 3,
+    "Firmware development": 3,
+    "GitLab CI": 2,
+    "Hardware-software integration": 3,
+    "IoT protocols (MQTT/CoAP)": 3,
+    "Network automation": 2,
+    "Python": 1,
+    "REST API design": 1,
+    "RTOS": 3,
+    "Sensor integration": 1,
+    "Shell scripting (Bash)": 2
   },
-  "text": "# AdImpulse Analytics Platform  \n\nAdImpulse is a real-time analytics platform designed to process and analyze ad impressions at scale, leveraging distributed computing and fault-tolerant architecture. Built for adtech environments where milliseconds matter, this project balances high-throughput data ingestion with actionable insights, ensuring reliability even under adversarial conditions.  \n\n## Tech Stack  \nThe platform is constructed using a combination of Python for data processing, AWS for scalable cloud infrastructure, Prometheus and Grafana for monitoring, and Docker for containerization. Key components include:  \n- **Python**: For ETL pipelines and anomaly detection logic  \n- **AWS**: EC2 clusters for compute, S3 for storage, and Kinesis for real-time data ingestion  \n- **Prometheus/Grafana**: Centralized monitoring with custom dashboards for latency and error tracking  \n- **Docker**: Lightweight containerization for consistent deployment across environments  \n\n## Architecture Overview  \nThe system operates as a layered pipeline:  \n1. **Ingestion Layer**: Raw impression data is streamed via AWS Kinesis, ensuring low-latency ingestion  \n2. **Processing Layer**: Python-based microservices handle data normalization and metric aggregation, with retries and checkpointing for fault tolerance  \n3. **Storage Layer**: Aggregated metrics are stored in Amazon S3, partitioned by timestamp for efficient querying  \n4. **Monitoring Layer**: Prometheus scrapes metrics from all nodes, while Grafana provides real-time visualizations and alerting for critical thresholds  \n\n## Setup Instructions  \n1. Clone the repository: `git clone https://github.com/alexandra-chen/adimpulse.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure AWS credentials and Prometheus scrape targets in `config.yaml`  \n4. Build Docker containers: `docker-compose up --build`  \n5. Run the pipeline: `python main.py`  \n\n## Operational Insights  \n- **CI/CD**: Automated testing and deployment via GitHub Actions ensures rapid iteration without compromising stability  \n- **Incident Management**: Predefined alerting rules in Prometheus trigger escalations for latency spikes or data loss, with rollback mechanisms to revert to stable states  \n- **Scalability**: The architecture scales horizontally by adding EC2 nodes, with dynamic resource allocation based on incoming impression rates  \n\nThis project exemplifies a pragmatic approach to building resilient, high-performance systems in adtech, balancing technical depth with operational simplicity."
+  "text": "# SecureIoT Payment Gateway  \nA low-power embedded system for real-time financial transaction monitoring using encrypted IoT protocols and secure firmware. Designed for edge devices in fintech environments, balancing latency and compliance with PCI DSS standards.  \n\n---\n\n## Badges  \n[![Security](https://img.shields.io/badge/secure-yes-blue)](https://example.com)  \n[![CI](https://img.shields.io/badge/CI-passing-green)](https://example.com)  \n[![Version](https://img.shields.io/badge/version-1.2.0-yellow)](https://example.com)  \n\n---\n\n## Getting Started / Installation  \n**Requirements:**  \n- ARM Cortex-M7 microcontroller (e.g., STM32H7)  \n- Rust toolchain (rustc 1.60+)  \n- OpenSSL development libraries  \n\n**Steps:**  \n1. Fetch the repository using `git clone https://github.com/ritikamalhotra/SecureIoT.git`  \n2. Build the firmware: `cargo build --target thumbv7em-none-eabihf`  \n3. Flash to device via ST-Link: `arm-none-eabi-gdb -ex 'target remote localhost:3333' -ex 'monitor reset' -ex 'load'`  \n\n---\n\n## Usage / Examples  \n**Basic operation:**  \n```bash  \n./secureiot --mode monitor --interval 100ms  \n```  \n**Send transaction:**  \n```bash  \ncurl -X POST https://api.paymentgateway.com/tx -d '{\"amount\": 50, \"hash\": \"abc123\"}'  \n```  \n**Check logs:**  \n```bash  \n./secureiot --log-level debug --output /mnt/sdcard/logs.txt  \n```  \n\n**Features:**  \n- MQTT over TLS for encrypted communication  \n- Dynamic power scaling (150µA idle, 2.3mA active)  \n- Real-time anomaly detection (≤15ms latency)  \n\n---\n\n## Architecture / Design  \nThe system uses a dual-core Cortex-M7 with a secure bootloader for firmware updates. Key components:  \n- **Microcontroller:** STM32H743 with 256KB RAM and 1MB Flash  \n- **Communication:** MQTT over TLS 1.3 with pre-shared keys  \n- **Crypto:** Custom AES-256-CTR implementation (3.2ms per block)  \n- **RTOS:** FreeRTOS with priority-based task scheduling  \n\nDesign prioritizes isolation between payment processing and network stacks to prevent side-channel attacks.  \n\n---\n\n## Tech Stack / Built With  \n- **Firmware:** C++17, Embedded Linux (Yocto 3.2)  \n- **Protocols:** MQTT 5.0, CoAP 1.5, TLS 1.3  \n- **RTOS:** FreeRTOS with MPU-enabled memory protection  \n- **Tools:** Rust for scripting, Arm GDB for debugging  \n\n---\n\n## Roadmap / Future Work  \n- Add hardware-backed encryption modules (HSM) for PCI DSS compliance  \n- Implement multi-factor authentication via NFC/SE tags  \n- Expand CoAP support for LoRaWAN integration  \n\n---\n\n## Acknowledgments  \nThanks to the Rust community for tooling, OpenSSL for crypto libraries, and the FreeRTOS team for real-time scheduling primitives.  \n\n---\n\n## Contributing  \nContributions via GitHub PRs are welcome. Prefer C++17 and Rust code style. All patches must include unit tests and CI passes."
 }

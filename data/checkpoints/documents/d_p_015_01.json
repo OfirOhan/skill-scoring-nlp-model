@@ -3,20 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_015",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "small (2-4)",
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Apache Airflow": 1,
-    "Docker": 3,
-    "GCP": 3,
-    "MLOps (MLflow/W&B)": 3,
-    "NLP": 3,
-    "PyTorch": 3,
-    "REST API design": 2,
-    "TensorFlow": 1,
-    "scikit-learn": 3
+    "AWS": 5,
+    "Cloud cost optimization": 4,
+    "GCP": 5,
+    "Infrastructure as Code": 4,
+    "Kubernetes": 4,
+    "Network troubleshooting": 3,
+    "PostgreSQL": 4,
+    "Python": 4,
+    "REST API design": 3,
+    "Terraform": 4
   },
-  "text": "# Ad Click Prediction with Deep Learning  \n\n**Predict click-through rates for ad campaigns using a lightweight deep learning model optimized for real-time inference.**  \n\n## Tech Stack  \n- **Modeling**: PyTorch (custom neural network), scikit-learn (feature engineering)  \n- **Deployment**: Docker (containerization), GCP AI Platform (cloud hosting)  \n- **MLOps**: MLflow (experiment tracking), Weights & Biases (monitoring)  \n- **Data**: BigQuery (ad campaign logs), BQML (preprocessing)  \n- **NLP**: spaCy (text feature extraction)  \n- **API**: FastAPI (production endpoint)  \n\n## Architecture Overview  \nThe system processes raw ad campaign data via BigQuery, extracts contextual features with spaCy, and trains a PyTorch model using MLflow. Docker containers orchestrate training and inference pipelines, while GCP AI Platform handles scalable deployment. The REST API exposes real-time prediction endpoints with latency <50ms.  \n\n## Setup Instructions  \n1. Clone repo: `git clone https://github.com/elenamartinez/ad-click-prediction.git`  \n2. Build Docker image:  \n   ```bash  \n   docker build -t ad-click-model -f Dockerfile .  \n   ```  \n3. Train model:  \n   ```bash  \n   docker run --rm -v $(pwd):/workspace ad-click-model python train.py --gcp-project YOUR_PROJECT  \n   ```  \n4. Deploy to GCP:  \n   ```bash  \n   gcloud ai-platform models create ad-model --regions us-central1  \n   gcloud ai-platform versions create v1 --model ad-model --origin ./saved_model --runtime-version 2.8 --framework pytorch  \n   ```  \n5. Query API: `curl https://api.adplatform.com/predict -X POST -d '{\"user_id\": \"123\", \"ad_text\": \"discount offer\"}'`  \n\n## Metrics  \n- **AUC-ROC**: 0.89 (validation set)  \n- **Log Loss**: 0.32 (test set)  \n- **Inference Latency**: 48ms (p99)  \n- **Model Size**: 58MB (optimized PyTorch export)  \n\n## Skills & Tools  \n- **Docker**: Containerized training pipelines with multi-stage builds  \n- **GCP**: BigQuery integration, AI Platform deployment, cloud storage  \n- **MLOps**: MLflow tracking, W&B artifact logging, CI/CD pipeline  \n- **NLP**: Text vectorization, domain-specific feature extraction  \n- **PyTorch**: Custom model architecture with gradient checkpointing  \n- **scikit-learn**: Pipeline automation, hyperparameter tuning  \n\n*Lightweight, production-ready solution for adtech CTR prediction.*"
+  "text": "# NexusPay Microservices Platform  \nA high-throughput, low-latency financial data pipeline engineered for fintech's most demanding use cases. Built to handle millions of transactions per second with zero-tolerance for latency, this platform serves as the backbone for real-time analytics, fraud detection, and cross-border settlement systems.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/actions/workflow/status/username/nexuspay/main.yml?branch=main)](https://github.com/username/nexuspay/actions)  \n[![Coverage](https://img.shields.io/coverity/coverage/username/nexuspay)](https://coverity.com/projects/username/nexuspay)  \n[![Docs](https://img.shields.io/badge/docs-latest-blue)](https://nexuspay.readthedocs.io)  \n\n## Getting Started / Installation  \n```bash\ngit clone https://github.com/username/nexuspay.git  \ncd nexuspay  \nmake dependencies  \nmake deploy-local  \n```  \nEnsure you have Docker 20.10+, kubectl 1.22+, and Terraform 1.5+ installed. For production, use AWS/GCP terraform modules and configure IAM roles.  \n\n## Usage / Examples  \n```python  \nfrom nexuspay import Pipeline  \npipeline = Pipeline(\"fraud-detection\")  \npipeline.process(  \n    data={\"transaction_id\": \"TX12345\", \"amount\": 1500.00},  \n    callback=\"https://api.example.com/webhook\"  \n)  \n```  \nUse the REST API for batch reconciliation:  \n```bash  \ncurl -X POST https://api.nexuspay.com/v1/reconcile \\\n  -H \"Authorization: Bearer <token>\" \\\n  -d '{\"batch_id\": \"BATCH67890\"}'  \n```  \n\n## Architecture / Design  \nThe platform is a distributed event-driven system with Kafka as the central message bus. Key components include:  \n- **Rate-Limited API Gateway** (NGINX+Lua) for 10k+ RPS  \n- **Kafka Streams** for real-time data transformation  \n- **Multi-Region PostgreSQL Clusters** with synchronous replication  \n- **Kubernetes Operator** for dynamic service scaling  \n- **Network Policy Enforcement** via Cilium for zero-trust model  \n\n## Tech Stack / Built With  \n- **Cloud**: AWS (EC2, S3, Lambda) + GCP (BigQuery, Dataflow)  \n- **Orchestration**: Kubernetes (Helm charts, Operator)  \n- **Data**: PostgreSQL (sharded), Kafka, Redis (cache)  \n- **Lang**: Python (data pipelines), Go (services), Rust (security modules)  \n- **IaC**: Terraform (modules), AWS CloudFormation, Pulumi  \n\n## Roadmap / Future Work  \nQ4 2023: Integrate AI-powered anomaly detection with TensorFlow Serving.  \nQ1 2024: Expand to Azure with hybrid cloud support.  \n2024: Implement end-to-end encryption for all data in transit.  \n\n## Acknowledgments  \nThanks to AWS and GCP teams for collaborative architecture reviews. Special mention to the PostgreSQL team for shard-aware replication strategies.  \n\n## Contributing  \nPRs welcome! Follow the [contributing guide](https://nexuspay.readthedocs.io/en/latest/contributing.html) for code style and testing requirements."
 }

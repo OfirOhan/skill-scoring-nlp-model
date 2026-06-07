@@ -1,23 +1,27 @@
 {
   "doc_id": "d_p_027_03",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_027",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "heavy"
+    "recommender_role": "professor",
+    "recommender_closeness": "brief",
+    "company_type": "startup",
+    "company_size": "large (500+)"
   },
   "skill_evidence": {
-    "CI/CD pipelines": 3,
-    "Cloud cost optimization": 3,
-    "Go": 3,
-    "Kubernetes": 3,
-    "Message queues": 3,
-    "Microservices architecture": 3,
-    "PostgreSQL": 3,
-    "Python": 5,
-    "REST API design": 3,
-    "Terraform": 3
+    "ArgoCD": 3,
+    "CI/CD pipelines": 1,
+    "Cloud cost optimization": 2,
+    "Cloud networking (VPC/subnets)": 1,
+    "Configuration management (Ansible)": 1,
+    "GitHub Actions": 1,
+    "GitLab CI": 2,
+    "Jenkins": 2,
+    "Linux administration": 3,
+    "Monitoring & alerting": 3,
+    "Prometheus/Grafana": 3,
+    "Python": 1,
+    "Shell scripting (Bash)": 1
   },
-  "text": "# Ad Analytics Dashboard\n\nReal-time ad performance monitoring with scalable architecture and low-latency data pipelines. Built for adtech teams requiring sub-100ms metric updates and interactive visualization. Serves 50+ concurrent users with 99.95% uptime.\n\n## Tech Stack\n- **Backend**: Go (1.21), Python (3.11), PostgreSQL (16.2)\n- **Orchestration**: Kubernetes (1.28) with HPA (scale 3-12 pods)\n- **Data Ingestion**: Kafka (3.4) with 500+ partitions\n- **Visualization**: Plotly (via Python) + React (v18)\n- **CI/CD**: GitHub Actions (v2.2) with parallel matrix jobs\n- **Infrastructure**: Terraform (1.5) + AWS (EKS, RDS, S3)\n- **Monitoring**: Prometheus (v2.34) + Grafana (v10)\n\n## Architecture\nMicroservices split into three layers:\n1. **Ingestion**: Kafka consumers with 200ms processing latency\n2. **Processing**: Go-based stream processor handling 10k+ events/sec\n3. **Visualization**: Python-based dashboard with Redis (6.2) caching\n\nKubernetes autoscaling reduces cold start latency by 40%. PostgreSQL is optimized with partitioning and connection pooling (max 150 active connections).\n\n## Setup\n```bash\ngit clone https://github.com/your-username/ad-analytics-dashboard\ncd ad-analytics-dashboard\n\n# Initialize infrastructure\nterraform init && terraform apply --auto-approve\n\n# Set environment variables\nexport DB_USER=ad_user\nexport DB_PASSWORD=secure_pass\nexport KAFKA_BOOTSTRAP=kafka-cluster:9092\n\n# Build services\ngo mod tidy && go build -o ad-server\npip install -r requirements.txt\n\n# Run dashboard\npython main.py\n```\n\n## Key Metrics\n- 30% reduction in cloud costs via Kubernetes spot instances\n- 99.98% API availability with 50ms P99 latency\n- 15x query performance improvement with PostgreSQL index optimizations\n- 95% faster deployment cycles with GitHub Actions parallelism\n\nBuilt for adtech teams needing real-time analytics without sacrificing scalability or cost efficiency."
+  "text": "Connor Murphy is a DevOps Engineer at NexaCloud Solutions, a SaaS company scaling rapidly across multiple regions. His work focuses on maintaining system reliability while optimizing resource usage.  \n\nConnor’s strength lies in balancing operational stability with cost efficiency. He designed a cloud cost optimization framework that reduced unnecessary spend by 18% without compromising service levels. His GitLab CI pipelines automate 90% of routine deployments, enabling faster feature rollouts. ArgoCD plays a central role in his workflow, ensuring seamless application sync across environments. He troubleshoots Linux-based infrastructure issues proactively, often resolving outages before they escalate. His monitoring setup with Prometheus and Grafana provides real-time visibility, allowing teams to address bottlenecks swiftly.  \n\nOne standout achievement was refactoring a legacy monitoring system, which cut alert fatigue by 70% and improved incident response times. Connor’s ability to simplify complex systems while maintaining rigor is rare. He approaches challenges with methodical clarity, often mentoring junior engineers during on-call shifts. His reliability and technical depth make him an asset to any team.  \n\nConnor is a pragmatic problem-solver who prioritizes long-term system health over short-term fixes. I’m confident he’ll thrive in roles requiring both precision and adaptability."
 }

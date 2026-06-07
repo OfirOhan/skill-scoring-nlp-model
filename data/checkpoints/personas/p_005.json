@@ -1,58 +1,69 @@
 {
   "persona_id": "p_005",
   "hyperparams": {
-    "archetype": "product_manager",
-    "years_experience": 5,
-    "seniority": "mid",
-    "industry": "cybersecurity",
+    "archetype": "devops_sre",
+    "years_experience": 11,
+    "seniority": "staff",
+    "industry": "fintech",
     "writing_style": "verbose",
-    "language_fluency": "ESL",
+    "language_fluency": "native",
     "self_promotion_level": "humble",
-    "quantification_tendency": "qualitative"
+    "quantification_tendency": "metrics-heavy"
   },
-  "name": "Emily Carter",
-  "current_role": "Product Manager",
-  "company": "CyberShield Technologies",
+  "name": "Umar Bello",
+  "current_role": "Staff DevOps/SRE Lead",
+  "company": "FinTech Innovators Ltd.",
   "education": {
-    "degree": "Master of Science in Cybersecurity",
-    "university": "Carnegie Mellon University",
-    "year": 2020
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "University of London",
+    "year": 2012
   },
   "career_trajectory": [
     {
-      "role": "Product Coordinator",
-      "company": "SecureNet Solutions",
-      "duration": "2 years",
-      "responsibilities": "Supported product launches, conducted market research, and collaborated with engineering teams to prioritize features."
+      "role": "Junior DevOps Engineer",
+      "company": "FinTech Innovators Ltd.",
+      "duration": "2012-2015",
+      "achievements": "Built foundational CI/CD pipelines for payment gateway microservices, reduced deployment latency by 40%"
     },
     {
-      "role": "Junior Product Manager",
-      "company": "Verve Security",
-      "duration": "3 years",
-      "responsibilities": "Owned end-to-end product cycles, managed stakeholder expectations, and drove data-informed decisions for threat detection platforms."
+      "role": "Senior DevOps Engineer",
+      "company": "FinTech Innovators Ltd.",
+      "duration": "2015-2018",
+      "achievements": "Led cloud migration to AWS, achieved 99.95% SLA with zero downtime during peak transaction periods"
     },
     {
-      "role": "Product Manager",
-      "company": "CyberShield Technologies",
-      "duration": "Current role",
-      "responsibilities": "Lead strategy for endpoint security solutions, coordinate cross-functional teams, and oversee roadmap alignment with business goals."
+      "role": "Staff Cloud Infrastructure Engineer",
+      "company": "FinTech Innovators Ltd.",
+      "duration": "2018-2020",
+      "achievements": "Designed multi-cloud architecture with cost optimization, reducing annual cloud spend by $1.2M"
+    },
+    {
+      "role": "Staff DevOps/SRE Lead",
+      "company": "FinTech Innovators Ltd.",
+      "duration": "2020-present",
+      "achievements": "Established chaos engineering practices, improving system resilience by 65% during regulatory audits"
     }
   ],
   "skills": {
-    "Product management": 4,
-    "Roadmap planning": 4,
-    "Stakeholder management": 4,
-    "Competitive analysis": 3,
-    "Agile/Scrum": 4,
-    "SQL analytics": 3,
-    "Data visualization (Tableau/Power BI)": 3,
-    "A/B testing": 3,
-    "Hypothesis testing": 3
+    "CI/CD pipelines": 4,
+    "GitHub Actions": 4,
+    "Jenkins": 3,
+    "ArgoCD": 4,
+    "GitLab CI": 3,
+    "Prometheus/Grafana": 4,
+    "Monitoring & alerting": 4,
+    "Python": 4,
+    "AWS": 5,
+    "Kubernetes": 5,
+    "Terraform": 5,
+    "Linux administration": 5,
+    "Shell scripting": 4
   },
   "document_ids": [
     "d_p_005_00",
     "d_p_005_01",
     "d_p_005_02",
-    "d_p_005_03"
+    "d_p_005_03",
+    "d_p_005_04"
   ]
 }

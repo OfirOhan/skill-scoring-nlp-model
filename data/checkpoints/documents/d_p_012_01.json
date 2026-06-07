@@ -4,20 +4,20 @@
   "persona_id": "p_012",
   "hyperparams": {
     "project_scale": "team-internal",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "heavy"
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "HTML/CSS": 3,
-    "JavaScript": 3,
-    "Node.js": 1,
-    "REST API design": 2,
-    "React": 3,
-    "Responsive design": 3,
-    "State management (Redux/Zustand)": 2,
-    "TypeScript": 3,
-    "Web accessibility (WCAG)": 2,
-    "Webpack/Vite": 3
+    "AWS": 3,
+    "CI/CD pipelines": 3,
+    "Docker": 3,
+    "GitLab CI": 3,
+    "Kubernetes": 3,
+    "Linux administration": 2,
+    "Network automation": 2,
+    "Prometheus/Grafana": 3,
+    "Python": 3,
+    "Terraform": 3
   },
-  "text": "# NexaDashboard: Real-time Analytics UI for SaaS Platforms  \n\nNexaDashboard is a lightweight, team-internal React-based UI toolkit designed to visualize real-time analytics for SaaS platforms. Built with TypeScript, it emphasizes modularity, performance, and accessibility, enabling rapid prototyping of dashboards with minimal boilerplate.  \n\n## Tech Stack  \n- **Frontend**: React 18, TypeScript 4.9, Vite 3  \n- **Styling**: Tailwind CSS 3.3 (custom config), CSS-in-JS for isolated components  \n- **Build**: Vite (production), Vite dev server (local)  \n- **Accessibility**: WCAG 2.1 AA compliance (keyboard navigation, ARIA labels)  \n- **State**: Custom hooks for isolated state logic (no global state managers)  \n- **Responsive**: Mobile-first design with breakpoints for 1x/2x/3x density  \n\n## Architecture  \nThe dashboard follows a component-based architecture with a \"data layer\" abstraction for API integrations. Key components include:  \n- `ChartContainer`: Encapsulates D3.js-based visualizations with dynamic sizing  \n- `MetricsGrid`: Layout system for card-based metrics with CSS grid  \n- `TimeRangePicker`: Custom date range selector with TypeScript type inference  \n- `ThemeSwitcher`: Dark/light mode toggle with CSS variable injection  \n\nPerformance optimizations include:  \n- 30% faster load times via code splitting and lazy loading  \n- 20% smaller bundle size through tree-shaking and type inference  \n- 15ms reduction in re-render latency with React.memo and useMemo  \n\n## Setup  \n```bash  \nnpm install  \nnpm run dev  \n```  \nRuns the Vite dev server with hot reload. For production:  \n```bash  \nnpm run build  \n```  \nGenerates optimized static assets.  \n\n## Skills Demonstrated  \n- **React**: Component composition, hooks, and context API  \n- **TypeScript**: Type safety for props, state, and API responses  \n- **Responsive Design**: CSS media queries and flexible layouts  \n- **Accessibility**: Keyboard focus management and semantic HTML  \n- **Performance**: Code splitting, lazy loading, and bundle optimization  \n\n*Internal tooling for SaaS analytics teams. Not for public deployment.*"
+  "text": "# AutoScaleCI: CI/CD Pipeline Automation for Startups  \nA lightweight, modular tool to streamline deployment workflows while maintaining scalability for growing teams  \n\n[![Build Status](https://github.com/username/autoscaleci/actions/workflows/main.yml/badge.svg)](https://github.com/username/autoscaleci/actions)  \n[![Coverage](https://codecov.io/gh/username/autoscaleci/branch/main/graph/badge.svg)](https://codecov.io/gh/username/autoscaleci)  \n\n## Getting Started / Installation  \nInstall via pip:  \n```bash  \npip install autoscaleci  \n```  \nEnsure Docker and AWS CLI are installed. For team-internal use, configure AWS credentials via `~/.aws/credentials` and set environment variables for Docker socket access.  \n\n## Usage / Examples  \n```yaml  \n# .autoscaleci/config.yaml  \npipeline:  \n  deploy:  \n    stages:  \n      - build: docker build -t my-app  \n      - test: pytest  \n      - deploy: aws ecs update-service  \n```  \nAutomatically scales pipeline stages based on repo size and team workload. Integrates with GitHub Actions for pull request triggers.  \n\n## Architecture / Design  \nBuilt as a plugin-driven framework, separating orchestration logic from environment-specific tasks. Key components:  \n- **Scaler Engine**: Dynamically adjusts parallel jobs based on repo activity  \n- **AWS Proxy**: Manages EC2 and ECS interactions with rate-limiting safeguards  \n- **Observability Layer**: Exposes metrics via Prometheus for real-time pipeline health monitoring  \n\n## Tech Stack / Built With  \n- **Python** (async/await for non-blocking I/O)  \n- **Docker** (containerized agents for consistent execution)  \n- **Terraform** (infrastructure-as-code for ephemeral testing environments)  \n- **Kubernetes** (orchestrates multi-cluster deployments)  \n- **Prometheus/Grafana** (custom dashboards for pipeline latency analysis)  \n- **GitLab CI** (integration for legacy repo migrations)  \n\n## Contributing  \nWe welcome improvements to scaling algorithms and plugin architectures.  \n- Fork the repo  \n- Add tests for new features  \n- Update documentation for non-technical stakeholders  \n- Submit a pull request with a clear description of your contribution  \n\n## Testing  \nAll tests run in isolated Docker containers. Use `pytest -v` for verbose output or `pytest --cov` to check code coverage.  \n\n## Roadmap / Future Work  \n- Add support for Azure DevOps integration  \n- Implement dynamic resource allocation based on historical pipeline data  \n- Enhance security with automatic IAM role creation for temporary credentials  \n- Improve observability with distributed tracing for multi-cloud workflows"
 }

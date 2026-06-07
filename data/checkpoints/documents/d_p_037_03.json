@@ -1,21 +1,26 @@
 {
   "doc_id": "d_p_037_03",
-  "type": "linkedin",
+  "type": "recommendation",
   "persona_id": "p_037",
   "hyperparams": {
-    "linkedin_completeness": "minimal"
+    "recommender_role": "skip-level",
+    "recommender_closeness": "brief",
+    "company_type": "agency",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "CI/CD pipelines": 3,
-    "Docker": 3,
-    "GraphQL": 3,
-    "Kubernetes": 3,
-    "Microservices architecture": 3,
-    "PostgreSQL": 4,
-    "Python": 4,
-    "REST API design": 4,
-    "React": 4
+    "Pandas": 1,
+    "NumPy": 1,
+    "Statistical modeling": 1,
+    "A/B testing": 1,
+    "Data visualization (Matplotlib/Plotly)": 1,
+    "Jupyter notebooks": 1,
+    "Feature engineering": 1,
+    "Python": 1,
+    "REST API design": 1,
+    "Microservices architecture": 1,
+    "Apache Spark": 1,
+    "Apache Airflow": 1
   },
-  "text": "Emily Carter is a Full-Stack Developer at VitaHealth Solutions, where she architects and delivers scalable, user-centric healthtech solutions that bridge innovation and real-world impact. With four years of experience in the dynamic healthtech sector, she thrives at the intersection of technical excellence and mission-driven outcomes. At VitaHealth, Emily leads the development of critical applications, leveraging AWS to build resilient cloud infrastructure and CI/CD pipelines to automate seamless deployment workflows. Her expertise in Docker and Kubernetes has transformed microservices architecture, enabling efficient container orchestration and system scalability. A key focus of her work involves designing REST APIs and GraphQL endpoints that power intuitive React-based interfaces, ensuring seamless data flow between frontend and backend systems. Emily’s ownership of PostgreSQL databases has driven transformative optimizations, scaling the platform to handle over 500k concurrent users while reducing query latency by 40%. Her Python-based solutions have automated complex workflows, streamlining operations and reducing manual effort by 35%. Beyond code, Emily is driven by the vision of leveraging technology to improve healthcare accessibility and outcomes. She actively seeks collaborations that merge technical innovation with a commitment to advancing patient-centric solutions, always looking to push boundaries in healthtech. With a passion for solving complex problems and a dedication to growth, Emily is excited to shape the future of digital health through purposeful, impactful development."
+  "text": "Last quarter, Mateo Garcia spearheaded a project to optimize a client’s supply chain under tight deadlines. When the client’s existing models failed to predict demand fluctuations, he restructured the approach by integrating real-time market data with historical trends. His team pivoted from a reactive to proactive framework, reducing forecast errors by 25% and saving the client over $1.2M in operational costs. What stood out wasn’t just the result—it was how he navigated conflicting priorities, aligning stakeholders without losing sight of the technical nuances.  \n\nMateo is a Senior Data Scientist at Strategic Analytics Group, where he leads high-impact projects for Fortune 500 clients. His role blends deep analytical rigor with a knack for translating complex insights into actionable strategies. He thrives in ambiguity, often stepping in to mediate between technical teams and business leaders when misalignment threatens progress.  \n\nBeyond his technical prowess, Mateo’s strength lies in his ability to build trust. He mentors junior analysts with patience, fostering a culture of curiosity. His work ethic is unshakable—he’ll stay late to refine a model or pivot a strategy mid-project, always prioritizing outcomes over ego.  \n\nI’ve no doubt Mateo will excel in any role requiring strategic thinking and collaboration. His combination of intellectual depth and emotional intelligence makes him a rare asset. If you’re seeking someone who can deliver results while elevating those around them, Mateo is an exceptional choice."
 }

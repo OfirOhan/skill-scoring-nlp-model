@@ -1,27 +1,77 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A full-stack developer CV highlighting fintech experience and technical skills",
-    "title": "Alex Morgan - Full-Stack Developer",
+    "topic_summary": "Senior ML Engineer with 7 years of experience in healthtech, specializing in machine learning solutions for medical diagnostics and treatment optimization.",
+    "title": "Neha Joshi - Senior ML Engineer",
     "doc_id": "d_p_020_00",
     "persona_id": "p_020",
     "hyperparams": {
-      "cv_format": "minimal",
+      "cv_format": "paragraph",
       "geographic_convention": "Europe",
-      "company_type": "academic",
+      "company_type": "startup",
       "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A fintech payment processing API built with Node.js and Python",
-    "title": "FinTechPay: Secure Payment Gateway API",
+    "topic_summary": "A predictive analytics platform for hospital readmission risk scoring using patient health records and clinical data.",
+    "title": "MedReadmit: Predictive Analytics for Hospital Readmissions",
     "doc_id": "d_p_020_01",
     "persona_id": "p_020",
     "hyperparams": {
-      "project_scale": "team-internal",
+      "project_scale": "academic",
+      "project_team_size": "solo",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "Deep learning model for automated detection of diabetic retinopathy from retinal fundus images.",
+    "title": "DiabeticEye: Medical Imaging Analysis with CNNs",
+    "doc_id": "d_p_020_02",
+    "persona_id": "p_020",
+    "hyperparams": {
+      "project_scale": "academic",
+      "project_team_size": "large (15+)",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "Reinforcement learning framework for personalized treatment recommendations in chronic disease management.",
+    "title": "ChronicCareRL: Adaptive Treatment Planning System",
+    "doc_id": "d_p_020_03",
+    "persona_id": "p_020",
+    "hyperparams": {
+      "project_scale": "academic",
       "project_team_size": "medium (5-15)",
-      "jargon_density": "heavy"
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "Endorsement from a manager highlighting Neha's leadership in cross-functional ML projects at MedTech Innovations.",
+    "title": "Recommendation from Dr. Priya Kapoor, Chief Data Officer",
+    "doc_id": "d_p_020_04",
+    "persona_id": "p_020",
+    "hyperparams": {
+      "recommender_role": "skip-level",
+      "recommender_closeness": "worked-daily",
+      "company_type": "enterprise",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "Peer recommendation emphasizing Neha's collaborative approach and expertise in deploying ML models for clinical workflows.",
+    "title": "Recommendation from Raj Patel, Senior Data Scientist",
+    "doc_id": "d_p_020_05",
+    "persona_id": "p_020",
+    "hyperparams": {
+      "recommender_role": "professor",
+      "recommender_closeness": "occasional",
+      "company_type": "startup",
+      "company_size": "mid (50-500)"
     }
   }
 ]

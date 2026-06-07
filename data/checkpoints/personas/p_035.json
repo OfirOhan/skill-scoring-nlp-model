@@ -1,56 +1,64 @@
 {
   "persona_id": "p_035",
   "hyperparams": {
-    "archetype": "security_engineer",
-    "years_experience": 2,
-    "seniority": "junior",
-    "industry": "enterprise",
-    "writing_style": "neutral",
-    "language_fluency": "native",
-    "self_promotion_level": "balanced",
-    "quantification_tendency": "qualitative"
+    "archetype": "data_scientist",
+    "years_experience": 6,
+    "seniority": "senior",
+    "industry": "consulting",
+    "writing_style": "verbose",
+    "language_fluency": "near-native",
+    "self_promotion_level": "humble",
+    "quantification_tendency": "mixed"
   },
-  "name": "Emily Carter",
-  "current_role": "Security Engineer",
-  "company": "GlobalTech Solutions",
+  "name": "Sergei Antonov",
+  "current_role": "Senior Data Scientist - Consulting",
+  "company": "Strategic Analytics Solutions",
   "education": {
-    "degree": "Bachelor of Science in Cybersecurity",
-    "university": "University of CyberSecurity",
-    "year": 2022
+    "degree": "Master of Science in Data Science",
+    "university": "Moscow State University",
+    "year": 2018
   },
   "career_trajectory": [
     {
-      "year": 2020,
-      "position": "Security Analyst Intern",
-      "company": "SecureNet Inc."
+      "position": "Data Analyst",
+      "company": "TechNova Inc.",
+      "duration": "2 years",
+      "responsibilities": "Performed exploratory data analysis, built dashboards with Tableau, and optimized SQL queries for large datasets."
     },
     {
-      "year": 2021,
-      "position": "Junior Security Engineer",
-      "company": "DataGuard LLC"
+      "position": "Data Scientist",
+      "company": "Quantum Analytics Group",
+      "duration": "3 years",
+      "responsibilities": "Developed machine learning pipelines using scikit-learn and PyTorch, conducted A/B testing for product optimization, and mentored junior analysts."
     },
     {
-      "year": 2022,
-      "position": "Security Engineer",
-      "company": "GlobalTech Solutions"
+      "position": "Lead Data Scientist",
+      "company": "NexGen Consulting",
+      "duration": "1 year",
+      "responsibilities": "Architected MLOps pipelines with MLflow, designed recommendation systems for e-commerce clients, and led cross-functional teams for deployment."
     }
   ],
   "skills": {
-    "Network security": 3,
-    "Application security (OWASP)": 3,
-    "Penetration testing": 3,
-    "IAM/Access control": 3,
-    "Encryption & PKI": 3,
-    "Security auditing": 3,
-    "Firewall configuration": 3,
-    "Network automation": 3,
-    "Linux administration": 3,
-    "AWS": 3,
-    "Incident management": 3
+    "Pandas": 4,
+    "NumPy": 4,
+    "Statistical modeling": 4,
+    "A/B testing": 3,
+    "Data visualization (Matplotlib/Plotly)": 3,
+    "Feature engineering": 4,
+    "Time series analysis": 4,
+    "scikit-learn": 4,
+    "PyTorch": 4,
+    "TensorFlow": 4,
+    "SQL analytics": 3,
+    "Tableau/Power BI": 3,
+    "MLOps (MLflow/W&B)": 3,
+    "Model deployment": 4
   },
   "document_ids": [
     "d_p_035_00",
     "d_p_035_01",
-    "d_p_035_02"
+    "d_p_035_02",
+    "d_p_035_03",
+    "d_p_035_04"
   ]
 }

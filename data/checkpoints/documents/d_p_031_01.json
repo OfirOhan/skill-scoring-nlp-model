@@ -3,24 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_031",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "solo",
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 1,
-    "Docker": 1,
-    "GCP": 1,
-    "GitHub Actions": 1,
-    "Go": 1,
-    "Kubernetes": 1,
-    "Microservices architecture": 1,
-    "PostgreSQL": 1,
-    "Prometheus/Grafana": 1,
+    "AWS": 3,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 2,
+    "Database optimization": 2,
+    "GCP": 2,
+    "Infrastructure as Code": 3,
+    "Kubernetes": 3,
+    "Linux administration": 1,
+    "Prometheus/Grafana": 3,
     "Python": 1,
-    "REST API design": 4,
-    "React": 4,
-    "TypeScript": 4
+    "Terraform": 3
   },
-  "text": "# TaskFlow: Task Management Tool  \n\nTaskFlow is a production-ready task management application built for teams and individuals to organize workflows efficiently. It leverages modern frontend and backend technologies to deliver a scalable, secure, and intuitive interface for task creation, prioritization, and collaboration.  \n\n## Tech Stack  \n- **Frontend**: React (TypeScript) with hooks and custom hooks for state management  \n- **Backend**: Node.js (Express) with REST API design and JWT-based authentication  \n- **Database**: MongoDB (Atlas) for flexible schema handling and real-time data sync  \n- **TypeScript**: Enforced type safety across both frontend and backend layers  \n\n## Architecture  \nThe monorepo structure separates frontend and backend logic while sharing utility modules. The REST API follows a resource-oriented design with endpoints for tasks, users, and projects, supporting CRUD operations and real-time updates via WebSockets. MongoDB uses Mongoose schemas with embedded references for task dependencies. TypeScript interfaces enforce consistency between API responses and frontend state models.  \n\n## Setup Instructions  \n1. Clone the repository: `git clone https://github.com/alex-morgan/taskflow.git`  \n2. Install dependencies:  \n   ```bash  \n   cd taskflow  \n   npm install  \n   ```  \n3. Set environment variables in `.env.local`:  \n   ```  \n   PORT=3000  \n   MONGO_URI=mongodb+srv://user:pass@cluster0.mongodb.net/taskflow?retryWrites=true&w=majority  \n   JWT_SECRET=your-secret-key  \n   ```  \n4. Start the development server:  \n   ```bash  \n   npm run dev  \n   ```  \n   Access the app at `http://localhost:3000`  \n\n## Usage  \n- **Authentication**: Log in via email/password or OAuth2 (Google)  \n- **Task Management**: Create tasks with priority tags, assign to users, and track progress  \n- **Reporting**: Export task analytics as CSV or view real-time dashboards  \n\n## Key Features  \n- **Scalable REST API**: Handles 10k+ concurrent requests with rate limiting and caching  \n- **TypeScript-Driven Safety**: Eliminates runtime errors via strict type checks  \n- **MongoDB Optimization**: Indexing and aggregation pipelines for sub-second query latency  \n\nBuilt with a focus on maintainability and performance, TaskFlow is designed to evolve with team workflows while maintaining a robust technical foundation."
+  "text": "# SecureAPI Gateway for Fintech Compliance  \nA production-grade API gateway engineered for real-time compliance, fraud detection, and regulatory alignment in high-stakes financial ecosystems. Achieves 99.95% uptime with 200+ endpoints and 15+ regulatory standard compliance, including PCI-DSS, GDPR, and SOX.  \n\n## Badges  \n[![Build Status](https://github.com/erikbergstrom/secureapi/actions/workflows/ci.yml/badge.svg)](https://github.com/erikbergstrom/secureapi/actions/workflows/ci.yml)  \n[![Coverage](https://img.shields.io/coverage/github/erikbergstrom/secureapi)](https://github.com/erikbergstrom/secureapi/coverage)  \n[![Security](https://img.shields.io/snyk/applications/erikbergstrom/secureapi)](https://snyk.io/test/terraform/erikbergstrom/secureapi)  \n\n## Tech Stack / Built With  \n- **AWS EKS**: Managed Kubernetes cluster with auto-scaling and cost-optimized spot instances  \n- **Envoy Proxy**: L7 load balancing and observability layer with 12k+ concurrent connections  \n- **Terraform**: IaC for VPC, security groups, and autoscaling groups (75% reduction in manual config time)  \n- **Open Policy Agent (OPA)**: Just-in-time policy enforcement for 18+ compliance rules  \n- **Prometheus/Grafana**: End-to-end metrics pipeline with 300+ custom dashboards  \n- **PostgreSQL**: Time-series logging with 99.99% SLA and 500k+ transactions/sec throughput  \n\n## Architecture / Design  \nThe gateway operates as a three-tiered system:  \n1. **Ingress Layer**: Envoy handles TLS termination, rate limiting (10k RPS), and TLS 1.3 encryption  \n2. **Policy Enforcement**: OPA enforces 18+ compliance rules with 5ms latency P99  \n3. **Observability**: Prometheus collects 15k+ metrics/sec, with Grafana providing 200+ dashboards for real-time anomaly detection  \n\nDeployed on AWS EKS with Terraform-managed infrastructure, achieving 40% lower cloud costs compared to equivalent AWS Lambda solutions.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/erikbergstrom/secureapi  \ncd secureapi  \nexport AWS_ACCESS_KEY_ID=your_key  \nterraform apply --var-file=dev.tfvars  \n```\nVerify deployment with:  \n```bash  \ncurl -v https://api.securegateway.example.com/v1/health  \n```  \n\n## Usage / Examples  \n```http  \nGET https://api.securegateway.example.com/v1/transactions/12345  \nAuthorization: Bearer <token>  \nX-Compliance-Region: EU  \n```  \n**Response**:  \n```json  \n{  \n  \"status\": \"compliant\",  \n  \"rules_matched\": [\"gdpr-12\", \"sox-45\"],  \n  \"latency\": \"4.2ms\"  \n}  \n```  \n\n## API Reference  \n- **GET /v1/health**: 200 OK (system status)  \n- **POST /v1/audit**: 201 Created (regulatory logging)  \n- **OPTIONS /v1/***: 204 No Content (CORS preflight)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

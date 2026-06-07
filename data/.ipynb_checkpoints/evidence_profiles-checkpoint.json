@@ -1,0 +1,47 @@
+{
+  "1": {
+    "label": "Awareness",
+    "description": "Skill listed, no usage context",
+    "cv": null,
+    "project_readme": null,
+    "recommendation": null,
+    "linkedin": null,
+    "blog": null
+  },
+  "2": {
+    "label": "Beginner",
+    "description": "Basic/learning usage (coursework, tutorials)",
+    "cv": "Mentioned once in a learning/minor context. Used as part of a team, not owned. 'Completed tutorial', 'exposure to'.",
+    "project_readme": "Used in a small personal/academic project with basic/simple usage, not the main technology.",
+    "recommendation": null,
+    "linkedin": "May appear in a skills list only.",
+    "blog": null
+  },
+  "3": {
+    "label": "Intermediate",
+    "description": "Regular use in real projects",
+    "cv": "Mentioned in 1-2 work bullets with real project context. Contributed meaningfully, part of regular workflow.",
+    "project_readme": "Used substantially in a real project — not the core technology but plays a real role.",
+    "recommendation": "Briefly mentioned: 'solid skills in X', 'contributed effectively using X'.",
+    "linkedin": "Mentioned in context of work.",
+    "blog": null
+  },
+  "4": {
+    "label": "Advanced",
+    "description": "Production/complex usage, ownership",
+    "cv": "Featured in 2-3 bullets with production context, ownership language, measurable impact.",
+    "project_readme": "Core technology of a significant project. Design decisions described. Performance tuning.",
+    "recommendation": "Specifically praised: 'strong command of X', 'go-to person for X on the team'.",
+    "linkedin": "Highlighted as key expertise.",
+    "blog": "Could be a topic of a tutorial/deep-dive."
+  },
+  "5": {
+    "label": "Expert",
+    "description": "Architecture-level, mentoring, deep multi-year work",
+    "cv": "Central to role identity. Architecture decisions, mentoring others, multi-year depth, cross-team impact.",
+    "project_readme": "Multiple projects with deep/complex usage. Owns the technical direction. Novel approaches.",
+    "recommendation": "Exceptional. 'One of the strongest I've seen.' Transformative impact.",
+    "linkedin": "Defines professional identity.",
+    "blog": "Authoritative deep-dive with original insights."
+  }
+}

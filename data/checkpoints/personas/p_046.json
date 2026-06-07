@@ -1,57 +1,69 @@
 {
   "persona_id": "p_046",
   "hyperparams": {
-    "archetype": "backend_engineer",
-    "years_experience": 5,
-    "seniority": "mid",
-    "industry": "startup",
-    "writing_style": "neutral",
-    "language_fluency": "ESL",
-    "self_promotion_level": "humble",
-    "quantification_tendency": "mixed"
+    "archetype": "devops_sre",
+    "years_experience": 7,
+    "seniority": "senior",
+    "industry": "enterprise",
+    "writing_style": "verbose",
+    "language_fluency": "native",
+    "self_promotion_level": "boastful",
+    "quantification_tendency": "metrics-heavy"
   },
-  "name": "Alexandra Chen",
-  "current_role": "Backend Engineer",
-  "company": "NexaTech Solutions",
+  "name": "Linda Gustafsson",
+  "current_role": "Senior Site Reliability Engineer / DevOps Architect",
+  "company": "NordicTech Solutions AB",
   "education": {
-    "degree": "Bachelor of Science in Computer Science",
-    "university": "University of California, Berkeley",
-    "year": 2018
+    "degree": "Master's in Computer Science",
+    "university": "KTH Royal Institute of Technology",
+    "year": 2016
   },
   "career_trajectory": [
     {
-      "role": "Software Engineer",
-      "company": "TechNova Inc.",
-      "year": 2018
+      "role": "DevOps Engineer",
+      "company": "ScandiCloud",
+      "duration": "2015-2017",
+      "achievements": "Automated 80% of deployment pipelines using Jenkins and GitLab CI, reduced incident resolution time by 40% through proactive monitoring"
     },
     {
-      "role": "Backend Developer",
-      "company": "DataFlow Systems",
-      "year": 2020
+      "role": "SRE Lead",
+      "company": "NordicCloud",
+      "duration": "2017-2019",
+      "achievements": "Designed multi-cloud strategy for GCP/AWS, achieved 99.95% SLA with Terraform-managed infrastructure, mentored 5 junior SREs"
     },
     {
-      "role": "Senior Backend Engineer",
-      "company": "InnovateX Startup",
-      "year": 2022
+      "role": "DevOps Architect",
+      "company": "NordicTech Solutions AB",
+      "duration": "2019-2022",
+      "achievements": "Implemented Kubernetes-based microservices architecture, reduced cloud costs by 30% through optimization, led chaos engineering framework for 12+ services"
     }
   ],
   "skills": {
-    "Python": 4,
-    "Go": 4,
-    "REST API design": 4,
-    "Microservices architecture": 4,
-    "Message queues": 3,
-    "PostgreSQL": 4,
-    "CI/CD pipelines": 3,
-    "GitHub Actions": 3,
-    "Prometheus/Grafana": 3,
-    "Linux administration": 3
+    "CI/CD pipelines": 5,
+    "GitHub Actions": 4,
+    "Jenkins": 3,
+    "ArgoCD": 4,
+    "GitLab CI": 5,
+    "Prometheus/Grafana": 5,
+    "Monitoring & alerting": 5,
+    "SLA/SLO management": 4,
+    "Linux administration": 5,
+    "Shell scripting (Bash)": 4,
+    "Configuration management (Ansible)": 4,
+    "Log management (ELK)": 3,
+    "Chaos engineering": 4,
+    "AWS": 5,
+    "GCP": 5,
+    "Docker": 4,
+    "Kubernetes": 5,
+    "Terraform": 5,
+    "Cloud networking (VPC/subnets)": 4,
+    "Cloud cost optimization": 4
   },
   "document_ids": [
     "d_p_046_00",
     "d_p_046_01",
     "d_p_046_02",
-    "d_p_046_03",
-    "d_p_046_04"
+    "d_p_046_03"
   ]
 }

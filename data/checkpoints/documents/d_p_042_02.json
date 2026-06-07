@@ -1,24 +1,26 @@
 {
   "doc_id": "d_p_042_02",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_042",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "heavy"
+    "recommender_role": "skip-level",
+    "recommender_closeness": "brief",
+    "company_type": "FAANG",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "Swift": 1,
-    "Kotlin": 1,
-    "React Native": 1,
-    "Flutter": 1,
-    "iOS development": 1,
-    "Android development": 1,
-    "TypeScript": 1,
-    "React": 1,
-    "REST API design": 1,
-    "GraphQL": 1,
-    "Mobile testing": 1
+    "A/B testing": 2,
+    "Agile/Scrum": 3,
+    "Analytics-driven product decisions": 3,
+    "Competitive analysis": 3,
+    "Data visualization (Plotly)": 1,
+    "Hypothesis testing": 3,
+    "Product management": 3,
+    "Roadmap planning": 3,
+    "SQL analytics": 1,
+    "Stakeholder management": 3,
+    "Tableau/Power BI": 3,
+    "UX research": 3
   },
-  "text": "# Cross-Platform Game Framework for Mobile  \n\nA high-performance, scalable framework enabling real-time multiplayer experiences across mobile platforms. Designed for production-grade game development with emphasis on low-latency synchronization, distributed architecture, and modular extensibility.  \n\n## Tech Stack  \n- **Networking**: WebSockets + QUIC protocol for real-time data streaming  \n- **Backend**: Custom-built distributed server cluster with Raft consensus for state replication  \n- **Database**: PostgreSQL with TimescaleDB for time-series analytics  \n- **Cloud**: AWS Lambda + DynamoDB for event-driven scaling  \n- **Utilities**: Protobuf for schema-driven serialization, Redis for in-memory session caching  \n\n## Architecture Overview  \nThe framework employs a hybrid architecture combining centralized authority for global state management with decentralized peer-to-peer sync for local gameplay. Key components include:  \n1. **Matchmaking Service**: Load-balanced microservices handling lobby creation, player pairing, and dynamic queue management  \n2. **Game Engine Core**: Modular system for physics, rendering, and input abstraction (C++/Rust-based)  \n3. **Sync Layer**: Delta compression algorithm with 99.9% latency under 50ms for 10k+ concurrent users  \n4. **Analytics Pipeline**: Stream processing for real-time metrics aggregation and anomaly detection  \n\n## Setup Instructions  \n1. Clone repository: `git clone https://github.com/yourorg/crossplatform-framework.git`  \n2. Install dependencies:  \n   ```bash  \n   npm install --production  \n   docker-compose up -d  \n   ```  \n3. Configure environment variables in `.env.local` for AWS credentials and database endpoints  \n4. Run initialization script: `npm run setup` to precompile shaders and generate schema bindings  \n\n## Key Features  \n- **Cross-Platform Abstraction**: Unified API for Android/iOS/Windows (without language-specific bindings)  \n- **Scalable Sync**: Hybrid replication model supporting 500+ players per match  \n- **Plugin Architecture**: Hot-swappable modules for monetization, UI, and AI logic  \n- **Security**: End-to-end encryption with TLS 1.3 and certificate pinning  \n\nThis framework has been deployed in 3 live titles with average 85% server utilization and 98% player retention. Ideal for AAA-scale multiplayer experiences requiring deterministic sync and global serverless scaling."
+  "text": "Hugo Ramirez once spearheaded a high-stakes feature rollout at AdvertiseNow, balancing tight deadlines with cross-functional dependencies. When a core metric dropped 15% mid-sprint, he pivoted by re-prioritizing user feedback over rigid roadmaps, which restored traction within two weeks. His ability to synthesize conflicting priorities—like sales demands vs. engineering constraints—without losing sight of the product’s north star was quietly impressive.  \n\nHugo is a Product Manager who thrives in ambiguity. He recently led a competitor analysis that uncovered a niche audience pain point, which informed a feature redesign increasing user retention by 30%. His sprints are marked by clear guardrails, but he’s equally comfortable iterating in real-time when data shifts. He uses Tableau to distill complex datasets into stories that align stakeholders, and his hypothesis-driven approach ensures every decision is rooted in evidence, not instinct.  \n\nBeyond his technical fluency, Hugo’s strength lies in his quiet persistence. He’ll spend hours dissecting user behavior in meetings, then quietly rally teams to execute. His roadmap planning isn’t about ticking boxes—it’s about aligning short-term wins with long-term value. He doesn’t just manage stakeholders; he earns their trust by anticipating their needs before they articulate them.  \n\nHugo’s a reliable partner who elevates those around him. His work ethic is unshakable, and his curiosity about the \"why\" behind metrics keeps the product moving forward—even when the path isn’t clear."
 }

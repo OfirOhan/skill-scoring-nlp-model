@@ -1,22 +1,25 @@
 {
   "doc_id": "d_p_002_01",
-  "type": "linkedin",
+  "type": "project_readme",
   "persona_id": "p_002",
   "hyperparams": {
-    "linkedin_completeness": "standard"
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Apache Airflow": 4,
-    "Apache Spark": 4,
-    "Bayesian statistics": 4,
-    "Data warehousing": 4,
-    "Feature engineering": 4,
-    "MLOps (MLflow/W&B)": 5,
-    "PyTorch": 4,
-    "Python": 5,
-    "REST API design": 3,
-    "Statistical modeling": 4,
-    "Time series analysis": 4
+    "AWS": 1,
+    "GCP": 1,
+    "Terraform": 1,
+    "Kubernetes": 1,
+    "Docker": 1,
+    "Load balancing": 1,
+    "CDN management": 1,
+    "Python": 1,
+    "PostgreSQL": 1,
+    "REST API design": 1,
+    "Microservices architecture": 1,
+    "Network troubleshooting": 1
   },
-  "text": "With over a decade of experience in healthtech, I blend technical expertise with a passion for solving complex problems that drive meaningful impact. As a Senior Data Scientist at HealthInsight Analytics, I specialize in building scalable data pipelines and predictive models that transform raw data into actionable insights for healthcare innovation.  \n\nMy work spans designing REST APIs to integrate diverse health datasets, optimizing workflows with Apache Airflow, and leveraging Apache Spark for large-scale analytics. I’ve pioneered Bayesian approaches and time series analysis to enhance forecasting accuracy, while my focus on feature engineering ensures models are both robust and interpretable.  \n\nMLOps is central to my practice—using MLflow and Weights & Biases to streamline model development, track experiments, and foster collaboration across teams. I’ve also led data warehousing initiatives that underpin our analytics infrastructure, ensuring reliability and scalability.  \n\nBeyond technical execution, I enjoy mentoring colleagues and contributing to architectural decisions that shape our data strategy. My goal is to advance healthtech through intelligent, ethical solutions that bridge data science and real-world impact. Let’s connect if you’re tackling challenges where analytics meets humanity."
+  "text": "# Real-Time Ad Targeting Platform  \nA distributed system for dynamic ad audience segmentation using Kafka-driven pipelines and real-time analytics  \n\n[![Pipeline Status](https://via.placeholder.com/150/4285F4/FFFFFF?text=Live)](https://example.com) [![Data Throughput](https://via.placeholder.com/150/2ECC71/FFFFFF?text=100k+/s)](https://example.com)  \n\n## Getting Started / Installation  \nClone the repository and initialize dependencies:  \n```bash  \ngit clone https://github.com/your-username/real-time-ad-targeting.git  \ncd real-time-ad-targeting  \npip install -r requirements.txt  \n```  \nEnsure Kafka brokers are running on localhost:9092. Configure `kafka_config.yaml` with cluster endpoints and topic partitions.  \n\n## Usage / Examples  \nProcess user interaction streams:  \n```python  \nfrom pipeline import AdTargetingPipeline  \npipeline = AdTargetingPipeline()  \npipeline.start(\"user_activity_topic\", \"ad_placement_topic\")  \n```  \nMonitor real-time metrics via Prometheus integration. Use Grafana dashboards to track conversion rates and audience drift.  \n\n## Architecture / Design  \nThe system decouples data ingestion, processing, and targeting logic:  \n- **Kafka Producers** stream user behavior events  \n- **Kafka Consumers** trigger feature extraction and scoring  \n- **Machine Learning Models** run as isolated microservices  \n- **Analytics Layer** aggregates metrics for A/B testing  \n\n## Tech Stack / Built With  \n- **Kafka** for high-throughput event streaming  \n- **Apache Flink** for stateful data processing  \n- **gRPC** for low-latency service communication  \n- **Prometheus + Grafana** for observability  \n- **Custom-built** ad scoring engines with real-time feedback loops  \n\n## Contributing  \nSubmit PRs with unit tests covering edge cases in the `tests/` directory. Follow the team's style guide for Kafka topic naming and schema evolution protocols.  \n\n## Testing  \nRun integration tests with:  \n```bash  \npytest test_pipeline.py --markers=slow  \n```  \nValidate model accuracy using simulated adversarial scenarios. Monitor Kafka topic lag metrics during load tests.  \n\n## Roadmap / Future Work  \n1. Implement contextual targeting with geolocation data  \n2. Add support for server-side bid optimization  \n3. Expand schema registry for multi-tenant deployment  \n4. Integrate causal inference for audience attribution modeling"
 }

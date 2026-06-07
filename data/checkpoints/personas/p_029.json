@@ -1,59 +1,60 @@
 {
   "persona_id": "p_029",
   "hyperparams": {
-    "archetype": "data_engineer",
-    "years_experience": 12,
-    "seniority": "staff",
-    "industry": "healthtech",
-    "writing_style": "verbose",
+    "archetype": "platform_engineer",
+    "years_experience": 0,
+    "seniority": "junior",
+    "industry": "adtech",
+    "writing_style": "concise",
     "language_fluency": "native",
-    "self_promotion_level": "humble",
-    "quantification_tendency": "qualitative"
+    "self_promotion_level": "balanced",
+    "quantification_tendency": "mixed"
   },
-  "name": "Alexandra M. Chen",
-  "current_role": "Staff Data Engineer",
-  "company": "VitaHealth Solutions",
+  "name": "Monica Nyambura",
+  "current_role": "Platform Engineer",
+  "company": "AdVerve Interactive",
   "education": {
-    "degree": "Master of Science in Data Science",
-    "university": "Massachusetts Institute of Technology",
-    "year": 2018
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "Kenya Technical University",
+    "year": 2023
   },
   "career_trajectory": [
     {
-      "role": "Data Analyst",
-      "company": "HealthTrack Analytics",
-      "duration": "2 years",
-      "responsibilities": "Designed ETL pipelines for patient data analytics, optimized PostgreSQL queries for clinical data reporting"
+      "role": "DevOps Intern",
+      "company": "ClickAd Network",
+      "duration": "6 months",
+      "responsibilities": "Assisted with AWS EC2 instance provisioning and basic Terraform templates"
     },
     {
-      "role": "Lead Data Engineer",
-      "company": "MediCloud Inc.",
-      "duration": "5 years",
-      "responsibilities": "Architected real-time data lakes using Apache Kafka and Databricks, implemented dbt for transformation pipelines"
+      "role": "Cloud Support Engineer",
+      "company": "AdVerve Interactive",
+      "duration": "1 year",
+      "responsibilities": "Managed GCP load balancers and CDN configurations for ad-serving infrastructure"
     },
     {
-      "role": "Senior Data Engineering Manager",
-      "company": "VitaHealth Solutions",
-      "duration": "5 years",
-      "responsibilities": "Led cloud migration to AWS, developed CI/CD pipelines for data infrastructure, mentored junior engineers"
+      "role": "Platform Engineer",
+      "company": "AdVerve Interactive",
+      "duration": "3 months",
+      "responsibilities": "Designing Kubernetes clusters for real-time ad processing pipelines"
     }
   ],
   "skills": {
-    "Apache Spark": 5,
-    "Apache Airflow": 5,
-    "dbt": 5,
-    "Data warehousing": 5,
-    "Snowflake": 5,
-    "Data modeling": 5,
-    "Python": 5,
-    "AWS": 5,
-    "Docker": 4,
-    "Kubernetes": 5
+    "AWS": 3,
+    "GCP": 3,
+    "Docker": 3,
+    "Kubernetes": 3,
+    "Terraform": 3,
+    "Load balancing": 3,
+    "Python": 3,
+    "Linux administration": 3,
+    "Shell scripting": 3,
+    "Network automation": 2
   },
   "document_ids": [
     "d_p_029_00",
     "d_p_029_01",
     "d_p_029_02",
-    "d_p_029_03"
+    "d_p_029_03",
+    "d_p_029_04"
   ]
 }

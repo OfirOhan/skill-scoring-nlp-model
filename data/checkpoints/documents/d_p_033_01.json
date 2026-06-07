@@ -3,26 +3,24 @@
   "type": "project_readme",
   "persona_id": "p_033",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "large (15+)",
+    "project_scale": "academic",
+    "project_team_size": "solo",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Python": 1,
-    "Java": 1,
-    "Go": 1,
-    "Node.js": 1,
-    "React": 1,
-    "REST API design": 1,
-    "PostgreSQL": 1,
-    "MongoDB": 1,
-    "Redis": 1,
-    "AWS": 1,
-    "Docker": 1,
-    "Kubernetes": 1,
-    "Terraform": 1,
-    "CI/CD pipelines": 1,
-    "Monitoring & alerting": 1
+    "Agile/Scrum": 3,
+    "CI/CD pipelines": 3,
+    "Cross-team collaboration": 3,
+    "Database optimization": 3,
+    "GitHub Actions": 4,
+    "Linux administration": 1,
+    "Monitoring & alerting": 3,
+    "Project management": 3,
+    "Prometheus/Grafana": 1,
+    "Stakeholder communication": 1,
+    "System design": 4,
+    "Technical writing": 2,
+    "Team leadership": 1
   },
-  "text": "# NexaTask: Full-Stack Project Management Tool for Consulting Clients  \n\nNexaTask is a scalable, modular platform designed to streamline task tracking, resource allocation, and real-time collaboration for consulting teams. Built with a focus on flexibility and performance, it reduces administrative overhead by 40% while maintaining granular access controls for multi-client environments.  \n\n## Tech Stack  \n- **Core Layer**: Custom modular framework with async event-driven architecture  \n- **Data Models**: Distributed ledger-inspired schema for audit trails and versioning  \n- **Front-End**: WebAssembly-based UI with declarative component architecture  \n- **API Layer**: Proprietary protocol for secure, low-latency client-server communication  \n- **Storage**: Hybrid sync/async persistence model with conflict resolution logic  \n\n## Architecture Overview  \nThe system employs a layered microservices topology with a central orchestrator managing task dependencies and workflow automation. Key components include:  \n- **Task Engine**: Prioritizes dynamic workload balancing across distributed nodes  \n- **Collaboration Hub**: Enables real-time document co-editing with operational transformation  \n- **Analytics Module**: Aggregates metrics for burn-down tracking and predictive resource planning  \n- **Security Layer**: Implements zero-trust model with contextual access policies  \n\nThe architecture supports horizontal scaling with minimal latency, enabling 10,000+ concurrent sessions without performance degradation. All modules are decoupled via a publish-subscribe bus for efficient event propagation.  \n\n## Setup Instructions  \n1. Clone repository: `git clone https://github.com/alexcarter/nexatask.git`  \n2. Initialize environment: `./setup.sh` (requires 64-bit Linux with 16GB+ RAM)  \n3. Launch core services: `./start-cluster.sh`  \n4. Access dashboard via `http://localhost:8080`  \n\n## Key Features  \n- Auto-escalation alerts for critical task deadlines  \n- AI-driven resource optimization engine  \n- Multi-tenancy with isolated data planes  \n- Customizable workflow templates for consulting projects  \n\nBuilt for high-stakes environments, NexaTask reduces manual coordination by 65% while maintaining full compliance with client-specific governance frameworks. Ideal for consulting firms managing 50+ concurrent projects.  \n\n*Note: This project is maintained by a 15+ developer team with strict code review protocols and automated validation pipelines.*"
+  "text": "# Serverless Microservices Architecture for Scalable SaaS Applications  \n\nA production-ready, modular framework leveraging AWS Lambda, API Gateway, and DynamoDB to deliver serverless microservices for SaaS platforms. Designed for horizontal scaling, event-driven workflows, and decoupled service boundaries.  \n\n## Badges  \n[![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-1.0-blue)](https://github.com/kenjimori/actions)  \n[![AWS Services](https://img.shields.io/badge/AWS-1.0-green)](https://aws.amazon.com/)  \n[![Serverless](https://img.shields.io/badge/Serverless-1.0-yellow)](https://serverless.com/)  \n\n## Getting Started / Installation  \n1. Install AWS CLI and configure credentials via `aws configure`  \n2. Set up IAM roles with Lambda execution and DynamoDB access  \n3. Deploy infrastructure using AWS CloudFormation or Terraform  \n4. Install Serverless Framework (`npm install -g serverless`)  \n5. Set environment variables: `AWS_PROFILE`, `AWS_REGION`, `SLSS_ENV`  \n\n## Usage / Examples  \n```typescript\n// Example Lambda handler for user authentication  \nexports.handler = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {  \n  const userId = await getUserIdFromJWT(event.headers.Authorization);  \n  const user = await getUserFromDynamoDB(userId);  \n  return {  \n    statusCode: 200,  \n    body: JSON.stringify(user)  \n  };  \n};  \n```  \nDeploy with `sls deploy --stage dev` and invoke via API Gateway URL.  \n\n## Architecture / Design  \nThe architecture decouples business logic into stateless Lambda functions, each bound to an API Gateway endpoint. DynamoDB serves as the primary data store, with S3 for static assets and CloudFront for CDN. Event sourcing patterns are used for async workflows, while IAM roles enforce least-privilege access.  \n\n## Tech Stack / Built With  \n- **Cloud Providers**: AWS Lambda, API Gateway, DynamoDB, S3, CloudFront  \n- **Tools**: Serverless Framework, AWS SAM, CloudFormation  \n- **Languages**: TypeScript, Node.js, AWS SDK  \n\n## Contributing  \nPull requests are welcome! Ensure all changes include unit tests and CI/CD pipeline validation. For significant architectural changes, open an issue to discuss design patterns first.  \n\n## Testing  \n- Unit tests for Lambda handlers using Jest  \n- Integration tests for API Gateway endpoints with Postman  \n- End-to-end tests for S3 uploads and DynamoDB queries  \n- GitHub Actions pipeline validates all tests on PRs  \n\n## Roadmap / Future Work  \n1. Add Aurora Serverless for transactional workloads  \n2. Implement AWS X-Ray for distributed tracing  \n3. Expand microservices for payment processing and analytics  \n4. Add automated rollback mechanisms for CI/CD pipelines  \n5. Document advanced patterns for cross-account deployments"
 }

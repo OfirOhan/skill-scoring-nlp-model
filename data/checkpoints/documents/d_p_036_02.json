@@ -1,27 +1,22 @@
 {
   "doc_id": "d_p_036_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_036",
   "hyperparams": {
-    "recommender_role": "professor",
-    "recommender_closeness": "brief",
-    "company_type": "agency",
-    "company_size": "small (<50)"
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 1,
-    "CI/CD pipelines": 3,
-    "Cloud cost optimization": 3,
-    "Docker": 1,
-    "GitHub Actions": 3,
+    "AWS": 3,
+    "Go": 4,
     "Kubernetes": 3,
-    "Linux administration": 3,
+    "Load balancing": 2,
+    "Microservices architecture": 3,
     "Monitoring & alerting": 3,
-    "Network automation": 1,
-    "Prometheus/Grafana": 3,
-    "Python": 1,
-    "Shell scripting (Bash)": 1,
-    "Terraform": 3
+    "PostgreSQL": 4,
+    "Python": 2,
+    "Terraform": 2
   },
-  "text": "**Recommendation Letter**  \n\nTo Whom It May Concern,  \n\nI am pleased to recommend Alexandra Chen for any opportunity requiring a DevOps engineer with a focus on system reliability and operational efficiency. As a professor who collaborated with Alexandra during her capstone project at [University], I observed her exceptional ability to balance technical rigor with collaborative problem-solving.  \n\nAt NexaTech Solutions, Alexandra leads CI/CD pipeline optimizations that reduced deployment latency by 40% and increased release frequency from biweekly to daily, enabling the team to respond swiftly to market demands. Her cloud cost optimization strategies slashed infrastructure expenses by 22% annually without compromising performance, a critical win for the startup’s budget constraints.  \n\nAlexandra’s expertise in Kubernetes has been instrumental in scaling the company’s microservices architecture, achieving 99.95% system uptime during peak loads. She also designed a Prometheus/Grafana monitoring dashboard that cut incident resolution time by 35%, ensuring proactive issue detection. Her Linux administration skills resolved a critical security vulnerability within hours, preventing potential data breaches.  \n\nBeyond technical prowess, Alexandra’s meticulousness and proactive mindset stand out. She consistently mentors junior engineers and advocates for automation, exemplified by her GitHub Actions integration framework, which standardized workflows across 80% of the development team.  \n\nHer combination of analytical precision, leadership, and adaptability makes her an invaluable asset. I wholeheartedly endorse her candidacy.  \n\nSincerely,  \n[Professor’s Name]  \n[University], [Department]"
+  "text": "# Ad Campaign Analytics Dashboard  \nA scalable backend architecture for processing and analyzing campaign performance data across millions of ad impressions, built with focus on reliability and real-time insights.  \n\n## Badges  \n[![CI/CD Status](https://example.com/ci-badge)](https://example.com) [![Test Coverage](https://example.com/coverage-badge)](https://example.com)  \n\n## Getting Started / Installation  \nClone the repo and install dependencies:  \n```bash  \ngit clone https://github.com/your-username/ad-campaign-dashboard.git  \ncd ad-campaign-dashboard  \npip install -r requirements.txt  \n```  \nEnsure PostgreSQL 13+ and AWS CLI are configured.  \n\n## Usage / Examples  \nProcess a day's worth of impressions:  \n```bash  \npython ingestor.py --input /path/to/impressions.csv --output /tmp/processed_data  \n```  \nQuery campaign metrics via `/api/v1/campaigns/{campaign_id}`.  \n\n## Architecture / Design  \nThe system is split into three microservices:  \n- **Ingestor**: Handles raw data ingestion with Kafka-backed queuing.  \n- **Processor**: Aggregates metrics using PostgreSQL's time-series capabilities.  \n- **Analytics**: Exposes REST APIs for dashboard visualization.  \n\nLoad balancing is managed via Nginx, with Kubernetes handling service scaling.  \n\n## Tech Stack / Built With  \n- **Language**: Go (for high-throughput processing) and Python (for ETL scripts)  \n- **Database**: PostgreSQL 13+ (optimized for time-series analytics)  \n- **Cloud**: AWS (S3 for storage, EC2 for compute)  \n- **Orchestration**: Kubernetes (with HPA for dynamic scaling)  \n- **Infrastructure**: Terraform (for AWS resource provisioning)  \n\n## Contributing  \nPull requests are welcome! Ensure code aligns with PEP8 and GoFmt standards. Add tests for new features.  \n\n## Testing  \nUnit tests are written in Python (pytest) and Go (testify). Integration tests validate Kafka, PostgreSQL, and AWS interactions. Monitoring via Prometheus and Grafana ensures alerting for failed jobs.  \n\n## Roadmap / Future Work  \n- Implement real-time analytics with Apache Flink  \n- Add machine learning models for predictive campaign optimization  \n- Expand multi-cloud support (GCP/Azure) for regional compliance  \n- Refactor legacy ETL scripts to improve latency by 30%  \n\nThis project reflects a balance between robustness and agility, designed to scale with the demands of ad-tech workflows."
 }

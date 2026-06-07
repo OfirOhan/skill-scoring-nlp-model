@@ -4,28 +4,18 @@
   "persona_id": "p_034",
   "hyperparams": {
     "project_scale": "production",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "moderate"
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "microservices architecture": 5,
-    "postgresql": 1,
-    "rest api design": 1,
-    "ci/cd pipelines": 1,
-    "docker": 4,
-    "go": 1,
-    "kubernetes": 1,
-    "redis": 1,
-    "terraform": 1,
-    "Go": 1,
-    "REST API design": 1,
-    "Microservices architecture": 1,
-    "PostgreSQL": 1,
-    "Redis": 1,
-    "Terraform": 1,
-    "Kubernetes": 1,
-    "Docker": 1,
-    "CI/CD pipelines": 1
+    "Next.js": 3,
+    "REST API design": 4,
+    "React": 4,
+    "Test automation": 4,
+    "TypeScript": 4,
+    "Unit testing": 4,
+    "Web performance optimization": 3,
+    "Webpack/Vite": 3
   },
-  "text": "# Scalable Microservices for Real-Time Data Processing  \n\nA modular system designed to handle high-throughput data streams with low-latency processing, built for startup environments requiring flexibility and rapid iteration.  \n\n## Tech Stack  \n- **Node.js**: Lightweight, event-driven runtime for building scalable backend services  \n- **Apache Kafka**: Distributed messaging system for real-time data pipelines  \n- **Docker**: Containerization tool for consistent deployment and resource isolation  \n\n## Architecture Overview  \nThe system is organized into decoupled services that communicate via Kafka topics. Each service handles a specific data transformation or processing stage, allowing teams to scale independently. Docker ensures uniform runtime environments across development, testing, and production, reducing configuration drift. Key design choices include:  \n- **Service isolation**: Each microservice runs in its own Docker container, enabling independent scaling and updates  \n- **Kafka as a backbone**: Topics act as buffers between stages, ensuring fault tolerance and asynchronous processing  \n- **Resource management**: Docker's memory and CPU limits prevent single services from impacting others  \n\n## Setup Instructions  \n1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/) and ensure it's running  \n2. Clone the repository: `git clone https://github.com/your-username/scalable-microservices.git`  \n3. Navigate to the project root and build containers:  \n   ```bash  \n   docker-compose up --build  \n   ```  \n   This starts all services, including Kafka brokers and producer/consumer instances.  \n4. Monitor logs via `docker logs <container-name>` to debug data flow  \n\n## Production Impact  \nDocker's consistent environments eliminated deployment errors during our beta phase, reducing incident resolution time by 40%. The microservices architecture allowed us to scale specific pipelines independently, improving overall system throughput by 30% without code changes. Kafka's partitioning model ensured even data distribution, while Docker's resource limits prevented cascading failures during peak loads.  \n\nThis project reflects a balance between simplicity and scalability, designed to evolve with the startup's growth while maintaining operational stability."
+  "text": "# NexaDash: Real-Time Analytics Dashboard  \nA React-based platform for dynamic data visualization in consulting projects, combining modular UI components with real-time data pipelines. Built to scale with minimal latency, this dashboard emphasizes extensibility and performance in high-stakes analytical workflows.  \n\n## Badges  \n[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat)](https://github.com/zainab-osman/nexadash)  \n[![React](https://img.shields.io/badge/React-282c34?style=flat)](https://reactjs.org/)  \n[![TypeScript](https://img.shields.io/badge/TypeScript-0078d7?style=flat)](https://www.typescriptlang.org/)  \n[![Performance](https://img.shields.io/badge/Performance-optimized-4285F4?style=flat)](https://github.com/zainab-osman/nexadash)  \n\n## Tech Stack / Built With  \n- **Frontend**: React (18), Next.js (13), TypeScript, Tailwind CSS, WebSocket  \n- **Backend**: Node.js (16), REST API (GraphQL/REST hybrid), Webpack/Vite (for build optimization)  \n- **Data**: WebSocket for real-time updates, REST API for historical data  \n- **Testing**: Jest, React Testing Library, Cypress for end-to-end scenarios  \n- **Deployment**: Docker, CI/CD pipelines, cloud-agnostic infrastructure  \n\n## Architecture / Design  \nThe dashboard is split into a client-side React app (Next.js) and a server-side API layer. Real-time data flows via WebSocket, while historical queries use REST endpoints. The UI is modular, with drag-and-drop widgets powered by a stateless component architecture. Code splitting and lazy loading ensure sub-2s load times for core components.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/zainab-osman/nexadash.git  \ncd nexadash  \nnpm install  \ncp .env.example .env  \n# Configure API endpoints and WebSocket URLs  \nnpm run dev  \n```  \nFor production, use Docker to containerize both frontend and backend services.  \n\n## Usage / Examples  \n1. Connect to a data source via the REST API endpoint in `.env`  \n2. Customize widgets by editing `components/visualizers/`  \n3. Trigger real-time updates with WebSocket publish/subscribe  \n4. Use the CLI tool `npx generate-widget` to scaffold new visualizations  \n\n## Configuration  \n- `REACT_APP_API_URL`: Base URL for REST endpoints  \n- `WEBSOCKET_ENDPOINT`: WebSocket server address  \n- `ENVIRONMENT`: `development`/`production` for feature flags  \n- `MAX_CACHE_SIZE`: Controls in-memory data retention for performance  \n\n## Deployment  \nDeploy using Docker Compose for local staging or cloud platforms like AWS ECS. CI/CD pipelines auto-deploy to staging/production with rollbacks enabled. For scale, use Kubernetes to manage WebSocket connections and API load balancing.  \n\n## License  \nMIT License  \n© 2023 Zainab Osman | [GitHub](https://github.com/zainab-osman) | [LinkedIn](https://linkedin.com/in/zainab-osman)"
 }

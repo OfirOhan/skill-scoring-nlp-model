@@ -3,21 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_029",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "heavy"
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 5,
-    "Apache Airflow": 5,
-    "Apache Spark": 5,
-    "Data modeling": 5,
-    "Data warehousing": 5,
-    "Docker": 4,
-    "Kubernetes": 5,
-    "Python": 5,
-    "Snowflake": 5,
-    "dbt": 5
+    "AWS": 1,
+    "Docker": 1,
+    "GCP": 1,
+    "Kubernetes": 1,
+    "Linux administration": 1,
+    "Load balancing": 1,
+    "Network automation": 1,
+    "Python": 3,
+    "Shell scripting": 1,
+    "Terraform": 1
   },
-  "text": "# HealthDataFlow  \n\nHealthDataFlow is a real-time data pipeline architecture designed to process, transform, and store patient health data within a scalable, compliant, and high-availability healthtech environment. This project serves as a foundational infrastructure for ingesting heterogeneous clinical data sources, ensuring low-latency processing, and enabling downstream analytics for predictive modeling and operational insights.  \n\n## Tech Stack  \n- **Cloud Infrastructure**: AWS (S3, EC2, IAM, CloudWatch)  \n- **Containerization**: Docker (orchestrated via Kubernetes for production resilience)  \n- **Orchestration**: Apache Airflow (custom DAGs for batch/real-time workflows)  \n- **Processing**: Apache Spark (structured streaming for ETL)  \n- **Data Warehousing**: Snowflake (multi-cloud, ACID-compliant, governed schema)  \n- **Data Modeling**: dbt (transformed models for analytics, lineage tracking)  \n- **Streaming**: Kafka (as a data source for real-time ingestion)  \n- **Language**: Python (custom scripts, Airflow operators, dbt models)  \n\n## Architecture Overview  \nThe pipeline ingests raw patient data from IoT devices and EHR systems via Kafka, where it is partitioned and serialized for parallel processing. Spark Structured Streaming processes these streams, applying schema validation and enrichment logic before writing to intermediate S3 parquet files. Airflow orchestrates batch jobs that load data into Snowflake, leveraging dbt to enforce data governance and semantic layer abstractions. Kubernetes ensures containerized workloads scale elastically, while Docker Compose simplifies local development.  \n\n## Setup Instructions  \n1. **Local Development**:  \n   - `docker-compose up` to spin up Kafka, Spark, and Airflow containers  \n   - Configure AWS credentials via `aws configure` for S3/Snowflake integration  \n   - Deploy dbt models using `dbt run --models analytics.*`  \n\n2. **Production Deployment**:  \n   - Deploy Kubernetes manifests to EKS for container orchestration  \n   - Provision Snowflake warehouses and roles via Terraform  \n   - Schedule Airflow DAGs with dynamic task dependencies  \n\n## Key Contributions  \n- **Docker**: Reduced deployment friction by 40% through standardized containerization  \n- **AWS**: Achieved 99.99% SLA for data ingestion pipelines via auto-scaling and redundancy  \n- **Airflow**: Eliminated manual intervention in ETL workflows, improving reliability  \n- **Snowflake**: Enabled real-time analytics with sub-second query latency  \n\nThis project exemplifies a production-grade architecture for healthtech data pipelines, balancing compliance, scalability, and operational efficiency."
+  "text": "# AdBidPro - Real-Time Ad Bidding Platform  \nA lightweight, event-driven ad bidding system built with Kafka for low-latency auction processing and Python for bid evaluation logic. Designed to optimize ad delivery in high-throughput environments.  \n\n## Badges  \n[![GitHub stars](https://img.shields.io/github/stars/monicanyambura/AdBidPro?style=social)](https://github.com/monicanyambura/AdBidPro)  \n[![PyPI version](https://img.shields.io/pypi/v/adbidpro?style=flat)](https://pypi.org/project/adbidpro/)  \n[![License](https://img.shields.io/github/license/monicanyambura/AdBidPro?style=flat)](https://github.com/monicanyambura/AdBidPro/blob/main/LICENSE)  \n\n## Getting Started / Installation  \nInstall Python 3.8+ and Kafka. Run `pip install -r requirements.txt` to install dependencies. Ensure Kafka is running locally with `bin/zookeeper-server-start.sh` and `bin/kafka-server-start.sh`.  \n\n## Usage / Examples  \nRun the bid processor:  \n```bash  \npython bid_processor.py --input-topic bids --output-topic auctions  \n```  \nThis consumes bid events from the `bids` topic, evaluates them using a custom pricing model, and publishes auction results to `auctions`.  \nExample config:  \n```yaml  \nkafka_broker: 'localhost:9092'  \nauction_timeout: 500  \n```  \n\n## API Reference  \nThe bid processor exposes a REST API for submitting bids:  \n- `POST /bids`  \n  - Request: JSON with `ad_id`, `bid_amount`, and `user_id`  \n  - Response: Auction status code and timestamp  \n\n## Testing  \nRun unit tests with `pytest tests/`. Tests validate Kafka producer/consumer interactions and mock Kafka for isolation. Integration tests verify bid evaluation logic against edge cases.  \n\n## Contributing  \nPull requests welcome! For academic use only. This project is maintained by a single contributor.  \n\n## Deployment  \nDeploy as a standalone script with Kafka running locally. No cloud infrastructure required.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/monicanyambura/AdBidPro/blob/main/LICENSE) for details."
 }

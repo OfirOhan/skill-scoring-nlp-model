@@ -1,40 +1,50 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Alexandra Mitchell's 3 years of experience as a Platform Engineer specializing in cloud infrastructure architecture for consulting clients.",
-    "title": "Alexandra 'Lexi' Mitchell - Platform Engineer CV",
+    "topic_summary": "A Machine Learning Engineer CV highlighting adtech experience and technical skills",
+    "title": "Nina Rodriguez - Machine Learning Engineer",
     "doc_id": "d_p_048_00",
     "persona_id": "p_048",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
+      "cv_format": "minimal",
       "geographic_convention": "US",
-      "company_type": "agency",
+      "company_type": "academic",
       "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A GitHub README for a cloud-native platform migration project using Kubernetes and AWS services.",
-    "title": "CloudForge Platform Modernization",
+    "topic_summary": "A real-time ad click fraud detection system using anomaly detection algorithms",
+    "title": "AdGuard: Real-Time Click Fraud Detection",
     "doc_id": "d_p_048_01",
     "persona_id": "p_048",
     "hyperparams": {
-      "project_scale": "production",
-      "project_team_size": "solo",
+      "project_scale": "academic",
+      "project_team_size": "small (2-4)",
       "jargon_density": "heavy"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from a former manager at CloudForge Solutions attesting to Lexi's expertise in cloud infrastructure design.",
-    "title": "Recommendation for Alexandra Mitchell",
+    "topic_summary": "Endorsement from a professor for Nina's academic ML research in adtech",
+    "title": "Recommendation for Nina Rodriguez",
     "doc_id": "d_p_048_02",
     "persona_id": "p_048",
     "hyperparams": {
       "recommender_role": "professor",
-      "recommender_closeness": "occasional",
-      "company_type": "academic",
-      "company_size": "large (500+)"
+      "recommender_closeness": "brief",
+      "company_type": "enterprise",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "linkedin",
+    "topic_summary": "Professional summary showcasing Nina's passion for ML in adtech and career goals",
+    "title": "Nina Rodriguez | Machine Learning Engineer",
+    "doc_id": "d_p_048_03",
+    "persona_id": "p_048",
+    "hyperparams": {
+      "linkedin_completeness": "minimal"
     }
   }
 ]

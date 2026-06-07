@@ -3,21 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_020",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "heavy"
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 1,
+    "AWS": 4,
+    "Apache Airflow": 4,
+    "Computer vision": 1,
     "Docker": 3,
-    "GitLab CI": 3,
-    "JavaScript": 3,
-    "PostgreSQL": 3,
-    "Python": 3,
-    "REST API design": 3,
-    "React": 1,
-    "TypeScript": 1,
-    "Web performance optimization": 1
+    "GCP": 1,
+    "Hugging Face Transformers": 4,
+    "Kubernetes": 1,
+    "MLOps (MLflow/W&B)": 4,
+    "Model deployment": 4,
+    "NLP": 4,
+    "PyTorch": 1,
+    "TensorFlow": 1
   },
-  "text": "# FinTechPay: Secure Payment Gateway API  \n\nFinTechPay is a high-throughput, PCI-DSS-compliant payment processing API designed for financial institutions. It enables seamless integration of payment flows with robust fraud detection, tokenization, and real-time settlement capabilities. Built for scalability and security, the system supports multi-currency transactions and adheres to SOC2 standards.  \n\n## Tech Stack  \n- **Backend**: Node.js (Express) for HTTP APIs, Python (FastAPI) for payment logic  \n- **Database**: PostgreSQL (14+) for transactional data and audit logs  \n- **Containerization**: Docker (v20.10+) for service isolation and deployment consistency  \n- **CI/CD**: GitLab CI (v14.0+) for automated testing, linting, and deployment pipelines  \n- **Security**: AES-256 encryption, HMAC signing, and rate-limiting middleware  \n\n## Architecture  \nThe system follows a microservices pattern:  \n1. **Node.js API Layer**: Handles HTTP requests, rate limiting, and JWT authentication.  \n2. **Python Processing Engine**: Executes payment logic, including fraud checks and settlement workflows.  \n3. **PostgreSQL**: Stores transaction metadata, audit logs, and user credentials with row-level security.  \n4. **Docker Orchestration**: Services are containerized and orchestrated via Docker Compose for local development.  \n\nKey design decisions:  \n- REST APIs (v1.1) with OpenAPI specs for consistent endpoint behavior  \n- Asynchronous processing for high-volume transactions using Python’s async/await  \n- PostgreSQL connection pooling for concurrent query handling  \n\n## Setup Instructions  \n1. Clone the repo: `git clone https://github.com/fin-tech-pay/fin-tech-pay.git`  \n2. Build Docker containers:  \n   ```bash  \n   docker-compose up --build  \n   ```  \n3. Set environment variables (`.env` file):  \n   - `DB_USER`, `DB_PASS`, `SECRET_KEY` (32-byte HMAC key)  \n   - `PAYMENT_TIMEOUT` (seconds, e.g., `5`)  \n4. Run migrations:  \n   ```bash  \n   docker exec -it fin-tech-pay-db psql -U postgres -d fintechpay -f migrations/001_initial.sql  \n   ```  \n5. Start services:  \n   ```bash  \n   docker-compose up  \n   ```  \n6. Trigger CI/CD pipeline via GitLab CI for automated testing and deployment.  \n\nThis project requires strong familiarity with distributed systems, cryptographic protocols, and financial compliance standards."
+  "text": "# MedReadmit: Predictive Analytics for Hospital Readmissions  \nA scalable platform to score readmission risk using EHR data, built with production-grade MLOps and NLP pipelines.  \n\n[![AWS](https://img.shields.io/badge/AWS-00c58c?style=flat)](https://aws.amazon.com/)  \n[![Airflow](https://img.shields.io/badge/Apache%20Airflow-0066cc?style=flat)](https://airflow.apache.org/)  \n[![Transformers](https://img.shields.io/badge/Hugging%20Face%20Transformers-000000?style=flat&logo=huggingface)](https://huggingface.co/)  \n[![MLflow](https://img.shields.io/badge/MLflow-000000?style=flat&logo=mlflow)](https://mlflow.org/)  \n[![Deployment](https://img.shields.io/badge/Deployment-00c58c?style=flat)](https://aws.amazon.com/lambda/)  \n\n## Getting Started / Installation  \nInstall Docker for consistent environments:  \n```bash  \ncurl -fsSL https://get.docker.com -o get-docker.sh  \nsudo sh get-docker.sh  \n```  \nBuild the container:  \n```bash  \ndocker build -t medreadmit .  \ndocker run --rm -p 8000:8000 medreadmit  \n```  \nRequires Python 3.8+, pandas, and AWS CLI configured.  \n\n## Usage / Examples  \nPredict readmission risk with:  \n```bash  \ncurl -X POST http://localhost:8000/predict \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"patient_id\": \"123\", \"age\": 65, \"diagnosis\": \"Pneumonia\"}'  \n```  \nOutput includes risk score (0-1) and top 3 contributing factors. Model achieves 89% F1 on 10k+ de-identified records.  \n\n## Configuration  \nEdit `config.yaml` to adjust:  \n- Model type (e.g., BERT for NLP features)  \n- Data pipeline paths (CSV/JSON formats)  \n- Output format (JSON, CSV, or AWS S3)  \nAWS credentials are loaded via environment variables.  \n\n## Deployment  \nExpose as REST API via AWS Lambda + API Gateway. Packaging uses Docker to ensure consistent dependencies. CI/CD pipelines automate testing and deployment with GitHub Actions.  \n\n## Architecture / Design  \nModular microservices:  \n1. **ETL Pipeline**: Airflow orchestrates data ingestion from CSVs and AWS S3.  \n2. **Model Serving**: MLflow tracks experiments; models are versioned and deployed as Docker containers.  \n3. **Inference Layer**: REST API handles batch and real-time requests with rate limiting.  \n\n## Tech Stack / Built With  \n- **Docker** (containerization)  \n- **AWS Lambda + API Gateway** (serverless deployment)  \n- **Apache Airflow** (orchestration)  \n- **Hugging Face Transformers** (NLP feature extraction)  \n- **MLflow** (experiment tracking)  \n- **Python 3.8+** (core language)  \n\n## Contributing  \nThis is a solo project, but I welcome collaboration on data pipelines or model optimization. Open issues for feature requests or bugs. All contributions require a pull request with tests.  \n\n---  \n*Built with 100% reproducible workflows. No magic—just data, models, and infrastructure.*"
 }

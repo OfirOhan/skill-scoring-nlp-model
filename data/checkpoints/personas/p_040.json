@@ -1,68 +1,61 @@
 {
   "persona_id": "p_040",
   "hyperparams": {
-    "archetype": "devops_sre",
-    "years_experience": 7,
-    "seniority": "senior",
-    "industry": "adtech",
-    "writing_style": "verbose",
+    "archetype": "embedded_engineer",
+    "years_experience": 1,
+    "seniority": "junior",
+    "industry": "fintech",
+    "writing_style": "neutral",
     "language_fluency": "native",
-    "self_promotion_level": "boastful",
-    "quantification_tendency": "mixed"
+    "self_promotion_level": "humble",
+    "quantification_tendency": "metrics-heavy"
   },
-  "name": "Alexandra Chen",
-  "current_role": "Senior Site Reliability Engineer",
-  "company": "AdVelox Media",
+  "name": "Ritika Malhotra",
+  "current_role": "Embedded Systems Engineer",
+  "company": "FinTech Innovators Inc.",
   "education": {
-    "degree": "Bachelor of Science in Computer Science",
-    "university": "Massachusetts Institute of Technology",
-    "year": 2016
+    "degree": "Bachelor of Technology in Electronics and Communication Engineering",
+    "university": "Indian Institute of Technology, Delhi",
+    "year": 2022
   },
   "career_trajectory": [
     {
-      "role": "Junior DevOps Engineer",
-      "company": "ClickAd Networks",
-      "year": 2016
+      "year": 2022,
+      "position": "Embedded Systems Intern",
+      "company": "FinTech Innovators Inc.",
+      "responsibilities": "Developed firmware for IoT-enabled payment terminals, integrated MQTT protocols for real-time transaction data."
     },
     {
-      "role": "DevOps Engineer",
-      "company": "BrightPixel Media",
-      "year": 2018
+      "year": 2023,
+      "position": "Junior Embedded Engineer",
+      "company": "FinTech Innovators Inc.",
+      "responsibilities": "Led sensor integration for biometric authentication modules, achieved 98.5% reliability in hardware-software co-design."
     },
     {
-      "role": "Senior DevOps Engineer",
-      "company": "AdVelox Media",
-      "year": 2020
-    },
-    {
-      "role": "Senior Site Reliability Engineer",
-      "company": "AdVelox Media",
-      "year": 2023
+      "year": 2024,
+      "position": "Embedded Systems Engineer",
+      "company": "FinTech Innovators Inc.",
+      "responsibilities": "Architected edge computing solutions for latency-critical fraud detection systems, reducing processing time by 40%."
     }
   ],
   "skills": {
-    "CI/CD pipelines": 4,
-    "GitHub Actions": 4,
-    "Jenkins": 3,
-    "ArgoCD": 4,
-    "GitLab CI": 3,
-    "Prometheus/Grafana": 4,
-    "Monitoring & alerting": 4,
-    "Incident management": 4,
-    "SLA/SLO management": 4,
-    "Python": 4,
-    "Kubernetes": 4,
-    "Terraform": 4,
-    "Docker": 4,
-    "AWS": 4,
-    "GCP": 3
+    "C/C++ (embedded)": 3,
+    "RTOS": 3,
+    "Firmware development": 3,
+    "IoT protocols (MQTT/CoAP)": 3,
+    "Hardware-software integration": 3,
+    "Embedded Linux": 3,
+    "Sensor integration": 2,
+    "Python": 2,
+    "REST API design": 2,
+    "Network automation": 2,
+    "GitLab CI": 2,
+    "Shell scripting (Bash)": 2
   },
   "document_ids": [
     "d_p_040_00",
     "d_p_040_01",
     "d_p_040_02",
-    "d_p_040_03",
-    "d_p_040_04",
-    "d_p_040_05"
+    "d_p_040_03"
   ]
 }

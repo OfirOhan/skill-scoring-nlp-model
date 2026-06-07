@@ -4,22 +4,21 @@
   "persona_id": "p_026",
   "hyperparams": {
     "project_scale": "production",
-    "project_team_size": "large (15+)",
-    "jargon_density": "moderate"
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "ArgoCD": 4,
-    "CI/CD pipelines": 4,
-    "Cloud cost optimization": 4,
-    "Cloud migration": 4,
-    "GitHub Actions": 4,
-    "Kubernetes": 4,
-    "PostgreSQL": 1,
-    "Prometheus/Grafana": 4,
-    "Python": 3,
-    "REST API design": 3,
-    "Redis": 3,
-    "Terraform": 5
+    "AWS": 2,
+    "CI/CD pipelines": 3,
+    "Docker": 3,
+    "Go": 1,
+    "Kubernetes": 3,
+    "Microservices architecture": 3,
+    "PostgreSQL": 4,
+    "Prometheus/Grafana": 3,
+    "Python": 4,
+    "REST API design": 4,
+    "Terraform": 3
   },
-  "text": "# NexaCorp CloudOps Automation Suite  \n\nThe NexaCorp CloudOps Automation Suite is a production-grade framework designed to streamline cloud infrastructure deployment, optimize operational efficiency, and enforce observability across distributed systems. Built for large-scale enterprise environments, this suite integrates CI/CD pipelines, declarative infrastructure-as-code, and real-time monitoring to reduce manual intervention and accelerate time-to-production.  \n\n## Tech Stack  \n- **Terraform**: Core to infrastructure provisioning, with modularized state management and cross-team collaboration.  \n- **GitHub Actions**: Central to CI/CD workflows, enabling automated testing, dependency validation, and deployment orchestration.  \n- **ArgoCD**: Used for GitOps-based application deployment, with automated sync strategies and rollback mechanisms.  \n- **Kubernetes**: Orchestration layer for containerized workloads, integrated with Helm for declarative manifest management.  \n- **Prometheus/Grafana**: Central to observability, providing end-to-end metrics aggregation and customizable dashboards.  \n- **Redis**: Employed for distributed caching and service discovery in microservices architectures.  \n- **REST API design**: Leveraged for internal tooling, ensuring consistent endpoint structures and rate-limiting strategies.  \n- **Cloud cost optimization**: Achieved through tagging conventions, spot instance utilization, and auto-scaling policies.  \n- **Cloud migration**: Successfully transitioned 12+ legacy systems to AWS, reducing infrastructure costs by 40% and improving deployment reliability.  \n\n## Architecture Overview  \nThe suite operates on a layered model:  \n1. **Infrastructure Layer**: Terraform modules define multi-cloud environments with version-controlled state.  \n2. **CI/CD Pipeline**: GitHub Actions triggers builds, runs unit tests, and validates infrastructure changes via Terraform Plan.  \n3. **Deployment Layer**: ArgoCD synchronizes application states with Git, ensuring zero-downtime rollouts.  \n4. **Observability Layer**: Prometheus scrapes metrics from Kubernetes nodes and services, visualized in Grafana for real-time monitoring.  \n\n## Setup Instructions  \n1. Clone the repository: `git clone https://github.com/nexacorp/cloudops-suite.git`  \n2. Initialize Terraform modules: `terraform init -backend-config=backend.tfstate`  \n3. Configure GitHub Actions secrets for API keys and cloud credentials.  \n4. Deploy the observability stack using Helm charts in your Kubernetes cluster.  \n5. Validate workflows with `terraform apply --auto-approve` and monitor via Grafana.  \n\nThis project is a collaborative effort with 15+ engineers, focusing on scalability, resilience, and operational hygiene. Metrics show 30% faster deployment cycles and 99.95% SLA adherence since adoption."
+  "text": "# HealthDataSync  \nSecure, scalable patient data synchronization across healthcare systems using Python and PostgreSQL. Designed for production environments with focus on compliance, performance, and cross-platform interoperability.  \n\n## License  \nMIT License  \n\n## Badges  \n[![Build Status](https://shield.io/commit/1234)](https://github.com/username/repo/actions)  \n[![Docker Image Size](https://badgen.net/docker/size/username/repo)](https://hub.docker.com/r/username/repo)  \n[![Dependency Status](https://shield.io/dependency/1234)](https://github.com/username/repo/dependents)  \n\n## Getting Started / Installation  \n1. Clone repository: `git clone https://github.com/username/healthdatasync.git`  \n2. Set up PostgreSQL (or use Docker: `docker-compose up -d`)  \n3. Install dependencies: `pip install -r requirements.txt`  \n4. Configure environment variables for database credentials and API keys  \n5. Run migrations: `alembic upgrade head`  \n6. Start service: `uvicorn main:app --host 0.0.0.0 --port 8000`  \n\n## Usage / Examples  \n- Sync patient records: `curl -X POST https://api.healthdatasync.com/sync --header \"Authorization: Bearer <token>\" --data '{\"patient_id\": \"12345\"}'`  \n- Monitor sync status: `GET /api/v1/sync/status?patient_id=12345`  \n- Handle errors via webhooks: Configure `WEBHOOK_ENDPOINT` in `.env` for real-time notifications  \n\n## Architecture / Design  \nMicroservices architecture with API Gateway for request routing. Data synchronization logic decoupled into dedicated workers using RabbitMQ. PostgreSQL serves as the central store with read replicas for reporting. Security layers include TLS 1.3, AES-256 encryption at rest, and role-based access controls. Prometheus/Grafana integrated for real-time metrics and alerting.  \n\n## Tech Stack / Built With  \n- **Language**: Python (FastAPI, Pydantic, Alembic)  \n- **Database**: PostgreSQL (with replication, connection pooling)  \n- **Networking**: REST API (OpenAPI spec), gRPC for internal service communication  \n- **Deployment**: Docker (multi-stage builds), Kubernetes (Helm charts)  \n- **CI/CD**: GitHub Actions (automated testing, linting)  \n- **Infrastructure**: Terraform (cloud-agnostic provisioning)  \n- **Monitoring**: Prometheus (exporters for PostgreSQL, Redis), Grafana (dashboards)  \n\n## Contributing  \nSubmit issues or pull requests with tests. Follow PEP8 guidelines. Ensure all changes include:  \n- Type hints for API endpoints  \n- Unit/integration tests (pytest)  \n- Documentation updates for CLI tools  \n- Security audits for new features  \n\n## Testing  \nAutomated tests cover 95% of core logic (pytest+coverage). Integration tests validate cross-system sync workflows. Testing environment mirrors production with mocked AWS S3 and PostgreSQL. CI pipeline enforces code quality checks and security scans."
 }

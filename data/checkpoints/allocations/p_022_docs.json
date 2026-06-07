@@ -1,39 +1,75 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional summary highlighting Alex Carter's 6 years of experience as a frontend engineer in fintech, specializing in scalable web applications and financial UI/UX design.",
-    "title": "Alex Carter - Senior Frontend Engineer",
+    "topic_summary": "A comprehensive CV detailing Sven Lindqvist's 14 years of DevOps and cybersecurity experience.",
+    "title": "Sven Lindqvist - DevOps Engineer",
     "doc_id": "d_p_022_00",
     "persona_id": "p_022",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
-      "geographic_convention": "Israel",
-      "company_type": "enterprise",
+      "cv_format": "hybrid",
+      "geographic_convention": "US",
+      "company_type": "agency",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A GitHub project README for an automated security tooling suite integrating with CI/CD pipelines.",
+    "title": "Automated Security Tooling for CyberShield",
+    "doc_id": "d_p_022_01",
+    "persona_id": "p_022",
+    "hyperparams": {
+      "project_scale": "production",
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A README for an incident response platform leveraging DevOps practices for threat mitigation.",
+    "title": "Incident Response Platform with DevOps Integration",
+    "doc_id": "d_p_022_02",
+    "persona_id": "p_022",
+    "hyperparams": {
+      "project_scale": "academic",
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A README detailing secure infrastructure as code using Terraform and AWS compliance standards.",
+    "title": "Secure Infrastructure as Code for Cloud Environments",
+    "doc_id": "d_p_022_03",
+    "persona_id": "p_022",
+    "hyperparams": {
+      "project_scale": "academic",
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation letter from Sven's manager at CyberShield highlighting his DevOps and security expertise.",
+    "title": "Recommendation from CyberShield CTO",
+    "doc_id": "d_p_022_04",
+    "persona_id": "p_022",
+    "hyperparams": {
+      "recommender_role": "professor",
+      "recommender_closeness": "brief",
+      "company_type": "startup",
       "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "blog",
-    "topic_summary": "A technical blog post exploring frontend architecture patterns for high-security fintech applications, focusing on componentization and accessibility.",
-    "title": "Modern Frontend Practices in Fintech",
-    "doc_id": "d_p_022_01",
+    "topic_summary": "A technical blog post on securing CI/CD pipelines in high-stakes cybersecurity environments.",
+    "title": "Securing CI/CD Pipelines in Cybersecurity Environments",
+    "doc_id": "d_p_022_05",
     "persona_id": "p_022",
     "hyperparams": {
       "blog_depth": "opinion-piece",
       "jargon_density": "heavy"
-    }
-  },
-  {
-    "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from Alex's manager at FinTech Innovators Inc., attesting to his leadership in building secure financial platforms and mentoring junior engineers.",
-    "title": "Recommendation for Alex Carter",
-    "doc_id": "d_p_022_02",
-    "persona_id": "p_022",
-    "hyperparams": {
-      "recommender_role": "skip-level",
-      "recommender_closeness": "brief",
-      "company_type": "FAANG",
-      "company_size": "mid (50-500)"
     }
   }
 ]

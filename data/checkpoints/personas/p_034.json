@@ -1,38 +1,54 @@
 {
   "persona_id": "p_034",
   "hyperparams": {
-    "archetype": "backend_engineer",
-    "years_experience": 6,
+    "archetype": "frontend_engineer",
+    "years_experience": 7,
     "seniority": "senior",
-    "industry": "startup",
+    "industry": "consulting",
     "writing_style": "modest",
     "language_fluency": "native",
-    "self_promotion_level": "humble",
+    "self_promotion_level": "boastful",
     "quantification_tendency": "qualitative"
   },
-  "name": "Aarav Mehta",
-  "current_role": "Senior Backend Engineer",
-  "company": "InnovateX Labs",
+  "name": "Zainab Osman",
+  "current_role": "Senior Frontend Engineer Consultant",
+  "company": "NexaTech Solutions",
   "education": {
-    "degree": "BSc in Computer Science",
-    "university": "IIT Bombay",
-    "year": 2018
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "University of London",
+    "year": 2016
   },
   "career_trajectory": [
-    "Software Engineer at TechNova Solutions (2018-2020)",
-    "Senior Software Engineer at CloudGen Inc (2020-2022)",
-    "Senior Backend Engineer at InnovateX Labs (2022-present)"
+    {
+      "role": "Junior Frontend Developer",
+      "company": "StellarStartups",
+      "year": 2016
+    },
+    {
+      "role": "Frontend Developer",
+      "company": "EchoLabs",
+      "year": 2018
+    },
+    {
+      "role": "Senior Frontend Engineer",
+      "company": "VerveWorks",
+      "year": 2020
+    },
+    {
+      "role": "Senior Frontend Engineer Consultant",
+      "company": "NexaTech Solutions",
+      "year": 2022
+    }
   ],
   "skills": {
-    "Go": 4,
-    "REST API design": 5,
-    "Microservices architecture": 5,
-    "PostgreSQL": 5,
-    "Redis": 4,
-    "Terraform": 4,
-    "Kubernetes": 4,
-    "Docker": 4,
-    "CI/CD pipelines": 4
+    "React": 5,
+    "TypeScript": 5,
+    "Next.js": 4,
+    "Web performance optimization": 4,
+    "REST API design": 4,
+    "Webpack/Vite": 4,
+    "Unit testing": 5,
+    "Test automation": 5
   },
   "document_ids": [
     "d_p_034_00",

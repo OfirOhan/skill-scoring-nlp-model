@@ -1,35 +1,14 @@
 {
   "banned_phrases": {
-    "total_documents": 206,
-    "documents_with_issues": 4,
-    "total_issues": 4,
+    "total_documents": 180,
+    "documents_with_issues": 1,
+    "total_issues": 1,
     "issues": [
       {
-        "doc_id": "d_p_029_03",
-        "pattern": "\\bmastery\\s+of\\b",
+        "doc_id": "d_p_044_00",
+        "pattern": "\\bproficient\\s+in\\b",
         "matches": [
-          "mastery of"
-        ]
-      },
-      {
-        "doc_id": "d_p_032_05",
-        "pattern": "\\bmastery\\s+of\\b",
-        "matches": [
-          "mastery of"
-        ]
-      },
-      {
-        "doc_id": "d_p_044_02",
-        "pattern": "\\bmastery\\s+of\\b",
-        "matches": [
-          "mastery of"
-        ]
-      },
-      {
-        "doc_id": "d_p_048_02",
-        "pattern": "\\bmastery\\s+of\\b",
-        "matches": [
-          "mastery of"
+          "Proficient in"
         ]
       }
     ]
@@ -40,233 +19,233 @@
     "issues": []
   },
   "bow_baseline": {
-    "mean_cv_accuracy": 0.2760792567116678,
+    "mean_cv_accuracy": 0.33747511786275536,
     "cv_scores": [
-      0.26859504132231404,
-      0.17391304347826086,
-      0.18840579710144928,
-      0.34575569358178054,
-      0.40372670807453415
+      0.42650602409638555,
+      0.2584541062801932,
+      0.32608695652173914,
+      0.28019323671497587,
+      0.3961352657004831
     ],
     "threshold": 0.45,
     "passed": true,
-    "total_examples": 2416,
+    "total_examples": 2071,
     "label_distribution": {
-      "5": 267,
-      "4": 554,
-      "3": 808,
-      "2": 220,
-      "1": 567
+      "3": 802,
+      "2": 199,
+      "1": 510,
+      "4": 440,
+      "5": 120
     },
     "top_features_per_class": {
       "1": [
         {
-          "feature": "vitalcare",
-          "weight": 1.1943647434095868
+          "feature": "20ci",
+          "weight": 1.2512507819760772
         },
         {
-          "feature": "mobile",
-          "weight": 1.189457966894805
+          "feature": "text",
+          "weight": 1.1079959791047997
         },
         {
-          "feature": "his",
-          "weight": 1.0549104321448983
+          "feature": "connormurphy",
+          "weight": 1.0724876281750955
+        },
+        {
+          "feature": "auto",
+          "weight": 1.0562737127383324
+        },
+        {
+          "feature": "monicanyambura",
+          "weight": 1.050451185472458
+        },
+        {
+          "feature": "efficiency",
+          "weight": 1.0220156852962012
+        },
+        {
+          "feature": "during",
+          "weight": 1.0081683788078466
+        },
+        {
+          "feature": "admicro",
+          "weight": 1.00465872246161
+        },
+        {
+          "feature": "run",
+          "weight": 0.9812371423861174
         },
         {
           "feature": "the",
-          "weight": 1.0494274705280116
-        },
-        {
-          "feature": "jordan",
-          "weight": 0.9779805152726688
-        },
-        {
-          "feature": "biometric",
-          "weight": 0.9498740656354107
-        },
-        {
-          "feature": "key",
-          "weight": 0.9370662876826457
-        },
-        {
-          "feature": "or",
-          "weight": 0.9322323711505672
-        },
-        {
-          "feature": "modular",
-          "weight": 0.9086544296399685
-        },
-        {
-          "feature": "user",
-          "weight": 0.8851685475984874
+          "weight": 0.9713537111383652
         }
       ],
       "2": [
         {
-          "feature": "defect",
-          "weight": 1.0968106987670323
+          "feature": "firmware",
+          "weight": 0.883031080347371
         },
         {
-          "feature": "for",
-          "weight": 1.0243089084573147
+          "feature": "dashboard",
+          "weight": 0.8268178300755491
         },
         {
-          "feature": "name",
-          "weight": 1.0233956497411167
+          "feature": "firebase",
+          "weight": 0.8042751290363186
         },
         {
-          "feature": "her",
-          "weight": 0.9443288600055638
+          "feature": "test",
+          "weight": 0.7995919467733867
         },
         {
-          "feature": "she",
-          "weight": 0.9101282238579206
+          "feature": "fraud",
+          "weight": 0.7903591590394784
         },
         {
-          "feature": "campaign",
-          "weight": 0.8939445156611646
+          "feature": "rahuliyer",
+          "weight": 0.7236731663149247
         },
         {
-          "feature": "engagement",
-          "weight": 0.8732505840572498
+          "feature": "build",
+          "weight": 0.7070146043006056
         },
         {
-          "feature": "devices",
-          "weight": 0.7363889208999702
+          "feature": "fintech",
+          "weight": 0.6844201713100181
         },
         {
-          "feature": "technova",
-          "weight": 0.6982560681483494
+          "feature": "nebulaops",
+          "weight": 0.6828567995380566
         },
         {
-          "feature": "his",
-          "weight": 0.6967979189906446
+          "feature": "websocket",
+          "weight": 0.6792145091523442
         }
       ],
       "3": [
         {
-          "feature": "graphql",
-          "weight": 1.0044525296707612
+          "feature": "ricardoalmeida",
+          "weight": 1.297563833743548
         },
         {
-          "feature": "experience",
-          "weight": 0.9740981703837062
+          "feature": "docker",
+          "weight": 0.9125651080534803
         },
         {
-          "feature": "saas",
-          "weight": 0.9523329901336564
+          "feature": "anya",
+          "weight": 0.8664107835035701
         },
         {
-          "feature": "ai",
-          "weight": 0.8214679036396816
+          "feature": "priscilla",
+          "weight": 0.8096872743435645
         },
         {
-          "feature": "apis",
-          "weight": 0.8089975460840307
+          "feature": "taskflow",
+          "weight": 0.7961198321777274
         },
         {
-          "feature": "software",
-          "weight": 0.8022744321235558
+          "feature": "linkedin",
+          "weight": 0.747547187981175
         },
         {
-          "feature": "learning",
-          "weight": 0.8012297525630444
+          "feature": "ad",
+          "weight": 0.7428343872591057
         },
         {
-          "feature": "security",
-          "weight": 0.7899424009060003
+          "feature": "sql",
+          "weight": 0.7271256228874609
         },
         {
-          "feature": "cybersecurity",
-          "weight": 0.7618636179875858
+          "feature": "testing",
+          "weight": 0.7253542917027332
         },
         {
-          "feature": "2022",
-          "weight": 0.7585248258505576
+          "feature": "user",
+          "weight": 0.7038128308758763
         }
       ],
       "4": [
         {
-          "feature": "kubernetes",
-          "weight": 1.1209916837185208
+          "feature": "flat",
+          "weight": 0.9391233471136797
+        },
+        {
+          "feature": "nexuspay",
+          "weight": 0.8624414167143262
+        },
+        {
+          "feature": "style",
+          "weight": 0.7868657488273413
+        },
+        {
+          "feature": "org",
+          "weight": 0.7828293171386324
+        },
+        {
+          "feature": "pwa",
+          "weight": 0.7712283743258285
+        },
+        {
+          "feature": "of",
+          "weight": 0.7652086552153003
+        },
+        {
+          "feature": "client",
+          "weight": 0.741321010643981
+        },
+        {
+          "feature": "in",
+          "weight": 0.738848562495406
         },
         {
           "feature": "senior",
-          "weight": 1.0763049637597064
+          "weight": 0.7196013162284378
         },
         {
-          "feature": "end",
-          "weight": 1.0592237229663493
-        },
-        {
-          "feature": "our",
-          "weight": 0.9157248012086295
-        },
-        {
-          "feature": "by",
-          "weight": 0.8377754323675263
-        },
-        {
-          "feature": "we",
-          "weight": 0.7923456473334123
-        },
-        {
-          "feature": "orchestration",
-          "weight": 0.7768695709445916
-        },
-        {
-          "feature": "cloud",
-          "weight": 0.7516267705089156
-        },
-        {
-          "feature": "react",
-          "weight": 0.7279210644392874
-        },
-        {
-          "feature": "leadership",
-          "weight": 0.7167163632861889
+          "feature": "consulting",
+          "weight": 0.7044710848021507
         }
       ],
       "5": [
         {
-          "feature": "staff",
-          "weight": 1.747324705388711
+          "feature": "cedricblanc",
+          "weight": 1.4525131733888372
         },
         {
-          "feature": "data",
-          "weight": 1.2660172226397106
+          "feature": "neuralogic",
+          "weight": 1.3185834845322544
         },
         {
-          "feature": "vitahealth",
-          "weight": 1.1831927042875825
+          "feature": "rafael",
+          "weight": 0.9422451483780433
         },
         {
-          "feature": "test",
-          "weight": 1.0760813659429649
+          "feature": "industrial",
+          "weight": 0.9216941811633124
         },
         {
-          "feature": "net",
-          "weight": 1.0501939876589632
+          "feature": "end",
+          "weight": 0.8761860953783951
         },
         {
-          "feature": "our",
-          "weight": 1.0442445484805063
+          "feature": "dinasoliman",
+          "weight": 0.8577392069158477
         },
         {
-          "feature": "we",
-          "weight": 0.9917613641981862
+          "feature": "rafaelcosta",
+          "weight": 0.8423764447490684
         },
         {
-          "feature": "automation",
-          "weight": 0.9588653119015885
+          "feature": "nlp",
+          "weight": 0.8375520039753795
         },
         {
-          "feature": "infrastructure",
-          "weight": 0.8999910563535444
+          "feature": "that",
+          "weight": 0.832598149537835
         },
         {
-          "feature": "testing",
-          "weight": 0.8915741749911228
+          "feature": "architect",
+          "weight": 0.7867209407193606
         }
       ]
     }

@@ -1,74 +1,62 @@
 {
   "persona_id": "p_011",
   "hyperparams": {
-    "archetype": "platform_engineer",
-    "years_experience": 14,
+    "archetype": "ml_engineer",
+    "years_experience": 13,
     "seniority": "staff",
-    "industry": "e-commerce",
-    "writing_style": "verbose",
-    "language_fluency": "native",
-    "self_promotion_level": "balanced",
+    "industry": "consulting",
+    "writing_style": "concise",
+    "language_fluency": "ESL",
+    "self_promotion_level": "boastful",
     "quantification_tendency": "mixed"
   },
-  "name": "Elena Voss",
-  "current_role": "Staff Platform Engineer - Cloud Infrastructure & DevOps Architecture",
-  "company": "GlobalEcom Solutions",
+  "name": "Cedric Blanc",
+  "current_role": "Staff ML Engineer - AI Solutions Architect",
+  "company": "NeuraLogic Consulting",
   "education": {
-    "degree": "Master of Science in Computer Science",
-    "university": "Massachusetts Institute of Technology",
-    "year": 2010
+    "degree": "Master of Science in Machine Learning",
+    "university": "ETH Zurich",
+    "year": 2017
   },
   "career_trajectory": [
     {
-      "role": "DevOps Engineer",
-      "company": "RetailMomentum",
-      "duration": "2009-2012",
-      "key_achievements": [
-        "Automated deployment pipelines for 50+ microservices",
-        "Reduced infrastructure costs by 32% through AWS optimization"
-      ]
+      "year": 2011,
+      "role": "Junior ML Engineer",
+      "company": "NexaTech Startup"
     },
     {
-      "role": "Senior SRE Engineer",
-      "company": "VirtuaCart",
-      "duration": "2012-2015",
-      "key_achievements": [
-        "Designed global CDN architecture with Akamai",
-        "Implemented chaos engineering practices for 99.99% SLA"
-      ]
+      "year": 2015,
+      "role": "Senior ML Engineer",
+      "company": "Quantify Systems"
     },
     {
-      "role": "Principal Platform Engineer",
-      "company": "GlobalEcom Solutions",
-      "duration": "2015-2018",
-      "key_achievements": [
-        "Led multi-cloud migration from AWS to GCP/Azure",
-        "Established service mesh governance with Istio"
-      ]
+      "year": 2018,
+      "role": "Team Lead, AI Solutions",
+      "company": "DataVerve Inc."
+    },
+    {
+      "year": 2021,
+      "role": "Staff ML Engineer",
+      "company": "NeuraLogic Consulting"
     }
   ],
   "skills": {
+    "PyTorch": 5,
+    "TensorFlow": 5,
+    "MLOps": 5,
+    "Model deployment": 5,
+    "LLMs/Prompt engineering": 5,
+    "NLP": 5,
     "AWS": 5,
-    "Docker": 5,
-    "Kubernetes": 5,
-    "Terraform": 5,
-    "Infrastructure as Code": 5,
-    "Load balancing": 4,
-    "CDN management": 4,
-    "Cloud networking (VPC/subnets)": 4,
-    "Cloud cost optimization": 5,
-    "Serverless (Lambda/Cloud Functions)": 4,
-    "Python": 4,
-    "Go": 4,
-    "REST API design": 4,
-    "Microservices architecture": 4,
-    "PostgreSQL": 4,
-    "Redis": 4
+    "GCP": 5,
+    "Kubernetes": 4,
+    "Terraform": 4
   },
   "document_ids": [
     "d_p_011_00",
     "d_p_011_01",
     "d_p_011_02",
-    "d_p_011_03"
+    "d_p_011_03",
+    "d_p_011_04"
   ]
 }

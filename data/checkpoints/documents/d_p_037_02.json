@@ -1,24 +1,25 @@
 {
   "doc_id": "d_p_037_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_037",
   "hyperparams": {
-    "recommender_role": "peer",
-    "recommender_closeness": "occasional",
-    "company_type": "FAANG",
-    "company_size": "small (<50)"
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "CI/CD pipelines": 3,
-    "Docker": 3,
-    "GraphQL": 3,
-    "Kubernetes": 3,
-    "Microservices architecture": 3,
-    "PostgreSQL": 3,
-    "Python": 3,
-    "REST API design": 3,
-    "React": 3
+    "Pandas": 1,
+    "NumPy": 1,
+    "Statistical modeling": 1,
+    "A/B testing": 1,
+    "Data visualization (Matplotlib/Plotly)": 1,
+    "Jupyter notebooks": 1,
+    "Feature engineering": 1,
+    "Python": 1,
+    "REST API design": 1,
+    "Microservices architecture": 1,
+    "Apache Spark": 1,
+    "Apache Airflow": 1
   },
-  "text": "Emily Carter’s contributions to VitaHealth Solutions exemplify the rare blend of technical mastery and collaborative insight that defines a true leader in healthtech. As a Full-Stack Developer, she spearheaded the migration of our patient data platform to a microservices architecture, dismantling monolithic bottlenecks and enabling real-time analytics critical for clinical decision-making. Her Kubernetes expertise shone during a high-stakes deployment, where she automated rolling updates across 12 services, reducing downtime by 70% and earning praise for her calm, methodical approach under pressure.  \n\nHer ability to harmonize frontend and backend workflows is equally impressive. When our team faced scalability challenges with the React-based patient portal, Emily rearchitected the API layer using GraphQL, slashing query latency by 40% while maintaining data integrity. Her REST API designs are a study in simplicity—every endpoint she crafts balances flexibility with precision, a trait that’s made her a go-to collaborator for cross-functional teams.  \n\nBeyond technical prowess, Emily’s work ethic is a constant source of inspiration. She once spent 14 hours troubleshooting a PostgreSQL deadlock during a critical launch, only to return with a custom query optimizer that preempted similar issues. Her curiosity drives her to explore tools like Docker, which she integrated into our CI/CD pipelines, streamlining deployments and fostering a culture of continuous improvement.  \n\nEmily’s blend of intellectual rigor and empathy makes her an invaluable asset. She doesn’t just solve problems—she anticipates them, and her impact extends far beyond code."
+  "text": "# Customer Segmentation Insights  \nA real-time analytics platform for dissecting customer behavior in telecommunications, leveraging PostgreSQL as the analytical backbone and Tableau for dynamic visualization. This project enables stakeholders to isolate high-value segments, track churn risk metrics, and align strategic initiatives with data-driven insights. The architecture prioritizes scalability, security, and interoperability, ensuring seamless integration with existing BI ecosystems.  \n\n---\n\n## Getting Started / Installation  \n1. **Database Setup**: Deploy PostgreSQL 14+ with `pg_trgm` extension enabled for efficient text pattern matching. Create a dedicated schema for customer data, ensuring `pg_settings` are optimized for read-heavy workloads (e.g., `shared_buffers` at 25% of RAM, `work_mem` adjusted for complex joins).  \n2. **Tableau Connection**: Configure a secure connection to the PostgreSQL instance using Tableau’s JDBC driver. Set up a named data source with pre-joined views for latency reduction, avoiding redundant joins during runtime.  \n3. **Access Control**: Implement row-level security (RLS) policies in PostgreSQL to enforce data privacy constraints. Use Tableau’s row-level permissions to further granularize access based on user roles.  \n\n---\n\n## Usage / Examples  \nThe dashboard provides three primary analytical planes:  \n- **Cohort Analysis**: Interactive heatmaps visualizing monthly churn rates across demographic cohorts, filtered by service plan tiers and geographic regions.  \n- **Predictive Segmentation**: A drill-down interface for isolating high-risk segments using PostgreSQL’s `pg_stat_statements` for query performance monitoring.  \n- **Real-Time KPIs**: Embedded widgets displaying live metrics (e.g., CSAT scores, ARPU trends) sourced from a materialized view updated via scheduled batch jobs.  \n\nFor advanced use cases, leverage Tableau’s calculated fields to derive custom metrics (e.g., *customer lifetime value*) directly from the database, minimizing data transfer overhead.  \n\n---\n\n## License  \nInternal use only. Proprietary analytics framework designed for enterprise-grade deployment. Redistribution requires explicit written consent from the project maintainer."
 }

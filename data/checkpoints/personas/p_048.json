@@ -1,54 +1,62 @@
 {
   "persona_id": "p_048",
   "hyperparams": {
-    "archetype": "platform_engineer",
-    "years_experience": 3,
-    "seniority": "mid",
-    "industry": "consulting",
-    "writing_style": "verbose",
+    "archetype": "ml_engineer",
+    "years_experience": 0,
+    "seniority": "junior",
+    "industry": "adtech",
+    "writing_style": "modest",
     "language_fluency": "native",
-    "self_promotion_level": "boastful",
+    "self_promotion_level": "humble",
     "quantification_tendency": "mixed"
   },
-  "name": "Alexandra 'Lexi' Mitchell",
-  "current_role": "Platform Engineer - Cloud Infrastructure Architect",
-  "company": "CloudForge Solutions",
+  "name": "Nina Rodriguez",
+  "current_role": "Machine Learning Engineer",
+  "company": "AdLift Technologies",
   "education": {
     "degree": "Bachelor of Science in Computer Science",
     "university": "University of Southern California",
-    "year": 2019
+    "year": 2024
   },
   "career_trajectory": [
     {
-      "year": 2020,
-      "role": "DevOps Engineer",
-      "company": "TechCorp Innovations"
+      "role": "Data Analytics Intern",
+      "company": "BannerAds Inc.",
+      "duration": "6 months",
+      "responsibilities": "Assisted in building user segmentation models using Python and SQL."
     },
     {
-      "year": 2021,
-      "role": "SRE Lead",
-      "company": "CloudMinds Ltd"
+      "role": "Machine Learning Intern",
+      "company": "ClickBoost Dynamics",
+      "duration": "6 months",
+      "responsibilities": "Developed A/B testing frameworks and collaborated on ad performance prediction models."
     },
     {
-      "year": 2022,
-      "role": "Platform Engineer",
-      "company": "CloudForge Solutions"
+      "role": "Junior Machine Learning Engineer",
+      "company": "AdLift Technologies",
+      "duration": "3 months",
+      "responsibilities": "Maintaining and optimizing recommendation systems for ad targeting pipelines."
     }
   ],
   "skills": {
-    "AWS": 4,
-    "Kubernetes": 4,
-    "Terraform": 4,
-    "Cloud cost optimization": 3,
-    "CI/CD pipelines": 3,
-    "Python": 3,
-    "GitLab CI": 3,
-    "Prometheus/Grafana": 3,
-    "Database optimization": 3
+    "PyTorch": 3,
+    "TensorFlow": 3,
+    "scikit-learn": 3,
+    "NLP": 3,
+    "Recommendation systems": 3,
+    "MLOps (MLflow/W&B)": 3,
+    "Model deployment": 3,
+    "AWS": 3,
+    "Docker": 3,
+    "REST API design": 3,
+    "Apache Airflow": 3,
+    "ETL pipeline design": 3,
+    "Data modeling": 3
   },
   "document_ids": [
     "d_p_048_00",
     "d_p_048_01",
-    "d_p_048_02"
+    "d_p_048_02",
+    "d_p_048_03"
   ]
 }

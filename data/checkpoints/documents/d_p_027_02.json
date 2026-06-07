@@ -3,21 +3,24 @@
   "type": "project_readme",
   "persona_id": "p_027",
   "hyperparams": {
-    "project_scale": "academic",
+    "project_scale": "hobby",
     "project_team_size": "medium (5-15)",
-    "jargon_density": "heavy"
+    "jargon_density": "plain"
   },
   "skill_evidence": {
+    "ArgoCD": 1,
     "CI/CD pipelines": 3,
-    "Cloud cost optimization": 3,
-    "Go": 3,
-    "Kubernetes": 3,
-    "Message queues": 4,
-    "Microservices architecture": 3,
-    "PostgreSQL": 3,
+    "Cloud cost optimization": 1,
+    "Cloud networking (VPC/subnets)": 1,
+    "Configuration management (Ansible)": 1,
+    "GitHub Actions": 3,
+    "GitLab CI": 1,
+    "Jenkins": 1,
+    "Linux administration": 1,
+    "Monitoring & alerting": 1,
+    "Prometheus/Grafana": 1,
     "Python": 3,
-    "REST API design": 3,
-    "Terraform": 3
+    "Shell scripting (Bash)": 3
   },
-  "text": "# Ad Targeting Caching Platform  \n\nA high-throughput, low-latency distributed caching solution for ad targeting workloads, leveraging Redis as the primary cache layer and Kafka for event-driven updates. Designed for adtech environments requiring sub-100ms response times and 99.99% SLA compliance.  \n\n## Tech Stack  \n- **Language**: Go (core service), Python (data pipeline utilities)  \n- **Data Stores**: Redis (in-memory cache), PostgreSQL (metadata store)  \n- **Message Queues**: Apache Kafka (event streaming, 99.95% delivery rate)  \n- **Orchestration**: Kubernetes (auto-scaling, 30% cost reduction via resource optimization)  \n- **Infrastructure**: Terraform (IaC, 20% faster deployment cycles)  \n- **APIs**: RESTful endpoints (OpenAPI spec, 400+ endpoints)  \n- **CI/CD**: GitHub Actions (automated testing, 95% test coverage)  \n\n## Architecture Overview  \nThe platform decouples ad targeting logic from caching layers, using Redis for real-time ad lookup and Kafka for asynchronous updates. Key components:  \n- **Redis Cluster**: Sharded with Redis Sentinel for high availability (99.99% uptime)  \n- **Kafka Producers/Consumers**: Delta updates propagated to cache via Kafka topics, with idempotent replay mechanisms  \n- **PostgreSQL**: Stores ad metadata and user segments (read replicas for query scaling)  \n- **Kubernetes Operator**: Manages Redis shard rebalancing and Kafka topic lifecycle  \n- **Prometheus/Grafana**: End-to-end latency monitoring (95th percentile < 80ms)  \n\n## Setup Instructions  \n1. Install dependencies: Go 1.21, Kafka, Redis, PostgreSQL  \n2. Configure environment variables in `.env` (Redis hosts, Kafka brokers, DB credentials)  \n3. Initialize infrastructure:  \n   ```bash  \n   terraform init && terraform apply --auto-approve  \n   ```  \n4. Spin up services:  \n   ```bash  \n   make build && make up  \n   ```  \n5. Verify health:  \n   ```bash  \n   curl http://localhost:8080/healthz  \n   ```  \n\n## Contribution  \nImplement caching strategies for ad rule evaluation (Redis Lua scripts) and Kafka stream processing (Kafka Streams API). Optimize for 99.99% cache hit rate with 50ms tail latency.  \n\nMetrics: 30% reduction in ad serving latency, 25% lower cloud costs via Terraform resource tagging, and 99.95% Kafka message delivery rate."
+  "text": "# Cloud-Native CI/CD Pipeline for Microservices  \n\nA streamlined workflow for automating builds, tests, and deployments of microservices using GitHub Actions and Docker. Designed for teams prioritizing speed and reliability without compromising security or observability.  \n\n## Badges  \n[![Build Status](https://example.com/status)](https://example.com)  \n[![Docker Image](https://example.com/docker)](https://example.com)  \n[![GitHub Actions](https://example.com/actions)](https://example.com)  \n\n## Getting Started  \nClone the repository using git. Ensure Docker is installed and running locally. Configure secrets in your GitHub repo for container registry credentials and environment variables. Run `docker compose up` to spin up a local test environment.  \n\n## Usage  \nDeploy a new microservice by pushing code to the main branch. The pipeline triggers a series of steps:  \n1. **Linting**: Python scripts validate code quality.  \n2. **Testing**: Unit and integration tests execute in isolated Docker containers.  \n3. **Packaging**: Artifacts are built into Docker images tagged with semantic versions.  \n4. **Deployment**: Validated images push to a private registry, ready for staging or production.  \n\nExample: A new API service is tested locally, then pushed to the registry. The pipeline automatically tags it with `v1.2.3` and marks it as deployable.  \n\n## Architecture  \nThe pipeline is organized into three phases:  \n- **Validation**: Ensures code adheres to style guides and dependency rules.  \n- **Orchestration**: Coordinates Docker builds and test execution in parallel.  \n- **Deployment**: Tags and pushes images to a registry, with optional manual approval for production.  \n\nKey decisions include using Docker for isolation and GitHub Actions for workflow orchestration, avoiding monolithic builds.  \n\n## Tech Stack  \n- **GitHub Actions**: For CI/CD orchestration and secret management.  \n- **Docker**: For containerized builds and environment consistency.  \n- **Python**: For custom linting and test reporting scripts.  \n- **Bash**: For automation in pre-commit hooks and cleanup tasks.  \n\n## Roadmap  \n- Add parallel testing for faster feedback loops.  \n- Integrate with external monitoring tools for deployment health checks.  \n- Support multi-stage deployments with environment-specific config files.  \n\n## Acknowledgments  \nInspired by real-world SaaS deployments, this project leverages tools and patterns from production-grade pipelines. Special thanks to the GitHub Actions and Docker communities for foundational work.  \n\n## Contributing  \nSubmit issues for edge cases or feature requests. Pull requests are welcome—ensure tests cover new logic and follow the existing style guide. Code reviews are mandatory for changes affecting deployment workflows."
 }

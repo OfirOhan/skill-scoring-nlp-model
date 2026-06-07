@@ -1,42 +1,54 @@
 {
   "persona_id": "p_007",
   "hyperparams": {
-    "archetype": "devops_sre",
-    "years_experience": 2,
-    "seniority": "junior",
-    "industry": "adtech",
-    "writing_style": "neutral",
-    "language_fluency": "native",
-    "self_promotion_level": "boastful",
+    "archetype": "security_engineer",
+    "years_experience": 5,
+    "seniority": "mid",
+    "industry": "healthtech",
+    "writing_style": "verbose",
+    "language_fluency": "ESL",
+    "self_promotion_level": "balanced",
     "quantification_tendency": "mixed"
   },
-  "name": "Alexandra Chen",
-  "current_role": "DevOps Engineer",
-  "company": "AdvertiseNow Inc.",
+  "name": "Xiomara Vargas",
+  "current_role": "Senior Security Engineer",
+  "company": "MediSafe Technologies",
   "education": {
-    "degree": "Bachelor of Science in Computer Science",
-    "university": "University of California, Berkeley",
-    "year": 2022
+    "degree": "Master's in Cybersecurity",
+    "university": "University of Health Sciences",
+    "year": 2019
   },
   "career_trajectory": [
-    "Systems Administrator at ScaleAd, 2021-2022",
-    "DevOps Engineer at AdvertiseNow, 2022-present"
+    {
+      "year": 2018,
+      "position": "Security Analyst",
+      "company": "HealthTrack Innovations"
+    },
+    {
+      "year": 2020,
+      "position": "Security Engineer",
+      "company": "MediSafe Technologies"
+    },
+    {
+      "year": 2022,
+      "position": "Senior Security Engineer",
+      "company": "MediSafe Technologies"
+    }
   ],
   "skills": {
-    "GitHub Actions": 3,
-    "Terraform": 3,
-    "Prometheus/Grafana": 3,
-    "Linux administration": 3,
-    "Shell scripting (Bash)": 3,
-    "GitLab CI": 3,
-    "Python": 3,
-    "AWS": 3,
-    "Docker": 3,
-    "Network automation": 3
+    "Network security": 3,
+    "Application security (OWASP)": 4,
+    "Penetration testing": 4,
+    "IAM/Access control": 3,
+    "Encryption & PKI": 4,
+    "Security auditing": 3,
+    "SIEM tools": 3,
+    "Vulnerability management": 3,
+    "Compliance (SOC2/GDPR)": 3,
+    "AWS": 3
   },
   "document_ids": [
     "d_p_007_00",
-    "d_p_007_01",
-    "d_p_007_02"
+    "d_p_007_01"
   ]
 }

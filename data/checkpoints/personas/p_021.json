@@ -1,60 +1,62 @@
 {
   "persona_id": "p_021",
   "hyperparams": {
-    "archetype": "mobile_developer",
-    "years_experience": 9,
-    "seniority": "senior",
-    "industry": "gaming",
-    "writing_style": "concise",
+    "archetype": "data_scientist",
+    "years_experience": 2,
+    "seniority": "junior",
+    "industry": "e-commerce",
+    "writing_style": "verbose",
     "language_fluency": "native",
-    "self_promotion_level": "boastful",
-    "quantification_tendency": "metrics-heavy"
+    "self_promotion_level": "balanced",
+    "quantification_tendency": "mixed"
   },
-  "name": "Alex Rivera",
-  "current_role": "Senior Mobile Architect - Game Studios",
-  "company": "Nova Interactive",
+  "name": "Takeshi Hayashi",
+  "current_role": "Junior Data Scientist",
+  "company": "NijiMart",
   "education": {
-    "degree": "Bachelor of Science in Computer Science",
-    "university": "University of Southern California",
-    "year": 2014
+    "degree": "Master of Science in Data Science",
+    "university": "Keio University",
+    "year": 2021
   },
   "career_trajectory": [
     {
-      "role": "Junior Mobile Developer",
-      "company": "PixelForge Games",
-      "duration": "2015-2017",
-      "achievements": "Built core mechanics for 3 mobile games, 15% performance optimization"
+      "role": "Data Analyst Intern",
+      "company": "EcoCart",
+      "duration": "6 months",
+      "responsibilities": "Assisted in aggregating sales metrics and creating dashboards for inventory optimization."
     },
     {
-      "role": "Lead Mobile Engineer",
-      "company": "Nova Interactive",
-      "duration": "2019-2021",
-      "achievements": "Spearheaded cross-platform migration, reduced deployment time by 40%"
+      "role": "Data Science Intern",
+      "company": "NijiMart",
+      "duration": "12 months",
+      "responsibilities": "Developed predictive models for customer churn and contributed to A/B testing frameworks for pricing strategies."
     },
     {
-      "role": "Senior Mobile Architect",
-      "company": "Nova Interactive",
-      "duration": "2021-present",
-      "achievements": "Designed scalable backend integrations, 30% reduction in crash reports"
+      "role": "Junior Data Scientist",
+      "company": "NijiMart",
+      "duration": "2 years",
+      "responsibilities": "Owns end-to-end projects for recommendation systems and optimizes feature pipelines for user segmentation."
     }
   ],
   "skills": {
-    "Swift": 5,
-    "Kotlin": 5,
-    "Flutter": 4,
-    "Mobile CI/CD": 4,
-    "App Store deployment": 4,
-    "TypeScript": 4,
-    "React": 3,
-    "REST API design": 4,
-    "GraphQL": 3
+    "Pandas": 3,
+    "NumPy": 3,
+    "SQL analytics": 3,
+    "Data visualization (Matplotlib/Plotly)": 3,
+    "Feature engineering": 3,
+    "Exploratory data analysis": 3,
+    "A/B testing": 3,
+    "scikit-learn": 4,
+    "Python": 3,
+    "REST API design": 3,
+    "Apache Airflow": 3,
+    "dbt": 3,
+    "ETL pipeline design": 3,
+    "Data modeling": 3
   },
   "document_ids": [
     "d_p_021_00",
     "d_p_021_01",
-    "d_p_021_02",
-    "d_p_021_03",
-    "d_p_021_04",
-    "d_p_021_05"
+    "d_p_021_02"
   ]
 }

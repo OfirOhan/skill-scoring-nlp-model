@@ -4,21 +4,24 @@
   "persona_id": "p_035",
   "hyperparams": {
     "project_scale": "academic",
-    "project_team_size": "large (15+)",
+    "project_team_size": "solo",
     "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Application security (OWASP)": 3,
-    "Encryption & PKI": 3,
-    "Firewall configuration": 3,
-    "IAM/Access control": 3,
-    "Incident management": 2,
-    "Linux administration": 3,
-    "Network automation": 3,
-    "Network security": 3,
-    "Penetration testing": 3,
-    "Security auditing": 2
+    "A/B testing": 3,
+    "Data visualization (Matplotlib/Plotly)": 3,
+    "Feature engineering": 4,
+    "MLOps (MLflow/W&B)": 3,
+    "Model deployment": 4,
+    "NumPy": 4,
+    "Pandas": 4,
+    "PyTorch": 2,
+    "SQL analytics": 3,
+    "Statistical modeling": 4,
+    "Tableau/Power BI": 3,
+    "TensorFlow": 2,
+    "Time series analysis": 4,
+    "scikit-learn": 4
   },
-  "text": "# SecureAPI Gateway - Enterprise Security Solution  \n\nSecureAPI Gateway is a scalable, enterprise-grade API gateway designed to enhance security through threat detection, data encryption, and granular access control. Built for high-traffic environments, it integrates seamlessly with cloud infrastructure to enforce compliance and mitigate risks without compromising performance.  \n\n## Tech Stack  \n- **Cloud**: AWS Lambda, API Gateway, CloudFront, and S3  \n- **Security**: AWS KMS, TLS 1.3, OWASP ZAP, and custom threat intelligence feeds  \n- **Database**: PostgreSQL (SSL-enabled) for audit logging  \n- **Automation**: Ansible for configuration management, Terraform for infrastructure as code  \n- **Networking**: iptables, CloudFront WAF, and VPC peering  \n- **Tools**: Wireshark, Nmap, and custom Python scripts for real-time monitoring  \n\n## Architecture Overview  \nThe gateway operates as a stateless microservices layer, handling request routing, authentication, and encryption. Key components include:  \n- **Threat Detection Module**: Integrates with AWS WAF and custom rules for real-time anomaly detection.  \n- **Encryption Engine**: Enforces TLS 1.3 for in-transit data and AES-256-GCM for at-rest encryption via AWS KMS.  \n- **Access Control Plane**: Leverages IAM roles and custom RBAC policies to enforce least-privilege access.  \n- **Audit Trail**: Logs all API interactions to a secure PostgreSQL database with immutable storage.  \n\n## Setup Instructions  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/secureapi-gateway/secureapi.git  \n   ```  \n2. Configure AWS credentials via `~/.aws/credentials` and set environment variables for KMS keys and DB endpoints.  \n3. Deploy infrastructure using Terraform:  \n   ```bash  \n   terraform init && terraform apply  \n   ```  \n4. Run security audits with OWASP ZAP and validate encryption protocols via Wireshark.  \n5. Test with Postman or `curl` to simulate API requests and verify threat detection rules.  \n\nThis project emphasizes proactive security through automation, encryption, and continuous monitoring, ensuring alignment with enterprise compliance standards. Regular penetration testing and audit trails are integral to maintaining robust defenses."
+  "text": "# Predictive Analytics for Client Retention  \n\nThis project leverages machine learning to forecast client churn in consulting engagements, enabling data-driven retention strategies. By analyzing historical client interactions, financial metrics, and engagement patterns, the model identifies high-risk clients and prioritizes interventions. The solution emphasizes interpretability, scalability, and integration with existing business intelligence tools, ensuring actionable insights for senior stakeholders.  \n\n## License  \nMIT License  \n\n## Badges  \n[![GitHub](https://badgen.net/badge-url/github.com/sergei-antonov/client-retention?icon=github&label=repo)](https://github.com/sergei-antonov/client-retention)  \n[![GitHub Actions](https://badgen.net/badge-url/github.com/sergei-antonov/client-retention/workflows/CI%20-%20Tests%20-%20Coverage/badge.svg?icon=github-actions&label=ci)](https://github.com/sergei-antonov/client-retention/actions)  \n[![License](https://badgen.net/badge/license/MIT/blue)](https://github.com/sergei-antonov/client-retention/blob/main/LICENSE)  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/sergei-antonov/client-retention.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure environment variables for database access and API keys  \n4. Run `python setup.py` to initialize the project structure  \n\n## Usage / Examples  \nTo generate a churn prediction report:  \n```bash  \npython predict.py --input data/client_logs.csv --output reports/churn_report.pdf  \n```  \nFor A/B testing of retention strategies:  \n```bash  \npython ab_test.py --scenario \"email_campaign\" --control_group \"baseline\"  \n```  \nVisualize feature importance:  \n```bash  \npython visualize.py --model models/final_model.pkl --output plots/feature_importance.png  \n```  \n\n## Architecture / Design  \nThe system employs a modular pipeline:  \n- **Data Layer**: SQL queries (PostgreSQL) extract client metrics, while Pandas handles preprocessing.  \n- **Model Layer**: A gradient-boosted ensemble (XGBoost) trained on time-series features, validated via stratified k-fold.  \n- **Integration Layer**: REST API endpoints for real-time scoring, compatible with Tableau dashboards.  \n- **Monitoring**: MLflow tracks model drift, while custom scripts log A/B test metrics to BigQuery.  \n\n## Tech Stack / Built With  \n- **Data**: SQL, Pandas, NumPy, and JSON for structured and unstructured data handling.  \n- **Modeling**: Scikit-learn (pipelines, hyperparameter tuning), statistical modeling for baseline comparisons.  \n- **Visualization**: Plotly for interactive dashboards, Matplotlib for static reports.  \n- **MLOps**: MLflow for experiment tracking, W&B for hyperparameter logging.  \n- **Deployment**: Dockerized inference server with Flask, deployed on AWS Lambda for cost efficiency.  \n\n## Contributing  \nEnhance the model’s feature engineering by adding domain-specific metrics (e.g., engagement score). Propose improvements to the A/B testing framework or expand support for additional client segments.  \n\n## Testing  \nUnit tests (pytest) verify data preprocessing pipelines and model scoring logic. Integration tests validate API endpoints and database interactions. Code coverage exceeds 85%, with focus on edge cases in time-series forecasting."
 }

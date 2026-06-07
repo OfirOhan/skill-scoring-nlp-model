@@ -1,57 +1,58 @@
 {
   "persona_id": "p_041",
   "hyperparams": {
-    "archetype": "qa_test_engineer",
-    "years_experience": 10,
-    "seniority": "staff",
-    "industry": "enterprise",
-    "writing_style": "neutral",
+    "archetype": "data_scientist",
+    "years_experience": 6,
+    "seniority": "senior",
+    "industry": "startup",
+    "writing_style": "modest",
     "language_fluency": "near-native",
     "self_promotion_level": "boastful",
     "quantification_tendency": "qualitative"
   },
-  "name": "Emily Chen",
-  "current_role": "Staff QA Engineer",
-  "company": "GlobalTech Solutions",
+  "name": "Kwame Mensah",
+  "current_role": "Senior Data Scientist",
+  "company": "NexGen Analytics",
   "education": {
-    "degree": "Bachelor of Science in Computer Science",
-    "university": "Massachusetts Institute of Technology",
-    "year": 2015
+    "degree": "Master of Science in Data Science",
+    "university": "University of Cape Town",
+    "year": 2018
   },
   "career_trajectory": [
     {
-      "role": "QA Engineer",
-      "company": "TechNova Inc.",
-      "duration": "2013-2016"
+      "role": "Data Analyst",
+      "company": "TechNova Solutions",
+      "duration": "2 years",
+      "responsibilities": "Built predictive models for customer churn, optimized SQL queries for real-time analytics"
     },
     {
-      "role": "Senior QA Engineer",
-      "company": "CloudForge Ltd.",
-      "duration": "2016-2019"
+      "role": "Data Scientist",
+      "company": "PixelPulse Inc.",
+      "duration": "3 years",
+      "responsibilities": "Led A/B testing frameworks, developed NLP pipelines for user sentiment analysis"
     },
     {
-      "role": "Staff QA Engineer",
-      "company": "GlobalTech Solutions",
-      "duration": "2019-present"
+      "role": "Senior Data Scientist",
+      "company": "NexGen Analytics",
+      "duration": "1 year",
+      "responsibilities": "Architected MLOps pipelines, deployed production models using MLflow and ONNX"
     }
   ],
   "skills": {
-    "Test automation": 5,
-    "Selenium/Playwright": 4,
-    "Performance testing (JMeter/k6)": 5,
-    "API testing": 5,
-    "Test strategy design": 4,
-    "BDD/TDD": 3,
-    "CI/CD pipelines": 4,
-    "GitHub Actions": 4,
-    "Prometheus/Grafana": 4,
-    "Linux administration": 4,
-    "Shell scripting (Bash)": 3
+    "PyTorch": 4,
+    "TensorFlow": 4,
+    "Feature engineering": 4,
+    "Model deployment": 4,
+    "Python": 5,
+    "SQL analytics": 3,
+    "MLOps": 3,
+    "Apache Airflow": 3
   },
   "document_ids": [
     "d_p_041_00",
     "d_p_041_01",
     "d_p_041_02",
-    "d_p_041_03"
+    "d_p_041_03",
+    "d_p_041_04"
   ]
 }

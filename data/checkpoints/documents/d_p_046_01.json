@@ -1,23 +1,31 @@
 {
   "doc_id": "d_p_046_01",
-  "type": "project_readme",
+  "type": "linkedin",
   "persona_id": "p_046",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "solo",
-    "jargon_density": "plain"
+    "linkedin_completeness": "standard"
   },
   "skill_evidence": {
-    "CI/CD pipelines": 3,
-    "GitHub Actions": 3,
-    "Go": 3,
-    "Linux administration": 3,
-    "Message queues": 3,
-    "Microservices architecture": 4,
-    "PostgreSQL": 4,
-    "Prometheus/Grafana": 3,
-    "Python": 4,
-    "REST API design": 4
+    "AWS": 5,
+    "ArgoCD": 4,
+    "CI/CD pipelines": 5,
+    "Chaos engineering": 4,
+    "Cloud cost optimization": 4,
+    "Cloud networking (VPC/subnets)": 4,
+    "Configuration management (Ansible)": 4,
+    "Docker": 4,
+    "GCP": 5,
+    "GitHub Actions": 4,
+    "GitLab CI": 5,
+    "Jenkins": 3,
+    "Kubernetes": 5,
+    "Linux administration": 5,
+    "Log management (ELK)": 3,
+    "Monitoring & alerting": 5,
+    "Prometheus/Grafana": 5,
+    "SLA/SLO management": 4,
+    "Shell scripting (Bash)": 4,
+    "Terraform": 5
   },
-  "text": "# UserAnalyticsPlatform  \n\nA scalable backend system for processing and visualizing user data in a SaaS environment. Built as a microservices architecture to handle high-throughput analytics with reliable data pipelines.  \n\n## Tech Stack  \n- **Backend**: Go (main service), Python (data processing)  \n- **Database**: PostgreSQL (timeseries + user metadata)  \n- **Message queues**: Kafka (event streaming between services)  \n- **Monitoring**: Prometheus + Grafana (service health, query latency)  \n- **CI/CD**: GitHub Actions (automated testing, deployment)  \n- **OS**: Linux (server deployment, containerization)  \n\n## Architecture Overview  \nThe platform is divided into three core services:  \n1. **Data Ingestion Service** (Go): Receives user events via HTTP, validates data, and publishes to Kafka. Handles 10k+ events/sec with rate limiting.  \n2. **Analytics Engine** (Python): Consumes Kafka messages, processes data into aggregated metrics, and stores results in PostgreSQL. Optimized for batch processing with 30% latency reduction.  \n3. **Visualization API** (Go): Exposes REST endpoints for querying metrics. Uses PostgreSQL indexes to return results in <500ms for 95% of requests.  \n\nServices communicate via Kafka topics, with Prometheus tracking CPU, memory, and latency metrics. Grafana dashboards provide real-time insights into system performance.  \n\n## Setup Instructions  \n1. Clone the repo: `git clone https://github.com/alexandra-chen/UserAnalyticsPlatform.git`  \n2. Install dependencies:  \n   - Go (1.21+) and Python 3.10  \n   - PostgreSQL (localhost or remote DB)  \n   - Kafka (local or cloud instance)  \n3. Configure environment variables in `.env.local` (see `.env.example` for format).  \n4. Build and run services:  \n   ```bash  \n   cd data-ingestion  \n   go build  \n   ./data-ingestion  \n   cd ../analytics-engine  \n   pip install -r requirements.txt  \n   python main.py  \n   ```  \n5. Deploy with Docker (scripts in `deploy/`) or use GitHub Actions for CI/CD.  \n\nThis project demonstrates a production-ready microservices setup for handling user analytics at scale. Built and maintained as a solo project with measurable improvements in system reliability and performance."
+  "text": "Career Journey  \nSeven years ago, I stepped into the world of enterprise DevOps as a Site Reliability Engineer, driven by a fascination with turning chaos into order. Early days were spent mastering Linux administration and building CI/CD pipelines that scaled with our growing cloud footprint. Over time, I evolved from a hands-on operator to an architect shaping systems that power global enterprise workflows. My career trajectory has been defined by solving complex problems at scale—whether optimizing cloud costs, designing resilient Kubernetes clusters, or mentoring teams to adopt best practices. Today, I lead DevOps initiatives at NordicTech Solutions AB, where my work bridges infrastructure, automation, and business outcomes.  \n\nCurrent Focus  \nRight now, I’m obsessed with crafting cloud-native architectures that balance innovation with operational excellence. My recent projects revolve around refining ArgoCD pipelines to streamline application deployments, implementing chaos engineering to preempt system failures, and leveraging GCP and AWS to build cost-efficient, high-availability networks. I’m also deeply invested in SLA/SLO management, ensuring our services meet—and exceed—client expectations. This phase of my career is about scaling reliability, refining automation, and fostering a culture where engineering excellence is non-negotiable.  \n\nSkills Highlight  \nMy expertise spans CI/CD pipelines, cloud networking, and Kubernetes orchestration, with measurable impacts on system uptime and cost savings. I’ve architected Terraform-driven infrastructure that reduced provisioning time by 40%, designed ELK stacks that cut log analysis latency by 60%, and spearheaded chaos engineering exercises that eliminated 95% of critical P0 incidents. Whether it’s debugging complex Prometheus alerts, optimizing Docker container performance, or mentoring teams on GitLab CI/CD, I thrive at the intersection of code, infrastructure, and strategy.  \n\nCall to Action  \nIf you’re navigating the complexities of cloud infrastructure, automation, or operational reliability, let’s connect. I’m always eager to collaborate, share insights, or discuss how we can build systems that are both resilient and efficient. Let’s drive innovation—no excuses."
 }

@@ -1,34 +1,22 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Senior Backend Engineer with 7 years of experience in adtech, specializing in scalable backend systems and high-performance APIs",
-    "title": "Alex Johnson - Senior Backend Engineer",
+    "topic_summary": "DevOps Engineer with 0 years of experience in SaaS industry, focusing on DevOps and SRE practices.",
+    "title": "Connor Murphy - DevOps Engineer",
     "doc_id": "d_p_027_00",
     "persona_id": "p_027",
     "hyperparams": {
       "cv_format": "paragraph",
-      "geographic_convention": "Israel",
-      "company_type": "FAANG",
+      "geographic_convention": "Europe",
+      "company_type": "enterprise",
       "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A real-time ad bidding system using microservices and distributed databases for adtech platforms",
-    "title": "Real-Time Ad Bidding System",
+    "topic_summary": "Automated scaling solution for SaaS applications using Terraform and AWS.",
+    "title": "Auto-Scaling Infrastructure for SaaS Applications",
     "doc_id": "d_p_027_01",
-    "persona_id": "p_027",
-    "hyperparams": {
-      "project_scale": "hobby",
-      "project_team_size": "medium (5-15)",
-      "jargon_density": "plain"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "A distributed caching solution for ad targeting with Redis and Kafka integration",
-    "title": "Ad Targeting Caching Platform",
-    "doc_id": "d_p_027_02",
     "persona_id": "p_027",
     "hyperparams": {
       "project_scale": "academic",
@@ -38,25 +26,37 @@
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A scalable ad analytics dashboard with real-time metrics and visualization tools",
-    "title": "Ad Analytics Dashboard",
-    "doc_id": "d_p_027_03",
+    "topic_summary": "CI/CD pipeline implementation for cloud-native microservices using GitHub Actions and Docker.",
+    "title": "CI/CD Pipeline for Cloud-Native Microservices",
+    "doc_id": "d_p_027_02",
     "persona_id": "p_027",
     "hyperparams": {
-      "project_scale": "team-internal",
+      "project_scale": "hobby",
       "project_team_size": "medium (5-15)",
-      "jargon_density": "heavy"
+      "jargon_density": "plain"
     }
   },
   {
-    "doc_type": "blog",
-    "topic_summary": "Strategies for optimizing backend infrastructure to handle high-throughput adtech workloads",
-    "title": "Optimizing Backend Systems for Real-Time Ad Tech Workloads",
+    "doc_type": "recommendation",
+    "topic_summary": "Recommendation from NexaCloud Solutions' DevOps Manager highlighting Connor's technical skills and contributions to infrastructure reliability.",
+    "title": "Recommendation for Connor Murphy",
+    "doc_id": "d_p_027_03",
+    "persona_id": "p_027",
+    "hyperparams": {
+      "recommender_role": "professor",
+      "recommender_closeness": "brief",
+      "company_type": "startup",
+      "company_size": "large (500+)"
+    }
+  },
+  {
+    "doc_type": "linkedin",
+    "topic_summary": "DevOps Engineer passionate about building scalable and reliable infrastructure for SaaS platforms.",
+    "title": "Connor Murphy | DevOps Engineer",
     "doc_id": "d_p_027_04",
     "persona_id": "p_027",
     "hyperparams": {
-      "blog_depth": "opinion-piece",
-      "jargon_density": "plain"
+      "linkedin_completeness": "standard"
     }
   }
 ]

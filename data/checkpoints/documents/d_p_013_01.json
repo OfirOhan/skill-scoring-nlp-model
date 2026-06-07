@@ -3,9 +3,9 @@
   "type": "project_readme",
   "persona_id": "p_013",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "moderate"
+    "project_scale": "hobby",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
     "Swift": 1,
@@ -14,12 +14,10 @@
     "Flutter": 1,
     "iOS development": 1,
     "Android development": 1,
-    "Mobile CI/CD": 1,
+    "TypeScript": 1,
+    "React": 1,
     "REST API design": 1,
-    "GraphQL": 1,
-    "Test automation": 1,
-    "Mobile testing": 1,
     "Security testing": 1
   },
-  "text": "# FinSecure Pay - Biometric Payment Solution  \n\n**FinSecure Pay** is a secure mobile payment application designed for fintech startups, enabling users to transact with biometric authentication. The app prioritizes encryption, seamless UX, and compliance with financial regulations.  \n\n## Key Features  \n- **Biometric Login**: Fingerprint or facial recognition for secure access.  \n- **Encrypted Transactions**: End-to-end encryption for all payment data.  \n- **Real-Time Fraud Detection**: Integrated anomaly detection for suspicious activity.  \n- **Multi-Currency Support**: Native handling of fiat and stablecoin transactions.  \n- **Regulatory Compliance**: GDPR and PCI-DSS compliant data storage and processing.  \n\n## Tech Stack  \n- **Platform**: Secure mobile framework (proprietary hybrid architecture).  \n- **Core Libraries**: Biometric SDK, encryption libraries, and payment gateway integrations.  \n- **Backend**: RESTful APIs for transaction validation and user management (managed externally).  \n- **Security**: AES-256 encryption, tokenization, and secure key storage.  \n\n## Architecture Overview  \nThe app follows a **layered architecture** to ensure scalability and security:  \n1. **Presentation Layer**: Biometric authentication flow and user interface.  \n2. **Business Logic Layer**: Transaction validation, fraud checks, and payment routing.  \n3. **Data Layer**: Encrypted local storage and secure API communication.  \n4. **Security Layer**: Runtime encryption, secure boot, and tamper detection.  \n\n## Setup Instructions  \n1. Clone the repository: `git clone https://github.com/yourusername/finsecure-pay.git`  \n2. Install dependencies using the project-specific toolchain.  \n3. Configure biometric permissions and encryption keys via the admin dashboard.  \n4. Run the app and test authentication flows and transaction endpoints.  \n\n## Contributing  \nWe welcome contributions to enhance security protocols, optimize UX, and expand supported currencies. Please review the [contributing guidelines](CONTRIBUTING.md) before submitting changes.  \n\n**Note**: This project is maintained with a focus on financial security and user privacy. All features adhere to strict compliance standards for fintech operations."
+  "text": "# SecureAuth Mobile SDK  \nA modular framework for biometric authentication with end-to-end encryption, designed for seamless integration into mobile applications. Focuses on zero-knowledge proofs and multi-factor verification to safeguard user credentials without storing sensitive data.  \n\n---\n\n## Badges  \n[![Project Status](https://img.shields.io/badge/status-active-green)](https://github.com/secureauth-sdk)  \n[![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/secureauth-sdk/blob/main/LICENSE)  \n\n---\n\n## Getting Started  \n1. Clone the repository using `git clone https://github.com/secureauth-sdk.git`  \n2. Install dependencies via `npm install` or `yarn`  \n3. Configure environment variables for encryption keys and biometric provider endpoints  \n4. Run `npm start` to initialize the development server  \n\nEnsure your system meets the minimum requirements: modern CPU, TLS 1.3 support, and access to hardware-backed cryptographic modules.  \n\n---\n\n## Usage / Examples  \nTo authenticate a user:  \n```javascript  \nconst auth = new SecureAuth();  \nconst result = await auth.verifyBiometric({  \n  userId: 'user_123',  \n  challenge: 'random_salt_value'  \n});  \nconsole.log(result); // { success: true, encryptedToken: '...' }  \n```  \nFor multi-factor setup:  \n```javascript  \nawait auth.enrollFactors({  \n  factors: ['fingerprint', 'face'],  \n  encryptionMode: 'AES-256-GCM'  \n});  \n```  \nThe SDK abstracts key exchange protocols, ensuring credentials are never transmitted in plaintext.  \n\n---\n\n## API Reference  \n- `SecureAuth()` constructor: Initializes with encryption policies and biometric backend URL  \n- `verifyBiometric(data: AuthRequest)`: Returns encrypted token or error  \n- `enrollFactors(config: EnrollmentConfig)`: Registers authentication methods  \n- `generateKeyPair()`: Creates ephemeral keys for session encryption  \n\n---\n\n## Testing  \nAutomated tests validate encryption strength and biometric fallback logic. Run `npm test` to execute unit and integration suites. Coverage reports are generated in `./coverage/`.  \n\n---\n\n## Contributing  \nFork the repo, create a feature branch, and submit a pull request. Prioritize documentation updates and edge-case handling. All contributions require a signed CLA.  \n\n---\n\n## Deployment  \nBuild production artifacts using `npm run build`. Package as a standalone library or integrate via npm. For enterprise use, request a custom encryption policy configuration.  \n\n---\n\n## License  \nMIT License – see [LICENSE](https://github.com/secureauth-sdk/blob/main/LICENSE) for details."
 }

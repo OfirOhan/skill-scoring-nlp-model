@@ -1,26 +1,25 @@
 {
   "doc_id": "d_p_031_03",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_031",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "plain"
+    "recommender_role": "direct-manager",
+    "recommender_closeness": "occasional",
+    "company_type": "agency",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "AWS": 1,
-    "Docker": 1,
+    "AWS": 3,
+    "CI/CD pipelines": 2,
+    "Cloud cost optimization": 1,
+    "Database optimization": 1,
     "GCP": 1,
-    "GitHub Actions": 1,
-    "Go": 1,
-    "Kubernetes": 1,
-    "Microservices architecture": 1,
-    "PostgreSQL": 1,
+    "Infrastructure as Code": 2,
+    "Kubernetes": 3,
+    "Linux administration": 1,
     "Prometheus/Grafana": 1,
     "Python": 1,
-    "REST API design": 4,
-    "React": 5,
-    "TypeScript": 4
+    "Terraform": 2
   },
-  "text": "# Real-Time Collaboration Tool  \n\nA lightweight, real-time collaboration platform built for remote teams. Enables live document editing, chat, and shared task management via WebSocket, React, and Firebase. Designed for seamless UX and minimal latency.  \n\n## Tech Stack  \n- **Frontend**: React (TypeScript) with custom hooks for state management  \n- **Backend**: Firebase Realtime Database (WebSocket-powered sync) + Firebase Cloud Functions (REST API endpoints)  \n- **Features**: Live editing, collaborative chat, version history, user permissions  \n\n## Architecture Overview  \nThe app uses Firebase's real-time database for low-latency synchronization, with WebSocket handling bidirectional communication. React components manage UI state, while Firebase Cloud Functions handle complex operations like conflict resolution and audit logging. REST APIs are used for user authentication and data persistence.  \n\n## Key Components  \n- **Editor**: React-based WYSIWYG with collaborative typing detection (200+ lines of TypeScript)  \n- **Chat**: WebSocket-driven real-time messaging with message history persistence  \n- **Task Board**: Drag-and-drop interface with Firebase-backed task states  \n- **Auth**: Firebase Authentication with role-based access control  \n\n## Setup Instructions  \n1. Clone the repo: `git clone https://github.com/your-username/realtime-collab.git`  \n2. Install frontend dependencies: `npm install`  \n3. Configure Firebase:  \n   - Create a Firebase project  \n   - Add Firebase config to `src/firebaseConfig.ts`  \n   - Deploy Cloud Functions: `firebase deploy --only functions`  \n4. Start the app: `npm run start`  \n5. Use Firebase Emulator Suite for local testing (optional)  \n\n## Usage  \n- Collaborate on documents in real time with auto-save  \n- Chat with team members via integrated chat pane  \n- Track task progress with drag-and-drop boards  \n- View version history for all edits  \n\n## Notes  \n- Firebase Realtime Database handles 100+ concurrent connections with <50ms latency  \n- TypeScript type definitions cover 95% of core logic  \n- REST APIs handle 500+ requests/day with 99.9% uptime  \n\nReady to build next-gen collaboration tools? Fork the repo and start coding!"
+  "text": "Erik Bergstrom, Principal Platform Engineer at FinTech Innovators Inc., is a high-performing leader in fintech infrastructure. His work drives operational reliability and scalability across mission-critical systems.  \n\nErik excels in architecting cloud-native solutions that align with business goals. He consistently designs scalable Kubernetes clusters that reduce deployment times by 40%, ensuring seamless integration with legacy systems. His CI/CD pipelines, built with Infrastructure as Code, have cut environment setup costs by 25% across teams. He also prioritizes team growth, mentoring junior engineers to adopt best practices in automation and system resilience.  \n\nErik’s most impactful work involved leading the migration of critical services to AWS, resulting in a 30% reduction in infrastructure costs and 25% faster incident resolution. He also pioneered a Kubernetes-based disaster recovery framework, improving failover times by 50% during a major outage. His ability to balance technical rigor with strategic vision ensures systems evolve without compromising stability.  \n\nErik’s dedication to excellence and collaborative mindset make him a standout asset. I wholeheartedly recommend him for any role requiring innovation and operational excellence."
 }

@@ -3,21 +3,24 @@
   "type": "project_readme",
   "persona_id": "p_027",
   "hyperparams": {
-    "project_scale": "hobby",
+    "project_scale": "academic",
     "project_team_size": "medium (5-15)",
-    "jargon_density": "plain"
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "CI/CD pipelines": 3,
-    "Cloud cost optimization": 3,
-    "Go": 3,
-    "Kubernetes": 4,
-    "Message queues": 3,
-    "Microservices architecture": 5,
-    "PostgreSQL": 5,
-    "Python": 3,
-    "REST API design": 3,
-    "Terraform": 3
+    "ArgoCD": 1,
+    "CI/CD pipelines": 1,
+    "Cloud cost optimization": 1,
+    "Cloud networking (VPC/subnets)": 2,
+    "Configuration management (Ansible)": 1,
+    "GitHub Actions": 1,
+    "GitLab CI": 1,
+    "Jenkins": 1,
+    "Linux administration": 1,
+    "Monitoring & alerting": 1,
+    "Prometheus/Grafana": 1,
+    "Python": 1,
+    "Shell scripting (Bash)": 1
   },
-  "text": "# Real-Time Ad Bidding System  \n\nA distributed ad bidding platform built for low-latency, high-throughput auctions. Designed for adtech platforms requiring real-time decision-making with microservices and PostgreSQL.  \n\n## Tech Stack  \n- **Backend**: Go (high-performance services), Python (data pipelines)  \n- **Database**: PostgreSQL (distributed, read replicas for scale)  \n- **Orchestration**: Kubernetes (auto-scaling, 99.95% uptime SLA)  \n- **Infrastructure**: Terraform (CI/CD integration, 30% cost reduction via spot instances)  \n- **Message queues**: Kafka (asynchronous bidding events, 5ms avg latency)  \n- **APIs**: RESTful (gRPC for internal services, 200+ endpoints)  \n- **Monitoring**: Prometheus + Grafana (95th percentile latency < 15ms)  \n\n## Architecture Overview  \nThe system splits into three microservices:  \n1. **Bidding Service** (Go): Processes bids in <5ms using Kafka for event-driven workflows  \n2. **Auction Service** (Python): Manages real-time auctions with PostgreSQL's MVCC for consistent state  \n3. **Reporting Service** (Go): Aggregates metrics via Prometheus, exports to BigQuery daily  \n\nKubernetes manages autoscaling across 10+ nodes, with Terraform provisioning 12 clusters across 3 regions. PostgreSQL uses logical replication for cross-datacenter sync.  \n\n## Setup Instructions  \n1. Clone repo: `git clone https://github.com/alexj/real-time-ad-bidding.git`  \n2. Initialize infrastructure:  \n   ```bash  \n   terraform init && terraform apply --var region=us-east-1  \n   ```  \n3. Deploy services:  \n   ```bash  \n   kubectl apply -f k8s/manifests.yaml  \n   ```  \n4. Run tests:  \n   ```bash  \n   go test ./... && python3 tests/data_pipeline.py  \n   ```  \n5. Monitor with:  \n   ```bash  \n   kubectl port-forward service/grafana 3000  \n   ```  \n\nBuilt for adtech platforms needing sub-10ms bid processing. Metrics dashboard available at `http://grafana.local`."
+  "text": "# Auto-Scaling Infrastructure for SaaS Applications  \n\nA modular Terraform solution for dynamic AWS resource provisioning, optimized for SaaS workloads with auto-scaling capabilities. This project decouples infrastructure blueprints from operational logic, enabling rapid iteration while maintaining compliance with AWS best practices.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/last-commit/connormurphy/auto-scale-saas)](https://github.com/connormurphy/auto-scale-saas/commits/main)  \n[![Terraform](https://img.shields.io/terraform/registry/connormurphy/auto-scale-saas)](https://registry.terraform.io/modules/connormurphy/auto-scale-saas)  \n[![AWS](https://img.shields.io/badge/AWS-Enabled-4285F4)](https://aws.amazon.com/)  \n\n## Tech Stack / Built With  \n- **Terraform** (v1.5+)  \n- **AWS EC2 Auto Scaling Groups**  \n- **AWS CloudFormation** (embedded templates)  \n- **IAM Roles & Policies**  \n- **VPC Subnet Isolation**  \n- **Security Group Rules**  \n- **Resource Tagging**  \n\n## Architecture / Design  \nThe core module abstracts AWS resource creation into reusable, version-controlled blueprints. Auto Scaling Groups are dynamically sized based on predefined CPU utilization thresholds, with load balancers distributing traffic across instances. Security groups enforce least-privilege access, and subnet isolation ensures network segmentation. Terraform state is managed via S3 buckets with versioned backups.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/connormurphy/auto-scale-saas.git`  \n2. Navigate to the project directory: `cd auto-scale-saas`  \n3. Initialize Terraform: `terraform init`  \n4. Validate configuration: `terraform validate`  \n\n## Usage / Examples  \n```bash  \nterraform apply -var region=us-west-2 -var instance_type=t3.micro  \n```  \nThis deploys a minimal auto-scaling group with 2 EC2 instances, a Classic Load Balancer, and default security group rules. Adjust `desired_capacity` and `max_size` in `variables.tf` for workload-specific scaling.  \n\n## Configuration  \nThe `variables.tf` file defines critical parameters:  \n- `region`: AWS region code (e.g., `us-east-1`)  \n- `instance_type`: EC2 instance family (e.g., `t3.small`)  \n- `security_group_rules`: Array of ingress/egress rules  \n- `subnet_ids`: List of subnet IDs for VPC isolation  \n\n## Deployment  \nRun `terraform apply` after configuring variables. Use `terraform destroy` to purge resources. For production, enable state locking and remote backend storage via S3.  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
 }

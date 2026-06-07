@@ -3,19 +3,19 @@
   "type": "project_readme",
   "persona_id": "p_010",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "solo",
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
     "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "C/C++ (embedded)": 5,
-    "Firmware development": 5,
-    "GitLab CI": 4,
-    "IoT protocols (MQTT/CoAP)": 5,
-    "Network automation": 2,
-    "Python": 2,
-    "REST API design": 2,
-    "RTOS": 5
+    "Flutter": 3,
+    "Kotlin (Android)": 3,
+    "REST API design": 3,
+    "React": 1,
+    "React Native": 1,
+    "Swift": 3,
+    "TypeScript": 1,
+    "Web accessibility (WCAG)": 3
   },
-  "text": "# Smart Home Sensor Network  \n\nA production-grade, low-power IoT sensor network for home automation, built on ARM Cortex-M microcontrollers. Designed for scalability, reliability, and seamless integration with cloud platforms.  \n\n## Tech Stack  \n- **Microcontroller**: ARM Cortex-M4F (STM32F4)  \n- **RTOS**: FreeRTOS (custom real-time task scheduling)  \n- **Communication**: MQTT (TLS 1.2) + CoAP (DTLS 1.2) for hybrid protocol support  \n- **Cloud Integration**: AWS IoT Core (MQTT bridge)  \n- **Build System**: GitLab CI (CI/CD pipelines, automated firmware signing)  \n- **Utilities**: Python (scripting for device provisioning)  \n\n## Architecture Overview  \nThe system comprises three layers:  \n1. **Sensor Nodes**: Cortex-M4-based devices with 16-bit ADCs, temperature/humidity sensors, and sleep-mode power management (avg. 1.2mA active, 0.3mA deep sleep).  \n2. **Gateway**: STM32F4 with dual-stack MQTT/CoAP support, acting as a TLS-encrypted bridge to AWS IoT Core.  \n3. **Cloud Layer**: AWS Lambda for data processing, DynamoDB for storage, and CloudWatch for telemetry.  \n\n## Setup Instructions  \n1. Clone the repo: `git clone https://github.com/jordan-carter/smart-home-sensor-network.git`  \n2. Configure GitLab CI: Set up runners for ARM toolchain (GCC 11.2) and firmware signing (RSA-2048).  \n3. Build firmware: `make flash` (automatically triggers CI/CD pipeline for code quality checks).  \n4. Deploy: Use Python scripts (`flash.py`, `provision.py`) for device OTA updates and certificate management.  \n\n## Key Skills & Contributions  \n- **C/C++ (embedded)**: 3+ years of firmware development, including custom RTOS task scheduling and memory-safe IPC.  \n- **RTOS**: FreeRTOS porting for Cortex-M4, with 98%+ uptime in production (15% faster context switches via custom priority inversion mitigation).  \n- **IoT Protocols**: MQTT/CoAP integration with TLS/DTLS, achieving 95% packet delivery in 300ms latency networks.  \n- **GitLab CI**: Automated CI/CD pipelines reduced deployment time by 40%, with 100% test coverage for firmware updates.  \n- **Power Optimization**: Achieved 30% reduction in active power consumption via dynamic voltage scaling and sleep-state tuning.  \n\n*Contributions welcome! This project is maintained as a solo effort with cross-team impact on 5+ embedded systems in production.*"
+  "text": "# Enterprise Mobility Platform  \nA cross-platform mobile application that automates enterprise workflows by synchronizing data in real-time with backend systems, reducing manual input by 40% and improving task completion speed by 30% across pilot deployments.  \n\n---\n\n[![Project Status](https://img.shields.io/badge/status-active-blue)](https://github.com/enterprise-mobility/platform)  \n[![Community Contributions](https://img.shields.io/badge/contributors-15-orange)](https://github.com/enterprise-mobility/platform/graphs/contributors)  \n[![Roadmap Milestones](https://img.shields.io/badge/roadmap-upcoming-yellow)](https://github.com/enterprise-mobility/platform/milestone/1)  \n\n---\n\n## Getting Started / Installation  \nClone the repository:  \n```bash  \ngit clone https://github.com/enterprise-mobility/platform.git  \ncd platform  \n```  \nInstall dependencies:  \n```bash  \nflutter pub get  \n```  \nConfigure platform-specific settings (Kotlin for Android, Swift for iOS) and set up REST API endpoints for backend integration.  \n\n---\n\n## Usage / Examples  \nThe app enables real-time synchronization of inventory data between mobile devices and a central ERP system. For example, a warehouse manager can update stock levels via a mobile interface, and the backend system reflects these changes within 2 seconds.  \n\nKey workflows include:  \n- Secure API-driven data sync with OAuth 2.0 authentication  \n- Offline-first design for intermittent connectivity  \n- Role-based UI customization for different user groups  \n\n---\n\n## Architecture / Design  \nThe solution uses a modular architecture with Flutter for cross-platform UI, Kotlin for Android-specific logic, and Swift for iOS enhancements. REST APIs act as a bridge between the app and legacy systems, ensuring compatibility with existing databases. Web accessibility standards (WCAG 2.1) are enforced in all UI components.  \n\n---\n\n## Tech Stack / Built With  \n- **Flutter**: Core framework for cross-platform UI development  \n- **Kotlin**: Android-specific modules for native performance  \n- **Swift**: iOS-specific enhancements for platform-specific features  \n- **REST APIs**: Standardized endpoints for backend integration  \n- **WCAG 2.1**: Accessibility compliance for all UI components  \n\n---\n\n## Roadmap / Future Work  \nUpcoming features include:  \n- Enhanced security with end-to-end encryption  \n- Offline sync with conflict resolution logic  \n- AI-driven analytics for workflow optimization  \n\n---\n\n## Acknowledgments  \nThis project leverages contributions from a team of 12 developers, with special thanks to the QA engineers for refining the sync logic and the product managers for aligning features with business goals.  \n\n---\n\n## Contributing  \nContributions are welcome! Submit issues or pull requests via the GitHub repository. For API-related changes, ensure compliance with REST best practices and WCAG guidelines. Code of conduct follows the standard GitHub Contributor Covenant."
 }

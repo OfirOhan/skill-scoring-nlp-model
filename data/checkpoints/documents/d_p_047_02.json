@@ -3,23 +3,22 @@
   "type": "recommendation",
   "persona_id": "p_047",
   "hyperparams": {
-    "recommender_role": "skip-level",
+    "recommender_role": "professor",
     "recommender_closeness": "occasional",
-    "company_type": "academic",
-    "company_size": "mid (50-500)"
+    "company_type": "startup",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "API testing": 1,
-    "CI/CD pipelines": 1,
-    "Integration testing": 1,
-    "Java": 1,
-    "Microservices architecture": 1,
-    "Performance testing (JMeter/k6)": 1,
-    "Python": 1,
+    "AWS": 1,
+    "Docker": 1,
+    "GCP": 1,
+    "Hugging Face Transformers": 1,
+    "NLP": 3,
+    "PyTorch": 1,
+    "Python": 3,
     "REST API design": 1,
-    "Selenium/Playwright": 1,
-    "Test automation": 1,
-    "Unit testing": 1
+    "Recommendation systems": 3,
+    "TensorFlow": 1
   },
-  "text": "Alex Morgan has consistently demonstrated exceptional rigor and insight in his role as a QA/Test Engineer at AdVerve Solutions, particularly within the adtech domain. His ability to anticipate edge cases in complex ad delivery systems has repeatedly prevented critical failures. For instance, during a high-stakes campaign launch, Alex’s meticulous testing uncovered a subtle timing discrepancy in ad rotation logic that could have resulted in a 15% revenue loss for a major client. His follow-up documentation of the issue, complete with step-by-step reproduction steps and root cause analysis, streamlined the resolution process for the engineering team.  \n\nBeyond technical acumen, Alex’s collaborative spirit shines through his proactive engagement with cross-functional teams. He frequently bridges gaps between developers and stakeholders by translating technical jargon into actionable insights, ensuring alignment on priorities. One notable example was his initiative to standardize test environment configurations across teams, which reduced environment-related bugs by approximately 40% over six months.  \n\nHis work ethic is equally impressive: Alex often volunteers to review peers’ test cases, offering constructive feedback that elevates the team’s overall quality standards. His curiosity and willingness to explore unconventional testing scenarios have led to innovative approaches, such as simulating real-world user behavior under varying network conditions. These qualities make him an invaluable asset to any organization seeking precision and reliability in adtech operations."
+  "text": "Dear [Admissions Committee/Recipient's Name],  \n\nI have known Eliott Marchand since his undergraduate years, during which he collaborated on a natural language processing project analyzing social media sentiment for ad campaign optimization. As a professor, I’ve observed his growth from a curious student to a thoughtful engineer at AdVerve Technologies, where he specializes in recommendation systems.  \n\nEliott’s strengths lie in his ability to bridge theoretical insights with practical applications. His work on refining AdVerve’s targeting algorithms demonstrated a deep understanding of NLP, particularly in parsing user intent from unstructured data. He also consistently leverages Python to streamline data pipelines, often simplifying complex workflows for his team. These skills are evident in his recent project, where he redesigned a legacy recommendation engine to prioritize contextual relevance, resulting in a measurable increase in user engagement.  \n\nWhat stands out is his methodical approach and willingness to iterate. During a late-stage debugging session, Eliott spent hours refining a model’s hyperparameters, ultimately resolving an edge-case issue that had stumped the team. His curiosity and resilience are complemented by a collaborative spirit—he frequently mentors junior engineers and shares insights during cross-departmental brainstorming.  \n\nEliott’s technical acumen and intellectual humility make him a valuable contributor. I am confident he will excel in any role that demands both precision and creativity.  \n\nSincerely,  \n[Professor’s Full Name]  \n[University/Institution]  \n[Contact Information]"
 }

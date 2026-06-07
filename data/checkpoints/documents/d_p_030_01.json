@@ -3,22 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_030",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "heavy"
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 3,
+    "API testing": 3,
+    "BDD/TDD": 1,
     "CI/CD pipelines": 3,
-    "Docker": 3,
     "GitHub Actions": 3,
-    "Linux administration": 3,
-    "Microservices architecture": 3,
-    "Monitoring & alerting": 3,
-    "PostgreSQL": 4,
-    "Python": 4,
-    "REST API design": 4,
-    "Terraform": 3
+    "Integration testing": 2,
+    "Python": 3,
+    "REST API design": 2,
+    "Selenium/Playwright": 3,
+    "Test automation": 3,
+    "Test strategy design": 2,
+    "Unit testing": 2,
+    "Web accessibility (WCAG)": 1
   },
-  "text": "# HealthTrack Data Aggregator  \n\nHealthTrack is a HIPAA-compliant API for aggregating, anonymizing, and securely managing patient health data across disparate clinical systems. Built for academic research institutions, it processes >200k patient records daily with 99.95% uptime, ensuring GDPR and HIPAA compliance through end-to-end encryption and role-based access controls.  \n\n## Tech Stack  \n- **Backend**: Python (FastAPI) with type-hinted REST APIs, PostgreSQL (v14) with pgcrypto for encrypted storage  \n- **Cloud**: AWS (EC2, S3, RDS) with Terraform-managed infrastructure as code  \n- **CI/CD**: GitHub Actions (Python linters, unit tests, Docker builds)  \n- **Containerization**: Docker (multi-stage builds for production artifacts)  \n- **Monitoring**: Prometheus + Grafana for latency tracking (P99 < 150ms), CloudWatch for alerting  \n- **Security**: JWT-based authentication, AWS KMS for key management, audit logging  \n- **Microservices**: Async event-driven architecture with Kafka for batch processing  \n\n## Architecture Overview  \nThe system operates as a microservices layer over a PostgreSQL cluster. The core services include:  \n1. **Ingestion Gateway**: REST API for receiving raw data via HTTPS, validated with Pydantic models  \n2. **Data Processor**: Celery worker pool (10 nodes) handling anonymization with FHIR standardization  \n3. **Audit Trail**: Write-ahead logging to S3 with AWS Lambda-triggered indexing  \n4. **Query API**: Read-optimized endpoint with Postgres JSONB indexing for subsecond query latency  \n\n## Setup Instructions  \n```bash\n# Clone repo  \ngit clone https://github.com/healthtrack-aggregator/healthtrack.git  \ncd healthtrack  \n\n# Build Docker image  \ndocker build -t healthtrack-api:latest .  \n\n# Run migrations  \ndocker-compose up --build  \npython manage.py migrate  \npython manage.py seed --init  \n\n# Trigger CI/CD pipeline  \ngithub-actions run ci_cd_pipeline  \n```  \n\nMetrics dashboard available at `http://localhost:8000/metrics` (Prometheus format). Production deployment uses AWS Fargate with Terraform-managed VPCs."
+  "text": "# NexaTest: Automated Regression Testing Framework for SaaS Applications  \nA tool for maintaining test stability across dynamic SaaS UIs. Built with modular test cases, cross-browser support, and CI/CD integration.  \n\n---\n\n## Getting Started / Installation  \nInstall via pip:  \n```bash  \npip install nexatest  \n```  \nRequires Python 3.8+.  \nInstall dependencies:  \n```bash  \npip install selenium playwright requests  \n```  \nSet environment variables for API keys or service credentials before running.  \n\n---\n\n## Usage / Examples  \nRun a test suite:  \n```bash  \nnexatest run tests/test_sso_login.py  \n```  \nExample test script:  \n```python  \nfrom nexatest import TestCase  \n\nclass SSOIntegration(TestCase):  \n    def test_login_flow(self):  \n        self.navigate(\"https://example.com/login\")  \n        self.fill(\"email\", \"test@user.com\")  \n        self.fill(\"password\", \"securepass\")  \n        self.click(\"submit\")  \n        self.assert_text(\"Welcome, test@user.com\")  \n```  \nIntegrate with GitHub Actions:  \n```yaml  \njobs:  \n  test:  \n    runs-on: ubuntu-latest  \n    steps:  \n      - uses: actions/checkout@v3  \n      - uses: actions/setup-python@v4  \n        with:  \n          python-version: 3.8  \n      - run: pip install nexatest  \n      - run: nexatest run tests/  \n```  \n\n---\n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

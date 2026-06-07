@@ -4,25 +4,19 @@
   "persona_id": "p_008",
   "hyperparams": {
     "project_scale": "production",
-    "project_team_size": "large (15+)",
+    "project_team_size": "medium (5-15)",
     "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 2,
-    "Apache Airflow": 3,
-    "Computer vision": 2,
+    "AWS": 1,
+    "CI/CD pipelines": 3,
     "Docker": 3,
-    "ETL pipeline design": 3,
-    "GCP": 2,
-    "Kubernetes": 2,
-    "MLOps": 3,
-    "Model deployment": 3,
-    "NLP": 2,
-    "PyTorch": 3,
-    "Reinforcement learning": 3,
-    "TensorFlow": 3,
-    "Recommendation systems": 2,
-    "MLOps (MLflow/W&B)": 1
+    "Go": 1,
+    "Kubernetes": 1,
+    "PostgreSQL": 3,
+    "Python": 4,
+    "REST API design": 3,
+    "Terraform": 1
   },
-  "text": "# Dynamic Difficulty Adjustment for RTS Games  \n\nA scalable AI-driven system to balance player experience in real-time strategy games by dynamically adjusting enemy behavior and resource allocation using reinforcement learning.  \n\n## Tech Stack  \n- **Language**: Python  \n- **Frameworks**: PyTorch, Unity (for game integration)  \n- **Deployment**: Docker, AWS EC2  \n- **Workflow**: Apache Airflow (for data pipelines), Git  \n- **Monitoring**: Prometheus (for training metrics)  \n\n## Architecture Overview  \nThe system operates as a modular pipeline:  \n1. **Game State Sensors**: Extract real-time metrics (player performance, resource usage, unit counts) from the game engine.  \n2. **Reinforcement Learning Agent**: Trained to optimize difficulty parameters (enemy spawn rates, AI aggression, resource caps) via a custom reward function that prioritizes player engagement without frustration.  \n3. **Feedback Loop**: Adjusts difficulty in real-time based on player actions, with overrides for manual intervention.  \n4. **Deployment**: Containerized with Docker for consistent environment management, scaled across AWS EC2 instances.  \n\n## Setup Instructions  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/alex-carter/dynamic-difficulty.git  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n3. Build Docker containers:  \n   ```bash  \n   docker-compose up --build  \n   ```  \n4. Configure AWS credentials via environment variables for EC2 deployment.  \n\n## Skills & Tools  \n- **Reinforcement Learning**: Designed a custom RL agent with PyTorch, balancing exploration and exploitation in dynamic environments.  \n- **Docker**: Containerized training and inference pipelines to ensure cross-platform compatibility.  \n- **Apache Airflow**: Automated data preprocessing workflows for historical game telemetry.  \n- **AWS**: Deployed scalable inference endpoints using EC2 for low-latency response.  \n- **Unity Integration**: Built a middleware layer to inject difficulty adjustments into game logic without modifying core code.  \n\nThis project scales to 15+ developers, with clear separation of concerns between ML training, deployment, and game-specific logic. The system has been tested in live multiplayer environments, maintaining player retention rates within 15% of target benchmarks."
+  "text": "# Real-Time Ad Bidding System  \nA scalable backend solution for real-time ad auctioning, optimized for high-throughput and low-latency adtech workflows. Built with Python and PostgreSQL, this system processes 10k+ bids per second with 99.99% uptime in production.  \n\n## Badges  \n[![Python](https://img.shields.io/badge/python-3.9-blue)](https://www.python.org/)  \n[![PostgreSQL](https://img.shields.io/badge/postgresql-14-green)](https://www.postgresql.org/)  \n[![CI/CD](https://img.shields.io/badge/ci--cd-azure-blue)](https://azure.microsoft.com/)  \n[![Docker](https://img.shields.io/badge/docker-23.0-blue)](https://www.docker.com/)  \n\n## Getting Started  \n1. Clone the repo: `git clone https://github.com/yourusername/real-time-ad-bidding.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Set up PostgreSQL (or use Docker container):  \n   ```bash  \n   docker run --name ad-bidding-db -e POSTGRES_PASSWORD=securepass -d postgres:14  \n   ```  \n4. Run migrations: `python manage.py migrate`  \n5. Start the server: `python manage.py runserver`  \n6. Run tests: `pytest --cov=ad_bidding`  \n\n## Usage  \nThe system exposes a REST API for bid submission and auction results:  \n```bash  \nPOST /bids  \n{  \n  \"advertiser_id\": \"advertiser_123\",  \n  \"bid_amount\": 2.50,  \n  \"ad_network\": \"network_x\"  \n}  \n```  \nResponse:  \n```json  \n{  \n  \"auction_id\": \"auction_456\",  \n  \"winning_bid\": 2.50,  \n  \"timestamp\": \"2023-10-05T14:30:00Z\"  \n}  \n```  \nDesigned for sub-100ms latency with 99.99% request success rate.  \n\n## Architecture  \nA microservices architecture with:  \n- **Message queue**: RabbitMQ for async bid processing  \n- **Database**: PostgreSQL with partitioned tables for 10k+ writes/sec  \n- **Caching**: Redis for bid metadata (50ms response time)  \n- **Load balancing**: Nginx with sticky sessions for ad network routing  \n\n## Tech Stack  \n- **Language**: Python (owning core auction logic, 30% performance uplift via async optimizations)  \n- **Database**: PostgreSQL (90% read/write ratio, 500ms P99 latency)  \n- **Containerization**: Docker (CI/CD integration, 20% deployment time reduction)  \n- **API**: RESTful design (OpenAPI specs, 100% schema validation)  \n- **CI/CD**: Azure Pipelines (automated testing, 95% test coverage)  \n\n## Contributing  \nSubmit PRs with:  \n- Unit tests (pytest) for all new features  \n- Type hints for Python modules  \n- Dockerized environment for reproducibility  \n- Benchmarking results for performance improvements  \n\n## Testing  \n- **Unit tests**: 95% coverage (pytest, 400+ assertions)  \n- **Integration tests**: Simulate 5k concurrent bids (500ms P99)  \n- **CI/CD**: Automated test suite runs on every push (98% pass rate)  \n\n## Roadmap  \n- Q4 2023: Add ML-driven bid optimization (Pilot with TensorFlow)  \n- Q1 2024: Expand to support 10+ ad networks via plugin architecture  \n- Q2 2024: Implement fault-tolerant state replication (Raft consensus)"
 }

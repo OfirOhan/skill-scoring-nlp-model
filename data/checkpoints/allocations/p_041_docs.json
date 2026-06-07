@@ -1,51 +1,63 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional resume highlighting 10 years of QA engineering experience in enterprise software development",
-    "title": "Emily Chen - Staff QA Engineer",
+    "topic_summary": "A professional CV highlighting Kwame Mensah's experience as a Senior Data Scientist at NexGen Analytics, specializing in startup data solutions.",
+    "title": "Kwame Mensah - Senior Data Scientist",
     "doc_id": "d_p_041_00",
     "persona_id": "p_041",
     "hyperparams": {
-      "cv_format": "minimal",
+      "cv_format": "bullet-heavy",
       "geographic_convention": "Europe",
-      "company_type": "FAANG",
+      "company_type": "academic",
       "company_size": "small (<50)"
     }
   },
   {
-    "doc_type": "blog",
-    "topic_summary": "Discussion on implementing CI/CD pipelines for automated testing in enterprise environments",
-    "title": "Modernizing QA Processes with CI/CD Integration",
+    "doc_type": "project_readme",
+    "topic_summary": "A GitHub README for a predictive maintenance project using time series analysis to optimize industrial equipment performance.",
+    "title": "Predictive Maintenance for Industrial Equipment",
     "doc_id": "d_p_041_01",
     "persona_id": "p_041",
     "hyperparams": {
-      "blog_depth": "tutorial",
-      "jargon_density": "heavy"
-    }
-  },
-  {
-    "doc_type": "recommendation",
-    "topic_summary": "Endorsement from a former manager praising technical expertise and leadership in QA teams",
-    "title": "Recommendation for Emily Chen - Staff QA Engineer",
-    "doc_id": "d_p_041_02",
-    "persona_id": "p_041",
-    "hyperparams": {
-      "recommender_role": "direct-manager",
-      "recommender_closeness": "occasional",
-      "company_type": "academic",
-      "company_size": "large (500+)"
+      "project_scale": "production",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "moderate"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "Overview of a scalable test automation framework for enterprise application regression testing",
-    "title": "Enterprise Regression Testing Framework v2.1",
+    "topic_summary": "A README for a customer churn prediction model leveraging clustering and classification techniques in a SaaS startup context.",
+    "title": "Customer Churn Prediction Model",
+    "doc_id": "d_p_041_02",
+    "persona_id": "p_041",
+    "hyperparams": {
+      "project_scale": "hobby",
+      "project_team_size": "solo",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post exploring advanced time series analysis techniques for real-time decision-making in startups.",
+    "title": "Advanced Time Series Analysis in Startups",
     "doc_id": "d_p_041_03",
     "persona_id": "p_041",
     "hyperparams": {
-      "project_scale": "team-internal",
-      "project_team_size": "medium (5-15)",
-      "jargon_density": "heavy"
+      "blog_depth": "opinion-piece",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation letter from a startup co-founder praising Kwame's leadership in building scalable machine learning pipelines.",
+    "title": "Recommendation from NexGen Analytics Co-Founder",
+    "doc_id": "d_p_041_04",
+    "persona_id": "p_041",
+    "hyperparams": {
+      "recommender_role": "peer",
+      "recommender_closeness": "worked-daily",
+      "company_type": "agency",
+      "company_size": "small (<50)"
     }
   }
 ]

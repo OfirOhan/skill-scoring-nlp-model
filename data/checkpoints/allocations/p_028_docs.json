@@ -1,40 +1,51 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A CV highlighting Emily Chen's QA Test Engineer experience in enterprise software testing.",
-    "title": "Emily Chen - QA Test Engineer CV",
+    "topic_summary": "A professional CV highlighting Maya Johal's 8 years of experience as a Senior DevOps Consultant specializing in cloud infrastructure and automation.",
+    "title": "Maya Johal - Senior DevOps Consultant",
     "doc_id": "d_p_028_00",
     "persona_id": "p_028",
     "hyperparams": {
       "cv_format": "paragraph",
-      "geographic_convention": "India",
-      "company_type": "enterprise",
-      "company_size": "small (<50)"
+      "geographic_convention": "Europe",
+      "company_type": "startup",
+      "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A GitHub README for an automated regression testing framework developed for a financial services platform.",
-    "title": "Enterprise API Test Automation Framework",
+    "topic_summary": "A GitHub README for a project automating CI/CD pipelines for cloud-native applications using Kubernetes and Terraform.",
+    "title": "Cloud-Native CI/CD Pipeline Automation",
     "doc_id": "d_p_028_01",
     "persona_id": "p_028",
     "hyperparams": {
-      "project_scale": "team-internal",
-      "project_team_size": "small (2-4)",
-      "jargon_density": "heavy"
+      "project_scale": "academic",
+      "project_team_size": "solo",
+      "jargon_density": "moderate"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from Emily's manager praising her expertise in test automation and collaboration.",
-    "title": "Recommendation for Emily Chen - QA Test Engineer",
+    "topic_summary": "A recommendation letter from Maya's former manager praising her leadership in DevOps transformation projects.",
+    "title": "Recommendation for Maya Johal - CloudOptima Solutions",
     "doc_id": "d_p_028_02",
     "persona_id": "p_028",
     "hyperparams": {
-      "recommender_role": "professor",
+      "recommender_role": "skip-level",
       "recommender_closeness": "worked-daily",
-      "company_type": "enterprise",
-      "company_size": "small (<50)"
+      "company_type": "FAANG",
+      "company_size": "large (500+)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post discussing observability strategies for microservices architectures in DevOps workflows.",
+    "title": "Observability in Microservices: Bridging DevOps and SRE Practices",
+    "doc_id": "d_p_028_03",
+    "persona_id": "p_028",
+    "hyperparams": {
+      "blog_depth": "opinion-piece",
+      "jargon_density": "heavy"
     }
   }
 ]

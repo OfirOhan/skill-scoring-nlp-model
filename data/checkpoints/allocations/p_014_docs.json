@@ -1,40 +1,61 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Aisha Khan's experience as a Senior Tech Lead in e-commerce, focusing on system architecture and team leadership.",
-    "title": "Aisha Khan - Senior Tech Lead CV",
+    "topic_summary": "Professional resume highlighting Dina Soliman's 11 years of full-stack development experience in SaaS.",
+    "title": "Dina Soliman - Staff Full-Stack Developer",
     "doc_id": "d_p_014_00",
     "persona_id": "p_014",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
+      "cv_format": "minimal",
       "geographic_convention": "Israel",
-      "company_type": "startup",
-      "company_size": "mid (50-500)"
+      "company_type": "FAANG",
+      "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A README for a real-time inventory management system built to optimize e-commerce supply chain operations.",
-    "title": "VeloCart InventorySync",
+    "topic_summary": "A full-stack application enabling real-time collaboration in a cloud-native SaaS environment.",
+    "title": "Cloud-Native SaaS Platform for Real-Time Collaboration",
     "doc_id": "d_p_014_01",
     "persona_id": "p_014",
     "hyperparams": {
       "project_scale": "hobby",
-      "project_team_size": "large (15+)",
-      "jargon_density": "moderate"
+      "project_team_size": "solo",
+      "jargon_density": "heavy"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from Aisha's manager praising her leadership in scaling VeloCart's tech stack.",
-    "title": "Recommendation for Aisha Khan - Senior Tech Lead",
+    "topic_summary": "Recommends Dina for her leadership in full-stack development and SaaS architecture.",
+    "title": "Recommendation from Tech Lead at NexaCloud Solutions",
     "doc_id": "d_p_014_02",
     "persona_id": "p_014",
     "hyperparams": {
       "recommender_role": "peer",
-      "recommender_closeness": "occasional",
-      "company_type": "startup",
+      "recommender_closeness": "brief",
+      "company_type": "agency",
       "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "linkedin",
+    "topic_summary": "Professional summary highlighting Dina's 11 years of experience in full-stack development for SaaS, with a focus on scalable and secure solutions.",
+    "title": "Dina Soliman - Staff Full-Stack Developer",
+    "doc_id": "d_p_014_03",
+    "persona_id": "p_014",
+    "hyperparams": {
+      "linkedin_completeness": "standard"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "Discusses strategies for modernizing legacy SaaS applications using full-stack microservices.",
+    "title": "Modernizing Legacy SaaS Applications with Full-Stack Microservices",
+    "doc_id": "d_p_014_04",
+    "persona_id": "p_014",
+    "hyperparams": {
+      "blog_depth": "opinion-piece",
+      "jargon_density": "moderate"
     }
   }
 ]

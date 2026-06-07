@@ -1,60 +1,62 @@
 {
   "persona_id": "p_003",
   "hyperparams": {
-    "archetype": "qa_test_engineer",
-    "years_experience": 0,
+    "archetype": "platform_engineer",
+    "years_experience": 2,
     "seniority": "junior",
-    "industry": "consulting",
-    "writing_style": "confident",
-    "language_fluency": "native",
-    "self_promotion_level": "balanced",
-    "quantification_tendency": "metrics-heavy"
+    "industry": "startup",
+    "writing_style": "concise",
+    "language_fluency": "near-native",
+    "self_promotion_level": "boastful",
+    "quantification_tendency": "mixed"
   },
-  "name": "Emily Chen",
-  "current_role": "QA Engineer",
-  "company": "TechSolutions Inc.",
+  "name": "Carmen Delgado",
+  "current_role": "Platform Engineer",
+  "company": "NebulaTech Innovations",
   "education": {
     "degree": "Bachelor of Science in Computer Science",
-    "university": "XYZ University",
-    "year": 2024
+    "university": "University of California, Berkeley",
+    "year": 2022
   },
   "career_trajectory": [
     {
-      "role": "QA Intern",
-      "company": "InnovateTech Co.",
+      "title": "DevOps Engineer Intern",
+      "company": "Aurora Systems",
       "duration": "6 months",
-      "responsibilities": "Assisted with test case documentation and basic automation script writing"
+      "responsibilities": "Automated deployment pipelines, managed AWS EC2 instances"
     },
     {
-      "role": "Junior QA Engineer",
-      "company": "DevConsult Ltd.",
-      "duration": "1 year",
-      "responsibilities": "Implemented regression tests for SaaS platforms using Selenium"
+      "title": "DevOps Engineer",
+      "company": "NebulaTech Innovations",
+      "duration": "1.5 years",
+      "responsibilities": "Designed Terraform modules, optimized CI/CD workflows"
     },
     {
-      "role": "QA Engineer",
-      "company": "TechSolutions Inc.",
-      "duration": "3 months",
-      "responsibilities": "Designed API test frameworks and optimized CI/CD pipelines"
+      "title": "Platform Engineer",
+      "company": "NebulaTech Innovations",
+      "duration": "current",
+      "responsibilities": "Architect cloud-native solutions, lead infrastructure scalability"
     }
   ],
   "skills": {
-    "Test automation": 3,
-    "Selenium/Playwright": 3,
-    "Unit testing": 3,
-    "Integration testing": 3,
-    "Performance testing (JMeter/k6)": 3,
-    "API testing": 3,
-    "Python": 3,
-    "REST API design": 3,
+    "AWS": 3,
+    "Terraform": 3,
+    "Infrastructure as Code": 3,
+    "Docker": 3,
+    "Kubernetes": 3,
     "CI/CD pipelines": 3,
-    "Java": 2
+    "Cloud cost optimization": 3,
+    "Python": 2,
+    "Linux administration": 3,
+    "Shell scripting": 2,
+    "Ansible": 3,
+    "Monitoring & alerting": 3,
+    "Chaos engineering": 2
   },
   "document_ids": [
     "d_p_003_00",
     "d_p_003_01",
     "d_p_003_02",
-    "d_p_003_03",
-    "d_p_003_04"
+    "d_p_003_03"
   ]
 }

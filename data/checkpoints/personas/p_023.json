@@ -1,59 +1,61 @@
 {
   "persona_id": "p_023",
   "hyperparams": {
-    "archetype": "product_manager",
-    "years_experience": 4,
-    "seniority": "mid",
-    "industry": "consulting",
-    "writing_style": "neutral",
-    "language_fluency": "near-native",
-    "self_promotion_level": "humble",
-    "quantification_tendency": "mixed"
+    "archetype": "data_engineer",
+    "years_experience": 2,
+    "seniority": "junior",
+    "industry": "cybersecurity",
+    "writing_style": "verbose",
+    "language_fluency": "native",
+    "self_promotion_level": "balanced",
+    "quantification_tendency": "qualitative"
   },
-  "name": "Emily Carter",
-  "current_role": "Product Manager",
-  "company": "Strategic Innovations Group",
+  "name": "Xander de Vries",
+  "current_role": "Junior Data Engineer",
+  "company": "CyberShield Analytics",
   "education": {
-    "degree": "Business Administration",
-    "university": "University of Michigan",
-    "year": 2018
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "University of Amsterdam",
+    "year": 2021
   },
   "career_trajectory": [
     {
-      "role": "Business Analyst",
-      "company": "Global Consulting Co.",
-      "duration": "2 years",
-      "responsibilities": "Conducted market research and translated client needs into actionable insights."
+      "role": "Data Analyst Intern",
+      "company": "CyberShield Analytics",
+      "duration": "6 months",
+      "responsibilities": "Assisted in processing security logs, designed basic ETL workflows using Python and SQL, collaborated with cybersecurity teams to identify threat patterns"
     },
     {
-      "role": "Product Coordinator",
-      "company": "Digital Solutions Inc.",
-      "duration": "1.5 years",
-      "responsibilities": "Collaborated with cross-functional teams to define product roadmaps and manage deliverables."
+      "role": "Data Engineering Intern",
+      "company": "CyberShield Analytics",
+      "duration": "6 months",
+      "responsibilities": "Implemented data pipelines for real-time network traffic analysis, optimized PostgreSQL queries for forensic data retrieval, contributed to Snowflake schema design"
     },
     {
-      "role": "Product Manager",
-      "company": "Strategic Innovations Group",
-      "duration": "0.5 years",
-      "responsibilities": "Own end-to-end product lifecycle from concept to launch, with focus on client-centric solutions."
+      "role": "Junior Data Engineer",
+      "company": "CyberShield Analytics",
+      "duration": "1 year",
+      "responsibilities": "Architected Apache Kafka-based stream processing pipelines for intrusion detection, deployed dbt models for security metrics reporting, maintained AWS Redshift clusters for incident response analytics"
     }
   ],
   "skills": {
-    "Product management": 4,
-    "UX research": 3,
-    "Stakeholder management": 3,
-    "Roadmap planning": 3,
-    "Competitive analysis": 3,
-    "Analytics-driven product decisions": 3,
-    "SQL analytics": 3,
-    "Tableau/Power BI": 3,
-    "A/B testing": 3,
-    "Hypothesis testing": 3,
-    "Cross-team collaboration": 3
+    "Apache Spark": 4,
+    "Apache Kafka": 3,
+    "Apache Airflow": 3,
+    "dbt": 3,
+    "ETL pipeline design": 3,
+    "Data warehousing": 4,
+    "Snowflake": 3,
+    "Databricks": 3,
+    "Python": 3,
+    "REST API design": 3,
+    "CI/CD pipelines": 3,
+    "Docker": 3,
+    "Kubernetes": 3,
+    "Database optimization": 2
   },
   "document_ids": [
     "d_p_023_00",
-    "d_p_023_01",
-    "d_p_023_02"
+    "d_p_023_01"
   ]
 }

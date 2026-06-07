@@ -1,49 +1,63 @@
 {
   "persona_id": "p_033",
   "hyperparams": {
-    "archetype": "fullstack_developer",
-    "years_experience": 4,
-    "seniority": "mid",
+    "archetype": "tech_lead_architect",
+    "years_experience": 8,
+    "seniority": "senior",
     "industry": "consulting",
-    "writing_style": "concise",
-    "language_fluency": "ESL",
-    "self_promotion_level": "humble",
+    "writing_style": "verbose",
+    "language_fluency": "native",
+    "self_promotion_level": "boastful",
     "quantification_tendency": "mixed"
   },
-  "name": "Alex Carter",
-  "current_role": "Full-Stack Developer Consultant",
-  "company": "NexaTech Solutions",
+  "name": "Kenji Mori",
+  "current_role": "Principal Tech Lead / Cloud Architecture Strategist",
+  "company": "NexaTek Solutions",
   "education": {
-    "degree": "BSc in Computer Science",
-    "university": "State University of Technology",
-    "year": 2020
+    "degree": "Computer Science",
+    "university": "University of Tokyo",
+    "year": 2015
   },
   "career_trajectory": [
-    "Junior Software Developer at TechNova Solutions (2019-2021)",
-    "Senior Full-Stack Developer at DevSphere Inc. (2021-2022)",
-    "Consulting Developer at NexaTech Solutions (2022-present)"
+    {
+      "role": "Junior Developer",
+      "company": "InnovateX",
+      "year": 2013
+    },
+    {
+      "role": "Senior Developer",
+      "company": "NexaTech",
+      "year": 2015
+    },
+    {
+      "role": "Tech Lead",
+      "company": "NexaTek",
+      "year": 2017
+    },
+    {
+      "role": "Principal Tech Lead / Architect",
+      "company": "NexaTek Solutions",
+      "year": 2019
+    }
   ],
   "skills": {
-    "Python": 3,
-    "Java": 3,
-    "Go": 3,
-    "Node.js": 3,
-    "React": 3,
-    "REST API design": 4,
-    "PostgreSQL": 3,
-    "MongoDB": 3,
-    "Redis": 3,
-    "AWS": 3,
-    "Docker": 3,
-    "Kubernetes": 3,
-    "Terraform": 3,
-    "CI/CD pipelines": 3,
-    "Monitoring & alerting": 3
+    "System design": 5,
+    "Team leadership": 4,
+    "Agile/Scrum": 4,
+    "Cross-team collaboration": 4,
+    "Stakeholder communication": 4,
+    "Project management": 4,
+    "Technical writing": 3,
+    "CI/CD pipelines": 4,
+    "GitHub Actions": 4,
+    "Prometheus/Grafana": 4,
+    "Monitoring & alerting": 4,
+    "Linux administration": 3,
+    "Database optimization": 4
   },
   "document_ids": [
     "d_p_033_00",
     "d_p_033_01",
-    "d_p_033_02",
-    "d_p_033_03"
+    "d_p_033_02"
   ]
 }

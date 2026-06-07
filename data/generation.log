@@ -1061,3 +1061,464 @@
 2026-06-07 20:00:14,183 [WARNING] validate.cross_validate: Allocation rationality check failed for p_031: Expecting value: line 1 column 1 (char 0)
 2026-06-07 20:03:19,742 [INFO] validate.cross_validate: Wrote allocation rationality report: /workspace/skill-scoring-nlp-model/data/reports/allocation_rationality_report.json
 2026-06-07 20:03:19,744 [INFO] __main__: All validation reports written to /workspace/skill-scoring-nlp-model/data/reports
+2026-06-07 20:25:32,946 [INFO] __main__: Starting generation: 50 personas, concurrency=2
+2026-06-07 20:25:32,947 [INFO] generate.seed_generator: Loading cached seeds from /workspace/skill-scoring-nlp-model/data/structure_seeds.json
+2026-06-07 20:25:32,951 [INFO] __main__: Loaded 68 structure seeds
+2026-06-07 20:26:12,280 [INFO] generate.personas: Generated p_001: Nathan Brooks (Product Manager, 14yr)
+2026-06-07 20:26:20,766 [INFO] generate.personas: Generated p_000: Yuki Tanaka (Platform Engineer, 1yr)
+2026-06-07 20:26:29,687 [INFO] generate.personas: Generated p_002: Binta Traore (Platform Engineer, 3yr)
+2026-06-07 20:26:44,623 [INFO] generate.personas: Generated p_003: Carmen Delgado (Platform Engineer, 2yr)
+2026-06-07 20:26:52,713 [INFO] generate.personas: Generated p_004: Kiran Thapa (Mobile Developer, 4yr)
+2026-06-07 20:27:13,775 [INFO] generate.personas: Generated p_005: Umar Bello (DevOps / SRE, 11yr)
+2026-06-07 20:27:19,814 [INFO] generate.personas: Generated p_006: Uma Krishnan (Tech Lead / Architect, 4yr)
+2026-06-07 20:27:43,279 [INFO] generate.personas: Generated p_008: Priscilla Ferreira (Backend Engineer, 2yr)
+2026-06-07 20:27:54,281 [INFO] generate.personas: Generated p_007: Xiomara Vargas (Security Engineer, 5yr)
+2026-06-07 20:28:05,646 [INFO] generate.personas: Generated p_009: Jasmine Kaur (Frontend Engineer, 1yr)
+2026-06-07 20:28:24,997 [INFO] generate.personas: Generated p_010: Moussa Keita (Mobile Developer, 2yr)
+2026-06-07 20:28:33,468 [INFO] generate.personas: Generated p_011: Cedric Blanc (ML Engineer, 13yr)
+2026-06-07 20:29:09,396 [INFO] generate.personas: Generated p_013: Hana Kim (Mobile Developer, 3yr)
+2026-06-07 20:29:10,894 [INFO] generate.personas: Generated p_012: Hannah Fischer (DevOps / SRE, 5yr)
+2026-06-07 20:29:30,560 [INFO] generate.personas: Generated p_014: Dina Soliman (Full-Stack Developer, 11yr)
+2026-06-07 20:30:00,909 [INFO] generate.personas: Generated p_016: Gabriel Souza (Security Engineer, 6yr)
+2026-06-07 20:30:07,375 [INFO] generate.personas: Generated p_015: Michael Tran (Platform Engineer, 8yr)
+2026-06-07 20:30:15,968 [INFO] generate.personas: Generated p_017: Aaron Baptiste (ML Engineer, 3yr)
+2026-06-07 20:30:51,917 [INFO] generate.personas: Generated p_018: Rahul Iyer (Frontend Engineer, 5yr)
+2026-06-07 20:30:56,929 [INFO] generate.personas: Generated p_019: Marcus Johnson (QA / Test Engineer, 5yr)
+2026-06-07 20:31:12,343 [INFO] generate.personas: Generated p_020: Neha Joshi (ML Engineer, 7yr)
+2026-06-07 20:31:32,118 [INFO] generate.personas: Generated p_021: Takeshi Hayashi (Data Scientist, 2yr)
+2026-06-07 20:31:37,082 [INFO] generate.personas: Generated p_022: Sven Lindqvist (DevOps / SRE, 14yr)
+2026-06-07 20:31:52,912 [INFO] generate.personas: Generated p_024: Farhana Chowdhury (Full-Stack Developer, 3yr)
+2026-06-07 20:32:01,837 [INFO] generate.personas: Generated p_023: Xander de Vries (Data Engineer, 2yr)
+2026-06-07 20:32:33,752 [INFO] generate.personas: Generated p_025: Kamila Szymanska (Full-Stack Developer, 4yr)
+2026-06-07 20:32:41,555 [INFO] generate.personas: Generated p_026: Ian Szabo (Backend Engineer, 4yr)
+2026-06-07 20:32:55,022 [INFO] generate.personas: Generated p_027: Connor Murphy (DevOps / SRE, 0yr)
+2026-06-07 20:33:05,446 [INFO] generate.personas: Generated p_028: Maya Johal (DevOps / SRE, 8yr)
+2026-06-07 20:33:37,236 [INFO] generate.personas: Generated p_029: Monica Nyambura (Platform Engineer, 0yr)
+2026-06-07 20:33:41,061 [INFO] generate.personas: Generated p_030: Aiden O'Sullivan (QA / Test Engineer, 0yr)
+2026-06-07 20:34:00,783 [INFO] generate.personas: Generated p_032: Nadia Khoury (Data Engineer, 2yr)
+2026-06-07 20:34:06,358 [INFO] generate.personas: Generated p_031: Erik Bergstrom (Platform Engineer, 7yr)
+2026-06-07 20:34:21,794 [INFO] generate.personas: Generated p_034: Zainab Osman (Frontend Engineer, 7yr)
+2026-06-07 20:34:54,455 [INFO] generate.personas: Generated p_035: Sergei Antonov (Data Scientist, 6yr)
+2026-06-07 20:35:08,831 [INFO] generate.personas: Generated p_033: Kenji Mori (Tech Lead / Architect, 8yr)
+2026-06-07 20:35:40,818 [INFO] generate.personas: Generated p_037: Mateo Garcia (Data Scientist, 12yr)
+2026-06-07 20:35:44,673 [INFO] generate.personas: Generated p_036: Sana Patel (Backend Engineer, 11yr)
+2026-06-07 20:36:03,826 [INFO] generate.personas: Generated p_038: Ricardo Almeida (Full-Stack Developer, 5yr)
+2026-06-07 20:36:17,478 [INFO] generate.personas: Generated p_039: Rafael Costa (Data Scientist, 8yr)
+2026-06-07 20:36:29,786 [INFO] generate.personas: Generated p_040: Ritika Malhotra (Embedded Engineer, 1yr)
+2026-06-07 20:36:41,098 [INFO] generate.personas: Generated p_041: Kwame Mensah (Data Scientist, 6yr)
+2026-06-07 20:37:05,768 [INFO] generate.personas: Generated p_042: Hugo Ramirez (Product Manager, 2yr)
+2026-06-07 20:37:22,260 [INFO] generate.personas: Generated p_043: Olumide Afolabi (Frontend Engineer, 5yr)
+2026-06-07 20:37:31,100 [INFO] generate.personas: Generated p_044: Omar Farooq (Full-Stack Developer, 0yr)
+2026-06-07 20:37:53,366 [INFO] generate.personas: Generated p_045: Anya Kowalski (Full-Stack Developer, 2yr)
+2026-06-07 20:37:59,450 [INFO] generate.personas: Generated p_046: Linda Gustafsson (DevOps / SRE, 7yr)
+2026-06-07 20:38:22,852 [INFO] generate.personas: Generated p_047: Eliott Marchand (ML Engineer, 2yr)
+2026-06-07 20:38:30,187 [INFO] generate.personas: Generated p_048: Nina Rodriguez (ML Engineer, 0yr)
+2026-06-07 20:38:49,385 [INFO] generate.personas: Generated p_049: Pavel Dvorak (Data Engineer, 2yr)
+2026-06-07 20:38:55,449 [INFO] generate.planner: Planned 3 documents for p_001
+2026-06-07 20:39:01,978 [INFO] generate.planner: Planned 2 documents for p_000
+2026-06-07 20:39:19,808 [INFO] generate.planner: Planned 4 documents for p_002
+2026-06-07 20:39:32,633 [INFO] generate.planner: Planned 4 documents for p_003
+2026-06-07 20:39:34,074 [INFO] generate.planner: Planned 2 documents for p_004
+2026-06-07 20:39:55,796 [INFO] generate.planner: Planned 5 documents for p_005
+2026-06-07 20:40:05,413 [INFO] generate.planner: Planned 3 documents for p_006
+2026-06-07 20:40:22,026 [INFO] generate.planner: Planned 2 documents for p_007
+2026-06-07 20:40:26,808 [INFO] generate.planner: Planned 3 documents for p_008
+2026-06-07 20:40:51,118 [INFO] generate.planner: Planned 3 documents for p_009
+2026-06-07 20:40:56,153 [INFO] generate.planner: Planned 2 documents for p_010
+2026-06-07 20:41:13,639 [INFO] generate.planner: Planned 5 documents for p_011
+2026-06-07 20:41:32,011 [INFO] generate.planner: Planned 2 documents for p_012
+2026-06-07 20:42:03,014 [INFO] generate.planner: Planned 5 documents for p_013
+2026-06-07 20:42:39,259 [INFO] generate.planner: Planned 5 documents for p_014
+2026-06-07 20:42:53,456 [INFO] generate.planner: Planned 4 documents for p_016
+2026-06-07 20:43:02,690 [INFO] generate.planner: Planned 4 documents for p_015
+2026-06-07 20:43:19,312 [INFO] generate.planner: Planned 4 documents for p_017
+2026-06-07 20:43:29,273 [INFO] generate.planner: Planned 3 documents for p_018
+2026-06-07 20:43:32,093 [INFO] generate.planner: Planned 1 documents for p_019
+2026-06-07 20:44:06,123 [INFO] generate.planner: Planned 3 documents for p_021
+2026-06-07 20:44:25,641 [INFO] generate.planner: Planned 6 documents for p_020
+2026-06-07 20:44:54,891 [INFO] generate.planner: Planned 6 documents for p_022
+2026-06-07 20:44:55,033 [INFO] generate.planner: Planned 3 documents for p_024
+2026-06-07 20:45:09,082 [INFO] generate.planner: Planned 2 documents for p_023
+2026-06-07 20:45:25,155 [INFO] generate.planner: Planned 2 documents for p_026
+2026-06-07 20:45:59,247 [INFO] generate.planner: Planned 5 documents for p_025
+2026-06-07 20:46:32,473 [INFO] generate.planner: Planned 4 documents for p_028
+2026-06-07 20:46:45,077 [INFO] generate.planner: Planned 5 documents for p_027
+2026-06-07 20:47:03,499 [INFO] generate.planner: Planned 5 documents for p_029
+2026-06-07 20:47:11,746 [INFO] generate.planner: Planned 3 documents for p_030
+2026-06-07 20:47:15,453 [INFO] generate.planner: Planned 2 documents for p_032
+2026-06-07 20:47:46,938 [INFO] generate.planner: Planned 5 documents for p_034
+2026-06-07 20:48:06,107 [INFO] generate.planner: Planned 5 documents for p_031
+2026-06-07 20:48:31,712 [INFO] generate.planner: Planned 3 documents for p_033
+2026-06-07 20:48:50,073 [INFO] generate.planner: Planned 6 documents for p_037
+2026-06-07 20:48:51,466 [INFO] generate.planner: Planned 5 documents for p_035
+2026-06-07 20:49:03,615 [INFO] generate.planner: Planned 2 documents for p_038
+2026-06-07 20:50:08,924 [INFO] generate.planner: Planned 4 documents for p_039
+2026-06-07 20:50:10,991 [WARNING] generate.planner: p_036 doc planning attempt 1: Expecting value: line 16 column 15 (char 721)
+2026-06-07 20:50:49,253 [INFO] generate.planner: Planned 4 documents for p_040
+2026-06-07 20:50:53,751 [INFO] generate.planner: Planned 5 documents for p_041
+2026-06-07 20:51:16,613 [INFO] generate.planner: Planned 3 documents for p_043
+2026-06-07 20:51:16,782 [INFO] generate.planner: Planned 3 documents for p_042
+2026-06-07 20:51:32,968 [INFO] generate.planner: Planned 3 documents for p_044
+2026-06-07 20:52:02,338 [INFO] generate.planner: Planned 3 documents for p_045
+2026-06-07 20:52:22,978 [INFO] generate.planner: Planned 4 documents for p_046
+2026-06-07 20:52:40,744 [INFO] generate.planner: Planned 3 documents for p_047
+2026-06-07 20:52:52,371 [INFO] generate.planner: Planned 1 documents for p_049
+2026-06-07 20:52:54,079 [INFO] generate.planner: Planned 4 documents for p_048
+2026-06-07 20:53:34,362 [INFO] generate.planner: Allocated evidence for p_001 (8 skills × 3 docs)
+2026-06-07 20:53:57,500 [INFO] generate.planner: Allocated evidence for p_000 (12 skills × 2 docs)
+2026-06-07 20:54:57,729 [WARNING] generate.planner: p_002 allocation attempt 1: substring not found
+2026-06-07 20:54:58,172 [INFO] generate.planner: Allocated evidence for p_003 (13 skills × 4 docs)
+2026-06-07 20:55:50,268 [INFO] generate.planner: Allocated evidence for p_004 (10 skills × 2 docs)
+2026-06-07 20:56:19,786 [WARNING] generate.planner: p_005 allocation attempt 1: substring not found
+2026-06-07 20:56:48,711 [INFO] generate.planner: Allocated evidence for p_006 (11 skills × 3 docs)
+2026-06-07 20:57:13,613 [INFO] generate.planner: Allocated evidence for p_007 (10 skills × 2 docs)
+2026-06-07 20:58:11,540 [WARNING] generate.planner: p_008 allocation attempt 1: substring not found
+2026-06-07 20:58:15,248 [INFO] generate.planner: Allocated evidence for p_009 (13 skills × 3 docs)
+2026-06-07 20:58:56,131 [INFO] generate.planner: Allocated evidence for p_010 (8 skills × 2 docs)
+2026-06-07 20:59:21,472 [INFO] generate.planner: Allocated evidence for p_011 (10 skills × 5 docs)
+2026-06-07 20:59:59,867 [INFO] generate.planner: Allocated evidence for p_012 (10 skills × 2 docs)
+2026-06-07 21:00:44,984 [WARNING] generate.planner: p_013 allocation attempt 1: substring not found
+2026-06-07 21:01:02,768 [INFO] generate.planner: Allocated evidence for p_014 (12 skills × 5 docs)
+2026-06-07 21:01:46,228 [INFO] generate.planner: Allocated evidence for p_016 (9 skills × 4 docs)
+2026-06-07 21:02:12,559 [INFO] generate.planner: Allocated evidence for p_015 (10 skills × 4 docs)
+2026-06-07 21:02:56,536 [INFO] generate.planner: Allocated evidence for p_017 (12 skills × 4 docs)
+2026-06-07 21:03:36,619 [WARNING] generate.planner: p_018 allocation attempt 1: Expecting value: line 1 column 1 (char 0)
+2026-06-07 21:03:39,284 [INFO] generate.planner: Allocated evidence for p_019 (11 skills × 1 docs)
+2026-06-07 21:04:41,971 [WARNING] generate.planner: Allocation error: Data visualization (Matplotlib/Plotly): max must equal 3, got 4
+2026-06-07 21:04:41,972 [WARNING] generate.planner: Allocation error: Data visualization (Matplotlib/Plotly): values exceed global level 3: [3, 4, 2]
+2026-06-07 21:04:41,973 [WARNING] generate.planner: Allocation error: Exploratory data analysis: max must equal 3, got 4
+2026-06-07 21:04:41,973 [WARNING] generate.planner: Allocation error: Exploratory data analysis: values exceed global level 3: [3, 4, 2]
+2026-06-07 21:04:41,974 [WARNING] generate.planner: Allocation error: REST API design: max must equal 3, got 2
+2026-06-07 21:04:41,974 [WARNING] generate.planner: p_021 allocation attempt 1: Allocation failed hard constraints
+2026-06-07 21:05:01,173 [WARNING] generate.planner: p_020 allocation attempt 1: substring not found
+2026-06-07 21:05:48,020 [INFO] generate.planner: Allocated evidence for p_022 (12 skills × 6 docs)
+2026-06-07 21:06:07,259 [INFO] generate.planner: Allocated evidence for p_024 (16 skills × 3 docs)
+2026-06-07 21:06:52,516 [INFO] generate.planner: Allocated evidence for p_023 (14 skills × 2 docs)
+2026-06-07 21:07:02,917 [INFO] generate.planner: Allocated evidence for p_026 (11 skills × 2 docs)
+2026-06-07 21:07:45,645 [INFO] generate.planner: Allocated evidence for p_025 (10 skills × 5 docs)
+2026-06-07 21:07:48,048 [INFO] generate.planner: Allocated evidence for p_028 (11 skills × 4 docs)
+2026-06-07 21:09:07,389 [WARNING] generate.planner: p_027 allocation attempt 1: Expecting value: line 1 column 1 (char 0)
+2026-06-07 21:09:09,921 [WARNING] generate.planner: p_029 allocation attempt 1: Unterminated string starting at: line 48 column 5 (char 853)
+2026-06-07 21:09:40,246 [INFO] generate.planner: Allocated evidence for p_032 (10 skills × 2 docs)
+2026-06-07 21:10:15,823 [INFO] generate.planner: Allocated evidence for p_030 (12 skills × 3 docs)
+2026-06-07 21:10:40,108 [INFO] generate.planner: Allocated evidence for p_034 (8 skills × 5 docs)
+2026-06-07 21:11:09,849 [INFO] generate.planner: Allocated evidence for p_031 (11 skills × 5 docs)
+2026-06-07 21:11:55,241 [INFO] generate.planner: Allocated evidence for p_033 (13 skills × 3 docs)
+2026-06-07 21:12:34,214 [WARNING] generate.planner: p_037 allocation attempt 1: substring not found
+2026-06-07 21:13:14,713 [INFO] generate.planner: Allocated evidence for p_038 (15 skills × 2 docs)
+2026-06-07 21:13:19,097 [INFO] generate.planner: Allocated evidence for p_035 (14 skills × 5 docs)
+2026-06-07 21:14:00,041 [INFO] generate.planner: Planned 5 documents for p_036
+2026-06-07 21:14:14,910 [INFO] generate.planner: Allocated evidence for p_039 (8 skills × 4 docs)
+2026-06-07 21:15:20,389 [INFO] generate.planner: Allocated evidence for p_041 (8 skills × 5 docs)
+2026-06-07 21:15:23,537 [WARNING] generate.planner: p_040 allocation attempt 1: Unterminated string starting at: line 47 column 5 (char 865)
+2026-06-07 21:16:13,878 [INFO] generate.planner: Allocated evidence for p_042 (12 skills × 3 docs)
+2026-06-07 21:16:23,354 [INFO] generate.planner: Allocated evidence for p_043 (13 skills × 3 docs)
+2026-06-07 21:17:14,998 [INFO] generate.planner: Allocated evidence for p_044 (10 skills × 3 docs)
+2026-06-07 21:17:33,477 [INFO] generate.planner: Allocated evidence for p_045 (12 skills × 3 docs)
+2026-06-07 21:18:22,211 [INFO] generate.planner: Allocated evidence for p_046 (20 skills × 4 docs)
+2026-06-07 21:18:49,218 [WARNING] generate.planner: Allocation error: Recommendation systems: max must equal 3, got 4
+2026-06-07 21:18:49,218 [WARNING] generate.planner: Allocation error: Recommendation systems: values exceed global level 3: [3, 4, 3]
+2026-06-07 21:18:49,219 [WARNING] generate.planner: p_047 allocation attempt 1: Allocation failed hard constraints
+2026-06-07 21:19:29,926 [INFO] generate.planner: Allocated evidence for p_049 (14 skills × 1 docs)
+2026-06-07 21:20:09,243 [INFO] generate.documents: Generated d_p_001_00 (cv, 3380 chars, temp=0.76, banned=10)
+2026-06-07 21:20:13,280 [WARNING] generate.planner: p_048 allocation attempt 1: Expecting value: line 1 column 1 (char 0)
+2026-06-07 21:20:32,015 [INFO] generate.documents: Generated d_p_001_02 (recommendation, 1824 chars, temp=0.99, banned=10)
+2026-06-07 21:20:34,164 [INFO] generate.documents: Generated d_p_001_01 (project_readme, 2587 chars, temp=0.9, banned=0)
+2026-06-07 21:20:34,165 [INFO] __main__: Completed p_001: Nathan Brooks — 8 skills, 3 docs
+2026-06-07 21:20:58,695 [INFO] generate.documents: Generated d_p_000_00 (cv, 3047 chars, temp=0.87, banned=1)
+2026-06-07 21:21:57,128 [INFO] generate.documents: Generated d_p_000_01 (project_readme, 4546 chars, temp=0.81, banned=1)
+2026-06-07 21:21:57,130 [INFO] __main__: Completed p_000: Yuki Tanaka — 12 skills, 2 docs
+2026-06-07 21:22:22,898 [INFO] generate.documents: Generated d_p_003_00 (cv, 2441 chars, temp=0.8, banned=10)
+2026-06-07 21:22:24,277 [WARNING] generate.planner: p_002 allocation attempt 2: Expecting value: line 1 column 1 (char 0)
+2026-06-07 21:22:39,227 [INFO] generate.documents: Generated d_p_003_02 (recommendation, 1732 chars, temp=0.92, banned=10)
+2026-06-07 21:22:45,652 [INFO] generate.documents: Generated d_p_003_01 (project_readme, 2663 chars, temp=0.87, banned=10)
+2026-06-07 21:22:54,821 [INFO] generate.documents: Generated d_p_003_03 (linkedin, 1776 chars, temp=0.81, banned=10)
+2026-06-07 21:22:54,822 [INFO] __main__: Completed p_003: Carmen Delgado — 13 skills, 4 docs
+2026-06-07 21:23:19,135 [INFO] generate.documents: Generated d_p_004_01 (project_readme, 2392 chars, temp=0.85, banned=10)
+2026-06-07 21:23:19,489 [INFO] generate.documents: Generated d_p_004_00 (cv, 4150 chars, temp=0.92, banned=10)
+2026-06-07 21:23:19,489 [INFO] __main__: Completed p_004: Kiran Thapa — 10 skills, 2 docs
+2026-06-07 21:23:54,511 [INFO] generate.documents: Generated d_p_006_00 (cv, 4238 chars, temp=0.78, banned=10)
+2026-06-07 21:24:12,290 [INFO] generate.planner: Allocated evidence for p_005 (13 skills × 5 docs)
+2026-06-07 21:24:22,496 [INFO] generate.documents: Generated d_p_006_01 (project_readme, 2797 chars, temp=0.9, banned=10)
+2026-06-07 21:24:30,908 [INFO] generate.documents: Generated d_p_006_02 (recommendation, 1800 chars, temp=1.07, banned=10)
+2026-06-07 21:24:30,909 [INFO] __main__: Completed p_006: Uma Krishnan — 11 skills, 3 docs
+2026-06-07 21:24:51,817 [INFO] generate.documents: Generated d_p_007_01 (blog, 3070 chars, temp=1.01, banned=10)
+2026-06-07 21:24:54,714 [INFO] generate.documents: Generated d_p_007_00 (cv, 4542 chars, temp=0.85, banned=10)
+2026-06-07 21:24:54,716 [INFO] __main__: Completed p_007: Xiomara Vargas — 10 skills, 2 docs
+2026-06-07 21:25:26,022 [INFO] generate.documents: Generated d_p_009_00 (cv, 4795 chars, temp=0.96, banned=10)
+2026-06-07 21:25:42,831 [INFO] generate.documents: Generated d_p_009_01 (project_readme, 1552 chars, temp=0.94, banned=10)
+2026-06-07 21:25:46,448 [INFO] generate.planner: Allocated evidence for p_008 (9 skills × 3 docs)
+2026-06-07 21:25:56,702 [WARNING] generate.documents: d_p_009_02: sanitization issues: ["Banned pattern found: ['mastery of']"]
+2026-06-07 21:26:10,872 [INFO] generate.documents: Generated d_p_010_00 (cv, 3964 chars, temp=0.84, banned=10)
+2026-06-07 21:26:21,596 [INFO] generate.documents: Generated d_p_010_01 (project_readme, 2950 chars, temp=0.77, banned=10)
+2026-06-07 21:26:21,598 [INFO] __main__: Completed p_010: Moussa Keita — 8 skills, 2 docs
+2026-06-07 21:26:38,381 [WARNING] generate.documents: d_p_011_00: sanitization issues: ["Level-1 skill 'AWS' found in document text"]
+2026-06-07 21:26:47,874 [INFO] generate.documents: Generated d_p_011_01 (project_readme, 2947 chars, temp=0.85, banned=10)
+2026-06-07 21:27:03,721 [INFO] generate.documents: Generated d_p_011_02 (project_readme, 2628 chars, temp=0.94, banned=10)
+2026-06-07 21:27:07,115 [INFO] generate.documents: Generated d_p_011_03 (recommendation, 1486 chars, temp=1.03, banned=10)
+2026-06-07 21:27:24,299 [INFO] generate.documents: Generated d_p_011_04 (blog, 2301 chars, temp=0.92, banned=10)
+2026-06-07 21:27:44,363 [INFO] generate.documents: Generated d_p_012_00 (cv, 4225 chars, temp=0.76, banned=10)
+2026-06-07 21:27:49,280 [INFO] generate.documents: Generated d_p_012_01 (project_readme, 2602 chars, temp=0.87, banned=10)
+2026-06-07 21:27:49,281 [INFO] __main__: Completed p_012: Hannah Fischer — 10 skills, 2 docs
+2026-06-07 21:28:17,013 [INFO] generate.documents: Generated d_p_014_00 (cv, 3891 chars, temp=0.78, banned=10)
+2026-06-07 21:28:43,912 [INFO] generate.documents: Generated d_p_014_01 (project_readme, 2823 chars, temp=0.79, banned=10)
+2026-06-07 21:29:01,479 [INFO] generate.documents: Generated d_p_014_02 (recommendation, 1305 chars, temp=0.98, banned=10)
+2026-06-07 21:29:07,190 [WARNING] generate.planner: p_013 allocation attempt 2: Expecting value: line 1 column 1 (char 0)
+2026-06-07 21:29:17,814 [INFO] generate.documents: Generated d_p_014_03 (linkedin, 1978 chars, temp=0.98, banned=10)
+2026-06-07 21:29:27,390 [INFO] generate.documents: Generated d_p_014_04 (blog, 2605 chars, temp=1.03, banned=10)
+2026-06-07 21:29:27,392 [INFO] __main__: Completed p_014: Dina Soliman — 12 skills, 5 docs
+2026-06-07 21:29:43,805 [INFO] generate.documents: Generated d_p_016_00 (cv, 3557 chars, temp=0.77, banned=10)
+2026-06-07 21:29:46,077 [INFO] generate.documents: Generated d_p_016_01 (blog, 1973 chars, temp=0.95, banned=10)
+2026-06-07 21:30:00,333 [INFO] generate.documents: Generated d_p_016_03 (linkedin, 1486 chars, temp=0.83, banned=10)
+2026-06-07 21:30:00,356 [INFO] generate.documents: Generated d_p_016_02 (recommendation, 1699 chars, temp=0.9, banned=10)
+2026-06-07 21:30:00,357 [INFO] __main__: Completed p_016: Gabriel Souza — 9 skills, 4 docs
+2026-06-07 21:30:25,560 [INFO] generate.documents: Generated d_p_015_01 (project_readme, 2829 chars, temp=0.88, banned=10)
+2026-06-07 21:30:25,997 [INFO] generate.documents: Generated d_p_015_00 (cv, 3401 chars, temp=0.98, banned=10)
+2026-06-07 21:30:44,299 [INFO] generate.documents: Generated d_p_015_03 (blog, 2301 chars, temp=1.0, banned=10)
+2026-06-07 21:30:46,223 [INFO] generate.documents: Generated d_p_015_02 (project_readme, 1751 chars, temp=0.87, banned=10)
+2026-06-07 21:30:46,224 [INFO] __main__: Completed p_015: Michael Tran — 10 skills, 4 docs
+2026-06-07 21:31:13,144 [INFO] generate.documents: Generated d_p_017_00 (cv, 4246 chars, temp=0.97, banned=10)
+2026-06-07 21:31:15,448 [INFO] generate.documents: Generated d_p_017_01 (project_readme, 1140 chars, temp=0.81, banned=10)
+2026-06-07 21:31:31,639 [INFO] generate.documents: Generated d_p_017_02 (recommendation, 1554 chars, temp=1.08, banned=10)
+2026-06-07 21:31:32,163 [INFO] generate.documents: Generated d_p_017_03 (linkedin, 1727 chars, temp=1.04, banned=10)
+2026-06-07 21:31:32,164 [INFO] __main__: Completed p_017: Aaron Baptiste — 12 skills, 4 docs
+2026-06-07 21:32:02,708 [WARNING] generate.documents: d_p_019_00: sanitization issues: ["Banned pattern found: ['Swedish: Basic']"]
+2026-06-07 21:32:14,115 [INFO] generate.planner: Allocated evidence for p_018 (9 skills × 3 docs)
+2026-06-07 21:32:55,198 [INFO] generate.planner: Allocated evidence for p_021 (14 skills × 3 docs)
+2026-06-07 21:33:27,417 [INFO] generate.planner: Allocated evidence for p_020 (12 skills × 6 docs)
+2026-06-07 21:33:34,535 [INFO] generate.documents: Generated d_p_022_00 (cv, 4393 chars, temp=0.91, banned=10)
+2026-06-07 21:33:51,966 [INFO] generate.documents: Generated d_p_022_01 (project_readme, 2579 chars, temp=0.8, banned=10)
+2026-06-07 21:33:54,487 [WARNING] generate.documents: d_p_022_02: sanitization issues: ["Level-1 skill 'Python' found in document text"]
+2026-06-07 21:34:07,467 [INFO] generate.documents: Generated d_p_022_04 (recommendation, 1523 chars, temp=1.01, banned=10)
+2026-06-07 21:34:11,190 [INFO] generate.documents: Generated d_p_022_03 (project_readme, 1680 chars, temp=0.89, banned=10)
+2026-06-07 21:34:25,826 [INFO] generate.documents: Generated d_p_022_05 (blog, 2693 chars, temp=0.86, banned=10)
+2026-06-07 21:34:47,688 [INFO] generate.documents: Generated d_p_024_00 (cv, 4699 chars, temp=0.77, banned=10)
+2026-06-07 21:34:50,967 [INFO] generate.documents: Generated d_p_024_01 (project_readme, 2623 chars, temp=0.82, banned=10)
+2026-06-07 21:35:05,628 [INFO] generate.documents: Generated d_p_024_02 (recommendation, 1595 chars, temp=0.88, banned=10)
+2026-06-07 21:35:05,629 [INFO] __main__: Completed p_024: Farhana Chowdhury — 16 skills, 3 docs
+2026-06-07 21:35:19,628 [INFO] generate.documents: Generated d_p_023_00 (cv, 4024 chars, temp=0.91, banned=10)
+2026-06-07 21:35:26,798 [INFO] generate.documents: Generated d_p_023_01 (project_readme, 1740 chars, temp=0.88, banned=10)
+2026-06-07 21:35:26,799 [INFO] __main__: Completed p_023: Xander de Vries — 14 skills, 2 docs
+2026-06-07 21:35:51,009 [INFO] generate.documents: Generated d_p_026_01 (project_readme, 2803 chars, temp=0.77, banned=10)
+2026-06-07 21:35:53,998 [INFO] generate.documents: Generated d_p_026_00 (cv, 4237 chars, temp=0.93, banned=10)
+2026-06-07 21:35:53,999 [INFO] __main__: Completed p_026: Ian Szabo — 11 skills, 2 docs
+2026-06-07 21:36:21,108 [INFO] generate.documents: Generated d_p_025_01 (project_readme, 2535 chars, temp=0.79, banned=10)
+2026-06-07 21:36:40,585 [INFO] generate.documents: Generated d_p_025_00 (cv, 3797 chars, temp=0.76, banned=10)
+2026-06-07 21:36:48,257 [INFO] generate.documents: Generated d_p_025_02 (project_readme, 2785 chars, temp=0.87, banned=10)
+2026-06-07 21:36:59,017 [INFO] generate.documents: Generated d_p_025_03 (recommendation, 1855 chars, temp=0.86, banned=10)
+2026-06-07 21:37:09,258 [INFO] generate.documents: Generated d_p_025_04 (recommendation, 1525 chars, temp=0.99, banned=10)
+2026-06-07 21:37:09,259 [INFO] __main__: Completed p_025: Kamila Szymanska — 10 skills, 5 docs
+2026-06-07 21:37:32,184 [INFO] generate.documents: Generated d_p_028_00 (cv, 3668 chars, temp=0.83, banned=10)
+2026-06-07 21:37:32,430 [INFO] generate.documents: Generated d_p_028_01 (project_readme, 2477 chars, temp=0.87, banned=10)
+2026-06-07 21:37:48,367 [INFO] generate.documents: Generated d_p_028_02 (recommendation, 1615 chars, temp=0.88, banned=10)
+2026-06-07 21:37:55,293 [WARNING] generate.documents: d_p_028_03: sanitization issues: ["Banned pattern found: ['Documentation: Advanced']"]
+2026-06-07 21:39:08,713 [INFO] generate.planner: Allocated evidence for p_029 (10 skills × 5 docs)
+2026-06-07 21:39:10,465 [WARNING] generate.planner: p_027 allocation attempt 2: Expecting value: line 1 column 1 (char 0)
+2026-06-07 21:39:29,373 [INFO] generate.documents: Generated d_p_032_01 (project_readme, 2499 chars, temp=0.88, banned=10)
+2026-06-07 21:39:36,229 [INFO] generate.documents: Generated d_p_032_00 (cv, 3147 chars, temp=0.77, banned=10)
+2026-06-07 21:39:36,230 [INFO] __main__: Completed p_032: Nadia Khoury — 10 skills, 2 docs
+2026-06-07 21:39:55,769 [INFO] generate.documents: Generated d_p_030_01 (project_readme, 1348 chars, temp=0.79, banned=10)
+2026-06-07 21:39:57,057 [INFO] generate.documents: Generated d_p_030_00 (cv, 3259 chars, temp=0.93, banned=10)
+2026-06-07 21:40:13,411 [INFO] generate.documents: Generated d_p_030_02 (recommendation, 1491 chars, temp=0.86, banned=10)
+2026-06-07 21:40:13,413 [INFO] __main__: Completed p_030: Aiden O'Sullivan — 12 skills, 3 docs
+2026-06-07 21:40:28,308 [INFO] generate.documents: Generated d_p_034_00 (cv, 4501 chars, temp=0.99, banned=10)
+2026-06-07 21:40:39,036 [INFO] generate.documents: Generated d_p_034_01 (project_readme, 2832 chars, temp=0.94, banned=10)
+2026-06-07 21:40:53,934 [INFO] generate.documents: Generated d_p_034_02 (project_readme, 2853 chars, temp=0.87, banned=10)
+2026-06-07 21:40:53,965 [INFO] generate.documents: Generated d_p_034_03 (recommendation, 1769 chars, temp=0.91, banned=10)
+2026-06-07 21:41:16,061 [INFO] generate.documents: Generated d_p_034_04 (blog, 2917 chars, temp=0.89, banned=10)
+2026-06-07 21:41:16,062 [INFO] __main__: Completed p_034: Zainab Osman — 8 skills, 5 docs
+2026-06-07 21:41:42,214 [INFO] generate.documents: Generated d_p_031_01 (project_readme, 2734 chars, temp=0.82, banned=10)
+2026-06-07 21:42:05,537 [INFO] generate.documents: Generated d_p_031_00 (cv, 3280 chars, temp=0.96, banned=10)
+2026-06-07 21:42:08,932 [INFO] generate.documents: Generated d_p_031_02 (project_readme, 2806 chars, temp=0.89, banned=10)
+2026-06-07 21:42:20,637 [INFO] generate.documents: Generated d_p_031_03 (recommendation, 1270 chars, temp=0.87, banned=10)
+2026-06-07 21:42:28,274 [INFO] generate.documents: Generated d_p_031_04 (blog, 2614 chars, temp=0.97, banned=10)
+2026-06-07 21:42:28,275 [INFO] __main__: Completed p_031: Erik Bergstrom — 11 skills, 5 docs
+2026-06-07 21:42:53,583 [INFO] generate.documents: Generated d_p_033_01 (project_readme, 2759 chars, temp=0.84, banned=10)
+2026-06-07 21:42:57,626 [WARNING] generate.documents: d_p_033_00: sanitization issues: ["Banned pattern found: ['Proficient in']"]
+2026-06-07 21:43:07,847 [INFO] generate.documents: Generated d_p_033_02 (recommendation, 1994 chars, temp=0.85, banned=10)
+2026-06-07 21:43:49,804 [WARNING] generate.documents: d_p_038_00: sanitization issues: ["Banned pattern found: ['Basic knowledge']"]
+2026-06-07 21:44:16,140 [INFO] generate.documents: Generated d_p_038_01 (project_readme, 2905 chars, temp=0.92, banned=10)
+2026-06-07 21:44:20,426 [WARNING] generate.planner: p_037 allocation attempt 2: Expecting value: line 12 column 44 (char 1288)
+2026-06-07 21:44:41,740 [INFO] generate.documents: Generated d_p_035_01 (project_readme, 3312 chars, temp=0.91, banned=10)
+2026-06-07 21:44:54,040 [INFO] generate.documents: Generated d_p_035_00 (cv, 5603 chars, temp=0.89, banned=10)
+2026-06-07 21:45:07,962 [INFO] generate.documents: Generated d_p_035_02 (project_readme, 3161 chars, temp=0.84, banned=10)
+2026-06-07 21:45:21,420 [INFO] generate.documents: Generated d_p_035_03 (project_readme, 3047 chars, temp=0.71, banned=10)
+2026-06-07 21:45:27,015 [INFO] generate.documents: Generated d_p_035_04 (blog, 2524 chars, temp=0.9, banned=10)
+2026-06-07 21:45:27,018 [INFO] __main__: Completed p_035: Sergei Antonov — 14 skills, 5 docs
+2026-06-07 21:46:00,153 [INFO] generate.documents: Generated d_p_039_00 (cv, 5394 chars, temp=0.79, banned=10)
+2026-06-07 21:46:26,564 [INFO] generate.planner: Allocated evidence for p_036 (9 skills × 5 docs)
+2026-06-07 21:46:26,708 [INFO] generate.documents: Generated d_p_039_01 (project_readme, 3604 chars, temp=0.94, banned=10)
+2026-06-07 21:46:48,464 [INFO] generate.documents: Generated d_p_039_03 (blog, 2728 chars, temp=0.95, banned=10)
+2026-06-07 21:46:49,714 [INFO] generate.documents: Generated d_p_039_02 (linkedin, 1372 chars, temp=0.95, banned=10)
+2026-06-07 21:46:49,715 [INFO] __main__: Completed p_039: Rafael Costa — 8 skills, 4 docs
+2026-06-07 21:47:14,782 [INFO] generate.documents: Generated d_p_041_01 (project_readme, 2794 chars, temp=0.86, banned=10)
+2026-06-07 21:47:33,395 [INFO] generate.documents: Generated d_p_041_02 (project_readme, 1717 chars, temp=0.86, banned=10)
+2026-06-07 21:47:35,148 [INFO] generate.documents: Generated d_p_041_00 (cv, 3120 chars, temp=1.0, banned=10)
+2026-06-07 21:47:52,287 [INFO] generate.documents: Generated d_p_041_04 (recommendation, 1829 chars, temp=0.91, banned=10)
+2026-06-07 21:47:55,715 [INFO] generate.documents: Generated d_p_041_03 (blog, 2524 chars, temp=1.03, banned=10)
+2026-06-07 21:47:55,716 [INFO] __main__: Completed p_041: Kwame Mensah — 8 skills, 5 docs
+2026-06-07 21:48:28,187 [INFO] generate.documents: Generated d_p_042_00 (cv, 3873 chars, temp=0.86, banned=10)
+2026-06-07 21:48:53,150 [INFO] generate.documents: Generated d_p_042_01 (project_readme, 2760 chars, temp=0.86, banned=10)
+2026-06-07 21:49:09,472 [INFO] generate.documents: Generated d_p_042_02 (recommendation, 1550 chars, temp=0.95, banned=10)
+2026-06-07 21:49:09,474 [INFO] __main__: Completed p_042: Hugo Ramirez — 12 skills, 3 docs
+2026-06-07 21:49:15,483 [WARNING] generate.planner: p_040 allocation attempt 2: substring not found
+2026-06-07 21:49:37,012 [INFO] generate.documents: Generated d_p_043_01 (blog, 2476 chars, temp=0.97, banned=10)
+2026-06-07 21:49:43,803 [INFO] generate.documents: Generated d_p_043_00 (cv, 3691 chars, temp=0.88, banned=10)
+2026-06-07 21:50:03,152 [INFO] generate.documents: Generated d_p_043_02 (project_readme, 2625 chars, temp=0.87, banned=10)
+2026-06-07 21:50:03,153 [INFO] __main__: Completed p_043: Olumide Afolabi — 13 skills, 3 docs
+2026-06-07 21:50:11,623 [WARNING] generate.documents: d_p_044_00: sanitization issues: ["Banned pattern found: ['Proficient in']", "Banned pattern found: ['Basic understanding']"]
+2026-06-07 21:50:22,558 [INFO] generate.documents: Generated d_p_044_01 (project_readme, 1965 chars, temp=0.87, banned=10)
+2026-06-07 21:50:27,904 [INFO] generate.documents: Generated d_p_044_02 (recommendation, 1506 chars, temp=1.07, banned=10)
+2026-06-07 21:50:51,141 [INFO] generate.documents: Generated d_p_045_01 (project_readme, 2721 chars, temp=0.71, banned=10)
+2026-06-07 21:50:52,719 [INFO] generate.documents: Generated d_p_045_00 (cv, 4283 chars, temp=0.9, banned=10)
+2026-06-07 21:51:07,741 [INFO] generate.documents: Generated d_p_045_02 (recommendation, 1780 chars, temp=0.86, banned=10)
+2026-06-07 21:51:07,742 [INFO] __main__: Completed p_045: Anya Kowalski — 12 skills, 3 docs
+2026-06-07 21:51:25,883 [INFO] generate.documents: Generated d_p_046_01 (linkedin, 2260 chars, temp=0.89, banned=10)
+2026-06-07 21:51:38,790 [INFO] generate.documents: Generated d_p_046_00 (cv, 5228 chars, temp=0.95, banned=10)
+2026-06-07 21:51:48,613 [INFO] generate.documents: Generated d_p_046_02 (blog, 2765 chars, temp=0.82, banned=10)
+2026-06-07 21:51:55,996 [WARNING] generate.documents: d_p_046_03: sanitization issues: ["Banned pattern found: ['mastery of']"]
+2026-06-07 21:52:30,031 [INFO] generate.documents: Generated d_p_049_00 (cv, 3357 chars, temp=0.95, banned=10)
+2026-06-07 21:52:30,033 [INFO] __main__: Completed p_049: Pavel Dvorak — 14 skills, 1 docs
+2026-06-07 21:52:48,614 [INFO] generate.planner: Allocated evidence for p_047 (10 skills × 3 docs)
+2026-06-07 21:53:53,084 [WARNING] generate.planner: p_048 allocation attempt 2: Expecting value: line 13 column 82 (char 1042)
+2026-06-07 21:54:12,697 [WARNING] generate.planner: p_002 allocation attempt 3: Expecting value: line 12 column 87 (char 963)
+2026-06-07 21:54:12,698 [ERROR] generate.planner: p_002: using fallback allocation
+2026-06-07 21:54:12,714 [INFO] generate.planner: Allocated evidence for p_002 (12 skills × 4 docs)
+2026-06-07 21:54:26,435 [INFO] generate.documents: Generated d_p_005_00 (cv, 3537 chars, temp=0.76, banned=10)
+2026-06-07 21:54:33,559 [INFO] generate.documents: Generated d_p_005_01 (project_readme, 1590 chars, temp=0.73, banned=10)
+2026-06-07 21:54:50,688 [INFO] generate.documents: Generated d_p_005_03 (recommendation, 1829 chars, temp=0.99, banned=10)
+2026-06-07 21:54:52,411 [INFO] generate.documents: Generated d_p_005_02 (project_readme, 2686 chars, temp=0.91, banned=10)
+2026-06-07 21:55:11,432 [INFO] generate.documents: Generated d_p_005_04 (blog, 2916 chars, temp=0.91, banned=10)
+2026-06-07 21:55:11,434 [INFO] __main__: Completed p_005: Umar Bello — 13 skills, 5 docs
+2026-06-07 21:55:32,902 [INFO] generate.documents: Generated d_p_008_00 (cv, 4682 chars, temp=0.8, banned=10)
+2026-06-07 21:55:40,394 [INFO] generate.documents: Generated d_p_008_01 (project_readme, 2908 chars, temp=0.82, banned=10)
+2026-06-07 21:55:48,104 [INFO] generate.documents: Generated d_p_008_02 (recommendation, 1435 chars, temp=1.07, banned=10)
+2026-06-07 21:55:48,108 [INFO] __main__: Completed p_008: Priscilla Ferreira — 9 skills, 3 docs
+2026-06-07 21:56:01,440 [INFO] generate.documents: Generated d_p_009_02 (recommendation, 1672 chars, temp=1.0, banned=10)
+2026-06-07 21:56:01,441 [INFO] __main__: Completed p_009: Jasmine Kaur — 13 skills, 3 docs
+2026-06-07 21:56:20,978 [INFO] generate.documents: Generated d_p_011_00 (cv, 3340 chars, temp=0.89, banned=10)
+2026-06-07 21:56:20,979 [INFO] __main__: Completed p_011: Cedric Blanc — 10 skills, 5 docs
+2026-06-07 21:56:58,322 [INFO] generate.documents: Generated d_p_019_00 (cv, 3824 chars, temp=0.95, banned=10)
+2026-06-07 21:56:58,324 [INFO] __main__: Completed p_019: Marcus Johnson — 11 skills, 1 docs
+2026-06-07 21:57:24,194 [WARNING] generate.planner: p_013 allocation attempt 3: Expecting value: line 1 column 1 (char 0)
+2026-06-07 21:57:24,195 [ERROR] generate.planner: p_013: using fallback allocation
+2026-06-07 21:57:24,209 [INFO] generate.planner: Allocated evidence for p_013 (10 skills × 5 docs)
+2026-06-07 21:57:27,838 [INFO] generate.documents: Generated d_p_018_00 (cv, 3472 chars, temp=0.82, banned=10)
+2026-06-07 21:57:43,061 [INFO] generate.documents: Generated d_p_018_01 (project_readme, 2333 chars, temp=0.89, banned=10)
+2026-06-07 21:57:44,633 [INFO] generate.documents: Generated d_p_018_02 (blog, 2284 chars, temp=1.01, banned=10)
+2026-06-07 21:57:44,634 [INFO] __main__: Completed p_018: Rahul Iyer — 9 skills, 3 docs
+2026-06-07 21:58:13,259 [INFO] generate.documents: Generated d_p_021_01 (project_readme, 3543 chars, temp=0.82, banned=10)
+2026-06-07 21:58:30,663 [INFO] generate.documents: Generated d_p_021_02 (recommendation, 1559 chars, temp=1.06, banned=10)
+2026-06-07 21:58:45,758 [INFO] generate.documents: Generated d_p_021_00 (cv, 4802 chars, temp=0.78, banned=10)
+2026-06-07 21:58:45,760 [INFO] __main__: Completed p_021: Takeshi Hayashi — 14 skills, 3 docs
+2026-06-07 21:59:02,136 [INFO] generate.documents: Generated d_p_020_00 (cv, 4743 chars, temp=0.99, banned=10)
+2026-06-07 21:59:13,072 [INFO] generate.documents: Generated d_p_020_01 (project_readme, 2779 chars, temp=0.75, banned=10)
+2026-06-07 21:59:25,811 [INFO] generate.documents: Generated d_p_020_02 (project_readme, 1971 chars, temp=0.8, banned=10)
+2026-06-07 21:59:37,570 [INFO] generate.documents: Generated d_p_020_03 (project_readme, 1719 chars, temp=0.77, banned=10)
+2026-06-07 21:59:42,094 [INFO] generate.documents: Generated d_p_020_04 (recommendation, 1799 chars, temp=0.93, banned=10)
+2026-06-07 21:59:52,369 [INFO] generate.documents: Generated d_p_020_05 (recommendation, 1740 chars, temp=0.91, banned=10)
+2026-06-07 21:59:52,371 [INFO] __main__: Completed p_020: Neha Joshi — 12 skills, 6 docs
+2026-06-07 22:00:01,047 [INFO] generate.documents: Generated d_p_022_02 (project_readme, 1971 chars, temp=0.8099999999999999, banned=10)
+2026-06-07 22:00:01,049 [INFO] __main__: Completed p_022: Sven Lindqvist — 12 skills, 6 docs
+2026-06-07 22:00:12,864 [INFO] generate.documents: Generated d_p_028_03 (blog, 2939 chars, temp=1.03, banned=10)
+2026-06-07 22:00:12,865 [INFO] __main__: Completed p_028: Maya Johal — 11 skills, 4 docs
+2026-06-07 22:00:34,329 [INFO] generate.documents: Generated d_p_029_01 (project_readme, 2010 chars, temp=0.81, banned=10)
+2026-06-07 22:00:35,942 [INFO] generate.documents: Generated d_p_029_00 (cv, 3267 chars, temp=0.87, banned=10)
+2026-06-07 22:00:57,994 [INFO] generate.documents: Generated d_p_029_02 (project_readme, 2436 chars, temp=0.85, banned=10)
+2026-06-07 22:00:59,720 [INFO] generate.documents: Generated d_p_029_03 (project_readme, 2602 chars, temp=0.9, banned=10)
+2026-06-07 22:01:10,995 [INFO] generate.documents: Generated d_p_029_04 (recommendation, 1428 chars, temp=1.0, banned=10)
+2026-06-07 22:01:10,997 [INFO] __main__: Completed p_029: Monica Nyambura — 10 skills, 5 docs
+2026-06-07 22:01:33,672 [INFO] generate.documents: Generated d_p_033_00 (cv, 3628 chars, temp=1.09, banned=10)
+2026-06-07 22:01:33,673 [INFO] __main__: Completed p_033: Kenji Mori — 13 skills, 3 docs
+2026-06-07 22:02:05,569 [INFO] generate.planner: Allocated evidence for p_027 (13 skills × 5 docs)
+2026-06-07 22:02:27,853 [WARNING] generate.documents: d_p_038_00: sanitization issues: ["Banned pattern found: ['Serverless: Basic']"]
+2026-06-07 22:02:52,281 [WARNING] generate.documents: d_p_036_00: sanitization issues: ["Level-1 skill 'AWS' found in document text", "Level-1 skill 'PostgreSQL' found in document text", "Level-1 skill 'Python' found in document text"]
+2026-06-07 22:03:16,632 [INFO] generate.documents: Generated d_p_036_01 (project_readme, 2446 chars, temp=0.9, banned=10)
+2026-06-07 22:03:26,394 [WARNING] generate.planner: Allocation error: A/B testing: max must equal 4, got 3
+2026-06-07 22:03:26,395 [WARNING] generate.planner: p_037 allocation attempt 3: Allocation failed hard constraints
+2026-06-07 22:03:26,395 [ERROR] generate.planner: p_037: using fallback allocation
+2026-06-07 22:03:26,408 [INFO] generate.planner: Allocated evidence for p_037 (12 skills × 6 docs)
+2026-06-07 22:03:36,906 [INFO] generate.documents: Generated d_p_036_02 (project_readme, 2366 chars, temp=0.87, banned=10)
+2026-06-07 22:03:52,372 [INFO] generate.documents: Generated d_p_036_03 (project_readme, 2833 chars, temp=0.93, banned=10)
+2026-06-07 22:03:54,983 [INFO] generate.documents: Generated d_p_036_04 (blog, 2442 chars, temp=0.95, banned=10)
+2026-06-07 22:04:17,267 [WARNING] generate.documents: d_p_044_00: sanitization issues: ["Banned pattern found: ['Proficient in']", "Banned pattern found: ['Basic understanding']"]
+2026-06-07 22:04:35,964 [INFO] generate.documents: Generated d_p_046_03 (recommendation, 1734 chars, temp=0.98, banned=10)
+2026-06-07 22:04:35,965 [INFO] __main__: Completed p_046: Linda Gustafsson — 20 skills, 4 docs
+2026-06-07 22:04:38,381 [INFO] generate.planner: Allocated evidence for p_040 (12 skills × 4 docs)
+2026-06-07 22:05:01,565 [INFO] generate.documents: Generated d_p_047_01 (project_readme, 2187 chars, temp=0.92, banned=10)
+2026-06-07 22:05:05,167 [INFO] generate.documents: Generated d_p_047_00 (cv, 3450 chars, temp=0.88, banned=10)
+2026-06-07 22:05:15,534 [INFO] generate.documents: Generated d_p_047_02 (recommendation, 1637 chars, temp=1.05, banned=10)
+2026-06-07 22:05:15,536 [INFO] __main__: Completed p_047: Eliott Marchand — 10 skills, 3 docs
+2026-06-07 22:05:52,771 [INFO] generate.documents: Generated d_p_002_00 (cv, 4752 chars, temp=0.94, banned=10)
+2026-06-07 22:06:27,071 [WARNING] generate.planner: p_048 allocation attempt 3: Unterminated string starting at: line 9 column 5 (char 127)
+2026-06-07 22:06:27,072 [ERROR] generate.planner: p_048: using fallback allocation
+2026-06-07 22:06:27,083 [INFO] generate.planner: Allocated evidence for p_048 (13 skills × 4 docs)
+2026-06-07 22:06:28,490 [WARNING] generate.documents: d_p_002_01: sanitization issues: ["Level-1 skill 'Docker' found in document text", "Level-1 skill 'Python' found in document text"]
+2026-06-07 22:06:41,738 [INFO] generate.documents: Generated d_p_002_02 (recommendation, 1529 chars, temp=1.04, banned=10)
+2026-06-07 22:06:44,285 [INFO] generate.documents: Generated d_p_002_03 (linkedin, 1488 chars, temp=0.99, banned=10)
+2026-06-07 22:07:11,122 [INFO] generate.documents: Generated d_p_013_01 (project_readme, 2566 chars, temp=0.77, banned=10)
+2026-06-07 22:07:17,410 [INFO] generate.documents: Generated d_p_013_00 (cv, 3914 chars, temp=0.91, banned=10)
+2026-06-07 22:07:32,929 [INFO] generate.documents: Generated d_p_013_02 (project_readme, 2092 chars, temp=0.94, banned=10)
+2026-06-07 22:07:43,199 [INFO] generate.documents: Generated d_p_013_03 (project_readme, 2646 chars, temp=0.7, banned=10)
+2026-06-07 22:07:49,538 [INFO] generate.documents: Generated d_p_013_04 (recommendation, 1627 chars, temp=0.93, banned=10)
+2026-06-07 22:07:49,539 [INFO] __main__: Completed p_013: Hana Kim — 10 skills, 5 docs
+2026-06-07 22:08:10,873 [INFO] generate.documents: Generated d_p_027_00 (cv, 3744 chars, temp=0.78, banned=10)
+2026-06-07 22:08:11,213 [INFO] generate.documents: Generated d_p_027_01 (project_readme, 2583 chars, temp=0.76, banned=10)
+2026-06-07 22:08:24,796 [INFO] generate.documents: Generated d_p_027_03 (recommendation, 1411 chars, temp=1.02, banned=10)
+2026-06-07 22:08:35,932 [INFO] generate.documents: Generated d_p_027_02 (project_readme, 2780 chars, temp=0.8, banned=10)
+2026-06-07 22:08:36,977 [INFO] generate.documents: Generated d_p_027_04 (linkedin, 1153 chars, temp=1.04, banned=10)
+2026-06-07 22:08:36,978 [INFO] __main__: Completed p_027: Connor Murphy — 13 skills, 5 docs
+2026-06-07 22:09:00,790 [WARNING] generate.documents: d_p_036_00: sanitization issues: ["Level-1 skill 'AWS' found in document text", "Level-1 skill 'Kubernetes' found in document text", "Level-1 skill 'Load balancing' found in document text", "Level-1 skill 'Microservices architecture' found in document text", "Level-1 skill 'Monitoring & alerting' found in document text", "Level-1 skill 'PostgreSQL' found in document text", "Level-1 skill 'Python' found in document text", "Level-1 skill 'Terraform' found in document text"]
+2026-06-07 22:09:03,976 [INFO] generate.documents: Generated d_p_038_00 (cv, 4088 chars, temp=0.97, banned=10)
+2026-06-07 22:09:03,977 [INFO] __main__: Completed p_038: Ricardo Almeida — 15 skills, 2 docs
+2026-06-07 22:09:24,083 [INFO] generate.documents: Generated d_p_037_01 (project_readme, 2906 chars, temp=0.95, banned=10)
+2026-06-07 22:09:26,345 [WARNING] generate.documents: d_p_037_00: sanitization issues: ["Banned pattern found: ['Proficient in']"]
+2026-06-07 22:09:41,178 [INFO] generate.documents: Generated d_p_037_02 (project_readme, 2226 chars, temp=0.71, banned=10)
+2026-06-07 22:09:41,471 [INFO] generate.documents: Generated d_p_037_03 (recommendation, 1542 chars, temp=0.86, banned=10)
+2026-06-07 22:09:54,797 [INFO] generate.documents: Generated d_p_037_04 (recommendation, 1651 chars, temp=1.07, banned=10)
+2026-06-07 22:10:02,399 [INFO] generate.documents: Generated d_p_037_05 (blog, 3650 chars, temp=0.83, banned=10)
+2026-06-07 22:10:31,986 [INFO] generate.documents: Generated d_p_040_00 (cv, 3902 chars, temp=0.84, banned=10)
+2026-06-07 22:10:41,886 [WARNING] generate.documents: d_p_044_00: sanitization issues: ["Banned pattern found: ['Proficient in']"]
+2026-06-07 22:10:41,961 [INFO] generate.documents: Generated d_p_044_00 (cv, 3198 chars, temp=1.11, banned=10)
+2026-06-07 22:10:41,962 [INFO] __main__: Completed p_044: Omar Farooq — 10 skills, 3 docs
+2026-06-07 22:10:54,678 [WARNING] generate.documents: d_p_040_01: sanitization issues: ["Level-1 skill 'Python' found in document text"]
+2026-06-07 22:11:06,536 [INFO] generate.documents: Generated d_p_040_02 (project_readme, 2054 chars, temp=0.81, banned=10)
+2026-06-07 22:11:10,601 [INFO] generate.documents: Generated d_p_040_03 (linkedin, 1184 chars, temp=1.02, banned=10)
+2026-06-07 22:11:32,652 [INFO] generate.documents: Generated d_p_048_00 (cv, 3618 chars, temp=0.92, banned=10)
+2026-06-07 22:11:35,421 [INFO] generate.documents: Generated d_p_048_01 (project_readme, 2212 chars, temp=0.91, banned=10)
+2026-06-07 22:11:47,023 [INFO] generate.documents: Generated d_p_048_02 (recommendation, 1619 chars, temp=0.95, banned=10)
+2026-06-07 22:11:49,228 [INFO] generate.documents: Generated d_p_048_03 (linkedin, 1300 chars, temp=0.97, banned=10)
+2026-06-07 22:11:49,230 [INFO] __main__: Completed p_048: Nina Rodriguez — 13 skills, 4 docs
+2026-06-07 22:12:11,403 [INFO] generate.documents: Generated d_p_036_00 (cv, 3180 chars, temp=1.1600000000000001, banned=10)
+2026-06-07 22:12:11,407 [INFO] __main__: Completed p_036: Sana Patel — 9 skills, 5 docs
+2026-06-07 22:12:17,421 [WARNING] generate.documents: d_p_002_01: sanitization issues: ["Level-1 skill 'Python' found in document text"]
+2026-06-07 22:12:43,646 [INFO] generate.documents: Generated d_p_040_01 (project_readme, 2777 chars, temp=0.98, banned=10)
+2026-06-07 22:12:43,647 [INFO] __main__: Completed p_040: Ritika Malhotra — 12 skills, 4 docs
+2026-06-07 22:12:45,009 [INFO] generate.documents: Generated d_p_037_00 (cv, 4974 chars, temp=0.9199999999999999, banned=10)
+2026-06-07 22:12:45,010 [INFO] __main__: Completed p_037: Mateo Garcia — 12 skills, 6 docs
+2026-06-07 22:13:03,309 [WARNING] generate.documents: d_p_002_01: sanitization issues: ["Level-1 skill 'Python' found in document text"]
+2026-06-07 22:13:03,388 [INFO] generate.documents: Generated d_p_002_01 (project_readme, 2349 chars, temp=1.06, banned=10)
+2026-06-07 22:13:03,389 [INFO] __main__: Completed p_002: Binta Traore — 12 skills, 4 docs
+2026-06-07 22:13:03,390 [INFO] __main__: Generation complete: 50/50 personas succeeded
+2026-06-07 22:13:03,391 [INFO] __main__: Assembling final dataset...
+2026-06-07 22:13:05,776 [INFO] generate.assembler: Wrote 50 personas to /workspace/skill-scoring-nlp-model/data/personas.json
+2026-06-07 22:13:05,809 [INFO] generate.assembler: Wrote 180 documents to /workspace/skill-scoring-nlp-model/data/documents_db.json
+2026-06-07 22:13:05,810 [INFO] generate.assembler: Dataset summary:
+2026-06-07 22:13:05,810 [INFO] generate.assembler:   Personas: 50
+2026-06-07 22:13:05,811 [INFO] generate.assembler:   Total skills: 571
+2026-06-07 22:13:05,811 [INFO] generate.assembler:   Total documents: 180
+2026-06-07 22:13:05,812 [INFO] generate.assembler:     blog: 18
+2026-06-07 22:13:05,812 [INFO] generate.assembler:     cv: 50
+2026-06-07 22:13:05,813 [INFO] generate.assembler:     linkedin: 10
+2026-06-07 22:13:05,813 [INFO] generate.assembler:     project_readme: 67
+2026-06-07 22:13:05,814 [INFO] generate.assembler:     recommendation: 35
+2026-06-07 22:13:05,815 [INFO] __main__: Running validation...
+2026-06-07 22:13:05,844 [INFO] __main__: Running anti-shortcut checks...
+2026-06-07 22:13:58,269 [INFO] validate.shortcut_check: Wrote shortcut check report: /workspace/skill-scoring-nlp-model/data/reports/shortcut_check_report.json
+2026-06-07 22:13:58,270 [INFO] __main__: Running statistical checks...
+2026-06-07 22:13:58,286 [INFO] validate.stats: Wrote stats report: /workspace/skill-scoring-nlp-model/data/reports/stats_report.json
+2026-06-07 22:13:58,287 [INFO] validate.cross_validate: Running LLM Check A: Per-document skill showcase...
+2026-06-07 22:47:07,916 [INFO] validate.cross_validate: Wrote skill showcase report: /workspace/skill-scoring-nlp-model/data/reports/skill_showcase_report.json
+2026-06-07 22:47:07,917 [INFO] validate.cross_validate: Running LLM Check B: Allocation rationality...
+2026-06-07 22:56:29,711 [INFO] validate.cross_validate: Wrote allocation rationality report: /workspace/skill-scoring-nlp-model/data/reports/allocation_rationality_report.json
+2026-06-07 22:56:29,713 [INFO] __main__: All validation reports written to /workspace/skill-scoring-nlp-model/data/reports

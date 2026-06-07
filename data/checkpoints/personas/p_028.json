@@ -1,53 +1,62 @@
 {
   "persona_id": "p_028",
   "hyperparams": {
-    "archetype": "qa_test_engineer",
-    "years_experience": 1,
-    "seniority": "junior",
-    "industry": "enterprise",
-    "writing_style": "verbose",
-    "language_fluency": "native",
+    "archetype": "devops_sre",
+    "years_experience": 8,
+    "seniority": "senior",
+    "industry": "consulting",
+    "writing_style": "modest",
+    "language_fluency": "ESL",
     "self_promotion_level": "balanced",
-    "quantification_tendency": "metrics-heavy"
+    "quantification_tendency": "mixed"
   },
-  "name": "Emily Chen",
-  "current_role": "QA Test Engineer",
-  "company": "TechNova Solutions",
+  "name": "Maya Johal",
+  "current_role": "Senior DevOps Consultant",
+  "company": "CloudOptima Solutions",
   "education": {
     "degree": "Bachelor of Science in Computer Science",
-    "university": "University of Oregon",
-    "year": 2023
+    "university": "University of Toronto",
+    "year": 2016
   },
   "career_trajectory": [
     {
-      "role": "QA Intern",
+      "role": "DevOps Engineer",
+      "company": "TechNova Inc.",
+      "year": 2015
+    },
+    {
+      "role": "Senior DevOps Engineer",
+      "company": "CloudScale LLC",
+      "year": 2018
+    },
+    {
+      "role": "DevOps Consultant",
+      "company": "InfraMinds Consulting",
+      "year": 2020
+    },
+    {
+      "role": "Senior DevOps Consultant",
+      "company": "CloudOptima Solutions",
       "year": 2022
-    },
-    {
-      "role": "QA Engineer",
-      "year": 2023
-    },
-    {
-      "role": "QA Test Engineer",
-      "year": 2024
     }
   ],
   "skills": {
-    "Test automation": 3,
-    "Selenium/Playwright": 3,
-    "API testing": 3,
-    "Integration testing": 2,
-    "BDD/TDD": 2,
-    "Test strategy design": 2,
-    "Python": 3,
-    "JMeter": 3,
-    "REST API design": 3,
-    "GitLab CI": 3,
-    "Web performance optimization": 2
+    "CI/CD pipelines": 4,
+    "GitHub Actions": 4,
+    "Jenkins": 3,
+    "ArgoCD": 4,
+    "Prometheus/Grafana": 4,
+    "Monitoring & alerting": 4,
+    "Kubernetes": 4,
+    "Terraform": 4,
+    "AWS": 5,
+    "Docker": 4,
+    "Cloud cost optimization": 4
   },
   "document_ids": [
     "d_p_028_00",
     "d_p_028_01",
-    "d_p_028_02"
+    "d_p_028_02",
+    "d_p_028_03"
   ]
 }

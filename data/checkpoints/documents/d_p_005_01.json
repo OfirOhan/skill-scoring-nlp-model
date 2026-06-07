@@ -8,15 +8,19 @@
     "jargon_density": "plain"
   },
   "skill_evidence": {
-    "A/B testing": 1,
-    "Agile/Scrum": 3,
-    "Competitive analysis": 1,
-    "Data visualization (Tableau/Power BI)": 2,
-    "Hypothesis testing": 1,
-    "Product management": 3,
-    "Roadmap planning": 3,
-    "SQL analytics": 3,
-    "Stakeholder management": 1
+    "AWS": 4,
+    "ArgoCD": 3,
+    "CI/CD pipelines": 3,
+    "GitHub Actions": 3,
+    "GitLab CI": 3,
+    "Jenkins": 3,
+    "Kubernetes": 4,
+    "Linux administration": 4,
+    "Monitoring & alerting": 4,
+    "Prometheus/Grafana": 4,
+    "Python": 3,
+    "Shell scripting": 3,
+    "Terraform": 4
   },
-  "text": "# SecureNet Threat Detection System  \n\nSecureNet is an open-source cybersecurity tool designed to automate threat detection using machine learning models. It leverages real-time data analysis to identify anomalies, malware patterns, and potential breaches, providing actionable insights for security teams. Built with a focus on scalability and adaptability, SecureNet is ideal for organizations seeking to enhance their defensive capabilities without compromising operational efficiency.  \n\n## Tech Stack  \n- **Programming Languages**: Python (Core), Go (Performance-critical components)  \n- **Machine Learning Frameworks**: TensorFlow, Scikit-learn  \n- **Data Processing**: Apache Kafka (Streaming), Pandas (Batch)  \n- **Database**: PostgreSQL (Structured Logs), Redis (In-memory Caching)  \n- **Visualization**: Matplotlib (Basic), Grafana (Dashboard Integration)  \n- **Deployment**: Docker, Kubernetes (Container Orchestration)  \n\n## Architecture Overview  \nSecureNet operates through a layered architecture:  \n1. **Data Ingestion Layer**: Collects network traffic, system logs, and user behavior data via Kafka.  \n2. **Preprocessing Module**: Normalizes and anonymizes data using Pandas, ensuring compliance with privacy regulations.  \n3. **Model Inference Engine**: Executes trained ML models (e.g., Isolation Forest for anomaly detection) to flag suspicious activities.  \n4. **Alerting System**: Integrates with SIEM tools (e.g., Splunk) to trigger real-time alerts and automate response workflows.  \n5. **Dashboard**: Provides aggregated metrics and visualization via Grafana, enabling security teams to monitor trends and drill into incidents.  \n\n## Setup Instructions  \n1. **Environment**: Clone the repository and install dependencies using `pip install -r requirements.txt`.  \n2. **Database**: Configure PostgreSQL credentials in `config/db_config.py` and run schema migrations.  \n3. **Kafka**: Set up Kafka brokers and create topics for streaming data ingestion.  \n4. **Model Training**: Use the `train.py` script to retrain models with updated datasets.  \n5. **Deployment**: Package services using Docker and deploy to Kubernetes for scalable orchestration.  \n\n## Development Workflow  \nSecureNet follows Agile/Scrum practices, with biweekly sprints focused on feature prioritization and backlog refinement. Product management ensures alignment between technical feasibility and business goals, while roadmap planning balances short-term fixes with long-term architecture improvements. SQL analytics plays a critical role in querying log data to refine model inputs and validate detection accuracy.  \n\nContribute to SecureNet by enhancing model precision, expanding integration capabilities, or improving user-facing dashboards. This project is a collaborative effort to advance automated threat detection in cybersecurity."
+  "text": "# Secure Microservices Architecture for Financial Platforms  \nA production-grade framework for building, securing, and scaling microservices in fintech environments. This project integrates AWS, Kubernetes, and observability tools to deliver 99.99% uptime with zero PII exposure.  \n\n## Getting Started / Installation  \n1. **Clone the repo**: `git clone https://github.com/umarbello/secure-microservices.git`  \n2. **Initialize Terraform**: `terraform init` (configures VPCs, RDS, and IAM roles for AWS)  \n3. **Set up CI/CD**: GitHub Actions automates unit tests (92% coverage) and deploys to ArgoCD via GitLab CI pipelines.  \n4. **Kubernetes setup**: Deploy with `kubectl apply -f k8s/` (uses Helm charts for service meshes and secrets management)  \n5. **Security baseline**: Run `./scripts/scan.sh` (includes shell scripts for kube-bench and Clair image scanning)  \n\n## Usage / Examples  \n- **Deployment**: ArgoCD syncs manifests to AWS EKS clusters, reducing deployment latency by 40%  \n- **Observability**: Prometheus scrapes metrics from 12+ services; Grafana dashboards show 99.9% request success rates  \n- **Security**: TLS termination at the load balancer (AWS ALB), JWT validation with Auth0, and audit logs in CloudWatch  \n- **Scalability**: Kubernetes HPA scales pods based on CPU metrics (avg. 2.3x capacity during peak)  \n\n## License  \nMIT License  \n\n---  \n*Built with AWS (cost reduction: 37%), Kubernetes (autoscaling: 2.1x efficiency), and Terraform (infrastructure as code: 95% reproducibility). Monitoring tools (Prometheus/Grafana) reduced incident resolution time by 68%.*"
 }

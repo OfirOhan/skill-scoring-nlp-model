@@ -3,21 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_037",
   "hyperparams": {
-    "project_scale": "hobby",
+    "project_scale": "team-internal",
     "project_team_size": "large (15+)",
-    "jargon_density": "heavy"
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "CI/CD pipelines": 3,
-    "Docker": 3,
-    "GraphQL": 3,
-    "Kubernetes": 3,
-    "Microservices architecture": 3,
-    "PostgreSQL": 4,
-    "Python": 4,
-    "REST API design": 4,
-    "React": 4
+    "Pandas": 1,
+    "NumPy": 1,
+    "Statistical modeling": 1,
+    "A/B testing": 1,
+    "Data visualization (Matplotlib/Plotly)": 1,
+    "Jupyter notebooks": 1,
+    "Feature engineering": 1,
+    "Python": 1,
+    "REST API design": 1,
+    "Microservices architecture": 1,
+    "Apache Spark": 1,
+    "Apache Airflow": 1
   },
-  "text": "# VitaConnect Telehealth Platform  \n\nVitaConnect is a secure, scalable telehealth platform designed to facilitate real-time video consultations between patients and healthcare providers while ensuring compliance with HIPAA and GDPR standards. The platform leverages modern infrastructure to deliver a seamless, high-performance experience for both clinicians and users.  \n\n## Tech Stack  \n- **Cloud Infrastructure**: AWS (EC2, S3, RDS, CloudFront) for hosting, storage, and global content delivery  \n- **Containerization**: Docker for consistent development and production environments  \n- **Orchestration**: Kubernetes (EKS) for managing microservices at scale  \n- **Data Layer**: PostgreSQL (v14+) with custom query optimization and sharding for high-throughput patient records  \n- **Frontend**: React (v18) with TypeScript for dynamic, responsive UI components  \n- **Backend**: Python (FastAPI) for RESTful APIs and GraphQL endpoints (Apollo Server)  \n- **CI/CD**: GitHub Actions for automated testing, linting, and deployment pipelines  \n- **Security**: TLS 1.3, OAuth 2.0, and end-to-end encryption for video streams  \n\n## Architecture Overview  \nThe platform employs a microservices architecture divided into decoupled services:  \n- **Patient Portal**: React frontend with WebRTC for video conferencing  \n- **Clinical Backend**: Python-based API gateway handling authentication, scheduling, and data aggregation  \n- **Data Store**: PostgreSQL cluster with read replicas for analytics and reporting  \n- **Media Services**: Dockerized FFmpeg containers for transcoding and storage on S3  \n- **Monitoring**: Prometheus + Grafana for real-time performance metrics and alerting  \n\n## Setup Instructions  \n1. Clone the repository: `git clone https://github.com/vitaconnect/platform.git`  \n2. Configure environment variables via `.env` files (AWS credentials, database URLs, etc.)  \n3. Run migrations: `python manage.py migrate` (PostgreSQL) and `npx prisma migrate deploy` (GraphQL schema)  \n4. Build Docker containers: `docker-compose up --build` (includes Redis, RabbitMQ, and Nginx)  \n5. Deploy to Kubernetes: `kubectl apply -f k8s/deployment.yaml` (ensure AWS EKS cluster is preconfigured)  \n\n## Contributions  \nThis project is a collaborative effort with 15+ contributors, focusing on modular development and automated testing. Key contributions include optimizing PostgreSQL write performance by 40% through index partitioning and implementing CI/CD pipelines that reduce deployment latency to under 2 minutes.  \n\nFor further details, refer to the `docs/` directory for architecture diagrams and API spec files."
+  "text": "# Predictive Maintenance Analytics  \n\nA scalable solution for monitoring industrial equipment health, integrating real-time telemetry with historical maintenance logs to optimize operational efficiency. Designed for enterprise environments where downtime costs exceed $500K annually, this system enables proactive maintenance scheduling via predictive models and alerting workflows.  \n\n## Badges  \n<!-- No standard badges applied due to branding constraints -->  \n\n## Getting Started / Installation  \nTo deploy, provision a Kubernetes cluster with PostgreSQL 13+ and Redis 6. Configure the environment via `env.yaml` and ensure all dependencies are installed via `npm install` or equivalent package managers. The system requires access to IoT device telemetry streams and legacy maintenance records stored in SQL-compatible databases.  \n\n## Usage / Examples  \n1. **Data Ingestion**: Stream sensor data from MQTT brokers into the event store using the provided ingestion pipeline.  \n2. **Model Inference**: Trigger batch predictions against historical logs to identify high-risk equipment.  \n3. **Alerting**: Integrate with Slack or PagerDuty to receive notifications when predicted failure thresholds are exceeded.  \n4. **Reporting**: Query the analytics dashboard to view maintenance cost savings and downtime reduction metrics.  \n\n## Configuration  \nModify `config.yaml` to define database connection strings, alert thresholds, and integration endpoints. For production, enable TLS encryption and configure rate limiting via the API gateway. All settings are version-controlled in the `config/` directory.  \n\n## Deployment  \nDeploy using Helm charts for Kubernetes orchestration. The system is designed for horizontal scaling, with separate pods for data processing, model serving, and alerting. Monitor health via Prometheus and Grafana dashboards. Blue-green deployment is recommended for zero-downtime updates.  \n\n## Architecture / Design  \nThe system follows a layered architecture:  \n- **Ingestion Layer**: Processes raw telemetry data from IoT devices.  \n- **Processing Layer**: Aggregates and transforms data into structured formats.  \n- **Model Layer**: Runs inference against pre-trained models hosted in a secure API gateway.  \n- **Alerting Layer**: Distributes notifications via configured channels.  \nEach layer is decoupled to allow independent scaling and maintenance.  \n\n## Tech Stack / Built With  \n- Cloud-native frameworks (Kubernetes, Helm, Prometheus)  \n- SQL databases (PostgreSQL, MySQL)  \n- Message brokers (MQTT, Kafka)  \n- Containerization tools (Docker, Podman)  \n- CI/CD pipelines (GitHub Actions, Jenkins)  \n\n## Contributing  \nTo contribute, fork the repository and submit a pull request with detailed documentation. All changes must include unit tests and adhere to the team’s coding standards. Collaboration is encouraged via Slack channels dedicated to specific subsystems."
 }

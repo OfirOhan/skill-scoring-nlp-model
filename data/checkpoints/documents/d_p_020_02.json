@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_020_02",
+  "type": "project_readme",
+  "persona_id": "p_020",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 1,
+    "Apache Airflow": 1,
+    "Computer vision": 4,
+    "Docker": 4,
+    "GCP": 1,
+    "Hugging Face Transformers": 1,
+    "Kubernetes": 1,
+    "MLOps (MLflow/W&B)": 3,
+    "Model deployment": 4,
+    "NLP": 1,
+    "PyTorch": 4,
+    "TensorFlow": 1
+  },
+  "text": "# DiabeticEye: Medical Imaging Analysis with CNNs  \nAutomated diabetic retinopathy detection from retinal fundus images using PyTorch-based CNNs, achieving 94.2% accuracy and 89.5% F1 score on a 12k+ dataset.  \n\n## Badges  \n[![Model Accuracy](https://img.shields.io/badge/Accuracy-94.2%25-blue)](https://example.com)  \n[![License](https://img.shields.io/badge/LICENSE-MIT-yellow)](https://github.com/NehaJoshi/DiabeticEye/blob/main/LICENSE)  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/NehaJoshi/DiabeticEye.git  \ncd DiabeticEye  \npip install -r requirements.txt  \n```  \nEnsure Python 3.8+ is installed. Docker is optional but recommended for consistent environments.  \n\n## Usage / Examples  \nRun inference on a single image:  \n```bash  \npython infer.py --input ./test_images/eye1.jpg --model_path models/best.pt  \n```  \nTrain a new model:  \n```bash  \npython train.py --config configs/train.yaml  \n```  \nMetrics: 94.2% accuracy, 89.5% F1 score on 12k+ retinal images.  \n\n## Configuration  \nModify `configs/train.yaml` for hyperparameters. Track experiments with MLflow for logging metrics, artifacts, and model versions.  \n\n## Deployment  \nPackage the model as a REST API using FastAPI. Deploy with Docker to ensure cross-platform consistency. Latency: <500ms for inference.  \n\n## Architecture / Design  \nThe CNN uses 5 convolutional layers with ReLU activation, followed by global average pooling and a softmax classifier. The model was optimized for low false negatives, critical in healthcare applications.  \n\n## Tech Stack / Built With  \n- **PyTorch**: Core framework for model development  \n- **Docker**: Containerization for deployment  \n- **MLflow**: Experiment tracking and artifact management  \n- **FastAPI**: Production-ready inference API  \n\n## Contributing  \nThis project is maintained by a 15+ member team. Contributions are welcome—submit PRs for model optimizations, documentation improvements, or new feature integrations."
+}

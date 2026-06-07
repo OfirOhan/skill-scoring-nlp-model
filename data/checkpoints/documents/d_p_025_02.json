@@ -3,20 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_025",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "plain"
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Apache Airflow": 3,
-    "Apache Kafka": 4,
-    "Apache Spark": 3,
-    "Cloud cost optimization": 2,
-    "Data modeling": 2,
-    "Terraform": 4,
-    "Python": 3,
-    "Snowflake": 1
+    "AWS": 2,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 1,
+    "Docker": 2,
+    "Microservices architecture": 2,
+    "Node.js": 2,
+    "PostgreSQL": 1,
+    "Python": 2,
+    "REST API design": 3,
+    "React": 1
   },
-  "text": "# Real-Time Analytics Dashboard  \n\nA scalable solution for processing and visualizing streaming data from IoT devices, built for a mid-sized startup. The project focuses on real-time data ingestion, transformation, and dashboarding using cloud-native tools.  \n\n## Tech Stack  \n- **Data Ingestion**: Apache Kafka (managed cluster, 3-node replication)  \n- **Processing**: Apache Spark (Structured Streaming, batch/real-time pipelines)  \n- **Orchestration**: Apache Airflow (DAGs for ETL workflows, retries, alerts)  \n- **Storage**: AWS S3 (parquet files, partitioned by timestamp)  \n- **Infrastructure**: Terraform (VPC, EC2, IAM roles, cost-optimized spot instances)  \n- **Dashboarding**: Grafana (custom dashboards, Prometheus metrics)  \n- **Language**: Python (dataframe operations, API integrations)  \n\n## Architecture Overview  \nThe system ingests IoT telemetry data via Kafka, which is then processed by Spark for aggregation and anomaly detection. Airflow schedules hourly batch jobs to archive historical data to S3. Terraform provisions a cost-optimized AWS environment with auto-scaling for peak loads. Grafana visualizes real-time metrics, with alerts configured for threshold breaches.  \n\n## Setup Instructions  \n1. **Infrastructure**  \n   - Clone the repo and run `terraform init` to bootstrap AWS resources (VPC, EC2, S3 bucket).  \n   - Configure Kafka cluster via AWS MSK (managed service) with IAM authentication.  \n\n2. **Data Pipelines**  \n   - Deploy Spark clusters using EMR with spot instances for cost efficiency.  \n   - Set up Airflow DAGs to trigger Kafka consumers, Spark jobs, and S3 uploads.  \n\n3. **Dashboard**  \n   - Install Grafana and connect to Kafka topics for real-time visualization.  \n   - Configure Prometheus for Spark metrics and alert rules.  \n\n## Key Design Choices  \n- Kafka’s partitioning strategy ensures low-latency ingestion for 10K+ devices.  \n- Spark’s micro-batch processing balances latency and resource usage.  \n- Terraform modules abstract cloud provider-specific configurations for portability.  \n- Airflow’s retry logic handles transient failures in AWS services.  \n\nThis project demonstrates end-to-end data engineering workflows with focus on reliability and cost-aware scaling. Perfect for teams needing real-time insights without vendor lock-in."
+  "text": "# Real-Time Collaboration Tool  \nA distributed system enabling live document editing and synchronized data sharing for SaaS teams, leveraging WebSocket and Firebase for low-latency, scalable real-time interactions.  \n\n## Badges  \n[![GitHub](https://img.shields.io/badge/GitHub-5630E4?style=flat&logo=github)](https://github.com/realtime-collab-tool)  \n[![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=flat&logo=firebase)](https://firebase.google.com/)  \n[![WebSocket](https://img.shields.io/badge/WebSocket-4285F4?style=flat&logo=websocket)](https://developer.mozilla.org/en-US/docs/WebSockets)  \n\n## Tech Stack / Built With  \n- **Firebase**: Real-time database, authentication, and cloud functions for synchronization  \n- **WebSocket**: Bidirectional communication for low-latency updates  \n- **TypeScript**: Static typing for robust API contracts  \n- **Node.js**: Backend logic for WebSocket proxies and Firebase integration  \n- **AWS Lambda**: Serverless functions for event-driven workflows  \n- **Docker**: Containerization for consistent CI/CD environments  \n\n## Architecture / Design  \nThe system decouples real-time updates from persistent storage, using Firebase as a synchronization layer and WebSocket for direct peer-to-peer communication. Firebase handles conflict resolution and state replication, while WebSocket enables custom message routing for features like cursor position tracking. The architecture prioritizes fault tolerance by replicating critical state across multiple Firebase regions and using WebSocket keep-alive mechanisms to prevent disconnections.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/realtime-collab-tool.git`  \n2. Install dependencies: `npm install`  \n3. Configure Firebase credentials in `firebase.json` and set up WebSocket endpoints in `config.js`  \n4. Run the development server: `npm start`  \n5. Deploy Firebase functions: `firebase deploy --only functions`  \n\n## Usage / Examples  \n- **Document Collaboration**: Use `ws://localhost:8080` to connect and subscribe to document updates via `documentId`  \n- **Real-Time Sync**: Firebase triggers propagate changes to all connected clients within 50ms of modification  \n- **User Presence**: WebSocket heartbeats update a Firebase presence map every 30 seconds  \n\n## API Reference  \n- **POST /api/v1/documents**: Create a new document with initial content  \n- **GET /api/v1/documents/:id**: Retrieve document state with `if-match` header for optimistic updates  \n- **PATCH /api/v1/documents/:id**: Apply changes with versioning to prevent overwrites  \n- **DELETE /api/v1/documents/:id**: Archive document with soft delete and audit log entry  \n\n## License  \nMIT License © 2023 Kamila Szymanska. See [LICENSE](LICENSE) for details."
 }

@@ -1,40 +1,62 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional resume highlighting DevOps and SRE experience in a startup environment",
-    "title": "Alexandra Chen - Senior DevOps Engineer",
+    "topic_summary": "A professional CV highlighting 11 years of backend engineering experience in adtech, focusing on scalable systems and high-performance APIs.",
+    "title": "Sana Patel - Staff Backend Engineer",
     "doc_id": "d_p_036_00",
     "persona_id": "p_036",
     "hyperparams": {
       "cv_format": "minimal",
-      "geographic_convention": "India",
-      "company_type": "FAANG",
-      "company_size": "small (<50)"
+      "geographic_convention": "Europe",
+      "company_type": "startup",
+      "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "Implementation of a scalable CI/CD pipeline for microservices using Kubernetes and GitOps",
-    "title": "Microservices CI/CD Pipeline with GitOps",
+    "topic_summary": "A high-throughput API for real-time ad bidding auctions with low-latency processing and distributed consensus protocols.",
+    "title": "Real-Time Ad Bidding System",
     "doc_id": "d_p_036_01",
     "persona_id": "p_036",
     "hyperparams": {
       "project_scale": "team-internal",
-      "project_team_size": "large (15+)",
+      "project_team_size": "solo",
       "jargon_density": "moderate"
     }
   },
   {
-    "doc_type": "recommendation",
-    "topic_summary": "Endorsement from a manager praising her leadership in DevOps automation and team collaboration",
-    "title": "Recommendation from NexaTech Solutions CTO",
+    "doc_type": "project_readme",
+    "topic_summary": "A scalable backend architecture for processing and analyzing campaign performance data across millions of ad impressions.",
+    "title": "Ad Campaign Analytics Dashboard",
     "doc_id": "d_p_036_02",
     "persona_id": "p_036",
     "hyperparams": {
-      "recommender_role": "professor",
-      "recommender_closeness": "brief",
-      "company_type": "agency",
-      "company_size": "small (<50)"
+      "project_scale": "production",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A microservices-based ad serving infrastructure with global load balancing and fault-tolerant delivery mechanisms.",
+    "title": "Distributed Ad Serving Infrastructure",
+    "doc_id": "d_p_036_03",
+    "persona_id": "p_036",
+    "hyperparams": {
+      "project_scale": "hobby",
+      "project_team_size": "large (15+)",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A deep dive into designing backend systems for adtech platforms, focusing on latency optimization and fault tolerance.",
+    "title": "Building Scalable Backend Systems for AdTech Platforms",
+    "doc_id": "d_p_036_04",
+    "persona_id": "p_036",
+    "hyperparams": {
+      "blog_depth": "opinion-piece",
+      "jargon_density": "heavy"
     }
   }
 ]

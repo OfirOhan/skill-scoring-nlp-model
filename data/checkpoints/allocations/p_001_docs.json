@@ -1,21 +1,21 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Aiden Clarke's experience as a Senior DevOps Engineer in the gaming industry",
-    "title": "Aiden Clarke - Senior DevOps Engineer",
+    "topic_summary": "CV for Nathan Brooks, Staff Product Manager with 14 years of experience in fintech.",
+    "title": "Nathan Brooks - Staff Product Manager",
     "doc_id": "d_p_001_00",
     "persona_id": "p_001",
     "hyperparams": {
-      "cv_format": "minimal",
-      "geographic_convention": "India",
-      "company_type": "academic",
+      "cv_format": "hybrid",
+      "geographic_convention": "US",
+      "company_type": "startup",
       "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A DevOps tool for automating game server deployments and scaling in real-time during peak player activity",
-    "title": "GameServerOrchestrator",
+    "topic_summary": "README for a financial compliance automation tool developed by Nathan Brooks.",
+    "title": "Financial Compliance Automation Tool",
     "doc_id": "d_p_001_01",
     "persona_id": "p_001",
     "hyperparams": {
@@ -26,26 +26,15 @@
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "A recommendation from Aiden's manager praising his leadership in cloud infrastructure modernization",
-    "title": "Recommendation from GameForge CTO",
+    "topic_summary": "Recommendation letter from Nathan's former manager at CapitalFlow Solutions.",
+    "title": "Recommendation from Sarah Chen, Senior VP of Product",
     "doc_id": "d_p_001_02",
     "persona_id": "p_001",
     "hyperparams": {
       "recommender_role": "skip-level",
       "recommender_closeness": "brief",
-      "company_type": "startup",
-      "company_size": "large (500+)"
-    }
-  },
-  {
-    "doc_type": "blog",
-    "topic_summary": "A technical deep dive on implementing CI/CD pipelines for game content updates in distributed teams",
-    "title": "CI/CD for Game Dev: Scaling Reliable Updates in the Gaming Industry",
-    "doc_id": "d_p_001_03",
-    "persona_id": "p_001",
-    "hyperparams": {
-      "blog_depth": "deep-dive",
-      "jargon_density": "moderate"
+      "company_type": "enterprise",
+      "company_size": "mid (50-500)"
     }
   }
 ]

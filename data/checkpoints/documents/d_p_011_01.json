@@ -3,28 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_011",
   "hyperparams": {
-    "project_scale": "production",
+    "project_scale": "hobby",
     "project_team_size": "medium (5-15)",
-    "jargon_density": "plain"
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
     "AWS": 5,
-    "CDN management": 4,
-    "Cloud cost optimization": 5,
-    "Cloud networking (VPC/subnets)": 4,
-    "Docker": 5,
-    "Go": 4,
-    "Infrastructure as Code": 5,
-    "Kubernetes": 5,
-    "Load balancing": 4,
-    "Microservices architecture": 4,
-    "PostgreSQL": 4,
-    "Python": 4,
-    "REST API design": 4,
-    "Redis": 4,
-    "Serverless": 3,
-    "Terraform": 5,
-    "Serverless (Lambda/Cloud Functions)": 1
+    "GCP": 5,
+    "Kubernetes": 4,
+    "LLMs/Prompt engineering": 5,
+    "MLOps": 5,
+    "Model deployment": 5,
+    "NLP": 5,
+    "PyTorch": 5,
+    "TensorFlow": 5,
+    "Terraform": 4
   },
-  "text": "# EcommerceMicroservicesCI/CD  \n\n## Overview  \nThis project establishes a robust, automated CI/CD pipeline tailored for deploying microservices in a production-grade e-commerce platform. The architecture emphasizes scalability, reliability, and cost efficiency, leveraging AWS infrastructure and modern DevOps tooling to streamline deployment workflows while maintaining strict compliance with operational SLAs.  \n\n## Tech Stack  \n- **Cloud Infrastructure**: AWS (EC2, RDS, ELB, VPC, CloudFront, Route53)  \n- **Containerization**: Docker (multi-stage builds, image optimization)  \n- **Orchestration**: Kubernetes (EKS) with auto-scaling and readiness probes  \n- **Infrastructure as Code**: Terraform (state management, module reuse)  \n- **Databases**: PostgreSQL (read replicas, connection pooling) + Redis (in-memory caching, Redisson integration)  \n- **Networking**: VPC subnets with private/public access control, NAT gateways, and security group policies  \n- **CI/CD**: GitHub Actions (CI) + Jenkins (CD) with parallel test execution and artifact caching  \n- **Monitoring**: Prometheus/Grafana for metrics, CloudWatch for logs, and custom dashboards  \n- **APIs**: RESTful endpoints with OpenAPI specs, rate limiting, and JWT authentication  \n- **Cost Optimization**: Spot instances for batch jobs, reserved instance allocations, and auto-scaling thresholds  \n\n## Architecture  \nThe pipeline decouples microservices into modular components (e.g., user auth, inventory, payment) with dedicated Docker images. Terraform provisions AWS resources, including VPCs, subnets, and load balancers, ensuring network isolation and security. Kubernetes manages container orchestration, with Helm charts for service deployment and rollback capabilities. GitHub Actions handles unit/integration testing, static analysis, and image building, while Jenkins orchestrates deployment to staging/production environments. Redis and PostgreSQL are configured with high availability, and CloudFront caches static assets to reduce latency. Load balancers distribute traffic across zones, and cost optimization strategies (e.g., spot fleet requests) reduce cloud spend by 30% annually.  \n\n## Setup Instructions  \n1. **Initialize Infrastructure**:  \n   - `terraform init` to bootstrap AWS provider and modules  \n   - `terraform apply` with `-var-file=prod.tfvars` for production parameters  \n2. **CI/CD Configuration**:  \n   - Configure GitHub Actions workflows in `.github/workflows/` for test/build stages  \n   - Set up Jenkins pipelines with credentials and artifact storage in S3  \n3. **Deploy Microservices**:  \n   - Use `kubectl apply -f k8s/` to deploy services to EKS  \n   - Validate with `kubectl rollout status` and Prometheus metrics  \n4. **Post-Deployment**:  \n   - Monitor via CloudWatch and Grafana dashboards  \n   - Archive Terraform states securely and rotate credentials  \n\nThis pipeline reduces deployment time by 50% and ensures zero-downtime updates, with measurable improvements in system reliability and cost efficiency."
+  "text": "# NeuraLogic Business Insights Platform  \nAI-driven analytics platform leveraging machine learning for real-time business intelligence. Combines scalable infrastructure, NLP pipelines, and MLOps workflows to transform raw data into actionable insights. Built for enterprises requiring hybrid cloud flexibility and model governance.  \n\n## Badges  \n[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat)](https://github.com/cedricblanc/neuralogic)  \n[![CI/CD](https://img.shields.io/badge/CI%2FCD-passing?style=flat)](https://github.com/cedricblanc/neuralogic/actions)  \n[![Tech Stack](https://img.shields.io/badge/Tech%20Stack-PyTorch%2CTensorFlow%2CMLops%2CK8s%2CTerraform%2CAWS%2CGCP%2CLLMs%2CNLP-blue?style=flat)](https://github.com/cedricblanc/neuralogic)  \n\n## Getting Started / Installation  \n```bash  \n# Prerequisites  \nPython 3.9+  \nDocker 20.10+  \nkubectl 1.22+  \n\n# Clone repo  \ngit clone https://github.com/cedricblanc/neuralogic.git  \ncd neuralogic  \n\n# Initialize infrastructure  \nterraform init  \nterraform apply -var region=eu-west-1  \n\n# Launch local dev env  \ndocker-compose up --build  \n```  \nNote: This is a hobby project with limited enterprise-grade features. Production use requires additional security and compliance layers.  \n\n## Usage / Examples  \n```bash  \n# Run inference pipeline  \npython inference.py --model-id 12345 --data-path /data/transactions.csv  \n\n# Monitor model drift  \ncurl http://api:8080/models/12345/metrics  \n\n# Generate NLP insights  \npython nlp_analytics.py --corpus-path /data/reviews.txt  \n```  \nPlatform integrates PyTorch/TensorFlow models with LLMs for text analysis, using AWS S3 for storage and GCP BigQuery for analytics.  \n\n## Configuration  \nEnvironment variables in `.env` control cloud provider settings, model registry access, and pipeline thresholds. Terraform variables define cluster size, region, and cost optimization strategies.  \n\n## Deployment  \nDeploy via Kubernetes manifests with Terraform-managed EKS/GKE clusters. Auto-scaling rules and cost-optimization policies are baked into the deployment pipeline, reducing cloud spend by 30% in prior projects.  \n\n## Architecture / Design  \nMicroservices architecture with:  \n- Data ingestion layer (Kafka + AWS Kinesis)  \n- Model serving (TorchServe + TF Serving)  \n- NLP pipeline (HuggingFace Transformers + custom embeddings)  \n- Analytics dashboard (React + Grafana)  \nKubernetes orchestrates workloads, while Terraform ensures reproducible infrastructure across AWS and GCP.  \n\n## Tech Stack / Built With  \nPython, PyTorch, TensorFlow, HuggingFace, Docker, Kubernetes, Terraform, AWS, GCP, Prometheus, Grafana, Apache Kafka, BigQuery, S3, Redis, Elasticsearch.  \n\n## Contributing  \nContributions require experience with MLOps pipelines, hybrid cloud deployments, and NLP model integration. Submit pull requests with benchmarking data and infrastructure-as-code updates. Collaboration is key for cross-cloud optimization."
 }

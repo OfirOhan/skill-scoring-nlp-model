@@ -4,23 +4,19 @@
   "persona_id": "p_036",
   "hyperparams": {
     "project_scale": "team-internal",
-    "project_team_size": "large (15+)",
+    "project_team_size": "solo",
     "jargon_density": "moderate"
   },
   "skill_evidence": {
     "AWS": 3,
-    "CI/CD pipelines": 4,
-    "Cloud cost optimization": 2,
-    "Docker": 3,
-    "GitHub Actions": 4,
-    "Kubernetes": 4,
-    "Linux administration": 3,
+    "Go": 4,
+    "Kubernetes": 3,
+    "Load balancing": 3,
+    "Microservices architecture": 4,
     "Monitoring & alerting": 3,
-    "Network automation": 1,
-    "Prometheus/Grafana": 4,
-    "Python": 2,
-    "Shell scripting (Bash)": 3,
+    "PostgreSQL": 4,
+    "Python": 3,
     "Terraform": 3
   },
-  "text": "# Microservices CI/CD Pipeline with GitOps  \n\n**Automated, scalable, and observable CI/CD for microservices at scale**  \nDeploy 15+ microservices with 99.95% uptime, 40% faster rollback times, and 70% reduced manual intervention via GitOps-driven pipelines.  \n\n## Tech Stack  \n- **CI/CD**: GitHub Actions (custom workflows, parallel jobs)  \n- **Orchestration**: Kubernetes (AWS EKS, 3-node cluster)  \n- **GitOps**: Argo CD (auto-sync, canary deployments)  \n- **Monitoring**: Prometheus + Grafana (30+ metrics, 95% SLA visibility)  \n- **Infrastructure**: Terraform (AWS VPC, EKS, S3 artifact storage)  \n- **Containers**: Docker (multi-stage builds, 25% smaller images)  \n- **Tools**: AWS CLI, kubectl, Bash scripts (CI/CD automation)  \n\n## Architecture Overview  \n- **GitHub Actions** triggers builds on PRs/Tags, pushing containers to ECR.  \n- **Argo CD** syncs manifests from Git, deploying to Kubernetes with blue-green/rolling updates.  \n- **Prometheus** scrapes metrics from kubelet, container runtime, and application endpoints.  \n- **Terraform** manages infrastructure as code, with drift detection enabled.  \n- **Docker** handles image building, tagging, and registry pushes.  \n\n## Setup Instructions  \n1. Clone repo: `git clone https://github.com/your-org/microservices-cicd.git`  \n2. Initialize Terraform: `terraform init && terraform apply` (AWS credentials required)  \n3. Deploy Argo CD: `kubectl apply -f argo-cd.yaml`  \n4. Configure GitHub Actions secrets (AWS ECR, Kubernetes credentials)  \n5. Trigger pipeline via PR/Tag: `github.com/your-org/your-repo`  \n\n## Key Metrics  \n- **Deployment Latency**: 12 min (vs 45 min pre-automation)  \n- **Rollback Success Rate**: 99.95% (30+ rollbacks)  \n- **Infrastructure Cost**: 20% reduction via Terraform optimization  \n- **Error Detection**: 85% faster via Prometheus alerting  \n- **Team Onboarding**: 2-hour setup vs 8-hour manual process  \n\n## Skills & Tools  \n- **CI/CD**: GitHub Actions (ownership of 5+ pipelines), Kubernetes (cluster management)  \n- **Monitoring**: Prometheus/Grafana (custom dashboards, alert rules)  \n- **Cloud**: AWS EKS, S3, CloudFormation (cost tracking via AWS Cost Explorer)  \n- **DevOps**: Docker, Bash, Terraform (infrastructure-as-code)  \n- **Linux**: Systemd, systemd-journald, auditd (node maintenance)  \n\n*Built for scalability, observability, and zero-touch operations in a 15+ dev team.*"
+  "text": "# Real-Time Ad Bidding System  \n\nA high-throughput API for real-time ad bidding auctions, designed to handle low-latency processing and distributed consensus protocols for adtech workflows. Built as a team-internal tool for a solo backend engineer, optimized for scalability and reliability in ad inventory management.  \n\n## License  \nMIT License  \n\n## Badges  \n[![License](https://img.shields.io/npm/l/react)](https://opensource.org/licenses/MIT)  \n[![Test Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/SanaPatel/real-time-bidding/main/test-coverage.json)](https://github.com/SanaPatel/real-time-bidding/actions/workflows/tests.yml)  \n\n## Getting Started / Installation  \n1. Clone the repository using `git clone https://github.com/SanaPatel/real-time-bidding.git`  \n2. Install dependencies with `go mod tidy`  \n3. Configure AWS credentials for S3 and DynamoDB access  \n4. Deploy infrastructure via Terraform (`terraform apply`)  \n\n## Usage / Examples  \n```bash  \ncurl -X POST https://api.realtime-bidding.com/auctions \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"bids\": [{\"advertiser\": \"TechCo\", \"price\": 0.15, \"creative_id\": \"CR-123\"}],\n    \"inventory_id\": \"INV-456\"\n  }'\n```  \nThe API returns a winning bid with auction metadata, including timestamp and consensus hash.  \n\n## Architecture / Design  \nThe system uses a microservices architecture with a central auction coordinator written in Go, handling bid validation and consensus logic. PostgreSQL stores bid history and inventory metadata, while AWS Lambda processes bid callbacks asynchronously. Load balancing via Nginx ensures even distribution across Kubernetes-managed pods.  \n\n## Tech Stack / Built With  \n- **Go** (for high-throughput auction logic)  \n- **Python** (data processing pipelines)  \n- **PostgreSQL** (persistent bid history)  \n- **AWS** (S3 for creative assets, DynamoDB for bid caching)  \n- **Kubernetes** (orchestrating bid validation workers)  \n- **Terraform** (infrastructure-as-code for AWS)  \n\n## Contributing  \nThis project is team-internal, but contributions are welcome for documentation improvements or bug fixes. Submit PRs with clear commit messages and ensure tests pass before merging.  \n\n## Testing  \nUnit tests for auction logic and integration tests for distributed consensus are run via `go test`. Test coverage is monitored with Prometheus, and alerts are triggered for failures exceeding 5% of total runs."
 }

@@ -3,21 +3,22 @@
   "type": "recommendation",
   "persona_id": "p_025",
   "hyperparams": {
-    "recommender_role": "direct-manager",
-    "recommender_closeness": "worked-daily",
-    "company_type": "FAANG",
+    "recommender_role": "skip-level",
+    "recommender_closeness": "brief",
+    "company_type": "startup",
     "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "AWS": 1,
-    "Apache Airflow": 1,
-    "Apache Kafka": 1,
-    "Apache Spark": 1,
-    "Cloud cost optimization": 1,
-    "Data modeling": 1,
-    "Terraform": 1,
-    "Python": 1,
-    "Snowflake": 1
+    "AWS": 2,
+    "CI/CD pipelines": 2,
+    "Cloud cost optimization": 2,
+    "Docker": 2,
+    "Microservices architecture": 2,
+    "Node.js": 2,
+    "PostgreSQL": 2,
+    "Python": 2,
+    "REST API design": 3,
+    "React": 2
   },
-  "text": "Emily Johnson is a rare blend of technical precision and collaborative insight, making her an invaluable asset to any team. As Senior Data Engineer at NexaTech Solutions, she consistently delivered robust, scalable solutions that aligned deeply with the company’s growth ambitions. Her ability to translate complex business needs into precise data strategies was evident in her work on the user behavior analytics platform, where she designed a system that processed terabytes of data with near-zero latency, enabling real-time insights that drove product decisions.  \n\nWhat sets Emily apart is her knack for simplifying intricate problems. During a critical project to integrate third-party data sources, she identified a bottleneck in data synchronization that had persisted for months. By rearchitecting the workflow and introducing a novel data validation layer, she resolved the issue within weeks, saving the team significant time and resource allocation. Her proactive approach to debugging and her insistence on rigorous testing ensured systems ran smoothly under pressure.  \n\nBeyond her technical prowess, Emily’s collaborative spirit fosters trust. She frequently bridges gaps between engineering and non-technical stakeholders, articulating technical challenges in accessible terms and championing data-driven decision-making. Her attention to detail and willingness to iterate based on feedback have consistently elevated team outcomes.  \n\nIn a fast-paced startup environment, Emily’s adaptability and intellectual curiosity are standout traits. She thrives in ambiguity, quickly pivoting priorities while maintaining high standards. Her contributions have not only accelerated NexaTech’s data maturity but also inspired her peers to approach challenges with creativity and rigor. A pleasure to work with, she would bring the same impact to any organization fortunate enough to welcome her."
+  "text": "Kamila once led our team’s pivot to a new API integration during a critical client launch. When the existing system’s limitations threatened to delay the release, she restructured the backend endpoints to align with the client’s evolving needs. Her REST API design ensured seamless data flow between our SaaS platform and third-party tools, cutting onboarding time by 30% without compromising reliability. She balanced technical precision with business urgency, earning trust from both engineers and stakeholders.  \n\nKamila is a full-stack developer who thrives at the intersection of code and clarity. She’s built scalable React interfaces that simplify complex workflows for users, and her Node.js expertise has optimized backend performance without sacrificing maintainability. Beyond her technical skills, she’s a reliable collaborator who mentors junior devs with patience and insight. Her ability to distill technical jargon into actionable steps has strengthened cross-team communication.  \n\nHer problem-solving mindset shines in high-pressure scenarios. During a recent outage, she debugged a critical bug in under an hour, prioritizing user impact over protocol. She’s also taken ownership of non-technical tasks, like refining our documentation process, which has reduced onboarding friction for new hires.  \n\nKamila’s curiosity and work ethic make her a natural fit for any team seeking innovation. She’ll bring the same rigor and empathy to your role as she has to ours. I’d welcome the chance to connect further."
 }

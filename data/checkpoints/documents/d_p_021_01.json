@@ -3,20 +3,25 @@
   "type": "project_readme",
   "persona_id": "p_021",
   "hyperparams": {
-    "project_scale": "hobby",
+    "project_scale": "team-internal",
     "project_team_size": "medium (5-15)",
-    "jargon_density": "moderate"
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "App Store deployment": 3,
-    "Flutter": 4,
-    "GraphQL": 1,
-    "Kotlin": 1,
-    "Mobile CI/CD": 2,
+    "A/B testing": 1,
+    "Apache Airflow": 2,
+    "Data modeling": 3,
+    "Data visualization (Matplotlib/Plotly)": 3,
+    "ETL pipeline design": 3,
+    "Exploratory data analysis": 3,
+    "Feature engineering": 3,
+    "NumPy": 3,
+    "Pandas": 3,
+    "Python": 3,
     "REST API design": 2,
-    "React": 1,
-    "Swift": 1,
-    "TypeScript": 1
+    "SQL analytics": 3,
+    "dbt": 2,
+    "scikit-learn": 3
   },
-  "text": "# NovaGameFramework  \n\nA cross-platform game framework enabling rapid mobile game development with Flutter and Unity. Designed for teams needing scalable, maintainable architectures without compromising creative freedom.  \n\n## Tech Stack  \n- **Flutter** (Dart): UI rendering, cross-platform mobile compatibility  \n- **Unity** (C#): 3D game logic, physics, and asset management  \n- **Android/iOS**: Native builds via Unity and Flutter plugins  \n- **Git**: Version control for collaborative workflows  \n\n## Architecture  \nModular, plugin-based design with:  \n1. **Flutter Shell**: Manages UI state, input handling, and cross-platform rendering  \n2. **Unity Engine**: Handles game physics, animations, and complex interactions  \n3. **Bridge Layer**: Dart-C# interop for real-time data synchronization (e.g., player stats, UI events)  \n4. **Asset Pipeline**: Automated texture compression and platform-specific optimization  \n\n## Setup Instructions  \n```bash\n# Clone repo  \ngit clone https://github.com/your-username/NovaGameFramework  \n\n# Flutter setup  \nflutter pub get  \nflutter build apk --release  \n\n# Unity setup  \ncd unity_project  \nUnityBuildScript.sh --platform Android  \n```  \n*Ensure Flutter and Unity versions align with documented compatibility matrix.*  \n\n## Skills & Tools  \n- **Flutter**: Reduced development time by 30% in 3+ projects; managed state synchronization for 50+ concurrent users  \n- **App Store Deployment**: Streamlined submission workflows for 12+ games; automated crash reporting integration  \n- **Mobile CI/CD**: Integrated GitHub Actions for Flutter builds and Unity pipeline triggers  \n- **REST API Design**: Lightweight endpoints for leaderboards and multiplayer sync (used in 2 live titles)  \n\n## Contribution  \nEnhance plugin compatibility, optimize asset pipelines, or refine the bridge layer. All PRs require unit tests and performance benchmarks.  \n\n*Built for speed, not compromise.* 🚀"
+  "text": "# NijiMart Customer Segmentation Analysis  \nA data-driven exploration of customer behavior patterns to refine marketing strategies through unsupervised learning techniques. This project leverages clustering algorithms to identify distinct customer segments, enabling targeted promotional campaigns and resource allocation. Built for internal use within a mid-sized e-commerce team, the analysis integrates historical transaction data, demographic insights, and behavioral metrics to uncover actionable trends.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/last-commit/takeshihayashi/nijimart-segmentation)](https://github.com/takeshihayashi/nijimart-segmentation/commits/main)  \n[![CI/CD](https://img.shields.io/github/actions/workflow/1048293313/badge.svg)](https://github.com/takeshihayashi/nijimart-segmentation/actions)  \n[![Tech Stack](https://img.shields.io/badge/tech-stack-Python%20%7C%20Pandas%20%7C%20scikit--learn%20%7C%20Plotly-blue)](https://github.com/takeshihayashi/nijimart-segmentation)  \n\n## Getting Started / Installation  \nEnsure Python 3.9+ is installed. Clone the repository and install dependencies via:  \n```bash  \npip install -r requirements.txt  \n```  \nThe project assumes access to a PostgreSQL database for raw data. Configure `config.py` with your database credentials before proceeding.  \n\n## Usage / Examples  \nRun the analysis by executing:  \n```bash  \npython main.py --input_path ./data/raw --output_path ./results  \n```  \nThis triggers a full workflow:  \n1. Load and preprocess transaction logs using Pandas and NumPy  \n2. Apply K-Means clustering to 8 key behavioral metrics  \n3. Generate segment profiles with Plotly dashboards  \n4. Export cluster assignments to CSV for downstream marketing tools  \n\nFor a quick visualization of RFM scores, use:  \n```bash  \npython visualize_rfm.py --output ./reports/RFM_insights.html  \n```  \n\n## Architecture / Design  \nThe system is structured as a modular pipeline:  \n- **Data Layer**: PostgreSQL integration via SQLAlchemy for schema-aware querying  \n- **Processing Layer**: ETL workflows with Pandas for feature engineering (e.g., calculating RFM scores)  \n- **Modeling Layer**: scikit-learn pipelines for hyperparameter tuning and cross-validation  \n- **Visualization Layer**: Interactive Plotly dashboards for segment comparison  \n\nDecisions prioritize scalability—data partitioning and memory-efficient operations ensure compatibility with large datasets.  \n\n## Tech Stack / Built With  \n- **Language**: Python 3.9+  \n- **Data Handling**: Pandas, NumPy, SQLAlchemy  \n- **Modeling**: scikit-learn (K-Means, DBSCAN)  \n- **Visualization**: Plotly, Dash  \n- **Infrastructure**: Apache Airflow for scheduled pipeline runs  \n\n## Roadmap / Future Work  \n1. Integrate real-time transaction streams for dynamic segmentation  \n2. Add support for hierarchical clustering to refine segment hierarchies  \n3. Develop a web interface for non-technical stakeholders  \n4. Explore hybrid models combining clustering with rule-based segmentation  \n\n## Acknowledgments  \nThis project benefits from collaborative insights within the NijiMart analytics team. Special thanks to the data engineering team for maintaining the PostgreSQL schema and the product team for providing business context.  \n\n## Contributing  \nEnhance this project by:  \n- Adding new feature engineering techniques  \n- Improving visualization interactivity  \n- Optimizing cluster validation metrics  \nAll contributions require a pull request and code review. Let’s build better customer insights together!"
 }

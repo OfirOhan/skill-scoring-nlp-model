@@ -3,20 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_025",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "heavy"
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "Apache Airflow": 4,
-    "Apache Kafka": 3,
-    "Apache Spark": 4,
-    "Cloud cost optimization": 3,
-    "Data modeling": 3,
-    "Terraform": 3,
-    "Python": 4,
-    "Snowflake": 1
+    "AWS": 3,
+    "CI/CD pipelines": 4,
+    "Cloud cost optimization": 1,
+    "Docker": 3,
+    "Microservices architecture": 3,
+    "Node.js": 3,
+    "PostgreSQL": 4,
+    "Python": 2,
+    "REST API design": 4,
+    "React": 3
   },
-  "text": "# Real-Time Analytics Pipeline for E-commerce  \n\nA scalable, cloud-native data pipeline for processing and analyzing real-time user behavior data in an e-commerce startup. Built to handle high-velocity data streams, batch processing, and cost-efficient storage.  \n\n## Tech Stack  \n- **Data Ingestion**: Apache Kafka (stream processing, fault-tolerant data ingestion)  \n- **Batch Processing**: Apache Spark (distributed ETL, dynamic allocation, partitioning)  \n- **Orchestration**: Apache Airflow (DAG scheduling, error handling, monitoring)  \n- **Storage**: AWS S3 (cold storage), DynamoDB (real-time metrics), Redshift (OLAP)  \n- **Infrastructure**: AWS EC2 (compute), Lambda (serverless transforms), Terraform (IaC)  \n- **Language**: Python (data pipelines, custom operators, DAG definitions)  \n\n## Architecture Overview  \nThe pipeline ingests user events via Kafka, processes them in Spark for aggregation, and stores results in S3/DynamoDB. Airflow orchestrates workflows with retries, timeouts, and alerting. Terraform provisions AWS resources with cost-optimized configurations (e.g., spot instances, reserved capacity).  \n\n## Key Features  \n- **Real-Time Metrics**: Kafka streams processed by Spark with 99.9% latency <500ms  \n- **Cost Optimization**: AWS cost reduction by 40% via spot fleet reservations and S3 lifecycle policies  \n- **Scalability**: Spark clusters auto-scale to 50+ executors during peak traffic  \n- **Fault Tolerance**: Kafka replicas, Airflow retries, and idempotent Spark writes  \n\n## Setup Instructions  \n1. **Install dependencies**: `pip install -r requirements.txt`  \n2. **Configure AWS credentials**: Set `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`  \n3. **Terraform setup**:  \n   ```bash  \n   terraform init  \n   terraform apply -var-file=terraform.tfvars  \n   ```  \n4. **Airflow DAGs**: Place DAG files in `dags/` directory; ensure `airflow.cfg` is configured  \n5. **Run pipeline**: Trigger DAGs via Airflow UI or CLI  \n\n## Production Impact  \n- Reduced ETL latency by 60% through Spark dynamic allocation  \n- Achieved 99.95% SLA for real-time dashboards using Kafka + Airflow  \n- Automated infrastructure provisioning with Terraform, cutting onboarding time by 75%  \n\n*Built for startups needing rapid, cost-effective data pipelines with enterprise-grade reliability.*"
+  "text": "# NexaCloud Analytics Dashboard  \nA real-time data visualization platform for SaaS businesses, built with React and Node.js. This project streamlines actionable insights from raw data, enabling teams to monitor KPIs, forecast trends, and optimize operational efficiency.  \n\n## Badges  \n[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github)](https://github.com/kamilaszymanska/nexacloud)  \n[![CI/CD](https://img.shields.io/badge/CI%2FCD-passing-success)](https://github.com/kamilaszymanska/nexacloud/actions)  \n[![Size](https://img.shields.io/badge/Size-120KB-lightgray)](https://github.com/kamilaszymanska/nexacloud)  \n\n## Tech Stack / Built With  \n- **Frontend**: React (TypeScript) for dynamic, responsive UIs  \n- **Backend**: Node.js (Express) for RESTful API endpoints  \n- **Database**: PostgreSQL for structured data storage and complex queries  \n- **Cloud**: AWS S3 for data backups and AWS ECS for microservice orchestration  \n- **Containerization**: Docker for consistent development and production environments  \n- **Microservices**: Modular backend services for scalability and independent deployment  \n\n## Architecture / Design  \nThe system follows a microservices architecture, with React handling the frontend and Node.js managing business logic. PostgreSQL serves as the central database, while AWS S3 ensures data durability. Docker containers isolate services, and REST APIs enable seamless communication between components.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/kamilaszymanska/nexacloud.git`  \n2. Install dependencies:  \n   ```bash  \n   cd nexacloud  \n   npm install  \n   ```  \n3. Set up environment variables in `.env` for PostgreSQL, AWS credentials, and API keys.  \n\n## Usage / Examples  \n- Fetch real-time metrics via `/api/v1/metrics` endpoint  \n- Visualize trends using React-based charts with dynamic filtering  \n- Export reports to AWS S3 via the `/api/v1/export` route  \n\n## Configuration  \n- PostgreSQL: Configure `DATABASE_URL` and connection pool settings  \n- AWS: Set `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for S3 integration  \n- API Keys: Store authentication tokens in `.env` for secure access  \n\n## Deployment  \nDeploy using Docker Compose for local testing or AWS ECS for production. CI/CD pipelines automate testing, linting, and deployment, reducing manual overhead by 40% in production environments.  \n\n## License  \nMIT License  \n[View License](https://github.com/kamilaszymanska/nexacloud/blob/main/LICENSE)"
 }

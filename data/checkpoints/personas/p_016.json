@@ -1,55 +1,58 @@
 {
   "persona_id": "p_016",
   "hyperparams": {
-    "archetype": "frontend_engineer",
-    "years_experience": 3,
-    "seniority": "mid",
-    "industry": "fintech",
-    "writing_style": "modest",
-    "language_fluency": "native",
-    "self_promotion_level": "humble",
-    "quantification_tendency": "qualitative"
+    "archetype": "security_engineer",
+    "years_experience": 6,
+    "seniority": "senior",
+    "industry": "healthtech",
+    "writing_style": "neutral",
+    "language_fluency": "ESL",
+    "self_promotion_level": "boastful",
+    "quantification_tendency": "metrics-heavy"
   },
-  "name": "Emily Carter",
-  "current_role": "Frontend Engineer",
-  "company": "FinTech Innovators Ltd.",
+  "name": "Gabriel Souza",
+  "current_role": "Senior Security Engineer",
+  "company": "HealthGuard Technologies",
   "education": {
-    "degree": "Bachelor of Science in Computer Science",
-    "university": "University of Washington",
-    "year": 2020
+    "degree": "Bachelor of Science in Cybersecurity",
+    "university": "University of São Paulo",
+    "year": 2018
   },
   "career_trajectory": [
     {
-      "role": "Frontend Intern",
-      "company": "FinTech Solutions Inc.",
-      "year": 2020
+      "role": "Security Analyst",
+      "company": "MedTech Solutions",
+      "duration": "2 years",
+      "responsibilities": "Conducted vulnerability assessments and implemented firewall rules for HIPAA-compliant systems."
     },
     {
-      "role": "Junior Frontend Developer",
-      "company": "CapitalFlow Technologies",
-      "year": 2021
+      "role": "Security Architect",
+      "company": "ClinicaNet",
+      "duration": "3 years",
+      "responsibilities": "Designed IAM frameworks and led SOC2 compliance audits for cloud-based EHR platforms."
     },
     {
-      "role": "Mid-Level Frontend Engineer",
-      "company": "FinTech Innovators Ltd.",
-      "year": 2022
+      "role": "Senior Security Engineer",
+      "company": "HealthGuard Technologies",
+      "duration": "1 year",
+      "responsibilities": "Architected zero-trust networks and reduced breach response time by 40% through advanced SIEM integration."
     }
   ],
   "skills": {
-    "JavaScript": 4,
-    "TypeScript": 4,
-    "React": 4,
-    "Next.js": 3,
-    "Responsive design": 3,
-    "Web accessibility": 3,
-    "REST API design": 3,
-    "Webpack/Vite": 3,
-    "Unit testing": 3,
-    "Test automation": 3
+    "Network security": 4,
+    "Application security (OWASP)": 5,
+    "Penetration testing": 4,
+    "IAM/Access control": 5,
+    "Compliance (SOC2/GDPR)": 4,
+    "SIEM tools": 4,
+    "Vulnerability management": 4,
+    "Threat modeling": 4,
+    "Incident response": 5
   },
   "document_ids": [
     "d_p_016_00",
     "d_p_016_01",
-    "d_p_016_02"
+    "d_p_016_02",
+    "d_p_016_03"
   ]
 }

@@ -3,23 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_017",
   "hyperparams": {
-    "project_scale": "academic",
+    "project_scale": "hobby",
     "project_team_size": "solo",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 5,
-    "Apache Airflow": 4,
-    "Apache Spark": 4,
-    "Computer vision": 4,
-    "Docker": 4,
-    "Kubernetes": 4,
-    "LLMs/Prompt engineering": 3,
-    "MLOps (MLflow/W&B)": 5,
-    "Model deployment": 5,
-    "NLP": 5,
-    "PyTorch": 5,
-    "RAG systems": 3
+    "AWS": 3,
+    "Docker": 3,
+    "GCP": 2,
+    "Hugging Face Transformers": 3,
+    "Kubernetes": 2,
+    "MLOps (MLflow/W&B)": 4,
+    "Model deployment": 4,
+    "NLP": 4,
+    "PyTorch": 4,
+    "Recommendation systems": 2,
+    "TensorFlow": 3,
+    "scikit-learn": 2
   },
-  "text": "# Predictive Analytics for Patient Readmission Risk  \n\nA scalable, production-ready framework for predicting inpatient readmission risk using structured and unstructured electronic health records (EHRs). Built with a focus on reproducibility, auditability, and integration with clinical workflows.  \n\n## Key Features  \n- **End-to-end pipeline**: Integrates EHR data cleaning, feature engineering, and model deployment using MLOps best practices  \n- **Hybrid model architecture**: Combines tabular data processing (Apache Spark) with NLP for unstructured clinical notes (transformers + RAG)  \n- **Cloud-native deployment**: Containerized with Docker, orchestrated via Kubernetes, and hosted on AWS  \n- **Monitoring & tracking**: MLflow for experiment tracking, W&B for model versioning, and Prometheus for pipeline metrics  \n\n## Tech Stack  \n- **Data Processing**: Apache Spark (PySpark), Apache Airflow (DAGs)  \n- **Modeling**: PyTorch (transformer-based NLP), scikit-learn (tabular pipelines)  \n- **Deployment**: Docker, Kubernetes, AWS EKS  \n- **Monitoring**: MLflow, Weights & Biases, Prometheus  \n- **Data Storage**: AWS S3, Redshift, PostgreSQL  \n- **NLP**: HuggingFace Transformers, RAG (Retrieval-Augmented Generation)  \n\n## Architecture Overview  \n1. **ETL Pipeline**: Apache Airflow orchestrates data ingestion from CSV/Parquet sources, with Spark for distributed ETL and schema validation  \n2. **Feature Engineering**: PySpark UDFs for temporal feature extraction; BERT-based embeddings for clinical notes via HuggingFace  \n3. **Model Training**: Hybrid pipeline combining XGBoost (tabular) and transformer-based classifiers (PyTorch) with RAG for contextual note analysis  \n4. **Deployment**: Dockerized models pushed to Kubernetes, with MLflow tracking experiment metrics and W&B logging hyperparameters  \n5. **Monitoring**: Prometheus alerts for pipeline failures; AWS CloudWatch for infrastructure metrics  \n\n## Setup Instructions  \n1. Clone repository: `git clone https://github.com/your-username/patient-readmission-prediction.git`  \n2. Install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   docker-compose build  \n   ```  \n3. Configure AWS credentials and Spark cluster specs in `config.yaml`  \n4. Run pipeline:  \n   ```bash  \n   airflow initdb  \n   airflow scheduler  \n   ```  \n5. Monitor experiments via MLflow UI (`http://localhost:5000`) and W&B dashboard  \n\n## Usage  \n- **Training**: `python train.py --config config.yaml`  \n- **Inference**: `python predict.py --model_path models/ final_model.pth`  \n- **Deployment**: Deploy Docker container to EKS using Helm charts  \n\nThis project demonstrates a production-grade approach to clinical predictive analytics, with measurable impact on readmission prediction accuracy (15% improvement in pilot study)."
+  "text": "# Fraud Detection System for Financial Transactions  \n\nReal-time anomaly detection using ensemble models with <100ms latency. Trained on 1.2M+ transactions with 98.3% F1 score. Built for fintech use cases with production-grade monitoring and scalable deployment.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/aaronbaptiste/fraud-detection.git  \ncd fraud-detection  \npip install -r requirements.txt  \ndocker-compose up -d  \n```  \nRequires AWS credentials for model serving. Ensure TensorFlow 2.12 and PyTorch 2.0 are installed.  \n\n## Usage / Examples  \n```bash  \npython inference.py --transaction_id \"TX123456\"  \n```  \nOutputs risk score (0-1) and flagged features. For production, use the Docker API endpoint:  \n```python  \nimport requests  \nrequests.post(\"http://localhost:5000/predict\", json={\"amount\": 1500, \"category\": \"TRANSFER\"})  \n```  \nModel deployed via MLflow with W&B tracking. Monitor metrics in MLflow UI.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n---  \n*Built with TensorFlow 2.12, PyTorch 2.0, MLflow 2.9, and Docker 24.0. AWS Lambda integration for edge deployment.*"
 }

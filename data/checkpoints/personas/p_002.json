@@ -1,57 +1,56 @@
 {
   "persona_id": "p_002",
   "hyperparams": {
-    "archetype": "data_scientist",
-    "years_experience": 10,
-    "seniority": "staff",
-    "industry": "healthtech",
-    "writing_style": "modest",
-    "language_fluency": "near-native",
-    "self_promotion_level": "balanced",
-    "quantification_tendency": "mixed"
+    "archetype": "platform_engineer",
+    "years_experience": 3,
+    "seniority": "mid",
+    "industry": "adtech",
+    "writing_style": "concise",
+    "language_fluency": "ESL",
+    "self_promotion_level": "boastful",
+    "quantification_tendency": "qualitative"
   },
-  "name": "Emily J. Carter",
-  "current_role": "Senior Data Scientist",
-  "company": "HealthInsight Analytics",
+  "name": "Binta Traore",
+  "current_role": "Platform Engineer",
+  "company": "AdvertiseSphere Inc.",
   "education": {
-    "degree": "Master of Science in Data Science",
-    "university": "Stanford University",
-    "year": 2015
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "University of Montreal",
+    "year": 2019
   },
   "career_trajectory": [
     {
-      "year": 2013,
-      "role": "Data Analyst Intern",
-      "company": "MedTech Solutions"
+      "position": "DevOps Engineer",
+      "company": "ClickMedia Solutions",
+      "duration": "1 year",
+      "responsibilities": "Automated CI/CD pipelines, managed AWS EC2 clusters"
     },
     {
-      "year": 2014,
-      "role": "Data Analyst",
-      "company": "MedTech Solutions"
+      "position": "Cloud Solutions Engineer",
+      "company": "AdvertiseSphere Inc.",
+      "duration": "2 years",
+      "responsibilities": "Designed GCP multi-cloud architecture, optimized cloud costs"
     },
     {
-      "year": 2017,
-      "role": "Data Scientist",
-      "company": "HealthPredict Analytics"
-    },
-    {
-      "year": 2023,
-      "role": "Senior Data Scientist",
-      "company": "HealthInsight Analytics"
+      "position": "Platform Engineer",
+      "company": "AdvertiseSphere Inc.",
+      "duration": "current",
+      "responsibilities": "Lead infrastructure as code, implement Kubernetes-based microservices"
     }
   ],
   "skills": {
-    "Statistical modeling": 4,
-    "Time series analysis": 4,
-    "Bayesian statistics": 4,
-    "Feature engineering": 4,
-    "MLOps (MLflow/W&B)": 5,
-    "PyTorch": 4,
-    "Python": 5,
-    "Apache Spark": 4,
+    "AWS": 4,
+    "GCP": 3,
+    "Terraform": 3,
+    "Kubernetes": 4,
+    "Docker": 3,
+    "Load balancing": 3,
+    "CDN management": 3,
+    "Python": 3,
+    "PostgreSQL": 3,
     "REST API design": 3,
-    "Data warehousing": 4,
-    "Apache Airflow": 4
+    "Microservices architecture": 3,
+    "Network troubleshooting": 3
   },
   "document_ids": [
     "d_p_002_00",

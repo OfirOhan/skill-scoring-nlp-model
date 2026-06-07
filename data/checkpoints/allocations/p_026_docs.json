@@ -1,40 +1,27 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional resume highlighting SRE experience in enterprise environments",
-    "title": "Alexandra 'Alex' Chen - Senior Site Reliability Engineer",
+    "topic_summary": "A professional CV highlighting Ian Szabo's 4 years of experience as a backend engineer in healthtech, focusing on scalable systems and API development.",
+    "title": "Ian Szabo - Backend Engineer",
     "doc_id": "d_p_026_00",
     "persona_id": "p_026",
     "hyperparams": {
-      "cv_format": "paragraph",
-      "geographic_convention": "India",
-      "company_type": "agency",
-      "company_size": "mid (50-500)"
+      "cv_format": "bullet-heavy",
+      "geographic_convention": "Europe",
+      "company_type": "enterprise",
+      "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "Automating cloud infrastructure deployment using CI/CD pipelines and observability tools",
-    "title": "NexaCorp CloudOps Automation Suite",
+    "topic_summary": "A GitHub README for a backend service that securely syncs patient data across healthcare systems using Python and PostgreSQL.",
+    "title": "HealthDataSync",
     "doc_id": "d_p_026_01",
     "persona_id": "p_026",
     "hyperparams": {
       "project_scale": "production",
-      "project_team_size": "large (15+)",
-      "jargon_density": "moderate"
-    }
-  },
-  {
-    "doc_type": "recommendation",
-    "topic_summary": "Endorsement of Alex's expertise in system reliability and team leadership",
-    "title": "Recommendation from NexaCorp's CTO",
-    "doc_id": "d_p_026_02",
-    "persona_id": "p_026",
-    "hyperparams": {
-      "recommender_role": "peer",
-      "recommender_closeness": "occasional",
-      "company_type": "FAANG",
-      "company_size": "large (500+)"
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "heavy"
     }
   }
 ]

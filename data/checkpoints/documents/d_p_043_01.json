@@ -1,22 +1,25 @@
 {
   "doc_id": "d_p_043_01",
-  "type": "project_readme",
+  "type": "blog",
   "persona_id": "p_043",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "large (15+)",
+    "blog_depth": "opinion-piece",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 5,
-    "CI/CD pipelines": 5,
-    "Cloud cost optimization": 2,
-    "Cloud networking (VPC/subnets)": 4,
-    "Linux administration": 5,
-    "PostgreSQL": 3,
-    "Prometheus/Grafana": 5,
-    "Python": 3,
-    "Terraform": 5
+    "GraphQL": 3,
+    "JavaScript": 4,
+    "Next.js": 2,
+    "Node.js": 3,
+    "REST API design": 3,
+    "React": 4,
+    "Responsive design": 4,
+    "State management (Redux/Zustand)": 4,
+    "Test automation (Selenium/Playwright)": 3,
+    "TypeScript": 4,
+    "Web accessibility (WCAG)": 3,
+    "Web performance optimization": 4,
+    "Webpack/Vite": 2
   },
-  "text": "# GlobalRetail Microservices Scaling Framework  \n\nA production-grade framework for orchestrating microservices at scale, engineered to deliver sub-100ms latency globally while maintaining 99.99% SLA. Designed for e-commerce platforms with terabytes of daily transactional data and millions of concurrent users.  \n\n## 🚀 Tech Stack  \n- **Cloud**: AWS (VPCs, subnets, EC2, ELB, CloudFormation)  \n- **Infrastructure as Code**: Terraform (modules for global service mesh, regional failover)  \n- **Monitoring**: Prometheus + Grafana (custom exporters for service discovery, latency tracking)  \n- **CI/CD**: Jenkins + GitLab (multi-stage pipelines for canary deployments)  \n- **Database**: PostgreSQL (read replicas, sharding for global cart state)  \n- **Languages**: Python (custom health checks, metrics aggregation)  \n- **OS**: Linux (custom kernel tuning for low-latency networking)  \n\n## 🏗️ Architecture Overview  \nThe framework leverages AWS Global Accelerator for edge routing, with Terraform-managed VPCs segmented by region and AZ. Auto-scaling groups are orchestrated via CloudFormation, with Prometheus scraping metrics from custom exporters to drive dynamic scaling policies. PostgreSQL is horizontally scaled with Citus for global query distribution. Failover is managed via AWS Route 53 latency-based routing and Terraform-managed health check endpoints.  \n\n## 📦 Setup Instructions  \n1. Clone repo: `git clone https://github.com/globalretail/scale-framework.git`  \n2. Initialize Terraform: `terraform init -backend-config=backend.tfrc`  \n3. Deploy infrastructure: `terraform apply --var-file=env-prod.tfvars`  \n4. Configure CI/CD pipelines via Jenkinsfile (pre-validated for multi-region sync)  \n5. Set up Prometheus targets in `prometheus.yml` for service discovery  \n\n## 📈 Performance & Cost Metrics  \n- 30% reduction in cloud costs via spot instance utilization and auto-scaling  \n- 99.999% uptime via dual-region failover with <1s switchover latency  \n- 40% faster deployment cycles via GitLab-Jenkins pipeline optimization  \n- 95th percentile latency <120ms globally (PostgreSQL + Redis caching)  \n\n## 🛠️ Contributing  \nThis framework is production-critical; contributions require approval from SRE lead. Review PRs against [architecture docs](docs/architecture.md) and ensure compliance with AWS Well-Architected Framework.  \n\n*Built for scale, tested at scale.*"
+  "text": "E-commerce platforms face a unique frontend challenge: balancing speed, scalability, and a seamless user experience under high traffic. As a frontend engineer, I’ve spent years wrestling with this problem, and the solution lies in a disciplined approach to architecture.  \n\nThe core issue isn’t just about making pages load faster—it’s about structuring the frontend to handle unpredictable traffic spikes without compromising interactivity. Traditional monolithic React apps often falter here, bloated with unoptimized assets and inefficient rendering. The problem compounds when integrating with legacy systems or third-party APIs, which can introduce latency and inconsistency.  \n\nTo address this, I started by refactoring a legacy e-commerce site using Next.js for server-side rendering and static exports. TypeScript became essential for managing component props and state, catching errors early. For state management, I opted for Redux with RTK for predictable state updates, paired with Zustand for lightweight, scoped state in UI components. This hybrid approach allowed granular control over data flow without overcomplicating the architecture.  \n\nThe step-by-step process began with lazy loading components using React.lazy and Suspense, reducing initial bundle size by 30%. I then optimized image delivery via next/image, leveraging next.config.js to dynamically resize and format assets. For performance, I implemented code splitting with Webpack’s SplitChunksPlugin, cutting load times by 25%. On the backend, I integrated a GraphQL API for product data, reducing redundant API calls and improving response times.  \n\nResults were measurable. The site’s LCP improved from 2.8s to 1.2s, and TTI dropped from 1.5s to 0.4s. Server-side rendering handled 80% of traffic, while static exports served 15%, with Redis caching handling the remaining 5%. User retention increased by 12% in the first month, validating the approach.  \n\nThis work isn’t just about technical wins—it’s about building a system that scales with the business. Prioritizing performance without sacrificing accessibility or maintainability is the real challenge.  \n\nFor deeper dives, check out MDN’s Web Performance docs, the React Performance guide, and Web Performance APIs. Also, revisit WCAG 2.1 for accessibility best practices—something I’ve integrated into every project.  \n\nThe road to scalable frontend architecture is never finished, but with the right tools and mindset, it’s manageable."
 }

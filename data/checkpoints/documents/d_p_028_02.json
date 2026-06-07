@@ -3,23 +3,23 @@
   "type": "recommendation",
   "persona_id": "p_028",
   "hyperparams": {
-    "recommender_role": "professor",
+    "recommender_role": "skip-level",
     "recommender_closeness": "worked-daily",
-    "company_type": "enterprise",
-    "company_size": "small (<50)"
+    "company_type": "FAANG",
+    "company_size": "large (500+)"
   },
   "skill_evidence": {
-    "API testing": 2,
-    "BDD/TDD": 2,
-    "GitLab CI": 2,
-    "Integration testing": 1,
-    "JMeter": 2,
-    "Python": 2,
-    "REST API design": 2,
-    "Selenium/Playwright": 2,
-    "Test automation": 3,
-    "Test strategy design": 2,
-    "Web performance optimization": 2
+    "AWS": 3,
+    "ArgoCD": 3,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 4,
+    "Docker": 3,
+    "GitHub Actions": 3,
+    "Jenkins": 3,
+    "Kubernetes": 3,
+    "Monitoring & alerting": 3,
+    "Prometheus/Grafana": 3,
+    "Terraform": 3
   },
-  "text": "Emily Chen’s contributions as a QA Test Engineer at TechNova Solutions have been instrumental in elevating the team’s operational efficiency and product quality. Her expertise in test automation frameworks has directly reduced regression testing cycles by 40%, enabling the team to prioritize high-impact areas. For example, she spearheaded the automation of a critical user workflow, cutting manual testing hours from 12 to 5 per sprint while maintaining a 99.8% defect detection rate. This work seamlessly integrated with the team’s agile practices, ensuring continuous delivery without compromising quality.  \n\nEmily’s analytical rigor shone during a recent incident where a production bug caused a 15% revenue dip. She rapidly identified the root cause—a misconfigured API endpoint—and collaborated with developers to implement a robust regression suite, preventing similar issues. Her ability to translate complex system behaviors into actionable test scenarios has made her an indispensable asset.  \n\nBeyond technical skills, Emily’s collaborative spirit and attention to detail are exceptional. She consistently mentors junior team members, sharing insights on best practices for test script optimization. Her proactive approach to identifying edge cases and her meticulous documentation of test environments have streamlined onboarding and reduced context-switching overhead.  \n\nEmily’s combination of technical acumen, problem-solving agility, and dedication to team success makes her a rare talent. I wholeheartedly recommend her for any role requiring precision, innovation, and a commitment to excellence."
+  "text": "Maya’s recent work on cloud cost optimization for a high-traffic e-commerce platform stands out. She redesigned infrastructure tagging strategies, cutting monthly spend by 22% without sacrificing performance. Her AWS expertise shone during a critical incident where she rapidly isolated and resolved a billing anomaly, preventing a potential $50K overage.  \n\nOver her four years at CloudOptima, Maya evolved from a focused automation specialist to a strategic contributor. Early in her role, she modernized their CI/CD pipelines using Jenkins and GitHub Actions, reducing deployment friction across 15+ microservices. Her deep Kubernetes knowledge later enabled a seamless migration of a legacy monolith, improving scalability by 40%. She’s also been instrumental in integrating Prometheus and Grafana for real-time monitoring, which became a team standard.  \n\nA standout moment was when she led a cross-team effort to debug a persistent ArgoCD sync failure. Her methodical approach—mapping dependencies, isolating environment variables, and collaborating with upstream providers—resolved the issue in under 12 hours, avoiding a scheduled rollback.  \n\nMaya’s leadership extends beyond technical mastery. She mentors juniors with patience, fostering a culture of ownership. Her ability to balance hands-on troubleshooting with strategic planning makes her a trusted collaborator.  \n\nI wholeheartedly recommend Maya. Her reliability, curiosity, and knack for turning complexity into clarity make her an invaluable asset. She’s the kind of engineer who doesn’t just solve problems—she rethinks the systems around them."
 }

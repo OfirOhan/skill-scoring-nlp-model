@@ -3,25 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_032",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "solo",
+    "project_scale": "team-internal",
+    "project_team_size": "large (15+)",
     "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Agile/Scrum": 1,
-    "CI/CD pipelines": 3,
-    "Cross-team collaboration": 1,
-    "Database optimization": 2,
-    "GitHub Actions": 3,
-    "Linux administration": 1,
-    "Mentoring": 1,
-    "Monitoring & alerting": 1,
-    "PostgreSQL": 1,
-    "Project management": 1,
-    "Stakeholder communication": 1,
-    "System design": 1,
-    "Team leadership": 1,
-    "Technical debt management": 1
+    "AWS": 3,
+    "Apache Airflow": 3,
+    "Apache Spark": 3,
+    "Data warehousing": 3,
+    "Database optimization": 3,
+    "Docker": 2,
+    "ETL pipeline design": 3,
+    "Python": 3,
+    "Snowflake": 4,
+    "Terraform": 2
   },
-  "text": "# Real-Time Ad Bidding Optimization Framework  \n\n**Optimize ad bids in real-time with machine learning and distributed systems**  \n\nThis project delivers a scalable framework for real-time ad bidding optimization, achieving **30% faster decision latency** and **95% bid accuracy** in controlled environments. Built for adtech engineers seeking to balance revenue and cost efficiency without sacrificing performance.  \n\n---\n\n## 🚀 Tech Stack  \n- **Language**: Python 3.9  \n- **ML**: TensorFlow 2.10, Scikit-learn  \n- **Data Pipeline**: Apache Kafka 3.2 (real-time event streaming)  \n- **Caching**: Redis 7.0 (low-latency bid decision storage)  \n- **Containerization**: Docker 20.10 (microservices deployment)  \n- **CI/CD**: GitHub Actions (automated testing, deployment)  \n\n---\n\n## 📌 Architecture Overview  \nThe framework processes bid requests via a Kafka pipeline, where historical and contextual data is ingested and preprocessed. A trained gradient-boosted model (XGBoost) evaluates bid opportunities in parallel, with results cached in Redis for sub-10ms access. Metrics are exported to Prometheus for real-time monitoring.  \n\n---\n\n## 🧰 Setup Instructions  \n1. **Clone the repo**:  \n   ```bash  \n   git clone https://github.com/elenavoss/real-time-bidding-optimization.git  \n   ```  \n2. **Build Docker containers**:  \n   ```bash  \n   docker-compose up --build  \n   ```  \n3. **Run tests via GitHub Actions**:  \n   ```bash  \n   git push origin main  \n   ```  \n   Automated tests validate model performance and system latency.  \n\n---\n\n## 📊 Performance Metrics  \n- **Bid decision latency**: 8.2ms (vs. 12ms baseline)  \n- **Model accuracy**: 95.3% (AUC-ROC score)  \n- **Throughput**: 12,000+ bids/sec (Kafka + Redis pipeline)  \n- **CI/CD success rate**: 99.8% (last 30 days)  \n\n---\n\n## 🛠 Skills & Tools  \n- **CI/CD pipelines**: GitHub Actions automate unit tests, integration checks, and Docker builds  \n- **Database optimization**: Redis caching reduces database load by 60%  \n- **Distributed systems**: Kafka ensures fault-tolerant data ingestion  \n- **Machine learning**: End-to-end pipeline from data preprocessing to model deployment  \n\n---  \n\n**Ready to optimize ad spend?** Dive into the code and benchmark your own strategies."
+  "text": "# HealthDataPipeline  \nStreamlines healthcare data processing with cloud-native ETL workflows, achieving 98% data integrity and 40% faster batch processing in production  \n\n[![GitHub Actions Status](https://img.shields.io/github/actions/status/nadiakhoury/healthdatapipline)](https://github.com/nadiakhoury/healthdatapipline/actions)  \n[![CI/CD Pipeline](https://img.shields.io/badge/CI--CD-passing-green)](https://github.com/nadiakhoury/healthdatapipline/actions)  \n[![Usage Stats](https://img.shields.io/badge/usage-12k%20daily-blue)](https://github.com/nadiakhoury/healthdatapipline/graphs/commit-activity)  \n\n## Getting Started  \n1. Clone repo: `git clone https://github.com/nadiakhoury/healthdatapipline.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure AWS credentials via `~/.aws/credentials`  \n4. Deploy infrastructure using Terraform (see `infrastructure/README.md`)  \n\n## Usage / Examples  \n```bash  \npython etl/orchestration.py --source s3://healthdata-raw --target snowflake://healthdata-dwh  \n```  \nProcesses 500M+ records daily with 99.99% SLA. Example use case:  \n- Ingest EHR data from S3 → Transform with Spark → Load to Snowflake for analytics  \n- Real-time patient monitoring data processed in 12ms/record via Airflow DAGs  \n\n## Architecture / Design  \nCentralized data lake on AWS S3 with:  \n- Apache Airflow for workflow orchestration (15+ DAGs)  \n- Apache Spark clusters for batch processing (500GB+ daily)  \n- Snowflake as unified data warehouse (10TB+ storage)  \n- Automated schema evolution via Delta Lake  \n\n## Tech Stack / Built With  \n- **Cloud**: AWS (S3, EC2, RDS) + Snowflake (data warehouse)  \n- **ETL**: Apache Spark (PySpark), Airflow, Delta Lake  \n- **Infrastructure**: Terraform, Docker (for local dev)  \n- **Monitoring**: Prometheus + Grafana for pipeline health  \n\n## Contributing  \nWe welcome improvements to:  \n- Pipeline efficiency (target 30% reduction in processing time)  \n- Snowflake schema optimization (current query latency: 120ms)  \n- Error handling for 20+ data source formats  \n\n## Testing  \n- Unit tests: 95% coverage (pytest + mocking)  \n- Integration tests: Validate 100+ data transformations  \n- Chaos testing: Simulate 50% node failure in Spark clusters  \n\n## Roadmap / Future Work  \nQ4 2023:  \n- Expand Snowflake data sharing for 5+ partner hospitals  \n- Implement serverless ETL for 20% cost reduction  \n- Add GDPR-compliant data masking for 1M+ patient records  \n- Explore AWS Glue for hybrid cloud migrations"
 }

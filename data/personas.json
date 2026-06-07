@@ -2,180 +2,170 @@
   {
     "persona_id": "p_000",
     "hyperparams": {
-      "archetype": "mobile_developer",
-      "years_experience": 14,
-      "seniority": "staff",
-      "industry": "SaaS",
-      "writing_style": "concise",
-      "language_fluency": "ESL",
+      "archetype": "platform_engineer",
+      "years_experience": 1,
+      "seniority": "junior",
+      "industry": "healthtech",
+      "writing_style": "modest",
+      "language_fluency": "native",
       "self_promotion_level": "humble",
       "quantification_tendency": "mixed"
     },
-    "name": "Alexandra Chen",
-    "current_role": "Staff Mobile Architect",
-    "company": "NovaSphere Technologies",
+    "name": "Yuki Tanaka",
+    "current_role": "Platform Engineer",
+    "company": "HealthInsight Solutions",
     "education": {
       "degree": "Bachelor of Science in Computer Science",
-      "university": "University of California, Berkeley",
-      "year": 2010
+      "university": "Tokyo Institute of Technology",
+      "year": 2023
     },
     "career_trajectory": [
       {
-        "title": "Junior Mobile Developer",
-        "company": "TechNova Solutions",
-        "year": 2010
+        "role": "Software Developer Intern",
+        "company": "HealthInsight Solutions",
+        "year": 2022
       },
       {
-        "title": "Senior Mobile Developer",
-        "company": "CloudSync Inc.",
-        "year": 2013
+        "role": "DevOps Engineer",
+        "company": "HealthInsight Solutions",
+        "year": 2023
       },
       {
-        "title": "Lead Mobile Engineer",
-        "company": "DataFlow SaaS",
-        "year": 2016
-      },
-      {
-        "title": "Staff Mobile Architect",
-        "company": "NovaSphere Technologies",
-        "year": 2019
+        "role": "Platform Engineer",
+        "company": "HealthInsight Solutions",
+        "year": 2024
       }
     ],
     "skills": {
-      "Swift": 4,
-      "Kotlin": 5,
-      "React Native": 3,
-      "Flutter": 3,
-      "iOS development": 5,
-      "Android development": 4,
-      "Mobile CI/CD": 5,
-      "TypeScript": 4,
-      "React": 3,
-      "Webpack/Vite": 3,
-      "REST API design": 4,
-      "GraphQL": 3
+      "AWS": 3,
+      "Terraform": 3,
+      "Docker": 3,
+      "Kubernetes": 3,
+      "Infrastructure as Code": 3,
+      "CI/CD pipelines": 3,
+      "Cloud cost optimization": 2,
+      "Python": 2,
+      "REST API design": 2,
+      "Monitoring & alerting": 3,
+      "Linux administration": 3,
+      "Network troubleshooting": 2
     },
     "document_ids": [
       "d_p_000_00",
-      "d_p_000_01",
-      "d_p_000_02",
-      "d_p_000_03",
-      "d_p_000_04"
+      "d_p_000_01"
     ]
   },
   {
     "persona_id": "p_001",
     "hyperparams": {
-      "archetype": "devops_sre",
-      "years_experience": 6,
-      "seniority": "senior",
-      "industry": "gaming",
+      "archetype": "product_manager",
+      "years_experience": 14,
+      "seniority": "staff",
+      "industry": "fintech",
       "writing_style": "neutral",
       "language_fluency": "native",
-      "self_promotion_level": "humble",
-      "quantification_tendency": "qualitative"
+      "self_promotion_level": "boastful",
+      "quantification_tendency": "mixed"
     },
-    "name": "Aiden Clarke",
-    "current_role": "Senior DevOps Engineer",
-    "company": "GameForge Interactive",
+    "name": "Nathan Brooks",
+    "current_role": "Staff Product Manager",
+    "company": "CapitalFlow Solutions",
     "education": {
-      "degree": "Master of Science in Computer Science",
-      "university": "University of California, Berkeley",
-      "year": 2018
+      "degree": "Master of Business Administration (MBA)",
+      "university": "Wharton School",
+      "year": 2010
     },
     "career_trajectory": [
       {
-        "role": "DevOps Engineer",
-        "company": "PixelPunch Studios",
-        "duration": "2017-2019"
+        "role": "Product Analyst",
+        "company": "PayNet Financial",
+        "duration": "2008-2010"
       },
       {
-        "role": "DevOps Lead",
-        "company": "Riftscape Games",
-        "duration": "2019-2021"
+        "role": "Product Manager",
+        "company": "FinTech Innovators",
+        "duration": "2010-2013"
       },
       {
-        "role": "Senior DevOps Engineer",
-        "company": "GameForge Interactive",
-        "duration": "2021-present"
+        "role": "Senior Product Manager",
+        "company": "GlobalPay Systems",
+        "duration": "2013-2016"
+      },
+      {
+        "role": "Staff Product Manager",
+        "company": "CapitalFlow Solutions",
+        "duration": "2016-present"
       }
     ],
     "skills": {
-      "CI/CD pipelines": 4,
-      "GitHub Actions": 4,
-      "Jenkins": 4,
-      "ArgoCD": 3,
-      "Prometheus/Grafana": 4,
-      "Monitoring & alerting": 4,
-      "Kubernetes": 4,
-      "Python": 3,
-      "REST API design": 3,
-      "Message queues": 3,
-      "PostgreSQL": 3,
-      "Redis": 3,
-      "Cloud cost optimization": 4
+      "Product management": 5,
+      "Stakeholder management": 4,
+      "Roadmap planning": 4,
+      "Competitive analysis": 4,
+      "SQL analytics": 4,
+      "Data visualization": 4,
+      "A/B testing": 4,
+      "Hypothesis testing": 4
     },
     "document_ids": [
       "d_p_001_00",
       "d_p_001_01",
-      "d_p_001_02",
-      "d_p_001_03"
+      "d_p_001_02"
     ]
   },
   {
     "persona_id": "p_002",
     "hyperparams": {
-      "archetype": "data_scientist",
-      "years_experience": 10,
-      "seniority": "staff",
-      "industry": "healthtech",
-      "writing_style": "modest",
-      "language_fluency": "near-native",
-      "self_promotion_level": "balanced",
-      "quantification_tendency": "mixed"
+      "archetype": "platform_engineer",
+      "years_experience": 3,
+      "seniority": "mid",
+      "industry": "adtech",
+      "writing_style": "concise",
+      "language_fluency": "ESL",
+      "self_promotion_level": "boastful",
+      "quantification_tendency": "qualitative"
     },
-    "name": "Emily J. Carter",
-    "current_role": "Senior Data Scientist",
-    "company": "HealthInsight Analytics",
+    "name": "Binta Traore",
+    "current_role": "Platform Engineer",
+    "company": "AdvertiseSphere Inc.",
     "education": {
-      "degree": "Master of Science in Data Science",
-      "university": "Stanford University",
-      "year": 2015
+      "degree": "Bachelor of Science in Computer Science",
+      "university": "University of Montreal",
+      "year": 2019
     },
     "career_trajectory": [
       {
-        "year": 2013,
-        "role": "Data Analyst Intern",
-        "company": "MedTech Solutions"
+        "position": "DevOps Engineer",
+        "company": "ClickMedia Solutions",
+        "duration": "1 year",
+        "responsibilities": "Automated CI/CD pipelines, managed AWS EC2 clusters"
       },
       {
-        "year": 2014,
-        "role": "Data Analyst",
-        "company": "MedTech Solutions"
+        "position": "Cloud Solutions Engineer",
+        "company": "AdvertiseSphere Inc.",
+        "duration": "2 years",
+        "responsibilities": "Designed GCP multi-cloud architecture, optimized cloud costs"
       },
       {
-        "year": 2017,
-        "role": "Data Scientist",
-        "company": "HealthPredict Analytics"
-      },
-      {
-        "year": 2023,
-        "role": "Senior Data Scientist",
-        "company": "HealthInsight Analytics"
+        "position": "Platform Engineer",
+        "company": "AdvertiseSphere Inc.",
+        "duration": "current",
+        "responsibilities": "Lead infrastructure as code, implement Kubernetes-based microservices"
       }
     ],
     "skills": {
-      "Statistical modeling": 4,
-      "Time series analysis": 4,
-      "Bayesian statistics": 4,
-      "Feature engineering": 4,
-      "MLOps (MLflow/W&B)": 5,
-      "PyTorch": 4,
-      "Python": 5,
-      "Apache Spark": 4,
+      "AWS": 4,
+      "GCP": 3,
+      "Terraform": 3,
+      "Kubernetes": 4,
+      "Docker": 3,
+      "Load balancing": 3,
+      "CDN management": 3,
+      "Python": 3,
+      "PostgreSQL": 3,
       "REST API design": 3,
-      "Data warehousing": 4,
-      "Apache Airflow": 4
+      "Microservices architecture": 3,
+      "Network troubleshooting": 3
     },
     "document_ids": [
       "d_p_002_00",
@@ -187,217 +177,228 @@
   {
     "persona_id": "p_003",
     "hyperparams": {
-      "archetype": "qa_test_engineer",
-      "years_experience": 0,
+      "archetype": "platform_engineer",
+      "years_experience": 2,
       "seniority": "junior",
-      "industry": "consulting",
-      "writing_style": "confident",
-      "language_fluency": "native",
-      "self_promotion_level": "balanced",
-      "quantification_tendency": "metrics-heavy"
+      "industry": "startup",
+      "writing_style": "concise",
+      "language_fluency": "near-native",
+      "self_promotion_level": "boastful",
+      "quantification_tendency": "mixed"
     },
-    "name": "Emily Chen",
-    "current_role": "QA Engineer",
-    "company": "TechSolutions Inc.",
+    "name": "Carmen Delgado",
+    "current_role": "Platform Engineer",
+    "company": "NebulaTech Innovations",
     "education": {
       "degree": "Bachelor of Science in Computer Science",
-      "university": "XYZ University",
-      "year": 2024
+      "university": "University of California, Berkeley",
+      "year": 2022
     },
     "career_trajectory": [
       {
-        "role": "QA Intern",
-        "company": "InnovateTech Co.",
+        "title": "DevOps Engineer Intern",
+        "company": "Aurora Systems",
         "duration": "6 months",
-        "responsibilities": "Assisted with test case documentation and basic automation script writing"
+        "responsibilities": "Automated deployment pipelines, managed AWS EC2 instances"
       },
       {
-        "role": "Junior QA Engineer",
-        "company": "DevConsult Ltd.",
-        "duration": "1 year",
-        "responsibilities": "Implemented regression tests for SaaS platforms using Selenium"
+        "title": "DevOps Engineer",
+        "company": "NebulaTech Innovations",
+        "duration": "1.5 years",
+        "responsibilities": "Designed Terraform modules, optimized CI/CD workflows"
       },
       {
-        "role": "QA Engineer",
-        "company": "TechSolutions Inc.",
-        "duration": "3 months",
-        "responsibilities": "Designed API test frameworks and optimized CI/CD pipelines"
+        "title": "Platform Engineer",
+        "company": "NebulaTech Innovations",
+        "duration": "current",
+        "responsibilities": "Architect cloud-native solutions, lead infrastructure scalability"
       }
     ],
     "skills": {
-      "Test automation": 3,
-      "Selenium/Playwright": 3,
-      "Unit testing": 3,
-      "Integration testing": 3,
-      "Performance testing (JMeter/k6)": 3,
-      "API testing": 3,
-      "Python": 3,
-      "REST API design": 3,
+      "AWS": 3,
+      "Terraform": 3,
+      "Infrastructure as Code": 3,
+      "Docker": 3,
+      "Kubernetes": 3,
       "CI/CD pipelines": 3,
-      "Java": 2
+      "Cloud cost optimization": 3,
+      "Python": 2,
+      "Linux administration": 3,
+      "Shell scripting": 2,
+      "Ansible": 3,
+      "Monitoring & alerting": 3,
+      "Chaos engineering": 2
     },
     "document_ids": [
       "d_p_003_00",
       "d_p_003_01",
       "d_p_003_02",
-      "d_p_003_03",
-      "d_p_003_04"
+      "d_p_003_03"
     ]
   },
   {
     "persona_id": "p_004",
     "hyperparams": {
-      "archetype": "data_scientist",
-      "years_experience": 14,
-      "seniority": "staff",
-      "industry": "fintech",
-      "writing_style": "neutral",
-      "language_fluency": "native",
+      "archetype": "mobile_developer",
+      "years_experience": 4,
+      "seniority": "mid",
+      "industry": "startup",
+      "writing_style": "concise",
+      "language_fluency": "near-native",
       "self_promotion_level": "humble",
-      "quantification_tendency": "qualitative"
+      "quantification_tendency": "metrics-heavy"
     },
-    "name": "Emily J. Rodriguez",
-    "current_role": "Staff Data Scientist",
-    "company": "FinTech Innovators Ltd.",
+    "name": "Kiran Thapa",
+    "current_role": "Mobile Developer",
+    "company": "NexaTech Solutions",
     "education": {
-      "degree": "Master of Science in Data Science",
-      "university": "Massachusetts Institute of Technology",
-      "year": 2009
+      "degree": "Bachelor of Science in Computer Science",
+      "university": "Bharati Vidyapeeth University",
+      "year": 2020
     },
     "career_trajectory": [
-      {
-        "year": 2006,
-        "role": "Junior Data Analyst",
-        "company": "Capital Insights Group"
-      },
-      {
-        "year": 2008,
-        "role": "Data Scientist",
-        "company": "RiskMetrics Solutions"
-      },
-      {
-        "year": 2012,
-        "role": "Senior Machine Learning Engineer",
-        "company": "Quantum Finance Systems"
-      },
-      {
-        "year": 2023,
-        "role": "Staff Data Scientist",
-        "company": "FinTech Innovators Ltd."
-      }
+      "Software Intern at TechNova Pvt Ltd (2019-2020)",
+      "Junior Mobile Developer at AppLabs Inc (2020-2022)",
+      "Mid-Level Mobile Developer at NexaTech Solutions (2022-present)"
     ],
     "skills": {
-      "Pandas": 5,
-      "NumPy": 5,
-      "SQL analytics": 5,
-      "scikit-learn": 5,
-      "Feature engineering": 4,
-      "Time series analysis": 4,
-      "Python": 5,
-      "Apache Spark": 4,
-      "MLOps (MLflow)": 4,
-      "Data modeling": 4
+      "Swift": 3,
+      "Kotlin": 3,
+      "React Native": 3,
+      "Flutter": 3,
+      "iOS development": 4,
+      "Mobile CI/CD": 3,
+      "TypeScript": 3,
+      "React": 3,
+      "Web accessibility (WCAG)": 3,
+      "REST API design": 3
     },
     "document_ids": [
       "d_p_004_00",
-      "d_p_004_01",
-      "d_p_004_02"
+      "d_p_004_01"
     ]
   },
   {
     "persona_id": "p_005",
     "hyperparams": {
-      "archetype": "product_manager",
-      "years_experience": 5,
-      "seniority": "mid",
-      "industry": "cybersecurity",
+      "archetype": "devops_sre",
+      "years_experience": 11,
+      "seniority": "staff",
+      "industry": "fintech",
       "writing_style": "verbose",
-      "language_fluency": "ESL",
+      "language_fluency": "native",
       "self_promotion_level": "humble",
-      "quantification_tendency": "qualitative"
+      "quantification_tendency": "metrics-heavy"
     },
-    "name": "Emily Carter",
-    "current_role": "Product Manager",
-    "company": "CyberShield Technologies",
+    "name": "Umar Bello",
+    "current_role": "Staff DevOps/SRE Lead",
+    "company": "FinTech Innovators Ltd.",
     "education": {
-      "degree": "Master of Science in Cybersecurity",
-      "university": "Carnegie Mellon University",
-      "year": 2020
+      "degree": "Bachelor of Science in Computer Science",
+      "university": "University of London",
+      "year": 2012
     },
     "career_trajectory": [
       {
-        "role": "Product Coordinator",
-        "company": "SecureNet Solutions",
-        "duration": "2 years",
-        "responsibilities": "Supported product launches, conducted market research, and collaborated with engineering teams to prioritize features."
+        "role": "Junior DevOps Engineer",
+        "company": "FinTech Innovators Ltd.",
+        "duration": "2012-2015",
+        "achievements": "Built foundational CI/CD pipelines for payment gateway microservices, reduced deployment latency by 40%"
       },
       {
-        "role": "Junior Product Manager",
-        "company": "Verve Security",
-        "duration": "3 years",
-        "responsibilities": "Owned end-to-end product cycles, managed stakeholder expectations, and drove data-informed decisions for threat detection platforms."
+        "role": "Senior DevOps Engineer",
+        "company": "FinTech Innovators Ltd.",
+        "duration": "2015-2018",
+        "achievements": "Led cloud migration to AWS, achieved 99.95% SLA with zero downtime during peak transaction periods"
       },
       {
-        "role": "Product Manager",
-        "company": "CyberShield Technologies",
-        "duration": "Current role",
-        "responsibilities": "Lead strategy for endpoint security solutions, coordinate cross-functional teams, and oversee roadmap alignment with business goals."
+        "role": "Staff Cloud Infrastructure Engineer",
+        "company": "FinTech Innovators Ltd.",
+        "duration": "2018-2020",
+        "achievements": "Designed multi-cloud architecture with cost optimization, reducing annual cloud spend by $1.2M"
+      },
+      {
+        "role": "Staff DevOps/SRE Lead",
+        "company": "FinTech Innovators Ltd.",
+        "duration": "2020-present",
+        "achievements": "Established chaos engineering practices, improving system resilience by 65% during regulatory audits"
       }
     ],
     "skills": {
-      "Product management": 4,
-      "Roadmap planning": 4,
-      "Stakeholder management": 4,
-      "Competitive analysis": 3,
-      "Agile/Scrum": 4,
-      "SQL analytics": 3,
-      "Data visualization (Tableau/Power BI)": 3,
-      "A/B testing": 3,
-      "Hypothesis testing": 3
+      "CI/CD pipelines": 4,
+      "GitHub Actions": 4,
+      "Jenkins": 3,
+      "ArgoCD": 4,
+      "GitLab CI": 3,
+      "Prometheus/Grafana": 4,
+      "Monitoring & alerting": 4,
+      "Python": 4,
+      "AWS": 5,
+      "Kubernetes": 5,
+      "Terraform": 5,
+      "Linux administration": 5,
+      "Shell scripting": 4
     },
     "document_ids": [
       "d_p_005_00",
       "d_p_005_01",
       "d_p_005_02",
-      "d_p_005_03"
+      "d_p_005_03",
+      "d_p_005_04"
     ]
   },
   {
     "persona_id": "p_006",
     "hyperparams": {
-      "archetype": "ml_engineer",
-      "years_experience": 3,
+      "archetype": "tech_lead_architect",
+      "years_experience": 4,
       "seniority": "mid",
-      "industry": "cybersecurity",
-      "writing_style": "verbose",
-      "language_fluency": "ESL",
-      "self_promotion_level": "balanced",
+      "industry": "enterprise",
+      "writing_style": "confident",
+      "language_fluency": "near-native",
+      "self_promotion_level": "boastful",
       "quantification_tendency": "qualitative"
     },
-    "name": "Alexandra Chen",
-    "current_role": "Machine Learning Engineer",
-    "company": "CyberShield Analytics",
+    "name": "Uma Krishnan",
+    "current_role": "Senior Tech Lead",
+    "company": "NexaCorp",
     "education": {
-      "degree": "Master of Science in Data Science",
-      "university": "University of Cybersecurity Studies",
-      "year": 2020
+      "degree": "Bachelor of Science in Computer Science",
+      "university": "Stanford University",
+      "year": 2018
     },
     "career_trajectory": [
-      "Intern ML Engineer at SecureData Corp (2020-2021)",
-      "Junior ML Engineer at CyberDefend Solutions (2021-2022)",
-      "Machine Learning Engineer at CyberShield Analytics (2022-present)"
+      {
+        "role": "Software Engineer",
+        "company": "InnovateX Technologies",
+        "duration": "2 years",
+        "responsibilities": "Developed scalable backend services using Java and AWS, collaborated with cross-functional teams"
+      },
+      {
+        "role": "Lead Developer",
+        "company": "Verve Systems",
+        "duration": "2 years",
+        "responsibilities": "Owned full-stack microservices architecture, mentored junior engineers, optimized cloud costs"
+      },
+      {
+        "role": "Senior Tech Lead",
+        "company": "NexaCorp",
+        "duration": "current",
+        "responsibilities": "Architected enterprise-grade systems, managed multi-cloud strategy, led agile transformations"
+      }
     ],
     "skills": {
-      "PyTorch": 3,
-      "TensorFlow": 4,
-      "scikit-learn": 3,
-      "NLP": 4,
-      "MLOps": 3,
-      "Model deployment": 4,
-      "Apache Airflow": 4,
-      "Apache Kafka": 3,
-      "dbt": 3,
-      "ETL pipeline design": 3
+      "Team leadership": 4,
+      "System design": 4,
+      "Agile/Scrum": 4,
+      "Cross-team collaboration": 3,
+      "Stakeholder communication": 3,
+      "Technical writing": 3,
+      "CI/CD pipelines": 3,
+      "GitHub Actions": 3,
+      "Prometheus/Grafana": 3,
+      "Linux administration": 3,
+      "Database optimization": 3
     },
     "document_ids": [
       "d_p_006_00",
@@ -408,348 +409,307 @@
   {
     "persona_id": "p_007",
     "hyperparams": {
-      "archetype": "devops_sre",
-      "years_experience": 2,
-      "seniority": "junior",
-      "industry": "adtech",
-      "writing_style": "neutral",
-      "language_fluency": "native",
-      "self_promotion_level": "boastful",
+      "archetype": "security_engineer",
+      "years_experience": 5,
+      "seniority": "mid",
+      "industry": "healthtech",
+      "writing_style": "verbose",
+      "language_fluency": "ESL",
+      "self_promotion_level": "balanced",
       "quantification_tendency": "mixed"
     },
-    "name": "Alexandra Chen",
-    "current_role": "DevOps Engineer",
-    "company": "AdvertiseNow Inc.",
+    "name": "Xiomara Vargas",
+    "current_role": "Senior Security Engineer",
+    "company": "MediSafe Technologies",
     "education": {
-      "degree": "Bachelor of Science in Computer Science",
-      "university": "University of California, Berkeley",
-      "year": 2022
+      "degree": "Master's in Cybersecurity",
+      "university": "University of Health Sciences",
+      "year": 2019
     },
     "career_trajectory": [
-      "Systems Administrator at ScaleAd, 2021-2022",
-      "DevOps Engineer at AdvertiseNow, 2022-present"
+      {
+        "year": 2018,
+        "position": "Security Analyst",
+        "company": "HealthTrack Innovations"
+      },
+      {
+        "year": 2020,
+        "position": "Security Engineer",
+        "company": "MediSafe Technologies"
+      },
+      {
+        "year": 2022,
+        "position": "Senior Security Engineer",
+        "company": "MediSafe Technologies"
+      }
     ],
     "skills": {
-      "GitHub Actions": 3,
-      "Terraform": 3,
-      "Prometheus/Grafana": 3,
-      "Linux administration": 3,
-      "Shell scripting (Bash)": 3,
-      "GitLab CI": 3,
-      "Python": 3,
-      "AWS": 3,
-      "Docker": 3,
-      "Network automation": 3
+      "Network security": 3,
+      "Application security (OWASP)": 4,
+      "Penetration testing": 4,
+      "IAM/Access control": 3,
+      "Encryption & PKI": 4,
+      "Security auditing": 3,
+      "SIEM tools": 3,
+      "Vulnerability management": 3,
+      "Compliance (SOC2/GDPR)": 3,
+      "AWS": 3
     },
     "document_ids": [
       "d_p_007_00",
-      "d_p_007_01",
-      "d_p_007_02"
+      "d_p_007_01"
     ]
   },
   {
     "persona_id": "p_008",
     "hyperparams": {
-      "archetype": "ml_engineer",
-      "years_experience": 4,
-      "seniority": "mid",
-      "industry": "gaming",
-      "writing_style": "modest",
+      "archetype": "backend_engineer",
+      "years_experience": 2,
+      "seniority": "junior",
+      "industry": "adtech",
+      "writing_style": "neutral",
       "language_fluency": "near-native",
-      "self_promotion_level": "humble",
-      "quantification_tendency": "qualitative"
+      "self_promotion_level": "boastful",
+      "quantification_tendency": "metrics-heavy"
     },
-    "name": "Alex Carter",
-    "current_role": "Machine Learning Engineer",
-    "company": "NexaGame Studios",
+    "name": "Priscilla Ferreira",
+    "current_role": "Backend Engineer",
+    "company": "AdVelox Technologies",
     "education": {
-      "degree": "Master of Science in Computer Science",
-      "university": "Massachusetts Institute of Technology",
-      "year": 2020
+      "degree": "Bachelor of Science in Computer Science",
+      "university": "University of São Paulo",
+      "year": 2021
     },
     "career_trajectory": [
       {
-        "role": "Junior ML Engineer",
-        "company": "PixelForge Games",
-        "duration": "2 years",
-        "responsibilities": "Developed AI-driven NPC behaviors for open-world games using reinforcement learning and PyTorch."
+        "role": "Software Engineer Intern",
+        "company": "TechNova Solutions",
+        "year": 2021
       },
       {
-        "role": "ML Engineer",
-        "company": "Vortex Interactive",
-        "duration": "2 years",
-        "responsibilities": "Built recommendation systems for game content personalization using TensorFlow and Apache Airflow."
+        "role": "Backend Developer",
+        "company": "AdClick Media",
+        "year": 2022
+      },
+      {
+        "role": "Backend Engineer",
+        "company": "AdVelox Technologies",
+        "year": 2023
       }
     ],
     "skills": {
-      "PyTorch": 3,
-      "TensorFlow": 3,
-      "NLP": 3,
-      "Computer vision": 3,
-      "Recommendation systems": 4,
-      "MLOps (MLflow/W&B)": 4,
-      "Model deployment": 3,
-      "Reinforcement learning": 3,
-      "AWS": 4,
-      "GCP": 3,
+      "Python": 4,
+      "Go": 3,
+      "REST API design": 3,
+      "PostgreSQL": 3,
+      "AWS": 3,
       "Docker": 3,
       "Kubernetes": 3,
-      "ETL pipeline design": 3,
-      "Apache Airflow": 3
+      "Terraform": 3,
+      "CI/CD pipelines": 3
     },
     "document_ids": [
       "d_p_008_00",
       "d_p_008_01",
-      "d_p_008_02",
-      "d_p_008_03",
-      "d_p_008_04"
+      "d_p_008_02"
     ]
   },
   {
     "persona_id": "p_009",
     "hyperparams": {
-      "archetype": "platform_engineer",
-      "years_experience": 7,
-      "seniority": "senior",
-      "industry": "adtech",
-      "writing_style": "verbose",
+      "archetype": "frontend_engineer",
+      "years_experience": 1,
+      "seniority": "junior",
+      "industry": "SaaS",
+      "writing_style": "confident",
       "language_fluency": "ESL",
       "self_promotion_level": "boastful",
       "quantification_tendency": "qualitative"
     },
-    "name": "Alex Carter",
-    "current_role": "Senior Platform Engineer",
-    "company": "AdvertiseX",
-    "education": {
-      "degree": "Bachelor of Science in Computer Science",
-      "university": "Massachusetts Institute of Technology",
-      "year": 2015
-    },
-    "career_trajectory": [
-      {
-        "role": "DevOps Engineer",
-        "company": "ClickAd Studio",
-        "duration": "2 years",
-        "achievements": "Automated 80% of deployment pipelines using Jenkins and Docker"
-      },
-      {
-        "role": "Senior SRE",
-        "company": "MediaNet",
-        "duration": "3 years",
-        "achievements": "Reduced infrastructure costs by 35% through AWS cost optimization"
-      },
-      {
-        "role": "Cloud Infrastructure Lead",
-        "company": "AdvertiseX",
-        "duration": "2 years",
-        "achievements": "Architected multi-cloud strategy with GCP and Azure integration"
-      }
-    ],
-    "skills": {
-      "AWS": 5,
-      "Kubernetes": 4,
-      "Terraform": 5,
-      "Infrastructure as Code": 5,
-      "Cloud cost optimization": 4,
-      "Load balancing": 4,
-      "Serverless": 4,
-      "Python": 3,
-      "PostgreSQL": 3,
-      "Redis": 3,
-      "Prometheus/Grafana": 4,
-      "CI/CD pipelines": 4,
-      "Monitoring & alerting": 4
-    },
-    "document_ids": [
-      "d_p_009_00",
-      "d_p_009_01",
-      "d_p_009_02",
-      "d_p_009_03",
-      "d_p_009_04",
-      "d_p_009_05",
-      "d_p_009_06"
-    ]
-  },
-  {
-    "persona_id": "p_010",
-    "hyperparams": {
-      "archetype": "embedded_engineer",
-      "years_experience": 11,
-      "seniority": "staff",
-      "industry": "startup",
-      "writing_style": "modest",
-      "language_fluency": "near-native",
-      "self_promotion_level": "balanced",
-      "quantification_tendency": "metrics-heavy"
-    },
-    "name": "Jordan Carter",
-    "current_role": "Staff Embedded Systems Engineer",
-    "company": "IoT Innovators Inc.",
-    "education": {
-      "degree": "Bachelor of Science in Electrical Engineering",
-      "university": "University of Washington",
-      "year": 2012
-    },
-    "career_trajectory": [
-      {
-        "year": 2012,
-        "role": "Embedded Engineer",
-        "company": "SmartTech Devices (consumer hardware)"
-      },
-      {
-        "year": 2015,
-        "role": "Senior Firmware Developer",
-        "company": "EdgeWare Systems (industrial IoT)"
-      },
-      {
-        "year": 2018,
-        "role": "Staff Embedded Engineer",
-        "company": "IoT Innovators Inc. (startup)"
-      }
-    ],
-    "skills": {
-      "C/C++ (embedded)": 5,
-      "RTOS": 5,
-      "Firmware development": 5,
-      "IoT protocols (MQTT/CoAP)": 5,
-      "Python": 4,
-      "REST API design": 4,
-      "GitLab CI": 4,
-      "Network automation": 4
-    },
-    "document_ids": [
-      "d_p_010_00",
-      "d_p_010_01",
-      "d_p_010_02",
-      "d_p_010_03",
-      "d_p_010_04"
-    ]
-  },
-  {
-    "persona_id": "p_011",
-    "hyperparams": {
-      "archetype": "platform_engineer",
-      "years_experience": 14,
-      "seniority": "staff",
-      "industry": "e-commerce",
-      "writing_style": "verbose",
-      "language_fluency": "native",
-      "self_promotion_level": "balanced",
-      "quantification_tendency": "mixed"
-    },
-    "name": "Elena Voss",
-    "current_role": "Staff Platform Engineer - Cloud Infrastructure & DevOps Architecture",
-    "company": "GlobalEcom Solutions",
-    "education": {
-      "degree": "Master of Science in Computer Science",
-      "university": "Massachusetts Institute of Technology",
-      "year": 2010
-    },
-    "career_trajectory": [
-      {
-        "role": "DevOps Engineer",
-        "company": "RetailMomentum",
-        "duration": "2009-2012",
-        "key_achievements": [
-          "Automated deployment pipelines for 50+ microservices",
-          "Reduced infrastructure costs by 32% through AWS optimization"
-        ]
-      },
-      {
-        "role": "Senior SRE Engineer",
-        "company": "VirtuaCart",
-        "duration": "2012-2015",
-        "key_achievements": [
-          "Designed global CDN architecture with Akamai",
-          "Implemented chaos engineering practices for 99.99% SLA"
-        ]
-      },
-      {
-        "role": "Principal Platform Engineer",
-        "company": "GlobalEcom Solutions",
-        "duration": "2015-2018",
-        "key_achievements": [
-          "Led multi-cloud migration from AWS to GCP/Azure",
-          "Established service mesh governance with Istio"
-        ]
-      }
-    ],
-    "skills": {
-      "AWS": 5,
-      "Docker": 5,
-      "Kubernetes": 5,
-      "Terraform": 5,
-      "Infrastructure as Code": 5,
-      "Load balancing": 4,
-      "CDN management": 4,
-      "Cloud networking (VPC/subnets)": 4,
-      "Cloud cost optimization": 5,
-      "Serverless (Lambda/Cloud Functions)": 4,
-      "Python": 4,
-      "Go": 4,
-      "REST API design": 4,
-      "Microservices architecture": 4,
-      "PostgreSQL": 4,
-      "Redis": 4
-    },
-    "document_ids": [
-      "d_p_011_00",
-      "d_p_011_01",
-      "d_p_011_02",
-      "d_p_011_03"
-    ]
-  },
-  {
-    "persona_id": "p_012",
-    "hyperparams": {
-      "archetype": "frontend_engineer",
-      "years_experience": 2,
-      "seniority": "junior",
-      "industry": "SaaS",
-      "writing_style": "modest",
-      "language_fluency": "ESL",
-      "self_promotion_level": "humble",
-      "quantification_tendency": "metrics-heavy"
-    },
-    "name": "Alex Chen",
+    "name": "Jasmine Kaur",
     "current_role": "Frontend Engineer",
-    "company": "NexaTech Solutions",
+    "company": "NexaSphere Technologies",
     "education": {
       "degree": "Bachelor of Science in Computer Science",
-      "university": "University of Washington",
-      "year": 2022
+      "university": "University of Toronto",
+      "year": 2023
     },
     "career_trajectory": [
-      {
-        "role": "Web Developer Intern",
-        "company": "CloudFlow Inc.",
-        "duration": "6 months",
-        "responsibilities": "Assisted in building responsive dashboards using React and Tailwind CSS"
-      },
-      {
-        "role": "Junior Frontend Developer",
-        "company": "NexaTech Solutions",
-        "duration": "1 year",
-        "responsibilities": "Developed reusable UI components and optimized page load times by 30%"
-      },
-      {
-        "role": "Frontend Engineer",
-        "company": "NexaTech Solutions",
-        "duration": "current",
-        "responsibilities": "Lead implementation of accessible design systems and mentor junior developers"
-      }
+      "Internship at CloudGen SaaS startup (2022)",
+      "Junior Frontend Developer at DataLoom Inc. (2023)",
+      "Frontend Engineer at NexaSphere Technologies (2024)"
     ],
     "skills": {
       "JavaScript": 3,
       "TypeScript": 3,
       "React": 3,
-      "HTML/CSS": 3,
+      "Next.js": 3,
       "Responsive design": 3,
-      "Web accessibility (WCAG)": 2,
-      "REST API design": 2,
-      "Node.js": 2,
+      "Web accessibility (WCAG)": 3,
       "Webpack/Vite": 3,
-      "State management (Redux/Zustand)": 2
+      "Node.js": 2,
+      "REST API design": 2,
+      "Test automation": 2,
+      "Selenium/Playwright": 2,
+      "Unit testing": 2,
+      "Python": 2
+    },
+    "document_ids": [
+      "d_p_009_00",
+      "d_p_009_01",
+      "d_p_009_02"
+    ]
+  },
+  {
+    "persona_id": "p_010",
+    "hyperparams": {
+      "archetype": "mobile_developer",
+      "years_experience": 2,
+      "seniority": "junior",
+      "industry": "enterprise",
+      "writing_style": "modest",
+      "language_fluency": "native",
+      "self_promotion_level": "balanced",
+      "quantification_tendency": "metrics-heavy"
+    },
+    "name": "Moussa Keita",
+    "current_role": "Mobile Developer",
+    "company": "NexGen Technologies",
+    "education": {
+      "degree": "Bachelor of Science in Computer Science",
+      "university": "University of Technology",
+      "year": 2022
+    },
+    "career_trajectory": [
+      "Mobile Developer Intern at TechNova Solutions (2021)",
+      "Junior Mobile Developer at CodeCraft Studios (2022)",
+      "Mobile Developer at NexGen Technologies (2023)"
+    ],
+    "skills": {
+      "Swift": 3,
+      "Kotlin (Android)": 3,
+      "React Native": 3,
+      "Flutter": 3,
+      "TypeScript": 2,
+      "React": 2,
+      "Web accessibility (WCAG)": 3,
+      "REST API design": 3
+    },
+    "document_ids": [
+      "d_p_010_00",
+      "d_p_010_01"
+    ]
+  },
+  {
+    "persona_id": "p_011",
+    "hyperparams": {
+      "archetype": "ml_engineer",
+      "years_experience": 13,
+      "seniority": "staff",
+      "industry": "consulting",
+      "writing_style": "concise",
+      "language_fluency": "ESL",
+      "self_promotion_level": "boastful",
+      "quantification_tendency": "mixed"
+    },
+    "name": "Cedric Blanc",
+    "current_role": "Staff ML Engineer - AI Solutions Architect",
+    "company": "NeuraLogic Consulting",
+    "education": {
+      "degree": "Master of Science in Machine Learning",
+      "university": "ETH Zurich",
+      "year": 2017
+    },
+    "career_trajectory": [
+      {
+        "year": 2011,
+        "role": "Junior ML Engineer",
+        "company": "NexaTech Startup"
+      },
+      {
+        "year": 2015,
+        "role": "Senior ML Engineer",
+        "company": "Quantify Systems"
+      },
+      {
+        "year": 2018,
+        "role": "Team Lead, AI Solutions",
+        "company": "DataVerve Inc."
+      },
+      {
+        "year": 2021,
+        "role": "Staff ML Engineer",
+        "company": "NeuraLogic Consulting"
+      }
+    ],
+    "skills": {
+      "PyTorch": 5,
+      "TensorFlow": 5,
+      "MLOps": 5,
+      "Model deployment": 5,
+      "LLMs/Prompt engineering": 5,
+      "NLP": 5,
+      "AWS": 5,
+      "GCP": 5,
+      "Kubernetes": 4,
+      "Terraform": 4
+    },
+    "document_ids": [
+      "d_p_011_00",
+      "d_p_011_01",
+      "d_p_011_02",
+      "d_p_011_03",
+      "d_p_011_04"
+    ]
+  },
+  {
+    "persona_id": "p_012",
+    "hyperparams": {
+      "archetype": "devops_sre",
+      "years_experience": 5,
+      "seniority": "mid",
+      "industry": "startup",
+      "writing_style": "modest",
+      "language_fluency": "native",
+      "self_promotion_level": "humble",
+      "quantification_tendency": "qualitative"
+    },
+    "name": "Hannah Fischer",
+    "current_role": "DevOps Engineer",
+    "company": "NexaSphere Technologies",
+    "education": {
+      "degree": "Bachelor of Science in Computer Science",
+      "university": "Massachusetts Institute of Technology",
+      "year": 2018
+    },
+    "career_trajectory": [
+      {
+        "role": "Junior DevOps Engineer",
+        "company": "TechNova Solutions",
+        "year": 2018
+      },
+      {
+        "role": "DevOps Engineer",
+        "company": "NexaSphere Technologies",
+        "year": 2019
+      },
+      {
+        "role": "Senior DevOps Engineer",
+        "company": "NexaSphere Technologies",
+        "year": 2021
+      }
+    ],
+    "skills": {
+      "CI/CD pipelines": 3,
+      "GitLab CI": 3,
+      "Kubernetes": 4,
+      "Terraform": 4,
+      "Prometheus/Grafana": 3,
+      "AWS": 4,
+      "Python": 3,
+      "Linux administration": 3,
+      "Docker": 3,
+      "Network automation": 3
     },
     "document_ids": [
       "d_p_012_00",
@@ -760,52 +720,50 @@
     "persona_id": "p_013",
     "hyperparams": {
       "archetype": "mobile_developer",
-      "years_experience": 7,
-      "seniority": "senior",
-      "industry": "fintech",
-      "writing_style": "concise",
-      "language_fluency": "ESL",
-      "self_promotion_level": "boastful",
+      "years_experience": 3,
+      "seniority": "mid",
+      "industry": "cybersecurity",
+      "writing_style": "modest",
+      "language_fluency": "near-native",
+      "self_promotion_level": "humble",
       "quantification_tendency": "qualitative"
     },
-    "name": "Alex Carter",
-    "current_role": "Senior Mobile Developer – Fintech Specialization",
-    "company": "FinTech Innovators Ltd.",
+    "name": "Hana Kim",
+    "current_role": "Mobile Developer (Cybersecurity Focus)",
+    "company": "SecureNet Technologies",
     "education": {
-      "degree": "BSc in Software Engineering",
-      "university": "Tech University",
-      "year": 2017
+      "degree": "Bachelor of Science in Computer Science",
+      "university": "University of California, Berkeley",
+      "year": 2020
     },
     "career_trajectory": [
       {
+        "year": 2020,
         "role": "Junior Mobile Developer",
-        "company": "PaySafe Solutions (2016)",
-        "duration": "1 year"
+        "company": "TechStart Innovations"
       },
       {
-        "role": "Lead Mobile Developer",
-        "company": "MoneyFlow Tech (2018-2020)",
-        "duration": "2 years"
+        "year": 2022,
+        "role": "Mobile Developer",
+        "company": "CyberGuard Solutions"
       },
       {
-        "role": "Senior Mobile Architect",
-        "company": "FinTech Innovators Ltd. (2020-present)",
-        "duration": "3 years"
+        "year": 2023,
+        "role": "Mobile Developer",
+        "company": "SecureNet Technologies"
       }
     ],
     "skills": {
-      "Swift": 5,
-      "Kotlin": 5,
-      "React Native": 4,
-      "Flutter": 4,
-      "iOS development": 5,
-      "Android development": 5,
-      "Mobile CI/CD": 4,
-      "REST API design": 4,
-      "GraphQL": 3,
-      "Test automation": 4,
-      "Mobile testing": 4,
-      "Security testing": 4
+      "Swift": 4,
+      "Kotlin": 3,
+      "React Native": 3,
+      "Flutter": 3,
+      "iOS development": 3,
+      "Android development": 3,
+      "TypeScript": 3,
+      "React": 3,
+      "REST API design": 3,
+      "Security testing": 3
     },
     "document_ids": [
       "d_p_013_00",
@@ -818,784 +776,815 @@
   {
     "persona_id": "p_014",
     "hyperparams": {
-      "archetype": "tech_lead_architect",
-      "years_experience": 4,
-      "seniority": "mid",
-      "industry": "e-commerce",
-      "writing_style": "modest",
+      "archetype": "fullstack_developer",
+      "years_experience": 11,
+      "seniority": "staff",
+      "industry": "SaaS",
+      "writing_style": "confident",
       "language_fluency": "native",
       "self_promotion_level": "humble",
-      "quantification_tendency": "metrics-heavy"
+      "quantification_tendency": "mixed"
     },
-    "name": "Aisha Khan",
-    "current_role": "Senior Tech Lead",
-    "company": "VeloCart",
+    "name": "Dina Soliman",
+    "current_role": "Staff Full-Stack Developer",
+    "company": "NexaCloud Solutions",
     "education": {
       "degree": "Bachelor of Science in Computer Science",
-      "university": "University of Toronto",
-      "year": 2018
+      "university": "Massachusetts Institute of Technology",
+      "year": 2012
     },
     "career_trajectory": [
       {
-        "role": "Software Engineer",
-        "company": "VeloCart",
-        "duration": "2018-2019",
-        "achievements": "Built core payment processing module with 95%+ uptime, reduced latency by 40% via caching optimization"
+        "role": "Junior Software Developer",
+        "company": "InnovateTech Inc.",
+        "year": 2013
       },
       {
-        "role": "Team Lead",
-        "company": "VeloCart",
-        "duration": "2019-2021",
-        "achievements": "Led 6-engineer team to migrate monorepo to microservices, improving deployment frequency by 50%"
+        "role": "Lead Backend Developer",
+        "company": "StreamlineApps",
+        "year": 2016
       },
       {
-        "role": "Tech Lead",
-        "company": "VeloCart",
-        "duration": "2021-2023",
-        "achievements": "Architected serverless order processing pipeline, cutting infrastructure costs by $250K annually"
+        "role": "Principal Engineer",
+        "company": "CloudNest Ltd.",
+        "year": 2019
+      },
+      {
+        "role": "Staff Full-Stack Developer",
+        "company": "NexaCloud Solutions",
+        "year": 2023
       }
     ],
     "skills": {
-      "Team leadership": 4,
-      "Mentoring": 3,
-      "Technical writing": 3,
-      "Code review": 4,
-      "System design": 4,
-      "Agile/Scrum": 4,
-      "Cross-team collaboration": 4,
-      "Stakeholder communication": 3,
-      "Project management": 3,
+      "Python": 5,
+      "Node.js": 4,
+      "React": 4,
+      "PostgreSQL": 5,
+      "Redis": 4,
+      "REST API design": 5,
+      "Microservices architecture": 5,
+      "AWS": 5,
+      "Docker": 4,
+      "Kubernetes": 5,
       "CI/CD pipelines": 4,
-      "Kubernetes": 4,
-      "AWS": 4,
-      "Terraform": 3,
-      "Infrastructure as Code": 4,
-      "Cloud cost optimization": 3
+      "Cloud cost optimization": 4
     },
     "document_ids": [
       "d_p_014_00",
       "d_p_014_01",
-      "d_p_014_02"
+      "d_p_014_02",
+      "d_p_014_03",
+      "d_p_014_04"
     ]
   },
   {
     "persona_id": "p_015",
     "hyperparams": {
-      "archetype": "ml_engineer",
-      "years_experience": 0,
-      "seniority": "junior",
-      "industry": "adtech",
-      "writing_style": "concise",
+      "archetype": "platform_engineer",
+      "years_experience": 8,
+      "seniority": "senior",
+      "industry": "fintech",
+      "writing_style": "confident",
       "language_fluency": "native",
       "self_promotion_level": "humble",
-      "quantification_tendency": "metrics-heavy"
+      "quantification_tendency": "mixed"
     },
-    "name": "Elena Martínez",
-    "current_role": "Machine Learning Engineer",
-    "company": "AdVerge",
+    "name": "Michael Tran",
+    "current_role": "Platform Engineer",
+    "company": "Nexus Financial Solutions",
     "education": {
-      "degree": "Bachelor of Science in Computer Science",
-      "university": "University of California, Berkeley",
-      "year": 2023
+      "degree": "Master of Science in Computer Science",
+      "university": "Massachusetts Institute of Technology (MIT)",
+      "year": 2018
     },
     "career_trajectory": [
-      "Data Analyst Intern at AdVerge (2022)",
-      "Machine Learning Intern at AdVerge (2023)",
-      "ML Engineer at AdVerge (2024)"
+      "Junior DevOps Engineer at FinTech Innovators (2015-2017)",
+      "DevOps Engineer at CapitalFlow Systems (2017-2019)",
+      "Senior Platform Engineer at SecureBank Solutions (2019-2023)"
     ],
     "skills": {
-      "PyTorch": 3,
-      "TensorFlow": 3,
-      "scikit-learn": 3,
-      "NLP": 3,
-      "MLOps (MLflow/W&B)": 3,
-      "Apache Airflow": 2,
-      "REST API design": 2,
-      "Docker": 3,
-      "GCP": 3
+      "AWS": 5,
+      "GCP": 5,
+      "Kubernetes": 4,
+      "Terraform": 4,
+      "Infrastructure as Code": 4,
+      "Cloud cost optimization": 4,
+      "Python": 4,
+      "PostgreSQL": 4,
+      "REST API design": 4,
+      "Network troubleshooting": 4
     },
     "document_ids": [
       "d_p_015_00",
       "d_p_015_01",
-      "d_p_015_02"
+      "d_p_015_02",
+      "d_p_015_03"
     ]
   },
   {
     "persona_id": "p_016",
     "hyperparams": {
-      "archetype": "frontend_engineer",
-      "years_experience": 3,
-      "seniority": "mid",
-      "industry": "fintech",
-      "writing_style": "modest",
-      "language_fluency": "native",
-      "self_promotion_level": "humble",
-      "quantification_tendency": "qualitative"
+      "archetype": "security_engineer",
+      "years_experience": 6,
+      "seniority": "senior",
+      "industry": "healthtech",
+      "writing_style": "neutral",
+      "language_fluency": "ESL",
+      "self_promotion_level": "boastful",
+      "quantification_tendency": "metrics-heavy"
     },
-    "name": "Emily Carter",
-    "current_role": "Frontend Engineer",
-    "company": "FinTech Innovators Ltd.",
+    "name": "Gabriel Souza",
+    "current_role": "Senior Security Engineer",
+    "company": "HealthGuard Technologies",
     "education": {
-      "degree": "Bachelor of Science in Computer Science",
-      "university": "University of Washington",
-      "year": 2020
+      "degree": "Bachelor of Science in Cybersecurity",
+      "university": "University of São Paulo",
+      "year": 2018
     },
     "career_trajectory": [
       {
-        "role": "Frontend Intern",
-        "company": "FinTech Solutions Inc.",
-        "year": 2020
+        "role": "Security Analyst",
+        "company": "MedTech Solutions",
+        "duration": "2 years",
+        "responsibilities": "Conducted vulnerability assessments and implemented firewall rules for HIPAA-compliant systems."
       },
       {
-        "role": "Junior Frontend Developer",
-        "company": "CapitalFlow Technologies",
-        "year": 2021
+        "role": "Security Architect",
+        "company": "ClinicaNet",
+        "duration": "3 years",
+        "responsibilities": "Designed IAM frameworks and led SOC2 compliance audits for cloud-based EHR platforms."
       },
       {
-        "role": "Mid-Level Frontend Engineer",
-        "company": "FinTech Innovators Ltd.",
-        "year": 2022
+        "role": "Senior Security Engineer",
+        "company": "HealthGuard Technologies",
+        "duration": "1 year",
+        "responsibilities": "Architected zero-trust networks and reduced breach response time by 40% through advanced SIEM integration."
       }
     ],
     "skills": {
-      "JavaScript": 4,
-      "TypeScript": 4,
-      "React": 4,
-      "Next.js": 3,
-      "Responsive design": 3,
-      "Web accessibility": 3,
-      "REST API design": 3,
-      "Webpack/Vite": 3,
-      "Unit testing": 3,
-      "Test automation": 3
+      "Network security": 4,
+      "Application security (OWASP)": 5,
+      "Penetration testing": 4,
+      "IAM/Access control": 5,
+      "Compliance (SOC2/GDPR)": 4,
+      "SIEM tools": 4,
+      "Vulnerability management": 4,
+      "Threat modeling": 4,
+      "Incident response": 5
     },
     "document_ids": [
       "d_p_016_00",
       "d_p_016_01",
-      "d_p_016_02"
+      "d_p_016_02",
+      "d_p_016_03"
     ]
   },
   {
     "persona_id": "p_017",
     "hyperparams": {
       "archetype": "ml_engineer",
-      "years_experience": 8,
-      "seniority": "senior",
-      "industry": "healthtech",
-      "writing_style": "neutral",
-      "language_fluency": "native",
-      "self_promotion_level": "humble",
-      "quantification_tendency": "qualitative"
+      "years_experience": 3,
+      "seniority": "mid",
+      "industry": "fintech",
+      "writing_style": "concise",
+      "language_fluency": "ESL",
+      "self_promotion_level": "boastful",
+      "quantification_tendency": "metrics-heavy"
     },
-    "name": "Emily Carter",
-    "current_role": "Senior ML Engineer - Health Analytics",
-    "company": "VitalCare Technologies",
+    "name": "Aaron Baptiste",
+    "current_role": "Machine Learning Engineer",
+    "company": "FinNexus Solutions",
     "education": {
-      "degree": "Master of Science in Machine Learning",
-      "university": "Stanford University",
-      "year": 2018
+      "degree": "Master of Science in Data Science",
+      "university": "Georgia Tech",
+      "year": 2021
     },
     "career_trajectory": [
       {
-        "role": "ML Engineer Intern",
-        "company": "HealthInsight Analytics",
-        "duration": "2016-2017"
+        "role": "Data Science Intern",
+        "company": "Bloomberg Finance L.P.",
+        "year": 2020
+      },
+      {
+        "role": "Machine Learning Engineer",
+        "company": "FinNexus Solutions",
+        "year": 2021
       },
       {
         "role": "Lead ML Engineer",
-        "company": "MedTech Solutions",
-        "duration": "2017-2020"
-      },
-      {
-        "role": "Head of AI Innovation",
-        "company": "Wellness Dynamics",
-        "duration": "2020-2022"
+        "company": "FinNexus Solutions",
+        "year": 2022
       }
     ],
     "skills": {
-      "PyTorch": 5,
-      "NLP": 5,
-      "Computer vision": 4,
-      "MLOps (MLflow/W&B)": 5,
-      "Model deployment": 5,
-      "LLMs/Prompt engineering": 4,
-      "RAG systems": 4,
-      "AWS": 5,
+      "PyTorch": 4,
+      "TensorFlow": 4,
+      "scikit-learn": 3,
+      "Hugging Face Transformers": 3,
+      "NLP": 4,
+      "Recommendation systems": 3,
+      "MLOps (MLflow/W&B)": 4,
+      "Model deployment": 4,
+      "AWS": 4,
+      "GCP": 3,
       "Docker": 4,
-      "Kubernetes": 4,
-      "Apache Airflow": 4,
-      "Apache Spark": 4
+      "Kubernetes": 3
     },
     "document_ids": [
       "d_p_017_00",
       "d_p_017_01",
       "d_p_017_02",
-      "d_p_017_03",
-      "d_p_017_04"
+      "d_p_017_03"
     ]
   },
   {
     "persona_id": "p_018",
     "hyperparams": {
-      "archetype": "fullstack_developer",
-      "years_experience": 3,
+      "archetype": "frontend_engineer",
+      "years_experience": 5,
       "seniority": "mid",
-      "industry": "adtech",
-      "writing_style": "concise",
-      "language_fluency": "native",
-      "self_promotion_level": "boastful",
-      "quantification_tendency": "metrics-heavy"
+      "industry": "fintech",
+      "writing_style": "confident",
+      "language_fluency": "near-native",
+      "self_promotion_level": "humble",
+      "quantification_tendency": "mixed"
     },
-    "name": "Alex Carter",
-    "current_role": "Senior Full-Stack Developer",
-    "company": "AdVerve Technologies",
+    "name": "Rahul Iyer",
+    "current_role": "Senior Frontend Engineer",
+    "company": "CapitalFlow Solutions",
     "education": {
       "degree": "Bachelor of Science in Computer Science",
-      "university": "Georgia Tech",
-      "year": 2019
+      "university": "Massachusetts Institute of Technology",
+      "year": 2018
     },
     "career_trajectory": [
-      "Junior Software Engineer at BrightRoll (2019-2021) - Built real-time ad targeting pipelines in Python/Go",
-      "Full-Stack Developer at AdVelox (2021-2022) - Architected scalable ad-serving APIs with GraphQL",
-      "Senior Full-Stack Developer at AdVerve (2022-present) - Own 3+ microservices with Kubernetes/Redis"
+      {
+        "title": "Frontend Developer Intern",
+        "company": "FinTech Innovators",
+        "year_range": "2017-2018"
+      },
+      {
+        "title": "Junior Frontend Engineer",
+        "company": "NexaPay Solutions",
+        "year_range": "2018-2019"
+      },
+      {
+        "title": "Frontend Engineer",
+        "company": "CapitalFlow Solutions",
+        "year_range": "2019-2020"
+      },
+      {
+        "title": "Senior Frontend Engineer",
+        "company": "CapitalFlow Solutions",
+        "year_range": "2020-present"
+      }
     ],
     "skills": {
-      "Python": 4,
-      "Go": 4,
-      "REST API design": 4,
-      "GraphQL": 3,
-      "React": 4,
+      "JavaScript": 3,
       "TypeScript": 4,
-      "PostgreSQL": 4,
-      "Redis": 3,
-      "AWS": 4,
-      "GCP": 3,
-      "Docker": 4,
-      "Kubernetes": 3,
-      "GitHub Actions": 3,
-      "Prometheus/Grafana": 3
+      "React": 4,
+      "Next.js": 3,
+      "Responsive design": 4,
+      "Web accessibility (WCAG)": 3,
+      "Webpack/Vite": 3,
+      "State management (Redux/Zustand)": 3,
+      "Web performance optimization": 3
     },
     "document_ids": [
       "d_p_018_00",
       "d_p_018_01",
-      "d_p_018_02",
-      "d_p_018_03"
+      "d_p_018_02"
     ]
   },
   {
     "persona_id": "p_019",
     "hyperparams": {
-      "archetype": "fullstack_developer",
-      "years_experience": 11,
-      "seniority": "staff",
+      "archetype": "qa_test_engineer",
+      "years_experience": 5,
+      "seniority": "mid",
       "industry": "gaming",
-      "writing_style": "confident",
-      "language_fluency": "native",
-      "self_promotion_level": "balanced",
+      "writing_style": "neutral",
+      "language_fluency": "near-native",
+      "self_promotion_level": "boastful",
       "quantification_tendency": "mixed"
     },
-    "name": "Alex Carter",
-    "current_role": "Staff Full-Stack Engineer",
+    "name": "Marcus Johnson",
+    "current_role": "Senior QA Test Engineer",
     "company": "Lumina Games",
     "education": {
-      "degree": "Computer Science",
+      "degree": "Bachelor of Science in Software Engineering",
       "university": "University of Southern California",
-      "year": 2015
+      "year": 2019
     },
     "career_trajectory": [
       {
-        "year": 2012,
-        "position": "Junior Game Developer",
-        "company": "PixelForge Studios"
+        "role": "QA Tester",
+        "company": "Nova Interactive",
+        "duration": "2 years",
+        "responsibilities": "Manual testing of mobile games, bug tracking, and basic automation scripting"
       },
       {
-        "year": 2015,
-        "position": "Senior Backend Engineer",
-        "company": "Nova Interactive"
+        "role": "QA Engineer",
+        "company": "Vortex Studios",
+        "duration": "2 years",
+        "responsibilities": "Developed Selenium test suites for web-based game tools, collaborated on test strategy design"
       },
       {
-        "year": 2018,
-        "position": "Lead Full-Stack Developer",
-        "company": "Aether Games"
-      },
-      {
-        "year": 2021,
-        "position": "Staff Full-Stack Engineer",
-        "company": "Lumina Games"
+        "role": "QA Lead",
+        "company": "Lumina Games",
+        "duration": "1 year",
+        "responsibilities": "Oversaw API testing for multiplayer game servers, integrated JMeter for performance validation"
       }
     ],
     "skills": {
+      "Test automation": 3,
+      "Selenium/Playwright": 3,
+      "Unit testing": 3,
+      "Integration testing": 3,
+      "Performance testing (JMeter/k6)": 3,
+      "API testing": 3,
       "Python": 4,
-      "C#/.NET": 5,
-      "Node.js": 4,
-      "Rust": 5,
-      "REST API design": 5,
-      "gRPC": 4,
-      "Microservices architecture": 5,
-      "React": 5,
-      "AWS": 5,
-      "GCP": 4,
-      "Docker": 5,
-      "Kubernetes": 5,
-      "CI/CD pipelines": 5,
-      "Monitoring & alerting": 5
+      "Java": 2,
+      "Go": 3,
+      "REST API design": 3,
+      "CI/CD pipelines": 3
     },
     "document_ids": [
-      "d_p_019_00",
-      "d_p_019_01",
-      "d_p_019_02",
-      "d_p_019_03"
+      "d_p_019_00"
     ]
   },
   {
     "persona_id": "p_020",
     "hyperparams": {
-      "archetype": "fullstack_developer",
-      "years_experience": 1,
-      "seniority": "junior",
-      "industry": "fintech",
-      "writing_style": "concise",
+      "archetype": "ml_engineer",
+      "years_experience": 7,
+      "seniority": "senior",
+      "industry": "healthtech",
+      "writing_style": "confident",
       "language_fluency": "ESL",
-      "self_promotion_level": "balanced",
-      "quantification_tendency": "mixed"
+      "self_promotion_level": "humble",
+      "quantification_tendency": "metrics-heavy"
     },
-    "name": "Alex Morgan",
-    "current_role": "Full-Stack Developer",
-    "company": "FinTech Innovators LLC",
+    "name": "Neha Joshi",
+    "current_role": "Senior ML Engineer",
+    "company": "MedTech Innovations",
     "education": {
-      "degree": "Bachelor of Science in Computer Science",
-      "university": "State University of Technology",
-      "year": 2023
+      "degree": "Master of Science in Data Science",
+      "university": "University of Washington",
+      "year": 2018
     },
     "career_trajectory": [
       {
-        "title": "Software Intern",
-        "company": "Digital Payments Corp",
-        "duration": "6 months",
-        "responsibilities": "Assisted in building payment gateway APIs using Python and PostgreSQL"
+        "role": "Data Scientist Intern",
+        "company": "HealthAI Labs",
+        "year": 2016
       },
       {
-        "title": "Junior Full-Stack Developer",
-        "company": "FinTech Innovators LLC",
-        "duration": "1 year",
-        "responsibilities": "Developed frontend features with React and backend services with Python/REST APIs"
+        "role": "Machine Learning Engineer",
+        "company": "VitalSigns Health",
+        "year": 2017
+      },
+      {
+        "role": "Lead ML Engineer",
+        "company": "MedTech Innovations",
+        "year": 2020
       }
     ],
     "skills": {
-      "Python": 3,
-      "JavaScript": 3,
-      "React": 3,
-      "REST API design": 3,
-      "PostgreSQL": 3,
-      "TypeScript": 2,
-      "Docker": 3,
-      "AWS": 3,
-      "GitLab CI": 3,
-      "Web performance optimization": 2
+      "PyTorch": 4,
+      "TensorFlow": 4,
+      "Hugging Face Transformers": 4,
+      "NLP": 5,
+      "Computer vision": 4,
+      "MLOps (MLflow/W&B)": 5,
+      "Model deployment": 4,
+      "AWS": 5,
+      "GCP": 4,
+      "Docker": 5,
+      "Kubernetes": 4,
+      "Apache Airflow": 4
     },
     "document_ids": [
       "d_p_020_00",
-      "d_p_020_01"
+      "d_p_020_01",
+      "d_p_020_02",
+      "d_p_020_03",
+      "d_p_020_04",
+      "d_p_020_05"
     ]
   },
   {
     "persona_id": "p_021",
     "hyperparams": {
-      "archetype": "mobile_developer",
-      "years_experience": 9,
-      "seniority": "senior",
-      "industry": "gaming",
-      "writing_style": "concise",
+      "archetype": "data_scientist",
+      "years_experience": 2,
+      "seniority": "junior",
+      "industry": "e-commerce",
+      "writing_style": "verbose",
       "language_fluency": "native",
-      "self_promotion_level": "boastful",
-      "quantification_tendency": "metrics-heavy"
+      "self_promotion_level": "balanced",
+      "quantification_tendency": "mixed"
     },
-    "name": "Alex Rivera",
-    "current_role": "Senior Mobile Architect - Game Studios",
-    "company": "Nova Interactive",
+    "name": "Takeshi Hayashi",
+    "current_role": "Junior Data Scientist",
+    "company": "NijiMart",
     "education": {
-      "degree": "Bachelor of Science in Computer Science",
-      "university": "University of Southern California",
-      "year": 2014
+      "degree": "Master of Science in Data Science",
+      "university": "Keio University",
+      "year": 2021
     },
     "career_trajectory": [
       {
-        "role": "Junior Mobile Developer",
-        "company": "PixelForge Games",
-        "duration": "2015-2017",
-        "achievements": "Built core mechanics for 3 mobile games, 15% performance optimization"
+        "role": "Data Analyst Intern",
+        "company": "EcoCart",
+        "duration": "6 months",
+        "responsibilities": "Assisted in aggregating sales metrics and creating dashboards for inventory optimization."
       },
       {
-        "role": "Lead Mobile Engineer",
-        "company": "Nova Interactive",
-        "duration": "2019-2021",
-        "achievements": "Spearheaded cross-platform migration, reduced deployment time by 40%"
+        "role": "Data Science Intern",
+        "company": "NijiMart",
+        "duration": "12 months",
+        "responsibilities": "Developed predictive models for customer churn and contributed to A/B testing frameworks for pricing strategies."
       },
       {
-        "role": "Senior Mobile Architect",
-        "company": "Nova Interactive",
-        "duration": "2021-present",
-        "achievements": "Designed scalable backend integrations, 30% reduction in crash reports"
+        "role": "Junior Data Scientist",
+        "company": "NijiMart",
+        "duration": "2 years",
+        "responsibilities": "Owns end-to-end projects for recommendation systems and optimizes feature pipelines for user segmentation."
       }
     ],
     "skills": {
-      "Swift": 5,
-      "Kotlin": 5,
-      "Flutter": 4,
-      "Mobile CI/CD": 4,
-      "App Store deployment": 4,
-      "TypeScript": 4,
-      "React": 3,
-      "REST API design": 4,
-      "GraphQL": 3
+      "Pandas": 3,
+      "NumPy": 3,
+      "SQL analytics": 3,
+      "Data visualization (Matplotlib/Plotly)": 3,
+      "Feature engineering": 3,
+      "Exploratory data analysis": 3,
+      "A/B testing": 3,
+      "scikit-learn": 4,
+      "Python": 3,
+      "REST API design": 3,
+      "Apache Airflow": 3,
+      "dbt": 3,
+      "ETL pipeline design": 3,
+      "Data modeling": 3
     },
     "document_ids": [
       "d_p_021_00",
       "d_p_021_01",
-      "d_p_021_02",
-      "d_p_021_03",
-      "d_p_021_04",
-      "d_p_021_05"
+      "d_p_021_02"
     ]
   },
   {
     "persona_id": "p_022",
     "hyperparams": {
-      "archetype": "frontend_engineer",
-      "years_experience": 6,
-      "seniority": "senior",
-      "industry": "fintech",
-      "writing_style": "concise",
-      "language_fluency": "near-native",
-      "self_promotion_level": "boastful",
+      "archetype": "devops_sre",
+      "years_experience": 14,
+      "seniority": "staff",
+      "industry": "cybersecurity",
+      "writing_style": "neutral",
+      "language_fluency": "ESL",
+      "self_promotion_level": "balanced",
       "quantification_tendency": "mixed"
     },
-    "name": "Alex Carter",
-    "current_role": "Senior Frontend Engineer",
-    "company": "FinTech Innovators Inc.",
+    "name": "Sven Lindqvist",
+    "current_role": "Staff DevOps Engineer",
+    "company": "CyberShield Security Solutions",
     "education": {
-      "degree": "Master of Science in Computer Science",
-      "university": "University of Washington",
-      "year": 2018
+      "degree": "Bachelor of Science in Computer Science",
+      "university": "KTH Royal Institute of Technology",
+      "year": 2010
     },
     "career_trajectory": [
-      "Junior Developer (2017-2019) at Blockchain Payments Ltd.",
-      "Mid-Level Frontend Engineer (2019-2021) at WealthTrack Solutions",
-      "Senior Frontend Engineer (2021-2023) at FinTech Innovators Inc."
+      {
+        "role": "Junior Systems Administrator",
+        "company": "SecureNet Technologies",
+        "year_range": "2010-2012"
+      },
+      {
+        "role": "DevOps Engineer",
+        "company": "Sentinel Cybersecurity",
+        "year_range": "2012-2015"
+      },
+      {
+        "role": "Senior Site Reliability Engineer",
+        "company": "Vigilant Security Group",
+        "year_range": "2015-2018"
+      },
+      {
+        "role": "Staff DevOps Engineer",
+        "company": "CyberShield Security Solutions",
+        "year_range": "2018-present"
+      }
     ],
     "skills": {
-      "JavaScript": 4,
-      "TypeScript": 5,
-      "React": 5,
-      "Next.js": 4,
-      "Responsive design": 4,
-      "Web accessibility (WCAG)": 4,
-      "State management (Redux/Zustand)": 4,
-      "Python": 3,
-      "Node.js": 3,
-      "REST API design": 4,
-      "GraphQL": 3,
-      "Stakeholder management": 3
+      "CI/CD pipelines": 5,
+      "GitHub Actions": 4,
+      "Jenkins": 3,
+      "ArgoCD": 4,
+      "Prometheus/Grafana": 4,
+      "Kubernetes": 5,
+      "Terraform": 5,
+      "Python": 4,
+      "Cloud cost optimization": 4,
+      "Network automation": 3,
+      "Database optimization": 3,
+      "Incident management": 4
     },
     "document_ids": [
       "d_p_022_00",
       "d_p_022_01",
-      "d_p_022_02"
+      "d_p_022_02",
+      "d_p_022_03",
+      "d_p_022_04",
+      "d_p_022_05"
     ]
   },
   {
     "persona_id": "p_023",
     "hyperparams": {
-      "archetype": "product_manager",
-      "years_experience": 4,
-      "seniority": "mid",
-      "industry": "consulting",
-      "writing_style": "neutral",
-      "language_fluency": "near-native",
-      "self_promotion_level": "humble",
-      "quantification_tendency": "mixed"
+      "archetype": "data_engineer",
+      "years_experience": 2,
+      "seniority": "junior",
+      "industry": "cybersecurity",
+      "writing_style": "verbose",
+      "language_fluency": "native",
+      "self_promotion_level": "balanced",
+      "quantification_tendency": "qualitative"
     },
-    "name": "Emily Carter",
-    "current_role": "Product Manager",
-    "company": "Strategic Innovations Group",
+    "name": "Xander de Vries",
+    "current_role": "Junior Data Engineer",
+    "company": "CyberShield Analytics",
     "education": {
-      "degree": "Business Administration",
-      "university": "University of Michigan",
-      "year": 2018
+      "degree": "Bachelor of Science in Computer Science",
+      "university": "University of Amsterdam",
+      "year": 2021
     },
     "career_trajectory": [
       {
-        "role": "Business Analyst",
-        "company": "Global Consulting Co.",
-        "duration": "2 years",
-        "responsibilities": "Conducted market research and translated client needs into actionable insights."
+        "role": "Data Analyst Intern",
+        "company": "CyberShield Analytics",
+        "duration": "6 months",
+        "responsibilities": "Assisted in processing security logs, designed basic ETL workflows using Python and SQL, collaborated with cybersecurity teams to identify threat patterns"
       },
       {
-        "role": "Product Coordinator",
-        "company": "Digital Solutions Inc.",
-        "duration": "1.5 years",
-        "responsibilities": "Collaborated with cross-functional teams to define product roadmaps and manage deliverables."
+        "role": "Data Engineering Intern",
+        "company": "CyberShield Analytics",
+        "duration": "6 months",
+        "responsibilities": "Implemented data pipelines for real-time network traffic analysis, optimized PostgreSQL queries for forensic data retrieval, contributed to Snowflake schema design"
       },
       {
-        "role": "Product Manager",
-        "company": "Strategic Innovations Group",
-        "duration": "0.5 years",
-        "responsibilities": "Own end-to-end product lifecycle from concept to launch, with focus on client-centric solutions."
+        "role": "Junior Data Engineer",
+        "company": "CyberShield Analytics",
+        "duration": "1 year",
+        "responsibilities": "Architected Apache Kafka-based stream processing pipelines for intrusion detection, deployed dbt models for security metrics reporting, maintained AWS Redshift clusters for incident response analytics"
       }
     ],
     "skills": {
-      "Product management": 4,
-      "UX research": 3,
-      "Stakeholder management": 3,
-      "Roadmap planning": 3,
-      "Competitive analysis": 3,
-      "Analytics-driven product decisions": 3,
-      "SQL analytics": 3,
-      "Tableau/Power BI": 3,
-      "A/B testing": 3,
-      "Hypothesis testing": 3,
-      "Cross-team collaboration": 3
+      "Apache Spark": 4,
+      "Apache Kafka": 3,
+      "Apache Airflow": 3,
+      "dbt": 3,
+      "ETL pipeline design": 3,
+      "Data warehousing": 4,
+      "Snowflake": 3,
+      "Databricks": 3,
+      "Python": 3,
+      "REST API design": 3,
+      "CI/CD pipelines": 3,
+      "Docker": 3,
+      "Kubernetes": 3,
+      "Database optimization": 2
     },
     "document_ids": [
       "d_p_023_00",
-      "d_p_023_01",
-      "d_p_023_02"
+      "d_p_023_01"
     ]
   },
   {
     "persona_id": "p_024",
     "hyperparams": {
-      "archetype": "qa_test_engineer",
-      "years_experience": 10,
-      "seniority": "staff",
-      "industry": "adtech",
-      "writing_style": "confident",
-      "language_fluency": "near-native",
-      "self_promotion_level": "balanced",
+      "archetype": "fullstack_developer",
+      "years_experience": 3,
+      "seniority": "mid",
+      "industry": "startup",
+      "writing_style": "neutral",
+      "language_fluency": "native",
+      "self_promotion_level": "boastful",
       "quantification_tendency": "mixed"
     },
-    "name": "Alexandra Chen",
-    "current_role": "Staff QA Engineer - Test Automation Architect",
-    "company": "AdVerve Technologies",
+    "name": "Farhana Chowdhury",
+    "current_role": "Full-Stack Developer",
+    "company": "NexGen Solutions",
     "education": {
-      "degree": "Computer Science",
-      "university": "University of California, Berkeley",
-      "year": 2012
+      "degree": "Bachelor of Science in Computer Science",
+      "university": "University of Toronto",
+      "year": 2021
     },
     "career_trajectory": [
       {
-        "role": "QA Engineer",
-        "company": "MediaNet Solutions",
-        "duration": "2010-2013"
+        "role": "Software Development Intern",
+        "company": "TechNova Innovations",
+        "year": 2020
       },
       {
-        "role": "QA Lead",
-        "company": "AdSquared Inc",
-        "duration": "2013-2016"
+        "role": "Junior Full-Stack Developer",
+        "company": "DevLabs Inc.",
+        "year": 2021
       },
       {
-        "role": "Senior QA Engineer",
-        "company": "ClickFlow Media",
-        "duration": "2016-2019"
-      },
-      {
-        "role": "Staff QA Engineer",
-        "company": "AdVerve Technologies",
-        "duration": "2019-present"
+        "role": "Mid-Level Full-Stack Developer",
+        "company": "NexGen Solutions",
+        "year": 2023
       }
     ],
     "skills": {
-      "Test automation": 5,
-      "Selenium/Playwright": 4,
-      "API testing": 5,
-      "Performance testing (JMeter/k6)": 5,
-      "Integration testing": 4,
-      "Test strategy design": 5,
-      "Python": 5,
-      "REST API design": 5,
-      "CI/CD pipelines": 5,
-      "Problem-solving": 5
+      "Python": 4,
+      "JavaScript": 4,
+      "React": 4,
+      "Node.js": 4,
+      "REST API design": 4,
+      "PostgreSQL": 4,
+      "MongoDB": 4,
+      "Docker": 4,
+      "AWS": 4,
+      "CI/CD pipelines": 4,
+      "GitHub Actions": 3,
+      "Kubernetes": 3,
+      "Prometheus/Grafana": 3,
+      "Web performance optimization": 3,
+      "Responsive design": 3,
+      "Database optimization": 3
     },
     "document_ids": [
       "d_p_024_00",
       "d_p_024_01",
-      "d_p_024_02",
-      "d_p_024_03"
+      "d_p_024_02"
     ]
   },
   {
     "persona_id": "p_025",
     "hyperparams": {
-      "archetype": "data_engineer",
-      "years_experience": 7,
-      "seniority": "senior",
-      "industry": "startup",
-      "writing_style": "neutral",
+      "archetype": "fullstack_developer",
+      "years_experience": 4,
+      "seniority": "mid",
+      "industry": "SaaS",
+      "writing_style": "confident",
       "language_fluency": "native",
-      "self_promotion_level": "humble",
+      "self_promotion_level": "balanced",
       "quantification_tendency": "qualitative"
     },
-    "name": "Emily Johnson",
-    "current_role": "Senior Data Engineer",
-    "company": "NexaTech Solutions",
+    "name": "Kamila Szymanska",
+    "current_role": "Full-Stack Developer",
+    "company": "NexaCloud Solutions",
     "education": {
-      "degree": "Bachelor of Science in Computer Science",
-      "university": "University of Washington",
-      "year": 2016
+      "degree": "Bachelor of Science in Software Engineering",
+      "university": "Warsaw University of Technology",
+      "year": 2019
     },
     "career_trajectory": [
       {
-        "role": "Data Analyst",
-        "company": "Mid-sized e-commerce firm",
-        "year": "2016-2018"
+        "role": "Junior Developer",
+        "company": "PixelPulse (startup)",
+        "duration": "1 year",
+        "responsibilities": "Built MVP features using Python and React, collaborated with designers on responsive UI"
       },
       {
-        "role": "Data Engineer",
-        "company": "Early-stage fintech startup",
-        "year": "2018-2020"
+        "role": "Full-Stack Developer",
+        "company": "DataFlow Inc.",
+        "duration": "2 years",
+        "responsibilities": "Architected microservices with Node.js, optimized PostgreSQL queries, led frontend migrations to Vue.js"
       },
       {
-        "role": "Lead Data Engineer",
-        "company": "Growth-stage healthtech startup",
-        "year": "2020-2022"
-      },
-      {
-        "role": "Senior Data Engineer",
-        "company": "NexaTech Solutions",
-        "year": "2022-present"
+        "role": "Senior Full-Stack Developer",
+        "company": "NexaCloud Solutions",
+        "duration": "1 year",
+        "responsibilities": "Designed SaaS product architecture, managed CI/CD pipelines, mentored junior engineers"
       }
     ],
     "skills": {
-      "Apache Spark": 4,
-      "Apache Kafka": 4,
-      "Apache Airflow": 4,
-      "Snowflake": 5,
-      "Data modeling": 4,
-      "Python": 5,
-      "AWS": 5,
-      "Terraform": 4,
-      "Cloud cost optimization": 4
+      "Python": 4,
+      "Node.js": 3,
+      "React": 3,
+      "PostgreSQL": 4,
+      "REST API design": 5,
+      "Microservices architecture": 3,
+      "AWS": 4,
+      "Docker": 3,
+      "CI/CD pipelines": 4,
+      "Cloud cost optimization": 3
     },
     "document_ids": [
       "d_p_025_00",
       "d_p_025_01",
       "d_p_025_02",
       "d_p_025_03",
-      "d_p_025_04",
-      "d_p_025_05"
+      "d_p_025_04"
     ]
   },
   {
     "persona_id": "p_026",
     "hyperparams": {
-      "archetype": "devops_sre",
-      "years_experience": 6,
-      "seniority": "senior",
-      "industry": "enterprise",
-      "writing_style": "verbose",
-      "language_fluency": "near-native",
-      "self_promotion_level": "humble",
+      "archetype": "backend_engineer",
+      "years_experience": 4,
+      "seniority": "mid",
+      "industry": "healthtech",
+      "writing_style": "neutral",
+      "language_fluency": "ESL",
+      "self_promotion_level": "boastful",
       "quantification_tendency": "mixed"
     },
-    "name": "Alexandra 'Alex' Chen",
-    "current_role": "Senior Site Reliability Engineer",
-    "company": "NexaCorp",
+    "name": "Ian Szabo",
+    "current_role": "Backend Engineer",
+    "company": "VitalPath Health",
     "education": {
-      "degree": "Master of Science in Computer Science",
-      "university": "Massachusetts Institute of Technology",
-      "year": 2018
+      "degree": "Bachelor of Science in Computer Science",
+      "university": "University of Toronto",
+      "year": 2020
     },
     "career_trajectory": [
       {
-        "role": "DevOps Engineer",
-        "company": "SynthWave Technologies",
-        "duration": "2 years",
-        "responsibilities": "Automated deployment pipelines for microservices, managed AWS EC2 fleets, implemented basic monitoring with Nagios"
+        "position": "Software Developer Intern",
+        "company": "HealthTech Solutions",
+        "duration": "2019-2020"
       },
       {
-        "role": "SRE Lead",
-        "company": "VeloCloud Systems",
-        "duration": "3 years",
-        "responsibilities": "Owned incident response processes, designed global Kubernetes clusters, optimized GCP cost structures"
+        "position": "Junior Backend Engineer",
+        "company": "MedCare Systems",
+        "duration": "2020-2022"
       },
       {
-        "role": "Senior SRE",
-        "company": "NexaCorp",
-        "duration": "1 year",
-        "responsibilities": "Architected multi-cloud resilience strategies, mentored junior SREs, spearheaded observability platform modernization"
+        "position": "Senior Backend Engineer",
+        "company": "VitalPath Health",
+        "duration": "2022-present"
       }
     ],
     "skills": {
-      "CI/CD pipelines": 4,
-      "GitHub Actions": 4,
-      "ArgoCD": 4,
-      "Prometheus/Grafana": 4,
-      "Kubernetes": 5,
-      "Terraform": 5,
-      "Cloud cost optimization": 4,
-      "Python": 3,
-      "REST API design": 3,
-      "PostgreSQL": 3,
-      "Redis": 3,
-      "Cloud migration": 4
+      "Python": 4,
+      "Go": 4,
+      "REST API design": 4,
+      "Microservices architecture": 4,
+      "PostgreSQL": 4,
+      "AWS": 4,
+      "CI/CD pipelines": 3,
+      "Docker": 3,
+      "Kubernetes": 3,
+      "Terraform": 3,
+      "Prometheus/Grafana": 3
     },
     "document_ids": [
       "d_p_026_00",
-      "d_p_026_01",
-      "d_p_026_02"
+      "d_p_026_01"
     ]
   },
   {
     "persona_id": "p_027",
     "hyperparams": {
-      "archetype": "backend_engineer",
-      "years_experience": 7,
-      "seniority": "senior",
-      "industry": "adtech",
-      "writing_style": "concise",
+      "archetype": "devops_sre",
+      "years_experience": 0,
+      "seniority": "junior",
+      "industry": "SaaS",
+      "writing_style": "neutral",
       "language_fluency": "native",
-      "self_promotion_level": "humble",
-      "quantification_tendency": "metrics-heavy"
+      "self_promotion_level": "boastful",
+      "quantification_tendency": "mixed"
     },
-    "name": "Alex Johnson",
-    "current_role": "Senior Backend Engineer",
-    "company": "AdTech Innovations",
+    "name": "Connor Murphy",
+    "current_role": "DevOps Engineer",
+    "company": "NexaCloud Solutions",
     "education": {
       "degree": "Bachelor of Science in Computer Science",
-      "university": "University of Washington",
-      "year": 2016
+      "university": "West Coast University",
+      "year": 2023
     },
     "career_trajectory": [
       {
-        "role": "Backend Developer",
-        "company": "MediaMetrics",
-        "year": 2017,
-        "metrics": "Built ad-serving API handling 5M+ requests/day"
+        "title": "DevOps Intern",
+        "company": "ScaleTech Innovations",
+        "duration": "6 months",
+        "responsibilities": "Assisted with CI/CD pipeline automation and basic infrastructure monitoring"
       },
       {
-        "role": "Lead Backend Engineer",
-        "company": "AdvertiseNow",
-        "year": 2019,
-        "metrics": "Architected microservices for 20+ ad platforms"
-      },
-      {
-        "role": "Senior Backend Engineer",
-        "company": "AdTech Innovations",
-        "year": 2021,
-        "metrics": "Optimized database queries reducing latency by 40%"
+        "title": "Junior DevOps Engineer",
+        "company": "CloudForge Inc.",
+        "duration": "1 year",
+        "responsibilities": "Maintained GitLab CI/CD pipelines and supported Linux server deployments"
       }
     ],
     "skills": {
-      "Python": 5,
-      "Go": 5,
-      "REST API design": 5,
-      "Microservices architecture": 5,
-      "Message queues": 4,
-      "PostgreSQL": 5,
-      "CI/CD pipelines": 4,
-      "Kubernetes": 4,
-      "Terraform": 4,
-      "Cloud cost optimization": 4
+      "CI/CD pipelines": 3,
+      "GitHub Actions": 3,
+      "Jenkins": 2,
+      "ArgoCD": 3,
+      "GitLab CI": 2,
+      "Prometheus/Grafana": 3,
+      "Monitoring & alerting": 3,
+      "Linux administration": 3,
+      "Shell scripting (Bash)": 3,
+      "Configuration management (Ansible)": 3,
+      "Cloud networking (VPC/subnets)": 2,
+      "Cloud cost optimization": 2,
+      "Python": 3
     },
     "document_ids": [
       "d_p_027_00",
@@ -1608,226 +1597,219 @@
   {
     "persona_id": "p_028",
     "hyperparams": {
-      "archetype": "qa_test_engineer",
-      "years_experience": 1,
-      "seniority": "junior",
-      "industry": "enterprise",
-      "writing_style": "verbose",
-      "language_fluency": "native",
+      "archetype": "devops_sre",
+      "years_experience": 8,
+      "seniority": "senior",
+      "industry": "consulting",
+      "writing_style": "modest",
+      "language_fluency": "ESL",
       "self_promotion_level": "balanced",
-      "quantification_tendency": "metrics-heavy"
+      "quantification_tendency": "mixed"
     },
-    "name": "Emily Chen",
-    "current_role": "QA Test Engineer",
-    "company": "TechNova Solutions",
+    "name": "Maya Johal",
+    "current_role": "Senior DevOps Consultant",
+    "company": "CloudOptima Solutions",
     "education": {
       "degree": "Bachelor of Science in Computer Science",
-      "university": "University of Oregon",
-      "year": 2023
+      "university": "University of Toronto",
+      "year": 2016
     },
     "career_trajectory": [
       {
-        "role": "QA Intern",
+        "role": "DevOps Engineer",
+        "company": "TechNova Inc.",
+        "year": 2015
+      },
+      {
+        "role": "Senior DevOps Engineer",
+        "company": "CloudScale LLC",
+        "year": 2018
+      },
+      {
+        "role": "DevOps Consultant",
+        "company": "InfraMinds Consulting",
+        "year": 2020
+      },
+      {
+        "role": "Senior DevOps Consultant",
+        "company": "CloudOptima Solutions",
         "year": 2022
-      },
-      {
-        "role": "QA Engineer",
-        "year": 2023
-      },
-      {
-        "role": "QA Test Engineer",
-        "year": 2024
       }
     ],
     "skills": {
-      "Test automation": 3,
-      "Selenium/Playwright": 3,
-      "API testing": 3,
-      "Integration testing": 2,
-      "BDD/TDD": 2,
-      "Test strategy design": 2,
-      "Python": 3,
-      "JMeter": 3,
-      "REST API design": 3,
-      "GitLab CI": 3,
-      "Web performance optimization": 2
+      "CI/CD pipelines": 4,
+      "GitHub Actions": 4,
+      "Jenkins": 3,
+      "ArgoCD": 4,
+      "Prometheus/Grafana": 4,
+      "Monitoring & alerting": 4,
+      "Kubernetes": 4,
+      "Terraform": 4,
+      "AWS": 5,
+      "Docker": 4,
+      "Cloud cost optimization": 4
     },
     "document_ids": [
       "d_p_028_00",
       "d_p_028_01",
-      "d_p_028_02"
+      "d_p_028_02",
+      "d_p_028_03"
     ]
   },
   {
     "persona_id": "p_029",
     "hyperparams": {
-      "archetype": "data_engineer",
-      "years_experience": 12,
-      "seniority": "staff",
-      "industry": "healthtech",
-      "writing_style": "verbose",
+      "archetype": "platform_engineer",
+      "years_experience": 0,
+      "seniority": "junior",
+      "industry": "adtech",
+      "writing_style": "concise",
       "language_fluency": "native",
-      "self_promotion_level": "humble",
-      "quantification_tendency": "qualitative"
+      "self_promotion_level": "balanced",
+      "quantification_tendency": "mixed"
     },
-    "name": "Alexandra M. Chen",
-    "current_role": "Staff Data Engineer",
-    "company": "VitaHealth Solutions",
+    "name": "Monica Nyambura",
+    "current_role": "Platform Engineer",
+    "company": "AdVerve Interactive",
     "education": {
-      "degree": "Master of Science in Data Science",
-      "university": "Massachusetts Institute of Technology",
-      "year": 2018
+      "degree": "Bachelor of Science in Computer Science",
+      "university": "Kenya Technical University",
+      "year": 2023
     },
     "career_trajectory": [
       {
-        "role": "Data Analyst",
-        "company": "HealthTrack Analytics",
-        "duration": "2 years",
-        "responsibilities": "Designed ETL pipelines for patient data analytics, optimized PostgreSQL queries for clinical data reporting"
+        "role": "DevOps Intern",
+        "company": "ClickAd Network",
+        "duration": "6 months",
+        "responsibilities": "Assisted with AWS EC2 instance provisioning and basic Terraform templates"
       },
       {
-        "role": "Lead Data Engineer",
-        "company": "MediCloud Inc.",
-        "duration": "5 years",
-        "responsibilities": "Architected real-time data lakes using Apache Kafka and Databricks, implemented dbt for transformation pipelines"
+        "role": "Cloud Support Engineer",
+        "company": "AdVerve Interactive",
+        "duration": "1 year",
+        "responsibilities": "Managed GCP load balancers and CDN configurations for ad-serving infrastructure"
       },
       {
-        "role": "Senior Data Engineering Manager",
-        "company": "VitaHealth Solutions",
-        "duration": "5 years",
-        "responsibilities": "Led cloud migration to AWS, developed CI/CD pipelines for data infrastructure, mentored junior engineers"
+        "role": "Platform Engineer",
+        "company": "AdVerve Interactive",
+        "duration": "3 months",
+        "responsibilities": "Designing Kubernetes clusters for real-time ad processing pipelines"
       }
     ],
     "skills": {
-      "Apache Spark": 5,
-      "Apache Airflow": 5,
-      "dbt": 5,
-      "Data warehousing": 5,
-      "Snowflake": 5,
-      "Data modeling": 5,
-      "Python": 5,
-      "AWS": 5,
-      "Docker": 4,
-      "Kubernetes": 5
+      "AWS": 3,
+      "GCP": 3,
+      "Docker": 3,
+      "Kubernetes": 3,
+      "Terraform": 3,
+      "Load balancing": 3,
+      "Python": 3,
+      "Linux administration": 3,
+      "Shell scripting": 3,
+      "Network automation": 2
     },
     "document_ids": [
       "d_p_029_00",
       "d_p_029_01",
       "d_p_029_02",
-      "d_p_029_03"
+      "d_p_029_03",
+      "d_p_029_04"
     ]
   },
   {
     "persona_id": "p_030",
     "hyperparams": {
-      "archetype": "backend_engineer",
-      "years_experience": 4,
-      "seniority": "mid",
-      "industry": "healthtech",
-      "writing_style": "neutral",
-      "language_fluency": "native",
-      "self_promotion_level": "balanced",
-      "quantification_tendency": "metrics-heavy"
+      "archetype": "qa_test_engineer",
+      "years_experience": 0,
+      "seniority": "junior",
+      "industry": "SaaS",
+      "writing_style": "modest",
+      "language_fluency": "near-native",
+      "self_promotion_level": "humble",
+      "quantification_tendency": "mixed"
     },
-    "name": "James Carter",
-    "current_role": "Backend Engineer",
-    "company": "HealthTrack Inc.",
+    "name": "Aiden O'Sullivan",
+    "current_role": "QA Engineer",
+    "company": "NexaLogic Solutions",
     "education": {
-      "degree": "Bachelor of Science in Computer Science",
-      "university": "University of California, Berkeley",
-      "year": 2018
+      "degree": "Bachelor of Software Engineering",
+      "university": "University of Technology Sydney",
+      "year": 2023
     },
     "career_trajectory": [
-      {
-        "role": "Software Developer Intern",
-        "company": "HealthData Solutions",
-        "year": 2019
-      },
-      {
-        "role": "Junior Backend Developer",
-        "company": "MedTech Innovations",
-        "year": 2020
-      },
-      {
-        "role": "Senior Backend Developer",
-        "company": "HealthTrack Inc.",
-        "year": 2021
-      }
+      "Completed Software Engineering degree (2023)",
+      "Internship at TechNova Inc. (2023)",
+      "Junior QA Engineer at NexaLogic Solutions (2024)"
     ],
     "skills": {
-      "Python": 4,
-      "REST API design": 4,
-      "Microservices architecture": 4,
-      "PostgreSQL": 4,
-      "AWS": 4,
-      "Docker": 3,
+      "Test automation": 3,
+      "Selenium/Playwright": 3,
+      "Unit testing": 2,
+      "Integration testing": 2,
+      "API testing": 3,
+      "Test strategy design": 2,
+      "BDD/TDD": 2,
+      "Python": 3,
       "CI/CD pipelines": 3,
       "GitHub Actions": 3,
-      "Monitoring & alerting": 3,
-      "Linux administration": 3,
-      "Terraform": 3
+      "REST API design": 2,
+      "Web accessibility (WCAG)": 2
     },
     "document_ids": [
       "d_p_030_00",
       "d_p_030_01",
-      "d_p_030_02",
-      "d_p_030_03"
+      "d_p_030_02"
     ]
   },
   {
     "persona_id": "p_031",
     "hyperparams": {
-      "archetype": "fullstack_developer",
-      "years_experience": 10,
-      "seniority": "staff",
-      "industry": "startup",
-      "writing_style": "concise",
+      "archetype": "platform_engineer",
+      "years_experience": 7,
+      "seniority": "senior",
+      "industry": "fintech",
+      "writing_style": "confident",
       "language_fluency": "near-native",
-      "self_promotion_level": "boastful",
-      "quantification_tendency": "mixed"
+      "self_promotion_level": "balanced",
+      "quantification_tendency": "metrics-heavy"
     },
-    "name": "Alex Morgan",
-    "current_role": "Staff Full-Stack Developer",
-    "company": "NexGen Solutions",
+    "name": "Erik Bergstrom",
+    "current_role": "Principal Platform Engineer",
+    "company": "FinTech Innovators Inc.",
     "education": {
-      "degree": "Computer Science",
+      "degree": "Master of Science in Computer Science",
       "university": "Stanford University",
-      "year": 2018
+      "year": 2017
     },
     "career_trajectory": [
       {
-        "role": "Junior Developer",
-        "company": "TechStart Inc.",
-        "duration": "2015-2017",
-        "achievements": "Built first microservices architecture for SaaS product"
+        "role": "DevOps Engineer",
+        "company": "PayNet Solutions (2016-2018)",
+        "responsibilities": "Automated CI/CD pipelines for payment processing APIs, reduced deployment time by 40%"
       },
       {
-        "role": "Senior Backend Engineer",
-        "company": "ScaleUp Labs",
-        "duration": "2017-2020",
-        "achievements": "Led database optimization reducing query latency by 60%"
+        "role": "Senior DevOps Engineer",
+        "company": "TrustFlow Financial (2018-2020)",
+        "responsibilities": "Led GCP migration, achieved 30% cost savings via resource optimization"
       },
       {
-        "role": "Staff Full-Stack Architect",
-        "company": "NexGen Solutions",
-        "duration": "2020-Present",
-        "achievements": "Scaled startup infrastructure to 500k+ users with serverless architecture"
+        "role": "Platform Engineer",
+        "company": "FinTech Innovators Inc. (2020-2022)",
+        "responsibilities": "Architected multi-cloud infrastructure, 2x scalability for real-time fraud detection systems"
       }
     ],
     "skills": {
-      "Python": 5,
-      "Go": 5,
-      "REST API design": 5,
-      "React": 5,
-      "TypeScript": 5,
-      "PostgreSQL": 5,
-      "Microservices architecture": 5,
       "AWS": 4,
-      "GCP": 4,
-      "Docker": 4,
-      "Kubernetes": 5,
-      "GitHub Actions": 4,
-      "Prometheus/Grafana": 4
+      "GCP": 3,
+      "Kubernetes": 4,
+      "Terraform": 4,
+      "Cloud cost optimization": 3,
+      "Infrastructure as Code": 4,
+      "Python": 3,
+      "Prometheus/Grafana": 3,
+      "CI/CD pipelines": 3,
+      "Linux administration": 3,
+      "Database optimization": 3
     },
     "document_ids": [
       "d_p_031_00",
@@ -1840,139 +1822,174 @@
   {
     "persona_id": "p_032",
     "hyperparams": {
-      "archetype": "tech_lead_architect",
-      "years_experience": 7,
-      "seniority": "senior",
-      "industry": "adtech",
-      "writing_style": "confident",
-      "language_fluency": "ESL",
-      "self_promotion_level": "balanced",
+      "archetype": "data_engineer",
+      "years_experience": 2,
+      "seniority": "junior",
+      "industry": "healthtech",
+      "writing_style": "concise",
+      "language_fluency": "native",
+      "self_promotion_level": "boastful",
       "quantification_tendency": "metrics-heavy"
     },
-    "name": "Elena Voss",
-    "current_role": "Principal Tech Architect",
-    "company": "TargetLift Media",
+    "name": "Nadia Khoury",
+    "current_role": "Data Engineer",
+    "company": "HealthInsight Analytics",
     "education": {
-      "degree": "Bachelor of Science in Computer Science",
+      "degree": "Master of Science in Data Engineering",
       "university": "University of California, Berkeley",
-      "year": 2016
+      "year": 2022
     },
     "career_trajectory": [
-      "Software Engineer (Backend) at AdTechScale Inc. (2016-2018)",
-      "Senior Backend Developer leading ad-serving platform migrations (2018-2020)",
-      "Tech Lead for real-time bidding systems (2020-2022)",
-      "Principal Tech Architect overseeing cloud-native ad inventory management (2022-present)"
+      {
+        "role": "Data Intern",
+        "company": "MedTech Innovations",
+        "duration": "6 months",
+        "responsibilities": "Processed EHR data pipelines using Apache Spark and Snowflake"
+      },
+      {
+        "role": "Data Analyst",
+        "company": "VitalCare Solutions",
+        "duration": "1 year",
+        "responsibilities": "Built dashboards with PostgreSQL and designed first ETL workflows"
+      },
+      {
+        "role": "Junior Data Engineer",
+        "company": "HealthInsight Analytics",
+        "duration": "1 year",
+        "responsibilities": "Scaled Kafka-based ingestion pipelines and optimized DB queries"
+      }
     ],
     "skills": {
-      "Team leadership": 4,
-      "Mentoring": 4,
-      "System design": 5,
-      "Agile/Scrum": 4,
-      "Cross-team collaboration": 4,
-      "Stakeholder communication": 4,
-      "Project management": 4,
-      "Technical debt management": 4,
-      "CI/CD pipelines": 3,
-      "GitHub Actions": 3,
-      "Monitoring & alerting": 3,
-      "Linux administration": 3,
-      "PostgreSQL": 3,
-      "Database optimization": 3
+      "Apache Spark": 3,
+      "ETL pipeline design": 3,
+      "Data warehousing": 3,
+      "Snowflake": 4,
+      "Apache Airflow": 3,
+      "Database optimization": 3,
+      "Python": 3,
+      "AWS": 3,
+      "Terraform": 2,
+      "Docker": 2
     },
     "document_ids": [
       "d_p_032_00",
-      "d_p_032_01",
-      "d_p_032_02",
-      "d_p_032_03",
-      "d_p_032_04",
-      "d_p_032_05",
-      "d_p_032_06"
+      "d_p_032_01"
     ]
   },
   {
     "persona_id": "p_033",
     "hyperparams": {
-      "archetype": "fullstack_developer",
-      "years_experience": 4,
-      "seniority": "mid",
+      "archetype": "tech_lead_architect",
+      "years_experience": 8,
+      "seniority": "senior",
       "industry": "consulting",
-      "writing_style": "concise",
-      "language_fluency": "ESL",
-      "self_promotion_level": "humble",
+      "writing_style": "verbose",
+      "language_fluency": "native",
+      "self_promotion_level": "boastful",
       "quantification_tendency": "mixed"
     },
-    "name": "Alex Carter",
-    "current_role": "Full-Stack Developer Consultant",
-    "company": "NexaTech Solutions",
+    "name": "Kenji Mori",
+    "current_role": "Principal Tech Lead / Cloud Architecture Strategist",
+    "company": "NexaTek Solutions",
     "education": {
-      "degree": "BSc in Computer Science",
-      "university": "State University of Technology",
-      "year": 2020
+      "degree": "Computer Science",
+      "university": "University of Tokyo",
+      "year": 2015
     },
     "career_trajectory": [
-      "Junior Software Developer at TechNova Solutions (2019-2021)",
-      "Senior Full-Stack Developer at DevSphere Inc. (2021-2022)",
-      "Consulting Developer at NexaTech Solutions (2022-present)"
+      {
+        "role": "Junior Developer",
+        "company": "InnovateX",
+        "year": 2013
+      },
+      {
+        "role": "Senior Developer",
+        "company": "NexaTech",
+        "year": 2015
+      },
+      {
+        "role": "Tech Lead",
+        "company": "NexaTek",
+        "year": 2017
+      },
+      {
+        "role": "Principal Tech Lead / Architect",
+        "company": "NexaTek Solutions",
+        "year": 2019
+      }
     ],
     "skills": {
-      "Python": 3,
-      "Java": 3,
-      "Go": 3,
-      "Node.js": 3,
-      "React": 3,
-      "REST API design": 4,
-      "PostgreSQL": 3,
-      "MongoDB": 3,
-      "Redis": 3,
-      "AWS": 3,
-      "Docker": 3,
-      "Kubernetes": 3,
-      "Terraform": 3,
-      "CI/CD pipelines": 3,
-      "Monitoring & alerting": 3
+      "System design": 5,
+      "Team leadership": 4,
+      "Agile/Scrum": 4,
+      "Cross-team collaboration": 4,
+      "Stakeholder communication": 4,
+      "Project management": 4,
+      "Technical writing": 3,
+      "CI/CD pipelines": 4,
+      "GitHub Actions": 4,
+      "Prometheus/Grafana": 4,
+      "Monitoring & alerting": 4,
+      "Linux administration": 3,
+      "Database optimization": 4
     },
     "document_ids": [
       "d_p_033_00",
       "d_p_033_01",
-      "d_p_033_02",
-      "d_p_033_03"
+      "d_p_033_02"
     ]
   },
   {
     "persona_id": "p_034",
     "hyperparams": {
-      "archetype": "backend_engineer",
-      "years_experience": 6,
+      "archetype": "frontend_engineer",
+      "years_experience": 7,
       "seniority": "senior",
-      "industry": "startup",
+      "industry": "consulting",
       "writing_style": "modest",
       "language_fluency": "native",
-      "self_promotion_level": "humble",
+      "self_promotion_level": "boastful",
       "quantification_tendency": "qualitative"
     },
-    "name": "Aarav Mehta",
-    "current_role": "Senior Backend Engineer",
-    "company": "InnovateX Labs",
+    "name": "Zainab Osman",
+    "current_role": "Senior Frontend Engineer Consultant",
+    "company": "NexaTech Solutions",
     "education": {
-      "degree": "BSc in Computer Science",
-      "university": "IIT Bombay",
-      "year": 2018
+      "degree": "Bachelor of Science in Computer Science",
+      "university": "University of London",
+      "year": 2016
     },
     "career_trajectory": [
-      "Software Engineer at TechNova Solutions (2018-2020)",
-      "Senior Software Engineer at CloudGen Inc (2020-2022)",
-      "Senior Backend Engineer at InnovateX Labs (2022-present)"
+      {
+        "role": "Junior Frontend Developer",
+        "company": "StellarStartups",
+        "year": 2016
+      },
+      {
+        "role": "Frontend Developer",
+        "company": "EchoLabs",
+        "year": 2018
+      },
+      {
+        "role": "Senior Frontend Engineer",
+        "company": "VerveWorks",
+        "year": 2020
+      },
+      {
+        "role": "Senior Frontend Engineer Consultant",
+        "company": "NexaTech Solutions",
+        "year": 2022
+      }
     ],
     "skills": {
-      "Go": 4,
-      "REST API design": 5,
-      "Microservices architecture": 5,
-      "PostgreSQL": 5,
-      "Redis": 4,
-      "Terraform": 4,
-      "Kubernetes": 4,
-      "Docker": 4,
-      "CI/CD pipelines": 4
+      "React": 5,
+      "TypeScript": 5,
+      "Next.js": 4,
+      "Web performance optimization": 4,
+      "REST API design": 4,
+      "Webpack/Vite": 4,
+      "Unit testing": 5,
+      "Test automation": 5
     },
     "document_ids": [
       "d_p_034_00",
@@ -1985,578 +2002,559 @@
   {
     "persona_id": "p_035",
     "hyperparams": {
-      "archetype": "security_engineer",
-      "years_experience": 2,
-      "seniority": "junior",
-      "industry": "enterprise",
-      "writing_style": "neutral",
-      "language_fluency": "native",
-      "self_promotion_level": "balanced",
-      "quantification_tendency": "qualitative"
+      "archetype": "data_scientist",
+      "years_experience": 6,
+      "seniority": "senior",
+      "industry": "consulting",
+      "writing_style": "verbose",
+      "language_fluency": "near-native",
+      "self_promotion_level": "humble",
+      "quantification_tendency": "mixed"
     },
-    "name": "Emily Carter",
-    "current_role": "Security Engineer",
-    "company": "GlobalTech Solutions",
+    "name": "Sergei Antonov",
+    "current_role": "Senior Data Scientist - Consulting",
+    "company": "Strategic Analytics Solutions",
     "education": {
-      "degree": "Bachelor of Science in Cybersecurity",
-      "university": "University of CyberSecurity",
-      "year": 2022
+      "degree": "Master of Science in Data Science",
+      "university": "Moscow State University",
+      "year": 2018
     },
     "career_trajectory": [
       {
-        "year": 2020,
-        "position": "Security Analyst Intern",
-        "company": "SecureNet Inc."
+        "position": "Data Analyst",
+        "company": "TechNova Inc.",
+        "duration": "2 years",
+        "responsibilities": "Performed exploratory data analysis, built dashboards with Tableau, and optimized SQL queries for large datasets."
       },
       {
-        "year": 2021,
-        "position": "Junior Security Engineer",
-        "company": "DataGuard LLC"
+        "position": "Data Scientist",
+        "company": "Quantum Analytics Group",
+        "duration": "3 years",
+        "responsibilities": "Developed machine learning pipelines using scikit-learn and PyTorch, conducted A/B testing for product optimization, and mentored junior analysts."
       },
       {
-        "year": 2022,
-        "position": "Security Engineer",
-        "company": "GlobalTech Solutions"
+        "position": "Lead Data Scientist",
+        "company": "NexGen Consulting",
+        "duration": "1 year",
+        "responsibilities": "Architected MLOps pipelines with MLflow, designed recommendation systems for e-commerce clients, and led cross-functional teams for deployment."
       }
     ],
     "skills": {
-      "Network security": 3,
-      "Application security (OWASP)": 3,
-      "Penetration testing": 3,
-      "IAM/Access control": 3,
-      "Encryption & PKI": 3,
-      "Security auditing": 3,
-      "Firewall configuration": 3,
-      "Network automation": 3,
-      "Linux administration": 3,
-      "AWS": 3,
-      "Incident management": 3
+      "Pandas": 4,
+      "NumPy": 4,
+      "Statistical modeling": 4,
+      "A/B testing": 3,
+      "Data visualization (Matplotlib/Plotly)": 3,
+      "Feature engineering": 4,
+      "Time series analysis": 4,
+      "scikit-learn": 4,
+      "PyTorch": 4,
+      "TensorFlow": 4,
+      "SQL analytics": 3,
+      "Tableau/Power BI": 3,
+      "MLOps (MLflow/W&B)": 3,
+      "Model deployment": 4
     },
     "document_ids": [
       "d_p_035_00",
       "d_p_035_01",
-      "d_p_035_02"
+      "d_p_035_02",
+      "d_p_035_03",
+      "d_p_035_04"
     ]
   },
   {
     "persona_id": "p_036",
     "hyperparams": {
-      "archetype": "devops_sre",
-      "years_experience": 3,
-      "seniority": "mid",
-      "industry": "startup",
-      "writing_style": "concise",
-      "language_fluency": "near-native",
+      "archetype": "backend_engineer",
+      "years_experience": 11,
+      "seniority": "staff",
+      "industry": "adtech",
+      "writing_style": "modest",
+      "language_fluency": "native",
       "self_promotion_level": "boastful",
-      "quantification_tendency": "metrics-heavy"
+      "quantification_tendency": "mixed"
     },
-    "name": "Alexandra Chen",
-    "current_role": "Senior DevOps Engineer",
-    "company": "NexaTech Solutions",
+    "name": "Sana Patel",
+    "current_role": "Staff Backend Engineer",
+    "company": "AdvertiseFlow",
     "education": {
       "degree": "Bachelor of Science in Computer Science",
-      "university": "Massachusetts Institute of Technology",
-      "year": 2020
+      "university": "University of Toronto",
+      "year": 2012
     },
     "career_trajectory": [
-      "DevOps Engineer at StartUpX (2021-2022): Automated CI/CD pipelines for 5 microservices, reduced deployment time by 40%",
-      "Senior DevOps Engineer at CloudScale Inc (2022-2023): Orchestrated Kubernetes cluster scaling, achieved 99.95% SLA",
-      "DevOps/SRE Hybrid Role at NexaTech (2023-present): Owned cloud cost optimization, cut infrastructure spend by 25%"
+      "Junior Backend Developer at AdvertiseFlow (2012-2015)",
+      "Senior Backend Developer at AdvertiseFlow (2015-2018)",
+      "Lead Backend Engineer at AdvertiseFlow (2018-2021)",
+      "Staff Backend Engineer at AdvertiseFlow (2021-present)"
     ],
     "skills": {
-      "CI/CD pipelines": 4,
-      "GitHub Actions": 4,
-      "Terraform": 4,
+      "Python": 4,
+      "Go": 5,
+      "PostgreSQL": 5,
+      "AWS": 5,
+      "Microservices architecture": 5,
       "Kubernetes": 4,
-      "Prometheus/Grafana": 4,
-      "Monitoring & alerting": 4,
-      "Linux administration": 4,
-      "Python": 3,
-      "Docker": 3,
-      "AWS": 4,
-      "Shell scripting (Bash)": 3,
-      "Network automation": 3,
-      "Cloud cost optimization": 4
+      "Terraform": 4,
+      "Load balancing": 4,
+      "Monitoring & alerting": 4
     },
     "document_ids": [
       "d_p_036_00",
       "d_p_036_01",
-      "d_p_036_02"
+      "d_p_036_02",
+      "d_p_036_03",
+      "d_p_036_04"
     ]
   },
   {
     "persona_id": "p_037",
     "hyperparams": {
-      "archetype": "fullstack_developer",
-      "years_experience": 4,
-      "seniority": "mid",
-      "industry": "healthtech",
+      "archetype": "data_scientist",
+      "years_experience": 12,
+      "seniority": "staff",
+      "industry": "consulting",
       "writing_style": "verbose",
       "language_fluency": "native",
       "self_promotion_level": "balanced",
-      "quantification_tendency": "qualitative"
+      "quantification_tendency": "mixed"
     },
-    "name": "Emily Carter",
-    "current_role": "Full-Stack Developer",
-    "company": "VitaHealth Solutions",
+    "name": "Mateo Garcia",
+    "current_role": "Senior Data Scientist",
+    "company": "Strategic Analytics Group",
     "education": {
-      "degree": "Bachelor of Science in Computer Science",
-      "university": "University of Michigan",
-      "year": 2020
+      "degree": "Master's in Data Science",
+      "university": "Stanford University",
+      "year": 2015
     },
     "career_trajectory": [
       {
-        "year": 2019,
-        "position": "Junior Software Developer",
-        "company": "HealthTrack Inc."
+        "role": "Data Analyst",
+        "company": "Global Insights LLC",
+        "years": "2010–2012"
       },
       {
-        "year": 2021,
-        "position": "Senior Full-Stack Developer",
-        "company": "MedCare Solutions"
+        "role": "Data Scientist",
+        "company": "Quantum Analytics",
+        "years": "2012–2015"
       },
       {
-        "year": 2022,
-        "position": "Full-Stack Developer",
-        "company": "VitaHealth Solutions"
+        "role": "Senior Data Scientist",
+        "company": "Vertex Consulting",
+        "years": "2015–2017"
+      },
+      {
+        "role": "Staff Data Scientist",
+        "company": "Strategic Analytics Group",
+        "years": "2017–present"
       }
     ],
     "skills": {
-      "Python": 4,
-      "React": 4,
+      "Pandas": 4,
+      "NumPy": 4,
+      "Statistical modeling": 5,
+      "A/B testing": 4,
+      "Data visualization (Matplotlib/Plotly)": 4,
+      "Jupyter notebooks": 4,
+      "Feature engineering": 4,
+      "Python": 5,
       "REST API design": 4,
-      "GraphQL": 3,
-      "PostgreSQL": 4,
-      "Microservices architecture": 3,
-      "AWS": 3,
-      "Docker": 3,
-      "Kubernetes": 3,
-      "CI/CD pipelines": 3
+      "Microservices architecture": 4,
+      "Apache Spark": 4,
+      "Apache Airflow": 4
     },
     "document_ids": [
       "d_p_037_00",
       "d_p_037_01",
       "d_p_037_02",
-      "d_p_037_03"
+      "d_p_037_03",
+      "d_p_037_04",
+      "d_p_037_05"
     ]
   },
   {
     "persona_id": "p_038",
     "hyperparams": {
-      "archetype": "tech_lead_architect",
-      "years_experience": 4,
+      "archetype": "fullstack_developer",
+      "years_experience": 5,
       "seniority": "mid",
-      "industry": "cybersecurity",
-      "writing_style": "confident",
-      "language_fluency": "native",
-      "self_promotion_level": "boastful",
-      "quantification_tendency": "metrics-heavy"
+      "industry": "SaaS",
+      "writing_style": "concise",
+      "language_fluency": "near-native",
+      "self_promotion_level": "balanced",
+      "quantification_tendency": "qualitative"
     },
-    "name": "Alexandra 'Alex' Mitchell",
-    "current_role": "Tech Lead - Cybersecurity Architecture",
-    "company": "SentinelShield Cybersecurity Solutions",
+    "name": "Ricardo Almeida",
+    "current_role": "Senior Full-Stack Developer",
+    "company": "NexaCloud Solutions",
     "education": {
-      "degree": "Master of Science in Cybersecurity",
-      "university": "Massachusetts Institute of Technology",
-      "year": 2020
+      "degree": "Bachelor of Science in Computer Science",
+      "university": "University of Lisbon",
+      "year": 2018
     },
     "career_trajectory": [
       {
-        "role": "Security Analyst",
-        "company": "QuantumGuard Inc.",
-        "year": 2019
+        "year": 2018,
+        "position": "Junior Full-Stack Developer",
+        "company": "InnovaTech Startup"
       },
       {
-        "role": "Senior Security Engineer",
-        "company": "ViperTech Cybersecurity",
-        "year": 2021
+        "year": 2020,
+        "position": "Lead Developer",
+        "company": "ApexSoft Ltd."
       },
       {
-        "role": "Tech Lead - Cybersecurity Architecture",
-        "company": "SentinelShield Cybersecurity Solutions",
-        "year": 2023
+        "year": 2022,
+        "position": "Senior Full-Stack Developer",
+        "company": "NexaCloud Solutions"
       }
     ],
     "skills": {
-      "Team leadership": 4,
-      "Mentoring": 3,
-      "System design": 4,
-      "Agile/Scrum": 4,
-      "Cross-team collaboration": 3,
-      "Stakeholder communication": 3,
-      "Risk assessment": 4,
+      "Python": 4,
+      "Node.js": 3,
+      "React": 3,
+      "REST API design": 3,
+      "PostgreSQL": 3,
+      "MongoDB": 3,
+      "JavaScript": 3,
+      "TypeScript": 3,
+      "gRPC": 3,
+      "AWS": 3,
+      "Docker": 3,
+      "Kubernetes": 3,
       "CI/CD pipelines": 3,
-      "Monitoring & alerting": 4,
-      "Linux administration": 3,
-      "Database optimization": 3,
-      "Chaos engineering": 3
+      "GitLab CI": 3,
+      "Serverless": 2
     },
     "document_ids": [
       "d_p_038_00",
-      "d_p_038_01",
-      "d_p_038_02",
-      "d_p_038_03"
+      "d_p_038_01"
     ]
   },
   {
     "persona_id": "p_039",
     "hyperparams": {
-      "archetype": "security_engineer",
-      "years_experience": 1,
-      "seniority": "junior",
-      "industry": "consulting",
-      "writing_style": "concise",
+      "archetype": "data_scientist",
+      "years_experience": 8,
+      "seniority": "senior",
+      "industry": "enterprise",
+      "writing_style": "verbose",
       "language_fluency": "native",
       "self_promotion_level": "balanced",
-      "quantification_tendency": "mixed"
+      "quantification_tendency": "qualitative"
     },
-    "name": "Liam Carter",
-    "current_role": "Security Engineer",
-    "company": "Verve Consulting",
+    "name": "Rafael Costa",
+    "current_role": "Senior Data Scientist - Enterprise AI Solutions",
+    "company": "NexaTech Solutions",
     "education": {
-      "degree": "Bachelor of Science in Computer Science",
-      "university": "University of Oregon",
-      "year": 2022
+      "degree": "Master of Science in Data Science",
+      "university": "University of Cambridge",
+      "year": 2018
     },
     "career_trajectory": [
       {
-        "role": "Security Analyst Intern",
-        "company": "CyberShield Group",
-        "duration": "6 months"
+        "position": "Data Analyst",
+        "company": "Strategic Analytics Group",
+        "duration": "2015-2017",
+        "responsibilities": "Developed predictive models for customer churn, optimized SQL queries for real-time reporting, and conducted exploratory data analysis on enterprise datasets."
       },
       {
-        "role": "Junior Security Engineer",
-        "company": "Verve Consulting",
-        "duration": "10 months"
+        "position": "Data Scientist",
+        "company": "FinTech Innovators Inc.",
+        "duration": "2017-2019",
+        "responsibilities": "Led A/B testing frameworks for product features, engineered features for fraud detection models, and deployed ML pipelines on AWS."
       },
       {
-        "role": "Security Consultant",
-        "company": "Verve Consulting",
-        "duration": "5 months"
+        "position": "Lead Data Scientist",
+        "company": "HealthInsight Technologies",
+        "duration": "2019-2021",
+        "responsibilities": "Architected MLOps pipelines using MLflow, optimized NLP models for clinical text analysis, and mentored junior data scientists in Bayesian modeling."
+      },
+      {
+        "position": "Senior Data Scientist",
+        "company": "NexaTech Solutions",
+        "duration": "2021-present",
+        "responsibilities": "Designing reinforcement learning systems for dynamic pricing, leading cross-functional teams in model deployment, and optimizing feature stores for real-time analytics."
       }
     ],
     "skills": {
-      "Network security": 3,
-      "Application security (OWASP)": 3,
-      "Penetration testing": 3,
-      "IAM/Access control": 3,
-      "Encryption & PKI": 3,
-      "Security auditing": 2,
-      "SIEM tools": 3,
-      "Vulnerability management": 3,
-      "TCP/IP": 2,
-      "Firewall configuration": 3
+      "scikit-learn": 5,
+      "TensorFlow": 5,
+      "MLOps": 5,
+      "Time series analysis": 5,
+      "Python": 5,
+      "Apache Spark": 4,
+      "Apache Airflow": 4,
+      "Data warehousing": 4
     },
     "document_ids": [
       "d_p_039_00",
-      "d_p_039_01"
+      "d_p_039_01",
+      "d_p_039_02",
+      "d_p_039_03"
     ]
   },
   {
     "persona_id": "p_040",
     "hyperparams": {
-      "archetype": "devops_sre",
-      "years_experience": 7,
-      "seniority": "senior",
-      "industry": "adtech",
-      "writing_style": "verbose",
+      "archetype": "embedded_engineer",
+      "years_experience": 1,
+      "seniority": "junior",
+      "industry": "fintech",
+      "writing_style": "neutral",
       "language_fluency": "native",
-      "self_promotion_level": "boastful",
-      "quantification_tendency": "mixed"
+      "self_promotion_level": "humble",
+      "quantification_tendency": "metrics-heavy"
     },
-    "name": "Alexandra Chen",
-    "current_role": "Senior Site Reliability Engineer",
-    "company": "AdVelox Media",
+    "name": "Ritika Malhotra",
+    "current_role": "Embedded Systems Engineer",
+    "company": "FinTech Innovators Inc.",
     "education": {
-      "degree": "Bachelor of Science in Computer Science",
-      "university": "Massachusetts Institute of Technology",
-      "year": 2016
+      "degree": "Bachelor of Technology in Electronics and Communication Engineering",
+      "university": "Indian Institute of Technology, Delhi",
+      "year": 2022
     },
     "career_trajectory": [
       {
-        "role": "Junior DevOps Engineer",
-        "company": "ClickAd Networks",
-        "year": 2016
+        "year": 2022,
+        "position": "Embedded Systems Intern",
+        "company": "FinTech Innovators Inc.",
+        "responsibilities": "Developed firmware for IoT-enabled payment terminals, integrated MQTT protocols for real-time transaction data."
       },
       {
-        "role": "DevOps Engineer",
-        "company": "BrightPixel Media",
-        "year": 2018
+        "year": 2023,
+        "position": "Junior Embedded Engineer",
+        "company": "FinTech Innovators Inc.",
+        "responsibilities": "Led sensor integration for biometric authentication modules, achieved 98.5% reliability in hardware-software co-design."
       },
       {
-        "role": "Senior DevOps Engineer",
-        "company": "AdVelox Media",
-        "year": 2020
-      },
-      {
-        "role": "Senior Site Reliability Engineer",
-        "company": "AdVelox Media",
-        "year": 2023
+        "year": 2024,
+        "position": "Embedded Systems Engineer",
+        "company": "FinTech Innovators Inc.",
+        "responsibilities": "Architected edge computing solutions for latency-critical fraud detection systems, reducing processing time by 40%."
       }
     ],
     "skills": {
-      "CI/CD pipelines": 4,
-      "GitHub Actions": 4,
-      "Jenkins": 3,
-      "ArgoCD": 4,
-      "GitLab CI": 3,
-      "Prometheus/Grafana": 4,
-      "Monitoring & alerting": 4,
-      "Incident management": 4,
-      "SLA/SLO management": 4,
-      "Python": 4,
-      "Kubernetes": 4,
-      "Terraform": 4,
-      "Docker": 4,
-      "AWS": 4,
-      "GCP": 3
+      "C/C++ (embedded)": 3,
+      "RTOS": 3,
+      "Firmware development": 3,
+      "IoT protocols (MQTT/CoAP)": 3,
+      "Hardware-software integration": 3,
+      "Embedded Linux": 3,
+      "Sensor integration": 2,
+      "Python": 2,
+      "REST API design": 2,
+      "Network automation": 2,
+      "GitLab CI": 2,
+      "Shell scripting (Bash)": 2
     },
     "document_ids": [
       "d_p_040_00",
       "d_p_040_01",
       "d_p_040_02",
-      "d_p_040_03",
-      "d_p_040_04",
-      "d_p_040_05"
+      "d_p_040_03"
     ]
   },
   {
     "persona_id": "p_041",
     "hyperparams": {
-      "archetype": "qa_test_engineer",
-      "years_experience": 10,
-      "seniority": "staff",
-      "industry": "enterprise",
-      "writing_style": "neutral",
+      "archetype": "data_scientist",
+      "years_experience": 6,
+      "seniority": "senior",
+      "industry": "startup",
+      "writing_style": "modest",
       "language_fluency": "near-native",
       "self_promotion_level": "boastful",
       "quantification_tendency": "qualitative"
     },
-    "name": "Emily Chen",
-    "current_role": "Staff QA Engineer",
-    "company": "GlobalTech Solutions",
+    "name": "Kwame Mensah",
+    "current_role": "Senior Data Scientist",
+    "company": "NexGen Analytics",
     "education": {
-      "degree": "Bachelor of Science in Computer Science",
-      "university": "Massachusetts Institute of Technology",
-      "year": 2015
-    },
-    "career_trajectory": [
-      {
-        "role": "QA Engineer",
-        "company": "TechNova Inc.",
-        "duration": "2013-2016"
-      },
-      {
-        "role": "Senior QA Engineer",
-        "company": "CloudForge Ltd.",
-        "duration": "2016-2019"
-      },
-      {
-        "role": "Staff QA Engineer",
-        "company": "GlobalTech Solutions",
-        "duration": "2019-present"
-      }
-    ],
-    "skills": {
-      "Test automation": 5,
-      "Selenium/Playwright": 4,
-      "Performance testing (JMeter/k6)": 5,
-      "API testing": 5,
-      "Test strategy design": 4,
-      "BDD/TDD": 3,
-      "CI/CD pipelines": 4,
-      "GitHub Actions": 4,
-      "Prometheus/Grafana": 4,
-      "Linux administration": 4,
-      "Shell scripting (Bash)": 3
-    },
-    "document_ids": [
-      "d_p_041_00",
-      "d_p_041_01",
-      "d_p_041_02",
-      "d_p_041_03"
-    ]
-  },
-  {
-    "persona_id": "p_042",
-    "hyperparams": {
-      "archetype": "mobile_developer",
-      "years_experience": 9,
-      "seniority": "senior",
-      "industry": "gaming",
-      "writing_style": "confident",
-      "language_fluency": "ESL",
-      "self_promotion_level": "balanced",
-      "quantification_tendency": "mixed"
-    },
-    "name": "Alex Chen",
-    "current_role": "Senior Mobile Development Manager",
-    "company": "Nova Games",
-    "education": {
-      "degree": "Bachelor of Science in Computer Science",
-      "university": "University of California, Berkeley",
-      "year": 2015
-    },
-    "career_trajectory": [
-      {
-        "role": "Mobile Developer",
-        "company": "PixelForge Studios",
-        "years": "2014-2016"
-      },
-      {
-        "role": "Senior Mobile Developer",
-        "company": "Luma Interactive",
-        "years": "2016-2018"
-      },
-      {
-        "role": "Lead Mobile Engineer",
-        "company": "Aether Games",
-        "years": "2018-2020"
-      },
-      {
-        "role": "Senior Mobile Development Manager",
-        "company": "Nova Games",
-        "years": "2020-present"
-      }
-    ],
-    "skills": {
-      "Swift": 5,
-      "Kotlin": 5,
-      "React Native": 4,
-      "Flutter": 4,
-      "iOS development": 4,
-      "Android development": 4,
-      "TypeScript": 4,
-      "React": 4,
-      "REST API design": 4,
-      "GraphQL": 4,
-      "Mobile testing": 4
-    },
-    "document_ids": [
-      "d_p_042_00",
-      "d_p_042_01",
-      "d_p_042_02",
-      "d_p_042_03",
-      "d_p_042_04",
-      "d_p_042_05"
-    ]
-  },
-  {
-    "persona_id": "p_043",
-    "hyperparams": {
-      "archetype": "devops_sre",
-      "years_experience": 12,
-      "seniority": "staff",
-      "industry": "e-commerce",
-      "writing_style": "confident",
-      "language_fluency": "native",
-      "self_promotion_level": "humble",
-      "quantification_tendency": "metrics-heavy"
-    },
-    "name": "Alex Carter",
-    "current_role": "Staff Site Reliability Engineer",
-    "company": "GlobalRetail Inc.",
-    "education": {
-      "degree": "Bachelor of Science in Computer Science",
-      "university": "University of Washington",
-      "year": 2010
-    },
-    "career_trajectory": [
-      {
-        "role": "DevOps Engineer",
-        "company": "XYZ Corp",
-        "duration": "2010–2013"
-      },
-      {
-        "role": "Senior DevOps Engineer",
-        "company": "ABC Corp",
-        "duration": "2013–2016"
-      },
-      {
-        "role": "Staff DevOps Engineer",
-        "company": "TechCo",
-        "duration": "2016–2018"
-      },
-      {
-        "role": "Staff SRE",
-        "company": "GlobalRetail Inc.",
-        "duration": "2018–present"
-      }
-    ],
-    "skills": {
-      "CI/CD pipelines": 5,
-      "AWS": 5,
-      "Prometheus/Grafana": 5,
-      "Linux administration": 5,
-      "Terraform": 5,
-      "Python": 4,
-      "PostgreSQL": 4,
-      "Cloud networking (VPC/subnets)": 4,
-      "Cloud cost optimization": 4
-    },
-    "document_ids": [
-      "d_p_043_00",
-      "d_p_043_01",
-      "d_p_043_02",
-      "d_p_043_03",
-      "d_p_043_04",
-      "d_p_043_05"
-    ]
-  },
-  {
-    "persona_id": "p_044",
-    "hyperparams": {
-      "archetype": "data_engineer",
-      "years_experience": 6,
-      "seniority": "senior",
-      "industry": "e-commerce",
-      "writing_style": "neutral",
-      "language_fluency": "native",
-      "self_promotion_level": "boastful",
-      "quantification_tendency": "mixed"
-    },
-    "name": "Alex Carter",
-    "current_role": "Lead Data Engineer",
-    "company": "E-Commerce Innovations Inc.",
-    "education": {
-      "degree": "Master of Science in Computer Science",
-      "university": "University of California, Berkeley",
+      "degree": "Master of Science in Data Science",
+      "university": "University of Cape Town",
       "year": 2018
     },
     "career_trajectory": [
       {
         "role": "Data Analyst",
-        "company": "TechStart Solutions",
-        "year": "2016-2018"
+        "company": "TechNova Solutions",
+        "duration": "2 years",
+        "responsibilities": "Built predictive models for customer churn, optimized SQL queries for real-time analytics"
       },
       {
-        "role": "Data Engineer",
-        "company": "RetailFlow Inc.",
-        "year": "2018-2020"
+        "role": "Data Scientist",
+        "company": "PixelPulse Inc.",
+        "duration": "3 years",
+        "responsibilities": "Led A/B testing frameworks, developed NLP pipelines for user sentiment analysis"
       },
       {
-        "role": "Senior Data Engineer",
-        "company": "E-Commerce Co.",
-        "year": "2020-2022"
-      },
-      {
-        "role": "Lead Data Engineer",
-        "company": "E-Commerce Innovations Inc.",
-        "year": "2022-present"
+        "role": "Senior Data Scientist",
+        "company": "NexGen Analytics",
+        "duration": "1 year",
+        "responsibilities": "Architected MLOps pipelines, deployed production models using MLflow and ONNX"
       }
     ],
     "skills": {
-      "Apache Spark": 5,
-      "Apache Kafka": 5,
-      "dbt": 5,
-      "Data modeling": 5,
-      "ETL pipeline design": 5,
-      "Snowflake": 5,
+      "PyTorch": 4,
+      "TensorFlow": 4,
+      "Feature engineering": 4,
+      "Model deployment": 4,
       "Python": 5,
-      "AWS": 5,
-      "Apache Airflow": 5,
-      "Data quality frameworks": 4,
-      "PostgreSQL": 4
+      "SQL analytics": 3,
+      "MLOps": 3,
+      "Apache Airflow": 3
+    },
+    "document_ids": [
+      "d_p_041_00",
+      "d_p_041_01",
+      "d_p_041_02",
+      "d_p_041_03",
+      "d_p_041_04"
+    ]
+  },
+  {
+    "persona_id": "p_042",
+    "hyperparams": {
+      "archetype": "product_manager",
+      "years_experience": 2,
+      "seniority": "junior",
+      "industry": "adtech",
+      "writing_style": "neutral",
+      "language_fluency": "near-native",
+      "self_promotion_level": "humble",
+      "quantification_tendency": "mixed"
+    },
+    "name": "Hugo Ramirez",
+    "current_role": "Product Manager",
+    "company": "AdvertiseNow Inc.",
+    "education": {
+      "degree": "Bachelor of Science in Marketing",
+      "university": "University of Texas at Austin",
+      "year": 2021
+    },
+    "career_trajectory": [
+      {
+        "role": "Product Intern",
+        "company": "AdvertiseNow Inc.",
+        "duration": "6 months",
+        "responsibilities": "Assisted in tracking campaign performance metrics, conducted basic competitor analysis, and collaborated with engineers on feature prioritization"
+      },
+      {
+        "role": "Junior Product Analyst",
+        "company": "AdvertiseNow Inc.",
+        "duration": "12 months",
+        "responsibilities": "Analyzed user engagement data, designed A/B tests for ad creative, and contributed to roadmap planning for ad targeting tools"
+      },
+      {
+        "role": "Product Coordinator",
+        "company": "AdvertiseNow Inc.",
+        "duration": "6 months",
+        "responsibilities": "Managed cross-functional sprints, coordinated stakeholder feedback sessions, and supported launch of a real-time bidding dashboard"
+      }
+    ],
+    "skills": {
+      "Product management": 4,
+      "UX research": 3,
+      "Analytics-driven product decisions": 3,
+      "Roadmap planning": 3,
+      "Stakeholder management": 3,
+      "Competitive analysis": 3,
+      "Agile/Scrum": 3,
+      "SQL analytics": 3,
+      "Data visualization (Plotly)": 3,
+      "A/B testing": 3,
+      "Hypothesis testing": 3,
+      "Tableau/Power BI": 3
+    },
+    "document_ids": [
+      "d_p_042_00",
+      "d_p_042_01",
+      "d_p_042_02"
+    ]
+  },
+  {
+    "persona_id": "p_043",
+    "hyperparams": {
+      "archetype": "frontend_engineer",
+      "years_experience": 5,
+      "seniority": "mid",
+      "industry": "e-commerce",
+      "writing_style": "modest",
+      "language_fluency": "near-native",
+      "self_promotion_level": "humble",
+      "quantification_tendency": "mixed"
+    },
+    "name": "Olumide Afolabi",
+    "current_role": "Frontend Engineer",
+    "company": "EcomSphere Solutions",
+    "education": {
+      "degree": "Bachelor of Science in Computer Science",
+      "university": "University of Ibadan",
+      "year": 2018
+    },
+    "career_trajectory": [
+      "Junior Frontend Developer at StartUpCo (2018-2020)",
+      "Senior Frontend Developer at TrendyMart (2020-2023)",
+      "Frontend Engineer at EcomSphere Solutions (2023-present)"
+    ],
+    "skills": {
+      "JavaScript": 4,
+      "TypeScript": 4,
+      "React": 4,
+      "Next.js": 3,
+      "Responsive design": 4,
+      "Web accessibility (WCAG)": 3,
+      "State management (Redux/Zustand)": 4,
+      "Node.js": 3,
+      "REST API design": 3,
+      "Web performance optimization": 4,
+      "Webpack/Vite": 3,
+      "Test automation (Selenium/Playwright)": 3,
+      "GraphQL": 3
+    },
+    "document_ids": [
+      "d_p_043_00",
+      "d_p_043_01",
+      "d_p_043_02"
+    ]
+  },
+  {
+    "persona_id": "p_044",
+    "hyperparams": {
+      "archetype": "fullstack_developer",
+      "years_experience": 0,
+      "seniority": "junior",
+      "industry": "enterprise",
+      "writing_style": "modest",
+      "language_fluency": "native",
+      "self_promotion_level": "balanced",
+      "quantification_tendency": "mixed"
+    },
+    "name": "Omar Farooq",
+    "current_role": "Full-Stack Developer",
+    "company": "TechCorp Innovations",
+    "education": {
+      "degree": "BSc in Computer Science",
+      "university": "University of London",
+      "year": 2023
+    },
+    "career_trajectory": [
+      "Developer Intern at TechCorp Innovations (2023)",
+      "Junior Full-Stack Developer at TechCorp Innovations (2024)"
+    ],
+    "skills": {
+      "Python": 3,
+      "JavaScript": 3,
+      "React": 3,
+      "Node.js": 3,
+      "REST API design": 3,
+      "PostgreSQL": 3,
+      "Docker": 3,
+      "Kubernetes": 3,
+      "Terraform": 3,
+      "GitLab CI": 3
     },
     "document_ids": [
       "d_p_044_00",
@@ -2567,161 +2565,180 @@
   {
     "persona_id": "p_045",
     "hyperparams": {
-      "archetype": "qa_test_engineer",
-      "years_experience": 7,
-      "seniority": "senior",
-      "industry": "fintech",
-      "writing_style": "concise",
+      "archetype": "fullstack_developer",
+      "years_experience": 2,
+      "seniority": "junior",
+      "industry": "SaaS",
+      "writing_style": "confident",
       "language_fluency": "near-native",
       "self_promotion_level": "boastful",
-      "quantification_tendency": "metrics-heavy"
+      "quantification_tendency": "qualitative"
     },
-    "name": "Alexandra Chen",
-    "current_role": "Senior QA Engineer - Payment Systems",
-    "company": "FinTech Innovators Inc.",
+    "name": "Anya Kowalski",
+    "current_role": "Full-Stack Developer",
+    "company": "NexGen SaaS Solutions",
     "education": {
       "degree": "Bachelor of Science in Computer Science",
-      "university": "University of Washington",
-      "year": 2016
+      "university": "University of Warsaw",
+      "year": 2021
     },
     "career_trajectory": [
-      "QA Engineer (2017-2019) - Automated test frameworks for mobile banking apps",
-      "QA Lead (2019-2021) - Directed API testing for real-time payment gateways",
-      "Senior QA Engineer (2021-present) - Architecting security testing strategies for fintech platforms"
+      {
+        "year": 2021,
+        "position": "Junior Software Developer",
+        "company": "Startup Catalyst",
+        "responsibilities": "Focused on Python backend development for SaaS products, collaborating with cross-functional teams"
+      },
+      {
+        "year": 2022,
+        "position": "Full-Stack Developer",
+        "company": "NexGen SaaS Solutions",
+        "responsibilities": "Built scalable web applications using Node.js/React, optimized MongoDB queries, and designed REST APIs"
+      },
+      {
+        "year": 2023,
+        "position": "Lead Developer (Contract)",
+        "company": "CloudForge Innovations",
+        "responsibilities": "Architected microservices with gRPC, implemented CI/CD pipelines, and mentored junior engineers"
+      }
     ],
     "skills": {
-      "Test automation": 5,
-      "Selenium/Playwright": 4,
-      "Unit testing": 4,
-      "Integration testing": 5,
-      "Performance testing (JMeter/k6)": 5,
-      "API testing": 5,
-      "Test strategy design": 5,
-      "BDD/TDD": 4,
-      "Security testing": 5,
-      "Python": 5,
-      "Java": 4,
-      "Go": 3,
-      "REST API design": 4,
-      "Microservices architecture": 4
+      "Python": 3,
+      "Node.js": 3,
+      "React": 3,
+      "REST API design": 3,
+      "MongoDB": 3,
+      "JavaScript": 3,
+      "TypeScript": 3,
+      "Docker": 3,
+      "Kubernetes": 2,
+      "AWS": 3,
+      "GitLab CI": 2,
+      "CI/CD pipelines": 3
     },
     "document_ids": [
       "d_p_045_00",
       "d_p_045_01",
-      "d_p_045_02",
-      "d_p_045_03",
-      "d_p_045_04"
+      "d_p_045_02"
     ]
   },
   {
     "persona_id": "p_046",
     "hyperparams": {
-      "archetype": "backend_engineer",
-      "years_experience": 5,
-      "seniority": "mid",
-      "industry": "startup",
-      "writing_style": "neutral",
-      "language_fluency": "ESL",
-      "self_promotion_level": "humble",
-      "quantification_tendency": "mixed"
+      "archetype": "devops_sre",
+      "years_experience": 7,
+      "seniority": "senior",
+      "industry": "enterprise",
+      "writing_style": "verbose",
+      "language_fluency": "native",
+      "self_promotion_level": "boastful",
+      "quantification_tendency": "metrics-heavy"
     },
-    "name": "Alexandra Chen",
-    "current_role": "Backend Engineer",
-    "company": "NexaTech Solutions",
+    "name": "Linda Gustafsson",
+    "current_role": "Senior Site Reliability Engineer / DevOps Architect",
+    "company": "NordicTech Solutions AB",
     "education": {
-      "degree": "Bachelor of Science in Computer Science",
-      "university": "University of California, Berkeley",
-      "year": 2018
+      "degree": "Master's in Computer Science",
+      "university": "KTH Royal Institute of Technology",
+      "year": 2016
     },
     "career_trajectory": [
       {
-        "role": "Software Engineer",
-        "company": "TechNova Inc.",
-        "year": 2018
+        "role": "DevOps Engineer",
+        "company": "ScandiCloud",
+        "duration": "2015-2017",
+        "achievements": "Automated 80% of deployment pipelines using Jenkins and GitLab CI, reduced incident resolution time by 40% through proactive monitoring"
       },
       {
-        "role": "Backend Developer",
-        "company": "DataFlow Systems",
-        "year": 2020
+        "role": "SRE Lead",
+        "company": "NordicCloud",
+        "duration": "2017-2019",
+        "achievements": "Designed multi-cloud strategy for GCP/AWS, achieved 99.95% SLA with Terraform-managed infrastructure, mentored 5 junior SREs"
       },
       {
-        "role": "Senior Backend Engineer",
-        "company": "InnovateX Startup",
-        "year": 2022
+        "role": "DevOps Architect",
+        "company": "NordicTech Solutions AB",
+        "duration": "2019-2022",
+        "achievements": "Implemented Kubernetes-based microservices architecture, reduced cloud costs by 30% through optimization, led chaos engineering framework for 12+ services"
       }
     ],
     "skills": {
-      "Python": 4,
-      "Go": 4,
-      "REST API design": 4,
-      "Microservices architecture": 4,
-      "Message queues": 3,
-      "PostgreSQL": 4,
-      "CI/CD pipelines": 3,
-      "GitHub Actions": 3,
-      "Prometheus/Grafana": 3,
-      "Linux administration": 3
+      "CI/CD pipelines": 5,
+      "GitHub Actions": 4,
+      "Jenkins": 3,
+      "ArgoCD": 4,
+      "GitLab CI": 5,
+      "Prometheus/Grafana": 5,
+      "Monitoring & alerting": 5,
+      "SLA/SLO management": 4,
+      "Linux administration": 5,
+      "Shell scripting (Bash)": 4,
+      "Configuration management (Ansible)": 4,
+      "Log management (ELK)": 3,
+      "Chaos engineering": 4,
+      "AWS": 5,
+      "GCP": 5,
+      "Docker": 4,
+      "Kubernetes": 5,
+      "Terraform": 5,
+      "Cloud networking (VPC/subnets)": 4,
+      "Cloud cost optimization": 4
     },
     "document_ids": [
       "d_p_046_00",
       "d_p_046_01",
       "d_p_046_02",
-      "d_p_046_03",
-      "d_p_046_04"
+      "d_p_046_03"
     ]
   },
   {
     "persona_id": "p_047",
     "hyperparams": {
-      "archetype": "qa_test_engineer",
+      "archetype": "ml_engineer",
       "years_experience": 2,
       "seniority": "junior",
       "industry": "adtech",
-      "writing_style": "verbose",
-      "language_fluency": "near-native",
+      "writing_style": "concise",
+      "language_fluency": "ESL",
       "self_promotion_level": "humble",
-      "quantification_tendency": "mixed"
+      "quantification_tendency": "qualitative"
     },
-    "name": "Alex Morgan",
-    "current_role": "QA/Test Engineer",
-    "company": "AdVerve Solutions",
+    "name": "Eliott Marchand",
+    "current_role": "Machine Learning Engineer",
+    "company": "AdVerve Technologies",
     "education": {
-      "degree": "Bachelor of Science in Computer Science",
-      "university": "State University of Technology",
+      "degree": "Master's in Data Science",
+      "university": "University of London",
       "year": 2022
     },
     "career_trajectory": [
       {
-        "role": "Software Intern",
-        "company": "AdVerve Solutions",
-        "duration": "6 months",
-        "responsibilities": "Assisted in debugging ad-serving APIs and basic test case documentation"
+        "role": "ML Intern",
+        "company": "AdVerve Technologies",
+        "year": 2021
       },
       {
-        "role": "QA Automation Specialist",
-        "company": "AdVerve Solutions",
-        "duration": "1 year",
-        "responsibilities": "Developed Selenium test scripts for campaign management dashboards"
+        "role": "Junior ML Engineer",
+        "company": "AdVerve Technologies",
+        "year": 2022
       },
       {
-        "role": "Test Engineer",
-        "company": "AdVerve Solutions",
-        "duration": "6 months",
-        "responsibilities": "Conducted integration testing for real-time bidding modules"
+        "role": "Ad Targeting Project Lead",
+        "company": "AdTech Solutions",
+        "year": 2023
       }
     ],
     "skills": {
-      "Test automation": 3,
-      "Selenium/Playwright": 3,
-      "Unit testing": 3,
-      "Integration testing": 3,
-      "Performance testing (JMeter/k6)": 2,
-      "API testing": 3,
-      "Python": 3,
-      "Java": 2,
-      "REST API design": 2,
-      "Microservices architecture": 2,
-      "CI/CD pipelines": 3
+      "Python": 4,
+      "PyTorch": 3,
+      "TensorFlow": 3,
+      "Hugging Face Transformers": 3,
+      "NLP": 3,
+      "Recommendation systems": 3,
+      "AWS": 3,
+      "GCP": 3,
+      "Docker": 3,
+      "REST API design": 3
     },
     "document_ids": [
       "d_p_047_00",
@@ -2732,127 +2749,123 @@
   {
     "persona_id": "p_048",
     "hyperparams": {
-      "archetype": "platform_engineer",
-      "years_experience": 3,
-      "seniority": "mid",
-      "industry": "consulting",
-      "writing_style": "verbose",
+      "archetype": "ml_engineer",
+      "years_experience": 0,
+      "seniority": "junior",
+      "industry": "adtech",
+      "writing_style": "modest",
       "language_fluency": "native",
-      "self_promotion_level": "boastful",
+      "self_promotion_level": "humble",
       "quantification_tendency": "mixed"
     },
-    "name": "Alexandra 'Lexi' Mitchell",
-    "current_role": "Platform Engineer - Cloud Infrastructure Architect",
-    "company": "CloudForge Solutions",
+    "name": "Nina Rodriguez",
+    "current_role": "Machine Learning Engineer",
+    "company": "AdLift Technologies",
     "education": {
       "degree": "Bachelor of Science in Computer Science",
       "university": "University of Southern California",
-      "year": 2019
+      "year": 2024
     },
     "career_trajectory": [
       {
-        "year": 2020,
-        "role": "DevOps Engineer",
-        "company": "TechCorp Innovations"
+        "role": "Data Analytics Intern",
+        "company": "BannerAds Inc.",
+        "duration": "6 months",
+        "responsibilities": "Assisted in building user segmentation models using Python and SQL."
       },
       {
-        "year": 2021,
-        "role": "SRE Lead",
-        "company": "CloudMinds Ltd"
+        "role": "Machine Learning Intern",
+        "company": "ClickBoost Dynamics",
+        "duration": "6 months",
+        "responsibilities": "Developed A/B testing frameworks and collaborated on ad performance prediction models."
       },
       {
-        "year": 2022,
-        "role": "Platform Engineer",
-        "company": "CloudForge Solutions"
+        "role": "Junior Machine Learning Engineer",
+        "company": "AdLift Technologies",
+        "duration": "3 months",
+        "responsibilities": "Maintaining and optimizing recommendation systems for ad targeting pipelines."
       }
     ],
     "skills": {
-      "AWS": 4,
-      "Kubernetes": 4,
-      "Terraform": 4,
-      "Cloud cost optimization": 3,
-      "CI/CD pipelines": 3,
-      "Python": 3,
-      "GitLab CI": 3,
-      "Prometheus/Grafana": 3,
-      "Database optimization": 3
+      "PyTorch": 3,
+      "TensorFlow": 3,
+      "scikit-learn": 3,
+      "NLP": 3,
+      "Recommendation systems": 3,
+      "MLOps (MLflow/W&B)": 3,
+      "Model deployment": 3,
+      "AWS": 3,
+      "Docker": 3,
+      "REST API design": 3,
+      "Apache Airflow": 3,
+      "ETL pipeline design": 3,
+      "Data modeling": 3
     },
     "document_ids": [
       "d_p_048_00",
       "d_p_048_01",
-      "d_p_048_02"
+      "d_p_048_02",
+      "d_p_048_03"
     ]
   },
   {
     "persona_id": "p_049",
     "hyperparams": {
-      "archetype": "tech_lead_architect",
+      "archetype": "data_engineer",
       "years_experience": 2,
       "seniority": "junior",
-      "industry": "SaaS",
+      "industry": "startup",
       "writing_style": "confident",
-      "language_fluency": "native",
+      "language_fluency": "near-native",
       "self_promotion_level": "boastful",
-      "quantification_tendency": "metrics-heavy"
+      "quantification_tendency": "mixed"
     },
-    "name": "Alex Johnson",
-    "current_role": "Tech Lead",
-    "company": "NexaCorp",
+    "name": "Pavel Dvorak",
+    "current_role": "Data Engineer",
+    "company": "NexaData Solutions",
     "education": {
-      "degree": "Computer Science",
-      "university": "MIT",
-      "year": 2022
+      "degree": "Bachelor of Science in Computer Science",
+      "university": "University of Toronto",
+      "year": 2021
     },
     "career_trajectory": [
       {
-        "role": "Software Engineer Intern",
-        "company": "ScaleTech",
+        "title": "Data Analyst Intern",
+        "company": "TechNova Analytics",
         "duration": "6 months",
-        "key_achievements": [
-          "Architected a microservices-based pricing engine with 95% uptime",
-          "Reduced deployment time by 40% using CI/CD pipelines"
-        ]
+        "responsibilities": "Processed raw data using Python and SQL, created visualizations for stakeholder reports."
       },
       {
-        "role": "Senior Software Engineer",
-        "company": "NexaCorp",
-        "duration": "1.5 years",
-        "key_achievements": [
-          "Led backend development for SaaS product with 200k+ active users",
-          "Migrated monolith to serverless architecture saving $150k annually"
-        ]
+        "title": "Data Engineering Intern",
+        "company": "DataVerve Inc.",
+        "duration": "6 months",
+        "responsibilities": "Built ETL pipelines with Apache Airflow and optimized PostgreSQL queries for real-time analytics."
       },
       {
-        "role": "Junior Tech Lead",
-        "company": "NexaCorp",
-        "duration": "0.5 years",
-        "key_achievements": [
-          "Designed cloud-native architecture with 99.95% SLA",
-          "Implemented cross-team collaboration framework reducing sprint cycle time by 30%"
-        ]
+        "title": "Junior Data Engineer",
+        "company": "NexaData Solutions",
+        "duration": "2 years",
+        "responsibilities": "Architected cloud-native data pipelines on AWS, integrated Kafka with Snowflake, and automated DBT models."
       }
     ],
     "skills": {
-      "System design": 3,
-      "Cloud infrastructure": 4,
-      "Backend development": 3,
-      "Agile/Scrum": 3,
-      "Cross-team collaboration": 3,
-      "Stakeholder communication": 3,
-      "Technical writing": 3,
-      "Python": 3,
-      "CI/CD pipelines": 4,
-      "GitHub Actions": 3,
-      "Monitoring & alerting": 3,
-      "Linux administration": 3,
-      "Shell scripting": 3,
-      "Database optimization": 3
+      "Apache Spark": 3,
+      "Apache Kafka": 3,
+      "Apache Airflow": 3,
+      "dbt": 3,
+      "ETL pipeline design": 3,
+      "Data warehousing": 3,
+      "Snowflake": 3,
+      "PostgreSQL": 3,
+      "Python": 4,
+      "REST API design": 3,
+      "Docker": 3,
+      "Kubernetes": 2,
+      "Infrastructure as Code": 3,
+      "Cloud cost optimization": 2
     },
     "document_ids": [
-      "d_p_049_00",
-      "d_p_049_01",
-      "d_p_049_02",
-      "d_p_049_03"
+      "d_p_049_00"
     ]
   }
 ]

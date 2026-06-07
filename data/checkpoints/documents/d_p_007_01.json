@@ -1,23 +1,22 @@
 {
   "doc_id": "d_p_007_01",
-  "type": "project_readme",
+  "type": "blog",
   "persona_id": "p_007",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "plain"
+    "blog_depth": "tutorial",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
     "AWS": 2,
-    "Docker": 2,
-    "GitHub Actions": 1,
-    "GitLab CI": 3,
-    "Linux administration": 2,
-    "Network automation": 1,
-    "Prometheus/Grafana": 1,
-    "Python": 2,
-    "Shell scripting (Bash)": 2,
-    "Terraform": 3
+    "Application security (OWASP)": 4,
+    "Compliance (SOC2/GDPR)": 3,
+    "Encryption & PKI": 4,
+    "IAM/Access control": 3,
+    "Network security": 3,
+    "Penetration testing": 4,
+    "SIEM tools": 3,
+    "Security auditing": 3,
+    "Vulnerability management": 3
   },
-  "text": "# AdScaleCI  \n\nAdScaleCI is a CI/CD pipeline tailored for adtech campaign deployment, leveraging Kubernetes for orchestration and Terraform for infrastructure provisioning. Designed for high-throughput environments, it reduces deployment latency by 40% while ensuring consistent, repeatable workflows across 10+ campaigns.  \n\n## Tech Stack  \n- **Kubernetes**: Manages containerized campaign services.  \n- **Terraform**: Automates cloud infrastructure provisioning on AWS.  \n- **GitLab CI**: Executes CI/CD workflows for code validation and deployment.  \n- **AWS**: Hosts compute resources and storage.  \n- **Docker**: Packages campaign microservices for deployment.  \n- **Linux**: Underlying OS for all nodes.  \n- **Python**: Scripting for custom validation logic.  \n- **Shell Scripting**: Automates routine tasks like environment checks.  \n\n## Architecture Overview  \nThe pipeline integrates GitLab CI pipelines with Terraform to provision Kubernetes clusters dynamically. Campaign code is validated in GitLab CI, then deployed to Kubernetes via Terraform-managed manifests. AWS resources are scoped to individual campaigns, ensuring isolation and cost control.  \n\n## Setup Instructions  \n1. **Initialize Terraform**:  \n   ```bash  \n   terraform init -var-file=terraform.tfvars  \n   terraform apply  \n   ```  \n2. **Configure GitLab CI**:  \n   Update `.gitlab-ci.yml` with your project’s build stages (e.g., unit tests, static analysis).  \n3. **Deploy to Kubernetes**:  \n   Run `kubectl apply -f k8s-deployments.yaml` after pipeline success.  \n4. **Monitor**: Use AWS CloudWatch for resource metrics.  \n\n## Skills & Tools  \n- **GitLab CI**: Used for CI/CD workflows and pipeline automation.  \n- **Terraform**: Applied for infrastructure-as-code and cluster management.  \n- **AWS**: Leveraged for compute and storage, with resource tagging for cost tracking.  \n- **Docker**: Employed to containerize campaign services.  \n- **Linux**: Utilized for system-level configuration and debugging.  \n- **Python**: Integrated for custom validation scripts.  \n- **Shell Scripting**: Used for environment setup and pre-deployment checks.  \n\nAdScaleCI streamlines ad campaign deployments with minimal manual intervention, enabling teams to focus on innovation."
+  "text": "**Zero-Trust Security in Healthtech: Protecting Sensitive Patient Data**  \n\nIn healthtech, the stakes of data breaches are higher than in most industries. Patient records are not just sensitive—they’re life-critical. My team recently overhauled our security posture to align with zero-trust principles, and the results speak for themselves.  \n\n**Problem Statement**  \nLegacy systems in healthtech often assume implicit trust within defined boundaries. This creates vulnerabilities: insider threats, third-party access, and outdated protocols. For example, our previous architecture allowed internal apps to communicate without verifying identities, exposing patient data to lateral movement risks. Compliance with HIPAA and GDPR added pressure to modernize, but the real challenge was balancing security with the need for seamless data flow across clinical workflows.  \n\n**Setup**  \nWe began by mapping all data flows and identifying critical assets. Our environment included on-prem servers, AWS cloud services, and third-party APIs. We prioritized three pillars: identity verification, network segmentation, and encryption. Tools like AWS IAM, CloudFront, and AWS KMS became foundational. We also integrated SIEM tools to centralize logging and alerting.  \n\n**Step-by-Step**  \n1. **Network Segmentation**: We isolated patient data stores behind AWS VPCs, restricting access to only authenticated services.  \n2. **IAM Enforcement**: Every user and service had role-based access, with regular audits to prune unused permissions.  \n3. **Secure Communication**: All data in transit used TLS 1.3, and APIs enforced OAuth 2.0 with JWT tokens.  \n4. **Encryption at Rest**: AES-256 encrypted databases, while PKI-managed keys ensured key rotation and access controls.  \n5. **Multi-Factor Authentication**: MFA became mandatory for all admin access, reducing phishing risks.  \n6. **Continuous Monitoring**: SIEM tools aggregated logs, and we configured alerts for anomalous behavior, like sudden data access spikes.  \n7. **Penetration Testing**: We conducted quarterly red team exercises to identify gaps, simulating both external and insider threats.  \n\n**Results**  \nPost-implementation, breach risks dropped by 72%, and compliance audits passed without findings. Our system achieved 99.9% uptime while maintaining sub-50ms latency for critical workflows. Encryption overhead was minimized through key caching, and audit logs reduced incident response times by 40%.  \n\n**Conclusion**  \nZero-trust isn’t a one-time project—it’s an ongoing process. By treating every request as untrusted, we’ve created a resilient framework that adapts to evolving threats. The real win? Clinicians now access data without friction, knowing it’s protected by layers of automation and policy.  \n\n**Further Reading**  \n- OWASP Top Ten for healthcare-specific vulnerabilities  \n- AWS Security Best Practices for HIPAA compliance  \n- NIST Zero Trust Architecture Framework (2023 edition)  \n- Case studies on PKI implementation in EHR systems  \n- GDPR breach notification guidelines for health data"
 }

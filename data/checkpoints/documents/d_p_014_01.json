@@ -4,25 +4,22 @@
   "persona_id": "p_014",
   "hyperparams": {
     "project_scale": "hobby",
-    "project_team_size": "large (15+)",
-    "jargon_density": "moderate"
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
     "AWS": 4,
-    "Agile/Scrum": 4,
     "CI/CD pipelines": 4,
-    "Cloud cost optimization": 3,
-    "Code review": 3,
-    "Cross-team collaboration": 3,
-    "Infrastructure as Code": 4,
-    "Kubernetes": 4,
-    "Mentoring": 3,
-    "Project management": 3,
-    "Stakeholder communication": 3,
-    "System design": 4,
-    "Team leadership": 3,
-    "Technical writing": 3,
-    "Terraform": 3
+    "Cloud cost optimization": 4,
+    "Docker": 4,
+    "Kubernetes": 5,
+    "Microservices architecture": 5,
+    "Node.js": 4,
+    "PostgreSQL": 5,
+    "Python": 5,
+    "REST API design": 5,
+    "React": 4,
+    "Redis": 4
   },
-  "text": "# VeloCart InventorySync  \nA real-time inventory management system to optimize e-commerce supply chain operations, reducing stock discrepancies by 42% and improving order fulfillment latency by 35%.  \n\n## 🚀 Overview  \nVeloCart InventorySync synchronizes inventory across 12+ sales channels and 5 regional warehouses, processing 2M+ transactions/day. Built for scalability, it reduces stockouts by 28% and ensures 99.95% SLA through automated reconciliation and predictive restocking.  \n\n## 🧰 Tech Stack  \n- **Cloud**: AWS (EC2, S3, Lambda, DynamoDB, CloudFront)  \n- **Orchestration**: Kubernetes (EKS) with HPA for auto-scaling  \n- **Data Sync**: Apache Kafka for event streaming, Redis for in-memory caching  \n- **IaC**: Terraform for reproducible infrastructure  \n- **CI/CD**: GitHub Actions with parallel testing for 90%+ pipeline success rate  \n- **Monitoring**: Prometheus + Grafana for real-time metrics  \n\n## 📌 Architecture  \nA microservices architecture with:  \n1. **Event Producer**: Kafka topics for inventory updates  \n2. **Sync Engine**: Kubernetes pods handling 10K+ concurrent sync requests  \n3. **Data Store**: DynamoDB with global tables for cross-region consistency  \n4. **Analytics Layer**: Redshift for historical inventory trends  \n5. **Frontend**: CloudFront + S3 for low-latency access to inventory dashboards  \n\n## 📦 Setup  \n1. Clone repo: `git clone https://github.com/your-username/velocart-inventorysync.git`  \n2. Initialize Terraform: `terraform init` (uses AWS credentials from ~/.aws/credentials)  \n3. Deploy infrastructure: `terraform apply` (optimized for 30% lower compute costs via spot instances)  \n4. Configure CI/CD: `./setup-pipelines.sh` (automates testing and deployment)  \n5. Monitor with Prometheus: `kubectl apply -f monitoring/manifests.yaml`  \n\n## 📊 Metrics  \n- 99.95% system uptime (SLA compliance)  \n- 42% reduction in stock discrepancies (Q3 2023)  \n- 35% improvement in order fulfillment latency (vs. legacy systems)  \n- 20% faster sprint delivery via Agile/Scrum practices  \n\n## 🤝 Collaboration  \nDesigned for cross-team integration with logistics, sales, and analytics teams. Regular code reviews (95% code quality score) and stakeholder syncs ensure alignment on KPIs. Mentoring sessions for junior engineers have reduced onboarding time by 25%.  \n\n## 📄 Documentation  \nTechnical specs and architecture diagrams available in `/docs`. Contributions welcome!"
+  "text": "# Cloud-Native SaaS Platform for Real-Time Collaboration  \n\nA full-stack application enabling real-time collaboration in a cloud-native SaaS environment, designed to scale with 500+ concurrent users and optimized for cost efficiency. Built as a hobby project by a solo developer, this platform leverages modern infrastructure and architecture to deliver low-latency, secure, and extensible collaboration tools.  \n\n## Badges  \n[![GitHub stars](https://img.shields.io/github/stars/dinasoliman/cloud-native-collab?style=flat&label=stars)](https://github.com/dinasoliman/cloud-native-collab)  \n[![GitHub issues](https://img.shields.io/github/issues/dinasoliman/cloud-native-collab?style=flat&label=issues)](https://github.com/dinasoliman/cloud-native-collab)  \n[![AWS](https://img.shields.io/badge/AWS-Production%20Ready-blue)](https://aws.amazon.com/)  \n[![Kubernetes](https://img.shields.io/badge/Kubernetes-Production%20Ready-blue)](https://kubernetes.io/)  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/dinasoliman/cloud-native-collab.git  \ncd cloud-native-collab  \ndocker-compose up -d  \n```  \nEnsure Docker and Docker Compose are installed. The environment variables in `.env` and `docker-compose.yml` configure AWS, Redis, and PostgreSQL. Use `docker exec` to debug containers.  \n\n## Usage / Examples  \nStart the server: `npm run start`  \nLaunch the client: `npm run dev`  \nAccess the app at `http://localhost:3000`  \nKey features include live document editing, real-time notifications, and user presence tracking.  \n\n## Configuration  \nConfigure AWS credentials via `~/.aws/credentials` and set `AWS_REGION` in `.env`. Redis and PostgreSQL settings are in `config/redis.js` and `config/db.js`. Use `dotenv` for local development.  \n\n## Deployment  \nDeploy to AWS using CloudFormation templates in `infrastructure/`. Set up EKS with Terraform and integrate GitHub Actions for CI/CD. Use spot instances for non-critical workloads to reduce costs by 40%.  \n\n## Architecture / Design  \nThe system follows a microservices architecture with Node.js APIs, React frontend, and Redis for pub/sub. PostgreSQL handles persistent data, while Kubernetes manages container orchestration. REST APIs enable service-to-service communication, and circuit breakers prevent cascading failures.  \n\n## Tech Stack / Built With  \n- **Frontend**: React, TypeScript  \n- **Backend**: Node.js, Express, REST APIs  \n- **Database**: PostgreSQL, Redis (pub/sub)  \n- **Cloud**: AWS (EC2, EKS, CloudFormation)  \n- **Orchestration**: Kubernetes, Helm  \n- **CI/CD**: GitHub Actions, Terraform  \n\n## Contributing  \nContributions are welcome! Open an issue for feature requests or bug reports. Fork the repo, create a pull request with tests and documentation. Follow the issue template for repro steps and expected behavior."
 }

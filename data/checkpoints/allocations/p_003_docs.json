@@ -1,64 +1,50 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A concise CV highlighting Emily Chen's QA engineering skills and consulting experience.",
-    "title": "Emily Chen - QA Engineer",
+    "topic_summary": "Professional resume highlighting platform engineering experience in a startup environment",
+    "title": "Carmen Delgado - Platform Engineer",
     "doc_id": "d_p_003_00",
     "persona_id": "p_003",
     "hyperparams": {
-      "cv_format": "hybrid",
-      "geographic_convention": "Israel",
+      "cv_format": "minimal",
+      "geographic_convention": "Europe",
       "company_type": "FAANG",
-      "company_size": "small (<50)"
+      "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A test automation framework for streamlining regression testing in consulting projects.",
-    "title": "Automated Regression Testing Framework",
+    "topic_summary": "Open-source project for building scalable microservices infrastructure in a startup",
+    "title": "NebulaOps: Scalable Platform for Microservices",
     "doc_id": "d_p_003_01",
     "persona_id": "p_003",
     "hyperparams": {
-      "project_scale": "hobby",
-      "project_team_size": "small (2-4)",
-      "jargon_density": "moderate"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "A defect tracking system designed for managing issues across multiple consulting client projects.",
-    "title": "Consulting Defect Tracker",
-    "doc_id": "d_p_003_02",
-    "persona_id": "p_003",
-    "hyperparams": {
-      "project_scale": "hobby",
-      "project_team_size": "large (15+)",
+      "project_scale": "academic",
+      "project_team_size": "medium (5-15)",
       "jargon_density": "heavy"
     }
   },
   {
-    "doc_type": "project_readme",
-    "topic_summary": "A CI/CD pipeline integration to automate QA workflows and improve deployment efficiency.",
-    "title": "CI/CD QA Workflow Automation",
-    "doc_id": "d_p_003_03",
+    "doc_type": "recommendation",
+    "topic_summary": "Endorsement from a former manager praising technical skills and leadership",
+    "title": "Recommendation from Maria Lopez, CTO",
+    "doc_id": "d_p_003_02",
     "persona_id": "p_003",
     "hyperparams": {
-      "project_scale": "team-internal",
-      "project_team_size": "small (2-4)",
-      "jargon_density": "moderate"
+      "recommender_role": "direct-manager",
+      "recommender_closeness": "worked-daily",
+      "company_type": "FAANG",
+      "company_size": "large (500+)"
     }
   },
   {
-    "doc_type": "recommendation",
-    "topic_summary": "A recommendation from a university professor highlighting Emily's academic and QA project contributions.",
-    "title": "Recommendation for Emily Chen",
-    "doc_id": "d_p_003_04",
+    "doc_type": "linkedin",
+    "topic_summary": "Professional summary showcasing platform engineering expertise and startup experience",
+    "title": "LinkedIn Summary",
+    "doc_id": "d_p_003_03",
     "persona_id": "p_003",
     "hyperparams": {
-      "recommender_role": "skip-level",
-      "recommender_closeness": "brief",
-      "company_type": "enterprise",
-      "company_size": "mid (50-500)"
+      "linkedin_completeness": "minimal"
     }
   }
 ]

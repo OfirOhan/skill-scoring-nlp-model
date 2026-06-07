@@ -3,26 +3,26 @@
   "type": "cv",
   "persona_id": "p_049",
   "hyperparams": {
-    "cv_format": "paragraph",
+    "cv_format": "bullet-heavy",
     "geographic_convention": "US",
-    "company_type": "academic",
-    "company_size": "small (<50)"
+    "company_type": "enterprise",
+    "company_size": "large (500+)"
   },
   "skill_evidence": {
-    "Agile/Scrum": 3,
-    "Backend development": 3,
-    "CI/CD pipelines": 4,
-    "Cloud infrastructure": 3,
-    "Cross-team collaboration": 3,
-    "Database optimization": 3,
-    "GitHub Actions": 3,
-    "Linux administration": 3,
-    "Monitoring & alerting": 3,
-    "Python": 3,
-    "Shell scripting": 3,
-    "Stakeholder communication": 3,
-    "System design": 3,
-    "Technical writing": 3
+    "Apache Airflow": 3,
+    "Apache Kafka": 3,
+    "Apache Spark": 3,
+    "Cloud cost optimization": 2,
+    "Data warehousing": 3,
+    "Docker": 3,
+    "ETL pipeline design": 3,
+    "Infrastructure as Code": 3,
+    "Kubernetes": 2,
+    "PostgreSQL": 3,
+    "Python": 4,
+    "REST API design": 3,
+    "Snowflake": 3,
+    "dbt": 3
   },
-  "text": "Alex Johnson  \nTech Lead | NexaCorp | 2 years of experience  \nEducation: Computer Science, MIT (2022)  \n\nAs a results-driven tech lead at NexaCorp, I’ve consistently delivered high-impact solutions in a SaaS environment, leveraging my expertise in cloud-native systems, scalable backend architectures, and cross-functional collaboration. My career began as a Software Engineer Intern at ScaleTech, where I architected a microservices-based pricing engine achieving 95% uptime and reduced deployment time by 40% through optimized CI/CD pipelines. This experience solidified my ability to design systems with measurable reliability and efficiency, a skill I’ve applied across my roles.  \n\nAt NexaCorp, I transitioned from Senior Software Engineer to Junior Tech Lead, driving critical projects that scaled our SaaS product to 200k+ active users. As a backend developer, I spearheaded the migration of a monolithic architecture to a serverless model, cutting annual operational costs by $150k while improving scalability. This required deep expertise in cloud infrastructure, particularly AWS services, and demonstrated my ability to balance technical complexity with business outcomes. My work on cloud-native systems included designing a architecture with a 99.95% SLA, integrating advanced monitoring tools like Prometheus and Grafana to ensure real-time visibility into system performance.  \n\nCollaboration has always been central to my approach. As a Tech Lead, I implemented a cross-team collaboration framework that reduced sprint cycle time by 30%, streamlining workflows between product, QA, and DevOps teams. This involved refining Agile/Scrum practices to align with our small team’s needs, ensuring transparency and rapid feedback loops. My stakeholder communication skills were critical in aligning technical roadmaps with business goals, particularly during the serverless migration, where I translated technical constraints into actionable plans for non-technical leadership.  \n\nMy proficiency in automation tools like GitHub Actions has been a cornerstone of my productivity. At ScaleTech, I automated 80% of deployment workflows, while at NexaCorp, I extended this to include dynamic environment configurations, reducing manual errors by 65%. Shell scripting has enabled me to create custom tools for log analysis and system diagnostics, further enhancing operational efficiency. Linux administration skills have been vital in maintaining secure, high-performance servers, with a focus on optimizing resource allocation and ensuring compliance with security protocols.  \n\nDatabase optimization is another area where I’ve made significant contributions. During my time at NexaCorp, I redesigned a PostgreSQL schema to reduce query latency by 50%, using indexing strategies and query caching. This required a deep understanding of data flow and performance bottlenecks, paired with rigorous testing to validate improvements. My technical writing skills are reflected in the documentation I’ve produced for internal systems, which has reduced onboarding time for new engineers by 40%.  \n\nBeyond technical skills, I’ve consistently demonstrated ownership of complex problems. For example, I led the design of a monitoring & alerting system that slashed incident resolution time by 70%, integrating tools like Datadog and Slack for real-time notifications. This required balancing system reliability with alert fatigue, a challenge I resolved through intelligent threshold tuning. My ability to combine technical rigor with business acumen has positioned me as a key contributor to NexaCorp’s growth, and I’m eager to bring this same impact to new challenges."
+  "text": "**Pavel Dvorak**  \nData Engineer | NexaData Solutions  \nEmail: pavel.dvorak@email.com | Phone: (416) 555-0199 | Location: Toronto, Canada | LinkedIn: linkedin.com/in/pavel-dvorak  \n\n---  \n**Professional Experience**  \n*Junior Data Engineer*  \n**NexaData Solutions** | Toronto, Canada | June 2022 – Present  \n- Architected cloud-native data pipelines on AWS, reducing infrastructure costs by 15% through resource optimization strategies  \n- Integrated Apache Kafka with Snowflake to enable real-time analytics, improving data latency by 40% for critical dashboards  \n- Automated DBT models to streamline data transformation, cutting manual reconciliation time by 35%  \n- Designed REST APIs for data ingestion, enabling seamless integration with third-party SaaS tools  \n\n*Data Engineering Intern*  \n**DataVerve Inc.** | Ottawa, Canada | September 2021 – December 2021  \n- Built ETL pipelines with Apache Airflow, processing 10M+ records monthly for customer analytics  \n- Optimized PostgreSQL queries for real-time analytics, achieving 2x faster query response times  \n- Collaborated with DevOps to containerize services using Docker, improving deployment efficiency  \n\n*Data Analyst Intern*  \n**TechNova Analytics** | Waterloo, Canada | January 2021 – June 2021  \n- Processed raw data using Python and SQL, creating visualizations for stakeholder reports  \n- Developed Python scripts to automate data cleaning, reducing manual effort by 50%  \n\n---  \n**Education**  \n*Bachelor of Science in Computer Science*  \n**University of Toronto** | Toronto, Canada | Graduated: 2021  \n\n---  \n**Technical Skills**  \n- **Cloud cost optimization**: Leveraged AWS cost explorer to identify underutilized resources  \n- **Kubernetes**: Deployed microservices on Kubernetes clusters for scalable data processing  \n- **Apache Airflow**: Orchestrated ETL workflows, ensuring 99.9% uptime for pipeline operations  \n- **Apache Kafka**: Integrated Kafka with Snowflake for real-time data ingestion and analytics  \n- **Apache Spark**: Processed large datasets for batch analytics, handling 500M+ records per day  \n- **Data warehousing**: Built dimensional models in Snowflake to support complex business queries  \n- **Docker**: Containerized data processing jobs, enabling reproducible environments  \n- **ETL pipeline design**: Engineered scalable architectures for data integration and transformation  \n- **Infrastructure as Code**: Automated AWS resource provisioning using Terraform  \n- **PostgreSQL**: Optimized queries for high-throughput applications, achieving 3x performance gains  \n- **REST API design**: Developed endpoints for data pipelines, enabling seamless system interoperability  \n- **Snowflake**: Implemented secure data lakes for analytics, supporting 100+ concurrent users  \n- **dbt**: Automated data modeling workflows, ensuring consistent and reliable data pipelines  \n- **Python**: Engineered production-grade scripts for data processing, automation, and analytics  \n\n---  \n**Projects**  \n*Data Pipeline Optimization*  \n- Redesigned legacy ETL processes using Apache Airflow, reducing data processing time by 30%  \n- Implemented caching strategies in PostgreSQL to handle peak load during data ingestion  \n\n---  \n**Certifications**  \n- AWS Certified Solutions Architect – Associate (2023)  \n\n---  \n**Languages**  \n- English (near-native)  \n- Russian (fluent)"
 }

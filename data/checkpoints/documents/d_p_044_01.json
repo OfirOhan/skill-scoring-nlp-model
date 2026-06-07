@@ -1,23 +1,23 @@
 {
   "doc_id": "d_p_044_01",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_044",
   "hyperparams": {
-    "blog_depth": "tutorial",
-    "jargon_density": "heavy"
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Apache Airflow": 3,
-    "Apache Kafka": 5,
-    "Apache Spark": 5,
-    "Data modeling": 4,
-    "Data quality frameworks": 4,
-    "ETL pipeline design": 5,
-    "PostgreSQL": 2,
-    "Python": 5,
-    "Snowflake": 4,
-    "dbt": 4
+    "Docker": 3,
+    "GitLab CI": 3,
+    "JavaScript": 3,
+    "Kubernetes": 3,
+    "Node.js": 3,
+    "PostgreSQL": 3,
+    "Python": 2,
+    "REST API design": 3,
+    "React": 3,
+    "Terraform": 3
   },
-  "text": "At scale, e-commerce data pipelines demand a balance of real-time responsiveness and batch throughput. Our architecture leverages Apache Kafka as the ingestion layer, partitioning transaction streams by customer ID to enable parallel processing while maintaining exactly-once semantics via Kafka’s idempotent producers. For the processing layer, Apache Spark Structured Streaming operates on micro-batch windows of 500ms, dynamically allocating executors based on queue utilization to handle peak 120k transactions/second during sales events.  \n\nKafka’s topic compaction and retention policies are tuned to 7-day offsets, reducing storage overhead by 40% compared to raw ingestion. We’ve implemented a hybrid ETL model: critical metrics like cart abandonment rates are processed via Kafka Streams for sub-second latency, while historical cohort analysis uses Spark SQL on Snowflake’s data warehouse, optimized with partitioned delta tables and materialized views.  \n\nData quality frameworks are baked into the pipeline via dbt models that enforce schema drift detection and lineage tracking. For example, our product catalog pipeline now includes a Python-based anomaly detector that flags price inconsistencies across regions, reducing manual review by 60%. Snowflake’s multi-cluster architecture handles 10x daily data volume growth, with query performance improved 35% through index clustering on transaction timestamps.  \n\nApache Airflow orchestrates 150+ DAGs, scheduling batch jobs during off-peak hours and triggering real-time alerts via Slack webhooks. We’ve also implemented a custom Python-based backpressure mechanism in Kafka producers, throttling message rates when Spark’s queue depth exceeds 80% of available memory.  \n\nA critical optimization was rewriting the order fulfillment pipeline from a monolithic Spark job to a lambda architecture, splitting it into a real-time Kafka Streams component and a batch replay system. This reduced end-to-end latency from 15 minutes to 2.3 seconds, with 99.99% availability via Kafka’s replication factor of 3.  \n\nFor storage, we’ve migrated from AWS S3 to Snowflake’s object storage layer, achieving 50% faster ETL cycles through native integration. Python scripts manage metadata synchronization between Kafka topics and Snowflake tables, ensuring schema alignment across systems.  \n\nThe result? A 30% reduction in compute costs and a 40% improvement in query latency, enabling real-time personalization features that drove a 15% increase in conversion rates during our last Black Friday event. The pipeline’s resilience was tested during a 4-hour AWS region outage, where Kafka’s cross-region replication and Spark’s checkpointing preserved data integrity without loss."
+  "text": "# Enterprise TaskFlow  \nA task management platform built with React and Node.js, designed for large-scale enterprise workflows. Prioritizes scalability, security, and seamless integration with existing systems.  \n\n---\n\n## Badges  \n[![GitHub](https://badgen.net/badge/github/OmarFarooq/Enterprise-TaskFlow/green)](https://github.com/OmarFarooq/Enterprise-TaskFlow)  \n[![npm](https://badgen.net/badge/npm/1.0.0/green)](https://npmjs.com/package/enterprise-taskflow)  \n[![Docker](https://badgen.net/badge/docker/2.5/green)](https://hub.docker.com/r/enterprise-taskflow)  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/OmarFarooq/Enterprise-TaskFlow.git`  \n2. Navigate to the project root: `cd Enterprise-TaskFlow`  \n3. Install dependencies: `npm install`  \n4. Set up environment variables: Copy `.env.example` to `.env` and update PostgreSQL credentials.  \n5. Start the app: `docker-compose up -d`  \n\n---\n\n## Usage / Examples  \nTo create a task:  \n**API Call**:  \n```bash\nPOST /api/tasks  \n{ \"title\": \"Review Q3 report\", \"assignee\": \"john.doe@company.com\" }\n```  \n**React Component**:  \n```jsx\n<CreateTaskForm onSubmit={handleCreateTask} />  \n```  \nTasks are filtered by priority and assigned to users via role-based access.  \n\n---\n\n## API Reference  \n- `GET /api/tasks` – Fetch all tasks (paginated)  \n- `POST /api/tasks` – Create a new task  \n- `PUT /api/tasks/:id` – Update task status  \n- `DELETE /api/tasks/:id` – Archive task  \nAuthentication: Bearer token via `Authorization` header.  \n\n---\n\n## Testing  \nRun unit tests: `npm test`  \nEnd-to-end tests use Cypress. Coverage report generated in `coverage/` directory.  \nGitLab CI pipelines automate testing on PRs.  \n\n---\n\n## Deployment  \nDeploy with Docker and Kubernetes. Terraform provisions cloud resources.  \nProduction setup includes PostgreSQL 14, Redis for caching, and NGINX reverse proxy.  \n\n---\n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

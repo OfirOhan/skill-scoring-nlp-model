@@ -4,28 +4,18 @@
   "persona_id": "p_034",
   "hyperparams": {
     "project_scale": "production",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "plain"
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "microservices architecture": 1,
-    "postgresql": 1,
-    "rest api design": 5,
-    "ci/cd pipelines": 1,
-    "docker": 1,
-    "go": 1,
-    "kubernetes": 1,
-    "redis": 1,
-    "terraform": 1,
-    "Go": 1,
-    "REST API design": 1,
-    "Microservices architecture": 1,
-    "PostgreSQL": 1,
-    "Redis": 1,
-    "Terraform": 1,
-    "Kubernetes": 1,
-    "Docker": 1,
-    "CI/CD pipelines": 1
+    "Next.js": 4,
+    "REST API design": 4,
+    "React": 4,
+    "Test automation": 4,
+    "TypeScript": 4,
+    "Unit testing": 4,
+    "Web performance optimization": 4,
+    "Webpack/Vite": 4
   },
-  "text": "# Secure API Gateway with Rate Limiting  \n\nA lightweight, production-ready API gateway built with Express.js to enforce security, authentication, and rate limiting for RESTful services. Designed to act as a single entry point for client requests, it ensures robust protection against unauthorized access and excessive traffic.  \n\n## Tech Stack  \n- **Express.js**: Core framework for handling HTTP requests and middleware logic.  \n- **JWT (JSON Web Tokens)**: Used for stateless authentication, ensuring secure user identification across distributed systems.  \n- **Custom Rate Limiting Logic**: Implemented using in-memory counters to enforce request caps per user and endpoint.  \n- **Helmet**: Middleware to set HTTP headers for enhanced security (e.g., CSP, X-Content-Type-Options).  \n- **CORS Configuration**: Fine-grained control over cross-origin requests to prevent unauthorized client interactions.  \n\n## Architecture Overview  \nThe gateway operates as a centralized layer between clients and backend services. Upon receiving a request, it:  \n1. Validates incoming JWT tokens to authenticate users.  \n2. Applies rate-limiting rules based on user roles and endpoint-specific thresholds.  \n3. Forwards validated requests to the appropriate backend service.  \n4. Returns structured error responses for invalid tokens, exceeding rate limits, or misconfigured CORS settings.  \n\nThe design prioritizes simplicity and maintainability, avoiding complex dependencies while ensuring scalability for small to medium-scale startups.  \n\n## Setup Instructions  \n1. **Clone the repository**:  \n   ```bash  \n   git clone https://github.com/your-username/secure-api-gateway.git  \n   ```  \n2. **Install dependencies**:  \n   ```bash  \n   npm install  \n   ```  \n3. **Configure environment variables**:  \n   - `JWT_SECRET`: A strong key for signing tokens.  \n   - `RATE_LIMIT_WINDOW_MS`: Time window (in milliseconds) for rate-limiting calculations.  \n   - `MAX_REQUESTS`: Maximum allowed requests per window.  \n4. **Start the server**:  \n   ```bash  \n   node index.js  \n   ```  \n   The gateway will run on `http://localhost:3000` by default.  \n\n## Usage Example  \nTo test authentication:  \n```bash  \ncurl -X POST http://localhost:3000/auth \\  \n  -H \"Content-Type: application/json\" \\  \n  -d '{\"username\":\"user1\",\"password\":\"pass123\"}'  \n```  \nFor a protected endpoint:  \n```bash  \ncurl -X GET http://localhost:3000/protected \\  \n  -H \"Authorization: Bearer <your_jwt_token>\"  \n```  \n\nThis project balances security and performance, offering a reliable foundation for securing APIs in startup environments."
+  "text": "# FinConsult PWA  \nA production-grade progressive web app for financial consulting clients, optimized for offline access and performance. Built with Next.js, React, and TypeScript to deliver a secure, fast, and reliable interface for financial data visualization and analysis.  \n\n---\n\n## Badges  \n[![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js)](https://nextjs.org)  \n[![TypeScript](https://img.shields.io/badge/TypeScript-0078D7?style=flat&logo=typescript)](https://www.typescriptlang.org)  \n[![PWA](https://img.shields.io/badge/PWA-3498DB?style=flat&logo=progressive-web-app)](https://web.dev/progressive-web-apps/)  \n[![License](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/MIT)  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/zainab-osman/finconsult-pwa.git  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   npm install  \n   ```  \n3. Set environment variables for the backend API endpoint in `.env.local`.  \n4. Start the development server:  \n   ```bash  \n   npm run dev  \n   ```  \n\n---\n\n## Usage / Examples  \nThe app enables users to visualize financial metrics, generate reports, and access historical data offline. Key features include:  \n- **Offline-first design**: Service workers cache critical assets and data for uninterrupted access.  \n- **Performance optimization**: Code-splitting, lazy loading, and image compression reduce initial load times by 40%.  \n- **Secure data handling**: End-to-end encryption for sensitive client information.  \nExample use case: A client loads a quarterly report while on a plane, with the app retrieving cached data and syncing updates upon reconnection.  \n\n---\n\n## API Reference  \nThe app interacts with a REST API built with Node.js and Express, featuring:  \n- **Endpoints**: `/api/reports`, `/api/metrics`, `/api/sync`  \n- **Methods**: GET, POST, PUT (rate-limited to 100 requests/minute)  \n- **Response types**: JSON with TypeScript interfaces for type safety  \n- **Authentication**: JWT-based token validation for client access  \n\n---\n\n## Testing  \nAutomated testing ensures reliability:  \n- **Unit tests**: Jest + React Testing Library for component behavior validation  \n- **Integration tests**: End-to-end scenarios for API interactions and PWA features  \n- **Coverage**: 95%+ code coverage with detailed test reports  \n- **CI/CD**: GitHub Actions runs tests on every PR and push  \n\n---\n\n## Deployment  \nDeployed via Vite for production builds, hosted on Netlify with:  \n- **Service worker**: Registers at build time for PWA capabilities  \n- **Performance metrics**: Lighthouse score of 97/100 in production  \n- **CI/CD**: Automated rebuilds and deployments on code changes  \n\n---\n\n## License  \nMIT License  \n[View License](https://opensource.org/licenses/MIT)"
 }

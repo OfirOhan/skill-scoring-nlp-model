@@ -3,22 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_047",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "solo",
-    "jargon_density": "plain"
+    "project_scale": "hobby",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "API testing": 3,
-    "CI/CD pipelines": 3,
-    "Integration testing": 3,
-    "Java": 1,
-    "Microservices architecture": 1,
-    "Performance testing (JMeter/k6)": 1,
+    "AWS": 3,
+    "Docker": 3,
+    "GCP": 3,
+    "Hugging Face Transformers": 3,
+    "NLP": 3,
+    "PyTorch": 3,
     "Python": 3,
-    "REST API design": 2,
-    "Selenium/Playwright": 3,
-    "Test automation": 3,
-    "Unit testing": 3
+    "REST API design": 3,
+    "Recommendation systems": 3,
+    "TensorFlow": 2
   },
-  "text": "# AdGuard: Automated Ad Compliance Testing Framework  \n\nAdGuard is a test automation framework designed to validate ad campaigns against compliance standards in the adtech industry. It streamlines the verification of ad content, targeting rules, and regulatory adherence, reducing manual checks and minimizing risks of non-compliance. Built for internal use within a team, this tool ensures consistency in testing workflows and accelerates the validation process for high-volume ad campaigns.  \n\n## Tech Stack  \n- **Programming Language**: Python (for core logic and scripting)  \n- **Testing Tools**: Playwright (for browser automation), pytest (for structured test execution)  \n- **API Testing**: REST API integration for validating ad metadata and campaign endpoints  \n- **CI/CD**: GitHub Actions for automated test execution and reporting  \n- **Reporting**: HTML test summaries with actionable insights for compliance teams  \n\n## Architecture  \nAdGuard operates as a modular framework, separating test logic, data management, and reporting into distinct components. The core module handles ad content validation, while integration tests verify interactions with ad delivery systems. REST API endpoints are mocked for isolated testing, and CI/CD pipelines trigger full compliance checks on campaign deployments. The framework prioritizes reusability, allowing test cases to be adapted across ad platforms and regulatory updates.  \n\n## Setup Instructions  \n1. **Clone the Repository**:  \n   ```bash  \n   git clone https://github.com/your-username/AdGuard.git  \n   cd AdGuard  \n   ```  \n2. **Install Dependencies**:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n3. **Configure Environment Variables**:  \n   Set `AD_PLATFORMS`, `API_KEYS`, and `REPORT_PATH` in `.env` for platform-specific settings.  \n4. **Run Tests**:  \n   ```bash  \n   pytest --html=report.html  \n   ```  \n5. **CI/CD Integration**:  \n   Configure GitHub Actions workflow (`/.github/workflows/test.yml`) to automate test runs on PRs.  \n\n## Key Features  \n- **Ad Content Validation**: Checks for prohibited keywords, misleading claims, and formatting rules.  \n- **Campaign Compliance Checks**: Ensures targeting rules align with GDPR, CCPA, and other regulations.  \n- **Integration Testing**: Validates ad delivery pipelines for real-time compliance.  \n- **Scalable Reports**: Generates detailed HTML reports with pass/fail metrics and error logs.  \n\nAdGuard reduces manual effort by 30% in compliance validation workflows, with 95% test coverage for ad platforms and regulatory rules. It is actively maintained to adapt to evolving adtech standards and internal team requirements."
+  "text": "# AdTargetAI: Real-Time Ad Personalization System  \nA scalable solution for dynamic ad content delivery using user behavior analytics to boost engagement metrics  \n\n## Badges  \n[![Active](https://img.shields.io/badge/status-active-green)](https://github.com/eliottmarchand/AdTargetAI)  \n[![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/eliottmarchand/AdTargetAI/blob/main/LICENSE)  \n\n## Tech Stack / Built With  \n- **Core**: Python, PyTorch, TensorFlow (for model prototyping)  \n- **Cloud**: AWS Lambda for serverless inference, GCP BigQuery for user analytics  \n- **Deployment**: Docker containers for consistent environments  \n- **NLP**: Hugging Face Transformers for intent detection in user queries  \n- **Architecture**: REST API for real-time ad targeting, Redis for caching  \n\n## Architecture / Design  \nThe system processes user interactions via a pipeline:  \n1. **Data Ingestion**: AWS Kinesis streams capture clickstream data.  \n2. **Model Serving**: PyTorch models (trained on historical engagement data) predict ad relevance scores.  \n3. **Recommendation Layer**: A hybrid system combines collaborative filtering with contextual embeddings from Hugging Face.  \n4. **API Gateway**: REST endpoints expose ad suggestions to ad servers, prioritizing low-latency responses.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/eliottmarchand/AdTargetAI.git  \ncd AdTargetAI  \ndocker-compose up --build  \n```  \nEnsure Docker and Python 3.9+ are installed. Configure AWS/GCP credentials via environment variables.  \n\n## Usage / Examples  \n**Real-time ad suggestion**:  \n```bash  \ncurl -X POST https://api.adtargetai.com/v1/suggest \\\n  -H \"Authorization: Bearer YOUR_API_KEY\" \\\n  -d '{\"user_id\": \"12345\", \"context\": \"product_search\"}'  \n```  \nResponse includes a ranked list of ad IDs with predicted CTR scores.  \n\n## API Reference  \n**Endpoints**:  \n- `POST /v1/suggest`: Request ad recommendations  \n  - Body: `user_id` (string), `context` (string)  \n  - Response: JSON array of ad IDs with confidence scores  \n\n## License  \nMIT License. See [LICENSE](https://github.com/eliottmarchand/AdTargetAI/blob/main/LICENSE) for details."
 }
