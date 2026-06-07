@@ -14,6 +14,7 @@ You are generating a realistic hi-tech professional persona for a synthetic data
 {archetype_label} — typical skill areas: {primary_categories}
 
 == CONSTRAINTS ==
+- Name (pre-assigned, use exactly): {pre_selected_name}
 - Years of experience: {years_experience}
 - Seniority: {seniority}
 - Industry: {industry}
@@ -43,7 +44,7 @@ Quantification tendency: {quantification_tendency}
 
 == TASK ==
 Generate a JSON persona with the following fields:
-- "name": realistic full name
+- "name": MUST be "{pre_selected_name}" (do not change it)
 - "current_role": job title matching the archetype
 - "company": realistic company name
 - "education": {{"degree": "...", "university": "...", "year": YYYY}}
@@ -160,11 +161,20 @@ Quantification tendency: {quantification_tendency}
 Company type: {company_type}
 Company size: {company_size}
 
+== DOCUMENT STRUCTURE (follow this section order) ==
+{structure_seed}
+
 == SKILL EVIDENCE FOR THIS DOCUMENT ==
 For each skill below, the CV MUST show EXACTLY this level of evidence.
 This is the MOST IMPORTANT requirement — accuracy here is critical.
 
 {skill_evidence_instructions}
+
+== STYLE VARIANCE (CRITICAL) ==
+- Do NOT start with common LLM patterns like "results-driven", "passionate", "dynamic"
+- Vary sentence structure: mix simple, compound, and complex sentences
+- Make this document feel UNIQUE — not like a template
+{banned_phrases}
 
 == RULES ==
 1. NEVER use proficiency words: "expert", "proficient", "beginner", "familiar", "advanced", "mastery", "novice", "extensive experience"
@@ -176,6 +186,7 @@ This is the MOST IMPORTANT requirement — accuracy here is critical.
 7. Keep between 400-800 words
 8. Make it read like a REAL CV, not a template
 9. Level 1 skills must NOT appear anywhere in the document
+10. Follow the DOCUMENT STRUCTURE above — use those sections in that order
 
 Output ONLY the CV text, no explanation or meta-commentary.\
 """
@@ -200,17 +211,25 @@ Writing style: {writing_style}
 Language fluency: {language_fluency}
 Quantification tendency: {quantification_tendency}
 
+== DOCUMENT STRUCTURE (follow this section order) ==
+{structure_seed}
+
 == SKILL EVIDENCE FOR THIS DOCUMENT ==
 {skill_evidence_instructions}
+
+== STYLE VARIANCE (CRITICAL) ==
+- Make this README feel UNIQUE — not like a template
+- Vary the tone and level of detail across sections
+{banned_phrases}
 
 == RULES ==
 1. NEVER use proficiency words: "expert", "proficient", "beginner", "familiar", "advanced", "mastery", "novice"
 2. SHOW skill depth through described USAGE, architecture decisions, and technical details
 3. Each skill's evidence MUST match its assigned intensity
-4. Include: project title, description, tech stack, brief architecture, setup instructions
-5. Keep between 200-500 words
-6. Make it read like a REAL GitHub README
-7. Level 1 skills must NOT appear anywhere in the document
+4. Keep between 200-500 words
+5. Make it read like a REAL GitHub README
+6. Level 1 skills must NOT appear anywhere in the document
+7. Follow the DOCUMENT STRUCTURE above — use those sections in that order
 
 Output ONLY the README text in markdown format, no explanation.\
 """
@@ -234,8 +253,18 @@ Company size: {company_size}
 Writing style context: {writing_style}
 Quantification tendency: {quantification_tendency}
 
+== DOCUMENT FLOW (follow this paragraph structure) ==
+{structure_seed}
+
 == SKILL EVIDENCE FOR THIS DOCUMENT ==
 {skill_evidence_instructions}
+
+== STYLE VARIANCE (CRITICAL) ==
+- Do NOT start with "rare blend of", "standout", "I am pleased to"
+- Do NOT use "exemplifies", "instrumental in", "transformative impact"
+- Write from the recommender's AUTHENTIC voice — a professor writes differently than a startup CTO
+- A peer recommendation is casual and specific. A manager is broader and more strategic.
+{banned_phrases}
 
 == RULES ==
 1. NEVER use proficiency words: "expert", "proficient", "beginner", "familiar", "advanced", "mastery", "novice"
@@ -245,6 +274,7 @@ Quantification tendency: {quantification_tendency}
 5. Include personality and work ethic observations
 6. Keep between 150-350 words
 7. Level 1 skills must NOT appear anywhere in the document
+8. Follow the DOCUMENT FLOW above for paragraph structure
 
 Output ONLY the recommendation letter text, no explanation.\
 """
@@ -264,14 +294,23 @@ Writing style: {writing_style}
 Language fluency: {language_fluency}
 Self-promotion level: {self_promotion_level}
 
+== DOCUMENT FLOW ==
+{structure_seed}
+
 == SKILL EVIDENCE FOR THIS DOCUMENT ==
 {skill_evidence_instructions}
+
+== STYLE VARIANCE (CRITICAL) ==
+- Do NOT start with "Passionate about" or "Driven by"
+- Make this feel like a REAL person wrote it, not a template
+{banned_phrases}
 
 == RULES ==
 1. NEVER use proficiency words as labels
 2. Keep between 100-300 words depending on completeness level
 3. LinkedIn summaries are personal and forward-looking
 4. Level 1 skills must NOT appear anywhere
+5. Follow the DOCUMENT FLOW above
 
 Output ONLY the LinkedIn summary text, no explanation.\
 """
@@ -295,14 +334,23 @@ Writing style: {writing_style}
 Language fluency: {language_fluency}
 Quantification tendency: {quantification_tendency}
 
+== ARTICLE STRUCTURE (follow this flow) ==
+{structure_seed}
+
 == SKILL EVIDENCE FOR THIS DOCUMENT ==
 {skill_evidence_instructions}
+
+== STYLE VARIANCE (CRITICAL) ==
+- Make this feel like a REAL blog post by a REAL engineer, not AI-generated
+- Vary the opening: don't always start with a grand statement
+{banned_phrases}
 
 == RULES ==
 1. NEVER use proficiency words as labels
 2. Show depth through technical detail and original insights
 3. Keep between 300-600 words
 4. Level 1 skills must NOT appear anywhere
+5. Follow the ARTICLE STRUCTURE above
 
 Output ONLY the blog post text, no explanation.\
 """

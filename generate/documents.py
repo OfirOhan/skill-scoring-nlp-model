@@ -1,11 +1,17 @@
 """
 Phase 5: Document text generation via LLM.
+
+Integrates:
+- Adaptive banned phrase tracking (TF-IDF-based)
+- Document structure seeds
+- Per-document temperature sampling
 """
 
 import json
 import asyncio
 import aiohttp
 import logging
+import random
 from pathlib import Path
 
 from spe.generate.prompts import (
@@ -18,6 +24,8 @@ from spe.generate.prompts import (
 )
 from spe.generate.personas import llm_call
 from spe.generate.sanitizer import sanitize_document
+from spe.generate.phrase_tracker import PhraseTracker
+from spe.generate.seed_generator import pick_seed, format_seed_for_prompt
 
 logger = logging.getLogger(__name__)
 
@@ -29,6 +37,31 @@ PROMPT_TEMPLATES = {
     "linkedin": LINKEDIN_GENERATION,
     "blog": BLOG_GENERATION,
 }
+
+# Temperature ranges per document type.
+# Text-heavy documents benefit from higher temperature for diversity.
+TEMPERATURE_RANGES = {
+    "cv": (0.75, 1.0),
+    "project_readme": (0.7, 0.95),
+    "recommendation": (0.85, 1.1),
+    "linkedin": (0.8, 1.05),
+    "blog": (0.8, 1.05),
+}
+
+# Module-level phrase tracker — shared across all document generation calls.
+# Safe for asyncio (single-threaded event loop).
+_phrase_tracker = PhraseTracker()
+
+
+def get_phrase_tracker() -> PhraseTracker:
+    """Get the module-level phrase tracker (for testing/inspection)."""
+    return _phrase_tracker
+
+
+def _sample_temperature(doc_type: str) -> float:
+    """Sample a temperature for this document type from its configured range."""
+    lo, hi = TEMPERATURE_RANGES.get(doc_type, (0.8, 1.0))
+    return round(random.uniform(lo, hi), 2)
 
 
 def _extract_text(raw: str) -> str:
@@ -56,8 +89,13 @@ async def generate_document(
     session: aiohttp.ClientSession,
     semaphore: asyncio.Semaphore,
     checkpoint_dir: Path,
+    structure_seeds: dict | None = None,
 ) -> dict:
     """Generate a single document's text via LLM.
+
+    Args:
+        structure_seeds: Pre-generated structure seeds dict (doc_type -> list of seeds).
+                         If None, no structural seed is injected.
 
     Returns the complete document dict for documents_db.json.
     """
@@ -68,7 +106,10 @@ async def generate_document(
     if checkpoint_file.exists():
         logger.info(f"Skipping {doc_id} — checkpoint exists")
         with open(checkpoint_file) as f:
-            return json.load(f)
+            doc = json.load(f)
+        # Still ingest into phrase tracker for adaptive banning
+        _phrase_tracker.ingest(doc.get("text", ""))
+        return doc
 
     # Build skill evidence for this specific document
     doc_skill_evidence = {}
@@ -81,6 +122,21 @@ async def generate_document(
     # Build the prompt based on document type
     hp = persona["hyperparams"]
     dp = doc_plan.get("hyperparams", {})
+
+    # --- Structure seed ---
+    seed_text = ""
+    if structure_seeds:
+        seniority = hp.get("seniority", "all")
+        seed = pick_seed(structure_seeds, doc_type, seniority)
+        seed_text = format_seed_for_prompt(seed)
+    if not seed_text:
+        seed_text = "Use a natural structure appropriate for this document type."
+
+    # --- Adaptive banned phrases ---
+    banned_phrases_text = _phrase_tracker.format_for_prompt(top_k=10)
+
+    # --- Temperature ---
+    temperature = _sample_temperature(doc_type)
 
     prompt_kwargs = {
         "name": persona["name"],
@@ -96,6 +152,8 @@ async def generate_document(
         "self_promotion_level": hp["self_promotion_level"],
         "quantification_tendency": hp["quantification_tendency"],
         "skill_evidence_instructions": skill_evidence_instructions,
+        "structure_seed": seed_text,
+        "banned_phrases": banned_phrases_text,
     }
 
     # Add document-level params
@@ -121,7 +179,7 @@ async def generate_document(
     max_retries = 3
     for attempt in range(max_retries):
         try:
-            raw = await llm_call(session, semaphore, prompt)
+            raw = await llm_call(session, semaphore, prompt, temperature=temperature)
             text = _extract_text(raw)
 
             if len(text) < 50:
@@ -132,6 +190,8 @@ async def generate_document(
             if issues:
                 logger.warning(f"{doc_id}: sanitization issues: {issues}")
                 if attempt < max_retries - 1:
+                    # Bump temperature slightly on retry for more diversity
+                    temperature = min(temperature + 0.1, 1.3)
                     continue  # Retry
 
             break
@@ -139,6 +199,9 @@ async def generate_document(
             logger.warning(f"{doc_id} generation attempt {attempt+1}: {e}")
             if attempt == max_retries - 1:
                 text = f"[GENERATION FAILED: {e}]"
+
+    # Ingest into phrase tracker for future documents
+    _phrase_tracker.ingest(text)
 
     # Assemble document record
     document = {
@@ -155,5 +218,8 @@ async def generate_document(
     with open(checkpoint_file, "w") as f:
         json.dump(document, f, indent=2, ensure_ascii=False)
 
-    logger.info(f"Generated {doc_id} ({doc_type}, {len(text)} chars)")
+    logger.info(
+        f"Generated {doc_id} ({doc_type}, {len(text)} chars, "
+        f"temp={temperature}, banned={len(_phrase_tracker.get_banned_phrases())})"
+    )
     return document

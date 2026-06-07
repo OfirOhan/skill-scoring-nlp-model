@@ -19,6 +19,7 @@ from spe.generate.personas import generate_persona
 from spe.generate.planner import plan_documents, allocate_evidence
 from spe.generate.documents import generate_document
 from spe.generate.assembler import assemble_dataset
+from spe.generate.seed_generator import generate_all_seeds
 from spe.validate.shortcut_check import run_shortcut_checks
 from spe.validate.stats import run_stats_checks
 from spe.validate.cross_validate import run_validation_checks
@@ -44,6 +45,7 @@ async def process_persona(
     persona_id: str,
     session: aiohttp.ClientSession,
     semaphore: asyncio.Semaphore,
+    structure_seeds: dict | None = None,
 ) -> dict:
     """Full pipeline for a single persona: generate → plan → allocate → generate docs."""
 
@@ -79,6 +81,7 @@ async def process_persona(
             doc_plan, persona, allocation,
             session, semaphore,
             checkpoint_dir=CHECKPOINT_DIR / "documents",
+            structure_seeds=structure_seeds,
         )
         for doc_plan in doc_plans
     ]
@@ -104,12 +107,17 @@ async def run_generation(num_personas: int, concurrency: int):
 
     logger.info(f"Starting generation: {num_personas} personas, concurrency={concurrency}")
 
+    # Pre-step: Generate document structure seeds
+    seeds_path = DATA_DIR / "structure_seeds.json"
+    structure_seeds = await generate_all_seeds(seeds_path)
+    logger.info(f"Loaded {sum(len(v) for v in structure_seeds.values())} structure seeds")
+
     async with aiohttp.ClientSession(
         timeout=aiohttp.ClientTimeout(total=300)
     ) as session:
         # Process all personas in parallel (throttled by semaphore)
         tasks = [
-            process_persona(f"p_{i:03d}", session, semaphore)
+            process_persona(f"p_{i:03d}", session, semaphore, structure_seeds=structure_seeds)
             for i in range(num_personas)
         ]
         personas = await asyncio.gather(*tasks, return_exceptions=True)

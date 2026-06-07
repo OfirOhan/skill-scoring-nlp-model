@@ -6,6 +6,7 @@ import json
 import asyncio
 import aiohttp
 import logging
+import random as _random
 from pathlib import Path
 
 from spe.generate.hyperparams import (
@@ -19,6 +20,43 @@ from spe.generate.prompts import PERSONA_GENERATION
 
 logger = logging.getLogger(__name__)
 
+# ---------------------------------------------------------------------------
+# Name pool — ensures diverse, non-repeating names across personas
+# ---------------------------------------------------------------------------
+
+DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+_name_pool: list[str] | None = None
+_used_names: set[str] = set()
+
+
+def _load_name_pool() -> list[str]:
+    """Load and shuffle the curated name pool."""
+    global _name_pool
+    if _name_pool is None:
+        pool_path = DATA_DIR / "name_pool.json"
+        with open(pool_path) as f:
+            _name_pool = json.load(f)
+        _random.shuffle(_name_pool)
+    return _name_pool
+
+
+def pick_unique_name() -> str:
+    """Pick a name from the pool that hasn't been used yet.
+
+    Falls back to appending a numeric suffix if the pool is exhausted.
+    """
+    pool = _load_name_pool()
+    for name in pool:
+        if name not in _used_names:
+            _used_names.add(name)
+            return name
+    # Pool exhausted — generate a suffixed name
+    base = _random.choice(pool)
+    suffix = len(_used_names) - len(pool) + 1
+    unique = f"{base} {suffix}"
+    _used_names.add(unique)
+    return unique
+
 OLLAMA_URL = "http://localhost:11434/api/chat"
 MODEL = "qwen3"
 
@@ -27,14 +65,20 @@ async def llm_call(
     session: aiohttp.ClientSession,
     semaphore: asyncio.Semaphore,
     prompt: str,
+    temperature: float = 0.8,
 ) -> str:
-    """Make an async LLM call to ollama with concurrency control."""
+    """Make an async LLM call to ollama with concurrency control.
+
+    Args:
+        temperature: Sampling temperature. Higher values (0.9-1.1) produce
+                     more diverse text, lower values (0.6-0.8) are more focused.
+    """
     async with semaphore:
         payload = {
             "model": MODEL,
             "messages": [{"role": "user", "content": prompt}],
             "stream": False,
-            "options": {"temperature": 0.8, "num_predict": 4096},
+            "options": {"temperature": temperature, "num_predict": 4096},
         }
         async with session.post(OLLAMA_URL, json=payload) as resp:
             result = await resp.json()
@@ -79,6 +123,9 @@ async def generate_persona(
         with open(checkpoint_file) as f:
             return json.load(f)
 
+    # Pick a unique name from the diversity pool
+    pre_selected_name = pick_unique_name()
+
     # Sample hyperparameters
     archetype_key = sample_archetype()
     hyperparams = sample_persona_hyperparams(archetype_key)
@@ -102,6 +149,7 @@ async def generate_persona(
 
     # Build the prompt
     prompt = PERSONA_GENERATION.format(
+        pre_selected_name=pre_selected_name,
         archetype_label=archetype["label"],
         primary_categories=", ".join(archetype["primary_categories"]),
         years_experience=hyperparams["years_experience"],
