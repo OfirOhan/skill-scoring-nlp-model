@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_110_03",
+  "type": "project_readme",
+  "persona_id": "p_110",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "3D graphics (OpenGL/Vulkan)": 1,
+    "C#/.NET": 1,
+    "Game networking": 3,
+    "Game physics": 1,
+    "GraphQL": 3,
+    "Microservices architecture": 4,
+    "Python": 2,
+    "REST API design": 4,
+    "Team Collaboration": 2,
+    "Unity": 1,
+    "Unreal Engine": 1
+  },
+  "text": "# GameDev Collaborator Suite: Real-Time Collaboration Framework for Game Pipelines  \nA technical guide for orchestrating distributed game development workflows with measurable latency reduction and conflict resolution metrics  \n\n---\n\n## Roadmap / Future Work  \nPhase 1 (2023–2024): Focus on core synchronization protocols, achieving 30% reduction in real-time asset sync latency across 15+ team members.  \nPhase 2 (2025): Expand to VR pipeline integration, targeting 40% fewer merge conflicts via automated conflict detection.  \nPhase 3 (2026): Introduce AI-driven workflow optimization, with 25% improvement in task allocation efficiency.  \n\n---\n\n## Getting Started / Installation  \nPrerequisites: Python 3.8+, Docker 20.10+, and a PostgreSQL instance (version 13+).  \n1. Clone repository using `git init` and `git remote add origin` to establish local tracking.  \n2. Run `docker-compose up --build` to spin up Redis, PostgreSQL, and the main service.  \n3. Access the dashboard at `http://localhost:8080` after initial sync completes.  \n\n---\n\n## Usage / Examples  \n**Scenario 1:** Real-time asset syncing across 12 team members reduced sync latency from 1.2s to 0.85s via WebSocket-based delta compression.  \n**Scenario 2:** GraphQL endpoints for version history retrieval achieved 95% query latency under 200ms with Apollo Server caching.  \n**Scenario 3:** REST API for task delegation (POST `/api/v1/tasks`) scaled to 500+ concurrent requests with Redis rate limiting.  \n\n---\n\n## Tech Stack  \n- **Core:** Python 3.8 for logic, Docker for containerization, PostgreSQL for relational data  \n- **Networking:** WebSocket for real-time sync, REST for task management, GraphQL for version history  \n- **Storage:** Redis for in-memory caching, PostgreSQL for persistent metadata  \n\n---\n\n## Architecture / Design  \nThe system is partitioned into three microservices:  \n1. **Sync Engine** (Python): Manages WebSocket connections and delta compression for 15+ users, with 99.9% uptime via load balancing.  \n2. **API Gateway** (Node.js): Routes REST and GraphQL requests, handling 500+ RPS with Redis rate limiting and circuit breakers.  \n3. **Data Store** (PostgreSQL + Redis): Ensures ACID compliance for critical operations while leveraging Redis for sub-100ms read latency.  \n\nAll components scale horizontally, with horizontal scaling reducing sync latency by 35% in distributed environments.  \n\n---\n\n## License  \nMIT License — see [LICENSE](LICENSE) for full details."
+}

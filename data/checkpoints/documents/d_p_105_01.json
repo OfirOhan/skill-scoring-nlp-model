@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_105_01",
+  "type": "project_readme",
+  "persona_id": "p_105",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "API testing": 3,
+    "BDD/TDD": 2,
+    "GitLab CI": 2,
+    "Integration testing": 2,
+    "Java": 1,
+    "Python": 3,
+    "REST API design": 2,
+    "Selenium/Playwright": 3,
+    "Test automation": 3,
+    "Unit testing": 2
+  },
+  "text": "# AdGuard: Ad Campaign Validation Framework  \nAutomate ad campaign validation with precision. This framework streamlines QA workflows by simulating real-time ad delivery, detecting discrepancies in creative assets, and ensuring compliance with platform-specific rules. Built for adtech teams, it reduces manual validation cycles while maintaining traceability for audit purposes.  \n\n---\n\n## Roadmap / Future Work  \n- **Real-time validation** integration with ad serving platforms (Q3 2024)  \n- **CI/CD pipeline automation** for test suite execution via GitLab CI (Q4 2024)  \n- **Support for emerging ad formats** (e.g., native ads, dynamic creative optimization)  \n- **Enhanced reporting** with anomaly detection for performance metrics  \n\n---\n\n## Getting Started / Installation  \nInstall via pip:  \n```bash  \npip install adguard-framework  \n```  \nEnsure dependencies are met:  \n- Python 3.10+  \n- Playwright (for browser automation)  \n- pytest (for test execution)  \n\n---\n\n## Usage / Examples  \nValidate ad creatives:  \n```python  \nfrom adguard import CampaignValidator  \nvalidator = CampaignValidator(\"campaign_id_123\")  \nresult = validator.check_creative_compliance()  \nprint(result.status)  # \"PASSED\" or \"FAILED\"  \n```  \nTest campaign metrics:  \n```python  \nvalidator.run_performance_checks(  \n    expected_click_through_rate=0.05,  \n    max_load_time=2000  # in milliseconds  \n)  \n```  \n\n---\n\n## Tech Stack  \n- **Language**: Python (for core logic and API testing)  \n- **Automation**: Playwright (browser interactions), pytest (test harness)  \n- **CI/CD**: GitLab CI (for scheduled test runs)  \n- **Data**: In-memory storage for test artifacts  \n\n---\n\n## Architecture / Design  \nThe framework uses a modular architecture with three layers:  \n1. **Adapter Layer**: Interfaces with ad platforms via REST APIs  \n2. **Validation Engine**: Rules engine for creative compliance checks  \n3. **Reporting Layer**: Generates structured logs for audit trails  \n\nTests are organized into fixtures for session setup, with parallel execution enabled for large campaigns.  \n\n---\n\n## License  \nMIT License (see [LICENSE](LICENSE) for details)"
+}

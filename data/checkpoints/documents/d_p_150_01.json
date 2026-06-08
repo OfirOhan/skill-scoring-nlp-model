@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_150_01",
+  "type": "project_readme",
+  "persona_id": "p_150",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "A/B testing": 4,
+    "Analytics-driven product decisions": 4,
+    "Data visualization": 4,
+    "Product management": 3,
+    "Roadmap planning": 2,
+    "SQL analytics": 4,
+    "Stakeholder management": 1,
+    "Tableau/Power BI": 4,
+    "User journey mapping": 1
+  },
+  "text": "# Enterprise Analytics Dashboard  \nA cloud-native platform for real-time business intelligence, built with agile practices to scale across 15+ stakeholders. Reduces query latency by 30% through optimized data pipelines and dynamic visualization layers.  \n\n## Deployment  \nContinuous delivery via AWS CodePipeline with blue-green deployment. 99.95% SLA achieved through auto-scaling and zero-downtime rollouts. Monitors 200+ metrics across 12 environments.  \n\n## Badges  \n[![Deployment Status](https://example.com/badge-deploy)](https://example.com)  \n[![Code Quality](https://example.com/badge-quality)](https://example.com)  \n[![Test Coverage](https://example.com/badge-tests)](https://example.com)  \n\n## Tech Stack  \n- Cloud: AWS (Lambda, DynamoDB, CloudFront)  \n- Data: Apache Kafka (stream processing), PostgreSQL (OLAP)  \n- Frontend: React 18.2, Chart.js (custom visualization layer)  \n- CI/CD: GitHub Actions, Terraform (infrastructure as code)  \n- Analytics: Mixpanel (A/B testing), SQL Server 2019 (batch processing)  \n\n## Architecture / Design  \nMicroservices-driven with API Gateway as the single entry point. Data pipelines split into ingestion (Kafka), transformation (Spark), and storage (S3/Redshift). Visualization layer decouples front-end from backend, enabling 40% faster query rendering.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/enterprise-analytics/dashboard.git  \ncd dashboard  \nnpm install  \nexport AWS_ACCESS_KEY_ID=\"your_key\"  \nnpm run build  \n```  \nRequires Docker 20.10+ and Node.js 18.  \n\n## Usage / Examples  \n**Real-time dashboard**:  \n```bash  \nnpm run start:prod  \n# Access via https://dashboard.enterprise.com  \n```  \n**A/B testing**:  \n```bash  \nnpm run ab-test -- --variant=gold --metric=conversion  \n```  \nMonitors 15+ KPIs with 95% confidence intervals.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/enterprise-analytics/dashboard/blob/main/LICENSE) for details."
+}

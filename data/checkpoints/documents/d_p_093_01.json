@@ -1,0 +1,26 @@
+{
+  "doc_id": "d_p_093_01",
+  "type": "project_readme",
+  "persona_id": "p_093",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Apache Airflow": 3,
+    "Apache Kafka": 1,
+    "Apache Spark": 3,
+    "Data warehousing": 3,
+    "ETL pipeline design": 3,
+    "Hugging Face Transformers": 3,
+    "MLOps": 3,
+    "Model deployment": 3,
+    "NLP": 4,
+    "PyTorch": 4,
+    "TensorFlow": 3,
+    "dbt": 3,
+    "scikit-learn": 3
+  },
+  "text": "# CyberSentinel: Anomaly Detection in Network Traffic Using Deep Learning  \n\nCyberSentinel leverages deep learning to identify subtle patterns in network traffic, enabling proactive threat detection in enterprise environments. Built for scalability and real-time inference, this project achieves **92.4% F1-score** on a custom dataset of 1.2M+ packet flows, with latency under 200ms for streaming inference. The model is optimized for edge deployment, balancing precision and computational efficiency.  \n\n## Tech Stack  \n- **Deep Learning**: PyTorch (main model), TensorFlow (prototyping)  \n- **Data Processing**: Apache Spark (batch feature extraction), scikit-learn (normalization)  \n- **Orchestration**: Airflow (ETL pipeline scheduling)  \n- **Model Serving**: MLOps pipelines (DVC + FastAPI)  \n- **NLP Integration**: Hugging Face Transformers (embedding layers for protocol metadata)  \n- **Data Warehousing**: dbt (schema management for traffic logs)  \n\n## Architecture / Design  \nCyberSentinel employs a hybrid architecture combining **Convolutional Neural Networks (CNNs)** for spatial pattern recognition and **LSTMs** for temporal sequence analysis. Raw packet data is first aggregated into flow-based features using Spark, then normalized via scikit-learn. The model trains on a mix of labeled attack vectors (e.g., SQLi, DDoS) and baseline traffic, with adversarial examples injected during training to improve robustness. Deployment leverages FastAPI for REST endpoints, with model versions managed via DVC.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/yourusername/CyberSentinel.git  \ncd CyberSentinel  \npip install -r requirements.txt  \npython setup.py install  \n```  \nEnsure you have Docker installed for containerized inference.  \n\n## Usage / Examples  \nTo evaluate the model:  \n```bash  \npython evaluate.py --dataset ./data/flow_features.csv --output ./results/  \n```  \nFor real-time detection:  \n```bash  \npython stream_infer.py --model ./models/cyber_sentinel_v1.pt --input ./data/live_traffic.pcap  \n```  \nExample metrics: **True Positive Rate (TPR) = 94.2%**, **False Positive Rate (FPR) = 3.1%**.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/license/yourusername/CyberSentinel)](https://github.com/yourusername/CyberSentinel)  \n[![CI/CD](https://img.shields.io/github/actions/workflow/yourusername/CyberSentinel/main.yml)](https://github.com/yourusername/CyberSentinel/actions)  \n[![Version](https://img.shields.io/github/package-json/version/yourusername/CyberSentinel/package.json)](https://github.com/yourusername/CyberSentinel)  \n\n## Contributing  \nCyberSentinel is a solo project, but I welcome contributions to documentation or model optimization. Review the [contributing guidelines](CONTRIBUTING.md) for details.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

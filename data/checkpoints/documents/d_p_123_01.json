@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_123_01",
+  "type": "project_readme",
+  "persona_id": "p_123",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "GraphQL": 2,
+    "JavaScript": 5,
+    "Next.js": 1,
+    "Node.js": 1,
+    "REST API design": 1,
+    "React": 5,
+    "Test automation": 1,
+    "TypeScript": 5,
+    "Web performance optimization": 4
+  },
+  "text": "# SecurePay UI - Financial Transaction Dashboard  \nA type-safe, performance-optimized React component suite for enterprise payment gateways, engineered for high-concurrency financial workflows and real-time transaction visualization. Built with TypeScript, this modular UI system abstracts complex payment lifecycle states while maintaining strict type safety and cross-browser compatibility. Designed for integration into fintech platforms requiring sub-100ms response times and zero-failure rate in production environments.  \n\n## Deployment  \nThis project is deployed via a monorepo structure with Webpack 5-based bundling, optimized for CDN delivery. Production builds leverage dynamic import splitting and lazy loading to ensure <500KB initial bundle size. All UI components are pre-compiled into a UMD format for seamless integration into legacy payment gateways. The UI is hosted on Cloudflare Pages with HTTP/3 and Brotli compression, achieving 92% gzip compression ratio and <120ms TTI for global users.  \n\n## Getting Started / Installation  \nTo integrate SecurePay UI into your payment gateway, first install the core package:  \n```bash  \nnpm install @securepay-ui/core  \n```  \nFor advanced usage, clone the monorepo and run:  \n```bash  \nnpm install && npm run build:prod  \n```  \nEnsure your environment supports TypeScript 4.9+ and React 18.2+. The project includes pre-configured Babel and TypeScript settings for immediate compatibility with modern JS features.  \n\n## Usage / Examples  \nThe UI exports a `TransactionDashboard` component with a declarative API for configuring payment states. Example:  \n```tsx  \n<TransactionDashboard  \n  onTransactionSuccess={(data) => handleSuccess(data)}  \n  onError={(error) => logError(error)}  \n  analytics={new AnalyticsProvider()}  \n/>  \n```  \nThe component supports 12+ state transitions, including real-time fraud detection alerts and multi-factor authentication modals. All UI elements are designed for 4K scaling and accessibility compliance.  \n\n## Tech Stack  \n- **React 18.2**: Declarative UI with concurrent mode and suspense integration  \n- **TypeScript 4.9**: Full type inference for API contracts and component props  \n- **GraphQL (Apollo Client 3)**: For fetching transaction metadata from backend services  \n- **Webpack 5**: Tree-shaking and code splitting for production builds  \n- **Ant Design 5**: Themable UI components for financial dashboards  \n\n## Architecture / Design  \nThe UI follows a hexagonal architecture pattern, decoupling UI logic from business rules. Core components are wrapped in React Context for state management, with TypeScript interfaces defining strict type contracts. Performance is optimized via Webpack code splitting and lazy-loaded components, reducing initial load time by 60%. All UI elements are tested for 4K and 8K rendering performance using Lighthouse.  \n\n## License  \nMIT License (see LICENSE file for details)  \n\n## Badges  \n[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript)](https://www.typescriptlang.org/)  \n[![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react)](https://reactjs.org/)  \n[![Performance](https://img.shields.io/badge/Performance-92%25-green?style=flat)](https://example.com)"
+}

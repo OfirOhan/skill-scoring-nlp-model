@@ -1,0 +1,26 @@
+{
+  "doc_id": "d_p_210_01",
+  "type": "project_readme",
+  "persona_id": "p_210",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 1,
+    "Cloud cost optimization": 1,
+    "Docker": 3,
+    "GCP": 1,
+    "GitLab CI": 2,
+    "Kubernetes": 4,
+    "Load balancing": 3,
+    "PostgreSQL": 1,
+    "Prometheus/Grafana": 3,
+    "Python": 2,
+    "REST API design": 2,
+    "Redis": 2,
+    "Terraform": 1
+  },
+  "text": "# NexaGame Server Scaling: Multiplayer Performance Optimization  \nOptimize latency-critical multiplayer game server clusters with Docker, Kubernetes, and real-time monitoring. This project redefines scalability in high-concurrency environments through dynamic resource allocation and microservices orchestration.  \n\n## Badges  \n[![CI/CD Status](https://example.com/custom-badge)](https://example.com) [![Kubernetes Ready](https://example.com/custom-badge)](https://example.com) [![Performance Benchmark](https://example.com/custom-badge)](https://example.com)  \n\n## Tech Stack  \n- **Containerization**: Docker (custom base images, multi-stage builds)  \n- **Orchestration**: Kubernetes (horizontal pod autoscaling, service mesh integration)  \n- **Monitoring**: Prometheus + Grafana (custom metrics exporters for game state)  \n- **Networking**: Nginx ingress + TCP load balancing (session affinity for persistent connections)  \n- **CI/CD**: GitLab CI (CI/CD pipelines for image promotion across environments)  \n- **Supporting Tools**: Python (custom health checks), Redis (session caching), REST API (player stats aggregation)  \n\n## Architecture / Design  \nThe architecture decouples game logic from networking layers, using Kubernetes Deployments for stateless server pods and StatefulSets for persistent session data. Load balancers route traffic to active pods based on real-time metrics, while Prometheus scrapes custom exporters to detect latency spikes. Auto-scaling rules trigger based on CPU utilization and connection pool size, ensuring sub-50ms latency for 10k+ concurrent users.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/username/nexa-game-scaling.git`  \n2. Build Docker images: `docker-compose -f docker-compose.build.yml up --build`  \n3. Deploy to Kubernetes: `kubectl apply -f k8s/manifests.yaml`  \n4. Verify deployment: `kubectl get pods,svc -n gaming`  \n\n## Usage / Examples  \n- **Scale Cluster**: Use `kubectl scale deployment/game-server --replicas=5` to adjust pod count.  \n- **Monitor Latency**: Access Grafana at `http://grafana.example.com` to view real-time P99 latency.  \n- **Rolling Update**: `kubectl apply -f k8s/updates/feature-flags.yaml` to inject new game logic.  \n\n## Contributing  \nContributions require Docker and Kubernetes proficiency. Prioritize PRs that enhance autoscaling thresholds or integrate new metrics exporters. All code must pass GitLab CI pipelines and adhere to the [Kubernetes Best Practices](https://kubernetes.io/docs/tasks/).  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

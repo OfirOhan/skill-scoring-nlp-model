@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_147_01",
+  "type": "project_readme",
+  "persona_id": "p_147",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 2,
+    "Apache Airflow": 3,
+    "Apache Kafka": 2,
+    "Apache Spark": 3,
+    "Data modeling": 3,
+    "Data warehousing": 3,
+    "Docker": 3,
+    "ETL pipeline design": 3,
+    "Python": 3,
+    "Snowflake": 2,
+    "Terraform": 2
+  },
+  "text": "# Inventory Optimization Pipeline  \n\nStreamline real-time inventory management for e-commerce platforms using Apache Airflow and BigQuery. This project automates demand forecasting, stock rebalancing, and supplier coordination, reducing overstock by 18% in our last deployment. Integrates with legacy systems via REST APIs and leverages machine learning models for predictive analytics.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies:  \n```bash  \npip install -r requirements.txt  \nairflow db init  \nairflow users create --username admin --password admin --role admin --email admin@example.com  \n```  \nSet environment variables for BigQuery credentials and Kafka endpoints. Use Docker for local Airflow development to ensure consistent runtime environments.  \n\n## Tech Stack  \n- **Orchestration**: Apache Airflow (DAGs for real-time data pipelines)  \n- **Data Warehousing**: BigQuery (scalable analytics layer)  \n- **Processing**: Apache Spark (batch & stream processing)  \n- **Storage**: Cloud Storage (raw data lake)  \n- **Tools**: Docker (containerization), Terraform (infrastructure as code)  \n- **Integration**: REST APIs (legacy systems), Kafka (event streaming)  \n- **Analytics**: Python (custom models for demand prediction)  \n\n## Usage / Examples  \nTrigger a pipeline to update inventory metrics:  \n```bash  \nairflow trigger dag 'inventory_optimization_daily'  \n```  \nObserve real-time stock adjustments in BigQuery tables `inventory_snapshots` and `demand_forecasts`. The pipeline processes 500k+ transactions hourly, with latency under 2 minutes.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/commit-activity-y/username/repo)](https://github.com/username/repo)  \n[![Build Status](https://img.shields.io/github/actions/workflow/username/repo/main.yml)](https://github.com/username/repo/actions)  \n[![License](https://img.shields.io/github/license/username/repo)](https://github.com/username/repo/blob/main/LICENSE)  \n\n## Architecture / Design  \nThe pipeline uses Airflow to orchestrate data ingestion from Kafka, processed by Spark for anomaly detection and aggregation. Results are stored in BigQuery, where data models (star schema) enable fast querying. Docker ensures consistent environments across development and production. ETL workflows prioritize fault tolerance, with retries and dead-letter queues for failed records.  \n\n## Contributing  \nEnhance the pipeline's predictive accuracy by refining the machine learning models. Submit PRs with unit tests and documentation updates. For critical changes, discuss with the team via Slack channels #data-engineering and #inventory-ops.  \n\n## License  \nMIT License — see [LICENSE](https://github.com/username/repo/blob/main/LICENSE) for details."
+}

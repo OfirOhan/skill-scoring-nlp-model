@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_162_01",
+  "type": "project_readme",
+  "persona_id": "p_162",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "A/B testing": 3,
+    "Data visualization (Matplotlib/Plotly)": 4,
+    "Feature engineering": 3,
+    "MLOps (MLflow/W&B)": 3,
+    "NumPy": 4,
+    "Pandas": 4,
+    "Python": 4,
+    "SQL analytics": 4,
+    "Statistical modeling": 4,
+    "Tableau/Power BI": 2
+  },
+  "text": "# Predictive Analytics for Client Retention  \n\nA data-driven approach to forecasting client churn in consulting engagements, leveraging historical client data to inform retention strategies. This project integrates statistical modeling, feature engineering, and visualization to deliver actionable insights for client retention optimization.  \n\n## Badges  \n🚀 Production-Ready  \n📊 Data-Driven Insights  \n🔧 MLOps-Integrated  \n💡 Consulting-Industry Focus  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details.  \n\n## Tech Stack  \n- **Python** (core language)  \n- **Pandas** (data wrangling, time-series alignment)  \n- **NumPy** (numerical operations, feature scaling)  \n- **SQL** (database querying, data aggregation)  \n- **MLflow** (model tracking, deployment pipelines)  \n- **Weights & Biases** (experiment logging, hyperparameter tuning)  \n- **Tableau** (interactive dashboards for stakeholder reviews)  \n- **Plotly** (dynamic visualizations of retention trends)  \n\n## Architecture / Design  \nThe system follows a pipeline-first design, prioritizing reproducibility and scalability. Raw client data is ingested via SQL queries, preprocessed using Pandas for missing value imputation and temporal alignment. Feature engineering focuses on deriving metrics like engagement frequency and contract renewal cycles. Models are trained using logistic regression and survival analysis techniques, with MLflow managing version control. Final outputs are visualized in Tableau, enabling consultants to prioritize high-risk clients.  \n\n## Getting Started / Installation  \n1. Clone the repository.  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure database credentials in `config.py`  \n4. Run `etl_pipeline.py` to generate processed datasets  \n5. Execute notebooks in `analysis/` for model training and evaluation  \n\n## Usage / Examples  \n```python  \n# Example: Train a retention model  \nfrom mlflow.pyfunc import PythonModel  \nclass RetentionPredictor(PythonModel):  \n    def __init__(self, model):  \n        self.model = model  \n    def predict(self, context, df):  \n        return self.model.predict_proba(df)[:, 1]  \n```  \nUse `evaluate_model.py` to compare baseline metrics (e.g., 22% churn rate vs. 15% predicted). Visualize results via Tableau dashboards hosted on the company’s internal platform.  \n\n## Contributing  \nPull requests are welcome! For major changes, open an issue to discuss the approach. Focus on improving model interpretability or expanding dataset sources."
+}

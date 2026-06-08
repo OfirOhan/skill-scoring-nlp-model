@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_052_01",
+  "type": "project_readme",
+  "persona_id": "p_052",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "CI/CD pipelines": 3,
+    "Docker": 4,
+    "Java": 2,
+    "Kubernetes": 2,
+    "Node.js": 3,
+    "PostgreSQL": 5,
+    "Python": 5,
+    "REST API design": 5,
+    "React": 5,
+    "Serverless": 2,
+    "TypeScript": 3
+  },
+  "text": "# Healthcare Analytics Dashboard  \nA full-stack application for analyzing patient data and generating actionable insights for healthcare providers. Built to handle high-throughput clinical datasets with real-time analytics, customizable dashboards, and secure data export workflows.  \n\n## Badges  \n[![Production Ready](https://img.shields.io/badge/Deployment-Production-blue)](https://example.com)  \n[![CI/CD](https://img.shields.io/badge/CI%2FCD-Enabled-green)](https://example.com)  \n[![Docker](https://img.shields.io/badge/Docker-Optimized-yellow)](https://example.com)  \n\n## Tech Stack  \n- **Frontend**: React (TypeScript) with custom hooks for state management and reusable UI components  \n- **Backend**: Node.js (TypeScript) REST API with Express, GraphQL layer for complex queries, and rate-limiting middleware  \n- **Data Processing**: Python scripts for ETL pipelines, leveraging pandas and PySpark for batch transformations  \n- **Database**: PostgreSQL (v14+) with connection pooling, partitioning, and materialized views for subsecond query performance  \n- **Cloud**: AWS Lambda for serverless data ingestion, S3 for archival storage, and CloudWatch for monitoring  \n- **Containerization**: Docker (v20+) with multi-stage builds and security scanning; orchestrated via Kubernetes (v1.24)  \n- **CI/CD**: GitHub Actions with parallel test execution and artifact caching  \n\n## Configuration  \nSet environment variables in `.env.local` for local development:  \n```env  \nDB_HOST=postgres://user:pass@localhost:5432/healthcare_db  \nAWS_REGION=us-west-2  \n```\nFor production, use AWS Secrets Manager and Docker Compose with encrypted volumes.  \n\n## Getting Started / Installation  \n1. Clone the repo and install dependencies:  \n```bash  \nnpm install  \ndocker-compose build  \n```  \n2. Initialize PostgreSQL with schema:  \n```bash  \ndocker-compose run db init  \n```  \n3. Run the app:  \n```bash  \ndocker-compose up --build  \n```  \nEnsure AWS credentials are configured via `~/.aws/credentials` for Lambda integration.  \n\n## Usage / Examples  \n```bash  \n# Fetch patient trends for last 30 days  \ncurl -X GET 'http://localhost:3000/api/v1/patients/trends?timeframe=30d'  \n\n# Generate report for export  \ncurl -X POST 'http://localhost:3000/api/v1/reports' -d '{\"patient_id\": \"12345\", \"format\": \"pdf\"}'  \n```  \nDashboard includes drill-down capabilities for cohort analysis and real-time anomaly detection.  \n\n## Testing  \n- Unit tests: `npm test` (Jest + TypeScript)  \n- Integration tests: `npm run test:e2e` (Cypress + Docker)  \n- Coverage: ~89% (lcov report in `/coverage`)  \n- Security: OWASP ZAP scans for API endpoints and Docker image vulnerabilities  \n\n## License  \nMIT License © 2023 Olivia Chen – [see LICENSE](LICENSE) for full terms."
+}

@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_269_01",
+  "type": "project_readme",
+  "persona_id": "p_269",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "A/B testing": 1,
+    "Agile/Scrum": 4,
+    "Competitive analysis": 1,
+    "Data visualization": 1,
+    "SQL analytics": 1,
+    "Hypothesis testing": 1,
+    "Roadmap planning": 4,
+    "Stakeholder management": 4,
+    "Team leadership": 4,
+    "Tableau/Power BI": 4,
+    "UX research": 1,
+    "Product management": 1
+  },
+  "text": "# 🌍 Eternal Quest: Cross-Platform Expansion  \nA seamless multiplayer RPG experience spanning web, mobile, and desktop platforms  \n\n---\n\n## 🚀 Badges  \n[![Platforms](https://img.shields.io/badge/platforms-web%2Cmobile%2Cdesktop-blue)](https://example.com)  \n[![Tech Stack](https://img.shields.io/badge/tech-stack-React%20Native%2CUnity%2CWebAssembly-yellow)](https://example.com)  \n[![Team Size](https://img.shields.io/badge/team-size-8-person)](https://example.com)  \n\n---\n\n## 🧠 Tech Stack  \n- **Core Engine**: Unity (C#) for cross-platform game logic  \n- **Mobile**: React Native (TypeScript) for UI/UX consistency  \n- **Web**: WebAssembly (WASM) + Three.js for 3D rendering  \n- **Backend**: Firebase (Realtime DB, Auth) + Node.js (API Gateway)  \n- **Analytics**: Tableau (custom dashboards) + Firebase Crashlytics  \n- **CI/CD**: GitHub Actions (auto-deploy to Firebase Hosting)  \n\n---\n\n## 🏗️ Architecture / Design  \nThe architecture prioritizes modularity and shared codebases. Unity handles physics and rendering, while React Native and WebAssembly act as thin layers for platform-specific UI. Firebase ensures real-time sync across devices. Tableau dashboards track user engagement metrics, informing sprint priorities.  \n\nKey decisions:  \n- Centralized asset management via Unity’s Addressable System  \n- Firebase as a single source of truth for user sessions  \n- WebAssembly for web portability without runtime plugins  \n\n---\n\n## 🚀 Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/yourusername/eternal-quest.git`  \n2. Install dependencies:  \n   ```bash  \n   npm install  \n   npm run build:web  \n   npm run build:mobile  \n   ```  \n3. Configure Firebase credentials in `config/firebase.json`  \n4. Run local server: `npm start`  \n\n---\n\n## 🎮 Usage / Examples  \n- **Character Creation**: Web interface syncs with Unity backend for real-time character stats  \n- **Cross-Platform Sync**: Mobile actions update web session state via Firebase  \n- **Analytics**: Tableau dashboards track session duration and feature usage  \n\n---\n\n## 🤝 Contributing  \nCollaborate via GitHub Issues. Focus on:  \n- Feature parity across platforms  \n- Performance optimization (WebAssembly bottlenecks)  \n- Stakeholder feedback loops for UX refinements  \n\n---\n\n## 📄 License  \nMIT License (see [LICENSE](https://github.com/yourusername/eternal-quest/blob/main/LICENSE) for details)"
+}

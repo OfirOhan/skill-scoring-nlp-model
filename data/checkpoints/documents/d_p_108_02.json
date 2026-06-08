@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_108_02",
+  "type": "project_readme",
+  "persona_id": "p_108",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "CI/CD pipelines": 3,
+    "Docker": 3,
+    "GCP": 4,
+    "Kubernetes": 4,
+    "Linux administration": 4,
+    "Prometheus/Grafana": 4,
+    "Python": 3,
+    "Terraform": 4
+  },
+  "text": "# Microservices Resilience Framework  \nA lightweight toolset for building fault-tolerant microservices with circuit breakers and service mesh integration. Designed for e-commerce platforms with high availability requirements.  \n\n## Roadmap / Future Work  \n- Expand support for Consul and Linkerd alongside Istio  \n- Add automated health check workflows via Prometheus alerts  \n- Implement CI/CD pipeline for deployment to AWS EKS and GCP GKE  \n- Create dashboards for circuit breaker metrics in Grafana  \n\n## Getting Started / Installation  \n1. Ensure Docker is installed (version 20.10+)  \n2. Pull the framework container: `docker pull gcr.io/your-project/resilience-framework:latest`  \n3. Configure your service mesh (Istio/Linkerd) in `config/mesh.yaml`  \n4. Run the framework: `docker-compose up -d`  \n\n## Usage / Examples  \n```bash\n# Deploy a circuit breaker for order processing  \npython3 circuitbreaker.py --service orders --timeout 500ms --retry 3  \n\n# Monitor service mesh health  \ncurl http://localhost:8080/metrics | grep \"request_success_rate\"  \n```  \nUse the `deploy.sh` script to spin up a Kubernetes cluster with Terraform, preconfigured for Prometheus and Grafana.  \n\n## Tech Stack  \n- **Language**: Python 3.9 for core logic  \n- **Containerization**: Docker with multi-stage builds  \n- **Orchestration**: Kubernetes (EKS/GKE) with HPA  \n- **Cloud**: AWS Lambda for async tasks, GCP Cloud Run for stateless services  \n- **IaC**: Terraform modules for VPCs and IAM roles  \n- **Monitoring**: Prometheus with alertmanager, Grafana dashboards  \n\n## Architecture / Design  \nThe framework operates in three layers:  \n1. **Resilience Layer**: Implements Hystrix-style circuit breakers with exponential backoff  \n2. **Mesh Layer**: Integrates with service meshes for TLS enforcement and traffic splitting  \n3. **Observability Layer**: Exposes metrics via Prometheus and logs to AWS CloudWatch  \n\nKey decisions:  \n- Use Linux sysctl tuning for kernel-level connection limits  \n- Leverage AWS CloudFormation for infrastructure drift detection  \n- Employ Python's `asyncio` for non-blocking retries  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details"
+}

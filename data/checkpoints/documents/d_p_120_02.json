@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_120_02",
+  "type": "project_readme",
+  "persona_id": "p_120",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Android development": 1,
+    "Flutter": 1,
+    "Kotlin": 1,
+    "Mobile CI/CD": 1,
+    "Mobile testing": 1,
+    "REST API design": 3,
+    "React": 1,
+    "React Native": 4,
+    "State management": 3,
+    "Swift": 1,
+    "Web accessibility": 3,
+    "iOS development": 1,
+    "Web accessibility (WCAG)": 1,
+    "State management (Redux/Zustand)": 1
+  },
+  "text": "# User Engagement Boost  \nA scalable solution for driving user interaction through tailored notifications and actionable analytics, designed for e-commerce platforms with high user retention goals.  \n\n## Badges  \n[![Active Users](https://example.com/active-users)](https://example.com/active-users)  \n[![Retention Rate](https://example.com/retention-rate)](https://example.com/retention-rate)  \n[![React Native](https://example.com/react-native)](https://example.com/react-native)  \n\n## Tech Stack  \n- **Frontend**: React Native (production-ready, cross-platform)  \n- **Backend**: Node.js with Express, MongoDB for real-time data storage  \n- **Analytics**: Segment + Google Analytics 4 (custom event tracking)  \n- **Notifications**: Firebase Cloud Messaging (FCM) with dynamic payload routing  \n- **CI/CD**: GitHub Actions (automated testing, deployment pipelines)  \n\n## Configuration  \n1. Set up environment variables in `.env` for API keys and FCM credentials  \n2. Link Firebase project to the app via `google-services.json` (Android) or `GoogleService-Info.plist` (iOS)  \n3. Configure Segment write keys for event tracking in `analytics.js`  \n4. Define notification templates in `notifications.json` with conditional logic for user segments  \n\n## Getting Started  \n1. Clone the repository: `git clone https://github.com/your-username/user-engagement-boost.git`  \n2. Install dependencies: `npm install`  \n3. Set up Firebase and Segment project keys in `.env`  \n4. Run migrations: `npm run db:migrate`  \n5. Start the development server: `npm run dev`  \n\n## Usage / Examples  \n- **Personalized Push**: Trigger notifications based on user behavior (e.g., \"Your cart item is back in stock!\").  \n- **Retention Analytics**: View daily active user trends in the dashboard with drill-down to individual segments.  \n- **A/B Testing**: Compare notification click-through rates using Segment's experiment framework.  \n- **Onboarding Flow**: Auto-generate welcome emails with product recommendations via REST API integration.  \n\n## Testing  \n- **Unit Tests**: Jest for core logic (e.g., notification payload validation)  \n- **Integration Tests**: Supertest for API endpoints (e.g., user segment classification)  \n- **End-to-End Tests**: Detox for mobile UI interactions (e.g., notification click tracking)  \n- **Performance**: Lighthouse for baseline accessibility checks (WCAG 2.1 AA compliance)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

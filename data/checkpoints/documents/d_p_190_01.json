@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_190_01",
+  "type": "project_readme",
+  "persona_id": "p_190",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "API testing": 3,
+    "GitLab CI": 3,
+    "Integration testing": 3,
+    "JavaScript": 2,
+    "Python": 3,
+    "REST API design": 3,
+    "Selenium/Playwright": 3,
+    "Test automation": 3,
+    "Test strategy design": 2,
+    "Unit testing": 3,
+    "Web accessibility (WCAG)": 1
+  },
+  "text": "# NexGen Test Automation Framework  \n\nA modular, scalable framework designed to streamline regression testing for NexGen Solutions’ product suite. Built to reduce test maintenance overhead while ensuring consistent coverage across web and API endpoints. Prioritizes speed, readability, and seamless integration with CI/CD pipelines.  \n\n## Roadmap / Future Work  \n- Expand test coverage for microservices architecture by Q3 2024  \n- Integrate real-time reporting with Grafana for test dashboard visualization  \n- Add support for headless browser compatibility testing via Playwright  \n- Refactor test data management to support dynamic environment variables  \n- Explore parallel execution optimization for CI/CD pipelines  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n```bash  \ngit clone https://github.com/nexgensolutions/next-gen-test-framework.git  \n```  \n2. Install dependencies:  \n```bash  \npip install -r requirements.txt  \n```  \n3. Configure environment variables in `.env` for API endpoints and credentials  \n4. Run initial setup:  \n```bash  \npython setup.py install  \n```  \n\n## Usage / Examples  \n```python  \nfrom framework.api import APITestCase  \nfrom framework.web import WebTestCase  \n\nclass LoginTest(APITestCase):  \n    def test_auth_success(self):  \n        self.post(\"/login\", {\"username\": \"admin\", \"password\": \"secure123\"})  \n        self.assert_status(200)  \n\nclass DashboardTest(WebTestCase):  \n    def test_page_load(self):  \n        self.navigate(\"https://app.nexgen.com/dashboard\")  \n        self.assert_title(\"NexGen Dashboard\")  \n```  \nFramework supports chaining API requests, parameterized test data, and hybrid test suites.  \n\n## Tech Stack  \n- **Language**: Python 3.9+  \n- **Browsers**: Playwright (Chromium, Firefox, WebKit)  \n- **CI/CD**: GitLab CI for pipeline orchestration  \n- **Testing**: pytest for unit/integration test suites  \n- **Containers**: Docker for environment isolation  \n\n## Architecture / Design  \nFramework follows a layered architecture:  \n1. **Core Engine**: Manages test execution flow and reporting  \n2. **Adapter Layer**: Abstracts browser/API interactions via plugins  \n3. **Data Layer**: Centralized config and test data storage  \n4. **CI Integration**: Pre-configured GitLab CI templates for pipeline sync  \n\nDesigned for extensibility—add custom plugins for third-party services. Test results are exported in JSON format for downstream analysis.  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
+}

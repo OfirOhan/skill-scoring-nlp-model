@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_126_03",
+  "type": "project_readme",
+  "persona_id": "p_126",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "Cloud networking (VPC/subnets)": 3,
+    "GitLab CI": 3,
+    "Kubernetes": 4,
+    "Load balancing": 3,
+    "Network automation": 1,
+    "Prometheus/Grafana": 3,
+    "Python": 2,
+    "Terraform": 3
+  },
+  "text": "# ScaleTech Microservices Platform  \nA production-grade SaaS platform built on Kubernetes and AWS, designed for scalable, secure, and observable microservices architectures. Reduces deployment time by 60% and scales to 10k concurrent users with zero downtime.  \n\n## Deployment  \nDeploy via AWS CloudFormation and Terraform, with GitLab CI/CD pipelines automating infrastructure provisioning and canary rollouts. Load balancers (AWS ALB/NLB) ensure 99.95% SLA, while Prometheus/Grafana provides real-time metrics for 150+ endpoints. All clusters are managed via Kubernetes with HPA and CPU/memory autoscaling.  \n\n## Getting Started / Installation  \n1. Clone repo and run `terraform apply` to provision VPC, EC2, and EKS clusters.  \n2. Configure AWS credentials via `~/.aws/credentials` and install kubectl.  \n3. Trigger CI/CD pipeline via GitLab Merge Request to build and deploy services.  \n4. Validate deployment with `kubectl get pods` and Prometheus dashboard.  \n\n## Usage / Examples  \n- Deploy a service: `kubectl apply -f deploy/service.yaml`  \n- Monitor CPU usage: `kubectl top pod --sort=cpu`  \n- Check load balancer health: `aws elbv2 describe-target-health`  \n- Scale horizontally: `kubectl scale deploy/my-service --replicas=5`  \n\n## Tech Stack  \n- **Cloud**: AWS (VPC, EC2, EKS, ALB, CloudWatch)  \n- **Orchestration**: Kubernetes (HPA, CNI, RBAC)  \n- **CI/CD**: GitLab CI (parallel jobs, artifact caching)  \n- **Observability**: Prometheus/Grafana (custom dashboards, alert rules)  \n- **Tools**: Terraform (state management, module reuse), Python (CLI scripts)  \n\n## Architecture / Design  \nThe platform uses a multi-VPC design for security, with private subnets for Kubernetes nodes and public subnets for load balancers. Services communicate via Istio service mesh, with mTLS enabled for all inter-service traffic. Prometheus scrapes metrics from kubelet and custom exporters, while Grafana visualizes latency, error rates, and resource utilization.  \n\n## License  \nMIT License  \nhttps://opensource.org/licenses/MIT  \n\n## Badges  \n![Deployment Time](https://img.shields.io/badge/deployment%20time-3min30s-green)  \n![Cost Savings](https://img.shields.io/badge/cost%20savings-40%25-blue)  \n![SLA](https://img.shields.io/badge/sla-99.95%25-yellow)"
+}

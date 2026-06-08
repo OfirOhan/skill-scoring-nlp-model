@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_200_01",
+  "type": "project_readme",
+  "persona_id": "p_200",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Data warehousing": 2,
+    "Docker": 3,
+    "ETL pipeline design": 2,
+    "Model deployment": 3,
+    "NLP": 3,
+    "PyTorch": 3,
+    "REST API design": 3,
+    "TensorFlow": 1,
+    "scikit-learn": 1
+  },
+  "text": "# Fintech Fraud Detection with Time-Series ML  \n\nThis repository hosts a production-grade fraud detection system tailored for fintech use cases, leveraging time-series analysis and anomaly detection to identify irregular transaction patterns in real-time. The solution is designed for scalability, with a focus on low-latency inference and integration into existing financial workflows. The core model employs PyTorch for sequence modeling, while Docker ensures consistent deployment across environments.  \n\n## Contributing  \nThis project is a collaborative effort—your input is essential. Whether you're refining the anomaly detection thresholds, enhancing the data pipeline, or proposing new features like real-time alerting, your contributions help shape the future of this tool. For guidance, refer to the issue tracker or reach out via the discussion board. All pull requests are welcome, but ensure they align with the project’s goals of robustness and simplicity.  \n\n## Getting Started / Installation  \nTo begin, clone this repository using your preferred method. Navigate to the project root and run `docker-compose up --build` to spin up the environment. This command initializes a PostgreSQL instance for data storage, a Redis cache for session management, and a PyTorch-based inference service. Ensure you have Docker and Docker Compose installed. Once the containers are running, proceed to the Usage section for deployment instructions.  \n\n## Usage / Examples  \nThe system processes transaction logs in real-time, flagging outliers via a hybrid approach combining statistical thresholds and deep learning. To test the model, execute:  \n```bash  \ncurl -X POST http://localhost:8080/flag --data '{\"amount\": 15000, \"timestamp\": \"2023-10-05T14:30:00Z\", \"user_id\": \"U12345\"}'  \n```  \nThis sends a mock transaction to the REST API, which routes it through the model and returns a fraud probability score. The pipeline also supports batch processing for historical data analysis, with results stored in the PostgreSQL database.  \n\n## Tech Stack  \n- **Modeling**: PyTorch (sequence modeling), Redis (caching)  \n- **Deployment**: Docker (containerization), REST API (gRPC-based endpoints)  \n- **Data**: PostgreSQL (structured storage), Kafka (streaming ingestion)  \n- **Tools**: ELK Stack (logging), Grafana (monitoring)  \n\n## Architecture / Design  \nThe architecture is divided into three layers:  \n1. **Data Ingestion**: Kafka streams ingest raw transaction logs, which are then parsed and normalized.  \n2. **Processing**: A PyTorch model trained on time-series data identifies anomalies, while a rule-based engine applies static thresholds.  \n3. **Deployment**: Docker containers encapsulate the model and API, ensuring isolation and reproducibility. Model updates are managed via a CI/CD pipeline, with rollback capabilities for critical deployments.  \n\n## License  \nMIT License  \n\n## Badges  \n[![License](https://example.com/badge)](https://example.com/license)"
+}

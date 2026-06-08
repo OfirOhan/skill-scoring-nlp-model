@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_092_01",
+  "type": "project_readme",
+  "persona_id": "p_092",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Feature engineering": 4,
+    "MLOps (MLflow)": 5,
+    "NumPy": 4,
+    "Pandas": 4,
+    "Python": 5,
+    "SQL analytics": 4,
+    "Statistical modeling": 4,
+    "Tableau/Power BI": 4,
+    "Time series analysis": 3,
+    "scikit-learn": 3
+  },
+  "text": "# Medical Image Analysis for Chronic Disease Detection  \nA collaborative deep learning project leveraging multimodal imaging data to identify early-stage chronic conditions through automated pattern recognition and statistical modeling.  \n\n## Acknowledgments  \nThis work is a joint effort with the HealthTech Innovation Lab and collaborating clinicians at Tokyo Metropolitan Hospital. Special thanks to Dr. Aiko Tanaka for guiding the clinical validation framework and to the NVIDIA Deep Learning Institute for GPU-accelerated training infrastructure.  \n\n## Getting Started / Installation  \nClone the repository using Git:  \n```bash  \ngit clone https://github.com/your-username/medical-image-analysis.git  \n```  \nInstall dependencies via pip:  \n```bash  \npip install -r requirements.txt  \n```  \nEnsure CUDA 11.8 and PyTorch 2.0 are installed for optimal performance.  \n\n## Usage / Examples  \nRun inference on preprocessed DICOM datasets:  \n```bash  \npython inference.py --model_path models/chronic_disease_v2.pth --input_dir data/test_images  \n```  \nFor training, use:  \n```bash  \npython train.py --config configs/retinal_scan.yaml  \n```  \nThe pipeline integrates time-series analysis of sequential scans to capture disease progression.  \n\n## Tech Stack  \n- **Python**: Core language for all modules, with custom type hinting for model interoperability  \n- **PyTorch**: Built scalable deep learning architectures with mixed-precision training  \n- **MLflow**: Centralized experiment tracking with production model registry integration  \n- **Docker**: Containerized deployment for consistent environment replication  \n- **SQL**: PostgreSQL for storing metadata and longitudinal patient records  \n- **Tableau**: Interactive dashboards for visualizing model performance metrics  \n- **NumPy/Pandas**: Efficient array operations for feature extraction and data preprocessing  \n- **scikit-learn**: Baseline classifiers for benchmarking deep learning results  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for full details  \n\n## Badges  \n[![CI/CD Status](https://github.com/your-username/medical-image-analysis/actions/workflows/ci.yml/badge.svg)](https://github.com/your-username/medical-image-analysis/actions/workflows/ci.yml)  \n[![Code Coverage](https://img.shields.io/coveralls/your-username/medical-image-analysis)](https://coveralls.io/github/your-username/medical-image-analysis)  \n\n## Contributing  \nWe welcome contributions to data curation, model optimization, and clinical workflow integration. For guidance on implementing feature engineering pipelines or improving statistical modeling accuracy, reach out to the maintainers via GitHub Issues."
+}

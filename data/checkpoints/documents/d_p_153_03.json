@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_153_03",
+  "type": "project_readme",
+  "persona_id": "p_153",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "A/B testing": 3,
+    "Agile/Scrum": 3,
+    "Analytics-driven product decisions": 3,
+    "Competitive analysis": 1,
+    "Data visualization": 3,
+    "Hypothesis testing": 3,
+    "Product management": 3,
+    "Roadmap planning": 3,
+    "SQL analytics": 3,
+    "Stakeholder management": 2,
+    "Tableau/Power BI": 3,
+    "UX research": 1
+  },
+  "text": "# NexaFlow Analytics Dashboard: Real-Time Data Visualization for SaaS Platforms  \n\nNexaFlow is a high-throughput analytics dashboard built for SaaS platforms, enabling real-time visualization of user behavior metrics with sub-50ms latency. Designed for scalability, it processes 10k+ data points/sec via WebSocket streams, with interactive dashboards built using React 18 and TypeScript. The project optimizes data pipeline efficiency through Kafka-based ingestion and Redis caching, reducing query latency by 40% in production.  \n\n## Getting Started / Installation  \nInstall dependencies with `npm install` and configure environment variables in `.env.local`. Run the backend server via `npm start` and frontend via `npm run dev`. Ensure Docker is installed for PostgreSQL and Grafana integration.  \n\n## Tech Stack  \n- **Frontend**: React 18, TypeScript 4.9, Chart.js 4.4  \n- **Backend**: Node.js 16, Express 4.18, PostgreSQL 15  \n- **Data Ingestion**: Kafka 3.3, Apache Flink 1.16  \n- **Monitoring**: Grafana 10.1, Prometheus 2.38  \n- **Infrastructure**: Docker 20.10, AWS Lambda (serverless deployment)  \n\n## Usage / Examples  \n```bash\n# Sample SQL query for user retention analysis  \nSELECT COUNT(*) AS retained_users  \nFROM user_activity  \nWHERE session_id IN (SELECT session_id FROM session_data WHERE event_date > CURRENT_DATE - INTERVAL '7 days')  \nAND event_type = 'login';  \n```  \nVisualize results in real-time via the dashboard’s drag-and-drop UI. Use the `@types/axios` module to fetch dynamic metrics, with caching enabled via Redis.  \n\n## Badges  \n[![Build Status](https://example.com/status)](https://example.com)  \n[![Coverage](https://example.com/coverage)](https://example.com)  \n[![Performance](https://example.com/perf)](https://example.com)  \n\n## Architecture / Design  \nThe system employs a microservices architecture with a central data pipeline. Kafka handles event streaming, while Flink processes data into Redis for low-latency access. Frontend components are decoupled via WebSockets, enabling real-time updates without full page reloads.  \n\n## Contributing  \nEnhance data pipeline efficiency or expand visualization modules. Prioritize issues labeled `perf` or `feature`. For roadmap planning, reference the `roadmap.md` document in the `docs` folder.  \n\n## License  \nMIT License. See [LICENSE](https://example.com/license) for details."
+}

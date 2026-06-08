@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_187_01",
+  "type": "project_readme",
+  "persona_id": "p_187",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "C/C++ (embedded)": 3,
+    "Firmware development": 3,
+    "Go": 3,
+    "Hardware-software integration": 3,
+    "IoT protocols (MQTT/CoAP)": 3,
+    "Network automation": 3,
+    "Python": 3,
+    "REST API design": 3,
+    "RTOS": 3
+  },
+  "text": "# Industrial IoT Edge Computing Platform  \nA real-time data processing system for enterprise-grade industrial IoT deployments, optimized for low-latency edge analytics and secure device communication.  \n\n---\n\n## Badges  \n✅ Production-Ready  \n⚡ Real-Time Processing (≤50ms latency)  \n📦 Containerized Deployment  \n🔧 Hardware-Software Integration  \n📡 MQTT/CoAP Protocol Support  \n\n---\n\n## Tech Stack  \n- **C/C++**: Firmware for edge nodes (STM32, NXP i.MX RT)  \n- **Go**: Core processing engine with goroutines for concurrent data streams  \n- **Python**: Scripting layer for device calibration and diagnostics  \n- **MQTT/CoAP**: Lightweight protocols for device-cloud communication  \n- **RTOS**: FreeRTOS for deterministic task scheduling  \n- **Network Automation**: Ansible for zero-touch deployment across 100+ gateways  \n\n---\n\n## Architecture / Design  \nThe platform decouples data ingestion, processing, and actuation into modular components:  \n1. **Edge Nodes**: STM32-based microcontrollers with built-in ADCs for sensor data acquisition  \n2. **Data Pipeline**: Go-written stream processor with sliding window aggregation for predictive analytics  \n3. **API Layer**: RESTful endpoints for remote configuration and OTA updates  \n4. **Network Stack**: MQTT broker with TLS 1.3 for secure, low-bandwidth device communication  \n5. **Monitoring**: Prometheus metrics exported via gRPC for real-time system health tracking  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repository to a host machine with Docker installed  \n2. Build the edge firmware using `make firmware` (requires ARM GCC toolchain)  \n3. Deploy via Ansible playbooks to target gateways (pre-configured for Ubuntu 22.04 LTS)  \n4. Validate with simulated sensor data using the Python test harness  \n\n---\n\n## Usage / Examples  \n```bash\n# Deploy a temperature sensor node  \nansible-playbook deploy.yml -e \"node_type=temp_sensor\"\n\n# Query live metrics via REST API  \ncurl -k https://edge-gateway:8080/metrics?interval=1s\n```\n\n---\n\n## Contributing  \nThis project is used internally by our manufacturing division. Contributions are welcome for:  \n- Expanding protocol support (e.g., LoRaWAN)  \n- Enhancing firmware for newer ARM Cortex-M series  \n- Improving network resilience in high-interference environments  \n\n---\n\n## License  \nMIT License (see [LICENSE](LICENSE) for details)"
+}

@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_271_01",
+  "type": "project_readme",
+  "persona_id": "p_271",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Android development": 2,
+    "Flutter": 4,
+    "Kotlin": 2,
+    "Mobile CI/CD": 3,
+    "REST API design": 3,
+    "React": 1,
+    "React Native": 4,
+    "State management": 3,
+    "Swift": 1,
+    "TypeScript": 1,
+    "Web accessibility": 1,
+    "iOS development": 2
+  },
+  "text": "# ShopFlow Mobile App Performance Optimization  \n\nOptimized e-commerce mobile app performance by 40% in load times and 25% improvement in user engagement through targeted architecture refactoring and resource management. Focused on reducing cold start latency, optimizing network requests, and enhancing UI responsiveness for Android and iOS platforms.  \n\n## API Reference  \n**Endpoints**  \n- `GET /products?category={id}`: Pagination with 100ms latency reduction via server-side filtering  \n- `POST /cart/items`: Batch processing with 30% faster response times using Flutter's `http` library  \n- `GET /search?q={term}`: Debounced query with 50ms improvement via `StreamController`  \n\n**Rate Limiting**  \n- 100 RPS for `/products` with exponential backoff  \n- 50 RPS for `/search` with token bucket algorithm  \n\n**Authentication**  \n- JWT-based with 200ms token refresh optimization  \n- Android/iOS specific headers for regional CDN routing  \n\n## Usage / Examples  \n**Product Card Widget**  \n```dart\nclass ProductCard extends StatelessWidget {\n  final ProductModel product;\n  const ProductCard({super.key, required this.product});\n  \n  @override\n  Widget build(BuildContext context) {\n    return LayoutBuilder(\n      builder: (context, constraints) {\n        return CachedNetworkImage(\n          imageUrl: product.imageURL,\n          placeholder: (context, url) => const SizedBox.shrink(),\n          errorWidget: (context, url, error) => const Icon(Icons.error),\n        );\n      },\n    );\n  }\n}\n```  \n\n**Cart State Management**  \n```dart\nfinal cartState = CartState(\n  items: [\n    CartItem(product: Product(id: '123', name: 'Widget'), quantity: 2),\n  ],\n  totalPrice: 49.99,\n);\n```  \n\n## Getting Started / Installation  \n```bash\nflutter pub add shopflow_optimization\nflutter pub get\nflutter build --release\n```  \nConfigure Firebase for analytics and Sentry for error tracking. Set up GitHub Actions for CI/CD with automated performance tests.  \n\n## Tech Stack  \n- Flutter (iOS/Android) with Dart  \n- Firebase Cloud Messaging for push notifications  \n- Sentry for crash reporting  \n- Android development (Kotlin) for native integrations  \n- REST API design with OpenAPI spec compliance  \n\n## Architecture / Design  \nAdopted a layered architecture with:  \n1. **Presentation Layer**: Flutter widgets with lazy loading  \n2. **Business Logic**: Isolated Dart files with Riverpod for state management  \n3. **Data Layer**: Network requests with `http` and local SQLite caching  \n4. **Performance**: Background image processing and memory optimization  \n\nImplemented 90%+ code reuse between platforms using Flutter's widget tree. Reduced cold start time from 2.3s to 1.1s via pre-warming strategies.  \n\n## License  \nMIT License  \n\n## Badges  \n[![Performance Metrics](https://example.com/perf-badge.png)](https://example.com/perf)  \n[![CI/CD Status](https://example.com/ci-badge.png)](https://example.com/ci)"
+}

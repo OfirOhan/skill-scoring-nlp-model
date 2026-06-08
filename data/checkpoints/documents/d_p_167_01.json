@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_167_01",
+  "type": "project_readme",
+  "persona_id": "p_167",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "CI/CD pipelines": 3,
+    "Docker": 3,
+    "GitHub Actions": 3,
+    "Go": 1,
+    "Kubernetes": 2,
+    "Microservices architecture": 3,
+    "Monitoring & alerting": 3,
+    "PostgreSQL": 3,
+    "Prometheus/Grafana": 3,
+    "Python": 1,
+    "REST API design": 4,
+    "Terraform": 1
+  },
+  "text": "# NexaGame Server Optimization  \n\nOptimized Node.js backend for real-time game servers, reducing latency by 30% and improving throughput by 40% through Redis caching and asynchronous architecture.  \n\n## Getting Started / Installation  \nClone the repository:  \n```bash  \ngit clone https://github.com/yourusername/nexagameserver.git  \ncd nexagameserver  \n```  \nBuild with Docker:  \n```bash  \ndocker compose build  \ndocker compose up  \n```  \nRun tests via GitHub Actions:  \n```bash  \ngithub-actions run ci  \n```  \nSet environment variables for Redis and PostgreSQL connections.  \n\n## Usage / Examples  \nInitialize the server:  \n```bash  \nnode server.js  \n```  \nHandle player connections via REST API:  \n```bash  \nPOST /api/players  \n```  \nRedis is used for session storage, reducing DB queries by 65%. Example benchmark:  \n```bash  \ncurl -X POST http://localhost:3000/api/benchmark  \n```  \nMetrics: 15,000 RPS with 99.9% latency under 150ms.  \n\n## Badges  \n[![Build Status](https://github.com/yourusername/nexagameserver/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/nexagameserver/actions/workflows/ci.yml)  \n[![Test Coverage](https://codecov.io/gh/yourusername/nexagameserver/branch/main/graph/badge.svg)](https://codecov.io/gh/yourusername/nexagameserver)  \n\n## Tech Stack  \n- Node.js 18  \n- Redis 7  \n- PostgreSQL 14  \n- Docker 24  \n- GitHub Actions 3  \n- Prometheus/Grafana for monitoring  \n\n## Architecture / Design  \nMicroservices architecture with Redis as the primary cache layer. REST API endpoints handle player authentication and game state updates. Docker containers isolate services, and Prometheus tracks latency metrics.  \n\n## Contributing  \nPull requests are welcome! For major changes, open an issue first. This project is team-internal, so ensure compliance with company standards before submitting.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

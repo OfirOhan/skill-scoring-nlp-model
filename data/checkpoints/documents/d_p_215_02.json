@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_215_02",
+  "type": "project_readme",
+  "persona_id": "p_215",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "Apache Airflow": 3,
+    "Computer vision": 1,
+    "ETL pipeline design": 3,
+    "Feature stores": 3,
+    "GCP": 2,
+    "LLMs/Prompt engineering": 2,
+    "MLOps (MLflow/W&B)": 3,
+    "Model deployment": 3,
+    "NLP": 3,
+    "PyTorch": 2,
+    "Snowflake": 3,
+    "TensorFlow": 2,
+    "dbt": 3
+  },
+  "text": "# Enterprise Predictive Analytics Platform  \nA scalable, production-ready solution for enterprise forecasting, built with focus on reliability and performance. The platform processes terabytes of structured data from Snowflake, leverages AWS for compute, and delivers actionable insights with 92% accuracy in churn prediction benchmarks.  \n\n## Roadmap / Future Work  \n- Expand data sources to include real-time IoT feeds by Q3 2024  \n- Implement model versioning with MLflow for auditability  \n- Integrate causal inference modules for root-cause analysis  \n- Optimize inference latency to <50ms for API endpoints  \n\n## Getting Started / Installation  \n1. Clone the repository using your preferred method  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure AWS credentials and Snowflake connection in `config/secrets.yaml`  \n4. Initialize the feature store with `python init_db.py`  \n5. Launch the pipeline: `airflow scheduler`  \n\n## Usage / Examples  \n```bash  \n# Run a batch prediction job  \npython run_pipeline.py --mode batch  \n\n# Trigger real-time inference endpoint  \ncurl -X POST https://api.prediction.service/predict \\\n  -H \"Authorization: Bearer <token>\" \\\n  -d '{\"features\": {\"tenure\": 36, \"usage\": 850}}'  \n```  \nSample output includes confidence scores and actionable recommendations for customer retention.  \n\n## Tech Stack  \n- **Language**: Python 3.9 (with type hints)  \n- **Cloud**: AWS (EC2, S3, Lambda) for compute/storage  \n- **Data**: Snowflake as the central data warehouse  \n- **ETL**: dbt for schema management and data transformation  \n- **Orchestration**: Apache Airflow for workflow scheduling  \n- **Monitoring**: Prometheus + Grafana for pipeline metrics  \n\n## Architecture / Design  \nThe system follows a microservices pattern with three core layers:  \n1. **Data Layer**: Snowflake as source, feature store for cached features  \n2. **Model Layer**: Trained models stored in MLflow, served via REST API  \n3. **Feedback Loop**: Automated retraining triggered by data drift detection  \n\nAll components are containerized with Docker for consistent deployment across environments.  \n\n## License  \nMIT License (see [LICENSE](LICENSE) for details)"
+}

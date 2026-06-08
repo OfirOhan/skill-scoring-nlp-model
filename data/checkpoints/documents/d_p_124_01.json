@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_124_01",
+  "type": "project_readme",
+  "persona_id": "p_124",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "CI/CD pipelines": 2,
+    "Docker": 2,
+    "Go": 1,
+    "Kubernetes": 1,
+    "Microservices architecture": 1,
+    "PostgreSQL": 1,
+    "Python": 4,
+    "REST API design": 3,
+    "Terraform": 1
+  },
+  "text": "# Real-Time Data Processor  \nA system for streamlining data ingestion and transformation workflows with Python and AWS Lambda, optimized for startup scalability.  \n\n---\n\n## Badges  \n[![Build Status](https://github.com/your-username/real-time-data-processor/actions/workflows/build.yml/badge.svg)](https://github.com/your-username/real-time-data-processor/actions/workflows/build.yml)  \n\n---\n\n## Getting Started / Installation  \n1. Install AWS CLI and configure credentials  \n2. Set up Python 3.9+ environment  \n3. Deploy Lambda function via AWS Console or CLI  \n4. Configure S3 bucket triggers for data ingestion  \n\n---\n\n## Tech Stack  \n- **Python 3.9**: Core logic and data transformation  \n- **AWS Lambda**: Serverless compute for real-time processing  \n- **Amazon S3**: Data storage and event triggering  \n- **CloudWatch Logs**: Monitoring and debugging  \n\n---\n\n## Architecture / Design  \nThe system ingests data via S3 bucket events, processes it in Lambda functions, and outputs results to designated storage. Key decisions:  \n- Python’s asyncio for non-blocking I/O operations  \n- Lambda’s cold start mitigation via provisioned concurrency  \n- Modular design for easy integration with third-party APIs  \n\n---\n\n## Usage / Examples  \n```python  \n# Sample Lambda handler for JSON data processing  \ndef lambda_handler(event, context):  \n    for record in event['Records']:  \n        payload = json.loads(record['body'])  \n        processed_data = transform_data(payload)  \n        save_to_database(processed_data)  \n    return {'statusCode': 200}  \n```  \nTrigger this function via S3 object creation events.  \n\n---\n\n## Testing  \n- **Unit tests**: Validate data transformation logic with pytest  \n- **Integration tests**: Simulate S3 events and verify Lambda responses  \n- CI/CD pipeline: Automates testing on PRs and deploys to staging  \n\n---\n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
+}

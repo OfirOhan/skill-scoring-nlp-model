@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_280_01",
+  "type": "project_readme",
+  "persona_id": "p_280",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "Apache Airflow": 2,
+    "Apache Spark": 2,
+    "Computer vision": 1,
+    "Docker": 3,
+    "Hugging Face Transformers": 3,
+    "Kubernetes": 2,
+    "MLOps (MLflow/W&B)": 3,
+    "Model deployment": 2,
+    "NLP": 3,
+    "PyTorch": 3,
+    "TensorFlow": 3,
+    "Terraform": 2,
+    "scikit-learn": 3
+  },
+  "text": "# Predictive Analytics for Client Retention  \nA scalable framework for forecasting customer churn in consulting scenarios using hybrid ML models and AWS integration  \n\n## Configuration  \nEnvironment variables are managed via `.env.example` and `docker-compose.yml`. Key dependencies include:  \n- AWS credentials (S3/EC2)  \n- Dockerized PyTorch backend  \n- Hugging Face API tokens for NLP preprocessing  \n- MLflow tracking URI for experiment logging  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/daichikobayashi/client-retention-prediction.git  \n   ```  \n2. Initialize environment:  \n   ```bash  \n   cp .env.example .env  \n   docker-compose build  \n   docker-compose up -d  \n   ```  \n3. Install AWS CLI and configure credentials for S3/EC2 integration  \n\n## Usage / Examples  \nRun inference on new client data:  \n```bash  \ndocker exec -it prediction_container python predict.py --input data/client_churn.csv  \n```  \nTrain a hybrid model with:  \n```bash  \nmlflow run ./models/ensemble --params model_type=rf_xgb  \n```  \nExample output:  \n```json  \n{\"churn_probability\": 0.27, \"risk_factors\": [\"low_engagement\", \"service_gaps\"]}  \n```  \n\n## Tech Stack  \n- **ML Libraries**: PyTorch (neural networks), scikit-learn (preprocessing), Hugging Face Transformers (NLP)  \n- **Cloud**: AWS S3 (data storage), EC2 (batch processing)  \n- **DevOps**: Docker (containerization), MLflow (experiment tracking)  \n- **Monitoring**: Prometheus (model latency metrics)  \n\n## Architecture / Design  \nThe system employs a layered architecture:  \n1. **Data Layer**: AWS S3 for raw client logs, PostgreSQL for metadata  \n2. **Processing Layer**: PyTorch-based neural network for pattern recognition, scikit-learn pipelines for feature engineering  \n3. **Inference Layer**: REST API via FastAPI, with Hugging Face models for sentiment analysis of client feedback  \n4. **Monitoring**: MLflow for tracking hyperparameters, Prometheus for latency metrics  \n\n## License  \nMIT License  \nSee [LICENSE](LICENSE)  \n\n## Badges  \n[![GitHub](https://badges.frappr.com/gh/daichikobayashi/client-retention-prediction/1.svg)](https://github.com/daichikobayashi/client-retention-prediction)  \n[![Travis CI](https://badges.frappr.com/gh/daichikobayashi/client-retention-prediction/1.svg)](https://travis-ci.com/daichikobayashi/client-retention-prediction)  \n[![MLflow](https://img.shields.io/badge/MLflow-0.19.0-blue.svg)](https://mlflow.org/)"
+}

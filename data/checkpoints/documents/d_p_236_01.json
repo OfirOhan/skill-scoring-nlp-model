@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_236_01",
+  "type": "project_readme",
+  "persona_id": "p_236",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "API testing": 4,
+    "BDD/TDD": 4,
+    "Go": 1,
+    "Java": 1,
+    "Performance testing (JMeter/k6)": 1,
+    "Python": 4,
+    "REST API design": 4,
+    "Selenium/Playwright": 5,
+    "Test strategy design": 1,
+    "Test automation": 1
+  },
+  "text": "# Automated Regression Testing Framework for SaaS Applications  \nA scalable, maintainable solution for regression testing in SaaS environments, leveraging Python, Selenium, Playwright, and REST API integration to reduce manual effort and ensure consistent quality across feature releases.  \n\n---\n\n## Badges  \n[![GitHub](https://badgen.net/badge/github/AditiKapoor/gray)](https://github.com/AditiKapoor)  \n[![Python](https://badgen.net/badge/python/3.9/gray)](https://python.org)  \n[![CI/CD](https://badgen.net/badge/ci/cd/gray)](https://github.com/AditiKapoor/actions)  \n\n---\n\n## Getting Started / Installation  \n1. **Prerequisites**: Python 3.9+ with `pip` installed.  \n2. **Install dependencies**:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n3. **Environment setup**:  \n   - Set `SELENIUM_BROWSER` and `PLAYWRIGHT_BROWSER` environment variables for cross-browser compatibility.  \n   - Configure API endpoints in `config.yaml` for dynamic test execution.  \n4. **Run tests**:  \n   ```bash  \n   pytest test_suite/  \n   ```  \n   Results are logged in `reports/` with detailed failure analysis.  \n\n---\n\n## Tech Stack  \n- **Language**: Python (3.9) for scriptability and integration.  \n- **UI Automation**: Selenium (for legacy browsers) + Playwright (for modern, headless execution).  \n- **API Testing**: Python `requests` library with BDD-style test cases.  \n- **REST API Design**: Custom middleware for mocking endpoints during CI/CD pipelines.  \n- **CI/CD**: GitHub Actions for parallel test execution and artifact archiving.  \n\n---\n\n## Architecture / Design  \nThe framework is modular, with separate modules for API, UI, and data validation. Selenium and Playwright are abstracted into a shared driver layer, enabling seamless switching between browsers. REST API tests are decoupled from UI workflows, allowing independent scaling. BDD-style test cases (using `pytest-bdd`) are stored in `features/`, ensuring alignment with business requirements.  \n\n---\n\n## Usage / Examples  \n**API Test Example**:  \n```python  \ndef test_user_creation():  \n    response = requests.post(\"https://api.example.com/users\", json={\"name\": \"TestUser\"})  \n    assert response.status_code == 201  \n    assert \"id\" in response.json()  \n```  \n**UI Test Example**:  \n```python  \n@when(\"the user navigates to the dashboard\")  \ndef navigate_to_dashboard(page):  \n    page.goto(\"https://app.example.com/dashboard\")  \n    assert page.title() == \"Dashboard\"  \n```  \n\n---\n\n## Testing  \n- **Unit Tests**: Validate core modules (e.g., API request handlers, browser initialization).  \n- **Integration Tests**: Ensure API/UI interactions align with production workflows.  \n- **Coverage**: Achieved 92%+ line coverage via `pytest-cov`, with critical paths prioritized.  \n- **Reliability**: 85% reduction in test flakiness after implementing Playwright's auto-waiting and retry logic.  \n\n---\n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

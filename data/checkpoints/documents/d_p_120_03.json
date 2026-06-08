@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_120_03",
+  "type": "project_readme",
+  "persona_id": "p_120",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Android development": 1,
+    "Flutter": 1,
+    "Kotlin": 1,
+    "Mobile CI/CD": 2,
+    "Mobile testing": 2,
+    "REST API design": 4,
+    "React": 1,
+    "React Native": 1,
+    "State management": 3,
+    "Swift": 4,
+    "Web accessibility": 1,
+    "iOS development": 5,
+    "Web accessibility (WCAG)": 1,
+    "State management (Redux/Zustand)": 1
+  },
+  "text": "# Real-Time Order Tracking  \nA decentralized logistics dashboard for e-commerce platforms, enabling end-to-end order visibility via real-time API integrations. Built for scalability, this system synchronizes with backend services to provide live updates on shipment statuses, route deviations, and delivery windows. Designed for enterprise-grade reliability, it balances performance with developer productivity through modular architecture and asynchronous workflows.  \n\n## Tech Stack  \n- **iOS Development**: Swift 5.9, SwiftUI, Combine  \n- **Backend Services**: RESTful APIs, Firebase Cloud Messaging (FCM) for push notifications  \n- **Data Sync**: WebSocket for bidirectional communication, Apollo Client for GraphQL  \n- **CI/CD**: GitHub Actions for automated testing and iOS build pipelines  \n- **Testing**: XCTest for unit/integration tests, XCTestUI for UI automation  \n\n## Architecture / Design  \nThe system employs a layered architecture with three core modules:  \n1. **Order Core**: Manages state via Combine publishers, decoupling UI from data sources  \n2. **Notification Hub**: Processes FCM payloads and triggers localized alerts  \n3. **Sync Engine**: Handles WebSocket heartbeats and delta updates for real-time tracking  \n\nKey design decisions include using protocol-oriented programming for API clients, embedding Codable compliance in models, and leveraging SwiftUI's @ObservedObject for reactive UI updates. The architecture supports horizontal scaling through modular API endpoints and decoupled service layers.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/your-username/real-time-order-tracking.git`  \n2. Install dependencies via Swift Package Manager  \n3. Configure Firebase credentials in `Constants.swift`  \n4. Set up REST API endpoints in `APIConfig.swift`  \n5. Build and run on iOS simulator or physical device  \n\n## Usage / Examples  \n- Track order status: `OrderViewModel.shared.loadOrder(withId: \"12345\")`  \n- Subscribe to updates: `NotificationCenter.default.addObserver(forName: .orderStatusDidChange, ...)`  \n- Handle delivery alerts: `NotificationCenter.default.addObserver(forName: .deliveryWindowUpdated, ...)`  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/license/your-username/real-time-order-tracking)](LICENSE)  \n[![CI/CD](https://img.shields.io/github/actions/workflow/your-username/real-time-order-tracking/ci.yml)](https://github.com/your-username/real-time-order-tracking/actions)  \n\n## Contributing  \nContributions are welcome! Please open an issue for feature proposals or bug reports. When submitting pull requests, ensure code adheres to Swift Style Guide and includes unit tests for all new functionality.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details"
+}

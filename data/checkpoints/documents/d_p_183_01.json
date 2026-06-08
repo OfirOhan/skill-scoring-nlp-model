@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_183_01",
+  "type": "project_readme",
+  "persona_id": "p_183",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "API testing": 4,
+    "CI/CD pipelines": 4,
+    "Integration testing": 4,
+    "Java": 3,
+    "Performance testing (JMeter/k6)": 5,
+    "Python": 5,
+    "REST API design": 3,
+    "Selenium/Playwright": 5,
+    "Test automation": 4,
+    "Unit testing": 5
+  },
+  "text": "# CloudVulnScanner: Automated Vulnerability Scanning for Multi-Cloud Environments  \n\nA high-throughput, cloud-native tool for detecting misconfigurations and security flaws across AWS, GCP, and Azure. Leverages dynamic inventory mapping and real-time alerting to reduce remediation latency by 40% in production environments.  \n\n## API Reference  \n**Endpoints**  \n- `POST /api/v1/scan`  \n  - `target`: Cloud provider (aws/gcp/azure)  \n  - `scan_type`: full/quick (default: full)  \n  - `auth_token`: Bearer token for cloud provider API access  \n- `GET /api/v1/results/{scan_id}`  \n  - Returns JSON with severity counts, remediation steps, and CVSS scores  \n\n**Authentication**  \nOAuth2.0 with JWT tokens; API keys stored in environment variables via `cloud_cred` config file.  \n\n## Usage / Examples  \n```bash  \ncurl -X POST https://cloudvulnscanner.com/api/v1/scan \\\n  -H \"Authorization: Bearer <token>\" \\\n  -d '{\"target\": \"aws\", \"scan_type\": \"full\"}'  \n\ncurl -X GET https://cloudvulnscanner.com/api/v1/results/12345\n```  \n**Output**  \n```json  \n{  \n  \"severity\": {\"critical\": 3, \"high\": 12, \"medium\": 45},  \n  \"remediations\": [\"Enable IAM role boundary policies\", ...],  \n  \"cvss_scores\": [9.8, 7.2, ...]  \n}  \n```  \n\n## Getting Started / Installation  \n```bash  \npython -m venv .env  \nsource .env/bin/activate  \npip install -r requirements.txt  \nexport CLOUD_CRED=/path/to/credentials.yaml  \npython main.py --target aws --scan-type quick  \n```  \n\n## Tech Stack  \n- **Language**: Python (core logic) + Java (API backend)  \n- **Libraries**: PyYAML, requests, boto3, google-cloud-sdk, azure-mgmt  \n- **Testing**: PyTest, Selenium (UI), Playwright (headless)  \n- **CI/CD**: GitHub Actions with Dockerized builds  \n\n## Architecture / Design  \nMicroservices-based with a Python worker pool for concurrent scans. Java-based REST API handles orchestration and result aggregation. Uses Redis for distributed locking and Kafka for async alert notifications. Performance bottlenecks addressed via JMeter load testing (max 5k scans/sec).  \n\n## License  \nMIT License (see LICENSE file)  \n\n## Badges  \n[![CI/CD Status](https://example.com/ci-badge)](https://example.com/ci)  \n[![Test Coverage](https://example.com/coverage)](https://example.com/coverage)  \n[![Security Compliance](https://example.com/security)](https://example.com/security)"
+}

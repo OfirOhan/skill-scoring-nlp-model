@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_056_01",
+  "type": "project_readme",
+  "persona_id": "p_056",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Application security (OWASP)": 4,
+    "Compliance (SOC2/GDPR)": 3,
+    "Encryption & PKI": 3,
+    "IAM/Access control": 4,
+    "Network security": 4,
+    "Penetration testing": 2,
+    "SIEM tools": 2,
+    "Threat modeling": 2,
+    "Vulnerability management": 2
+  },
+  "text": "# SecureDevOps  \nA toolkit for embedding security into DevOps workflows to reduce vulnerabilities and improve compliance. Built for teams needing scalable, repeatable security practices without compromising delivery speed.  \n\n## Getting Started / Installation  \nClone the repo and install dependencies:  \n```bash  \ngit clone https://github.com/your-username/securedevops.git  \ncd securedevops  \nnpm install  \n```  \nConfigure your CI/CD pipeline to trigger security checks on every commit. Adjust the `config/security-profiles.json` file to match your team’s compliance requirements.  \n\n## Tech Stack  \n- **CI/CD**: GitHub Actions, GitLab CI  \n- **Security Tools**: SonarQube, OWASP ZAP, Dependency-Check  \n- **Infrastructure**: Terraform, AWS IAM  \n- **Monitoring**: Prometheus, Grafana  \n- **Encryption**: AWS KMS, TLS 1.3  \n\n## Usage / Examples  \n1. **Automated Scanning**: Integrate SonarQube scans into your build pipeline to catch code vulnerabilities early.  \n2. **Secrets Management**: Use AWS Secrets Manager with IAM roles to securely handle API keys and database credentials.  \n3. **Compliance Checks**: Run SOC2-aligned checks via Terraform modules to validate infrastructure configurations.  \n\n## Badges  \n[![Security Score](https://example.com/security-badge)](https://example.com)  \n[![Compliance Status](https://example.com/compliance-badge)](https://example.com)  \n\n## Architecture / Design  \nThe system is modular, with security checks decoupled from core workflows. Key components include:  \n- **Policy Engine**: Dynamically enforces access controls and compliance rules.  \n- **Scan Orchestration**: Parallelizes vulnerability checks without blocking deployments.  \n- **Audit Trail**: Logs all security events to a centralized SIEM system for forensic analysis.  \nNetwork segmentation and microservices architecture ensure minimal attack surface.  \n\n## Contributing  \nWe welcome improvements to security policies, tool integrations, and compliance templates. Submit pull requests with clear, actionable changes.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

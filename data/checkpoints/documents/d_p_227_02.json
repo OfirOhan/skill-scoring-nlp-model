@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_227_02",
+  "type": "project_readme",
+  "persona_id": "p_227",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "CI/CD pipelines": 4,
+    "Cloud cost optimization": 3,
+    "Cloud networking (VPC/subnets)": 4,
+    "GitHub Actions": 1,
+    "GitLab CI": 1,
+    "Go": 1,
+    "Jenkins": 1,
+    "Linux administration": 3,
+    "Monitoring & alerting": 1,
+    "PostgreSQL": 1,
+    "Prometheus/Grafana": 1,
+    "Python": 1,
+    "Redis": 1,
+    "Terraform": 5
+  },
+  "text": "# Auto-Scaling Infrastructure for E-Commerce Peak Traffic  \n\nThis project provides a scalable, cloud-native solution for managing e-commerce traffic spikes using Kubernetes and infrastructure-as-code tools. Designed for medium-sized teams, it balances cost efficiency with reliability, reducing cloud costs by 30% during peak periods while maintaining sub-50ms latency for critical workloads.  \n\n## Configuration  \nThe infrastructure is defined using Terraform, with modular templates for Kubernetes clusters, node pools, and autoscaling rules. Key configurations include:  \n- Kubernetes cluster with CPU-based autoscaling (target utilization: 70%)  \n- Linux-based worker nodes with custom kernel tuning for I/O performance  \n- VPC subnet isolation for production and staging environments  \n- Cloud cost optimization rules tied to instance type selection and idle node termination  \n\n## Getting Started / Installation  \n1. Install Terraform (v1.5+) and `kubectl`  \n2. Set environment variables for cloud provider credentials  \n3. Run `terraform apply` to provision the cluster and autoscaling policies  \n4. Validate node pool scaling using `kubectl get nodes`  \n5. Monitor autoscaling events via cloud provider console  \n\n## Usage / Examples  \nDuring a flash sale, the cluster automatically adds 200+ worker nodes within 10 minutes of CPU utilization exceeding 85%. For manual scaling, use:  \n```bash  \nkubectl scale --replicas=50 deploy/web-app  \n```  \nTo reset idle nodes:  \n```bash  \nterraform destroy -var-file=production.tfvars  \n```  \n\n## Tech Stack  \n- Kubernetes (v1.30+)  \n- Terraform (v1.5+)  \n- Cloud provider: AWS/GCP (configurable)  \n- Linux kernel tuning (4.15+)  \n- Cloud cost optimization (Spot instances, idle node termination)  \n\n## Architecture / Design  \nThe architecture prioritizes isolation and automation:  \n1. **Kubernetes Cluster**: Managed with Terraform, split into production and staging VPCs  \n2. **Autoscaling Rules**: CPU-based horizontal pod autoscaler (HPA) with 5-minute cooldown  \n3. **Node Pools**: Tiered (high-memory, general-purpose) with dynamic instance type selection  \n4. **Networking**: VPC subnets with security group rules for microservice communication  \n\n## License  \nMIT License (see [LICENSE](LICENSE))  \n\n## Badges  \n[![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat)](https://github.com)  \n[![License](https://img.shields.io/badge/license-MIT-green?style=flat)](LICENSE)  \n[![Terraform](https://img.shields.io/badge/Terraform-700000?style=flat)](https://www.terraform.io)"
+}

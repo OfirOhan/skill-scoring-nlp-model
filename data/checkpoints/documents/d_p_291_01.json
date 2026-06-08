@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_291_01",
+  "type": "project_readme",
+  "persona_id": "p_291",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "Docker": 3,
+    "GitLab CI": 3,
+    "JavaScript": 3,
+    "Node.js": 3,
+    "PostgreSQL": 3,
+    "Python": 3,
+    "REST API design": 3,
+    "React": 3,
+    "Terraform": 1
+  },
+  "text": "# NexGen Consulting Dashboard  \nA cloud-native analytics platform for consulting firms, built to streamline client data visualization and reporting. Combines real-time insights with intuitive UI, powered by a scalable backend and secure cloud infrastructure.  \n\n## API Reference  \nRESTful endpoints for data ingestion, visualization, and user management:  \n- `POST /api/v1/data` (JWT auth) – Ingest structured client metrics (CSV/JSON)  \n- `GET /api/v1/analytics/:clientId` (OAuth2) – Fetch aggregated KPIs with time-range filters  \n- `PUT /api/v1/permissions` (Admin token) – Set user access levels for dashboards  \n\nAll responses include status codes and JSON payloads. Authentication flows support both API keys and session cookies.  \n\n## Usage / Examples  \n```bash\n# Fetch last month's client performance  \ncurl -X GET \"https://api.nexgenconsulting.dev/analytics/CLNT-42?start=2023-09-01\" \\\n  -H \"Authorization: Bearer <oauth_token>\"\n```  \n> Renders a Chart.js bar chart comparing quarterly revenue growth.  \n\nFor local dev:  \n```bash\ndocker compose up --build  \nyarn start:dev  \n```  \nAccess UI at `http://localhost:3000` with sample credentials `user@example.com/password123`.  \n\n## Getting Started / Installation  \n1. Clone repo  \n2. Set environment variables in `.env.local` (PostgreSQL credentials, AWS S3 bucket, JWT secret)  \n3. Run `yarn db:setup` to create tables and seed demo data  \n4. Start services with `docker compose up` (includes Redis for caching)  \n5. Deploy CI/CD pipeline via GitLab CI (config in `.gitlab-ci.yml`)  \n\n## Tech Stack  \n- **Frontend**: React (TypeScript), Chart.js, Tailwind CSS  \n- **Backend**: Node.js (Express), Python (data processing scripts)  \n- **Database**: PostgreSQL with pgBouncer pooling  \n- **Cloud**: AWS S3 for storage, EC2 for production servers  \n- **CI/CD**: GitLab CI with Dockerized test suite  \n- **Monitoring**: Prometheus + Grafana for backend metrics  \n\n## Architecture / Design  \nMicroservices split into:  \n1. **Data Layer**: PostgreSQL with read replicas for analytics queries  \n2. **Backend**: Node.js API with rate-limiting and middleware for audit logging  \n3. **Frontend**: React app with WebSockets for real-time updates  \n4. **Services**: AWS Lambda for background data processing  \n\nLoad balancer (Nginx) routes traffic to Docker containers. All services communicate via REST + gRPC for internal calls.  \n\n## License  \nMIT License  \n[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/commit-activity/m/gitasaxena/nexgen-dashboard)]  \n[![CI/CD](https://img.shields.io/github/actions/workflow/123456)]  \n[![Dependencies](https://img.shields.io/librariesio/deps/github/gitasaxena/nexgen-dashboard)]"
+}

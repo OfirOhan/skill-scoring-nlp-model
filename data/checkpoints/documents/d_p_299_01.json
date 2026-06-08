@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_299_01",
+  "type": "project_readme",
+  "persona_id": "p_299",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Application security (OWASP)": 2,
+    "Compliance (SOC2/GDPR)": 3,
+    "Encryption & PKI": 3,
+    "IAM/Access control": 3,
+    "Incident response": 2,
+    "Network security": 4,
+    "Penetration testing": 2,
+    "SIEM tools": 3,
+    "Security auditing": 3,
+    "Threat modeling": 3,
+    "Vulnerability management": 3
+  },
+  "text": "# AdGuard: Real-Time Ad Fraud Detection System  \nAdGuard is a production-grade platform leveraging machine learning and network security protocols to detect ad fraud in real time. Built for adtech at scale, it processes 1.2M+ requests/sec with 98% fraud detection accuracy and 40% lower false positives compared to legacy systems. The system integrates with enterprise SIEMs and enforces TLS 1.3 encryption across all data pipelines.  \n\n## Roadmap / Future Work  \n- **Q3 2024**: Expand detection to video ad fraud with 95%+ precision using temporal anomaly detection  \n- **Q4 2024**: Integrate with SOC2-compliant audit trails for GDPR-aligned transparency  \n- **2025**: Deploy federated learning models to reduce data residency risks by 70%  \n\n## Getting Started / Installation  \nClone the repository using your preferred method.  \n```bash  \ngit clone https://github.com/your-organization/adguard.git  \ncd adguard  \npip install -r requirements.txt  \nexport API_KEYS=\"your-secure-token\"  \npython setup.py install  \n```  \nEnsure your environment meets the minimum hardware requirements: 32GB RAM, 8-core CPU, and NVMe SSD for sub-50ms latency.  \n\n## Usage / Examples  \nRun the core detection pipeline:  \n```bash  \nadguard run --input /data/traffic.jsonl --output /results/alerts.csv  \n```  \nExample input:  \n```json  \n{\"ip\": \"192.168.1.100\", \"timestamp\": \"2024-03-15T14:23:00Z\", \"request_type\": \"bid_request\"}  \n```  \nOutput includes:  \n- Fraud score (0–1)  \n- TLS handshake verification status  \n- Geolocation discrepancy flags  \n\n## Tech Stack  \n- **ML**: TensorFlow Lite for edge nodes, PyTorch for model training  \n- **Security**: Snort IDS rules, YARA for payload analysis  \n- **Cloud**: AWS WAF + Lambda for real-time filtering  \n- **Storage**: Apache Kafka for event streams, Redis for caching  \n- **Compliance**: SOC2-aligned logging, GDPR data minimization  \n\n## Architecture / Design  \nAdGuard employs a layered architecture:  \n1. **Network Layer**: DPI-capable proxies with TLS 1.3 termination  \n2. **Feature Extraction**: Zero-day detection via entropy analysis of request payloads  \n3. **ML Inference**: Distributed inference using TensorFlow Serving with 99.999% uptime  \n4. **Alerting**: SIEM integration via Prometheus + Grafana for 30s+ response times  \nEncryption is end-to-end with AWS KMS-managed keys. Access control enforces IAM roles with least-privilege policies.  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
+}

@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_225_02",
+  "type": "project_readme",
+  "persona_id": "p_225",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Application security (OWASP)": 3,
+    "Compliance (SOC2/GDPR)": 3,
+    "Encryption & PKI": 2,
+    "IAM/Access control": 3,
+    "Network security": 5,
+    "Penetration testing": 4,
+    "SIEM tools": 5,
+    "Security auditing": 4,
+    "Threat modeling": 4,
+    "Vulnerability management": 4
+  },
+  "text": "# Real-Time Threat Detection Framework  \nA scalable system for identifying adversarial activity in real time using machine learning and SIEM integration. Designed to detect zero-day threats, insider risks, and anomalous behavior while maintaining compliance with SOC2 and GDPR standards.  \n\n## Getting Started / Installation  \nInstall dependencies via pip:  \n```bash  \npip install -r requirements.txt  \n```  \nConfigure SIEM integration by updating `config/siem.yaml` with your provider’s API credentials. Ensure Elasticsearch is running for log aggregation.  \n\n## Usage / Examples  \nRun the detection pipeline:  \n```bash  \npython main.py --siem splunk --model tf_model.h5  \n```  \nExample use case: Detecting lateral movement patterns in Windows event logs. The framework correlates log entries with pre-trained ML models to flag suspicious processes.  \n\n## Badges  \n[![Security Audited](https://example.com/audited)](https://example.com/audited)  \n[![Compliance Certified](https://example.com/compliant)](https://example.com/compliant)  \n\n## Tech Stack  \n- **SIEM**: ELK Stack, Splunk, QRadar  \n- **ML**: TensorFlow, PyTorch, Scikit-learn  \n- **Networking**: OpenVPN, TLS 1.3, Zero Trust Architecture  \n- **Compliance**: SOC2, GDPR, HIPAA-ready modules  \n\n## Architecture / Design  \nThe system processes logs in real time via a Kafka stream, feeding into a distributed ML inference engine. Anomaly detection models (Isolation Forest, LSTM) flag deviations, which are then correlated with SIEM alerts. A custom rule engine enforces access controls via IAM policies, ensuring only authorized analysts interact with sensitive data.  \n\n## Contributing  \nSubmit pull requests with security audits and compliance checks. Prioritize contributions that enhance threat modeling or reduce false positives. All code must pass automated penetration testing and static analysis.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_301_03",
+  "type": "project_readme",
+  "persona_id": "p_301",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Apache Spark": 2,
+    "Data modeling": 3,
+    "Data visualization (Matplotlib/Plotly)": 3,
+    "ETL pipeline design": 2,
+    "Feature engineering": 3,
+    "Jupyter notebooks": 2,
+    "Microservices architecture": 2,
+    "NumPy": 4,
+    "Pandas": 4,
+    "Python": 4,
+    "REST API design": 2,
+    "SQL analytics": 3,
+    "Statistical modeling": 3,
+    "scikit-learn": 2
+  },
+  "text": "# MalwareClassifier: Cybersecurity Threat Intelligence Tool  \nA production-grade deep learning framework for classifying malware behavior via behavioral pattern analysis. Built to scale across distributed environments, this tool enables real-time threat detection by analyzing system call sequences and resource consumption metrics.  \n\n## Getting Started / Installation  \nEnsure Python 3.9+ is installed. Install dependencies via:  \n```bash  \npip install -r requirements.txt  \n```  \nFor internal deployment, consult the `docker-compose.yaml` in the `infra` directory. All models are pre-trained; no additional setup required for inference.  \n\n## Tech Stack  \n- **Core**: Python, NumPy, Pandas, PyTorch  \n- **Data**: Kafka for stream ingestion, Redis for caching  \n- **Infrastructure**: Kubernetes for orchestration, Prometheus for monitoring  \n- **Visualization**: Plotly for interactive dashboards, Matplotlib for static reports  \n\n## Usage / Examples  \nRun inference with:  \n```python  \nfrom classifier import BehaviorAnalyzer  \nanalyzer = BehaviorAnalyzer(model_path=\"models/v3\")  \nresult = analyzer.predict(\"sample_system_calls.log\")  \nprint(result)  # {\"malware_type\": \"trojan\", \"confidence\": 0.97}  \n```  \nFor training, use the `train.py` script with a labeled dataset in Parquet format.  \n\n## Badges  \n[![CI/CD Status](https://example.com/status-badge)](https://example.com/monitor)  \n[![Model Version](https://example.com/version-badge)](https://example.com/models)  \n\n## Architecture / Design  \nThe system decouples data preprocessing, feature extraction, and model inference into microservices. Key decisions:  \n- **Feature Engineering**: Custom PCA pipelines reduce dimensionality of system call sequences  \n- **Modeling**: Hybrid approach combining LSTM for temporal analysis and attention mechanisms for critical call detection  \n- **Scalability**: Batch processing via Apache Spark handles 10M+ events/day  \n\n## Contributing  \nSubmit pull requests via the `dev` branch. Follow PEP8 guidelines and include unit tests for all new features. For production changes, coordinate with the ML engineering team via Slack's #modeling channel.  \n\n## License  \nMIT License (see `LICENSE` for details)"
+}

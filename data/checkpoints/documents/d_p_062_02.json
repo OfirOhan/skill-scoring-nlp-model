@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_062_02",
+  "type": "project_readme",
+  "persona_id": "p_062",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "Apache Spark": 4,
+    "Docker": 4,
+    "Kubernetes": 4,
+    "MLOps": 4,
+    "NLP": 4,
+    "PyTorch": 4,
+    "TensorFlow": 4,
+    "Recommendation systems": 4,
+    "MLOps (MLflow/W&B)": 1
+  },
+  "text": "# Demand Forecasting for Inventory Optimization  \nLeverage time series analysis to predict product demand and optimize inventory levels across e-commerce platforms. This project integrates AWS, Apache Spark, and NLP to deliver scalable, real-time demand insights with measurable impact on stock turnover and revenue.  \n\n## Testing  \nAutomated testing ensures robustness across data pipelines and models. Unit tests validate Spark transformations, while integration tests verify end-to-end data flow from S3 to inference. Performance benchmarks using JMeter simulate peak load scenarios, and model drift detection runs nightly via AWS Lambda. All tests are orchestrated via GitHub Actions, with test coverage exceeding 92% for core logic.  \n\n## Getting Started / Installation  \nClone the repository using your preferred method. Ensure Python 3.9+ is installed, along with Docker and the AWS CLI. Install dependencies via `pip install -r requirements.txt` and configure AWS credentials. For local development, spin up the Docker container with `docker-compose up --build` to spin up a Spark cluster and PostgreSQL instance.  \n\n## Usage / Examples  \nRun the pipeline with `python pipeline.py --env prod` to ingest data from S3, process it via Spark, and deploy forecasts to AWS Redshift. For inference, use `python forecast.py --product_id 12345` to generate demand predictions. The NLP module extracts sentiment trends from customer reviews, which are fed into the time series model as exogenous variables.  \n\n## Tech Stack  \n- **AWS**: Lambda for serverless inference, S3 for data storage, Kinesis for real-time data ingestion.  \n- **Apache Spark**: Distributed processing of terabytes of transactional data, with window functions for seasonality analysis.  \n- **Docker**: Containerized ML workflows with GPU support for PyTorch-based models.  \n- **Kubernetes**: Orchestration of Spark clusters and model-serving pods.  \n- **NLP**: spaCy for feature extraction from unstructured customer feedback.  \n\n## Architecture / Design  \nThe system decouples data ingestion, preprocessing, and model serving. Spark processes raw data into a time series format, while PyTorch handles the LSTM-based demand forecasting. NLP pipelines enrich features with sentiment scores, which are merged into the model input. AWS Lambda triggers the pipeline hourly, with results stored in Redshift for analytics.  \n\n## License  \nMIT License.  \n\n## Contributing  \nSubmit PRs with unit tests and performance benchmarks. All contributions must align with the architecture and pass CI/CD checks. Discuss features in the GitHub Issues board before submitting code."
+}

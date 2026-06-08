@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_284_02",
+  "type": "project_readme",
+  "persona_id": "p_284",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "ArgoCD": 1,
+    "GitLab CI": 1,
+    "Kubernetes": 3,
+    "Linux administration": 1,
+    "Network automation": 1,
+    "PostgreSQL": 4,
+    "Prometheus/Grafana": 5,
+    "Python": 4,
+    "Redis": 4
+  },
+  "text": "# Real-Time Ad Server Monitoring System  \n\nA scalable solution for tracking ad server performance metrics with Prometheus and Grafana, designed for low-latency environments. This system captures request latency, error rates, and cache hit ratios, enabling proactive optimization of ad delivery pipelines.  \n\n## Getting Started / Installation  \nEnsure Python 3.8+ and PostgreSQL are installed. Clone the repository and install dependencies:  \n```bash  \npip install -r requirements.txt  \n```  \nConfigure Prometheus scrape targets in `prometheus.yml` and set up Grafana data sources. Launch the service with:  \n```bash  \npython main.py  \n```  \nThis initializes Redis for caching query results and starts the metrics collector.  \n\n## Usage / Examples  \nMonitor ad server health via Grafana dashboards. Example queries include:  \n- `ad_request_latency_seconds` (95th percentile)  \n- `cache_hit_ratio` (Redis-based)  \n- `error_rate_by_status_code` (Prometheus metric)  \n\nSet up alerts for thresholds like `request_latency_seconds > 200` or `cache_hit_ratio < 0.85`.  \n\n## Badges  \n[![Build Status](https://github.com/yourusername/yourproject/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/yourproject/actions/workflows/ci.yml)  \n\n## Tech Stack  \n- **Prometheus**: Real-time metric collection  \n- **Grafana**: Interactive dashboarding  \n- **Python**: Custom metric processing logic  \n- **PostgreSQL**: Historical data storage (optimized for ad campaign analysis)  \n- **Redis**: In-memory caching for query results  \n- **Kubernetes**: Container orchestration for production deployment  \n\n## Architecture / Design  \nThe system ingests metrics from ad server endpoints via Prometheus, processes them in Python, and stores aggregated data in PostgreSQL. Redis caches frequent query results to reduce DB load. Grafana visualizes metrics with custom dashboards, enabling teams to track performance across regions and ad campaigns.  \n\n## Contributing  \nEnhance dashboards, refine alert thresholds, or optimize Redis caching strategies. Submit pull requests for bug fixes or feature improvements.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

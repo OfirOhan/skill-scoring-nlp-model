@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_083_01",
+  "type": "project_readme",
+  "persona_id": "p_083",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Design systems": 3,
+    "GraphQL": 4,
+    "Node.js": 3,
+    "REST API design": 4,
+    "React": 4,
+    "Test automation": 3,
+    "TypeScript": 4,
+    "Web performance optimization": 3
+  },
+  "text": "# CapitalFlow Real-Time Dashboard  \nA high-performance financial analytics platform built for CapitalFlow Solutions, enabling real-time data visualization with sub-200ms latency and 99.95% uptime. Designed for 15+ engineers across fintech, this dashboard handles 50k+ data points per second using a hybrid WebSocket/GraphQL architecture.  \n\n## Tech Stack  \n- **Frontend**: React 18, TypeScript 4.9, Redux Toolkit, Chart.js 4.4  \n- **Backend**: Node.js 18, GraphQL Yoga, Apollo Server  \n- **Data Pipeline**: Apache Kafka (3 partitions), WebSocket (ws 7.4)  \n- **Performance**: Webpack 5 (code splitting), Lighthouse 98/100  \n- **Design System**: Shared component library (Figma + Storybook)  \n- **Monitoring**: Prometheus + Grafana (custom dashboards)  \n\n## Architecture / Design  \nThe system uses a layered architecture with a WebSocket backbone for real-time updates and GraphQL for structured queries. Data flows through:  \n1. Kafka producers pushing market data (100ms P99 latency)  \n2. WebSocket clients updating React components via `useSubscription`  \n3. Apollo Client caching with 75% reduction in redundant fetches  \n4. Redux Toolkit for state normalization (30% smaller payloads)  \nPerformance optimizations include:  \n- Lazy-loaded chart components (40% faster initial load)  \n- Webpack splitChunks for 25% smaller bundle size  \n- Server-side rendering (SSR) with Next.js 13.4  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/capitalflow/capitalflow-dashboard.git  \ncd capitalflow-dashboard  \nnpm install  \ncp .env.example .env  \n# Configure Kafka and WebSocket endpoints in .env  \nnpm run start  \n```  \nDockerized deployment is supported via `docker-compose up -d` for consistent environment.  \n\n## Usage / Examples  \n```javascript  \n// Real-time market data subscription  \nuseSubscription(MARKET_DATA, {  \n  variables: { symbol: 'AAPL' },  \n  onData: (data) => updateChart(data.candles)  \n});  \n\n// Precomputed KPIs via GraphQL  \nconst { volume, openInterest } = useQuery(GET_KPI, {  \n  fetchPolicy: 'cache-first'  \n});  \n```  \nThe dashboard supports 50+ interactive visualizations with drill-down capabilities and real-time anomaly detection alerts.  \n\n## Badges  \n[![Build Status](https://github.com/capitalflow/capitalflow-dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/capitalflow/capitalflow-dashboard/actions/workflows/ci.yml)  \n[![Coverage](https://codecov.io/gh/capitalflow/capitalflow-dashboard/branch/main/graph/badge.svg)](https://codecov.io/gh/capitalflow/capitalflow-dashboard)  \n\n## Contributing  \nPRs with unit tests (Jest 29) and end-to-end tests (Cypress 12) are prioritized. Follow the [design system guidelines](https://capitalflow.design) and maintain 90%+ test coverage.  \n\n## License  \nMIT License (see [LICENSE](LICENSE) for details)"
+}

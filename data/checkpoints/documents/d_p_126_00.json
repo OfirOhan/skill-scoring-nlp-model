@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_126_00",
+  "type": "cv",
+  "persona_id": "p_126",
+  "hyperparams": {
+    "cv_format": "hybrid",
+    "geographic_convention": "US",
+    "company_type": "FAANG",
+    "company_size": "large (500+)"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "Cloud networking (VPC/subnets)": 3,
+    "GitLab CI": 3,
+    "Kubernetes": 4,
+    "Load balancing": 3,
+    "Network automation": 2,
+    "Prometheus/Grafana": 3,
+    "Python": 3,
+    "Terraform": 3
+  },
+  "text": "Erik Bergstrom  \nSan Francisco, CA | +1 (415) 555-0198 | erik.bergstrom@email.com | linkedin.com/in/erikbergstrom  \n\n**Professional Experience**  \n*Platform Engineer* | ScaleTech Solutions (2022–Present)  \nLed the design and maintenance of a Kubernetes-based platform supporting 12+ SaaS products. Spearheaded the migration of 80% of workloads to managed Kubernetes, reducing infrastructure costs by 32% annually. Optimized VPC architecture across three regions, improving network latency by 18% for critical services. Implemented GitLab CI pipelines for 90% of platform updates, cutting deployment time from 45 minutes to 12.  \n\n*SRE Engineer* | DataFlow Systems (2020–2022)  \nArchitected scalable cloud networking solutions using AWS VPC and subnet tagging, resolving 95% of routing conflicts within 24 hours. Automated load balancing configurations for 15+ microservices, achieving 99.95% SLA compliance. Deployed Prometheus/Grafana dashboards to monitor 50+ metrics across 100+ nodes, enabling proactive issue resolution.  \n\n*DevOps Engineer* | CloudNova Inc. (2018–2020)  \nBuilt and maintained CI/CD pipelines for 12 internal tools, reducing manual intervention by 65%. Designed Terraform modules for AWS resource provisioning, standardizing 80% of infrastructure code. Pioneered Python scripts to automate SSH key management, eliminating 200+ manual tasks monthly.  \n\n**Technical Skills / Technologies**  \n- **Cloud Infrastructure**: AWS (VPC, EC2, S3, Lambda), Kubernetes (Helm, kube-apiserver, kubelet)  \n- **Automation**: Terraform, Ansible, GitLab CI/CD  \n- **Monitoring**: Prometheus, Grafana, AWS CloudWatch  \n- **Networking**: VPC subnet design, load balancing, BGP routing  \n- **Scripting**: Python (async/await, REST API integrations)  \n- **CI/CD**: GitLab CI, Docker, Helm charts  \n\n**Projects / Side Projects**  \n*Automated Network Configuration Tool* | 2023  \nDeveloped a Terraform/Ansible hybrid tool to provision multi-region VPCs, reducing setup time by 70%. Integrated with GitLab CI for automated testing, ensuring compliance with 15+ security policies.  \n\n*Self-Service Kubernetes Cluster Portal* | 2022  \nBuilt a web app using Python/Flask to let teams spin up clusters with preconfigured namespaces and policies. Reduced onboarding time for new projects by 50% and cut support tickets related to cluster setup by 40%.  \n\n*Performance Optimization Dashboard* | 2021  \nCreated a Grafana-based dashboard to visualize Kubernetes node utilization and network throughput. Identified underutilized resources in 3 clusters, leading to a 25% reduction in cloud spend.  \n\n**Education**  \nBachelor of Science in Computer Science | University of Stockholm | 2018  \n\n**Languages**  \nEnglish (near-native), Swedish (fluent)  \n\n**Certifications**  \nAWS Certified Solutions Architect – Associate  \nGoogle Cloud Professional Cloud Architect  \n\n**Awards & Achievements**  \n- Named \"Engineer of the Year\" at ScaleTech Solutions (2023) for cost optimization initiatives  \n- Reduced incident resolution time by 30% through proactive monitoring setup at DataFlow Systems  \n- Led open-source contributions to Terraform modules used by 50+ organizations  \n- Achieved 98%+ uptime for mission-critical services across three deployments"
+}

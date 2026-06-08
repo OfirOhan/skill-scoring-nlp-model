@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_083_02",
+  "type": "project_readme",
+  "persona_id": "p_083",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Design systems": 3,
+    "GraphQL": 3,
+    "Node.js": 4,
+    "REST API design": 4,
+    "React": 4,
+    "Test automation": 3,
+    "TypeScript": 4,
+    "Web performance optimization": 3
+  },
+  "text": "# SecurePay Gateway UI  \nA PCI-DSS-compliant payment gateway UI with seamless backend integration, built for fintech applications requiring strict security and performance. Reduces payment processing latency by 40% compared to legacy UIs in internal benchmarks.  \n\n## Badges  \n[![CI/CD](https://example.com/badge-ci)](https://example.com) [![Security](https://example.com/badge-security)](https://example.com) [![Coverage](https://example.com/badge-coverage)](https://example.com)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Tech Stack  \n- **Frontend**: React 18, TypeScript 4.9, Redux Toolkit, Webpack 5  \n- **Security**: PCI-DSS-compliant components, end-to-end encryption (E2EE), tokenization  \n- **Backend**: REST APIs (Node.js 18, Express), GraphQL (Apollo Server)  \n- **Performance**: Code splitting, lazy loading, Lighthouse score >90  \n- **Design**: Internal design system (atoms/organisms/molecules), Figma integration  \n\n## Architecture / Design  \nComponent-based architecture with isolated state management for payment flows. PCI-DSS compliance achieved through:  \n- Tokenized input fields with no raw card data exposure  \n- Secure communication via TLS 1.3  \n- Automated audits with Snyk and OWASP ZAP  \nDesign system reused across 3+ internal fintech projects, reducing UI duplication by 60%.  \n\n## Getting Started / Installation  \n```bash  \nnpm install  \ncp .env.example .env  \n# Configure API endpoints and security keys in .env  \nnpm run build  \n```  \n\n## Usage / Examples  \n```tsx  \nimport { PaymentForm } from 'securepay-ui';  \n\nconst App = () => (  \n  <PaymentForm  \n    onSuccess={(transactionId) => console.log('Processed:', transactionId)}  \n    onError={(error) => console.error('Failed:', error)}  \n  />  \n);  \n```  \nIncludes pre-built components for card input, 3D Secure authentication, and real-time fraud detection integration.  \n\n## Contributing  \nOpen to contributions from fintech engineers with experience in secure UI/UX. Prioritize security audits and performance optimizations. All PRs must include unit tests and CI/CD pipeline validation."
+}

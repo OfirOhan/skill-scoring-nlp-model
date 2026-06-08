@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_097_01",
+  "type": "project_readme",
+  "persona_id": "p_097",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Design systems": 3,
+    "HTML/CSS": 3,
+    "JavaScript": 3,
+    "Next.js": 3,
+    "REST API design": 3,
+    "React": 4,
+    "Responsive design": 3,
+    "State management (Redux/Zustand)": 3,
+    "TypeScript": 3,
+    "Web accessibility (WCAG)": 3,
+    "Web performance optimization": 3,
+    "Webpack/Vite": 3
+  },
+  "text": "# Financial Dashboard Visualizer  \nA React-based dashboard for visualizing real-time financial data with interactive charts, drill-down analytics, and customizable widgets. Built to support 5+ concurrent users with sub-200ms latency for critical metrics. Designed for fintech teams requiring rapid insights from high-frequency market data streams.  \n\n## Deployment  \nLive at [https://financial-dashboard.vercel.app](https://financial-dashboard.vercel.app) with automated CI/CD via GitHub Actions. Deployed on Vercel with serverless functions for data fetching and edge caching. Metrics dashboard shows 99.95% uptime over the last 30 days.  \n\n## Badges  \n[![Build Status](https://github.com/yourusername/financial-dashboard/actions/workflows/build.yml/badge.svg)](https://github.com/yourusername/financial-dashboard/actions/workflows/build.yml)  \n[![Code Coverage](https://img.shields.io/coveralls/yourusername/financial-dashboard)](https://coveralls.io/github/yourusername/financial-dashboard)  \n[![Dependencies](https://img.shields.io/david/yourusername/financial-dashboard)](https://david-dm.org/yourusername/financial-dashboard)  \n\n## Tech Stack  \n- **React 18**: Core UI framework with concurrent mode for smooth real-time updates  \n- **TypeScript**: Enforced type safety for API contracts and state management  \n- **Redux Toolkit**: Centralized state for cross-component data sharing (12k+ lines of state logic)  \n- **Vite**: Development server with 3x faster cold starts compared to Webpack  \n- **Chart.js**: Customizable charting library with accessibility labels for WCAG 2.1 AA compliance  \n- **Tailwind CSS**: Utility-first styling with 15+ custom themes for dark/light modes  \n- **REST API**: GraphQL layer for data aggregation (50+ endpoints)  \n\n## Architecture / Design  \nThe dashboard uses a microfrontend architecture with 3 distinct zones:  \n1. **Data Layer**: WebSocket listeners for 30+ financial data sources (tickers, crypto, forex)  \n2. **UI Layer**: React components organized into 12+ modular widgets with drag-and-drop reordering  \n3. **Analytics Layer**: Redux slices for 15+ metrics (e.g., volatility scores, ROI trends)  \n\nResponsive design uses CSS Grid for breakpoints (mobile: 3 columns, desktop: 6 columns). Performance optimizations include lazy loading for non-critical charts and code splitting via React.lazy.  \n\n## Getting Started / Installation  \n```bash\nnpm install\nnpm run dev\n```  \nRequires Node.js 18+ and Docker for local API mocking. Environment variables in `.env.local` define API endpoints and authentication tokens.  \n\n## Usage / Examples  \n- **Real-time Chart**: Drag the \"Price Trends\" widget to view 5-minute candlestick data  \n- **Drill-down Analytics**: Click a chart point to open a modal with historical volatility metrics  \n- **Custom Filters**: Use the sidebar to toggle between USD/EUR/GBP currency views  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

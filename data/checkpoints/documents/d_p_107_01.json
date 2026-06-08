@@ -1,0 +1,26 @@
+{
+  "doc_id": "d_p_107_01",
+  "type": "project_readme",
+  "persona_id": "p_107",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Apache Spark": 2,
+    "Computer vision": 1,
+    "Data warehousing": 2,
+    "ETL pipeline design": 3,
+    "GCP": 3,
+    "Hugging Face Transformers": 3,
+    "MLOps (MLflow/W&B)": 3,
+    "Model deployment": 2,
+    "NLP": 3,
+    "PyTorch": 3,
+    "REST API design": 3,
+    "TensorFlow": 3,
+    "scikit-learn": 3
+  },
+  "text": "# Predictive Analytics for Hospital Readmissions  \nA machine learning model to identify high-risk patients and reduce preventable hospital readmissions through actionable insights. Built as a personal project to bridge clinical data with predictive modeling for healthcare improvement.  \n\n## Contributing  \nThis project is a work in progress, but your insights on data curation or model improvements would be invaluable. Propose features like risk stratification visualizations or integration with clinical workflows. Pull requests are welcome—start by discussing ideas in the issues.  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/your-username/predictive-analytics.git  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n3. Set up a virtual environment (recommended) and ensure Python 3.9+ is installed.  \n\n## Usage / Examples  \nRun the training pipeline:  \n```bash  \npython train.py --data_path ./data/clinical_records.csv  \n```  \nThe script loads synthetic clinical data (HIPAA-compliant), extracts features like admission length and comorbidities, and trains a gradient-boosted model. For inference, use the REST API endpoint `/predict` with a JSON payload containing patient metrics.  \n\n## Tech Stack  \n- **Python** (3.9+)  \n- **scikit-learn** (feature engineering, baseline models)  \n- **PyTorch** (custom neural network for advanced risk scoring)  \n- **GCP** (data storage, cloud compute for batch processing)  \n- **MLflow** (experiment tracking, model registry)  \n- **Flask** (lightweight API for deployment)  \n\n## Architecture / Design  \nThe pipeline ingests structured clinical data via pandas, transforms it with scikit-learn's `ColumnTransformer`, and trains models using both traditional ML and PyTorch-based approaches. GCP handles large-scale data storage, while MLflow logs hyperparameters and metrics. The API layer abstracts model inference for integration with hospital systems.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![MIT License](https://badges.frappr.com/license/mit/50/50.png)](LICENSE)  \n[![GitHub Actions](https://badges.frappr.com/job/your-username/predictive-analytics/50/50.png)](https://github.com/your-username/predictive-analytics/actions)  \n[![Tech Stack](https://badges.frappr.com/tech/python/50/50.png)](https://github.com/your-username/predictive-analytics)"
+}

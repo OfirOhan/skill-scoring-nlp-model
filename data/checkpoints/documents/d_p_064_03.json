@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_064_03",
+  "type": "project_readme",
+  "persona_id": "p_064",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "CI/CD pipelines": 4,
+    "Chaos engineering": 4,
+    "GitHub Actions": 4,
+    "Go": 4,
+    "Linux administration": 3,
+    "Monitoring & alerting": 4,
+    "Prometheus/Grafana": 4,
+    "Microservices architecture": 4,
+    "PostgreSQL": 4,
+    "REST API design": 4,
+    "Redis": 4,
+    "Python": 1,
+    "Message queues": 1
+  },
+  "text": "# Payment Gateway Integration  \nA production-ready solution for international e-commerce, featuring fraud detection, multi-currency support, and seamless payment gateway integration. Built for scalability and reliability in high-traffic environments.  \n\n## Badges  \n[![Production Ready](https://img.shields.io/badge/production-ready-green)](https://example.com)  \n[![CI/CD](https://img.shields.io/badge/CI%2FCD-passing-blue)](https://example.com)  \n[![Security](https://img.shields.io/badge/security-verified-yellow)](https://example.com)  \n\n## Tech Stack  \n- **Go**: High-performance backend services with concurrency support  \n- **PostgreSQL**: Scalable relational database for transaction storage  \n- **Redis**: Caching layer for session data and rate limiting  \n- **REST API**: Standardized endpoints for payment processing and fraud checks  \n- **Prometheus/Grafana**: Real-time monitoring of payment success rates and latency  \n- **Microservices**: Decoupled architecture for modular updates  \n- **AWS**: Hosted on EC2 with VPC isolation; reduced latency by 35% via global endpoints  \n- **GitHub Actions**: Automated CI/CD pipelines with 98% test coverage  \n- **Chaos Engineering**: Proactively tested failover scenarios with 99.99% uptime  \n- **Linux Admin**: Customized systemd units for service reliability and logging  \n\n## Configuration  \nSet environment variables in `.env` or AWS Parameter Store:  \n```env  \nPAYMENT_GATEWAY_API_KEY=your-secret-key  \nCURRENCY_FRAUD_RULES=rules.json  \nREDIS_HOST=redis-cluster-endpoint  \n```  \nEnsure AWS credentials are configured via IAM roles for EC2 instances.  \n\n## Getting Started  \n```bash  \ngit clone https://github.com/your-username/payment-gateway.git  \ncd payment-gateway  \ngo mod tidy  \ncp .env.example .env  \n# Configure AWS and PostgreSQL credentials  \n```\nUse Docker for consistent local development.  \n\n## Usage / Examples  \nProcess a payment:  \n```bash  \ncurl -X POST https://api.payment-gateway.com/v1/payments \\\n  -H \"Authorization: Bearer <token>\" \\\n  -d '{\"amount\": 150, \"currency\": \"USD\", \"user_id\": \"12345\"}'  \n```  \nCheck fraud risk:  \n```bash  \ncurl -X GET https://api.payment-gateway.com/v1/fraud-checks/78901 \\\n  -H \"Authorization: Bearer <token>\"  \n```  \n\n## Testing  \nRun unit tests:  \n```bash  \ngo test ./...  \n```  \nIntegration tests validate multi-currency conversions and fraud rule triggers. Chaos tests inject latency and network splits to ensure resilience.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

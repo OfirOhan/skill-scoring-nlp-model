@@ -1,0 +1,28 @@
+{
+  "doc_id": "d_p_163_01",
+  "type": "project_readme",
+  "persona_id": "p_163",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 2,
+    "Agile/Scrum": 1,
+    "Cloud cost optimization": 1,
+    "Code review": 1,
+    "Cross-team collaboration": 1,
+    "Docker": 3,
+    "Kubernetes": 4,
+    "Mentoring": 1,
+    "Project management": 1,
+    "REST API design": 4,
+    "Stakeholder communication": 1,
+    "System design": 3,
+    "Team leadership": 1,
+    "Technical writing": 2,
+    "Terraform": 1
+  },
+  "text": "# HealthPulse Analytics  \nLeveraging machine learning to transform raw clinical data into actionable insights for predictive patient care. This project powers real-time risk stratification and outcome forecasting for our clinical teams, reducing unplanned readmissions by 18% in pilot deployments.  \n\n## Deployment  \n🚀 Live on AWS EKS with blue-green rolling updates.  \n✅ 99.9% SLA via Prometheus + Grafana monitoring.  \n🔧 CI/CD pipeline triggers on PRs to `main` with GitHub Actions.  \n\n## Badges  \n[![Deployment Status](https://img.shields.io/badge/deployed-aws-blue)](https://console.aws.amazon.com/eks/home)  \n[![Test Coverage](https://img.shields.io/badge/coverage-82--3%25-green)](https://github.com/healthpulse/healthpulse-analytics/actions)  \n[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/healthpulse/healthpulse-analytics/actions)  \n\n## Tech Stack  \n- **Core**: Python 3.10, TensorFlow 2.12, PostgreSQL 14  \n- **Orchestration**: Kubernetes (production-grade deployment with HPA)  \n- **APIs**: RESTful endpoints for clinical integration (FHIR-compliant)  \n- **Containers**: Docker for microservices packaging (CI/CD pipeline validated)  \n- **Monitoring**: Prometheus + Grafana for model drift detection  \n\n## Architecture / Design  \nThe system is a layered pipeline:  \n1. **Data Ingestion**: Kafka streams process EHRs in real time  \n2. **Feature Engineering**: Spark jobs preprocess clinical data for ML  \n3. **Model Serving**: TensorFlow Serving hosts production models with GPU acceleration  \n4. **API Layer**: REST endpoints expose risk scores to clinical apps  \n5. **Feedback Loop**: Anomaly detection triggers retraining workflows  \n\nKubernetes manages autoscaling for peak load (5x scale-out during pandemic surges). The API layer uses OpenAPI 3.0 for versioned endpoints.  \n\n## Getting Started / Installation  \n```bash\ngit clone https://github.com/healthpulse/healthpulse-analytics.git  \ncd healthpulse-analytics  \ndocker-compose build --no-cache  \nexport DATABASE_URL=your_postgres_connection_string  \npython manage.py migrate  \npython manage.py runserver 0.0.0.0:8000  \n```  \n\n## Usage / Examples  \n```bash  \n# Predict 30-day readmission risk for patient ID 12345  \ncurl -X POST https://api.healthpulse.dev/predictions \\\n  -H \"Authorization: Bearer YOUR_TOKEN\" \\\n  -d '{\"patient_id\": \"12345\", \"features\": {\"age\": 67, \"diabetes\": true}}'  \n```  \n\n## License  \nMIT License — see [LICENSE](https://github.com/healthpulse/healthpulse-analytics/blob/main/LICENSE) for details."
+}

@@ -1,0 +1,28 @@
+{
+  "doc_id": "d_p_058_01",
+  "type": "project_readme",
+  "persona_id": "p_058",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "Agile/Scrum": 3,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 3,
+    "Cross-team collaboration": 3,
+    "Database optimization": 3,
+    "Kubernetes": 4,
+    "Linux administration": 2,
+    "Mentoring": 1,
+    "Monitoring & alerting": 3,
+    "Project management": 3,
+    "Stakeholder communication": 2,
+    "System design": 4,
+    "Team leadership": 3,
+    "Terraform": 4
+  },
+  "text": "# Real-Time Bidding Platform for AdvertiseNow Media  \nA distributed system enabling sub-200ms ad impressions with dynamic bidder pooling and latency-optimized auction mechanics. Built for scale, resilience, and compliance with programmatic ad standards.  \n\n## Badges  \n[![Tech Stack](https://example.com/tech-badge)](https://example.com)  \n[![CI/CD](https://example.com/ci-badge)](https://example.com)  \n[![License](https://example.com/license-badge)](https://example.com)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Tech Stack  \n- **AWS**: Lambda, DynamoDB, Kinesis, S3 (cost-optimized with reserved instances)  \n- **Kubernetes**: Cluster autoscaling, service mesh (Istio), horizontal pod autoscaling  \n- **Databases**: PostgreSQL (read replicas), Redis (in-memory caching for bid requests)  \n- **Message Queues**: Kafka (for bid event streaming)  \n- **Monitoring**: Prometheus + Grafana (custom dashboards for latency metrics)  \n- **CI/CD**: GitHub Actions (automated testing, canary deployments)  \n\n## Architecture / Design  \nA microservices architecture with:  \n1. **Bid Engine**: WebSocket-based auction logic (Go) with real-time bid validation  \n2. **Auction Service**: Load-balanced API gateway (Nginx) handling 10k+ RPS  \n3. **Data Plane**: Kafka topics for bid events, processed by Apache Flink for analytics  \n4. **Infrastructure**: Terraform-managed VPCs with VPC peering for cross-region latency optimization  \n5. **Security**: AWS WAF for DDoS mitigation, IAM roles for service-to-service auth  \n\n## Getting Started / Installation  \n1. Install Docker and Kubernetes CLI  \n2. Clone repo: `git clone https://github.com/advertise-now/bidding-platform.git`  \n3. Configure AWS credentials via `~/.aws/credentials`  \n4. Deploy infrastructure: `terraform apply -var-file=dev.tfvars`  \n5. Build and push images: `make docker-build && make docker-push`  \n\n## Usage / Examples  \n```bash\n# Simulate bid request\ncurl -X POST https://api.bidding-platform.dev/bid \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"ad_id\": \"123\", \"bidders\": [{\"id\": \"bidder-a\", \"max_cpc\": 0.5}]}'\n```\nResponse includes winning bidder, final bid price, and impression metadata.  \n\n## Contributing  \nWe use GitHub Issues for tracking. New features require:  \n- Architecture review (system design docs mandatory)  \n- Unit tests (coverage ≥ 90%)  \n- CI/CD pipeline integration  \n- Cross-team coordination with analytics and compliance teams for metric validation"
+}

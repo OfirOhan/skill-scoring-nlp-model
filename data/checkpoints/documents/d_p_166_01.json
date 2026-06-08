@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_166_01",
+  "type": "project_readme",
+  "persona_id": "p_166",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "CI/CD pipelines": 3,
+    "Docker": 3,
+    "Go": 1,
+    "Java": 1,
+    "Kubernetes": 1,
+    "Node.js": 3,
+    "Python": 1,
+    "REST API design": 5,
+    "React": 5,
+    "Terraform": 3,
+    "TypeScript": 5
+  },
+  "text": "# Enterprise Scalable Web App  \n\nA production-grade platform designed for real-time collaboration, built with React for the frontend and Node.js for backend services. Focuses on modular architecture, type safety, and seamless integration with cloud infrastructure.  \n\n## Badges  \n[![AWS Integration](https://github.com/yourusername/yourrepo/actions/workflows/aws.yml/badge.svg)](https://github.com/yourusername/yourrepo/actions/workflows/aws.yml)  \n[![CI/CD Pipeline](https://github.com/yourusername/yourrepo/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/yourrepo/actions/workflows/ci.yml)  \n[![Docker Ready](https://github.com/yourusername/yourrepo/actions/workflows/docker.yml/badge.svg)](https://github.com/yourusername/yourrepo/actions/workflows/docker.yml)  \n[![Node.js](https://github.com/yourusername/yourrepo/actions/workflows/node.yml/badge.svg)](https://github.com/yourusername/yourrepo/actions/workflows/node.yml)  \n[![Terraform](https://github.com/yourusername/yourrepo/actions/workflows/terraform.yml/badge.svg)](https://github.com/yourusername/yourrepo/actions/workflows/terraform.yml)  \n\n## Tech Stack  \n- **Frontend**: React (TypeScript) with hooks for state management and component-based architecture  \n- **Backend**: Node.js (Express) with REST API design principles for scalable, secure endpoints  \n- **Database**: PostgreSQL (managed via AWS RDS) with type-safe ORM integration  \n- **Infrastructure**: Terraform for cloud provisioning, AWS Lambda for serverless functions  \n- **Deployment**: Dockerized microservices with CI/CD pipeline for automated testing and releases  \n\n## Configuration  \nEnvironment variables are managed via `.env` files, with AWS credentials stored in IAM roles for production. Docker-compose is used for local development, ensuring parity with staging environments. REST API endpoints are documented via OpenAPI specs, accessible at `/api/docs`.  \n\n## Getting Started  \nDownload the repository via the provided link. Navigate to the project root and run `npm install` to fetch dependencies. Configure AWS credentials using the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables. Launch the development server with `npm start` and access the app at `http://localhost:3000`.  \n\n## Usage / Examples  \nThe platform supports real-time data synchronization via WebSocket integrations. For example, users can collaboratively edit documents with live updates reflected across all connected clients. REST API endpoints for user authentication and data retrieval are accessible at `/api/auth` and `/api/data`, respectively.  \n\n## Testing  \nUnit tests for React components are written with Jest, while backend logic is tested using Mocha and Chai. End-to-end tests leverage Cypress for browser automation. CI/CD pipelines enforce test coverage thresholds and block deployments below 85% code quality.  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
+}

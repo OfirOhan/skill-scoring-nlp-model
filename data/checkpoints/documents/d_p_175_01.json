@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_175_01",
+  "type": "project_readme",
+  "persona_id": "p_175",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Apache Kafka": 3,
+    "Apache Spark": 3,
+    "Cloud cost optimization": 1,
+    "Data modeling": 3,
+    "Database optimization": 1,
+    "Docker": 2,
+    "ETL pipeline design": 3,
+    "Kubernetes": 1,
+    "PostgreSQL": 3,
+    "Python": 3,
+    "Snowflake": 3,
+    "Terraform": 1
+  },
+  "text": "# Real-Time Analytics Pipeline with Kafka and Spark  \n\nA scalable, low-latency pipeline for ingesting, processing, and storing real-time user behavior and transactional data. Designed for startups requiring sub-second analytics with minimal infrastructure overhead.  \n\n## Deployment  \nProduction-ready with containerized Kafka and Spark clusters. Deploy using managed Kafka services for fault tolerance and autoscaling. Spark workloads leverage cluster resource allocation for batch/real-time hybrid workloads. Monitoring via Prometheus and Grafana ensures end-to-end visibility.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies:  \n```bash  \npip install -r requirements.txt  \n```  \nSet up local Kafka and Zookeeper using Docker Compose for prototyping. For production, configure Kafka brokers and Spark clusters with appropriate replication factors and executor memory.  \n\n## Usage / Examples  \n- **Ingestion**: Kafka producers stream JSON payloads with user IDs and event timestamps.  \n- **Processing**: Spark Structured Streaming applies windowed aggregations for real-time dashboards.  \n- **Storage**: Parquet files are written to S3, with nightly ETL jobs loading data into Snowflake for BI.  \nExample latency: 80ms P99 for 10k+ events/sec with 3 Kafka partitions.  \n\n## Tech Stack  \n- **Message Queue**: Apache Kafka (0.11.0.3)  \n- **Processing Engine**: Apache Spark (3.2.1)  \n- **Storage**: PostgreSQL (14.2) for OLTP, Snowflake (2.70) for analytics  \n- **Language**: Python (3.9) for ETL scripts and data modeling  \n- **Containerization**: Docker (20.10.7) for local testing  \n\n## Architecture / Design  \nKafka acts as the ingestion layer, partitioned by user ID for parallel processing. Spark Streaming processes events in micro-batches, with stateful aggregations for user session tracking. Data is persisted to PostgreSQL for transactional queries and Snowflake for ad-hoc analysis. Data modeling prioritizes denormalized schemas for query performance.  \n\n## License  \nMIT License  \nhttps://opensource.org/licenses/MIT  \n\n## Badges  \n[![Pipeline Throughput](https://img.shields.io/badge/throughput-10k%20events%2Fsec-green)](https://example.com)  \n[![Latency P99](https://img.shields.io/badge/latency-80ms-amber)](https://example.com)  \n[![Schema Version](https://img.shields.io/badge/schema-v3.2-blue)](https://example.com)"
+}

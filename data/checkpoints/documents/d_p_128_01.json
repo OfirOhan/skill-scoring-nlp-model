@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_128_01",
+  "type": "project_readme",
+  "persona_id": "p_128",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Browser DevTools": 1,
+    "Next.js": 1,
+    "REST API design": 2,
+    "React": 3,
+    "Responsive design": 3,
+    "State management (Redux)": 2,
+    "TypeScript": 3,
+    "Web accessibility (WCAG)": 2
+  },
+  "text": "# NexaCorp Enterprise Dashboard UI  \nA scalable, production-ready React/TypeScript dashboard with real-time analytics and role-based UI for internal operations  \n\n---\n\n## Badges  \n[TypeScript](#tech-stack) • [React](#tech-stack) • [Tailwind CSS](#tech-stack) • [Redux Toolkit](#tech-stack) • [WCAG 2.1 AA](#testing)  \n\n---\n\n## Tech Stack  \n- **Frontend**: React 18, TypeScript 4.9, Redux Toolkit (state management), Tailwind CSS (utility-first styling)  \n- **Tools**: Vite (build system), Axios (HTTP), Lodash (utility functions)  \n- **Accessibility**: Keyboard navigation, ARIA labels, color contrast ratios ≥4.5:1  \n- **Performance**: 95%+ Lighthouse score (performance, accessibility)  \n\n---\n\n## Configuration  \nSet environment variables in `.env` for API endpoints and auth tokens.  \n```bash  \nREACT_APP_API_URL=https://api.nexacorp.dev  \nREACT_APP_ENV=production  \n```  \nInstall dependencies:  \n```bash  \nnpm install  \n```  \n\n---\n\n## Getting Started  \n1. Clone the repository (preferably via Git CLI or IDE integration)  \n2. Install dependencies  \n3. Run `npm start` to launch the dev server on `http://localhost:3000`  \n4. Use `npm run build` for production-ready bundles  \n\n---\n\n## Usage / Examples  \n- **Role-based UI**: Admins see full analytics panels; analysts view filtered datasets  \n- **Real-time updates**: WebSocket integration for live metrics (50+ data points/sec)  \n- **Customizable widgets**: Drag-and-drop layout with 120+ pre-built components  \n- **Responsive design**: Mobile-first breakpoints (≥768px, ≥1024px, ≥1200px)  \n\n---\n\n## Testing  \n- **Unit tests**: 100+ assertions using Jest & React Testing Library  \n- **E2E tests**: Cypress for login flows and dashboard transitions  \n- **Accessibility checks**: axe-core for WCAG 2.1 AA compliance  \n- **Performance**: Lighthouse CI for load times and resource efficiency  \n\n---\n\n## License  \nMIT License — see [LICENSE](LICENSE) for full terms"
+}

@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_171_01",
+  "type": "project_readme",
+  "persona_id": "p_171",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Cloud cost optimization": 1,
+    "Docker": 3,
+    "GitLab CI": 3,
+    "JavaScript": 3,
+    "PostgreSQL": 1,
+    "Python": 1,
+    "REST API design": 3,
+    "React": 3,
+    "TypeScript": 3,
+    "Web performance optimization": 2,
+    "Webpack/Vite": 3
+  },
+  "text": "# Enterprise Project Management Tool  \nA real-time collaboration platform for distributed teams, built with React and Node.js. Streamlines task tracking, resource allocation, and cross-functional workflow synchronization. Designed for scalability, with a focus on intuitive UX and granular permissions.  \n\n## Configuration  \nSet environment variables in `.env.local` for API endpoints and authentication. Use `docker-compose` to spin up a local development environment with Redis for session storage. Configure `gitlab-ci.yml` to automate testing and static asset optimization via Vite.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies:  \n```bash  \nnpm install  \nnpm run build  \n```  \nRun the development server with `npm start` for hot-reloading. For production, use Docker to containerize the backend and frontend separately.  \n\n## Usage / Examples  \n- **Task Creation**: Use the REST API to POST to `/api/tasks` with JSON payloads, including priority and deadline fields.  \n- **Dashboard Interaction**: Filter tasks by status via URL parameters, leveraging React hooks for state management.  \n- **Authentication**: Implement OAuth2 flow with custom JWT tokens, validated via middleware in the Node.js backend.  \n\n## Tech Stack  \n- Frontend: React 18, TypeScript 4.9, Vite 3  \n- Backend: Node.js 18, Express, REST API  \n- Build Tools: Webpack 5 (for legacy compatibility), Vite (for modern frontend)  \n- CI/CD: GitLab CI with automated linting and unit tests  \n\n## Architecture / Design  \nMicroservices architecture with a central task manager API. Frontend and backend communicate via HTTP/2 endpoints. Docker containers isolate dependencies, while Redis caches frequent query results. TypeScript interfaces enforce strict type safety across modules.  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![Build Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/simonelefevre/status-badge/main/status.json)](https://github.com/simonelefevre/status-badge)  \n[![Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/simonelefevre/coverage-badge/main/coverage.json)](https://github.com/simonelefevre/coverage-badge)"
+}

@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_170_02",
+  "type": "project_readme",
+  "persona_id": "p_170",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 2,
+    "Chaos Engineering": 1,
+    "Cloud Cost Optimization": 3,
+    "GitLab CI": 3,
+    "Kubernetes": 3,
+    "Load Balancing": 4,
+    "Prometheus/Grafana": 3,
+    "Python": 3,
+    "Terraform": 3
+  },
+  "text": "# GameOptiSync  \nA real-time performance optimization and resource management tool tailored for multiplayer game servers, designed to balance latency, throughput, and infrastructure costs without compromising player experience. Built to integrate seamlessly with existing server infrastructures, it provides actionable insights and automated adjustments to maintain peak performance under varying loads.  \n\n---\n\n## Badges  \nLicense: MIT  \nProduction: ✅ Live in production  \nScalability: ⚡ Auto-scaling supported  \n\n---\n\n## License  \nMIT License  \n[View License File](LICENSE)  \n\n---\n\n## Tech Stack  \n- **AWS**: Serverless architecture with auto-scaling EC2 clusters  \n- **Cloud Cost Optimization**: Dynamic spot instance allocation reduces costs by 40% in peak hours  \n- **GitLab CI**: Pipeline for automated testing and deployment  \n- **Kubernetes**: Orchestration for containerized game server pods  \n- **Prometheus/Grafana**: Real-time metrics dashboard for latency, CPU, and memory tracking  \n- **Python**: Scripting for custom optimization rules and data processing  \n- **Terraform**: Infrastructure-as-code for rapid environment provisioning  \n- **Load Balancing**: Custom TCP proxy with 15% latency reduction in global server clusters  \n\n---\n\n## Architecture / Design  \nGameOptiSync operates as a distributed system, with a central controller node that ingests metrics from game servers via Prometheus. It uses Kubernetes to dynamically scale worker nodes based on real-time load, while AWS Spot Fleet management ensures cost efficiency. A custom load balancer routes traffic to the optimal server cluster, reducing latency by prioritizing geographically proximate instances. All decisions are logged and auditable via Grafana dashboards.  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repository  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure environment variables for AWS credentials and server endpoints  \n4. Run the controller: `python main.py --start`  \n\n---\n\n## Usage / Examples  \n```bash  \n# Optimize resource allocation for a 1000-player match  \npython optimize.py --server-id=server123 --threshold=0.8  \n\n# Monitor real-time metrics  \npython monitor.py --output=grafana_dashboard.json  \n```  \n\n---\n\n## Contributing  \nContributions are welcome but must align with the project’s focus on stability and performance. All pull requests require automated testing via GitLab CI and a signed contributor agreement. Prioritize clarity in documentation and ensure all changes adhere to the MIT license terms."
+}

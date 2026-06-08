@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_184_01",
+  "type": "project_readme",
+  "persona_id": "p_184",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "GraphQL": 1,
+    "JavaScript": 4,
+    "Next.js": 3,
+    "REST API design": 3,
+    "React": 4,
+    "Responsive design": 4,
+    "Security testing": 4,
+    "State management (Redux/Zustand)": 4,
+    "Test automation (Selenium/Playwright)": 1,
+    "TypeScript": 4,
+    "Web accessibility (WCAG)": 3,
+    "Web performance optimization": 4
+  },
+  "text": "# SecureShield Dashboard  \nReal-time threat intelligence visualization for enterprise cybersecurity operations, leveraging React, TypeScript, and CyberShield's API ecosystem for dynamic incident tracking and risk prioritization  \n\n## Badges  \n[![Security Compliance](https://img.shields.io/badge/secure-compliant-blue)](https://example.com)  \n[![React](https://img.shields.io/badge/react-2023-blue)](https://react.dev)  \n[![TypeScript](https://img.shields.io/badge/typescript-4.9-orange)](https://typescriptlang.org)  \n\n## Getting Started  \n```bash  \nnpx create-next-app@latest secure-shield-dashboard  \ncd secure-shield-dashboard  \nyarn add @cybershield/api-client @reduxjs/toolkit tailwindcss  \ncp .env.example .env  \n```  \nConfigure API credentials in `.env` and run `yarn dev` for local development. All components are statically typed and require no server-side rendering for core functionality.  \n\n## Tech Stack  \n- **Frontend**: React 18 + TypeScript 4.9, Next.js 13 for SSR in analytics panels  \n- **State Management**: Redux Toolkit with normalized data models for 50k+ incident entries  \n- **Styling**: Tailwind CSS with dark mode support for 24/7 monitoring  \n- **Performance**: Webpack 5 chunk splitting for 30% faster load times  \n- **Security**: OWASP ZAP integration for runtime injection detection, Snyk for dependency vuln scanning  \n\n## Architecture / Design  \nThe dashboard employs a microfrontend architecture with Webpack 5 modules for isolated threat visualization components. Redux Toolkit manages global state for incident timelines, risk scores, and asset graphs. Tailwind's JIT compiler ensures responsive layouts for multi-monitor workstations. All API calls use CyberShield's REST endpoints with OAuth2 token refresh middleware.  \n\n## Usage / Examples  \nNavigate to `/incidents` for real-time event streams filtered by severity (critical/urgent). Use the timeline component to drill into specific threat vectors, with automatic data fetching via CyberShield's `/api/v2/incidents` endpoint. The asset graph component renders 3D topology with WebGL for large-scale network visualization.  \n\n## Testing  \nUnit tests for React components use Jest + React Testing Library, covering 92% of UI logic. Integration tests verify API call accuracy with mocked CyberShield endpoints. Security testing includes OWASP ZAP scans for XSS/CSRF vulnerabilities and Snyk audits for package dependencies. Accessibility checks ensure WCAG 2.1 compliance for screen reader users.  \n\n## License  \nMIT License © 2023 Johan Bakken  \nFor internal enterprise use only. Not for public distribution."
+}

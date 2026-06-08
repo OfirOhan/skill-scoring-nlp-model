@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_242_01",
+  "type": "project_readme",
+  "persona_id": "p_242",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Apache Airflow": 3,
+    "Data visualization": 4,
+    "PyTorch": 5,
+    "Python": 5,
+    "REST API design": 3,
+    "SQL analytics": 4,
+    "Snowflake": 3,
+    "dbt": 3,
+    "scikit-learn": 5,
+    "Data visualization (Matplotlib/Plotly)": 1
+  },
+  "text": "# Supply Chain Optimization with Machine Learning  \nA predictive analytics solution for retail supply chain efficiency, leveraging ML to forecast demand and reduce waste. This project combines real-time data processing with scalable models to improve inventory accuracy by 18% in pilot deployments.  \n\n---\n\n## Badges  \n[![Pipeline Status](https://example.com/pipeline-badge)](https://example.com/pipeline)  \n[![Model Accuracy](https://example.com/accuracy-badge)](https://example.com/models)  \n[![Deployment Ready](https://example.com/deploy-badge)](https://example.com/deploy)  \n\n---\n\n## Tech Stack  \n- **Data Infrastructure**: Snowflake (data lakehouse), dbt (ETL automation), REST APIs (microservices integration)  \n- **Modeling**: PyTorch (custom neural networks), scikit-learn (baseline models), SQL analytics (feature engineering)  \n- **Orchestration**: Apache Airflow (daily pipeline scheduling), Python (core logic)  \n- **Monitoring**: Prometheus (model drift alerts), custom dashboards (inventory KPIs)  \n\n---\n\n## Configuration  \nSet environment variables for Snowflake credentials, Airflow DAGs, and API endpoints. Example:  \n```env  \nSNOWFLAKE_USER=your_user  \nAIRFLOW_CONN_SNOWFLAKE=snowflake://your_user:@your_account  \nAPI_ENDPOINT=https://api.example.com/v1/forecast  \n```  \nInstall dependencies via `pip install -r requirements.txt` and configure dbt models in `models/` directory.  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/yourusername/supply-chain-opt.git`  \n2. Set up virtual environment: `python -m venv venv && source venv/bin/activate`  \n3. Install dependencies: `pip install -r requirements.txt`  \n4. Configure environment variables as described above  \n5. Run dbt models: `dbt run --models inventory_features`  \n\n---\n\n## Usage / Examples  \n- **Forecasting**: Execute `python forecast.py --store_id 123` to generate demand predictions  \n- **Pipeline**: Trigger Airflow DAGs via `airflow trigger_dag supply_chain_pipeline`  \n- **API**: POST to `/v1/forecast` with store IDs for real-time inventory optimization  \n\n---\n\n## Testing  \nRun unit tests with `pytest tests/` and ensure coverage > 85% via `pytest --cov`. Integration tests validate Snowflake connectivity and model accuracy thresholds.  \n\n---\n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

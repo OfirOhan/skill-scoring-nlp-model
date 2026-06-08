@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_073_01",
+  "type": "project_readme",
+  "persona_id": "p_073",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "GraphQL": 4,
+    "JavaScript": 4,
+    "Next.js": 3,
+    "REST API design": 3,
+    "React": 5,
+    "Security testing": 3,
+    "State management": 3,
+    "Test automation": 3,
+    "TypeScript": 5,
+    "Web accessibility": 3,
+    "Web performance optimization": 3
+  },
+  "text": "# Financial Dashboard Component Library  \nA reusable React library for building secure, responsive financial dashboards with TypeScript, optimized for fintech applications.  \n\n---\n\n## Tech Stack  \n- **React** (custom hooks for charting, data visualization)  \n- **TypeScript** (strict typing for API payloads, state management)  \n- **GraphQL** (real-time data fetching with 30% faster load times vs REST)  \n- **Next.js** (server-side rendering for SEO-compliant dashboards)  \n- **REST APIs** (integrated with legacy systems via Swagger specs)  \n- **Web Accessibility** (WCAG 2.1 AA compliance for screen readers)  \n- **Security Testing** (OWASP ZAP integration for token validation)  \n- **Web Performance** (lazy loading for 40% faster initial render)  \n\n---\n\n## Architecture / Design  \nBuilt as a monorepo with component-specific contexts for isolation. Core principles:  \n- **Security-first state management** (Redux Toolkit with granular permissions)  \n- **Modular charting** (custom hooks for candlestick and pie charts)  \n- **Role-based access** (RBAC via JWT claims in UI components)  \n- **Test automation** (Jest + React Testing Library for 95%+ unit coverage)  \n- **Performance metrics** (Lighthouse score of 92+ for production builds)  \n\n---\n\n## Getting Started / Installation  \n```bash  \nnpm install @jkaur/dashboard-components  \n# or  \nyarn add @jkaur/dashboard-components  \n```  \nEnsure TypeScript 4.7+ and React 18 are configured in your project.  \n\n---\n\n## Usage / Examples  \n```tsx  \nimport { ChartContainer, TransactionList } from '@jkaur/dashboard-components';  \n\nexport default function Dashboard() {  \n  return (  \n    <ChartContainer data={financialData} theme=\"dark\" />  \n  );  \n};  \n```  \nComponents include:  \n- Secure transaction tables with filtering  \n- Real-time balance indicators  \n- Audit trail logs with pagination  \n\n---\n\n## Badges  \n[![Build Status](https://example.com/build-badge)](https://example.com)  \n[![Coverage](https://example.com/coverage)](https://example.com)  \n\n---\n\n## Contributing  \nPull requests welcome for security audits, performance tweaks, or new components. Prioritize:  \n- Adding accessibility labels to chart elements  \n- Optimizing lazy-loaded modules  \n- Expanding RBAC rules for nested resources  \n\n---\n\n## License  \nMIT License. See [LICENSE](https://example.com/license) for details."
+}

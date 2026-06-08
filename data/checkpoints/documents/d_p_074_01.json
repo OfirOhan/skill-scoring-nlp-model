@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_074_01",
+  "type": "project_readme",
+  "persona_id": "p_074",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Python": 1,
+    "Go": 1,
+    "REST API design": 1,
+    "Microservices architecture": 1,
+    "PostgreSQL": 1,
+    "MongoDB": 1,
+    "React": 1,
+    "TypeScript": 1,
+    "Docker": 1,
+    "Kubernetes": 1,
+    "AWS": 1,
+    "CI/CD pipelines": 1,
+    "Linux administration": 1,
+    "Terraform": 1
+  },
+  "text": "# Secure Authentication System  \nA robust, scalable solution for user authentication with emphasis on cryptographic rigor and session management. Designed for enterprise environments requiring compliance with zero-trust principles and adaptive authentication workflows.  \n\n## API Reference  \nEndpoints are structured for stateless, token-based interactions. All requests require a valid session token in the `Authorization` header.  \n\n- **`POST /auth/register`**  \n  Registers a new user with salted hashing of passwords using Argon2id. Returns a temporary token for email verification.  \n\n- **`POST /auth/login`**  \n  Authenticates user via PKCE-compliant OAuth2 flow. Validates multi-factor authentication (MFA) through TOTP and hardware token checks.  \n\n- **`GET /user/session`**  \n  Retrieves user metadata and session status. Supports conditional access policies based on geolocation and device trust scores.  \n\n- **`DELETE /auth/logout`**  \n  Invalidates active sessions and revokes refresh tokens. Includes a grace period for session cleanup.  \n\n## Usage / Examples  \nTo initiate a secure login flow:  \n```http  \nPOST https://api.secureauth.com/auth/login  \nContent-Type: application/json  \n\n{  \n  \"username\": \"daria.ionscu\",  \n  \"password\": \"encrypted_hash\",  \n  \"mfa_token\": \"otp_code\"  \n}  \n```  \nResponse includes a JWT with claims for user roles and session expiration.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies:  \n```bash  \ngit clone https://github.com/secureauth-system/secureauth.git  \ncd secureauth  \nnpm install  \n```  \nConfigure environment variables for encryption keys and MFA provider integrations.  \n\n## Tech Stack  \n- **Backend**: Node.js with Express for API routing  \n- **Security**: AES-256-GCM for data encryption, HMAC for request signing  \n- **Authentication**: OAuth2 with PKCE, TOTP, and hardware token support  \n- **Logging**: Structured logs with Sensitive Data Masking (SDM)  \n\n## Architecture / Design  \nThe system employs a layered approach:  \n1. **Presentation Layer**: Token-based API with rate limiting and IP reputation checks  \n2. **Business Logic**: Centralized authentication workflows with policy enforcement  \n3. **Data Layer**: In-memory cache for session tokens, persistent storage for user credentials (not disclosed)  \n4. **Security**: All communication is encrypted via TLS 1.3; tokens are signed with ECDSA  \n\n## License  \nLicensed under the MIT License. See the LICENSE file for details.  \n\n## Badges  \n[![Secure by Design](https://img.shields.io/badge/secure-by--design-blue)](https://securebydesign.org)  \n[![Cybersecurity-Ready](https://img.shields.io/badge/cybersecurity-ready-green)](https://cybersecurityready.io)"
+}

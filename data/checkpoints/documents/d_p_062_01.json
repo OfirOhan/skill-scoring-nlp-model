@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_062_01",
+  "type": "project_readme",
+  "persona_id": "p_062",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "Apache Spark": 4,
+    "Docker": 4,
+    "Kubernetes": 4,
+    "MLOps": 4,
+    "NLP": 5,
+    "PyTorch": 4,
+    "TensorFlow": 4,
+    "Recommendation systems": 5,
+    "MLOps (MLflow/W&B)": 1
+  },
+  "text": "# E-Commerce Personalized Recommendation System  \nA production-grade ML pipeline leveraging distributed computing, NLP, and real-time analytics to drive customer engagement and revenue growth. The system processes terabytes of user behavior data to deliver contextual, intent-aware recommendations across search, cart, and post-purchase touchpoints.  \n\n## Acknowledgments  \nThis work would not have been possible without the foundational contributions of the e-commerce data engineering team, whose scalable data pipelines underpin the system’s real-time inference capabilities. Special thanks to the product analytics team for providing critical feedback on user intent modeling.  \n\n## Getting Started / Installation  \n```bash  \n# Prerequisites: AWS CLI configured, Docker Desktop (with Kubernetes enabled)  \npip install -r requirements.txt  \naws s3 cp s3://internal-artifacts/recommendation-model/ model/  \n```  \nEnsure AWS credentials are set via `aws configure` and Docker is running with Kubernetes enabled for distributed training.  \n\n## Usage / Examples  \nThe system ingests user session data via Kinesis and generates recommendations using a hybrid model combining matrix factorization with BERT-based intent classification. Example inference:  \n```python  \nfrom inference import Recommender  \nrecommender = Recommender(model_path=\"model/transformer\")  \nrecommendations = recommender.predict(user_id=\"U12345\", context={\"cart_items\": [\"SKU001\", \"SKU002\"], \"timestamp\": \"2023-10-05T14:30:00Z\"})  \nprint(recommendations)  \n```  \nOutput includes a ranked list of products with confidence scores and intent-based metadata.  \n\n## Tech Stack  \n- **AWS**: Full-stack deployment on EC2 clusters with S3 for data lakes, Lambda for real-time triggers, and CloudWatch for monitoring. Reduced infrastructure costs by 35% via spot instance optimization.  \n- **Apache Spark**: Engineered a 4-node cluster for batch feature engineering, processing 10TB+ of clickstream data in 12 minutes.  \n- **Docker/Kubernetes**: Containerized inference service with autoscaling, achieving 99.99% uptime during Black Friday traffic spikes.  \n- **NLP**: Custom BERT variant fine-tuned on customer reviews and search queries to extract intent, improving recommendation relevance by 22% in A/B tests.  \n- **Recommendation Systems**: Hybrid approach combining collaborative filtering with deep learning, resulting in a 15% increase in average order value.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![Deployment Status](https://api.travis-ci.com/your-username/repo.svg?branch=main)](https://travis-ci.com/your-username/repo)  \n[![Code Quality](https://github.com/your-username/repo/actions/workflows/code-quality.yml/badge.svg)](https://github.com/your-username/repo/actions/workflows/code-quality.yml)  \n\n## Contributing  \nPull requests are welcome! For significant changes, open an issue to discuss the approach. All contributions must align with the team’s architecture guidelines and pass automated testing."
+}

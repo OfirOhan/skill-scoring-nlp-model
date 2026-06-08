@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_191_01",
+  "type": "project_readme",
+  "persona_id": "p_191",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Application security (OWASP)": 3,
+    "Compliance (SOC2/GDPR)": 2,
+    "Encryption & PKI": 2,
+    "IAM/Access control": 2,
+    "Network security": 4,
+    "Penetration testing": 2,
+    "SIEM tools": 2,
+    "Security auditing": 2,
+    "Threat modeling": 3,
+    "Vulnerability management": 2
+  },
+  "text": "# Real-Time Intrusion Detection System (RIDS)  \nA production-ready machine learning pipeline for identifying zero-day attacks with 98.2% detection accuracy and 0.7% false positive rate in live network traffic.  \n\n## Contributing  \nThis project is currently team-internal, but contributions are welcome for data labeling, model optimization, and integration with SIEM tools. Reach out via the team’s secure Slack channel for onboarding.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/your-username/rids.git`  \n2. Install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n3. Set up a virtual environment and configure environment variables for API keys and storage paths.  \n\n## Usage / Examples  \nRun the detector in real-time:  \n```bash  \npython main.py --mode inference --threshold 0.95  \n```  \nFor training:  \n```bash  \npython train.py --dataset /path/to/flow_data --model_type lstm  \n```  \nMetrics: 98.2% detection rate (F1-score), 0.7% false positives, 12ms latency per packet.  \n\n## Tech Stack  \n- **ML**: TensorFlow 2.12, PyTorch Lightning, Scikit-learn  \n- **Cloud**: AWS Kinesis for data ingestion, S3 for model storage  \n- **Security**: TLS 1.3 for data pipelines, AES-256 for encrypted logs  \n- **Tools**: Zeek for pcap analysis, Grafana for alert dashboards  \n\n## Architecture / Design  \nThe system operates in three stages:  \n1. **Data Ingestion**: Zeek normalizes pcap files into CSV streams, filtered via custom BPF rules.  \n2. **Feature Engineering**: Extracts 47+ metrics (e.g., packet rate, protocol type) using sliding windows.  \n3. **Model Inference**: LSTM-based detector processes 100ms chunks, with alerts routed to SIEM via Graylog.  \nKey design choice: Prioritize low-latency inference over model complexity, validated by 23% faster response times in production.  \n\n## License  \nMIT License (see [LICENSE](LICENSE) for details).  \n\n## Badges  \n[![Detection Rate](https://example.com/detection-badge.png)](https://example.com)  \n[![False Positive Rate](https://example.com/fpr-badge.png)](https://example.com)  \n[![Latency](https://example.com/latency-badge.png)](https://example.com)"
+}

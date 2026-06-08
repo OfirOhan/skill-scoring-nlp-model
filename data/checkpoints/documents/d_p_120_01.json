@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_120_01",
+  "type": "project_readme",
+  "persona_id": "p_120",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Android development": 2,
+    "Flutter": 3,
+    "Kotlin": 1,
+    "Mobile CI/CD": 2,
+    "Mobile testing": 2,
+    "REST API design": 3,
+    "React": 1,
+    "React Native": 1,
+    "State management": 3,
+    "Swift": 1,
+    "Web accessibility": 1,
+    "iOS development": 1,
+    "Web accessibility (WCAG)": 1,
+    "State management (Redux/Zustand)": 1
+  },
+  "text": "# E-Commerce Inventory Tracker  \nA real-time inventory management system for e-commerce teams, built with Flutter and Firebase. This app streamlines stock tracking, order reconciliation, and low-stock alerts through a unified mobile interface. Designed for cross-platform deployment with minimal friction, it integrates Firebase Cloud Functions for backend logic and Firestore for scalable data storage.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/last-commit/opalnguyen/inventory-tracker)](https://github.com/opalnguyen/inventory-tracker/commits/main)  \n[![Flutter](https://img.shields.io/badge/flutter-%2302569b.svg?style=flat&logo=flutter)](https://flutter.dev)  \n[![Firebase](https://img.shields.io/badge/firebase-%23db4437.svg?style=flat&logo=firebase)](https://firebase.google.com)  \n[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/opalnguyen/inventory-tracker.git  \n   ```  \n2. Navigate to the project directory and fetch dependencies:  \n   ```bash  \n   cd inventory-tracker  \n   flutter pub get  \n   ```  \n3. Configure Firebase by replacing the `firebase_options.dart` file with your project's credentials.  \n4. Run the app:  \n   ```bash  \n   flutter run  \n   ```  \n\n## Tech Stack  \n- **Flutter**: Cross-platform UI toolkit for native performance and hot reload.  \n- **Firebase**: Backend-as-a-service for authentication, real-time database, and cloud functions.  \n- **Firestore**: NoSQL database for inventory records and user permissions.  \n- **Cloud Functions**: Serverless logic for stock alerts and order synchronization.  \n- **Dart**: Language for Flutter, with custom utilities for data validation and parsing.  \n\n## Architecture / Design  \nThe app follows a **layered architecture** with separate presentation, domain, and data layers. Flutter's **BLoC pattern** manages state for inventory updates and user interactions, while Firebase Cloud Functions handle background tasks like low-stock notifications. The UI is built with **Material 3 components** for a cohesive, modern experience.  \n\n## Usage / Examples  \n- **Add Inventory**: Tap \"New Item\" to input product details, quantities, and supplier info.  \n- **Track Stock**: View real-time stock levels with color-coded thresholds (green/amber/red).  \n- **Generate Reports**: Export weekly stock summaries via Firebase Cloud Functions.  \n- **Multi-User Sync**: Collaborate in real time with Firestore’s real-time listeners.  \n\n## Testing  \n- **Unit Tests**: Validate business logic for stock calculations and form validation using `test` and `mockito`.  \n- **Integration Tests**: Ensure Firebase interactions (e.g., auth flows, database writes) function as expected.  \n- **UI Tests**: Use `flutter_test` to verify widget states and transitions.  \n- **CI/CD**: Automated tests run on GitHub Actions for PRs and merges.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

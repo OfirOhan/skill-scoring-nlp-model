@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_126_01",
+  "type": "blog",
+  "persona_id": "p_126",
+  "hyperparams": {
+    "blog_depth": "tutorial",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "Cloud networking (VPC/subnets)": 3,
+    "GitLab CI": 3,
+    "Kubernetes": 4,
+    "Load balancing": 3,
+    "Network automation": 1,
+    "Prometheus/Grafana": 3,
+    "Python": 3,
+    "Terraform": 3
+  },
+  "text": "**Scaling SaaS Platforms: Lessons from Platform Engineering**  \n\n**Introduction**  \nLast quarter, we handled a 400% traffic spike without downtime. How? By treating scalability as a design principle, not an afterthought. This post distills hard-won lessons from building and maintaining cloud-native SaaS platforms at scale.  \n\n**1. Auto-Scaling with AWS and Kubernetes**  \nWe deployed Kubernetes clusters on AWS EKS, using HPA (Horizontal Pod Autoscaler) to scale compute resources based on CPU/mem metrics. Combined with AWS Auto Scaling Groups, this setup reduced cold start latency by 60%. Key metric: 99.99% uptime during Black Friday traffic, with 85% of pods scaling automatically.  \n\n**2. Terraform for Infrastructure as Code**  \nTerraform became our single source of truth for AWS VPCs, subnets, and Kubernetes clusters. By versioning infrastructure in GitLab, we cut deployment errors by 70%. A single `terraform apply` now provisions 150+ resources across 3 regions, with rollback capabilities for critical failures.  \n\n**3. GitLab CI for CI/CD Pipelines**  \nOur GitLab CI pipeline integrates Terraform plan checks, unit tests, and canary deployments. Deployments now take 12 minutes vs. 90 minutes pre-automation. We also use GitLab’s merge request approvals to ensure all changes pass security and compliance checks before merging.  \n\n**4. Prometheus/Grafana for Observability**  \nWe replaced legacy dashboards with Prometheus for real-time metrics and Grafana for customizable visualizations. This allowed us to detect and resolve a critical memory leak 2 hours faster than before. Key dashboard: 99.95% API latency under 200ms, with alerts for >95th percentile spikes.  \n\n**5. Load Balancing with AWS ALB**  \nAWS Application Load Balancers (ALB) handled SSL termination, DDoS mitigation, and traffic routing. By configuring weighted targets, we shifted 30% of traffic to newer instances during maintenance windows without service disruption.  \n\n**6. Python for Automation**  \nPython scripts automate routine tasks like AWS cost explorer reports and Kubernetes cluster health checks. One script reduced manual reporting time from 2 hours to 15 minutes, freeing engineers for higher-impact work.  \n\n**7. Security via IAM and VPC Isolation**  \nWe segmented services into isolated VPCs with AWS IAM roles, limiting cross-service access. This cut unauthorized access attempts by 98% in 6 months. All cloud resources are tagged with ownership and cost centers for accountability.  \n\n**Summary**  \nScaling SaaS requires treating infrastructure as code, observability as a non-negotiable, and automation as a multiplier. By aligning AWS, Kubernetes, and CI/CD pipelines with measurable KPIs, we’ve built a platform that grows with our users—without compromising reliability or cost efficiency. The real win? Engineers now focus on innovation, not firefighting."
+}

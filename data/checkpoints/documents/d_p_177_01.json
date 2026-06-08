@@ -1,0 +1,26 @@
+{
+  "doc_id": "d_p_177_01",
+  "type": "project_readme",
+  "persona_id": "p_177",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "Apache Airflow": 2,
+    "Cloud cost optimization": 1,
+    "Docker": 3,
+    "Hugging Face Transformers": 3,
+    "Kubernetes": 3,
+    "MLOps (MLflow/W&B)": 3,
+    "Model deployment": 3,
+    "NLP": 3,
+    "PyTorch": 3,
+    "TensorFlow": 3,
+    "Terraform": 1,
+    "scikit-learn": 3
+  },
+  "text": "# CyberShield: ML-Based Network Intrusion Detection System  \nCyberShield is a real-time intrusion detection system leveraging advanced machine learning to identify zero-day exploits, DDoS attacks, and anomalous network behavior with 98.7% detection accuracy (F1-score) on the NSL-KDD dataset. The system integrates temporal anomaly detection, behavioral pattern analysis, and adaptive thresholding to minimize false positives (0.12% FP rate) in high-velocity network traffic.  \n\n## Configuration  \nConfigure the system via `config.yaml` for model parameters, data pipelines, and inference thresholds. Set environment variables:  \n```bash  \nexport MODEL_VERSION=2.3.1  \nexport AWS_S3_BUCKET=cybershield-logs  \nexport KUBERNETES_NAMESPACE=intrusion-detection  \n```  \nEnable GPU acceleration by setting `CUDA_VISIBLE_DEVICES=0` for PyTorch-based inference.  \n\n## Getting Started / Installation  \nInstall dependencies:  \n```bash  \npip install -r requirements.txt  \ndocker compose build --no-cache  \n```  \nPull pre-trained models from Hugging Face:  \n```bash  \nhuggingface-cli download --repo-id cybershield-ml/ntc-model-v2.3.1 --local-dir models/  \n```  \nDeploy to Kubernetes using `kubectl apply -f k8s/deployment.yaml` for scalable, distributed inference.  \n\n## Usage / Examples  \nRun real-time detection:  \n```bash  \npython3 main.py --config config.yaml --input /data/network-logs-2023.csv  \n```  \nExample API call:  \n```bash  \ncurl -X POST http://localhost:8080/detect -H \"Content-Type: application/json\" -d '{\"packet_flow\": \"192.168.1.1:80 -> 10.0.0.5:443\"}'  \n```  \nMetrics: 45ms inference latency, 99.98% model availability (AWS CloudWatch).  \n\n## Tech Stack  \n- **Frameworks**: PyTorch (v2.0), TensorFlow (v2.12), scikit-learn (v1.3)  \n- **MLOps**: MLflow (tracking), Weights & Biases (experiment logs)  \n- **Deployment**: Docker (swarm), Kubernetes (Helm charts), Apache Airflow (batch retraining)  \n- **NLP**: BERT tokenizer for protocol metadata encoding  \n- **Cloud**: AWS S3 (data lake), EC2 (GPU instances)  \n\n## Architecture / Design  \nThe system employs a three-tier architecture:  \n1. **Feature Extractor**: Processes pcap files with Scapy to extract flow-based features (duration, packet size, protocol type).  \n2. **Model Serving**: PyTorch-based classifier with dynamic thresholding (ADWIN algorithm) for drift detection.  \n3. **Real-Time Pipeline**: Apache Kafka for low-latency log ingestion, integrated with AWS Lambda for automated alerting.  \n\n## License  \nMIT License  \n\n## Badges  \n![Model Version](https://img.shields.io/badge/model%20version-2.3.1-blue)  \n![Framework](https://img.shields.io/badge/frameworks-PyTorch%2C%20TensorFlow%2C%20scikit-learn-yellow)"
+}

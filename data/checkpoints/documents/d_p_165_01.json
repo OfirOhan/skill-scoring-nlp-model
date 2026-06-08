@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_165_01",
+  "type": "project_readme",
+  "persona_id": "p_165",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "3D graphics (OpenGL/Vulkan)": 2,
+    "C#/.NET": 4,
+    "Game networking": 3,
+    "Game physics": 4,
+    "Python": 2,
+    "REST API design": 2,
+    "Rust": 2,
+    "Unity": 4,
+    "Unreal Engine": 1,
+    "Web performance optimization": 1
+  },
+  "text": "# Epic Quest: 2D Platformer Game Prototype  \nA collaborative project at Lumina Interactive, this prototype explores dynamic level generation, physics-based mechanics, and multiplayer synchronization for a 2D platformer. Built with a focus on scalability and test-driven development, it serves as a foundation for future expansion into full-scale game development.  \n\n## Testing  \nAutomated testing frameworks (NUnit, xUnit) ensure robustness across core systems. Integration tests validate multiplayer synchronization, while unit tests isolate physics simulations and level loader logic. Continuous integration pipelines enforce 85%+ test coverage, with nightly runs verifying cross-platform compatibility. Performance benchmarks are tied to frame rate stability under concurrent player interactions.  \n\n## Getting Started / Installation  \nClone the repository using `git clone https://github.com/lumina-interactive/epic-quest.git`. Ensure Unity 2021.3+ and .NET 6 SDK are installed. Import the project into Unity, then configure the build pipeline via `Assets/Editor/BuildSettings.cs`. For multiplayer features, deploy a local server using the included `NetworkManager` script and ensure port forwarding is configured.  \n\n## Usage / Examples  \nLaunch the game via `Assets/Scenes/MainMenu.unity` to access single-player and multiplayer modes. The `Assets/Scripts/LevelGenerator.cs` script demonstrates procedural terrain creation, while `Assets/Scripts/PlayerController.cs` showcases physics-based movement. To test networking, enable the `EnableMultiplayer` flag in the `GameSettings` manager and connect via the in-game lobby.  \n\n## Tech Stack  \n- **Core Engine**: Unity (C#, .NET 6)  \n- **Physics**: Unity Physics with custom collision resolution for ragdoll mechanics  \n- **Networking**: Custom TCP/UDP hybrid system for low-latency sync  \n- **Assets**: Tiled map editor, Unity Asset Store libraries for particle effects  \n- **3D Graphics**: Unity’s 3D rendering pipeline for 2D sprite layering  \n\n## Architecture / Design  \nThe architecture employs a layered system: core logic, physics, and networking modules are decoupled via event-driven signals. The `GameManager` orchestrates state transitions, while the `PhysicsSystem` handles collision detection and response. Networking is abstracted into a `SyncManager` that mirrors state across clients, with delta compression for bandwidth efficiency.  \n\n## License  \nMIT License. See `LICENSE.md` for full terms.  \n\n## Contributing  \nPull requests are welcome! Ensure all changes include unit tests and adhere to the coding standards outlined in `CONTRIBUTING.md`. For networking contributions, validate against the `NetworkValidationTests` suite. All commits must reference GitHub issues and include clear, descriptive messages."
+}

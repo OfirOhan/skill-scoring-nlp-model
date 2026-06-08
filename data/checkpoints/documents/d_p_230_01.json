@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_230_01",
+  "type": "project_readme",
+  "persona_id": "p_230",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "CI/CD pipelines": 3,
+    "Docker": 3,
+    "GitHub Actions": 2,
+    "Go": 3,
+    "Linux administration": 2,
+    "Microservices architecture": 3,
+    "PostgreSQL": 3,
+    "Prometheus/Grafana": 2,
+    "Python": 4,
+    "REST API design": 3,
+    "Redis": 2
+  },
+  "text": "# NexaCloud API Gateway  \n\nA scalable, production-ready API gateway for microservices-based SaaS platforms, designed to handle 10k+ concurrent requests with 99.95% uptime. Built by a 15-member team to streamline service routing, authentication, and observability across distributed systems.  \n\n## Contributing  \nWe welcome contributions via GitHub! Start by cloning the repository and running `make test` to validate your changes. All pull requests must include unit tests and CI/CD pipeline updates. For Python-based components, ensure code coverage exceeds 85% using pytest.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/your-username/nexacloud-api-gateway.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Set up Docker containers for PostgreSQL and Redis using `docker-compose up -d`  \n4. Configure environment variables in `.env` for API keys and database credentials  \n\n## Usage / Examples  \n- **Routing**: Use `curl -X POST http://localhost:8080/api/v1/route` to forward requests to backend services.  \n- **Authentication**: Integrate OAuth2 via `/auth/token` endpoint, reducing unauthorized access by 40%.  \n- **Caching**: Leverage Redis to cache API responses, cutting latency by 30% for frequent queries.  \n\n## Tech Stack  \n- **Python** (core logic, rate limiting, and analytics)  \n- **Go** (high-performance service discovery and health checks)  \n- **Docker** (containerization for consistent deployment)  \n- **PostgreSQL** (centralized metadata storage with 99.99% reliability)  \n- **Redis** (distributed caching layer)  \n- **Prometheus/Grafana** (monitoring for 95th percentile latency metrics)  \n\n## Architecture / Design  \nThe gateway acts as a reverse proxy, routing requests to microservices based on path and headers. Key components include:  \n- **Rate Limiting**: Implemented in Python using sliding window algorithm  \n- **Service Discovery**: Built with Go’s etcd client for dynamic service registration  \n- **Observability**: Exposes OpenTelemetry traces for distributed requests  \n- **CI/CD**: Automated with GitHub Actions for linting, testing, and deployment  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![Build Status](https://github.com/your-username/nexacloud-api-gateway/actions/workflows/build.yml/badge.svg)](https://github.com/your-username/nexacloud-api-gateway/actions/workflows/build.yml)  \n[![Coverage](https://codecov.io/gh/your-username/nexacloud-api-gateway/branch/main/graph/badge.svg)](https://codecov.io/gh/your-username/nexacloud-api-gateway)  \n[![Version](https://img.shields.io/badge/version-1.2.3-blue)](https://github.com/your-username/nexacloud-api-gateway/releases/tag/1.2.3)"
+}

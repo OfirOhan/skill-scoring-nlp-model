@@ -1,0 +1,26 @@
+{
+  "doc_id": "d_p_152_01",
+  "type": "project_readme",
+  "persona_id": "p_152",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 5,
+    "CI/CD pipelines": 4,
+    "GCP": 5,
+    "Go": 3,
+    "Kubernetes": 5,
+    "Linux administration": 4,
+    "Message queues": 2,
+    "Monitoring & alerting": 4,
+    "PostgreSQL": 1,
+    "Python": 3,
+    "REST API design": 1,
+    "Redis": 1,
+    "Terraform": 5
+  },
+  "text": "# Cloud-Native CI/CD Pipeline Automation  \nA tool for streamlining multi-cloud infrastructure provisioning and configuration management using Terraform and Ansible. Designed to reduce manual errors and ensure consistency across AWS, GCP, and Kubernetes clusters.  \n\n---\n\n## Badges  \n[![GitHub Actions Status](https://github.com/sanapatel/ci-cd-tool/workflows/CI%20Pipeline/badge.svg)](https://github.com/sanapatel/ci-cd-tool/actions)  \n[![Docker Image](https://img.shields.io/docker/pulls/sanapatel/ci-cd-tool)](https://hub.docker.com/r/sanapatel/ci-cd-tool)  \n[![Test Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sanapatel/ci-cd-tool/main/test-coverage.json)](https://github.com/sanapatel/ci-cd-tool)  \n\n---\n\n## Tech Stack  \n- **Terraform**: Infrastructure-as-code for AWS, GCP, and Kubernetes cluster provisioning.  \n- **Ansible**: Configuration management for agentless node setup and service orchestration.  \n- **AWS/GCP**: Multi-cloud architecture with shared modules for consistent resource deployment.  \n- **Kubernetes**: Integration for managing containerized workloads across clusters.  \n- **Go**: Custom CLI tools for dynamic configuration parsing and pipeline orchestration.  \n- **Python**: Scripting for environment-specific variable injection and artifact management.  \n- **Message queues**: Used sparingly for asynchronous task coordination in distributed deployments.  \n\n---\n\n## Configuration  \nEnvironment variables (e.g., `AWS_ACCESS_KEY_ID`, `GCP_PROJECT_ID`) are sourced from `.env` files or Kubernetes secrets. Terraform modules and Ansible playbooks are organized by cloud provider and service type. Customizable via `terraform.tfvars` and `inventory.ini` files.  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/sanapatel/ci-cd-tool.git  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   make deps  \n   ```  \n3. Configure credentials and environment variables.  \n4. Initialize Terraform:  \n   ```bash  \n   terraform init  \n   ```  \n\n---\n\n## Usage / Examples  \nDeploy a microservice to AWS and GCP:  \n```bash  \nmake deploy AWS_REGION=us-east-1 GCP_ZONE=us-central1  \n```  \nThis triggers Terraform to create VPCs, Kubernetes clusters, and Ansible to configure load balancers and security groups.  \n\n---\n\n## Testing  \n- **Unit tests**: Validate Ansible playbooks with `molecule` and Go unit tests for CLI logic.  \n- **Integration tests**: Simulate cross-cloud deployments using Docker containers.  \n- **End-to-end tests**: Monitor resource creation with Prometheus and Grafana dashboards.  \n\n---\n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_272_01",
+  "type": "project_readme",
+  "persona_id": "p_272",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Design systems": 4,
+    "JavaScript": 5,
+    "Next.js": 1,
+    "REST API design": 4,
+    "React": 5,
+    "Responsive design": 5,
+    "Stakeholder management": 1,
+    "State management (Redux/Zustand)": 4,
+    "Test automation": 1,
+    "TypeScript": 5,
+    "Web accessibility (WCAG)": 4,
+    "Web performance optimization": 4
+  },
+  "text": "# HealthLoop Patient Portal: Modern Frontend for Secure Health Record Access  \nA robust, accessible, and scalable React application enabling secure, real-time access to patient health records through Firebase integration. Designed for seamless interoperability with internal health data systems while maintaining HIPAA-compliant data handling.  \n\n## Testing  \nAutomated testing is foundational to ensuring reliability and accessibility compliance. Jest and React Testing Library are used for unit and integration tests, covering core workflows like authentication, data fetching, and form validation. Accessibility is rigorously tested using axe and WAVE tools, with a focus on keyboard navigation, ARIA attributes, and color contrast ratios. End-to-end tests leverage Cypress for critical user journeys, ensuring consistent behavior across browser environments.  \n\n## Getting Started / Installation  \nClone the repository using your preferred method. Navigate to the project root and install dependencies with `npm install`. Initialize Firebase by configuring the `firebase.js` file with your project credentials. Set environment variables for API endpoints and security rules. Run `npm start` to launch the development server.  \n\n## Usage / Examples  \nTo view the portal, navigate to `localhost:3000` and authenticate with a test account. Key features include:  \n- Real-time health data synchronization via Firebase Firestore  \n- Role-based access controls for patient and provider views  \n- Formatted medical history summaries with date-range filtering  \n- Exportable PDF reports generated via Puppeteer integration  \n\n## Tech Stack  \n- **Frontend**: React 18 with TypeScript, leveraging hooks for state management and context for theme/authorization  \n- **State Management**: Zustand for granular, type-safe state partitioning across modules  \n- **Design Systems**: Internal component library with 100% type coverage, enabling 30% faster UI development  \n- **REST APIs**: Internal microservices for data aggregation, with 95% request latency reduction via caching layers  \n- **Web Accessibility**: Full WCAG 2.1 AA compliance, with 120+ semantic HTML elements and 80% keyboard accessibility  \n- **Performance**: Lazy loading, code splitting, and image optimization reduce initial load time by 40%  \n\n## Architecture / Design  \nThe application follows a modular monorepo structure with distinct feature folders, each containing its own state slices and utility functions. Firebase is integrated via custom hooks to abstract authentication, real-time listeners, and security rules. Responsive design is achieved through CSS-in-JS with a focus on mobile-first patterns. Performance is optimized via preloading critical resources and implementing server-side rendering for static content.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details.  \n\n## Contributing  \nContributions are welcome. Please review the [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on code style, accessibility checks, and performance benchmarks. Prioritize issues labeled \"good first issue\" for onboarding. All pull requests must include automated test coverage and accessibility audits."
+}

@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_179_01",
+  "type": "project_readme",
+  "persona_id": "p_179",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "ArgoCD": 3,
+    "CI/CD pipelines": 3,
+    "Docker": 3,
+    "GitHub Actions": 3,
+    "Jenkins": 1,
+    "Kubernetes": 1,
+    "Linux administration": 2,
+    "Prometheus/Grafana": 1,
+    "Python": 3,
+    "Team Collaboration": 1,
+    "Terraform": 1
+  },
+  "text": "# Financial Compliance Automation Pipeline  \nA scalable, real-time compliance validation system for financial transactions, designed to meet regulatory standards such as GDPR, SOX, and PCI-DSS. This pipeline automates rule-based checks, audit logging, and anomaly detection, reducing manual effort by 75% while ensuring 99.99% data integrity across 12+ fintech use cases.  \n\n## Badges  \n[![Build Status](https://github.com/zoe-papadakis/financial-compliance-pipeline/actions/workflows/main.yml/badge.svg)](https://github.com/zoe-papadakis/financial-compliance-pipeline/actions/workflows/main.yml)  \n[![Test Coverage](https://codeclimate.com/github/zoe-papadakis/financial-compliance-pipeline/badges/coverage.svg)](https://codeclimate.com/github/zoe-papadakis/financial-compliance-pipeline)  \n[![Code Quality](https://codeclimate.com/github/zoe-papadakis/financial-compliance-pipeline/badges/gpa.svg)](https://codeclimate.com/github/zoe-papadakis/financial-compliance-pipeline)  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n```bash  \ngit clone https://github.com/zoe-papadakis/financial-compliance-pipeline.git  \ncd financial-compliance-pipeline  \n```  \n2. Install dependencies:  \n```bash  \npip install -r requirements.txt  \n```  \n3. Configure environment variables for database credentials and rule sets.  \n4. Run the pipeline locally using Docker:  \n```bash  \ndocker-compose up --build  \n```  \nEnsure compatibility with Linux environments; Windows support is experimental.  \n\n## Tech Stack  \n- **Language**: Python 3.9+ (with Pandas, Pydantic, and lxml)  \n- **Containerization**: Docker (multi-stage builds for production)  \n- **CI/CD**: GitHub Actions (automated testing, linting, and deployment)  \n- **Deployment**: ArgoCD (for GitOps-driven pipeline orchestration)  \n- **Data Storage**: PostgreSQL (with JSONB for rule metadata)  \n- **Security**: TLS 1.3, AES-256 for audit logs  \n\n## Architecture / Design  \nThe pipeline operates as a layered microservices architecture:  \n1. **Data Ingestion**: Kafka-powered ingestion layer for real-time transaction streams.  \n2. **Rule Engine**: Python-based core with pluggable compliance rules (e.g., AML checks, transaction limits).  \n3. **Audit Logging**: Async logging to Elasticsearch with retention policies.  \n4. **Reporting**: Dashboards via Grafana (though not explicitly mentioned in the document).  \nArgoCD manages deployment pipelines, ensuring zero-downtime rollouts.  \n\n## Usage / Examples  \nTo validate a batch of transactions:  \n```bash  \npython3 compliance_runner.py --input transactions.csv --output audit.log  \n```  \nExample output:  \n```  \n[INFO] 42/5000 transactions flagged for further review (AML violation)  \n[SUCCESS] Audit log written to audit.log (size: 2.1MB)  \n```  \nCustomize rules via `rules/` directory; add new compliance checks by extending the `RuleBase` class.  \n\n## Testing  \nAutomated tests cover 95% of code paths:  \n- **Unit Tests**: `pytest` for individual rule validation (e.g., `test_aml_check.py`).  \n- **Integration Tests**: End-to-end pipeline execution with mock data.  \n- **Performance Tests**: Stress testing with 10,000+ transactions/sec using Locust.  \nCoverage reports are generated on every push, with thresholds enforced via GitHub Actions.  \n\n## License  \nMIT License (see [LICENSE](https://github.com/zoe-papadakis/financial-compliance-pipeline/blob/main/LICENSE) for details)."
+}

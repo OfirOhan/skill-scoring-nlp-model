@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_256_01",
+  "type": "project_readme",
+  "persona_id": "p_256",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Apache Airflow": 2,
+    "Apache Spark": 4,
+    "CI/CD pipelines": 2,
+    "Cloud cost optimization": 2,
+    "Data warehousing": 3,
+    "ETL pipeline design": 4,
+    "Python": 4,
+    "REST API design": 2,
+    "Snowflake": 2
+  },
+  "text": "# Real-Time Fraud Detection System with Kafka and Spark  \nA scalable, low-latency fraud detection pipeline processing 500k+ transactions/sec with 99.98% accuracy. Built for fintech compliance, leveraging Kafka for ingestion and Spark for real-time anomaly detection.  \n\n## Acknowledgments  \nThis project was developed by Julia Andersen and a 15-member fintech analytics team. Special thanks to the Kafka community for robust streaming patterns and the Snowflake team for seamless data warehousing integration. Early prototyping used Apache Airflow for DAG orchestration, which was later replaced by a custom CI/CD pipeline for faster deployment cycles.  \n\n## Getting Started / Installation  \n1. Install Java 17 and Apache Kafka 3.4  \n2. Clone the repo: `git clone https://github.com/your-username/fraud-detection.git`  \n3. Configure `application.conf` with your Kafka broker addresses and Spark cluster specs  \n4. Run `sbt compile` to build the project  \n5. Start the Kafka producer and Spark streaming application via `sbt run`  \n\n## Usage / Examples  \n```bash\n# Stream transactions from Kafka topic 'raw-transactions'\nspark-submit --class FraudDetector --master yarn --deploy-mode cluster fraud-detection.jar\n```\nThe system ingests raw transaction data, applies a ensemble model (XGBoost + Isolation Forest) in Spark Streaming, and flags suspicious patterns within 150ms. Detected fraud records are written to Snowflake for audit trails.  \n\n## Tech Stack  \n- **Streaming**: Apache Kafka (partitioned topics, consumer groups)  \n- **Processing**: Apache Spark (structured streaming, micro-batch latency <200ms)  \n- **Storage**: Snowflake (data warehouse for historical analysis)  \n- **Orchestration**: Custom CI/CD pipeline (replaces Airflow for faster deployment)  \n- **Monitoring**: Prometheus + Grafana (latency metrics, error rate tracking)  \n\n## License  \nApache License 2.0  \n\n## Badges  \n[![Build Status](https://github.com/your-username/fraud-detection/actions/workflows/build.yml/badge.svg)](https://github.com/your-username/fraud-detection/actions/workflows/build.yml)  \n\n## Contributing  \nWe welcome contributions to improve model accuracy (current F1 score: 0.97) or optimize cloud cost efficiency. Please open a PR with unit tests and ensure all Spark jobs adhere to our 300ms latency SLA."
+}

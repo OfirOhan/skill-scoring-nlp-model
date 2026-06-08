@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_276_01",
+  "type": "project_readme",
+  "persona_id": "p_276",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Apache Spark": 4,
+    "Data visualization (Plotly)": 5,
+    "Data warehousing": 2,
+    "Feature engineering": 4,
+    "Python": 5,
+    "REST API design": 4,
+    "Statistical modeling": 5,
+    "Time series analysis": 5,
+    "XGBoost/LightGBM": 5,
+    "scikit-learn": 5
+  },
+  "text": "# FraudGuard: Real-Time Fraud Detection System  \nFraudGuard is a scalable real-time fraud detection system built for fintech environments. It leverages machine learning to flag suspicious transactions with sub-100ms latency, reducing false positives by 25% in production. The system processes 10M+ transactions/day using distributed computing, with visualization tools for real-time monitoring.  \n\n## Roadmap / Future Work  \n- **Phase 1 (Q3 2024):** Expand model to detect crypto transactions, integrating blockchain data streams.  \n- **Phase 2 (Q1 2025):** Deploy explainability features using SHAP values for compliance audits.  \n- **Phase 3 (Q2 2025):** Scale to 10M+ transactions/day with Kafka stream processing.  \n- **Long-term:** Integrate with decentralized identity protocols for user authentication.  \n\n## Getting Started / Installation  \nInstall dependencies:  \n```bash  \npip install -r requirements.txt  \n```  \nRun the pipeline:  \n```bash  \npython pipeline.py --config config/prod.yaml  \n```  \nNote: Docker containers are preconfigured for local testing.  \n\n## Usage / Examples  \nDetect fraud in a transaction:  \n```bash  \ncurl -X POST http://localhost:5000/predict \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"amount\": 1500, \"time\": \"2024-03-15T14:32:00Z\", \"location\": \"US-NY\"}'  \n```  \nResponse includes fraud score (0–1) and risk category.  \n\nVisualize real-time metrics:  \n```python  \nfrom dash_app import run_dashboard  \nrun_dashboard()  \n```  \nOpens a dashboard with Plotly graphs for transaction volume and model performance.  \n\n## Tech Stack  \n- **Data Processing:** Apache Spark (10M+ transactions/sec), PySpark for feature engineering.  \n- **Modeling:** XGBoost (98.2% F1-score), LightGBM (97.5% AUC).  \n- **API:** Flask RESTful endpoints handling 5k+ requests/sec.  \n- **Visualization:** Plotly dashboards with interactive time-series analysis.  \n- **Python:** Core language for all ML pipelines and data wrangling.  \n\n## Architecture / Design  \nFraudGuard uses a layered architecture:  \n1. **Ingestion:** Kafka streams for real-time transaction data.  \n2. **Feature Engineering:** PySpark pipelines for time-series aggregation and anomaly detection.  \n3. **Model Serving:** REST API with XGBoost ensembles for low-latency scoring.  \n4. **Monitoring:** Plotly dashboards track model drift and system performance.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

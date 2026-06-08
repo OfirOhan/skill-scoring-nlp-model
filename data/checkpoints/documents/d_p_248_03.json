@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_248_03",
+  "type": "project_readme",
+  "persona_id": "p_248",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Android development": 4,
+    "Flutter": 4,
+    "GraphQL": 5,
+    "Kotlin": 4,
+    "REST API design": 5,
+    "React": 1,
+    "React Native": 1,
+    "Swift": 4,
+    "TypeScript": 4,
+    "iOS development": 1
+  },
+  "text": "# Financial Data Dashboard  \nA mobile application delivering real-time financial insights through customizable dashboards, optimized for enterprise-scale data processing and user engagement. Built to handle high-frequency market updates with sub-200ms latency, this project leverages modular architecture to scale across 15+ team members while maintaining strict compliance with financial data protocols.  \n\n## Badges  \n[![Production-Ready](https://img.shields.io/badge/Production-Ready-4285F4)](https://example.com)  \n[![GraphQL-Driven](https://img.shields.io/badge/GraphQL-Driven-FF6B6B)](https://example.com)  \n[![Kotlin/Flutter](https://img.shields.io/badge/Kotlin--Flutter-2196F3)](https://example.com)  \n[![REST API](https://img.shields.io/badge/REST-API-4CAF50)](https://example.com)  \n[![Enterprise-Grade](https://img.shields.io/badge/Enterprise-Grade-FF9800)](https://example.com)  \n[![Team-Driven](https://img.shields.io/badge/Team-Driven-795548)](https://example.com)  \n\n## License  \nMIT License — see LICENSE for details.  \n\n## Tech Stack  \n- **Android**: Kotlin (Jetpack Compose), Room, Dagger  \n- **Cross-Platform**: Flutter (Cupertino widgets, null safety)  \n- **Data Layer**: Apollo GraphQL (subscriptions), REST APIs (Node.js/Python)  \n- **Backend**: TypeScript (TypeORM, NestJS), Kafka for streaming  \n- **Infrastructure**: Firebase (Analytics, Crashlytics), AWS Lambda  \n\n## Architecture / Design  \nThe system follows a **microservices-first** approach, with GraphQL as the primary data layer for real-time updates and REST for historical batch processing. Android modules use **MVI (Model-View-Intent)** with Kotlin Flow for state management, while Flutter widgets are decoupled via **Redux-DevTools** for debugging. Key decisions include:  \n- **GraphQL subscriptions** for live stock tick data (reduced latency by 30% vs. REST polling)  \n- **Kotlin Multiplatform** for shared business logic between Android and Flutter  \n- **TypeScript typings** enforced in backend services to minimize runtime errors  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/your-username/financial-dashboard.git`  \n2. Install Flutter SDK and Android Studio (with Kotlin plugin)  \n3. Configure environment variables for API keys and Firebase credentials  \n4. Build Android: `./gradlew assembleDebug`  \n5. Run Flutter: `flutter run -d chrome`  \n\n## Usage / Examples  \n- Fetch real-time stock data via GraphQL subscription:  \n  ```graphql  \n  subscription {  \n    stockPrice(symbol: \"AAPL\") {  \n      price  \n      changePercentage  \n    }  \n  }  \n  ```  \n- Generate a dashboard with dynamic widgets (e.g., candlestick charts, KPI cards)  \n- Export historical data to CSV via REST endpoint `/api/v1/export`  \n\n## Contributing  \nWe welcome contributions to backend APIs, Flutter UI components, or Android performance optimizations. Fork the repo, submit a PR with tests, and ensure CI/CD pipelines pass. For enterprise-specific features, contact the maintainers for onboarding.  \n\n*Note: This project is hobby-scale but designed for enterprise-grade deployment. All code adheres to SOC2 compliance standards.*"
+}

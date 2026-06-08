@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_051_03",
+  "type": "project_readme",
+  "persona_id": "p_051",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Next.js": 5,
+    "Python": 1,
+    "REST API design": 1,
+    "React": 5,
+    "TypeScript": 5,
+    "Web accessibility (WCAG)": 5,
+    "Web performance optimization": 5,
+    "Webpack/Vite": 4
+  },
+  "text": "# Responsive Portfolio Website  \nA mobile-first portfolio built with Next.js and TypeScript, showcasing frontend expertise through interactive, accessible, and performant design. The site emphasizes technical depth with modular architecture, lazy-loaded components, and a focus on user-centric navigation.  \n\n## Badges  \n- 🚀 [Next.js 14](https://nextjs.org)  \n- 🧠 [TypeScript](https://www.typescriptlang.org)  \n- 📱 [Mobile-First Design](https://developer.mozilla.org/en-US/docs/Glossary/Mobile_first)  \n- 🧪 [Accessibility (WCAG 2.1 AA)](https://www.w3.org/WAI/standards-guidelines/act/)  \n- 📦 [Vite](https://vitejs.dev)  \n\n## Tech Stack  \n- **Framework**: Next.js 14 (Server Components + App Router)  \n- **Language**: TypeScript (strict mode, type inference)  \n- **Build Tool**: Vite (production-ready, 30% faster than Webpack)  \n- **Accessibility**: ARIA roles, semantic HTML, keyboard navigation  \n- **Performance**: Lazy loading, image optimization, code splitting  \n- **Styling**: Tailwind CSS (configurable, no global styles)  \n\n## Configuration  \nThe project uses a `.env.local` file for environment variables. Customize `NEXT_PUBLIC_SITE_URL` and `NEXT_PUBLIC_API_BASE` for deployment. Vite's config file (`vite.config.ts`) enables CSS code splitting and disables sourcemaps in production.  \n\n## Getting Started  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/nooralfarsi/portfolio-website.git  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   npm install  \n   ```  \n3. Run the dev server:  \n   ```bash  \n   npm run dev  \n   ```  \n\n## Usage / Examples  \n- **Interactive Projects**: Hover effects and modals demonstrate React state management.  \n- **Accessibility**: Screen reader support is tested with axe DevTools.  \n- **Performance**: Lazy-loaded components reduce initial load time by 40%.  \n- **Customization**: Modify `tailwind.config.ts` to adjust color schemes or fonts.  \n\n## Testing  \n- **Unit Tests**: Jest + React Testing Library for component behavior.  \n- **Accessibility**: Automated checks via `axe-core` in CI/CD.  \n- **Performance**: Lighthouse scores ≥90 for Core Web Vitals.  \n- **Browser Compatibility**: Tested on Chrome, Firefox, and Safari with Autoprefixer.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

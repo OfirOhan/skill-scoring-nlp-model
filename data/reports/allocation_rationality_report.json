@@ -1,14 +1,14 @@
 {
-  "total_personas": 50,
-  "flagged_personas": 1,
+  "total_personas": 309,
+  "flagged_personas": 14,
   "results": [
     {
       "persona_id": "p_000",
-      "score": 3,
+      "score": 4,
       "concerns": [
-        "Duplicate skill entries with inconsistent capitalization (e.g., 'aws' vs 'AWS', 'docker' vs 'Docker') leading to redundant allocations",
-        "Project README (d_p_000_01) has lower intensity for some skills (e.g., network troubleshooting: 1) despite being a project description that should showcase technical depth",
-        "Cloud cost optimization and REST API design have conflicting intensity allocations between documents (e.g., 'cloud_cost_optimization' vs 'Cloud cost optimization')"
+        "Duplicate skill entries with case sensitivity (e.g., 'aws' vs 'AWS') causing confusion and potential double-counting",
+        "README document (d_p_000_01) is project-specific but assigned high intensity for skills like Docker/Kubernetes/Terraform, which may be reasonable given the project description, but could be more nuanced",
+        "Cloud cost optimization and network troubleshooting are assigned lower intensity in the README despite being listed as Level 2 globally, which is consistent but could be clarified"
       ],
       "flagged": false
     },
@@ -20,35 +20,31 @@
     },
     {
       "persona_id": "p_002",
-      "score": 3,
-      "concerns": [
-        "Python intensity is too low for [d_p_002_01] (project README) which directly references Python implementation",
-        "Recommendation [d_p_002_02] is allocated to technical skills rather than soft skills like leadership",
-        "PostgreSQL evidence is sparse across all documents despite being a key database skill",
-        "Kubernetes intensity is high in CV but no specific project evidence is allocated"
-      ],
-      "flagged": false
-    },
-    {
-      "persona_id": "p_003",
       "score": 5,
       "concerns": [],
       "flagged": false
     },
     {
-      "persona_id": "p_004",
+      "persona_id": "p_003",
       "score": 4,
       "concerns": [
-        "Flutter allocation to d_p_004_01 (intensity 1) may be low if the project README doesn't explicitly mention Flutter usage",
-        "Swift allocation to d_p_004_01 (intensity 2) could be questionable if the React Native project doesn't involve Swift"
+        "Python and Shell scripting are assigned lower intensities in the recommendation and LinkedIn documents, which may not align with their role as specific technical skills. These could be better emphasized in the CV or project README where technical depth is more directly demonstrated."
       ],
       "flagged": false
     },
     {
+      "persona_id": "p_004",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
       "persona_id": "p_005",
-      "score": 4,
+      "score": 3,
       "concerns": [
-        "The recommendation document (d_p_005_03) is allocated to technical skills (CI/CD, Kubernetes, etc.) rather than leadership/management soft skills, which is mismatched. Recommendations should emphasize SRE leadership, team management, or operational impact rather than technical proficiency."
+        "Recommendation document (d_p_005_03) is incorrectly allocated to technical skills (AWS, Kubernetes, etc.) instead of soft skills like leadership/management",
+        "Project_readme documents (d_p_005_01, d_p_005_02) show limited direct evidence for ArgoCD (level 3) and GitLab CI (level 3) despite the candidate's level 4/5 skills",
+        "Blog (d_p_005_04) is allocated to Python/shell scripting (level 4) which is less directly relevant to the topic of DevOps compliance best practices"
       ],
       "flagged": false
     },
@@ -66,39 +62,37 @@
     },
     {
       "persona_id": "p_008",
-      "score": 4,
-      "concerns": [
-        "The recommendation letter (d_p_008_02) is being used to evidence technical skills (e.g., CI/CD, Docker, Terraform) rather than soft skills, which may not align with its purpose as a performance evaluation document"
-      ],
+      "score": 5,
+      "concerns": [],
       "flagged": false
     },
     {
       "persona_id": "p_009",
-      "score": 3,
+      "score": 2,
       "concerns": [
-        "Node.js and Python (backend skills) are allocated to the project README (frontend-focused), which is contradictory",
-        "REST API design (backend skill) is allocated to the project README (frontend project), which is questionable",
-        "Recommendation document is assigned to technical skills rather than soft skills, but no soft skills are listed in global skill levels"
+        "Recommendation document (d_p_009_02) is allocated to technical skills (React/TypeScript) instead of soft skills (collaboration, communication) as expected from a manager's recommendation",
+        "Project_readme (d_p_009_01) is assigned to Node.js/Python (backend tech) despite being a frontend-focused React/Firebase project",
+        "Web accessibility (WCAG) and Webpack/Vite are assigned to all documents including project_readme, which lacks evidence of accessibility implementation or build tool usage",
+        "REST API design is allocated to project_readme but the described project uses Firebase (backend abstraction) rather than direct API design"
       ],
-      "flagged": false
+      "flagged": true
     },
     {
       "persona_id": "p_010",
       "score": 4,
       "concerns": [
-        "React and React Native are assigned low intensity (1) to project_readme, which describes a cross-platform enterprise app. If the project uses Flutter (also allocated high intensity), React/React Native relevance is unclear.",
-        "Swift is allocated high intensity to project_readme, but the project description doesn't specify iOS development. If the project is Android-focused, this may be misleading."
+        "React Native is allocated intensity 1 in the project README despite being Level 3 globally. If the project doesn't use React Native, this is fine, but the CV (which should highlight experience) should have higher intensity for this skill."
       ],
       "flagged": false
     },
     {
       "persona_id": "p_011",
-      "score": 4,
+      "score": 3,
       "concerns": [
-        "CV (d_p_011_00) has low intensity for most skills despite 13 years of experience, suggesting underrepresentation of foundational evidence",
-        "Recommendation letter (d_p_011_03) is allocated to technical skills rather than leadership/soft skills, which is unusual for recommendation documents",
-        "Terraform evidence is limited to 3-4 intensity across documents, but the skill is rated Level 4 which may require more concrete examples",
-        "Multiple technical skills (AWS/GCP/LLMs etc.) are heavily weighted to project READMEs (d_p_011_01/02) which may overemphasize specific projects over broader experience"
+        "Recommendation letter (d_p_011_03) is incorrectly allocated to technical skills (AWS/GCP/LLMs) instead of soft skills (leadership, project delivery)",
+        "CV (d_p_011_00) has uniform 1 intensity for all skills, which may underrepresent skill evidence from a 13-year resume",
+        "Terraform (level 4) has inconsistent intensity across documents (3-4) despite being a foundational DevOps tool",
+        "Multiple skills (AWS/GCP/LLMs) have overlapping high intensity across both project_readmes, which may overemphasize project-specific evidence over broader consulting experience"
       ],
       "flagged": false
     },
@@ -112,9 +106,10 @@
       "persona_id": "p_013",
       "score": 3,
       "concerns": [
-        "Project READMEs (d_p_013_01-03) should have higher intensity for skills directly related to their content (e.g., SecureAuth SDK likely involves Swift, which is only allocated 1 intensity there)",
-        "Recommendation (d_p_013_04) is a soft skill document but is being used to support technical skills like Security testing (allocated 1 intensity instead of higher for soft skill validation)",
-        "Uniform intensity distribution (mostly 1-3) doesn't reflect varying depth of evidence across documents for skills like Swift (which has 4 intensity on CV but 1 on project docs)"
+        "Project READMEs (e.g., SecureAuth SDK, EncryptedChatApp) should have higher intensity for security-related skills like 'security testing' or 'encryption protocols' instead of generic 1s",
+        "Recommendation letter is misallocated to Swift (a technical skill) rather than cybersecurity expertise (a soft skill)",
+        "Multiple skills (React Native, Flutter, etc.) are assigned 3 intensity to CV but lack project-specific evidence",
+        "Security testing skill is primarily linked to CV rather than the threat detection project (d_p_013_03)"
       ],
       "flagged": false
     },
@@ -122,10 +117,8 @@
       "persona_id": "p_014",
       "score": 4,
       "concerns": [
-        "Document [d_p_014_05] referenced in evidence allocation does not exist in the provided documents list",
-        "React allocation (level 4 in project_readme, level 5 in blog) appears inconsistent with blog's focus on microservices architecture",
-        "LinkedIn document [d_p_014_03] is allocated for Python/PostgreSQL (level 5) which may not be the strongest evidence type for these technical skills",
-        "Multiple skills (e.g., CI/CD, Cloud cost optimization) have identical intensity allocations across all documents, which may indicate lack of differentiated evidence"
+        "Document d_p_014_05 referenced in evidence allocation does not exist in the provided documents list.",
+        "Redis/React allocations in project README/blog may stretch relevance for skills not explicitly mentioned in those documents."
       ],
       "flagged": false
     },
@@ -133,8 +126,10 @@
       "persona_id": "p_015",
       "score": 4,
       "concerns": [
-        "Blog [d_p_015_03] about serverless architecture is assigned GCP level 4, which conflicts with its focus on AWS-centric serverless patterns",
-        "NexusPay project [d_p_015_01] has GCP level 5 and AWS level 5, suggesting dual cloud usage but no evidence of GCP implementation in the project README"
+        "CV intensity is uniformly low (1) across all skills, which may underrepresent its role in showcasing foundational expertise for a 8-year candidate",
+        "Blog on serverless architecture contributes to both AWS and GCP skills (4), which could be seen as conflating platform-specific evidence",
+        "Network troubleshooting (4) is primarily linked to SecureAPI Gateway (project_readme_02) but lacks explicit technical depth in the document",
+        "Terraform (4) is assigned to project_readme_01 and 02 but the READMEs may not detail IaC implementation specifics"
       ],
       "flagged": false
     },
@@ -142,9 +137,9 @@
       "persona_id": "p_016",
       "score": 4,
       "concerns": [
-        "High intensity for Application security (OWASP) in CV and LinkedIn (5) may overstate relevance if these documents don't explicitly discuss OWASP frameworks",
-        "Recommendation letter (d_p_016_02) is assigned lower intensity for most skills (3) despite being a strong source for compliance/leadership claims",
-        "Multiple skills (SIEM, Threat modeling, etc.) have identical intensity distribution patterns which may indicate formulaic allocation rather than document-specific relevance"
+        "The blog's focus on encryption strategies may not directly support Compliance (SOC2/GDPR) claims, which are more about regulatory frameworks than technical encryption.",
+        "Recommendation letter (d_p_016_02) is assigned to Compliance (SOC2/GDPR) and other skills with lower intensity (3), which may not reflect its actual relevance to those specific areas.",
+        "Multiple skills (SIEM, Threat modeling, Vulnerability management) rely heavily on the blog for evidence, which may not be the most appropriate source for these technical areas."
       ],
       "flagged": false
     },
@@ -152,11 +147,9 @@
       "persona_id": "p_017",
       "score": 3,
       "concerns": [
-        "Recommendation document (d_p_017_02) is being used for technical skills (e.g., NLP, Docker) rather than soft skills like teamwork/leadership",
-        "LinkedIn document (d_p_017_03) is being allocated to technical skills (e.g., MLOps) rather than career summary content",
-        "Hugging Face Transformers (level 3) is assigned to project_readme (d_p_017_01) which is a fraud detection system - unclear if Hugging Face was used",
-        "Recommendation systems (level 3) has low intensity in project_readme (d_p_017_01) despite being a fintech ML role",
-        "scikit-learn (level 3) has uneven intensity distribution across documents with no clear justification"
+        "Recommendation letter (d_p_017_02) is allocated high intensity for technical skills like MLOps and model deployment, which contradicts its purpose as a soft skill endorsement document",
+        "LinkedIn profile (d_p_017_03) is given high intensity for skills like NLP and PyTorch, but it's a professional summary rather than technical documentation",
+        "Project README (d_p_017_01) is the primary evidence for most skills, which is reasonable, but the intensity distribution seems uneven (e.g., GCP has intensity 2 while scikit-learn has 2 despite being a foundational library)"
       ],
       "flagged": false
     },
@@ -176,11 +169,11 @@
       "persona_id": "p_020",
       "score": 3,
       "concerns": [
-        "TensorFlow (level 4) is allocated to recommendation document [d_p_020_05], which doesn't mention technical skills",
-        "Docker (level 5) is assigned to CV [d_p_020_00] without explicit mention in the document",
-        "NLP (level 5) is allocated to recommendations [d_p_020_04-05] which don't detail technical skill application",
-        "MLOps (level 5) is assigned to recommendations [d_p_020_04-05] which focus on leadership rather than technical implementation",
-        "GCP (level 4) has only 1 intensity in CV [d_p_020_00] without specific cloud platform mention"
+        "Technical skills like TensorFlow (level 4) are allocated to recommendation documents (d_p_020_05), which should focus on soft skills rather than technical proficiency",
+        "Kubernetes (level 4) is assigned to ChronicCareRL project_readme (d_p_020_03) which describes reinforcement learning, not container orchestration",
+        "NLP (level 5) has high scores in recommendation documents (d_p_020_04/d_p_020_05) which don't provide technical evidence for NLP expertise",
+        "Model deployment (level 4) has high scores in recommendation documents instead of technical project_readmes",
+        "TensorFlow (level 4) has a 4 intensity in recommendation document (d_p_020_05) which is inappropriate for technical skill evidence"
       ],
       "flagged": false
     },
@@ -192,21 +185,19 @@
     },
     {
       "persona_id": "p_022",
-      "score": 4,
+      "score": 3,
       "concerns": [
-        "The recommendation letter (d_p_022_04) is allocated to multiple specific skills (e.g., ArgoCD:3, Cloud cost optimization:3) which may not be directly referenced in a general recommendation document.",
-        "Project READMEs (d_p_022_01-03) are assigned high intensity for skills like CI/CD pipelines (5) and Kubernetes (5), which may be inferred but not explicitly detailed in the README content."
+        "Recommendation letter (d_p_022_04) is inappropriately allocated to technical skills (e.g., ArgoCD, GitHub Actions) instead of soft skills or overall expertise",
+        "Cloud cost optimization (level 4) lacks direct evidence in documents (only CV and READMEs with indirect relevance)",
+        "Jenkins (level 3) has minimal evidence (CV and one README) for a skill with moderate proficiency",
+        "Database optimization (level 3) has no direct evidence in documents, relying solely on CV"
       ],
       "flagged": false
     },
     {
       "persona_id": "p_023",
-      "score": 4,
-      "concerns": [
-        "The project README (d_p_023_01) is assigned high intensity (4) for skills like Apache Spark and Data warehousing, but a README typically describes project setup rather than detailed technical implementation. This may overstate evidence for these skills.",
-        "The candidate's 2-year experience with 14 skills at levels 2-4 may indicate overallocation, especially for a junior role where depth often exceeds breadth.",
-        "Skills like Kubernetes and CI/CD pipelines are allocated to both documents without clear differentiation between general experience (CV) and project-specific implementation (README)."
-      ],
+      "score": 5,
+      "concerns": [],
       "flagged": false
     },
     {
@@ -217,12 +208,14 @@
     },
     {
       "persona_id": "p_025",
-      "score": 4,
+      "score": 2,
       "concerns": [
-        "Technical skills like REST API design and PostgreSQL are allocated to recommendation letters (soft skill documents), which is inconsistent. Recommendations should focus on soft skills like leadership and collaboration, not technical expertise.",
-        "Cloud cost optimization has high intensity in the CV (3) and recommendations (3), but low intensity in project READMEs (1-1). This may not align with typical project documentation focus areas."
+        "Recommendation documents (d_p_025_03, d_p_025_04) are incorrectly allocated to technical skills (e.g., AWS, Docker) instead of soft skills like leadership or collaboration",
+        "Project READMEs (d_p_025_01, d_p_025_02) show low intensity for skills like Cloud cost optimization (level 1) and React (level 1) despite being project-specific documents",
+        "Python (level 4 globally) has conflicting evidence - project READMEs show level 2 but recommendation letter shows level 4 without clear justification",
+        "REST API design (level 5 globally) has high intensity in CV but only moderate intensity in project READMEs without explaining how the skill level is achieved"
       ],
-      "flagged": false
+      "flagged": true
     },
     {
       "persona_id": "p_026",
@@ -234,11 +227,10 @@
       "persona_id": "p_027",
       "score": 3,
       "concerns": [
-        "High skill levels (3) for a 0-year experience candidate may not be adequately supported by project_readmes (which describe projects, not depth of expertise).",
-        "Cloud networking (VPC/subnets) is allocated to d_p_027_01 (auto-scaling project) which mentions Terraform/AWS but not explicit networking expertise.",
-        "Python/Shell scripting (level 3) are heavily tied to project_readmes rather than dedicated documentation.",
-        "Soft skills (like monitoring) are allocated to project_readmes instead of recommendations, which is less appropriate.",
-        "Multiple skills (e.g. ArgoCD, GitHub Actions) are assigned high intensity to d_p_027_03 (recommendation) which may not directly demonstrate technical proficiency."
+        "High skill levels (Level 3) for a candidate with 0 years of experience in the SaaS industry, which may be overestimated",
+        "Allocation of technical skills (e.g., ArgoCD, Ansible) to the CV (self-claim) rather than project documents, which is less reliable",
+        "Cloud networking (VPC/subnets) allocated to a project README about auto-scaling infrastructure, which may not directly demonstrate networking expertise",
+        "Recommendation document (d_p_027_03) is assigned high intensity for multiple skills but lacks specific details about the candidate's contributions to justify Level 3 proficiency"
       ],
       "flagged": false
     },
@@ -250,22 +242,20 @@
     },
     {
       "persona_id": "p_029",
-      "score": 2,
+      "score": 4,
       "concerns": [
-        "CV with 0 years of experience claims Level 3 skills across multiple technical domains, which is unrealistic for a candidate with no professional experience",
-        "Recommendation document is being used to support technical skills (Network automation) instead of soft skills, which is inappropriate",
-        "Python skill level is allocated high intensity across all documents despite no explicit evidence in the READMEs (though implied through project context)",
-        "Multiple Level 3 skills are assigned to a candidate with 0 years of experience, which creates a credibility issue"
+        "The recommendation document (d_p_029_04) is allocated to Network automation (level 2) which is a technical skill, but the recommendation primarily serves as a soft skill document (attesting to collaboration and technical proficiency). This creates a mismatch between document type and skill category.",
+        "The CV (d_p_029_00) is assigned intensity 3 to all level 3 skills, which may overemphasize the CV's role in demonstrating technical expertise when it's a general document that might not explicitly detail specific skills.",
+        "Network automation (level 2) has the highest intensity in the recommendation document, but there's no evidence in other documents to support this skill, which could create an imbalance in the skill evidence base."
       ],
-      "flagged": true
+      "flagged": false
     },
     {
       "persona_id": "p_030",
-      "score": 3,
+      "score": 4,
       "concerns": [
-        "Technical skills (BDD/TDD, Test strategy design) are allocated to recommendation letter (d_p_030_02), which is more appropriate for soft skills rather than technical proficiency",
-        "Project README (d_p_030_01) is assigned high intensity for Python (3) and Test automation (3), which may overstate evidence for a 0-year experience candidate",
-        "Web accessibility (WCAG) is assigned lower intensity in project README (1) despite being a technical skill that could be demonstrated through code examples"
+        "Recommendation letter (d_p_030_02) is being used to support practical skills like BDD/TDD and CI/CD pipelines, which are better evidenced by project documentation",
+        "High skill levels (Level 3) for multiple technical skills may seem inconsistent with 0 years of industry experience, though project README could justify some of this"
       ],
       "flagged": false
     },
@@ -273,43 +263,45 @@
       "persona_id": "p_031",
       "score": 3,
       "concerns": [
-        "Recommendation letter (d_p_031_03) is allocated to technical skills (Kubernetes/Terraform) instead of soft skills (leadership, collaboration).",
-        "Linux administration (level 3) is assigned to recommendation letter (d_p_031_03) with intensity 1, which is unlikely to reflect actual expertise from a recommendation document."
+        "Recommendation letter (d_p_031_03) is being used to evidence technical skills like CI/CD pipelines (intensity 2) and cloud cost optimization (intensity 1), which is inappropriate for a recommendation document",
+        "Linux administration (level 3) is allocated to CV and blog but not directly evidenced in any document topic",
+        "Python (level 3) has inconsistent intensity across documents (CV:2, project READMEs:1/3, blog:3) without clear justification",
+        "Database optimization (level 3) is allocated to project READMEs with intensity 2 and 3, but not clearly tied to the fraud detection platform project"
       ],
       "flagged": false
     },
     {
       "persona_id": "p_032",
-      "score": 5,
-      "concerns": [],
+      "score": 4,
+      "concerns": [
+        "Snowflake level 4 seems high for a 2-year candidate; the project_readme does not explicitly mention Snowflake usage",
+        "Docker/Terraform level 2 allocation appears low given their common use in cloud infrastructure projects",
+        "Multiple Level 3 skills (AWS, Spark, Airflow) are allocated to both documents, which may overstate evidence breadth for a 2-year candidate"
+      ],
       "flagged": false
     },
     {
       "persona_id": "p_033",
-      "score": 4,
-      "concerns": [
-        "Linux administration intensity (1 in README) seems low for a project that might involve Linux infrastructure, especially with global level 3",
-        "Technical writing intensity (1 in recommendation) appears mismatched - recommendation letters typically don't showcase technical writing skills",
-        "System design (global level 5) is only rated 4 in project README, which might underrepresent evidence for highest skill level"
-      ],
+      "score": 5,
+      "concerns": [],
       "flagged": false
     },
     {
       "persona_id": "p_034",
       "score": 4,
       "concerns": [
-        "Recommendation document (d_p_034_03) is allocated to technical skills (REST API design/React) rather than soft skills like leadership or consulting expertise, which might be more appropriate for a recommendation letter",
-        "Webpack/Vite (level 4) has limited supporting evidence (only 2 documents) despite being a more technical tool",
-        "Web performance optimization (level 4) is primarily supported by a single project_readme document, which may not fully demonstrate breadth of experience"
+        "The recommendation document is being used to support technical skills (e.g., Next.js, REST API design) rather than soft skills like leadership or consulting expertise, which is inconsistent with its purpose as a recommendation letter."
       ],
       "flagged": false
     },
     {
       "persona_id": "p_035",
-      "score": 4,
+      "score": 3,
       "concerns": [
-        "PyTorch and TensorFlow have inconsistent intensity levels across documents (e.g., project_readme 035_01 has 2 for PyTorch but CV/blog have 4). This may suggest mismatch if projects actually used these frameworks.",
-        "SQL analytics has low intensity (1) for the blog, which may be acceptable given its focus on deployment rather than data wrangling, but could be clarified."
+        "A/B testing intensity (3) for CV and project_readmes seems low given the candidate's consulting background where A/B testing is often used for client retention strategies",
+        "PyTorch (2) and TensorFlow (2) intensity in project_readmes contradict global level 4, suggesting over-allocation without sufficient project evidence",
+        "Blog document is allocated high intensity for PyTorch/TensorFlow (4) but the blog topic focuses on real-time insights rather than specific frameworks",
+        "SQL analytics (1) intensity in blog document seems misplaced as the blog doesn't mention SQL-related content"
       ],
       "flagged": false
     },
@@ -318,29 +310,29 @@
       "score": 4,
       "concerns": [
         "Document d_p_036_05 referenced in evidence allocation does not exist in the provided documents list",
-        "PostgreSQL intensity 5 in d_p_036_03 (Distributed Ad Serving Infrastructure) may not align with the project description focusing on microservices/load balancing",
-        "Python intensity 5 in d_p_036_05 (non-existent document) creates inconsistency"
+        "Python and Terraform allocations are lower than expected for a candidate with 11 years of adtech experience (projects mention infrastructure but no explicit Python/Terraform use cases)",
+        "PostgreSQL allocation for d_p_036_02 (analytics dashboard) is Level 5, but the document topic only mentions data processing without specific DB expertise"
       ],
       "flagged": false
     },
     {
       "persona_id": "p_037",
-      "score": 4,
+      "score": 3,
       "concerns": [
-        "Data visualization (Matplotlib/Plotly) is allocated to d_p_037_02 (customer segmentation dashboard) which uses Tableau (not listed in the skill), creating a mismatch",
-        "Recommendation documents (d_p_037_03/d_p_037_04) are being used for technical skills (e.g. microservices, REST API) rather than soft skills (leadership, teamwork) which is inappropriate",
-        "All skills except Python/statistical modeling have identical allocation patterns (CV=4, others=1) which may not reflect nuanced evidence depth"
+        "High-level skills (e.g., Python:5, Statistical modeling:5) are overwhelmingly tied to the CV (d_p_037_00) with no supporting evidence in project documents or recommendations",
+        "Recommendations (d_p_037_03/04) are used for technical skills like Microservices architecture/REST API design, which may not align with their focus on leadership and pipeline deployment",
+        "Project READMEs (d_p_037_01/02) show limited evidence for skills like Apache Spark/Airflow (only 1 intensity) despite being data science projects",
+        "The blog (d_p_037_05) about ethical AI lacks connections to technical skills like statistical modeling or Python"
       ],
       "flagged": false
     },
     {
       "persona_id": "p_038",
-      "score": 3,
+      "score": 4,
       "concerns": [
-        "Python's global level 4 is only supported by CV (4) but not the project README (3), which may not fully justify the higher level",
-        "Serverless has conflicting intensity levels (CV:2, README:1) but global level 2 suggests the README's 1 is understated",
-        "The project README (d_p_038_01) appears to cover multiple skills (13) at level 3, which may be unrealistic for a single project's documentation",
-        "The CV (d_p_038_00) is allocated 14 skills at level 3, which may overstate the evidence for a 5-year SaaS developer with limited documents"
+        "Serverless skill is allocated intensity 2 to CV and 1 to project README, which may indicate inconsistent evidence if the project doesn't use serverless",
+        "Python's global level 4 is only supported by CV (intensity 4) but project README has intensity 3, which may be insufficient for level 4",
+        "Multiple skills (AWS, CI/CD, etc.) have identical intensity allocation across both documents, which may overstate evidence breadth for a 5-year experience candidate"
       ],
       "flagged": false
     },
@@ -354,19 +346,18 @@
       "persona_id": "p_040",
       "score": 4,
       "concerns": [
-        "LinkedIn document (d_p_040_03) is assigned high intensity for skills like C/C++ and Embedded Linux, which may not be directly reflected in a summary-focused profile",
-        "Python/REST API design have inconsistent intensities (1-2) across documents, potentially underrepresenting their relevance to fintech/embedded projects",
-        "Sensor integration and Network automation at level 2 may not fully align with the candidate's fintech focus where hardware-software integration is more critical"
+        "LinkedIn document is assigned to all skills, which may overstate evidence for soft skills not explicitly mentioned in the summary",
+        "Python/REST API design have inconsistent intensity (2 vs 1) across documents despite being level 2 globally",
+        "Breadth of level 3 skills may be overreaching for 1 year of fintech embedded experience"
       ],
       "flagged": false
     },
     {
       "persona_id": "p_041",
-      "score": 3,
+      "score": 4,
       "concerns": [
-        "The recommendation letter (d_p_041_04) is being used to support technical skills (e.g., Apache Airflow: 1, Python: 2), which is inappropriate. Recommendations should focus on soft skills, not technical proficiency.",
-        "SQL analytics (level 3) has uniform intensity 3 across all documents, which may overstate the breadth of evidence for a mid-level skill.",
-        "Model deployment (level 4) and PyTorch (level 4) are assigned intensity 4 to all documents, including the READMEs, which may not sufficiently demonstrate deployment experience beyond project descriptions."
+        "The recommendation letter (d_p_041_04) is allocated to technical skills (e.g., Python level 2, MLOps level 3) rather than soft skills like leadership or teamwork, which is mismatched.",
+        "Python level 2 in the recommendation letter seems inconsistent with the candidate's global Python level 5, as the CV and project READMEs strongly support advanced Python proficiency."
       ],
       "flagged": false
     },
@@ -374,9 +365,9 @@
       "persona_id": "p_042",
       "score": 3,
       "concerns": [
-        "Data visualization (Plotly) and Tableau/Power BI are allocated to d_p_042_01 (project README), which mentions React/Python but no specific tools. The project description does not align with these skills.",
-        "Recommendation letter (d_p_042_02) is assigned high intensity for technical skills like SQL analytics and data visualization, which are not typically covered in recommendation letters.",
-        "Competitive analysis and stakeholder management are assigned lower intensity (1) to d_p_042_01 (project README), which may not provide evidence for these strategic skills."
+        "Tableau/Power BI and UX research are assigned low intensity (1) to the README document, which doesn't explicitly mention these tools or research activities",
+        "Product Management (Level 4) has higher intensity (4) in the CV but only 3 in the recommendation letter, which may underrepresent the recommendation's value for this key skill",
+        "Competitive analysis and roadmap planning are assigned to the README (intensity 1) despite being strategic product management skills that would typically require more direct evidence"
       ],
       "flagged": false
     },
@@ -390,10 +381,9 @@
       "persona_id": "p_044",
       "score": 3,
       "concerns": [
-        "Python and REST API design allocated to recommendation document (d_p_044_02) which is academic-focused rather than technical evidence",
-        "Candidate has 0 years of experience but all skills are rated level 3 - this may not align with typical career progression patterns",
-        "Terraform and Kubernetes (level 3) are not mentioned in the project README (d_p_044_01) which focuses on React/Node.js project",
-        "Recommendation document (d_p_044_02) is the only source for Python (level 3) despite CV and README containing more relevant technical context"
+        "Python skill allocation to project_readme (intensity 2) seems mismatched since the project is described as React/Node.js with no mention of Python usage",
+        "Recommendation document (d_p_044_02) is being used to justify Python skill level (intensity 3) which is more academic than practical for a Full-Stack role",
+        "All skills are rated Level 3 despite 0 years of experience, which may overstate practical proficiency compared to academic knowledge from the recommendation"
       ],
       "flagged": false
     },
@@ -401,39 +391,2240 @@
       "persona_id": "p_045",
       "score": 4,
       "concerns": [
-        "The recommendation letter (d_p_045_02) is allocated high intensity for technical skills rather than soft skills, which is more appropriate for a recommendation document."
+        "Recommendation letter (d_p_045_02) is allocated technical skills (e.g., Python, Kubernetes) that should primarily reflect soft skills like leadership or teamwork",
+        "Project README (d_p_045_01) has high intensity (3) for skills like Kubernetes and Python that are not explicitly mentioned in the project description",
+        "Python's global level 3 is supported by CV and recommendation (3 each), but README only has 1, which may underrepresent evidence"
       ],
       "flagged": false
     },
     {
       "persona_id": "p_046",
-      "score": 4,
-      "concerns": [
-        "Blog allocation for CI/CD pipelines (level 5) may be inconsistent with its focus on observability (Prometheus/Grafana), not CI/CD tooling"
-      ],
-      "flagged": false
-    },
-    {
-      "persona_id": "p_047",
       "score": 5,
       "concerns": [],
       "flagged": false
     },
     {
-      "persona_id": "p_048",
-      "score": 3,
+      "persona_id": "p_047",
+      "score": 4,
       "concerns": [
-        "Contradiction between 0 years of experience and Level 3 skill ratings (typically requires professional experience)",
-        "Recommendation document (d_p_048_02) is allocated to skills like 'recommendation systems' and 'NLP' which may not align with its academic endorsement focus",
-        "All skills are allocated across all documents with uniform intensity, which may overstate evidence for a candidate with no professional experience"
+        "REST API design is allocated to the recommendation document (d_p_047_02), which is a soft skill recommendation rather than a technical document",
+        "TensorFlow is rated 2 in the project README (d_p_047_01) but has a global level 3 - may underrepresent actual usage in the project"
       ],
       "flagged": false
+    },
+    {
+      "persona_id": "p_048",
+      "score": 2,
+      "concerns": [
+        "Global skill levels are all Level 3 despite 0 years of experience, which is unrealistic for most job markets",
+        "Project README (d_p_048_01) is allocated to skills with intensity 1 but contains specific adtech implementation details that should warrant higher intensity",
+        "Recommendation letter (d_p_048_02) is being used to support technical skills (e.g. MLOps) that are better evidenced by practical projects",
+        "LinkedIn (d_p_048_03) is being used for all skills with intensity 1, which is inconsistent with its role as a professional summary rather than technical documentation"
+      ],
+      "flagged": true
     },
     {
       "persona_id": "p_049",
       "score": 4,
       "concerns": [
-        "All evidence is derived from a single document (CV), which may not realistically cover the breadth of skills for a candidate with 2 years of experience. A more experienced candidate would typically have multiple sources of evidence."
+        "Python level 4 with 2 years of experience may be optimistic; advanced proficiency typically requires more time unless working on complex projects",
+        "All skills mapped to a single CV document may lack diversity in evidence sources, which could impact credibility"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_050",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_051",
+      "score": 4,
+      "concerns": [
+        "Technical skills (Next.js, Python, Webpack/Vite) are allocated to recommendations, which are more suited for soft skills like leadership and collaboration",
+        "REST API design has low intensity (1) for the portfolio website, which may not directly relate to API design",
+        "Python skill level (4) has low intensity (1-2) in project_readmes, which may underrepresent its usage in consulting work"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_052",
+      "score": 3,
+      "concerns": [
+        "Recommendations (d_p_052_03, d_p_052_04) are allocated to technical skills instead of soft skills (leadership, collaboration).",
+        "Java (level 4) has inconsistent evidence intensity (CV:4, projects:2, blog:3) which may not fully support its global level.",
+        "Serverless (level 4) has mixed intensity (CV:3, project:4) which could create contradictions if not clearly justified."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_053",
+      "score": 3,
+      "concerns": [
+        "Recommendation document (d_p_053_04) is incorrectly allocated to technical skills like Kubernetes (5) and Terraform (5) instead of soft skills like leadership/mentorship",
+        "Cloud Cost Optimization (4) is only supported by the blog (d_p_053_05), which may not directly demonstrate cost optimization expertise",
+        "GCP (4) is only supported by the project_readme (d_p_053_01) which mentions Kafka/microservices rather than GCP-specific work",
+        "CI/CD pipelines (3) are assigned to a project_readme (d_p_053_03) that specifically mentions CI/CD optimization, which should have higher intensity",
+        "Network automation (3) is assigned to a payment gateway project (d_p_053_02) that may not directly relate to network automation"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_054",
+      "score": 4,
+      "concerns": [
+        "Apache Kafka intensity (3) in the project README seems low for a project explicitly built using Kafka",
+        "Recommendation letter (d_p_054_02) has high intensity for technical skills like Python/Snowflake, which may not be the strongest source for detailed technical evidence",
+        "Data warehousing intensity (2) in the project README appears mismatched with the skill's global level (3) given the project's fintech context"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_055",
+      "score": 3,
+      "concerns": [
+        "Technical skills like Jupyter notebooks and Python are overallocated to the recommendation document (soft skill endorsement) and LinkedIn summary (career goals), which lack direct evidence of technical proficiency",
+        "Data visualization skills are assigned high intensity to all documents, but the CV and recommendation document don't provide specific examples of visualization work",
+        "SQL analytics level 3 is supported across all documents, but the CV and recommendation document lack specific SQL implementation evidence",
+        "REST API design has conflicting intensity allocations (2 for project_readme vs 1 for CV), which may indicate inconsistent evidence prioritization"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_056",
+      "score": 3,
+      "concerns": [
+        "Blog [d_p_056_06] on zero-trust architecture is incorrectly allocated to 'Application security (OWASP)' instead of 'Network security' or 'IAM/Access control'.",
+        "Project_readme [d_p_056_02] (CloudSecurityAuditTool) is assigned low intensity for 'Application security (OWASP)' but aligns better with 'Compliance' or 'Vulnerability management'.",
+        "SIEM tools skill has uniformly low intensity (2-3) despite global level 4, indicating insufficient evidence.",
+        "Threat modeling has low intensity (2-3) across all documents but is rated Level 3 globally, which may be acceptable but lacks depth.",
+        "Recommendation [d_p_056_04] (peer) is allocated to 'Penetration testing' with intensity 4, which is appropriate, but other skills like 'SIEM tools' lack similar recommendation support."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_057",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_058",
+      "score": 4,
+      "concerns": [
+        "Blog (d_p_058_03) has high intensity for Terraform (3) and System Design (4) which may not directly align with its focus on machine learning optimization",
+        "Project_readme (d_p_058_01) has lower intensity for CI/CD pipelines (3) despite being a technical project that might naturally involve CI/CD",
+        "Linux administration (3) is only moderately supported by the CV and project_readme, which may underrepresent its actual relevance"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_060",
+      "score": 3,
+      "concerns": [
+        "LinkedIn summary (d_p_060_02) is allocated 3 for all skills despite being a general summary document, which may not provide detailed technical evidence",
+        "Project README (d_p_060_01) is allocated 3 for skills like firmware development and RTOS, but a README typically lacks in-depth technical documentation to fully justify Level 3",
+        "GitLab CI, Python, REST API, and Shell scripting are allocated 2/1 but may require more specific project evidence to support their skill levels"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_061",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_062",
+      "score": 3,
+      "concerns": [
+        "Recommendations (d_p_062_04/d_p_062_05) are assigned to technical skills (AWS, Spark) with low intensity instead of soft skills (leadership, collaboration)",
+        "MLOps (MLflow/W&B) evidence is sparse across all documents (only 4 in CV), which may not align with the global level 4 rating"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_063",
+      "score": 4,
+      "concerns": [
+        "The recommendation letter (d_p_063_02) is being used to allocate technical skills (e.g., Apache Airflow, MLOps) rather than soft skills (leadership, project management). Recommendations should focus on behavioral evidence, not specific technical proficiency."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_064",
+      "score": 2,
+      "concerns": [
+        "Python and Message queues are rated Level 5 but have minimal evidence (level 1) in all documents except the blog, which contradicts their global skill level",
+        "Recommendation document (d_p_064_04) is incorrectly allocating technical skills like Chaos engineering instead of focusing on leadership/soft skills",
+        "Project READMEs (d_p_064_01-03) are assigned high intensity for skills like Go/PostgreSQL/Redis but show no specific project evidence in their topics",
+        "Blog (d_p_064_05) about scaling infrastructure is being used to support skills like Python and Message queues which aren't directly related to the topic"
+      ],
+      "flagged": true
+    },
+    {
+      "persona_id": "p_065",
+      "score": 4,
+      "concerns": [
+        "Cloud networking (VPC/subnets) skill level 4 is allocated low intensity (1) to blog and project README, which may not adequately support the global level for a Senior Platform Engineer",
+        "Network automation (level 3) has low intensity (1) in blog and project README, which may not align with the skill's importance in cloud infrastructure",
+        "Bash (level 3) has low intensity (1) in blog and project README, which may underrepresent scripting skills in a SaaS platform context"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_066",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_067",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_068",
+      "score": 3,
+      "concerns": [
+        "README file (d_p_068_01) is allocated high intensity for skills like CI/CD pipelines and Docker, which are typically documented in deployment/infrastructure contexts rather than project READMEs",
+        "PostgreSQL and Python show low intensity in README but are rated global level 3, creating potential contradiction if these skills weren't demonstrated in the project",
+        "LinkedIn summary (d_p_068_03) is assigned full intensity for all skills despite being a general career summary rather than technical evidence",
+        "Multiple skills (e.g., Terraform, Load balancing) have low intensity in README but are rated global level 3 without clear project evidence"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_069",
+      "score": 1,
+      "concerns": [
+        "Contradiction between 0 years of experience and level 3 expertise across all skills (expert level)",
+        "Project README (d_p_069_01) is assigned high intensity for skills like Hugging Face Transformers/Recommendation systems that seem mismatched with fraud detection focus",
+        "LinkedIn summary (d_p_069_02) is given high intensity for technical skills despite being a summary document rather than evidence of technical proficiency",
+        "No allocation for soft skills despite being an enterprise role",
+        "All documents are assigned identical intensity levels (3) across all skills, showing no differentiation in evidence strength"
+      ],
+      "flagged": true
+    },
+    {
+      "persona_id": "p_070",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_071",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_072",
+      "score": 3,
+      "concerns": [
+        "Recommendations (d_p_072_04, d_p_072_05) are allocated to technical skills instead of soft skills (e.g., leadership, teamwork). Recommendations should validate soft skills, not technical expertise.",
+        "Skills like GCP and Cloud cost optimization are assigned high intensity from the CV (d_p_072_00) without explicit project documentation to support these claims.",
+        "Project READMEs (d_p_072_01-03) are assigned low intensity (1) for many skills, which may not fully reflect their relevance to the candidate's experience."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_073",
+      "score": 4,
+      "concerns": [
+        "Recommendation documents (d_p_073_04, d_p_073_05) are being used to support technical skills (e.g., React, TypeScript) rather than soft skills like leadership or collaboration, which is less appropriate",
+        "CV (d_p_073_00) has minimal intensity (1) for most skills despite being a primary source for experience verification",
+        "Security testing evidence is spread across multiple documents with inconsistent intensity (3-4) despite the Secure Payment Gateway UI project specifically mentioning PCI compliance and multi-factor authentication"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_074",
+      "score": 2,
+      "concerns": [
+        "The candidate has 0 years of experience but is assigned level 3 in multiple technical skills, which is unrealistic for someone with no professional experience.",
+        "The project_readme mentions Node.js (used in the secure authentication system), but Node.js is not listed in the global skill levels, creating a contradiction.",
+        "Technical skills like Python/Go are assigned to the recommendation document, which is typically used for soft skills rather than technical proficiency."
+      ],
+      "flagged": true
+    },
+    {
+      "persona_id": "p_075",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_076",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_077",
+      "score": 4,
+      "concerns": [
+        "The recommendation document (d_p_077_03) is allocated to technical skills (Go/Java) rather than soft skills (leadership/management), which is inconsistent with its testimonial nature",
+        "Java allocation in project_readme (intensity 2) seems mismatched with global level 4, unless the framework explicitly avoids Java usage",
+        "REST API design and Selenium/Playwright have similar intensity allocations across all documents, which may oversimplify skill differentiation"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_078",
+      "score": 4,
+      "concerns": [
+        "Stakeholder communication is assigned intensity 1 to the project README, which may not directly address stakeholder engagement (more relevant to CV)",
+        "Technical writing is level 2 globally but assigned intensity 2 to both documents, which may underrepresent its importance relative to other skills",
+        "Agile/Scrum and Cross-team collaboration have lower intensity in the README compared to CV, which may reflect appropriate relevance but could be clearer"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_079",
+      "score": 4,
+      "concerns": [
+        "Flutter (Level 4) is allocated to CV (d_p_079_00) with intensity 4 but the project_readme (d_p_079_01) only mentions React Native, not Flutter",
+        "Webpack/Vite (Level 3) is allocated to project_readme (d_p_079_01) with intensity 1 despite the project using Firebase, not Webpack/Vite",
+        "Swift (Level 3) is allocated to project_readme (d_p_079_01) with intensity 1 despite the project being React Native, not Swift",
+        "Technical skills like Web accessibility and TypeScript are allocated to both project_readme and recommendation, which may not be appropriate for recommendation document type"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_080",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_081",
+      "score": 4,
+      "concerns": [
+        "Go/Java/GraphQL intensity in project_readme (1) seems low given the project's technical nature; if these languages are used, the README should reflect higher intensity",
+        "Test strategy design has lower intensity (2) in project_readme despite being a key QA skill, which may underrepresent strategic evidence"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_082",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_083",
+      "score": 4,
+      "concerns": [
+        "Blog document (d_p_083_05) is assigned low intensity (1) to Node.js despite the blog focusing on accessibility/performance rather than backend technologies",
+        "Recommendation letter (d_p_083_04) is used for Test automation (intensity 4) which is a soft skill document type mismatch",
+        "Web performance optimization has uneven intensity distribution (4,3,4,3) across documents with only TradeInsight and blog showing strong relevance"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_084",
+      "score": 4,
+      "concerns": [
+        "Cloud cost optimization allocated to project_readme (which focuses on deployment, not cost) may be overrepresented",
+        "GitLab CI and Jenkins have low intensity in project_readme which doesn't mention these tools",
+        "Recommendation letter (soft evidence) is assigned high intensity for technical skills like ArgoCD and Kubernetes that may not be explicitly mentioned"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_085",
+      "score": 4,
+      "concerns": [
+        "Document d_p_085_04 referenced in evidence allocation does not exist in the provided documents list, creating a contradiction.",
+        "The blog (d_p_085_03) is allocated high intensity (5) for Terraform, which may overstate relevance if the blog does not explicitly discuss Terraform implementation."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_086",
+      "score": 2,
+      "concerns": [
+        "Cross-team collaboration and Stakeholder management (soft skills) are allocated to READMEs (technical documents) instead of the recommendation letter",
+        "SQL analytics and User journey mapping (technical skills) are assigned low intensity in the recommendation letter which is inappropriate for technical evidence",
+        "Product management and UX research (level 3) are supported by READMEs without actual project experience to justify high skill levels",
+        "Recommendation letter is used for both technical and soft skills, which is inconsistent with document type"
+      ],
+      "flagged": true
+    },
+    {
+      "persona_id": "p_087",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_088",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_089",
+      "score": 4,
+      "concerns": [
+        "Recommendation document (soft skill) is assigned to technical skills (Game networking, REST API design) with high intensity, which may not align with its purpose",
+        "Galactic Frontiers (mobile) project_readme is assigned Unreal Engine with intensity 3, which may be contradictory if the project didn't actually use Unreal Engine",
+        "Microservices architecture has uniform low intensity across all documents, which may not reflect a Senior Lead's expected breadth of technical expertise"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_090",
+      "score": 3,
+      "concerns": [
+        "Technical skills (e.g., GitLab CI, Selenium/Playwright) are assigned to the recommendation letter, which is more suited for soft skills rather than technical proficiency",
+        "All documents are given equal intensity for Python and automation skills, which may not reflect the actual depth of evidence in each document type",
+        "Skill levels (e.g., Python: 3) may be overestimated for 1-year experience, especially without stronger project-specific evidence"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_091",
+      "score": 4,
+      "concerns": [
+        "Technical skills (e.g., Kubernetes, microservices) are allocated to the recommendation letter, which is a soft skill document rather than a technical artifact. This misaligns the evidence type with the skill category."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_092",
+      "score": 3,
+      "concerns": [
+        "scikit-learn level 3 in d_p_092_01 (project README) contradicts global level 5, as the project is a machine learning project",
+        "Time series analysis level 3 in d_p_092_01 mismatched with a medical image analysis project (non-time-series focus)",
+        "MLOps (MLflow) level 5 assigned to d_p_092_01 (project README) seems mismatched - MLflow implementation details would likely be in code/docs, not a README",
+        "Blog (d_p_092_03) has level 4 for Python but no direct evidence of Python usage in the blog content"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_093",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_094",
+      "score": 2,
+      "concerns": [
+        "Recommendation document (d_p_094_02) is being used to support technical skills like Test strategy design (level 2) and Selenium/Playwright (level 2), which are not directly addressed in the recommendation's content about learning agility and attention to detail",
+        "Multiple level 3 skills (API testing, Integration testing, Test automation, Selenium/Playwright, Unit testing) are supported primarily by a single project_readme document (d_p_094_01), which may not provide sufficient breadth of evidence for a candidate with 0 years of experience",
+        "CV (d_p_094_00) is assigned high intensity (3) for Test automation and Selenium/Playwright despite stating 'no experience' in the role",
+        "LinkedIn document (d_p_094_03) is allocated level 2 for skills like REST API design and Python, which are not explicitly mentioned in the LinkedIn summary focused on consulting industry insights"
+      ],
+      "flagged": true
+    },
+    {
+      "persona_id": "p_095",
+      "score": 3,
+      "concerns": [
+        "The recommendation document (d_p_095_03) is allocated to technical skills (e.g., Kubernetes, Go) instead of soft skills like leadership or teamwork, which is inappropriate for a recommendation letter."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_096",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_097",
+      "score": 3,
+      "concerns": [
+        "Project README (d_p_097_01) is allocated for skills like Webpack/Vite and Web accessibility (WCAG) without explicit mention of these in the project description, which may stretch the evidence",
+        "With 0 years of experience, the breadth of evidence across all three documents for most skills may be unrealistic",
+        "React's higher intensity (4) in the project README is appropriate, but other skills being equally weighted across all documents could imply redundant evidence"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_098",
+      "score": 3,
+      "concerns": [
+        "Kubernetes allocation (README:2) may be inconsistent if the payment gateway project does not use Kubernetes",
+        "Agile/Scrum allocation (recommendation:3) seems mismatched - a professor's recommendation is unlikely to detail Agile/Scrum experience",
+        "High Level 3 scores for multiple skills with minimal evidence (e.g., AWS, Python) given 0 years of industry experience",
+        "Technical writing (recommendation:3) appears mismatched - academic recommendations typically don't attest to technical writing proficiency"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_099",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_100",
+      "score": 4,
+      "concerns": [
+        "Selenium/Playwright intensity is 1 for d_p_100_03 (project README) which discusses a security tool. This seems inconsistent as the README topic doesn't directly relate to UI automation tools like Selenium/Playwright"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_101",
+      "score": 4,
+      "concerns": [
+        "The blog [d_p_101_04] is about React state management but has a low intensity (3) for 'State management (Redux/Zustand)' despite being a relevant topic. This might underrepresent its importance for the skill.",
+        "The blog [d_p_101_04] has a very low intensity (1) for 'Webpack/Vite' despite being a technical blog, which is appropriate but could be more balanced with other documents."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_102",
+      "score": 4,
+      "concerns": [
+        "Recommendation document (d_p_102_04) is primarily a soft skill reference but allocated to technical skills like iOS development (intensity 3), which may not align well with document type",
+        "Project README (d_p_102_03) has low intensity for Android development (2) despite being a cross-platform developer, which may underrepresent Android expertise",
+        "Responsive design (global level 5) is only strongly supported by the blog (intensity 5), but lacks evidence from other documents"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_103",
+      "score": 4,
+      "concerns": [
+        "AWS skill level 5 is not strongly evidenced by any document (highest intensity 4 for project_readme 103_01), which may underrepresent the candidate's expertise",
+        "CI/CD pipelines and Cloud cost optimization are allocated to non-technical documents (e.g., project_readme 103_01) without clear technical evidence",
+        "Network automation has low intensity (3) despite being a key SRE skill, with no direct project documentation",
+        "The CV (d_p_103_00) is allocated minimal intensity (1) across all skills, which is appropriate but may not fully capture the candidate's experience"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_104",
+      "score": 3,
+      "concerns": [
+        "LinkedIn document is being used for technical skills (e.g., GitHub Actions, Terraform) that are better supported by project READMEs or CV",
+        "Linux administration evidence is weak (intensity 1 across all documents) despite being rated Level 2 globally",
+        "GitHub Actions intensity (2) in CV is lower than other docs, but CV is not a technical document type for tool-specific evidence"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_105",
+      "score": 4,
+      "concerns": [
+        "Java intensity (1) in project READMEs may be too low if the adtech projects require Java, though this could reflect limited experience"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_106",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_107",
+      "score": 3,
+      "concerns": [
+        "Contradiction between 0 years of experience and all skills rated Level 3 (typically requires practical experience)",
+        "Computer Vision (Level 2) appears in project documentation for a predictive analytics project that doesn't inherently involve computer vision",
+        "All documents (CV, README, LinkedIn) are allocated identical intensity values across skills, suggesting lack of differentiation in evidence depth"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_108",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_109",
+      "score": 4,
+      "concerns": [
+        "The recommendation letter (d_p_109_02) is being allocated to technical skills (Security testing, Test automation) rather than soft skills (leadership, team management). Recommendations should focus on interpersonal skills, not technical proficiencies."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_110",
+      "score": 3,
+      "concerns": [
+        "AI Narrative Engine v2.1 (d_p_110_02) is allocated to Game physics (level 2) which is mismatched - the project is about AI storytelling, not physics",
+        "Python (level 4) is allocated to blog (d_p_110_05) about procedural generation - no clear connection to Python implementation",
+        "GraphQL (level 4) is allocated to GameDev Collaborator Suite (d_p_110_03) - document topic doesn't mention GraphQL usage",
+        "REST API design (level 4) is allocated to GameDev Collaborator Suite (d_p_110_03) - document topic focuses on collaboration tools, not API design"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_111",
+      "score": 3,
+      "concerns": [
+        "The README file (d_p_111_01) is assigned high intensity for product management (3) and roadmap planning (3), which may not fully reflect the candidate's general skill level. Project documentation often focuses on technical implementation rather than strategic product management experience.",
+        "The blog (d_p_111_03) is allocated high intensity for stakeholder management (3) and UX research (4), but the document topic focuses on AI-driven personalization rather than stakeholder interaction or UX research methodologies.",
+        "SQL analytics (level 3) is assigned moderate intensity (3) to the README, but the blog and recommendation letter receive lower scores (3 and 2), which may not align with the candidate's potential technical depth in data analysis."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_112",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_113",
+      "score": 4,
+      "concerns": [
+        "Recommendation document is being used for technical skills (C/C++, Embedded Linux, etc.) instead of soft skills. Recommendations should focus on leadership, teamwork, or project management, not technical expertise."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_114",
+      "score": 4,
+      "concerns": [
+        "The recommendation document (d_p_114_04) is allocated to Java (hard skill) rather than soft skills like leadership, which is inconsistent with document type",
+        "Snowflake has high CV evidence (5) but minimal project_readme support (1), which may not align with its global level 5"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_115",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_116",
+      "score": 4,
+      "concerns": [
+        "The 'recommendation' document is primarily a soft skill endorsement but is allocated to technical skills (e.g., PostgreSQL, Python), which may not align with its purpose of highlighting threat detection expertise rather than specific technical proficiencies."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_117",
+      "score": 4,
+      "concerns": [
+        "The recommendation document (d_p_117_03) is allocated technical skills (React/JS/TypeScript) rather than soft skills or leadership attributes, which is mismatched"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_118",
+      "score": 4,
+      "concerns": [
+        "Recommendation letter (d_p_118_02) is allocated high intensity for technical skills (e.g., Python, Test automation) which are better supported by CV and project README",
+        "Uniform intensity allocation across all documents may overstate evidence depth for skills like API testing and GitLab CI, which are more prominently featured in the project README",
+        "Breadth of evidence for all skills across all documents may be unrealistic for 1-year SaaS QA Engineer with limited experience"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_119",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_120",
+      "score": 4,
+      "concerns": [
+        "iOS development (Level 5) is heavily weighted in project_readme documents (d_p_120_03: 5, d_p_120_04: 5), but the project_readme topics don't explicitly mention iOS-specific work (e.g., 'Real-Time Order Tracking' could be cross-platform).",
+        "Web accessibility (WCAG) has high intensity in the CV (3) but low in project_readmes (1), which may not fully justify the global level 3 if accessibility wasn't emphasized in projects.",
+        "React Native (Level 4) is allocated 4 in d_p_120_02 but only 1 in d_p_120_01, which may underrepresent its relevance to the 'User Engagement Boost' project if it was a primary technology.",
+        "State management (Redux/Zustand) has low intensity in project_readmes (1) but is assigned 3 in the CV, which may not fully support the global level 3 if the CV only mentions it briefly."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_121",
+      "score": 4,
+      "concerns": [
+        "Python (a technical skill) is allocated to recommendation letters (d_p_121_02, d_p_121_03) which are meant to highlight soft skills like leadership and collaboration, not coding proficiency",
+        "Docker (Level 4) has low intensity in recommendations (2) but higher in project README (4), which may not align with the candidate's stated experience"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_122",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_123",
+      "score": 3,
+      "concerns": [
+        "Recommendation letter (d_p_123_03) is allocated for technical skills like Node.js, REST API design, and Test automation, which are more appropriately covered in project documentation or CVs rather than a recommendation letter focused on leadership and soft skills.",
+        "GraphQL allocation in project_readme (d_p_123_01) is low (2) despite the document being a UI component, but the blog (d_p_123_02) has high allocation (4) for GraphQL even though its topic focuses on React/Redux without explicit GraphQL mention.",
+        "Web performance optimization is allocated high intensity (5) to all documents, but the project_readme (d_p_123_01) is a README for a UI component, which may not directly demonstrate performance optimization expertise."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_124",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_125",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_126",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_127",
+      "score": 4,
+      "concerns": [
+        "Data visualization (Tableau/Power BI) is rated level 4 but the CV only mentions general experience without specific tool usage details",
+        "Product management level 4 may require more concrete evidence of product lifecycle impact than what's described in the CV",
+        "Multiple skills (A/B testing, hypothesis testing) are rated level 3 but lack specific project examples in the single document"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_128",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_129",
+      "score": 4,
+      "concerns": [
+        "Document d_p_129_04 referenced in evidence allocation does not exist in the documents list",
+        "Recommendation letter (d_p_129_02) contains technical skills (e.g. Python, REST API design) that are more appropriately aligned with project documentation rather than soft skill references",
+        "Java (level 2) has higher intensity (3) in project_readme compared to Python (level 3) which has lower intensity (2) in the same document, which may not reflect realistic skill emphasis"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_130",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_131",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_132",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_133",
+      "score": 4,
+      "concerns": [
+        "Terraform (Level 4) is primarily supported by CV and Cloud Security tool (d_p_133_03), but lacks evidence from other projects despite the skill's level",
+        "Strategic planning (Level 5) relies heavily on CV and blog (d_p_133_06), which might not fully demonstrate the depth required for Level 5",
+        "PostgreSQL (Level 4) has limited evidence in Cloud Security tool (d_p_133_03) with only 1 intensity, which may not justify the skill level",
+        "Cross-team collaboration (Level 4) has low intensity in the blog (d_p_133_06), which is a technical document rather than a collaboration-focused source"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_134",
+      "score": 4,
+      "concerns": [
+        "High skill levels (level 3) for a 0-year experienced candidate may be unrealistic unless supported by substantial projects (e.g., the TestBot framework).",
+        "Recommendation letter (d_p_134_02) is allocated to skills like 'Test automation' and 'Selenium/Playwright' (intensity 2), which may be more appropriately linked to technical documentation rather than academic endorsements.",
+        "Java/Node.js (level 2) have inconsistent evidence allocation (CV: 2, README: 1, recommendation: 2), which could imply unclear relevance to the project or role."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_135",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_136",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_137",
+      "score": 3,
+      "concerns": [
+        "Recommendation letter (d_p_137_02) is being allocated to technical skills (e.g., Kubernetes: 3, incident management: 4) instead of soft skills (leadership, collaboration), which is inappropriate for a recommendation document",
+        "Cloud cost optimization (level 4) has low intensity (1) in recommendation letter despite being a strategic skill that managers would typically comment on",
+        "Project README (d_p_137_01) is allocated to GitLab CI (3) while the project is a GitHub-based observability platform that would more naturally use GitHub Actions (4) which also has higher intensity"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_138",
+      "score": 4,
+      "concerns": [
+        "The recommendation letter (d_p_138_02) is allocated to technical skills (e.g., Node.js level 3) rather than soft skills like leadership or teamwork, which is inappropriate for a recommendation document.",
+        "Project README (d_p_138_03) has low intensity for Node.js (1) and GCP (1), which may be acceptable if the project doesn't use these technologies, but this should be explicitly clarified."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_139",
+      "score": 3,
+      "concerns": [
+        "Contradiction between 'Years of Experience: 0' and high skill levels (mostly 3) across multiple technical domains",
+        "Linux administration/Shell scripting (Level 2) allocated to project README which doesn't mention system administration tasks",
+        "Webpack/Vite (Level 2) allocated to project README which focuses on React/Node.js without build tool specifics",
+        "Recommendation document (d_p_139_02) assigned to multiple Level 2 skills despite being a manager's assessment rather than technical evidence"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_140",
+      "score": 3,
+      "concerns": [
+        "Recommendation document is being used to support technical skills (e.g., Kafka, Spark) instead of soft skills/leadership, which is mismatched",
+        "Project README is heavily weighted for multiple skills (Kafka, Spark, Snowflake) but the document explicitly describes a single project with limited scope for broad skill coverage",
+        "CV is allocated high intensity for Python (5) but the CV document itself doesn't demonstrate Python expertise explicitly",
+        "Blog about ETL strategies is allocated to multiple skills (Airflow, ETL design) but the document's primary focus is on strategy rather than technical implementation"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_141",
+      "score": 4,
+      "concerns": [
+        "IoT protocols (MQTT/CoAP) and gRPC have low intensity in project_readme (2 and 3) despite the project being about game controllers, which may not directly involve these protocols",
+        "Blog document has high intensity for Python/REST API/gRPC (4) but the blog's topic focuses on power efficiency, which may not strongly correlate with these skills",
+        "Microservices architecture has low intensity in project_readme (2) which seems mismatched with a firmware-focused project"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_142",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_143",
+      "score": 4,
+      "concerns": [
+        "Project README for Kubernetes (d_p_143_01) has low intensity (3) despite being a key skill, potentially mismatched if the project didn't use Kubernetes",
+        "Python skill allocation has inconsistent intensity (1 in project READMEs) which may underrepresent its relevance if Python is used for scripting",
+        "Terraform intensity in project README (d_p_143_02) is 1, which may not reflect actual usage if the monitoring platform doesn't use Terraform"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_144",
+      "score": 3,
+      "concerns": [
+        "Jenkins is allocated Level 2 for the CV but only Level 1 for the project_readme, which may overstate evidence if the project doesn't use Jenkins",
+        "Cloud networking (VPC/subnets) is allocated Level 2 for both documents despite the project_readme not explicitly mentioning networking concepts",
+        "Linux administration and Bash scripting are at Level 3, but the project_readme only provides Level 2 evidence, suggesting potential over-claiming for entry-level candidate"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_145",
+      "score": 3,
+      "concerns": [
+        "Microservices architecture skill has low intensity (2) for d_p_145_01 (Java project README) despite the project explicitly describing a microservices architecture",
+        "Java skill level 3 is supported by only d_p_145_00 (CV) and d_p_145_01 (Java project) with intensity 3, but the Java project should logically have higher intensity",
+        "Cloud cost optimization (level 3) has multiple low-intensity allocations but no clear evidence of cost optimization practices in any document",
+        "REST API design (level 5) has only d_p_145_00 (CV) and d_p_145_05 (LinkedIn) with intensity 5/4, but no project documentation showing API design work",
+        "Recommendations are allocated to technical skills (e.g. Kubernetes, Docker) rather than soft skills like leadership or team management"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_146",
+      "score": 4,
+      "concerns": [
+        "Blog (d_p_146_03) is allocated to CI/CD pipelines (intensity 1), Network automation (intensity 1), and REST API design (intensity 2) despite the blog's focus on real-time systems, which may not directly relate to these skills",
+        "Recommendation (d_p_146_02) is used for technical skills (e.g., C/C++, Embedded Linux) instead of soft skills, which may not align with its purpose as a leadership endorsement"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_147",
+      "score": 3,
+      "concerns": [
+        "Recommendation letter (d_p_147_02) is being used for technical skills (e.g., Kafka, Terraform) rather than soft skills (teamwork, leadership), which is inappropriate",
+        "README (d_p_147_01) contains no mention of AWS, Kafka, Snowflake, or Terraform but is assigned intensity 3 for these skills",
+        "All skills are allocated to all documents, creating an unrealistic breadth of evidence for a 2-year candidate"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_148",
+      "score": 4,
+      "concerns": [
+        "High skill levels (Level 3) for a 1-year candidate may be overestimated; some skills like Design Thinking/Hypothesis Testing are at Level 2 but others (e.g., SQL analytics) are at Level 3 with limited experience",
+        "README files typically support technical/analytical skills (e.g., Plotly, SQL) but may not adequately justify Level 3 for soft skills like Stakeholder Management",
+        "Design Thinking and Hypothesis Testing have low intensity in README (1) but high in CV (2), which may not align with project documentation",
+        "Recommendation letter emphasizes feature launch leadership but may not fully support Level 3 for all skills like UX research or roadmap planning"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_149",
+      "score": 4,
+      "concerns": [
+        "Project READMEs (d_p_149_01-03) show low intensity (1) for high-level skills like AWS (5), Kubernetes (5), and Terraform (5), which may not sufficiently justify their global level 5 ratings. The CV (d_p_149_00) appears to be the primary source for these skills, but project-specific evidence is minimal.",
+        "PostgreSQL (3) and Redis (3) are only allocated intensity 3 in the CV, which may not reflect the breadth of evidence needed for level 3 skills in an enterprise role with 7 years of experience.",
+        "The blog (d_p_149_04) allocates low intensity (1) to skills like AWS (5) and Kubernetes (5), which could underrepresent their significance in a cloud-native modernization context. A more detailed technical blog might justify higher intensities."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_150",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_151",
+      "score": 4,
+      "concerns": [
+        "Kubernetes allocation in the recommendation (intensity 1) seems inconsistent with the global level 3, potentially underrepresenting the candidate's actual proficiency in this area"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_152",
+      "score": 4,
+      "concerns": [
+        "Recommendation document (d_p_152_02) is assigned high intensity for technical skills (e.g., Kubernetes:5, Linux:5) which may conflate soft skills with technical expertise. Recommendations typically highlight soft skills like leadership, but the allocation treats them as technical evidence.",
+        "Terraform (d_p_152_02) has intensity 1 despite being a core skill with high global level. The project README (d_p_152_01) is the only document with Terraform intensity 5, which may underrepresent the skill's breadth.",
+        "Message queues (d_p_152_03) has intensity 1 despite the blog discussing observability tools (Prometheus/Grafana) which are closely related to monitoring & alerting. This may indicate a mismatch between skill scope and document relevance."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_153",
+      "score": 4,
+      "concerns": [
+        "UX research has low intensity in most documents (only 2 in blog/recommendation), but the README (data visualization project) could have more relevance",
+        "Competitive analysis has very low intensity in README (1) which seems mismatched",
+        "Hypothesis testing is allocated to README (data visualization project) which may not directly relate",
+        "Stakeholder management has lower intensity in README (2) despite being a soft skill typically emphasized in recommendations"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_154",
+      "score": 4,
+      "concerns": [
+        "Snowflake level 5 is only supported by the CV (intensity 5) but the blog (intensity 3) and project READMEs (intensity 1) show little evidence, which may not fully justify the global level",
+        "Kubernetes and Docker have low intensity across all documents despite being listed as Level 3 skills, which may indicate underrepresentation of cloud orchestration experience",
+        "Project README 02 (AWS Redshift migration) has high AWS intensity (4) but no mention of Snowflake, which could create inconsistency with the candidate's Snowflake level 5"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_155",
+      "score": 4,
+      "concerns": [
+        "Test automation/Selenium/Playwright (level 3) allocated to recommendation letter (which is a soft skill document), while technical evidence is underrepresented in recommendations",
+        "UI design (Figma/Sketch) has minimal intensity (1-3) across all documents, which may not align with the 'UI design (Figma/Sketch)' skill level 3 if the candidate's work heavily involves design tools"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_156",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_157",
+      "score": 3,
+      "concerns": [
+        "Computer vision and TensorFlow allocation to [d_p_157_01] (project README) lacks direct evidence - the project description focuses on reinforcement learning without clear mention of computer vision or TensorFlow usage",
+        "REST API design level 4 in [d_p_157_01] seems inflated for a README file - API design details would typically require more comprehensive documentation",
+        "Multiple level 3 skills (Apache Airflow, Docker, GCP, etc.) allocated to [d_p_157_00] (CV) may overstate breadth of experience for a 0-year candidate",
+        "Project README contains only one document, limiting evidence for skills like recommendation systems and NLP which require more detailed implementation context"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_158",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_159",
+      "score": 2,
+      "concerns": [
+        "Selenium/Playwright (intensity 3 on project_readme) contradicts the project's focus on API testing (RestAssured/Python), which doesn't typically use UI tools",
+        "JavaScript (intensity 3 on project_readme) lacks direct evidence in the README which focuses on Python/RestAssured",
+        "REST API design (intensity 2 on both docs) lacks clear evidence in the project_readme which focuses on testing rather than design",
+        "Multiple Level 3 skills (API testing, Python, etc.) are supported by a project_readme that primarily demonstrates testing implementation rather than comprehensive skill mastery"
+      ],
+      "flagged": true
+    },
+    {
+      "persona_id": "p_160",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_161",
+      "score": 4,
+      "concerns": [
+        "Web accessibility (WCAG) has low intensity in recommendation and blog (1) despite global level 4, but CV has 4. Blog topic doesn't mention accessibility, so 1 is acceptable.",
+        "Recommendation document (d_p_161_02) is allocated to REST API design (4) and Web accessibility (1), which may not be the best evidence for API design but could support leadership skills not explicitly tracked.",
+        "Webpack/Vite has 4 intensity in CV but only 3 in project README, which is odd since the project uses Webpack/Vite (though the README might not detail build tools)."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_162",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_163",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_164",
+      "score": 3,
+      "concerns": [
+        "Recommendations (d_p_164_03, d_p_164_04) are allocated to technical skills (IAM/Access control, Compliance) rather than soft skills (leadership, peer recognition).",
+        "The blog (d_p_164_05) about IoT security is assigned to AWS (intensity 3) without clear evidence of AWS-specific content in the document.",
+        "Network automation (level 3) has high intensity for project_readme (d_p_164_01: 2) but lower for CV (d_p_164_00: 3), which may not align with the candidate's 8 years of experience."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_165",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_166",
+      "score": 4,
+      "concerns": [
+        "Recommendation letter (d_p_166_03) is allocated to technical skills (React/TypeScript) rather than soft skills (leadership, teamwork), which is inappropriate for document type"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_167",
+      "score": 3,
+      "concerns": [
+        "Go and Python are allocated to project_readme (Node.js/Redis project) which doesn't mention these languages, creating mismatch",
+        "Kubernetes evidence in project_readme (level 2) conflicts with project's Node.js/Redis focus",
+        "Microservices architecture level 4 in project_readme seems disconnected from a server optimization project",
+        "REST API design level 4 in project_readme is reasonable but needs more project-specific evidence",
+        "Python level 3 allocation lacks clear project evidence despite CV mention"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_168",
+      "score": 4,
+      "concerns": [
+        "Cloud cost optimization (level 4) has high intensity in the blog (d_p_168_04) which focuses on microservices scaling, not cost optimization. The blog's topic doesn't align with this skill.",
+        "Linux administration (level 3) has minimal evidence (mostly intensity 1) across all documents, which may not sufficiently support the stated skill level.",
+        "Team leadership (level 4) has a low intensity (2) in the project README (d_p_168_01), which is a technical document rather than a leadership-focused one."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_169",
+      "score": 4,
+      "concerns": [
+        "Technical skills like Python, Docker, and Kubernetes are allocated to the recommendation document (d_p_169_02), which is a soft skill/leadership document rather than a technical specification or project artifact. This mismatches the document type with the evidence type."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_170",
+      "score": 4,
+      "concerns": [
+        "Recommendation document (d_p_170_03) is allocated to technical skills (Chaos Engineering, Cloud Cost Optimization) rather than soft skills (leadership, teamwork), which is less appropriate for a recommendation letter",
+        "Project_readme documents (d_p_170_01, d_p_170_02) have inconsistent intensity allocations for some skills (e.g., Chaos Engineering: 3 vs 1) without clear justification for varying relevance"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_171",
+      "score": 3,
+      "concerns": [
+        "Technical skills like REST API design and TypeScript are allocated to the recommendation document (d_p_171_03), which is inappropriate for assessing technical proficiency",
+        "Cloud cost optimization (Level 2) is assigned to multiple documents without clear evidence of cloud infrastructure experience",
+        "High intensity allocations for React/TypeScript in LinkedIn document (d_p_171_04) may overstate skills given 0 years of experience",
+        "Python/PostgreSQL (Level 3) are allocated to a Django project README (d_p_171_02) which might not demonstrate enterprise-level expertise"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_172",
+      "score": 4,
+      "concerns": [
+        "Web accessibility (WCAG) has high intensity in CV (4) but low in project_readme documents (1), despite HealthSphere project explicitly mentioning accessibility",
+        "State management (Redux/Zustand) has CV intensity 3 but project_readme documents show 1, which may not align with actual project tool usage (HealthSphere uses React, TeleMedVue uses Vue)",
+        "Web accessibility (WCAG) and UX research are allocated to both project_readme and recommendations, but project_readme documents may not sufficiently demonstrate depth for Level 4 skills"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_173",
+      "score": 4,
+      "concerns": [
+        "A/B testing is heavily allocated to the project README (intensity 3) despite it being a technical document, while the CV (intensity 2) and recommendation (intensity 1) have lower allocations. The README doesn't explicitly mention A/B testing, which could be a mismatch.",
+        "JavaScript (level 2) has moderate allocation to the README (intensity 2) but lower intensity in the CV (1) and recommendation (1), which may underrepresent its technical skill level.",
+        "UX research (level 3) is allocated high intensity to the CV (3) and recommendation (3), but the README (intensity 2) shows less connection to user research, which may be inconsistent with the skill level."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_174",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_175",
+      "score": 3,
+      "concerns": [
+        "Recommendation document (d_p_175_02) is being allocated technical skills like Cloud cost optimization, Docker, and Kubernetes that likely wouldn't be detailed in a managerial recommendation (more suited for performance feedback than technical specifics)",
+        "Level 2 skills (Cloud cost optimization, Database optimization, Docker, Kubernetes, Terraform) are assigned across all three documents, which is unrealistic for a 1-year candidate with limited project scope",
+        "Project README (d_p_175_01) is being assigned multiple Level 3 skills (Kafka, Spark, ETL, PostgreSQL, Python, Snowflake) without clear evidence of depth in a single project"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_176",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_177",
+      "score": 3,
+      "concerns": [
+        "Recommendation document (d_p_177_02) is allocating technical skills (e.g., NLP, MLOps) rather than soft skills, which is inappropriate for a recommendation letter",
+        "Hugging Face Transformers has higher intensity (3) in project README than in CV (2), which may not align with the typical prioritization of core frameworks in professional resumes"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_178",
+      "score": 4,
+      "concerns": [
+        "Recommendation document (d_p_178_02) is allocated to technical skills (React, state management) which are better supported by project documentation rather than peer recommendations. Recommendations are more appropriate for soft skills or project outcomes rather than technical proficiency."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_179",
+      "score": 4,
+      "concerns": [
+        "Team Collaboration (Level 2) is assigned to technical READMEs (d_p_179_01-03) rather than collaborative documents like recommendations or LinkedIn endorsements",
+        "Multiple Level 3 skills (e.g., Jenkins, Kubernetes) have low intensity in project READMEs (d_p_179_01-03) which may not fully justify the global Level 3 rating for a 1-year candidate"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_180",
+      "score": 3,
+      "concerns": [
+        "The blog document (d_p_180_04) is a technical deep dive but is assigned intensity 1 for most skills, which is inconsistent with its content. Skills like AWS, Docker, Kubernetes, and Prometheus/Grafana should have higher intensity as they are central to the topic.",
+        "The recommendation letter (d_p_180_03) is a soft skill document but is allocated technical skills (e.g., Python, Node.js) with intensity 1. This misaligns document type with the evidence it supports."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_181",
+      "score": 3,
+      "concerns": [
+        "Recommendation letter (d_p_181_03) is allocated to technical skills (e.g., Kubernetes, Monitoring & alerting) instead of leadership/management skills",
+        "PostgreSQL evidence is limited to one document (d_p_181_02) with intensity 4, which may not justify Level 4 global rating",
+        "Project_readme for fraud detection (d_p_181_01) has high intensity for Python/Redis but lacks direct evidence for these skills in the document",
+        "Load balancing (Level 4) has only one document (d_p_181_02) with intensity 4, which may not support the global rating"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_182",
+      "score": 4,
+      "concerns": [
+        "Recommendation document [d_p_182_02] is allocating technical skills (e.g., Push notifications: 3, REST API design: 3) rather than soft skills like leadership or project management, which is mismatched",
+        "Project README [d_p_182_03] is being assigned moderate intensity (2-4) for skills like Flutter and React Native, which may not directly relate to the security SDK project described"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_183",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_184",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_185",
+      "score": 4,
+      "concerns": [
+        "Compliance (SOC2/GDPR) is assigned level 2 to both documents, but the README focuses on technical security measures rather than compliance-specific details. The CV might better reflect compliance experience.",
+        "Network automation (level 2) and threat modeling (level 2) are allocated to the CV, which may not adequately demonstrate these skills compared to project-specific documentation.",
+        "Threat modeling is assigned level 1 to the README, which may underrepresent its relevance to the project's Zero Trust architecture focus."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_186",
+      "score": 4,
+      "concerns": [
+        "Recommendation document (d_p_186_04) is allocated to technical skills like CI/CD pipelines and cloud networking, which may be more appropriately tied to project documentation rather than a leadership endorsement",
+        "Python skill intensity (4) is assigned to project_readme documents with mixed relevance (d_p_186_03 has 4 but others have 3), creating inconsistent evidence breadth",
+        "GCP skill (5) is assigned to project_readme documents (d_p_186_01: 3, d_p_186_02:4) that may not strongly demonstrate GCP expertise"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_187",
+      "score": 4,
+      "concerns": [
+        "Recommendation letter (soft skill document) is allocated to technical skills (Firmware development, Hardware-software integration) rather than leadership/management attributes",
+        "Go, Python, REST API design (level 3) have limited evidence (only 3 intensity across documents) for a 3-year enterprise candidate"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_188",
+      "score": 4,
+      "concerns": [
+        "Soft skills (Collaboration/Communication) are allocated to a README document, which is primarily technical and unlikely to detail interpersonal skills",
+        "Cloud cost optimization (Level 5) is supported by project README (intensity 5) but may be unrealistic for 3 years of SaaS experience without specific evidence"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_189",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_190",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_191",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_192",
+      "score": 3,
+      "concerns": [
+        "Web accessibility (WCAG) skill level 3 is not well-supported by evidence (only 3 intensity in CV, 1 in other docs)",
+        "Next.js allocation (3 intensity in project_readme) may be inappropriate as the project is described as a React/TypeScript frontend project",
+        "TypeScript intensity 1 in project_readme is low for a project explicitly using TypeScript",
+        "REST API design (3 intensity in project_readme) may not be directly relevant to a frontend-only project description"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_193",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_194",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_195",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_196",
+      "score": 1,
+      "concerns": [
+        "High skill levels (Level 3) for a candidate with 0 years of experience is unrealistic",
+        "Project README documents (d_p_196_01) are being assigned high intensity for technical skills like PyTorch/TensorFlow, which are better demonstrated in professional experience documents",
+        "No evidence allocation for NLP-specific implementations in the project documentation",
+        "AWS and model deployment skills are allocated to README document which lacks infrastructure/production context",
+        "Data warehousing/ETL pipeline design being tied to a predictive analytics project that may not require such infrastructure"
+      ],
+      "flagged": true
+    },
+    {
+      "persona_id": "p_197",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_198",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_199",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_200",
+      "score": 4,
+      "concerns": [
+        "NLP skill is allocated high intensity (3) to the project README, but the project description only mentions time-series ML and anomaly detection, which may not require NLP.",
+        "TensorFlow is assigned intensity 3 to the project README, but the project description does not mention TensorFlow usage, which could be a contradiction.",
+        "scikit-learn is assigned intensity 1 to the project README, which may be inconsistent with the global level 2 if the project did not use it."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_201",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_202",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_203",
+      "score": 4,
+      "concerns": [
+        "The 'recommendation' document (d_p_203_03) is a soft skill document (leadership/managerial endorsement) but is being allocated to technical skills (AWS, CI/CD, etc.) with intensities 3-4. This misalignment is problematic as recommendations typically support soft skills rather than technical expertise."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_204",
+      "score": 4,
+      "concerns": [
+        "The recommendation document (d_p_204_03) is allocated to technical skills (AWS, CI/CD, etc.) instead of soft skills (leadership, communication). Recommendations should focus on non-technical attributes."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_205",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_206",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_207",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_208",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_209",
+      "score": 4,
+      "concerns": [
+        "High skill levels (mostly 3) for a candidate with 0 years of experience may not align with typical career progression. The evidence (CV, project, recommendation) strongly supports these levels, but the lack of experience could still be a red flag."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_210",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_211",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_212",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_213",
+      "score": 4,
+      "concerns": [
+        "Flutter allocation to d_p_213_01 (TaskFlow) is questionable as the project uses React Native and Firebase, not Flutter",
+        "GraphQL allocation to d_p_213_01 (TaskFlow) seems mismatched if Firebase is the primary backend",
+        "Recommendation document (d_p_213_04) has high intensity for hard skills (Kotlin/Swift) but lacks allocation for leadership/soft skills"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_214",
+      "score": 3,
+      "concerns": [
+        "Breadth of evidence for level 3 skills may be unrealistic for 1 year of experience (CV + 2 project READMEs may not sufficiently demonstrate advanced expertise in multiple domains)",
+        "SIEM tools and Vulnerability management (level 2) are underrepresented in project documents despite being critical for security engineering",
+        "Recommendation letter (soft skill document) is allocated to technical skills (e.g., Application security) which is less impactful than using it for soft skills like problem-solving"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_215",
+      "score": 4,
+      "concerns": [
+        "Computer vision is assigned intensity 1 to project_readme, which may not align with the project's focus on predictive analytics (unless the project explicitly uses computer vision)",
+        "LLMs/Prompt engineering has intensity 4 on LinkedIn but only 2 on project_readme, which could indicate a mismatch if the project doesn't focus on LLMs"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_216",
+      "score": 3,
+      "concerns": [
+        "Recommendation document (d_p_216_02) is allocated to technical skills (Game networking, physics, etc.) instead of soft skills (e.g., leadership, teamwork), which is inappropriate for a recommendation letter.",
+        "Unreal Engine (level 4 globally) has low intensity (1) in the project README, which contradicts its high global level unless the project explicitly did not use Unreal Engine.",
+        "Microservices architecture (level 3 globally) has low intensity (1) in the project README, which may be acceptable if the project didn't use it, but could be inconsistent if it did."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_217",
+      "score": 2,
+      "concerns": [
+        "The recommendation document (d_p_217_03) is classified as a soft skill document but is being allocated to technical skills (e.g., AWS:3, Kubernetes:4). Soft skills should not be used as evidence for technical skill levels."
+      ],
+      "flagged": true
+    },
+    {
+      "persona_id": "p_218",
+      "score": 4,
+      "concerns": [
+        "Unreal Engine skill level is rated 3 globally, but the project README (d_p_218_01) only has 1 intensity, suggesting limited project relevance to Unreal Engine. If the project primarily uses Unity, this creates a contradiction between global level and project evidence."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_219",
+      "score": 4,
+      "concerns": [
+        "Recommendation document (d_p_219_02) is being used to evidence technical skills (Kotlin/Swift/REST API) rather than soft skills (leadership, teamwork, etc.) which is inappropriate"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_220",
+      "score": 3,
+      "concerns": [
+        "Contradiction between 0 years of experience and Level 3 skills (e.g., JavaScript, MongoDB) which typically require demonstrable experience",
+        "All Level 3 skills are allocated to all documents, but the project README (technical evidence) should carry more weight than LinkedIn/CV for technical proficiency",
+        "Cloud skills (AWS, cost optimization) are allocated to all documents despite being more operational/infrastructure focused, which may not align with the project README's technical focus"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_221",
+      "score": 4,
+      "concerns": [
+        "The recommendation document is allocated to technical skills (e.g., State management, Web performance) with low intensity, which may not align with its purpose of highlighting soft skills.",
+        "Responsive design and State management have low intensity in the README, which may not reflect the project's actual scope (a game may not require advanced responsive design).",
+        "Database optimization and Web performance optimization have low intensity in the recommendation, which may not support their global Level 2 ratings if the candidate's experience isn't clearly documented there."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_222",
+      "score": 4,
+      "concerns": [
+        "Recommendation document (soft skill) is allocated to technical skills (Game Networking) rather than leadership/consulting soft skills",
+        "JavaScript (level 3) has low intensity in project README (1) despite being a general-purpose language used in web development",
+        "Unreal Engine (level 3) has minimal intensity in project README (1) despite being a major engine for game development"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_223",
+      "score": 4,
+      "concerns": [
+        "Recommendations are primarily for soft skills (leadership, collaboration) but allocated to technical skills with high intensity, which may not align with document topics",
+        "Terraform and some cloud cost optimization skills have low intensity in blog and recommendations, which may not sufficiently support global level 3",
+        "Database optimization and Docker have moderate intensity in blog but high intensity in CV/LinkedIn, which could imply inconsistent evidence sources for these skills"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_224",
+      "score": 4,
+      "concerns": [
+        "Test automation and Unit testing are allocated to README and blog (technical documents) instead of a recommendation (soft skill document)",
+        "Node.js (backend skill) is allocated to project README (frontend-focused document) with intensity 2",
+        "REST API design is allocated to project README (which may not directly relate to API design for a UI framework)",
+        "Recommendation document is used for technical skills like React and State management instead of leadership/soft skills"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_225",
+      "score": 4,
+      "concerns": [
+        "Penetration testing (level 4) and Threat modeling (level 4) have low evidence intensity (3/1) despite being mid-level skills, suggesting insufficient project documentation",
+        "Vulnerability management (level 5) shows weak evidence in project_readme_03 (intensity 1) which contradicts its high global rating",
+        "Recommendation letter (d_p_225_04) is allocated to technical skills like Compliance (level 5) and IAM (level 5) rather than leadership/soft skills, which may be misaligned with its document type",
+        "Project_readme_03 (quantum-resistant encryption) has disproportionately low intensity for SIEM tools (1) and Network security (2) despite being a complex security project"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_226",
+      "score": 2,
+      "concerns": [
+        "The blog document 'Optimizing ML Deployment in Startup Tech Stack' is heavily related to model deployment, MLOps, and cloud infrastructure (AWS/Kubernetes), but it's assigned intensity 1 for all these skills instead of 5",
+        "Project READMEs for NLP-Insight (social media sentiment) and StartupRecommender (product recommendations) should have higher intensity for NLP/LLMs/Prompt engineering but are assigned 1",
+        "Multiple skills (AWS, Docker, Kubernetes, Terraform) have the same intensity pattern (5 in CV, 1 in other docs) despite the blog/document topics being directly relevant to these skills",
+        "The CV is correctly assigned high intensity for all skills, but this creates an imbalance where other documents are underrepresented for key skills"
+      ],
+      "flagged": true
+    },
+    {
+      "persona_id": "p_227",
+      "score": 4,
+      "concerns": [
+        "PostgreSQL and Redis global levels are 3, but evidence allocation shows mostly 1s, which may not support the stated skill level",
+        "Terraform allocation has a typo in document key (d_227_04 instead of d_p_227_04)",
+        "Monitoring & alerting has level 4 in blog and inventory project, but only 1 in auto-scaling project which seems inconsistent with SRE focus"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_228",
+      "score": 3,
+      "concerns": [
+        "Node.js allocated to project_readme (frontend project) with low intensity (2) which is unlikely",
+        "Node.js allocated to recommendation document (non-technical) with intensity 4 which is inappropriate",
+        "Next.js allocated to project_readme (React/WS project) with intensity 5 which may not match actual project scope",
+        "Typo in document ID 'd_p_2218_01' which should be 'd_p_228_01'"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_229",
+      "score": 4,
+      "concerns": [
+        "The 'recommendation' document is incorrectly allocated to technical skills (e.g., AWS, Python, Terraform) instead of soft skills. Recommendations should primarily reflect project delivery, teamwork, or leadership, not technical proficiency."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_230",
+      "score": 4,
+      "concerns": [
+        "Python's high intensity (4) on the project README may not align with the CV's lower intensity (3) if the candidate's overall Python experience isn't prominently featured in the CV"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_231",
+      "score": 4,
+      "concerns": [
+        "Stakeholder communication is allocated to READMEs and blog (technical documents) rather than the CV, which is more appropriate for soft skills",
+        "Monitoring & alerting has low intensity (2) in the blog despite being a technical document that could include monitoring details",
+        "Technical writing (Level 3) is allocated to the blog (which is a technical writing piece), but the CV has lower intensity (3) which may not fully reflect the candidate's writing capabilities"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_232",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_233",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_234",
+      "score": 2,
+      "concerns": [
+        "Go (level 4) is allocated to a Node.js/Kafka project (d_p_234_01) which is unrelated to Go",
+        "Cloud cost optimization (level 4) is allocated to a recommendation document (d_p_234_04) which is a soft skill testimonial",
+        "REST API design (level 5) is only allocated to CV (d_p_234_00) which is a professional summary, not technical documentation",
+        "PostgreSQL (level 4) is allocated to Redis/WS projects (d_p_234_02) which are unrelated to PostgreSQL",
+        "Microservices architecture (level 5) has inconsistent intensity values across projects"
+      ],
+      "flagged": true
+    },
+    {
+      "persona_id": "p_235",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_236",
+      "score": 3,
+      "concerns": [
+        "Performance testing (JMeter/k6) is heavily allocated to the CV and blog, but the project_readme files (which are technical) have low intensity, which may not align with actual project evidence",
+        "Go/Java are only supported by CV and limited project_readme entries, lacking broader technical documentation evidence",
+        "Soft skills like BDD/TDD are allocated to project_readme files (which are technical) rather than recommendations, which is less appropriate",
+        "Test automation is primarily supported by CV with low evidence from technical documentation, which may not reflect practical implementation depth",
+        "The blog is allocated to multiple skills (BDD/TDD, CI/CD, etc.) without clear thematic focus, creating potential evidence overlap"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_237",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_238",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_239",
+      "score": 4,
+      "concerns": [
+        "GraphQL evidence is heavily weighted to the blog (level 4) but other documents have low intensity (2-3), which may not fully support the global level 4",
+        "Game networking shows lower intensity in the CV (level 2) compared to project_readme (level 4), but this could be acceptable if the CV focuses on broader experience rather than specific technical depth",
+        "Unreal Engine allocation has inconsistent intensity (d_p_239_01: 3 vs d_p_239_03: 5) without clear justification for the difference"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_240",
+      "score": 4,
+      "concerns": [
+        "Competitive analysis: CV (level 2) and recommendation (level 1) may not sufficiently support the global level 3 if the project README (level 3) is the only strong evidence",
+        "Product management: All documents at level 3 may overstate evidence for a candidate with 0 years of experience; the README (project) might not fully demonstrate product management expertise",
+        "SQL analytics: README (level 2) may be the only evidence, which is reasonable for a startup candidate but could be weak for level 2"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_241",
+      "score": 4,
+      "concerns": [
+        "Soft skills like Stakeholder management and Test automation are allocated to blog posts and CVs, which may not provide strong evidence for these specific competencies",
+        "State management (Redux/Zustand) is rated Level 4 but has limited evidence (only CV with intensity 4) compared to other skills",
+        "Some technical skills like GraphQL and Node.js have low intensity for projects that may not directly relate (e.g. PWA/Components library)"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_242",
+      "score": 3,
+      "concerns": [
+        "The 'Data visualization (Matplotlib/Plotly)' skill has low intensity (1) for the project_readme document, which is a GitHub project focused on supply chain optimization with ML (likely requiring visualization).",
+        "The 'Data visualization' skill has inconsistent allocation: project_readme is assigned 1 (low) while the CV is 4, conflicting with the project's focus on visualization.",
+        "The 'Data visualization (Matplotlib/Plotly)' and 'Data visualization' skills appear to be redundant/duplicated in the global skill list, causing confusion in evidence allocation.",
+        "The blog document (d_p_242_03) is assigned low intensity (1) for REST API design, Snowflake, and dbt, which are not directly relevant to the blog's topic (ethical AI)."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_243",
+      "score": 4,
+      "concerns": [
+        "Recommendation document (d_p_243_03) is allocated to technical skills like Application Security and Penetration Testing, which is inappropriate for a recommendation letter that should focus on soft skills/overall expertise",
+        "Penetration Testing (Level 2) has inconsistent intensity allocation (1-2) across documents without clear justification for the global level",
+        "Security Auditing (Level 2) shows similar intensity inconsistencies with minimal evidence support",
+        "Network Automation (Level 2) has mostly 2 intensity but one document shows 1, which may not fully justify the global level"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_244",
+      "score": 3,
+      "concerns": [
+        "Recommendation document (d_p_244_02) is being used for technical skills like 'Design systems' (intensity 2) and 'State management' (intensity 1), which is inappropriate for a recommendation letter",
+        "Project_readme (d_p_244_01) has low intensity (3) for 'State management (Redux/Zustand)' despite being the main project, which likely uses state management",
+        "Conflicting intensity values for 'Next.js' (d_p_243_01 appears to be a typo/reference error)",
+        "Blog document (d_p_244_03) has low intensity (3) for 'Next.js' despite being a technical deep dive that might relate to modern frontend frameworks"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_245",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_246",
+      "score": 3,
+      "concerns": [
+        "NLP and PyTorch allocated to project_readme (technical document) which focuses on collaborative filtering, not text-based NLP tasks",
+        "dbt allocated to project_readme which may not align with a recommendation system project",
+        "Cloud cost optimization (technical skill) allocated to recommendation letter (soft document) without clear contextual justification"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_247",
+      "score": 3,
+      "concerns": [
+        "AWS, Kubernetes, Terraform, and Cloud cost optimization are allocated to project READMEs that do not mention these technologies (projects use Unity, Node.js, WebSockets, Firebase).",
+        "Recommendation document is being used to support technical skills like CI/CD pipelines (which should be allocated to professional documents, not testimonials).",
+        "Python and React have low intensity in project READMEs despite being allocated to CV/LinkedIn with high intensity, suggesting potential mismatch between documented work and actual project usage."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_248",
+      "score": 4,
+      "concerns": [
+        "iOS development skill has high CV intensity (5) but low project READMEs (1) and recommendations (1), which may not fully justify Level 5 rating",
+        "React/React Native have low intensity in project READMEs (1) which seems inconsistent with their Level 4 global rating if those frameworks were used in projects"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_249",
+      "score": 2,
+      "concerns": [
+        "Project_readme_01 (Kafka/Spark dashboard) and project_readme_03 (Airflow/BigQuery) should have higher intensity for Kafka/Spark/Airflow than 1, as these projects explicitly mention the skills",
+        "Recommendations (d_p_249_04/05) should allocate to soft skills like leadership/collaboration, not technical skills. Global skill levels lack soft skill categories",
+        "Snowflake (level 5) and Apache Spark (level 5) have minimal project evidence (only CV mentions), lacking specific project documentation to support expert level",
+        "Docker/REST API (level 3) are assigned to READMEs with no technical detail, making the skill level assessment questionable for a senior role"
+      ],
+      "flagged": true
+    },
+    {
+      "persona_id": "p_250",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_251",
+      "score": 3,
+      "concerns": [
+        "A/B testing is allocated to project_readme 02 (demand forecasting) and LinkedIn, which don't explicitly mention A/B testing",
+        "Recommendation letter (d_p_251_04) is assigned to A/B testing and MLOps (intensity 4) despite being a soft skill document",
+        "Data visualization (Matplotlib/Plotly) is allocated to CV (d_p_251_00) with intensity 4, which doesn't mention visualization tools",
+        "Feature engineering and MLOps (level 5) are assigned to multiple documents with intensity 1, lacking sufficient evidence for level 5",
+        "SQL analytics (level 5) is assigned to CV (d_p_251_00) with intensity 5, which doesn't mention SQL analytics specifically",
+        "Blog post (d_p_251_06) is assigned to A/B testing and Snowflake with intensity 1 despite being about reinforcement learning"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_252",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_253",
+      "score": 3,
+      "concerns": [
+        "Technical skills (e.g., Python, Pandas) are allocated to LinkedIn profile (d_p_253_02), which is more suited for soft skills/overview rather than technical proficiency evidence",
+        "scikit-learn level 4 in project_readme (d_p_253_01) seems high for a candidate with 0 years of experience, even if it's a personal project"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_254",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_255",
+      "score": 3,
+      "concerns": [
+        "Recommendation documents (d_p_255_04, d_p_255_05) are allocated to technical skills with intensity 1, but recommendations typically support soft skills (leadership, collaboration) rather than specific technical proficiencies",
+        "Project READMEs (d_p_255_01-03) are assigned low intensity (1) for most skills despite being primary evidence for full-stack development in healthtech projects",
+        "Python (Level 5) is heavily weighted to CV (d_p_255_00:5), but no other documents provide supporting evidence for this highest level",
+        "Database optimization (Level 3) and Monitoring & alerting (Level 3) are assigned to CV with intensity 3, but the projects may contain more relevant technical details"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_256",
+      "score": 4,
+      "concerns": [
+        "The recommendation document (d_p_256_02) is being used to allocate technical skills like Python (4) and Snowflake (4), which may not align with its purpose as a soft skill endorsement. Recommendations typically highlight leadership, impact, or cultural fit rather than specific technical proficiencies."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_257",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_258",
+      "score": 4,
+      "concerns": [
+        "The recommendation letter (d_p_258_02) is assigned high intensity for technical skills like Linux admin and monitoring, which are more likely to be covered in CV/README rather than a recommendation letter",
+        "The project README (d_p_258_01) is given high intensity for CI/CD pipelines (which is reasonable) but lower intensity for cloud cost optimization and database optimization, which may not align with the project description focusing on Terraform/Ansible",
+        "Multiple skills (e.g., PostgreSQL, Network troubleshooting) are assigned to the README with intensity 2, which may underrepresent their actual relevance to the project"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_259",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_260",
+      "score": 4,
+      "concerns": [
+        "MLOps (MLflow/W&B) evidence is weak in the recommendation letter (intensity 1) and project_readme (intensity 1), despite global level 3",
+        "NLP evidence is low in the project_readme (intensity 1) which may not align with global level 3 if the project didn't use NLP",
+        "REST API design has mixed intensities (1-2) but is listed as global level 2, which may be slightly inconsistent with the project_readme intensity 2"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_261",
+      "score": 3,
+      "concerns": [
+        "Recommendation letter (d_p_261_02) is allocated to technical skills (Network automation, Python, REST API design) instead of soft skills (e.g., leadership, communication). This misaligns with the document type's purpose.",
+        "Shell scripting (Bash) has uniformly low intensity (2/1) despite being a basic skill for embedded systems, which may underrepresent its relevance to the role.",
+        "Firmware development and C/C++ (embedded) are heavily weighted to project README (d_p_261_01), but the CV (d_p_261_00) also has high intensity for these skills. This could overemphasize project-specific knowledge over broader experience."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_262",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_263",
+      "score": 3,
+      "concerns": [
+        "The blog document [d_p_263_04] is about frontend optimization but has intensity 1 for web performance optimization, which is contradictory since the blog's topic directly relates to this skill",
+        "The recommendation letter [d_p_263_03] should have higher intensity for stakeholder management (a soft skill) rather than intensity 1",
+        "Project READMEs [d_p_263_01, d_p_263_02] mention React/D3.js but have intensity 1 for React/TypeScript/Next.js, which doesn't align with the high skill levels in these areas",
+        "Next.js level 5 with intensity 5 only in CV but no project evidence, suggesting potential contradiction between skill level and project experience"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_264",
+      "score": 4,
+      "concerns": [
+        "Recommendations are allocated to hard skills (UI design, web accessibility) instead of soft skills (leadership, collaboration).",
+        "Blog evidence for JavaScript (3) seems lower than expected for a technical blog on SSR, which inherently uses JavaScript."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_265",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_266",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_267",
+      "error": "Expecting value: line 1 column 1 (char 0)",
+      "score": 0,
+      "concerns": []
+    },
+    {
+      "persona_id": "p_268",
+      "score": 3,
+      "concerns": [
+        "Recommendation letter (d_p_268_02) is allocating high scores to technical skills (C/C++, Embedded Linux, etc.) rather than soft skills like project management or teamwork, which is inconsistent with the document type",
+        "Python/REST API/Network troubleshooting are given low intensity in recommendation letter despite being mentioned in project README, creating potential contradiction in evidence allocation",
+        "RTOS and Firmware development are given high intensity in all documents, but the project README may not sufficiently demonstrate depth for Level 4 proficiency"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_269",
+      "score": 3,
+      "concerns": [
+        "Soft skills like 'stakeholder management' and 'team leadership' are allocated to README documents (d_p_269_01) which are unlikely to demonstrate interpersonal skills, while recommendations (d_p_269_04/d_p_269_05) are underutilized for these skills",
+        "Product management (level 4) is only supported by the CV (d_p_269_00) with no evidence from project documents, which is insufficient for a senior role",
+        "UX research (level 3) is allocated to multiple documents with low intensity (mostly 1), which may not provide sufficient evidence for this skill",
+        "A/B testing and SQL analytics (level 3) are primarily linked to the monetization strategy (d_p_269_03), which may not directly demonstrate these analytical skills"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_270",
+      "score": 4,
+      "concerns": [
+        "A/B testing intensity on project READMEs (d_p_270_01/d_p_270_02) may be over-allocated if the projects didn't explicitly involve A/B testing",
+        "SQL analytics intensity on all project READMEs (d_p_270_01/d_p_270_02) might overstate relevance if the projects didn't require SQL analytics",
+        "User journey mapping intensity on project READMEs (d_p_270_01/d_p_270_02) could be better supported by UX-focused documentation"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_271",
+      "score": 3,
+      "concerns": [
+        "Contradiction between Flutter (level 4) and React Native (level 4) in the same project README - a single project typically wouldn't use both frameworks simultaneously",
+        "Swift/iOS development (level 3 globally) allocated to project README with low intensity (2), which may not reflect actual project scope",
+        "REST API design (level 4 globally) has higher evidence in CV (4) than project README (3), which could imply the project's focus was more on implementation than design"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_272",
+      "score": 4,
+      "concerns": [
+        "Stakeholder management and test automation are allocated to the README (project_readme) which is an inappropriate document type for soft skills (should be CV)",
+        "Next.js is rated 1 for the project_readme despite the project being a React app - the README doesn't mention Next.js specifically",
+        "Web performance optimization is rated 4 for the project_readme but the README doesn't provide evidence of performance optimization techniques"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_273",
+      "score": 4,
+      "concerns": [
+        "Compliance (SOC2/GDPR) is allocated to the recommendation document (d_p_273_04) with intensity 3, which is a soft skill endorsement rather than technical compliance evidence",
+        "Penetration testing (level 4) has low intensity (3) in the blog document (d_p_273_05) which is an expert analysis rather than penetration testing-specific content",
+        "SIEM tools (level 4) have lower intensity (3) in the SecureDevOps project README (d_p_273_03) which is a DevSecOps framework rather than SIEM-focused content",
+        "Threat modeling (level 5) has intensity 4 in the CloudSecAuto project README (d_p_273_01) which is a cloud security automation tool rather than threat modeling-specific content"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_274",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_275",
+      "score": 4,
+      "concerns": [
+        "Recommendation document (d_p_275_02) is being used for technical skills (Message queues, Network automation, etc.) with low intensity, which is inappropriate. Recommendations should primarily support soft skills like leadership/management, not technical expertise."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_276",
+      "score": 4,
+      "concerns": [
+        "The recommendation document (d_p_276_03) is being allocated technical skills (e.g., Python, statistical modeling) instead of soft skills like leadership or project management, which is inappropriate for a recommendation letter"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_277",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_278",
+      "score": 4,
+      "concerns": [
+        "React Native skill level 4 in CV but only 2 in project README (conflict if project uses React Native)",
+        "JavaScript and React skill levels 2 in CV but only 1 in README (low evidence for non-core skills)"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_279",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_280",
+      "score": 4,
+      "concerns": [
+        "Recommendation letter (d_p_280_02) has lower intensity for skills like AWS (2) and Docker (2) compared to CV (3), which may not align with its purpose of endorsing academic/technical abilities",
+        "Project README (d_p_280_01) has high intensity for Apache Spark (3) and Airflow (3) but no explicit mention of these tools in the document description",
+        "LinkedIn summary (d_p_280_03) is allocated high intensity for Docker (3) and Hugging Face (3) but the document description doesn't mention these specific tools"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_281",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_282",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_283",
+      "score": 4,
+      "concerns": [
+        "The recommendation document is primarily a soft skill endorsement but is allocated to technical skills with low intensity (1), which may not align with its purpose",
+        "Project_readme for AdInsight Dashboard (Python/React) shows low intensity for REST API design (1), but the candidate's global REST API level is 5 - could imply stronger evidence in other projects",
+        "Python skill allocation shows high intensity (3) in CV but only 3 in AdInsight project, which may underrepresent its usage in the dashboard"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_284",
+      "score": 3,
+      "concerns": [
+        "GitLab CI is allocated to project_readme 01 (Jenkins/Docker project) which is inconsistent with the tool mentioned",
+        "Recommendation document (d_p_284_03) is being used to evidence technical skills (Kubernetes, Linux, etc.) instead of soft skills like leadership",
+        "Prometheus/Grafana has high intensity (5) for project_readme 02 (monitoring system) which is appropriate, but other skills like PostgreSQL have lower intensity for project_readme 02 (which doesn't mention DB monitoring)",
+        "Python/Redis evidence seems mismatched with project_readme topics (CI/CD and monitoring systems)"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_285",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_286",
+      "score": 3,
+      "concerns": [
+        "Stakeholder management (a soft skill) is only allocated to the CV, which is odd since it's typically documented in recommendations or project testimonials, not a resume",
+        "GraphQL and REST API design are allocated to the performance blog document which doesn't directly relate to API design",
+        "Webpack/Vite allocation is inconsistent - only project_readme 01 has medium intensity while others have low intensity despite being development tools",
+        "Web performance optimization has high intensity for project_readme 01 and 02 which may not explicitly demonstrate performance optimization techniques"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_287",
+      "score": 3,
+      "concerns": [
+        "Recommendation document (d_p_287_02) is being used to support technical skills (e.g., Kubernetes, Go) rather than soft skills or overall professional assessment",
+        "Project README (d_p_287_01) has inconsistent intensity levels for skills like PostgreSQL (2) and Python (3) that may not align with the project's focus on API gateway development",
+        "LinkedIn document (d_p_287_03) is assigned high intensity for skills like Terraform (5) and Redis (3) without clear justification for how these are reflected in the profile summary"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_288",
+      "score": 4,
+      "concerns": [
+        "Recommendation document (d_p_288_02) is being allocated to technical skills like 'Monitoring & alerting' and 'Kubernetes' instead of soft skills (leadership, reliability initiatives). This contradicts the document's purpose as a soft skill endorsement."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_289",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_290",
+      "score": 4,
+      "concerns": [
+        "REST API design is allocated to the recommendation document (d_p_290_02), which is inappropriate as this document focuses on endorsements rather than technical skills"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_291",
+      "score": 3,
+      "concerns": [
+        "The recommendation letter (d_p_291_02) is being used to support technical skills (AWS, Docker, etc.) rather than soft skills like client management, which is more appropriate for a recommendation document",
+        "Python evidence shows inconsistency (CV:2 vs project_readme:3) when global level is 3, suggesting potential underrepresentation in CV documentation",
+        "Terraform evidence appears unusually low across all documents (max 3) for a global level 2 skill, which may indicate over- or under-estimation depending on project scope"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_292",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_293",
+      "score": 4,
+      "concerns": [
+        "Technical skills (e.g., AWS, Docker) are allocated to the recommendation document (d_p_293_03), which is more suited for soft skills like leadership, not technical expertise",
+        "Project READMEs (d_p_293_01, d_p_293_02) have low intensity (1) for skills like PostgreSQL and Chaos engineering, despite being project-specific documents that could demonstrate practical application",
+        "Python and PostgreSQL (Level 3 skills) are only supported by the CV (intensity 3) and minimal other evidence, which may not fully justify the global skill level"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_294",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_295",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_296",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_297",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_298",
+      "score": 3,
+      "concerns": [
+        "The blog document (d_p_298_03) is allocated low intensity (1) for skills like 'Microservices architecture' and 'Database optimization', despite being a technical deep dive on microservices design. This contradicts the document's topic.",
+        "Project READMEs (d_p_298_01, d_p_298_02) are assigned low intensity (1) for many skills, but they likely involve the mentioned technologies (e.g., payment gateways, fraud detection systems) which should have higher evidence weight.",
+        "Skills like 'Go' and 'Terraform' are assigned high intensity (5) to the CV, which is reasonable, but the blog and project READMEs could also justify higher intensity for these skills if they detail implementation."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_299",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_300",
+      "score": 3,
+      "concerns": [
+        "Technical skills like Docker and CI/CD pipelines are allocated to the recommendation document (soft skill context), which is inappropriate. READMEs and CVs should support technical skills, while recommendations should focus on soft skills like teamwork.",
+        "Linux administration has a 1 intensity in the project_readme (primary technical evidence source), which contradicts its global level 2. This suggests insufficient evidence to support the stated skill level."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_301",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_302",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_303",
+      "score": 4,
+      "concerns": [
+        "The CV mentions Vue.js as a specialization, but Vue.js is not listed in the global skill levels (missing skill).",
+        "Recommendations (d_p_303_01, d_p_303_02) highlight leadership/soft skills but are not allocated to any soft skill categories (e.g., teamwork, leadership).",
+        "Webpack/Vite (level 4) is only strongly supported by LinkedIn (d_p_303_03) but not the blog (d_p_303_04), which focuses on state management.",
+        "The blog (d_p_303_04) is allocated high levels for state management but low levels for unrelated skills like Selenium/Playwright (level 1), which may not align with its content."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_304",
+      "score": 4,
+      "concerns": [
+        "The recommendation letter (d_p_304_02) is allocated to technical skills (e.g., Application security, SIEM tools) rather than soft skills (e.g., collaboration, problem-solving). Recommendations should focus on soft skills, not technical expertise.",
+        "The project README (d_p_304_01) is assigned high intensity (3) for skills like Penetration testing and SIEM tools, which may not be directly addressed in the described adtech threat detection project."
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_305",
+      "score": 4,
+      "concerns": [
+        "Infrastructure as Code (level 4) is heavily weighted to the project README, which may not sufficiently demonstrate advanced IaC expertise",
+        "Python (level 3) has low intensity in the project README which uses Node.js, but the CV might be the primary source",
+        "Kubernetes (level 3) has low intensity in the project README which doesn't mention it, but the CV might reference it",
+        "GitLab CI (level 3) has low intensity in the project README which doesn't mention it, but the CV might reference it"
+      ],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_306",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_307",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_308",
+      "score": 5,
+      "concerns": [],
+      "flagged": false
+    },
+    {
+      "persona_id": "p_309",
+      "score": 4,
+      "concerns": [
+        "Penetration testing (Level 4) is allocated to a blog (Zero-Trust) and project READMEs (API security) which may not directly relate to penetration testing techniques",
+        "Security auditing (Level 4) is primarily supported by a blog (Zero-Trust) and project READMEs (encryption), which may lack direct auditing evidence",
+        "Firewall configuration (Level 4) has minimal evidence from project READMEs and recommendation, which might not fully justify the skill level",
+        "The recommendation document is allocated to multiple skills (compliance, IAM, incident response) which is appropriate but could be seen as over-reliance on a single document for multiple skills"
       ],
       "flagged": false
     }

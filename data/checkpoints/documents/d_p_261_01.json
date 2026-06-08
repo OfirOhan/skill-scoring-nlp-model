@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_261_01",
+  "type": "project_readme",
+  "persona_id": "p_261",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "C/C++ (embedded)": 4,
+    "CI/CD pipelines": 3,
+    "Embedded Linux": 3,
+    "Firmware development": 4,
+    "Hardware-software integration": 3,
+    "IoT protocols (MQTT/CoAP)": 3,
+    "Network automation": 2,
+    "Python": 3,
+    "REST API design": 3,
+    "RTOS": 3,
+    "Shell scripting (Bash)": 2
+  },
+  "text": "# SecureFirmwareUpdate  \nA framework for secure, authenticated firmware updates on ARM Cortex-M IoT devices, prioritizing cryptographic integrity and rollback resilience  \n\n## API Reference  \n**Update Endpoint**  \n`POST /update`  \n- `image` (binary): Base64-encoded firmware blob  \n- `signature` (string): ECDSA signature of the image using the device's long-term key  \n- `nonce` (string): 16-byte random value to prevent replay attacks  \n\n**Verification Endpoint**  \n`GET /verify`  \n- `version` (string): Target firmware version  \n- `timestamp` (integer): Unix epoch of update request  \n\n## Usage / Examples  \n```bash  \n# Sign firmware with device's private key  \nopenssl dgst -sha256 -sign private_key.pem -out firmware.sig firmware.bin  \n\n# Trigger update via REST API  \ncurl -X POST https://api.update.example.com/update \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"image\": \"base64_firmware\", \"signature\": \"sig_base64\", \"nonce\": \"random_nonce\"}'  \n```  \n\n## Getting Started / Installation  \n1. Clone the repository using `git init` and `git remote add`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Flash the bootloader binary to the target Cortex-M4 using ST-Link utility  \n4. Configure `config.h` for your device's flash memory layout  \n\n## Tech Stack  \n- **Microcontroller**: STM32F407 with ARM Cortex-M4  \n- **Security**: ECDSA + HMAC-SHA256 for payload signing  \n- **Communication**: MQTT over TLS for remote update requests  \n- **Storage**: Flash memory with wear-leveling algorithm  \n- **Tools**: ARM GCC, OpenOCD, Python-based firmware signer  \n\n## Architecture / Design  \nThe framework separates validation, signing, and deployment into distinct stages:  \n1. **Pre-validation**: Checks firmware hash against a trusted repository  \n2. **Secure Boot**: Verifies signature using the device's stored public key  \n3. **Rollback Protection**: Compares version numbers to prevent downgrade attacks  \n4. **OTA Delivery**: Uses MQTT with TLS for encrypted, authenticated transfers  \n\n## License  \nMIT License  \nSee [LICENSE](LICENSE) for full terms  \n\n## Badges  \n[![Build Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fexample.com%2Fbuild-status.json)](https://example.com/build-status)  \n[![Firmware Size](https://img.shields.io/endpoint?url=https%3A%2F%2Fexample.com%2Ffirmware-size.json)](https://example.com/firmware-size)"
+}

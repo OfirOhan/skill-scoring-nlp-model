@@ -1,0 +1,28 @@
+{
+  "doc_id": "d_p_139_01",
+  "type": "project_readme",
+  "persona_id": "p_139",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 2,
+    "Database optimization": 2,
+    "Docker": 3,
+    "GitLab CI": 3,
+    "HTML/CSS": 3,
+    "JavaScript": 3,
+    "Linux administration": 1,
+    "Node.js": 3,
+    "PostgreSQL": 3,
+    "Python": 2,
+    "REST API design": 3,
+    "React": 3,
+    "Shell scripting": 1,
+    "Web performance optimization": 3,
+    "Webpack/Vite": 1
+  },
+  "text": "# Enterprise Task Management Tool  \nA real-time task coordination platform for cross-functional teams, built to handle 500+ daily tasks with role-based access and automated status updates.  \n\n## Badges  \n[![Status: Active](https://example.com/status)](https://example.com/status) [![License: MIT](https://example.com/mit)](https://example.com/mit)  \n\n## Tech Stack  \n- **Frontend**: React (custom hooks for task state management, 95% test coverage)  \n- **Backend**: Node.js (REST API with rate-limiting for 10+ concurrent users)  \n- **Database**: PostgreSQL (optimized for 500+ daily writes, 200ms latency)  \n- **CI/CD**: GitLab CI (automated Docker image builds for 3 environments)  \n- **Containerization**: Docker (production-ready, 90% reduction in deployment time)  \n- **Styling**: HTML/CSS (custom theme with 30% faster load times via critical CSS)  \n- **Performance**: JavaScript (tree-shaking, 40% smaller bundle size)  \n\n## Configuration  \n1. Copy `.env.example` to `.env` and set PostgreSQL credentials  \n2. Run `docker-compose up --build` for local dev (MySQL and Redis included)  \n3. GitLab CI pipelines auto-scale based on workload (triggered by `main` branch pushes)  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/your-username/enterprise-task-tool.git  \ncd enterprise-task-tool  \ndocker-compose build  \ndocker-compose up  \n```  \nFor production: Use `docker-compose.prod.yml` with AWS RDS integration  \n\n## Usage / Examples  \n- **Task creation**: `/api/tasks` POST with JSON payload (e.g., `{\"title\": \"Q4 report\", \"assignee\": \"johndoe\"}`)  \n- **Real-time updates**: WebSocket syncs task status across 10+ devices  \n- **Role-based access**: Admins view all tasks; team leads see assigned tasks only  \n\n## Testing  \n- **Unit tests**: 95% coverage (Jest for backend, React Testing Library for frontend)  \n- **Integration tests**: Supertest for API endpoints (mocked PostgreSQL)  \n- **Performance**: Load testing with 100 concurrent users (99.9% uptime)  \n\n## License  \nMIT License (internal use only — for enterprise deployment, contact Yuki Tanaka for custom licensing)"
+}

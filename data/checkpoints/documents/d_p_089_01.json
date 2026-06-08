@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_089_01",
+  "type": "project_readme",
+  "persona_id": "p_089",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "3D graphics (Vulkan)": 4,
+    "C#/.NET": 4,
+    "Game networking": 4,
+    "Game physics": 5,
+    "Microservices architecture": 3,
+    "Python": 3,
+    "REST API design": 5,
+    "Unity": 5,
+    "Unreal Engine": 5,
+    "gRPC": 3
+  },
+  "text": "# Ethereal Quest: VR Puzzle Adventure  \nEthereal Quest is an experimental VR puzzle game designed to challenge spatial reasoning and reflexes through immersive, procedurally generated environments. Players navigate shifting geometries and solve physics-based puzzles while managing resource scarcity. The project leverages cross-platform VR tools and real-time physics simulations to create a seamless blend of gameplay and environmental storytelling.  \n\n## Badges  \n[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/MIT)  \n[![Build Status](https://img.shields.io/badge/build-passing-green)](https://github.com/monica-nyambura/ethereal-quest/actions)  \n[![Tech Stack](https://img.shields.io/badge/tech-stack-Unity%2C%20Unreal%20Engine%2C%20Vulkan-blue)](https://github.com/monica-nyambura/ethereal-quest)  \n\n## License  \nThis project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details. Contributions must include a signed contributor agreement and adhere to the project’s code of conduct.  \n\n## Tech Stack  \n- **Unity (3D UI/UX)**: Used for rapid prototyping of puzzle mechanics and UI/UX workflows.  \n- **Unreal Engine (Vulkan Rendering)**: Drives high-fidelity 3D environments with Vulkan-based rendering for performance optimization.  \n- **C#/.NET**: Core scripting language for game logic, with asynchronous task management for resource allocation.  \n- **Python (gRPC)**: Backend services for puzzle generation and multiplayer synchronization, utilizing gRPC for low-latency communication.  \n- **REST API**: Exposed for analytics and player progression tracking, with rate-limiting and authentication middleware.  \n- **Physics Engines**: Hybrid integration of PhysX and Bullet for realistic object interactions and collision detection.  \n\n## Architecture / Design  \nThe architecture employs a microservices model, decoupling puzzle logic, physics simulations, and networking into separate services. Unity handles input and UI rendering, while Unreal Engine manages the 3D world. Python gRPC services orchestrate puzzle generation and multiplayer state synchronization. Physics calculations are distributed across PhysX and Bullet, with custom middleware for collision resolution. The REST API provides telemetry for player analytics, with caching layers to reduce latency.  \n\n## Getting Started / Installation  \n1. Install [Unity Hub](https://unity.com/download) and [Unreal Engine](https://www.unrealengine.com/en-US/download).  \n2. Set up Python 3.9+ with pip and install dependencies: `pip install grpcio protobuf`.  \n3. Clone the repository: `git clone https://github.com/monica-nyambura/ethereal-quest.git`.  \n4. Configure environment variables for gRPC endpoints and Vulkan drivers.  \n5. Build and run the Unity project via the provided `.sln` file.  \n\n## Usage / Examples  \nLaunch the game via Unity and navigate the VR environment using hand-tracking controls. Solve puzzles by manipulating gravity wells and resource nodes, with feedback provided through haptic vibrations. Example levels include a gravity-defying maze and a resource management challenge with dynamic environmental hazards.  \n\n## Contributing  \nContributions are welcome — submit bug reports, feature requests, or pull requests via the GitHub repository. Ensure all code adheres to the project’s coding standards and includes unit tests. For significant changes, open an issue to discuss implementation details before submitting a pull request."
+}

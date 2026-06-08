@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_082_02",
+  "type": "blog",
+  "persona_id": "p_082",
+  "hyperparams": {
+    "blog_depth": "tutorial",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 2,
+    "CI/CD pipelines": 1,
+    "Docker": 1,
+    "JavaScript": 4,
+    "Microservices architecture": 4,
+    "PostgreSQL": 4,
+    "Python": 4,
+    "REST API design": 4,
+    "React": 4,
+    "Web performance optimization": 3
+  },
+  "text": "In late 2023, a healthcare provider I worked with faced a critical breach—patient data exposed due to misconfigured access controls. It’s a sobering reminder that securing health data isn’t just about encryption; it’s about designing systems where security is woven into every layer. As a full-stack developer in healthtech, I’ve spent years balancing compliance, performance, and usability. This post distills a recent project where we rebuilt a patient portal to meet HIPAA standards while maintaining a seamless user experience.  \n\nThe context was clear: the existing monolithic app struggled with scalability and lacked granular access controls. Our stack included React for the frontend, Python/PostgreSQL for the backend, and REST APIs bridging the two. The challenge wasn’t just meeting regulatory requirements—it was ensuring data protection without sacrificing performance. Health data is sensitive, but it’s also critical for timely care. Any delay in query response times could impact clinical workflows.  \n\nOur solution centered on three pillars: encryption, access control, and performance optimization. We enforced HTTPS everywhere, encrypting data at rest using AES-256 in PostgreSQL. Role-based access controls (RBAC) were implemented via PostgreSQL’s row-level security, ensuring clinicians only saw relevant patient records. To prevent brute-force attacks, we added rate limiting to the API layer, throttling requests to 100 per minute per IP. Meanwhile, we optimized query performance by indexing critical fields and using connection pooling, which reduced average response times by 40% without compromising security.  \n\nThe results were measurable. Post-implementation, our breach risk assessment scored 92% compliance with HIPAA, up from 68% previously. The system handled 15,000 concurrent users without degradation, and audit logs provided real-time visibility into data access. Clinicians reported no noticeable lag, which validated our focus on balancing security and usability.  \n\nKey takeaways? Security must be a design constraint, not an afterthought. RBAC and encryption are table stakes, but their execution defines success. Performance isn’t the enemy of security—it’s part of the same equation. Finally, regular audits and team training are non-negotiable. In healthtech, a single misconfigured policy can cost lives. We learned to treat security as a continuous process, not a checkbox."
+}

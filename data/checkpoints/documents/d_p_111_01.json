@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_111_01",
+  "type": "project_readme",
+  "persona_id": "p_111",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Competitive analysis": 2,
+    "Cross-team collaboration": 3,
+    "Data visualization": 3,
+    "Product management": 3,
+    "Roadmap planning": 3,
+    "SQL analytics": 3,
+    "Stakeholder communication": 2,
+    "Stakeholder management": 2,
+    "UX research": 3
+  },
+  "text": "# FinTrack: Real-Time Financial Analytics Dashboard  \nA lightweight tool for tracking personal transactions and generating actionable insights with minimal latency. Built for users who need to monitor cash flow, categorize expenses, and visualize trends without sacrificing performance.  \n\n## Badges  \n[![🚀 Live](https://img.shields.io/badge/Status-Live-green)](https://github.com/yourusername/FinTrack)  \n[![📈 Real-Time](https://img.shields.io/badge/Feature-Real--Time-yellow)](https://github.com/yourusername/FinTrack)  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n```bash  \ngit clone https://github.com/yourusername/FinTrack.git  \ncd FinTrack  \n```  \n2. Install dependencies:  \n```bash  \nnpm install  \npip install -r requirements.txt  \n```  \n3. Configure your API keys and database connection in `.env`.  \n4. Run the backend:  \n```bash  \nuvicorn main:app --reload  \n```  \n5. Start the frontend:  \n```bash  \nnpm run dev  \n```  \n\n## Tech Stack  \n**Backend**: Python (FastAPI, Pandas, Plotly)  \n**Frontend**: React (Vite, Chart.js)  \n**Database**: SQLite (for local storage)  \n**Real-Time**: WebSocket (for live updates)  \n\n## Architecture / Design  \nThe system splits data ingestion, processing, and visualization into distinct layers. The backend handles real-time data aggregation using FastAPI, while the frontend renders dynamic charts via Chart.js. WebSockets ensure updates propagate instantly across devices. This separation allows for scalable upgrades without rewriting core logic.  \n\n## Usage / Examples  \n- **Track Expenses**: Input transactions via a form, and watch categories auto-calculate.  \n- **Generate Reports**: Export CSVs of monthly summaries or drill into specific dates.  \n- **Visualize Trends**: Interactive charts show spending patterns over time, with filters for income vs. expenses.  \n\n## Testing  \n- **Unit Tests**: Python components are tested with `pytest` for data validation and edge cases.  \n- **Component Tests**: React UI elements are verified with `Jest` and `React Testing Library`.  \n- **End-to-End**: Cypress ensures WebSocket connections and real-time updates function as expected.  \n\n## License  \nOpen source under MIT License. See [LICENSE](https://github.com/yourusername/FinTrack/blob/main/LICENSE) for details."
+}

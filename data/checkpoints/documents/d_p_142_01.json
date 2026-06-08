@@ -1,0 +1,26 @@
+{
+  "doc_id": "d_p_142_01",
+  "type": "project_readme",
+  "persona_id": "p_142",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "ArgoCD": 3,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 2,
+    "Docker": 3,
+    "GitHub Actions": 4,
+    "Jenkins": 2,
+    "Kubernetes": 3,
+    "Linux administration": 3,
+    "Monitoring & alerting": 3,
+    "Prometheus/Grafana": 3,
+    "Python": 3,
+    "Terraform": 3
+  },
+  "text": "# HealthMonitor: Real-Time Healthcare System Monitoring Platform  \n\nHealthMonitor is a scalable, real-time monitoring solution for medical device systems, designed to ensure operational reliability and data integrity in clinical environments. Built with healthcare workflows in mind, it integrates seamlessly with existing infrastructure while prioritizing low-latency telemetry and alerting for mission-critical systems.  \n\n## Badges  \n[![GitHub Actions Status](https://github.com/oscarylindgren/healthmonitor/workflows/CI%20Pipeline/badge.svg)](https://github.com/oscarylindgren/healthmonitor/actions)  \n[![Test Coverage](https://github.com/oscarylindgren/healthmonitor/workflows/Test%20Coverage/badge.svg)](https://github.com/oscarylindgren/healthmonitor/actions)  \n[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n```bash  \ngit clone https://github.com/oscarylindgren/healthmonitor.git  \ncd healthmonitor  \n```  \n2. Install dependencies:  \n```bash  \npip install -r requirements.txt  \ndocker compose build  \n```  \n3. Run the local instance:  \n```bash  \ndocker compose up -d  \n```  \nAccess the dashboard at [http://localhost:3000](http://localhost:3000) after initial setup.  \n\n## Tech Stack  \n- **Backend**: Python (FastAPI) for real-time data ingestion  \n- **Monitoring**: Prometheus + Grafana for metric collection and visualization  \n- **Orchestration**: Kubernetes (EKS) for scalable service deployment  \n- **CI/CD**: GitHub Actions for automated testing and deployment  \n- **Infrastructure**: Terraform for reproducible cloud resource provisioning  \n- **Storage**: AWS S3 for historical telemetry data archiving  \n- **Networking**: ArgoCD for declarative application rollouts  \n\n## Architecture / Design  \nHealthMonitor employs a microservices architecture with three core components:  \n1. **Telemetry Aggregator**: Collects device data via MQTT and HTTP endpoints, pre-processing for anomaly detection  \n2. **Alert Engine**: Integrates with Prometheus to trigger alerts via Slack/Email based on predefined thresholds  \n3. **Dashboard**: A Grafana instance with custom dashboards for clinical teams to monitor device status  \n\nThe system is designed to scale horizontally, with Kubernetes managing pod autoscaling based on CPU utilization. Prometheus scrapes metrics from all services every 15 seconds, ensuring sub-second latency for critical alerts.  \n\n## Usage / Examples  \n- Monitor device uptime: Navigate to `/dashboard/clinical` and filter by device ID  \n- Configure alerts: Edit `prometheus/alerts.yml` to define new thresholds  \n- Export logs: Use `kubectl logs <pod-name>` to debug recent telemetry ingestion issues  \n\n## Testing  \nAutomated tests are triggered on every push to main via GitHub Actions. Coverage includes:  \n- Unit tests for data parsing logic (pytest)  \n- Integration tests for alert rule execution (Docker-based)  \n- End-to-end tests for dashboard interactivity (Selenium)  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details."
+}

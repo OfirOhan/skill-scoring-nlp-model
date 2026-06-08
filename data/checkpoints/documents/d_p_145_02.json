@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_145_02",
+  "type": "project_readme",
+  "persona_id": "p_145",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "CI/CD pipelines": 4,
+    "Cloud cost optimization": 3,
+    "Docker": 4,
+    "Go": 3,
+    "Java": 1,
+    "Kubernetes": 4,
+    "Microservices architecture": 2,
+    "Monitoring & alerting": 4,
+    "PostgreSQL": 4,
+    "Python": 4,
+    "REST API design": 3,
+    "Terraform": 4
+  },
+  "text": "# Secure Data Pipeline for Financial Services  \n\nA scalable, compliant data pipeline for financial institutions using Kafka and Flink, designed to meet strict regulatory requirements while enabling real-time analytics. Built for enterprise-grade reliability and security, with a focus on audit trails, encryption, and operational efficiency.  \n\n## Testing  \nAutomated test coverage exceeds 95% across Kafka producers, Flink stream processing, and PostgreSQL integrations. Unit tests validate data integrity and compliance checks, while end-to-end tests simulate transactional workloads. CI/CD pipelines enforce test execution on every merge, with alerts for regression risks. Performance benchmarks show 99.99% uptime during peak loads, with latency under 50ms for critical paths.  \n\n## Getting Started / Installation  \nClone the repo and navigate to the directory. Ensure Docker is installed, then run `docker-compose up` to spin up Kafka, Flink, and PostgreSQL. The pipeline requires Python 3.8+ for CLI tools and Terraform 1.2+ for infrastructure provisioning. No external dependencies beyond standard DevOps tooling.  \n\n## Usage / Examples  \nTo process financial transactions:  \n```bash  \npython pipeline.py --input-topic transactions --output-topic analytics  \n```  \nThis ingests data via Kafka, applies real-time fraud detection rules using Flink, and persists results to PostgreSQL. Security features include TLS-encrypted Kafka streams, IAM-restricted Flink access, and audit logs for all data modifications.  \n\n## Tech Stack  \n- **Kafka**: Real-time data ingestion with partitioned, replicated topics  \n- **Flink**: Stateful stream processing with windowed aggregations  \n- **PostgreSQL**: High-availability storage for structured audit logs  \n- **Python**: CLI utilities for pipeline orchestration  \n- **Docker/Kubernetes**: Containerized deployment with auto-scaling  \n- **Terraform**: Cloud infrastructure as code for cost-optimized AWS clusters  \n- **Prometheus/Grafana**: Real-time monitoring with alert thresholds  \n\n## Architecture / Design  \nThe pipeline decouples data ingestion, processing, and storage layers. Kafka handles fault-tolerant message ordering, while Flink ensures low-latency anomaly detection. PostgreSQL serves as a write-ahead log for compliance audits. All components are secured via TLS, IAM policies, and row-level encryption. Terraform provisions resources with 30% lower costs compared to manual setups.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details.  \n\n## Contributing  \nPull requests are welcome! Focus on improving test coverage, optimizing Kafka partitioning, or enhancing Flink query performance. All contributions require code reviews and pass the full test suite before merging."
+}

@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_117_01",
+  "type": "project_readme",
+  "persona_id": "p_117",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "GraphQL": 3,
+    "JavaScript": 5,
+    "Next.js": 4,
+    "Python": 1,
+    "REST API design": 3,
+    "React": 5,
+    "TypeScript": 5,
+    "Web accessibility (WCAG)": 4,
+    "Web performance optimization": 4,
+    "Webpack/Vite": 3
+  },
+  "text": "# Real-Time Ad Performance Dashboard  \nA React-based dashboard engineered for real-time ad metrics tracking and campaign performance analysis in high-velocity adtech environments. Designed to visualize click-through rates, impression volumes, and conversion funnels with sub-second latency, this project leverages TypeScript, Next.js, and GraphQL to deliver a scalable, accessible, and performant interface for ad operations teams.  \n\n---\n\n## Deployment  \nThe dashboard is deployed on Vercel with automated CI/CD pipelines, ensuring zero-downtime rollouts and real-time monitoring of deployment health. Live demo accessible via [https://ad-dashboard.vercel.app](https://ad-dashboard.vercel.app) (authenticated via OAuth2).  \n\n---\n\n## Badges  \n[![Deployment Status](https://img.shields.io/endpoint?url=https://dashboard.status.badge)](https://dashboard.status.badge)  \n[![TypeScript Enabled](https://img.shields.io/badge/TypeScript-3198C8?style=flat)](https://github.com/yourusername/real-time-ad-dashboard)  \n[![Accessibility Score](https://img.shields.io/badge/WCAG-AA--AA--AA?style=flat)](https://github.com/yourusername/real-time-ad-dashboard)  \n\n---\n\n## Tech Stack  \n- **Frontend**: React 18, TypeScript 4.9, Next.js 13 (with App Router)  \n- **Data Fetching**: GraphQL subscriptions for real-time metric updates, REST APIs for historical data  \n- **Build Tools**: Vite for JIT compilation, Webpack 5 for production bundling  \n- **State Management**: Redux Toolkit for global state, React Context for theme/authorization  \n- **Accessibility**: ARIA labels, keyboard navigation, semantic HTML5  \n- **Performance**: Code splitting, lazy loading, image optimization via Next.js Image Component  \n\n---\n\n## Architecture / Design  \nThe architecture prioritizes decoupled components and unidirectional data flow. GraphQL subscriptions provide live updates to ad metrics, while REST endpoints serve historical campaign data. React components are optimized for reusability, with custom hooks for metric visualization. Accessibility is baked into every component, adhering to WCAG 2.1 AA standards. Web performance is enhanced through lazy loading and server-side rendering, reducing initial load time by 40%.  \n\n---\n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/yourusername/real-time-ad-dashboard  \ncd real-time-ad-dashboard  \nnpm install  \nnpm run dev  \n```  \nEnsure environment variables (`NEXT_PUBLIC_GRAPHQL_ENDPOINT`, `AUTH0_DOMAIN`) are configured for local development.  \n\n---\n\n## Usage / Examples  \nNavigate to `/campaigns` to view real-time performance metrics for active ad groups. Use the `/analytics` route to drill into conversion funnels with interactive heatmaps. Filters for time ranges and ad networks are exposed via a sidebar with keyboard-accessible toggles.  \n\n---\n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

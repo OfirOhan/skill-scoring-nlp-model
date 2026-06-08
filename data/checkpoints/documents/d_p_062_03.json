@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_062_03",
+  "type": "project_readme",
+  "persona_id": "p_062",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "Apache Spark": 4,
+    "Docker": 4,
+    "Kubernetes": 4,
+    "MLOps": 4,
+    "NLP": 1,
+    "PyTorch": 4,
+    "TensorFlow": 4,
+    "Recommendation systems": 1,
+    "MLOps (MLflow/W&B)": 1
+  },
+  "text": "# Fraud Detection in Online Transactions  \n\nA production-grade anomaly detection system for e-commerce fraud, leveraging scalable cloud infrastructure and distributed processing to identify high-risk transactions in real-time. Built for hobbyist-level exploration but designed with enterprise-grade architecture, this project has been deployed across 15+ team members to monitor 10M+ transactions daily.  \n\n## API Reference  \n\n**Endpoints**  \n- `POST /validate_transaction`  \n  *Validates a single transaction with risk score*  \n  ```bash  \n  curl -X POST https://api.fraud-detect.com/validate_transaction \\\n    -H \"Content-Type: application/json\" \\\n    -d '{\"transaction_id\": \"TX123456\", \"amount\": 299.99, \"user_id\": \"USER789\"}'  \n  ```  \n  *Response:* `{ \"is_fraud\": false, \"risk_score\": 12.4, \"confidence\": \"low\" }`  \n\n- `GET /batch_score`  \n  *Scores a batch of transactions using distributed processing*  \n  ```bash  \n  curl -X GET \"https://api.fraud-detect.com/batch_score?file_id=FILE_001\"  \n  ```  \n  *Response:* `{\"batch_id\": \"BATCH_001\", \"processed\": 52000, \"fraudulent\": 127}`  \n\n## Usage / Examples  \n\nFor real-time validation:  \n```python  \nimport requests  \nresponse = requests.post(  \n    \"https://api.fraud-detect.com/validate_transaction\",  \n    json={\"transaction_id\": \"TX123456\", \"amount\": 299.99, \"user_id\": \"USER789\"}  \n)  \nprint(response.json())  \n```  \n\nFor batch processing:  \n```bash  \ncurl \"https://api.fraud-detect.com/batch_score?file_id=FILE_001\" | jq .  \n```  \n\n## Getting Started / Installation  \n\n1. Clone the repo: `git clone https://github.com/your-username/fraud-detect.git`  \n2. Build Docker image: `docker-compose build`  \n3. Deploy to Kubernetes: `kubectl apply -f k8s/deployment.yaml`  \n4. Monitor via AWS CloudWatch: `aws cloudwatch get-metric-statistics ...`  \n\n## Tech Stack  \n\n- **AWS**: EC2 clusters, S3 storage, CloudWatch, and Lambda for real-time triggers  \n- **Apache Spark**: Distributed processing of 500GB+ transaction logs with 40% faster inference  \n- **Docker**: Containerized microservices for consistent CI/CD pipelines  \n- **Kubernetes**: Orchestration of 20+ pods across 3 availability zones  \n- **Python**: Core logic with NumPy and Pandas for feature engineering  \n\n## Architecture / Design  \n\nThe system ingests raw transactions via Kafka, preprocesses data in Spark for anomaly scoring, and routes results to AWS S3 for storage. Docker containers handle model serving, while Kubernetes ensures fault tolerance. AWS X-Ray traces requests across services, and Prometheus monitors latency metrics.  \n\n## License  \n\nMIT License  \n\n## Badges  \n\n[![Build Status](https://img.shields.io/endpoint?url=https%3A%2F%2Factions-badge.surge.sh%2Fv2%2Fbadge%3Frepo%3Dyour-username%2Ffraud-detect%26branch%3Dmain%26type%3Dsuccess)](https://github.com/your-username/fraud-detect/actions)  \n[![Coverage](https://img.shields.io/endpoint?url=https%3A%2F%2Fcoveragemetric.surge.sh%2Fv1%2Fbadge%3Frepo%3Dyour-username%2Ffraud-detect%26branch%3Dmain)](https://github.com/your-username/fraud-detect/actions)  \n[![GitHub stars](https://img.shields.io/github/stars/your-username/fraud-detect?style=social)](https://github.com/your-username/fraud-detect)"
+}

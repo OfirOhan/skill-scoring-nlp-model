@@ -1,0 +1,29 @@
+{
+  "doc_id": "d_p_137_01",
+  "type": "project_readme",
+  "persona_id": "p_137",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "ArgoCD": 4,
+    "CI/CD pipelines": 4,
+    "Cloud cost optimization": 2,
+    "GitHub Actions": 4,
+    "GitLab CI": 3,
+    "Incident management": 2,
+    "Jenkins": 1,
+    "Kubernetes": 5,
+    "Linux administration": 3,
+    "Monitoring & alerting": 4,
+    "Prometheus/Grafana": 4,
+    "Python": 2,
+    "Serverless": 2,
+    "Shell scripting (Bash)": 4,
+    "Terraform": 3
+  },
+  "text": "# NexaCloud Observability Platform  \n\nA centralized observability platform for SaaS applications, integrating real-time metrics, distributed tracing, and log aggregation. Designed to reduce mean time to resolution (MTTR) by 30% and lower cloud costs by 40% through intelligent resource allocation and anomaly detection.  \n\n## API Reference  \n**Endpoints**:  \n- `GET /api/v1/metrics` – Fetch aggregated metrics (Prometheus format, 100ms latency)  \n- `POST /api/v1/traces` – Ingest OpenTelemetry traces (1000 req/s throughput)  \n- `GET /api/v1/logs` – Query structured logs (100ms query latency)  \n\n**Authentication**: Bearer token (OAuth2) with rate limiting (100 req/min per user).  \n**Response Formats**: JSON with Prometheus exposition format for metrics.  \n\n## Usage / Examples  \n```python  \n# Fetch metrics via HTTP  \nimport requests  \nresponse = requests.get(\"https://nexacloud.example.com/api/v1/metrics\", headers={\"Authorization\": \"Bearer <token>\"})  \nprint(response.text)  \n```  \n\n```go  \n// Trace ingestion example  \notelSDKExporters = []otel.ExporterProvider{  \n    otel.NewOTLPSpanExporter(otel.WithOTLPHost(\"http://localhost:4317\")),  \n}  \n```  \n\n```bash  \n# Log aggregation pipeline  \ncurl -X POST http://localhost:8080/api/v1/logs \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"level\": \"error\", \"message\": \"DB connection failed\"}'  \n```  \n\n## Getting Started / Installation  \n1. Clone repo: `git clone https://github.com/jamesokafor/nexacloud.git`  \n2. Install dependencies: `go mod tidy && pip install -r requirements.txt`  \n3. Configure environment variables:  \n   - `NEXA_CLOUD_PROMETHEUS_ADDR`  \n   - `NEXA_CLOUD_GRAFANA_WEBHOOK`  \n4. Run server: `go run main.go --config=config.yaml`  \n\n## Tech Stack  \n- **Language**: Go (core), Python (utils), Bash (scripts)  \n- **Monitoring**: Prometheus (metrics), Grafana (dashboards)  \n- **Storage**: Loki (logs), TimescaleDB (time-series)  \n- **Deployment**: Kubernetes (10+ clusters), ArgoCD (GitOps)  \n- **CI/CD**: GitHub Actions (CI), GitLab CI (CD)  \n- **Cloud**: AWS (EC2, S3, Lambda)  \n\n## Architecture / Design  \nThe platform uses a microservices architecture with Kafka for event streaming. Metrics are ingested via Prometheus exporters, traces via OpenTelemetry, and logs via Loki. Kubernetes ensures horizontal scaling (500+ pods). Terraform manages AWS infrastructure (VPC, EC2, RDS). GitLab CI automates testing, while GitHub Actions handles dependency updates.  \n\n## License  \nMIT License – see [LICENSE](LICENSE)  \n\n## Badges  \n[![Stars](https://img.shields.io/github/stars/jamesokafor/nexacloud?style=social)](https://github.com/jamesokafor/nexacloud)  \n[![Build](https://img.shields.io/github/actions/workflow.com/jamesokafor/nexacloud/main.yml?branch=main)](https://github.com/jamesokafor/nexacloud/actions)  \n[![Coverage](https://img.shields.io/coveralls/jamesokafor/nexacloud/main)](https://coveralls.io/github/jamesokafor/nexacloud)"
+}

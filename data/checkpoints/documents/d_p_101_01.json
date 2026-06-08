@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_101_01",
+  "type": "project_readme",
+  "persona_id": "p_101",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Next.js": 3,
+    "React": 4,
+    "Responsive design": 4,
+    "State management (Redux/Zustand)": 3,
+    "TypeScript": 4,
+    "UX research": 3,
+    "Web accessibility (WCAG)": 4,
+    "Webpack/Vite": 3
+  },
+  "text": "# Real-Time Collaboration Tool  \nA production-grade platform enabling seamless, real-time collaboration across distributed teams. Built with React, Firebase, and a microservices architecture, this tool supports concurrent document editing, live chat, and version history. Optimized for scalability, it serves 500+ teams with 30% faster load times compared to legacy solutions.  \n\n## Getting Started / Installation  \nTo bootstrap the environment, ensure Node.js ≥ 18 is installed. Clone the repository and install dependencies:  \n```bash  \nnpm install  \n```  \nConfigure Firebase credentials via `firebase-config.js` and set up environment variables for production deployment. For local development, run:  \n```bash  \nnpm run dev  \n```  \nThe tool integrates with Firebase Realtime Database for synchronization and Cloud Firestore for persistent storage.  \n\n## Tech Stack  \n- **Frontend**: React (v18), TypeScript, Redux Toolkit (for state management), Vite (build tool)  \n- **Backend**: Firebase Realtime Database, Cloud Firestore, Firebase Authentication  \n- **UX**: Figma-driven design system, A/B testing framework for accessibility patterns  \n- **Performance**: Webpack 5 (tree-shaking), Lighthouse score ≥ 95/100  \n- **Accessibility**: WCAG 2.1 AA compliance, ARIA roles for collaborative UI elements  \n\n## Usage / Examples  \n```tsx  \n// Real-time document sync  \nconst [doc, setDoc] = useState<DocumentType>({});  \nuseEffect(() => {  \n  const dbRef = firebase.database().ref('documents/' + docId);  \n  dbRef.on('value', (snapshot) => setDoc(snapshot.val()));  \n}, [docId]);  \n```  \nThe tool supports responsive layouts for 10+ device types and includes keyboard navigation for screen readers. Example use cases include live code reviews and shared whiteboarding sessions.  \n\n## Badges  \n[![Build Status](https://example.com/status)](https://example.com)  \n[![Code Coverage](https://example.com/coverage)](https://example.com)  \n[![Dependencies](https://example.com/dependencies)](https://example.com)  \n\n## Architecture / Design  \nThe system decouples UI layers from backend services via a service-oriented architecture. Firebase acts as the central event bus, while Redux manages UI state separately. Key components include:  \n- **Sync Layer**: Firebase listeners for real-time updates  \n- **UI Layer**: React components with TypeScript typings for collaborative features  \n- **Accessibility Layer**: ARIA attributes and keyboard event handlers for screen readers  \n\n## Contributing  \nCollaboration is core to this project. To contribute:  \n1. Fork the repository and open a pull request with a detailed description  \n2. Follow the team's coding standards for TypeScript and Firebase integration  \n3. Participate in UX research sprints for accessibility improvements  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

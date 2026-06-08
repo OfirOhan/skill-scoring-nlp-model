@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_285_01",
+  "type": "project_readme",
+  "persona_id": "p_285",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "A/B testing": 3,
+    "Apache Airflow": 3,
+    "Data modeling": 4,
+    "Feature engineering": 4,
+    "Hypothesis testing": 3,
+    "Python": 5,
+    "SQL analytics": 3,
+    "Statistical modeling": 4,
+    "Tableau/Power BI": 3,
+    "scikit-learn": 5
+  },
+  "text": "# AdTargetOptimizer  \nReal-time ad targeting optimization using reinforcement learning and user behavior data, enabling dynamic bid adjustments and personalized campaign strategies. Built for scalability, with production-grade models trained on 10+ terabytes of clickstream data.  \n\n## API Reference  \n**Endpoints**:  \n- `POST /predict`  \n  *Input*: JSON with user demographics, browsing history, and session metadata  \n  *Output*: Reinforcement learning policy output (bid amount, ad variant)  \n  *Example*:  \n  ```json\n  {\n    \"user_id\": \"U12345\",\n    \"device\": \"mobile\",\n    \"session_duration\": 120,\n    \"clicks\": [\"/product\", \"/cart\"]\n  }\n  ```  \n- `GET /metrics`  \n  *Returns*: Real-time A/B test metrics (CTR, CPM, conversion rates)  \n\n## Usage / Examples  \n```python\nimport requests  \nresponse = requests.post(\"https://api.adtargetoptimizer.com/predict\", json=user_data)  \nprint(response.json()[\"bid_strategy\"])  \n```  \nIntegrate with Apache Airflow for hourly retraining pipelines or use SQL analytics for historical performance audits.  \n\n## Getting Started / Installation  \n```bash\npip install -r requirements.txt  \npython init.py --data_path=/path/to/user_behavior.parquet  \n```  \nRequires Python 3.9+, TensorFlow 2.12, and a PostgreSQL instance for metadata storage.  \n\n## Tech Stack  \n- Python (central to all architecture decisions)  \n- scikit-learn (core for baseline models)  \n- TensorFlow (reinforcement learning framework)  \n- Apache Airflow (orchestrating data pipelines)  \n- SQL (PostgreSQL for user segmentation)  \n- Tableau (dashboarding for campaign performance)  \n\n## Architecture / Design  \nA layered system with:  \n1. **Data Pipeline**: SQL-based ETL for user behavior aggregation  \n2. **Reinforcement Engine**: Proximal Policy Optimization (PPO) for bid optimization  \n3. **A/B Testing**: Hypothesis-driven split testing with statistical significance checks  \n4. **Monitoring**: Prometheus + Grafana for real-time model drift detection  \n\n## License  \nMIT License  \n\n## Badges  \n[![GitHub stars](https://img.shields.io/github/stars/hawadiop/AdTargetOptimizer?style=social)](https://github.com/hawadiop/AdTargetOptimizer)  \n[![Issues](https://img.shields.io/github/issues/hawadiop/AdTargetOptimizer?style=social)](https://github.com/hawadiop/AdTargetOptimizer)  \n[![License](https://img.shields.io/badge/license-MIT-blue?style=flat)](https://github.com/hawadiop/AdTargetOptimizer/blob/main/LICENSE)"
+}

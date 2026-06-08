@@ -1,0 +1,31 @@
+{
+  "doc_id": "d_p_095_01",
+  "type": "project_readme",
+  "persona_id": "p_095",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "CI/CD pipelines": 2,
+    "Cloud cost optimization": 1,
+    "Docker": 3,
+    "GCP": 1,
+    "Go": 1,
+    "GraphQL": 1,
+    "Kubernetes": 1,
+    "Microservices architecture": 2,
+    "MongoDB": 3,
+    "Node.js": 3,
+    "PostgreSQL": 3,
+    "Prometheus/Grafana": 2,
+    "Python": 1,
+    "REST API design": 3,
+    "React": 3,
+    "Redis": 2,
+    "TypeScript": 1
+  },
+  "text": "# Real-Time Trading Dashboard  \nA high-performance financial analytics platform built with React and Node.js, enabling real-time stock price tracking, market sentiment analysis, and customizable charting for institutional traders.  \n\n---\n\n## Badges  \n[![GitHub](https://img.shields.io/github/last-commit/ilyafedorov/trading-dashboard)](https://github.com/ilyafedorov/trading-dashboard)  \n[![Travis CI](https://img.shields.io/travis/ilyafedorov/trading-dashboard)](https://travis-ci.com/ilyafedorov/trading-dashboard)  \n[![npm](https://img.shields.io/npm/v/trading-dashboard)](https://www.npmjs.com/package/trading-dashboard)  \n\n---\n\n## Tech Stack  \n- **Frontend**: React 18 (with hooks and context API) for dynamic UI rendering  \n- **Backend**: Node.js 18 with Express for REST API endpoints and WebSocket integration  \n- **Data Storage**: PostgreSQL 14 for relational data (user preferences, watchlists) and MongoDB 6 for real-time market data ingestion  \n- **Real-Time Sync**: WebSocket over TCP for bidirectional communication between client and server  \n- **Deployment**: Dockerized microservices with AWS Lambda for serverless data processing  \n- **Monitoring**: Prometheus for metric collection and Grafana for dashboard visualization  \n\n---\n\n## Configuration  \nEnvironment variables are managed via `.env` file using `dotenv` for secure credential handling. Key configurations include:  \n- `API_KEYS` for third-party financial data providers (e.g., Alpha Vantage)  \n- `DATABASE_URL` for PostgreSQL connection string  \n- `MONGO_URI` for MongoDB cluster access  \n- `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for S3 storage of historical data  \n\n---\n\n## Getting Started / Installation  \n```bash  \nnpm install  \ncp .env.example .env  \n# Edit .env to include API keys and database credentials  \nnpm run dev  \n```  \nFor production, build Docker containers and deploy to AWS ECS with load balancing.  \n\n---\n\n## Usage / Examples  \n- **Live Data Feed**: Subscribe to WebSocket channels for real-time stock price updates (e.g., `NASDAQ:MSFT`)  \n- **Custom Filters**: Apply sector-based filters (e.g., `Technology`, `Finance`) and sort by volume/PE ratio  \n- **Historical Analysis**: Query MongoDB for 5-year price trends and export to CSV via AWS S3  \n\n---\n\n## Testing  \n- **Unit Tests**: Jest 28 with React Testing Library for component isolation  \n- **Integration Tests**: Supertest for API endpoint validation (e.g., `/api/stocks/MSFT`)  \n- **Coverage**: 92%+ line coverage via `npx jest --coverage`  \n\n---\n\n## License  \nMIT License. See [LICENSE](LICENSE) for full terms."
+}

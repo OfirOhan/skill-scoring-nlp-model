@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_114_01",
+  "type": "project_readme",
+  "persona_id": "p_114",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Apache Airflow": 4,
+    "Apache Kafka": 3,
+    "Apache Spark": 4,
+    "Data warehousing": 5,
+    "ETL pipeline design": 5,
+    "Go": 4,
+    "Java": 3,
+    "Python": 3,
+    "REST API design": 3,
+    "Terraform": 3,
+    "dbt": 4,
+    "Snowflake": 1
+  },
+  "text": "# Healthcare Data Pipeline Optimization  \nA scalable, resilient ETL framework for integrating heterogeneous healthcare datasets into a unified analytics platform, leveraging distributed systems and domain-specific data modeling to accelerate clinical insights and regulatory compliance  \n\n## API Reference  \n**Endpoints**  \n- `POST /ingest`  \n  - Accepts JSON batches of FHIR-compliant patient records with optional HL7v2 headers  \n  - Returns ingestion ID and schema validation status  \n- `GET /transform/{pipeline_id}`  \n  - Retrieves metadata about ongoing transformations, including schema lineage and data quality metrics  \n  - Supports filters for time windows and entity types  \n\n**Authentication**  \n- API keys via `X-API-Key` header (managed through Terraform secrets)  \n- Rate limiting enforced at 500 RPS per key  \n\n## Usage / Examples  \n**Real-time ingestion pipeline**  \n```python\nfrom health_data import Ingestor  \ningestor = Ingestor(\n    kafka_brokers=\"cluster.us-west-2.prod:9092\",\n    schema_registry=\"https://schema-registry.prod\",\n    dbt_project=\"healthcare_models\"\n)\ningestor.run_pipeline(\"emergency_triage\")\n```  \n\n**Airflow DAG example**  \n```python\nfrom airflow import DAG  \nfrom airflow.operators.python import PythonOperator  \nfrom datetime import timedelta  \n\ndefault_args = {  \n    'start_date': datetime(2023, 1, 1),  \n    'retries': 3,  \n    'retry_delay': timedelta(minutes=5)  \n}  \n\ndag = DAG(  \n    'icd10_mapping',  \n    default_args=default_args,  \n    schedule_interval='@daily'  \n)  \n\ndef transform_icd10(**kwargs):  \n    # Leverage dbt models for ICD-10 to SNOMED mapping  \n    pass  \n\ntransform_task = PythonOperator(  \n    task_id='transform_icd10',  \n    python_callable=transform_icd10,  \n    dag=dag  \n)  \n```  \n\n## Getting Started / Installation  \n1. Install dependencies:  \n```bash  \npip install apache-airflow==2.2.4 dbt-core==0.21.0 pyarrow  \n```  \n2. Configure environment variables:  \n```bash  \nexport KAFKA_BOOTSTRAP_SERVERS=\"cluster.us-west-2.prod:9092\"  \nexport DBT_PROJECT_DIR=\"/path/to/healthcare_models\"  \n```  \n3. Initialize Airflow DAGs and dbt models via the CLI  \n\n## Tech Stack  \n- **Data Ingestion**: Apache Kafka (with Avro schema registry)  \n- **Processing**: Apache Spark (structured streaming) + Go-based message brokers  \n- **Orchestration**: Apache Airflow (with REST API integration)  \n- **Transformation**: dbt (with custom macros for clinical data normalization)  \n- **Storage**: Cloud-native object storage with partitioned parquet datasets  \n- **Monitoring**: Prometheus + Grafana for pipeline latency and error tracking  \n\n## Architecture / Design  \nThe pipeline employs a three-tier architecture:  \n1. **Ingestion Layer**: Kafka topics for raw HL7v2 and FHIR feeds, with schema validation via Avro  \n2. **Transformation Layer**: Spark jobs with dynamic partitioning, leveraging dbt for reusable SQL models  \n3. **Analytics Layer**: Precomputed parquet datasets with lineage metadata for auditability  \n\nKey design decisions include:  \n- Using Go for real-time message filtering due to its low-latency concurrency model  \n- Implementing schema evolution via Kafka's schema registry for backward compatibility  \n- Decoupling Airflow orchestration from data processing logic for fault tolerance  \n\n## License  \nMIT License — see [LICENSE](LICENSE)  \n\n## Badges  \n[![Build Status](https://github.com/isaac-cohen/healthcare-pipeline/actions/workflows/main.yml/badge.svg)](https://github.com/isaac-cohen/healthcare-pipeline/actions)  \n[![Code Coverage](https://img.shields.io/codecov/c/github/isaac-cohen/healthcare-pipeline)](https://codecov.io/gh/isaac-cohen/healthcare-pipeline)  \n[![Maintainability](https://img.shields.io/snyk/maintainability/isaac-cohen/healthcare-pipeline)](https://snyk.io/test/generic/isaac-cohen/healthcare-pipeline)"
+}

@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_072_01",
+  "type": "project_readme",
+  "persona_id": "p_072",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 1,
+    "GCP": 1,
+    "Kubernetes": 1,
+    "Terraform": 1,
+    "Infrastructure as Code": 1,
+    "Cloud cost optimization": 1,
+    "Python": 1,
+    "Go": 1,
+    "Prometheus/Grafana": 1,
+    "CI/CD pipelines": 1,
+    "Cloud migration": 1
+  },
+  "text": "# NexaCloud Scalable Microservices Platform  \nA polyglot, event-driven architecture designed for high-throughput SaaS applications with emphasis on modularity, fault tolerance, and real-time data consistency across distributed systems.  \n\n---\n\n## Deployment  \nThe platform leverages containerized microservices orchestrated via a service mesh, with automated validation of service health and rollback mechanisms. Deployment pipelines enforce strict versioning and dependency resolution, ensuring zero-downtime upgrades. Monitoring is embedded within the service layers to provide granular visibility into latency, throughput, and error rates across inter-service communication.  \n\n---\n\n## Badges  \n[![Build Status](https://example.com/build-badge)](https://example.com)  \n[![Code Coverage](https://example.com/coverage-badge)](https://example.com)  \n[![Security Compliance](https://example.com/security-badge)](https://example.com)  \n\n---\n\n## Tech Stack  \n- **Languages**: Java (core services), C++ (high-performance modules), Rust (critical path components)  \n- **Data Stores**: PostgreSQL (transactional workloads), MongoDB (schema-flexible data), Redis (in-memory caching)  \n- **Message Queues**: Kafka (batch processing), RabbitMQ (real-time event routing)  \n- **Distributed Tracing**: Jaeger-integrated observability for end-to-end request tracking  \n\n---\n\n## Architecture / Design  \nThe platform is structured as a layered architecture with a decoupled API gateway, stateless service pods, and a centralized configuration manager. Key design principles include:  \n- **Event Sourcing**: All state changes are recorded as immutable events for auditability and replay.  \n- **CQRS Pattern**: Command and query models are separated to optimize read/write performance.  \n- **Consistency Models**: Hybrid approach balancing eventual consistency for scalability and synchronous guarantees for critical operations.  \n- **Service Mesh**: Encapsulates service discovery, retries, and circuit breakers without external proxies.  \n\n---\n\n## Getting Started / Installation  \n1. Install Java 17 and a compatible message queue (Kafka/RabbitMQ).  \n2. Clone the repository and configure environment variables for database endpoints and secret management.  \n3. Build the core services using Gradle, ensuring all dependencies are resolved via semantic versioning.  \n4. Run the integration tests to validate service-to-service communication and edge-case resilience.  \n\n---\n\n## Usage / Examples  \n```bash\ncurl -X POST http://api-gateway/v1/data --header \"Content-Type: application/json\" --data '{\"event\": \"user_created\", \"payload\": {\"id\": \"123\", \"timestamp\": \"2023-10-01T12:00:00Z\"}}'\n```  \nThis triggers a cascade of events: the event is persisted to Kafka, processed by a background worker, and mirrored to Redis for real-time analytics. The API gateway handles rate limiting and request validation before forwarding to the appropriate service.  \n\n---\n\n## License  \nApache License 2.0 — see [LICENSE](https://example.com/license) for details."
+}

@@ -1,0 +1,31 @@
+{
+  "doc_id": "d_p_122_03",
+  "type": "project_readme",
+  "persona_id": "p_122",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "CI/CD pipelines": 1,
+    "Jenkins": 1,
+    "GitLab CI": 1,
+    "ArgoCD": 1,
+    "Prometheus/Grafana": 1,
+    "Monitoring & alerting": 1,
+    "Linux administration": 1,
+    "Shell scripting (Bash)": 1,
+    "Kubernetes": 1,
+    "AWS": 1,
+    "GCP": 1,
+    "Terraform": 1,
+    "Python": 1,
+    "REST API design": 1,
+    "Message queues": 1,
+    "PostgreSQL": 1,
+    "Redis": 1,
+    "Network automation": 1
+  },
+  "text": "# FintechHighAvail - Infrastructure-as-Code  \nA modular framework for deploying resilient fintech services with automated recovery and failover protocols. Designed for distributed systems requiring strict uptime guarantees and minimal manual intervention.  \n\n## API Reference  \n**Endpoints**  \n- `POST /deploy`  \n  Triggers infrastructure provisioning with optional parameters: `service_name`, `region`, `replica_count`.  \n- `GET /status/{service_name}`  \n  Returns health metrics: `latency`, `availability`, `last_recovery_ts`.  \n- `POST /recover/{service_name}`  \n  Initiates failover with optional `force_reload` flag.  \n\n**Authentication**  \nAPI keys via `X-API-Key` header. Key rotation handled via `/rotate_keys` endpoint.  \n\n## Usage / Examples  \n```bash  \n# Deploy a payment gateway service with 3 replicas  \ncurl -X POST \"https://api.fintechhighavail.com/deploy\" \\\n  -H \"X-API-Key: YOUR_KEY\" \\\n  -d '{\"service_name\": \"payment-gateway\", \"region\": \"us-east-1\", \"replica_count\": 3}'  \n\n# Check status of deployed service  \ncurl -X GET \"https://api.fintechhighavail.com/status/payment-gateway\" \\\n  -H \"X-API-Key: YOUR_KEY\"  \n```  \n\n## Getting Started / Installation  \n1. Clone repository: `git clone https://github.com/fintechhighavail/infra.git`  \n2. Install dependencies: `npm install` (Node.js 18+ required)  \n3. Configure environment variables:  \n   - `API_KEY`  \n   - `DEFAULT_REGION`  \n   - `MAX_RETRIES`  \n\n## Tech Stack  \n- **Configuration Management**: YAML-based templates with dynamic interpolation  \n- **Orchestration**: Lightweight service mesh for inter-component communication  \n- **Data Stores**: Embedded key-value store for ephemeral state tracking  \n- **Networking**: Zero-trust model with automated TLS certificate rotation  \n\n## Architecture / Design  \nCore components:  \n- **Control Plane**: Centralized service for deployment orchestration and health checks  \n- **Edge Nodes**: Stateless worker nodes with auto-scaling based on load metrics  \n- **Recovery Engine**: Isolated process for failover, using consensus algorithms to avoid split-brain scenarios  \n- **Audit Trail**: Immutable log of all configuration changes and recovery events  \n\n## License  \nMIT License — see `LICENSE` file for full terms  \n\n## Badges  \n[![Build Status](https://img.shields.io/badge/build-passing-green)](https://build.fintechhighavail.com)  \n[![Dependency Status](https://img.shields.io/badge/dependencies-up-to--date-yellow)](https://deps.fintechhighavail.com)  \n[![Code Coverage](https://img.shields.io/badge/coverage-92%25-blue)](https://coverage.fintechhighavail.com)"
+}

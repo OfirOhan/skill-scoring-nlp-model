@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_100_02",
+  "type": "recommendation",
+  "persona_id": "p_100",
+  "hyperparams": {
+    "recommender_role": "peer",
+    "recommender_closeness": "worked-daily",
+    "company_type": "enterprise",
+    "company_size": "small (<50)"
+  },
+  "skill_evidence": {
+    "API testing": 3,
+    "CI/CD pipelines": 3,
+    "GitLab CI": 3,
+    "Python": 3,
+    "REST API design": 3,
+    "Security testing": 4,
+    "Selenium/Playwright": 3,
+    "Test automation": 4
+  },
+  "text": "Last quarter, I’ll never forget the 3 a.m. Slack alert about a potential zero-day exploit in our API gateway. Binta was the first to pivot, swapping her usual Python script reviews for a deep dive into the CI/CD pipeline. She rerouted the build to isolate the vulnerable endpoint, then reverse-engineered the exploit’s vector using her custom Playwright scripts. By dawn, she’d not only patched the flaw but also refactored the test suite to flag similar issues automatically—something that’s saved us weeks of manual audits since.  \n\nBinta’s days are a blur of GitLab CI dashboards and Python-driven test frameworks, but her calm under pressure is what keeps our team grounded. She’s the one who’ll volunteer to refactor brittle Selenium scripts into more reliable Playwright tests, even when it means staying late to align with dev schedules. Her REST API design workstreams are legendary—once she flagged a misconfigured rate-limiting endpoint that could’ve let attackers flood our service, and she’s never shied from owning the fix.  \n\nWhat sets her apart is her knack for turning chaos into clarity. Whether it’s debugging a flaky test or mapping security risks across our tech stack, she approaches problems like a puzzle—methodical, curious, and relentlessly precise. Her test automation work has slashed regression cycles by 40%, but you’d never hear her boast about it. She just keeps showing up, ready to debug, refactor, and protect the systems we rely on.  \n\nIf you’re looking for someone who treats quality as a non-negotiable, Binta’s your person. She’s the kind of engineer who’ll make you trust the process—and the results."
+}

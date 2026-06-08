@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_078_01",
+  "type": "project_readme",
+  "persona_id": "p_078",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "Agile/Scrum": 2,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 3,
+    "Cross-team collaboration": 2,
+    "GitHub Actions": 3,
+    "Stakeholder communication": 1,
+    "System design": 3,
+    "Team leadership": 2,
+    "Technical writing": 2,
+    "Terraform": 3
+  },
+  "text": "# Enterprise Microservices Architecture  \nA modular, scalable framework for enterprise systems, optimized for performance and observability. Designed to reduce latency by 40% in high-throughput scenarios while maintaining fault tolerance across distributed services.  \n\n## Configuration  \nInfrastructure is defined via Terraform with AWS EC2, RDS, and S3 integration. Environment variables (e.g., `AWS_REGION`, `DATABASE_URL`) are managed via `.env` files. CI/CD pipelines use GitHub Actions for automated testing and deployment. Cloud cost optimization is enforced through AWS Cost Explorer, with budget alerts configured for compute and storage resources.  \n\n## Getting Started / Installation  \nClone the repo:  \n```bash  \ngit clone https://github.com/inespereira/enterprise-microservices.git  \ncd enterprise-microservices  \n```  \nInstall dependencies:  \n```bash  \nnpm install  \n```  \nInitialize Terraform:  \n```bash  \nterraform init  \n```  \nRun local tests with Docker:  \n```bash  \ndocker-compose up --build  \n```  \n\n## Usage / Examples  \nInvoke the core API gateway via `curl`:  \n```bash  \ncurl -X POST https://api-gateway.example.com/data \\\n  -H \"Authorization: Bearer <token>\" \\\n  -d '{\"query\": \"SELECT * FROM users\"}'  \n```  \nMonitor service health with Prometheus and Grafana. For debugging, use the built-in logging proxy to trace requests across services.  \n\n## Tech Stack  \n- **Backend**: Java (Spring Boot), Go (gRPC), Python (Celery)  \n- **Database**: PostgreSQL (sharded), Redis (caching)  \n- **Orchestration**: Docker Swarm, Kubernetes (experimental)  \n- **Observability**: Prometheus, Grafana, Jaeger  \n\n## Architecture / Design  \nServices are decoupled via a service mesh (Istio) for dynamic routing and retries. API gateways handle rate limiting and authentication. Database sharding reduces query latency by 35%. All services are containerized, with health checks and auto-scaling configured for AWS Fargate.  \n\n## License  \nMIT License  \n[![License](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/MIT)  \n\n## Badges  \n[![Build Status](https://github.com/inespereira/enterprise-microservices/actions/workflows/build.yml/badge.svg)](https://github.com/inespereira/enterprise-microservices/actions/workflows/build.yml)  \n[![Test Coverage](https://img.shields.io/coveralls/inespereira/enterprise-microservices)](https://coveralls.io/github/inespereira/enterprise-microservices)  \n[![License](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/MIT)"
+}

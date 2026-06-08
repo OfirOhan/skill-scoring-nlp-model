@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_132_02",
+  "type": "blog",
+  "persona_id": "p_132",
+  "hyperparams": {
+    "blog_depth": "deep-dive",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Apache Airflow": 3,
+    "Apache Kafka": 3,
+    "Apache Spark": 4,
+    "Data modeling": 3,
+    "Data warehousing": 3,
+    "ETL pipeline design": 3,
+    "GitLab CI": 3,
+    "Python": 3,
+    "REST API design": 3,
+    "Snowflake": 3,
+    "dbt": 3
+  },
+  "text": "**Overview**  \nLast quarter, we tackled a bottleneck in our data pipeline that was slowing down analytics for a key client. The problem wasn’t the data itself—it was how we moved and transformed it. By rethinking our ETL architecture with cloud-native tools, we cut processing time by 40% and reduced costs by 25%. Here’s how it unfolded.  \n\n**Context**  \nOur team managed a hybrid data ecosystem: raw logs from Kafka, batch processing in Spark, and a Snowflake data warehouse. The pipeline relied on Airflow for orchestration, but as data volumes grew, delays in task scheduling and inefficient data shuffling became critical. Engineers spent hours debugging slow jobs, and the client’s real-time dashboards felt increasingly sluggish.  \n\n**Challenge**  \nThe core issue was a mismatch between our batch-oriented Spark jobs and the real-time nature of Kafka streams. Our Airflow DAGs were triggering full-table scans on Snowflake, which taxed the warehouse’s resources. Meanwhile, intermediate data stored in S3 wasn’t partitioned, leading to unnecessary data movement. The result? A pipeline that scaled poorly and couldn’t meet SLAs.  \n\n**Solution**  \nWe refactored the pipeline into two streams: batch and stream. For batch workloads, we introduced partitioned Parquet files in S3, reducing scan times by 60%. Spark jobs now use dynamic allocation and caching to reuse intermediate results. For real-time data, we replaced Airflow with a Kafka consumer that writes directly to Snowflake via Python scripts, bypassing the DAG entirely. dbt was integrated to handle transformation logic, ensuring consistency across both streams. GitLab CI automates testing, and we’ve adopted REST APIs for monitoring job health.  \n\n**Results**  \nProcessing 10M records daily now takes 15 minutes instead of 90. Snowflake’s compute costs dropped by 30% due to reduced query load, and the client’s dashboards update every 10 minutes instead of once per day. The pipeline’s fault tolerance improved too—Kafka’s idempotent producers handle duplicates without manual intervention.  \n\n**Lessons Learned**  \n1. **Decouple streams and batches**: Treating them as separate workflows avoids resource contention.  \n2. **Prefer partitioned storage**: S3 Parquet files with time-based partitions make queries faster and cheaper.  \n3. **Embrace direct writes**: Bypassing Airflow for real-time data reduces latency and simplifies dependencies.  \n4. **Automate everything**: CI/CD and monitoring via REST APIs ensure reliability without manual oversight.  \n\nThe takeaway? Cloud-native ETL isn’t just about using the latest tools—it’s about aligning architecture with data flow. When you design for scalability and efficiency upfront, the wins compound over time."
+}

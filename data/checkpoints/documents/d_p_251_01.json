@@ -1,0 +1,30 @@
+{
+  "doc_id": "d_p_251_01",
+  "type": "project_readme",
+  "persona_id": "p_251",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "A/B testing": 1,
+    "Apache Spark": 1,
+    "Data modeling": 4,
+    "Data visualization": 4,
+    "REST API": 1,
+    "Snowflake": 4,
+    "Feature engineering": 1,
+    "MLOps": 1,
+    "NumPy": 5,
+    "Pandas": 5,
+    "Python": 5,
+    "SQL": 5,
+    "Statistical modeling": 5,
+    "Data visualization (Matplotlib/Plotly)": 1,
+    "SQL analytics": 1,
+    "REST API design": 1,
+    "MLOps (MLflow/W&B)": 1
+  },
+  "text": "# Customer Churn Prediction & Retention Optimization  \nLeveraging advanced statistical modeling and scalable data processing to identify high-risk customers and optimize retention strategies, resulting in a 18% reduction in churn and 22% increase in retention for a retail client.  \n\n## Badges  \n![Python](https://img.shields.io/badge/python-3.9-blue?logo=python)  \n![Pandas](https://img.shields.io/badge/pandas-1.5.3-green)  \n![NumPy](https://img.shields.io/badge/numpy-1.23.5-yellow)  \n![SQL](https://img.shields.io/badge/sql-PostgreSQL-blueviolet)  \n![Snowflake](https://img.shields.io/badge/snowflake-3.60.0-orange)  \n\n## Tech Stack  \n- **Python**: Core language for data processing, model development, and automation  \n- **Pandas/NumPy**: Central to feature transformation, aggregation, and numerical operations  \n- **SQL**: Used for data extraction, schema design, and ad-hoc analysis  \n- **Snowflake**: Primary data warehouse for scalable storage and real-time querying  \n- **scikit-learn/statmodels**: For logistic regression, survival analysis, and hyperparameter tuning  \n- **DVC**: Pipeline orchestration for reproducible data workflows  \n\n## Architecture / Design  \nThe pipeline ingests customer transaction data from Snowflake, preprocesses it using Pandas and NumPy for missing value imputation and normalization. Statistical models (logistic regression, Cox proportional hazards) are trained to predict churn probability, with features engineered via domain-specific insights. Results are segmented into risk tiers, enabling targeted retention campaigns. Snowflake is leveraged for real-time scoring of new data, ensuring model outputs align with live business metrics.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/your-username/customer-churn-optimization.git`  \n2. Set up a Python 3.9 virtual environment: `python -m venv venv && source venv/bin/activate`  \n3. Install dependencies: `pip install -r requirements.txt`  \n4. Configure Snowflake credentials in `config/snowflake.ini`  \n\n## Usage / Examples  \nRun the full analysis:  \n```bash  \npython main.py --output-dir results/  \n```  \nExplore model performance:  \n```bash  \npython evaluate.py --model logistic_regression --plot True  \n```  \nGenerate retention strategy report:  \n```bash  \npython generate_report.py --segment high_risk --format pdf  \n```  \n\n## Contributing  \nCollaborate by enhancing feature importance analysis or refining segmentation criteria. Ensure all data transformations adhere to Snowflake's schema conventions and validate statistical assumptions before deployment.  \n\n## License  \nApache-2.0 (see [LICENSE](LICENSE))"
+}

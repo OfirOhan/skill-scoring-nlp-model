@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_173_01",
+  "type": "project_readme",
+  "persona_id": "p_173",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "A/B testing": 3,
+    "Analytics-driven product decisions": 2,
+    "Competitive analysis": 2,
+    "Data visualization (Plotly)": 3,
+    "JavaScript": 2,
+    "Product management": 2,
+    "Roadmap planning": 2,
+    "SQL analytics": 3,
+    "Stakeholder management": 1,
+    "UX research": 2
+  },
+  "text": "# CyberShield Incident Response Automation  \nA lightweight tool to streamline incident response workflows by automating triage, containment, and reporting. Built for cybersecurity teams prioritizing speed and precision in threat mitigation.  \n\n---\n\n## Tech Stack  \n- **Core**: Python 3.10, Docker, Pandas  \n- **Monitoring**: Grafana + Prometheus for real-time alerts  \n- **Storage**: SQLite for local logs, AWS S3 for archival  \n- **Networking**: Netfilter/iptables for rule enforcement  \n- **CLI**: Click for intuitive command-line interface  \n\n---\n\n## Architecture / Design  \nCyberShield operates as a modular pipeline:  \n1. **Detection**: Parses logs from SIEM tools (Splunk, ELK) via webhook  \n2. **Orchestration**: Executes pre-defined playbooks (e.g., isolate host, block IP) using Docker containers  \n3. **Reporting**: Generates structured JSON logs for SIEM correlation  \n4. **Feedback Loop**: Trains anomaly detection models with historical data via SQL analytics  \n\nKey design choices:  \n- Containerized workflows ensure environment consistency  \n- Decouples alert processing from containment actions for scalability  \n- Lightweight for deployment on air-gapped networks  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repository using `git clone https://github.com/maxhoffmann/cybershield.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure `config.yaml` with your SIEM integration details  \n4. Run the orchestrator: `python3 orchestrator.py`  \n\nEnsure Docker is installed and running for containerized playbook execution.  \n\n---\n\n## Usage / Examples  \n```bash  \n# Trigger automated response to a phishing alert  \ncybershield alert --id 42 --action isolate  \n\n# Generate a report for the last 24 hours  \ncybershield report --timeframe 24h --format json  \n```  \nUse the CLI to chain actions: isolate a host, then block its IP, then log the sequence for audit.  \n\n---\n\n## Badges  \n[![CI/CD Status](https://github.com/maxhoffmann/cybershield/actions/workflows/ci.yml/badge.svg)](https://github.com/maxhoffmann/cybershield/actions/workflows/ci.yml)  \n[![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/maxhoffmann/cybershield/blob/main/LICENSE)  \n\n---\n\n## Contributing  \nWe welcome contributions from cybersecurity engineers and DevOps specialists. Focus on improving playbook efficiency or expanding SIEM integrations.  \n\n---\n\n## License  \nMIT License — see [LICENSE](https://github.com/maxhoffmann/cybershield/blob/main/LICENSE) for details."
+}

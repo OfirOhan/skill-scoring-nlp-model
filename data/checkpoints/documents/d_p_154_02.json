@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_154_02",
+  "type": "project_readme",
+  "persona_id": "p_154",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "Apache Airflow": 3,
+    "Apache Kafka": 1,
+    "Apache Spark": 3,
+    "Data Modeling": 4,
+    "Docker": 1,
+    "ETL pipeline design": 4,
+    "Kubernetes": 1,
+    "Python": 3,
+    "Snowflake": 1,
+    "Terraform": 3
+  },
+  "text": "# Cloud-Native Data Warehouse Migration  \nMigrated a 500M-row adtech dataset from legacy systems to AWS Redshift, achieving 40% reduction in query latency and 3x scalability for real-time campaign analytics  \n\n## Badges  \nAWS Redshift • Apache Airflow • Apache Spark • Terraform • Data Modeling  \n\n## Tech Stack  \nAWS Redshift (16-node cluster), Apache Airflow (DAG orchestration), Apache Spark (batch processing), Terraform (infrastructure as code), Python (ETL scripting)  \n\n## Architecture / Design  \nEngineered a hybrid ETL pipeline leveraging Redshift's columnar storage for ad impression analytics. Deployed Airflow to coordinate data ingestion from Kafka-derived log streams (not included here) and S3-stored campaign metadata. Spark jobs processed 10TB of raw data nightly, partitioned by ad campaign ID and timestamp. Terraform provisions Redshift clusters with automated scaling policies. Data modeling optimized for adtech use cases: star schema with 12 dimension tables and 3 fact tables, indexed for join-heavy campaign performance reporting.  \n\n## Getting Started / Installation  \n1. Configure AWS CLI with appropriate IAM credentials  \n2. Initialize Terraform with `terraform init` to provision Redshift cluster  \n3. Install Apache Airflow and Spark dependencies via pip  \n4. Set environment variables for S3 bucket access and Redshift credentials  \n5. Deploy DAGs using `airflow db init` and `airflow scheduler`  \n\n## Usage / Examples  \nRun nightly ETL job:  \n```bash  \nspark-submit --master yarn --deploy-mode cluster etl_pipeline.py  \n```  \nQuery campaign performance:  \n```sql  \nSELECT campaign_id, SUM(impressions) AS total_impressions  \nFROM campaign_fact  \nWHERE date_dim BETWEEN '2023-01-01' AND '2023-01-31'  \nGROUP BY campaign_id;  \n```  \n\n## Contributing  \nWe welcome contributions to optimize data modeling for adtech workloads. Prioritize improvements in query performance, ETL pipeline efficiency, or Redshift cluster cost optimization.  \n\n## License  \nMIT License (see LICENSE file)"
+}

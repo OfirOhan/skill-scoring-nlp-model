@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_164_02",
+  "type": "project_readme",
+  "persona_id": "p_164",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "Application security (OWASP)": 4,
+    "Compliance (SOC2/GDPR)": 3,
+    "IAM/Access control": 3,
+    "Network automation": 3,
+    "Network security": 4,
+    "Penetration testing": 3,
+    "SIEM tools": 3,
+    "Vulnerability management": 3
+  },
+  "text": "# HealthGuard Sentinel  \nA real-time threat detection system for healthcare networks, leveraging machine learning to identify anomalies in network traffic and safeguard sensitive patient data. Built for production use in high-stakes environments, this project combines scalable infrastructure with domain-specific security controls to meet stringent compliance requirements.  \n\n## Deployment  \nHosted on AWS, the system uses EC2 instances for model inference and Lambda for lightweight processing. Compliance checks are baked into deployment pipelines, ensuring SOC2 and GDPR adherence. Network segmentation and IAM policies enforce strict access control, while automated vulnerability scans run hourly to maintain baseline security.  \n\n## Badges  \n[GitHub](https://github.com/healthguard-sentinel) | [CI/CD Status](https://ci.example.com/healthguard) | [Compliance](https://compliance.healthguard.io)  \n\n## Tech Stack  \n- **Language**: Python (3.9), Bash  \n- **Cloud**: AWS (EC2, S3, Kinesis)  \n- **ML**: TensorFlow Lite (on-device inference), PyTorch (training)  \n- **Security**: AWS WAF, SIEM integration (Splunk), TLS 1.3  \n- **Compliance**: SOC2, GDPR, HIPAA-ready architecture  \n\n## Architecture / Design  \nThe system ingests network traffic via AWS Kinesis, feeding into a distributed processing pipeline. ML models trained on historical breach patterns flag anomalous behavior, triggering alerts in SIEM tools. Network automation tools dynamically adjust firewall rules in response to threats, while immutable logs stored in S3 ensure auditability.  \n\n## Getting Started / Installation  \n1. Clone the repo and install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n2. Configure AWS credentials via `~/.aws/credentials`  \n3. Deploy models to EC2 using Terraform templates  \n4. Validate compliance settings in `config/compliance.yaml`  \n\n## Usage / Examples  \nTo detect a data exfiltration attempt:  \n```python  \nfrom sentinel import ThreatAnalyzer  \nanalyzer = ThreatAnalyzer(model_path=\"models/healthcare_v3.pt\")  \ntraffic = load_network_stream(\"kinesis:healthnet-2023\")  \nfor alert in analyzer.process(traffic):  \n    print(f\"🚨 {alert['type']} detected: {alert['description']}\")  \n```  \nThe system outputs structured alerts compatible with SIEM tools, enabling rapid response.  \n\n## License  \nMIT License – see [LICENSE](https://github.com/healthguard-sentinel/LICENSE) for details."
+}

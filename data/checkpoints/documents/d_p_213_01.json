@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_213_01",
+  "type": "project_readme",
+  "persona_id": "p_213",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Flutter": 3,
+    "GraphQL": 4,
+    "Kotlin": 4,
+    "Mobile CI/CD": 4,
+    "REST API design": 4,
+    "React": 4,
+    "React Native": 4,
+    "Swift": 3,
+    "TypeScript": 4
+  },
+  "text": "# TaskFlow: SaaS Task Management App  \nA cross-platform task management solution leveraging Firebase for real-time collaboration, built with React Native and TypeScript. Designed for productivity-driven teams requiring seamless sync across devices.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/viktorhorvat/taskflow.git`  \n2. Install dependencies: `npm install`  \n3. Configure Firebase: Replace `firebase.json` with your project’s service credentials.  \n4. Run the app: `npx react-native run-android` or `npx react-native run-ios`  \n\n## Tech Stack  \n- **Frontend**: React Native (TypeScript), Expo, React Navigation  \n- **Backend**: Firebase (Firestore, Auth, Cloud Functions)  \n- **APIs**: RESTful endpoints for third-party integrations (e.g., Slack)  \n- **CI/CD**: GitHub Actions with automated testing and Firebase deployment pipelines  \n- **Utilities**: Lodash, Axios, React Query  \n\n## Usage / Examples  \n- **Real-time sync**: Tasks auto-update across devices via Firestore listeners.  \n- **Custom workflows**: Define priority levels and status filters via REST API endpoints.  \n- **Analytics**: Firebase Crashlytics for error tracking; custom metrics via Cloud Functions.  \n- **Example query**:  \n  ```ts  \n  const { data } = useQuery('tasks', {  \n    variables: { projectId: 'proj123' },  \n    fetchPolicy: 'network-only'  \n  });  \n  ```  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/license/viktorhorvat/taskflow)](https://github.com/viktorhorvat/taskflow)  \n[![CI/CD](https://img.shields.io/github/actions/workflow/v1/viktorhorvat/taskflow/ci.yml?branch=main)](https://github.com/viktorhorvat/taskflow/actions)  \n[![Coverage](https://img.shields.io/coveralls/viktorhorvat/taskflow)](https://coveralls.io/github/viktorhorvat/taskflow)  \n\n## Architecture / Design  \n- **Monorepo structure**: Shared logic in `utils/` for cross-platform consistency.  \n- **Firebase integration**: Firestore as the single source of truth; Cloud Functions handle complex workflows (e.g., deadline reminders).  \n- **TypeScript**: Enforced type safety in Redux slices and API clients.  \n- **GraphQL**: Used for batch data fetching in analytics dashboards (see `./src/graphql/`).  \n- **Kotlin**: Leveraged in Firebase Cloud Functions for server-side logic, ensuring low-latency operations.  \n\n## Contributing  \n- **Code reviews**: All PRs require approval from the maintainer; focus on performance-critical paths.  \n- **CI/CD**: Automated tests cover 90% of edge cases; ensure tests pass before merging.  \n- **Previous work**: Built Swift-based iOS utilities for data export; contributed to Flutter projects with shared UI components.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/viktorhorvat/taskflow/blob/main/LICENSE) for details."
+}

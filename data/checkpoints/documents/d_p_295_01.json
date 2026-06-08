@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_295_01",
+  "type": "project_readme",
+  "persona_id": "p_295",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Agile/Scrum": 2,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 3,
+    "Cross-team collaboration": 2,
+    "Kubernetes": 3,
+    "REST API design": 4,
+    "System design": 4,
+    "Team leadership": 2,
+    "Technical writing": 2,
+    "Terraform": 3
+  },
+  "text": "# AdOptima - Real-Time Campaign Optimization Platform  \n\nAdOptima is a production-ready adtech platform that dynamically adjusts real-time bidding strategies across multiple ad exchanges, reducing CTR variance by 22% and improving ROAS by 18% in Q3 2023. Built for adtech teams needing sub-100ms latency, it leverages machine learning models trained on 100M+ historical impressions to predict optimal bid adjustments.  \n\n## Testing  \nTesting is baked into every deployment. Unit tests cover 92% of core logic, with integration tests validating end-to-end pipeline reliability. The test suite runs in 8 minutes via GitHub Actions, with 30% of test cases written in parallel. All API endpoints are stress-tested with 10k concurrent users using Locust, ensuring 99.95% uptime under load.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/your-username/adoptima.git  \ncd adoptima  \nnpm install  \ncp .env.example .env  \n# Configure AWS credentials and Kafka brokers  \ndocker-compose up -d  \n```  \nEnsure you have Docker 20.10+, Node.js 18, and AWS CLI v2 installed.  \n\n## Usage / Examples  \n```bash  \n# Start the optimization engine  \nnpm run start  \n\n# Example API request to adjust bid strategy  \ncurl -X POST https://api.adoptima.dev/v1/campaigns/12345/optimize \\\n  -H \"Authorization: Bearer <token>\" \\\n  -d '{\"target_cpc\": 1.2, \"bid_multiplier\": 0.85}'  \n```  \nThis adjusts the bid multiplier for campaign 12345, reducing spend by 15% while maintaining 12% higher conversion rates.  \n\n## Tech Stack  \n- **Backend**: Node.js (TypeScript), Fastify, Kafka (Python)  \n- **ML**: PyTorch Lightning, Scikit-learn (AWS SageMaker)  \n- **Cloud**: AWS (EKS, S3, Lambda), GCP (BigQuery)  \n- **Monitoring**: Prometheus + Grafana, Datadog  \n\n## Architecture / Design  \nAdOptima uses a microservices architecture with a central event bus (Kafka) for real-time bid adjustments. The core optimization engine is a Kubernetes Deployment with Horizontal Pod Autoscaling, scaled to 3 replicas during peak hours. REST APIs are designed with OpenAPI 3.0, exposing 12 endpoints for campaign management.  \n\n## License  \nMIT License  \n\n## Contributing  \nWe welcome contributions via pull requests. Focus on improving model accuracy (current AUC-ROC: 0.89) or optimizing cloud costs (current AWS spend: $12k/month). All PRs must include unit tests and CI/CD pipeline updates."
+}

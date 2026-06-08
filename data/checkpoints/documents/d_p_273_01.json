@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_273_01",
+  "type": "project_readme",
+  "persona_id": "p_273",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "Application security (OWASP)": 4,
+    "Compliance (SOC2/GDPR)": 4,
+    "Encryption & PKI": 4,
+    "GCP": 3,
+    "IAM/Access control": 4,
+    "Incident response": 4,
+    "Network security": 5,
+    "Penetration testing": 3,
+    "SIEM tools": 3,
+    "Security auditing": 3,
+    "Threat modeling": 3
+  },
+  "text": "# CloudSecAuto: Cloud Security Automation Platform  \nCloudSecAuto is a continuous compliance monitoring tool designed to simplify identity-centric security across hybrid cloud environments. It automates audits, threat modeling, and incident response workflows while maintaining strict alignment with SOC2, GDPR, and ISO 27001 standards.  \n\n## Badges  \n[![CI/CD Status](https://example.com/ci-badge)](https://example.com) [![License](https://example.com/license-badge)](https://example.com) [![Compliance](https://example.com/compliance-badge)](https://example.com)  \n\n## Tech Stack  \n- **Cloud**: AWS (VPC, IAM, KMS) + GCP (Cloud IAM, Secret Manager)  \n- **Infrastructure**: Terraform for dynamic resource orchestration  \n- **Core Logic**: Python with async I/O for scalable compliance checks  \n- **SIEM Integration**: Splunk/ELK stack for real-time log correlation  \n- **Security**: OpenSSL for TLS, AWS KMS for encrypted key management  \n- **CI/CD**: GitHub Actions with Dockerized test suites  \n\n## Configuration  \nInitialize the platform via Terraform to spin up a secure control plane. Configure `config.yaml` to map cloud providers, define audit rules (e.g., IAM policy restrictions), and specify SIEM webhook endpoints. Pre-signed S3 buckets and GCP Cloud Storage are used for audit logs.  \n\n## Getting Started / Installation  \n1. Clone the repo and run `terraform init` to deploy the control plane.  \n2. Configure `cloud_profiles.json` with AWS/GCP credentials and compliance rules.  \n3. Install Python dependencies via `pip install -r requirements.txt`.  \n4. Run `python main.py --scan` to initiate compliance checks.  \n\n## Usage / Examples  \n- **Threat Modeling**: Use the built-in framework to simulate adversarial access paths in AWS VPCs.  \n- **Incident Response**: Automate rollback of misconfigured IAM roles via pre-defined playbooks.  \n- **Compliance Checks**: Validate GDPR data residency rules across multi-cloud environments.  \n- **Encryption Audits**: Scan for plaintext logs in S3 buckets and enforce KMS encryption.  \n\n## Testing  \nUnit tests verify IAM policy enforcement and encryption workflows. Integration tests simulate cross-cloud attack vectors using penetration testing frameworks. All tests run in Docker containers to isolate environments.  \n\n## License  \nApache 2.0 (see [LICENSE](https://example.com/license))  \n\n---  \n*Built with network security principles at the core, CloudSecAuto reduces manual audits by 70% while maintaining compliance with zero false positives in production environments.*"
+}

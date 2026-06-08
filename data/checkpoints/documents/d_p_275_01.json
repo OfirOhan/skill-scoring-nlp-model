@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_275_01",
+  "type": "project_readme",
+  "persona_id": "p_275",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "C/C++ (embedded)": 5,
+    "Embedded Linux": 3,
+    "Firmware development": 5,
+    "Hardware-software integration": 5,
+    "IoT protocols (MQTT/CoAP)": 4,
+    "Message queues": 3,
+    "Network automation": 4,
+    "Python": 1,
+    "REST API design": 4,
+    "RTOS": 4,
+    "Sensor integration": 4
+  },
+  "text": "# IoT-enabled Health Monitoring System  \nA real-time patient data collection platform for hospital IoT environments, leveraging embedded firmware and secure communication protocols for critical healthcare applications.  \n\n## Badges  \n[![Project Status](https://img.shields.io/badge/status-beta-blue)](https://example.com)  \n[![License](https://img.shields.io/badge/license-MIT-green)](https://example.com)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for full details.  \n\n## Tech Stack  \n- **Embedded Linux**: Real-time device management with kernel-level resource isolation  \n- **MQTT/CoAP**: Dual-protocol edge-to-cloud data transmission with QoS 1/2 guarantees  \n- **RTOS**: FreeRTOS-based task scheduling for sub-10ms latency critical paths  \n- **Sensor Integration**: TI CC2652R BLE + ADuCM3029 hybrid telemetry nodes  \n- **Message Queues**: RabbitMQ + Kafka hybrid for batch/real-time data routing  \n- **REST APIs**: OpenAPI v3-compliant endpoints for clinical data access  \n- **Network Automation**: Ansible-driven device provisioning with ZeroTouch enrollment  \n- **C/C++**: Kernel-space drivers + user-space middleware for deterministic I/O  \n\n## Architecture / Design  \nThe system operates as a three-tiered edge-cloud hybrid:  \n1. **Edge Layer**: ARM Cortex-M7 microcontroller hosts sensor fusion logic, filtering noisy biometric signals from ECG and SpO₂ sensors. MQTT over TLS ensures encrypted device-to-gateway communication.  \n2. **Gateway Layer**: Ubuntu-based edge node runs a custom CoAP proxy, translating between MQTT and REST APIs for cloud ingestion.  \n3. **Cloud Layer**: AWS IoT Core with Rule Engine routes data to Elasticsearch for analytics. Firmware includes self-diagnostic routines for battery calibration and signal integrity checks.  \n\n## Getting Started / Installation  \n1. Clone repository: `git clone https://github.com/yourusername/health-monitor.git`  \n2. Install dependencies: `sudo apt install build-essential cmake libssl-dev`  \n3. Flash firmware: `make flash` (requires Segger J-Link or STM32 ST-Link)  \n4. Configure MQTT broker credentials in `config/mqtt.yaml`  \n\n## Usage / Examples  \n```c\n// Firmware snippet for BLE data aggregation  \nvoid data_aggregation_task(void *arg) {  \n    while (1) {  \n        uint16_t ecg = read_ecg_sensor();  \n        uint8_t spo2 = read_spo2_sensor();  \n        publish_mqtt(\"health/data\", serialize_json(ecg, spo2), QOS_1);  \n        vTaskDelay(pdMS_TO_TICKS(500));  \n    }  \n}  \n```  \nExample workflow: Sensor data is filtered in the edge node, encrypted via AES-256, and routed to the cloud for anomaly detection.  \n\n## Contributing  \nPull requests welcome! Ensure code adheres to MISRA C:2016 standards. Add unit tests for new sensor drivers and document API changes in the changelog."
+}

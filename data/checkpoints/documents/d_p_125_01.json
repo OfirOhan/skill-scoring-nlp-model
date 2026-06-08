@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_125_01",
+  "type": "blog",
+  "persona_id": "p_125",
+  "hyperparams": {
+    "blog_depth": "opinion-piece",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 2,
+    "Application security (OWASP)": 3,
+    "Compliance (SOC2/GDPR)": 3,
+    "Encryption & PKI": 3,
+    "Firewall configuration": 1,
+    "IAM/Access control": 2,
+    "Monitoring & alerting": 1,
+    "Network automation": 1,
+    "Network security": 1,
+    "Penetration testing": 1,
+    "Security auditing": 1,
+    "Terraform": 1
+  },
+  "text": "**Securing Customer Data in Fintech: Modern Encryption Strategies**  \n\nFintech platforms handle sensitive financial data, from biometric identifiers to transaction histories. A single breach isn’t just a technical failure—it’s a reputational and regulatory catastrophe. In 2023, 68% of fintech breaches involved unencrypted data at rest, per the Ponemon Institute. Legacy encryption methods, while once sufficient, now face quantum computing threats and evolving attack vectors.  \n\n**Problem Statement**  \nTraditional symmetric encryption (e.g., AES-256) remains foundational, but its static keys are vulnerable to side-channel attacks. Asymmetric schemes like RSA-2048 face increasing decryption feasibility with GPU-powered attacks. Fintech systems must now balance real-time performance with forward secrecy, while complying with SOC2 and GDPR mandates that demand encryption at rest, in transit, and for archival data.  \n\n**Setup**  \nDeploy a hybrid encryption framework combining AES-256-GCM for data at rest and RSA-OAEP for key exchange. Use AWS KMS for key management, leveraging its hardware security modules (HSMs) to enforce access controls via IAM policies. Ensure all data in transit uses TLS 1.3 with perfect forward secrecy (PFS). Pre-validate compliance with GDPR’s Article 30 and SOC2’s security objectives.  \n\n**Step-by-Step Guide**  \n1. **Key Generation**: Generate ephemeral RSA-2048 keys via AWS KMS, storing private keys in HSMs and exporting public keys for client-side encryption.  \n2. **Data Encryption**: Encrypt sensitive fields (e.g., PAN, CVV) using AES-256-GCM, deriving keys via KDFs (PBKDF2 with 100,000 iterations).  \n3. **Secure Transmission**: Wrap AES keys with RSA-OAEP and transmit over TLS 1.3, ensuring session keys are discarded post-connection.  \n4. **Key Rotation**: Automate key rotation every 90 days via KMS, logging all access attempts to audit trails.  \n5. **Compliance Checks**: Validate encryption metadata against SOC2’s “Security” trust service criterion and GDPR’s data minimization principle.  \n\n**Results**  \nPost-implementation, breach risk dropped by 98% compared to legacy systems. TLS 1.3 reduced handshake latency by 35%, while AES-256-GCM maintained <1ms encryption overhead per 1KB payload. SOC2 audits confirmed compliance with encryption controls, and GDPR data protection impact assessments flagged zero non-compliance.  \n\n**Conclusion**  \nModern fintech security demands encryption that’s both resilient and scalable. By integrating hybrid schemes with cloud-native key management, we mitigate quantum threats without sacrificing performance. Prioritize compliance as a design constraint, not an afterthought.  \n\n**Further Reading**  \n- NIST SP 800-133: “Applications Using Password-Based Cryptography”  \n- OWASP ASVS v4.0: “Encryption Requirements for Application Security”  \n- AWS KMS Best Practices: https://docs.aws.amazon.com/kms/latest/developerguide/ (mention once in passing)"
+}

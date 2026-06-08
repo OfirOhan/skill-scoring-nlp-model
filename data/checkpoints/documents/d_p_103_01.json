@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_103_01",
+  "type": "project_readme",
+  "persona_id": "p_103",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 5,
+    "CI/CD pipelines": 4,
+    "Cloud cost optimization": 4,
+    "Kubernetes": 5,
+    "Linux administration": 4,
+    "Network automation": 3,
+    "Prometheus/Grafana": 4,
+    "Python": 4,
+    "Terraform": 4
+  },
+  "text": "# Financial Transaction Monitoring Dashboard  \nA real-time observability solution for fintech transaction pipelines, built to meet regulatory compliance and service-level agreement (SLA) requirements. This project leverages Prometheus for metrics collection, Grafana for visualization, and AWS-native tools to deliver sub-second latency and 99.95% uptime in production environments.  \n\n## Tech Stack  \n- **Metrics & Visualization**: Prometheus (with remote write to AWS CloudWatch), Grafana (with Loki integration for logs)  \n- **Infrastructure**: Terraform for IaC, AWS EKS for Kubernetes orchestration, AWS Lambda for async alerting  \n- **Data Processing**: Python (FastAPI) for metric aggregation, Redis for caching  \n- **Security & Compliance**: AWS IAM roles, VPC isolation, S3 retention policies for audit logs  \n- **CI/CD**: GitHub Actions for automated testing, Terraform Cloud for state management  \n\n## Architecture / Design  \nThe system operates as a layered pipeline:  \n1. **Data Ingestion**: Prometheus scrapes metrics from Kafka brokers and RabbitMQ queues, with custom exporters for legacy systems.  \n2. **Processing**: A Python service aggregates transaction volumes and anomaly detection scores, exposing a /metrics endpoint for Prometheus.  \n3. **Visualization**: Grafana dashboards monitor 12+ KPIs (e.g., TPS, latency percentiles, compliance flag rates), with alert rules triggered via AWS SNS.  \n4. **Cost Control**: Terraform provisions spot instances for metrics processing, reducing compute costs by 40% compared to on-demand equivalents.  \n\nKubernetes deployments use HPA to scale based on metric load, while AWS Auto Scaling ensures availability during peak transaction hours.  \n\n## Getting Started / Installation  \n1. Clone this repository using `git clone https://github.com/hugoramirez/financial-dashboard.git`  \n2. Configure AWS credentials via `aws configure` and set environment variables for Terraform  \n3. Deploy infrastructure with `terraform apply` (ensure `main.tf` reflects your AWS region)  \n4. Build and deploy the Python service using `poetry install` and `docker-compose up`  \n\n## Usage / Examples  \n- Monitor transaction throughput via the `/transactions` endpoint in Grafana  \n- Set up alerts for 95th percentile latency > 200ms using Prometheus' `percentile` function  \n- Integrate with existing systems by modifying the `exporters/` directory to match your metrics schema  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/license/hugoramirez/financial-dashboard)](https://github.com/hugoramirez/financial-dashboard/blob/main/LICENSE)  \n[![CI/CD](https://img.shields.io/github/actions/workflow.com/hugoramirez/financial-dashboard/main.yml?branch=main)](https://github.com/hugoramirez/financial-dashboard/actions)  \n[![Test Coverage](https://img.shields.io/coveralls/github/hugoramirez/financial-dashboard/main)](https://coveralls.io/github/hugoramirez/financial-dashboard)  \n\n## Contributing  \nPull requests are welcome! Ensure code adheres to PEP8 standards and includes unit tests. For significant changes, open an issue to discuss the approach.  \n\n## License  \nMIT License – see [LICENSE](https://github.com/hugoramirez/financial-dashboard/blob/main/LICENSE) for details"
+}

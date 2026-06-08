@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_213_02",
+  "type": "project_readme",
+  "persona_id": "p_213",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Flutter": 3,
+    "GraphQL": 3,
+    "Kotlin": 4,
+    "Mobile CI/CD": 4,
+    "REST API design": 5,
+    "React": 3,
+    "React Native": 4,
+    "Swift": 4,
+    "TypeScript": 4
+  },
+  "text": "# NexaCloud Dashboard  \nA real-time analytics dashboard for SaaS platforms, featuring mobile push notifications, dynamic data visualization, and cross-platform compatibility. Built for scalable team collaboration, it integrates real-time data streams with actionable insights for enterprise users.  \n\n## Testing  \nAutomated test coverage exceeds 85% across Flutter, React, and backend services.  \n- Flutter: Unit + widget tests with `flutter_test` and `golden_toolkit` for UI validation  \n- GraphQL: Apollo Client mocking for isolated data flow testing  \n- Mobile CI/CD: GitHub Actions with Detox (iOS) and Espresso (Android) for end-to-end validation  \n- REST API: Postman collections + Swagger for contract-first development  \nTest pipelines enforce type safety and runtime validation for production readiness  \n\n## Getting Started / Installation  \n```bash\ngit clone https://github.com/your-username/nexacloud-dashboard.git  \ncd nexacloud-dashboard  \nnpm install  \nflutter pub get  \n```  \nSet up environment variables for API keys and push notification credentials.  \nFor iOS: Configure Apple Push Notification Service (APNs) in `ios/Runner/Info.plist`.  \nFor Android: Add Firebase Cloud Messaging (FCM) configuration in `android/app/src/main/AndroidManifest.xml`.  \n\n## Usage / Examples  \n**Real-time metrics**:  \n```graphql\nsubscription {  \n  metrics {  \n    cpuUsage(percent: true)  \n    memoryUsage(megabytes: true)  \n  }  \n}\n```  \n**Push notification flow**:  \n1. Mobile app subscribes to WebSocket endpoint  \n2. Backend triggers `sendPushNotification` mutation with payload  \n3. Firebase Cloud Messaging delivers alert to user devices  \n\n## Tech Stack  \n- **Frontend**: Flutter (cross-platform), React (backend microservices)  \n- **Data**: GraphQL (real-time queries), REST API (historical data)  \n- **Mobile**: Kotlin (Android), Swift (iOS)  \n- **Type Safety**: TypeScript (backend), Dart (Flutter)  \n- **CI/CD**: GitHub Actions, Firebase CI for mobile builds  \n\n## Architecture / Design  \nMicroservices architecture with GraphQL as the API gateway.  \n- Mobile clients consume real-time data via WebSocket  \n- Backend services handle data aggregation and alerting logic  \n- Data visualization components use Chart.js and D3.js for dynamic rendering  \n- Push notification pipeline decouples mobile clients from backend logic  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for full terms  \n\n## Contributing  \nSubmit bug reports, feature requests, or code improvements.  \n- Fork the repo and create a feature branch  \n- Follow TypeScript/Flutter code style guidelines  \n- Include unit tests for all new functionality  \n- Submit pull requests with clear commit messages and documentation updates"
+}

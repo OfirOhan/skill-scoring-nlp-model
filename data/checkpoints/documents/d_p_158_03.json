@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_158_03",
+  "type": "project_readme",
+  "persona_id": "p_158",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "CI/CD pipelines": 3,
+    "Docker": 3,
+    "Go": 1,
+    "Kubernetes": 5,
+    "Microservices architecture": 5,
+    "PostgreSQL": 3,
+    "Python": 3,
+    "REST API design": 3
+  },
+  "text": "# Distributed Ad Server  \n\nA high-throughput ad delivery system leveraging Kafka for event streaming, Redis for low-latency caching, and Kubernetes for scalable orchestration. Built for real-time ad targeting with sub-100ms response times and 10k+ requests per second under load.  \n\n## Badges  \n[![Tech Stack](https://example.com/tech-badge)](https://example.com) [![License](https://example.com/license-badge)](https://example.com) [![CI/CD](https://example.com/ci-badge)](https://example.com)  \n\n## Getting Started / Installation  \n```bash  \ndocker pull adserver/base:latest  \ndocker run --env DB_URL=postgres://user:pass@host:5432/dbname --env KAFKA_BOOTSTRAP=kafka:9092 -p 8080:8080 adserver/base:latest  \n```  \nRequires Docker 20.10+, PostgreSQL 13+, and AWS credentials for S3-backed ad asset storage. Deploy with Kubernetes manifests in `k8s/` for production-grade scaling.  \n\n## Tech Stack  \n- **Kafka**: Real-time ad targeting with partitioned topic for inventory updates  \n- **Redis**: In-memory cache for ad metadata with TTL-based eviction  \n- **PostgreSQL**: Persistent storage for ad campaign metadata (10M+ rows)  \n- **Python**: Control plane for dynamic ad policy enforcement (FastAPI)  \n- **Kubernetes**: Auto-scaling for pod clusters across AWS EC2 instances  \n\n## Architecture / Design  \nThe system decouples ad delivery into three planes:  \n1. **Event Plane**: Kafka brokers handle 10k+ ad impression events/sec with partitioned topics for campaign-specific routing  \n2. **Cache Plane**: Redis Cluster caches ad inventory with TTLs and geo-aware sharding for CDNs  \n3. **Control Plane**: Python-based API for real-time ad policy updates (e.g., A/B testing, frequency capping)  \n\nKubernetes ensures fault tolerance with pod anti-affinity rules and rolling updates. AWS S3 serves static ad assets with CloudFront CDN for global distribution.  \n\n## Usage / Examples  \n```bash  \ncurl -X GET \"http://ad-server:8080/impression?user_id=123&campaign=456\"  \n```  \n**Response**: JSON ad payload with creative ID, placement, and metrics tracking.  \n\nControl plane API example:  \n```bash  \ncurl -X POST \"http://control-plane:8000/policies\" -d '{\"campaign_id\": \"456\", \"budget\": 10000}'  \n```  \n\n## Testing  \n- **Unit Tests**: 100% coverage for Kafka producers/consumers using pytest  \n- **Integration Tests**: Docker-compose simulates 500 concurrent ad requests with Locust  \n- **CI/CD**: GitHub Actions enforces CI/CD with Terraform for AWS cluster provisioning  \n\n## License  \nMIT License. See [LICENSE](https://example.com/license) for details."
+}

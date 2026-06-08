@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_232_01",
+  "type": "project_readme",
+  "persona_id": "p_232",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "API testing": 4,
+    "GitHub Actions": 4,
+    "Go": 3,
+    "Integration testing": 3,
+    "Java": 3,
+    "Node.js": 3,
+    "Performance testing (JMeter/k6)": 3,
+    "Python": 4,
+    "Selenium/Playwright": 4,
+    "Test automation": 4,
+    "Test strategy design": 3
+  },
+  "text": "# AutoRegTest: Enterprise Regression Testing Framework  \nAutomate regression testing for enterprise applications with scalable, maintainable test suites. Built for CI/CD pipelines, this framework reduces manual effort while ensuring critical workflows remain reliable across updates.  \n\n## Badges  \n[![CI/CD Status](https://github.com/mei-lin-wu/autoregtest/actions/workflows/ci.yml/badge.svg)](https://github.com/mei-lin-wu/autoregtest/actions/workflows/ci.yml)  \n[![Test Coverage](https://img.shields.io/coveralls/mei-lin-wu/autoregtest)](https://coveralls.io/github/mei-lin-wu/autoregtest)  \n[![Supported Environments](https://img.shields.io/badge/environments-Dev%20%26%20Prod-blue)](https://github.com/mei-lin-wu/autoregtest)  \n\n## Tech Stack  \n- **Core**: Python (test scripts), Java (backend mocks), Node.js (API proxy)  \n- **UI Tools**: Selenium + Playwright (parallel execution, headless mode)  \n- **CI/CD**: GitHub Actions (scheduled runs, parallel test queues)  \n- **Performance**: k6 (load scenarios), JMeter (stress testing)  \n- **API**: REST Assured (endpoint validation, response schema checks)  \n- **Integration**: Docker (containerized test environments)  \n\n## Configuration  \nConfigure via `config.yaml` (see `config/samples/`). Customize test suites, environment variables, and parallel execution settings. Example:  \n```yaml  \ntest_suites:  \n  - name: \"login_flow\"  \n    endpoints: [\"https://api.prod/auth/login\"]  \n    browsers: [\"chrome\", \"firefox\"]  \n    max_retries: 3  \n```  \n\n## Getting Started  \n1. Clone the repo: `git clone https://github.com/mei-lin-wu/autoregtest.git`  \n2. Install dependencies: `npm install && pip install -r requirements.txt`  \n3. Set environment variables in `.env.local` (e.g., API endpoints, credentials)  \n4. Run initial tests: `npm run test:ci`  \n\n## Usage / Examples  \n```bash  \n# Run all tests in parallel  \nnpm run test:parallel  \n\n# Execute specific suite  \nnpm run test:run -- --suite=login_flow  \n\n# Generate performance report  \nnpm run perf:test -- --scenario=login_spike  \n```  \nFramework supports dynamic test generation from API specs, reducing script maintenance overhead by 40% in our last project.  \n\n## Testing  \n- **Unit**: Validate test script logic with Pytest fixtures  \n- **Integration**: Verify system-wide workflows (e.g., login → data sync → reporting)  \n- **Performance**: Use k6 to simulate 10k concurrent users during peak hours  \n- **CI/CD**: GitHub Actions auto-triggers tests on PRs, ensuring no regressions in staging  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

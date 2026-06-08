@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_081_01",
+  "type": "project_readme",
+  "persona_id": "p_081",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "API testing": 3,
+    "Go": 1,
+    "GraphQL": 1,
+    "Integration testing": 3,
+    "Java": 1,
+    "Performance testing (JMeter/k6)": 2,
+    "Python": 3,
+    "REST API design": 3,
+    "Selenium/Playwright": 3,
+    "Test automation": 3,
+    "Test strategy design": 2,
+    "Unit testing": 3
+  },
+  "text": "# E-Commerce Cart Validation System  \nA robust framework for validating checkout workflows across e-commerce platforms, ensuring cart integrity, pricing accuracy, and edge-case resilience. Built for seamless integration into CI/CD pipelines, this system supports parallel test execution and real-time feedback for QA teams.  \n\n## Deployment  \nIntegrated with GitHub Actions for continuous validation, with staging and production environments synchronized via Terraform. Deployment triggers on PR merges, with test results visualized in a centralized dashboard accessible to all team members.  \n\n## Badges  \nContinuous Integration: ✅ Passed  \nTest Coverage: ⚠️ 82% (unit + integration)  \nPerformance Baseline: ⏱️ 12s (median)  \n\n## Tech Stack  \nPython-based framework for API validation, paired with Playwright for browser automation. REST API endpoints are tested using Pytest, while integration with third-party payment gateways leverages mock services. Performance benchmarks are captured via k6 for scalability validation.  \n\n## Architecture / Design  \nThe system is structured into modular test suites:  \n- **Cart Validation Layer**: Validates item additions, deletions, and quantity adjustments.  \n- **Checkout Orchestration**: Simulates user flows with conditional branching for promo codes and discounts.  \n- **Data Consistency Checks**: Cross-references backend databases with frontend UI states.  \nParallel execution is managed via pytest-xdist, with results aggregated into a JSON report for manual review.  \n\n## Getting Started / Installation  \n1. Clone the repository and install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n2. Set environment variables for API keys and test environments.  \n3. Configure GitHub Actions secrets for secure credential management.  \n\n## Usage / Examples  \nRun a full validation suite:  \n```bash  \npytest --reruns 2 --browser=chromium --environment=staging  \n```  \nExample: Validate a cart with 5 items and a 15% discount applied:  \n```python  \ndef test_checkout_with_discount():  \n    cart.add_items([{\"product_id\": \"X123\", \"quantity\": 2}])  \n    assert cart.total == 24.99  \n    checkout.apply_discount(\"SUMMER20\")  \n    assert checkout.final_price == 19.99  \n```  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details."
+}

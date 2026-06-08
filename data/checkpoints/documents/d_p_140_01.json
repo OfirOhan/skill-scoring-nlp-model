@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_140_01",
+  "type": "project_readme",
+  "persona_id": "p_140",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Apache Spark": 1,
+    "Apache Kafka": 1,
+    "Apache Airflow": 1,
+    "dbt": 1,
+    "Snowflake": 1,
+    "Data Modeling": 1,
+    "ETL pipeline design": 1,
+    "Data Warehousing": 1,
+    "Python": 1,
+    "REST API design": 1,
+    "Prometheus/Grafana": 1,
+    "GitHub Actions": 1,
+    "Linux administration": 1,
+    "Shell scripting": 1
+  },
+  "text": "# Real-Time Fraud Detection System  \nA low-latency, scalable solution for detecting suspicious financial transactions in real time, reducing false positives by 32% and latency to <50ms in production environments.  \n\n## Getting Started  \nEnsure your environment meets the following:  \n- A cloud-based compute cluster with ≥4 vCPU and 16GB RAM  \n- Pre-trained anomaly detection models (see `models/` directory)  \n- A REST API endpoint for transaction ingestion (see `api/` for integration specs)  \n- Network access to external data sources (e.g., credit bureau APIs)  \n\nRun the system with:  \n```bash  \nmake build && make serve  \n```  \nThis initializes the core processing pipeline, loads models, and starts the alerting interface.  \n\n## Usage / Examples  \nProcess a batch of 10M transactions in 2.3 seconds (1.2x faster than legacy systems). Example:  \n```bash  \n./process.sh --input transactions_2023.csv --output alerts.json  \n```  \nMetrics:  \n- 99.98% accuracy in detecting known fraud patterns  \n- 12.4ms average latency per transaction  \n- 95% reduction in false positives vs. rule-based systems  \n\n## Badges  \n[![High-Performance](https://img.shields.io/badge/Performance-<50ms-green)]  \n[![Accuracy](https://img.shields.io/badge/Accuracy-99.98%25-blue)]  \n[![Scalability](https://img.shields.io/badge/Scalability-Linear-yellow)]  \n\n## Tech Stack  \n- Distributed computing framework (proprietary, optimized for financial workloads)  \n- Real-time analytics engine (custom, with 98% CPU utilization at scale)  \n- Machine learning models (XGBoost, LSTM, and ensemble methods)  \n- Monitoring: Prometheus-integrated metrics dashboard (custom UI)  \n\n## Architecture / Design  \nThe system operates in three stages:  \n1. **Ingestion**: High-throughput API gateway with rate limiting and schema validation  \n2. **Processing**: Parallelized anomaly detection using memory-mapped data structures  \n3. **Alerting**: Rule-based and model-driven triggers with priority-based escalation  \n\nKey optimizations:  \n- Zero-copy data transfer between stages  \n- Model inference pipelining with 85% throughput  \n- Adaptive thresholding for dynamic fraud pattern recognition  \n\n## Contributing  \nSubmit issues for edge cases (e.g., rare transaction types) or performance bottlenecks. Pull requests should include:  \n- Unit tests for critical logic paths  \n- Benchmarking results comparing baseline vs. proposed changes  \n- Documentation updates for new features  \n\n## License  \n[![License](https://img.shields.io/badge/License-MIT-yellow)]  \nThis project is licensed under the MIT License. See `LICENSE` for details."
+}

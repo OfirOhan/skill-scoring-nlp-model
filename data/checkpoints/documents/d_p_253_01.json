@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_253_01",
+  "type": "project_readme",
+  "persona_id": "p_253",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Apache Spark": 3,
+    "Data modeling": 3,
+    "Data visualization (Matplotlib/Plotly)": 3,
+    "NumPy": 3,
+    "Pandas": 3,
+    "Python": 3,
+    "REST API design": 3,
+    "SQL analytics": 3,
+    "scikit-learn": 4
+  },
+  "text": "# CyberThreatHunter: Threat Detection with Machine Learning  \nReal-time network anomaly detection using adversarial robustness and temporal modeling for zero-day threat identification in production environments.  \n\n## Deployment  \nModel pipelines are containerized with Docker and orchestrated via Kubernetes for scalable inference. Real-time traffic is ingested via Kafka, preprocessed with Apache Spark, and scored by a hybrid model (Isolation Forest + Temporal ConvNets) deployed as a REST API. Monitoring via Prometheus ensures sub-100ms latency for 99.99% of requests.  \n\n## Badges  \n[![Production-Ready](https://via.placeholder.com/80/00FF00)](https://example.com)  \n[![Real-Time Inference](https://via.placeholder.com/80/0000FF)](https://example.com)  \n\n## Tech Stack  \n- **Core**: scikit-learn (custom ensemble pipelines), Apache Spark (batch feature engineering), Pandas/NumPy (data wrangling)  \n- **Infrastructure**: Docker (containerization), Kafka (stream processing), Prometheus (observability)  \n- **Analysis**: SQL (PostgreSQL for metadata queries), Plotly (interactive threat heatmaps)  \n\n## Architecture / Design  \nThe system comprises three layers:  \n1. **Ingestion**: Kafka streams raw packets to Spark for feature extraction (e.g., flow duration, protocol types).  \n2. **Modeling**: A hybrid model trained on MITRE ATT&CK datasets, with adversarial training to resist evasion tactics.  \n3. **API**: REST endpoint exposing threat scores via `/api/v1/detect` with JSON payloads.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/your-username/cyberthreathunter.git  \ncd cyberthreathunter  \ndocker-compose up -d  \n```  \nInstall dependencies via `pip install -r requirements.txt` and configure Kafka/Spark clusters in `config.yaml`.  \n\n## Usage / Examples  \nSend network flow data to the API:  \n```bash  \ncurl -X POST https://api.cyberthreathunter.local:8080/detect \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"flow_duration\": 3.4, \"protocol\": \"TCP\", \"packet_count\": 147}'  \n```  \nExpected response:  \n```json  \n{\"threat_score\": 89.2, \"label\": \"high\", \"timestamp\": \"2023-10-05T14:32:17Z\"}  \n```  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
+}

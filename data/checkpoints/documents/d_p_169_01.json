@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_169_01",
+  "type": "project_readme",
+  "persona_id": "p_169",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "Apache Airflow": 3,
+    "Apache Kafka": 3,
+    "Apache Spark": 3,
+    "Cloud cost optimization": 2,
+    "Data modeling": 2,
+    "Data warehousing": 3,
+    "Docker": 3,
+    "ETL pipeline design": 3,
+    "Kubernetes": 2,
+    "Python": 3,
+    "Snowflake": 3,
+    "Terraform": 2,
+    "dbt": 2
+  },
+  "text": "# HealthDataFlow: ETL Pipeline for Patient Analytics  \nA streamlined ETL framework designed to aggregate, transform, and analyze fragmented patient datasets into actionable clinical insights. Built for scalability, compliance, and integration with existing healthtech ecosystems.  \n\n## Getting Started / Installation  \nClone the repository using Git. Ensure Docker is installed to leverage pre-configured environments. Run `docker-compose up` to spin up Kafka, Spark, and Airflow containers. For production deployment, integrate with AWS S3 and Snowflake via IAM roles.  \n\n## Tech Stack  \n- **Cloud**: AWS (S3, Lambda, Glue) for data lakes and serverless compute  \n- **Streaming**: Apache Kafka for real-time ingestion of EHRs and device telemetry  \n- **Processing**: Apache Spark for batch transformations and ML model scoring  \n- **Orchestration**: Apache Airflow for workflow scheduling and error monitoring  \n- **Storage**: Snowflake as a unified data warehouse for analytics and reporting  \n- **Containerization**: Docker for consistent development and staging environments  \n\n## Usage / Examples  \n```bash\n# Trigger a daily ETL cycle  \nairflow trigger_dag 'patient_data_pipeline'\n\n# Query transformed metrics in Snowflake  \nSELECT * FROM health_insights.patient_trends WHERE date = CURRENT_DATE;\n```  \nThis pipeline ingests raw data from IoT devices and EHR systems, normalizes it via Spark, and loads it into Snowflake for BI tools.  \n\n## Badges  \n[![Production-Ready](https://img.shields.io/badge/production-ready-green)](https://github.com/lorenzoricci/healthdataflow)  \n[![Healthtech Compliance](https://img.shields.io/badge/healthtech-compliant-blue)](https://github.com/lorenzoricci/healthdataflow)  \n\n## Architecture / Design  \nThe pipeline operates in three stages:  \n1. **Ingestion**: Kafka handles real-time data from wearables and EHR APIs, with Kafka Connect for batch imports.  \n2. **Transformation**: Spark jobs clean and standardize data, applying FHIR schema mappings and anomaly detection.  \n3. **Storage**: Snowflake partitions data by patient ID and timestamp, enabling fast querying for clinical dashboards.  \nKubernetes is reserved for scaling critical workloads, though this version uses Docker for simplicity.  \n\n## Contributing  \nEnhance data lineage tracking, improve Kafka retention policies, or refine Snowflake schema design. Pull requests should include unit tests for transformation logic and compliance with HIPAA guidelines.  \n\n## License  \nMIT License – use freely, but attribute appropriately."
+}

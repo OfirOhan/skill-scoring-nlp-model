@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_086_01",
+  "type": "project_readme",
+  "persona_id": "p_086",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Agile/Scrum": 2,
+    "Cross-team collaboration": 2,
+    "Data visualization (Matplotlib/Plotly)": 1,
+    "Product management": 3,
+    "SQL analytics": 2,
+    "Stakeholder management": 2,
+    "UX research": 3,
+    "User journey mapping": 2,
+    "Wireframing/prototyping": 3
+  },
+  "text": "# RemoteTeam SaaS Platform  \nA lightweight, scalable SaaS solution for remote teams, focused on task management, communication, and real-time collaboration. Built with a modular architecture to support rapid feature iteration. Currently serves 120+ active teams with 85% user retention.  \n\n## Badges  \n[![Production Status](https://img.shields.io/badge/production-ready-green)](https://remote-team.com)  \n[![GitHub Stars](https://img.shields.io/github/stars/urvashigill/remoteteam)](https://github.com/urvashigill/remoteteam)  \n[![Users](https://img.shields.io/badge/users-120+)](https://remote-team.com/users)  \n\n## Tech Stack  \n- **Backend**: Node.js (Express) with TypeScript for type safety and maintainability  \n- **Frontend**: React (with TypeScript) for dynamic, responsive interfaces  \n- **Database**: PostgreSQL with connection pooling for high-concurrency workloads  \n- **Hosting**: AWS Lambda + API Gateway for serverless scalability  \n- **Monitoring**: Datadog for latency tracking and error rate analysis  \n\n## Configuration  \nSet environment variables in `.env` file:  \n```env  \nDB_HOST=your_db_endpoint  \nJWT_SECRET=your_secure_token  \nMAILGUN_API_KEY=your_mailgun_key  \n```  \nEnsure secrets are encrypted in production using AWS KMS.  \n\n## Getting Started / Installation  \n1. Clone repo: `git clone https://github.com/urvashigill/remoteteam.git`  \n2. Install dependencies: `npm install`  \n3. Configure `.env` with database and API keys  \n4. Run migrations: `npx prisma migrate deploy`  \n5. Seed sample data: `npx prisma db seed`  \n6. Start server: `npm run dev`  \n\n## Usage / Examples  \n- **Dashboard**: Access `/dashboard` to view team performance metrics (load time <500ms)  \n- **Task Management**: Use `/tasks` endpoint to assign and track subtasks (avg. resolution time: 2.3h)  \n- **Communication**: Integrate Slack webhooks for real-time notifications (latency <1s)  \n\n## Testing  \n- **Unit Tests**: 92% coverage via Jest (run `npm test`)  \n- **End-to-End**: Cypress tests validate workflow from user signup to task completion (pass rate: 98.7%)  \n- **Load Testing**: Locust scripts simulate 1,000 concurrent users without degradation  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

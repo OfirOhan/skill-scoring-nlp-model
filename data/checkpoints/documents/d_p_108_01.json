@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_108_01",
+  "type": "project_readme",
+  "persona_id": "p_108",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "CI/CD pipelines": 3,
+    "Docker": 3,
+    "GCP": 4,
+    "Kubernetes": 5,
+    "Linux administration": 4,
+    "Prometheus/Grafana": 4,
+    "Python": 3,
+    "Terraform": 4
+  },
+  "text": "# Real-Time Inventory Sync System  \nA distributed inventory synchronization pipeline using Kafka, Kubernetes, and cloud-native tooling to ensure sub-100ms latency across e-commerce order fulfillment workflows.  \n\n## Deployment  \nDeployed via Terraform-managed AWS/GCP hybrid clusters with Kubernetes Operators for Kafka. CI/CD pipelines leverage GitHub Actions for automated testing, including chaos engineering scenarios. Prometheus/Grafana dashboards monitor end-to-end latency, with alerts for >200ms tail latencies.  \n\n## Badges  \n[![GitHub Actions Status](https://img.shields.io/github/actions/workflow/status/username/repo/main.yml?branch=main)](https://github.com/username/repo/actions)  \n[![Terraform](https://img.shields.io/terraform/username/repo?label=TF)](https://registry.terraform.io/modules/username/repo)  \n[![Prometheus](https://img.shields.io/badge/Monitor-Prometheus-brightgreen)](https://prometheus.io)  \n\n## Tech Stack  \n- **Kafka 3.3**: Event sourcing for inventory delta propagation  \n- **Python 3.10**: Delta processing with asyncio and Apache Beam  \n- **Docker 24.0**: Containerized worker pods with resource throttling  \n- **Kubernetes 1.25**: Horizontal scaling with Prometheus metrics server  \n- **Terraform 1.5**: Multi-cloud infrastructure as code  \n- **AWS Lambda**: Async inventory update triggers  \n- **GCP Pub/Sub**: Cross-region event routing  \n- **Linux (Debian 12)**: Custom kernel tuning for low-latency I/O  \n\n## Architecture / Design  \nA Kafka-pubsub model with three-phase reconciliation:  \n1. **Event Capture**: Kafka producers push inventory deltas via AWS Kinesis Firehose  \n2. **Processing**: Python workers in Kubernetes Deployments apply deltas to Redis-backed caches  \n3. **Synchronization**: GCP Cloud Functions propagate updates to partner systems with idempotent deduplication  \nKubernetes HPA scales workers based on Kafka topic lag metrics, with Prometheus scraping intervals tuned to 10s for real-time visibility.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/username/repo.git  \ncd inventory-sync  \nterraform init && terraform apply -var \"cloud_provider=aws\"  \ndocker-compose up -d  \npython setup.py install  \n```\nEnsure AWS/GCP credentials are configured via environment variables. Prometheus metrics are exposed at `http://localhost:9090` for local debugging.  \n\n## Usage / Examples  \n```python  \nfrom kafka import KafkaProducer  \nproducer = KafkaProducer(bootstrap_servers='broker:9092')  \nproducer.send('inventory-topic', value=b'{\"item_id\": \"123\", \"delta\": {\"stock\": 50}}')  \n```  \nMonitor sync latency via `kubectl top pod` and Grafana dashboards. Use `kubectl rollout undo` to rollback deployments with >5% error rate.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/username/repo/blob/main/LICENSE) for details."
+}

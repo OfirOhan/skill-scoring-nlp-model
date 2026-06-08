@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_050_02",
+  "type": "project_readme",
+  "persona_id": "p_050",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "CI/CD pipelines": 3,
+    "GitHub Actions": 2,
+    "GitLab CI": 2,
+    "Linux administration": 3,
+    "Network troubleshooting": 2,
+    "PostgreSQL": 2,
+    "Prometheus/Grafana": 3,
+    "Python": 1,
+    "Redis": 1,
+    "Terraform": 3
+  },
+  "text": "# CloudHealthMonitor  \nReal-time cloud infrastructure monitoring system tailored for mission-critical healthtech applications, ensuring compliance with HIPAA and GDPR standards. Built for scalability, reliability, and seamless integration with clinical workflows.  \n\n## Tech Stack  \n- **Metrics**: Prometheus (exporters for Kubernetes, PostgreSQL, and custom health APIs)  \n- **Visualization**: Grafana (secured dashboards with role-based access)  \n- **Infrastructure**: Terraform (managed AWS/GCP clusters with auto-scaling)  \n- **CI/CD**: GitHub Actions (automated testing, dependency updates, and deployment pipelines)  \n- **Storage**: PostgreSQL (time-series optimized for alert history)  \n- **Networking**: Custom BGP configurations for multi-cloud redundancy  \n\n## Architecture / Design  \nThe system is structured as a microservices layer with distributed metrics aggregation. Core components include:  \n- **HealthProxy**: Reverse proxy with TLS termination and rate limiting for API traffic  \n- **MetricsAggregator**: Aggregates Prometheus metrics into normalized JSON for analytics  \n- **AlertEngine**: Rule engine for threshold-based alerts (customizable via YAML)  \n- **AuditTrail**: PostgreSQL-backed audit logs with immutable storage for compliance  \n\nTerraform provisions infrastructure as code, ensuring consistent environments across staging and production. Linux administration practices are embedded in container orchestration (Kubernetes) and systemd service management.  \n\n## Getting Started / Installation  \n1. Clone the repository using `git clone https://github.com/your-username/CloudHealthMonitor.git`  \n2. Install dependencies: `npm install` (Node.js for custom exporters)  \n3. Configure Terraform variables in `terraform.tfvars` for cloud provider credentials  \n4. Initialize and apply infrastructure: `terraform init && terraform apply --auto-approve`  \n5. Deploy Grafana dashboards via `./scripts/setup-grafana.sh`  \n\n## Usage / Examples  \n```bash\n# Start metrics collection  \n./bin/start-monitor.sh --cluster prod  \n\n# Query recent alerts  \ncurl http://localhost:3000/api/alerts?timeframe=24h  \n\n# Trigger manual health check  \n./bin/health-check.sh --endpoint /api/v1/patients\n```  \nMonitor real-time resource utilization via Grafana, with alerts sent to Slack/Teams via webhook integrations.  \n\n## Badges  \n[![Build Status](https://github.com/your-username/CloudHealthMonitor/actions/workflows/ci.yml/badge.svg)](https://github.com/your-username/CloudHealthMonitor/actions/workflows/ci.yml)  \n\n## Contributing  \nCollaborate on improving alert prioritization logic or expanding support for hybrid cloud environments. Ensure all changes pass CI/CD pipeline validation and include unit tests for critical components.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details."
+}

@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_255_03",
+  "type": "project_readme",
+  "persona_id": "p_255",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Python": 1,
+    "Go": 1,
+    "Node.js": 1,
+    "React": 1,
+    "PostgreSQL": 1,
+    "REST API design": 1,
+    "AWS": 1,
+    "Docker": 1,
+    "CI/CD pipelines": 1,
+    "Monitoring & alerting": 1,
+    "Database optimization": 1
+  },
+  "text": "# HealthInsight Analytics Dashboard  \nA lightweight tool to visualize and explore health metrics through intuitive charts and trend analysis. Built for internal team use, this dashboard simplifies complex data into actionable insights without relying on external dependencies.  \n\n---\n\n## Badges  \n[![Tests Pass](https://img.shields.io/badge/tests-passing-green)](https://example.com/tests)  \n[![Last Updated](https://img.shields.io/badge/last--updated-2023.10.15-blue)](https://github.com/healthinsight-dashboard)  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/healthinsight-dashboard.git  \n   ```  \n2. Navigate to the project directory and install dependencies:  \n   ```bash  \n   npm install  \n   ```  \n3. Run the application:  \n   ```bash  \n   npm start  \n   ```  \nThe dashboard will be available at [http://localhost:8080](http://localhost:8080).  \n\n---\n\n## Tech Stack  \n- **Frontend**: JavaScript (ES6+), HTML5, CSS3  \n- **Visualization**: Chart.js for interactive graphs  \n- **Data Handling**: Local JSON/CSV files for simplicity  \n- **Build Tool**: Webpack for bundling  \n\n---\n\n## Architecture / Design  \nThe dashboard follows a modular design, separating data fetching, chart rendering, and user interaction into distinct components. Key decisions include:  \n- Using Chart.js for dynamic visualizations to avoid external libraries  \n- Storing sample datasets in static files for quick prototyping  \n- Keeping the UI stateless to ensure responsiveness across devices  \n\n---\n\n## Usage / Examples  \n1. Load a dataset (e.g., `data/heart-rate.csv`) via the file picker.  \n2. Select metrics like \"Average Heart Rate\" or \"Sleep Duration\" from the sidebar.  \n3. Toggle between daily, weekly, or monthly views to analyze trends.  \n4. Export charts as PNGs via the \"Download\" button for reports.  \n\n---\n\n## Testing  \nUnit tests for components and data parsing are included. To run:  \n```bash  \nnpm test  \n```  \nTests verify chart rendering, data validation, and UI responsiveness.  \n\n---\n\n## License  \nMIT License — see [LICENSE](https://github.com/healthinsight-dashboard/blob/main/LICENSE) for details."
+}

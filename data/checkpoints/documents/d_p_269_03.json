@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_269_03",
+  "type": "project_readme",
+  "persona_id": "p_269",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "A/B testing": 3,
+    "Agile/Scrum": 4,
+    "Competitive analysis": 1,
+    "Data visualization": 3,
+    "SQL analytics": 3,
+    "Hypothesis testing": 3,
+    "Roadmap planning": 3,
+    "Stakeholder management": 1,
+    "Team leadership": 1,
+    "Tableau/Power BI": 4,
+    "UX research": 2,
+    "Product management": 1
+  },
+  "text": "# In-Game Purchase Optimization Strategy  \n\nA data-driven framework to refine monetization tactics in gaming environments through A/B testing, behavioral analysis, and iterative hypothesis validation.  \n\n## Badges  \n[![License](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/MIT)  \n[![Build Status](https://img.shields.io/badge/build-passing-green)](https://github.com/helenpark/igp-strat/actions)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for full text.  \n\n## Tech Stack  \n- **Data Analysis**: SQL, Python (Pandas), Tableau  \n- **Visualization**: Power BI, D3.js  \n- **Workflow**: Git, GitHub Actions, Jira (Scrum)  \n- **Tools**: Google Sheets (for quick prototyping), Figma (UI/UX mockups)  \n\n## Architecture / Design  \nThe strategy is structured as a layered framework:  \n1. **Data Layer**: Aggregates player behavior metrics (session duration, purchase frequency) via SQL queries.  \n2. **Analysis Layer**: Uses Python for statistical modeling and hypothesis testing (e.g., chi-square tests for conversion rate trends).  \n3. **Visualization Layer**: Tableau dashboards track A/B test performance, with drill-down capabilities for cohort analysis.  \n4. **Decision Layer**: Iterative roadmap planning aligns with quarterly KPIs, prioritizing high-impact features like limited-time offers.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/helenpark/igp-strat.git`  \n2. Install dependencies: Python 3.9+, Tableau Desktop, and PostgreSQL for SQL analytics.  \n3. Import sample datasets from the `data` folder to replicate analysis workflows.  \n\n## Usage / Examples  \n- **A/B Testing**: Compare conversion rates between free-to-play and premium models using SQL pivots and Python hypothesis testing.  \n- **Data Visualization**: Use Power BI to map purchase funnel drop-off points, highlighting UI/UX bottlenecks.  \n- **Roadmap Planning**: Jira boards track sprint goals, such as optimizing microtransaction placement based on heatmaps.  \n\n## Contributing  \nThis project is a personal initiative; contributions are welcome for documentation improvements or tooling enhancements. For feature requests, open an issue with specific use cases."
+}

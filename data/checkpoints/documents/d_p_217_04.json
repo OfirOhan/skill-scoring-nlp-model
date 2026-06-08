@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_217_04",
+  "type": "blog",
+  "persona_id": "p_217",
+  "hyperparams": {
+    "blog_depth": "tutorial",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 4,
+    "Kubernetes": 5,
+    "Linux administration": 4,
+    "PostgreSQL": 4,
+    "Prometheus/Grafana": 4,
+    "Python": 4,
+    "Terraform": 4
+  },
+  "text": "The chaos of a Black Friday sale hits harder than you expect. Last year, our e-commerce platform faced a 400% surge in traffic, and the monolith we’d relied on for years began to fracture. It was a wake-up call: traditional architectures simply couldn’t scale to meet the demands of modern commerce. As a platform engineer, I’ve spent the last three years refactoring our infrastructure into a microservices architecture, and the lessons learned are worth sharing.  \n\nBack in 2021, we were juggling a single monolithic application that handled everything from user authentication to inventory management. While it worked, it became a bottleneck. During peak hours, response times spiked to 12 seconds, and the risk of cascading failures was tangible. The decision to adopt microservices wasn’t just about splitting code—it was about rethinking how we handle traffic, dependencies, and resilience. We migrated critical services to Kubernetes, leveraging its orchestration capabilities to manage thousands of pods. For example, our order processing service now scales independently, reducing cold start latency by 65% compared to our previous state.  \n\nAt the core of our architecture lies Kubernetes, which has become the backbone of our platform. We use Helm charts for deployment, Terraform for IaC, and Prometheus/Grafana for observability. One key optimization was implementing Kubernetes Horizontal Pod Autoscaler (HPA) with custom metrics from our PostgreSQL database. This reduced idle node costs by 30% while maintaining 99.95% uptime. PostgreSQL itself was refactored into a cluster with read replicas and connection pooling, which cut query latency by 40% during high-traffic periods.  \n\nBenchmarks tell a story. After refactoring, our system handled 250k RPS with 95% request success rates, up from 60k RPS previously. AWS Lambda-based async workflows processed 80% of background tasks, reducing CPU utilization by 25%. Cost optimization was a priority—using Spot Instances for non-critical services saved $120k/month, while AWS Cost Explorer helped identify underutilized resources.  \n\nThe takeaway? Microservices aren’t a silver bullet, but they’re essential for e-commerce scalability. Prioritize observability, automate everything, and don’t ignore cost. Kubernetes is a powerful tool, but it requires discipline. For deeper insights, check out the [AWS Lambda Best Practices Guide](https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html) and [Kubernetes Best Practices](https://kubernetes.io/docs/tutorials/kubernetes-basics/).  \n\nFurther Reading:  \n- \"Designing Data-Intensive Applications\" by Martin Kleppmann  \n- AWS Lambda documentation for async processing  \n- Prometheus documentation for custom metric scraping  \n- PostgreSQL replication best practices for e-commerce workloads"
+}

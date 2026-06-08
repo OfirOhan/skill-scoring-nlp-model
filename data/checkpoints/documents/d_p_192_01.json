@@ -1,0 +1,28 @@
+{
+  "doc_id": "d_p_192_01",
+  "type": "project_readme",
+  "persona_id": "p_192",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "JavaScript": 3,
+    "Next.js": 3,
+    "Node.js": 3,
+    "REST API design": 3,
+    "React": 4,
+    "Responsive design": 3,
+    "Stakeholder management": 1,
+    "State management": 3,
+    "Test automation": 3,
+    "Unit testing": 3,
+    "Web accessibility": 3,
+    "Webpack/Vite": 3,
+    "TypeScript": 1,
+    "Web accessibility (WCAG)": 1,
+    "State management (Redux/Zustand)": 1
+  },
+  "text": "# Enterprise Dashboard UI  \nA modular, scalable interface for real-time analytics and reporting in enterprise SaaS platforms. Built with React and Next.js, this dashboard provides a foundation for custom widgets, data visualization, and seamless integration with backend systems. Designed for teams prioritizing clarity, performance, and adaptability in dynamic environments.  \n\n## Roadmap / Future Work  \n- **Dark mode toggle** for extended usability in low-light scenarios  \n- **Enhanced data visualization** with interactive charts and drill-down capabilities  \n- **Third-party integration** hooks for BI tools (e.g., Power BI, Looker)  \n- **Customizable widgets** via drag-and-drop interface  \n- **Performance optimizations** for large datasets and concurrent users  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/your-username/enterprise-dashboard-ui.git  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   cd enterprise-dashboard-ui  \n   npm install  \n   ```  \n3. Start the development server:  \n   ```bash  \n   npm run dev  \n   ```  \n4. Open [http://localhost:3000](http://localhost:3000) in your browser  \n\n## Usage / Examples  \n- **Dashboard layout**: Navigate to `/dashboard` for a split-view interface with real-time metrics and filters.  \n- **Widget customization**: Use the `/widgets` route to configure chart types, data sources, and styling.  \n- **API integration**: Replace placeholder endpoints in `src/api.js` with your backend services for live data.  \n\n## Tech Stack  \n- **Frontend**: React, Next.js (for SSR and routing), Tailwind CSS (for styling)  \n- **Backend**: Node.js (for API services), REST APIs (for data fetching)  \n- **Tools**: Webpack (for bundling), Jest (for unit testing)  \n\n## Architecture / Design  \nThe application follows a **component-driven architecture** with reusable UI elements and a centralized data layer. Key decisions:  \n- **Modular widgets** as independent React components with props for dynamic configuration  \n- **Responsive design** prioritized for mobile and desktop, using Tailwind's utility-first approach  \n- **Stateless components** for predictable rendering, with local state managed via React hooks  \n- **API abstraction layer** to decouple frontend from backend services  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details."
+}

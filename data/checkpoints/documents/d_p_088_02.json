@@ -1,0 +1,28 @@
+{
+  "doc_id": "d_p_088_02",
+  "type": "project_readme",
+  "persona_id": "p_088",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 2,
+    "CI/CD pipelines": 2,
+    "Docker": 2,
+    "GitHub Actions": 2,
+    "Kubernetes": 2,
+    "Microservices architecture": 3,
+    "Monitoring & alerting": 3,
+    "Next.js": 3,
+    "PostgreSQL": 4,
+    "Python": 4,
+    "REST API design": 4,
+    "React": 4,
+    "Redis": 3,
+    "Responsive design": 4,
+    "TypeScript": 2
+  },
+  "text": "# Ad Personalization Engine  \n\nA scalable AI-driven platform for hyper-targeted ad delivery, reducing CTR latency by 25% and improving campaign ROI by 18% through real-time user behavior analysis.  \n\n## Testing  \nAutomated test coverage of 92% via Jest and Postman, with load testing at 5k RPS using Locust. Prometheus monitors endpoint latency (<120ms) and error rates (<0.5%). Canary deployments validate A/B splits before production rollouts.  \n\n## Getting Started / Installation  \nClone the repo and install dependencies:  \n```bash  \nnpm install  \nnpm run migrate  \nnpm run seed  \n```  \nSet environment variables for PostgreSQL and Redis connections. Dockerized services (PostgreSQL, Redis) are preconfigured for local development. CI/CD pipelines enforce type-checking and linter rules via GitHub Actions.  \n\n## Usage / Examples  \nFetch personalized ad bundles:  \n```typescript  \nconst response = await fetch('/api/ads', {  \n  params: { user_id: '123', campaign_id: 'campaign_456' }  \n});  \nconsole.log(response.data); // { ads: [...], relevance_score: 0.92 }  \n```  \nOptimized for 300ms+ response times via Redis caching and PostgreSQL index shards.  \n\n## Tech Stack  \n- **Backend**: Python (FastAPI) with PostgreSQL (12+), Redis (6), and Kafka for real-time data ingestion  \n- **Frontend**: Next.js (React) with TypeScript, styled with Tailwind CSS  \n- **AI**: PyTorch models for user intent prediction, trained on 150M+ ad interactions  \n- **Infrastructure**: AWS Lambda for serverless ad rendering, CloudFront for CDN  \n\n## Architecture / Design  \nMicroservices decouple data ingestion, personalization logic, and ad delivery. The core engine uses a hybrid model:  \n1. **Data Layer**: PostgreSQL with partitioned tables for campaign-specific queries (query latency reduced by 40%)  \n2. **Processing Layer**: Python workers with Redis queues handle 10k+ concurrent ad requests  \n3. **Delivery Layer**: Next.js API gateway routes requests to Redis-cached ad templates  \n4. **Monitoring**: Prometheus + Grafana track model drift (mean absolute error <0.05) and database performance  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details  \n\n## Contributing  \nSubmit PRs with unit tests and performance benchmarks. All changes require code review and integration testing. Prioritize bug fixes for latency-critical paths (e.g., ad rendering pipelines)."
+}

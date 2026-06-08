@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_211_02",
+  "type": "project_readme",
+  "persona_id": "p_211",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "Agile/Scrum": 3,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 3,
+    "Cross-team collaboration": 3,
+    "Database optimization": 4,
+    "Kubernetes": 3,
+    "Mentoring": 3,
+    "Project management": 3,
+    "Stakeholder communication": 3,
+    "System design": 3,
+    "Team leadership": 3,
+    "Technical debt management": 3,
+    "Terraform": 3
+  },
+  "text": "# SmartCart Recommender Engine  \nAI-driven product recommendation system with real-time user behavior analysis, optimized for e-commerce scalability and conversion rate uplift  \n\n## Badges  \n[Production Ready] [CI/CD] [Kubernetes] [AWS] [Database Optimization]  \n\n## Getting Started / Installation  \n1. Clone repository and install dependencies: `pip install -r requirements.txt`  \n2. Configure AWS credentials and Kafka brokers in `config/env_vars.py`  \n3. Deploy infrastructure using Terraform: `terraform init && terraform apply`  \n4. Run local data pipeline: `python pipeline/realtime_processor.py`  \n5. Access API endpoint at `http://api-gateway:8080/recommendations`  \n\n## Tech Stack  \n- **Python** (3.9) with **TensorFlow** for model training  \n- **Apache Kafka** for real-time event streaming  \n- **Redis** as in-memory caching layer  \n- **AWS Lambda** and **DynamoDB** for serverless data ingestion  \n- **Kubernetes** with **Helm** for container orchestration  \n- **PostgreSQL** with advanced indexing and query optimization  \n- **PyTorch Lightning** for distributed model training  \n- **Prometheus** and **Grafana** for monitoring  \n\n## Architecture / Design  \nThe system decouples real-time behavior analysis from model inference. Kafka streams user interactions to a Spark streaming pipeline, which feeds into a Redis cache for low-latency access. The recommendation model, trained on historical sales data, runs on AWS Batch with periodic retraining. Kubernetes ensures horizontal scaling during peak traffic, while Terraform manages cost-optimized EC2 spot instances for batch jobs. PostgreSQL is optimized with partitioned tables and query plan caching to handle 10M+ transactions/day.  \n\n## Usage / Examples  \n```python  \n# Real-time recommendation API call  \nimport requests  \nresponse = requests.get(\"http://api-gateway:8080/recommendations\", params={\"user_id\": \"U12345\", \"session_id\": \"S67890\"})  \nprint(response.json())  \n```  \n```bash  \n# Batch retraining pipeline  \npython pipeline/batch_retrain.py --model_version v2.3 --data_source s3://smartcart-warehouse  \n```  \n\n## Testing  \n- **Unit tests**: 98% coverage for model components (pytest)  \n- **Integration tests**: Kafka stream validation (JUnit)  \n- **Resilience testing**: Chaos Monkey simulations for node failures  \n- **Performance benchmarks**: 50k requests/sec sustained on 8-core EC2 instances  \n- **CI/CD**: GitHub Actions with automated dependency checks and security scans  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details. Contributions welcome!"
+}

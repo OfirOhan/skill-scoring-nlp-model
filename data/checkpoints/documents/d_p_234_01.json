@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_234_01",
+  "type": "project_readme",
+  "persona_id": "p_234",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 3,
+    "GitHub Actions": 3,
+    "Go": 4,
+    "Microservices architecture": 5,
+    "PostgreSQL": 3,
+    "Python": 3,
+    "Monitoring & alerting": 3,
+    "REST API design": 1
+  },
+  "text": "# EcomDirect Product Catalog Microservices  \nA distributed system for managing product data with event-driven architecture, leveraging Node.js for service boundaries and Kafka for asynchronous communication. Designed for high-throughput scenarios with consistent data synchronization across multiple touchpoints.  \n\n---\n\n## Testing  \nAutomated testing is baked into the CI/CD pipeline via GitHub Actions, ensuring all services pass unit and integration tests before deployment. Kafka message flow validation is handled through custom producers/consumers with strict schema enforcement.  \n- **Unit tests**: Jest with mocking for service isolation  \n- **Integration tests**: Kafka topic validation with schema registry checks  \n- **Cloud cost optimization**: Docker-based local testing reduces infrastructure overhead during development  \n\n---\n\n## Getting Started / Installation  \n1. Ensure [Node.js](https://nodejs.org) (v18+) and [Kafka](https://kafka.apache.org) are installed  \n2. Clone the repository and install dependencies:  \n   ```bash  \n   npm install  \n   ```  \n3. Configure Kafka brokers and PostgreSQL connection strings in `.env`  \n4. Run database migrations:  \n   ```bash  \n   npx prisma migrate deploy  \n   ```  \n5. Start services:  \n   ```bash  \n   npm run start:dev  \n   ```  \n\n---\n\n## Usage / Examples  \n```bash  \n# Add product to catalog  \ncurl -X POST http://localhost:3000/api/v1/products \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"sku\": \"SKU123\", \"name\": \"Wireless Headphones\", \"price\": 89.99}'  \n\n# Consume inventory update event  \nnode consume-inventory.js  \n```  \nEvents are emitted via Kafka topics, enabling decoupled updates to downstream systems like search indexes or pricing engines.  \n\n---\n\n## Tech Stack  \n- **Language**: Node.js (service boundaries), Go (data processing pipelines)  \n- **Message Queue**: Apache Kafka (event sourcing, async communication)  \n- **Database**: PostgreSQL (read/write operations, schema enforcement)  \n- **Utilities**: Python (data validation scripts), Prometheus (metrics collection)  \n\n---\n\n## Architecture / Design  \nThe system is divided into three core services:  \n1. **Catalog API**: Exposes product CRUD operations with Kafka event publishing  \n2. **Inventory Sync**: Listens to Kafka topics for real-time stock updates  \n3. **Data Aggregator**: Aggregates product metadata from multiple sources  \n\nKafka ensures eventual consistency across services, while PostgreSQL provides ACID guarantees for critical operations. Monitoring is handled through Prometheus and Grafana for latency and error tracking.  \n\n---\n\n## License  \nMIT License  \n[View License File](LICENSE)  \n\n---\n\n## Contributing  \nContributions are welcome! Please:  \n1. Open an issue to discuss proposed changes  \n2. Write tests for all new functionality  \n3. Follow the team's code style guide for Go/Node.js  \n4. Add metrics tags for observability in production environments"
+}

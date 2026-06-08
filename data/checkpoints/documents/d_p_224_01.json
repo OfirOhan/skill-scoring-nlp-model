@@ -1,0 +1,26 @@
+{
+  "doc_id": "d_p_224_01",
+  "type": "project_readme",
+  "persona_id": "p_224",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "GraphQL": 2,
+    "JavaScript": 5,
+    "Next.js": 4,
+    "Node.js": 2,
+    "REST API design": 4,
+    "React": 5,
+    "Responsive design": 5,
+    "State management (Redux/Zustand)": 4,
+    "Test automation": 3,
+    "TypeScript": 5,
+    "Unit testing": 2,
+    "Web performance optimization": 4,
+    "Webpack/Vite": 4
+  },
+  "text": "# Lumina GameUI Framework  \nA modular React-based UI toolkit for game development, optimized for performance and cross-platform rendering with WebGL. Built to accelerate UI prototyping while maintaining scalability for internal game projects.  \n\n---\n\n## Badges  \n[![React](https://badgen.net/badge/React/100%25/green)](https://react.dev)  \n[![TypeScript](https://badgen.net/badge/TypeScript/100%25/blue)](https://www.typescriptlang.org)  \n[![WebGL](https://badgen.net/badge/WebGL/100%25/orange)](https://www.opengl.org)  \n[![Webpack](https://badgen.net/badge/Webpack/100%25/purple)](https://webpack.js.org)  \n\n---\n\n## Tech Stack  \n- **React** (with hooks and context APIs)  \n- **TypeScript** (strict mode, type-driven component design)  \n- **WebGL** (via Three.js for shader-based rendering)  \n- **Redux Toolkit** (normalized state management for complex UI flows)  \n- **Webpack** (custom bundler for asset optimization)  \n- **REST APIs** (for asset loading and dynamic UI configuration)  \n- **Responsive Design** (adaptive layouts for VR/AR and desktop)  \n\n---\n\n## Architecture / Design  \nLumina is built around a **component-driven** architecture with isolated rendering contexts for WebGL and DOM elements. Key decisions:  \n- **State isolation**: Redux slices are scoped to UI modules to prevent global state bloat.  \n- **Performance focus**: Webpack configures code splitting and lazy loading for large game UIs.  \n- **Shader integration**: WebGL components use Three.js shaders for real-time visual effects without DOM overhead.  \n- **Responsive fallbacks**: CSS Grid and Flexbox ensure compatibility across screen sizes and input methods.  \n\n---\n\n## Getting Started / Installation  \n```bash\nnpm install @lumina/gameui  \n# or  \nyarn add @lumina/gameui  \n```  \nEnsure your project has a compatible React/TypeScript setup. For WebGL integration, install Three.js separately.  \n\n---\n\n## Usage / Examples  \n```tsx\nimport { Canvas, useThree } from '@lumina/gameui';  \n\nconst UIOverlay = () => {  \n  const { camera } = useThree();  \n  return (  \n    <Canvas camera={camera}>  \n      <mesh>  \n        <boxGeometry />  \n        <meshStandardMaterial color=\"#00ffcc\" />  \n      </mesh>  \n    </Canvas>  \n  );  \n};  \n```  \nThis example renders a WebGL cube over a game scene. For DOM-based UI, use the `LuminaProvider` to sync state between UI and game logic.  \n\n---\n\n## Contributing  \nWe welcome improvements to performance optimizations, shader integration, and accessibility features.  \n- Run `npm test` for automated checks (including WebGL rendering tests).  \n- Pull requests should include benchmark comparisons for performance-critical changes.  \n\n---\n\n## License  \nMIT (see [LICENSE](LICENSE) for details)."
+}

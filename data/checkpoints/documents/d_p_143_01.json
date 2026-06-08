@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_143_01",
+  "type": "project_readme",
+  "persona_id": "p_143",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "CI/CD pipelines": 4,
+    "Cloud cost optimization": 3,
+    "Cloud migration": 3,
+    "Docker": 4,
+    "Kubernetes": 3,
+    "Load balancing": 1,
+    "Monitoring & alerting": 3,
+    "Python": 1,
+    "Terraform": 4
+  },
+  "text": "# HealthGuard CI/CD Pipeline  \nA HIPAA-compliant CI/CD pipeline engineered for secure, scalable deployment of medical device software in production environments. Designed to meet strict regulatory standards while enabling rapid, reliable releases with zero downtime. The pipeline operates in AWS with Terraform-managed infrastructure, ensuring compliance, cost efficiency, and audit readiness.  \n\n## Deployment  \nThe pipeline is deployed on AWS using Terraform to provision VPCs, EC2 instances, and S3 buckets with encrypted storage. All resources are tagged for cost tracking, reducing monthly cloud expenses by 40% compared to manual deployment. Automated IAM role creation enforces least-privilege access, and CloudTrail logs are retained for 180 days for audit compliance. Monitoring is handled via CloudWatch with custom dashboards for pipeline stages, achieving 99.9% uptime during peak workloads.  \n\n## Getting Started / Installation  \nClone the repository to your local machine and install Terraform 1.5+ and AWS CLI. Configure AWS credentials via `aws configure` before running `terraform init`. Adjust the `variables.tf` file to specify your region and compliance requirements. Execute `terraform apply` to provision infrastructure. Verify deployment by checking the CloudFormation stack status and validating S3 bucket encryption settings.  \n\n## Usage / Examples  \nThe pipeline supports automated builds for Dockerized medical device software, with artifacts stored in encrypted S3 buckets. Example workflows include:  \n- Triggering a CI/CD pipeline via GitHub Actions for code commits  \n- Deploying containerized microservices to ECS clusters with auto-scaling  \n- Generating audit logs for each deployment stage using CloudWatch Logs  \n- Enforcing HIPAA compliance with data-at-rest encryption and access controls  \n\n## Tech Stack  \n- **AWS**: Compute, storage, and networking infrastructure  \n- **Terraform**: Infrastructure-as-Code for consistent, repeatable deployments  \n- **Docker**: Containerization for medical device software  \n- **Kubernetes**: Orchestration for scalable, resilient deployments (EKS)  \n- **CloudWatch**: Monitoring and alerting for pipeline health  \n- **IAM**: Role-based access control for secure resource management  \n\n## Architecture / Design  \nThe pipeline leverages Terraform to define immutable infrastructure, ensuring environments are reproducible and auditable. Docker containers are built and pushed to a private ECR registry, with automated tagging for version control. Kubernetes manages deployment to ECS clusters, with rolling updates configured to avoid service disruptions. All data is encrypted at rest and in transit, and access is restricted via IAM policies.  \n\n## License  \nMIT License  \n© 2023 Mikhail Petrov  \n\n## Badges  \n[![CI/CD Compliance](https://example.com/compliance-badge)](https://example.com)  \n[![Cloud Cost Savings](https://example.com/cost-badge)](https://example.com)  \n[![HIPAA Ready](https://example.com/hipaa-badge)](https://example.com)"
+}

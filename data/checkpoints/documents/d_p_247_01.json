@@ -1,0 +1,26 @@
+{
+  "doc_id": "d_p_247_01",
+  "type": "project_readme",
+  "persona_id": "p_247",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "CI/CD pipelines": 4,
+    "Cloud cost optimization": 1,
+    "Docker": 4,
+    "Kubernetes": 1,
+    "MongoDB": 4,
+    "Node.js": 4,
+    "Python": 1,
+    "REST API design": 4,
+    "React": 1,
+    "Terraform": 1,
+    "TypeScript": 4,
+    "Web performance optimization": 4
+  },
+  "text": "# QuestCraft: Multiplayer Puzzle Game  \nQuestCraft is a real-time collaborative puzzle game where 4–8 players solve interconnected logic challenges via synchronized spatial interactions. The core mechanic revolves around shared state management, with players manipulating dynamic physics-based objects to unlock progression. Average session duration is 12 minutes, with 15% of sessions exceeding 20 minutes due to complex puzzle chains.  \n\n## Tech Stack  \n- **Unity 3D** (with IL2CPP for mobile builds)  \n- **Node.js 18** (with TypeScript) for backend logic and WebSocket relays  \n- **MongoDB Atlas** (sharded cluster) for user progress tracking and match history  \n- **AWS Lambda + API Gateway** (cost-optimized with 30% reduction via reserved instances)  \n- **Docker** (containerized CI/CD pipelines with 40% faster deployment cycles)  \n- **REST API** (OpenAPI 3.0 spec) for client-server communication  \n\n## Architecture / Design  \nThe system uses a hybrid architecture: Unity clients communicate via WebSockets to a Node.js cluster managing state synchronization. MongoDB handles persistent user data, while AWS Lambda processes asynchronous tasks like match creation. Real-time updates are batched every 150ms to balance latency and bandwidth. Key optimizations include:  \n- **WebGL compression** for Unity assets (35% size reduction)  \n- **Node.js clustering** with PM2 for horizontal scaling (supports 500+ concurrent sessions)  \n- **MongoDB change streams** for real-time progress tracking  \n\n## Getting Started / Installation  \n1. Clone the repo via `git init && npm install`  \n2. Configure AWS credentials in `~/.aws/credentials`  \n3. Build Docker containers: `docker-compose up --build`  \n4. Run the Unity Editor with `npm run start:unity`  \n5. Test API endpoints via Postman using the OpenAPI spec  \n\n## Usage / Examples  \n- **Server**: `npm run start:server` initializes WebSocket relays and MongoDB connections  \n- **Client**: Unity scenes load via `SceneManager.LoadScene(\"Lobby\")` with preloaded asset bundles  \n- Example API call: `POST /api/match/create` with payload `{ players: 4, puzzle: \"maze\" }`  \n\n## Badges  \n[![CI/CD Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/umakrishnan/questcraft/main/.github/badges/ci.json)](https://github.com/umakrishnan/questcraft/actions)  \n[![Docker Image Size](https://img.shields.io/docker/size/umakrishnan/questcraft-server)](https://hub.docker.com/r/umakrishnan/questcraft-server)  \n\n## Contributing  \nFocus on backend state management, Unity networking, or MongoDB schema improvements. Pull requests must include benchmark results for performance changes.  \n\n## License  \nMIT License (© 2023 Uma Krishnan)"
+}

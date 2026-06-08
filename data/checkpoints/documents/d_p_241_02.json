@@ -1,0 +1,26 @@
+{
+  "doc_id": "d_p_241_02",
+  "type": "project_readme",
+  "persona_id": "p_241",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "GraphQL": 1,
+    "JavaScript": 4,
+    "Next.js": 1,
+    "Node.js": 1,
+    "REST API design": 1,
+    "React": 5,
+    "TypeScript": 1,
+    "State management": 1,
+    "Test automation": 1,
+    "Stakeholder management": 1,
+    "Web performance optimization": 1,
+    "Webpack/Vite": 1,
+    "State management (Redux/Zustand)": 1
+  },
+  "text": "# Progressive Web App for E-Commerce Platform  \n\nA production-ready PWA built to deliver seamless shopping experiences with offline capabilities, ensuring users can browse and purchase products even without internet connectivity.  \n\n---\n\n## Badges  \n[![PWA](https://img.shields.io/badge/PWA-Enabled-blue)](https://web.dev/progressive-web-apps/)  \n[![React](https://img.shields.io/badge/React-18.2-blue)](https://reactjs.org/)  \n[![Offline Support](https://img.shields.io/badge/Offline-First-green)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Offline_support)  \n\n---\n\n## Tech Stack  \n- **React** (18.2) – Core framework for component-driven UI  \n- **HTML5** – Semantic structure for accessibility and performance  \n- **CSS3** – Responsive design with modern layout techniques  \n- **Service Workers** – Background sync and caching strategy  \n- **Web App Manifest** – Enable installable PWA behavior  \n- **Axios** – HTTP client for API interactions  \n\n---\n\n## Architecture / Design  \nThe app follows a component-based architecture, with a focus on modularity and maintainability. Key decisions include:  \n- **Offline-first approach**: Critical paths (product listings, cart) are cached via service workers, ensuring functionality during network outages.  \n- **Manifest integration**: The web app manifest enables installation prompts, enhancing user engagement.  \n- **Progressive enhancement**: Core features are available without JavaScript, with enhanced interactivity added dynamically.  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/your-username/pwa-ecommerce.git  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   npm install  \n   ```  \n3. Start the development server:  \n   ```bash  \n   npm start  \n   ```  \n4. Open `http://localhost:3000` in your browser.  \n\n---\n\n## Usage / Examples  \n- **Offline browsing**: Navigate to product pages or add items to the cart without an internet connection.  \n- **Service worker caching**: Assets are preloaded and cached, ensuring fast load times even after initial installation.  \n- **Installable PWA**: The manifest triggers an installation prompt, allowing users to save the app to their home screen.  \n\n---\n\n## Contributing  \nThis project is a solo endeavor, but contributions are welcome! If you have ideas for improving offline workflows or UI/UX enhancements, open an issue or submit a pull request.  \n\n---\n\n## License  \nMIT License – See the [LICENSE](LICENSE) file for details."
+}

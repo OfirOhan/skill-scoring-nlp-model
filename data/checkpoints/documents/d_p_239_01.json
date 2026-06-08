@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_239_01",
+  "type": "project_readme",
+  "persona_id": "p_239",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "3D graphics (OpenGL/Vulkan)": 5,
+    "C#/.NET": 4,
+    "Game networking": 3,
+    "Game physics": 4,
+    "GraphQL": 3,
+    "JavaScript": 2,
+    "Microservices architecture": 3,
+    "REST API design": 3,
+    "Unity": 5,
+    "Unreal Engine": 3
+  },
+  "text": "# NexGen Game Engine for SaaS  \nA cloud-first game engine optimized for SaaS scalability, enabling real-time multiplayer experiences with sub-50ms latency and 99.95% uptime across global player bases. Built for teams prioritizing modular architecture and zero-downtime deployments.  \n\n## Deployment  \nDeploy via AWS Lambda + ECS for serverless scalability or Azure Kubernetes Service for containerized microservices. CI/CD pipelines automate A/B testing of networking protocols, achieving 30% faster hotfix rollouts compared to monolithic alternatives. Metrics dashboard (Prometheus + Grafana) provides real-time tracking of player throughput and server load balancing efficiency.  \n\n## Getting Started / Installation  \nClone the repository and run `npm install --force` to bootstrap the environment. Configure `config/cloudProviders.json` with your preferred SaaS stack (AWS, Azure, or GCP). For local testing, use Docker Compose to spin up a simulated multiplayer environment with 100 concurrent users.  \n\n## Usage / Examples  \n```typescript\nconst gameServer = new NexGenServer({ \n  maxPlayers: 500, \n  physicsUpdateRate: 60, \n  networkProtocol: 'WebRTC' \n});\ngameServer.registerPlugin(new SpatialPartitioningPlugin());\ngameServer.start(); \n```  \nExample use cases include:  \n- Real-time battle royale matches with 200ms sync latency  \n- Persistent open-world MMOs with 50,000 concurrent sessions  \n- Turn-based strategy games leveraging GraphQL for state synchronization  \n\n## Tech Stack  \n- **Core Engine**: C#/.NET 8.0 with ECS pattern for entity management  \n- **Networking**: WebRTC + QUIC for low-latency peer-to-peer sync  \n- **Backend**: Apollo Server 4 + GraphQL for stateful session management  \n- **Rendering**: Unity 2022.3 with Vulkan acceleration for 4K+ FPS  \n- **Orchestration**: Kubernetes with Helm charts for microservice scaling  \n\n## Architecture / Design  \nThe engine employs a layered architecture:  \n1. **Physics Layer**: Customized NVIDIA PhysX integration for 1ms deterministic lockstep  \n2. **Network Layer**: Hybrid REST/GraphQL API for client-server reconciliation  \n3. **Cloud Layer**: Serverless functions for matchmaking and session management  \n4. **Analytics Layer**: Custom metrics pipeline for 90+ telemetry data points per session  \n\nKey decisions include decoupling physics calculations from network updates, enabling independent scaling of compute and latency-sensitive components. The architecture supports 10x horizontal scaling with minimal latency degradation.  \n\n## License  \nMIT License with commercial use clause for SaaS platforms.  \n\n## Badges  \n[![SaaS Compliance](https://example.com/saas-badge)](https://example.com) [![Cloud Native](https://example.com/cloud-badge)](https://example.com) [![Performance](https://example.com/perf-badge)](https://example.com)"
+}

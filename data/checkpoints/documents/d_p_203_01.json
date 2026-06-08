@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_203_01",
+  "type": "project_readme",
+  "persona_id": "p_203",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "CI/CD pipelines": 3,
+    "Go": 5,
+    "Kubernetes": 4,
+    "Microservices architecture": 5,
+    "PostgreSQL": 5,
+    "Python": 3,
+    "REST API design": 5,
+    "Redis": 4,
+    "Terraform": 4
+  },
+  "text": "# Secure API Gateway with Role-Based Access Control  \n\nA production-ready API gateway designed to enforce strict access policies, audit trails, and data integrity for cybersecurity applications. Built to scale across microservices, this system dynamically evaluates user roles, enforces encryption, and integrates with existing SIEM tools.  \n\n## Roadmap / Future Work  \n- **Dynamic policy updates**: Enable real-time rule adjustments via AWS Lambda without downtime  \n- **SIEM integration**: Add logs to CloudWatch and Splunk for threat detection  \n- **Multi-factor authentication**: Implement OAuth 2.0 with hardware token support  \n- **Performance optimization**: Reduce latency by 40% via Redis caching and async processing  \n\n## Getting Started / Installation  \n1. Clone the repo and install dependencies:  \n   ```bash  \n   go mod tidy  \n   pip install -r requirements.txt  \n   ```  \n2. Configure AWS credentials and Kubernetes cluster access  \n3. Deploy infrastructure using Terraform:  \n   ```bash  \n   terraform init && terraform apply -auto-approve  \n   ```  \n4. Start the gateway:  \n   ```bash  \n   go run main.go --config config.yaml  \n   ```  \n\n## Usage / Examples  \n```bash  \ncurl -X GET \"https://api.example.com/secure/data\" \\\n  -H \"Authorization: Bearer <token>\" \\\n  -H \"X-User-Role: admin\"  \n```  \nThis request is validated against PostgreSQL-stored policies, encrypted with AES-256, and logged to CloudWatch. Role-based endpoints are enforced via Redis-based rate limiting.  \n\n## Tech Stack  \n- **Go**: Core for high-performance API routing and security logic  \n- **AWS**: EC2 Auto Scaling, VPC segmentation, and CloudFront for edge security  \n- **Kubernetes**: Horizontal pod autoscaling and service mesh integration  \n- **Redis**: Distributed token storage with TTL-based session management  \n- **PostgreSQL**: Role-based policy storage with row-level security  \n- **Terraform**: Infrastructure-as-code for consistent, auditable deployments  \n- **CI/CD**: GitHub Actions for automated testing and deployment pipelines  \n\n## Architecture / Design  \nThe gateway operates as a microservice layer, intercepting requests before they reach backend services. Key components include:  \n- **Policy engine**: Written in Go, evaluates RBAC rules stored in PostgreSQL  \n- **Token validation**: Uses Redis for O(1) lookups and JWT decryption  \n- **Audit logging**: Streams to CloudWatch with AWS KMS encryption  \n- **Resilience**: Built with retries, circuit breakers, and distributed tracing  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
+}

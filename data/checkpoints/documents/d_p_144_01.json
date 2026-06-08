@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_144_01",
+  "type": "project_readme",
+  "persona_id": "p_144",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "CI/CD pipelines": 2,
+    "Cloud networking (VPC/subnets)": 2,
+    "Configuration management (Ansible)": 2,
+    "GitHub Actions": 2,
+    "GitLab CI": 1,
+    "Jenkins": 1,
+    "Linux administration": 2,
+    "Monitoring & alerting": 2,
+    "Prometheus/Grafana": 2,
+    "Python": 2,
+    "Shell scripting (Bash)": 2
+  },
+  "text": "# SecureCI: Automated Security Compliance Pipeline  \nSecureCI is a modular framework for enforcing security benchmarks across CI/CD pipelines, integrating real-time compliance checks with runtime policy enforcement. Designed for DevOps teams, it supports CIS, NIST, and ISO 27001 standards, with extensible rule sets and granular audit trails.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies:  \n```bash  \ngit clone https://github.com/secureci/secureci.git  \ncd secureci  \npip install -r requirements.txt  \n```\nConfigure your pipeline by defining compliance profiles in `config/compliance.yaml`. For Docker-based deployments, use `docker-compose up` to spin up the enforcement server.  \n\n## Usage / Examples  \nTrigger a compliance scan via CLI:  \n```bash  \nsecureci scan --profile cis-1.5 --target /var/www/html  \n```  \nThis executes a full CIS 1.5 benchmark check on a web root directory, outputting violations in JSON format. For CI integration, use the GitHub Actions runner to automate scans on code pushes:  \n```yaml  \n- name: Run SecureCI Compliance  \n  uses: secureci/secureci-action@v1  \n  with:  \n    profile: nist-800-53  \n    target: ./src  \n```  \nThe tool also supports dynamic policy enforcement via Open Policy Agent (OPA) for runtime validation.  \n\n## Badges  \n[![CI/CD Status](https://img.shields.io/badge/CI%20Status-passing-green)](https://github.com/secureci/secureci/actions)  \n[![Security Scan](https://img.shields.io/badge/Security-Scanned-blue)](https://github.com/secureci/secureci/security/dependabot)  \n[![Code Coverage](https://img.shields.io/badge/Coverage-85%25-yellow)](https://github.com/secureci/secureci/actions)  \n\n## Tech Stack  \n- **Core**: Go, Python, Open Policy Agent (OPA)  \n- **Infrastructure**: Docker, Terraform, Prometheus  \n- **Security**: CIS Benchmarks, NIST SP 800-53, SANS ICS  \n- **CI/CD**: GitHub Actions, GitLab (excluded per policy)  \n\n## Architecture / Design  \nSecureCI operates as a stateless policy engine with three layers:  \n1. **Input Parser**: Validates and normalizes compliance profiles  \n2. **Policy Engine**: Executes rule sets against target systems  \n3. **Reporting**: Generates audit logs and remediation guides  \nThe architecture supports horizontal scaling via gRPC for distributed enforcement.  \n\n## Contributing  \nSubmit bug reports via GitHub Issues. For code contributions, fork the repo, implement features with unit tests, and submit a pull request. All changes must include documentation updates and CI/CD pipeline validation.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/secureci/secureci/blob/main/LICENSE) for details."
+}

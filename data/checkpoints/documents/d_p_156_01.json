@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_156_01",
+  "type": "project_readme",
+  "persona_id": "p_156",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "CI/CD pipelines": 3,
+    "Configuration management (Ansible)": 3,
+    "Docker": 3,
+    "GitLab CI": 3,
+    "Kubernetes": 1,
+    "Linux administration": 3,
+    "Microservices architecture": 4,
+    "Monitoring & alerting": 3,
+    "PostgreSQL": 4,
+    "Python": 4,
+    "REST API design": 4
+  },
+  "text": "# SecurePay API Gateway  \nA high-throughput payment processing platform handling 2M+ transactions/month with 99.95% uptime. Built to scale with minimal latency, this system processes card payments, refunds, and fraud checks while maintaining PCI-DSS compliance across 15+ microservices.  \n\n## Deployment  \nThe gateway runs on AWS EC2 clusters with auto-scaling groups, backed by RDS PostgreSQL clusters (read replicas + logical replication). GitLab CI pipelines deploy updates every 15 mins, with blue-green deployments for zero-downtime rollouts. Monitoring via Prometheus and Grafana tracks 150+ metrics, including API latency (avg 85ms) and error rates (<0.02%).  \n\n## Badges  \n[![Build Status](https://example.com/build-badge)](https://example.com/build)  \n[![Coverage](https://example.com/coverage-badge)](https://example.com/coverage)  \n[![Uptime](https://example.com/uptime-badge)](https://example.com/uptime)  \n\n## Tech Stack  \n- **Backend**: Python 3.9 with FastAPI (150K+ endpoints/sec)  \n- **Database**: PostgreSQL 14 with replication (100GB+ writes/day)  \n- **Networking**: REST APIs with OpenAPI specs (95% spec compliance)  \n- **Containers**: Dockerized services (80% image reuse)  \n- **Ops**: Ansible playbooks for config management (500+ hosts)  \n- **CI/CD**: GitLab pipelines with parallel jobs (30% faster than Jenkins)  \n- **Monitoring**: Prometheus + Alertmanager (98% SLA adherence)  \n\n## Architecture / Design  \nThe system is split into three layers:  \n1. **Gateway Layer**: Load-balanced ingress with rate limiting (10K reqs/sec)  \n2. **Service Layer**: Microservices for payment routing, fraud detection, and audit logging  \n3. **Data Layer**: PostgreSQL with partitioned tables (10TB+ data) and CDC for async replication  \n\nKey decisions include using PostgreSQL's JSONB for flexible payment metadata and implementing circuit breakers for resilient service calls.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/fin-tech-innovators/securepay.git  \ncd securepay  \ndocker-compose up -d  \nansible-playbook -i inventory.ini setup.yml  \n```  \nEnsure AWS credentials are configured via environment variables.  \n\n## Usage / Examples  \n```python  \nimport requests  \nresponse = requests.post('https://api.securepay.com/v1/payments', json={  \n    \"amount\": 199.99,  \n    \"card_number\": \"4242424242424242\",  \n    \"exp_month\": 12,  \n    \"exp_year\": 2025  \n})  \nprint(response.json())  \n```  \nExpect a 200 OK with transaction ID and authorization code.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

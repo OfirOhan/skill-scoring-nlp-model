@@ -1,0 +1,26 @@
+{
+  "doc_id": "d_p_174_02",
+  "type": "project_readme",
+  "persona_id": "p_174",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 1,
+    "Application security (OWASP)": 2,
+    "Azure": 1,
+    "Compliance (SOC2/GDPR)": 2,
+    "Encryption & PKI": 3,
+    "Firewall configuration": 1,
+    "IAM/Access control": 2,
+    "Network automation": 1,
+    "Network security": 2,
+    "Penetration testing": 1,
+    "SIEM tools": 2,
+    "Security auditing": 1,
+    "Vulnerability management": 1
+  },
+  "text": "# HealthGuard: HIPAA-Compliant Encryption for Health Records  \n\nHealthGuard is a production-ready library for encrypting health records while maintaining HIPAA compliance. Built for healthtech systems requiring robust data protection, it leverages AES-256 and FIPS 140-2-certified algorithms to secure patient data at rest and in transit. The library abstracts cryptographic complexity, enabling developers to integrate encryption into workflows without sacrificing performance or compliance.  \n\n## Badges  \n[![Build Status](https://example.com/build-badge)](https://example.com)  \n[![Test Coverage](https://example.com/coverage-badge)](https://example.com)  \n[![HIPAA Compliance](https://example.com/compliance-badge)](https://example.com)  \n\n## Tech Stack  \n- **Language**: Python 3.9+ (with C extensions for cryptographic primitives)  \n- **Encryption**: AES-256-GCM, RSA-OAEP, HMAC-SHA256  \n- **Compliance**: HIPAA, NIST SP 800-53, FIPS 140-2  \n- **Dependencies**: cryptography, pyOpenSSL, PyKDF, cffi  \n- **CI/CD**: GitHub Actions (Linux/macOS builds only)  \n\n## Configuration  \nHealthGuard uses environment variables and a `config.yaml` file for key management. Example:  \n```yaml  \nencryption:  \n  key_rotation_interval: 30d  \n  audit_log_retention: 90d  \n  algorithm: AES-256-GCM  \n```  \nSet `HEALTHGUARD_LOG_LEVEL=DEBUG` for detailed encryption metadata.  \n\n## Getting Started / Installation  \n```bash  \npip install healthguard --upgrade  \n```  \nEnsure Python 3.9+ is installed. Dependencies include OpenSSL development headers (Linux) or Apple SDKs (macOS).  \n\n## Usage / Examples  \n```python  \nfrom healthguard import encrypt_record, decrypt_record  \n\npatient_data = {\"ssn\": \"123-45-6789\", \"diag\": \"Hypertension\"}  \nencrypted = encrypt_record(patient_data, key=b\"super-secret-key-123\")  \ndecrypted = decrypt_record(encrypted, key=b\"super-secret-key-123\")  \n```  \nHealthGuard handles key derivation via PBKDF2-HMAC-SHA256 with 100,000 iterations.  \n\n## Testing  \nRun unit and integration tests with:  \n```bash  \npython -m pytest tests/  \n```  \nCoverage: 98.2% (excluding FIPS validation stubs). Tests include:  \n- Key rotation edge cases  \n- Performance benchmarks (encrypt/decrypt 1M records/sec)  \n- Compliance audits (HIPAA data-at-rest checks)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

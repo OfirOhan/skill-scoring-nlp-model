@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_227_01",
+  "type": "project_readme",
+  "persona_id": "p_227",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "CI/CD pipelines": 2,
+    "Cloud cost optimization": 1,
+    "Cloud networking (VPC/subnets)": 1,
+    "GitHub Actions": 1,
+    "GitLab CI": 1,
+    "Go": 1,
+    "Jenkins": 1,
+    "Linux administration": 3,
+    "Monitoring & alerting": 4,
+    "PostgreSQL": 1,
+    "Prometheus/Grafana": 5,
+    "Python": 1,
+    "Redis": 1,
+    "Terraform": 1
+  },
+  "text": "# Real-Time Inventory Monitoring System  \n\nA scalable solution for tracking product availability across e-commerce platforms, built using Prometheus and Grafana to ensure operational precision and reduce stockout incidents by 35% in production.  \n\n---\n\n## Roadmap / Future Work  \n\n- **Phase 1 (Q3 2024):** Expand metric coverage to include fulfillment pipeline latency and regional stock distribution.  \n- **Phase 2 (Q1 2025):** Integrate with order management systems for predictive inventory thresholds.  \n- **Phase 3 (Q2 2025):** Implement dynamic alert suppression during peak traffic to minimize false positives.  \n\n---\n\n## Getting Started / Installation  \n\n1. **Prerequisites:**  \n   - Prometheus (v2.44+)  \n   - Grafana (v10.1+)  \n   - Linux environment with `systemd` for service management  \n\n2. **Setup:**  \n   - Deploy Prometheus with scrape configurations for inventory exporters.  \n   - Configure Grafana dashboards using provided `JSON` templates.  \n   - Run `./setup.sh` to initialize default alert rules and service dependencies.  \n\n---\n\n## Usage / Examples  \n\n- **Querying inventory levels:**  \n  ```promql\n  inventory_stock{product_id=\"12345\"}\n  ```  \n- **Alerting for low stock:**  \n  ```yaml\n  - alert: LowStockCritical\n    expr: inventory_stock{location=\"us-east-1\"} < 50\n    for: 1h\n    labels:\n      severity: critical\n  ```  \n- **Dashboard example:**  \n  Monitor regional stock variance with a heatmap visualization, enabling rapid replenishment decisions.  \n\n---\n\n## Tech Stack  \n\n- **Monitoring:** Prometheus (scraping, alerting, metrics aggregation)  \n- **Visualization:** Grafana (dashboard creation, real-time data exploration)  \n- **Data Sources:** Custom inventory exporters (exposed via HTTP endpoints)  \n\n---\n\n## Architecture / Design  \n\nThe system operates as a layered pipeline: Prometheus scrapes metrics from inventory services, aggregating time-series data for anomaly detection. Grafana serves as the interface for stakeholders, with alert rules tied to business-critical KPIs. SRE ownership ensures metric granularity and alert fatigue mitigation, balancing precision with operational overhead.  \n\n---\n\n## License  \n\nMIT License — see [LICENSE](LICENSE) for details."
+}

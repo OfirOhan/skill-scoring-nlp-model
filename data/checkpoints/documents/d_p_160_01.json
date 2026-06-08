@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_160_01",
+  "type": "project_readme",
+  "persona_id": "p_160",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 1,
+    "Database optimization": 3,
+    "Docker": 3,
+    "Go": 1,
+    "Kubernetes": 1,
+    "Microservices architecture": 1,
+    "Python": 1,
+    "REST API design": 4
+  },
+  "text": "# HealthDataSync  \nReal-time patient data synchronization between IoT devices and backend systems using Node.js and PostgreSQL. Designed for healthtech applications requiring low-latency, secure data flow with minimal infrastructure overhead.  \n\n---\n\n## Getting Started / Installation  \n1. Install [Node.js](https://nodejs.org) (v18+) and [PostgreSQL](https://www.postgresql.org)  \n2. Clone the repository:  \n   ```bash  \n   git clone https://github.com/your-username/healthdatasync.git  \n   cd healthdatasync  \n   ```  \n3. Set up PostgreSQL:  \n   - Create a database named `healthdatasync_db`  \n   - Update `config/db.js` with your credentials  \n4. Install dependencies:  \n   ```bash  \n   npm install  \n   ```  \n5. Start the server:  \n   ```bash  \n   npm run start  \n   ```  \n\n---\n\n## Usage / Examples  \n- **Sync patient vitals**:  \n  ```bash  \n  curl -X POST http://localhost:3000/api/v1/sync \\\n    -H \"Content-Type: application/json\" \\\n    -d '{\n      \"patient_id\": \"P12345\",\n      \"data\": {\n        \"heart_rate\": 72,\n        \"temperature\": 36.8\n      }\n    }'  \n  ```  \n- **Fetch real-time stats**:  \n  ```bash  \n  curl http://localhost:3000/api/v1/patients/P12345/stats  \n  ```  \n- **WebSocket integration**:  \n  Connect to `ws://localhost:3001` for live updates.  \n\n---\n\n## Badges  \n[![Build Status](https://your-ci-cd.com/status)](https://your-ci-cd.com)  \n[![Coverage](https://your-coverage.com/healthdatasync)](https://your-coverage.com/healthdatasync)  \n\n---\n\n## Tech Stack  \n- **Backend**: Node.js (v18), REST API, WebSocket  \n- **Database**: PostgreSQL (with query indexing and connection pooling)  \n- **Security**: TLS encryption, JWT authentication  \n- **Containerization**: Docker (for local development)  \n\n---\n\n## Architecture / Design  \n- **IoT Layer**: Devices push data via MQTT to a message broker (e.g., Mosquitto).  \n- **Sync Layer**: Node.js server validates data, stores it in PostgreSQL, and triggers WebSocket updates.  \n- **Analytics Layer**: REST API provides aggregated stats for dashboards.  \n- **Optimization**: Query performance improved by 40% via index optimization and batch processing.  \n\n---\n\n## Contributing  \nPull requests are welcome! Ensure code adheres to Prettier formatting and includes unit tests. For critical changes, open an issue to discuss implementation details.  \n\n---\n\n## License  \nMIT License © 2023 Beatriz Lopes"
+}

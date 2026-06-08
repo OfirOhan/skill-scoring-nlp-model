@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_060_01",
+  "type": "project_readme",
+  "persona_id": "p_060",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "C/C++ (embedded)": 3,
+    "Embedded Linux": 3,
+    "Firmware development": 3,
+    "GitLab CI": 2,
+    "Hardware-software integration": 3,
+    "IoT protocols (MQTT/CoAP)": 3,
+    "Python": 2,
+    "REST API design": 2,
+    "RTOS": 3,
+    "Shell scripting (Bash)": 2
+  },
+  "text": "# SmartInventory: IoT-Based Inventory Management System  \nReal-time, sensor-driven inventory tracking for e-commerce warehouses, reducing stockouts by 98% and manual audits by 30% through edge-computing and cloud integration.  \n\n## Contributing  \nWe welcome contributions to expand sensor support, refine cloud integration, or improve firmware robustness. Start by addressing open issues labeled *enhancement* or *bug*—prioritize edge device stability and protocol optimization. All pull requests must include unit tests and CI pipeline validation.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/your-username/SmartInventory.git`  \n2. Install dependencies: `docker compose build && docker compose up -d`  \n3. Configure MQTT broker (Mosquitto) with credentials in `.env`  \n4. Flash firmware to STM32Nucleo boards using STM32CubeIDE (see `firmware/README.md`)  \n\n## Usage / Examples  \n- **Warehouse tracking**: Deploy sensors on shelves to log stock levels every 15 seconds via MQTT.  \n- **Alerts**: Trigger SMS notifications via REST API when thresholds drop below 10% capacity.  \n- **Integration**: Sync with Shopify via Webhooks for real-time order fulfillment updates.  \n\n## Tech Stack  \n- **Embedded**: C11 (STM32 HAL), FreeRTOS, MQTT over TLS  \n- **Cloud**: AWS IoT Core (MQTT bridge), Python Flask API  \n- **Data**: InfluxDB (time-series), Grafana (dashboard)  \n- **Utils**: Bash scripts for CI/CD, Docker for containerization  \n\n## Architecture / Design  \nThe system operates in three layers:  \n1. **Edge**: STM32 microcontrollers run firmware to aggregate sensor data (humidity, motion, RFID) and batch MQTT publishes every 10 seconds.  \n2. **Cloud**: AWS IoT Core routes messages to Python-based analytics layer, which triggers alerts or syncs with e-commerce APIs.  \n3. **Persistence**: InfluxDB stores raw metrics, while PostgreSQL handles order-state correlations.  \n\n## License  \nMIT License — see `LICENSE` for details.  \n\n## Badges  \n![Accuracy](https://img.shields.io/badge/accuracy-98%25-green)  \n![Efficiency](https://img.shields.io/badge/efficiency-30%25-blue)  \n![RTOS](https://img.shields.io/badge/RTOS-FreeRTOS-yellow)  \n![Protocol](https://img.shields.io/badge/protocol-MQTT%20%26%20CoAP-orange)"
+}

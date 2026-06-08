@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_054_01",
+  "type": "project_readme",
+  "persona_id": "p_054",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "Apache Airflow": 2,
+    "Apache Kafka": 3,
+    "Apache Spark": 4,
+    "Data warehousing": 2,
+    "Docker": 3,
+    "ETL pipeline design": 3,
+    "Kubernetes": 2,
+    "Python": 4,
+    "Snowflake": 4,
+    "Terraform": 3,
+    "dbt": 3
+  },
+  "text": "# Real-Time Fraud Detection System  \nA production-grade pipeline for detecting anomalous financial transactions using Kafka, Spark, and cloud-native tools. Monitors 2M+ transactions/sec with <100ms latency, reducing false positives by 32% in live environments.  \n\n## Deployment  \nDeployed on AWS using Terraform-managed EC2 instances with Dockerized Kafka/Spark clusters. Production metrics available via Prometheus/Grafana dashboards.  \n\n## Badges  \n[![Production Status](https://img.shields.io/badge/production-ready-green)](https://example.com)  \n[![Tech Stack](https://img.shields.io/badge/kafka%20+%20spark%20+%20aws-blue)](https://example.com)  \n[![License](https://img.shields.io/badge/license-MIT-yellow)](https://example.com)  \n\n## Tech Stack  \n- **Kafka**: Real-time ingestion with 3-node cluster for fault tolerance  \n- **Spark Structured Streaming**: Windowed aggregations for behavioral analysis  \n- **Snowflake**: Delta Lake integration for historical pattern matching  \n- **Python**: Custom ML models for anomaly scoring (scikit-learn, PyTorch)  \n- **AWS**: EC2, S3, and CloudWatch for storage/metrics  \n- **Docker**: Containerized microservices with multi-stage builds  \n- **Terraform**: IaC for Kafka/ZooKeeper cluster provisioning  \n\n## Architecture / Design  \nData flows from Kafka brokers to Spark clusters via Kafka Streams. Spark processes transactions in 100ms windows, cross-referencing with Snowflake's historical dataset. Results are written to a Kafka topic for downstream alerting. Metrics are exported to Prometheus for real-time monitoring.  \n\n## Getting Started / Installation  \n```bash\ngit clone https://github.com/connormurphy/fraud-detection.git  \ncd fraud-detection  \ndocker compose up -d  \n# Deploy to AWS using terraform apply after configuring variables  \n```  \n\n## Usage / Examples  \nExample Kafka message:  \n```json  \n{\"transaction_id\": \"TX123456\", \"amount\": 1500.99, \"ip\": \"192.0.2.1\", \"user_agent\": \"Mozilla/5.0\"}  \n```  \nSpark processes this into a fraud score (0-1) using a trained model. Output is sent to a Kafka topic for integration with alerting systems.  \n\n## License  \nMIT License – see [LICENSE](https://example.com) for details."
+}

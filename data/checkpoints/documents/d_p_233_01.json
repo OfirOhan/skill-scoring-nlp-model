@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_233_01",
+  "type": "project_readme",
+  "persona_id": "p_233",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "CI/CD pipelines": 3,
+    "Chaos engineering": 3,
+    "Cloud cost optimization": 2,
+    "Kubernetes": 3,
+    "Load balancing": 3,
+    "Monitoring & alerting": 4,
+    "Prometheus/Grafana": 4,
+    "Python": 3,
+    "Serverless": 2,
+    "Terraform": 3
+  },
+  "text": "# AdGuard: Real-Time Ad Tech Infrastructure Monitoring  \nA tool to reduce false positives in ad tech infrastructure alerts by 30% and maintain latency under 150ms. Built for adtech systems with high availability requirements, this project centralizes monitoring, alerting, and chaos testing for ad servers, bidding systems, and data pipelines.  \n\n## Acknowledgments  \nThis project was made possible by the collaboration of Theo van den Berg (Senior Site Reliability Engineer) and the AdTech Infrastructure team. Special thanks to the AWS team for enabling scalable monitoring, and to the Prometheus contributors for their foundational work.  \n\n## Getting Started / Installation  \nClone the repository using your preferred method. Ensure Python 3.8+, Docker, and Terraform are installed. For internal use, no external dependencies are required—this tool is designed to run in a secure, isolated environment.  \n\n## Usage / Examples  \nRun `./start.sh` to initialize the monitoring service. Use `./check_metrics.py` to verify latency and error rates across ad servers. Chaos testing is enabled via `./chaos_run.sh`, which simulates network partitions and load spikes to validate resilience. Example alerts include:  \n- \"Ad server A latency > 150ms (2 alerts in 5 minutes)\"  \n- \"Bidding system B down for 30 seconds\"  \n\nDashboards are accessible via Grafana at `http://localhost:3000` after initial setup.  \n\n## Tech Stack  \n- **Python 3.9** for core logic and data processing  \n- **Kubernetes** for orchestrating monitoring agents across 12 ad server clusters  \n- **AWS CloudWatch + Prometheus** for dual-layer metrics aggregation (reduced false positives by 30%)  \n- **Terraform** for reproducible deployment of monitoring nodes  \n- **Chaos Monkey** for scheduled load testing and fault injection  \n- **Nginx** as a load balancer with health checks for ad tech microservices  \n\n## License  \nMIT License. For internal use only.  \n\n## Badges  \n[![Production Use](https://img.shields.io/badge/production-use-green)](https://github.com/your-org/adguard)  \n[![Team-Internal](https://img.shields.io/badge/team-internal-blue)](https://github.com/your-org/adguard)  \n\n## Contributing  \nContributions are welcome for internal use. Ensure AWS credentials are configured via environment variables, and Terraform is set up for infrastructure provisioning. All changes must include metrics validation and chaos testing."
+}

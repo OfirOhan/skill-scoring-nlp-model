@@ -1,0 +1,30 @@
+{
+  "doc_id": "d_p_188_01",
+  "type": "project_readme",
+  "persona_id": "p_188",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 5,
+    "Collaboration": 1,
+    "Communication": 1,
+    "Configuration management (Ansible)": 2,
+    "Database optimization": 2,
+    "Docker": 3,
+    "GCP": 1,
+    "Infrastructure as Code": 4,
+    "Kubernetes": 4,
+    "Load balancing": 3,
+    "Monitoring & alerting": 3,
+    "Network automation": 2,
+    "Python": 2,
+    "Serverless": 3,
+    "Terraform": 3
+  },
+  "text": "# NexaCloud Platform Microservices Architecture  \nA production-grade, self-contained SaaS platform built for horizontal scalability, with 99.99% uptime SLA and 500+ endpoints handling 10M+ requests/month. Designed for resilience, observability, and zero-downtime deployments.  \n\n## Testing  \nAutomated test coverage exceeds 95% across unit, integration, and chaos testing scenarios.  \n- **Unit tests**: 98% coverage using Jest (Node) and Pytest (Python) with mock dependencies  \n- **Integration tests**: 92% coverage via API mocking and database transaction rollback  \n- **Chaos testing**: Simulated 3-node outages, network partitions, and disk failures using Chaos Monkey  \n- **CI/CD**: GitHub Actions pipeline with parallel test execution reducing deployment latency by 40%  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/olumideafolabi/nexacloud-platform.git  \ncd nexacloud-platform  \ndocker-compose up --build  \n```  \nRequires:  \n- Docker 20.10+  \n- Terraform 1.3+  \n- AWS CLI v2 configured with IAM credentials  \n- Prometheus and Grafana for monitoring  \n\n## Usage / Examples  \n```bash  \n# Query user data via REST API  \ncurl -X GET \"http://api.nexacloud:8080/users/123\" -H \"Authorization: Bearer <token>\"  \n\n# Trigger async batch processing  \ncurl -X POST \"http://api.nexacloud:8080/batch/jobs\" -d '{\"type\": \"data_cleanup\", \"params\": {\"retention_days\": 30}}'  \n```  \nMonitor job status via Prometheus metrics or Grafana dashboards.  \n\n## Tech Stack  \n- **Cloud**: AWS (EC2, S3, RDS) with 60% cost reduction via spot instances and reserved capacity  \n- **Containerization**: Docker 24.0 with Kubernetes 1.25 for orchestration  \n- **Infrastructure**: Terraform 1.3 with state locking and versioned modules  \n- **Observability**: Prometheus + Grafana + Loki for logs, with 98% metric retention  \n- **Security**: Envoy Proxy for mTLS and rate limiting, WAF via AWS Shield  \n\n## Architecture / Design  \nAdopts a hexagonal architecture with service mesh (Istio 1.12) for traffic management. Key components:  \n- **API Gateway**: Envoy Proxy handling 80% of requests with 100ms median latency  \n- **Data Layer**: PostgreSQL 14 with read replicas and connection pooling  \n- **Event Bus**: Kafka 3.1 for async processing with 99.95% message durability  \n- **Auto-scaling**: Kubernetes HPA with 5-node minimum and 20-node maximum  \n- **Cost Optimization**: AWS Cost Explorer integration with monthly savings of $120K  \n\n## License  \nMIT License  \n\n## Contributing  \nFeedback welcome via GitHub Issues. While this project is currently maintained solo, community contributions to documentation or security fixes are encouraged."
+}

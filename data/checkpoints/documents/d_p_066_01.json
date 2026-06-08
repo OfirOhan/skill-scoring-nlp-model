@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_066_01",
+  "type": "project_readme",
+  "persona_id": "p_066",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "C/C++ (embedded)": 4,
+    "Embedded Linux": 4,
+    "Firmware development": 4,
+    "Go": 3,
+    "Hardware-software integration": 4,
+    "IoT protocols (MQTT/CoAP)": 4,
+    "Network automation": 3,
+    "Problem-solving": 3,
+    "Python": 4,
+    "REST API design": 4,
+    "RTOS": 4
+  },
+  "text": "# Smart Health Monitor System  \nA real-time IoT-enabled health data aggregation platform for wearable medical devices, optimized for low-latency signal processing and secure cloud integration. Developed by Wenjun Li (Senior Embedded Engineer) for a 3-person healthtech team.  \n\n---\n\n![CI/CD Status](https://example.com/badge)  \n![Code Coverage](https://example.com/badge)  \n![Dependencies](https://example.com/badge)  \n\n---\n\n## Tech Stack  \n- **Core**: C (RTOS task scheduling), Go (REST API), Python (data analysis)  \n- **RTOS**: FreeRTOS (300+ concurrent health metrics processed/sec)  \n- **Networking**: MQTT over TLS (99.98% packet delivery rate), CoAP for fallback  \n- **Embedded**: ARM Cortex-M7 (128-bit encryption, 200ms sensor polling cycle)  \n- **Cloud**: AWS IoT Core (10k+ devices registered, 500ms end-to-end latency)  \n- **Tools**: CMake (CI/CD pipeline), Wireshark (protocol debugging)  \n\n---\n\n## Architecture / Design  \nThe system integrates sensor data from 4+ wearable devices via a custom BLE stack (developed in C), routed through an embedded Linux gateway running a lightweight MQTT broker. Firmware handles 16-bit ECG signal processing with 128-sample FIFO buffers. Go-based backend services aggregate data into REST APIs with 99.95% uptime, while Python scripts generate 30s health trend visualizations.  \n\n---\n\n## Getting Started / Installation  \n1. Install cross-compiler for ARM Cortex-M7 (`arm-none-eabi-gcc`)  \n2. Clone submodules: `git submodule update --init --recursive`  \n3. Build firmware: `make clean && make flash` (45s build time)  \n4. Deploy backend: `go run main.go --config config.yaml`  \n\n---\n\n## Usage / Examples  \n- **Real-time monitoring**: Use `curl -X GET http://localhost:8080/health` for live vitals  \n- **Data export**: Run `python export.py --output-dir /results` (generates CSV/JSON)  \n- **Debugging**: Use `Wireshark` to analyze MQTT packets on port 1883  \n\n---\n\n## Contributing  \nPull requests welcome! Ensure all changes include:  \n- Unit tests (coverage ≥85%)  \n- CI/CD pipeline integration  \n- Documentation updates for embedded Linux drivers  \n\n---\n\n## License  \nMIT License (see [LICENSE](./LICENSE) for details)"
+}

@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_154_03",
+  "type": "project_readme",
+  "persona_id": "p_154",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "Apache Airflow": 3,
+    "Apache Kafka": 1,
+    "Apache Spark": 3,
+    "Data Modeling": 3,
+    "Docker": 1,
+    "ETL pipeline design": 4,
+    "Kubernetes": 1,
+    "Python": 4,
+    "Snowflake": 1,
+    "Terraform": 1
+  },
+  "text": "# ETL Optimization for Ad Targeting  \nRefine ad campaign data pipelines with 30% performance uplift via schema-aware transformation and parallelized ingestion strategies. This project demonstrates cost-effective scaling of ad targeting workloads using cloud-native tools and Python-based ETL orchestration.  \n\n## Badges  \n[![AWS](https://img.shields.io/badge/AWS-00c5c5?style=flat)](https://aws.amazon.com)  \n[![Apache Airflow](https://img.shields.io/badge/Airflow-1f85d0?style=flat)](https://airflow.apache.org)  \n[![Python](https://img.shields.io/badge/Python-3776EF?style=flat)](https://python.org)  \n\n## Getting Started  \nInstall dependencies via pip:  \n```bash  \npip install -r requirements.txt  \n```  \nConfigure AWS credentials using `aws configure` and set environment variables for S3 bucket paths. Run the pipeline with:  \n```bash  \npython main.py --input s3://ad-targeting-source --output s3://ad-targeting-output  \n```  \n\n## Tech Stack  \n- **Apache Airflow**: Orchestrate incremental data loads with dynamic DAGs  \n- **Apache Spark**: Parallelize ad impression aggregation across 100M+ records  \n- **AWS S3**: Scalable storage for raw and processed campaign data  \n- **Python**: Custom data validation routines and schema optimization logic  \n\n## Architecture / Design  \nThe pipeline processes ad impressions from CSV files, applying schema-aware filtering to reduce I/O overhead. Key optimizations include:  \n1. **Columnar storage**: Partition data by campaign ID to enable range queries  \n2. **Caching**: Store intermediate aggregates in Redis for real-time reporting  \n3. **Batch parallelism**: Distribute Spark tasks across 16+ worker nodes  \n4. **Schema evolution**: Auto-detect and handle nullable fields during ingestion  \n\n## Usage / Examples  \n```python  \nfrom pipeline import AdTargetingPipeline  \npipeline = AdTargetingPipeline(bucket='ad-targeting-source')  \npipeline.run()  \n# Output: Parquet files stored in s3://ad-targeting-output with 30% smaller size  \n```  \n\n## Testing  \nUnit tests validate data integrity across 50+ edge cases:  \n```bash  \npytest tests/test_pipeline.py  \n```  \nPerformance benchmarks compare execution times before/after optimization:  \n```  \nBefore: 12.4s → After: 8.6s (30% reduction)  \n```  \n\n## License  \nMIT License © 2023 Kwame Mensah"
+}

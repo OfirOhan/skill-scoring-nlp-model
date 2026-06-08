@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_170_01",
+  "type": "project_readme",
+  "persona_id": "p_170",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "Chaos Engineering": 1,
+    "Cloud Cost Optimization": 2,
+    "GitLab CI": 4,
+    "Kubernetes": 4,
+    "Load Balancing": 4,
+    "Prometheus/Grafana": 3,
+    "Python": 3,
+    "Terraform": 3
+  },
+  "text": "# EclipseGamePlatform  \nA cross-platform game engine engineered for high-performance, low-latency gameplay across Windows, macOS, and Linux. Built with a focus on real-time rendering pipelines, asynchronous task scheduling, and deterministic physics simulations. This project is a personal endeavor to push the boundaries of platform-agnostic game development, leveraging modern C++ and distributed systems patterns.  \n\n## Getting Started / Installation  \nClone the repository and initialize submodules:  \n```bash  \ngit clone --recursive https://github.com/gabrielsouza/EclipseGamePlatform.git  \ncd EclipseGamePlatform  \nmkdir build && cd build  \ncmake .. -DCMAKE_BUILD_TYPE=Release  \nmake -j$(nproc)  \n```  \nEnsure your system meets the requirements: C++20 compiler, Vulkan SDK (for Windows/macOS), and X11 development headers (for Linux). The build process integrates static analysis via Clang-Tidy and unit tests via Google Test.  \n\n## Tech Stack  \n- **Rendering**: Vulkan (Windows/macOS), OpenGL 4.6 (Linux)  \n- **Physics**: Bullet Physics (customized for deterministic simulation)  \n- **Networking**: ENet (low-latency multiplayer core)  \n- **Build**: CMake, Ninja, and CI/CD pipelines on GitLab  \n- **Monitoring**: Prometheus/Grafana for real-time latency metrics  \n- **Deployment**: AWS Lambda for cloud-based test environments (CI/CD)  \n- **Scripting**: Python (for rapid prototyping and tooling)  \n- **Infrastructure**: Terraform for reproducible dev environments  \n\n## Usage / Examples  \nInitialize the engine with a scene graph:  \n```cpp  \nauto engine = std::make_unique<Engine>(ECS::World::Create());  \nengine->LoadScene(\"assets/scenes/lobby.json\");  \nengine->Start();  \n```  \nHandle input asynchronously:  \n```cpp  \nInputSystem::RegisterCallback([](InputEvent event) {  \n    if (event.type == InputType::KeyPress && event.key == Key::Space) {  \n        Player::Instance().Jump();  \n    }  \n});  \n```  \nThe engine supports ECS patterns, entity-component systems, and thread-local memory pools for minimal GC overhead.  \n\n## Badges  \n[![CI/CD Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gabrielsouza/EclipseGamePlatform/main/.github/badges/ci.json)](https://github.com/gabrielsouza/EclipseGamePlatform/actions)  \n[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/gabrielsouza/EclipseGamePlatform/blob/main/LICENSE)  \n\n## Architecture / Design  \nThe architecture prioritizes modularity and deterministic behavior. A core thread pool manages physics and rendering tasks, while a dedicated IO thread handles network packets and asset loading. The rendering pipeline is decoupled into a deferred shading stage and a forward-rendering stage, with Vulkan compute shaders for post-processing.  \n\n## Contributing  \nContributions are welcome via GitHub pull requests. Focus on performance optimizations, cross-platform compatibility, or tooling enhancements. All changes must pass CI/CD pipelines, including static analysis and unit tests.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/gabrielsouza/EclipseGamePlatform/blob/main/LICENSE) for details."
+}

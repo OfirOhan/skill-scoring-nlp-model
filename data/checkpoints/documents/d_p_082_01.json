@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_082_01",
+  "type": "project_readme",
+  "persona_id": "p_082",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "CI/CD pipelines": 3,
+    "Docker": 3,
+    "JavaScript": 4,
+    "Microservices architecture": 4,
+    "PostgreSQL": 4,
+    "Python": 4,
+    "REST API design": 4,
+    "React": 4,
+    "Web performance optimization": 3
+  },
+  "text": "# MedTrack - Patient Vital Monitoring Web App  \nA full-stack healthtech solution for real-time patient data aggregation, visualization, and compliance-driven analytics. Built to meet HIPAA standards, this app enables secure, scalable monitoring of vitals across distributed healthcare environments. The system decouples frontend visualization from backend processing, leveraging microservices for fault isolation and performance optimization.  \n\n## Badges  \n[![Deployment Status](https://custom-badge-url)](https://app.deploy.status)  \n[![Test Coverage](https://custom-badge-url)](https://test-coverage.link)  \n[![Tech Stack](https://custom-badge-url)](https://tech-stack.link)  \n\n## Tech Stack  \n**Frontend**: React 18 + TypeScript, with Tailwind CSS for utility-first styling. Real-time updates via WebSocket with Socket.io, optimized for low-latency heart rate telemetry.  \n**Backend**: FastAPI (Python 3.10) for RESTful API endpoints, exposing CRUD operations for patient records and vitals.  \n**Data Layer**: PostgreSQL 15 with Citus for sharding, ensuring sub-second query latency across 10k+ concurrent users.  \n**Cloud**: AWS EKS cluster with NGINX ingress for horizontal scaling, backed by S3 for encrypted audit logs.  \n**CI/CD**: GitHub Actions pipeline for automated testing, Docker image builds, and Canary deployments to CloudFront.  \n**Security**: OAuth2.0 with JWT tokens, end-to-end encryption for data in transit, and role-based access controls (RBAC).  \n\n## Configuration  \nEnvironment variables are managed via `.env` files, with AWS credentials stored in AWS Secrets Manager. Docker Compose is used for local development, while production uses Kubernetes manifests. PostgreSQL is configured with connection pooling and connection limits tuned for high-throughput scenarios.  \n\n## Getting Started / Installation  \nClone the repository using `git clone https://github.com/tomasz-levandowski/medtrack.git`. Navigate to the project root and run `docker compose up --build` to spin up the stack. Ensure Docker Desktop is configured with AWS credentials via `aws configure` and `AWS_ACCESS_KEY_ID`/`AWS_SECRET_ACCESS_KEY` set in environment variables.  \n\n## Usage / Examples  \nThe dashboard provides real-time vitals visualization, with alerts triggered via Prometheus metrics and Grafana integration. Use `/api/patients` to fetch paginated patient lists, and `/api/vitals` for time-series data. For compliance, the audit log endpoint `/api/audit` returns tamper-proof records with AWS CloudTrail integration.  \n\n## Testing  \nUnit tests (Jest) cover React components and FastAPI endpoints. Integration tests verify PostgreSQL transactions and WebSocket connectivity. End-to-end tests (Cypress) simulate user flows, including secure login and data export. Test coverage exceeds 92%, with performance benchmarks ensuring <200ms response times under 10k RPS.  \n\n## License  \nMIT License. Commercial use requires attribution and compliance with HIPAA regulations."
+}

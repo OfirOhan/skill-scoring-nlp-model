@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_178_01",
+  "type": "project_readme",
+  "persona_id": "p_178",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Browser DevTools": 3,
+    "Next.js": 3,
+    "React": 3,
+    "Responsive design": 3,
+    "State management (Redux/Zustand)": 3,
+    "TypeScript": 3,
+    "Web accessibility (WCAG)": 3,
+    "Web performance optimization": 4
+  },
+  "text": "# HealthTrack Patient Portal  \nA secure, scalable frontend solution for managing patient health records and appointment scheduling, designed with accessibility, performance, and enterprise-grade reliability in mind. Built for a medium-sized healthtech team to streamline clinical workflows and ensure HIPAA-compliant data handling.  \n\n## Getting Started / Installation  \nEnsure Node.js 18+ is installed. Clone the repository and navigate into the project directory. Install dependencies with `npm install`, then configure environment variables for API endpoints and authentication keys. Run `npm run dev` to launch the development server. For production builds, use `npm run build` and deploy via Vercel or a custom CDN.  \n\n## Tech Stack  \n- **Next.js 13+**: Full SSR with dynamic routing for secure route-based authentication.  \n- **React 18+**: Component-based architecture with hooks for state management.  \n- **TypeScript**: Enforced type safety across APIs, components, and utility functions.  \n- **Redux Toolkit**: Centralized state management for user sessions and real-time data sync.  \n- **Tailwind CSS**: Utility-first styling with custom theme overrides for medical UI standards.  \n- **Webpack 5**: Bundling with code splitting for optimal load times.  \n- **Lodash**: Utility functions for data transformation and filtering.  \n- **Accessibility**: WCAG AA compliance via ARIA labels, keyboard navigation, and semantic HTML.  \n- **Performance**: Lazy loading, image optimization, and critical CSS inlining for sub-2s load times.  \n\n## Usage / Examples  \n- **Health Record View**: Navigate to `/dashboard/records` to render a paginated table of patient data, filtered by access controls.  \n- **Appointment Scheduling**: Use the `ScheduleModal` component to interact with a backend API via Redux-thunk, with real-time calendar updates.  \n- **Role-Based UI**: Toggle between provider and patient views using a state-driven layout system.  \n\n## Badges  \n[TypeScript] [React] [Next.js] [WCAG AA] [Performance Optimized] [Team-Internal]  \n\n## Architecture / Design  \nThe monorepo follows a modular structure with shared components, services, and types. A centralized Redux store manages session tokens and user permissions, while Zustand handles real-time notifications. The UI is built with a component tree that prioritizes accessibility, using semantic HTML and keyboard-first navigation. Performance is optimized through Webpack chunk splitting and lazy-loaded routes, ensuring critical assets load first.  \n\n## Contributing  \nPull requests are welcome! Ensure all changes include unit tests, accessibility audits, and performance benchmarks. For UI updates, follow the Figma design system. When submitting code, prioritize readability and maintainability.  \n\n## License  \nMIT License. This project is intended for internal use only within the healthtech team."
+}

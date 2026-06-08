@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_146_01",
+  "type": "project_readme",
+  "persona_id": "p_146",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "C/C++ (embedded)": 4,
+    "CI/CD pipelines": 2,
+    "Embedded Linux": 4,
+    "Firmware development": 4,
+    "Hardware-software integration": 4,
+    "IoT protocols (MQTT/CoAP)": 4,
+    "Network automation": 2,
+    "Python": 2,
+    "REST API design": 2,
+    "RTOS": 3
+  },
+  "text": "# Smart Sensor Network for Industrial IoT  \nA distributed edge computing framework for real-time environmental monitoring in industrial settings, utilizing ARM Cortex-M microcontrollers with MQTT/CoAP protocols for scalable data aggregation.  \n\n## Deployment  \nDeployed in a 24/7 factory environment with 120 sensor nodes operating at 500ms polling intervals. Edge gateways aggregate data via LoRaWAN and forward it to a cloud backend. System uptime exceeds 99.98% with <10ms latency for critical alerts.  \n\n## Badges  \n[![GitHub](https://github.com/yourusername/smart-sensor-network/actions/workflows/build.yml/badge.svg)](https://github.com/yourusername/smart-sensor-network/actions/workflows/build.yml)  \n[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yourusername/smart-sensor-network/blob/main/LICENSE)  \n\n## Tech Stack  \n- **Microcontroller**: ARM Cortex-M4 (STM32F4) with FreeRTOS  \n- **Communication**: MQTT over TLS/CoAP for edge-cloud sync  \n- **Edge Gateway**: Raspberry Pi 4 with Embedded Linux (Debian kernel 5.15)  \n- **Data Processing**: C++ for firmware, Python (NumPy) for analytics  \n- **CI/CD**: GitHub Actions for firmware validation  \n- **Protocols**: LoRaWAN Class C, MQTT retained messages, CoAP blockwise transfer  \n\n## Architecture / Design  \nA three-tier mesh network:  \n1. **Edge Layer**: 120 STM32F4 nodes with I2C/UART sensors, transmitting 16-bit precision data at 10Hz  \n2. **Aggregation Layer**: RPi 4 clusters with SPI-based sensor fusion, compressing data by 40% via delta encoding  \n3. **Cloud Layer**: AWS IoT Core with rule engine for anomaly detection (false positive rate <0.02%)  \nRTOS handles task scheduling with 15μs context switching, while Embedded Linux manages network stack and TLS offloading.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/yourusername/smart-sensor-network.git  \ncd firmware/STM32F4  \nmake clean && make flash  \ncd gateway/  \nsudo apt install raspbian-lite && ./setup.sh  \n```  \nConfigure MQTT broker (Mosquitto) with TLS certificates and enable CoAP proxy on port 5683.  \n\n## Usage / Examples  \n- **Real-time monitoring**: `python3 analytics.py --node-id 0x1A` for live temperature trends  \n- **Anomaly detection**: Triggered by 3σ deviation in humidity readings (sampling window: 10s)  \n- **Firmware updates**: OTA via MQTT with AES-256 signing for secure over-the-air patches  \n\n## License  \nMIT License. See [LICENSE](https://github.com/yourusername/smart-sensor-network/blob/main/LICENSE) for details."
+}

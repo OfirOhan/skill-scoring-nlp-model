@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_068_01",
+  "type": "project_readme",
+  "persona_id": "p_068",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 1,
+    "CI/CD pipelines": 2,
+    "Docker": 3,
+    "Load balancing": 2,
+    "MongoDB": 3,
+    "Node.js": 3,
+    "PostgreSQL": 1,
+    "Python": 1,
+    "REST API design": 3,
+    "React": 3,
+    "Terraform": 1
+  },
+  "text": "# TaskFlow SaaS App  \nA lightweight task management tool for internal teams, built with React and Node.js. Handles 500+ daily tasks across 3 projects with 98% uptime.  \n\n## API Reference  \n- **`POST /api/tasks`**  \n  Create a new task.  \n  ```json  \n  { \"title\": \"Deploy feature X\", \"dueDate\": \"2023-12-31\", \"priority\": 3 }  \n  ```  \n  Returns: `{\"id\": \"task-123\", \"status\": \"pending\"}`  \n\n- **`GET /api/tasks/:id`**  \n  Fetch task details.  \n  Response:  \n  ```json  \n  { \"id\": \"task-123\", \"assignee\": \"john.doe\", \"progress\": \"50%\" }  \n  ```  \n\n- **`PUT /api/tasks/:id/complete`**  \n  Mark task as done.  \n  Response: `{\"message\": \"Task completed\", \"timestamp\": \"2023-10-15T14:32:00Z\"}`  \n\n## Usage / Examples  \n**Example 1**: Assign a task to a team member  \n```bash  \ncurl -X POST https://taskflow-api.com/api/tasks \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"title\":\"Fix bug in login\",\"assignee\":\"jane.smith\",\"priority\":2}'  \n```  \n**Example 2**: Check task progress  \n```bash  \ncurl https://taskflow-api.com/api/tasks/task-456  \n```  \n\n## Getting Started / Installation  \n1. Clone repo: `git clone https://github.com/your-username/taskflow.git`  \n2. Install frontend: `cd client && npm install`  \n3. Install backend: `cd server && npm install`  \n4. Start Docker containers: `docker-compose up -d` (includes MongoDB)  \n5. Access app at `http://localhost:3000`  \n\n## Tech Stack  \n- **Frontend**: React (TypeScript) with custom hooks for state management  \n- **Backend**: Node.js (Express) with middleware for request validation  \n- **Database**: MongoDB (Atlas) for flexible schema design  \n- **API**: RESTful design with consistent status codes (200/404/500)  \n\n## Architecture / Design  \nMonorepo structure with separate React and Node.js services. MongoDB handles task data with indexes on `assignee` and `dueDate`. All API endpoints enforce rate limiting (100 requests/sec) and JWT auth.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details  \n\n## Badges  \n[![GitHub stars](https://img.shields.io/github/stars/your-username/taskflow?style=flat)](https://github.com/your-username/taskflow)  \n[![npm downloads](https://img.shields.io/npm/dw/taskflow?style=flat)](https://www.npmjs.com/package/taskflow)"
+}

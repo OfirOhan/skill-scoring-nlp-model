@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_191_03",
+  "type": "project_readme",
+  "persona_id": "p_191",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Application security (OWASP)": 3,
+    "Compliance (SOC2/GDPR)": 3,
+    "Encryption & PKI": 3,
+    "IAM/Access control": 5,
+    "Network security": 2,
+    "Penetration testing": 3,
+    "SIEM tools": 4,
+    "Security auditing": 3,
+    "Threat modeling": 2,
+    "Vulnerability management": 5
+  },
+  "text": "# Cloud Security Toolkit for Automated Vulnerability Assessment  \nA production-grade framework for real-time vulnerability detection, compliance validation, and SIEM integration across AWS and Azure environments. Reduces false positives by 72% and audit time by 68% through dynamic rule engines and contextual risk scoring.  \n\n## Acknowledgments  \nThis project would not exist without the foundational work of the Cloud Security Alliance, AWS Security Hub, and Azure Security Center. Special thanks to the open-source community for libraries like `boto3`, `azure-identity`, and `pyOpenSSL`. Early-stage prototyping was funded by internal R&D grants, with architecture reviews led by senior engineers from the SOC and compliance teams.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/vikramchoudhary/cloud-security-toolkit.git  \ncd cloud-security-toolkit  \npython3 -m venv .env  \nsource .env/bin/activate  \npip install -r requirements.txt  \n# Configure AWS/Azure credentials via ~/.aws/credentials and ~/.azure/credentials  \n```  \nEnsure Python 3.9+ is installed. All dependencies are pinned in `requirements.txt`.  \n\n## Usage / Examples  \n```bash  \n# Scan AWS S3 buckets for misconfigurations  \npython3 scan.py --cloud aws --resource s3 --output report.json  \n\n# Generate compliance report for GDPR/ISO 27001  \npython3 compliance_check.py --standards gdpr,iso27001 --export pdf  \n\n# Integrate with SIEM for real-time alerts  \npython3 siem_sync.py --siem splunk --interval 300  \n```  \nThe toolkit's dynamic risk scoring engine reduces manual triage by 68%, with automated remediation suggestions for 89% of common misconfigurations.  \n\n## Tech Stack  \n- **Language**: Python 3.9 (with type hints and async/await)  \n- **Cloud SDKs**: AWS Boto3, Azure SDK for Python  \n- **Security**: AES-256 encryption, PKI validation, OWASP ZAP integration  \n- **Monitoring**: Prometheus/Grafana for runtime metrics, ELK for log aggregation  \n- **Deployment**: Docker (with SELinux/AppArmor policies)  \n\n## License  \nMIT License (see [LICENSE](LICENSE) for details)  \n\n## Badges  \n[![Build Status](https://github.com/vikramchoudhary/cloud-security-toolkit/actions/workflows/build.yml/badge.svg)](https://github.com/vikramchoudhary/cloud-security-toolkit/actions/workflows/build.yml)  \n[![License](https://badges.frappr.com/license/MIT.svg)](LICENSE)  \n\n## Contributing  \nWe welcome security audits, new integrations (e.g., GCP), and enhancements to the compliance module. All PRs require a security review and must include unit tests. For SIEM integrations, provide a sample log schema and alert format."
+}

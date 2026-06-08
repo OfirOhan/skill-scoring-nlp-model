@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_218_01",
+  "type": "project_readme",
+  "persona_id": "p_218",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "C#/.NET": 3,
+    "Game networking": 3,
+    "Game physics": 1,
+    "JavaScript": 1,
+    "Python": 3,
+    "REST API design": 3,
+    "Unity": 3,
+    "Unreal Engine": 1
+  },
+  "text": "# AdMonetize: AdTech Integration for Game Monetization  \nA tool to simplify ad-tech integration in mobile games, focusing on seamless revenue generation through targeted ad placements. Built with scalability and developer efficiency in mind, this project supports Android and iOS platforms.  \n\n---\n\n## Badges  \n[![Platform](https://...)](https://...) Android & iOS Support  \n[![License](https://...)](https://...) MIT License  \n\n---\n\n## Tech Stack  \n- **Unity (C#)**: Core integration for game logic and ad SDKs  \n- **Python**: Backend data processing and analytics pipelines  \n- **REST API**: Real-time ad performance tracking  \n- **Game Networking**: Multiplayer ad sync across devices  \n- **SQLite**: Local storage for user engagement metrics  \n\n---\n\n## Architecture / Design  \nAdMonetize uses a modular plugin system for Unity, allowing developers to swap ad networks without code changes. A central `AdManager` class handles SDK initialization, event routing, and revenue tracking via REST endpoints. Python scripts process raw data into actionable insights, while networking components ensure consistent ad delivery across multiplayer sessions. The design prioritizes minimal runtime overhead and clear separation of concerns.  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/your-username/AdMonetize.git`  \n2. Install Unity (2020.3+ LTS) and Python 3.9+  \n3. Run `pip install -r requirements.txt` for dependencies  \n4. Import the Unity project and configure API keys in `Config/AdSettings.cs`  \n\n---\n\n## Usage / Examples  \n```csharp  \n// Initialize ad manager  \nAdManager.Instance.Initialize(\"test_ad_unit_123\");  \n\n// Show rewarded ad  \nAdManager.Instance.ShowRewardedAd(\"video_rewarded_456\");  \n```  \n\n```python  \n# Fetch and process analytics  \nfrom ad_processor import AnalyticsPipeline  \npipeline = AnalyticsPipeline(\"ad_data_2023.csv\")  \npipeline.generate_daily_report()  \n```  \n\n---\n\n## Contributing  \nEnhance ad network compatibility or improve analytics dashboards. Start by addressing open issues or proposing new features. Pull requests are welcome!  \n\n---\n\n## License  \nMIT License. See [LICENSE](https://github.com/your-username/AdMonetize/blob/main/LICENSE) for details."
+}

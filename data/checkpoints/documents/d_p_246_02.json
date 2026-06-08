@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_246_02",
+  "type": "recommendation",
+  "persona_id": "p_246",
+  "hyperparams": {
+    "recommender_role": "peer",
+    "recommender_closeness": "occasional",
+    "company_type": "FAANG",
+    "company_size": "large (500+)"
+  },
+  "skill_evidence": {
+    "Apache Airflow": 1,
+    "Cloud cost optimization": 3,
+    "Data warehousing": 1,
+    "MLOps (MLflow/W&B)": 4,
+    "Model deployment": 3,
+    "NLP": 2,
+    "PyTorch": 1,
+    "Recommendation systems": 3,
+    "dbt": 1
+  },
+  "text": "Wendy and I overlapped during a cross-team project to refine EcomPulse’s recommendation engine. When a sudden surge in traffic caused their models to lag, she quickly pivoted to scaling the inference pipeline using MLflow. Her adjustments reduced latency by 30% without compromising accuracy, letting the team handle a Black Friday spike seamlessly. She’d already baked in cloud cost optimization practices into the workflow, so the fix didn’t break the budget—something I’d never taken for granted until seeing her balance technical rigor with fiscal responsibility.  \n\nWendy’s day-to-day revolves around distilling complex ML problems into actionable insights. She’s the go-to person when the team needs a recommendation system tweak or a model deployment pipeline retooled. Last quarter, she spearheaded a shift to W&B for experiment tracking, which cut deployment cycles by two weeks. Her code is clean, well-documented, and always leaves room for others to build on it.  \n\nWhat stands out is her knack for turning ambiguous business goals into precise technical solutions. When EcomPulse’s stakeholders wanted “better personalization,” she broke it down into specific KPIs—click-through rates, conversion lifts—and built a hybrid model combining collaborative filtering with sparse embeddings. The result? A 12% lift in average order value. She’s also unflinchingly ethical, pushing back on a risky A/B test because the user sampling was skewed.  \n\nIf you’re looking for someone who ships reliable, scalable ML systems while staying grounded in business outcomes, Wendy’s your person. She’s a rock in the trenches—dependable, sharp, and relentlessly curious."
+}

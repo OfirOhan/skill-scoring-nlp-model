@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_213_03",
+  "type": "blog",
+  "persona_id": "p_213",
+  "hyperparams": {
+    "blog_depth": "tutorial",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Flutter": 2,
+    "GraphQL": 4,
+    "Kotlin": 3,
+    "Mobile CI/CD": 4,
+    "REST API design": 5,
+    "React": 4,
+    "React Native": 4,
+    "Swift": 4,
+    "TypeScript": 4
+  },
+  "text": "Scaling Mobile Apps for SaaS: Performance Optimization Strategies  \nIn a SaaS environment, mobile apps face unique challenges—large datasets, real-time sync, and cross-platform consistency. My team’s recent project with a customer handling 5M+ users revealed that 68% of crashes stemmed from inefficient data handling and unoptimized UI rendering. Here’s how we addressed it.  \n\n1. **Data Handling with GraphQL**  \n   We refactored our REST API into a GraphQL layer, reducing query latency by 40% via batched operations. By using Apollo Client’s caching and normalizing data with `@defer`, we minimized redundant network calls. For example, a user profile load that previously required 3 REST requests now uses a single GraphQL query, cutting load time by 2.3s.  \n\n2. **Network Optimization via REST**  \n   Despite GraphQL’s benefits, we retained REST for high-throughput endpoints. By implementing HTTP/2 and server-sent events (SSE), we reduced long-polling overhead. A critical dashboard refresh, which used to take 800ms, now averages 300ms with compressed payloads and delta syncing.  \n\n3. **UI Performance with React Native**  \n   We adopted React Native with TypeScript, leveraging `useMemo` and `useCallback` to prevent unnecessary re-renders. For complex tables, we implemented virtualization via `FlatList` and preloaded assets during app launch. This shaved 1.5s off initial render times, reducing cold start latency by 35%.  \n\n4. **CI/CD Integration**  \n   Our pipeline now includes Lighthouse audits and CPU throttling tests in Firebase Performance. By integrating Fastlane and GitHub Actions, we cut deployment time by 40%, ensuring rollouts don’t exceed 150ms.  \n\n5. **Kotlin & Swift for Native Edge Cases**  \n   For Android, we used Kotlin’s `Flow` to manage async data streams, avoiding memory leaks. On iOS, Swift’s `Combine` framework streamlined event-driven updates, cutting crash rates by 22% in the first week.  \n\n6. **TypeScript-Driven API Design**  \n   Our REST APIs now enforce strict type contracts via OpenAPI specs. This reduced misinterpretation of payloads by 70%, with type-checking catching 95% of errors pre-deployment.  \n\nSummary  \nOptimizing SaaS mobile apps requires a layered approach: GraphQL for data efficiency, REST for scalability, React Native for cross-platform consistency, and rigorous CI/CD for reliability. By prioritizing type safety, lazy loading, and network-level optimizations, we achieved a 50% reduction in crash rates and 40% faster load times. The key is treating performance as a continuous architecture decision, not a one-off fix."
+}

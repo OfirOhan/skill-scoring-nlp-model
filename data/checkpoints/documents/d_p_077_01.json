@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_077_01",
+  "type": "project_readme",
+  "persona_id": "p_077",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "API testing": 5,
+    "Go": 4,
+    "Java": 2,
+    "Performance testing (JMeter/k6)": 5,
+    "Python": 5,
+    "REST API design": 4,
+    "Selenium/Playwright": 4,
+    "Test automation": 5
+  },
+  "text": "# ShopFlow QA Automation Suite  \nA regression testing framework for e-commerce platforms, built to scale with modular test suites and cross-browser compatibility. Designed for teams needing reliable, maintainable automation without bloated tooling.  \n\n## Getting Started / Installation  \nEnsure Java 17+ is installed. Clone the repo and run:  \n```bash  \nnpm install  \nnpm run build  \n```  \nConfigure your e-commerce platform's API endpoints in `config/env.json`. For browser support, install Chrome/Edge drivers via [Selenium Manager](https://github.com/mozilla/selenium-manager).  \n\n## Usage / Examples  \nRun all tests with:  \n```bash  \nnpm test  \n```  \nExample: Validate checkout flow with dynamic pricing  \n```python  \n@allure.feature(\"Checkout\")  \ndef test_checkout_flow():  \n    api = RestAPI(\"https://api.example.com\")  \n    cart = api.create_cart()  \n    response = api.add_item(cart.id, product_id=\"123\", quantity=2)  \n    assert response.status_code == 201  \n    total = api.get_cart_total(cart.id)  \n    assert total == 29.99  \n```  \nPerformance tests use k6 to simulate 10k concurrent users:  \n```bash  \nk6 run -u 10000 script.js  \n```  \n\n## Badges  \n[![Build Status](https://github.com/xanderdevries/shopflow/actions/workflows/build.yml/badge.svg)](https://github.com/xanderdevries/shopflow/actions/workflows/build.yml)  \n[![Test Coverage](https://codecov.io/gh/xanderdevries/shopflow/branch/main/graph/badge.svg)](https://codecov.io/gh/xanderdevries/shopflow)  \n\n## Tech Stack  \n- **Go**: Backend logic for test orchestration and result aggregation  \n- **Python**: Core test scripts and API validation  \n- **Playwright**: Headless browser interactions for UI testing  \n- **REST API**: Custom framework for endpoint validation  \n- **JMeter/k6**: Distributed load testing for payment gateways  \n- **Docker**: Containerized test environments for CI/CD  \n\n## Architecture / Design  \nThe framework splits tests into three layers:  \n1. **API Layer**: REST endpoints for product catalog and cart management  \n2. **UI Layer**: Playwright scripts for checkout and search functionality  \n3. **Performance Layer**: k6 scripts with JMeter integration for stress testing  \n\nEach test suite is isolated with its own configuration, enabling parallel execution. Results are aggregated in a centralized dashboard built with Go and SQLite.  \n\n## Contributing  \nPull requests are welcome! For major changes, open an issue to discuss the approach. All contributions must include test coverage and performance benchmarks.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

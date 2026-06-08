@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_070_01",
+  "type": "project_readme",
+  "persona_id": "p_070",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 2,
+    "Docker": 3,
+    "Kubernetes": 3,
+    "Linux administration": 3,
+    "PostgreSQL": 3,
+    "Prometheus/Grafana": 3,
+    "Python": 3,
+    "REST API design": 3,
+    "Terraform": 3
+  },
+  "text": "# NexaAPI Gateway  \nA scalable API gateway for SaaS platform integration, designed to handle 10k+ RPS with 99.9% uptime. Built for flexibility, with dynamic routing and extensible middleware.  \n\n## Configuration  \nConfigure via `config.yaml` and environment variables.  \n- `API_PORT`: Default `8080`  \n- `LOG_LEVEL`: `INFO` or `DEBUG`  \n- `METRICS_EXPORTER`: Enable Prometheus via `http://localhost:9090`  \n- `DATABASE_URL`: PostgreSQL connection string (e.g., `postgres://user:pass@localhost:5432/db`)  \n\nSet up monitoring with Grafana by linking Prometheus data sources.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/your-username/nexaapi-gateway.git  \ncd nexaapi-gateway  \ndocker-compose up -d  \n```  \nInstall dependencies: Python 3.9+, Docker, and Terraform. Run `./setup.sh` to configure AWS credentials and PostgreSQL.  \n\n## Usage / Examples  \nRoute requests with dynamic path matching:  \n```bash  \ncurl -X GET http://localhost:8080/api/v1/users/123  \n```  \nEnable rate limiting via middleware:  \n```python  \n# config.yaml  \nrate_limit:  \n  max_requests: 100  \n  window_seconds: 60  \n```  \nUse AWS Lambda for async processing via S3 triggers.  \n\n## Tech Stack  \n- **Python**: Core logic with async I/O  \n- **Docker**: Containerization for local testing  \n- **Kubernetes**: Orchestration for production  \n- **PostgreSQL**: Persistent storage for config  \n- **AWS**: Lambda, S3, and CloudWatch for async tasks  \n- **Terraform**: Infrastructure-as-code for VPC and EC2  \n\n## Architecture / Design  \nNexaAPI uses a microservices pattern with a central router. Key components:  \n- **Load balancer**: Nginx with TLS termination  \n- **Caching layer**: Redis for frequent endpoints  \n- **Autoscaling**: Kubernetes HPA based on CPU metrics  \n- **Cost optimization**: Spot instances for non-critical workers  \n\nMonitor with Prometheus/Grafana for latency and error rates.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![CI/CD Status](https://github.com/your-username/nexaapi-gateway/actions/workflows/ci.yml/badge.svg)](https://github.com/your-username/nexaapi-gateway/actions/workflows/ci.yml)  \n[![Docker Image](https://img.shields.io/docker/registry/image?repo=your-registry/nexaapi&server=https://your-registry)](https://your-registry/nexaapi)"
+}

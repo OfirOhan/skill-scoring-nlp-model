@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_158_02",
+  "type": "project_readme",
+  "persona_id": "p_158",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "CI/CD pipelines": 3,
+    "Docker": 3,
+    "Go": 1,
+    "Kubernetes": 3,
+    "Microservices architecture": 3,
+    "PostgreSQL": 5,
+    "Python": 3,
+    "REST API design": 4
+  },
+  "text": "# Campaign Analytics Dashboard  \nA scalable ad performance tracking platform built with Node.js and PostgreSQL, designed for real-time campaign insights in high-traffic adtech environments. This project supports multi-team collaboration and integrates with AWS services for data storage, processing, and visualization.  \n\n## Getting Started / Installation  \nClone the repository using Git. Ensure Docker is installed to streamline dependency management.  \n```bash  \ngit clone https://github.com/your-username/campaign-analytics-dashboard.git  \ncd campaign-analytics-dashboard  \ndocker compose up --build  \n```  \nSet environment variables for PostgreSQL credentials and AWS S3 bucket configuration via `.env` file. The Docker setup includes pre-configured CI/CD pipelines for automated testing and deployment.  \n\n## Tech Stack  \n- **Backend**: Node.js 18, Express.js, REST API design (with OpenAPI spec integration)  \n- **Database**: PostgreSQL 14 (with indexing and partitioning strategies for high-write workloads)  \n- **Cloud**: AWS S3 for raw data storage, Lambda for batch processing, and CloudFront for static asset delivery  \n- **DevOps**: Docker (for containerization), GitHub Actions (CI/CD), and Kubernetes (for production scaling)  \n- **Utilities**: Python scripts for data aggregation, Redis caching for query optimization  \n\n## Usage / Examples  \nQuery campaign metrics via the REST API:  \n```bash  \ncurl -X GET https://api.campaign-dashboard.dev/campaigns?filter=region:eu  \n```  \nVisualize results in the embedded Grafana dashboard. Use Docker to spin up a local development instance:  \n```bash  \ndocker run -p 3000:3000 -e POSTGRES_URL=your-database-url campaign-analytics-dashboard  \n```  \nThe dashboard supports real-time updates via WebSocket and integrates with third-party ad platforms via webhook-based data ingestion.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/license/your-username/campaign-analytics-dashboard)](https://github.com/your-username/campaign-analytics-dashboard/blob/main/LICENSE)  \n[![Docker](https://img.shields.io/docker/pulls/your-username/campaign-analytics-dashboard)](https://hub.docker.com/r/your-username/campaign-analytics-dashboard)  \n[![CI/CD](https://img.shields.io/github/actions/workflow/your-username/campaign-analytics-dashboard/main.yml)](https://github.com/your-username/campaign-analytics-dashboard/actions)  \n\n## Architecture / Design  \nThe system employs a microservices architecture with Node.js APIs handling ad data ingestion and analytics. PostgreSQL is optimized for write-heavy workloads with partitioned tables and connection pooling. AWS Lambda processes batch data asynchronously, while Redis caches frequently accessed metrics. The REST API adheres to HATEOAS principles, enabling dynamic client-side navigation.  \n\n## Contributing  \nCollaborate via GitHub Issues. Focus on improving PostgreSQL query performance, expanding AWS integration, or refining the Grafana dashboard. All contributors must adhere to the REST API design guidelines and Docker containerization standards.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/your-username/campaign-analytics-dashboard/blob/main/LICENSE) for details."
+}

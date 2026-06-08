@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_181_01",
+  "type": "project_readme",
+  "persona_id": "p_181",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 1,
+    "Cloud cost optimization": 1,
+    "Database optimization": 1,
+    "GCP": 1,
+    "Go": 1,
+    "Infrastructure as Code": 1,
+    "Kubernetes": 1,
+    "Load balancing": 1,
+    "Monitoring & alerting": 1,
+    "PostgreSQL": 1,
+    "Python": 4,
+    "Redis": 4,
+    "Serverless": 1,
+    "Terraform": 1
+  },
+  "text": "# Financial Data Pipeline for Real-Time Fraud Detection  \nA scalable, low-latency system leveraging Apache Kafka and Spark for NexaFin’s payment processing platform. Designed to detect anomalous transaction patterns at ingestion speed, with Redis as the primary cache layer for real-time rule enforcement.  \n\n## Badges  \n[![Build Status](https://github.com/.../workflows/CI%20Pipeline/badge.svg)](https://github.com/.../actions)  \n[![Test Coverage](https://github.com/.../workflows/Code%20Coverage/badge.svg)](https://github.com/.../actions)  \n\n## Getting Started / Installation  \nEnsure Python 3.9+ is installed. Install dependencies via `pip install -r requirements.txt`. Redis must be running locally or via Docker. Kafka brokers should be accessible at `localhost:9092`. Configure environment variables for Kafka and Redis endpoints. Run `python main.py` to initiate the pipeline.  \n\n## Tech Stack  \n- **Python**: Core logic for data transformation and anomaly scoring (ownership: Fumiko Ishida)  \n- **Apache Kafka**: Real-time ingestion layer with partitioned topic for high-throughput streams  \n- **Apache Spark**: Batch and streaming processing for feature extraction and model inference  \n- **Redis**: In-memory cache for rule-based scoring and session state management (ownership: Fumiko Ishida)  \n\n## Architecture / Design  \nData flows from Kafka producers to Spark Structured Streaming, where Python UDFs apply pre-trained models and Redis-based rules. Redis serves as a distributed lock and cache for transaction context, reducing latency for recurring transactions. The system scales horizontally via Kafka partitions and Spark executors, with Redis replicas for fault tolerance.  \n\n## Usage / Examples  \n```python  \n# Example: Real-time scoring with Redis cache  \nfrom redis import Redis  \nimport json  \n\ndef score_transaction(txn):  \n    r = Redis(host='localhost', port=6379)  \n    key = f'txn:{txn[\"id\"]}'  \n    if r.exists(key):  \n        return json.loads(r.get(key))['score']  \n    # ... processing logic ...  \n    r.setex(key, 300, json.dumps({'score': 0.85, 'flagged': True}))  \n    return {'score': 0.85, 'flagged': True}  \n```  \n\n## Testing  \nUnit tests validate Python UDFs and Redis interactions using `pytest`. Integration tests simulate Kafka streams with 100k+ synthetic transactions, verifying latency under 50ms and 99.9% accuracy in rule enforcement. Redis connection pooling and cache eviction strategies are stress-tested with 100 concurrent clients.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

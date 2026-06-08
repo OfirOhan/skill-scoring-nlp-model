@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_064_02",
+  "type": "project_readme",
+  "persona_id": "p_064",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "CI/CD pipelines": 4,
+    "Chaos engineering": 4,
+    "GitHub Actions": 4,
+    "Go": 4,
+    "Linux administration": 4,
+    "Monitoring & alerting": 4,
+    "Prometheus/Grafana": 4,
+    "Microservices architecture": 4,
+    "PostgreSQL": 4,
+    "REST API design": 4,
+    "Redis": 4,
+    "Python": 1,
+    "Message queues": 1
+  },
+  "text": "# Real-time Order Processing System  \nA distributed event sourcing pipeline for e-commerce order fulfillment, optimized for sub-100ms latency at 10k TPS. Built with event-driven microservices and operationalized at scale.  \n\n## Deployment  \nLive instances run on AWS EC2 Auto Scaling groups with Kubernetes operator for statefulset orchestration. Deployment pipelines use GitHub Actions for canary rollouts, achieving 99.95% uptime during Black Friday peaks.  \n\n## Badges  \n[![Deployment Status](https://github.com/your-username/your-repo/actions/workflows/deploy.yml/badge.svg)](https://github.com/your-username/your-repo/actions/workflows/deploy.yml)  \n[![Test Coverage](https://codecov.io/gh/your-username/your-repo/branch/main/graph/badge.svg)](https://codecov.io/gh/your-username/your-repo)  \n[![Code Quality](https://github.com/your-username/your-repo/actions/workflows/lint.yml/badge.svg)](https://github.com/your-username/your-repo/actions/workflows/lint.yml)  \n\n## Tech Stack  \n- **Core**: Go (1.21), PostgreSQL (15), Redis (7)  \n- **Infrastructure**: AWS EC2, EKS, S3 for event logs  \n- **Monitoring**: Prometheus + Grafana with custom dashboards for latency and error rates  \n- **CI/CD**: GitHub Actions with multi-stage pipelines for testing, linting, and deployment  \n- **Design**: REST API v3 with OpenAPI spec, event sourcing via PostgreSQL append-only tables  \n\n## Architecture / Design  \nThe system decouples order ingestion from fulfillment via event sourcing. Orders are persisted as immutable events in PostgreSQL, with Redis caching atomic state transitions. Microservices handle inventory sync, payment validation, and shipping triggers via RESTful APIs. Chaos engineering exercises validate fault tolerance under 90% node loss scenarios.  \n\n## Getting Started / Installation  \n```bash\ngit clone https://github.com/your-username/your-repo.git  \ncd your-repo  \ndocker-compose up -d  \nmake build  \nmake run  \n```  \nEnsure AWS credentials are configured via `~/.aws/credentials` for production deployment.  \n\n## Usage / Examples  \n```bash  \ncurl -X POST https://api.order.system/create \\  \n  -H \"Content-Type: application/json\" \\  \n  -d '{\"customer_id\": \"C123\", \"items\": [{\"sku\": \"X001\", \"quantity\": 2}]}'\n```  \nMonitor real-time status via `/api/order/{id}/status` with 500ms polling intervals.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

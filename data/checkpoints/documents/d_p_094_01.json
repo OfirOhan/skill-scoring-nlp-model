@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_094_01",
+  "type": "project_readme",
+  "persona_id": "p_094",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "API testing": 3,
+    "CI/CD pipelines": 1,
+    "Integration testing": 3,
+    "JavaScript": 2,
+    "Python": 2,
+    "REST API design": 2,
+    "Selenium/Playwright": 3,
+    "Test automation": 3,
+    "Test strategy design": 1,
+    "Unit testing": 3
+  },
+  "text": "# Test Automation Framework for Client X's Application  \nA modular, scalable test automation solution designed to validate the reliability and performance of Client X’s web application. This framework prioritizes test maintainability, execution speed, and cross-browser compatibility, with a focus on reducing regression risks during iterative development cycles. Built for small teams, it emphasizes reusable components and structured test case organization, achieving 85% test coverage across core functionalities and a 30% reduction in execution time compared to legacy tools.  \n\n## Testing  \nThe framework leverages API testing to validate REST endpoints and integration testing to ensure seamless microservices communication. Unit tests are embedded within core modules to catch edge cases early, while Selenium and Playwright handle UI interactions with parallel execution support. Test results are aggregated via Allure reports, enabling rapid root-cause analysis. Real-world use cases include validating payment gateway integrations and stress-testing user authentication flows under concurrent load.  \n\n## Getting Started / Installation  \nClone the repository using your preferred method. Ensure Python 3.8+ is installed, then run `pip install -r requirements.txt` to install dependencies. Set environment variables for API keys and browser configurations before executing tests.  \n\n## Usage / Examples  \n```python  \n# Example: API validation test  \ndef test_payment_gateway():  \n    response = requests.post(\"https://api.clientx.com/payments\", json=PAYLOAD)  \n    assert response.status_code == 200  \n    assert \"transaction_id\" in response.json()  \n```  \nFor UI tests, use Playwright’s async API to simulate user workflows:  \n```javascript  \nawait page.fill(\"#username\", \"testuser\")  \nawait page.click(\"#submit\")  \nexpect(page.locator(\"#error-message\").textContent()).toBe(\"\")  \n```  \n\n## Tech Stack  \nPython 3.8, Selenium 4, Playwright 1.20, pytest 7, Allure 2.14, Docker 20.10, JSON-based test data.  \n\n## Architecture / Design  \nThe framework employs a layered architecture: a central test runner orchestrates test suites, while modular test scripts handle specific functionalities. Test data is decoupled from logic via JSON files, and parallel execution is managed through pytest-xdist. Integration with CI/CD is intentionally omitted, but the design allows for seamless plugin integration.  \n\n## License  \nMIT License  \n\n## Contributing  \nPull requests are welcome! Ensure code adheres to PEP8 standards, includes type hints, and passes all existing test cases. New features should include both unit and integration tests."
+}

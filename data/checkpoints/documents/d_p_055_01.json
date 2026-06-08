@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_055_01",
+  "type": "project_readme",
+  "persona_id": "p_055",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Apache Airflow": 1,
+    "Data modeling": 2,
+    "Data visualization (Matplotlib/Plotly)": 3,
+    "ETL pipeline design": 1,
+    "Feature engineering": 2,
+    "Jupyter notebooks": 3,
+    "NumPy": 3,
+    "Pandas": 3,
+    "Python": 3,
+    "REST API design": 1,
+    "SQL analytics": 3
+  },
+  "text": "# Customer Churn Prediction Model  \nA machine learning project to forecast SaaS customer churn using historical user data, achieving 89% accuracy in production testing. Built for hobby-scale experimentation with a cross-functional team of 12+ collaborators.  \n\n## Getting Started / Installation  \nInstall dependencies via pip:  \n```bash  \npip install -r requirements.txt  \n```  \nDownload the dataset from [this link](https://example.com/data) and place it in the `data/` directory. Ensure Python 3.9+ is installed.  \n\n## Tech Stack  \n- **Language**: Python 3.10  \n- **Data Processing**: Pandas (for ETL), NumPy (for numerical operations)  \n- **Modeling**: XGBoost (optimized for imbalanced datasets)  \n- **Visualization**: Matplotlib (static reports), Plotly (interactive dashboards)  \n- **Storage**: S3-compatible object storage (for production deployment)  \n- **Data Modeling**: Lightweight schema design for relational queries (SQL)  \n- **Feature Engineering**: Manual selection of 12+ predictive features  \n\n## Usage / Examples  \nTrain the model with:  \n```bash  \npython train.py --data_path data/churn.csv  \n```  \nGenerate a visualization report:  \n```bash  \npython generate_report.py --output_dir reports/  \n```  \nExplore data in Jupyter notebooks: `notebooks/churn_analysis.ipynb`  \n\n## Badges  \n⭐ 1.2k stars · 📈 89% accuracy · 🧠 12+ contributors  \n\n## Architecture / Design  \nThe system follows a modular pipeline: SQL queries extract user behavior metrics, which are cleaned and transformed using Pandas. Features are engineered to capture usage patterns and support vector interactions. The XGBoost model is trained on a stratified sample, with validation metrics tracked in real-time. Visualizations are generated as HTML files for stakeholder review.  \n\n## Contributing  \nPull requests welcome! Focus on improving feature importance analysis or expanding SQL integration for real-time data.  \n\n## License  \nMIT License (see [LICENSE](LICENSE))"
+}

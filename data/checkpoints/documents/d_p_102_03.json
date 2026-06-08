@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_102_03",
+  "type": "project_readme",
+  "persona_id": "p_102",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Android development": 2,
+    "Flutter": 2,
+    "Kotlin": 2,
+    "React Native": 4,
+    "Responsive design": 2,
+    "State management": 3,
+    "Swift": 2,
+    "TypeScript": 2,
+    "Web accessibility": 3,
+    "iOS development": 3
+  },
+  "text": "# NexaTask: Cross-Platform SaaS Productivity App  \nStreamline task management for remote teams with real-time sync, collaborative workflows, and intuitive UX. Built for scalability, with Firebase as the backbone and React Native ensuring seamless cross-platform performance.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies:  \n```bash  \nnpm install  \nnpx react-native run-android  \nnpx react-native run-ios  \n```  \nInitialize Firebase by configuring `firebase.json` and setting up the service account key. Ensure environment variables for API keys are securely managed.  \n\n## Usage / Examples  \n- **Task creation**: Tap \"Add Task\" to input description, deadline, and assignees.  \n- **Collaboration**: Team members receive real-time updates via Firebase Cloud Messaging.  \n- **Notifications**: Custom alerts trigger on deadline proximity or task completion.  \nExample: `Task 'Q4 Reporting' assigned to @jane, due by 5 PM` syncs instantly across devices.  \n\n## Badges  \n[![Production Ready](https://via.placeholder.com/80/4CAF50/FFFFFF?text=✅)](https://example.com)  \n[![Cross-Platform](https://via.placeholder.com/80/2196F3/FFFFFF?text=📱)](https://example.com)  \n[![Firebase Sync](https://via.placeholder.com/80/FF9800/FFFFFF?text=⚡)](https://example.com)  \n\n## Tech Stack  \n- **Frontend**: React Native (with TypeScript for type safety)  \n- **Backend**: Firebase (Realtime Database, Cloud Functions, Authentication)  \n- **State Management**: Context API with custom hooks for modularity  \n- **Accessibility**: ARIA labels and semantic markup for web components  \n- **Testing**: Jest for unit tests, Detox for end-to-end validation  \n\n## Architecture / Design  \nThe app follows a **Model-View-ViewModel (MVVM)** pattern, decoupling business logic from UI. Firebase Realtime Database ensures real-time sync, while Cloud Functions handle background tasks like email reminders. Modular components (e.g., `TaskList`, `NotificationCard`) enable reuse across platforms.  \n\n## Contributing  \nSubmit issues for feature requests or bugs. Pull requests should include unit tests and adhere to the code style guide. Prioritize accessibility improvements and performance optimizations.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

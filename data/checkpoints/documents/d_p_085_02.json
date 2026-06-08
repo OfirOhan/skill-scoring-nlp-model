@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_085_02",
+  "type": "project_readme",
+  "persona_id": "p_085",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "ArgoCD": 1,
+    "CI/CD pipelines": 1,
+    "Chaos engineering": 1,
+    "Cloud networking (VPC/subnets)": 1,
+    "Go": 1,
+    "Jenkins": 1,
+    "Kubernetes": 1,
+    "Monitoring & alerting": 1,
+    "PostgreSQL": 1,
+    "Prometheus/Grafana": 1,
+    "Python": 1,
+    "Terraform": 1
+  },
+  "text": "# CloudOptimizationForGaming  \nOptimize cloud spend for real-time gaming apps with dynamic resource scaling and predictive cost modeling. Reduces average monthly spend by 32% in benchmark scenarios.  \n\n## Contributing  \nCollaborate on cost analysis algorithms, validation frameworks, and real-world use case integration. Submit PRs with measurable impact metrics.  \n\n## Getting Started / Installation  \nInstall dependencies via npm:  \n```bash  \nnpm install @cloud-cost-utils/core @gaming-load-sim/estimator  \n```  \nConfigure environment variables for AWS/GCP API keys. Validate setup with `npm run sanity-check`.  \n\n## Usage / Examples  \n```javascript  \nconst optimizer = new CloudCostOptimizer({  \n  region: 'us-east-1',  \n  instanceTypes: ['c5.4xlarge', 'g4dn.xlarge'],  \n  peakLoad: 12000 // concurrent users  \n});  \nconsole.log(optimizer.proposeInstancePool());  \n```  \nExample output:  \n```  \n{  \n  recommendedPool: 'c5.4xlarge x3, g4dn.xlarge x2',  \n  estimatedCost: '$18,720/mo',  \n  costSavings: '34.2%'  \n}  \n```  \n\n## Tech Stack  \n- Node.js (v16+)  \n- AWS SDK v3  \n- PostgreSQL (lite) for historical cost storage  \n- Custom heuristic libraries for load forecasting  \n\n## Architecture / Design  \nDecentralized cost engine processes real-time metrics from game servers. Aggregates CPU/memory usage patterns to predict peak loads. Dynamically adjusts EC2 spot fleet requests based on historical cost curves and projected traffic.  \n\n## License  \nMIT  \n\n## Badges  \n[![npm version](https://badge.fury.io/js/cloud-cost-utils.svg)](https://npmjs.com/package/cloud-cost-utils)  \n[![build pass rate](https://img.shields.io/badge/build%20pass%20rate-92%25-green.svg)](https://github.com/qasim-malik/cloud-cost-utils/actions)"
+}

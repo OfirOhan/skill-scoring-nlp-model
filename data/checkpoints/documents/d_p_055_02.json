@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_055_02",
+  "type": "project_readme",
+  "persona_id": "p_055",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Apache Airflow": 1,
+    "Data modeling": 1,
+    "Data visualization (Matplotlib/Plotly)": 3,
+    "ETL pipeline design": 1,
+    "Feature engineering": 1,
+    "Jupyter notebooks": 3,
+    "NumPy": 3,
+    "Pandas": 3,
+    "Python": 3,
+    "REST API design": 2,
+    "SQL analytics": 3
+  },
+  "text": "# SaaS Usage Analytics Dashboard  \nA real-time analytics dashboard for monitoring SaaS product usage patterns, built with Python and Dash. Designed for teams tracking user engagement, feature adoption, and retention metrics.  \n\n## API Reference  \nEndpoints:  \n- `GET /api/usage` – Fetch aggregated usage data (500+ metrics) with filters (e.g., `date_range`, `feature_id`).  \n- `POST /api/refresh` – Trigger manual data refresh (supports incremental updates).  \n- `GET /api/metrics` – Retrieve metadata for all tracked KPIs (e.g., `active_users`, `session_duration`).  \n\nResponse latency: 95th percentile <200ms.  \n\n## Usage / Examples  \n```python  \n# Query user engagement metrics for Q3 2023  \nresponse = requests.get(  \n    \"https://api.example.com/api/usage\",  \n    params={\"date_range\": \"2023-07-01_to_2023-09-30\", \"feature_id\": \"onboarding_flow\"}  \n)  \n```  \nVisualize with Plotly:  \n```python  \nfig = px.line(df, x=\"timestamp\", y=\"click_rate\", title=\"Onboarding Flow Engagement\")  \nfig.show()  \n```  \nJupyter notebooks included for exploratory analysis and dashboard prototyping.  \n\n## Getting Started / Installation  \n1. Clone repo: `git clone https://github.com/carmendelgado/usage-dashboard.git`  \n2. Install dependencies:  \n   ```bash  \n   pip install dash plotly pandas numpy  \n   ```  \n3. Run app: `python app.py`  \n4. Access at `http://localhost:8050`  \n\n## Tech Stack  \n- **Frontend**: Dash (React-based, real-time updates)  \n- **Data Processing**: Pandas (data cleaning, aggregation)  \n- **Visualization**: Plotly (interactive charts, dashboards)  \n- **Utilities**: NumPy (numeric operations), SQLAlchemy (SQLite integration)  \n\n## Architecture / Design  \nDashboard leverages Dash for reactive UI, with backend logic handled via Flask subapp. Data streams from PostgreSQL (via SQLAlchemy) are pre-aggregated into Parquet files for fast querying. All visualizations are rendered client-side using Plotly’s WebGL engine.  \n\n## License  \nMIT License  \n\n## Badges  \n[![PyPI version](https://img.shields.io/pypi/v/usage-dashboard)](https://pypi.org/project/usage-dashboard)  \n[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)"
+}

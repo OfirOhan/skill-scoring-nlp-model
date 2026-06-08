@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_306_01",
+  "type": "project_readme",
+  "persona_id": "p_306",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Agile/Scrum": 4,
+    "CI/CD pipelines": 4,
+    "Cross-team collaboration": 4,
+    "Database optimization": 4,
+    "GitHub Actions": 4,
+    "Kubernetes": 5,
+    "Linux administration": 2,
+    "Monitoring & alerting": 4,
+    "Project management": 4,
+    "Stakeholder communication": 4,
+    "System design": 4,
+    "Team leadership": 4
+  },
+  "text": "# NexaCloud SaaS Platform  \nA cloud-native SaaS platform built with microservices, optimized for scalability and observability. Designed for production workloads with 99.95% SLA, supporting 10k+ concurrent users via Kubernetes orchestration.  \n\n---\n\n## API Reference  \n**Base URL**: `https://api.nexacloud.dev/v1`  \n**Authentication**: Bearer token (OAuth 2.0)  \n**Rate Limiting**: 5k requests/min per account  \n\n### Core Endpoints  \n- `POST /services` (Create microservice instance)  \n- `GET /metrics` (Prometheus metrics endpoint)  \n- `PUT /config` (Dynamic config updates for services)  \n\n**Response Format**: JSON with status codes (200 OK, 429 Too Many Requests, 503 Service Unavailable)  \n\n---\n\n## Usage / Examples  \n```bash\ncurl -X POST https://api.nexacloud.dev/v1/services \\\n  -H \"Authorization: Bearer <token>\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"name\": \"data-plane\", \"replicas\": 3}'\n```  \n**Result**: Service deployment with autoscaling enabled, monitored via Prometheus  \n\n---\n\n## Getting Started / Installation  \n1. Clone repo: `git clone https://github.com/nexacloud/platform.git`  \n2. Install dependencies: `go mod tidy && npm install`  \n3. Set environment variables:  \n   ```env\n   DB_URL=postgres://user:pass@localhost:5432  \n   KUBECONFIG=/path/to/config  \n   ```  \n4. Run migrations: `go run migrate.go`  \n5. Start services: `docker-compose up --build`  \n\n---\n\n## Tech Stack  \n- **Backend**: Go (1.21), Node.js (18)  \n- **Database**: PostgreSQL (14), Redis (7)  \n- **Message Queue**: Apache Kafka (3.4)  \n- **Orchestration**: Kubernetes (1.28)  \n- **CI/CD**: GitHub Actions (v3)  \n- **Monitoring**: Prometheus (3.1), Grafana (10.1)  \n\n---\n\n## Architecture / Design  \nMicroservices orchestrated via Kubernetes with Istio service mesh. Core services (auth, data-plane, analytics) decoupled using Kafka for async communication.  \n- **Scalability**: Horizontal pod autoscaling (HPA) with metrics from Prometheus  \n- **Resilience**: Circuit breakers, retries, and dead-letter queues for failed messages  \n- **Observability**: Distributed tracing (Jaeger) and centralized logs (ELK stack)  \n\n---\n\n## License  \nMIT License (see [LICENSE](LICENSE))  \n\n---\n\n## Badges  \n[![GitHub](https://img.shields.io/github/commit-activity/m/nexacloud/platform)]  \n[![Build Status](https://img.shields.io/github/actions/workflow/ci.yml?branch=main)]  \n[![Coverage](https://img.shields.io/coveralls/github/nexacloud/platform)]  \n[![Dependencies](https://img.shields.io/david/nexacloud/platform)]"
+}

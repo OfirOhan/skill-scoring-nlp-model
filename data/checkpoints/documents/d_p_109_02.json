@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_109_02",
+  "type": "recommendation",
+  "persona_id": "p_109",
+  "hyperparams": {
+    "recommender_role": "skip-level",
+    "recommender_closeness": "worked-daily",
+    "company_type": "FAANG",
+    "company_size": "small (<50)"
+  },
+  "skill_evidence": {
+    "API testing": 4,
+    "CI/CD pipelines": 4,
+    "Go": 4,
+    "Performance testing (JMeter/k6)": 4,
+    "Python": 4,
+    "REST API design": 1,
+    "Security testing": 5,
+    "Test automation": 5
+  },
+  "text": "Quinn once spent 14 hours after hours debugging a critical API vulnerability that could have exposed 500k user records. When the team dismissed it as a “corner case,” she methodically traced the issue through 12 interconnected services, rewriting the endpoint’s validation logic to prevent exploitation. Her fix not only patched the flaw but also became a template for our API security playbook.  \n\nQuinn is the quiet force behind our QA team’s reliability. As Cybersecurity Test Lead, she owns end-to-end testing for our SaaS platform, balancing automation with manual exploration. Her Go-based tools for CI/CD pipelines cut deployment time by 30%, while her Python scripts for performance testing (using k6) ensured our system handled 10x traffic spikes without degradation. She’s the first to volunteer for high-risk audits, often mentoring junior engineers on secure test design.  \n\nBeyond technical rigor, Quinn’s strength lies in her relentless curiosity and ethical mindset. She once redesigned our test automation framework to prioritize edge cases, reducing production vulnerabilities by 40% over two years. Her security testing approach—rooted in architectural foresight rather than reactive checks—has shaped how our team thinks about risk.  \n\nIf you’re seeking someone who treats testing as a strategic discipline, not just a checkbox, Quinn is your person. She’s the kind of engineer who’ll ask, “What if the attacker assumes this?” and then build the tests to answer it."
+}

@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_194_01",
+  "type": "project_readme",
+  "persona_id": "p_194",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "CI/CD pipelines": 4,
+    "Docker": 4,
+    "Go": 4,
+    "Kubernetes": 5,
+    "Linux administration": 4,
+    "Monitoring & alerting": 4,
+    "Prometheus/Grafana": 4,
+    "Python": 3,
+    "Terraform": 4
+  },
+  "text": "# NexaSphere Observability Platform  \n\nNexaSphere is a cloud-native observability tool designed to provide end-to-end visibility into distributed systems, enabling cross-team collaboration and proactive incident resolution. Built to integrate seamlessly with Kubernetes-native workflows, it reduces mean time to detect (MTTD) by 40% in production environments through structured metric aggregation and real-time alerting.  \n\n## Tech Stack  \n- **Python**: Data processing pipelines for log normalization and anomaly detection  \n- **AWS**: Infrastructure-as-code (IaC) via Terraform, managed Prometheus for metric storage, and VPC segmentation for security  \n- **CI/CD**: GitLab CI pipelines for automated testing, artifact promotion, and canary deployments  \n- **Docker**: Containerized agent deployment with dynamic resource allocation  \n- **Go**: High-performance metrics server for low-latency data ingestion  \n- **Linux**: Custom init scripts for service discovery and systemd integration  \n- **Monitoring**: Prometheus/Grafana stack for custom dashboards and alert suppression logic  \n- **Terraform**: Multi-region cluster provisioning with state locking  \n- **Kubernetes**: Core orchestration layer with custom controllers for service mesh integration  \n\n## Architecture / Design  \nThe platform is built atop Kubernetes, leveraging Prometheus for distributed metric collection and Grafana for visualization. A sidecar agent injects metrics into pods, while a centralized Go-based aggregator routes data to Prometheus. Terraform provisions AWS resources with auto-scaling groups for metric storage. CI/CD pipelines enforce strict schema validation for incoming data, ensuring compatibility with Grafana dashboards.  \n\n## Getting Started / Installation  \n1. Clone the repository and install Docker  \n2. Deploy the Terraform configuration to AWS  \n3. Use `kubectl` to apply Kubernetes manifests for the metrics server  \n4. Configure Prometheus remote storage for persistent metric retention  \n\n## Usage / Examples  \n```bash  \n# Deploy a sample service with built-in metrics  \nkubectl apply -f examples/metrics-redis.yaml  \n\n# Query Prometheus for latency distribution  \ncurl http://prometheus-server:9090/api/v1/query?query=percentile{job=\"redis\"}  \n```  \n\n## Badges  \n[![Build Status](https://example.com/build-badge)](https://example.com/ci)  \n[![Coverage](https://example.com/coverage)](https://example.com/coverage)  \n\n## Contributing  \nContributions are welcome but must align with team goals. Submit pull requests with unit tests and documentation updates. Reviewers will prioritize clarity and operational safety.  \n\n## License  \nMIT License (see [LICENSE](LICENSE) for details)"
+}

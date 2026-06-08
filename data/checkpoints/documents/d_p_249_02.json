@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_249_02",
+  "type": "project_readme",
+  "persona_id": "p_249",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Apache Spark": 1,
+    "Apache Kafka": 1,
+    "Apache Airflow": 1,
+    "Snowflake": 1,
+    "Databricks": 1,
+    "Data Modeling": 1,
+    "Python": 1,
+    "Terraform": 1,
+    "Docker": 1,
+    "REST API design": 1
+  },
+  "text": "# Cloud-Native Data Pipeline on AWS  \n\nA production-grade, serverless architecture for real-time data ingestion, transformation, and storage leveraging AWS services to ensure scalability, fault tolerance, and sub-100ms latency for SaaS applications. Engineered to handle 10M+ events/day with 99.95% uptime and 95%+ data consistency across global regions.  \n\n## Badges  \n[![Build Status](https://img.shields.io/endpoint?url=https://api.renovatebot.com/api/v1/repos/your-username/your-repo)](https://github.com/your-username/your-repo/actions)  \n[![Code Coverage](https://img.shields.io/endpoint?url=https://api.renovatebot.com/api/v1/repos/your-username/your-repo/coverage)](https://github.com/your-username/your-repo/actions)  \n[![Dependency Status](https://img.shields.io/endpoint?url=https://api.renovatebot.com/api/v1/repos/your-username/your-repo/dependents)](https://github.com/your-username/your-repo/network/dependents)  \n\n## Tech Stack  \n- **AWS Lambda**: Serverless compute for event-driven data processing  \n- **Amazon S3**: Object storage for raw and processed datasets  \n- **DynamoDB**: Low-latency NoSQL database for real-time analytics  \n- **Amazon CloudWatch**: Monitoring and logging for observability  \n- **AWS IAM**: Fine-grained access control for secure resource isolation  \n- **CloudFormation**: Infrastructure-as-code for consistent deployment  \n\n## Configuration  \nEnvironment variables are managed via AWS Systems Manager Parameter Store, with secrets encrypted using AWS KMS. Configure the following:  \n- `S3_BUCKET_NAME`: Target bucket for raw data ingestion  \n- `DYNAMODB_TABLE`: Name of the analytics database table  \n- `LOG_LEVEL`: Set to `INFO` or `DEBUG` for detailed CloudWatch logs  \n- `MAX_CONCURRENT_EXECUTIONS`: Cap Lambda invocations to prevent throttling  \n\n## Getting Started / Installation  \n1. Deploy AWS resources using CloudFormation templates in `infrastructure/stack.yaml`  \n2. Configure IAM roles with policy attachments for S3, DynamoDB, and CloudWatch access  \n3. Set environment variables via AWS SSM Parameter Store using the AWS CLI  \n4. Validate dependencies with `npm install` and `yarn lint`  \n\n## Usage / Examples  \nTrigger data processing pipelines via S3 event notifications:  \n```bash  \naws s3api put-object --bucket <bucket-name> --key <input-file-path>  \n```  \nMonitor pipeline health in CloudWatch Metrics for `LambdaInvocations` and `DynamoDBWriteCapacityUsed`.  \n\n## Testing  \nUnit tests for Lambda functions are written in TypeScript using Jest, with mocks for S3 and DynamoDB. Integration tests validate end-to-end data flow with AWS Lambda Test Events. Coverage thresholds are enforced at 95% for core logic and 85% for utility functions.  \n\n## License  \nLicensed under MIT License. See [LICENSE](LICENSE) for details."
+}

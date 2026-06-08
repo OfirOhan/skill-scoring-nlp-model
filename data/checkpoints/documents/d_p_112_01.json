@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_112_01",
+  "type": "project_readme",
+  "persona_id": "p_112",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 1,
+    "CI/CD pipelines": 3,
+    "Go": 5,
+    "Kubernetes": 5,
+    "Monitoring & alerting": 3,
+    "PostgreSQL": 5,
+    "Python": 1,
+    "REST API design": 5,
+    "Terraform": 4
+  },
+  "text": "# NexaCorp Microservices Framework  \nA production-grade, domain-driven architecture for scalable SaaS platforms built with Go, PostgreSQL, and Kubernetes. Designed for enterprise-grade reliability, with automated deployment pipelines and observability baked into every service.  \n\n## API Reference  \n**Endpoints**  \n- `POST /api/v1/users` - Create a new user (returns 201 on success, 409 if duplicate)  \n- `GET /api/v1/datastreams` - List active data pipelines (filtered by namespace)  \n- `PUT /api/v1/services/{serviceID}/scale` - Adjust replica count (requires admin token)  \n\n**Authentication**  \nOAuth2 Bearer tokens via `Authorization: Bearer <token>` header. All endpoints require valid JWT with `user` scope.  \n\n## Usage / Examples  \n```bash  \n# Initialize a new service with Terraform  \nterraform apply -var=\"namespace=finance\" -var=\"db_password=securepass\"  \n\n# Example: Create a user via API  \ncurl -X POST https://api.nexacorp.io/v1/users \\\n  -H \"Authorization: Bearer <token>\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"email\": \"john@example.com\", \"role\": \"analyst\"}'  \n```  \n\n## Getting Started / Installation  \n1. Install Go 1.21+ and Docker  \n2. Clone repo: `git clone https://github.com/nexacorp/microservices.git`  \n3. Build services: `go mod tidy && go build -mod=mod`  \n4. Configure PostgreSQL credentials in `config/env.yaml`  \n5. Deploy with `make deploy` (requires kubectl and helm 3.8+)  \n\n## Tech Stack  \n- **Language**: Go (1.21+)  \n- **Database**: PostgreSQL (16.x, with pgx driver)  \n- **Orchestration**: Kubernetes (with HPA and vertical scaling)  \n- **Infrastructure**: Terraform (stateful modules for DB and services)  \n- **Monitoring**: Prometheus + Grafana (custom dashboards for latency and errors)  \n- **CI/CD**: GitHub Actions (with parallel test matrix)  \n\n## Architecture / Design  \nServices are organized into bounded contexts (e.g., `user`, `billing`, `analytics`). Each service runs in its own Kubernetes namespace with dedicated PostgreSQL pods. Inter-service communication uses gRPC with TLS encryption and Envoy as a service mesh. Terraform manages infrastructure as code, including auto-scaling rules and security policies.  \n\n## License  \nMIT License (see [LICENSE](LICENSE))  \n\n## Badges  \n[![GitHub](https://img.shields.io/badge/github-nexacorp/microservices-blue?logo=github)](https://github.com/nexacorp/microservices)  \n[![Build](https://img.shields.io/badge/build-passing-green)](https://github.com/nexacorp/microservices/actions)  \n[![Test](https://img.shields.io/badge/test-100%25-green)](https://github.com/nexacorp/microservices/actions)  \n[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)"
+}

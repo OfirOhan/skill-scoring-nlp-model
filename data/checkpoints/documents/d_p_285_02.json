@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_285_02",
+  "type": "project_readme",
+  "persona_id": "p_285",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "A/B testing": 3,
+    "Apache Airflow": 3,
+    "Data modeling": 4,
+    "Feature engineering": 4,
+    "Hypothesis testing": 3,
+    "Python": 5,
+    "SQL analytics": 3,
+    "Statistical modeling": 4,
+    "Tableau/Power BI": 3,
+    "scikit-learn": 5
+  },
+  "text": "# FraudDetector  \nFraud detection in ad campaigns using hybrid anomaly detection and graph-based pattern analysis. Built for production environments with scalable data pipelines and real-time monitoring. Proven to reduce false positives by 32% in A/B tests during last campaign rollout.  \n\n## Getting Started  \nCheckout the repo and install dependencies via pip:  \n```bash  \npip install -r requirements.txt  \n```  \nSet up a PostgreSQL instance for metadata storage and run the ETL pipeline using Airflow DAGs. For local testing, use the `docker-compose` script to spin up a sandbox environment. Run unit tests with:  \n```bash  \npytest tests/  \n```  \nExample: Analyze a sample dataset with:  \n```python  \npython scripts/analyze_campaign.py --input data/sample.csv  \n```  \n\n## Tech Stack  \n- **Python 3.9** (core language, with custom type hints for model pipelines)  \n- **scikit-learn 1.2** (baseline anomaly detection, embedded in production workflows)  \n- **Apache Airflow 2.8** (orchestrates data ingestion, model retraining, and alerting)  \n- **Neo4j 4.4** (graph analysis for fraud network detection)  \n- **SQL (PostgreSQL)** (ETL, metadata storage, and ad-hoc analytics)  \n- **Tableau** (dashboard for real-time fraud metrics and model performance tracking)  \n\n## Usage / Examples  \nThe pipeline processes clickstream data, extracts temporal and spatial anomalies, then maps suspicious nodes in a graph. For example, a campaign with 15% click-through rate anomalies and 8% networked fraud clusters triggers a red flag. Use the `detect_fraud.py` script to validate custom datasets.  \n\n## Badges  \n[![License](https://img.shields.io/badge/license-Apache%202.0-blue)](https://opensource.org/licenses/Apache-2.0)  \n[![Tests](https://img.shields.io/badge/tests-100%25-green)](https://github.com/hawadiop/FraudDetector/actions)  \n[![Activity](https://img.shields.io/badge/last%20commit-2%20days-黄色)](https://github.com/hawadiop/FraudDetector/commits/main)  \n\n## Architecture / Design  \nThe system decouples data ingestion, feature engineering, and model inference. Core components:  \n- **Graph Analysis Layer**: Neo4j subgraphs detect coordinated fraud patterns.  \n- **Statistical Models**: Isolation Forest and Gaussian Mixture Models (GMM) for anomaly scoring.  \n- **Feedback Loop**: A/B tests validate model thresholds, with results stored in SQL for auditing.  \n\n## Contributing  \nEnhance model accuracy by refining feature engineering pipelines or expanding dataset sources. Propose new graph analysis rules for fraud detection. All contributions must include hypothesis testing and A/B validation.  \n\n## License  \nApache License 2.0"
+}

@@ -1,0 +1,28 @@
+{
+  "doc_id": "d_p_221_02",
+  "type": "recommendation",
+  "persona_id": "p_221",
+  "hyperparams": {
+    "recommender_role": "skip-level",
+    "recommender_closeness": "brief",
+    "company_type": "startup",
+    "company_size": "small (<50)"
+  },
+  "skill_evidence": {
+    "AWS": 2,
+    "CI/CD pipelines": 2,
+    "Database optimization": 1,
+    "Docker": 2,
+    "JavaScript": 3,
+    "MongoDB": 2,
+    "PostgreSQL": 2,
+    "Python": 3,
+    "REST API design": 3,
+    "React": 3,
+    "Responsive design": 1,
+    "State management (Redux/Zustand)": 1,
+    "TypeScript": 3,
+    "Web performance optimization": 1
+  },
+  "text": "George Adamu once spearheaded the integration of a real-time leaderboard system for Lumina Games’ mobile RPG, a project that required reconciling backend Python scripts with React frontends. When the initial API calls caused latency spikes during peak play hours, he dissected the issue by profiling request patterns and refactored the REST endpoints to batch user updates. The result? A 30% reduction in server load without sacrificing real-time feedback, which directly boosted player retention metrics. His ability to balance technical rigor with player experience was evident in how he iterated the system alongside designers, ensuring the feature felt seamless to users.  \n\nWe overlapped briefly during a cross-team sprint to refactor legacy code, where I observed his knack for simplifying complex systems. Though our direct collaboration was limited, his contributions to shared tools like CI/CD pipelines and AWS infrastructure were critical to our team’s agility.  \n\nGeorge’s strength lies in his relentless focus on reliability—whether debugging edge cases in TypeScript or ensuring Python scripts scaled with user growth. He’s equally comfortable diving into low-level optimization or pivoting to meet shifting project needs. His work ethic is unshakable; he’ll spend hours refining a single API endpoint until it’s frictionless, even if it means rethinking the entire architecture.  \n\nIn short, George is a developer who thrives where systems meet human interaction. His blend of technical precision and empathy for user outcomes makes him a rare asset.  \n\n— Alex Rivera, Former Colleague & Engineering Lead, Lumina Games"
+}

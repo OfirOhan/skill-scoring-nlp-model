@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_203_02",
+  "type": "project_readme",
+  "persona_id": "p_203",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "CI/CD pipelines": 3,
+    "Go": 5,
+    "Kubernetes": 4,
+    "Microservices architecture": 5,
+    "PostgreSQL": 5,
+    "Python": 4,
+    "REST API design": 5,
+    "Redis": 4,
+    "Terraform": 4
+  },
+  "text": "# End-to-End Encryption Tool for Sensitive Data  \nA production-grade solution for securing cross-node data transfers in distributed cybersecurity systems. Built with Go and Python, this tool handles key rotation, asynchronous processing, and compliance-ready logging.  \n\n---\n\n## Badges  \n🚀 Production-Grade | 🔐 E2EE Core | 🐍 CLI Tool | 🧠 Microservices-Driven  \n\n---\n\n## Tech Stack  \n- **Go**: Core encryption engine with zero-copy memory mapping for performance  \n- **Python**: CLI tool with asyncio-based async I/O for batch processing  \n- **Redis**: Distributed caching layer with TTL-based key expiration  \n- **PostgreSQL**: Audit log storage with row-level security  \n- **AWS**: Multi-region deployment with S3-backed key vaults  \n- **Kubernetes**: Self-healing deployment with readiness probes  \n- **Terraform**: Infrastructure-as-code for VPC isolation and security groups  \n- **REST API**: Type-safe endpoints for integration with SIEM systems  \n\n---\n\n## Architecture / Design  \nThe system operates as a microservices cluster with three primary components:  \n1. **Encryption Core**: Written in Go, handles AES-256-GCM and hybrid key exchange  \n2. **CLI Interface**: Python-based wrapper for batch file encryption/decryption  \n3. **Control Plane**: REST API for dynamic key rotation and policy enforcement  \n\nData flows through Redis as a pub/sub layer for real-time sync across nodes. PostgreSQL stores audit logs with automatic anonymization. Kubernetes ensures fault tolerance with pod anti-affinity rules.  \n\n---\n\n## Getting Started / Installation  \n```bash\ngit clone https://github.com/danielnakamura/e2ee-tool.git  \ncd e2ee-tool  \nmake deps  \nexport AWS_ACCESS_KEY_ID=...  \nexport AWS_SECRET_ACCESS_KEY=...  \ndocker-compose up -d  \n```  \nEnsure Redis and PostgreSQL are running before executing `make build`.  \n\n---\n\n## Usage / Examples  \nEncrypt a file:  \n```bash  \npython cli.py --encrypt --input data.json --output encrypted.bin  \n```  \nDecrypt with:  \n```bash  \npython cli.py --decrypt --input encrypted.bin --output data.json  \n```  \nREST API endpoint:  \n```bash  \ncurl -X POST https://api.example.com/rotate-keys  \n```  \n\n---\n\n## Contributing  \nThis project requires deep expertise in Go, Python, and cloud infrastructure. Submit pull requests with unit tests and CI/CD pipeline updates.  \n\n---\n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

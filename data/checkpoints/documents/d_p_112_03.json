@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_112_03",
+  "type": "project_readme",
+  "persona_id": "p_112",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 5,
+    "CI/CD pipelines": 4,
+    "Go": 1,
+    "Kubernetes": 1,
+    "Monitoring & alerting": 4,
+    "PostgreSQL": 1,
+    "Python": 4,
+    "REST API design": 5,
+    "Terraform": 5
+  },
+  "text": "# Serverless API Gateway  \nA scalable, battle-tested API gateway built for SaaS platforms using AWS Lambda, API Gateway, and Python. Designed to handle 10K+ concurrent requests with zero downtime, this solution enables rapid feature rollouts and seamless integration with legacy systems.  \n\n## Badges  \n[![GitHub Stars](https://img.shields.io/github/stars/xaviergirard/serverless-api-gateway?style=social)](https://github.com/xaviergirard/serverless-api-gateway)  \n[![CI/CD Status](https://img.shields.io/github/actions/workflow/file?workflow=ci.yml)](https://github.com/xaviergirard/serverless-api-gateway/actions)  \n[![Test Coverage](https://img.shields.io/coveralls/xaviergirard/serverless-api-gateway)](https://coveralls.io/github/xaviergirard/serverless-api-gateway)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Tech Stack  \n- **AWS**: Lambda, API Gateway, CloudWatch, X-Ray  \n- **Python**: Core logic for request validation, rate limiting, and auth  \n- **Terraform**: Infrastructure as code for multi-region deployments  \n- **CI/CD**: GitHub Actions with parallel testing for 30+ endpoints  \n- **Monitoring**: CloudWatch dashboards with custom alerts for latency > 500ms  \n\n## Architecture / Design  \nThe gateway acts as a single point of entry, routing requests to Lambda-powered microservices. Key components:  \n- **Lambda Functions**: Handle routing, authentication, and payload transformation  \n- **API Gateway**: Manages TLS termination and request distribution  \n- **Terraform**: Automates resource provisioning across 5 regions  \n- **CI/CD**: Redeploys 50+ endpoints in 2 minutes with zero-downtime swaps  \n- **Monitoring**: Custom dashboards track 99.99% SLA compliance  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/xaviergirard/serverless-api-gateway.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure AWS credentials via `~/.aws/credentials`  \n4. Deploy infrastructure: `terraform apply --auto-approve`  \n\n## Usage / Examples  \n```python  \n# Example endpoint handler  \ndef lambda_handler(event, context):  \n    if not validate_jwt(event['headers']['Authorization']):  \n        return { 'statusCode': 401, 'body': 'Unauthorized' }  \n    return { 'statusCode': 200, 'body': 'Success' }  \n```  \nDeploy a new endpoint:  \n```bash  \nterraform apply -var \"endpoint_name=users-v1\"  \n```  \n\n## Contributing  \nContributions are welcome. Focus on:  \n- Optimizing Cold Start mitigation (reduced latency by 40% in production)  \n- Enhancing rate-limiting algorithms (supporting 10K RPS)  \n- Improving Terraform resource tagging (reduced costs by 15%)  \nAll PRs require:  \n- Unit tests with 90%+ coverage  \n- CI/CD pipeline validation  \n- Real-world production impact analysis"
+}

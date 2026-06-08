@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_114_02",
+  "type": "project_readme",
+  "persona_id": "p_114",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Apache Airflow": 1,
+    "Apache Kafka": 5,
+    "Apache Spark": 1,
+    "Data warehousing": 1,
+    "ETL pipeline design": 4,
+    "Go": 4,
+    "Java": 3,
+    "Python": 4,
+    "REST API design": 4,
+    "Terraform": 4,
+    "dbt": 1,
+    "Snowflake": 1
+  },
+  "text": "# Real-Time Patient Monitoring System  \n\nA scalable, production-grade pipeline for ingesting, processing, and alerting on critical patient vitals in real time. Designed for high-availability healthcare environments, this system ensures sub-second latency for life-support data while maintaining audit trails and compliance with HIPAA. Built with a focus on observability, fault tolerance, and seamless integration with clinical workflows.  \n\n## Badges  \n[![GitHub](https://img.shields.io/badge/Repo-Active-green)](https://github.com/isaac-cohen/real-time-patient-monitoring)  \n[![CI/CD](https://img.shields.io/badge/Tests-Passed-blue)](https://github.com/isaac-cohen/real-time-patient-monitoring/actions)  \n[![Docker](https://img.shields.io/badge/Docker-Ready-blue)](https://hub.docker.com/r/isaac-cohen/monitoring-system)  \n\n## Tech Stack  \n- **Kafka**: Central to the architecture, enabling distributed, fault-tolerant ingestion of ECG, BP, and O2 saturation data from IoT devices.  \n- **Java**: Backend services for device registration and metadata management, leveraging Spring Boot for RESTful API endpoints.  \n- **Go**: High-performance signal processing modules for anomaly detection in cardiac rhythms.  \n- **Python**: Data transformation pipelines using Pandas and NumPy for historical trend analysis.  \n- **REST API**: GraphQL endpoints for real-time dashboards, exposing normalized patient metrics with schema validation.  \n- **Terraform**: Infrastructure-as-code for provisioning Kafka clusters, Prometheus exporters, and VPC networking.  \n\n## Configuration  \nThe system is configured via environment variables and Terraform modules. Key parameters include Kafka broker endpoints, Redis cache sizes, and alert thresholds. For local development, a `dev.env` file defines mock data sources and disables TLS for testing. Terraform templates ensure consistent deployment across staging and production environments, with versioned state files for auditability.  \n\n## Getting Started  \n1. Clone the repository and navigate to the project root.  \n2. Initialize Terraform and apply infrastructure as defined in `main.tf`.  \n3. Build the Go services using `go mod tidy` and `go build`.  \n4. Run Python data processors with `python3 pipeline.py` in a separate terminal.  \n5. Access the REST API at `http://localhost:8080/api/v1/metrics` for real-time data ingestion.  \n\n## Usage  \n- **Streaming Ingestion**: Use Kafka producers to send vitals to the `patient_data` topic, ensuring Avro schema compatibility.  \n- **Alerting**: Configure thresholds in the `alert_rules.yaml` file to trigger SMS/email notifications via the REST API.  \n- **Monitoring**: Query Prometheus metrics exposed at `/metrics` to track latency, error rates, and throughput.  \n\n## Testing  \n- **Unit Tests**: Run `go test` for Go services and `pytest` for Python modules to validate signal processing logic.  \n- **Integration Tests**: Use Postman to simulate device payloads and verify Kafka topic consistency.  \n- **End-to-End Tests**: Validate alert workflows with a custom script that mocks device failures and measures response times.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/isaac-cohen/real-time-patient-monitoring/blob/main/LICENSE) for details."
+}

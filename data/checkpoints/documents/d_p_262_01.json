@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_262_01",
+  "type": "project_readme",
+  "persona_id": "p_262",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Integration testing": 4,
+    "REST API design": 4,
+    "React": 5,
+    "Responsive design": 4,
+    "Test automation": 4,
+    "TypeScript": 5,
+    "Unit testing": 4,
+    "Web performance optimization": 4
+  },
+  "text": "# NexaDashboard  \nA production-grade SaaS analytics dashboard built with React and TypeScript, designed for real-time data visualization and scalable performance in enterprise environments. This project exemplifies a modular, type-safe architecture optimized for cross-browser compatibility and interactive user experiences. The dashboard supports multi-dimensional data exploration, live updates via WebSocket, and customizable widgets for financial, operational, and user analytics. Deployed as a single-page application, it leverages server-side rendering for SEO and pre-rendering, with performance benchmarks showing 30% faster load times compared to standard React setups.  \n\n## Tech Stack  \n- **Frontend**: React 18, TypeScript 4.9, React Query 4, Chart.js 4.4, Tailwind CSS 3.3  \n- **State Management**: Context API with custom hooks, Redux Toolkit for global state (optional)  \n- **Build Tools**: Vite 3.2, Webpack 5 (for legacy browser support)  \n- **Data Layer**: REST API integration with OpenAPI 3.0 specs, WebSocket for real-time updates  \n- **Testing**: Jest 29, React Testing Library, Cypress for end-to-end scenarios  \n- **Performance**: Lighthouse score of 98/100, code splitting via dynamic imports  \n\n## Architecture / Design  \nThe dashboard adopts a **modular monorepo structure** with separate packages for UI components, data models, and utilities. Key design decisions include:  \n- **TypeScript-centric state management**: Custom type guards and discriminated unions ensure type safety across nested components.  \n- **Responsive grid system**: CSS Grid with Tailwind’s `grid-cols` classes enables adaptive layouts for mobile, tablet, and desktop.  \n- **WebSocket integration**: Bidirectional communication with backend services reduces latency for live metrics, with fallback to HTTP polling.  \n- **Performance optimization**: Lazy-loaded components, memoization via React.memo, and tree-shaking in production builds.  \n- **Test coverage**: 92% unit test coverage for core logic, 85% for UI components, with integration tests validating API interactions.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/valentina-marchetti/nexa-dashboard.git  \ncd nexa-dashboard  \nnpm install  \nnpm run dev  \n```  \nEnsure Node.js 18+ is installed. Environment variables for API endpoints and WebSocket connections are configured in `.env.local`.  \n\n## Usage / Examples  \n- **Real-time metrics**: Use the `LiveChart` component to visualize streaming data from WebSocket.  \n- **Custom widgets**: Drag-and-drop interface for configuring KPI dashboards via the `WidgetEditor` tool.  \n- **Responsive mode**: Toggle between compact and expanded views using the `toggleView` utility.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/license/valentina-marchetti/nexa-dashboard)](https://github.com/valentina-marchetti/nexa-dashboard/blob/main/LICENSE)  \n[![npm](https://img.shields.io/npm/v/nexa-dashboard)](https://www.npmjs.com/package/nexa-dashboard)  \n[![Test Coverage](https://img.shields.io/coveralls/valentina-marchetti/nexa-dashboard)](https://coveralls.io/github/valentina-marchetti/nexa-dashboard)  \n\n## Contributing  \nThis project is a solo effort, but contributions are welcome for documentation, performance tweaks, or new widget integrations. Open an issue or submit a pull request with tests and benchmarks.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/valentina-marchetti/nexa-dashboard/blob/main/LICENSE) for details."
+}

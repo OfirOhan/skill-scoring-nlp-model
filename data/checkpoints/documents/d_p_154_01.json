@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_154_01",
+  "type": "project_readme",
+  "persona_id": "p_154",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "Apache Airflow": 3,
+    "Apache Kafka": 4,
+    "Apache Spark": 4,
+    "Data Modeling": 3,
+    "Docker": 3,
+    "ETL pipeline design": 4,
+    "Kubernetes": 1,
+    "Python": 4,
+    "Snowflake": 1,
+    "Terraform": 1
+  },
+  "text": "# Real-Time Ad Campaign Analytics Pipeline  \nA scalable, low-latency pipeline for processing clickstream data and delivering real-time campaign metrics to ad ops teams. Built to handle 10M+ events/day with <50ms end-to-end latency.  \n\n## Deployment  \nHosted on AWS EC2 clusters with Kafka brokers and Spark clusters managed via EMR. Airflow orchestrates batch reconciliation jobs and data quality checks. Configuration via environment variables for production/development parity.  \n\n## Badges  \n[![Pipeline Uptime](https://example.com/uptime-badge)](https://example.com/uptime)  \n[![Data Throughput](https://example.com/throughput)](https://example.com/throughput)  \n[![Schema Compliance](https://example.com/schema)](https://example.com/schema)  \n\n## Tech Stack  \n- **Data Ingestion**: Apache Kafka (partitioned by campaign ID, 3 replicas)  \n- **Processing**: Apache Spark Structured Streaming (batch window: 500ms)  \n- **Storage**: S3 for raw logs, Parquet for analytics tables  \n- **Orchestration**: Apache Airflow (DAGs for hourly reconciliation)  \n- **Language**: Python (PySpark, Kafka Producers/Consumers)  \n- **Infrastructure**: AWS EC2, EMR, S3 (no Docker in production)  \n\n## Architecture / Design  \nData flows from Kafka topics (e.g., `clickstream_events`) into Spark streaming jobs that apply pre-registered data models for ad campaign metrics. Aggregates are written to S3 in Parquet format for downstream BI tools. Schema evolution handled via Avro schema registry with backward compatibility.  \n\n## Getting Started / Installation  \n```bash  \n# Local dev (Docker not used in prod)  \npip install -r requirements.txt  \npython setup.py install  \nexport KAFKA_BOOTSTRAP_SERVERS=localhost:9092  \npython pipeline.py  \n```  \nFor AWS deployment, use AWS CLI to spin up EMR clusters and S3 buckets. Airflow DAGs are stored in S3 for version control.  \n\n## Usage / Examples  \n```python  \n# Sample Spark SQL query for real-time CPC calculation  \nspark.sql(\"\"\"\n    SELECT campaign_id, SUM(cost) / COUNT(*) AS cpc\n    FROM raw_clickstream\n    GROUP BY campaign_id\n    WINDOW w AS (ROWS BETWEEN 1 PRECEDING AND 1 PRECEDING)\n\"\"\").write.mode(\"append\").save(\"s3://analytics/realtime/cpc\")  \n```  \nOutput is available in S3 for ad ops dashboards.  \n\n## License  \nApache 2.0 (see [LICENSE](LICENSE) for details)"
+}

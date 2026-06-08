@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_069_01",
+  "type": "project_readme",
+  "persona_id": "p_069",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Apache Airflow": 1,
+    "Data warehousing": 3,
+    "ETL pipeline design": 3,
+    "Hugging Face Transformers": 3,
+    "Model deployment": 3,
+    "NLP": 3,
+    "PyTorch": 3,
+    "Recommendation systems": 1,
+    "TensorFlow": 3,
+    "dbt": 3,
+    "scikit-learn": 3
+  },
+  "text": "# Enterprise Fraud Detection System  \nA scalable anomaly detection framework for identifying fraudulent transactions in enterprise environments, leveraging machine learning to flag outliers in financial data streams.  \n\n## Roadmap / Future Work  \nExpand the system to ingest real-time transaction logs from cloud storage, integrating with existing data warehouses for historical pattern analysis. Prioritize model retraining schedules aligned with business cycles and explore hybrid approaches combining statistical thresholds with deep learning for evolving fraud patterns. Long-term goals include deploying explainable AI components to justify detection decisions and integrating with alerting systems for operational visibility.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies via `pip install -r requirements.txt`. Ensure your environment includes access to structured transaction datasets (CSV/Parquet format) and a PostgreSQL instance for metadata storage. For production readiness, deploy using Docker containers and configure environment variables for API keys and storage endpoints.  \n\n## Usage / Examples  \nRun the core detection pipeline with:  \n```bash  \npython src/main.py --input data/transactions.csv --output results/anomalies.parquet  \n```  \nThis trains an isolation forest model on historical data, flags suspicious transactions, and exports results. For iterative testing, use the `evaluate.py` script to compare detection thresholds against labeled fraud datasets.  \n\n## Tech Stack  \n- **Data Processing**: Apache Spark for distributed ETL, AWS S3 for scalable storage  \n- **Modeling**: Scikit-learn for baseline anomaly detection, TensorFlow for custom neural network layers  \n- **Deployment**: Docker for containerization, REST API endpoints for integration with enterprise systems  \n- **Monitoring**: Prometheus + Grafana for tracking model performance metrics  \n\n## Architecture / Design  \nThe system decouples data ingestion, feature engineering, and model inference into modular microservices. A central orchestrator manages workflow dependencies, while a caching layer reduces redundant computations. All components are designed for horizontal scaling, with audit logs maintained in a time-series database for compliance tracking.  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
+}

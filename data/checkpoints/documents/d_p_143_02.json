@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_143_02",
+  "type": "project_readme",
+  "persona_id": "p_143",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 3,
+    "Cloud migration": 3,
+    "Docker": 4,
+    "Kubernetes": 4,
+    "Load balancing": 3,
+    "Monitoring & alerting": 4,
+    "Python": 3,
+    "Terraform": 1
+  },
+  "text": "# PatientVitals Monitoring Platform  \n\nA production-grade real-time patient data monitoring system designed for healthcare environments. This platform ingests, processes, and visualizes critical vitals such as heart rate, blood pressure, and oxygen saturation using Prometheus for metrics collection and Grafana for dashboarding. The system ensures 99.99% uptime through automated scaling and proactive alerting, reducing clinical response delays by 40% in pilot deployments.  \n\n## Acknowledgments  \nThis project would not exist without the robust ecosystems of Prometheus, Grafana, and AWS. Special thanks to the AWS Lambda team for enabling serverless data processing pipelines, and to the Kubernetes community for their role in orchestrating containerized workloads. The use of Python scripts for data normalization and Docker for consistent deployment environments were pivotal in achieving cross-environment reliability.  \n\n## Getting Started / Installation  \n1. Clone the repository using `git clone https://github.com/yourusername/patientvitals.git`  \n2. Navigate to the project directory and run `docker-compose up --build` to spin up a local development environment. This leverages Docker for isolation and ensures dependency consistency across platforms.  \n3. Deploy to production via Kubernetes with `kubectl apply -f k8s/deployment.yaml`, which scales pods based on CPU utilization and ensures high availability.  \n\n## Usage / Examples  \n- Query real-time metrics via Prometheus API: `http://localhost:9090/api/v1/query?query=heart_rate`  \n- Configure Grafana dashboards to visualize trends in patient vitals, with alerts triggered for deviations beyond ±15% of baseline values.  \n- Automate alert suppression during scheduled maintenance using AWS Lambda functions that interface with the alert manager.  \n\n## Tech Stack  \n- **Monitoring**: Prometheus (metrics), Grafana (visualization)  \n- **Cloud**: AWS Lambda (serverless processing), EC2 Auto Scaling (elastic compute)  \n- **Orchestration**: Kubernetes (pod management), NGINX (load balancing)  \n- **Data**: Python (normalization scripts), PostgreSQL (metadata storage)  \n- **Containers**: Docker (environment consistency), Docker Hub (image hosting)  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![Uptime](https://example.com/uptime-badge.png)](https://example.com/uptime) [![Throughput](https://example.com/throughput-badge.png)](https://example.com/throughput)  \n\n## Contributing  \nCollaboration is encouraged. Please open an issue or PR for feature ideas, bug fixes, or documentation improvements. All contributions are reviewed through a GitHub Actions pipeline that enforces code quality and security standards."
+}

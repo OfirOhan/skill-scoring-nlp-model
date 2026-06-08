@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_237_01",
+  "type": "project_readme",
+  "persona_id": "p_237",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Agile/Scrum": 3,
+    "Cloud cost optimization": 2,
+    "Cross-team collaboration": 2,
+    "Database optimization": 4,
+    "Kubernetes": 5,
+    "Mentoring": 2,
+    "Multi-cloud strategy": 2,
+    "Project management": 3,
+    "REST API design": 4,
+    "Stakeholder communication": 2,
+    "System design": 5,
+    "Team leadership": 3,
+    "Technical debt management": 3,
+    "Terraform": 2
+  },
+  "text": "# NexaFlow Microservices Architecture  \nA scalable, cloud-optimized SaaS platform built for high-concurrency user traffic using Kubernetes-native patterns and REST-first design  \n\n[![Production Status](https://img.shields.io/badge/production-ready-green)](https://example.com/production)  \n[![CI/CD](https://img.shields.io/badge/CI/CD-passing-blue)](https://example.com/ci)  \n[![Kubernetes](https://img.shields.io/badge/kubernetes-1.25-blue)](https://kubernetes.io)  \n\n## Getting Started / Installation  \n1. Deploy a Kubernetes cluster (tested with EKS and GKE)  \n2. Configure environment variables for PostgreSQL and Redis endpoints  \n3. Run `make build` to compile services locally  \n4. Deploy with `kubectl apply -f manifests/` for production-grade orchestration  \n\n## Tech Stack  \n- **Orchestration**: Kubernetes (with HPA and vertical scaling)  \n- **Language**: Go (for performance-critical services), Python (for data pipelines)  \n- **Database**: PostgreSQL (with read replicas) + Redis (for caching)  \n- **APIs**: RESTful endpoints with OpenAPI spec-driven development  \n- **Infrastructure**: Terraform (minimal, focused on core cluster setup)  \n- **Monitoring**: Prometheus + Grafana for real-time metric aggregation  \n\n## Architecture / Design  \nThe system is divided into three core domains:  \n1. **User Flow**: Async message queues (RabbitMQ) handle 10k+ requests/sec  \n2. **Data Processing**: Batch workers with Kafka for event-driven pipelines  \n3. **Analytics**: Time-series DB for aggregated metrics  \n\nKey design choices:  \n- REST APIs use HATEOAS patterns with versioned endpoints  \n- Redis caching reduces DB load by 65% (per Prometheus metrics)  \n- Kubernetes service meshes enable mutual TLS between services  \n\n## Usage / Examples  \n```bash\n# Example: Create a user via REST API  \ncurl -X POST https://api.nexaflow.com/v1/users \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"email\": \"user@example.com\", \"plan\": \"pro\"}'\n```  \n\n## Testing  \n- **Unit Tests**: 98% coverage (Go tests + Pytest for Python services)  \n- **Integration Tests**: End-to-end validation of payment workflow  \n- **Chaos Engineering**: Regular stress tests with Chaos Monkey  \n- **Security**: OWASP ZAP scans for API vulnerabilities  \n\n## License  \nMIT License  \n© 2024 NexaFlow SaaS Team — All rights reserved."
+}

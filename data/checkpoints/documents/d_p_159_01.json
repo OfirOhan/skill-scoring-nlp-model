@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_159_01",
+  "type": "project_readme",
+  "persona_id": "p_159",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "API testing": 3,
+    "GitLab CI": 3,
+    "Integration testing": 3,
+    "JavaScript": 3,
+    "Python": 3,
+    "REST API design": 2,
+    "Selenium/Playwright": 3,
+    "Test automation": 3,
+    "Test strategy design": 2,
+    "Unit testing": 3
+  },
+  "text": "# SaaS API Testing Framework  \nA production-ready automation toolkit for validating RESTful endpoints in SaaS ecosystems. Built with Python and RestAssured, this framework enables rapid test script creation, parallel execution, and integration with CI pipelines. Designed for microservices architectures, it supports 98%+ test coverage across 12+ SaaS platforms, with 85% of tests running in <2 seconds.  \n\n## Badges  \n[![GitHub](https://via.placeholder.com/80x20?text=GitHub)](https://github.com/cedricblanc/saas-api-tester) [![CI/CD](https://via.placeholder.com/80x20?text=CI/CD)](https://gitlab.com/cedricblanc/ci-pipeline) [![Test Coverage](https://via.placeholder.com/80x20?text=98%25)](https://codecov.io/gh/cedricblanc/saas-api-tester)  \n\n## Getting Started / Installation  \nInstall via pip: `pip install saas-api-tester`  \nClone the repo: `git clone https://github.com/cedricblanc/saas-api-tester.git`  \nSet environment variables for API keys and base URLs. Preconfigure `config.yaml` with service-specific headers and timeouts. Run `pytest` to execute the 150+ test cases included in the baseline suite.  \n\n## Tech Stack  \n- **Python 3.10+**: Scripting and test execution  \n- **RestAssured**: Java-based API validation (via JVM interoperability)  \n- **GitLab CI/CD**: Pipeline orchestration for 50+ parallel test jobs  \n- **Docker**: Containerized test environments for 10+ SaaS platforms  \n- **PyTest**: Unit and integration test framework with 95% code coverage  \n\n## Architecture / Design  \nThe framework is divided into three layers:  \n1. **Request Pipeline**: Handles 100+ concurrent API calls with rate-limiting and retry logic  \n2. **Response Validator**: Uses JSON Schema for 99.9% of assertions, with custom regex for legacy systems  \n3. **CI Integration**: Exposes REST endpoints for 30+ CI systems to trigger tests on code push  \nAll components are modular, allowing 80% of tests to be reconfigured for new services in <15 minutes.  \n\n## Usage / Examples  \n```python  \nfrom saas_api_tester import TestSuite  \nsuite = TestSuite(\"user-auth\")  \nsuite.add_test(\"login_success\", {\"username\": \"test\", \"password\": \"1234\"})  \nsuite.add_assert(\"status_code\", 200)  \nsuite.run()  \n```  \nThis snippet validates a user authentication endpoint, executing in 1.2 seconds with 99.8% reliability.  \n\n## Testing  \nThe framework includes:  \n- **Unit Tests**: 120+ assertions for 20+ API endpoints  \n- **Integration Tests**: Validates 100% of service dependencies across 12 SaaS platforms  \n- **CI/CD Pipeline**: 85% of tests run on every push, with 92% pass rate in staging  \n- **Performance Metrics**: Average test execution time of 1.5 seconds, 99.95% uptime in production  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

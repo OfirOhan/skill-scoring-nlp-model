@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_214_02",
+  "type": "project_readme",
+  "persona_id": "p_214",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 2,
+    "Application security (OWASP)": 2,
+    "Encryption & PKI": 3,
+    "IAM/Access control": 2,
+    "Linux administration": 2,
+    "Network security": 3,
+    "SIEM tools": 1,
+    "Shell scripting (Bash)": 3,
+    "Vulnerability management": 1
+  },
+  "text": "# DataShield: Encrypting Advertiser Data in Transit  \n\nDataShield is a lightweight framework for securing advertiser data in transit within adtech platforms. By leveraging symmetric and asymmetric encryption, it reduces data exposure by 72% in production environments while maintaining low-latency performance. The project is designed for adtech teams prioritizing compliance with GDPR and CCPA, with optional integration into existing pipeline workflows.  \n\n## Configuration  \nConfigure encryption protocols via environment variables:  \n- `ENCRYPTION_ALGORITHM` (AES-256-GCM or ChaCha20-Poly1305)  \n- `KEY_MANAGEMENT_SERVICE` (AWS KMS or local HSM)  \n- `NETWORK_SECURITY_PROFILE` (TLS 1.3 or mTLS)  \n\nExample:  \n```bash  \nexport ENCRYPTION_ALGORITHM=AES-256-GCM  \nexport KEY_MANAGEMENT_SERVICE=AWS_KMS  \n```  \n\n## Getting Started / Installation  \n1. Clone the repo and install dependencies:  \n```bash  \ngit clone https://github.com/poojanair/datashield.git  \ncd datashield  \npip install -r requirements.txt  \n```  \n2. Generate encryption keys using the included shell script:  \n```bash  \n./generate_keys.sh --provider AWS_KMS --region us-east-1  \n```  \nEnsure OpenSSL 1.1.1+ and Python 3.8+ are installed.  \n\n## Usage / Examples  \nEncrypt real-time bid data:  \n```bash  \npython encryptor.py --input bids.json --output encrypted_bids.bin  \n```  \nDecrypt with:  \n```bash  \npython decryptor.py --input encrypted_bids.bin --key-id arn:aws:kms:us-east-1:123456789012:key/abcd1234-a123-4567-8abc-def123456789  \n```  \nPerformance metrics: 1.2M requests/sec throughput, <50ms latency.  \n\n## Tech Stack  \n- Python 3.9  \n- OpenSSL (for cryptographic primitives)  \n- Docker (containerized encryption services)  \n- AWS KMS (key management)  \n- Protobuf (schema-serializable data)  \n\n## Architecture / Design  \nDataShield operates in three layers:  \n1. **Data Ingestion**: Raw advertiser data is parsed and split into chunks.  \n2. **Encryption Engine**: Uses AES-256-GCM for bulk encryption, with AWS KMS managing keys.  \n3. **Network Tunnel**: TLS 1.3 encrypts data in transit, with mTLS for internal service communication.  \n\nKey decisions:  \n- Prioritized symmetric encryption for speed, with asymmetric key exchange for scalability.  \n- Implemented circuit-level encryption to prevent metadata leakage.  \n\n## License  \nMIT License (see `LICENSE`).  \n\n## Badges  \n[![Build Status](https://github.com/poojanair/datashield/actions/workflows/build.yml/badge.svg)](https://github.com/poojanair/datashield/actions/workflows/build.yml)  \n[![Security Audit](https://snyk.io/test/github/poojanair/datashield/badge.svg)](https://snyk.io/test/github/poojanair/datashield)"
+}

@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_168_01",
+  "type": "project_readme",
+  "persona_id": "p_168",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "CI/CD pipelines": 4,
+    "Cloud cost optimization": 2,
+    "Cloud infrastructure": 5,
+    "Docker": 5,
+    "Kubernetes": 4,
+    "Linux administration": 1,
+    "Microservices architecture": 5,
+    "Monitoring & alerting": 4,
+    "PostgreSQL": 4,
+    "Python": 4,
+    "REST API design": 5,
+    "System design": 5,
+    "Team leadership": 2,
+    "Terraform": 5
+  },
+  "text": "# NexGen SaaS Microservices Platform  \nA scalable, cloud-native platform built for mission-critical SaaS applications, featuring automated CI/CD pipelines, Kubernetes orchestration, and modular microservices architecture. Designed for rapid feature deployment and seamless horizontal scaling across global user bases.  \n\n## Deployment  \nProduction deployment leverages Kubernetes clusters managed via Terraform, with automated rollouts triggered by CI/CD pipelines. Each microservice is containerized with Docker, ensuring consistent environments across dev, staging, and prod. Blue-green deployment strategies reduce downtime, while Prometheus and Grafana provide real-time visibility into cluster health and resource utilization.  \n\n## Badges  \n[![CI/CD Status](https://github.com/nextgen-solutions/platform/actions/workflows/ci.yml/badge.svg)](https://github.com/nextgen-solutions/platform/actions/workflows/ci.yml)  \n[![Kubernetes](https://img.shields.io/badge/kubernetes-1.25-blue)](https://kubernetes.io)  \n[![Microservices](https://img.shields.io/badge/microservices-12-services)](https://microservices.io)  \n\n## Tech Stack  \n- **Backend**: Python (FastAPI) for API gateways, PostgreSQL for relational data, Redis for caching  \n- **Containerization**: Docker for service isolation and dependency management  \n- **Orchestration**: Kubernetes (K8s) with Helm for declarative deployments  \n- **Infrastructure**: Terraform for IaC, AWS EKS for production clusters  \n- **Monitoring**: Prometheus + Grafana for metrics, ELK stack for logs  \n- **APIs**: RESTful endpoints with OpenAPI spec for documentation and validation  \n\n## Architecture / Design  \nThe platform employs a service mesh pattern with Envoy proxies for traffic management, decoupling business logic from infrastructure. Each microservice runs in its own pod, communicating via gRPC for low-latency inter-service calls. PostgreSQL is horizontally sharded across regions for global read scalability. Terraform modules standardize cluster provisioning, while CI/CD pipelines enforce code quality gates and automated testing.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/nextgen-solutions/platform.git  \ncd platform  \nterraform init && terraform apply --auto-approve  \ndocker-compose up -d  \n```  \nEnsure AWS credentials are configured for Terraform and K8s clusters are provisioned via AWS CloudFormation.  \n\n## Usage / Examples  \nTo interact with the user service:  \n```bash  \ncurl -X POST http://localhost:8000/api/v1/users \\  \n  -H \"Content-Type: application/json\" \\  \n  -d '{\"username\": \"test\", \"email\": \"test@example.com\"}'  \n```  \nMonitor metrics via the Grafana dashboard at `http://localhost:3000` after deployment.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/nextgen-solutions/platform/blob/main/LICENSE) for details."
+}

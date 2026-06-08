@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_309_01",
+  "type": "project_readme",
+  "persona_id": "p_309",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Application security (OWASP)": 5,
+    "Cloud networking (VPC/subnets)": 4,
+    "Compliance (SOC2/GDPR)": 1,
+    "Encryption & PKI": 1,
+    "Firewall configuration": 4,
+    "IAM/Access control": 5,
+    "Incident response": 4,
+    "Network security": 5,
+    "Penetration testing": 4,
+    "SIEM tools": 1,
+    "Security auditing": 4
+  },
+  "text": "# SecureAPI Gateway  \nA production-grade API gateway for SaaS platforms, engineered to enforce zero-trust principles across identity, network, and application layers. Designed for scalability, with focus on IAM, microservices isolation, and real-time threat detection.  \n\n## Tech Stack  \n- **Core**: Go (1.21), Envoy Proxy (1.23), Kubernetes (1.28)  \n- **Networking**: AWS VPC with subnet segmentation, CloudFormation templates  \n- **Monitoring**: Prometheus (2.36), Grafana (10.1), ELK stack (7.19)  \n- **Security**: OpenID Connect (OIDC), JWT introspection, OAuth 2.0  \n- **Orchestration**: Terraform (1.5), ArgoCD (3.4)  \n\n## Architecture / Design  \nSecureAPI Gateway operates as a service mesh proxy, enforcing strict network policies via AWS VPC subnets. Firewalls are dynamically configured using CloudFormation, isolating microservices and restricting lateral movement.  \n- **IAM**: Centralized policy engine with role-based access control (RBAC), reducing privilege escalation risks by 73%  \n- **Incident Response**: Automated playbooks trigger on anomalous traffic patterns, cutting breach resolution time by 42%  \n- **Penetration Testing**: Quarterly red-team simulations validate firewall rules and IAM misconfigurations  \n- **Network Security**: Dual-stack IPv4/IPv6 enforcement, with DDoS mitigation via AWS Shield  \n\n## Getting Started / Installation  \n1. Clone the repository using `git clone https://github.com/valentina-marchetti/secureapi-gateway.git`  \n2. Deploy infrastructure via Terraform: `terraform init && terraform apply`  \n3. Configure Envoy proxies with custom YAML templates in `config/envoy/`  \n4. Integrate with existing IAM systems via OIDC discovery endpoints  \n\n## Usage / Examples  \n- **IAM Policy Enforcement**:  \n  ```yaml  \n  policies:  \n    - name: \"read-only-access\"  \n      roles: [\"analyst\"]  \n      endpoints: [\"*/*_read\"]  \n  ```  \n- **Network Isolation**:  \n  ```bash  \n  terraform apply -var subnet_id=eu-west-1a -var vpc_id=vpc-12345678  \n  ```  \n\n## Badges  \n[![Build Status](https://example.com/badges/build.svg)](https://example.com)  \n[![Test Coverage](https://example.com/badges/coverage.svg)](https://example.com)  \n[![Security Score](https://example.com/badges/security.svg)](https://example.com)  \n\n## Contributing  \nCollaborate via pull requests. Prioritize security audits and network policy refinements. Code reviews focus on least-privilege IAM configurations and VPC segmentation best practices.  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
+}

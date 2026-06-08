@@ -1,0 +1,26 @@
+{
+  "doc_id": "d_p_061_01",
+  "type": "project_readme",
+  "persona_id": "p_061",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 2,
+    "C#/.NET": 5,
+    "CI/CD pipelines": 4,
+    "Docker": 4,
+    "Kubernetes": 4,
+    "Microservices architecture": 5,
+    "MongoDB": 4,
+    "Prometheus/Grafana": 2,
+    "Python": 3,
+    "REST API design": 5,
+    "React": 2,
+    "Redis": 4,
+    "TypeScript": 3
+  },
+  "text": "# NexaQuest: Real-Time Multiplayer Game with WebSockets and Unity  \nA high-performance, scalable multiplayer game framework leveraging Unity for rendering, WebSockets for real-time synchronization, and a microservices architecture for backend orchestration. Designed for academic exploration of distributed systems in gaming, with focus on low-latency communication and state consistency across distributed clients.  \n\n## Tech Stack  \n- **Game Engine**: Unity (C#) for 3D rendering and physics  \n- **Networking**: WebSockets (Node.js backend) for bidirectional real-time data streaming  \n- **Backend Services**: C#/.NET microservices with Redis for session caching and MongoDB for persistent player state  \n- **Infrastructure**: Dockerized containers, Kubernetes for orchestration, and AWS EC2 for scalable deployment  \n- **Monitoring**: Prometheus/Grafana for latency tracking and throughput analysis  \n- **Scripting**: TypeScript for frontend tooling and Python for data pipeline scripting  \n\n## Architecture / Design  \nThe system is partitioned into three core layers:  \n1. **Game Layer**: Unity client communicates via WebSockets to a central hub, which routes updates to all connected clients. Spatial hashing and delta encoding reduce bandwidth overhead.  \n2. **Backend Layer**: A C#/.NET microservices architecture manages matchmaking, authentication, and state reconciliation. Redis serves as a distributed cache for transient session data, while MongoDB stores persistent player progress.  \n3. **Infrastructure Layer**: Docker containers encapsulate all services, orchestrated by Kubernetes for auto-scaling. CI/CD pipelines (GitHub Actions) automate testing and deployment to AWS EC2 clusters.  \n\nKey design choices include:  \n- **WebSocket Long Polling**: Ensures persistent connections with fallback to HTTP/1.1 for legacy clients  \n- **Event Sourcing**: All game state changes are logged as events in MongoDB for auditability  \n- **Load Balancing**: Nginx proxies distribute traffic across WebSocket endpoints  \n\n## Getting Started / Installation  \n1. Clone the repository using Git  \n2. Install Unity Hub and import the project (requires Unity 2021.3+)  \n3. Set up Docker with `docker-compose up --build` to spin up backend services  \n4. Configure AWS credentials for EC2 instance access  \n5. Run `npm install` and `dotnet build` to compile C# services  \n\n## Usage / Examples  \nTo launch the game:  \n```bash  \ndocker-compose up --build  \ncd frontend && npm start  \n```  \nThis initializes the WebSocket server, compiles Unity assets, and spawns a local multiplayer session. Use `curl` to test API endpoints for matchmaking or player stats.  \n\n## Badges  \n[![Build Status](https://example.com/badge)](https://example.com)  \n[![Coverage](https://example.com/coverage)](https://example.com)  \n[![License](https://example.com/license)](https://example.com)  \n\n## Contributing  \nCollaborate via pull requests targeting the `develop` branch. Focus on optimizing WebSocket throughput, refining state reconciliation algorithms, or expanding microservice capabilities.  \n\n## License  \nMIT License — see [LICENSE](https://example.com/license) for details."
+}

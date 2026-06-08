@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_057_01",
+  "type": "project_readme",
+  "persona_id": "p_057",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "Docker": 3,
+    "GCP": 3,
+    "Kubernetes": 3,
+    "LLMs/Prompt engineering": 4,
+    "MLOps": 4,
+    "Model deployment": 4,
+    "NLP": 4,
+    "PyTorch": 4,
+    "TensorFlow": 3,
+    "Terraform": 4,
+    "MLOps (MLflow/W&B)": 1
+  },
+  "text": "# SentimentGuard: Enterprise NLP for Customer Feedback Analysis  \nSentimentGuard is a production-grade NLP system designed to extract actionable insights from unstructured customer feedback. Built for Fortune 500 clients, it combines transformer-based models, domain-specific rule engines, and scalable cloud infrastructure to deliver real-time sentiment analysis with 94.3% F1-score on proprietary datasets.  \n\n## Badges  \n[![Version](https://img.shields.io/badge/version-1.2.0-blue)](https://github.com/ethanprice/sentimentguard/releases/tag/v1.2.0)  \n[![Build Status](https://img.shields.io/badge/build-passing-success)](https://github.com/ethanprice/sentimentguard/actions/workflows/ci.yml)  \n[![Coverage](https://img.shields.io/badge/coverage-89%25-yellow)](https://codecov.io/gh/ethanprice/sentimentguard)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for full details.  \n\n## Tech Stack  \n- **Cloud**: AWS (S3, EC2, Lambda) for distributed training; GCP (BigQuery) for data ingestion  \n- **Modeling**: PyTorch-based transformer pipelines, fine-tuned BERT variants, and custom rule-based sentiment lexicons  \n- **Deployment**: Docker containers orchestrated via Kubernetes on AWS EKS, with Terraform-managed infrastructure  \n- **Monitoring**: Prometheus for model drift detection, custom dashboards for feedback volume analytics  \n\n## Architecture / Design  \nThe system employs a layered architecture:  \n1. **Data Ingestion**: Apache Airflow pipelines pull structured data from BigQuery and unstructured text from S3  \n2. **Model Serving**: PyTorch models are wrapped in REST APIs using FastAPI, with async batch processing for 10k+ requests/sec  \n3. **Sentiment Engine**: Hybrid approach combining transformer-based sentiment scoring (LLM-optimized for domain jargon) and rule-based entity detection (e.g., \"refund\" triggers negative sentiment)  \n4. **Feedback Loop**: Model weights are retrained weekly using Terraform-managed AWS SageMaker jobs, with versioned checkpoints stored in S3  \n\n## Getting Started / Installation  \n```bash  \n# Prerequisites: AWS CLI configured, Docker Desktop running  \ngit clone https://github.com/ethanprice/sentimentguard.git  \ncd sentimentguard  \ndocker compose up -d  \n# Access API at http://localhost:8000/docs  \n```  \n\n## Usage / Examples  \n```python  \nimport requests  \nresponse = requests.post(\"http://localhost:8000/analyze\", json={\"feedback\": \"The refund process was a nightmare, but the customer support team was exceptional.\"})  \nprint(response.json())  \n# Output: {\"sentiment\": \"mixed\", \"confidence\": 0.82, \"keywords\": [\"refund\", \"support\"]}  \n```  \n\n## Contributing  \nSubmit PRs with unit tests covering new features. All code must pass mypy type checks and adhere to the [contributing guidelines](CONTRIBUTING.md). For production changes, ensure compatibility with AWS Lambda layers and Kubernetes deployment templates."
+}

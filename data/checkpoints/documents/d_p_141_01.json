@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_141_01",
+  "type": "project_readme",
+  "persona_id": "p_141",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "C/C++ (embedded)": 5,
+    "Embedded Linux": 3,
+    "Firmware development": 5,
+    "Hardware-software integration": 5,
+    "IoT protocols (MQTT/CoAP)": 2,
+    "Microservices architecture": 2,
+    "Network automation": 2,
+    "Python": 3,
+    "REST API design": 3,
+    "RTOS": 5,
+    "Sensor integration": 5,
+    "gRPC": 3
+  },
+  "text": "# Low-Latency Game Controller Firmware  \nA real-time embedded system optimizing input latency for competitive gaming through deterministic polling and hardware-software co-design. Benchmarked at 0.8ms average latency on STM32F4 microcontrollers, with 99.97% packet integrity under 100ms jitter conditions.  \n\n## Deployment  \nTargeted for STM32F4-based controller prototypes with UART/USB dual-interface support. Firmware is deployed via DFU over USB 2.0, with bootloader integration for field-upgrades. Tested on Windows 10/11 host systems with libusb-1.0 and V-USB libraries for host-side latency profiling.  \n\n## Getting Started / Installation  \n1. Install ARM GCC toolchain (v10.3) and STM32CubeIDE (v1.12)  \n2. Clone repository: `git clone https://github.com/shreya-bhat/low-latency-controller-firmware.git`  \n3. Build with `make -C firmware/` (requires Python 3.9+ for script-driven dependency resolution)  \n4. Flash via ST-Link Utility (v5.8) with 8MHz internal oscillator calibration  \n\n## Usage / Examples  \n```c\n// Interrupt-driven polling with 200ns precision  \nvoid EXTI0_IRQHandler(void) {  \n    if (LL_EXTI_IsActiveFlag_0_31(LL_EXTI_INSTANCE EXTI0)) {  \n        LL_TIM_OC_SetCompareCH1(TIM1, get_joystick_position());  \n        LL_EXTI_ClearFlag_0_31(LL_EXTI_INSTANCE EXTI0);  \n    }  \n}  \n```  \nRun `./benchmark.sh` to generate latency histograms (output in µs resolution). Example: 42% latency reduction achieved via dual-polling with hardware debouncing.  \n\n## Tech Stack  \n- Firmware: C11 with MISRA-C:2016 compliance  \n- RTOS: FreeRTOS v202312 (portable tickless kernel)  \n- Communication: USB CDC-ACM (12Mbps) + UART (38400 bps)  \n- Debug: J-Link OB (v5.56) with tracealyzer for real-time flow analysis  \n\n## Architecture / Design  \nCore design revolves around a state machine with 4 priority levels for input processing. Interrupt latency capped at 150ns via critical section macros. Dual-buffer DMA for sensor data aggregation, with 16-bit resolution ADC sampling at 1.25Msps. Implemented hardware handshake for USB packet retransmission under 10ms timeout.  \n\n## License  \nMIT License (see LICENSE file)  \n\n## Badges  \n[![Latency Benchmark](https://example.com/latency-badge.png)](https://example.com/latency)  \n[![RTOS Compliance](https://example.com/rtos-badge.png)](https://example.com/rtos)  \n[![Hardware Integration](https://example.com/hardware-badge.png)](https://example.com/hardware)"
+}

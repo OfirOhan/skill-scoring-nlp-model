@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_090_01",
+  "type": "project_readme",
+  "persona_id": "p_090",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "API testing": 3,
+    "GitLab CI": 3,
+    "Integration testing": 2,
+    "JavaScript": 2,
+    "Python": 3,
+    "Selenium/Playwright": 3,
+    "Test automation": 3,
+    "Web accessibility (WCAG)": 2
+  },
+  "text": "# GameTestBot: Automated Testing Framework for GameCraft  \n\nGameTestBot is a modular test automation framework designed to streamline regression testing for GameCraft’s Unity-based games. Built with Python 3.9+ and Unity’s Test Framework, it integrates Selenium/Playwright for browser-based UI testing and provides metrics-driven feedback on test coverage, performance, and reliability. The framework reduces regression time by 40% in internal benchmarks while maintaining 98.2% test suite stability across sprints.  \n\n## Getting Started / Installation  \nInstall dependencies via pip:  \n```bash  \npip install -r requirements.txt  \n```  \nFor Unity integration, import the `GameTestBot.unitypackage` into your project’s `Tests` folder. Configure `config.yaml` with your environment variables and test suite parameters.  \n\n## Tech Stack  \n- **Language**: Python 3.9, Unity C#  \n- **Browsers**: Chrome (Playwright), Firefox (Selenium)  \n- **CI/CD**: GitLab CI pipelines for parallel test execution  \n- **Metrics**: Prometheus + Grafana for real-time test performance dashboards  \n- **Dependencies**: Pytest, PyYAML, Unity Test Framework  \n\n## Usage / Examples  \nRun the full test suite:  \n```bash  \npytest --alluredir=report/  \n```  \nExample test case:  \n```python  \ndef test_level_load_time():  \n    assert load_level(\"level_1\") < 2.5  \n    assert check_for_crashes() == False  \n```  \nAPI testing is handled via `requests_mock` for mock endpoints, ensuring 100% coverage of game server interactions.  \n\n## Badges  \n[![Test Coverage](https://api.codeclimate.com/v1/badges/1234567890abcdef1234567890abcdef/metrics/coverage)](https://codeclimate.com/github/yourusername/game-test-bot)  \n[![CI Status](https://gitlab.com/yourusername/game-test-bot/-/badges/main/pipeline.svg)](https://gitlab.com/yourusername/game-test-bot/-/pipelines)  \n\n## Architecture / Design  \nThe framework employs a layered architecture:  \n1. **Core Engine**: Manages test discovery and execution flow  \n2. **Adapter Layer**: Abstracts browser interactions via Selenium/Playwright  \n3. **Metrics Module**: Aggregates test results and logs to Prometheus  \n4. **Report Generator**: Produces HTML/JSON reports with detailed failure analysis  \n\nKey design choices prioritize modularity—test cases are decoupled from implementation details, enabling rapid reconfiguration for new game versions.  \n\n## Contributing  \nSubmit PRs with test case expansions for new game features. Focus on edge cases with high crash rates (targeting <5% false positives).  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details."
+}

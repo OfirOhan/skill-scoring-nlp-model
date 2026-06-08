@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_053_01",
+  "type": "project_readme",
+  "persona_id": "p_053",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "CI/CD pipelines": 4,
+    "Cloud Cost Optimization": 1,
+    "GCP": 3,
+    "Kubernetes": 5,
+    "Monitoring & alerting": 4,
+    "Network automation": 1,
+    "PostgreSQL": 1,
+    "Python": 1,
+    "Terraform": 1
+  },
+  "text": "# EcoCart Scalable Order Processing System  \nHigh-throughput order pipeline using Kafka and microservices for e-commerce platforms  \n\n[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github)](https://github.com/eco-cart/processing-system)  \n[![CI/CD](https://img.shields.io/badge/CI/CD-passing?style=flat)](https://github.com/eco-cart/processing-system/actions)  \n[![Tests](https://img.shields.io/badge/Tests-100%25-green?style=flat)](https://github.com/eco-cart/processing-system/actions)  \n\nClone the repository and install dependencies:  \n```bash  \ngit clone https://github.com/eco-cart/processing-system.git  \ncd processing-system  \n./gradlew build  \n```  \n\n## Tech Stack  \n- **Kafka** for event streaming and decoupling services  \n- **Java 17** with Spring Boot for microservices  \n- **Docker** for containerization and local testing  \n- **AWS S3** for order data archival  \n- **GCP BigQuery** for real-time analytics  \n- **Prometheus + Grafana** for system metrics  \n- **Kubernetes** for orchestration and scaling  \n\n## Architecture / Design  \nThe system decouples order processing into modular services:  \n1. **Order Ingestion** – Kafka topic for incoming orders  \n2. **Payment Validation** – Async validation with retry logic  \n3. **Inventory Check** – Distributed locks for stock updates  \n4. **Order Finalization** – Aggregates state across services  \n\nAWS S3 stores raw order data for audit trails, while GCP BigQuery processes metrics for sales analytics. Kubernetes ensures horizontal scaling during peak traffic, with Prometheus monitoring latency and error rates.  \n\n## Usage / Examples  \n```java  \n// Submit order via REST API  \nPOST /orders  \n{ \"customerId\": \"123\", \"items\": [{\"productId\": \"456\", \"quantity\": 2}] }  \n\n// Process order asynchronously  \nkafka-console-producer --broker-list broker:9092 --topic orders  \n{\"orderId\": \"789\", \"status\": \"processed\"}  \n```  \n\n## Testing  \n- **Unit tests** for service logic using JUnit  \n- **Integration tests** validate Kafka topic interactions  \n- **End-to-end tests** simulate full order lifecycle with Docker containers  \n- **Monitoring** tracks latency and error rates via Prometheus  \n\n## License  \nMIT License  \n© 2023 EcoCart Platform Engineering Team"
+}

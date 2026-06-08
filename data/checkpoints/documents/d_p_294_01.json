@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_294_01",
+  "type": "project_readme",
+  "persona_id": "p_294",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "PostgreSQL": 4,
+    "Python": 1,
+    "REST API design": 4,
+    "Microservices architecture": 3,
+    "Docker": 3,
+    "GitHub Actions": 3,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 1
+  },
+  "text": "# NexaCommerce Microservices Framework  \nA modular, production-ready architecture for e-commerce platforms leveraging Go, PostgreSQL, and Docker. Designed for startups prioritizing scalability, resilience, and maintainability.  \n\n## Roadmap / Future Work  \n- **Phase 1 (Q3 2024):** Expand inventory service with real-time stock sync and GraphQL endpoints  \n- **Phase 2 (Q1 2025):** Implement payment gateway abstraction layer with multi-provider support  \n- **Phase 3 (Q2 2025):** Add observability via Prometheus + Grafana for latency tracking and query optimization  \n- **Long-term:** Migrate to async message queues for order processing and introduce CI/CD pipeline enhancements  \n\n## Getting Started / Installation  \n```bash\ngit clone https://github.com/junwatanabe/nexacommerce.git  \ncd nexacommerce  \ndocker compose build  \ndocker compose up -d  \n```  \nEnsure PostgreSQL 14+ is installed. Set `DATABASE_URL` in `.env` for local dev. CI/CD pipelines use GitHub Actions for dependency scanning and unit tests.  \n\n## Usage / Examples  \n**Create Product API (POST /api/v1/products):**  \n```http  \nPOST /api/v1/products  \nContent-Type: application/json  \n\n{  \n  \"name\": \"Wireless Headphones\",  \n  \"price\": 89.99,  \n  \"stock\": 500  \n}  \n```  \n**PostgreSQL Optimization:** Use `pg_trgm` extensions for full-text search on product names. Monitor `pg_stat_statements` to identify slow queries.  \n\n## Tech Stack  \n- **Language:** Go 1.21 (for concurrency and performance)  \n- **Database:** PostgreSQL 14+ (with JSONB for flexible product metadata)  \n- **Containerization:** Docker (for consistent dev/prod environments)  \n- **CI/CD:** GitHub Actions (automated testing, dependency checks)  \n- **API:** RESTful endpoints with OpenAPI 3.0 spec (self-documenting)  \n\n## Architecture / Design  \nServices are decoupled into:  \n- **Inventory Service** (gRPC for internal communication)  \n- **Order Service** (event-driven with Kafka)  \n- **Payment Service** (state machine for transaction retries)  \n\nPostgreSQL is sharded by user ID for horizontal scaling. Indexes are optimized for common query patterns, and connection pooling is managed via `pgx` to reduce latency.  \n\n## License  \nMIT License (see [LICENSE](LICENSE) for details)"
+}

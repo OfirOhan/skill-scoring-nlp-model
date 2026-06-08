@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_263_02",
+  "type": "project_readme",
+  "persona_id": "p_263",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "React": 1,
+    "TypeScript": 1,
+    "Next.js": 1,
+    "State management (Redux/Zustand)": 1,
+    "Responsive design": 1,
+    "Web performance optimization": 1,
+    "Node.js": 1,
+    "REST API design": 1,
+    "Webpack/Vite": 1,
+    "Web accessibility (WCAG)": 1,
+    "Stakeholder management": 1
+  },
+  "text": "# Financial Data Visualization Platform  \n\nA real-time web application for visualizing financial metrics using D3.js, designed to empower consulting clients with actionable insights from live market data.  \n\n---\n\n## Tech Stack  \n\n- **Core**: Vanilla JavaScript, HTML5, CSS3  \n- **Visualization**: D3.js (v7+) for dynamic, interactive charts  \n- **Data**: WebSocket integration for real-time updates  \n- **Storage**: LocalStorage for session-specific configurations  \n- **UI/UX**: Custom SVG rendering for high-fidelity visualizations  \n\n---\n\n## Architecture / Design  \n\nThe platform is built as a single-page application (SPA) with a modular architecture. Data pipelines are decoupled into three layers:  \n1. **Input Layer**: WebSocket listeners parse raw market data into structured JSON  \n2. **Processing Layer**: D3.js binds data to DOM elements, applying time-based animations for smooth transitions  \n3. **Output Layer**: SVG-based charts update in real-time, with zoom/pan capabilities for granular analysis  \n\nKey decisions prioritize performance:  \n- SVG elements are reused via D3's data-join pattern to minimize reflows  \n- Data is pre-aggregated to reduce payload size while maintaining 10ms latency for updates  \n\n---\n\n## Getting Started / Installation  \n\n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/your-username/financial-visualizer.git  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   npm install d3 v4.13.0 socket.io-client  \n   ```  \n3. Run the development server:  \n   ```bash  \n   npx live-server  \n   ```  \n\n---\n\n## Usage / Examples  \n\n- **Stock Price Trends**: Interactive line charts with customizable time ranges (e.g., 1h, 24h, 7d)  \n- **Portfolio Performance**: Stacked area charts showing asset allocation shifts  \n- **Real-Time Trading Volumes**: Heatmap visualizations with color-coded intensity  \n\nAll examples include export options for PNG/SVG, with metadata preserved for reporting.  \n\n---\n\n## Badges  \n\n[![GitHub](https://img.shields.io/github/commit-activity-monthly/your-username/financial-visualizer)](https://github.com/your-username/financial-visualizer)  \n[![Build Status](https://img.shields.io/github/actions/workflow/your-username/financial-visualizer/main.yml)](https://github.com/your-username/financial-visualizer/actions)  \n\n---\n\n## Contributing  \n\nPull requests are welcome! Ensure all changes include:  \n- Unit tests for new visualization modules  \n- Documentation updates for data pipeline workflows  \n- Performance benchmarks for real-time rendering  \n\n---\n\n## License  \n\nMIT License — see [LICENSE](https://github.com/your-username/financial-visualizer/blob/main/LICENSE) for details."
+}

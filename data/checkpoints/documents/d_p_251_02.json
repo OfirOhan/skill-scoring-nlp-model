@@ -1,0 +1,30 @@
+{
+  "doc_id": "d_p_251_02",
+  "type": "project_readme",
+  "persona_id": "p_251",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "A/B testing": 4,
+    "Apache Spark": 4,
+    "Data modeling": 4,
+    "Data visualization": 4,
+    "REST API": 4,
+    "Snowflake": 4,
+    "Feature engineering": 1,
+    "MLOps": 1,
+    "NumPy": 5,
+    "Pandas": 5,
+    "Python": 5,
+    "SQL": 5,
+    "Statistical modeling": 5,
+    "Data visualization (Matplotlib/Plotly)": 1,
+    "SQL analytics": 1,
+    "REST API design": 1,
+    "MLOps (MLflow/W&B)": 1
+  },
+  "text": "# Demand Forecasting with Time-Series ML  \nA production-grade demand forecasting system leveraging time-series analysis, statistical modeling, and scalable data pipelines for retail and manufacturing sectors. Achieved 12% reduction in forecast error across 30+ client use cases.  \n\n## Badges  \n[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat)](https://github.com/)  \n[![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-333333?style=flat)](https://github.com/)  \n[![Coverage](https://img.shields.io/badge/Coverage-333333?style=flat)](https://github.com/)  \n\n## License  \n© 2023 Yoko Fujita 4. All rights reserved.  \nThis project is licensed under the [MIT License](LICENSE).  \n\n## Tech Stack  \n- **Python 3.9+** (core language, NumPy, Pandas, SciPy)  \n- **Apache Spark 3.3** (distributed data processing, 10TB+ ingestion)  \n- **Snowflake** (data warehousing, real-time feature retrieval)  \n- **SQL** (query optimization, window functions for trend analysis)  \n- **Statistical modeling** (ARIMA, Prophet, Prophet+Spark hybrid)  \n- **A/B testing** (production impact: 8% uplift in inventory accuracy)  \n\n## Architecture / Design  \nThe system decouples data ingestion, model training, and inference layers. Snowflake serves as the centralized data source, with Spark orchestrating batch feature extraction and anomaly detection. Statistical models are trained on historical sales data, validated via holdout sets, and deployed as batch jobs. All metrics are logged in Prometheus for real-time monitoring.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/YokoFujita4/demand-forecasting.git`  \n2. Create a virtual environment: `python -m venv venv && source venv/bin/activate`  \n3. Install dependencies: `pip install -r requirements.txt`  \n4. Configure environment variables for Snowflake credentials and Spark clusters  \n\n## Usage / Examples  \nRun the forecasting pipeline:  \n```bash  \npython forecast.py --input sales_data.parquet --output forecast_results.parquet  \n```  \nInputs require Parquet files with timestamp and demand columns. Outputs include MAE, RMSE, and confidence intervals. A/B testing results are stored in `results/ab_test_metrics.csv` for post-deployment analysis.  \n\n## Contributing  \nSubmit bug reports via GitHub Issues. Pull requests must include:  \n- Unit tests for new features  \n- Documentation updates for Python API  \n- Compliance with PEP8 and type hints  \n- Performance benchmarks for Spark jobs  \n\nAll contributions are reviewed by the team lead and integrated into the main branch via CI/CD."
+}

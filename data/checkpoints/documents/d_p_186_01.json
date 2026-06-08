@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_186_01",
+  "type": "project_readme",
+  "persona_id": "p_186",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "CI/CD pipelines": 4,
+    "Cloud networking (VPC/subnets)": 4,
+    "Database optimization": 4,
+    "GCP": 3,
+    "Kubernetes": 4,
+    "Linux administration": 4,
+    "Network automation": 3,
+    "Python": 3,
+    "Terraform": 3
+  },
+  "text": "# Enterprise Microservices Architecture Modernization  \nA scalable, cloud-native platform for enterprise SaaS applications, optimized for performance, cost, and observability. Built with AWS/GCP hybrid infrastructure, this project demonstrates a modular microservices architecture with 40% latency reduction and 30% cost savings via automated scaling and database sharding.  \n\n## Contributing  \nOpen collaboration is encouraged. Submit PRs via GitHub for improvements to service mesh configurations, CI/CD pipelines, or network automation scripts. Follow [CONTRIBUTING.md](https://github.com/riyadesai/enterprise-microservices/blob/main/CONTRIBUTING.md) for guidelines on architecture reviews and code quality standards.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/riyadesai/enterprise-microservices.git  \ncd enterprise-microservices  \n./setup.sh  # Installs Python 3.9, Terraform 1.4, and AWS CLI  \nmake build  # Compiles Docker images with Prometheus metrics endpoints  \n```  \nDeploy using Terraform: `terraform apply` to provision VPCs, Kubernetes clusters, and database clusters. Ensure AWS IAM roles and GCP service accounts are preconfigured for cross-cloud communication.  \n\n## Usage / Examples  \n```bash  \n./run.sh --profile prod  # Launches all services with auto-scaling  \ncurl http://api-gateway:8080/health  # Validates service mesh routing  \n```  \nMonitor with Grafana dashboards: `kubectl port-forward svc/grafana 3000` to view latency trends and database query performance. Example: 25% improvement in read latency after sharding PostgreSQL tables.  \n\n## Tech Stack  \n- **Cloud**: AWS (EKS, RDS) + GCP (Cloud Run, BigQuery)  \n- **Orchestration**: Kubernetes with HPA (horizontal pod autoscaling)  \n- **CI/CD**: GitLab CI pipelines with artifact promotion between environments  \n- **Networking**: VPC peering + Cloud NAT for hybrid cloud access  \n- **Observability**: Prometheus + Grafana + Fluentd for log aggregation  \n\n## Architecture / Design  \nA decoupled architecture with API gateways, service meshes, and stateless compute layers. Key decisions:  \n- **Database Optimization**: PostgreSQL sharding reduced read latency by 25%  \n- **Network Automation**: Terraform-managed VPCs with route tables for 99.95% uptime  \n- **Security**: mTLS between services via Istio, with AWS WAF for API protection  \n\n## License  \nMIT License. See [LICENSE](https://github.com/riyadesai/enterprise-microservices/blob/main/LICENSE).  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/actions/workflow/status/riyadesai/enterprise-microservices/main.yml?branch=main)](https://github.com/riyadesai/enterprise-microservices/actions)  \n[![CI/CD](https://img.shields.io/github/workflow/status/riyadesai/enterprise-microservices/CI/CD?branch=main)](https://github.com/riyadesai/enterprise-microservices/actions)  \n[![Docker](https://img.shields.io/docker/pulls/riyadesai/enterprise-microservices)](https://hub.docker.com/r/riyadesai/enterprise-microservices)"
+}

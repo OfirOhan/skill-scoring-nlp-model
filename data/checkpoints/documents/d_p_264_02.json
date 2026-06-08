@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_264_02",
+  "type": "project_readme",
+  "persona_id": "p_264",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Design systems": 2,
+    "JavaScript": 3,
+    "Next.js": 3,
+    "React": 5,
+    "Responsive design": 3,
+    "State management": 4,
+    "TypeScript": 5,
+    "UI design": 2,
+    "Web accessibility": 4,
+    "Web performance optimization": 4
+  },
+  "text": "# Ecomify Checkout Optimization  \nA project to refine checkout workflows via Redux-driven state management and performance profiling, reducing user friction and improving conversion rates by 25% in controlled testing environments.  \n\n## Badges  \n[![Build Status](https://example.com/build)](https://example.com/build) [![Coverage](https://example.com/coverage)](https://example.com/coverage)  \n\n## Getting Started / Installation  \nClone the repository using your preferred method. Navigate to the project root and run `npm install` to fetch dependencies. Start the development server with `npm run dev` to view the checkout flow in action.  \n\n## Tech Stack  \n- **React** (with hooks and context API for state hydration)  \n- **TypeScript** (with strict type checks and interface-driven architecture)  \n- **Redux Toolkit** (for normalized state management and async action handling)  \n- **Next.js** (for server-side rendering and API route integration)  \n- **Webpack** (customized for code splitting and asset optimization)  \n- **Lighthouse** (for performance audits and baseline metrics)  \n- **Web Vitals** (tracking CLS, FID, and LCP in production scenarios)  \n\n## Architecture / Design  \nThe checkout flow is modularized into step-specific components, with Redux slices managing cart state, user inputs, and payment validation. Key decisions include:  \n- Centralized state for real-time validation across form fields  \n- Lazy-loaded components to reduce initial bundle size by 40%  \n- ARIA attributes and semantic HTML for accessibility compliance  \n- Web Vitals integration to monitor performance during user interactions  \n\n## Usage / Examples  \n```tsx\n// Example: Dispatching a payment confirmation action  \ndispatch(paymentConfirmed({ paymentMethod: 'credit-card', amount: 129.99 }))\n```\nThe `CheckoutWizard` component orchestrates step transitions, while the `CartSummary` provides live updates to subtotal and tax.  \n\n## Testing  \n- **Unit Tests**: 95% coverage for Redux reducers and utility functions (Jest + TypeScript)  \n- **Integration Tests**: End-to-end validation of form state transitions (Cypress)  \n- **Performance Tests**: Baseline Lighthouse scores improved by 25% post-optimization  \n- **Accessibility Tests**: Automated checks for ARIA compliance and keyboard navigation  \n\n## License  \nMIT License © 2023 Rahul Iyer"
+}

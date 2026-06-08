@@ -1,0 +1,26 @@
+{
+  "doc_id": "d_p_298_01",
+  "type": "project_readme",
+  "persona_id": "p_298",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Python": 1,
+    "Go": 1,
+    "Microservices architecture": 1,
+    "REST API design": 1,
+    "PostgreSQL": 1,
+    "Database optimization": 1,
+    "Redis": 1,
+    "CI/CD pipelines": 1,
+    "Terraform": 1,
+    "Load balancing": 1,
+    "Cloud cost optimization": 1,
+    "Prometheus/Grafana": 1,
+    "Linux administration": 1
+  },
+  "text": "# SecurePay Gateway  \nA robust, PCI-DSS compliant payment gateway API designed for fintech platforms, leveraging AES-256 encryption and real-time fraud detection. Built to handle 10,000+ transactions/sec with 99.99% uptime during peak financial operations.  \n\n## Badges  \n[![Security Compliance](https://img.shields.io/badge/Security-PCI-DSS-blue)](https://example.com)  \n[![Encryption Standard](https://img.shields.io/badge/Encryption-AES-256-green)](https://example.com)  \n[![Compliance](https://img.shields.io/badge/Compliance-GDPR-yellow)](https://example.com)  \n\n## Tech Stack  \n- **Core Framework**: Java 17 with Spring Security for role-based access control  \n- **Encryption**: AES-256-GCM with HKDF key derivation for tokenization  \n- **Fraud Detection**: Real-time ML model integration for anomaly scoring  \n- **Compliance**: Automated PCI-DSS rule checks via policy engine  \n- **Data Handling**: JSON Web Tokens (JWT) for sessionless authentication  \n\n## Configuration  \nSet environment variables for:  \n- `ENCRYPTION_KEY` (32-byte hex string)  \n- `FRAUD_MODEL_ENDPOINT` (internal ML service URL)  \n- `COMPLIANCE_RULESET_VERSION` (e.g., \"v3.2\")  \n- `MAX_TRANSACTION_VOLUME` (per-second threshold for rate limiting)  \n\n## Getting Started  \n1. Clone the repository: `git clone https://github.com/securepay-gateway/main.git`  \n2. Install dependencies via `npm install` (Node.js 18+ required)  \n3. Configure secrets in `.env.local` file  \n4. Run integration tests with `npm test` to validate compliance baseline  \n\n## Usage / Examples  \n**Encrypt sensitive data**:  \n```javascript  \nconst encrypt = async (payload) => {  \n  const key = await deriveKeyFromEnv();  \n  return aesGcmEncrypt(payload, key);  \n};  \n```  \n\n**Validate transaction**:  \n```javascript  \nconst isValid = await complianceCheck({  \n  amount: 450.00,  \n  currency: \"USD\",  \n  card: \"4111 1111 1111 1111\"  \n});  \nconsole.log(\"Transaction approved:\", isValid);  \n```  \n\n## Testing  \n- **Unit Tests**: 98% coverage for encryption modules and policy rules  \n- **Integration Tests**: Simulate 5,000 concurrent transactions with chaos engineering  \n- **Compliance Checks**: Automated rule validation against PCI-DSS 4.0 standards  \n- **Performance**: 99.95% latency below 150ms under 10,000 RPS load  \n\n## License  \nMIT License – see [LICENSE](https://github.com/securepay-gateway/main/blob/main/LICENSE) for full details."
+}

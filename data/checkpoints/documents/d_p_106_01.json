@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_106_01",
+  "type": "project_readme",
+  "persona_id": "p_106",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "Computer vision": 1,
+    "Docker": 3,
+    "GCP": 3,
+    "Hugging Face Transformers": 3,
+    "Kubernetes": 3,
+    "Model deployment": 3,
+    "NLP": 3,
+    "PyTorch": 4,
+    "REST API design": 3,
+    "TensorFlow": 3,
+    "scikit-learn": 3
+  },
+  "text": "# HealthPredictor: Predictive Analytics for Chronic Disease Management  \nA machine learning system that leverages patient data to forecast chronic disease progression and inform personalized treatment strategies. Built with a focus on scalability, interpretability, and clinical integration.  \n\n## Deployment  \nDeployed on AWS EC2 instances using Docker containers for consistent environment isolation. REST API endpoints are exposed via Flask and hosted on AWS API Gateway, enabling integration with EHR systems. Model inference is optimized with GPU acceleration on EC2 p3 instances.  \n\n## Getting Started / Installation  \nClone the repository:  \n```bash  \ngit clone https://github.com/zarahussain/healthpredictor.git  \ncd healthpredictor  \n```  \nInstall dependencies:  \n```bash  \npip install -r requirements.txt  \n```  \nBuild Docker image:  \n```bash  \ndocker build -t healthpredictor-api .  \ndocker run -d -p 5000:5000 healthpredictor-api  \n```  \n\n## Usage / Examples  \nSend a POST request to the `/predict` endpoint with patient data:  \n```bash  \ncurl -X POST http://localhost:5000/predict \\  \n  -H \"Content-Type: application/json\" \\  \n  -d '{\"age\": 65, \"blood_pressure\": 140, \"cholesterol\": 220, \"diabetes\": true}'  \n```  \nResponse includes predicted disease progression and risk stratification.  \n\n## Tech Stack  \n- **PyTorch**: Custom neural networks for time-series analysis of biomarkers  \n- **scikit-learn**: Data preprocessing pipelines and baseline models  \n- **Docker**: Containerization for deployment consistency  \n- **AWS**: EC2 for compute, API Gateway for endpoints  \n- **Flask**: REST API framework for model serving  \n\n## Architecture / Design  \nMicroservices architecture with PyTorch models running in Docker containers. Preprocessing pipelines (scikit-learn) handle feature normalization and missing data imputation. REST API serves predictions to clinical workstations, with results visualized in dashboards.  \n\n## License  \nMIT License  \n\n## Badges  \n[![Deployment Status](https://github.com/zarahussain/healthpredictor/actions/workflows/deploy.yml/badge.svg)](https://github.com/zarahussain/healthpredictor/actions/workflows/deploy.yml)"
+}

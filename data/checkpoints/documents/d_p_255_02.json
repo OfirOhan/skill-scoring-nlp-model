@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_255_02",
+  "type": "project_readme",
+  "persona_id": "p_255",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Python": 1,
+    "Go": 1,
+    "Node.js": 1,
+    "React": 1,
+    "PostgreSQL": 1,
+    "REST API design": 1,
+    "AWS": 1,
+    "Docker": 1,
+    "CI/CD pipelines": 1,
+    "Monitoring & alerting": 1,
+    "Database optimization": 1
+  },
+  "text": "# TeleMed Connect  \nA secure telemedicine platform enabling virtual consultations between patients and doctors, prioritizing privacy and seamless user experience. Built for academic research and small-scale deployment, this project balances scalability with strict compliance to healthcare regulations.  \n\n---\n\n## API Reference  \nThe API is designed for minimal surface area with focus on authentication and session management. Key endpoints:  \n\n- **POST /auth/login**  \n  *Request:* JSON with `email` and `password`  \n  *Response:* JWT token with refresh endpoint  \n\n- **POST /consultation/schedule**  \n  *Request:* JSON with `doctor_id`, `patient_id`, and `timestamp`  \n  *Response:* Confirmation ID and encrypted meeting link  \n\n- **GET /consultation/history/{user_id}**  \n  *Response:* Paginated list of past sessions with metadata  \n\nAll interactions use HTTPS and are rate-limited to 100 requests/minute per IP.  \n\n---\n\n## Usage / Examples  \n```bash\n# Login to obtain token  \ncurl -X POST https://api.telemedconnect.dev/auth/login \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"email\": \"doctor@example.com\", \"password\": \"securepass\"}'\n\n# Schedule a consultation  \ncurl -X POST https://api.telemedconnect.dev/consultation/schedule \\\n  -H \"Authorization: Bearer <token>\" \\\n  -d '{\"doctor_id\": \"D123\", \"patient_id\": \"P456\", \"timestamp\": \"2024-03-20T14:00:00Z\"}'\n```  \n\nThe platform encrypts all session data at rest and in transit, with optional HIPAA-compliant storage for institutional use.  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/telemedconnect/telemedconnect.git`  \n2. Set environment variables for API keys and database connections in `.env`  \n3. Run `mvn spring-boot:run` to start the service (requires Java 17)  \n4. Access the admin dashboard at `http://localhost:8080/admin`  \n\n---\n\n## Tech Stack  \n- **Backend:** Spring Boot (Java 17) with Kotlin for concise DSLs  \n- **Security:** OAuth2 + JWT for authentication; AES-256 for data encryption  \n- **Storage:** MongoDB for flexible schema handling of medical records  \n- **Networking:** gRPC for internal service communication  \n\n---\n\n## Architecture / Design  \nThe system uses a layered architecture with three planes:  \n1. **Presentation:** RESTful API with rate limiting and input validation  \n2. **Business Logic:** Domain-driven design for consultation scheduling and access control  \n3. **Data:** MongoDB sharded across regions for low-latency access  \n\nSensitive data is anonymized before storage, and all logs are encrypted with AES-256.  \n\n---\n\n## License  \nMIT License — see [LICENSE](LICENSE) for full terms  \n\n---\n\n## Badges  \n[![Secure By Design](https://img.shields.io/badge/secure-by%20design-blue)](https://telemedconnect.dev/security)  \n[![Healthcare Ready](https://img.shields.io/badge/healthcare-ready-green)](https://telemedconnect.dev/healthcare)  \n[![Academic Project](https://img.shields.io/badge/academic-project-yellow)](https://telemedconnect.dev/research)"
+}

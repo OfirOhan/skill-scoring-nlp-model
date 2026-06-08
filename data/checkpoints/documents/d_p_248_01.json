@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_248_01",
+  "type": "project_readme",
+  "persona_id": "p_248",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Android development": 4,
+    "Flutter": 4,
+    "GraphQL": 4,
+    "Kotlin": 4,
+    "REST API design": 4,
+    "React": 1,
+    "React Native": 4,
+    "Swift": 4,
+    "TypeScript": 1,
+    "iOS development": 1
+  },
+  "text": "# Enterprise Inventory Management App  \nA cross-platform mobile solution for real-time inventory tracking, built to streamline supply chain operations with Android and Flutter.  \n\n---\n\n## API Reference  \nThe app leverages a GraphQL backend for inventory data synchronization and REST APIs for legacy system integration. Key endpoints:  \n- `GET /inventory/status` – Fetch real-time stock levels with filters for location and product category.  \n- `POST /inventory/update` – Batch update stock quantities with audit trail logging.  \n- `GET /supply-chain/forecast` – Predictive analytics for stock replenishment, powered by server-side GraphQL subscriptions.  \n\nAndroid-specific GraphQL layer ensures offline support via local SQLite caching, with delta sync on reconnection. REST APIs use Retrofit for type-safe requests, with response validation for critical operations.  \n\n---\n\n## Usage / Examples  \n### Real-time Stock Check  \n```kotlin  \n// Android: Fetch inventory status  \nval query = \"query { inventoryStatus(productCode: \\\"P123\\\") { quantity location } }\"  \nGraphQLClient.query(query).enqueue { result ->  \n    updateUI(result.data?.inventoryStatus)  \n}  \n```  \n\n### Offline Stock Update  \n```dart  \n// Flutter: Save changes with local persistence  \nfinal db = InventoryDatabase.instance;  \nawait db.updateStock(\"P123\", 50);  \n// Sync with server on network restore  \n```  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/your-username/enterprise-inventory.git`  \n2. Android setup: Ensure JDK 17 and Android SDK are installed. Run `./gradlew assembleDebug`  \n3. Flutter setup: `flutter pub get` and `flutter run` for desktop/mobile testing.  \n4. Dependencies: Retrofit, GraphQL Kotlin, and SQLite Flutter plugins are pre-configured.  \n\n---\n\n## Tech Stack  \n- **Android**: Kotlin, Retrofit, GraphQL Kotlin, SQLite  \n- **Flutter**: Dart, Riverpod, HTTP, SQLite Flutter plugin  \n- **Backend**: GraphQL (Apollo), REST API (Spring Boot)  \n- **Tools**: Dagger for DI, Firebase for crash reporting  \n\n---\n\n## Architecture / Design  \nThe app follows a layered architecture:  \n1. **Data Layer**: GraphQL for real-time inventory, REST for legacy systems.  \n2. **UI Layer**: Flutter for cross-platform rendering, with Android-specific UI tweaks.  \n3. **Offline Support**: SQLite caching for Android, with delta sync logic to prevent data loss.  \n4. **Security**: JWT tokens for API access, with Android-specific TLS enforcement.  \n\n---\n\n## License  \nMIT License – see [LICENSE](LICENSE) for full terms.  \n\n---\n\n## Badges  \n[![GitHub](https://badges.alexa.com/badge.svg)](https://github.com/your-username/enterprise-inventory)  \n[![Documentation](https://badges.alexa.com/badge.svg)](https://your-username.github.io/enterprise-inventory-docs)  \n[![License](https://badges.alexa.com/badge.svg)](https://choosealicense.com/licenses/mit/)"
+}

@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_267_02",
+  "type": "project_readme",
+  "persona_id": "p_267",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 5,
+    "Apache Airflow": 2,
+    "Apache Kafka": 2,
+    "Apache Spark": 2,
+    "Cloud cost optimization": 3,
+    "Data modeling": 4,
+    "Data warehousing": 4,
+    "Database optimization": 2,
+    "Docker": 2,
+    "ETL pipeline design": 2,
+    "Kubernetes": 2,
+    "Python": 2,
+    "Snowflake": 2,
+    "Terraform": 4
+  },
+  "text": "# Enterprise Data Warehouse Migration on AWS  \nModernized ETL pipelines and data modeling for enterprise scalability using AWS Glue, Redshift, and cloud-native optimization  \n\n## Deployment  \nDeployed via Terraform-managed AWS infrastructure with automated CI/CD pipelines. Production environments use CloudWatch for real-time monitoring, with deployment visibility via AWS CodePipeline and CloudWatch metrics for ETL job latency.  \n\n## Badges  \n[![AWS Certified Solutions Architect](https://badges.example.com/aws-cert)](https://aws.amazon.com/certifications/)  \n[![CI/CD Pipeline](https://badges.example.com/ci-cd)](https://github.com/enterprise-warehouse/actions)  \n[![Security Compliance](https://badges.example.com/iso-27001)](https://security.aws.com/)  \n\n## Tech Stack  \n- **AWS Services**: Glue (ETL), Redshift (data warehouse), S3 (storage), Lambda (serverless), CloudWatch (monitoring)  \n- **Infrastructure**: Terraform (IaC), AWS IAM (role-based access)  \n- **Tools**: Python (scripting), AWS CLI (command-line integration)  \n\n## Architecture / Design  \nData flows from source systems to S3 via Kafka-ingestion pipelines, processed by Glue Spark jobs with dynamic partitioning. Redshift tables are optimized with columnar storage and materialized views, reducing query latency by 42%. Terraform ensures consistent environment provisioning across dev, staging, and prod.  \n\n## Getting Started / Installation  \n1. Clone repository: `git clone https://github.com/enterprise-warehouse/migration.git`  \n2. Configure AWS credentials via `aws configure` and IAM roles  \n3. Initialize Terraform: `terraform init` and apply infrastructure  \n4. Validate environment with `aws cloudformation describe-stacks`  \n\n## Usage / Examples  \nRun ETL jobs via AWS Glue console or CLI:  \n```bash\naws glue start-job-run --job-name \"customer_data_etl\"\n```  \nQuery Redshift with PostgreSQL client:  \n```sql\nSELECT * FROM sales_fact WHERE region = 'APAC' LIMIT 1000;\n```  \nMonitor job metrics in CloudWatch for latency and error rates.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/enterprise-warehouse/migration/blob/main/LICENSE) for details."
+}

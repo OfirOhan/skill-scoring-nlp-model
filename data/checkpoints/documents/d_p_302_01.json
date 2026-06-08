@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_302_01",
+  "type": "project_readme",
+  "persona_id": "p_302",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "C/C++ (embedded)": 4,
+    "Firmware development": 4,
+    "GitLab CI": 3,
+    "Hardware-software integration": 4,
+    "IoT protocols (MQTT/CoAP)": 3,
+    "Network troubleshooting": 2,
+    "Python": 3,
+    "REST API design": 3,
+    "RTOS": 4
+  },
+  "text": "# MotionControlVR: Real-Time Embedded Motion Integration for VR Gaming  \nA low-latency, high-precision motion control system for VR gaming, optimized for seamless interaction with immersive environments. Achieves <10ms end-to-end latency and 99.9% reliability in real-world testing.  \n\n---\n\n## Configuration  \n**Hardware**: ESP32 dev board with 6-axis IMU + magnetometer, connected via I2C.  \n**Software**: Configure sensor calibration parameters in `config.h` and adjust RTOS task priorities in `task_scheduler.c`. Set `ENABLE_MQTT` to `true` for cloud telemetry.  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/ianszabo/MotionControlVR.git`  \n2. Install PlatformIO via `pip install platformio`  \n3. Flash firmware using `platformio run --target upload` (requires ESP32 board connected)  \n4. Calibrate sensors via serial terminal: `./calibrate_sensor.sh`  \n\n---\n\n## Usage / Examples  \n- **Real-time motion tracking**: Use `motion_data.json` output for gesture recognition in Unity.  \n- **Latency benchmark**: Run `./latency_test.py` to validate <10ms response times.  \n- **Cloud sync**: Enable MQTT to stream telemetry to AWS IoT Core for remote monitoring.  \n\n---\n\n## Tech Stack  \n- **Languages**: C (RTOS), Python (data analysis)  \n- **RTOS**: FreeRTOS with 10ms tick resolution  \n- **Protocols**: MQTT (QoS 1), UART (sensor readback)  \n- **Hardware**: ESP32 (Dual-core, 240MHz), LSM6DS3 IMU  \n\n---\n\n## Architecture / Design  \n**Hardware Layer**: Sensor fusion (MPU9250) with 1kHz sampling rate.  \n**RTOS Layer**: Task-based scheduling for motion processing (3ms slice) and MQTT publishing (10ms slice).  \n**Communication**: MQTT bridge for cloud integration, with 99.8% packet delivery rate.  \n\n---\n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n---\n\n## Badges  \n[![Build Status](https://github.com/ianszabo/MotionControlVR/actions/workflows/build.yml/badge.svg)](https://github.com/ianszabo/MotionControlVR/actions/workflows/build.yml)  \n[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  \n[![Tech Stack](https://img.shields.io/badge/tech%20stack-C%20%7C%20Python%20%7C%20FreeRTOS%20%7C%20MQTT-green.svg)](https://github.com/ianszabo/MotionControlVR)"
+}

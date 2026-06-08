@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_108_03",
+  "type": "blog",
+  "persona_id": "p_108",
+  "hyperparams": {
+    "blog_depth": "tutorial",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "CI/CD pipelines": 3,
+    "Docker": 3,
+    "GCP": 4,
+    "Kubernetes": 4,
+    "Linux administration": 4,
+    "Prometheus/Grafana": 4,
+    "Python": 4,
+    "Terraform": 4
+  },
+  "text": "**Modernizing Legacy Systems with Serverless Architecture**  \n\n**Overview**  \nLast year, our e-commerce platform faced a critical inflection point. A monolithic Java backend, running on-premises, was struggling to scale during peak holiday traffic. The system’s rigid architecture and high operational costs threatened our ability to innovate. We decided to modernize by migrating key services to serverless architecture, leveraging AWS Lambda and GCP’s managed services while maintaining observability through Prometheus and Grafana.  \n\n**Context**  \nThe legacy system handled inventory, order processing, and payment workflows, all tightly coupled in a single JVM process. Scaling required provisioning EC2 instances, which led to unpredictable latency and frequent outages during promotions. Our team spent 60% of its time on manual scaling, patching, and debugging, leaving little room for new features. The database, a PostgreSQL cluster, became a bottleneck, with query times doubling during traffic spikes.  \n\n**Challenge**  \nThe primary hurdles were decoupling monolithic components without disrupting existing workflows and ensuring observability across a distributed serverless environment. Traditional logging and metrics tools couldn’t track Lambda invocations or API Gateway latency effectively. Additionally, legacy codebases lacked CI/CD integration, making automated testing and deployment risky.  \n\n**Solution**  \nWe adopted a phased approach:  \n1. **Decoupling**: Split order processing into microservices using AWS Lambda for async tasks and GCP Pub/Sub for event-driven communication.  \n2. **Observability**: Deployed Prometheus for metrics and Grafana for dashboards, instrumenting Lambda functions with custom logs and X-Ray traces.  \n3. **Infrastructure**: Used Terraform to manage AWS and GCP resources, ensuring consistent environments across dev, staging, and prod.  \n4. **CI/CD**: Built pipelines with GitHub Actions to automate testing, packaging, and deployment of Lambda functions, reducing release cycles from weeks to hours.  \n\n**Results**  \nWithin six months, we achieved 40% cost reduction via serverless elasticity, 50% lower latency in critical paths, and a 99.99% SLA. The team’s deployment frequency increased tenfold, and incident resolution times dropped by 70%. PostgreSQL offloading to read replicas also improved query performance by 35%.  \n\n**Lessons Learned**  \n- **Observability is non-negotiable**: Without granular metrics, serverless systems risk becoming “black boxes.”  \n- **Migrate incrementally**: Start with low-risk components—our payment gateway was the first to go serverless.  \n- **Balance tooling**: While AWS and GCP offer robust services, hybrid setups require careful orchestration.  \n- **CI/CD is the backbone**: Automated pipelines prevent deployment bottlenecks, especially when legacy codebases resist change.  \n\nThis journey taught us that modernization isn’t about replacing old systems but evolving them with the right tools. The key is to prioritize reliability, scalability, and team velocity—principles that serverless architecture, when implemented thoughtfully, can deliver."
+}

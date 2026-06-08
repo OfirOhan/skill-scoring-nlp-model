@@ -1,0 +1,51 @@
+[
+  {
+    "doc_type": "cv",
+    "topic_summary": "A professional CV highlighting Alexei's 9 years of experience as a Senior Data Engineer in fintech, with expertise in data pipeline architecture and cloud-native solutions.",
+    "title": "Alexei Morozov - Senior Data Engineer",
+    "doc_id": "d_p_140_00",
+    "persona_id": "p_140",
+    "hyperparams": {
+      "cv_format": "bullet-heavy",
+      "geographic_convention": "US",
+      "company_type": "startup",
+      "company_size": "small (<50)"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A GitHub README for a real-time fraud detection system using Apache Kafka and Spark Streaming, optimized for high-volume financial transaction data.",
+    "title": "Real-Time Fraud Detection System",
+    "doc_id": "d_p_140_01",
+    "persona_id": "p_140",
+    "hyperparams": {
+      "project_scale": "hobby",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post exploring strategies to optimize ETL pipelines for scalability in fintech environments using AWS Glue and Apache Airflow.",
+    "title": "Scalable ETL Pipelines for Fintech Data Engineering",
+    "doc_id": "d_p_140_02",
+    "persona_id": "p_140",
+    "hyperparams": {
+      "blog_depth": "tutorial",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation letter from Alexei's former manager at CapitalFlow Inc., praising his leadership in architecting real-time data platforms.",
+    "title": "Recommendation from CapitalFlow Inc. CTO",
+    "doc_id": "d_p_140_03",
+    "persona_id": "p_140",
+    "hyperparams": {
+      "recommender_role": "skip-level",
+      "recommender_closeness": "worked-daily",
+      "company_type": "academic",
+      "company_size": "large (500+)"
+    }
+  }
+]

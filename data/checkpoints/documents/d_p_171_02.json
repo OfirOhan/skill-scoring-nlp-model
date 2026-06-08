@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_171_02",
+  "type": "project_readme",
+  "persona_id": "p_171",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Cloud cost optimization": 1,
+    "Docker": 1,
+    "GitLab CI": 1,
+    "JavaScript": 1,
+    "PostgreSQL": 3,
+    "Python": 3,
+    "REST API design": 3,
+    "React": 1,
+    "TypeScript": 1,
+    "Web performance optimization": 2,
+    "Webpack/Vite": 1
+  },
+  "text": "# Customer Portal Dashboard  \nA secure, scalable enterprise dashboard for real-time customer analytics, built with Python/Django and PostgreSQL for high-throughput data visualization. Integrates REST APIs for seamless backend synchronization and supports role-based access control for multi-team collaboration.  \n\n## Badges  \n[![Enterprise-Ready](https://via.placeholder.com/80)](https://example.com) [![Python 3.10+](https://via.placeholder.com/80)](https://example.com) [![PostgreSQL](https://via.placeholder.com/80)](https://example.com)  \n\n## Tech Stack  \n- **Backend**: Django 4.2, Django REST framework, PostgreSQL 15 (for real-time data aggregation and analytics)  \n- **Data Layer**: PostgreSQL with JSONB for nested customer metadata and time-series queries  \n- **APIs**: RESTful endpoints for dashboard widgets, with rate limiting and authentication via JWT  \n- **Security**: Django-CORS-Headers, SSL enforcement, and role-based access control (RBAC) via custom middleware  \n- **Performance**: Redis caching for frequently accessed metrics and Celery for async report generation  \n\n## Configuration  \n- Set `DJANGO_SETTINGS_MODULE` to `config.settings.production` in `env_vars.py`  \n- Configure PostgreSQL credentials in `db_config.py` with SSL mode `verify-full`  \n- Enable CORS domains in `CORS_ALLOWED_ORIGINS` for microservices integration  \n- Set `SECRET_KEY` and `JWT_SECRET` via environment variables for production deployment  \n\n## Getting Started / Installation  \n1. Install dependencies: `pip install -r requirements.txt`  \n2. Apply migrations: `python manage.py migrate`  \n3. Load sample data: `python manage.py seed_data`  \n4. Run the server: `python manage.py runserver 0.0.0.0:8000`  \n5. Access the admin panel at `/admin` with superuser credentials  \n\n## Usage / Examples  \n- Fetch customer metrics: `GET /api/v1/metrics/?start=2024-01-01`  \n- Generate custom reports: `POST /api/v1/reports/` with filter parameters  \n- Monitor real-time KPIs via WebSocket integration with Django Channels  \n- Audit logs are stored in PostgreSQL with timestamped JSON logs for compliance  \n\n## Testing  \n- Run unit tests: `pytest --cov=customer_portal --cov-report html`  \n- Validate API endpoints with `curl` or Postman for 200/401/403 responses  \n- Stress-test database queries with `pgbench` for concurrent metric fetches  \n- Ensure RBAC enforces 100% access denial for unauthorized users  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
+}

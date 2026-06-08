@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_056_02",
+  "type": "project_readme",
+  "persona_id": "p_056",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Application security (OWASP)": 3,
+    "Compliance (SOC2/GDPR)": 4,
+    "Encryption & PKI": 4,
+    "IAM/Access control": 4,
+    "Network security": 4,
+    "Penetration testing": 2,
+    "SIEM tools": 3,
+    "Threat modeling": 2,
+    "Vulnerability management": 4
+  },
+  "text": "# CloudSecurityAuditTool  \nA modular framework for automating compliance checks and vulnerability assessments in infrastructure-as-code environments. Designed to integrate seamlessly with CI/CD pipelines, this tool prioritizes real-time risk detection and actionable remediation guidance for cloud-native architectures.  \n\n## Deployment  \nDeploy via Docker for consistent runtime environments. Preconfigured Kubernetes manifests enable scalable cluster audits. Integration with AWS CodePipeline and Azure DevOps ensures continuous compliance validation. All outputs are encrypted at rest using AES-256 and stored in SOC2-compliant SaaS platforms.  \n\n## Getting Started / Installation  \n```bash  \npip install -r requirements.txt  \nterraform init  \n```  \nEnsure Python 3.9+ and Terraform 1.4+ are installed. Configure environment variables for cloud provider credentials and compliance rule sets.  \n\n## Usage / Examples  \n```bash  \ncloudaudit scan --tfpath ./infrastructure --ruleset gdpr  \ncloudaudit check-iam --account-id 123456789012  \n```  \nAnalyzes Terraform modules for misconfigurations, validates IAM roles against least-privilege policies, and generates HTML reports with remediation steps.  \n\n## Tech Stack  \nPython 3.9, Terraform, AWS SDK, Azure CLI, Open Policy Agent, Docker, Kubernetes, Elasticsearch (for log aggregation), and TLS 1.3 for secure API communication.  \n\n## Architecture / Design  \nA layered architecture separates parsing, rule enforcement, and reporting. The core engine dynamically loads compliance policies (SOC2, GDPR) and cross-references them against IaC templates. Network security is enforced via zero-trust principles, with all inter-service communication routed through mTLS.  \n\n## License  \nMIT License  \n\n## Badges  \n[![Build Status](https://github.com/yourusername/CloudSecurityAuditTool/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/CloudSecurityAuditTool/actions)  \n[![Compliance](https://img.shields.io/badge/Compliant-SOC2%2FGDPR-blue)](https://github.com/yourusername/CloudSecurityAuditTool)  \n[![Version](https://img.shields.io/badge/Version-1.2.0-green)](https://github.com/yourusername/CloudSecurityAuditTool/releases)"
+}

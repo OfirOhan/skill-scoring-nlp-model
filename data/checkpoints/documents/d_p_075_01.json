@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_075_01",
+  "type": "project_readme",
+  "persona_id": "p_075",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 1,
+    "CI/CD pipelines": 3,
+    "Docker": 4,
+    "GitHub Actions": 3,
+    "Go": 1,
+    "Linux administration": 3,
+    "MongoDB": 1,
+    "Monitoring & alerting": 1,
+    "PostgreSQL": 3,
+    "Python": 1,
+    "REST API design": 3,
+    "Shell scripting (Bash)": 2
+  },
+  "text": "# E-Commerce Inventory Management System  \n\nA real-time inventory tracking solution built with Node.js and PostgreSQL, designed to handle concurrent updates and maintain 99.9% uptime under 10k+ requests/sec.  \n\n## Testing  \nAutomated test suite covers 95% of core logic with unit and integration tests. Test coverage is enforced via GitHub Actions, which runs tests on every PR and merge request. Mocha and Chai are used for assertions, while PostgreSQL transactions ensure data consistency during concurrent writes.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/marcusj/e-commerce-inventory.git`  \n2. Install dependencies: `npm install`  \n3. Initialize PostgreSQL via Docker (included in `docker-compose.yml`). Run `docker-compose up -d` to start the database.  \n4. Set environment variables for database credentials and API keys.  \n\n## Usage / Examples  \n- **Create an item**: `POST /api/items` with body `{ name: \"Laptop\", stock: 150 }`  \n- **Update stock**: `PATCH /api/items/:id` with body `{ stock: 50 }`  \n- **Query inventory**: `GET /api/inventory` returns real-time stock levels via WebSocket.  \n\n## Tech Stack  \n- Backend: Node.js 18, Express.js, REST API design  \n- Database: PostgreSQL 15 with JSONB for nested inventory data  \n- Containerization: Docker (reduced deployment friction by 40%)  \n- CI/CD: GitHub Actions (automates testing and linting)  \n- Scripting: Bash for database migrations and setup scripts  \n\n## Architecture / Design  \nThe system uses a microservices architecture with Node.js handling API logic and PostgreSQL for ACID compliance. Docker ensures consistent environments across dev, staging, and production. REST endpoints are designed for idempotency, with WebSocket subscriptions for real-time updates. Linux system commands are used for log rotation and resource monitoring.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Contributing  \nSubmit PRs with automated tests and code formatting. All contributions undergo code review and are integrated via GitHub Actions. Prefer pull requests over direct pushes to main."
+}

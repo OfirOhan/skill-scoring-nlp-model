@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_089_02",
+  "type": "project_readme",
+  "persona_id": "p_089",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "3D graphics (Vulkan)": 3,
+    "C#/.NET": 4,
+    "Game networking": 4,
+    "Game physics": 5,
+    "Microservices architecture": 3,
+    "Python": 3,
+    "REST API design": 5,
+    "Unity": 3,
+    "Unreal Engine": 3,
+    "gRPC": 3
+  },
+  "text": "# Galactic Frontiers: Mobile Strategy Game  \nGalactic Frontiers is a cross-platform mobile strategy game where players command fleets, manage resources, and engage in real-time tactical battles across procedurally generated star systems. Built for iOS and Android, the project emphasizes scalable architecture, performance optimization, and seamless multiplayer integration. As a Senior Game Development Lead, I oversaw the integration of 3D graphics pipelines, microservices backend, and cross-platform networking to deliver a cohesive player experience across devices.  \n\n## Deployment  \nThe game is deployed via the App Store and Google Play, with continuous integration pipelines ensuring automated builds and testing. Binary artifacts are versioned using Git tags, and release notes are generated from commit history.  \n\n## Badges  \n[![Build Status](https://example.com/build-badge)](https://example.com/build)  \n[![Code Coverage](https://example.com/coverage)](https://example.com/coverage)  \n[![Platform Support](https://example.com/platform)](https://example.com/platform)  \n\n## Tech Stack  \n- **Game Engine**: Unity (for iOS/Android) + Unreal Engine (for PC demo)  \n- **Graphics**: Vulkan (for 3D rendering optimization)  \n- **Backend**: Python (microservices), gRPC (service-to-service communication)  \n- **Networking**: Custom game logic + WebSockets for real-time multiplayer  \n- **APIs**: RESTful endpoints for player data sync and leaderboards  \n\n## Architecture / Design  \nThe architecture prioritizes modularity, with Unity handling UI and rendering while a Python-based microservices layer manages game state, matchmaking, and analytics. gRPC streams enable low-latency synchronization between clients and servers. For physics, a hybrid system combines Unity’s physics engine with custom collision detection for large-scale battles. REST APIs are designed for scalability, with rate limiting and caching implemented to handle peak load.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/yourusername/galactic-frontiers.git`  \n2. Install Unity Hub and the required SDKs for iOS/Android builds  \n3. Configure environment variables for API keys and deployment credentials  \n4. Run `npm install` to fetch build tools and dependencies  \n\n## Usage / Examples  \n- Launch the game via `./build.sh` for iOS/Android  \n- Test multiplayer with `./run-multiplayer.sh` (requires local server)  \n- Contribute by extending the `game_logic` module or optimizing Vulkan shaders  \n\n## License  \nMIT License – see [LICENSE](https://github.com/yourusername/galactic-frontiers/blob/main/LICENSE) for details."
+}

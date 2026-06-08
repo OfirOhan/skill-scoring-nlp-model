@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_196_01",
+  "type": "project_readme",
+  "persona_id": "p_196",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "PyTorch": 1,
+    "TensorFlow": 1,
+    "scikit-learn": 1,
+    "Hugging Face Transformers": 1,
+    "NLP": 1,
+    "Model deployment": 1,
+    "AWS": 1,
+    "Apache Airflow": 1,
+    "ETL pipeline design": 1,
+    "Data warehousing": 1,
+    "REST API design": 1
+  },
+  "text": "# HealthPredict: Predictive Analytics for Patient Readmissions  \n\nHealthPredict is a research-focused project designed to analyze patient data and predict the likelihood of readmission within 30 days. Built for academic exploration, it leverages structured clinical records to identify high-risk patients, enabling proactive interventions. The model prioritizes interpretability and generalizability, with performance evaluated using AUC-ROC and F1-score metrics.  \n\n## Getting Started / Installation  \n\nInstall dependencies via pip:  \n```bash  \npip install -r requirements.txt  \n```  \nDownload the dataset (CSV format) from [this source](https://example.com/dataset) and place it in the `data/` directory. Ensure Python 3.8+ is installed.  \n\n## Tech Stack  \n\n- **Data Handling**: Pandas, NumPy, Dask  \n- **Visualization**: Matplotlib, Seaborn  \n- **Modeling**: XGBoost, LightGBM (for gradient boosting)  \n- **Storage**: SQLite for model metadata  \n- **Utilities**: Scipy, Statsmodels  \n\n## Usage / Examples  \n\nRun the training pipeline:  \n```bash  \npython train.py --data=data/clinical_data.csv --output=models/healthpredict_v1  \n```  \nThis generates a trained model and evaluates performance on a holdout set. Example output includes confusion matrices and feature importance rankings.  \n\n## Badges  \n\n[![GitHub](https://badgen.net/badge2/healthpredict/green)](https://github.com/lucasmartin/healthpredict)  \n[![License](https://badgen.net/badge/license/MIT/blue)](https://github.com/lucasmartin/healthpredict/blob/main/LICENSE)  \n[![Dataset](https://badgen.net/badge/dataset/clinical/teal)](https://example.com/dataset)  \n\n## Architecture / Design  \n\nThe pipeline follows a modular design: data is preprocessed using Dask for scalability, then split into training and testing sets. Features are engineered to capture temporal trends and comorbidity indicators. The model uses gradient boosting with early stopping to prevent overfitting. Hyperparameters are tuned via randomized search, and results are logged in a SQLite database for reproducibility.  \n\n## Contributing  \n\nContributions are welcome! Focus on improving feature engineering, expanding dataset support, or refining evaluation metrics. Open an issue or submit a pull request via the GitHub interface.  \n\n## License  \n\nMIT License. See the [LICENSE](https://github.com/lucasmartin/healthpredict/blob/main/LICENSE) file for details."
+}

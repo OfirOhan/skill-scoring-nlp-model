@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_198_01",
+  "type": "project_readme",
+  "persona_id": "p_198",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Apache Airflow": 3,
+    "Apache Kafka": 3,
+    "Apache Spark": 3,
+    "Data warehousing": 3,
+    "ETL pipeline design": 3,
+    "GitHub Actions": 3,
+    "Infrastructure as Code": 3,
+    "Monitoring & alerting": 3,
+    "Python": 3,
+    "Snowflake": 3,
+    "Terraform": 3,
+    "dbt": 3
+  },
+  "text": "# Retail Data Pipeline Automation  \nAutomated ETL orchestration for real-time inventory analytics, reducing manual intervention by 70% and improving data freshness to <5 minutes  \n\n## Getting Started / Installation  \n**Prerequisites**: Docker (>=20.10), Python (3.9+), AWS CLI  \n```bash\ngit clone https://github.com/ulrichweber/retail-pipeline.git  \ncd retail-pipeline  \ndocker-compose build --no-cache  \ndocker-compose up -d  \n```  \nEnsure environment variables in `.env.local` align with your cloud provider's credentials  \n\n## Usage / Examples  \n**Real-time processing**:  \n```bash  \nairflow trigger_dag 'realtime_inventory'  \n```  \n**Batch reconciliation**:  \n```bash  \npython scripts/reconcile.py --source s3://bucket/logs --target snowflake_db  \n```  \nMonitor pipeline health via `/metrics` endpoint (exposes Prometheus-compatible metrics)  \n\n## Badges  \n[![Deployment Status](https://github.com/ulrichweber/retail-pipeline/actions/workflows/deploy.yml/badge.svg)](https://github.com/ulrichweber/retail-pipeline/actions/workflows/deploy.yml)  \n[![Test Coverage](https://codecov.io/gh/ulrichweber/retail-pipeline/branch/main/graph/badge.svg)](https://codecov.io/gh/ulrichweber/retail-pipeline)  \n\n## Tech Stack  \n- **Orchestration**: Apache Airflow (v2.8) with dynamic DAG generation  \n- **Streaming**: Apache Kafka (0.11+) for real-time sales event ingestion  \n- **Batch Processing**: Apache Spark (3.3) with Kafka integration for hybrid pipelines  \n- **Data Warehousing**: Snowflake (v2.55) with auto-scaling compute clusters  \n- **Transformation**: dbt (v12.11) for semantic layer abstraction  \n- **CI/CD**: GitHub Actions (v2.1) with multi-stage deployment pipelines  \n- **Infrastructure**: Terraform (v1.3) for AWS EKS and VPC provisioning  \n\n## Architecture / Design  \n**Core Flow**:  \n1. Kafka topics ingest POS transactions (1M+/hr)  \n2. Spark Structured Streaming aggregates metrics (latency <2s)  \n3. Airflow orchestrates nightly reconciliation (99.98% SLA)  \n4. dbt models populate Snowflake for BI (query latency <500ms)  \n5. Prometheus + Grafana monitor pipeline health (95%+ uptime)  \n\n**Key Optimization**:  \n- Kafka schema registry enforces data contract versioning  \n- Spark dynamic allocation reduces idle resource usage by 60%  \n- Snowflake materialized views accelerate ad-hoc analytics  \n\n## Contributing  \nFork the repo and submit PRs with:  \n1. Unit tests covering core transformations  \n2. Documentation updates for new DAGs  \n3. Infrastructure-as-code changes to Terraform modules  \n4. Performance benchmarks for new pipeline versions  \n\n## License  \nMIT License (see [LICENSE](LICENSE) for details)"
+}

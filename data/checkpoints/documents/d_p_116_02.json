@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_116_02",
+  "type": "project_readme",
+  "persona_id": "p_116",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 3,
+    "Go": 4,
+    "Kubernetes": 3,
+    "Microservices architecture": 4,
+    "PostgreSQL": 4,
+    "Python": 3,
+    "REST API design": 4,
+    "Terraform": 3
+  },
+  "text": "# SecureAPI Gateway: Cybersecurity-Enhanced RESTful API Infrastructure  \n\nSecureAPI Gateway is a production-grade API gateway built to enforce strict security protocols, including TLS 1.3, rate limiting with dynamic thresholds, and end-to-end encryption. Engineered for high-throughput environments, it reduces brute-force attack vectors by 82% and ensures compliance with GDPR and ISO 27001 standards. Deployed across 3 AWS regions with auto-scaling, it handles 1.2M+ requests/day while maintaining <50ms latency.  \n\n## Deployment  \nDeployed on AWS EC2 instances with Kubernetes orchestration, leveraging Terraform for infrastructure-as-code. CI/CD pipelines (GitHub Actions) automate testing and deployment, with canary rollouts reducing downtime to <0.5%. Cloud cost optimization strategies, including spot fleets and reserved instances, cut infrastructure spend by 35% compared to standard EC2.  \n\n## Getting Started / Installation  \n1. Clone repo: `git clone https://github.com/yourusername/secureapi-gateway.git`  \n2. Install dependencies: Go 1.21, PostgreSQL 15, Python 3.11  \n3. Configure AWS credentials via `~/.aws/credentials`  \n4. Run `terraform apply` to spin up a secure VPC with encrypted inter-node communication  \n5. Start the gateway: `go run main.go --config config.yaml`  \n\n## Usage / Examples  \n```bash\n# Enforce rate limit of 100 reqs/min per IP  \ncurl -X POST https://api.securegateway.com/v1/secure --header \"Authorization: Bearer <token>\" --data \"{ \\\"payload\\\": \\\"sensitive\\\" }\"  \n\n# Monitor encryption throughput  \ncurl -s http://localhost:8080/metrics | grep \"tls_throughput\"\n```  \nUse the `/debug` endpoint to inspect TLS handshake details or audit logs for suspicious patterns.  \n\n## Tech Stack  \n- **Go**: Core logic with concurrency-optimized rate limiting (99.999% uptime)  \n- **Python**: Postgres integration for audit logging (300K+ entries/sec)  \n- **PostgreSQL**: Distributed rate limit storage with replication lag <100ms  \n- **Terraform**: Multi-cloud readiness with AWS-specific security groups  \n- **Kubernetes**: Auto-scaling with anti-affinity rules for DDoS resilience  \n\n## Architecture / Design  \nMicroservices-based with a central policy engine handling TLS termination, rate limiting, and payload encryption. PostgreSQL serves as a distributed rate limit store, while Kubernetes ensures zero-downtime upgrades. REST API endpoints are secured via OAuth2.0 with JWT introspection, reducing unauthorized access by 97%.  \n\n## License  \nMIT License  \n\n## Badges  \n[![Build Status](https://github.com/yourusername/secureapi-gateway/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/secureapi-gateway/actions/workflows/ci.yml)  \n[![Security](https://imagelink.com/security-badge)](https://imagelink.com/security-badge)"
+}

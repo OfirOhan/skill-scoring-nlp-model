@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_103_03",
+  "type": "project_readme",
+  "persona_id": "p_103",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 3,
+    "Kubernetes": 3,
+    "Linux administration": 3,
+    "Network automation": 2,
+    "Prometheus/Grafana": 3,
+    "Python": 4,
+    "Terraform": 4
+  },
+  "text": "# High Availability Kubernetes Cluster for Payment Gateway  \nA production-ready Kubernetes cluster designed to support a fintech payment gateway with 99.99% SLA, automated failover, and cloud cost efficiency. Built to handle high transaction volumes with zero-downtime upgrades and real-time monitoring.  \n\n## Getting Started / Installation  \n1. Clone the repo and install Terraform.  \n2. Configure AWS credentials and region in `terraform.tfvars`.  \n3. Run `terraform init && terraform apply` to deploy VPC, control plane, and worker nodes across three availability zones.  \n4. Verify cluster health via `kubectl get nodes` and Prometheus dashboards.  \n\n## Usage / Examples  \n- Deploy a payment service: `kubectl apply -f deployment.yaml`  \n- Monitor metrics: Access Grafana via the provided endpoint.  \n- Trigger failover: Simulate node failure and observe automated rebalancing.  \n- Optimize costs: Use AWS Cost Explorer to refine instance types based on workload patterns.  \n\n## Badges  \n[![GitHub](https://github.com/hugoramirez/ha-k8s-cluster/actions/workflows/build.yml/badge.svg)](https://github.com/hugoramirez/ha-k8s-cluster/actions/workflows/build.yml)  \n[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/hugoramirez/ha-k8s-cluster/blob/main/LICENSE)  \n\n## Tech Stack  \n- **Cloud**: AWS (VPC, EC2, EKS)  \n- **Orchestration**: Terraform (infrastructure as code)  \n- **Monitoring**: Prometheus + Grafana (custom dashboards)  \n- **Language**: Python (scripts for automated scaling)  \n- **Networking**: Calico (CNI) with multi-AZ routing  \n- **Security**: IAM roles, VPC isolation, and encrypted etcd  \n\n## Architecture / Design  \nThe cluster spans three AZs with control plane nodes distributed for redundancy. Worker nodes use spot instances to reduce costs, balanced by auto-scaling groups. Prometheus scrapes metrics from kubelet and services, with alerts for node health and API latency. Python scripts analyze cost data to optimize instance types dynamically.  \n\n## Contributing  \nFeedback and improvements are welcome. For solo maintenance, focus on refining cost models and expanding monitoring coverage.  \n\n## License  \nMIT License — see [LICENSE](https://github.com/hugoramirez/ha-k8s-cluster/blob/main/LICENSE) for details."
+}

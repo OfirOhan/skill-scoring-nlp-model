@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_304_01",
+  "type": "project_readme",
+  "persona_id": "p_304",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Application security (OWASP)": 2,
+    "Cloud networking (VPC/subnets)": 3,
+    "Firewall configuration": 3,
+    "IAM/Access control": 3,
+    "Monitoring & alerting": 3,
+    "Network security": 3,
+    "Penetration testing": 2,
+    "SIEM tools": 3
+  },
+  "text": "# AdGuard: Real-Time Anomaly Detection for AdTech Threats  \n\nAdGuard is a lightweight, real-time threat detection system tailored for adtech environments. It leverages machine learning and network analysis to identify irregular traffic patterns, misconfigured ad servers, and potential data exfiltration vectors. Built for scalability, it integrates with existing monitoring workflows to provide actionable insights without disrupting operational pipelines.  \n\n## Tech Stack  \n- **Backend**: Python (FastAPI for API layer)  \n- **Machine Learning**: TensorFlow Lite (optimized for edge deployment)  \n- **Data Streaming**: Apache Kafka (real-time event ingestion)  \n- **Search & Analytics**: Elasticsearch (log normalization and pattern matching)  \n- **Monitoring**: Prometheus + Grafana (custom dashboards for latency metrics)  \n- **Cloud Networking**: AWS VPC (segmented traffic isolation)  \n- **Security**: IAM roles (fine-grained access control for cloud resources)  \n\n## Architecture / Design  \nThe system operates as a layered pipeline:  \n1. **Ingestion Layer**: Kafka brokers receive raw traffic metadata from ad servers, filtered via VPC security groups.  \n2. **Detection Engine**: TensorFlow Lite models analyze request frequency, geolocation mismatches, and payload entropy. Graph databases (Neo4j) map interdependent ad units for contextual correlation.  \n3. **Alerting Layer**: Prometheus triggers alerts based on deviation thresholds, which are then routed to SIEM tools (e.g., Splunk) for centralized logging.  \n4. **Feedback Loop**: Detected anomalies are re-evaluated weekly using labeled datasets to refine model thresholds.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/your-username/adguard.git  \ncd adguard  \npip install -r requirements.txt  \ndocker-compose up -d  \n```  \nEnsure Kafka and Elasticsearch clusters are pre-provisioned with IAM policies restricting access to adtech-specific namespaces.  \n\n## Usage / Examples  \nRun a baseline detection scan:  \n```bash  \npython main.py --input /path/to/traffic_logs --output /results/detections.json  \n```  \nExpected output includes:  \n- `malicious_ip`: Flagged IPs with >3σ deviation in request volume  \n- `suspicious_pattern`: Regex-matched payloads exceeding entropy thresholds  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/license/xinzhaolab/adguard)](https://github.com/xinzhaolab/adguard/blob/main/LICENSE)  \n[![Build Status](https://img.shields.io/github/actions/workflow/ci.yml?branch=main)](https://github.com/xinzhaolab/adguard/actions)  \n[![Coverage](https://img.shields.io/coveralls/xinzhaolab/adguard)](https://coveralls.io/github/xinzhaolab/adguard)  \n\n## Contributing  \nPull requests are welcome. For major changes, open an issue to discuss the approach. Ensure code adheres to PEP8 and includes unit tests for model inference pipelines.  \n\n## License  \nMIT License – see [LICENSE](https://github.com/xinzhaolab/adguard/blob/main/LICENSE) for details."
+}

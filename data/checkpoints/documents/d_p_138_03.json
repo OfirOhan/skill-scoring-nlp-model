@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_138_03",
+  "type": "project_readme",
+  "persona_id": "p_138",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "CI/CD pipelines": 3,
+    "Docker": 4,
+    "GCP": 1,
+    "Go": 4,
+    "Kubernetes": 3,
+    "Node.js": 1,
+    "PostgreSQL": 4,
+    "Python": 3,
+    "REST API design": 4,
+    "React": 3,
+    "TypeScript": 3
+  },
+  "text": "# NordicShop Microservices Architecture  \nA production-ready e-commerce platform engineered for high-traffic scalability, with a focus on fault tolerance and observability. Designed to handle 500K+ concurrent users via distributed systems, leveraging AWS and Kubernetes for orchestration.  \n\n## Testing  \nAutomated test coverage (92%) ensures service reliability. Pact-based API contract testing verifies 100% alignment between services. Chaos Engineering via Chaos Monkey validates system resilience under 45% node failure scenarios. CI/CD pipelines (GitHub Actions) execute 12,000+ unit/integration tests per release, with <0.05% regression risk.  \n\n## Getting Started  \n```bash  \ngit clone https://github.com/your-username/nordicshop.git  \ncd nordicshop  \nmake init  \n```  \nInstall dependencies: Docker (20.10+), PostgreSQL (15), and AWS CLI. Configure environment variables via `config/secrets.env` for RDS credentials and S3 endpoints.  \n\n## Usage / Examples  \n- **Product Catalog Update**:  \n  `curl -X POST https://api.nordicshop/v1/catalog --data '{\"sku\": \"N999\", \"inventory\": 1500}'`  \n  (Latency: <12ms, 99.999% SLA)  \n- **Order Processing Pipeline**:  \n  Kafka-driven event sourcing with 300K+ messages/sec throughput, routed via AWS Step Functions.  \n\n## Tech Stack  \n- **Backend**: Go (1.21), PostgreSQL (15) with connection pooling (max 2000 active)  \n- **Orchestration**: Kubernetes (1.28) with HPA (min 3, max 12 pods)  \n- **Storage**: AWS S3 (99.999999999% durability), DynamoDB (single-digit millisecond latency)  \n- **APIs**: RESTful (OpenAPI 3.0) with rate limiting (10K RPM)  \n- **CI/CD**: GitHub Actions + Terraform (stateful infrastructure as code)  \n\n## Architecture / Design  \nMonolithic-to-microservices migration via API Gateway (NGINX 1.26) with circuit breakers (Hystrix). Database sharding (PostgreSQL 12) for inventory management, scaled to 12 shards. Observability: Prometheus (exporters for all services) + Grafana (custom dashboards).  \n\n## License  \nMIT License  \n\n## Contributing  \nSubmit bug reports or feature requests via GitHub Issues. Pull requests should include:  \n1. Performance benchmarks (e.g., latency, throughput)  \n2. CI/CD pipeline updates (GitHub Actions)  \n3. Documentation improvements for service boundaries or API specs"
+}

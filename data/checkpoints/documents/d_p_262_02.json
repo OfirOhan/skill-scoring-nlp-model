@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_262_02",
+  "type": "project_readme",
+  "persona_id": "p_262",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Integration testing": 3,
+    "REST API design": 4,
+    "React": 5,
+    "Responsive design": 3,
+    "Test automation": 3,
+    "TypeScript": 3,
+    "Unit testing": 3,
+    "Web performance optimization": 3
+  },
+  "text": "# CollabSphere  \nReal-time collaborative editing tool for SaaS teams, built with WebSockets and Web Components to enable seamless document co-authoring across distributed teams  \n\n[![GitHub](https://badgen.net/badge/github/valentinas-projects/1478a8)](https://github.com/valentinas-projects/collabsphere)  \n[![npm](https://badgen.net/badge/npm/1.2.3/3366cc)](https://npmjs.com/package/collabsphere)  \n[![Web Components](https://badgen.net/badge/web-components/1.2.3/2962ff)](https://webcomponents.org/)  \n\n## Tech Stack  \n- **Frontend**: React (18.x), TypeScript (4.9), Web Components (Lit 3), Tailwind CSS (3.x)  \n- **Backend**: Node.js (18.x), Express (4.x), REST API (v1)  \n- **Real-time**: WebSocket (Socket.io 4.x), Operational Transform (OT)  \n- **Tools**: Webpack (5.x), ESLint (8.x), Prettier (3.x)  \n- **Deployment**: Docker (24.x), GitHub Actions (v3)  \n\n## Architecture / Design  \nCollabSphere’s architecture prioritizes modularity and real-time synchronization. The core editor is built with Web Components to ensure cross-framework compatibility, while React handles the UI layer for declarative state management. WebSocket channels manage document deltas, with OT algorithms ensuring conflict-free updates. REST APIs handle metadata and user permissions, integrated with a PostgreSQL database for persistent storage.  \n\nResponsive design is baked into the component tree, with a flexible grid system and dynamic font scaling. Performance optimizations include lazy-loaded modules and WebSocket connection pooling, reducing latency for 15+ concurrent editors.  \n\n## Getting Started / Installation  \n1. Clone the repo:  \n   ```bash  \n   git clone https://github.com/valentinas-projects/collabsphere.git  \n   cd collabsphere  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   npm install  \n   ```  \n3. Configure environment variables in `.env.local` for backend URL and API keys.  \n4. Build the app:  \n   ```bash  \n   npm run build  \n   ```  \n5. Run tests:  \n   ```bash  \n   npm test  \n   ```  \n\n## Usage / Examples  \nLaunch a session via the `/dashboard` route. Click \"New Document\" to create a shared workspace. Real-time changes appear instantly across all connected clients, with version history accessible via the \"History\" panel. REST API endpoints `/api/documents` and `/api/permissions` manage document lifecycles and access controls.  \n\n## Contributing  \nCollabSphere thrives on diverse input. To contribute:  \n- File issues using the `bug`, `feature`, or `enhancement` templates  \n- Submit PRs with tests covering edge cases (e.g., concurrent edits, network disruptions)  \n- Follow the TypeScript style guide and ensure all components adhere to Web Components standards  \n\n## License  \nMIT License — see [LICENSE](https://github.com/valentinas-projects/collabsphere/blob/main/LICENSE) for details"
+}

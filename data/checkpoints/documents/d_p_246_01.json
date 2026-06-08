@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_246_01",
+  "type": "project_readme",
+  "persona_id": "p_246",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Apache Airflow": 2,
+    "Cloud cost optimization": 1,
+    "Data warehousing": 3,
+    "MLOps (MLflow/W&B)": 3,
+    "Model deployment": 2,
+    "NLP": 3,
+    "PyTorch": 3,
+    "Recommendation systems": 4,
+    "dbt": 3
+  },
+  "text": "# E-commerce Product Recommendation System  \nA collaborative filtering-based recommendation engine leveraging customer purchase behavior to enhance conversion rates by 22% in controlled A/B tests. Built for academic research with scalable architecture, this project demonstrates real-world impact on user engagement and revenue optimization through personalized product suggestions.  \n\n## Deployment  \nThe system is containerized using Docker and deployed on a scalable cloud platform. CI/CD pipelines ensure automated testing and versioned rollouts. Model inference is integrated with the e-commerce platform via REST APIs, enabling real-time recommendations.  \n\n## Getting Started / Installation  \n1. Clone the repository using `git clone https://github.com/yourusername/repo.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Set up PostgreSQL database with schema defined in `schema.sql`  \n4. Configure API keys and environment variables in `.env`  \n\n## Usage / Examples  \nRun the recommendation pipeline:  \n```python  \npython recommend.py --user_id 12345 --top_n 5  \n```  \nInputs: User interaction history (CSV format)  \nOutputs: Ranked product recommendations with confidence scores (precision@5: 0.78, recall@5: 0.63)  \n\n## Tech Stack  \n- **Data Warehousing**: BigQuery for centralized customer analytics  \n- **MLOps**: MLflow for model tracking, Weights & Biases for experiment logging  \n- **NLP**: spaCy for text preprocessing in product descriptions  \n- **Frameworks**: PyTorch for custom collaborative filtering models  \n- **Orchestration**: Apache Airflow for batch pipeline scheduling  \n- **Data Transformation**: dbt for ETL processes on raw transaction data  \n\n## Architecture / Design  \nThe system follows a microservices architecture:  \n1. **Data Ingestion**: Apache Airflow schedules data pulls from CSV and database  \n2. **Feature Engineering**: dbt transforms purchase data into user-item interaction matrices  \n3. **Model Training**: PyTorch trains matrix factorization models with ALS optimization  \n4. **Deployment**: Docker containers host API endpoints for real-time inference  \n5. **Monitoring**: MLflow tracks metrics (RMSE: 0.82, AUC: 0.91) and model drift detection  \n\n## License  \nMIT License  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/commit-activity/y/yourusername/repo)](https://github.com/yourusername/repo)  \n[![CI/CD](https://img.shields.io/github/actions/workflow/yourusername/repo/main.yml)](https://github.com/yourusername/repo/actions)  \n[![Coverage](https://img.shields.io/coveralls/yourusername/repo)](https://coveralls.io/github/yourusername/repo)"
+}

@@ -1,0 +1,32 @@
+{
+  "doc_id": "d_p_193_01",
+  "type": "project_readme",
+  "persona_id": "p_193",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "CI/CD pipelines": 2,
+    "Cloud cost optimization": 1,
+    "Cloud networking (VPC/subnets)": 1,
+    "Database optimization": 1,
+    "Docker": 3,
+    "GitHub Actions": 3,
+    "Go": 3,
+    "Infrastructure as Code": 2,
+    "Kubernetes": 3,
+    "Linux administration": 1,
+    "Load balancing": 1,
+    "Microservices architecture": 3,
+    "Monitoring & alerting": 3,
+    "PostgreSQL": 3,
+    "Python": 1,
+    "REST API design": 4,
+    "Redis": 1,
+    "Serverless (Lambda/Cloud Functions)": 1,
+    "Shell scripting (Bash)": 1
+  },
+  "text": "# Enterprise API Gateway - Microservices Traffic Management  \nA scalable, resilient API gateway built with Go and Kubernetes to manage microservices traffic, enforce rate limits, and secure endpoints. Designed for high-throughput environments with 10k+ requests/sec and 99.95% uptime.  \n\n## Badges  \n[![CI/CD Status](https://github.com/YasminElAmin/api-gateway/actions/workflows/ci.yml/badge.svg)](https://github.com/YasminElAmin/api-gateway/actions/workflows/ci.yml)  \n[![Docker Image](https://img.shields.io/docker/pulls/yasminelamin/api-gateway)](https://hub.docker.com/r/yasminelamin/api-gateway)  \n[![Go Version](https://img.shields.io/github/go-version/YasminElAmin/api-gateway)](https://github.com/YasminElAmin/api-gateway)  \n\n## License  \nLicensed under the MIT License. See the [LICENSE](LICENSE) file for details.  \n\n## Tech Stack  \n- **Language**: Go (1.21) for performance-critical logic  \n- **Orchestration**: Kubernetes (v1.28) for container management  \n- **Containerization**: Docker (v24.0) for deployment consistency  \n- **Persistence**: PostgreSQL (v16) for metadata storage  \n- **Monitoring**: Prometheus + Grafana for real-time metrics  \n- **Security**: JWT-based authentication and TLS enforcement  \n\n## Architecture / Design  \nThe gateway decouples routing, rate limiting, and authentication into modular components. Key features include:  \n- **Service Mesh Integration**: Direct pod-to-pod communication via Kubernetes services  \n- **Dynamic Routing**: REST API-driven endpoint mapping with fallback strategies  \n- **Rate Limiting**: Token bucket algorithm with configurable thresholds (100 req/s per service)  \n- **Observability**: Prometheus metrics for latency (p99 < 15ms) and error rates (<0.05%)  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/YasminElAmin/api-gateway.git  \ncd api-gateway  \ndocker build -t yasminelamin/api-gateway:latest .  \nkubectl apply -f k8s/deployment.yaml  \n```  \nEnsure PostgreSQL and Prometheus are pre-provisioned in your cluster.  \n\n## Usage / Examples  \n```bash  \n# Route /v1/data to service-abc  \ncurl -X POST http://gateway:8080/routing -d '{\"path\":\"/v1/data\",\"target\":\"service-abc\"}'  \n\n# Enforce 50 req/s limit on /v1/api  \ncurl -X POST http://gateway:8080/rate-limit -d '{\"path\":\"/v1/api\",\"limit\":50}'  \n```  \nMonitor metrics via Grafana at `http://localhost:3000/datasource`  \n\n## Contributing  \nContributions require:  \n- Dockerized CI/CD pipeline integration  \n- REST API design adherence to OpenAPI 3.0 standards  \n- Kubernetes resource optimization (CPU/memory < 500Mi)  \n- Prometheus metric tagging for service-specific insights  \n\nAll pull requests must include benchmarking results for latency and throughput."
+}

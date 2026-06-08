@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_132_01",
+  "type": "project_readme",
+  "persona_id": "p_132",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Apache Airflow": 3,
+    "Apache Kafka": 3,
+    "Apache Spark": 3,
+    "Data modeling": 3,
+    "Data warehousing": 3,
+    "ETL pipeline design": 3,
+    "GitLab CI": 3,
+    "Python": 3,
+    "REST API design": 3,
+    "Snowflake": 2,
+    "dbt": 2
+  },
+  "text": "# Real-Time Analytics Platform with Kafka & Redshift  \n\nA scalable pipeline for ingesting, processing, and querying streaming data in real time, leveraging Kafka for event streaming and Redshift for analytical workloads. Designed for high-velocity data pipelines in enterprise environments, with built-in fault tolerance and monitoring.  \n\n## Deployment  \nDeployed on AWS with Kubernetes for container orchestration. Use environment variables for secrets and AWS credentials. CI/CD pipelines automate testing and deployment via GitLab CI, ensuring consistent builds across staging and production.  \n\n## Badges  \n[CI/CD: Passing](#) | [Test Coverage: 85%](#) | [Docker: Ready](#) | [Redshift: Operational](#)  \n\n## Tech Stack  \n- **Streaming**: Apache Kafka (avro serialization, partitioned topics)  \n- **Processing**: Apache Spark (structured streaming, windowed aggregations)  \n- **Storage**: AWS Redshift (columnar storage, materialized views)  \n- **Orchestration**: Apache Airflow (DAGs for batch reconciliation)  \n- **API**: RESTful endpoints (FastAPI) for ad-hoc queries  \n- **CI/CD**: GitLab CI (unit tests, integration tests)  \n- **Language**: Python (pandas, PySpark, SQLAlchemy)  \n\n## Architecture / Design  \nData flows from Kafka producers to Spark streaming workers, which perform real-time aggregations and write to Redshift. Airflow schedules nightly ETL jobs to sync with Snowflake for historical analysis. REST APIs expose Redshift schemas for low-latency querying. Data modeling prioritizes star schemas with denormalized fact tables for analytical performance.  \n\n## Getting Started / Installation  \n1. Install Docker and Docker Compose  \n2. Clone the repo: `git clone https://github.com/your-username/realtime-analytics.git`  \n3. Build containers: `docker-compose up --build`  \n4. Verify Kafka producers and Spark consumers are running  \n5. Access the REST API at `http://localhost:8000/docs`  \n\n## Usage / Examples  \n- **Stream ingestion**: Use Kafka CLI to publish JSON events to `raw-events-topic`  \n- **Query Redshift**: Execute SQL against `analytics.db` to retrieve aggregated metrics  \n- **Monitor latency**: Check Spark UI for processing time metrics (target < 500ms)  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details"
+}

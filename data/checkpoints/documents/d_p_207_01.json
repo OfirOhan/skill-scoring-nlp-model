@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_207_01",
+  "type": "project_readme",
+  "persona_id": "p_207",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "JavaScript": 4,
+    "Next.js": 3,
+    "REST API design": 2,
+    "React": 4,
+    "Responsive design": 4,
+    "State management (Redux/Zustand)": 3,
+    "Test automation": 3,
+    "TypeScript": 4,
+    "Web accessibility (WCAG)": 4,
+    "Web performance optimization": 4,
+    "Webpack/Vite": 3
+  },
+  "text": "# VividCart - E-commerce Checkout Optimization  \nA React/TypeScript frontend project optimizing checkout flows with 40% faster load times and 15% higher conversion rates through progressive enhancement and performance-first design.  \n\n## Acknowledgments  \nThis project wouldn’t exist without the collaborative efforts of the VividCart team:  \n- **Core contributors**: Maria Chen (state management), David Kim (performance audits), Priya Rao (accessibility audits)  \n- **Tools**: Vite for build speed, Zustand for state management, and Lighthouse for performance benchmarks  \n- **Inspiration**: WCAG 2.1 guidelines and real-world e-commerce pain points from client workshops  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/vividcart-team/checkout-optimization.git`  \n2. Install dependencies: `npm install` or `yarn install`  \n3. Set environment variables in `.env.local` for API keys and staging URLs  \n4. Start dev server: `npm run dev`  \n\n## Usage / Examples  \nRun `npm run dev` to launch the local dev server. Key features include:  \n- **Form validation**: Real-time feedback with 98% accuracy (via React Hook Form + Yup)  \n- **Dynamic pricing**: Live updates triggered by Redux-Zustand state sync  \n- **Accessibility**: Keyboard navigation and screen reader support (tested with axe-core)  \n\n## Tech Stack  \n- **Frontend**: React 18, TypeScript 4.9, Vite 4.0  \n- **State**: Zustand (replacing Redux for simpler dependency management)  \n- **Design**: Tailwind CSS for responsive layouts (mobile-first, 100% viewport width)  \n- **Performance**: Lighthouse score of 92/100 (with 3.2s FCP)  \n- **Testing**: Jest + React Testing Library for 85% coverage  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![Version](https://img.shields.io/npm/v/vividcart-checkout.svg)](https://npmjs.com/package/vividcart-checkout)  \n[![License](https://img.shields.io/npm/l/vividcart-checkout.svg)](https://npmjs.com/package/vividcart-checkout)  \n[![Size](https://img.shields.io/bundlephobia/min/vividcart-checkout.svg)](https://npmjs.com/package/vividcart-checkout)  \n\n## Contributing  \nWe welcome contributions! Focus areas:  \n- Performance improvements (e.g., lazy loading, code splitting)  \n- Accessibility enhancements (WCAG 2.2 compliance)  \n- New checkout flow variants (A/B testing framework integration)  \n\nFollow the [contributing guide](CONTRIBUTING.md) for setup and code style rules. All pull requests must include unit tests and performance benchmarks."
+}

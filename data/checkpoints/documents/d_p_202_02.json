@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_202_02",
+  "type": "blog",
+  "persona_id": "p_202",
+  "hyperparams": {
+    "blog_depth": "deep-dive",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 3,
+    "Cloud networking (VPC/subnets)": 1,
+    "Docker": 1,
+    "GCP": 1,
+    "Kubernetes": 1,
+    "Monitoring & alerting": 3,
+    "Serverless (Lambda/Cloud Functions)": 3,
+    "Terraform": 1
+  },
+  "text": "Problem Statement  \nScaling a SaaS application often hits a wall when traffic spikes exceed the capacity of traditional monolithic architectures. We faced this with a customer dashboard that saw 3x growth in 6 months, leading to latency issues and manual scaling efforts. The core challenge was balancing performance, cost, and maintainability while supporting unpredictable usage patterns. Traditional VM-based scaling required overprovisioning, which inflated costs without guaranteeing reliability.  \n\nFailed Approaches  \nOur first attempt relied on a monolith with auto-scaling EC2 instances. While it handled traffic, it introduced complexity in managing state and scaling horizontally. We tried a custom orchestration layer to decouple services, but it added latency and operational overhead. Another dead end was using a legacy API gateway with static backend servers—scaling became a manual chore, and cold starts during traffic spikes caused noticeable delays. These approaches highlighted the need for a more dynamic, event-driven model.  \n\nWorking Solution  \nWe rebuilt the dashboard using AWS Lambda with TypeScript, splitting logic into fine-grained microservices. Each function handled specific tasks—like data aggregation or real-time notifications—while API Gateway routed requests. DynamoDB served as the primary database, with S3 for static assets. CI/CD pipelines automated deployments, and CloudFront cached static content. This approach eliminated the need for managing infrastructure, allowing us to scale compute resources per request.  \n\nWhy It Works  \nLambda’s pay-per-use model aligns costs with actual demand, while its auto-scaling capabilities handle traffic spikes seamlessly. TypeScript’s type safety reduced runtime errors, and its integration with AWS SDKs streamlined interactions with DynamoDB and S3. Monitoring via CloudWatch and custom dashboards provided visibility into function execution times and error rates, enabling proactive optimization. By offloading infrastructure management to AWS, we focused on refining the user experience without compromising reliability.  \n\nFuture Work  \nNext steps include optimizing cold start times with provisioned concurrency and exploring advanced features like Lambda Layers for shared dependencies. We’re also evaluating real-time analytics pipelines using Kinesis to enhance dashboard responsiveness. Long-term, we aim to refine our CI/CD workflows to include automated performance testing, ensuring scalability remains a non-negotiable pillar as our customer base grows. The shift to serverless hasn’t just solved our immediate challenges—it’s redefined how we think about building and maintaining SaaS platforms."
+}

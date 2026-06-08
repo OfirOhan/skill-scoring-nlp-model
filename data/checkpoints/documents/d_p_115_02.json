@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_115_02",
+  "type": "project_readme",
+  "persona_id": "p_115",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 2,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 2,
+    "Configuration management (Ansible)": 3,
+    "GCP": 2,
+    "Infrastructure as Code": 3,
+    "Kubernetes": 3,
+    "Linux administration": 2,
+    "Network automation": 2,
+    "Prometheus/Grafana": 3,
+    "Python": 3,
+    "REST API design": 3,
+    "Shell scripting (Bash)": 3,
+    "Terraform": 3
+  },
+  "text": "# CloudNexus DevOps Automation Framework  \nA cloud-native CI/CD orchestration toolkit designed to accelerate enterprise deployment pipelines via declarative infrastructure and service automation.  \n\n## Badges  \n[![GitHub](https://github.com/omarfarooq/cloudnexus/actions/workflows/main.yml/badge.svg)](https://github.com/omarfarooq/cloudnexus/actions/workflows/main.yml)  \n[![CI/CD Status](https://github.com/omarfarooq/cloudnexus/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/omarfarooq/cloudnexus/actions/workflows/ci-cd.yml)  \n[![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/omarfarooq/cloudnexus/blob/main/LICENSE)  \n\n## Tech Stack  \n- **Core**: Python 3.9, Terraform 1.5, Ansible 2.14, Kubernetes 1.25  \n- **Monitoring**: Prometheus 2.34 + Grafana 10.1  \n- **Cloud**: AWS EKS, GCP Cloud Run (minimal footprint)  \n- **Networking**: Calico CNI, IPsec tunnels for hybrid environments  \n- **CLI**: Bash 5.1, AWS CLI 2, Terraform CLI  \n- **APIs**: REST endpoints for dynamic pipeline configuration  \n\n## Architecture / Design  \nCloudNexus operates as a microservices-layered framework, decoupling infrastructure provisioning (Terraform), configuration management (Ansible), and runtime orchestration (Kubernetes). The core CLI synthesizes declarative YAML manifests into dynamic API requests, enabling real-time pipeline adjustments. Prometheus metrics are ingested via ServiceMonitor to track deployment latency and resource utilization.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/omarfarooq/cloudnexus.git`  \n2. Install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   terraform init  \n   ansible-galaxy install -r requirements.yml  \n   ```  \n3. Configure cloud credentials in `.env` (AWS/GCP access keys)  \n\n## Usage / Examples  \n```bash  \n# Deploy a multi-cloud service  \ncloudnexus deploy --manifest services/ecommerce.yaml --cloud aws  \n\n# Monitor pipeline health  \ncloudnexus metrics --namespace cloudnexus --exporter prometheus  \n\n# Rollback failed deployment  \ncloudnexus rollback --pipeline-id 789 --stage prod  \n```  \nExample manifests leverage Terraform modules for VPC isolation and Ansible playbooks for containerd configuration.  \n\n## Contributing  \nSubmit PRs with unit tests covering CLI edge cases (e.g., invalid manifest syntax). Code must adhere to PEP8 and Terraform fmt standards. All contributions require a signed CLA.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/omarfarooq/cloudnexus/blob/main/LICENSE) for details."
+}

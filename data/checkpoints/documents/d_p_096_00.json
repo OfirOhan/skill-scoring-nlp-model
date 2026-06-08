@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_096_00",
+  "type": "cv",
+  "persona_id": "p_096",
+  "hyperparams": {
+    "cv_format": "minimal",
+    "geographic_convention": "India",
+    "company_type": "FAANG",
+    "company_size": "mid (50-500)"
+  },
+  "skill_evidence": {
+    "Apache Airflow": 3,
+    "Apache Kafka": 3,
+    "Apache Spark": 3,
+    "CI/CD pipelines": 3,
+    "Data modeling": 3,
+    "Data warehousing": 3,
+    "ETL pipeline design": 3,
+    "Linux administration": 2,
+    "Monitoring & alerting": 3,
+    "Python": 4,
+    "REST API design": 2,
+    "Snowflake": 3,
+    "Stream processing": 2
+  },
+  "text": "Ian Szabo  \nBangalore, India | +91 98765 43210 | ian.szabo@example.com  \n\n**Professional Experience**  \n*SentinelSec Technologies* | Data Engineer - Cybersecurity Threat Analytics (2021–Present)  \nDeveloped ETL pipelines for threat intelligence data, integrating Apache Kafka for real-time log ingestion and Apache Spark for batch analysis. Reduced data latency by 30% through optimized partitioning strategies. Designed Snowflake data warehouses to consolidate threat feeds from 12+ sources, enabling 24/7 monitoring with 99.95% query reliability.  \n\n*Vulcan Cyber* | Junior Data Engineer (2019–2021)  \nBuilt REST APIs for internal dashboards, streamlining data access for security analysts. Automated CI/CD pipelines using Jenkins, cutting deployment cycles from 4 hours to 15 minutes. Collaborated on data modeling for incident response workflows, improving incident classification accuracy by 18% through schema refinement.  \n\n*Vulcan Cyber* | Data Analyst Intern (2018)  \nConducted exploratory analysis on network traffic logs, identifying 12+ anomalous patterns using Python. Created ad-hoc reports for senior engineers, reducing manual analysis time by 25% for high-priority incidents.  \n\n**Education**  \n*Bachelor of Science in Computer Science* | University of Michigan (2018)  \n\n**Projects**  \n*Threat Detection System (SentinelSec, 2022)*  \nArchitected a real-time threat detection platform using Apache Kafka for event streaming and Python for rule-based anomaly detection. Integrated with SIEM tools to flag 80%+ of zero-day attacks in production environments.  \n\n*Log Analytics Dashboard (Vulcan Cyber, 2020)*  \nDeveloped a scalable dashboard using Python Dash and PostgreSQL, aggregating logs from 50+ endpoints. Reduced analyst time spent on manual log triage by 40% through automated visualization.  \n\n*Data Pipeline Optimization (SentinelSec, 2023)*  \nRefactored legacy ETL workflows using Apache Airflow, achieving 50% improvement in pipeline reliability. Introduced dynamic scaling for Spark clusters, reducing compute costs by $12k annually.  \n\n**Technical Skills / Technologies**  \n- **Python**: Primary language for threat analysis scripts and data pipelines; developed a custom IOC (Indicator of Compromise) parser reducing false positives by 35%.  \n- **Apache Kafka**: Core component of real-time log ingestion infrastructure; implemented retention policies to manage 10PB+ of security telemetry.  \n- **Apache Spark**: Used for batch processing of 50TB+ threat data; optimized query performance by 45% through columnar storage and caching.  \n- **Apache Airflow**: Orchestrated complex ETL workflows; automated 90% of data validation checks for compliance reporting.  \n- **Snowflake**: Centralized data lake for threat intelligence; enabled cross-team collaboration via role-based access controls.  \n- **CI/CD**: Integrated GitLab pipelines for Python package deployment; ensured 100% test coverage for critical analytics modules.  \n- **Data Warehousing**: Built dimensional models for incident response metrics; supported 50+ ad-hoc queries per day with sub-second latency.  \n- **Monitoring & Alerting**: Configured Prometheus/Grafana for pipeline health checks; reduced downtime by 70% through proactive threshold tuning.  \n- **ETL Pipeline Design**: Standardized data flow templates for 15+ internal tools; reduced onboarding time for new engineers by 60%.  \n- **Data Modeling**: Created star schemas for security event normalization; improved join performance by 50% through denormalization strategies.  \n\n**Certifications**  \n- AWS Certified Solutions Architect (2022)  \n- Google Cloud Professional Data Engineer (2021)  \n\n**Awards & Achievements**  \n- SentinelSec Innovation Award (2023) for contributions to real-time threat detection architecture  \n- Vulcan Cyber Excellence in Analytics (2020) for dashboard development project"
+}

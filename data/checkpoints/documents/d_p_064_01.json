@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_064_01",
+  "type": "project_readme",
+  "persona_id": "p_064",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "CI/CD pipelines": 4,
+    "Chaos engineering": 4,
+    "GitHub Actions": 4,
+    "Go": 4,
+    "Linux administration": 3,
+    "Monitoring & alerting": 4,
+    "Prometheus/Grafana": 4,
+    "Microservices architecture": 4,
+    "PostgreSQL": 4,
+    "REST API design": 4,
+    "Redis": 4,
+    "Python": 1,
+    "Message queues": 1
+  },
+  "text": "# Inventory Management Microservices  \nA scalable, production-ready system for tracking stock levels, handling fulfillment workflows, and providing real-time inventory analytics for e-commerce platforms. Built to manage millions of SKUs with low-latency updates and high availability.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/your-username/inventory-mgmt.git`  \n2. Set up environment variables for AWS RDS, Redis, and Prometheus endpoints.  \n3. Run `docker-compose up --build` to initialize PostgreSQL, Redis, and sidecar services.  \n4. Deploy to AWS via Terraform for production readiness.  \n\n## Tech Stack  \n- **Language**: Go (100% server-side)  \n- **Database**: PostgreSQL (read/write) + Redis (caching)  \n- **Cloud**: AWS (RDS, EC2, CloudWatch)  \n- **Monitoring**: Prometheus + Grafana (custom dashboards for latency, error rates)  \n- **CI/CD**: GitHub Actions (automated testing, deployment pipelines)  \n- **Architecture**: Microservices (inventory, stock, analytics) with API Gateway  \n\n## Usage / Examples  \n```bash\n# Create a product with initial stock  \ncurl -X POST http://localhost:8080/products \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"sku\": \"ABC123\", \"name\": \"Wireless Earbuds\", \"stock\": 1500}'\n\n# Check real-time inventory  \ncurl http://localhost:8080/products/ABC123/inventory\n```\nDesigned for RESTful interactions with rate limiting and caching layers.  \n\n## Badges  \n[![GitHub Actions Status](https://img.shields.io/endpoint?url=https://actions-badge-cache-prod.githubusercontent.com/v4/badges/15857027429216446858/6535741084458609378)](https://github.com/your-username/inventory-mgmt/actions)  \n[![AWS Production Deployment](https://img.shields.io/endpoint?url=https://aws-badge.example.com/your-username/inventory-mgmt)](https://console.aws.amazon.com/cloudwatch/home?)  \n[![Prometheus Metrics](https://img.shields.io/endpoint?url=https://prometheus-badge.example.com/your-username/inventory-mgmt)](https://grafana.example.com/dashboards)  \n\n## Architecture / Design  \nDecentralized services with API Gateway for routing. PostgreSQL handles ACID transactions for stock adjustments, while Redis caches frequent reads. Chaos engineering tools stress-test failover mechanisms, ensuring 99.99% uptime during peak seasons.  \n\n## Contributing  \nPull requests welcome! Focus on improving test coverage for edge cases (e.g., concurrent stock updates) or optimizing query performance.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

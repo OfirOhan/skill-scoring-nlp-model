@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_297_04",
+  "type": "project_readme",
+  "persona_id": "p_297",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "CI/CD pipelines": 4,
+    "Cloud cost optimization": 2,
+    "Database optimization": 2,
+    "GitHub Actions": 4,
+    "Go": 4,
+    "Kubernetes": 5,
+    "Network automation": 2,
+    "Prometheus/Grafana": 5,
+    "Python": 2,
+    "Terraform": 2
+  },
+  "text": "# Cloud-Native Observability Dashboard  \n\nA unified interface for monitoring distributed systems, built with Prometheus, Grafana, and Kubernetes. This tool provides real-time visibility into service health, latency, and resource utilization, tailored for teams managing microservices at scale.  \n\n## Deployment  \nDesigned for cloud-native environments, the dashboard supports containerized deployment via Docker and Kubernetes. GitHub Actions automates CI/CD pipelines, ensuring rapid iteration and production readiness. Deployment manifests are optimized for cost efficiency, leveraging Kubernetes autoscaling to adapt to workload fluctuations.  \n\n## Badges  \n[![CI/CD Status](https://example.com/ci-badge)](https://github.com/actions)  \n[![Test Coverage](https://example.com/coverage)](https://github.com/actions)  \n[![License](https://example.com/license)](https://github.com/license)  \n\n## Tech Stack  \n- **Backend**: Go (high-throughput metrics processing)  \n- **Orchestration**: Kubernetes (dynamic scaling, resource isolation)  \n- **Monitoring**: Prometheus (time-series data collection)  \n- **Visualization**: Grafana (interactive dashboards)  \n- **CI/CD**: GitHub Actions (automated testing, deployment pipelines)  \n\n## Architecture / Design  \nThe system decouples data ingestion, storage, and visualization layers. Prometheus scrapes metrics from Kubernetes pods, while Grafana serves as the frontend for customizable dashboards. A sidecar container in each microservice handles metric aggregation, reducing network overhead. The design emphasizes horizontal scalability, with metrics stored in a time-series database for historical analysis.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/your-username/cloud-native-dashboard.git`  \n2. Build Docker images: `docker-compose build`  \n3. Deploy to Kubernetes: `kubectl apply -f k8s/deployment.yaml`  \n4. Access Grafana via the exposed service endpoint.  \n\n## Usage / Examples  \n- Monitor CPU utilization across pods with a preconfigured Grafana dashboard.  \n- Set up alerts for latency spikes using Prometheus rules.  \n- Customize metrics collection via environment variables in the Go backend.  \n\n## License  \nApache 2.0"
+}

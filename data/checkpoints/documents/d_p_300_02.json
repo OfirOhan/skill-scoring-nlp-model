@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_300_02",
+  "type": "recommendation",
+  "persona_id": "p_300",
+  "hyperparams": {
+    "recommender_role": "peer",
+    "recommender_closeness": "worked-daily",
+    "company_type": "agency",
+    "company_size": "small (<50)"
+  },
+  "skill_evidence": {
+    "AWS": 2,
+    "CI/CD pipelines": 2,
+    "Docker": 3,
+    "GitHub Actions": 2,
+    "Linux administration": 2,
+    "Microservices architecture": 3,
+    "Monitoring & alerting": 2,
+    "PostgreSQL": 3,
+    "Python": 3,
+    "REST API design": 3
+  },
+  "text": "Nadia and I have collaborated daily on RetailFlow’s backend systems for over two years. Her role as a backend engineer involves maintaining scalability for their e-commerce platform, which processes 12M+ transactions monthly. We’ve worked closely on optimizing database performance and ensuring seamless integration between microservices.  \n\nNadia’s daily contributions are rooted in precision. She consistently troubleshoots production issues, often resolving critical outages within 30 minutes. Her Docker expertise is evident in how she containerizes services, reducing deployment friction. For example, she rearchitected the order processing pipeline using microservices, cutting latency by 40%. She also manages PostgreSQL clusters, fine-tuning queries to maintain sub-100ms response times during peak traffic. Python scripts she developed automate infrastructure checks, saving the team 15+ hours weekly.  \n\nA standout moment was her leadership during a database migration. When RetailFlow’s PostgreSQL instance hit 95% capacity, Nadia designed a sharding strategy, migrating 200M rows without downtime. She also built a REST API for third-party integrations, which became a key feature for their largest client.  \n\nNadia’s work ethic is unmatched. She approaches problems with methodical rigor, balancing technical depth with clear communication. Her ability to translate complex systems into actionable solutions makes her a vital asset. I’d wholeheartedly recommend her for any role requiring robust backend expertise and operational reliability."
+}

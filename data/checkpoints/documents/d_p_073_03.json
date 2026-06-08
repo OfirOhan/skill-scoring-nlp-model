@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_073_03",
+  "type": "project_readme",
+  "persona_id": "p_073",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "GraphQL": 2,
+    "JavaScript": 4,
+    "Next.js": 4,
+    "REST API design": 4,
+    "React": 5,
+    "Security testing": 4,
+    "State management": 4,
+    "Test automation": 4,
+    "TypeScript": 5,
+    "Web accessibility": 3,
+    "Web performance optimization": 4
+  },
+  "text": "# Secure Payment Gateway UI  \nA PCI-compliant, accessible payment interface with multi-factor authentication and real-time fraud detection. Built for fintech teams prioritizing security and user trust.  \n\n## Getting Started / Installation  \nClone the repo using Git. Install dependencies with `yarn install` and set environment variables for API endpoints. Run `yarn dev` to launch the development server. Ensure your system meets Node.js 18+ and yarn 1.22+ for optimal performance.  \n\n## Usage / Examples  \nNavigate to `/auth` for MFA enrollment. Use the `PaymentForm` component with tokenized card inputs to reduce PCI scope. The `TransactionHistory` section auto-refreshes every 15 seconds via WebSocket. Example:  \n```tsx\n<SecureCheckout \n  onSuccess={() => console.log('Payment authorized')} \n  onError={(err) => alert(err.message)} \n/>\n```  \nMonitor security metrics in the `/admin` dashboard, which aggregates OWASP ZAP scan results.  \n\n## Badges  \n[![PCI Compliance](https://example.com/pci-badge)](https://example.com/pci)  \n[![Test Coverage](https://example.com/coverage)](https://example.com/coverage)  \n\n## Tech Stack  \n- **Frontend**: React 18, TypeScript 4.9, Next.js 13 (SSR for sensitive data)  \n- **Security**: Web Crypto API,Helmet.js, OWASP ZAP integration  \n- **State**: Redux Toolkit for global session management  \n- **Testing**: Jest 29, React Testing Library, Cypress for end-to-end flows  \n- **Performance**: Code splitting, lazy loading, Lighthouse score 97/100  \n\n## Architecture / Design  \nThe UI follows a layered architecture:  \n1. **Presentation Layer**: React components with TypeScript typings for form validation  \n2. **Business Logic**: Redux slices handle MFA state and transaction lifecycle  \n3. **Security Layer**: Web Crypto encrypts sensitive data at rest  \n4. **Monitoring**: Sentry for error tracking, New Relic for performance metrics  \n\nKey decisions:  \n- Used Next.js App Router for granular control over server components  \n- Implemented ARIA attributes for screen reader compatibility in payment forms  \n- Optimized image loading with Next.js Image component (reduced form load time by 40%)  \n\n## Contributing  \nSubmit PRs with unit tests and security audits. Follow the code style guide for TypeScript and React. For security contributions, ensure all changes pass Snyk vulnerability scans.  \n\n## License  \nMIT License. See [LICENSE](https://example.com/license) for details."
+}

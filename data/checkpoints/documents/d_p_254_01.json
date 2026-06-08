@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_254_01",
+  "type": "project_readme",
+  "persona_id": "p_254",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "A/B testing": 3,
+    "Apache Airflow": 3,
+    "Data modeling": 3,
+    "Feature engineering": 4,
+    "Java": 2,
+    "NumPy": 4,
+    "Pandas": 4,
+    "Python": 4,
+    "REST API design": 3,
+    "SQL analytics": 4,
+    "scikit-learn": 3
+  },
+  "text": "# Real-Time Bid Optimization for AdTech Platforms  \nA machine learning system to optimize real-time bidding in ad auctions, improving campaign ROI by 15% while reducing latency to <50ms. Built for low-latency decision-making in high-volume ad ecosystems.  \n\n## Badges  \n[Build Status: Passing](#) | [Tests: 100%](#) | [Documentation: Complete](#) | [License: MIT](#)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Tech Stack  \n- **Core**: Python 3.9, NumPy, Pandas, scikit-learn, SQLAlchemy  \n- **Infrastructure**: Apache Airflow (orchestration), REST API (gRPC), SQL (PostgreSQL)  \n- **Tools**: A/B testing framework (custom), data modeling (Delta Lake)  \n- **Java**: Minimal backend integration for legacy systems  \n\n## Architecture / Design  \nThe system operates as a distributed pipeline:  \n1. **Streaming Layer**: Kafka ingests bid requests, filtered by real-time user context (device, location, ad network).  \n2. **Model Serving**: PyTorch-based bid predictor (trained on 10TB+ historical data) with ONNX optimizations.  \n3. **A/B Testing**: Integrated with Split.io to evaluate bid adjustments against control groups, measuring CTR variance.  \n4. **Feedback Loop**: SQL analytics (Snowflake) feeds model retraining every 15 minutes.  \n5. **Latency Optimization**: Caching layer (Redis) reduces median response time by 60% compared to baseline.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/andre-williams/bid-optimizer.git  \npip install -r requirements.txt  \nexport API_KEY=your-secret-token  \npython setup.py build_ext --inplace  \n```  \n\n## Usage / Examples  \n```python  \nfrom bid_optimizer import BidPredictor  \nmodel = BidPredictor.load(\"models/v1.2\")  \nbid = model.predict({  \n    \"user_id\": \"12345\",  \n    \"ad_network\": \"taboola\",  \n    \"device\": \"mobile\",  \n    \"budget\": 5000  \n})  \nprint(f\"Optimal bid: ${bid:.2f}\")  \n```  \n**Performance**: 99.98% prediction accuracy, 48ms P50 latency.  \n\n## Contributing  \nEnhance feature engineering pipelines or refine the A/B testing framework. Prioritize:  \n- Reducing model drift detection time by 30%  \n- Expanding SQL analytics to include cross-device attribution  \n- Integrating with legacy Java systems via gRPC stubs  \n\nAll contributions must include unit tests and documentation updates."
+}

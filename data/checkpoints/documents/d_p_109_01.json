@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_109_01",
+  "type": "project_readme",
+  "persona_id": "p_109",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "API testing": 5,
+    "CI/CD pipelines": 5,
+    "Go": 5,
+    "Performance testing (JMeter/k6)": 5,
+    "Python": 5,
+    "REST API design": 2,
+    "Security testing": 5,
+    "Test automation": 5
+  },
+  "text": "# SecureScan: Automated Penetration Testing Framework  \nSecureScan is a production-grade toolchain for continuous security validation, reducing manual penetration testing overhead by 72% in QA pipelines. It integrates API security testing, performance benchmarking, and real-time exploit detection into CI/CD workflows, enabling 24/7 compliance monitoring for web services and APIs.  \n\n## Badges  \n[![Build Status](https://github.com/QuinnO'Brien/SecureScan/actions/workflows/ci.yml/badge.svg)](https://github.com/QuinnO'Brien/SecureScan/actions/workflows/ci.yml)  \n[![Code Coverage](https://github.com/QuinnO'Brien/SecureScan/actions/workflows/coverage.yml/badge.svg)](https://github.com/QuinnO'Brien/SecureScan/actions/workflows/coverage.yml)  \n[![Security Scan](https://github.com/QuinnO'Brien/SecureScan/actions/workflows/security.yml/badge.svg)](https://github.com/QuinnO'Brien/SecureScan/actions/workflows/security.yml)  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for full terms.  \n\n## Tech Stack  \n- **Core**: Go (1.21+) for high-performance scanning, Python (3.10+) for scriptable modules  \n- **API Testing**: REST API v2 endpoints for orchestrated scan orchestration  \n- **CI/CD**: GitHub Actions with parallelized job scheduling for 100+ targets  \n- **Performance**: k6 integration for load-based vulnerability detection  \n- **Security**: OWASP ZAP + custom exploit payloads for dynamic analysis  \n\n## Architecture / Design  \nSecureScan employs a layered architecture:  \n1. **Orchestrator**: Go-based controller managing scan workflows and resource allocation  \n2. **Agent Network**: Decentralized Python workers for distributed scanning  \n3. **Analysis Hub**: Centralized data store for vulnerability metrics and false positive suppression  \n4. **Feedback Loop**: Real-time alerting to CI/CD pipelines via Slack/Webhook integrations  \n\nThe system scales to 500+ concurrent tests with <1.2s median latency, validated through JMeter benchmarks.  \n\n## Getting Started / Installation  \n1. Clone the repository using `git clone https://github.com/QuinnO'Brien/SecureScan.git`  \n2. Install dependencies: `go mod tidy && pip install -r requirements.txt`  \n3. Configure API keys and scan targets in `.env`  \n4. Run initial validation: `make test && make lint`  \n\n## Usage / Examples  \n```bash\n# Launch full scan against target API  \nSECURESCAN_TOKEN=xyz123 securescan run --targets https://api.example.com --profile high  \n# Generate compliance report  \nsecurescan report --output format=pdf --include metrics,vulnerabilities  \n```  \nMonitors 12+ security metrics in real time, including OWASP Top 10 compliance and TLS protocol weaknesses.  \n\n## Contributing  \nSubmit pull requests with unit tests covering new features. All contributions must include:  \n- Security audit logs for scan modules  \n- CI/CD pipeline integration  \n- Performance benchmarking against baseline metrics  \n- Compliance with MIT License terms"
+}

@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_217_02",
+  "type": "project_readme",
+  "persona_id": "p_217",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "CI/CD pipelines": 4,
+    "Cloud cost optimization": 3,
+    "Kubernetes": 3,
+    "Linux administration": 3,
+    "PostgreSQL": 3,
+    "Prometheus/Grafana": 3,
+    "Python": 4,
+    "Terraform": 5
+  },
+  "text": "# NexaCart CI/CD Pipeline  \n**Automated deployment framework for e-commerce platforms with zero-downtime rollouts, rigorous testing, and production-grade observability**  \n\n[![GitHub Actions](https://img.shields.io/github/actions/workflow/status/your-username/nexacart-ci-cd/main.yml?branch=main)](https://github.com/your-username/nexacart-ci-cd/actions)  \n[![Terraform](https://img.shields.io/terraform/your-username/nexacart-ci-cd?branch=main)](https://github.com/your-username/nexacart-ci-cd)  \n[![Prometheus](https://img.shields.io/badge/monitoring-Prometheus-blue)](https://github.com/your-username/nexacart-ci-cd/tree/main/monitoring)  \n\n## License  \nThis project is licensed under the [Apache License 2.0](https://github.com/your-username/nexacart-ci-cd/blob/main/LICENSE). All infrastructure-as-code templates, monitoring integrations, and deployment blueprints are governed by this license.  \n\n## Tech Stack  \n- **Infrastructure**: Terraform (central to architecture), AWS (EC2 Auto Scaling, RDS, CloudFront)  \n- **Orchestration**: Kubernetes (managed by EKS), Helm (for chart-based deployments)  \n- **Database**: PostgreSQL (14.x with pgBouncer) for transactional workloads  \n- **Observability**: Prometheus + Grafana (custom dashboards for CI/CD metrics)  \n- **CI/CD**: GitHub Actions (self-hosted runners for private repos)  \n- **Languages**: Python (for custom linters, deployment scripts), Bash (for infrastructure provisioning)  \n\n## Architecture / Design  \nThe pipeline leverages Terraform to provision AWS resources, ensuring cloud cost optimization via spot instance utilization and reserved instance allocation. Kubernetes is used for container orchestration, with rolling updates enabled for zero-downtime deployments. PostgreSQL is horizontally scaled using read replicas, with connection pooling via pgBouncer. Prometheus is integrated to monitor build success rates (99.95% SLA) and deployment latency (avg. 420ms). All stages include unit tests (pytest), integration tests (PostgreSQL fixtures), and canary releases (via Kubernetes service splits).  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/your-username/nexacart-ci-cd.git`  \n2. Configure AWS credentials via `aws configure` and set environment variables for Terraform  \n3. Install Terraform 1.5.x and Kubernetes CLI (kubectl)  \n4. Set up PostgreSQL credentials in `secrets.env`  \n5. Deploy infrastructure: `terraform init && terraform apply --auto-approve`  \n\n## Usage / Examples  \n```bash  \n# Trigger CI/CD pipeline  \n./scripts/deploy.sh --stage prod  \n\n# Monitor deployment health  \nkubectl get pods -n ci-cd --watch  \n```  \nThe pipeline reduces deployment frequency from 3x/day to 12x/day while maintaining <0.2% error rates. Canary releases use Kubernetes service splits with 5% traffic routing, validated via Prometheus metrics.  \n\n## Contributing  \nContributions require Terraform code reviews and integration with existing CI/CD templates. All changes must include:  \n- Cloud cost impact analysis (e.g., spot instance utilization)  \n- Kubernetes resource limits (CPU/Memory)  \n- Prometheus metric definitions  \n- Python script adherence to PEP8 standards  \nThis project is a cross-team initiative with Terraform mentoring programs and infrastructure-as-code best practices enforced via automated linters."
+}

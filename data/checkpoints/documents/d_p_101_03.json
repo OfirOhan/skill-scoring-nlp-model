@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_101_03",
+  "type": "project_readme",
+  "persona_id": "p_101",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Next.js": 4,
+    "React": 4,
+    "Responsive design": 4,
+    "State management (Redux/Zustand)": 3,
+    "TypeScript": 4,
+    "UX research": 3,
+    "Web accessibility (WCAG)": 4,
+    "Webpack/Vite": 3
+  },
+  "text": "# E-Commerce SPAs  \nA single-page e-commerce platform built with React and Next.js, featuring secure payment integration, responsive design, and accessibility compliance. This project powers the core user-facing components of our startup’s product, driving 30% faster load times and 20% higher conversion rates through optimized state management and UX research-driven workflows.  \n\n## Getting Started / Installation  \nTo set up the environment, ensure Node.js 18+ is installed. Clone the repository and install dependencies:  \n```bash  \nnpm install  \n```  \nConfigure environment variables for payment gateway keys and backend APIs. For local development, run:  \n```bash  \nnpm run dev  \n```  \nBuild the production bundle with:  \n```bash  \nnpm run build  \n```  \nThe project leverages Vite for development and Webpack for production bundling, ensuring fast hot-reloads and optimized asset delivery.  \n\n## Tech Stack  \n- **React** (18.2+) with TypeScript for type-safe component architecture  \n- **Next.js** (13.5+) for server-side rendering and API routes  \n- **Redux Toolkit** for global state management, with custom middleware for payment flow tracking  \n- **Tailwind CSS** with custom plugins for responsive design across breakpoints  \n- **Web Accessibility (WCAG 2.1 AA)** via ARIA roles and semantic HTML  \n- **Stripe Elements** for PCI-compliant payment integration  \n- **Webpack 5** for code splitting and tree-shaking in production  \n\n## Usage / Examples  \nNavigate to `/products` for a filtered grid layout optimized for touch interactions. The cart component uses Redux slices to manage session state, with real-time updates via WebSocket. Payment flows are secured with Stripe’s publishable keys, and all forms include validation rules defined in TypeScript interfaces.  \n\n## Badges  \n[![CI/CD Status](https://example.com/ci-badge)](https://example.com)  \n[![Test Coverage](https://example.com/coverage-badge)](https://example.com)  \n[![Accessibility Compliance](https://example.com/wcag-badge)](https://example.com)  \n\n## Architecture / Design  \nThe app follows a modular monorepo structure with shared UI components and feature-specific reducers. The payment flow incorporates a state machine pattern to handle asynchronous steps, while responsive design adapts to screen sizes via Tailwind’s responsive directives. UX research informed the placement of CTA buttons, reducing bounce rates by 15% in A/B tests.  \n\n## Contributing  \nContributions are welcome via pull requests. Ensure all code adheres to the TypeScript style guide and includes accessibility audits using axe-core. For payment-related changes, validate against Stripe’s security requirements.  \n\n## License  \nMIT License. See [LICENSE](./LICENSE) for details."
+}

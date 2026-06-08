@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_248_02",
+  "type": "project_readme",
+  "persona_id": "p_248",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Android development": 4,
+    "Flutter": 4,
+    "GraphQL": 4,
+    "Kotlin": 4,
+    "REST API design": 4,
+    "React": 1,
+    "React Native": 4,
+    "Swift": 4,
+    "TypeScript": 1,
+    "iOS development": 1
+  },
+  "text": "# Healthcare Patient Portal  \nA HIPAA-compliant mobile application enabling secure access to medical records, appointment scheduling, and provider communication. Built for enterprise-scale healthcare systems, this project balances robust security with intuitive UX for 15+ developers across Android, Flutter, and backend services.  \n\n## Tech Stack  \n- **Android**: Custom UI/UX for enterprise-grade security and performance optimization  \n- **Flutter**: Cross-platform consistency with 30% faster load times compared to native SDKs  \n- **GraphQL**: Real-time data synchronization with 25% reduction in API latency  \n- **Kotlin**: Backend services for OAuth2 authentication and audit logging  \n- **REST API**: Modularized endpoints with 99.95% uptime during peak usage  \n- **React Native**: Web-based portal for browser-first workflows  \n\n## Architecture / Design  \nThe system employs a three-tier architecture:  \n1. **Presentation Layer**: Flutter for Android/iOS with state management via Riverpod  \n2. **Business Logic**: Kotlin-based microservices handling encryption, access control, and HIPAA-compliant data masking  \n3. **Data Layer**: GraphQL API backed by PostgreSQL with pgcrypto for encrypted storage  \n\nKey security measures include TLS 1.3, JWT refresh tokens, and biometric authentication. The architecture supports horizontal scaling for 500k+ concurrent users.  \n\n## Getting Started / Installation  \n1. Clone the repository using `git clone https://github.com/yourusername/healthcare-portal.git`  \n2. Install Flutter SDK and Android Studio with Gradle 7.4+  \n3. Configure environment variables for API endpoints and secret keys  \n4. Run `./gradlew assembleDebug` for Android builds or `flutter run` for Flutter desktop  \n\n## Usage / Examples  \n- **Medical Records**: Fetch encrypted PDFs via GraphQL with access control  \n- **Appointment Scheduling**: Integrate with legacy EHR systems via REST webhook callbacks  \n- **Provider Communication**: Secure messaging with end-to-end encryption (AES-256)  \n\n## Badges  \n[![GitHub Actions](https://img.shields.io/github/actions/workflow/status/yourusername/healthcare-portal/ci.yml?branch=main)](https://github.com/yourusername/healthcare-portal/actions)  \n[![Android](https://img.shields.io/badge/Android-12+-blue)](https://developer.android.com)  \n[![Flutter](https://img.shields.io/badge/Flutter-3.10+-green)](https://flutter.dev)  \n[![GraphQL](https://img.shields.io/badge/GraphQL-15.4+-orange)](https://graphql.org)  \n\n## Contributing  \nWe welcome security audits, performance optimizations, and UX improvements. Submit pull requests with unit tests and integration checks. All contributions must include compliance documentation for HIPAA and GDPR.  \n\n## License  \nMIT License – see [LICENSE](https://github.com/yourusername/healthcare-portal/blob/main/LICENSE) for full terms."
+}

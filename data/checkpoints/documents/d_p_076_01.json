@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_076_01",
+  "type": "project_readme",
+  "persona_id": "p_076",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Application security (OWASP)": 2,
+    "Compliance (SOC2/GDPR)": 1,
+    "Encryption & PKI": 1,
+    "Firewall configuration": 1,
+    "IAM/Access control": 2,
+    "Network security": 1,
+    "Penetration testing": 1,
+    "SIEM tools": 3,
+    "Security auditing": 1,
+    "Vulnerability management": 3
+  },
+  "text": "# Veridian SIEM Threat Detection Platform  \nA scalable, real-time threat detection system for enterprise environments, designed to process terabytes of log data and automate incident response workflows. Built to integrate with existing security infrastructure, it prioritizes low-latency analytics and actionable insights for SOC teams.  \n\n## API Reference  \nRESTful endpoints for threat intelligence and alert management:  \n- **GET /api/v1/alerts**  \n  Fetch real-time threats with filters (e.g., `severity`, `source_ip`). Returns JSON with `timestamp`, `rule_id`, and `mitigation_steps`.  \n- **POST /api/v1/queries**  \n  Execute custom SIEM queries (e.g., detecting lateral movement patterns) against ingested data. Supports SQL-like syntax and returns structured results.  \n- **PUT /api/v1/alerts/{id}/resolve**  \n  Mark alerts as resolved with a justification. Requires authentication via API key in `X-API-Key` header.  \n\n## Usage / Examples  \n```bash  \n# Fetch high-severity alerts from the last 15 minutes  \ncurl -H \"X-API-Key: your_token\" \"https://api.veridian.siemsrv.com/api/v1/alerts?severity=high&timestamp_range=15m\"  \n```  \n**Example Query**:  \n```sql  \nSELECT * FROM logs WHERE source_ip IN ('192.168.1.100', '10.0.0.50') AND event_type = 'suspicious_login'  \n```  \nUse this to correlate cross-platform anomalies and trigger automated playbooks.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/veridian-security/siem-platform.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure environment variables for API keys and Elasticsearch credentials.  \n4. Run the ingestion pipeline: `python ingestor.py --config config.yaml`  \n\n## Tech Stack  \n- Backend: Python (FastAPI) with async request handling  \n- Data Storage: Elasticsearch (clustered for PB-scale ingestion)  \n- Visualization: Grafana (custom dashboards for SOC teams)  \n- Deployment: Docker (with Kubernetes for auto-scaling)  \n\n## Architecture / Design  \nThe platform uses a three-tier architecture:  \n1. **Ingestion Layer**: Kafka-based pipeline for log normalization and enrichment.  \n2. **Analytics Layer**: Rule engine with threat intelligence feeds (e.g., IP blacklists, known C2 domains).  \n3. **Alerting Layer**: Webhooks to SIEM tools (Splunk, IBM QRadar) and internal ticketing systems.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![Build Status](https://github.com/veridian-security/siem-platform/actions/workflows/build.yml/badge.svg)](https://github.com/veridian-security/siem-platform/actions)  \n[![Coverage](https://img.shields.io/coveralls/github/veridian-security/siem-platform/main)](https://coveralls.io/github/veridian-security/siem-platform)"
+}

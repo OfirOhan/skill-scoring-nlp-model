@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_237_03",
+  "type": "project_readme",
+  "persona_id": "p_237",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Agile/Scrum": 2,
+    "Cloud cost optimization": 2,
+    "Cross-team collaboration": 2,
+    "Database optimization": 3,
+    "Kubernetes": 2,
+    "Mentoring": 2,
+    "Multi-cloud strategy": 3,
+    "Project management": 2,
+    "REST API design": 3,
+    "Stakeholder communication": 2,
+    "System design": 4,
+    "Team leadership": 2,
+    "Technical debt management": 3,
+    "Terraform": 2
+  },
+  "text": "# Machine Learning Platform for Scalable Startups  \nA production-grade system enabling real-time data analysis to accelerate product development in startups. Built for horizontal scaling, fault tolerance, and integration with enterprise workflows.  \n\n## Deployment  \nDeployed on a hybrid AWS/GCP multi-cloud strategy with Terraform-managed infrastructure. Kubernetes clusters handle autoscaling for ML workloads, while Prometheus + Grafana provide end-to-end observability. CI/CD pipelines use GitHub Actions for rapid iteration.  \n\n## Getting Started / Installation  \nInstall dependencies via `npm install` or `pip install -r requirements.txt`. Configure environment variables for cloud credentials and database connections. Run `docker-compose up` to spin up a local development environment with PostgreSQL and Redis.  \n\n## Usage / Examples  \nProcess real-time user behavior data via the REST API:  \n```bash  \ncurl -X POST https://api.mlplatform.dev/v1/pipeline \\\n  -H \"Authorization: Bearer <token>\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"data_source\": \"event_stream\", \"model_id\": \"user_segmentation_v2\"}'  \n```  \nOutput is streamed to Kafka for downstream analytics.  \n\n## Tech Stack  \n- Cloud: AWS, GCP, Azure (multi-cloud resilience)  \n- DB: PostgreSQL (read replicas), Redis (caching)  \n- Frameworks: FastAPI, Apache Beam, TensorFlow Serving  \n- Monitoring: Prometheus, Datadog, Sentry  \n- Orchestration: Kubernetes, Helm, Terraform  \n\n## Architecture / Design  \nA microservices architecture with decoupled data ingestion, model serving, and visualization layers. Event streams are processed via Apache Kafka, with fault-tolerant batch jobs scheduled on Luigi. Database optimization includes partitioned tables and connection pooling. The system supports 100k+ concurrent users with 99.99% SLA.  \n\n## License  \nMIT License  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/last-commit/sofia-hernandez/ml-platform)](https://github.com/sofia-hernandez/ml-platform)  \n[![Build Status](https://img.shields.io/github/actions/workflow/sofia-hernandez/ml-platform/main.yml)](https://github.com/sofia-hernandez/ml-platform/actions)  \n[![Coverage](https://img.shields.io/coveralls/sofia-hernandez/ml-platform)](https://coveralls.io/github/sofia-hernandez/ml-platform)"
+}

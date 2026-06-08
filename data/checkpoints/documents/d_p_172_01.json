@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_172_01",
+  "type": "project_readme",
+  "persona_id": "p_172",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Design systems": 2,
+    "Next.js": 1,
+    "REST API design": 3,
+    "React": 4,
+    "Responsive design": 4,
+    "State management": 3,
+    "TypeScript": 4,
+    "UX research": 3,
+    "Web accessibility": 4,
+    "Web performance optimization": 2,
+    "Web accessibility (WCAG)": 1,
+    "State management (Redux/Zustand)": 1
+  },
+  "text": "# HealthSphere Patient Portal UI  \n\nA modular React/TypeScript interface for HealthSphere Innovations’ patient portal, prioritizing seamless user flows and scalable component architecture. Built for healthcare professionals, this UI streamlines appointment management, medical records access, and telehealth integrations while maintaining strict compliance with health data standards.  \n\n## Testing  \nAutomated test coverage includes unit tests for core components (Jest + React Testing Library) and end-to-end scenarios via Cypress. Integration tests validate API interactions with HealthSphere’s REST endpoints. CI/CD pipelines enforce test execution on pull requests, ensuring stability across 15+ developers.  \n\n## Getting Started  \n1. Clone the repo: `git clone https://github.com/healthsphere-ui/portal`  \n2. Install dependencies: `npm install`  \n3. Configure environment variables in `.env.local` for API keys and backend URLs  \n4. Start the dev server: `npm run dev`  \n\n## Usage  \nNavigate to `/dashboard` for patient summary widgets, `/appointments` for scheduling, and `/telehealth` for video consultations. Customizable themes and role-based UI toggles (e.g., admin vs. patient views) are enabled via context providers.  \n\n## Tech Stack  \n- **Frontend**: React 18, TypeScript 4.9, Tailwind CSS  \n- **State**: React Context API for theme and auth state  \n- **API**: Axios for RESTful calls to HealthSphere’s FHIR-compliant backend  \n- **Forms**: React Hook Form with custom validation rules  \n- **Accessibility**: Semantic HTML + ARIA roles (no explicit WCAG references)  \n\n## Architecture  \nComponent-driven structure with isolated, reusable UI units. Core modules include:  \n- `@components/portal` (navigation, modals, data tables)  \n- `@services/api` (type-safe API wrappers)  \n- `@utils/validators` (custom form logic)  \nResponsive design leverages Tailwind’s breakpoint utilities, with dynamic layouts for mobile-first workflows.  \n\n## License  \nMIT License — see the [LICENSE](LICENSE) file for details.  \n\n## Contributing  \nSubmit issues for UX bottlenecks or feature requests. Pull requests should include:  \n- Type-safe updates to API service layers  \n- Accessibility improvements (e.g., label associations)  \n- Performance optimizations for high-traffic dashboards  \nFollow the [CODE_STYLE.md](CODE_STYLE.md) guide for formatting and testing conventions."
+}

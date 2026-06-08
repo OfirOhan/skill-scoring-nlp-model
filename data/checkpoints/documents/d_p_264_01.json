@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_264_01",
+  "type": "project_readme",
+  "persona_id": "p_264",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Design systems": 3,
+    "JavaScript": 4,
+    "Next.js": 3,
+    "React": 5,
+    "Responsive design": 5,
+    "State management": 3,
+    "TypeScript": 5,
+    "UI design": 3,
+    "Web accessibility": 3,
+    "Web performance optimization": 3
+  },
+  "text": "# Ecomify Product Catalog UI  \n\nA production-ready React/TypeScript interface for e-commerce product catalogs, optimized for scalability, accessibility, and performance. Built with a focus on reusable components, state management, and responsive design to meet modern e-commerce demands.  \n\n## Deployment  \nDeploy via Vercel with environment variables for API keys and static assets.  \n```bash  \nvercel deploy --prod  \n```  \nEnsure `NEXT_PUBLIC_API_URL` is set for backend connectivity.  \n\n## Getting Started / Installation  \n```bash  \nnpm install  \n```  \nInstall dependencies and configure `.env.local` with required secrets.  \n```bash  \nnpm run dev  \n```  \nStart the dev server with hot-reloading and TypeScript type-checking.  \n\n## Usage / Examples  \n**Basic catalog view**:  \n```tsx  \n<ProductGrid products={catalogData} />  \n```  \n**Advanced filtering**:  \n```tsx  \n<FilterSidebar  \n  onFilter={handleFilter}  \n  categories={categories}  \n/>  \n```  \nAccessible keyboard navigation and screen reader support are baked into all interactive elements.  \n\n## Tech Stack  \n- **React**: Core framework with hooks and context for state management  \n- **TypeScript**: Type-safe props and utility types for maintainability  \n- **Tailwind CSS**: Utility-first styling with custom theme overrides  \n- **Next.js**: Server-side rendering and static export for SEO  \n- **Redux Toolkit**: Global state management for product data  \n- **Lodash**: Utility functions for data transformation  \n\n## Architecture / Design  \nThe UI follows a **component-driven architecture** with a shared design system. Key decisions:  \n- **State partitioning**: Redux slices for product data, filters, and UI state  \n- **Lazy loading**: Code-splitting via React.lazy for faster initial load  \n- **Accessibility**: ARIA labels, semantic HTML, and keyboard focus traps  \n- **Performance**: Image optimization with Next.js image component and lazy loading  \n\n## License  \nMIT License  \n© 2023 Rahul Iyer  \n\n## Badges  \n[![Version](https://img.badgesize.io/https://unpkg.com/@rahuliyer/ecomify@latest/README.md?w=100)](https://npmjs.com/package/@rahuliyer/ecomify)  \n[![GitHub](https://img.badgesize.io/https://github.com/rahuliyer/ecomify/commits/main.svg?w=100)](https://github.com/rahuliyer/ecomify)  \n[![Size](https://img.badgesize.io/https://unpkg.com/@rahuliyer/ecomify@latest/dist/ecomify.min.js?w=100)](https://unpkg.com/@rahuliyer/ecomify)"
+}

@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_118_01",
+  "type": "project_readme",
+  "persona_id": "p_118",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "API testing": 3,
+    "GitLab CI": 3,
+    "Integration testing": 3,
+    "Performance testing (JMeter/k6)": 3,
+    "Python": 3,
+    "REST API design": 3,
+    "Selenium/Playwright": 3,
+    "Test automation": 3,
+    "Unit testing": 3,
+    "Web performance optimization": 3
+  },
+  "text": "# Automated Regression Testing Framework for NexaCloud SaaS Platform  \nA scalable, maintainable framework for regression testing NexaCloud’s API and UI, reducing manual test hours by 40% and improving coverage from 65% to 92% in 3 months.  \n\n## Badges  \n[![GitHub Actions Status](https://github.com/yourusername/project/actions/workflows/build.yml/badge.svg)](https://github.com/yourusername/project/actions/workflows/build.yml)  \n[![Test Coverage](https://codecov.io/gh/yourusername/project/branch/main/graph/badge.svg)](https://codecov.io/gh/yourusername/project)  \n[![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/yourusername/project/blob/main/LICENSE)  \n\n## Tech Stack  \n- **Language**: Python 3.10 (for test scripts, reporting, and CI/CD pipelines)  \n- **UI Testing**: Playwright (headless browsers) + Selenium (legacy browser support)  \n- **API Testing**: Pytest + requests (for REST endpoints)  \n- **CI/CD**: GitLab CI (automated test triggers on PRs and pushes)  \n- **Performance**: k6 (load testing) + JMeter (stress scenarios)  \n- **Reporting**: Allure (HTML reports with step-by-step execution logs)  \n\n## Configuration  \nConfigure environment variables in `.env` (e.g., `NEXACLLOUD_API_URL=https://api.nexacloud.dev`, `PLAYWRIGHT_BROWSERS=chromium,firefox`).  \nInstall dependencies via `pip install -r requirements.txt` and set up GitLab CI runners with Docker images for Chrome/Edge.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/yourusername/automated-regression-framework.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Set up `.env` with API credentials and browser preferences.  \n4. Configure GitLab CI/CD pipelines via `config/*.yml` files.  \n\n## Usage / Examples  \n```python  \n# Example: API test for user authentication  \ndef test_login_success():  \n    response = requests.post(NEXACLLOUD_API_URL + \"/auth\", json={\"username\": \"testuser\", \"password\": \"securepass\"})  \n    assert response.status_code == 200  \n    assert \"token\" in response.json()  \n```  \nIntegrate with GitLab CI for nightly runs:  \n```yaml  \njob:  \n  script: pytest --alluredir=./reports  \n  artifacts:  \n    paths:  \n      - reports/  \n```  \n\n## Testing  \n- **Unit Tests**: 85% of codebase covered (pytest fixtures for mock API responses)  \n- **Integration Tests**: Validate API/UI flow consistency (e.g., login → dashboard → data export)  \n- **Performance Tests**: Simulate 10k concurrent users with k6 (95% latency < 2s)  \n- **Regression Tests**: Run nightly on GitLab CI (coverage: 92% of core features)  \n\n## License  \nMIT License — see LICENSE file for full terms."
+}

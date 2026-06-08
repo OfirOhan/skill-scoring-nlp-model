@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_112_02",
+  "type": "project_readme",
+  "persona_id": "p_112",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 1,
+    "CI/CD pipelines": 3,
+    "Go": 1,
+    "Kubernetes": 1,
+    "Monitoring & alerting": 3,
+    "PostgreSQL": 5,
+    "Python": 5,
+    "REST API design": 5,
+    "Terraform": 1
+  },
+  "text": "# Real-Time Analytics Dashboard  \nA high-throughput analytics interface leveraging GraphQL for real-time data ingestion and React for dynamic visualization. Built for SaaS platforms requiring sub-second latency and scalable data abstraction.  \n\n## Contributing  \nThis project thrives on collaborative refinement. Focus areas include optimizing PostgreSQL query patterns, enhancing GraphQL schema resilience under load, and expanding React component modularity. Pull requests with performance benchmarks or architecture diagrams are especially valued.  \n\n## Getting Started  \n1. Clone the repository using `git clone https://github.com/your-username/real-time-dashboard.git`  \n2. Install dependencies with `pip install -r requirements.txt`  \n3. Configure PostgreSQL credentials in `.env`  \n4. Run `python manage.py migrate` to set up the database  \n5. Start the development server via `npm run dev`  \n\n## Usage  \nQuery real-time metrics via GraphQL:  \n```graphql  \nquery {  \n  metrics(last: 60) {  \n    timestamp  \n    cpuUsage  \n    memoryUsage  \n  }  \n}  \n```  \nReact components auto-refresh at 100ms intervals, with fallback states for network latency.  \n\n## Tech Stack  \n- **Backend**: Python (FastAPI), PostgreSQL (with JSONB indexing)  \n- **Frontend**: React (with Apollo Client), GraphQL  \n- **CI/CD**: GitHub Actions (unit tests, linters)  \n- **Monitoring**: Prometheus + Grafana for API latency tracking  \n\n## Architecture  \nThe system decouples data ingestion (Python workers), query routing (GraphQL), and visualization (React). PostgreSQL handles time-series aggregation, while Python's async capabilities manage concurrent subscriptions. REST endpoints underpin legacy integrations, with GraphQL as the primary interface.  \n\n## License  \nMIT (see [LICENSE](LICENSE))  \n\n## Badges  \n[![Build Status](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/your-username/1234567890abcdef1234567890abcdef/raw/status.json)](https://github.com/your-username/real-time-dashboard/actions)  \n[![Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/your-username/1234567890abcdef1234567890abcdef/raw/coverage.json)](https://github.com/your-username/real-time-dashboard/actions)"
+}

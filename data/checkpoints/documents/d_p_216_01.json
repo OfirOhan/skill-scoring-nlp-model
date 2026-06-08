@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_216_01",
+  "type": "project_readme",
+  "persona_id": "p_216",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Game networking": 3,
+    "Game physics": 3,
+    "Microservices architecture": 1,
+    "Python": 3,
+    "REST API design": 3,
+    "Rust": 3,
+    "Unity": 4,
+    "Unreal Engine": 1
+  },
+  "text": "# SecureShield: Cybersecurity Game for Phishing Awareness  \n\nSecureShield is an immersive, scenario-driven cybersecurity training platform designed to sharpen users' ability to detect and neutralize phishing threats. By simulating real-world email spoofing, URL manipulation, and social engineering tactics, the game contextualizes cybersecurity principles through interactive decision-making. Its modular design allows for scalable difficulty levels, making it adaptable for academic institutions, corporate training, and self-directed learning.  \n\n---\n\n## Deployment  \n\nSecureShield is hosted on AWS Lambda with API Gateway for serverless scalability, ensuring low-latency interactions for real-time phishing simulations. The frontend, built with Unity, is containerized via Docker for consistent cross-platform rendering. CI/CD pipelines automate builds and deployments, with artifact storage in S3 buckets. The game’s backend leverages Python-based REST APIs for dynamic scenario generation, while Redis caches user progress for seamless session resumption.  \n\n---\n\n## Getting Started / Installation  \n\n1. Clone the repository using `git clone https://github.com/your-username/secureshield.git`  \n2. Install Docker and configure AWS credentials via environment variables  \n3. Run `docker-compose up --build` to spin up the containerized environment  \n4. Access the Unity frontend via the provided endpoint in `config/env.js`  \n\n---\n\n## Usage / Examples  \n\nUsers engage with SecureShield through a series of branching narratives, such as:  \n- **Email Simulation**: Identify malicious links in a spoofed corporate email using heuristic analysis.  \n- **Quiz Modules**: Solve multi-step puzzles to decrypt encoded phishing URLs.  \n- **Progression Tracking**: Earn \"security badges\" by completing scenarios with 100% accuracy.  \n\nAdministrators can customize threat vectors via the REST API, enabling tailored training for specific organizational risks.  \n\n---\n\n## Tech Stack  \n\n- **Frontend**: Unity (3.5+) for 3D/2D interactive scenarios  \n- **Backend**: Python (FastAPI) for RESTful API endpoints  \n- **Networking**: WebSockets for real-time multiplayer phishing drills  \n- **Physics**: Unity’s PhysX for realistic interaction mechanics  \n- **Storage**: Redis (in-memory) + DynamoDB for session persistence  \n\n---\n\n## Architecture / Design  \n\nThe system decouples rendering logic from game logic, with Unity handling visual feedback while Python manages scenario state and validation. REST APIs facilitate communication between frontend and backend, ensuring modular scalability. Game physics are optimized for touch-screen input, adapting to mobile and desktop environments.  \n\n---\n\n## License  \n\nMIT License — see `LICENSE` for full terms  \n\n---\n\n## Badges  \n\n[![GitHub](https://github.com/your-username/secureshield/actions/workflows/build.yml/badge.svg)](https://github.com/your-username/secureshield/actions/workflows/build.yml)  \n[![Coverage](https://codecov.io/gh/your-username/secureshield/branch/main/graph/badge.svg)](https://codecov.io/gh/your-username/secureshield)  \n[![Dependencies](https://david-dm.org/your-username/secureshield.svg)](https://david-dm.org/your-username/secureshield)"
+}

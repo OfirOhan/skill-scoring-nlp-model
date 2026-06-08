@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_136_01",
+  "type": "project_readme",
+  "persona_id": "p_136",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Python": 1,
+    "REST API design": 1,
+    "Node.js": 1,
+    "React": 1,
+    "TypeScript": 1,
+    "PostgreSQL": 1,
+    "MongoDB": 1,
+    "Web performance optimization": 1,
+    "AWS": 1,
+    "Docker": 1,
+    "Kubernetes": 1,
+    "CI/CD pipelines": 1,
+    "GitHub Actions": 1,
+    "Terraform": 1
+  },
+  "text": "# HealthLink Telemedicine Platform  \nHealthLink is a secure, user-centric platform designed to streamline virtual consultations and centralized health data management. Built with a focus on privacy and accessibility, it enables patients and providers to exchange medical information safely while maintaining strict control over data access. The system prioritizes end-to-end encryption, role-based permissions, and intuitive workflows to ensure seamless adoption in clinical settings.  \n\n---\n\n## Tech Stack  \nThe platform leverages a modern frontend framework with robust state management for dynamic UI interactions. Backend services utilize real-time capabilities for instant communication between users. Data is stored in a structured, scalable database optimized for query performance and compliance. Security protocols include TLS encryption, token-based authentication, and audit logging for all access events.  \n\n---\n\n## Architecture / Design  \nThe system follows a layered architecture to separate concerns:  \n- **Presentation Layer**: Handles user interface and client-side logic for both web and mobile access.  \n- **Business Logic Layer**: Manages core workflows like appointment scheduling, data validation, and access control.  \n- **Data Layer**: Ensures secure storage and retrieval of sensitive health information with automated backups.  \nKey design decisions include decentralized data ownership, minimal data exposure during transfers, and modular components for easy maintenance.  \n\n---\n\n## Getting Started / Installation  \n1. Ensure your environment meets the system requirements: modern browser, stable internet connection, and a supported OS.  \n2. Access the platform via the provided URL or install the desktop client for offline use.  \n3. Follow the onboarding wizard to set up user accounts, configure permissions, and import existing health records.  \n\n---\n\n## Usage / Examples  \n- **Patients**: Schedule virtual visits, view medical summaries, and securely share files with providers.  \n- **Providers**: Access real-time patient data, manage calendars, and collaborate with specialists via encrypted messaging.  \n- **Admins**: Monitor system health, audit access logs, and customize role-based permissions for teams.  \n\n---\n\n## Badges  \n[![Security](https://img.shields.io/badge/secure-yes-green)](https://example.com/security)  \n[![Healthcare](https://img.shields.io/badge/healthcare-focused-blue)](https://example.com/healthcare)  \n\n---\n\n## Contributing  \nWe welcome feedback and feature suggestions via the issue tracker. For deeper involvement, reach out to the team to discuss integration with existing EHR systems or enhancements to data anonymization workflows.  \n\n---\n\n## License  \nThis project is licensed under the MIT License. See the LICENSE file for details."
+}

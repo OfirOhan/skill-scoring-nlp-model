@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_071_01",
+  "type": "project_readme",
+  "persona_id": "p_071",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Design systems": 2,
+    "JavaScript": 3,
+    "Next.js": 3,
+    "Node.js": 2,
+    "REST API design": 3,
+    "React": 4,
+    "Responsive design": 4,
+    "State management (Redux/Zustand)": 4,
+    "Test automation": 2,
+    "TypeScript": 4,
+    "Web accessibility (WCAG)": 2,
+    "Web performance optimization": 2
+  },
+  "text": "# VerveLabs Analytics Dashboard  \nA lightweight, real-time analytics interface for VerveLabs’ internal data workflows. Built to streamline team insights, this dashboard aggregates user behavior, conversion metrics, and system performance across product lines. Designed for rapid iteration and minimal cognitive load, it balances visual clarity with granular data access. The tool is deployed across VerveLabs’ global teams, enabling data-driven decisions without infrastructure overhead.  \n\n## Deployment  \nThe dashboard is hosted on AWS Lambda with API Gateway for serverless scalability, ensuring sub-100ms response times for 99.9% of requests. A Vercel continuous deployment pipeline automates builds and rollbacks, with canary releases for new features. Monitoring is handled via Datadog, tracking error rates and user engagement metrics. The system is architected for zero-downtime updates, with load balancing across three regions.  \n\n## Getting Started / Installation  \n1. Clone the repository using `git clone https://github.com/vervelabs/analytics-dashboard.git`  \n2. Install dependencies with `npm install`  \n3. Set up environment variables for API keys and database credentials  \n4. Run `npm start` to launch the development server locally  \n5. For production, use `npm run build && npm run deploy` to trigger the CI/CD pipeline  \n\n## Usage / Examples  \nThe dashboard’s core functionality revolves around three primary workflows:  \n- **Real-time dashboards**: Users filter data by time range, product module, or user role to view live metrics.  \n- **Export tools**: Raw datasets can be exported to CSV or JSON for external analysis.  \n- **Custom widgets**: Drag-and-drop UI allows teams to create tailored views for their KPIs.  \nFor example, the marketing team uses it to track campaign ROI, while engineering leverages it for system health monitoring.  \n\n## Tech Stack  \n- **Frontend**: React 18 with TypeScript, Zustand for state management, and Chart.js for visualizations  \n- **Backend**: REST APIs built with Node.js and Express, leveraging PostgreSQL for structured data storage  \n- **Design**: Custom CSS modules with media queries for responsive layouts, ensuring compatibility across desktop and mobile interfaces  \n\n## Architecture / Design  \nThe system follows a unidirectional data flow, with React components decoupled from business logic. Zustand is used for global state management, while local state is handled via React Context. The UI is structured into modular components, each responsible for a distinct data visualization or interaction pattern. Performance is optimized through lazy loading and code splitting, with critical paths prioritized for faster initial renders.  \n\n## License  \nMIT License – see [LICENSE](https://github.com/vervelabs/analytics-dashboard/blob/main/LICENSE) for details  \n\n## Badges  \n![Build Status](https://github.com/vervelabs/analytics-dashboard/workflows/CI%20CD%20Pipeline/badge.svg)  \n![Test Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/vervelabs/1234567890abcdef1234567890abcdef/raw/coverage.json)  \n![Bundle Size](https://img.shields.io/bundlephobia/minzip/vervelabs/analytics-dashboard)"
+}

@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_286_01",
+  "type": "project_readme",
+  "persona_id": "p_286",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "GraphQL": 4,
+    "REST API design": 4,
+    "React": 5,
+    "Stakeholder management": 1,
+    "State management (Redux/Zustand)": 5,
+    "TypeScript": 5,
+    "Web performance optimization": 5,
+    "Webpack/Vite": 4
+  },
+  "text": "# E-Commerce Performance Optimizer  \nA high-performance e-commerce platform built with React and TypeScript, designed to optimize load times, reduce latency, and enhance user experience through granular performance monitoring and adaptive rendering strategies. This project integrates modern frontend patterns with production-grade performance engineering to deliver a scalable, maintainable architecture for large-scale e-commerce applications.  \n\n## Deployment  \nThe application is hosted on Vercel with automatic CI/CD pipelines for production builds. Deployment leverages Webpack 5 for code splitting and Vite for rapid development, ensuring minimal cold start times. Environment variables are managed via `.env` files, and production builds are optimized with Webpack’s TerserPlugin and Tree Shaking. The GraphQL API is served through a dedicated backend, while REST endpoints are managed via a microservices architecture.  \n\n## Getting Started / Installation  \n```bash  \nnpm install  \nnpm run build  \nnpm start  \n```  \nEnsure Node.js 18+ is installed. Clone the repository and install dependencies. Set environment variables for API endpoints and performance thresholds. The `npm run build` command generates optimized static assets, while `npm start` launches the development server with hot module replacement.  \n\n## Usage / Examples  \nThe optimizer provides a GraphQL API for querying product data and a REST endpoint for cart management. Example usage:  \n```graphql  \nquery Products {  \n  products(first: 10) {  \n    id  \n    name  \n    price  \n  }  \n}  \n```  \nFor cart operations:  \n```typescript  \nfetch('/api/cart', {  \n  method: 'POST',  \n  body: JSON.stringify({ productId: '123', quantity: 1 })  \n});  \n```  \nPerformance metrics are exposed via a dashboard that aggregates Lighthouse scores and load time analytics.  \n\n## Tech Stack  \n- **Frontend**: React 18, TypeScript 4.9, Redux Toolkit, Zustand  \n- **Build Tools**: Webpack 5, Vite 3  \n- **APIs**: GraphQL (Apollo Client), REST (Express.js)  \n- **Performance**: Lighthouse, Web Vitals, TerserPlugin  \n\n## Architecture / Design  \nThe architecture employs a microfrontend pattern with a monorepo structure, allowing isolated development of features while maintaining a unified state management system. Redux is used for global state, while Zustand handles component-specific state. Webpack 5’s Tree Shaking and Code Splitting reduce bundle sizes, and Vite’s development server enables instant hot reloads. GraphQL is optimized with DataLoader for batched requests, and REST endpoints are rate-limited to prevent abuse.  \n\n## License  \nMIT License — see `LICENSE` for details.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/license/stefannovakovic/ecommerce-optimizer)](https://github.com/stefannovakovic/ecommerce-optimizer/blob/main/LICENSE)  \n[![Build Status](https://img.shields.io/github/actions/workflow/status/stefannovakovic/ecommerce-optimizer/main.yml?branch=main)](https://github.com/stefannovakovic/ecommerce-optimizer/actions)  \n[![Coverage](https://img.shields.io/coveralls/stefannovakovic/ecommerce-optimizer)](https://coveralls.io/github/stefannovakovic/ecommerce-optimizer)  \n[![TypeScript](https://img.shields.io/badge/TypeScript-3690FB?style=flat)](https://www.typescriptlang.org/)"
+}

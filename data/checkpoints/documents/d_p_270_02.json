@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_270_02",
+  "type": "project_readme",
+  "persona_id": "p_270",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "A/B testing": 1,
+    "Cross-team collaboration": 1,
+    "Data visualization": 1,
+    "Product management": 2,
+    "Roadmap planning": 1,
+    "SQL analytics": 3,
+    "Stakeholder management": 1,
+    "UX research": 1,
+    "User journey mapping": 1
+  },
+  "text": "# SecureDevOps Integration Tool  \nAutomate security compliance and runtime protection in CI/CD pipelines with zero-trust enforcement, real-time threat detection, and policy-driven remediation workflows.  \n\n## Deployment  \nDeploy via containerized Kubernetes clusters with Helm charts preconfigured for Azure DevOps, GitHub Actions, and GitLab CI. Pre-signed S3 buckets provide secure artifact storage for compliance audits.  \n\n## Getting Started / Installation  \n1. Clone repository via `git@github.com:securedevops-integration-tool`  \n2. Install Docker Engine 20.10+ and kubectl 1.23+  \n3. Run `make build` to compile WASM-based policy enforcers  \n4. Deploy with `helm install securedevops -f values.yaml`  \n5. Configure integration tokens in `config/secrets.yaml`  \n\n## Usage / Examples  \n```yaml\n# Sample GitHub Actions workflow integration\n- name: Security Compliance Scan\n  uses: securedevops-integration-tool/action@v1.2\n  with:\n    pipeline_stage: build\n    policy_set: cis-1.5\n    audit_log: /tmp/scan_results.json\n```  \nMonitor runtime vulnerabilities via Prometheus metrics exposed at `/metrics` with Grafana dashboards preconfigured for SIEM integration.  \n\n## Tech Stack  \n- **Language**: Go (1.21+) for core engine, Rust (1.70+) for WASM modules  \n- **Security**: AWS KMS, Open Policy Agent, TLS 1.3  \n- **CI/CD**: GitHub Actions, GitLab CI, Azure DevOps  \n- **Storage**: Amazon S3, PostgreSQL (14+) with pgcrypto  \n- **Networking**: mTLS with service mesh integration  \n\n## Architecture / Design  \nAdaptive policy enforcement layer (PEL) dynamically injects security checks at pipeline stages, leveraging declarative policy rules in Open Policy Agent. Runtime protection uses eBPF for host-level monitoring, with audit trails stored in PostgreSQL for SQL analytics-driven incident correlation.  \n\n## License  \nMIT License  \n© 2024 SecureDevOps LLC  \n\n## Badges  \n[![Security Compliance](https://api.securedevops.io/badge/compliance)](https://securedevops.io/compliance)  \n[![Policy Enforcement](https://api.securedevops.io/badge/policy)](https://securedevops.io/policy)  \n[![Runtime Protection](https://api.securedevops.io/badge/runtime)](https://securedevops.io/runtime)"
+}
