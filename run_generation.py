@@ -14,6 +14,7 @@ import sys
 from pathlib import Path
 
 import aiohttp
+from tqdm.auto import tqdm
 
 from generate.personas import generate_persona
 from generate.planner import plan_documents, allocate_evidence
@@ -115,12 +116,22 @@ async def run_generation(num_personas: int, concurrency: int):
     async with aiohttp.ClientSession(
         timeout=aiohttp.ClientTimeout(total=300)
     ) as session:
-        # Process all personas in parallel (throttled by semaphore)
+        # Process all personas in parallel (throttled by semaphore), with a
+        # progress bar that advances as each persona finishes (any order).
+        pbar = tqdm(total=num_personas, desc="Personas", unit="persona")
+
+        async def _tracked(coro):
+            try:
+                return await coro
+            finally:
+                pbar.update(1)
+
         tasks = [
-            process_persona(f"p_{i:03d}", session, semaphore, structure_seeds=structure_seeds)
+            _tracked(process_persona(f"p_{i:03d}", session, semaphore, structure_seeds=structure_seeds))
             for i in range(num_personas)
         ]
         personas = await asyncio.gather(*tasks, return_exceptions=True)
+        pbar.close()
 
     # Log any failures
     failures = [i for i, p in enumerate(personas) if isinstance(p, Exception)]
