@@ -3,23 +3,27 @@
   "type": "cv",
   "persona_id": "p_171",
   "hyperparams": {
-    "cv_format": "paragraph",
-    "geographic_convention": "India",
-    "company_type": "FAANG",
-    "company_size": "small (<50)"
+    "cv_format": "minimal",
+    "geographic_convention": "Israel",
+    "company_type": "startup",
+    "company_size": "large (500+)"
   },
   "skill_evidence": {
+    "AWS": 2,
     "Cloud cost optimization": 2,
     "Docker": 3,
-    "GitLab CI": 3,
-    "JavaScript": 3,
-    "PostgreSQL": 3,
-    "Python": 3,
-    "REST API design": 3,
-    "React": 3,
-    "TypeScript": 3,
-    "Web performance optimization": 3,
-    "Webpack/Vite": 3
+    "Go": 3,
+    "Kubernetes": 2,
+    "Load balancing": 1,
+    "Microservices architecture": 4,
+    "Node.js": 3,
+    "PostgreSQL": 4,
+    "Python": 4,
+    "REST API design": 4,
+    "React": 4,
+    "Redis": 3,
+    "Terraform": 2,
+    "TypeScript": 4
   },
-  "text": "Simon Lefebvre  \n📞 +91 9876543210 | 📧 simon.lefebvre@example.com | 📍 Bengaluru, India  \nLinkedIn: linkedin.com/in/simonlefebvre  \n\nEducation  \nBachelor of Science in Computer Science, École Polytechnique Fédérale de Lausanne (EPFL), 2023. Graduated with a focus on distributed systems and real-time data processing. Thesis work involved optimizing microservices architecture for low-latency applications, emphasizing resource allocation and scalability.  \n\nProfessional Experience  \nSoftware Intern, TechNova Solutions (2022–2023)  \nDeveloped a modular backend framework using Python and PostgreSQL, enabling dynamic API endpoints for client applications. Streamlined deployment workflows by integrating Docker for containerization, reducing environment setup time by 30%. Automated testing pipelines with GitLab CI, ensuring 95%+ test coverage for core modules. Collaborated on a project to refactor legacy code, improving maintainability and reducing technical debt.  \n\nJunior Full-Stack Developer, NexaCorp (2023–present)  \nLed the development of a real-time analytics dashboard using React and TypeScript, achieving a 25% improvement in load times through lazy loading and code splitting. Implemented REST API endpoints for data ingestion, ensuring compliance with enterprise security standards. Contributed to cloud cost optimization initiatives by identifying redundant resource allocations, resulting in a 15% reduction in monthly AWS expenses.  \n\nTechnical Skills  \n- **Docker**: Containerized microservices for NexaCorp’s platform, enabling consistent environments across development and production.  \n- **GitLab CI**: Automated CI/CD pipelines for TechNova’s Python-based tools, reducing deployment cycles from hours to minutes.  \n- **JavaScript**: Built reusable UI components for internal tools, enhancing cross-team collaboration.  \n- **PostgreSQL**: Designed and optimized database schemas for a high-traffic application, achieving 99.9% uptime.  \n- **Python**: Developed data processing scripts that reduced manual effort by 40% in the intern role.  \n- **REST API design**: Created scalable endpoints for NexaCorp’s analytics service, supporting concurrent users exceeding 10,000.  \n- **React**: Redesigned a legacy dashboard, improving user engagement metrics by 20%.  \n- **TypeScript**: Enforced type safety in NexaCorp’s frontend codebase, reducing runtime errors by 35%.  \n- **Web performance optimization**: Reduced critical render path latency by 22% using Webpack and Vite for bundle optimization.  \n- **Webpack/Vite**: Migrated monolithic builds to Vite, cutting cold start times by 50% in production.  \n- **Cloud cost optimization**: Conducted audits to identify underutilized resources, contributing to savings of $2,500 monthly.  \n\nProjects  \n1. **Real-Time Analytics Dashboard (NexaCorp)**: Built with React and TypeScript, integrating REST APIs for live data visualization. Implemented Webpack optimization strategies to enhance performance.  \n2. **Microservices Refactor (TechNova)**: Redesigned legacy Python services using Docker, improving deployment reliability and reducing downtime.  \n3. **Cost Optimization Tool (NexaCorp)**: Developed a dashboard to monitor cloud resource usage, enabling proactive budget management.  \n4. **Internal Tool Automation (TechNova)**: Automated repetitive tasks using GitLab CI, reducing manual intervention by 60%.  \n\nLanguages  \nEnglish (fluent), French (professional proficiency)  \n\nCertifications  \nAWS Certified Cloud Practitioner (2023) – Focus on cost management and infrastructure optimization."
+  "text": "Rajiv Mehta  \nTel Aviv, Israel | +972 54 321 6789 | rajiv.mehta@example.com | linkedin.com/in/rajivmehta | github.com/rajivmehta  \n\n**Professional Experience / Work History**  \n*Sentinel Cybersecurity Solutions* | Full-Stack Developer (Cybersecurity Focus) | 2021–Present  \nArchitected secure microservices using Rust and GraphQL, enabling real-time threat analysis across 10+ global regions. Designed DynamoDB-based systems to process 5M+ security events daily, reducing latency by 40%. Spearheaded the integration of Redis for caching, improving dashboard response times by 35%.  \n\n*Vigilant Security Systems* | Senior Software Developer | 2019–2021  \nLed development of threat detection dashboards with React and TypeScript, integrating PostgreSQL for scalable data storage. Optimized REST API endpoints using Go, achieving a 25% reduction in query latency. Implemented CI/CD pipelines with Docker, streamlining deployment cycles.  \n\n*CyberShield Technologies* | Software Engineer Intern | 2018–2019  \nContributed to secure API gateway development using Python and Node.js, supporting encryption protocols for 500K+ API requests monthly. Collaborated on infrastructure automation tools, laying groundwork for future cloud migrations.  \n\n**Technical Skills / Technologies**  \n- **Microservices architecture**: Designed and deployed distributed systems at scale, ensuring compliance with SOC2 standards.  \n- **PostgreSQL**: Engineered high-availability databases for threat intelligence platforms, handling 10TB+ of structured data.  \n- **Python**: Developed automation scripts for security audits, reducing manual tasks by 60% in incident response workflows.  \n- **REST API design**: Built scalable endpoints for threat detection tools, achieving 99.95% uptime during peak traffic.  \n- **React**: Built interactive dashboards with state management optimized for real-time data visualization.  \n- **TypeScript**: Enhanced code reliability in security modules, reducing runtime errors by 30% in production.  \n- **Docker**: Automated containerization for CI/CD pipelines, ensuring consistent environments across 15+ development teams.  \n- **Go**: Implemented high-performance services for network traffic analysis, handling 10M+ packets per second.  \n- **Node.js**: Developed server-side logic for secure API gateways, integrating with OAuth2 for identity validation.  \n- **Redis**: Implemented caching layers for low-latency access to security metadata, improving query performance by 50%.  \n- **AWS**: Leveraged EC2 and S3 for scalable storage solutions in security data pipelines.  \n\n**Languages**  \n- English (native)  \n- Hebrew (proficient)  \n\n**Projects / Side Projects**  \n- **Secure Threat Dashboard**: Built a real-time analytics platform using React and PostgreSQL, enabling global teams to track cyber incidents.  \n- **API Gateway Optimization**: Redesigned a Python-based gateway with Node.js, improving request handling capacity by 70%.  \n- **Microservice Resilience Framework**: Developed a Rust-based service mesh for fault tolerance, reducing downtime by 20% in production.  \n\n**Certifications**  \n- Certified Information Systems Security Professional (CISSP) | (2022)  \n- AWS Certified Developer – Associate | (2021)  \n\n**Awards & Achievements**  \n- Recognized for innovation in microservices architecture at Sentinel Cybersecurity Solutions (2022).  \n- Featured in *Cybersecurity Today* for contributions to open-source threat detection tools (2021)."
 }

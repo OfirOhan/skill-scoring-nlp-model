@@ -3,20 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_108",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "solo",
-    "jargon_density": "heavy"
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 4,
+    "Agile/Scrum": 3,
     "CI/CD pipelines": 3,
-    "Docker": 3,
-    "GCP": 4,
-    "Kubernetes": 5,
-    "Linux administration": 4,
-    "Prometheus/Grafana": 4,
-    "Python": 3,
-    "Terraform": 4
+    "ClickHouse": 2,
+    "Cross-team collaboration": 2,
+    "GitHub Actions": 3,
+    "Linux administration": 1,
+    "Mentoring": 1,
+    "Shell scripting": 2,
+    "Stakeholder communication": 1,
+    "System design": 5,
+    "Team leadership": 1,
+    "Technical writing": 1
   },
-  "text": "# Real-Time Inventory Sync System  \nA distributed inventory synchronization pipeline using Kafka, Kubernetes, and cloud-native tooling to ensure sub-100ms latency across e-commerce order fulfillment workflows.  \n\n## Deployment  \nDeployed via Terraform-managed AWS/GCP hybrid clusters with Kubernetes Operators for Kafka. CI/CD pipelines leverage GitHub Actions for automated testing, including chaos engineering scenarios. Prometheus/Grafana dashboards monitor end-to-end latency, with alerts for >200ms tail latencies.  \n\n## Badges  \n[![GitHub Actions Status](https://img.shields.io/github/actions/workflow/status/username/repo/main.yml?branch=main)](https://github.com/username/repo/actions)  \n[![Terraform](https://img.shields.io/terraform/username/repo?label=TF)](https://registry.terraform.io/modules/username/repo)  \n[![Prometheus](https://img.shields.io/badge/Monitor-Prometheus-brightgreen)](https://prometheus.io)  \n\n## Tech Stack  \n- **Kafka 3.3**: Event sourcing for inventory delta propagation  \n- **Python 3.10**: Delta processing with asyncio and Apache Beam  \n- **Docker 24.0**: Containerized worker pods with resource throttling  \n- **Kubernetes 1.25**: Horizontal scaling with Prometheus metrics server  \n- **Terraform 1.5**: Multi-cloud infrastructure as code  \n- **AWS Lambda**: Async inventory update triggers  \n- **GCP Pub/Sub**: Cross-region event routing  \n- **Linux (Debian 12)**: Custom kernel tuning for low-latency I/O  \n\n## Architecture / Design  \nA Kafka-pubsub model with three-phase reconciliation:  \n1. **Event Capture**: Kafka producers push inventory deltas via AWS Kinesis Firehose  \n2. **Processing**: Python workers in Kubernetes Deployments apply deltas to Redis-backed caches  \n3. **Synchronization**: GCP Cloud Functions propagate updates to partner systems with idempotent deduplication  \nKubernetes HPA scales workers based on Kafka topic lag metrics, with Prometheus scraping intervals tuned to 10s for real-time visibility.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/username/repo.git  \ncd inventory-sync  \nterraform init && terraform apply -var \"cloud_provider=aws\"  \ndocker-compose up -d  \npython setup.py install  \n```\nEnsure AWS/GCP credentials are configured via environment variables. Prometheus metrics are exposed at `http://localhost:9090` for local debugging.  \n\n## Usage / Examples  \n```python  \nfrom kafka import KafkaProducer  \nproducer = KafkaProducer(bootstrap_servers='broker:9092')  \nproducer.send('inventory-topic', value=b'{\"item_id\": \"123\", \"delta\": {\"stock\": 50}}')  \n```  \nMonitor sync latency via `kubectl top pod` and Grafana dashboards. Use `kubectl rollout undo` to rollback deployments with >5% error rate.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/username/repo/blob/main/LICENSE) for details."
+  "text": "# HealthDataAnalytics Suite  \nA platform for predictive patient outcome modeling and real-time health data monitoring, built for academic research and clinical validation. Focuses on scalable, interpretable analytics with minimal latency for critical care scenarios.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/commit-activity/y/healthdataanalytics)](https://github.com/healthdataanalytics)  \n[![CI/CD](https://img.shields.io/github/actions/workflow/ci.yml?branch=main)](https://github.com/healthdataanalytics/actions)  \n[![HealthTech](https://img.shields.io/badge/healthtech-verified-blue)](https://healthtech.org/verified)  \n\n## Getting Started / Installation  \nClone the repository:  \n```bash  \ngit clone https://github.com/healthdataanalytics/healthdataanalytics.git  \ncd healthdataanalytics  \npip install -r requirements.txt  \n```  \nFor local development, run Docker containers to isolate dependencies:  \n```bash  \ndocker-compose up --build  \n```  \nNote: This project is designed for academic use. Do not deploy in production environments without rigorous validation.  \n\n## Tech Stack  \n- **Data Layer**: ClickHouse for high-speed querying of structured health metrics  \n- **Processing**: Python (Pandas, Scikit-learn) for feature engineering and model training  \n- **Visualization**: Grafana for real-time dashboards and anomaly detection  \n- **Workflow**: GitHub Actions for CI/CD, with automated testing on every push  \n- **Deployment**: Docker containers for consistent environment replication  \n\n## Architecture / Design  \nThe system is structured into three layers:  \n1. **Data Ingestion**: Kafka streams for real-time EHR data ingestion, with batch imports for historical datasets  \n2. **Analytics Engine**: A modular pipeline that leverages ClickHouse for sub-second query responses and Python-based machine learning models for predictive scoring  \n3. **Monitoring Layer**: Grafana dashboards tied to live data streams, with alert thresholds for critical patient metrics  \n\nThe design prioritizes interpretability, with all models exported as ONNX artifacts for auditability. Agile sprints drive iterative improvements, balancing clinical feedback with computational efficiency.  \n\n## Usage / Examples  \nRun a predictive model on a sample dataset:  \n```python  \npython predict.py --input data/sample_ehr.csv --output predictions.json  \n```  \nMonitor real-time ICU metrics:  \n```bash  \ndocker exec -it healthdataanalytics_grafana_1 /bin/bash  \n```  \nAccess the dashboard at http://localhost:3000  \n\n## Testing  \nUnit tests for core logic are written in pytest, with coverage reports generated via GitHub Actions. Integration tests validate end-to-end workflows, including data ingestion, processing, and visualization. All tests are run on every pull request.  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
 }

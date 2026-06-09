@@ -3,21 +3,20 @@
   "type": "project_readme",
   "persona_id": "p_143",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "solo",
-    "jargon_density": "plain"
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "CI/CD pipelines": 4,
-    "Cloud cost optimization": 3,
-    "Cloud migration": 3,
-    "Docker": 4,
-    "Kubernetes": 3,
-    "Load balancing": 1,
-    "Monitoring & alerting": 3,
-    "Python": 1,
-    "Terraform": 4
+    "Application security (OWASP)": 3,
+    "Compliance (SOC2/GDPR)": 1,
+    "Encryption & PKI": 4,
+    "IAM/Access control": 3,
+    "Network security": 5,
+    "Penetration testing": 3,
+    "SIEM tools": 1,
+    "Secure coding practices": 3,
+    "Vulnerability management": 3
   },
-  "text": "# HealthGuard CI/CD Pipeline  \nA HIPAA-compliant CI/CD pipeline engineered for secure, scalable deployment of medical device software in production environments. Designed to meet strict regulatory standards while enabling rapid, reliable releases with zero downtime. The pipeline operates in AWS with Terraform-managed infrastructure, ensuring compliance, cost efficiency, and audit readiness.  \n\n## Deployment  \nThe pipeline is deployed on AWS using Terraform to provision VPCs, EC2 instances, and S3 buckets with encrypted storage. All resources are tagged for cost tracking, reducing monthly cloud expenses by 40% compared to manual deployment. Automated IAM role creation enforces least-privilege access, and CloudTrail logs are retained for 180 days for audit compliance. Monitoring is handled via CloudWatch with custom dashboards for pipeline stages, achieving 99.9% uptime during peak workloads.  \n\n## Getting Started / Installation  \nClone the repository to your local machine and install Terraform 1.5+ and AWS CLI. Configure AWS credentials via `aws configure` before running `terraform init`. Adjust the `variables.tf` file to specify your region and compliance requirements. Execute `terraform apply` to provision infrastructure. Verify deployment by checking the CloudFormation stack status and validating S3 bucket encryption settings.  \n\n## Usage / Examples  \nThe pipeline supports automated builds for Dockerized medical device software, with artifacts stored in encrypted S3 buckets. Example workflows include:  \n- Triggering a CI/CD pipeline via GitHub Actions for code commits  \n- Deploying containerized microservices to ECS clusters with auto-scaling  \n- Generating audit logs for each deployment stage using CloudWatch Logs  \n- Enforcing HIPAA compliance with data-at-rest encryption and access controls  \n\n## Tech Stack  \n- **AWS**: Compute, storage, and networking infrastructure  \n- **Terraform**: Infrastructure-as-Code for consistent, repeatable deployments  \n- **Docker**: Containerization for medical device software  \n- **Kubernetes**: Orchestration for scalable, resilient deployments (EKS)  \n- **CloudWatch**: Monitoring and alerting for pipeline health  \n- **IAM**: Role-based access control for secure resource management  \n\n## Architecture / Design  \nThe pipeline leverages Terraform to define immutable infrastructure, ensuring environments are reproducible and auditable. Docker containers are built and pushed to a private ECR registry, with automated tagging for version control. Kubernetes manages deployment to ECS clusters, with rolling updates configured to avoid service disruptions. All data is encrypted at rest and in transit, and access is restricted via IAM policies.  \n\n## License  \nMIT License  \n© 2023 Mikhail Petrov  \n\n## Badges  \n[![CI/CD Compliance](https://example.com/compliance-badge)](https://example.com)  \n[![Cloud Cost Savings](https://example.com/cost-badge)](https://example.com)  \n[![HIPAA Ready](https://example.com/hipaa-badge)](https://example.com)"
+  "text": "# SecureMesh: Enterprise Secure Mesh Networking  \n\nSecureMesh is a mesh networking protocol designed for enterprise environments, prioritizing end-to-end encryption, granular access control, and resilience against network disruptions. Built for large-scale deployments, it balances performance with security, ensuring sensitive data remains protected across distributed teams. The protocol is actively maintained by a team of 15+ engineers, with a focus on continuous integration of secure practices.  \n\n## Tech Stack  \n- **Language**: Go (backend), Rust (networking layer)  \n- **Protocols**: WebRTC, QUIC, TLS 1.3  \n- **Crypto**: OpenSSL (AES-256-GCM), libsodium (HMAC, key derivation)  \n- **Serialization**: Protocol Buffers (schema versioning)  \n- **Monitoring**: Prometheus (secure metrics export)  \n\n## Architecture / Design  \nSecureMesh employs a zero-trust model, where all nodes authenticate via mutual TLS and validate data integrity with cryptographic signatures. Network traffic is encrypted end-to-end, with dynamic key rotation every 10 minutes to mitigate exposure risks. Access control is enforced through role-based policies integrated with LDAP and OAuth2 providers, ensuring only authorized users can establish tunnels.  \n\nThe protocol’s design emphasizes fault tolerance: nodes automatically reroute traffic if a peer disconnects, with no single point of failure. Secure coding practices are baked into the development lifecycle, including static analysis with SonarQube and regular penetration testing by third-party teams. Vulnerability management follows a strict triage process, with critical issues patched within 48 hours of disclosure.  \n\n## Getting Started / Installation  \n```bash\ngit clone https://github.com/securemesh/securemesh.git  \ncd securemesh  \ngo mod tidy  \nmake build  \n```  \nEnsure all dependencies are updated to their latest secure versions before deployment.  \n\n## Usage / Examples  \nTo establish a secure tunnel:  \n```bash  \nsecuremesh-cli --node-id=NODE123 --ca-cert=ca.pem  \n```  \nThis creates an encrypted tunnel using pre-shared keys, with access logs rotated hourly. Use `--audit-log` to enable compliance tracking for internal audits.  \n\n## Badges  \n[![Activity](https://img.shields.io/github/activity/securemesh/securemesh)](https://github.com/securemesh/securemesh)  \n[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)  \n\n## Contributing  \nSubmit fixes for vulnerabilities or enhancements to encryption algorithms. All pull requests must include:  \n1. Code reviews for secure practices  \n2. Automated tests for edge cases  \n3. Documentation updates for security workflows  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
 }

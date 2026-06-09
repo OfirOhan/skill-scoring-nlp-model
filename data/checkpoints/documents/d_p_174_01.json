@@ -1,25 +1,26 @@
 {
   "doc_id": "d_p_174_01",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_174",
   "hyperparams": {
-    "blog_depth": "deep-dive",
-    "jargon_density": "heavy"
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
     "AWS": 2,
-    "Application security (OWASP)": 3,
-    "Azure": 2,
-    "Compliance (SOC2/GDPR)": 3,
-    "Encryption & PKI": 3,
-    "Firewall configuration": 3,
-    "IAM/Access control": 3,
-    "Network automation": 3,
-    "Network security": 3,
-    "Penetration testing": 3,
-    "SIEM tools": 3,
-    "Security auditing": 3,
-    "Vulnerability management": 3
+    "CI/CD pipelines": 5,
+    "Chaos engineering": 1,
+    "Docker": 1,
+    "ELK": 1,
+    "GCP": 4,
+    "Kubernetes": 5,
+    "Load balancing": 4,
+    "PostgreSQL": 1,
+    "Prometheus/Grafana": 5,
+    "Python": 1,
+    "Redis": 1,
+    "Terraform": 5
   },
-  "text": "**Securing Health Data: AI-Driven Threat Detection in Healthtech**  \n\n**Overview**  \nHealth data is the crown jewel of modern healthtech systems, and its exposure can cripple organizations financially and reputationally. As attackers refine tactics to exploit vulnerabilities in legacy systems, traditional security measures fall short. At my organization, we deployed an AI-driven threat detection framework to preemptively neutralize risks while maintaining compliance with HIPAA and GDPR. The result? A 72% reduction in false positives and a 40% faster incident response cycle.  \n\n**Context**  \nOur platform processes over 500M patient records monthly, integrated with EHRs, IoT devices, and third-party APIs. The architecture spans hybrid cloud environments, with AWS for data lakes and on-premises systems for regulatory audits. Legacy infrastructure, however, created blind spots: outdated firewall rules, fragmented access controls, and siloed security tools. Compliance audits flagged inconsistent encryption practices, and manual threat hunting consumed 30% of the security team’s capacity.  \n\n**Challenge**  \nThe core problem was balancing real-time threat detection with system performance. Traditional SIEM tools generated overwhelming noise, while zero-day attacks evaded signature-based detection. We needed a system that could autonomously identify anomalous data access patterns, correlate cross-platform events, and adapt to evolving attack vectors—all without introducing latency.  \n\n**Solution**  \nWe built a layered AI-driven detection pipeline using a hybrid of supervised and unsupervised learning. A proprietary model, trained on 10 years of anonymized access logs, flagged deviations in data retrieval patterns (e.g., sudden spikes in query frequency or geolocation mismatches). This model integrated with Splunk for real-time event correlation, leveraging natural language processing to parse unstructured logs from medical devices. Encryption at rest and in transit (AES-256, TLS 1.3) was enforced via Kubernetes-managed secrets, while IAM roles with least-privilege access governed data flows.  \n\n**Results**  \nPost-implementation, the system detected 92% of phishing attempts and 85% of insider threats within 15 minutes of occurrence. Compliance audits showed 100% adherence to SOC2 controls, and data breach incidents dropped from 4.2 per quarter to 0.8. The AI model’s false positive rate fell to 7.3%, down from 22% pre-deployment, saving 1,200+ hours in manual triage annually.  \n\n**Lessons Learned**  \nFirst, AI models require continuous retraining with fresh, labeled datasets to avoid drift. Second, integrating security into DevOps pipelines—via automated vulnerability scans and CI/CD gates—reduced runtime vulnerabilities by 65%. Lastly, stakeholder buy-in is critical: clinicians and IT ops must co-own security metrics to ensure tools align with operational realities. In healthtech, security isn’t a checkbox—it’s a dynamic, AI-enhanced partnership between people and systems."
+  "text": "# GameServer Orchestrator  \nA scalable game server orchestration tool for NexaGame Studios, built to manage dynamic server scaling, deployment pipelines, and observability across GCP and Kubernetes clusters.  \n\n## API Reference  \n**Endpoints**  \n- `GET /api/v1/servers`  \n  *Returns list of active game servers with metrics.*  \n  **Response**: JSON array of server IDs, status, and load.  \n- `POST /api/v1/deployments`  \n  *Triggers deployment of a new game server version.*  \n  **Body**: `{\"game_id\": \"nexa-arena\", \"replica_count\": 3, \"config\": {\"max_players\": 64}}`  \n- `GET /api/v1/monitoring`  \n  *Aggregates metrics from Prometheus for real-time analysis.*  \n  **Query**: `?timeframe=hourly`  \n\n## Usage / Examples  \n```bash  \n# Scale servers during peak hours  \ncurl -X POST https://api.nexa-game.com/v1/deployments \\\n  -H \"Authorization: Bearer <token>\" \\\n  -d '{\"game_id\": \"nexa-arena\", \"replica_count\": 6, \"config\": {\"max_players\": 128}}'  \n\n# Monitor server health  \ncurl https://api.nexa-game.com/v1/monitoring?timeframe=hourly \\\n  | jq '.metrics.load_avg'\n```  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/nexa-game/orchestrator.git`  \n2. Set environment variables for GCP credentials and Kubernetes cluster access.  \n3. Run migrations and start the service:  \n   ```bash  \n   go mod tidy  \n   go run main.go --config=dev.yaml  \n   ```  \n4. Deploy to production via Terraform and CI/CD pipelines.  \n\n## Tech Stack  \n- **Cloud**: GCP (Compute Engine, Cloud Load Balancing)  \n- **Orchestration**: Kubernetes (with HPA for auto-scaling)  \n- **CI/CD**: GitHub Actions (automated testing, deployment pipelines)  \n- **Monitoring**: Prometheus + Grafana (custom dashboards for server metrics)  \n- **Infrastructure**: Terraform (state-managed GCP resource provisioning)  \n\n## Architecture / Design  \nThe orchestrator uses a central controller to manage server lifecycle events, routing requests through GCP load balancers to Kubernetes clusters. Terraform provisions infrastructure, while CI/CD pipelines ensure zero-downtime deployments. Prometheus/Grafana provide granular visibility into server load, latency, and resource usage. Load balancing rules are dynamically adjusted based on real-time metrics to handle traffic spikes during live events.  \n\n## License  \nApache 2.0  \n\n## Badges  \n[![Build Status](https://github.com/nexa-game/orchestrator/actions/workflows/build.yml/badge.svg)](https://github.com/nexa-game/orchestrator/actions/workflows/build.yml)  \n[![Test Coverage](https://img.shields.io/coveralls/github/nexa-game/orchestrator/main)](https://coveralls.io/github/nexa-game/orchestrator/main)  \n[![GCP Cost](https://img.shields.io/badge/GCP%20Cost-Optimized-green)](https://console.cloud.google.com/)"
 }

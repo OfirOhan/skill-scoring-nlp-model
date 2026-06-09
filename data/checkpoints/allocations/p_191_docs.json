@@ -1,62 +1,88 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A comprehensive CV highlighting Vikram Choudhary's 15 years of experience as a Staff Security Engineer in cybersecurity.",
-    "title": "Vikram Choudhary - Staff Security Engineer",
+    "topic_summary": "A professional CV highlighting Ingrid's 7 years of DevOps and SRE experience in consulting",
+    "title": "Ingrid Johansson - Senior DevOps Engineer",
     "doc_id": "d_p_191_00",
     "persona_id": "p_191",
     "hyperparams": {
-      "cv_format": "minimal",
+      "cv_format": "paragraph",
       "geographic_convention": "Israel",
-      "company_type": "startup",
-      "company_size": "small (<50)"
+      "company_type": "agency",
+      "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A GitHub README for an intrusion detection system using machine learning to identify real-time network threats.",
-    "title": "Intrusion Detection System for Real-Time Threat Monitoring",
+    "topic_summary": "A GitHub README for an automated CI/CD pipeline implementation for microservices",
+    "title": "MicroserviceCI",
     "doc_id": "d_p_191_01",
     "persona_id": "p_191",
     "hyperparams": {
-      "project_scale": "team-internal",
+      "project_scale": "production",
       "project_team_size": "solo",
       "jargon_density": "plain"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A README for a project implementing secure communication protocols for IoT devices to prevent data breaches.",
-    "title": "Secure Communication Protocols for IoT Devices",
+    "topic_summary": "A README detailing infrastructure as code practices for cloud-native application deployment",
+    "title": "CloudInfraPro",
     "doc_id": "d_p_191_02",
     "persona_id": "p_191",
     "hyperparams": {
       "project_scale": "academic",
-      "project_team_size": "large (15+)",
-      "jargon_density": "moderate"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "A README for a cloud security toolkit that automates vulnerability assessment in AWS and Azure environments.",
-    "title": "Cloud Security Toolkit for Automated Vulnerability Assessment",
-    "doc_id": "d_p_191_03",
-    "persona_id": "p_191",
-    "hyperparams": {
-      "project_scale": "academic",
-      "project_team_size": "medium (5-15)",
+      "project_team_size": "small (2-4)",
       "jargon_density": "heavy"
     }
   },
   {
-    "doc_type": "blog",
-    "topic_summary": "A technical blog post discussing strategies to secure legacy systems during cloud migration.",
-    "title": "Securing Legacy Systems in the Age of Cloud Migration",
+    "doc_type": "project_readme",
+    "topic_summary": "A README for a real-time monitoring system using Prometheus and Grafana for SRE teams",
+    "title": "SREMonitor",
+    "doc_id": "d_p_191_03",
+    "persona_id": "p_191",
+    "hyperparams": {
+      "project_scale": "hobby",
+      "project_team_size": "large (15+)",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation letter from her manager praising her leadership in DevOps transformation projects",
+    "title": "Recommendation from NexaTech Solutions CTO",
     "doc_id": "d_p_191_04",
     "persona_id": "p_191",
     "hyperparams": {
-      "blog_depth": "deep-dive",
-      "jargon_density": "moderate"
+      "recommender_role": "direct-manager",
+      "recommender_closeness": "occasional",
+      "company_type": "startup",
+      "company_size": "small (<50)"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A peer recommendation highlighting her expertise in Kubernetes and cloud migration strategies",
+    "title": "Recommendation from CloudOps Colleague",
+    "doc_id": "d_p_191_05",
+    "persona_id": "p_191",
+    "hyperparams": {
+      "recommender_role": "peer",
+      "recommender_closeness": "worked-daily",
+      "company_type": "startup",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post on optimizing CI/CD pipelines for scalable cloud deployments",
+    "title": "Modernizing CI/CD for Cloud-Native Resilience",
+    "doc_id": "d_p_191_06",
+    "persona_id": "p_191",
+    "hyperparams": {
+      "blog_depth": "tutorial",
+      "jargon_density": "plain"
     }
   }
 ]

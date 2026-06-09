@@ -1,23 +1,27 @@
 {
   "doc_id": "d_p_013_02",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_013",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "plain"
+    "recommender_role": "professor",
+    "recommender_closeness": "occasional",
+    "company_type": "academic",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "Swift": 1,
-    "Kotlin": 1,
-    "React Native": 1,
-    "Flutter": 1,
-    "iOS development": 1,
-    "Android development": 1,
-    "TypeScript": 1,
-    "React": 1,
-    "REST API design": 1,
-    "Security testing": 1
+    "Apache Airflow": 2,
+    "Apache Spark": 1,
+    "CI/CD pipelines": 2,
+    "Data modeling": 2,
+    "ETL pipeline design": 2,
+    "MLOps (MLflow/W&B)": 4,
+    "Model deployment": 4,
+    "NLP": 4,
+    "Prometheus/Grafana": 1,
+    "PyTorch": 4,
+    "Recommendation systems": 3,
+    "TensorFlow": 4,
+    "scikit-learn": 4
   },
-  "text": "# EncryptedChatApp  \nA decentralized messaging platform prioritizing privacy through cryptographic protocols. Designed for secure, real-time communication with zero-trust architecture.  \n\n---\n\n## Badges  \n[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)  \n[![Platform](https://img.shields.io/badge/platform-Web%20%26%20Mobile-lightgray)](https://example.com)  \n[![Status](https://img.shields.io/badge/status-Production-blue)](https://example.com)  \n\n---\n\n## Getting Started  \n1. Clone the repository: `git clone https://github.com/yourusername/encryptedchatapp.git`  \n2. Install dependencies via `npm install` or `yarn`  \n3. Configure environment variables for local development  \n4. Run the app with `npm start` or `yarn dev`  \n\n---\n\n## Usage  \n- **Secure Messaging**: Send and receive encrypted messages via WebSocket  \n- **Key Exchange**: Use Diffie-Hellman protocol for dynamic session keys  \n- **File Sharing**: Encrypt files using AES-256 before transmission  \n- **Audit Logs**: View encrypted metadata for compliance tracking  \n\nExample:  \n```bash  \nnpm run build  \nnpm run start  \n```  \nOpen the app in a browser or mobile emulator to test end-to-end encryption.  \n\n---\n\n## API Reference  \n- **/api/messages**: POST for encrypted message transmission  \n- **/api/keys**: GET for ephemeral key retrieval  \n- **/api/logs**: POST for audit log submission (requires authentication)  \n\nAll endpoints enforce TLS 1.3 and certificate pinning.  \n\n---\n\n## Testing  \n- Unit tests for encryption algorithms using Jest  \n- Integration tests for key exchange workflows  \n- Static analysis with ESLint and Snyk for dependency vulnerabilities  \n\nRun tests with:  \n```bash  \nnpm test  \nnpm run security-check  \n```  \n\n---\n\n## Contributing  \nPull requests are welcome! Ensure code aligns with OWASP guidelines and passes automated checks.  \n\n---\n\n## Deployment  \nDeploy using Docker containers with Let's Encrypt for HTTPS. Monitor with Prometheus and Grafana for real-time security metrics.  \n\n---\n\n## License  \n[MIT License](LICENSE) — Use freely, but attribute original authors."
+  "text": "Nadia Khoury’s work on a real-time fraud detection system for FinTech Solutions Inc. stands out. She spearheaded an NLP model using BERT to analyze transaction patterns, reducing false positives by 20% while maintaining 98% accuracy. Her ability to distill complex financial data into actionable insights made the system scalable for high-volume transactions. During a critical sprint, she debugged a model drift issue overnight, refining the pipeline to sustain performance under stress.  \n\nAs a student in my machine learning course, Nadia demonstrated relentless curiosity. She often stayed after class to discuss optimization strategies, blending theoretical knowledge with practical rigor. Her capstone project—a recommendation engine for a fintech client—showed her knack for translating business needs into technical solutions. Though we’ve only collaborated occasionally, her proactive approach and intellectual depth left a strong impression.  \n\nNadia’s technical mastery spans PyTorch and TensorFlow, with measurable impact in production systems. She’s adept at MLOps workflows, having deployed models via MLflow that cut deployment time by 30%. Her collaboration on a cross-functional team to refactor legacy pipelines showcased both technical precision and leadership. Beyond skills, she brings a pragmatic mindset—once she identified a redundant data preprocessing step, she restructured the entire ETL process, saving 15 hours monthly.  \n\nIn sum, Nadia is a rare blend of technical sharpness and operational awareness. She’ll thrive in roles demanding both innovation and reliability.  \n\nProfessor Emerick  \nDepartment of Computational Intelligence  \n[University Name]  \n[Contact Information]"
 }

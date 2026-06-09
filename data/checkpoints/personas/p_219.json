@@ -1,63 +1,61 @@
 {
   "persona_id": "p_219",
   "hyperparams": {
-    "archetype": "mobile_developer",
-    "years_experience": 8,
-    "seniority": "senior",
-    "industry": "adtech",
+    "archetype": "fullstack_developer",
+    "years_experience": 4,
+    "seniority": "mid",
+    "industry": "gaming",
     "writing_style": "verbose",
     "language_fluency": "native",
-    "self_promotion_level": "humble",
-    "quantification_tendency": "mixed"
+    "self_promotion_level": "boastful",
+    "quantification_tendency": "qualitative"
   },
-  "name": "Xin Zhao",
-  "current_role": "Senior Mobile Developer",
-  "company": "AdVerve Technologies",
+  "name": "Yoko Fujita 22",
+  "current_role": "Full-Stack Developer - Game Server Infrastructure",
+  "company": "Lumina Interactive",
   "education": {
     "degree": "Bachelor of Science in Computer Science",
-    "university": "National University of Singapore",
-    "year": 2016
+    "university": "Tokyo Institute of Technology",
+    "year": 2020
   },
   "career_trajectory": [
     {
-      "role": "Junior Mobile Developer",
-      "company": "ClickAd Studio",
-      "duration": "2016-2018",
-      "responsibilities": "Developed cross-platform ad tracking apps, optimized app store conversion rates by 18%"
+      "position": "Game Server Intern",
+      "company": "Nexu Games",
+      "duration": "6 months",
+      "responsibilities": "Optimized matchmaking algorithms in C# and implemented REST APIs for player stats tracking"
     },
     {
-      "role": "Senior Mobile Developer",
-      "company": "AdNova Solutions",
-      "duration": "2018-2020",
-      "responsibilities": "Led native iOS/Android ad SDK integrations, reduced crash rate by 32% through proactive CI/CD"
+      "position": "Junior Full-Stack Developer",
+      "company": "Aether Studios",
+      "duration": "18 months",
+      "responsibilities": "Built real-time multiplayer features using Node.js/React and designed PostgreSQL schemas for persistent game data"
     },
     {
-      "role": "Lead Mobile Engineer",
-      "company": "BannerFlow Inc.",
-      "duration": "2020-2022",
-      "responsibilities": "Architected Flutter-based ad dashboard with real-time analytics, 40% performance improvement"
-    },
-    {
-      "role": "Senior Mobile Developer",
-      "company": "AdVerve Technologies",
-      "duration": "2022-present",
-      "responsibilities": "Owns mobile infrastructure for programmatic ad delivery, 25% faster release cycles"
+      "position": "Senior Full-Stack Developer",
+      "company": "Lumina Interactive",
+      "duration": "3 years",
+      "responsibilities": "Architected microservices for cross-platform game synchronization using gRPC and managed Redis clusters for session persistence"
     }
   ],
   "skills": {
-    "Swift": 4,
-    "Kotlin": 4,
-    "Flutter": 3,
-    "Mobile CI/CD": 5,
-    "TypeScript": 4,
-    "React": 3,
+    "Python": 4,
+    "C#/.NET": 3,
+    "Node.js": 4,
+    "React": 4,
+    "TypeScript": 3,
     "REST API design": 4,
-    "Test automation": 4
+    "MongoDB": 3,
+    "AWS": 1,
+    "Docker": 3,
+    "JavaScript": 2,
+    "HTML/CSS": 2,
+    "Webpack/Vite": 3,
+    "Web performance optimization": 2
   },
   "document_ids": [
     "d_p_219_00",
     "d_p_219_01",
-    "d_p_219_02",
-    "d_p_219_03"
+    "d_p_219_02"
   ]
 }

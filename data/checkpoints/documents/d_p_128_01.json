@@ -3,19 +3,29 @@
   "type": "project_readme",
   "persona_id": "p_128",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "solo",
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
     "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "Browser DevTools": 1,
-    "Next.js": 1,
-    "REST API design": 2,
-    "React": 3,
-    "Responsive design": 3,
-    "State management (Redux)": 2,
-    "TypeScript": 3,
-    "Web accessibility (WCAG)": 2
+    "AWS": 3,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 1,
+    "Configuration management": 1,
+    "Docker": 3,
+    "GitHub Actions": 3,
+    "Infrastructure as Code": 3,
+    "Jenkins": 3,
+    "Kubernetes": 3,
+    "Linux administration": 3,
+    "Load balancing": 3,
+    "Log management": 1,
+    "Monitoring & alerting": 3,
+    "Prometheus/Grafana": 3,
+    "Python": 1,
+    "Serverless": 3,
+    "Shell scripting": 1,
+    "Terraform": 3
   },
-  "text": "# NexaCorp Enterprise Dashboard UI  \nA scalable, production-ready React/TypeScript dashboard with real-time analytics and role-based UI for internal operations  \n\n---\n\n## Badges  \n[TypeScript](#tech-stack) • [React](#tech-stack) • [Tailwind CSS](#tech-stack) • [Redux Toolkit](#tech-stack) • [WCAG 2.1 AA](#testing)  \n\n---\n\n## Tech Stack  \n- **Frontend**: React 18, TypeScript 4.9, Redux Toolkit (state management), Tailwind CSS (utility-first styling)  \n- **Tools**: Vite (build system), Axios (HTTP), Lodash (utility functions)  \n- **Accessibility**: Keyboard navigation, ARIA labels, color contrast ratios ≥4.5:1  \n- **Performance**: 95%+ Lighthouse score (performance, accessibility)  \n\n---\n\n## Configuration  \nSet environment variables in `.env` for API endpoints and auth tokens.  \n```bash  \nREACT_APP_API_URL=https://api.nexacorp.dev  \nREACT_APP_ENV=production  \n```  \nInstall dependencies:  \n```bash  \nnpm install  \n```  \n\n---\n\n## Getting Started  \n1. Clone the repository (preferably via Git CLI or IDE integration)  \n2. Install dependencies  \n3. Run `npm start` to launch the dev server on `http://localhost:3000`  \n4. Use `npm run build` for production-ready bundles  \n\n---\n\n## Usage / Examples  \n- **Role-based UI**: Admins see full analytics panels; analysts view filtered datasets  \n- **Real-time updates**: WebSocket integration for live metrics (50+ data points/sec)  \n- **Customizable widgets**: Drag-and-drop layout with 120+ pre-built components  \n- **Responsive design**: Mobile-first breakpoints (≥768px, ≥1024px, ≥1200px)  \n\n---\n\n## Testing  \n- **Unit tests**: 100+ assertions using Jest & React Testing Library  \n- **E2E tests**: Cypress for login flows and dashboard transitions  \n- **Accessibility checks**: axe-core for WCAG 2.1 AA compliance  \n- **Performance**: Lighthouse CI for load times and resource efficiency  \n\n---\n\n## License  \nMIT License — see [LICENSE](LICENSE) for full terms"
+  "text": "# VirtueMart Payment Gateway Integration  \nA modular, production-ready integration for expanding payment capabilities within VirtueMart, designed to handle high-volume transactions with minimal latency and compliance-ready security.  \n\n## Badges  \n[![CI/CD Status](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NikolaiSorokin/1234567890abcdef1234567890abcdef/raw/status.json)](https://github.com/NikolaiSorokin/VirtueMart-Payment-Gateway)  \n[![Docker Image](https://img.shields.io/docker/registry/registry.hub.docker.com/nikolaisorokin/virtuemart-payment-gateway)](https://hub.docker.com/r/nikolaisorokin/virtuemart-payment-gateway)  \n[![Terraform Ready](https://img.shields.io/terraform/ready/terraform.io/registry/modules/nikolaisorokin/virtuemart-payment-gateway)](https://registry.terraform.io/modules/nikolaisorokin/virtuemart-payment-gateway)  \n\n## Tech Stack  \n- **Platform**: VirtueMart 3.x (PHP 8.1)  \n- **Backend**: Laravel 9 for API orchestration  \n- **Frontend**: Node.js 18 with React for UI components  \n- **Payment Gateways**: Stripe API v2, PayPal REST, and Square SDK  \n- **Containerization**: Docker with multi-stage builds  \n- **CI/CD**: GitHub Actions for testing, Jenkins for artifact deployment  \n- **Infrastructure**: Terraform for AWS EC2 Auto Scaling groups and RDS setup  \n- **Monitoring**: Prometheus/Grafana for transaction latency metrics  \n\n## Configuration  \nSet environment variables in `.env` and `config/production.php`:  \n```php  \ndefine('PAYMENT_STRIPE_SECRET_KEY', 'sk_test_123');  \ndefine('PAYMENT_PAYPAL_CLIENT_ID', 'A234567890');  \n```  \nDeploy infrastructure via Terraform:  \n```bash  \nterraform init && terraform apply -var-file=prod.tfvars  \n```  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n```bash  \ngit clone https://github.com/NikolaiSorokin/VirtueMart-Payment-Gateway.git  \n```  \n2. Build Docker containers:  \n```bash  \ndocker-compose build --no-cache  \n```  \n3. Run migrations and seed data:  \n```bash  \nphp artisan migrate --seed  \n```  \n\n## Usage / Examples  \nInitialize a payment session:  \n```php  \n$stripe->createCharge($amount, $currency, $customerToken);  \n```  \nHandle webhook events:  \n```javascript  \napp.post('/webhook', (req, res) => {  \n  const event = req.body;  \n  if (event.type === 'payment.succeeded') {  \n    // Update order status in VirtueMart  \n  }  \n});  \n```  \n\n## Testing  \n- **Unit Tests**: Run `phpunit` for Laravel service providers and gateway mocks  \n- **End-to-End Tests**: Use Cypress to simulate checkout flows  \n- **Performance**: Load test with Locust to ensure <200ms P99 latency under 10k TPS  \n\n## License  \nMIT License — see [LICENSE](https://github.com/NikolaiSorokin/VirtueMart-Payment-Gateway/blob/main/LICENSE) for details."
 }

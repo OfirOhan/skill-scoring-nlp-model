@@ -1,55 +1,60 @@
 {
   "persona_id": "p_103",
   "hyperparams": {
-    "archetype": "devops_sre",
-    "years_experience": 8,
+    "archetype": "data_engineer",
+    "years_experience": 7,
     "seniority": "senior",
-    "industry": "fintech",
-    "writing_style": "modest",
-    "language_fluency": "native",
+    "industry": "healthtech",
+    "writing_style": "concise",
+    "language_fluency": "near-native",
     "self_promotion_level": "humble",
-    "quantification_tendency": "mixed"
+    "quantification_tendency": "metrics-heavy"
   },
-  "name": "Hugo Ramirez",
-  "current_role": "Senior Site Reliability Engineer",
-  "company": "FinSecure Technologies",
+  "name": "Simone de Luca",
+  "current_role": "Senior Data Engineer",
+  "company": "HealthInsight Analytics",
   "education": {
     "degree": "Bachelor of Science in Computer Science",
-    "university": "University of California, Berkeley",
+    "university": "University of Milan",
     "year": 2016
   },
   "career_trajectory": [
     {
-      "role": "Systems Administrator",
-      "company": "FirstState Bank",
-      "year": 2015
+      "title": "Data Analyst",
+      "company": "HealthMetrics Inc.",
+      "duration": "2016–2018"
     },
     {
-      "role": "DevOps Engineer",
-      "company": "CapitalFlow Solutions",
-      "year": 2017
+      "title": "Data Engineer",
+      "company": "VitalCare Systems",
+      "duration": "2018–2020"
     },
     {
-      "role": "Lead DevOps Engineer",
-      "company": "FinSecure Technologies",
-      "year": 2019
+      "title": "Senior Data Engineer",
+      "company": "MedTech Innovations",
+      "duration": "2020–2022"
     },
     {
-      "role": "Senior Site Reliability Engineer",
-      "company": "FinSecure Technologies",
-      "year": 2021
+      "title": "Senior Data Engineer",
+      "company": "HealthInsight Analytics",
+      "duration": "2022–present"
     }
   ],
   "skills": {
-    "CI/CD pipelines": 4,
-    "Kubernetes": 5,
-    "Terraform": 4,
-    "Prometheus/Grafana": 4,
-    "Cloud cost optimization": 4,
-    "Python": 4,
-    "AWS": 5,
-    "Linux administration": 4,
-    "Network automation": 3
+    "Apache Spark": 4,
+    "Snowflake": 5,
+    "ETL pipeline design": 5,
+    "Data warehousing": 4,
+    "Apache Airflow": 4,
+    "Data modeling": 4,
+    "Databricks": 4,
+    "Database optimization": 3,
+    "Python": 3,
+    "REST API design": 2,
+    "Terraform": 3,
+    "Docker": 3,
+    "Linux administration": 1,
+    "GitHub Actions": 2
   },
   "document_ids": [
     "d_p_103_00",

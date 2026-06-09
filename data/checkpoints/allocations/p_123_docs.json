@@ -1,51 +1,50 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Umar Bello's 14 years of frontend engineering experience in fintech.",
-    "title": "Umar Bello - Staff Frontend Engineer",
+    "topic_summary": "A data scientist CV highlighting experience in gaming analytics and machine learning.",
+    "title": "Xin Zhao - Data Scientist CV",
     "doc_id": "d_p_123_00",
     "persona_id": "p_123",
     "hyperparams": {
       "cv_format": "hybrid",
-      "geographic_convention": "US",
+      "geographic_convention": "Europe",
       "company_type": "academic",
       "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A README for a secure payment gateway UI component built with React and TypeScript.",
-    "title": "SecurePay UI - Financial Transaction Dashboard",
+    "topic_summary": "A project analyzing player behavior data to optimize game monetization strategies.",
+    "title": "Game Monetization Optimization with Player Behavior Analytics",
     "doc_id": "d_p_123_01",
     "persona_id": "p_123",
     "hyperparams": {
-      "project_scale": "hobby",
-      "project_team_size": "large (15+)",
-      "jargon_density": "heavy"
-    }
-  },
-  {
-    "doc_type": "blog",
-    "topic_summary": "A technical deep dive into building secure, compliant financial dashboards with React and Redux.",
-    "title": "Building Secure Financial Dashboards with React: Best Practices and Patterns",
-    "doc_id": "d_p_123_02",
-    "persona_id": "p_123",
-    "hyperparams": {
-      "blog_depth": "deep-dive",
+      "project_scale": "team-internal",
+      "project_team_size": "solo",
       "jargon_density": "moderate"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from a fintech team lead praising Umar's leadership and technical expertise.",
-    "title": "Recommendation for Umar Bello - Staff Frontend Engineer",
+    "topic_summary": "A recommendation from a senior manager praising Xin Zhao's contributions to game analytics initiatives.",
+    "title": "Recommendation for Xin Zhao - Senior Manager, NexGen Interactive",
+    "doc_id": "d_p_123_02",
+    "persona_id": "p_123",
+    "hyperparams": {
+      "recommender_role": "peer",
+      "recommender_closeness": "worked-daily",
+      "company_type": "academic",
+      "company_size": "small (<50)"
+    }
+  },
+  {
+    "doc_type": "linkedin",
+    "topic_summary": "A professional summary showcasing Xin Zhao's expertise in data science within the gaming industry.",
+    "title": "Xin Zhao - Data Scientist | Gaming Analytics Specialist",
     "doc_id": "d_p_123_03",
     "persona_id": "p_123",
     "hyperparams": {
-      "recommender_role": "professor",
-      "recommender_closeness": "worked-daily",
-      "company_type": "startup",
-      "company_size": "large (500+)"
+      "linkedin_completeness": "standard"
     }
   }
 ]

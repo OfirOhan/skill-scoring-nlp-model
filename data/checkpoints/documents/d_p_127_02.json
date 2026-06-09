@@ -1,0 +1,26 @@
+{
+  "doc_id": "d_p_127_02",
+  "type": "project_readme",
+  "persona_id": "p_127",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "GraphQL": 1,
+    "JavaScript": 5,
+    "Next.js": 1,
+    "Node.js": 2,
+    "Python": 1,
+    "REST API design": 2,
+    "React": 1,
+    "Responsive design": 4,
+    "State management (Redux/Zustand)": 1,
+    "TypeScript": 5,
+    "Web accessibility (WCAG)": 3,
+    "Web performance optimization": 4,
+    "Webpack/Vite": 3
+  },
+  "text": "# NextGen Retail E-Commerce Platform  \n\nA Vue.js solution for a retail client, enabling real-time inventory sync and multi-gateway payments. Optimized for 40% faster checkout cycles and 95%+ accessibility compliance.  \n\n## Badges  \n[![Build Status](https://github.com/workflow.svg)](https://github.com/actions)  \n[![Test Coverage](https://github.com/coverage.svg)](https://github.com/coverage)  \n[![Accessibility](https://github.com/a11y.svg)](https://github.com/a11y)  \n\n## Tech Stack  \n- **Vue 3** (with TypeScript)  \n- **Vite** (for rapid dev builds)  \n- **Stripe** & **PayPal** (payment integrations)  \n- **Firebase** (real-time inventory updates)  \n- **Webpack** (custom bundling for legacy systems)  \n- **Axios** (REST API client)  \n\n## Configuration  \nSet environment variables in `.env` for:  \n- API keys for Stripe, PayPal, and Firebase  \n- Production CDN endpoints  \n- Analytics tracking IDs  \n\nWebpack is configured for tree-shaking and code-splitting, reducing bundle size by 30% compared to baseline.  \n\n## Getting Started / Installation  \n```bash  \nnpm install  \nnpm run dev  \n```  \nRuns a dev server with hot reload. For production:  \n```bash  \nnpm run build  \nnpm run serve  \n```  \nOptimized for 2.5s Lighthouse performance on mobile.  \n\n## Usage / Examples  \n- **ProductCard**: Lazy-loaded with Vue 3 composables, accessible via ARIA labels  \n- **Cart**: Synced with Firebase, supports 500+ concurrent users  \n- **InventoryWidget**: Real-time updates via Firebase listeners, 98% uptime  \n\nResponsive design adapts to 100+ screen sizes, with performance optimizations like image compression and font loading strategies.  \n\n## Testing  \n- **Unit tests**: 100% coverage for core components (Jest)  \n- **Integration tests**: Cypress for checkout flow (12-step validation)  \n- **Accessibility**: axe-core audits run on every PR  \n- **Performance**: Lighthouse scores >90 in mobile and desktop  \n\n## License  \nMIT License – [View License File](LICENSE)"
+}

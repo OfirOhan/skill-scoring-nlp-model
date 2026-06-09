@@ -3,23 +3,22 @@
   "type": "recommendation",
   "persona_id": "p_209",
   "hyperparams": {
-    "recommender_role": "skip-level",
-    "recommender_closeness": "brief",
+    "recommender_role": "peer",
+    "recommender_closeness": "worked-daily",
     "company_type": "agency",
-    "company_size": "mid (50-500)"
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "AWS": 2,
-    "Docker": 2,
-    "GitHub Actions": 1,
-    "MLOps (MLflow)": 1,
-    "Model deployment": 2,
-    "NLP": 2,
-    "PyTorch": 2,
-    "TensorFlow": 2,
-    "REST API design": 2,
-    "Team collaboration": 3,
-    "scikit-learn": 2
+    "A/B testing": 3,
+    "Data visualization (Matplotlib/Plotly)": 3,
+    "Feature engineering": 3,
+    "Hypothesis testing": 3,
+    "Jupyter notebooks": 3,
+    "NumPy": 3,
+    "Pandas": 3,
+    "Python": 1,
+    "SQL analytics": 3,
+    "Statistical modeling": 3
   },
-  "text": "Pallavi Agarwal, a Machine Learning Engineer at FinTech Innovators Ltd., consistently delivers high-impact solutions that align with business goals.  \n\nHer ability to bridge technical and business needs was critical in a recent project where she collaborated with the risk team to refine a fraud detection model, resulting in a 15% reduction in false positives. She proactively identified data gaps and spearheaded integrations with internal systems, ensuring the model’s real-time scalability.  \n\nPallavi excels at translating complex models into actionable insights, ensuring stakeholders understand both the risks and opportunities. Her communication clarity and attention to detail made her a natural leader in cross-functional workshops, where she often distills technical jargon into relatable analogies.  \n\nPallavi’s reliability and proactive approach make her a valuable asset. I highly recommend her for any opportunity where her skills and dedication can contribute meaningfully."
+  "text": "Rabia once spearheaded a project to refine our fraud detection model. She designed an A/B test comparing two algorithms, which resulted in a 15% improvement in false positive rates. Her visualizations—using Plotly to track real-time performance—made complex trade-offs clear during stakeholder meetings. When the team debated whether to prioritize speed or accuracy, her charts clarified the business impact of each choice.  \n\nWe’ve collaborated daily for over a year, reviewing code during standups and troubleshooting pipeline issues. Rabia’s knack for distilling technical problems into actionable insights made her a go-to resource. She’s also mastered SQL analytics, pulling together disparate datasets to uncover patterns others missed.  \n\nRabia’s strength lies in her analytical rigor and communication clarity. She once engineered a feature set that boosted our predictive model’s accuracy by 10%, then documented the process in a Jupyter notebook that new hires used as a training tool. Her statistical modeling skills shone during a recent project, where she quantified the cost of delays in loan approvals, guiding the team to optimize workflows.  \n\nIn short, Rabia is a dependable collaborator who consistently delivers value through precision and curiosity. Her work ethic is unshakable—she’ll stay late to debug a query or refactor legacy code without prompting.  \n\nRabia Yilmaz, Data Scientist. Contact: r.yilmaz@fintechinnovators.com."
 }

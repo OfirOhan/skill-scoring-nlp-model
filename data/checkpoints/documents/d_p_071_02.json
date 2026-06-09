@@ -1,0 +1,29 @@
+{
+  "doc_id": "d_p_071_02",
+  "type": "project_readme",
+  "persona_id": "p_071",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "GraphQL": 1,
+    "Integration testing": 1,
+    "JavaScript": 3,
+    "Next.js": 3,
+    "Node.js": 1,
+    "Python": 1,
+    "REST API design": 3,
+    "React": 5,
+    "Responsive design": 5,
+    "State management (Redux/Zustand)": 4,
+    "Test automation": 2,
+    "TypeScript": 5,
+    "Unit testing": 1,
+    "Web accessibility (WCAG)": 4,
+    "Web performance optimization": 5,
+    "Webpack/Vite": 3
+  },
+  "text": "# Real-Time Financial Analytics Dashboard  \nA scalable, accessible, and high-performance interface for visualizing live financial metrics, designed for instant decision-making in high-stakes environments. Built with a focus on low-latency data streams, granular insights, and cross-platform compatibility.  \n\n---\n\n## Testing  \nAutomated test coverage exceeds 95% across all core components, validated via end-to-end (E2E) and visual regression suites. Tests prioritize edge-case validation for financial data integrity, with a focus on rendering consistency under high-traffic scenarios. Performance benchmarks ensure sub-200ms load times for critical UI elements.  \n\n---\n\n## Getting Started / Installation  \nClone the repository using your preferred method. Install dependencies via `npm install` or `yarn`. Set environment variables for API keys and data sources. Run `npm run dev` to launch the development server.  \n\n---\n\n## Usage / Examples  \nNavigate to `/dashboard` for real-time metrics visualization. Use `/compare` to overlay multiple data streams. Interact with drill-down panels for granular analysis. Example:  \n```bash\nnpm run dev\n```\nAccess the dashboard at `http://localhost:3000`.  \n\n---\n\n## Tech Stack  \n- **Frontend**: React (18+), TypeScript (4.9+), Next.js (13+)  \n- **State Management**: Zustand (with type-safe stores)  \n- **Performance**: Webpack 5 (tree-shaking), Vite (for dev server)  \n- **Accessibility**: WCAG 2.1 AA compliance, ARIA labels, keyboard navigation  \n- **Data**: REST API integrations, WebSockets for live updates  \n\n---\n\n## Architecture / Design  \nAdopts a micro-frontend pattern for modular scalability, with a centralized state layer managed via Zustand. Responsive design leverages CSS-in-JS and media queries for cross-device compatibility. Web performance is optimized through code-splitting, lazy loading, and image compression.  \n\n---\n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n---\n\n## Contributing  \nPRs are welcome. Ensure all changes include:  \n- Type-safe updates  \n- Accessibility audits  \n- Performance benchmarks  \n- Test coverage >= 95%  \nCollaborate via GitHub Issues for feature prioritization and architecture reviews."
+}

@@ -4,19 +4,18 @@
   "persona_id": "p_302",
   "hyperparams": {
     "project_scale": "hobby",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "plain"
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "C/C++ (embedded)": 4,
-    "Firmware development": 4,
-    "GitLab CI": 3,
-    "Hardware-software integration": 4,
-    "IoT protocols (MQTT/CoAP)": 3,
-    "Network troubleshooting": 2,
-    "Python": 3,
+    "GraphQL": 2,
+    "Next.js": 4,
+    "Python": 1,
     "REST API design": 3,
-    "RTOS": 4
+    "React": 5,
+    "Test automation": 1,
+    "TypeScript": 5,
+    "Web performance optimization": 3
   },
-  "text": "# MotionControlVR: Real-Time Embedded Motion Integration for VR Gaming  \nA low-latency, high-precision motion control system for VR gaming, optimized for seamless interaction with immersive environments. Achieves <10ms end-to-end latency and 99.9% reliability in real-world testing.  \n\n---\n\n## Configuration  \n**Hardware**: ESP32 dev board with 6-axis IMU + magnetometer, connected via I2C.  \n**Software**: Configure sensor calibration parameters in `config.h` and adjust RTOS task priorities in `task_scheduler.c`. Set `ENABLE_MQTT` to `true` for cloud telemetry.  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/ianszabo/MotionControlVR.git`  \n2. Install PlatformIO via `pip install platformio`  \n3. Flash firmware using `platformio run --target upload` (requires ESP32 board connected)  \n4. Calibrate sensors via serial terminal: `./calibrate_sensor.sh`  \n\n---\n\n## Usage / Examples  \n- **Real-time motion tracking**: Use `motion_data.json` output for gesture recognition in Unity.  \n- **Latency benchmark**: Run `./latency_test.py` to validate <10ms response times.  \n- **Cloud sync**: Enable MQTT to stream telemetry to AWS IoT Core for remote monitoring.  \n\n---\n\n## Tech Stack  \n- **Languages**: C (RTOS), Python (data analysis)  \n- **RTOS**: FreeRTOS with 10ms tick resolution  \n- **Protocols**: MQTT (QoS 1), UART (sensor readback)  \n- **Hardware**: ESP32 (Dual-core, 240MHz), LSM6DS3 IMU  \n\n---\n\n## Architecture / Design  \n**Hardware Layer**: Sensor fusion (MPU9250) with 1kHz sampling rate.  \n**RTOS Layer**: Task-based scheduling for motion processing (3ms slice) and MQTT publishing (10ms slice).  \n**Communication**: MQTT bridge for cloud integration, with 99.8% packet delivery rate.  \n\n---\n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n---\n\n## Badges  \n[![Build Status](https://github.com/ianszabo/MotionControlVR/actions/workflows/build.yml/badge.svg)](https://github.com/ianszabo/MotionControlVR/actions/workflows/build.yml)  \n[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  \n[![Tech Stack](https://img.shields.io/badge/tech%20stack-C%20%7C%20Python%20%7C%20FreeRTOS%20%7C%20MQTT-green.svg)](https://github.com/ianszabo/MotionControlVR)"
+  "text": "# Enterprise Dashboard UI Components  \nA reusable React component library for enterprise dashboard UIs, built with TypeScript and Tailwind CSS to streamline development and ensure consistency across teams.  \n\n---\n\n## Acknowledgments  \nThis project wouldn’t exist without the collaborative efforts of my team at [Company X], where we’ve prioritized reusable components to accelerate dashboard development. Special thanks to the maintainers of Tailwind CSS and React for their foundational work, and to the open-source community for tools like Vitest and ESLint that shape our workflow.  \n\n---\n\n## Getting Started / Installation  \nInstall the library via npm:  \n```bash  \nnpm install @enterprise-ui/components  \n```  \nEnsure your project has React 18+, TypeScript 4.9+, and Tailwind CSS 3.0+ configured. For advanced setups, refer to the `tailwind.config.js` example in the `examples/` directory.  \n\n---\n\n## Usage / Examples  \nImport components directly into your dashboard:  \n```tsx  \nimport { Card, Table, Chart } from '@enterprise-ui/components';  \n<Card title=\"User Activity\">  \n  <Table data={userStats} />  \n</Card>;  \n```  \nThe library includes 25+ components, from interactive charts to responsive data tables. Customization is achieved via props and Tailwind’s utility-first approach, with accessibility baked into all components.  \n\n---\n\n## Tech Stack  \n- **React**: Core framework with hooks and context APIs for state management  \n- **TypeScript**: Enforces type safety across components and props  \n- **Tailwind CSS**: Utility-first styling for rapid, responsive design  \n- **GraphQL**: Integrated for data fetching in complex dashboards  \n- **REST API**: Used for legacy system integrations, with caching strategies to optimize performance  \n\n---\n\n## License  \nLicensed under MIT. See [LICENSE](LICENSE) for details.  \n\n---\n\n## Badges  \n[![Version](https://img.shields.io/npm/v/@enterprise-ui/components)](https://www.npmjs.com/package/@enterprise-ui/components)  \n[![CI](https://img.shields.io/github/actions/workflow/status/username/repo/ci.yml?branch=main)](https://github.com/username/repo/actions)  \n[![License](https://img.shields.io/npm/l/@enterprise-ui/components)](LICENSE)  \n\n---\n\n## Contributing  \nWe welcome contributions! Submit issues for edge cases or feature requests. For pull requests, ensure code adheres to our TypeScript and Tailwind guidelines, and include tests for new components. All contributions are reviewed with an emphasis on maintainability and team-wide usability."
 }

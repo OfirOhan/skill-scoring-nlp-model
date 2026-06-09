@@ -4,20 +4,20 @@
   "persona_id": "p_276",
   "hyperparams": {
     "project_scale": "academic",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "plain"
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "Apache Spark": 4,
-    "Data visualization (Plotly)": 5,
-    "Data warehousing": 2,
-    "Feature engineering": 4,
-    "Python": 5,
-    "REST API design": 4,
-    "Statistical modeling": 5,
-    "Time series analysis": 5,
-    "XGBoost/LightGBM": 5,
-    "scikit-learn": 5
+    "A/B testing": 2,
+    "Analytics-driven product decisions": 4,
+    "Jupyter notebooks": 2,
+    "Pandas": 1,
+    "Product management": 4,
+    "Roadmap planning": 4,
+    "SQL analytics": 3,
+    "Stakeholder management": 4,
+    "Tableau/Power BI": 3,
+    "UX research": 4
   },
-  "text": "# FraudGuard: Real-Time Fraud Detection System  \nFraudGuard is a scalable real-time fraud detection system built for fintech environments. It leverages machine learning to flag suspicious transactions with sub-100ms latency, reducing false positives by 25% in production. The system processes 10M+ transactions/day using distributed computing, with visualization tools for real-time monitoring.  \n\n## Roadmap / Future Work  \n- **Phase 1 (Q3 2024):** Expand model to detect crypto transactions, integrating blockchain data streams.  \n- **Phase 2 (Q1 2025):** Deploy explainability features using SHAP values for compliance audits.  \n- **Phase 3 (Q2 2025):** Scale to 10M+ transactions/day with Kafka stream processing.  \n- **Long-term:** Integrate with decentralized identity protocols for user authentication.  \n\n## Getting Started / Installation  \nInstall dependencies:  \n```bash  \npip install -r requirements.txt  \n```  \nRun the pipeline:  \n```bash  \npython pipeline.py --config config/prod.yaml  \n```  \nNote: Docker containers are preconfigured for local testing.  \n\n## Usage / Examples  \nDetect fraud in a transaction:  \n```bash  \ncurl -X POST http://localhost:5000/predict \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"amount\": 1500, \"time\": \"2024-03-15T14:32:00Z\", \"location\": \"US-NY\"}'  \n```  \nResponse includes fraud score (0–1) and risk category.  \n\nVisualize real-time metrics:  \n```python  \nfrom dash_app import run_dashboard  \nrun_dashboard()  \n```  \nOpens a dashboard with Plotly graphs for transaction volume and model performance.  \n\n## Tech Stack  \n- **Data Processing:** Apache Spark (10M+ transactions/sec), PySpark for feature engineering.  \n- **Modeling:** XGBoost (98.2% F1-score), LightGBM (97.5% AUC).  \n- **API:** Flask RESTful endpoints handling 5k+ requests/sec.  \n- **Visualization:** Plotly dashboards with interactive time-series analysis.  \n- **Python:** Core language for all ML pipelines and data wrangling.  \n\n## Architecture / Design  \nFraudGuard uses a layered architecture:  \n1. **Ingestion:** Kafka streams for real-time transaction data.  \n2. **Feature Engineering:** PySpark pipelines for time-series aggregation and anomaly detection.  \n3. **Model Serving:** REST API with XGBoost ensembles for low-latency scoring.  \n4. **Monitoring:** Plotly dashboards track model drift and system performance.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# BlockPay: Secure Cross-Border Payment Platform  \nBlockPay is a blockchain-based solution enabling frictionless, real-time cross-border transactions with end-to-end encryption and multi-signature validation. Built for fintech teams prioritizing compliance, speed, and transparency, it reduces settlement times from days to seconds while maintaining auditability.  \n\n## Deployment  \nDeployed on AWS with Dockerized microservices, BlockPay runs on Ubuntu 20.04 LTS. The API layer is hosted on EC2 with Node.js 18, and the blockchain interface connects to a private Ethereum testnet via Infura. Production readiness includes automated TLS termination and daily backups.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/yourusername/blockpay.git`  \n2. Install dependencies: `npm install`  \n3. Configure environment variables in `.env.local` (API keys, wallet addresses)  \n4. Build and start services: `npm run build && npm start`  \n\n## Usage / Examples  \n- **Send Payment**: Use the `/api/v1/transact` endpoint with recipient wallet and amount.  \n- **Audit Logs**: Query `/api/v1/audit` for transaction timestamps and hash signatures.  \n- **Compliance Check**: The `/api/v1/compliance` endpoint validates sender KYC status pre-transaction.  \n\n## Tech Stack  \n- **Blockchain**: Ethereum (Solidity smart contracts)  \n- **Backend**: Node.js, Express.js, PostgreSQL  \n- **Security**: OpenSSL for TLS, HD Wallets for key management  \n- **Analytics**: PostgreSQL + Grafana for transaction monitoring  \n\n## Architecture / Design  \nThe architecture is a three-tiered stack:  \n1. **Presentation Layer**: React frontend with real-time updates via WebSocket  \n2. **Application Layer**: Node.js microservices handling routing and validation  \n3. **Blockchain Layer**: Smart contracts for settlement and audit trails  \nKey design choices include modular service isolation and a RESTful API for third-party integrations.  \n\n## License  \nMIT License – [View License File](LICENSE)  \n\n## Badges  \n[![Build Status](https://github.com/yourusername/blockpay/actions/workflows/build.yml/badge.svg)](https://github.com/yourusername/blockpay/actions/workflows/build.yml)  \n[![Test Coverage](https://codecov.io/gh/yourusername/blockpay/branch/main/graph/badge.svg)](https://codecov.io/gh/yourusername/blockpay)  \n[![Dependency Status](https://david-dm.org/yourusername/blockpay/status.svg)](https://david-dm.org/yourusername/blockpay)"
 }

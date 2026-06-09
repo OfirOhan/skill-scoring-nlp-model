@@ -1,23 +1,26 @@
 {
   "doc_id": "d_p_186_02",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_186",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "plain"
+    "recommender_role": "direct-manager",
+    "recommender_closeness": "brief",
+    "company_type": "enterprise",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "CI/CD pipelines": 4,
-    "Cloud networking (VPC/subnets)": 4,
-    "Database optimization": 3,
-    "GCP": 4,
-    "Kubernetes": 4,
-    "Linux administration": 4,
-    "Network automation": 4,
-    "Python": 3,
-    "Terraform": 4
+    "A/B testing": 2,
+    "Data visualization (Matplotlib/Plotly)": 2,
+    "Feature engineering": 3,
+    "Hypothesis testing": 2,
+    "NumPy": 2,
+    "Pandas": 2,
+    "Python": 2,
+    "REST API design": 1,
+    "SQL analytics": 2,
+    "Statistical modeling": 3,
+    "Tableau/Power BI": 2,
+    "Time series analysis": 2
   },
-  "text": "# Cloud-Native API Gateway for Scalable SaaS Solutions  \n\nA high-throughput, low-latency API gateway built for enterprise SaaS platforms. Enables secure, policy-driven service-to-service communication with built-in rate limiting, authentication, and observability. Reduces latency by 30% in production benchmarks while scaling to 10k+ requests/sec across AWS/GCP hybrid environments.  \n\n## Contributing  \nThis project thrives on community collaboration. Submit bug fixes, feature enhancements, or documentation improvements via pull requests. For security-related contributions, follow our [security guidelines](https://example.com/security). All code undergoes automated testing and code review.  \n\n## Getting Started / Installation  \n1. Clone the repo using `git clone https://github.com/yourusername/cloud-native-gateway.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure environment variables for AWS/GCP credentials and service endpoints  \n4. Run setup: `make init` (creates Docker containers and Kubernetes manifests)  \n5. Deploy with `make deploy` (automatically provisions infrastructure via Terraform)  \n\n## Usage / Examples  \n```bash\ncurl -X POST https://api.example.com/v1/services \\\n  -H \"Authorization: Bearer <token>\" \\\n  -d '{\"action\": \"create\", \"resource\": \"user\"}'\n```  \nKey features:  \n- JWT-based authentication with token refresh  \n- Dynamic routing based on service tags  \n- Prometheus metrics export for 99.99% SLA monitoring  \n\n## Tech Stack  \n- **Python** (core logic with FastAPI)  \n- **AWS** (Lambda for async processing, CloudFront for CDN)  \n- **GCP** (BigQuery for analytics, Cloud Logging)  \n- **Kubernetes** (orchestrates microservices)  \n- **Terraform** (infrastructure as code)  \n- **PostgreSQL** (optimized with connection pooling)  \n\n## Architecture / Design  \nA layered architecture with:  \n1. **Ingress Layer** (NGINX/Traefik for TLS termination)  \n2. **Policy Engine** (rules for rate limiting and access control)  \n3. **Service Mesh** (Istio for mTLS and observability)  \n4. **Analytics Pipeline** (Kafka for log aggregation)  \n\nOptimized for 95% request success rate with 99.99% uptime. Network automation via Ansible reduces provisioning time by 40%.  \n\n## License  \nMIT License — see [LICENSE](https://github.com/yourusername/cloud-native-gateway/blob/main/LICENSE)  \n\n## Badges  \n[![GitHub](https://badges.example.com/github)](https://github.com/yourusername/cloud-native-gateway)  \n[![CI/CD](https://badges.example.com/ci)](https://github.com/yourusername/cloud-native-gateway/actions)  \n[![Docker](https://badges.example.com/docker)](https://hub.docker.com/r/cloud-native-gateway)"
+  "text": "Academic Context  \nDina holds a Ph.D. in Computational Finance, which equipped her with a rigorous foundation in quantitative methods. Her dissertation on algorithmic risk modeling aligned closely with our firm’s focus on predictive analytics, enabling her to bridge academic theory with practical applications from day one.  \n\nWorking Relationship  \nAs Lead Data Scientist since 2021, Dina oversees teams developing machine learning models for fraud detection and credit scoring. Her role involves cross-functional collaboration, stakeholder alignment, and ensuring compliance with regulatory standards. She consistently meets tight deadlines while maintaining high accuracy thresholds in our risk assessment systems.  \n\nResearch Ability  \nDina’s work on feature engineering for transactional data reduced false positives by 18% in our fraud detection models. She designed statistical models that improved credit scoring F1 scores by 12%, directly impacting loan approval rates. Her ability to distill complex data into actionable insights has been critical to our product development pipeline.  \n\nBroader Strengths  \nBeyond technical skills, Dina demonstrates exceptional judgment under pressure. She mentors junior analysts, fostering a culture of precision and curiosity. Her work ethic is marked by relentless attention to detail and a proactive approach to solving ambiguous problems.  \n\nRecommendation  \nDina’s contributions have been instrumental in advancing our firm’s data-driven strategies. Her technical acumen, combined with leadership and analytical rigor, makes her an ideal candidate for roles requiring both innovation and operational excellence."
 }

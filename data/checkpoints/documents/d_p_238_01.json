@@ -3,23 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_238",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "small (2-4)",
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
     "jargon_density": "plain"
   },
   "skill_evidence": {
-    "API testing": 4,
-    "CI/CD pipelines": 4,
-    "GitHub Actions": 4,
-    "Integration testing": 3,
-    "Jenkins": 2,
-    "Linux administration": 2,
-    "Performance testing (JMeter/k6)": 4,
-    "Python": 4,
-    "Selenium/Playwright": 4,
-    "Test automation": 4,
-    "Test strategy design": 3,
-    "Unit testing": 2
+    "PyTorch": 1,
+    "TensorFlow": 1,
+    "MLOps (MLflow/W&B)": 1,
+    "Model deployment": 1,
+    "LLMs/Prompt engineering": 1,
+    "NLP": 1,
+    "Computer vision": 1,
+    "Apache Spark": 1,
+    "ETL pipeline design": 1,
+    "Data warehousing": 1,
+    "Cloud cost optimization": 1,
+    "Infrastructure as Code": 1
   },
-  "text": "# Financial Automation Framework  \nA robust, production-ready framework for automated testing of financial applications, designed to integrate seamlessly with CI/CD pipelines and deliver measurable test efficiency gains. Built for teams prioritizing scalability, reliability, and measurable test coverage.  \n\n---\n\n## API Reference  \n### Core Modules  \n- **Test Runner (Python 3.10+)**: Executes test suites with parallel execution enabled by default, reducing runtime by 40% compared to sequential models.  \n- **Reporting Engine (PyTest + Allure)**: Generates HTML reports with pass/fail metrics, execution time histograms, and detailed error logs.  \n- **CI/CD Integration (GitHub Actions)**: Triggers pipeline execution on PRs, with 98.5% test suite stability over 6 months.  \n- **Mock Server (FastAPI)**: Simulates financial APIs with configurable latency and error rates for integration testing.  \n\n### Key Endpoints  \n- `POST /run-tests`: Initiates test execution with optional parameters for environment and test suite.  \n- `GET /report`: Fetches latest test results in JSON format.  \n- `POST /mock-server`: Configure mock API behavior dynamically during test runs.  \n\n---\n\n## Usage / Examples  \n### Real-World Scenarios  \n1. **API Testing**: Validate transaction endpoints with 100% coverage of CRUD operations, reducing manual verification time by 70%.  \n2. **UI Testing**: Automate end-to-end workflows using Playwright, achieving 95% first-time pass rate for login/logout sequences.  \n3. **Performance Testing**: Load 10,000 concurrent users with k6, identifying bottlenecks in real-time payment processing.  \n\n### Example Command  \n```bash  \npytest --env=staging --suite=financial_api_tests --output=reports/  \n```  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repository:  \n```bash  \ngit clone https://github.com/rafaelcosta/financial-automation-framework.git  \n```  \n2. Install dependencies:  \n```bash  \npip install -r requirements.txt  \n```  \n3. Configure environment variables for CI/CD and mock server settings.  \n\n---\n\n## Tech Stack  \n- **Languages**: Python 3.10, TypeScript (for reporting)  \n- **Tools**: Playwright, FastAPI, k6, Jenkins (CI/CD), GitHub Actions  \n- **Databases**: SQLite (for test metadata), Prometheus (for performance metrics)  \n- **Cloud**: AWS Lambda (for async test execution)  \n\n---\n\n## Architecture / Design  \nThe framework is modular, with three primary layers:  \n1. **Core Layer**: Manages test execution, parallelization, and result aggregation.  \n2. **Reporting Layer**: Integrates with Allure for visual analytics and historical trend tracking.  \n3. **CI/CD Layer**: Orchestration via GitHub Actions, with Jenkins used for legacy system integration.  \n\nTest strategies prioritize integration and performance testing, with 80% of test cases designed to simulate real-world financial workflows.  \n\n---\n\n## License  \nMIT License  \n\n---\n\n## Badges  \n[![Test Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/rafaelcosta/financial-automation-framework/main/coverage.json)](https://github.com/rafaelcosta/financial-automation-framework)  \n[![Pipeline Stability](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/rafaelcosta/financial-automation-framework/main/stability.json)](https://github.com/rafaelcosta/financial-automation-framework)"
+  "text": "# Real-Time Fraud Detection System  \nA production-grade AI system for detecting fraudulent transactions using time-series analysis and ensemble models. Built to process 100k+ transactions/sec with 99.8% detection accuracy and <50ms latency.  \n\n## Getting Started / Installation  \nClone this repository and install dependencies:  \n```bash  \ngit clone https://github.com/your-username/real-time-fraud-detection.git  \ncd real-time-fraud-detection  \npip install -r requirements.txt  \n```  \nEnsure Python 3.9+ is installed. The system requires access to a Kafka stream (hosted separately) and a PostgreSQL database for historical data.  \n\n## Usage / Examples  \nRun the real-time detector:  \n```bash  \npython src/main.py --config config/prod.yaml  \n```  \nExample input: A JSON stream of transaction records with timestamp, amount, and user ID. Output includes fraud probability (0-1) and alert severity (low/medium/high).  \n\n**Performance Metrics**:  \n- F1 score: 0.98 (test set)  \n- False positive rate: 0.2% (production)  \n- Latency: <50ms (P99)  \n\n## Badges  \n[![Build Status](https://img.shields.io/endpoint?url=https%3A%2F%2Factions-badge-cache.net%2Fbadge%3Frepository%3Dyour-username%2Freal-time-fraud-detection%26branch%3Dmain)](https://github.com/your-username/real-time-fraud-detection/actions)  \n[![Version](https://img.shields.io/badge/version-1.2.0-blue)](https://github.com/your-username/real-time-fraud-detection/releases/tag/v1.2.0)  \n[![Test Coverage](https://img.shields.io/badge/coverage-85%25-green)](https://github.com/your-username/real-time-fraud-detection/actions/workflows/coverage.yml)  \n\n## Tech Stack  \n- **Data Ingestion**: Apache Kafka  \n- **Processing**: Apache Flink (stream processing)  \n- **Storage**: PostgreSQL (time-series DB)  \n- **Modeling**: XGBoost + LightGBM ensembles  \n- **Monitoring**: Prometheus + Grafana  \n\n## Architecture / Design  \nThe system splits into three core layers:  \n1. **Ingestion Layer**: Kafka streams ingest raw transaction data.  \n2. **Feature Layer**: Extracts time-based patterns (e.g., velocity, frequency) using sliding windows.  \n3. **Detection Layer**: Parallel ensembles score transactions in real-time. Alerts are routed via REST API to risk management systems.  \n\nKey design choice: Use of ensemble models to balance precision and recall, avoiding overfitting to noisy transaction data.  \n\n## Contributing  \nSubmit bug reports or feature requests via GitHub Issues. For code contributions:  \n- Follow PEP8 guidelines  \n- Include unit tests for all public functions  \n- Document model pipelines in `docs/architecture.md`  \n\n## License  \nMIT License. See [LICENSE](https://github.com/your-username/real-time-fraud-detection/blob/main/LICENSE) for details."
 }

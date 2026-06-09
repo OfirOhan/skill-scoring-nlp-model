@@ -3,24 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_247",
   "hyperparams": {
-    "project_scale": "team-internal",
+    "project_scale": "academic",
     "project_team_size": "medium (5-15)",
-    "jargon_density": "plain"
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "CI/CD pipelines": 4,
+    "AWS": 3,
+    "CDN management": 1,
     "Cloud cost optimization": 1,
-    "Docker": 4,
+    "Cloud networking (VPC/subnets)": 1,
+    "Docker": 1,
+    "GCP": 1,
+    "Infrastructure as Code": 5,
     "Kubernetes": 1,
-    "MongoDB": 4,
-    "Node.js": 4,
+    "Load balancing": 1,
     "Python": 1,
-    "REST API design": 4,
-    "React": 1,
-    "Terraform": 1,
-    "TypeScript": 4,
-    "Web performance optimization": 4
+    "Terraform": 1
   },
-  "text": "# QuestCraft: Multiplayer Puzzle Game  \nQuestCraft is a real-time collaborative puzzle game where 4–8 players solve interconnected logic challenges via synchronized spatial interactions. The core mechanic revolves around shared state management, with players manipulating dynamic physics-based objects to unlock progression. Average session duration is 12 minutes, with 15% of sessions exceeding 20 minutes due to complex puzzle chains.  \n\n## Tech Stack  \n- **Unity 3D** (with IL2CPP for mobile builds)  \n- **Node.js 18** (with TypeScript) for backend logic and WebSocket relays  \n- **MongoDB Atlas** (sharded cluster) for user progress tracking and match history  \n- **AWS Lambda + API Gateway** (cost-optimized with 30% reduction via reserved instances)  \n- **Docker** (containerized CI/CD pipelines with 40% faster deployment cycles)  \n- **REST API** (OpenAPI 3.0 spec) for client-server communication  \n\n## Architecture / Design  \nThe system uses a hybrid architecture: Unity clients communicate via WebSockets to a Node.js cluster managing state synchronization. MongoDB handles persistent user data, while AWS Lambda processes asynchronous tasks like match creation. Real-time updates are batched every 150ms to balance latency and bandwidth. Key optimizations include:  \n- **WebGL compression** for Unity assets (35% size reduction)  \n- **Node.js clustering** with PM2 for horizontal scaling (supports 500+ concurrent sessions)  \n- **MongoDB change streams** for real-time progress tracking  \n\n## Getting Started / Installation  \n1. Clone the repo via `git init && npm install`  \n2. Configure AWS credentials in `~/.aws/credentials`  \n3. Build Docker containers: `docker-compose up --build`  \n4. Run the Unity Editor with `npm run start:unity`  \n5. Test API endpoints via Postman using the OpenAPI spec  \n\n## Usage / Examples  \n- **Server**: `npm run start:server` initializes WebSocket relays and MongoDB connections  \n- **Client**: Unity scenes load via `SceneManager.LoadScene(\"Lobby\")` with preloaded asset bundles  \n- Example API call: `POST /api/match/create` with payload `{ players: 4, puzzle: \"maze\" }`  \n\n## Badges  \n[![CI/CD Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/umakrishnan/questcraft/main/.github/badges/ci.json)](https://github.com/umakrishnan/questcraft/actions)  \n[![Docker Image Size](https://img.shields.io/docker/size/umakrishnan/questcraft-server)](https://hub.docker.com/r/umakrishnan/questcraft-server)  \n\n## Contributing  \nFocus on backend state management, Unity networking, or MongoDB schema improvements. Pull requests must include benchmark results for performance changes.  \n\n## License  \nMIT License (© 2023 Uma Krishnan)"
+  "text": "# NexaGame Cross-Platform Engine Optimization  \nOptimize cross-platform game engine performance for real-time multiplayer experiences through distributed systems and low-latency networking. This project explores scalable architecture, resource management, and platform-specific optimizations for seamless multiplayer synchronization across PC, consoles, and cloud platforms.  \n\n## Badges  \n[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)  \n[![Platform](https://img.shields.io/badge/platforms-PC%2C%20Consoles%2C%20Cloud-444)](https://example.com)  \n[![Build](https://img.shields.io/badge/build-passing-green)](https://example.com)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for full terms.  \n\n## Tech Stack  \n- **Core Engine**: Unreal Engine 5.2 + custom networking layer  \n- **Cloud Services**: AWS EC2 (compute), S3 (asset storage), DynamoDB (session management)  \n- **Networking**: WebSockets, QUIC, and UDP-based prediction models  \n- **IaC**: AWS CloudFormation for infrastructure provisioning  \n- **Analytics**: AWS CloudWatch + custom metrics for latency tracking  \n\n## Architecture / Design  \nThe system employs a hybrid model:  \n- **Centralized Authority**: AWS EC2 clusters manage authoritative game state  \n- **Decentralized Clients**: Local clients use predictive rendering and delta compression  \n- **Cross-Platform Sync**: Platform-specific SDKs abstract input/output layers  \n- **Scalability**: Auto-scaling groups dynamically adjust to player load  \n- **Latency Mitigation**: Edge caching via S3 and regional EC2 zones  \n\nKey design principles:  \n- Minimize serialization overhead with binary protocol buffers  \n- Prioritize deterministic update intervals for synchronization  \n- Use AWS Lambda for microservices handling player matchmaking  \n\n## Getting Started / Installation  \n1. Create AWS account with EC2, S3, and DynamoDB access  \n2. Clone repository: `git clone https://github.com/your-username/nexa-game.git`  \n3. Deploy infrastructure:  \n   ```bash  \n   aws cloudformation deploy --template-file templates/infra.yaml  \n   ```  \n4. Build engine:  \n   ```bash  \n   cmake -S . -B build && cmake --build build  \n   ```  \n\n## Usage / Examples  \nRun a local multiplayer session:  \n```bash  \n./build/nexa-engine --session-id \"sess_1234\" --platform \"pc\"  \n```  \nMonitor latency metrics:  \n```bash  \naws cloudwatch get-metric-statistics --namespace \"NexaGame\" --metric-name \"Latency\"  \n```  \n\n## Contributing  \nWe welcome contributions to improve networking protocols, optimize resource allocation, or enhance cross-platform compatibility. Familiarity with AWS infrastructure, real-time systems, and game engine internals is required. Submit pull requests with benchmarks and architectural diagrams to demonstrate impact."
 }

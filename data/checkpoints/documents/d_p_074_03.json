@@ -1,25 +1,25 @@
 {
   "doc_id": "d_p_074_03",
-  "type": "linkedin",
+  "type": "project_readme",
   "persona_id": "p_074",
   "hyperparams": {
-    "linkedin_completeness": "detailed"
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Python": 1,
-    "Go": 1,
-    "REST API design": 1,
-    "Microservices architecture": 1,
-    "PostgreSQL": 1,
-    "MongoDB": 1,
-    "React": 1,
-    "TypeScript": 1,
-    "Docker": 1,
-    "Kubernetes": 1,
-    "AWS": 1,
-    "CI/CD pipelines": 1,
-    "Linux administration": 1,
-    "Terraform": 1
+    "AWS": 5,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 3,
+    "GitHub Actions": 1,
+    "Go": 5,
+    "Load balancing": 3,
+    "Microservices architecture": 5,
+    "MongoDB": 4,
+    "PostgreSQL": 5,
+    "Python": 3,
+    "REST API design": 5,
+    "Terraform": 3
   },
-  "text": "Daria Ionescu is a full-stack developer at SecuraTech Solutions, specializing in building robust, secure systems within the cybersecurity domain. With a focus on integrating advanced threat detection mechanisms, she collaborates closely with cross-functional teams to design solutions that prioritize privacy and data protection. Her work emphasizes compliance with evolving industry standards while ensuring seamless user experiences. Daria thrives in dynamic environments, where she leverages her technical expertise to address complex challenges and contribute to innovative projects. She is committed to continuous learning, staying informed about emerging threats and ethical hacking practices to strengthen organizational defenses. Beyond her technical role, she actively participates in knowledge-sharing initiatives, fostering a culture of collaboration within her team. Daria’s approach combines precision with creativity, enabling her to deliver scalable solutions that align with both business objectives and security imperatives. Her dedication to excellence and attention to detail make her a reliable asset in developing cutting-edge cybersecurity tools. With a strong foundation in problem-solving and a passion for safeguarding digital assets, she remains focused on advancing secure, user-centric technologies. Daria’s career reflects a commitment to growth, adaptability, and making meaningful contributions to the field of cybersecurity."
+  "text": "# FintechDataLake  \nA scalable data lake architecture for aggregating and processing financial transaction data at scale, built to support real-time analytics and compliance workflows in fintech environments.  \n\n## Badges  \n[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)  \n[![Build Status](https://img.shields.io/badge/build-passing-green)](https://github.com/GauravSaxena/FintechDataLake/actions)  \n[![Dependency Status](https://img.shields.io/badge/dependencies-up-to--date-yellow)](https://github.com/GauravSaxena/FintechDataLake/dependabot)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for full details.  \n\n## Tech Stack  \n- **Cloud**: AWS (S3, Redshift, CloudFront)  \n- **Data**: MongoDB (aggregations), PostgreSQL (metadata)  \n- **Processing**: Go (streaming pipelines), Python (ETL scripts)  \n- **Infrastructure**: Terraform (auto-scaling clusters), Nginx (load balancing)  \n- **APIs**: RESTful endpoints for real-time data ingestion  \n\n## Architecture / Design  \nThe data lake is structured as a multi-tiered pipeline:  \n1. **Ingestion Layer**: Apache Kafka streams feed raw transaction data into S3 buckets, with Terraform-managed AWS Glue crawlers auto-discovering schemas.  \n2. **Processing Layer**: Go-based microservices handle real-time fraud detection, while Python scripts orchestrate batch reconciliations. MongoDB acts as a high-performance cache for frequently accessed compliance reports.  \n3. **Storage Layer**: Redshift warehouses structured datasets for analytics, with cost-optimized S3 lifecycle policies managing cold storage.  \n4. **Monitoring**: Custom dashboards track ingestion latency and query performance, with alerts for data integrity violations.  \n\nKey decisions prioritize fault tolerance: redundant compute clusters, asynchronous replication, and schema versioning to ensure regulatory compliance.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/GauravSaxena/FintechDataLake.git`  \n2. Install dependencies: `make deps`  \n3. Initialize Terraform: `terraform init`  \n4. Deploy infrastructure: `terraform apply -auto-approve`  \n5. Verify Kafka connectivity via `bin/kafka-console-consumer.sh`  \n\n## Usage / Examples  \n- **Real-time Ingestion**: Use the `/v1/transactions` endpoint to stream data into the lake.  \n- **Batch Processing**: Run `python etl_pipeline.py` to reconcile daily settlement files.  \n- **Querying**: Execute SQL queries against Redshift to analyze transaction trends.  \n\n## Contributing  \nWe welcome contributions to improve scalability, security, or documentation.  \n- Fork the repo and submit a PR with clear commit messages.  \n- Add tests for new features; existing unit tests cover core workflows.  \n- Document changes in the `docs/` directory to maintain clarity for 15+ engineers.  \n- Engage in code reviews to ensure alignment with architectural principles."
 }

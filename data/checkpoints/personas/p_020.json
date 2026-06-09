@@ -1,60 +1,59 @@
 {
   "persona_id": "p_020",
   "hyperparams": {
-    "archetype": "ml_engineer",
-    "years_experience": 7,
-    "seniority": "senior",
-    "industry": "healthtech",
+    "archetype": "platform_engineer",
+    "years_experience": 5,
+    "seniority": "mid",
+    "industry": "e-commerce",
     "writing_style": "confident",
     "language_fluency": "ESL",
-    "self_promotion_level": "humble",
+    "self_promotion_level": "balanced",
     "quantification_tendency": "metrics-heavy"
   },
-  "name": "Neha Joshi",
-  "current_role": "Senior ML Engineer",
-  "company": "MedTech Innovations",
+  "name": "Hiroshi Sato",
+  "current_role": "Platform Engineer",
+  "company": "NexaCart Inc.",
   "education": {
-    "degree": "Master of Science in Data Science",
-    "university": "University of Washington",
-    "year": 2018
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "University of Tokyo",
+    "year": 2019
   },
   "career_trajectory": [
     {
-      "role": "Data Scientist Intern",
-      "company": "HealthAI Labs",
-      "year": 2016
+      "title": "DevOps Engineer",
+      "company": "TechNova Solutions",
+      "duration": "2018-2019"
     },
     {
-      "role": "Machine Learning Engineer",
-      "company": "VitalSigns Health",
-      "year": 2017
+      "title": "Cloud Infrastructure Specialist",
+      "company": "CloudSphere Inc.",
+      "duration": "2019-2021"
     },
     {
-      "role": "Lead ML Engineer",
-      "company": "MedTech Innovations",
-      "year": 2020
+      "title": "Senior Platform Engineer",
+      "company": "NexaCart Inc.",
+      "duration": "2021-present"
     }
   ],
   "skills": {
-    "PyTorch": 4,
-    "TensorFlow": 4,
-    "Hugging Face Transformers": 4,
-    "NLP": 5,
-    "Computer vision": 4,
-    "MLOps (MLflow/W&B)": 5,
-    "Model deployment": 4,
-    "AWS": 5,
-    "GCP": 4,
-    "Docker": 5,
+    "AWS": 4,
+    "GCP": 3,
+    "Terraform": 5,
     "Kubernetes": 4,
-    "Apache Airflow": 4
+    "CI/CD pipelines": 4,
+    "Load balancing": 3,
+    "Cloud networking (VPC/subnets)": 4,
+    "Serverless (Lambda/Cloud Functions)": 3,
+    "Python": 2,
+    "Linux administration": 3,
+    "Prometheus/Grafana": 3,
+    "GitLab CI": 3,
+    "Docker": 3,
+    "Database optimization": 1
   },
   "document_ids": [
     "d_p_020_00",
     "d_p_020_01",
-    "d_p_020_02",
-    "d_p_020_03",
-    "d_p_020_04",
-    "d_p_020_05"
+    "d_p_020_02"
   ]
 }

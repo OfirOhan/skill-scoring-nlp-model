@@ -3,27 +3,24 @@
   "type": "recommendation",
   "persona_id": "p_139",
   "hyperparams": {
-    "recommender_role": "professor",
+    "recommender_role": "peer",
     "recommender_closeness": "brief",
-    "company_type": "FAANG",
-    "company_size": "mid (50-500)"
+    "company_type": "agency",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "AWS": 2,
-    "Database optimization": 1,
-    "Docker": 2,
-    "GitLab CI": 2,
-    "HTML/CSS": 1,
-    "JavaScript": 2,
+    "AWS": 3,
+    "CI/CD pipelines": 2,
+    "GitHub Actions": 1,
+    "Go": 4,
+    "Jenkins": 1,
+    "Kubernetes": 3,
     "Linux administration": 1,
-    "Node.js": 2,
-    "PostgreSQL": 1,
-    "Python": 2,
-    "REST API design": 2,
-    "React": 2,
-    "Shell scripting": 1,
-    "Web performance optimization": 2,
-    "Webpack/Vite": 1
+    "Microservices architecture": 4,
+    "Monitoring & alerting": 2,
+    "PostgreSQL": 4,
+    "Python": 4,
+    "REST API design": 4
   },
-  "text": "Yuki Tanaka’s ability to bridge complex systems with user-centric design stood out during her internship at NexaCorp. When tasked with streamlining a legacy integration for a client’s supply chain platform, she identified a 30% latency bottleneck in API communication. By refactoring the microservices architecture and implementing a hybrid cloud strategy, she reduced response times by 42% while maintaining uptime above 99.95%. Her solution required coordination across six internal teams, yet she prioritized stakeholder needs without compromising technical rigor.  \n\nAs a professor, I collaborated with Yuki during a capstone project where she led a team of four students to build a real-time analytics dashboard for a local nonprofit. Though not her primary role, she voluntarily extended her expertise to mentor peers, ensuring the project met both technical and social impact goals. Her work ethic is marked by a quiet determination—she often stayed late to debug issues others overlooked, yet remained approachable during team retrospectives.  \n\nYuki’s strength lies in her ability to translate abstract requirements into scalable, reliable systems. She thrives in ambiguity, as seen in her recent work automating DevOps pipelines, which cut deployment cycles by 25%. Her curiosity drives her to continuously refine workflows, and her collaborative mindset ensures she elevates those around her.  \n\nIn summary, Yuki is a rare blend of technical precision and interpersonal adaptability. She will bring measurable value to any team requiring innovation under pressure.  \n\nProfessor Hiroshi Nakamura  \nDepartment of Computer Science  \nUniversity of Tokyo  \nh.nakamura@u-tokyo.ac.jp"
+  "text": "Working Relationship  \nUrsula and I collaborated on a few SaaS projects at NexaCorp, primarily focused on scaling backend systems. As a peer, I observed her consistently prioritize reliability and efficiency, often stepping in to debug complex microservices or optimize database queries. Her approach to problem-solving felt intuitive—she’d dissect systems with a methodical curiosity, rarely needing direction.  \n\nDay-to-Day Observations  \nUrsula’s daily work revolved around maintaining and extending microservices, with a particular focus on PostgreSQL performance. She’d spend hours refining queries or redesigning data models to handle growing user loads, often sharing insights that improved team-wide practices. Her REST API designs were clean and pragmatic, balancing simplicity with scalability. While I didn’t manage Kubernetes, I saw her troubleshoot pod scaling issues during peak traffic, ensuring services stayed responsive. AWS was her go-to for infrastructure, and she’d often explain choices in terms of cost vs. reliability, which helped align the team.  \n\nStandout Moments  \nDuring a critical outage, Ursula rebuilt a failing API endpoint using Go, reducing latency by over 40% without external dependencies. She also spearheaded a PostgreSQL migration to a sharded architecture, which stabilized our database under heavy load. Her ability to balance deep technical knowledge with clear communication made her a natural leader in ad-hoc troubleshooting sessions.  \n\nRecommendation  \nUrsula’s strength lies in her ability to translate abstract system challenges into concrete, maintainable solutions. She’s reliable, proactive, and has a knack for making complex systems feel manageable. Her work ethic and technical depth make her a strong fit for any team needing robust, scalable backend expertise."
 }

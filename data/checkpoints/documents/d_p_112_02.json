@@ -3,20 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_112",
   "hyperparams": {
-    "project_scale": "academic",
+    "project_scale": "team-internal",
     "project_team_size": "medium (5-15)",
-    "jargon_density": "heavy"
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 1,
-    "CI/CD pipelines": 3,
-    "Go": 1,
-    "Kubernetes": 1,
-    "Monitoring & alerting": 3,
-    "PostgreSQL": 5,
-    "Python": 5,
-    "REST API design": 5,
-    "Terraform": 1
+    "3D graphics (OpenGL/Vulkan)": 3,
+    "Game networking": 3,
+    "Game physics": 3,
+    "JavaScript": 1,
+    "Python": 1,
+    "REST API design": 2,
+    "React": 2,
+    "TypeScript": 1,
+    "Unity": 3,
+    "Unreal Engine": 3
   },
-  "text": "# Real-Time Analytics Dashboard  \nA high-throughput analytics interface leveraging GraphQL for real-time data ingestion and React for dynamic visualization. Built for SaaS platforms requiring sub-second latency and scalable data abstraction.  \n\n## Contributing  \nThis project thrives on collaborative refinement. Focus areas include optimizing PostgreSQL query patterns, enhancing GraphQL schema resilience under load, and expanding React component modularity. Pull requests with performance benchmarks or architecture diagrams are especially valued.  \n\n## Getting Started  \n1. Clone the repository using `git clone https://github.com/your-username/real-time-dashboard.git`  \n2. Install dependencies with `pip install -r requirements.txt`  \n3. Configure PostgreSQL credentials in `.env`  \n4. Run `python manage.py migrate` to set up the database  \n5. Start the development server via `npm run dev`  \n\n## Usage  \nQuery real-time metrics via GraphQL:  \n```graphql  \nquery {  \n  metrics(last: 60) {  \n    timestamp  \n    cpuUsage  \n    memoryUsage  \n  }  \n}  \n```  \nReact components auto-refresh at 100ms intervals, with fallback states for network latency.  \n\n## Tech Stack  \n- **Backend**: Python (FastAPI), PostgreSQL (with JSONB indexing)  \n- **Frontend**: React (with Apollo Client), GraphQL  \n- **CI/CD**: GitHub Actions (unit tests, linters)  \n- **Monitoring**: Prometheus + Grafana for API latency tracking  \n\n## Architecture  \nThe system decouples data ingestion (Python workers), query routing (GraphQL), and visualization (React). PostgreSQL handles time-series aggregation, while Python's async capabilities manage concurrent subscriptions. REST endpoints underpin legacy integrations, with GraphQL as the primary interface.  \n\n## License  \nMIT (see [LICENSE](LICENSE))  \n\n## Badges  \n[![Build Status](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/your-username/1234567890abcdef1234567890abcdef/raw/status.json)](https://github.com/your-username/real-time-dashboard/actions)  \n[![Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/your-username/1234567890abcdef1234567890abcdef/raw/coverage.json)](https://github.com/your-username/real-time-dashboard/actions)"
+  "text": "# ProceduralGenLib  \nA modular library for dynamic terrain and environment generation, optimized for real-time simulation in AAA-scale games. Designed to scale across distributed systems, with focus on memory efficiency and GPU acceleration for large-world generation.  \n\n## Acknowledgments  \nThis project is a collaborative effort by the core dev team at Nova Games. Special thanks to the creators of [Havok Physics](https://www.havok.com/) for foundational collision logic and [Oculus SDK](https://developer.oculus.com/) for VR integration insights. Early prototyping leveraged [Steamworks.NET](https://partner.steamgames.com/steamworks/) for multiplayer sync benchmarks.  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/NovaGames/ProceduralGenLib.git  \n   ```  \n2. Navigate to the project root and install dependencies:  \n   ```bash  \n   npm install  \n   ```  \n3. Configure your engine-specific settings in `./config/engineProfiles.json` (Unity/Unreal-specific overrides).  \n\n## Usage / Examples  \n- **Terrain Generation**: Use `PerlinNoiseGenerator` with octaves > 6 for biomes. Example:  \n  ```csharp  \n  var terrain = new TerrainGenerator(1024, 512, 8);  \n  terrain.GenerateHeightmap();  \n  ```  \n- **Dynamic LOD**: Enable `DynamicLODManager` for streaming 100k+ polygons across 16-core systems.  \n- **Physics Integration**: Pair with [PhysX](https://developer.nvidia.com/physx-sdk) for realistic destructible environments.  \n\n## Tech Stack  \n- **Core Engine**: Unity (2021.3+), Unreal Engine (5.1+)  \n- **Graphics**: OpenGL 4.6, Vulkan 1.3 (via [RADV](https://gitlab.freedesktop.org/mesa/mesa))  \n- **Networking**: Custom UDP-based sync with latency < 20ms (tested on 1000+ concurrent clients)  \n- **Physics**: Havok 2023, PhysX 4.1  \n- **Build Tools**: CMake 3.22, Conan 2.1  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for full terms.  \n\n## Badges  \n![Build Status](https://img.shields.io/endpoint?url=https://dashboard.novagames.com/api/builds/ProceduralGenLib)  \n![Version](https://img.shields.io/badge/Version-3.2.1-blue)  \n![Platform](https://img.shields.io/badge/Platform-PC%20%7C%20Console%20%7C%20VR-lightgrey)  \n\n## Contributing  \nWe welcome contributions to core algorithms (e.g., cellular automata for city generation) and engine-specific integrations. Focus areas:  \n- Optimizing memory bandwidth for 8K terrain grids  \n- Enhancing multiplayer sync for 500+ players  \n- Expanding support for [WebXR](https://webxr.org/) via Unity's [XR Interaction Toolkit](https://github.com/Unity-Technologies/xr interaction toolkit)  \n\nAll PRs must include benchmark data and pass CI/CD pipelines."
 }

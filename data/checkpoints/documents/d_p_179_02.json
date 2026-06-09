@@ -1,24 +1,23 @@
 {
   "doc_id": "d_p_179_02",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_179",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "plain"
+    "recommender_role": "direct-manager",
+    "recommender_closeness": "worked-daily",
+    "company_type": "academic",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "ArgoCD": 2,
-    "CI/CD pipelines": 3,
-    "Docker": 3,
-    "GitHub Actions": 2,
-    "Jenkins": 3,
-    "Kubernetes": 3,
-    "Linux administration": 2,
-    "Prometheus/Grafana": 1,
+    "3D graphics (OpenGL/Vulkan)": 3,
+    "C#/.NET": 3,
+    "Game networking": 3,
+    "Game physics": 3,
+    "JavaScript": 1,
     "Python": 1,
-    "Team Collaboration": 1,
-    "Terraform": 3
+    "REST API design": 1,
+    "Unity": 4,
+    "Unreal Engine": 4
   },
-  "text": "# Kubernetes-Based Microservices Deployment  \nA scalable, production-ready framework for deploying microservices in fintech environments using Kubernetes, Terraform, and CI/CD pipelines. This project enables consistent, repeatable deployments across multiple environments with minimal manual intervention, reducing deployment time by 40% compared to traditional methods.  \n\n## Badges  \n[![Build Status](https://github.com/yourusername/yourproject/actions/workflows/build.yml/badge.svg)](https://github.com/yourusername/yourproject/actions/workflows/build.yml)  \n[![Test Coverage](https://codecov.io/gh/yourusername/yourproject/branch/main/graph/badge.svg?token=XYZ123)](https://codecov.io/gh/yourusername/yourproject)  \n[![Deployment Time](https://github.com/yourusername/yourproject/actions/workflows/deploy.yml/badge.svg)](https://github.com/yourusername/yourproject/actions/workflows/deploy.yml)  \n\n## Tech Stack  \n- **Kubernetes**: Orchestration layer for containerized microservices, with auto-scaling configured for 80% of peak load.  \n- **Terraform**: Infrastructure-as-code for cloud provider provisioning, with 95% of resources defined in reusable modules.  \n- **Docker**: Containerization for services, with multi-stage builds reducing image size by 35%.  \n- **Jenkins**: CI/CD pipeline for automated testing and deployment, triggering builds on 100% of code changes.  \n- **ArgoCD**: GitOps tool for continuous sync between development and production clusters, with 99.9% deployment reliability.  \n- **GitHub Actions**: Lightweight automation for linting and dependency updates, reducing manual checks by 70%.  \n\n## Configuration  \nThe project uses environment-specific Terraform variables (e.g., `terraform.tfvars.env=dev`) to isolate configurations. Kubernetes manifests are version-controlled and annotated with `kustomize` labels for dynamic configuration overrides. Jenkins pipelines are parameterized to support parallel testing across 5+ microservices.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/yourusername/kubernetes-microservices.git`  \n2. Initialize Terraform: `terraform init -var-file=terraform.tfvars.env=dev`  \n3. Validate infrastructure: `terraform validate`  \n4. Deploy to Kubernetes: `kubectl apply -f k8s/deployment.yaml`  \n5. Verify service endpoints: `kubectl get svc -n fintech`  \n\n## Usage / Examples  \nTo deploy a new microservice:  \n1. Add Dockerfile and Kubernetes manifest to `services/<service-name>/`  \n2. Update `terraform.tfvars.env=prod` and `kustomize` labels in `k8s/deployment.yaml`  \n3. Trigger Jenkins pipeline: `curl -X POST http://jenkins:8080/job/deploy-trigger/build`  \n4. Monitor deployment status: `argo cd --watch`  \n\n## Testing  \nUnit tests for microservices are written in Jest (95% coverage) and run in parallel via Jenkins. Integration tests validate service-to-service communication with 100% pass rate. GitHub Actions enforce dependency updates nightly, ensuring no outdated libraries.  \n\n## License  \nMIT License — see [LICENSE](https://github.com/yourusername/kubernetes-microservices/blob/main/LICENSE) for details."
+  "text": "Ilya Fedorov has consistently demonstrated a nuanced understanding of game development systems, particularly in environments requiring high-performance 3D rendering and physics simulation. His work on cross-platform Unity projects for NexGen Interactive showcased a knack for balancing visual fidelity with computational efficiency. One notable example was his redesign of a physics engine integration, which reduced CPU overhead by 22% without compromising collision accuracy—a detail that significantly improved frame rates in multiplayer scenarios.  \n\nBeyond technical execution, Ilya’s collaborative approach is equally compelling. He thrives in dynamic, cross-functional teams, often bridging gaps between artists and engineers to align creative vision with technical feasibility. His ability to distill complex problems into actionable steps has made him a reliable resource during tight deadlines.  \n\nIn Unreal Engine projects, Ilya’s ownership of a persistent world system demonstrated both technical depth and strategic thinking. He iterated on a scalable networking architecture that supported 50+ concurrent players, a solution that became a template for subsequent projects. His work ethic is marked by patience and precision; he frequently volunteers to mentor junior developers, fostering a culture of shared growth.  \n\nIlya’s contributions extend beyond code. His curiosity about emerging technologies and willingness to experiment have introduced innovative workflows that enhance team productivity. For roles demanding both technical mastery and collaborative leadership, Ilya’s combination of expertise and approachability makes him an exceptional candidate."
 }

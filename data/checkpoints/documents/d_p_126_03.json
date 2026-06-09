@@ -3,20 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_126",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "moderate"
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "Cloud networking (VPC/subnets)": 3,
-    "GitLab CI": 3,
-    "Kubernetes": 4,
-    "Load balancing": 3,
+    "C/C++ (embedded)": 3,
+    "CI/CD pipelines": 1,
+    "Embedded Linux": 4,
+    "Firmware development": 3,
+    "Hardware-software integration": 3,
+    "IoT protocols (MQTT/CoAP)": 3,
     "Network automation": 1,
-    "Prometheus/Grafana": 3,
     "Python": 2,
-    "Terraform": 3
+    "REST API design": 2,
+    "RTOS": 3,
+    "Shell scripting (Bash)": 1
   },
-  "text": "# ScaleTech Microservices Platform  \nA production-grade SaaS platform built on Kubernetes and AWS, designed for scalable, secure, and observable microservices architectures. Reduces deployment time by 60% and scales to 10k concurrent users with zero downtime.  \n\n## Deployment  \nDeploy via AWS CloudFormation and Terraform, with GitLab CI/CD pipelines automating infrastructure provisioning and canary rollouts. Load balancers (AWS ALB/NLB) ensure 99.95% SLA, while Prometheus/Grafana provides real-time metrics for 150+ endpoints. All clusters are managed via Kubernetes with HPA and CPU/memory autoscaling.  \n\n## Getting Started / Installation  \n1. Clone repo and run `terraform apply` to provision VPC, EC2, and EKS clusters.  \n2. Configure AWS credentials via `~/.aws/credentials` and install kubectl.  \n3. Trigger CI/CD pipeline via GitLab Merge Request to build and deploy services.  \n4. Validate deployment with `kubectl get pods` and Prometheus dashboard.  \n\n## Usage / Examples  \n- Deploy a service: `kubectl apply -f deploy/service.yaml`  \n- Monitor CPU usage: `kubectl top pod --sort=cpu`  \n- Check load balancer health: `aws elbv2 describe-target-health`  \n- Scale horizontally: `kubectl scale deploy/my-service --replicas=5`  \n\n## Tech Stack  \n- **Cloud**: AWS (VPC, EC2, EKS, ALB, CloudWatch)  \n- **Orchestration**: Kubernetes (HPA, CNI, RBAC)  \n- **CI/CD**: GitLab CI (parallel jobs, artifact caching)  \n- **Observability**: Prometheus/Grafana (custom dashboards, alert rules)  \n- **Tools**: Terraform (state management, module reuse), Python (CLI scripts)  \n\n## Architecture / Design  \nThe platform uses a multi-VPC design for security, with private subnets for Kubernetes nodes and public subnets for load balancers. Services communicate via Istio service mesh, with mTLS enabled for all inter-service traffic. Prometheus scrapes metrics from kubelet and custom exporters, while Grafana visualizes latency, error rates, and resource utilization.  \n\n## License  \nMIT License  \nhttps://opensource.org/licenses/MIT  \n\n## Badges  \n![Deployment Time](https://img.shields.io/badge/deployment%20time-3min30s-green)  \n![Cost Savings](https://img.shields.io/badge/cost%20savings-40%25-blue)  \n![SLA](https://img.shields.io/badge/sla-99.95%25-yellow)"
+  "text": "# EcoLogix-Auto  \nA low-power embedded system framework for optimizing warehouse automation in e-commerce logistics, focusing on energy-efficient hardware-software integration and real-time task scheduling.  \n\n## Roadmap / Future Work  \n**Short-term:** Expand sensor integration with LoRaWAN-enabled modules for long-range inventory tracking. Optimize power management with dynamic clock gating in the ARM Cortex-M4 core.  \n**Mid-term:** Implement edge computing for local data aggregation, reducing cloud dependency. Explore hybrid RTOS-Embedded Linux scheduling for complex workflows.  \n**Long-term:** Add AI/ML inference for predictive maintenance, leveraging TensorFlow Lite micro for on-device analytics. Scale to multi-robot coordination with decentralized MQTT-based consensus.  \n\n## Getting Started / Installation  \nClone the repository and navigate to the project root. Install dependencies:  \n```bash  \nsudo apt-get install build-essential cmake libgpiod-dev  \n```  \nConfigure the hardware: connect the STM32 Nucleo board to the power supply and peripheral sensors. Use PlatformIO or Yocto for cross-compilation. Flash the firmware via ST-Link or UART bootloader.  \n\n## Usage / Examples  \nThe core module logs environmental data (temperature, humidity) with 10µA idle current. Example:  \n```python  \n# Process sensor data in Python for anomaly detection  \nimport serial  \nser = serial.Serial('/dev/ttyUSB0', 115200)  \nwhile True:  \n    data = ser.readline().decode().strip()  \n    if float(data) > 30:  \n        print(\"Overheating alert!\")  \n```  \nMonitor real-time metrics via a serial terminal. Adjust power thresholds using the embedded Linux shell for dynamic reconfiguration.  \n\n## Tech Stack  \n- **Firmware:** C/C++ (STM32 HAL, FreeRTOS)  \n- **OS:** Embedded Linux (Yocto-based, kernel 5.15)  \n- **Communication:** MQTT over TLS for secure device mesh networking  \n- **Protocols:** CoAP for lightweight resource discovery, Modbus RTU for legacy equipment  \n- **Tools:** Wireshark for protocol analysis, GDB for in-circuit debugging  \n\n## Architecture / Design  \nThe system employs a three-layered architecture:  \n1. **Hardware Abstraction:** STM32 manages peripheral drivers, with hardware monitoring for thermal throttling.  \n2. **Real-Time Scheduling:** FreeRTOS prioritizes motion control tasks (3ms tick), while Embedded Linux handles data processing.  \n3. **Network Layer:** MQTT broker runs on a Raspberry Pi gateway, aggregating data from 100+ nodes with 99.9% reliability.  \n\n## License  \nMIT License — see the LICENSE file for details."
 }

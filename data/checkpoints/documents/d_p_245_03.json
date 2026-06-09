@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_245_03",
+  "type": "project_readme",
+  "persona_id": "p_245",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Python": 1,
+    "C#/.NET": 1,
+    "Node.js": 1,
+    "React": 1,
+    "PostgreSQL": 1,
+    "MongoDB": 1,
+    "AWS": 1,
+    "Docker": 1,
+    "Kubernetes": 1,
+    "Cloud cost optimization": 1
+  },
+  "text": "# Game Analytics Dashboard  \nA lightweight tool for real-time tracking of player engagement and game performance metrics, built with focus on clarity and actionable insights.  \n\n---\n\n## Getting Started  \n1. Clone the repository to your local machine.  \n2. Navigate to the project directory and install dependencies.  \n3. Run the application using the provided script.  \n4. Access the dashboard via the local server URL.  \n\n---\n\n## Tech Stack  \n- **Frontend**: Vanilla HTML, CSS, and JavaScript with Chart.js for visualizations  \n- **Backend**: Java (Spring Boot) for API services  \n- **Data Storage**: SQLite for session logs and user metrics  \n- **Utilities**: Apache Commons for data processing, JFreeChart for custom graphs  \n\n---\n\n## Usage / Examples  \n- Monitor active player sessions and average playtime per level  \n- Track conversion rates between gameplay stages  \n- Export filtered data as CSV for deeper analysis  \n- Customizable timeframes for historical performance comparisons  \n\n---\n\n## Badges  \n[![Build Status](https://example.com/status)](https://example.com)  \n[![Code Coverage](https://example.com/coverage)](https://example.com)  \n[![License](https://example.com/license)](https://example.com)  \n\n---\n\n## Architecture / Design  \nThe dashboard follows a layered architecture:  \n- **Presentation Layer**: Responsive UI with modular components for metrics, charts, and filters  \n- **Business Logic**: Java services handle data aggregation and rule-based filtering  \n- **Data Layer**: SQLite ensures fast read/write operations for real-time updates  \n- **Integration**: REST APIs connect frontend to backend, with caching for frequent queries  \n\nKey decisions prioritize simplicity: minimal dependencies, clear separation of concerns, and focus on user-driven data exploration.  \n\n---\n\n## Contributing  \nPull requests are welcome! Ensure code aligns with existing patterns and includes unit tests. For UI changes, provide mockups or sketches to align with the design system.  \n\n---\n\n## License  \nThis project is licensed under the MIT License — see the LICENSE file for details."
+}

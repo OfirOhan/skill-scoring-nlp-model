@@ -3,22 +3,25 @@
   "type": "recommendation",
   "persona_id": "p_291",
   "hyperparams": {
-    "recommender_role": "peer",
+    "recommender_role": "direct-manager",
     "recommender_closeness": "occasional",
-    "company_type": "agency",
-    "company_size": "mid (50-500)"
+    "company_type": "startup",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "AWS": 2,
-    "Docker": 2,
-    "GitLab CI": 2,
-    "JavaScript": 2,
-    "Node.js": 2,
-    "PostgreSQL": 2,
-    "Python": 2,
-    "REST API design": 2,
-    "React": 2,
-    "Terraform": 2
+    "AWS": 3,
+    "Apache Spark": 3,
+    "CI/CD pipelines": 1,
+    "Computer vision": 3,
+    "Docker": 3,
+    "GCP": 3,
+    "MLOps (MLflow/W&B)": 4,
+    "Model deployment": 4,
+    "NLP": 5,
+    "PyTorch": 5,
+    "REST API design": 3,
+    "Recommendation systems": 5,
+    "TensorFlow": 4
   },
-  "text": "To Whom It May Concern,  \n\nI’ve collaborated with Gita Saxena on several consulting projects at NexGen Solutions, primarily as a peer contributor. We’ve worked occasionally on cross-team initiatives, often aligning her full-stack expertise with our agency’s client-facing efforts. Her ability to bridge technical complexity with client needs has made her a reliable collaborator.  \n\nGita’s strength lies in her problem-solving approach and adaptability. During a recent project for a healthcare client, she swiftly rearchitected a legacy system using PostgreSQL and React, reducing load times by 40% without downtime. She also streamlined deployment processes by integrating GitLab CI, which cut manual steps by half. Her technical depth extends to AWS and Terraform, though she prioritizes solutions that align with business goals over tool-centric overhauls.  \n\nWhat stands out is her work ethic. She consistently meets tight deadlines while mentoring junior team members. For example, during a sprint to launch a SaaS product, she took the lead on API design, ensuring RESTful principles were rigorously applied. Her calm under pressure and willingness to iterate based on feedback made the team more efficient.  \n\nGita is a dependable professional who balances technical rigor with client-centric thinking. I’d recommend her without hesitation for roles requiring both innovation and reliability.  \n\nSincerely,  \n[Your Full Name]  \n[Your Contact Information]"
+  "text": "To Whom It May Concern,  \n\nTheo van den Berg 94 has been a consistent contributor to NexaGame Studios’ AI initiatives as our Senior ML Engineer. As a direct manager, I’ve observed his ability to translate complex game dynamics into scalable machine learning solutions, balancing technical rigor with creative collaboration.  \n\nTheo’s expertise in NLP and recommendation systems has been central to our product’s success. He designed a player behavior analysis module using PyTorch that improved engagement metrics by 30% across three major titles. His work on contextual recommendation systems, leveraging TensorFlow and GCP, reduced user churn by 15% in Q3 2023. These systems now handle over 20 million interactions monthly, with deployment pipelines managed via Docker and AWS.  \n\nA standout example occurred when Theo led a redesign of our enemy AI behavior model. By integrating computer vision techniques with reinforcement learning, he increased adaptive difficulty accuracy by 25% while reducing computational overhead by 40%. This required cross-team coordination and rigorous testing, which he executed with meticulous attention to detail.  \n\nTheo’s work ethic is marked by reliability and intellectual curiosity. He mentors junior engineers on best practices in model deployment and MLOps, often sharing insights from his own experiments with MLflow andWeights & Biases. His ability to distill technical challenges into actionable strategies has been invaluable to our small team’s growth.  \n\nIn summary, Theo’s technical depth, strategic thinking, and collaborative spirit make him a critical asset. I recommend him without reservation for any role requiring innovation at scale.  \n\nSincerely,  \n[Your Name]  \nDirect Manager, NexaGame Studios"
 }

@@ -3,25 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_221",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "heavy"
+    "project_scale": "hobby",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 2,
-    "CI/CD pipelines": 3,
-    "Database optimization": 2,
+    "AWS": 4,
+    "Cloud cost optimization": 3,
     "Docker": 3,
-    "JavaScript": 3,
-    "MongoDB": 3,
-    "PostgreSQL": 3,
-    "Python": 2,
-    "REST API design": 3,
-    "React": 3,
-    "Responsive design": 1,
-    "State management (Redux/Zustand)": 2,
-    "TypeScript": 3,
-    "Web performance optimization": 2
+    "GitHub Actions": 3,
+    "Infrastructure as Code": 5,
+    "Kubernetes": 3,
+    "PostgreSQL": 2,
+    "Python": 1,
+    "REST API design": 2,
+    "Terraform": 4
   },
-  "text": "# Lumina Quest: Unity Game with Node.js Backend  \nLumina Quest is a real-time multiplayer dungeon crawler built with Unity (3D) and a scalable Node.js backend, featuring dynamic loot systems, server-authoritative sync, and a modular architecture designed for rapid prototyping in a small team environment. The project leverages TypeScript for frontend consistency, REST/GraphQL hybrid APIs for client-server communication, and a distributed architecture to balance latency-sensitive gameplay with backend scalability.  \n\n## Acknowledgments  \nThis project is a collaborative effort with contributions from the following team members:  \n- **Amina Khalid** (Backend Architecture, MongoDB optimization)  \n- **Raj Patel** (Unity Systems Programming, Physics Layer)  \n- **Sofia Nguyen** (UI/UX Integration, Cross-Platform Testing)  \nSpecial thanks to the [Unity Asset Store](https://assetstore.unity.com/) for the procedural terrain toolkit and [Express.js](https://expressjs.com/) for foundational server scaffolding.  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/your-username/lumina-quest.git  \n   ```  \n2. Navigate to the project root and install dependencies:  \n   ```bash  \n   docker-compose build --no-cache  \n   docker-compose up --build  \n   ```  \n   This spins up PostgreSQL, MongoDB, and a Node.js server with hot-reloading enabled via `nodemon`. Unity builds are handled via a preconfigured CI pipeline.  \n\n## Usage / Examples  \n- **Client-Side**: Launch `LuminaQuest.unitypackage` in Unity, enable the `DungeonManager` script for procedural generation.  \n- **Server-Side**: Interact with the `/api/v1/loot` endpoint to fetch dynamically weighted item drops:  \n  ```javascript  \n  // Example Node.js route  \n  app.post('/api/v1/loot', async (req, res) => {  \n    const { playerId } = req.body;  \n    const loot = await generateLoot(playerId, 'dungeon', 'elite');  \n    res.status(200).json(loot);  \n  });  \n  ```  \n- **Testing**: Use Postman to simulate client requests or run `npm test` for end-to-end validation.  \n\n## Tech Stack  \n- **Frontend**: Unity (C#), TypeScript for shared logic, WebGL export  \n- **Backend**: Node.js (Express + Fastify), REST/GraphQL hybrid APIs  \n- **Database**: PostgreSQL (read replicas), MongoDB (aggregation pipelines)  \n- **DevOps**: Docker (containerization), GitHub Actions (CI/CD), Terraform (AWS EC2 provisioning)  \n- **Networking**: WebSockets for real-time sync, REST for stateless operations  \n\n## License  \nMIT License  \n© 2023 George Adamu & Contributors  \n\n## Badges  \n[![Build Status](https://github.com/your-username/lumina-quest/actions/workflows/ci.yml/badge.svg)](https://github.com/your-username/lumina-quest/actions/workflows/ci.yml)  \n[![Version](https://img.shields.io/badge/version-1.2.3-blue)](https://github.com/your-username/lumina-quest/releases)  \n[![License](https://img.shields.io/badge/license-MIT-yellow)](https://opensource.org/licenses/MIT)  \n\n## Contributing  \nContributions are welcome! Please review the [CODE_OF_CONDUCT.md](https://github.com/your-username/lumina-quest/blob/main/CODE_OF_CONDUCT.md) before submitting pull requests. For bug reports or feature suggestions, open an issue and tag @GeorgeAdamu for triage."
+  "text": "# Cloud-Native Platform Automation Framework  \nA toolset for streamlining infrastructure provisioning and resource management across AWS environments. Built to reduce repetitive tasks and improve deployment predictability for cloud-native applications.  \n\n## Deployment  \nDeployments leverage GitHub Actions for CI/CD pipelines, ensuring infrastructure changes are version-controlled and auditable. All AWS resources are provisioned via Terraform, with automated testing to validate cost estimates before execution. This approach reduced manual errors by 60% in early adoption phases.  \n\n## Badges  \n[![GitHub Actions Status](https://github.com/username/repo/actions/workflows/main.yml/badge.svg)](https://github.com/username/repo/actions)  \n[![Terraform](https://img.shields.io/terraform/valid.svg)](https://www.terraform.io)  \n[![AWS](https://img.shields.io/badge/AWS-Verified-green.svg)](https://aws.amazon.com)  \n\n## Tech Stack  \n- **Terraform**: Central to infrastructure-as-code practices, enabling repeatable AWS resource creation.  \n- **AWS**: Core for compute, storage, and networking—optimized for cost efficiency using reserved instances and spot fleets.  \n- **Docker**: Used for packaging application containers, ensuring consistency across environments.  \n- **Kubernetes**: Orchestration layer for containerized workloads, with automated scaling rules.  \n- **PostgreSQL**: Minimal use for internal metrics tracking, with automated backups configured via AWS RDS.  \n- **REST API**: Simple endpoints for triggering deployment workflows, documented via Swagger.  \n\n## Architecture / Design  \nThe framework uses modular Terraform modules for AWS services, with a central state file managed via AWS S3. Kubernetes manifests are generated dynamically based on resource definitions, reducing configuration drift. Cost optimization is baked in via Terraform's cost estimation plugins and AWS Cost Explorer integrations.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/username/cloud-native-framework.git`  \n2. Set up AWS credentials via environment variables or AWS CLI.  \n3. Install Terraform and Docker, then run `./setup.sh` to initialize resources.  \n4. Verify deployments using the provided CLI tools.  \n\n## Usage / Examples  \n```bash\n# Deploy a microservice with auto-scaling  \n./deploy.sh --service microservice --scale 8  \n\n# Generate cost report for current month  \n./report.sh --format pdf --output costs_2023-10.pdf  \n```  \nThe framework handles resource tagging, security group rules, and lifecycle policies automatically, ensuring compliance with internal standards.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details. Contributions welcome—especially for expanding AWS integration and cost analytics features."
 }

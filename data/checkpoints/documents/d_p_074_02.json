@@ -1,28 +1,25 @@
 {
   "doc_id": "d_p_074_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_074",
   "hyperparams": {
-    "recommender_role": "skip-level",
-    "recommender_closeness": "brief",
-    "company_type": "academic",
-    "company_size": "large (500+)"
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "Python": 1,
-    "Go": 1,
-    "REST API design": 1,
-    "Microservices architecture": 1,
-    "PostgreSQL": 1,
+    "AWS": 5,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 3,
+    "GitHub Actions": 1,
+    "Go": 5,
+    "Load balancing": 3,
+    "Microservices architecture": 5,
     "MongoDB": 1,
-    "React": 1,
-    "TypeScript": 1,
-    "Docker": 1,
-    "Kubernetes": 1,
-    "AWS": 1,
-    "CI/CD pipelines": 1,
-    "Linux administration": 1,
-    "Terraform": 1
+    "PostgreSQL": 5,
+    "Python": 5,
+    "REST API design": 5,
+    "Terraform": 3
   },
-  "text": "Dr. Elena Marquez  \nDepartment of Cybersecurity & Information Systems  \nUniversity of Technological Advancement  \nelena.marquez@uta.edu  \n\nDaria Ionescu’s contributions to SecuraTech Solutions have been defined by her ability to merge technical precision with strategic foresight. As a Full-Stack Developer in cybersecurity, she has consistently delivered solutions that balance innovation with rigorous security protocols. Her work on encryption protocol optimization and real-time threat detection systems has strengthened the company’s defenses against emerging vulnerabilities. Colleagues frequently note her meticulous approach to system audits, which have preemptively identified risks in critical infrastructure projects.  \n\nBeyond technical excellence, Daria excels in translating complex security frameworks into actionable insights. During a high-stakes incident response exercise, she led a cross-functional team to isolate and neutralize a zero-day attack, demonstrating both her analytical depth and calm under pressure. Her ability to distill technical jargon into clear, accessible guidance has made her a trusted collaborator for both engineering teams and executive stakeholders.  \n\nHer impact extends to fostering a culture of continuous learning. Daria regularly mentors junior developers, emphasizing the importance of ethical hacking practices and proactive risk mitigation. Her dedication to refining processes—such as streamlining automated monitoring tools—has enhanced team efficiency without compromising security standards.  \n\nDaria’s blend of technical rigor, communication clarity, and collaborative leadership makes her an exceptional candidate. She brings a rare combination of curiosity, ethical precision, and the ability to turn abstract security principles into tangible, real-world protection. I strongly recommend her for any role requiring both technical mastery and strategic vision."
+  "text": "# RealTimeFraudDetect  \nA real-time fraud detection system built for high-throughput financial transaction analysis, leveraging machine learning models and scalable cloud infrastructure to identify anomalous behavior with sub-second latency.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies:  \n```bash  \ngo mod tidy  \npip install -r requirements.txt  \n```  \nSet environment variables for AWS credentials and cloud storage endpoints. Run the service with:  \n```bash  \ngo run main.go  \n```  \nEnsure all microservices are aligned via REST APIs, with PostgreSQL as the primary data store for transaction logs.  \n\n## Tech Stack  \n- **Language**: Go (core logic), Python (ML pipelines)  \n- **Database**: PostgreSQL (transaction metadata), Redis (rate limiting)  \n- **Cloud**: AWS (Lambda, DynamoDB, S3) for event sourcing and alert storage  \n- **Infrastructure**: Terraform for IaC, ELB for load balancing  \n- **CI/CD**: Custom scripts for testing and deployment, optimized for cost and speed  \n- **ML**: Scikit-learn and PyTorch models integrated with real-time data streams  \n\n## Usage / Examples  \nSend a POST request to `/api/v1/transaction` with JSON payload:  \n```json  \n{  \n  \"amount\": 1500,  \n  \"user_id\": \"U12345\",  \n  \"location\": \"US-NY\"  \n}  \n```  \nResponse includes a fraud score and alert status. The system processes 100k+ transactions/sec, with 99.95% accuracy in production.  \n\n## Badges  \n[![Production-Ready](https://badgen.net/badge/Status/Production-Ready/green)](https://example.com)  \n[![Maintained](https://badgen.net/badge/Maintained/Yes/orange)](https://example.com)  \n\n## Architecture / Design  \nThe system decouples fraud detection from transaction processing, using a microservices architecture. Go services handle real-time anomaly detection via gRPC, while Python workers process historical data for model retraining. AWS Lambda scales dynamically for surge events, and Redis caches frequent queries. Load balancers distribute traffic across 10+ instances, with Terraform managing autoscaling policies. Cloud cost optimization prioritizes spot instances for non-critical workloads.  \n\n## Contributing  \nCollaborate on improving model precision or optimizing pipeline throughput. Ideal for engineers with experience in fintech systems, distributed architectures, and ML integration. Start with unit tests for core logic or enhancements to the alerting workflow.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

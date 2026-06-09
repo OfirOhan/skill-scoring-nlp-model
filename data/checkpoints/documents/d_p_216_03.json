@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_216_03",
+  "type": "project_readme",
+  "persona_id": "p_216",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "Swift": 1,
+    "Kotlin": 1,
+    "React Native": 1,
+    "Flutter": 1,
+    "iOS development": 1,
+    "Mobile CI/CD": 1,
+    "JavaScript": 1,
+    "React": 1,
+    "Web accessibility": 1,
+    "Webpack/Vite": 1,
+    "Responsive design": 1
+  },
+  "text": "# BudgetBot Pro  \nAI-powered personal budgeting app with machine learning-driven spending insights, automated categorization, and real-time financial health tracking for individuals and small businesses.  \n\n---\n\n## Contributing  \nWe welcome contributions! Focus on data analysis pipelines, UI/UX refinements, or ML model optimization. All PRs must include unit tests and adhere to our [code quality standards](CODE_QUALITY.md). For API integrations, ensure compliance with financial data privacy protocols.  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/your-username/budgetbot-pro.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Set environment variables for API keys and database credentials.  \n4. Run migrations: `python manage.py migrate`  \n5. Start the dev server: `python manage.py runserver`  \n\n---\n\n## Usage / Examples  \n- **Automated Categorization**: Input a transaction like *\"Grocery shopping at Whole Foods\"* and receive a 92% accurate category assignment (food/dining).  \n- **Spending Insights**: View weekly breakdowns of discretionary vs. essential spending with 15% precision improvement over baseline models.  \n- **Goal Tracking**: Set a 6-month savings target and receive daily nudges with predictive success probability metrics.  \n\n---\n\n## Tech Stack  \n- **Backend**: Python 3.10 with Django REST framework  \n- **ML**: Scikit-learn for anomaly detection, TensorFlow Lite for on-device inference  \n- **Database**: PostgreSQL with JSONB for flexible transaction metadata  \n- **Cloud**: AWS Lambda for async processing, S3 for user data storage  \n\n---\n\n## Architecture / Design  \nMicroservices architecture with a central API gateway. The ML pipeline processes raw transaction data through a PyTorch-based model, outputting categorized insights. Real-time updates use WebSockets with Redis pub/sub for low-latency syncing. Security layers include AES-256 encryption for sensitive data and rate limiting for API endpoints.  \n\n---\n\n## License  \nMIT License – see the LICENSE file for details.  \n\n---\n\n## Badges  \n[![Accuracy](https://img.shields.io/badge/accuracy-92%25-green)]  \n[![Security](https://img.shields.io/badge/security-AES-256-blue)]  \n[![Performance](https://img.shields.io/badge/performance-50%25-faster-yellow)]"
+}

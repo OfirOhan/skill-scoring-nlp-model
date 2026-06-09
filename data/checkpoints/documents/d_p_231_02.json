@@ -3,26 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_231",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "plain"
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
     "Agile/Scrum": 3,
-    "CI/CD pipelines": 4,
-    "Cloud cost optimization": 3,
-    "Code review": 3,
-    "Cross-team collaboration": 3,
-    "GitHub Actions": 4,
-    "Kubernetes": 2,
-    "Mentoring": 3,
-    "Monitoring & alerting": 2,
-    "Project management": 3,
-    "Stakeholder communication": 3,
-    "System design": 3,
-    "Team leadership": 3,
-    "Technical writing": 2,
-    "Terraform": 4
+    "Competitive analysis": 3,
+    "Data visualization (Matplotlib/Plotly)": 2,
+    "Hypothesis testing": 1,
+    "Product management": 3,
+    "Roadmap planning": 2,
+    "SQL analytics": 3,
+    "Stakeholder management": 3,
+    "Tableau/Power BI": 2,
+    "UX research": 3,
+    "Web accessibility (WCAG)": 2
   },
-  "text": "# NexaCheckout Serverless Framework  \nA high-throughput checkout system for e-commerce, built with serverless architecture to handle payment gateways, fraud detection, and order fulfillment at scale.  \n\n## Deployment  \nDeployed via AWS Lambda with API Gateway, using Terraform for infrastructure-as-code. Staging and production environments are managed through CI/CD pipelines, with automated testing and rollback mechanisms.  \n\n## Badges  \n[![GitHub](https://github.com/your-username/your-repo/actions/workflows/build.yml/badge.svg)](https://github.com/your-username/your-repo/actions/workflows/build.yml)  \n[![Docker](https://img.shields.io/docker/pulls/your-dockerhub/your-image)](https://hub.docker.com/r/your-dockerhub/your-image)  \n[![License](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/MIT)  \n\n## Tech Stack  \n- **Serverless**: AWS Lambda, API Gateway, DynamoDB  \n- **Payment**: Stripe, PayPal, Braintree (adapter pattern for extensibility)  \n- **Fraud Detection**: Stripe Radar, custom rule engine (ML models hosted on S3)  \n- **Monitoring**: CloudWatch, custom dashboards for latency and error rates  \n- **CI/CD**: GitHub Actions for automated testing and deployment  \n\n## Architecture / Design  \nThe system decouples payment processing, fraud checks, and order fulfillment into separate Lambda functions. A central event bus routes transactions through a state machine, ensuring idempotency and audit trails. Fraud detection runs in parallel, with results stored in a time-series database for real-time analytics.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/your-username/your-repo.git`  \n2. Set up AWS credentials via `aws configure`  \n3. Install dependencies: `npm install`  \n4. Deploy with Serverless Framework: `sls deploy --stage staging`  \n\n## Usage / Examples  \n```bash  \n# Process payment  \ncurl -X POST https://api.staging.yourdomain.com/checkout \\\n  -H \"Authorization: Bearer <token>\" \\\n  -d '{\"amount\": 100, \"currency\": \"USD\", \"paymentMethod\": \"stripe\"}'  \n\n# Check fraud status  \ncurl -X GET https://api.staging.yourdomain.com/fraud-check/{transactionId}  \n```  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n*Built with Agile/Scrum practices, cross-team collaboration, and cloud cost optimization. CI/CD pipelines reduce deployment friction by 40%, while Terraform ensures consistent infrastructure across regions.*"
+  "text": "# CyberGuardian: Automated Incident Response System  \nA decentralized orchestration platform for real-time threat mitigation, leveraging security frameworks and orchestration tools to automate incident response workflows. Designed for rapid detection, containment, and forensic analysis in complex enterprise environments.  \n\n## Tech Stack  \n- **Orchestration**: Ansible (playbook automation), Terraform (infrastructure as code)  \n- **Security Frameworks**: MITRE ATT&CK, STIX/TAXII, SIEM integration (Splunk/ELK)  \n- **Language**: Python (core logic), Go (performance-critical components)  \n- **Database**: PostgreSQL (event logging), Redis (in-memory state tracking)  \n- **Networking**: Zero Trust Architecture (ZTA) policies, TLS 1.3  \n- **Monitoring**: Prometheus/Grafana (incident metrics), ELK stack (log aggregation)  \n\n## Architecture / Design  \nThe system is built as a microservices-based architecture with event-driven workflows. Core components include:  \n- **Detection Engine**: Aggregates signals from SIEM tools and endpoint sensors, using MITRE ATT&CK tactics for threat classification.  \n- **Orchestration Layer**: Ansible-driven playbooks execute containment actions (e.g., process killing, network isolation) with rollback capabilities.  \n- **Response Manager**: Prioritizes incidents based on risk scores derived from historical attack patterns (SQL analytics via PostgreSQL).  \n- **Forensic Module**: Logs all actions to a tamper-proof chain, compatible with SOAR platforms.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/your-organization/cyber-guardian.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure SIEM integrations in `config/attack_patterns.yaml`  \n4. Initialize the database: `python db/init.py`  \n5. Run the orchestration service: `go run main.go`  \n\n## Usage / Examples  \n```bash\n# Trigger automated response for a detected ransomware attack  \ncyber-guardian --incident-id 42 --priority high  \n```  \nExample playbook: Isolates compromised hosts, disables malicious services, and generates a forensic report in 90 seconds.  \n\n## Badges  \n[![Build Status](https://github.com/your-organization/cyber-guardian/actions/workflows/build.yml/badge.svg)](https://github.com/your-organization/cyber-guardian/actions/workflows/build.yml)  \n[![Security Coverage](https://snyk.io/test/github/your-organization/cyber-guardian/badge.svg)](https://snyk.io/test/github/your-organization/cyber-guardian)  \n\n## Contributing  \nWe welcome contributions via GitHub Issues and Pull Requests. For security-related patches, use the `security` label. All contributors must agree to the [code of conduct](CODE_OF_CONDUCT.md).  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
 }

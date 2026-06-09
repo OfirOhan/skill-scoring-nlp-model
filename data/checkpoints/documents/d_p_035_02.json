@@ -3,25 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_035",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "medium (5-15)",
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "A/B testing": 1,
-    "Data visualization (Matplotlib/Plotly)": 3,
-    "Feature engineering": 4,
-    "MLOps (MLflow/W&B)": 3,
-    "Model deployment": 4,
-    "NumPy": 4,
-    "Pandas": 4,
-    "PyTorch": 2,
-    "SQL analytics": 3,
-    "Statistical modeling": 4,
-    "Tableau/Power BI": 3,
-    "TensorFlow": 2,
-    "Time series analysis": 3,
-    "scikit-learn": 4
+    "AWS": 3,
+    "CI/CD pipelines": 4,
+    "Cloud cost optimization": 3,
+    "Database optimization": 2,
+    "GCP": 3,
+    "Infrastructure as Code": 3,
+    "Kubernetes": 4,
+    "Linux administration": 1,
+    "Monitoring & alerting": 3,
+    "Network automation": 1,
+    "Python": 3,
+    "Terraform": 3
   },
-  "text": "# Supply Chain Optimization with Machine Learning  \nA production-grade solution for demand forecasting and inventory optimization leveraging advanced statistical modeling and scalable ML pipelines. Deployed successfully in a Fortune 500 logistics ecosystem, achieving a 15% reduction in operational costs through predictive analytics and real-time adjustment mechanisms.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/commit-activity/y/username/repo)](https://github.com/username/repo)  \n[![PyPI](https://img.shields.io/pypi/v/supplychain-ml)](https://pypi.org/project/supplychain-ml/)  \n[![License](https://img.shields.io/github/license/username/repo)](LICENSE)  \n\n## Getting Started / Installation  \n```bash  \npip install -r requirements.txt  \npython -m setup install  \n```  \nEnsure Python 3.9+ is installed. For GPU acceleration, install PyTorch via `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118`. Note that PyTorch is used exclusively for prototyping; production deployment relies on distributed NumPy arrays and scikit-learn's parallel processing.  \n\n## Usage / Examples  \n```python  \nfrom supplychain_ml.pipeline import ForecastingPipeline  \npipeline = ForecastingPipeline(  \n    historical_data='path/to/sales.parquet',  \n    seasonality_window=365,  \n    feature_engineering=True  \n)  \npipeline.fit()  \npipeline.predict()  \n```  \nThis example demonstrates a full end-to-end workflow, including time series decomposition, lag feature generation, and ensemble model stacking. Visualization outputs are automatically generated via Plotly for interactive demand trend analysis.  \n\n## Configuration  \nConfiguration is managed via `config.yaml`, specifying:  \n- Database credentials (PostgreSQL/MySQL)  \n- Feature engineering parameters (e.g., `rolling_window_size=90`)  \n- Model hyperparameters (scikit-learn's `RandomizedSearchCV` settings)  \n- MLOps integration (MLflow tracking URI, Weights & Biases project name)  \n\n## Deployment  \nContainerized using Docker with GPU support. Deploy via Kubernetes with autoscaling enabled for peak demand periods. Model serving is handled by Flask API endpoints, with latency under 200ms for 99th percentile requests.  \n\n## Architecture / Design  \nThe system decouples data preprocessing, model training, and inference layers. Key components:  \n- **Data Layer**: Apache Arrow for efficient schema-on-read processing  \n- **Model Layer**: Ensemble of XGBoost, SARIMA, and LSTM for heterogeneous demand patterns  \n- **Feedback Loop**: Real-time anomaly detection using Z-score thresholds and SQL-based alerting  \n\n## Tech Stack / Built With  \n- **Languages**: Python (3.9+), SQL (PostgreSQL)  \n- **Libraries**: scikit-learn, NumPy, Pandas, Plotly, MLflow  \n- **Tools**: Docker, Kubernetes, Weights & Biases (for experiment tracking)  \n- **Data Formats**: Parquet, JSON, SQL tables  \n\n## Contributing  \nFork the repository and submit pull requests via GitHub. For production-grade contributions, ensure all models are wrapped in `@lru_cache`-decorated functions and include unit tests in `tests/`. All visualizations must adhere to Tableau's data governance policies."
+  "text": "# FraudGuard  \nFraudGuard: Real-time fraud detection system leveraging Apache Kafka and machine learning models for scalable, low-latency anomaly detection in fintech transactions  \n\n[![GitHub](https://badges.bar/gh/)](https://github.com/kravchenko-boris/FraudGuard)  \n[![Build Status](https://badges.bar/build/)](https://github.com/kravchenko-boris/FraudGuard/actions)  \n\n## Getting Started / Installation  \nClone the repository:  \n```bash  \ngit clone https://github.com/kravchenko-boris/FraudGuard.git  \ncd FraudGuard  \n```\nInstall dependencies:  \n```bash  \npip install -r requirements.txt  \ndocker compose up -d  \n```  \nSet environment variables for Kafka and ML model endpoints before running.  \n\n## Tech Stack  \n- **Data Pipeline**: Apache Kafka (partitioned topics, consumer groups)  \n- **ML Frameworks**: TensorFlow Lite (edge inference), PyTorch (batch processing)  \n- **Cloud**: AWS Lambda (event-driven triggers), GCP BigQuery (audit logging)  \n- **Infrastructure**: Terraform (multi-region deployment), Kubernetes (horizontal scaling)  \n- **Monitoring**: Prometheus + Grafana (latency metrics), Datadog (error tracking)  \n\n## Architecture / Design  \nFraudGuard decouples data ingestion, feature extraction, and decision-making layers. Kafka brokers handle high-throughput transaction streams, while a Kafka Streams processor applies real-time feature engineering. ML models run in separate pods, with results routed to alerting systems via AWS SQS. Horizontal scaling is managed via Kubernetes HPA, ensuring sub-100ms latency under 10k TPS.  \n\n## Usage / Examples  \n```python  \nfrom fraudguard.pipeline import TransactionProcessor  \nprocessor = TransactionProcessor(kafka_bootstrap_servers=\"localhost:9092\")  \ntransaction = {\"amount\": 5000, \"location\": \"US-NY\", \"user_id\": \"12345\"}  \nresult = processor.analyze(transaction)  \nprint(\"Fraud score:\", result[\"score\"])  \n```  \nExample use case: Monitor credit card transactions for geolocation mismatches and velocity spikes.  \n\n## Testing  \nUnit tests validate Kafka message serialization/deserialization (pytest). Integration tests simulate 100k+ concurrent transactions using Locust, benchmarking system throughput and latency. CI/CD pipelines enforce code quality via pre-commit hooks and GitHub Actions.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

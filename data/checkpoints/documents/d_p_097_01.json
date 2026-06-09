@@ -4,22 +4,23 @@
   "persona_id": "p_097",
   "hyperparams": {
     "project_scale": "hobby",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "moderate"
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Design systems": 3,
-    "HTML/CSS": 3,
-    "JavaScript": 3,
-    "Next.js": 3,
-    "REST API design": 3,
-    "React": 4,
-    "Responsive design": 3,
-    "State management (Redux/Zustand)": 3,
-    "TypeScript": 3,
-    "Web accessibility (WCAG)": 3,
-    "Web performance optimization": 3,
-    "Webpack/Vite": 3
+    "Apache Airflow": 1,
+    "Data modeling": 1,
+    "Data visualization (Matplotlib/Plotly)": 4,
+    "Exploratory data analysis": 3,
+    "Feature engineering": 3,
+    "Java": 1,
+    "NumPy": 4,
+    "Pandas": 4,
+    "Python": 3,
+    "REST API design": 1,
+    "SQL analytics": 4,
+    "Tableau/Power BI": 1,
+    "scikit-learn": 4
   },
-  "text": "# Financial Dashboard Visualizer  \nA React-based dashboard for visualizing real-time financial data with interactive charts, drill-down analytics, and customizable widgets. Built to support 5+ concurrent users with sub-200ms latency for critical metrics. Designed for fintech teams requiring rapid insights from high-frequency market data streams.  \n\n## Deployment  \nLive at [https://financial-dashboard.vercel.app](https://financial-dashboard.vercel.app) with automated CI/CD via GitHub Actions. Deployed on Vercel with serverless functions for data fetching and edge caching. Metrics dashboard shows 99.95% uptime over the last 30 days.  \n\n## Badges  \n[![Build Status](https://github.com/yourusername/financial-dashboard/actions/workflows/build.yml/badge.svg)](https://github.com/yourusername/financial-dashboard/actions/workflows/build.yml)  \n[![Code Coverage](https://img.shields.io/coveralls/yourusername/financial-dashboard)](https://coveralls.io/github/yourusername/financial-dashboard)  \n[![Dependencies](https://img.shields.io/david/yourusername/financial-dashboard)](https://david-dm.org/yourusername/financial-dashboard)  \n\n## Tech Stack  \n- **React 18**: Core UI framework with concurrent mode for smooth real-time updates  \n- **TypeScript**: Enforced type safety for API contracts and state management  \n- **Redux Toolkit**: Centralized state for cross-component data sharing (12k+ lines of state logic)  \n- **Vite**: Development server with 3x faster cold starts compared to Webpack  \n- **Chart.js**: Customizable charting library with accessibility labels for WCAG 2.1 AA compliance  \n- **Tailwind CSS**: Utility-first styling with 15+ custom themes for dark/light modes  \n- **REST API**: GraphQL layer for data aggregation (50+ endpoints)  \n\n## Architecture / Design  \nThe dashboard uses a microfrontend architecture with 3 distinct zones:  \n1. **Data Layer**: WebSocket listeners for 30+ financial data sources (tickers, crypto, forex)  \n2. **UI Layer**: React components organized into 12+ modular widgets with drag-and-drop reordering  \n3. **Analytics Layer**: Redux slices for 15+ metrics (e.g., volatility scores, ROI trends)  \n\nResponsive design uses CSS Grid for breakpoints (mobile: 3 columns, desktop: 6 columns). Performance optimizations include lazy loading for non-critical charts and code splitting via React.lazy.  \n\n## Getting Started / Installation  \n```bash\nnpm install\nnpm run dev\n```  \nRequires Node.js 18+ and Docker for local API mocking. Environment variables in `.env.local` define API endpoints and authentication tokens.  \n\n## Usage / Examples  \n- **Real-time Chart**: Drag the \"Price Trends\" widget to view 5-minute candlestick data  \n- **Drill-down Analytics**: Click a chart point to open a modal with historical volatility metrics  \n- **Custom Filters**: Use the sidebar to toggle between USD/EUR/GBP currency views  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# Predictive Maintenance for Industrial Equipment  \n\nA collaborative effort to predict equipment failures using sensor data from industrial machinery. The project leverages historical sensor readings to identify patterns indicative of potential breakdowns, enabling proactive maintenance scheduling. Built with a focus on reliability and scalability, this solution has been deployed in production environments to reduce unplanned downtime.  \n\n## Deployment  \nThe model runs as a standalone service on AWS Lambda, triggered by scheduled data ingestion from IoT devices. Monitoring is handled via CloudWatch for latency and accuracy tracking. All pipelines are versioned, ensuring reproducibility across teams.  \n\n## Badges  \n[![GitHub](https://badgen.net/badge/github/michaeltran/purple)](https://github.com/michaeltran)  \n[![PyPI](https://badgen.net/badge/pypi/1.0.0/green)](https://pypi.org/project/predictive-maintenance/)  \n[![Production](https://badgen.net/badge/production/active/yellow)](https://status.predictive-maintenance.io)  \n\n## Tech Stack  \n- Python (3.9)  \n- Pandas, NumPy for data preprocessing  \n- scikit-learn for model training  \n- SQL (PostgreSQL) for querying historical logs  \n- Matplotlib/Plotly for visualizing failure patterns  \n- Docker for containerized deployments  \n\n## Architecture / Design  \nThe system ingests time-series sensor data, which is cleaned and normalized using Pandas. Feature engineering focuses on extracting statistical metrics like mean, standard deviation, and peak values. A random forest model is trained on labeled failure data, with hyperparameters tuned via cross-validation. Outputs are visualized in real-time dashboards to highlight risk zones.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/michaeltran/predictive-maintenance.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Run the preprocessing script: `python preprocess.py --input sensors.csv`  \n4. Train the model: `python train_model.py --data processed_data.csv`  \n\n## Usage / Examples  \nTo predict a failure, pass sensor readings into the trained model:  \n```python  \nfrom model import Predictor  \npredictor = Predictor(\"model.pkl\")  \nprediction = predictor.predict([12.5, 34.2, 89.7])  \nprint(\"Failure risk:\", prediction)  \n```  \nVisualizations show how specific sensor spikes correlate with past failures, guiding maintenance prioritization.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details."
 }

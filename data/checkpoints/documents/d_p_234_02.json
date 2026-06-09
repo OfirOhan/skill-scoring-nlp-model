@@ -5,18 +5,23 @@
   "hyperparams": {
     "project_scale": "academic",
     "project_team_size": "large (15+)",
-    "jargon_density": "moderate"
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "CI/CD pipelines": 3,
-    "Cloud cost optimization": 1,
-    "GitHub Actions": 3,
-    "Go": 1,
-    "Microservices architecture": 5,
-    "PostgreSQL": 4,
-    "Python": 1,
-    "Monitoring & alerting": 3,
-    "REST API design": 1
+    "AWS": 1,
+    "Apache Kafka": 1,
+    "CI/CD pipelines": 1,
+    "Computer vision": 4,
+    "Docker": 2,
+    "Hugging Face Transformers": 1,
+    "Kubernetes": 1,
+    "MLOps": 1,
+    "Model deployment": 2,
+    "NLP": 1,
+    "PyTorch": 3,
+    "REST API design": 1,
+    "TensorFlow": 3,
+    "scikit-learn": 1
   },
-  "text": "# Real-Time Inventory Management System  \nA scalable solution for e-commerce platforms leveraging Redis and WebSocket to enable live inventory updates across distributed systems. Designed to reduce latency in stock synchronization while maintaining data consistency across microservices.  \n\n## Acknowledgments  \nThis project was built through collaborative effort with 15+ contributors, including database architects, real-time communication specialists, and system engineers. Special thanks to the PostgreSQL team for foundational optimizations and to the Redis community for enabling high-throughput data pipelines.  \n\n## Getting Started / Installation  \nEnsure Redis and WebSocket libraries are installed. For PostgreSQL, use the provided `docker-compose.yml` to spin up a production-ready instance. Run `npm install` to fetch dependencies, then start the service with `npm run dev`. The system auto-scales Redis connections based on load metrics.  \n\n## Usage / Examples  \nTo subscribe to inventory updates:  \n```javascript  \nconst socket = new WebSocket('wss://inventory.example.com');  \nsocket.onmessage = (event) => console.log('Stock change:', event.data);  \n```  \nFor manual updates:  \n```bash  \nredis-cli SET inventory:12345 '{\"quantity\": 42, \"last_updated\": \"2023-10-05T14:30:00Z\"}'  \n```  \nThe system ensures WebSocket clients receive deltas within 500ms of backend changes.  \n\n## Tech Stack  \n- **Database**: PostgreSQL (custom sharding for global inventory tracking, reduced query latency by 35%)  \n- **Caching**: Redis (pub/sub for real-time sync, 98% read efficiency)  \n- **Communication**: WebSocket (long-polling fallback for edge networks)  \n- **CI/CD**: GitHub Actions (automated testing, 92% test coverage)  \n- **Monitoring**: Prometheus + Grafana (alert thresholds for stock anomalies)  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![Build Status](https://github.com/actions-badge)](https://github.com/actions-badge) [![Test Coverage](https://github.com/coverage-badge)](https://github.com/coverage-badge)  \n\n## Contributing  \nPull requests welcome! Focus on improving Redis connection pooling or refining PostgreSQL indexing strategies. All contributions undergo automated testing and monitoring validation before merging."
+  "text": "# IndustrialInspectionCV  \nA computer vision system for real-time industrial quality inspection using YOLOv8. Trained on 12,000+ labeled images, this model detects surface defects in manufacturing lines with 94.2% accuracy.  \n\n## API Reference  \n```python  \nfrom industrial_inspection import YOLOv8Detector  \n\ndetector = YOLOv8Detector(model_version=\"v8n\", confidence_threshold=0.5)  \nresults = detector.detect_defects(image_path=\"assembly_line.jpg\")  \n```  \n**Parameters**:  \n- `model_version`: \"v8n\" (nano), \"v8s\" (small), or \"v8\" (default)  \n- `confidence_threshold`: Float between 0.3-0.7 for defect likelihood  \n- `image_path`: Path to RGB image (JPEG/PNG)  \n\n## Usage / Examples  \n1. **Defect detection**:  \n```python  \nresults = detector.detect_defects(\"defective_part.jpg\")  \nprint(f\"Detected {len(results)} defects\")  \n```  \n2. **Training pipeline**:  \n```bash  \npython train.py --data custom_dataset.yaml --model yolo8n.pt --epochs 50  \n```  \n3. **Evaluation**:  \n```python  \nmetrics = detector.evaluate(\"test_images/\")  \nprint(f\"mAP: {metrics['map']:.2f} | F1: {metrics['f1']:.2f}\")  \n```  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/industrial-inspection/IndustrialInspectionCV.git  \npip install -r requirements.txt  \npython setup.py install  \n```  \nDownload pre-trained models via `models/download.py` or use Hugging Face model hub.  \n\n## Tech Stack  \n- **Frameworks**: PyTorch 2.0, TensorFlow 2.12 (for data augmentation)  \n- **Libraries**: OpenCV, NumPy, PIL  \n- **Tools**: Docker (optional for containerization)  \n\n## Architecture / Design  \nThe system uses a modular pipeline:  \n1. **Data Ingestion**: Camera feeds or image directories  \n2. **Preprocessing**: Resize (640x640), normalization, and augmentation  \n3. **Inference Engine**: YOLOv8 model with ONNX optimizations  \n4. **Result Aggregation**: Bounding box coordinates and defect labels  \n5. **Feedback Loop**: Manual labeling for model retraining  \n\n## License  \nMIT License  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/license/industrial-inspection/IndustrialInspectionCV)](https://github.com/industrial-inspection/IndustrialInspectionCV)  \n[![PyPI](https://img.shields.io/pypi/v/industrial-inspection)](https://pypi.org/project/industrial-inspection)  \n[![Model Version](https://img.shields.io/badge/model-v8n-blue)](https://github.com/ultralytics/yolov8)"
 }

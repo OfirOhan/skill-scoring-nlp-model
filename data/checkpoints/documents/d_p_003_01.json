@@ -3,24 +3,19 @@
   "type": "project_readme",
   "persona_id": "p_003",
   "hyperparams": {
-    "project_scale": "academic",
+    "project_scale": "team-internal",
     "project_team_size": "medium (5-15)",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Ansible": 3,
-    "CI/CD pipelines": 3,
-    "Chaos engineering": 2,
-    "Cloud cost optimization": 3,
-    "Docker": 3,
-    "Infrastructure as Code": 3,
-    "Kubernetes": 3,
-    "Linux administration": 3,
-    "Monitoring & alerting": 3,
+    "C/C++ (embedded)": 4,
+    "Firmware development": 4,
+    "Go": 2,
+    "IoT protocols (MQTT/CoAP)": 4,
+    "Network automation": 1,
     "Python": 2,
-    "Shell scripting": 2,
-    "Terraform": 3
+    "REST API design": 3,
+    "RTOS": 5
   },
-  "text": "# NebulaOps: Scalable Platform for Microservices  \nA toolkit for deploying resilient, observability-first microservices at scale, optimized for startup workflows. Built with infrastructure-as-code and automation at its core.  \n\n## Badges  \n[![GitHub stars](https://img.shields.io/github/stars/carmendelgado/nebulaops?style=social)](https://github.com/carmendelgado/nebulaops)  \n[![CI/CD](https://img.shields.io/github/actions/workflow/status/carmendelgado/nebulaops/ci.yml?branch=main)](https://github.com/carmendelgado/nebulaops/actions)  \n[![License](https://img.shields.io/github/license/carmendelgado/nebulaops)](https://github.com/carmendelgado/nebulaops/blob/main/LICENSE)  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/carmendelgado/nebulaops.git  \ncd nebulaops  \nterraform init && terraform apply -var-file=dev.vars  \n```  \nRequires AWS credentials configured via `aws configure` and Ansible 2.12+.  \n\n## Usage / Examples  \nDeploy a service with:  \n```bash  \nansible-playbook deploy.yml -e \"service_name=auth-service\"  \n```  \nMonitor via Prometheus + Grafana dashboards auto-provisioned in AWS EKS.  \nFor chaos testing, run:  \n```bash  \n./chaos.sh --target auth-service --duration 30s  \n```  \n\n## Architecture / Design  \n- **Service mesh**: Istio for traffic management and observability  \n- **Stateless design**: All services containerized via Docker, scaled via Kubernetes HPA  \n- **Observability**: Centralized logging with Fluent Bit + Loki, distributed tracing with Jaeger  \n- **Resilience**: Circuit breakers implemented at the API gateway layer  \n\n## Tech Stack / Built With  \n- **Cloud**: AWS EKS, S3, CloudFront, and Lambda for edge functions  \n- **Orchestration**: Terraform for IaC, Ansible for config management  \n- **Runtime**: Docker containers, Golang services, and Python-based utilities  \n- **Observability**: Prometheus, Grafana, Jaeger, and Fluent Bit  \n- **CI/CD**: GitHub Actions with Terraform Cloud for secure state management  \n\n## Roadmap / Future Work  \n- Integrate chaos engineering for production-grade resilience  \n- Add cost optimization layers for AWS resource utilization  \n- Expand multi-cloud support with Azure and GCP  \n- Implement fine-grained access controls for service mesh  \n\n## Acknowledgments  \n- AWS for scalable infrastructure and cost management tools  \n- Ansible and Terraform communities for robust IaC practices  \n- Prometheus and Jaeger teams for observability foundations  \n\n## Contributing  \nPRs welcome! Focus on improving automation, expanding cloud provider support, or refining chaos testing workflows. Ensure all changes include unit tests and CI/CD pipeline updates."
+  "text": "# SecureIoT-FinTech: Embedded Systems for Financial IoT Security  \nA production-grade embedded framework for securing financial IoT endpoints using hardened firmware, encrypted communication, and compliance-ready design. Developed for fintech use cases requiring real-time data integrity and regulatory alignment.  \n\n---\n\n## Badges  \n[![GitHub](https://img.shields.io/github/last-commit/lucas-martin/secureiot-fintech)](https://github.com/lucas-martin/secureiot-fintech)  \n[![CI/CD](https://img.shields.io/github/actions/workflow/ci-cd.yml)](https://github.com/lucas-martin/secureiot-fintech/actions)  \n[![Security](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/lucas-martin/secureiot-fintech/main/security-report.json)](https://github.com/lucas-martin/secureiot-fintech/security)  \n\n---\n\n## Tech Stack  \n- **RTOS**: FreeRTOS (kernel-level isolation, task prioritization)  \n- **Firmware**: C11 (ARM Cortex-M4, 32-bit optimized)  \n- **Security**: AES-256-GCM, TLS 1.3 (MBED TLS), HMAC-SHA256  \n- **Communication**: MQTT over TLS (QoS 1), CoAP/DTLS for low-power sensors  \n- **Dev Tools**: CMake, ARM GCC, Wireshark (packet inspection)  \n- **Scripting**: Python (CI/CD pipelines, key rotation scripts)  \n- **APIs**: RESTful endpoints for firmware OTA updates (Go-based microservices)  \n\n---\n\n## Architecture / Design  \nThe system operates in three layers:  \n1. **Firmware Layer**: Real-time encryption of sensor data streams, with watchdog timers and secure boot (signed binaries via RSA-2048).  \n2. **Secure Communication**: MQTT topics segmented by TLS-enabled brokers, with dynamic key rotation every 12 hours.  \n3. **Compliance Layer**: Audit logs stored in tamper-evident flash, with IEEE 802.1AR for device authentication.  \n\nRTOS scheduling ensures 10 µs latency for critical transactions, while CoAP/DTLS handles 500ms+ sleep cycles for battery-powered sensors.  \n\n---\n\n## Getting Started / Installation  \n```bash\ngit clone https://github.com/lucas-martin/secureiot-fintech.git  \ncd secureiot-fintech  \nmake setup  \n```\nInstall ARM toolchain and Python 3.9+ for script execution. Use `make flash` to deploy to STM32H743 microcontrollers.  \n\n---\n\n## Usage / Examples  \n- **MQTT Secure Publish**:  \n  ```c  \n  mqtt_publish(\"secure/device/123\", encrypted_payload, MQTT_QOS_1);  \n  ```  \n- **OTA Update**: Trigger via REST API `/ota/update` with signed payload.  \n\n---\n\n## Contributing  \nPull requests welcome for firmware optimizations, protocol enhancements, or compliance module additions. Follow [CONTRIBUTING.md](CONTRIBUTING.md) for code style and testing requirements.  \n\n---\n\n## License  \nMIT License (see [LICENSE](LICENSE) for details). Internal team use only; external contributions require prior approval."
 }

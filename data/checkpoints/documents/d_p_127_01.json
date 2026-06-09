@@ -1,0 +1,26 @@
+{
+  "doc_id": "d_p_127_01",
+  "type": "project_readme",
+  "persona_id": "p_127",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "GraphQL": 1,
+    "JavaScript": 5,
+    "Next.js": 4,
+    "Node.js": 2,
+    "Python": 1,
+    "REST API design": 2,
+    "React": 5,
+    "Responsive design": 4,
+    "State management (Redux/Zustand)": 4,
+    "TypeScript": 5,
+    "Web accessibility (WCAG)": 3,
+    "Web performance optimization": 4,
+    "Webpack/Vite": 3
+  },
+  "text": "# Healthcare Patient Management Platform  \nA React-based platform for managing patient records and appointments, optimized for scalability and accessibility in a production healthcare consulting project.  \n\n## Tech Stack  \n- **Frontend**: React 18, TypeScript 4.9, Next.js 13 (with server components)  \n- **State Management**: Zustand 4.5 (replacing Redux for simpler, granular state partitioning)  \n- **Styling**: Tailwind CSS 3.3 (with custom config for medical UI conventions)  \n- **Build Tools**: Vite 4.2 (for faster dev builds) + Webpack 5.7 (for legacy dependency tree shaking)  \n- **Accessibility**: WCAG 2.1 AA compliance (via semantic HTML + ARIA roles)  \n- **Performance**: Image optimization (next/image), lazy loading, and code-splitting  \n\n## Architecture / Design  \nBuilt as a single-page application with Next.js API routes for backend integration.  \n- **Responsive Design**: Tailwind’s utility-first approach enabled 30% faster layout rendering on mobile  \n- **State Management**: Zustand’s granular state partitioning reduced bundle size by 18% vs. Redux  \n- **Performance**: Vite’s dev server cut hot-reload latency by 40% compared to Webpack  \n- **Accessibility**: ARIA labels and focus traps implemented for all modal interactions (tested via axe-core)  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/your-username/healthcare-platform.git  \ncd healthcare-platform  \nnpm install  \nnpm run dev  \n```  \nEnsure Node.js 18+ is installed (via nvm or native installer)  \n\n## Usage / Examples  \n- **Patient Records**: Filter by condition or provider using Zustand’s state filters  \n- **Appointment Scheduling**: Drag-and-drop calendar (React DnD) with real-time sync  \n- **Responsive Views**: Mobile-first layout adapts to 100vh on small screens  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/license/your-username/healthcare-platform)](LICENSE)  \n[![Build Status](https://img.shields.io/github/actions/workflow/your-username/healthcare-platform/main.yml)](https://github.com/your-username/healthcare-platform/actions)  \n[![Coverage](https://img.shields.io/codecov/c/your-username/healthcare-platform)](https://codecov.io/your-username/healthcare-platform)  \n\n## Contributing  \nPRs welcome! Follow the [conventional commits](https://www.conventionalcommits.org/) format for changelog accuracy.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details"
+}

@@ -1,28 +1,21 @@
 {
   "doc_id": "d_p_098_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_098",
   "hyperparams": {
-    "recommender_role": "professor",
-    "recommender_closeness": "worked-daily",
-    "company_type": "startup",
-    "company_size": "small (<50)"
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 1,
-    "Agile/Scrum": 3,
-    "CI/CD pipelines": 1,
-    "Cross-team collaboration": 3,
-    "GitHub Actions": 1,
-    "Kubernetes": 1,
-    "Linux administration": 1,
-    "PostgreSQL": 1,
-    "Prometheus/Grafana": 1,
-    "Python": 2,
+    "A/B testing": 1,
+    "Apache Airflow": 2,
+    "Data warehousing": 1,
+    "MLOps (MLflow/W&B)": 4,
+    "Python": 3,
     "REST API design": 2,
-    "Stakeholder communication": 3,
-    "System design": 3,
-    "Technical writing": 3
+    "TensorFlow": 4,
+    "scikit-learn": 4
   },
-  "text": "Franco Moretti is a rare blend of technical rigor and collaborative insight, having thrived as a Tech Lead at NexaPay Solutions—a fintech startup navigating complex regulatory and technical challenges. His work centered on building scalable payment platforms, where he balanced innovation with operational precision.  \n\nTechnical abilities highlight his comfort with Python for backend logic and REST API design, which he applied to streamline integration between NexaPay’s payment gateways and third-party services. His system design approach prioritized simplicity and maintainability, as seen in a recent project where he restructured a monolithic module into microservices, reducing deployment friction by 40% without compromising security.  \n\nSoft skills shine in his Agile/Scrum practice, where he adapted sprint planning to accommodate shifting regulatory requirements while keeping the team aligned. His cross-team collaboration extended beyond coding; he mediated between dev and compliance teams to resolve conflicting priorities, ensuring deadlines met without sacrificing standards. Stakeholder communication was equally deliberate—he crafted technical documentation that demystified complex workflows for non-technical executives, fostering trust and clarity.  \n\nFranco’s impact on the team was both practical and cultural. He mentored junior engineers through code reviews, emphasizing readability over shortcuts, and championed technical writing as a tool for knowledge sharing. His work ethic is defined by persistence: once, he spent three nights debugging a rare edge case in transaction validation, ultimately preventing a potential $500K liability.  \n\nFranco’s ability to merge technical excellence with empathetic leadership makes him a valuable asset. I endorse his candidacy without reservation."
+  "text": "# Customer Churn Prediction Model  \nA survival analysis-driven model to forecast SaaS customer attrition, achieving 89% accuracy and 82% F1 score in production. Built with focus on interpretability and operational integration.  \n\n## Configuration  \n**Environment**: Python 3.9+ with Conda environment.  \n**Dependencies**: `pandas`, `scikit-learn`, `tensorflow`, `mlflow`, `airflow`.  \n**Data**: Preprocessed CSVs (customer behavior logs, subscription metadata).  \n**Model**: Custom survival analysis pipeline with hyperparameter tuning.  \n\n## Getting Started / Installation  \n1. Clone repository: `git clone https://github.com/yourusername/churn-prediction.git`  \n2. Create Conda environment:  \n   ```bash  \n   conda create --name churn_env python=3.9  \n   conda activate churn_env  \n   pip install -r requirements.txt  \n   ```  \n3. Download and preprocess data (scripts in `data/processing`).  \n\n## Usage / Examples  \nRun the full pipeline:  \n```bash  \npython main.py --config config/prod.yaml  \n```  \nEvaluate model performance:  \n```bash  \nmlflow ui --port 8080  \n```  \nExample output:  \n```  \nAccuracy: 89.2% | F1 Score: 82.1% | AUC-ROC: 0.94  \n```  \n\n## Tech Stack  \n- **Modeling**: TensorFlow (deep learning), scikit-learn (baseline models)  \n- **MLOps**: MLflow (experiment tracking), Airflow (pipeline orchestration)  \n- **Data**: Pandas, NumPy, SQLite (metadata storage)  \n- **Deployment**: Dockerized API endpoint (Flask)  \n\n## Architecture / Design  \nModel integrates survival analysis (CoxPH) with deep learning for time-to-event prediction. Pipeline stages:  \n1. Data ingestion & feature engineering  \n2. Baseline models (logistic regression, random forest)  \n3. Deep learning model (LSTM + dense layers)  \n4. MLflow tracking with hyperparameter sweeps  \n5. Airflow-triggered batch scoring  \n\n## License  \nMIT License  \n\n## Badges  \n[![GitHub](https://badges.githubusercontent.com/yourusername/churn-prediction)](https://github.com/yourusername/churn-prediction)  \n[![MLflow](https://badges.mlflow.org/yourusername/churn-prediction)](https://mlflow.org)  \n[![TensorFlow](https://badges.tensorflow.org/yourusername/churn-prediction)](https://www.tensorflow.org)"
 }

@@ -1,49 +1,62 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional resume highlighting Ritika's experience as an Embedded Systems Engineer in fintech, with a focus on secure hardware solutions.",
-    "title": "Ritika Malhotra - Embedded Systems Engineer",
+    "topic_summary": "A comprehensive CV highlighting Emre Yalcin's 12 years of QA engineering experience in the gaming industry.",
+    "title": "Emre Yalcin - Staff QA Engineer CV",
     "doc_id": "d_p_040_00",
     "persona_id": "p_040",
     "hyperparams": {
-      "cv_format": "hybrid",
-      "geographic_convention": "US",
-      "company_type": "agency",
-      "company_size": "mid (50-500)"
+      "cv_format": "minimal",
+      "geographic_convention": "Europe",
+      "company_type": "startup",
+      "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "Development of a secure, low-power embedded system for IoT-based financial transaction monitoring.",
-    "title": "SecureIoT Payment Gateway",
+    "topic_summary": "A README for an automated test framework developed for NexaGame's multiplayer game engine.",
+    "title": "Automated Test Suite for NexaGame's Multiplayer Engine",
     "doc_id": "d_p_040_01",
     "persona_id": "p_040",
     "hyperparams": {
-      "project_scale": "hobby",
-      "project_team_size": "solo",
+      "project_scale": "team-internal",
+      "project_team_size": "small (2-4)",
       "jargon_density": "moderate"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "Design of a real-time fraud detection module using edge computing and embedded analytics in fintech applications.",
-    "title": "Real-Time Fraud Detection Module",
+    "topic_summary": "A README detailing a bug tracking system tailored for game development pipelines.",
+    "title": "GameDev Bug Tracking System",
     "doc_id": "d_p_040_02",
     "persona_id": "p_040",
     "hyperparams": {
-      "project_scale": "hobby",
-      "project_team_size": "small (2-4)",
+      "project_scale": "team-internal",
+      "project_team_size": "solo",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A README outlining a performance testing tool for game server scalability in cloud environments.",
+    "title": "Game Server Performance Testing Framework",
+    "doc_id": "d_p_040_03",
+    "persona_id": "p_040",
+    "hyperparams": {
+      "project_scale": "team-internal",
+      "project_team_size": "large (15+)",
       "jargon_density": "plain"
     }
   },
   {
-    "doc_type": "linkedin",
-    "topic_summary": "LinkedIn summary showcasing Ritika's expertise in embedded systems, fintech innovation, and her career goals in secure hardware development.",
-    "title": "Ritika Malhotra",
-    "doc_id": "d_p_040_03",
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post on QA strategies for ensuring zero-bug launches in AAA game development.",
+    "title": "Advanced QA Strategies for Game Development: Ensuring Zero-Bug Launches",
+    "doc_id": "d_p_040_04",
     "persona_id": "p_040",
     "hyperparams": {
-      "linkedin_completeness": "detailed"
+      "blog_depth": "tutorial",
+      "jargon_density": "plain"
     }
   }
 ]

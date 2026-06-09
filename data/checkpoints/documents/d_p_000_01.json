@@ -3,35 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_000",
   "hyperparams": {
-    "project_scale": "production",
+    "project_scale": "academic",
     "project_team_size": "medium (5-15)",
     "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "aws": 3,
-    "ci_cd_pipelines": 3,
-    "cloud_cost_optimization": 1,
-    "docker": 3,
-    "infrastructure_as_code": 3,
-    "kubernetes": 3,
-    "linux_administration": 3,
-    "monitoring_alerting": 3,
-    "network_troubleshooting": 1,
-    "python": 2,
-    "rest_api_design": 2,
-    "terraform": 3,
-    "AWS": 1,
-    "Terraform": 1,
-    "Docker": 1,
-    "Kubernetes": 1,
-    "Infrastructure as Code": 1,
-    "CI/CD pipelines": 1,
-    "Cloud cost optimization": 1,
-    "Python": 1,
-    "REST API design": 1,
-    "Monitoring & alerting": 1,
-    "Linux administration": 1,
-    "Network troubleshooting": 1
+    "Agile/Scrum": 3,
+    "Analytics-driven product decisions": 4,
+    "Competitive analysis": 3,
+    "Data visualization (Matplotlib/Plotly)": 2,
+    "Hypothesis testing": 2,
+    "Jupyter notebooks": 2,
+    "Product management": 3,
+    "Roadmap planning": 3,
+    "SQL analytics": 3,
+    "Stakeholder management": 3,
+    "Web accessibility (WCAG)": 1
   },
-  "text": "# HealthDataFlow: Streamlined Health Data Analytics Platform  \nA modular framework for processing, analyzing, and securely sharing health data across interoperable systems. Built for scalability, with a focus on seamless API integrations and real-time analytics for clinical and operational insights.  \n\n## Badges  \n[![GitHub Actions](https://github.com/healthdataflow/workflows/CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI%20CI"
+  "text": "# HealthInsight AI: Predictive Analytics for Healthcare Providers  \n\nHealthInsight AI is a modular platform that leverages machine learning to forecast patient outcomes with 82% accuracy in clinical trials. Built for healthcare providers, it integrates real-time data from EHRs to deliver actionable insights, reducing readmission rates by 14% in pilot programs.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies:  \n```bash  \npip install -r requirements.txt  \n```  \nEnsure your environment includes a PostgreSQL database (version 12+) and Python 3.9. For data ingestion, prepare a CSV file with patient demographics and historical metrics. Run `python setup.py` to initialize the database schema.  \n\n## Tech Stack  \n- **Backend**: FastAPI (asynchronous REST API) + PostgreSQL (timeseries storage)  \n- **AI Models**: PyTorch Lightning (tabular prediction) + MLflow (model registry)  \n- **Frontend**: Streamlit (interactive dashboards) + Plotly (visualizations)  \n- **Infrastructure**: AWS Lambda (serverless inference) + Docker (CI/CD)  \n\n## Usage / Examples  \nTo predict readmission risk:  \n```python  \nfrom models import PredictiveModel  \nmodel = PredictiveModel.load(\"v1.2\")  \nrisk_score = model.predict(patient_data)  \nprint(f\"Readmission risk: {risk_score:.2f} (0-1 scale)\")  \n```  \nExample output: `Readmission risk: 0.12 (0-1 scale)` — low risk.  \n\n## Badges  \n[![Build Status](https://github.com/healthinsight-ai/workflows/CI%20CD%20Pipeline/badge.svg)](https://github.com/healthinsight-ai/actions)  \n[![Test Coverage](https://codecov.io/gh/healthinsight-ai/healthinsight-ai/branch/main/graph/badge.svg)](https://codecov.io/gh/healthinsight-ai/healthinsight-ai)  \n[![Code Quality](https://img.shields.io/lgtm/total/healthinsight-ai?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/healthinsight-ai)  \n\n## Architecture / Design  \nThe system employs a microservices architecture with three tiers:  \n1. **Data Ingestion**: Kafka streams process EHR data into a batch pipeline.  \n2. **Model Serving**: MLflow deployments host trained models for real-time inference.  \n3. **Analytics Layer**: Streamlit dashboards aggregate predictions with SQL analytics.  \nScalability is prioritized via horizontal pod autoscaling for model inference.  \n\n## Contributing  \nTo contribute, fork the repository and submit a pull request with:  \n- Unit tests (pytest) for core modules  \n- Documentation updates for new features  \n- Performance benchmarks for model variants  \nCollaborate via GitHub Issues, focusing on high-impact areas like data pipeline optimization.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details."
 }

@@ -1,43 +1,60 @@
 {
   "persona_id": "p_060",
   "hyperparams": {
-    "archetype": "embedded_engineer",
-    "years_experience": 0,
-    "seniority": "junior",
-    "industry": "e-commerce",
-    "writing_style": "modest",
+    "archetype": "frontend_engineer",
+    "years_experience": 10,
+    "seniority": "staff",
+    "industry": "SaaS",
+    "writing_style": "confident",
     "language_fluency": "near-native",
     "self_promotion_level": "balanced",
-    "quantification_tendency": "metrics-heavy"
+    "quantification_tendency": "qualitative"
   },
-  "name": "Rohan Kulkarni",
-  "current_role": "Embedded Engineer",
-  "company": "SmartCart Technologies",
+  "name": "Priscilla Ferreira",
+  "current_role": "Staff Frontend Engineer",
+  "company": "NexaTech Solutions",
   "education": {
-    "degree": "Bachelor of Engineering in Electronics and Communication",
-    "university": "Institute of Electrical and Electronics Engineers",
-    "year": 2023
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "University of São Paulo",
+    "year": 2014
   },
   "career_trajectory": [
-    "Internship at TechNova Solutions (2022)",
-    "Junior Embedded Engineer at SmartCart Technologies (2023)",
-    "Current role: Embedded Engineer (2024)"
+    {
+      "year": 2013,
+      "role": "Frontend Developer",
+      "company": "CloudCanvas Startups"
+    },
+    {
+      "year": 2016,
+      "role": "Senior Frontend Developer",
+      "company": "Aurora SaaS"
+    },
+    {
+      "year": 2019,
+      "role": "Staff Frontend Engineer",
+      "company": "ScaleLabs Inc."
+    },
+    {
+      "year": 2023,
+      "role": "Staff Frontend Engineer",
+      "company": "NexaTech Solutions"
+    }
   ],
   "skills": {
-    "C/C++ (embedded)": 3,
-    "RTOS": 3,
-    "Firmware development": 3,
-    "IoT protocols (MQTT/CoAP)": 3,
-    "Hardware-software integration": 3,
-    "Embedded Linux": 3,
-    "Python": 2,
+    "React": 5,
+    "TypeScript": 5,
+    "Next.js": 4,
+    "Web performance optimization": 4,
+    "Design systems": 4,
+    "Python": 1,
     "REST API design": 2,
-    "GitLab CI": 2,
-    "Shell scripting (Bash)": 2
+    "Webpack/Vite": 3,
+    "Test automation": 2
   },
   "document_ids": [
     "d_p_060_00",
     "d_p_060_01",
-    "d_p_060_02"
+    "d_p_060_02",
+    "d_p_060_03"
   ]
 }

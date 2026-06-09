@@ -1,26 +1,21 @@
 {
   "doc_id": "d_p_167_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_167",
   "hyperparams": {
-    "recommender_role": "professor",
-    "recommender_closeness": "occasional",
-    "company_type": "FAANG",
-    "company_size": "large (500+)"
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "CI/CD pipelines": 3,
-    "Docker": 3,
-    "GitHub Actions": 3,
-    "Go": 1,
-    "Kubernetes": 4,
-    "Microservices architecture": 4,
-    "Monitoring & alerting": 3,
-    "PostgreSQL": 4,
-    "Prometheus/Grafana": 3,
-    "Python": 1,
-    "REST API design": 4,
-    "Terraform": 3
+    "apache_airflow": 1,
+    "data_modeling": 2,
+    "feature_engineering": 3,
+    "python": 3,
+    "rest_api_design": 1,
+    "scikit-learn": 3,
+    "statistical_modeling": 3,
+    "time_series_analysis": 1
   },
-  "text": "Fatima Al-Rashidi, a Backend Engineer at NexaGame Studios, consistently delivers high-impact solutions with precision and reliability.  \n\nHer Kubernetes expertise reshaped the company’s deployment strategy, reducing cluster downtime by 40% and enabling scalable microservices architecture for their flagship game. She designed a PostgreSQL sharding solution that cut query latency by 35%, directly improving server responsiveness during peak user loads. These systems now handle 2M+ requests daily, with near-zero error rates.  \n\nFatima’s CI/CD pipelines, built with GitHub Actions and Docker, streamlined deployment cycles from 4 hours to 15 minutes. She also implemented Prometheus/Grafana dashboards that cut monitoring latency by 60%, ensuring real-time visibility into critical metrics. Her Terraform modules standardized infrastructure provisioning across 12 environments, saving 200+ hours annually in setup and maintenance.  \n\nA self-driven problem-solver with an eye for detail, Fatima thrives in complex, high-stakes environments. Her ability to balance technical rigor with clear communication makes her a trusted collaborator and a strategic asset."
+  "text": "# CloudGuardian: Cloud Security Anomaly Detection  \nAutomated detection of suspicious patterns in cloud infrastructure logs using statistical modeling and Python. Monitors AWS/GCP logs for deviations from baseline behavior, achieving 93% precision in internal testing.  \n\n## Deployment  \nDeployed as a Docker container with GPU acceleration enabled for real-time processing. Uses AWS Lambda for event-driven log ingestion and Redis for caching baseline statistics. Metrics are exported via Prometheus for monitoring.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/rohan-kulkarni/CloudGuardian.git  \npip install -r requirements.txt  \ndocker-compose build  \ndocker-compose up -d  \n```  \nRequires access to cloud provider logs via CloudWatch or Stackdriver. Preprocess logs with `log-normalizer.py` to align timestamps and extract features.  \n\n## Usage / Examples  \nRun anomaly detection on a sample log file:  \n```bash  \npython anomaly_detector.py --input logs/sample.json --threshold 2.5  \n```  \nOutput includes flagged entries with confidence scores and suggested mitigation steps. Example output:  \n```  \n[ERROR] Unusual SSH login attempt detected (score: 3.7)  \nRecommendation: Check IP reputation and enable multi-factor authentication  \n```  \n\n## Tech Stack  \n- **Python 3.9** for data pipelines and analysis  \n- **Scikit-learn** for Gaussian Mixture Models and feature scaling  \n- **NumPy** for numerical operations on log streams  \n- **Redis** for low-latency baseline storage  \n- **Prometheus** for monitoring system performance  \n\n## Architecture / Design  \nLogs are ingested via Kafka brokers, normalized, and split into time windows. Features are engineered to capture entropy and rate anomalies. A hybrid model combines Gaussian Mixture Models with sliding-window statistics to adapt to drift. Results are streamed to a dashboard with alert prioritization based on risk scores.  \n\n## License  \nMIT License  \n\n## Badges  \n[![security](https://img.shields.io/badge/security-critical-red)]  \n[![python](https://img.shields.io/badge/python-3.9-blue)]  \n[![modeling](https://img.shields.io/badge/modeling-GMM-yellow)]"
 }

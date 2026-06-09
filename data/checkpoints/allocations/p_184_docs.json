@@ -1,40 +1,63 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A frontend engineer with 4 years of experience specializing in cybersecurity applications, focusing on secure UI/UX design and integration with backend security systems.",
-    "title": "Johan Bakken - Frontend Engineer",
+    "topic_summary": "A comprehensive CV highlighting Sofia Hernandez's 8 years of experience as a Senior ML Engineering Lead in enterprise settings.",
+    "title": "Sofia Hernandez - Senior ML Engineering Lead",
     "doc_id": "d_p_184_00",
     "persona_id": "p_184",
     "hyperparams": {
-      "cv_format": "hybrid",
+      "cv_format": "bullet-heavy",
       "geographic_convention": "India",
-      "company_type": "agency",
-      "company_size": "small (<50)"
+      "company_type": "FAANG",
+      "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A real-time threat monitoring dashboard built with React and TypeScript, integrating with CyberShield's backend security APIs for incident visualization.",
-    "title": "SecureShield Dashboard",
+    "topic_summary": "A project README for an enterprise fraud detection system using scalable machine learning pipelines.",
+    "title": "Enterprise Fraud Detection System",
     "doc_id": "d_p_184_01",
     "persona_id": "p_184",
     "hyperparams": {
-      "project_scale": "production",
+      "project_scale": "hobby",
       "project_team_size": "medium (5-15)",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A project README for an AutoML platform focused on customer churn prediction with MLOps integration.",
+    "title": "AutoML Platform for Customer Churn Prediction",
+    "doc_id": "d_p_184_02",
+    "persona_id": "p_184",
+    "hyperparams": {
+      "project_scale": "production",
+      "project_team_size": "small (2-4)",
       "jargon_density": "heavy"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "A manager's endorsement highlighting Johan's expertise in building secure, high-performance frontend solutions for cybersecurity platforms.",
-    "title": "Recommendation from CyberShield CTO",
-    "doc_id": "d_p_184_02",
+    "topic_summary": "A recommendation letter from Sofia's manager praising her leadership in ML engineering projects.",
+    "title": "Recommendation from NexaCorp CTO",
+    "doc_id": "d_p_184_03",
     "persona_id": "p_184",
     "hyperparams": {
-      "recommender_role": "peer",
+      "recommender_role": "skip-level",
       "recommender_closeness": "brief",
-      "company_type": "startup",
+      "company_type": "FAANG",
       "company_size": "small (<50)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post on best practices for scaling machine learning models in enterprise environments.",
+    "title": "Scaling Machine Learning Models in Enterprise Systems: Best Practices and Challenges",
+    "doc_id": "d_p_184_04",
+    "persona_id": "p_184",
+    "hyperparams": {
+      "blog_depth": "tutorial",
+      "jargon_density": "plain"
     }
   }
 ]

@@ -1,8 +1,8 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A comprehensive CV highlighting Uma Krishnan's experience as a Senior Tech Lead in enterprise software development.",
-    "title": "Uma Krishnan - Senior Tech Lead",
+    "topic_summary": "A professional CV highlighting Shreya Bhat's experience as a Senior Platform Engineer in e-commerce.",
+    "title": "Shreya Bhat - Senior Platform Engineer",
     "doc_id": "d_p_006_00",
     "persona_id": "p_006",
     "hyperparams": {
@@ -14,27 +14,49 @@
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A README for a cloud-native data pipeline project implementing real-time analytics for enterprise clients.",
-    "title": "NexaCorp Cloud-Native Data Pipeline",
+    "topic_summary": "A GitHub README for a payment gateway integration project enhancing e-commerce transaction efficiency.",
+    "title": "ZapPay: E-Commerce Payment Gateway Optimization",
     "doc_id": "d_p_006_01",
     "persona_id": "p_006",
     "hyperparams": {
-      "project_scale": "production",
-      "project_team_size": "medium (5-15)",
-      "jargon_density": "plain"
+      "project_scale": "hobby",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "moderate"
     }
   },
   {
-    "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from Uma's manager endorsing her leadership and technical expertise in enterprise architecture.",
-    "title": "Recommendation for Uma Krishnan - Senior Tech Lead",
+    "doc_type": "project_readme",
+    "topic_summary": "A GitHub README for a microservices architecture designed to handle high-traffic e-commerce platforms.",
+    "title": "E-Commerce Microservices Architecture",
     "doc_id": "d_p_006_02",
     "persona_id": "p_006",
     "hyperparams": {
-      "recommender_role": "skip-level",
-      "recommender_closeness": "worked-daily",
-      "company_type": "academic",
-      "company_size": "large (500+)"
+      "project_scale": "production",
+      "project_team_size": "solo",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A GitHub README detailing CI/CD pipeline improvements for faster and more reliable platform deployments.",
+    "title": "CI/CD Pipeline Enhancements for Platform Deployments",
+    "doc_id": "d_p_006_03",
+    "persona_id": "p_006",
+    "hyperparams": {
+      "project_scale": "team-internal",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post on optimizing payment gateways for scalability in e-commerce platforms.",
+    "title": "Optimizing Payment Gateways for E-Commerce Scalability",
+    "doc_id": "d_p_006_04",
+    "persona_id": "p_006",
+    "hyperparams": {
+      "blog_depth": "deep-dive",
+      "jargon_density": "plain"
     }
   }
 ]

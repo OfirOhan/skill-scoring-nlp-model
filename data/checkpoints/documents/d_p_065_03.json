@@ -1,26 +1,23 @@
 {
   "doc_id": "d_p_065_03",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_065",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "heavy"
+    "recommender_role": "peer",
+    "recommender_closeness": "occasional",
+    "company_type": "agency",
+    "company_size": "large (500+)"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "Bash": 1,
-    "Cloud networking": 4,
-    "GCP": 4,
-    "GitHub Actions": 4,
-    "Infrastructure as Code": 5,
-    "Kubernetes": 5,
-    "Load balancing": 4,
-    "Network automation": 1,
-    "Prometheus/Grafana": 4,
-    "Python": 4,
-    "Terraform": 5,
-    "Cloud networking (VPC/subnets)": 1
+    "Apache Airflow": 3,
+    "Apache Kafka": 4,
+    "Apache Spark": 1,
+    "Data warehousing": 1,
+    "Go": 1,
+    "Java": 1,
+    "Message queues": 1,
+    "Python": 1,
+    "Snowflake": 1
   },
-  "text": "# NexaCloud SaaS Platform  \n\nNexaCloud is a cloud-native SaaS platform engineered for scalable, multi-tenant applications. Built on AWS and GCP, it leverages Kubernetes for orchestration, Terraform for infrastructure-as-code, and observability tools like Prometheus and Grafana. The platform enables rapid deployment of microservices with automated CI/CD pipelines, optimized for performance and cost efficiency.  \n\n## Tech Stack  \n- **Cloud**: AWS (EC2, S3, Lambda) + GCP (Kubernetes Engine, Cloud SQL)  \n- **Orchestration**: Kubernetes with HPA and autoscaling  \n- **CI/CD**: GitHub Actions for deployment pipelines  \n- **Observability**: Prometheus + Grafana for metrics, Loki for logs  \n- **Programming**: Python for core services, Go for edge controllers  \n- **IaC**: Terraform for cross-cloud resource management  \n- **Networking**: Load balancers with dynamic routing and TLS termination  \n\n## Architecture / Design  \nThe architecture is decoupled into stateless microservices, with Kubernetes managing pod lifecycle and autoscaling. Terraform provisions AWS and GCP resources, ensuring consistent environments across regions. The platform supports hybrid deployments, with AWS handling compute and GCP managing storage. Prometheus and Grafana provide end-to-end visibility, while GitHub Actions automate testing and rollouts.  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/your-username/nexacloud.git  \n   cd nexacloud  \n   ```  \n2. Initialize Terraform:  \n   ```bash  \n   terraform init  \n   terraform apply -var \"region=us-west-2\"  \n   ```  \n3. Deploy services via GitHub Actions:  \n   ```bash  \n   make deploy  \n   ```  \n\n## Usage / Examples  \n- Deploy a Python service:  \n  ```bash  \n  python deploy.py --env prod --region eu-central-1  \n  ```  \n- Monitor metrics in Grafana:  \n  ```bash  \n  open http://grafana.nexacloud.local/dashboard  \n  ```  \n- Scale horizontally:  \n  ```bash  \n  kubectl scale deploy/my-service --replicas=5  \n  ```  \n\n## Badges  \n[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github)](https://github.com/your-username/nexacloud)  \n[![Actions](https://img.shields.io/badge/Actions-343232?style=flat&logo=github-actions)](https://github.com/your-username/nexacloud/actions)  \n[![Docker](https://img.shields.io/badge/Docker-000000?style=flat&logo=docker)](https://hub.docker.com/repository/docker/your-username/nexacloud)  \n\n## Contributing  \nContributions are welcome. Fork the repo, submit a PR with tests and docs. Ensure all changes align with the infrastructure-as-code standards and observability practices.  \n\n## License  \nMIT License. Commercial use permitted with attribution. See [LICENSE](LICENSE) for details."
+  "text": "Academic Context  \nDivya and I collaborated on a project to streamline real-time fraud detection systems at FinTech Innovators Inc. Her approach to integrating Kafka for low-latency data pipelines reduced processing delays by 30% in a high-volume production environment. This work required balancing system scalability with compliance constraints, a challenge she addressed with meticulous attention to detail.  \n\nWorking Relationship  \nWe’ve exchanged ideas on occasional cross-functional initiatives, such as optimizing data flow architectures for regulatory reporting. Divya’s ability to distill complex technical problems into actionable solutions was evident when she rearchitected a legacy pipeline using Airflow, cutting manual intervention by half. Her collaborative spirit and willingness to share insights made her a natural fit for team knowledge-sharing sessions.  \n\nResearch Ability  \nDivya’s analytical rigor shone during a recent audit of our data governance protocols. She identified gaps in metadata tracking and proposed a hybrid logging framework that improved traceability without overhauling existing infrastructure. Her curiosity led her to experiment with edge-case scenarios, ensuring our systems handled ambiguous data patterns reliably.  \n\nBroader Strengths  \nBeyond technical skills, Divya’s reliability and humility stand out. She consistently prioritizes team success over individual recognition, whether mentoring junior engineers or volunteering to debug critical issues during off-hours. Her adaptability shone when she quickly pivoted to support a new compliance mandate, demonstrating both resilience and strategic thinking.  \n\nRecommendation  \nDivya’s combination of technical precision, ethical consideration, and collaborative mindset makes her an exceptional professional. I wholeheartedly recommend her for any role requiring innovation, accountability, and a deep understanding of fintech challenges. Her contributions have already made a tangible difference, and I’m confident she’ll continue to add value wherever she goes."
 }

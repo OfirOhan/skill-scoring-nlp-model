@@ -1,22 +1,27 @@
 {
   "doc_id": "d_p_151_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_151",
   "hyperparams": {
-    "recommender_role": "professor",
-    "recommender_closeness": "worked-daily",
-    "company_type": "academic",
-    "company_size": "mid (50-500)"
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "CI/CD pipelines": 2,
-    "Docker": 3,
-    "Go": 2,
-    "Infrastructure as Code": 3,
-    "Kubernetes": 1,
-    "Microservices architecture": 2,
-    "Python": 3,
-    "REST API design": 4
+    "CI/CD pipelines": 1,
+    "GitHub Actions": 1,
+    "Jenkins": 1,
+    "ArgoCD": 1,
+    "Prometheus/Grafana": 1,
+    "Monitoring & alerting": 1,
+    "Linux administration": 1,
+    "Terraform": 1,
+    "Python": 1,
+    "Java": 1,
+    "Go": 1,
+    "Node.js": 1,
+    "REST API design": 1,
+    "PostgreSQL": 1
   },
-  "text": "Layla once spent three weeks rearchitecting a legacy API to handle a 300% surge in traffic during a critical security audit. She didn’t just scale the system—she redesigned it to self-heal from injection attempts, reducing downtime by 72%. Her ability to merge protocol compliance with real-time adaptability made her a linchpin in our cybersecurity lab.  \n\nLayla is a Backend Engineer at CyberShield Technologies, where she builds systems that shield networks from zero-day threats. Her work blends meticulous attention to edge cases with a hacker’s curiosity. She thrives in ambiguity, often volunteering to debug vulnerabilities others avoid. Her Python scripts automate repetitive tasks, freeing teams to focus on high-impact work.  \n\nBeyond technical rigor, Layla’s strength lies in her capacity to simplify complex systems. She once guided a non-technical stakeholder through a microservices migration using analogies from biology, making abstract concepts tangible. Her Docker deployments are so streamlined they’ve cut manual errors by 40%, and her Infrastructure as Code templates are reused across three projects.  \n\nI wholeheartedly recommend Layla. Her blend of precision and creativity makes her uniquely suited to roles demanding both innovation and reliability. She’s not just a problem-solver—she’s a guardian of digital integrity."
+  "text": "# Infrastructure as Code for AdTech Platforms  \n\nA modular framework for deploying scalable adtech infrastructure, optimized for rapid iteration and compliance-driven environments. This project abstracts complex adtech workloads into reusable IaC modules, enabling teams to align infrastructure with real-time campaign demands and regulatory requirements.  \n\n## API Reference  \nThe core API provides declarative constructs for managing adtech-specific resources, including dynamic scaling of ad servers, encrypted data pipelines, and role-based access controls. Key endpoints include:  \n- `CreateAdServerCluster`: Deploys a distributed ad server with auto-scaling and failover mechanisms  \n- `ConfigureDataPipeline`: Establishes secure, low-latency data flow between ad platforms and analytics engines  \n- `ValidateCompliancePolicy`: Ensures infrastructure adheres to GDPR, CCPA, and adtech-specific audit standards  \n\n## Usage / Examples  \n```bash  \n# Initialize ad server cluster with regional redundancy  \nInitializeAdServerCluster --region eu-west-1 --scale 3 --encryption AES-256  \n\n# Configure compliance-aware data pipeline  \nConfigureDataPipeline --source s3://ad-reports --destination bigquery --audit-trail true  \n```  \nThis framework has been tested in production adtech environments, reducing deployment times by 40% while maintaining compliance with global data regulations.  \n\n## Getting Started / Installation  \n1. Clone the repository to your local environment  \n2. Install required IaC tools (refer to tech stack section)  \n3. Configure environment variables for cloud provider credentials  \n4. Execute module-specific initialization scripts for your deployment region  \n\n## Tech Stack  \n- IaC framework: CloudFormation/Ansible (configurable)  \n- Cloud providers: AWS/Azure (multi-cloud support)  \n- Security: IAM roles, encrypted secrets management  \n- Compliance: Built-in policy validation layers  \n\n## Architecture / Design  \nThe architecture prioritizes elasticity and security through a layered design:  \n1. **Infrastructure Layer**: Modular, region-agnostic clusters for ad servers and data lakes  \n2. **Control Plane**: Policy-driven orchestration with real-time compliance checks  \n3. **Observability**: Native support for logging and metrics without external tools  \n\n## License  \nMIT License  \n\n## Badges  \n[![AdTech Compliance](https://example.com/compliance-badge)](https://example.com/compliance)  \n[![Deployment Reliability](https://example.com/reliability)](https://example.com/reliability)"
 }

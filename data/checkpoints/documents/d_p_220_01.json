@@ -3,22 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_220",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "large (15+)",
-    "jargon_density": "plain"
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 2,
-    "Cloud cost optimization": 2,
-    "Docker": 2,
-    "GitLab CI": 2,
-    "JavaScript": 3,
-    "MongoDB": 3,
-    "Node.js": 3,
-    "Python": 3,
-    "REST API design": 3,
-    "React": 3,
-    "Web performance optimization": 3
+    "Application security (OWASP)": 4,
+    "CI/CD pipelines": 1,
+    "DNS/DHCP": 1,
+    "Encryption & PKI": 4,
+    "Firewall configuration": 3,
+    "IAM/Access control": 4,
+    "Network automation": 1,
+    "Network security": 4,
+    "Penetration testing": 4,
+    "SIEM tools": 3,
+    "Security auditing": 2,
+    "TCP/IP": 2
   },
-  "text": "# GreenCart: Sustainable E-Commerce Platform  \nGreenCart is a full-stack e-commerce solution designed to empower eco-conscious consumers and retailers. It connects verified sustainable brands with buyers, offering carbon footprint tracking for every purchase and logistics partners that prioritize renewable energy. The platform’s modular architecture ensures scalability while maintaining a focus on user-centric design and environmental impact transparency.  \n\n## Contributing  \nThis project thrives on collaboration. Whether you’re refining carbon calculation algorithms, improving UI/UX for sustainability metrics, or optimizing logistics routing, your input shapes GreenCart’s impact. To contribute:  \n1. Fork the repository and create a feature branch.  \n2. Open an issue to discuss your idea before submitting a pull request.  \n3. Follow the code style guides and test coverage standards.  \nWe welcome enhancements to accessibility, performance, and sustainability reporting features.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies:  \n```bash  \ngit clone https://github.com/your-username/greencart.git  \ncd greencart  \nnpm install  \n```  \nSet up environment variables for database connections and API keys. Run migrations and seed sample data to test core workflows.  \n\n## Usage / Examples  \nUsers browse products tagged with sustainability certifications, view real-time carbon footprint estimates, and select delivery options with emission metrics. Retailers manage inventory via a dashboard that integrates with third-party carbon calculators. The admin panel tracks logistics partner performance and optimizes routes using historical shipment data.  \n\n## Tech Stack  \n- **Frontend**: React for dynamic UI components and reusable widgets for carbon metrics.  \n- **Backend**: Node.js REST APIs for product management and user authentication.  \n- **Database**: MongoDB for scalable storage of user profiles and transaction logs.  \n- **Data Processing**: Python scripts for batch carbon calculations and report generation.  \n- **Containerization**: Docker for consistent development and production environments.  \n- **CI/CD**: GitLab CI for automated testing and deployment pipelines.  \n\n## Architecture / Design  \nThe system is divided into microservices for independent scaling: a product catalog service, a logistics optimization engine, and a user analytics module. APIs are designed with OpenAPI standards, ensuring seamless integration with third-party tools. AWS is used sparingly for cloud storage, with cost optimization strategies implemented through reserved instances and spot fleet requests.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![Sustainability Score](https://img.shields.io/badge/sustainability-95%25-green)](https://example.com)  \n[![Carbon Neutral](https://img.shields.io/badge/carbon-neutral-blue)](https://example.com)  \n[![Open Source](https://img.shields.io/badge/open%20source-100%25-yellow)](https://example.com)"
+  "text": "# ZeroTrustAdBidding  \nSecure ad bidding system with zero-trust architecture to prevent fraud in adtech  \n\n[![Security](https://img.shields.io/badge/secure-yes-green)](https://example.com)  \n[![Tests](https://img.shields.io/badge/tests-100%25-blue)](https://example.com)  \n[![Tech Stack](https://img.shields.io/badge/tech-stack-Go%2C%20Python%2C%20PostgreSQL%20%26%20Redis-yellow)](https://example.com)  \n\n## Tech Stack  \n- **Language**: Go (performance-critical components) + Python (data analysis)  \n- **Security**: TLS 1.3, JWT with HMAC-SHA256, OAuth2 with PKCE, AES-256-GCM  \n- **Database**: PostgreSQL (encrypted columns) + Redis (in-memory cache with TTL)  \n- **Networking**: WireGuard tunnel for internal microservices, IP whitelisting for API gateways  \n- **Monitoring**: Prometheus + Grafana for anomaly detection (e.g., sudden traffic spikes)  \n\n## Configuration  \nSet environment variables for secrets (Vault integration recommended):  \n```bash  \nexport AD_BIDDING_API_KEY=\"your-encrypted-key\"  \nexport DATABASE_URL=\"postgres://user:pass@localhost:5432/db\"  \nexport REDIS_ADDR=\"redis://localhost:6379\"  \n```  \nConfigure firewall rules to restrict ingress to whitelisted IPs and ports.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/your-username/ZeroTrustAdBidding.git  \ncd ZeroTrustAdBidding  \nmake deps  \nmake build  \n```  \nEnsure Docker is installed for Redis and PostgreSQL.  \n\n## Usage / Examples  \nSubmit a bid with zero-trust validation:  \n```bash  \ncurl -X POST https://api.adbidding.example/v1/bid \\  \n  -H \"Authorization: Bearer <JWT>\" \\  \n  -H \"Content-Type: application/json\" \\  \n  -d '{\"ad_id\": \"123\", \"bid_amount\": 5.99}'  \n```  \nSystem enforces mutual TLS, rate limiting, and real-time fraud scoring via machine learning models.  \n\n## Testing  \nRun unit tests:  \n```bash  \ngo test -v ./...  \npython -m pytest tests/  \n```  \nIntegration tests validate end-to-end security:  \n- TLS handshake verification  \n- JWT signature validation  \n- AES encryption/decryption  \n- Firewall rule enforcement  \n\n## License  \nMIT License (see [LICENSE](https://github.com/your-username/ZeroTrustAdBidding/blob/main/LICENSE))"
 }

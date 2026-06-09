@@ -3,23 +3,24 @@
   "type": "project_readme",
   "persona_id": "p_014",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "solo",
-    "jargon_density": "heavy"
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "CI/CD pipelines": 4,
-    "Cloud cost optimization": 4,
-    "Docker": 4,
-    "Kubernetes": 5,
-    "Microservices architecture": 5,
-    "Node.js": 4,
-    "PostgreSQL": 5,
-    "Python": 5,
-    "REST API design": 5,
-    "React": 4,
-    "Redis": 4
+    "Apache Spark": 1,
+    "Cloud cost optimization": 3,
+    "Computer vision": 3,
+    "Docker": 3,
+    "ETL pipeline design": 2,
+    "Kubernetes": 3,
+    "MLOps (MLflow/W&B)": 4,
+    "Model deployment": 3,
+    "NLP": 4,
+    "PyTorch": 3,
+    "REST API design": 3,
+    "Recommendation systems": 3,
+    "TensorFlow": 3
   },
-  "text": "# Cloud-Native SaaS Platform for Real-Time Collaboration  \n\nA full-stack application enabling real-time collaboration in a cloud-native SaaS environment, designed to scale with 500+ concurrent users and optimized for cost efficiency. Built as a hobby project by a solo developer, this platform leverages modern infrastructure and architecture to deliver low-latency, secure, and extensible collaboration tools.  \n\n## Badges  \n[![GitHub stars](https://img.shields.io/github/stars/dinasoliman/cloud-native-collab?style=flat&label=stars)](https://github.com/dinasoliman/cloud-native-collab)  \n[![GitHub issues](https://img.shields.io/github/issues/dinasoliman/cloud-native-collab?style=flat&label=issues)](https://github.com/dinasoliman/cloud-native-collab)  \n[![AWS](https://img.shields.io/badge/AWS-Production%20Ready-blue)](https://aws.amazon.com/)  \n[![Kubernetes](https://img.shields.io/badge/Kubernetes-Production%20Ready-blue)](https://kubernetes.io/)  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/dinasoliman/cloud-native-collab.git  \ncd cloud-native-collab  \ndocker-compose up -d  \n```  \nEnsure Docker and Docker Compose are installed. The environment variables in `.env` and `docker-compose.yml` configure AWS, Redis, and PostgreSQL. Use `docker exec` to debug containers.  \n\n## Usage / Examples  \nStart the server: `npm run start`  \nLaunch the client: `npm run dev`  \nAccess the app at `http://localhost:3000`  \nKey features include live document editing, real-time notifications, and user presence tracking.  \n\n## Configuration  \nConfigure AWS credentials via `~/.aws/credentials` and set `AWS_REGION` in `.env`. Redis and PostgreSQL settings are in `config/redis.js` and `config/db.js`. Use `dotenv` for local development.  \n\n## Deployment  \nDeploy to AWS using CloudFormation templates in `infrastructure/`. Set up EKS with Terraform and integrate GitHub Actions for CI/CD. Use spot instances for non-critical workloads to reduce costs by 40%.  \n\n## Architecture / Design  \nThe system follows a microservices architecture with Node.js APIs, React frontend, and Redis for pub/sub. PostgreSQL handles persistent data, while Kubernetes manages container orchestration. REST APIs enable service-to-service communication, and circuit breakers prevent cascading failures.  \n\n## Tech Stack / Built With  \n- **Frontend**: React, TypeScript  \n- **Backend**: Node.js, Express, REST APIs  \n- **Database**: PostgreSQL, Redis (pub/sub)  \n- **Cloud**: AWS (EC2, EKS, CloudFormation)  \n- **Orchestration**: Kubernetes, Helm  \n- **CI/CD**: GitHub Actions, Terraform  \n\n## Contributing  \nContributions are welcome! Open an issue for feature requests or bug reports. Fork the repo, create a pull request with tests and documentation. Follow the issue template for repro steps and expected behavior."
+  "text": "# Adaptive Game Difficulty with Reinforcement Learning  \n\nA scalable system for real-time difficulty adjustment in games using RL agents, boosting player retention by 18% in pilot tests.  \n\n## Tech Stack  \n- **Frameworks**: PyTorch (RL agent), MLflow (experiment tracking)  \n- **Deployment**: Docker (containerization), Kubernetes (orchestration)  \n- **APIs**: REST endpoints for game state ingestion and feedback  \n- **Monitoring**: Prometheus/Grafana for latency metrics  \n- **Storage**: PostgreSQL (player progress logs)  \n\n## Architecture / Design  \nThe system uses a decentralized RL agent that processes player actions and game state metrics (e.g., kill/death ratio, time-to-complete). A feedback loop adjusts difficulty parameters dynamically, with MLflow logging hyperparameters and rewards. Dockerized microservices handle real-time inference and batch retraining. The agent’s policy network is optimized for low-latency execution, ensuring seamless integration with game engines.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/yourusername/adaptive-difficulty.git  \ncd adaptive-difficulty  \ndocker-compose build  \ndocker-compose up -d  \n```  \nEnsure Python 3.9+ and dependencies in `requirements.txt` are installed.  \n\n## Usage / Examples  \nRun the RL agent with:  \n```bash  \npython train_agent.py --env \"game_v1\" --epochs 100  \n```  \nTest real-time adjustment:  \n```bash  \ncurl -X POST http://localhost:8080/adjust_difficulty -d '{\"player_id\": \"123\", \"score\": 500}'  \n```  \nOutput includes updated difficulty level and reward metrics.  \n\n## Badges  \n[![GitHub](https://badgen.net/badge/repo/active/green)](https://github.com/yourusername/adaptive-difficulty)  \n[![Build](https://badgen.net/badge/build/passing/green)](https://github.com/yourusername/adaptive-difficulty/actions)  \n[![License](https://badgen.net/badge/license/MIT/blue)](https://github.com/yourusername/adaptive-difficulty/blob/main/LICENSE)  \n\n## Contributing  \nSubmit bug reports or feature requests via GitHub issues. Pull requests should include unit tests and updates to `docs/README.md`. Follow PEP8 guidelines and ensure CI/CD pipeline passes.  \n\n## License  \nMIT License (see `LICENSE` file)"
 }

@@ -1,62 +1,58 @@
 {
   "persona_id": "p_003",
   "hyperparams": {
-    "archetype": "platform_engineer",
-    "years_experience": 2,
-    "seniority": "junior",
-    "industry": "startup",
-    "writing_style": "concise",
-    "language_fluency": "near-native",
+    "archetype": "embedded_engineer",
+    "years_experience": 6,
+    "seniority": "senior",
+    "industry": "fintech",
+    "writing_style": "modest",
+    "language_fluency": "native",
     "self_promotion_level": "boastful",
-    "quantification_tendency": "mixed"
+    "quantification_tendency": "metrics-heavy"
   },
-  "name": "Carmen Delgado",
-  "current_role": "Platform Engineer",
-  "company": "NebulaTech Innovations",
+  "name": "Lucas Martin",
+  "current_role": "Senior Embedded Engineer",
+  "company": "FinTech Innovators Inc.",
   "education": {
-    "degree": "Bachelor of Science in Computer Science",
-    "university": "University of California, Berkeley",
-    "year": 2022
+    "degree": "Master of Science in Electrical Engineering",
+    "university": "Massachusetts Institute of Technology",
+    "year": 2018
   },
   "career_trajectory": [
     {
-      "title": "DevOps Engineer Intern",
-      "company": "Aurora Systems",
-      "duration": "6 months",
-      "responsibilities": "Automated deployment pipelines, managed AWS EC2 instances"
+      "role": "Junior Embedded Engineer",
+      "company": "FinTech Startups Inc.",
+      "year": 2017
     },
     {
-      "title": "DevOps Engineer",
-      "company": "NebulaTech Innovations",
-      "duration": "1.5 years",
-      "responsibilities": "Designed Terraform modules, optimized CI/CD workflows"
+      "role": "Embedded Systems Engineer",
+      "company": "SecurePay Solutions",
+      "year": 2019
     },
     {
-      "title": "Platform Engineer",
-      "company": "NebulaTech Innovations",
-      "duration": "current",
-      "responsibilities": "Architect cloud-native solutions, lead infrastructure scalability"
+      "role": "Senior Embedded Engineer",
+      "company": "FinTech Innovators Inc.",
+      "year": 2021
+    },
+    {
+      "role": "Embedded Engineer",
+      "company": "FinTech Innovators Inc.",
+      "year": 2023
     }
   ],
   "skills": {
-    "AWS": 3,
-    "Terraform": 3,
-    "Infrastructure as Code": 3,
-    "Docker": 3,
-    "Kubernetes": 3,
-    "CI/CD pipelines": 3,
-    "Cloud cost optimization": 3,
+    "C/C++ (embedded)": 4,
+    "RTOS": 5,
+    "Firmware development": 4,
+    "IoT protocols (MQTT/CoAP)": 4,
     "Python": 2,
-    "Linux administration": 3,
-    "Shell scripting": 2,
-    "Ansible": 3,
-    "Monitoring & alerting": 3,
-    "Chaos engineering": 2
+    "Go": 2,
+    "REST API design": 3,
+    "Network automation": 1
   },
   "document_ids": [
     "d_p_003_00",
     "d_p_003_01",
-    "d_p_003_02",
-    "d_p_003_03"
+    "d_p_003_02"
   ]
 }

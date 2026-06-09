@@ -1,23 +1,22 @@
 {
   "doc_id": "d_p_217_03",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_217",
   "hyperparams": {
-    "recommender_role": "peer",
-    "recommender_closeness": "occasional",
-    "company_type": "agency",
-    "company_size": "small (<50)"
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "CI/CD pipelines": 3,
-    "Cloud cost optimization": 3,
-    "Kubernetes": 4,
-    "Linux administration": 3,
-    "PostgreSQL": 3,
-    "Prometheus/Grafana": 3,
-    "Python": 3,
-    "Terraform": 3
+    "Apache Spark": 1,
+    "CI/CD pipelines": 1,
+    "ETL pipeline design": 1,
+    "LLMs/Prompt engineering": 5,
+    "MLOps (MLflow/W&B)": 1,
+    "Model deployment": 3,
+    "NLP": 4,
+    "Prometheus/Grafana": 1,
+    "PyTorch": 3
   },
-  "text": "Youssef Mansour is a reliable and detail-oriented platform engineer at NexaCart Technologies. We’ve collaborated on several projects, including scaling their CI/CD pipelines and optimizing cloud infrastructure. His work consistently aligns with the team’s goals, and his approach to problem-solving is both methodical and adaptable.  \n\nYoussef’s technical strengths are rooted in his hands-on experience with Kubernetes, where he owns production clusters handling over 5K+ pods. He designed a custom autoscaling solution that reduced instance costs by 12% during peak traffic. His AWS expertise shines in managing cost-optimized EC2 fleets, and he recently implemented a CI/CD pipeline that cut deployment times by 30% using Terraform and GitHub Actions. He also maintains PostgreSQL databases with automated monitoring via Prometheus/Grafana, ensuring 99.95% uptime. His Linux administration skills are evident in his ability to troubleshoot system bottlenecks quickly, often resolving issues before they escalate.  \n\nBeyond technical skills, Youssef excels at clear communication. He explains complex system issues to non-technical stakeholders with precision, and his mentorship has helped junior engineers grasp Python-based automation tasks. His work ethic is consistent—whether debugging late-night production hiccups or refining infrastructure docs, he prioritizes accuracy and ownership.  \n\nYoussef’s contributions have directly improved NexaCart’s platform reliability and cost efficiency. He’s a natural collaborator who balances technical depth with team-oriented problem-solving. I’d confidently recommend him for any role requiring robust engineering and measurable impact."
+  "text": "# Model Optimization for Edge Devices  \n\nThis project focuses on reducing ML model latency and improving deployment efficiency on edge devices using TensorFlow Lite. By leveraging quantization, pruning, and architecture compression, we achieve a 40% reduction in inference latency and a 30% decrease in model size compared to baseline models. The solution is tailored for NLP tasks and LLM optimization, with real-world applications in real-time text classification and low-resource language modeling.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies:  \n```bash  \npip install -r requirements.txt  \npython setup.py install  \n```  \nFor TensorFlow Lite conversion, ensure you have the latest version installed. Run `convert_model.py` to generate optimized TFLite artifacts. Example usage:  \n```python  \nfrom optimizer import optimize_model  \noptimized_model = optimize_model(\"bert-base\", quantize=True, prune_ratio=0.3)  \n```  \n\n## Tech Stack  \n- **TensorFlow Lite**: Core framework for model conversion and deployment  \n- **PyTorch**: Used for baseline model training and export  \n- **ONNX**: Intermediate format for cross-framework compatibility  \n- **TensorFlow.js**: Web-based inference demo (optional)  \n- **Numpy/Scipy**: For numerical operations during pruning  \n\n## Usage / Examples  \nOptimize a pre-trained model:  \n```python  \nfrom optimizer import optimize_model  \noptimized_model = optimize_model(\"bert-base\", quantize=True, prune_ratio=0.3)  \noptimized_model.save(\"optimized_bert.tflite\")  \n```  \nRun inference on a Raspberry Pi 4 with TensorFlow Lite:  \n```bash  \npython infer_edge.py --model optimized_bert.tflite --input text_data.txt  \n```  \n\n## Badges  \n[![Model Size Reduction](https://img.shields.io/badge/size%20reduction-30%25-green)]  \n[![Latency Improvement](https://img.shields.io/badge/latency%20improvement-40%25-green)]  \n[![NLP Applications](https://img.shields.io/badge/nlp%20use%20cases-5%25-yellow)]  \n[![LLM Optimization](https://img.shields.io/badge/llm%20focus-100%25-blue)]  \n\n## Architecture / Design  \nThe pipeline integrates model compression techniques with edge-specific constraints. Quantization-aware training ensures accuracy retention during 8-bit conversion. Pruning strategies prioritize critical layers for NLP tasks, while TensorFlow Lite’s graph optimization reduces redundant operations. The design balances computational efficiency with maintainability, enabling deployment on devices with <1 GB RAM.  \n\n## Contributing  \nContributions are welcome! Focus on expanding NLP use cases or improving LLM optimization techniques. Avoid implementing CI/CD or ETL tools—this project prioritizes model-level innovation.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

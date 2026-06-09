@@ -3,20 +3,25 @@
   "type": "project_readme",
   "persona_id": "p_103",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "moderate"
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "CI/CD pipelines": 3,
-    "Cloud cost optimization": 3,
-    "Kubernetes": 3,
-    "Linux administration": 3,
-    "Network automation": 2,
-    "Prometheus/Grafana": 4,
+    "Apache Airflow": 3,
+    "Apache Spark": 3,
+    "Data modeling": 3,
+    "Data warehousing": 3,
+    "Database optimization": 3,
+    "Databricks": 3,
+    "Docker": 2,
+    "ETL pipeline design": 4,
+    "GitHub Actions": 2,
+    "Linux administration": 1,
     "Python": 3,
-    "Terraform": 3
+    "REST API design": 2,
+    "Snowflake": 3,
+    "Terraform": 2
   },
-  "text": "# Automated Compliance Check Suite  \n\nA modular toolset for automating regulatory compliance checks in financial systems, designed to streamline audit workflows and ensure adherence to evolving standards like GDPR, CCPA, and PCI-DSS.  \n\n## Testing  \nAutomated tests are central to this project. A pytest-based framework with 92% coverage ensures rulesets and integrations behave as expected. CI/CD pipelines (GitHub Actions) run tests on every push, validating compatibility with Python 3.8–3.11. Mocked AWS S3 buckets and Prometheus metrics are used to simulate production conditions during regression testing.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/hugoramirez/automated-compliance-check-suite.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Set environment variables for AWS credentials and Prometheus endpoints.  \n4. Run initial setup: `python setup.py install`  \n\n## Usage / Examples  \n```bash  \n# Validate PCI-DSS compliance for a PostgreSQL database  \npython compliance_check.py --rule pci-dss-3.2.1 --target postgres://user:pass@localhost:5432/db  \n\n# Generate a compliance report in CSV format  \npython report_generator.py --format csv --output compliance_report_2023-10-05.csv  \n```  \nThe tool supports plugin-based rule expansion, enabling custom checks for internal policies.  \n\n## Tech Stack  \n- Python 3.9+ with type hints and async support  \n- Prometheus for real-time metric collection  \n- Grafana for dashboarding and alerting  \n- AWS Lambda for serverless rule execution  \n- Terraform for reproducible infrastructure setup  \n- Kubernetes for scalable deployment (via Helm charts)  \n\n## Architecture / Design  \nThe system is split into three layers:  \n1. **Policy Layer**: YAML-based rule definitions (e.g., \"PCI-DSS 3.2.1 requires encryption at rest\").  \n2. **Execution Layer**: Parallelized checks using `concurrent.futures` and AWS SDKs.  \n3. **Observability Layer**: Prometheus exporters track check durations, and Grafana dashboards visualize compliance trends.  \n\nAll components are containerized with Docker, and Kubernetes orchestrates scaling during peak audit seasons.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Contributing  \nPull requests are welcome! Focus on improving rule accuracy, expanding supported regulations, or optimizing cloud cost models. Ensure all changes include unit tests and update the documentation."
+  "text": "# VitalFlow: Real-Time Health Data Pipeline Optimization  \nA scalable, low-latency solution for streamlining ETL workflows in clinical telemetry systems. Benchmarked at 30% latency reduction and 99.9% SLA compliance in stress tests.  \n\n## Badges  \n[![GitHub Actions Status](https://github.com/yourusername/vitalflow/actions/workflows/main.yml/badge.svg)](https://github.com/yourusername/vitalflow/actions/workflows/main.yml)  \n[![Test Coverage](https://codecov.io/gh/yourusername/vitalflow/branch/main/graph/badge.svg)](https://codecov.io/gh/yourusername/vitalflow)  \n[![Tech Stack](https://img.shields.io/badge/tech-stack-blue)](https://github.com/yourusername/vitalflow)  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/yourusername/vitalflow.git  \ncd vitalflow  \ndocker compose up -d  \n```  \nEnsure Python 3.9+ and Docker are installed. The pipeline initializes a Kafka cluster, Spark cluster, and Snowflake connection via Databricks.  \n\n## Tech Stack  \n- **Processing**: Apache Spark (Structured Streaming) for fault-tolerant batch/stream hybrid workflows  \n- **Orchestration**: Apache Airflow DAGs for dynamic workflow scheduling  \n- **Storage**: Snowflake (delta tables) + Databricks for ACID compliance  \n- **Networking**: Kafka for decoupled, scalable telemetry ingestion  \n- **Monitoring**: Prometheus + Grafana for end-to-end latency tracking  \n\n## Architecture / Design  \nThe pipeline ingests raw ECG/PPG data from IoT devices via Kafka, processes it in Spark Streaming with sliding window aggregations, and writes to Snowflake. Key optimizations include:  \n- **Schema Evolution**: Avro schema registry for backward-compatible data evolution  \n- **Parallelism**: Dynamic partitioning based on patient cohort size (tested at 10k+ concurrent users)  \n- **Error Handling**: Dead-letter queues for failed records, with retry policies baked into Airflow operators  \n\n## Usage / Examples  \n```python  \n# Example: Trigger a batch reprocessing  \nairflow trigger_dag 'daily_data_sync'  \n```  \n```bash  \n# Benchmarking command for latency analysis  \npython benchmarks/latency_test.py --throughput 5000 --threshold 200ms  \n```  \nThe CLI tool outputs percentile latencies and identifies bottlenecks in Kafka producers or Spark executors.  \n\n## Testing  \nUnit tests cover 85% of Spark transformations, with integration tests simulating 100 concurrent device feeds. Key metrics:  \n- **Test Coverage**: 92% (Codecov)  \n- **Latency Tolerance**: 99.95% of records processed within 150ms  \n- **Fault Tolerance**: 99.8% recovery rate after simulated node failures  \n\n## License  \nMIT License. See [LICENSE](https://github.com/yourusername/vitalflow/blob/main/LICENSE) for details."
 }

@@ -1,34 +1,22 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Sergei Antonov's 6 years of experience as a Senior Data Scientist in consulting, specializing in data-driven business solutions.",
-    "title": "Sergei Antonov - Senior Data Scientist",
+    "topic_summary": "Professional summary of Boris Kravchenko's 7-year experience as a Senior Platform Engineer in fintech.",
+    "title": "Boris Kravchenko - Senior Platform Engineer",
     "doc_id": "d_p_035_00",
     "persona_id": "p_035",
     "hyperparams": {
       "cv_format": "bullet-heavy",
       "geographic_convention": "Europe",
       "company_type": "startup",
-      "company_size": "small (<50)"
+      "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A project using machine learning to predict client churn and optimize retention strategies for consulting clients.",
-    "title": "Predictive Analytics for Client Retention",
+    "topic_summary": "A microservices architecture for a high-throughput payment processing platform.",
+    "title": "FinTrust Payment Gateway",
     "doc_id": "d_p_035_01",
-    "persona_id": "p_035",
-    "hyperparams": {
-      "project_scale": "academic",
-      "project_team_size": "solo",
-      "jargon_density": "plain"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "Developed ML models to optimize supply chain operations, reducing costs by 15% for a Fortune 500 client.",
-    "title": "Supply Chain Optimization with Machine Learning",
-    "doc_id": "d_p_035_02",
     "persona_id": "p_035",
     "hyperparams": {
       "project_scale": "team-internal",
@@ -38,25 +26,38 @@
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "Built time-series forecasting models to improve inventory management and meet customer demand accurately.",
-    "title": "Demand Forecasting and Inventory Management",
-    "doc_id": "d_p_035_03",
+    "topic_summary": "Real-time fraud detection system using Apache Kafka and machine learning models.",
+    "title": "FraudGuard",
+    "doc_id": "d_p_035_02",
     "persona_id": "p_035",
     "hyperparams": {
       "project_scale": "academic",
-      "project_team_size": "solo",
+      "project_team_size": "large (15+)",
       "jargon_density": "heavy"
     }
   },
   {
+    "doc_type": "recommendation",
+    "topic_summary": "Letter from Boris's manager praising his leadership and technical expertise in fintech platform development.",
+    "title": "Recommendation from FinTrust CTO",
+    "doc_id": "d_p_035_03",
+    "persona_id": "p_035",
+    "hyperparams": {
+      "recommender_role": "peer",
+      "recommender_closeness": "occasional",
+      "company_type": "academic",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
     "doc_type": "blog",
-    "topic_summary": "Explores advanced techniques in deploying ML models for real-time decision-making in consulting projects.",
-    "title": "Leveraging Machine Learning for Real-Time Business Insights",
+    "topic_summary": "Exploring strategies for building scalable, secure fintech platforms with cloud-native technologies.",
+    "title": "Designing Resilient Financial Systems at Scale",
     "doc_id": "d_p_035_04",
     "persona_id": "p_035",
     "hyperparams": {
       "blog_depth": "opinion-piece",
-      "jargon_density": "plain"
+      "jargon_density": "moderate"
     }
   }
 ]

@@ -1,22 +1,23 @@
 {
   "doc_id": "d_p_100_01",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_100",
   "hyperparams": {
-    "recommender_role": "peer",
-    "recommender_closeness": "occasional",
-    "company_type": "academic",
-    "company_size": "mid (50-500)"
+    "project_scale": "hobby",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "API testing": 4,
-    "CI/CD pipelines": 3,
-    "GitLab CI": 3,
-    "Python": 3,
-    "REST API design": 3,
-    "Security testing": 4,
-    "Selenium/Playwright": 3,
-    "Test automation": 4
+    "Application security (OWASP)": 4,
+    "DNS/DHCP": 2,
+    "Encryption & PKI": 4,
+    "Firewall configuration": 1,
+    "IAM/Access control": 4,
+    "Network automation": 2,
+    "Network security": 4,
+    "Penetration testing": 4,
+    "Security auditing": 3,
+    "TCP/IP": 3
   },
-  "text": "Binta once spearheaded a critical API security audit for a high-profile client, identifying a vulnerability in their authentication flow that could have exposed user data. She designed a custom test suite using Python and GitLab CI, integrating Selenium to simulate real-world attack vectors. Her work not only flagged the issue but also streamlined the team’s testing process, cutting regression cycles by 30%.  \n\nWe’ve collaborated occasionally on cybersecurity projects, mostly via Slack and shared docs. As a peer, I’ve observed her consistently deliver precise, actionable insights. She’s the kind of engineer who’ll spend 20 minutes debugging a flaky test instead of rushing to fix it.  \n\nBinta’s strength lies in her ability to bridge technical rigor with practical impact. She owns API testing workflows, often refining them to handle edge cases others overlook. Her security testing approach is methodical—she’ll dig into logs, replay attacks, and push teams to think beyond standard scenarios. She’s also a quiet mentor, helping junior engineers grasp the nuances of test automation without sounding preachy.  \n\nIn short, she’s a reliable, detail-oriented problem-solver who elevates the quality of everything she touches. Her work has directly improved system reliability and reduced critical bugs in production.  \n\nFeel free to reach out if you need further details."
+  "text": "# SecureDevOps Framework for CyberShield Clients  \n\nA lightweight toolkit to embed security into DevOps pipelines for CyberShield Consulting clients. Automates compliance checks, secret management, and runtime protections without disrupting CI/CD workflows.  \n\n[![GitHub](https://img.shields.io/github/actions/workflow/status/cybershield/securedevops/main.yml?branch=main)](https://github.com/cybershield/securedevops/actions)  \n[![CI/CD](https://img.shields.io/badge/CI%2FCD-passing-green)](https://github.com/cybershield/securedevops/actions)  \n[![Security](https://img.shields.io/badge/Security-verified-blue)](https://github.com/cybershield/securedevops/security)  \n\n## Tech Stack  \n- **Core**: Python 3.10, Docker, Kubernetes  \n- **Security**: Terraform, HashiCorp Vault, OWASP ZAP  \n- **CI/CD**: GitHub Actions, GitLab CI  \n- **Networking**: Calico (for network policy enforcement)  \n- **Storage**: AWS S3 (for audit logs)  \n\n## Architecture / Design  \nThe framework is modular, with plugins for:  \n1. **Pre-commit checks** (SAST, DAST, dependency scanning)  \n2. **Runtime protection** (runtime application self-protection, network policy enforcement)  \n3. **Post-deploy audits** (log analysis, secret detection)  \n\nEach plugin integrates with existing CI/CD pipelines via REST APIs. Security policies are defined in YAML, enabling clients to customize rules for their compliance regimes.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/cybershield/securedevops.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure secrets in `config/secrets.yaml` (Vault integration optional)  \n4. Run pre-commit checks: `python scripts/pre_commit.py`  \n\n## Usage / Examples  \n```bash  \n# Scan a Docker image for vulnerabilities  \nsecuredevops scan --image nginx:latest --profile owasp  \n\n# Enforce network policies in Kubernetes  \nsecuredevops apply --namespace prod --policy strict-egress  \n```  \n\n## Contributing  \nPull requests welcome! Focus on improving plugin accuracy or expanding support for new security tools. For security-related contributions, reach out via the issues tracker.  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
 }

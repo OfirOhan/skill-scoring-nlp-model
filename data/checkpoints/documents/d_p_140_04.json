@@ -1,0 +1,28 @@
+{
+  "doc_id": "d_p_140_04",
+  "type": "blog",
+  "persona_id": "p_140",
+  "hyperparams": {
+    "blog_depth": "tutorial",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "CI/CD pipelines": 2,
+    "Cloud cost optimization": 3,
+    "Database optimization": 3,
+    "Go": 5,
+    "Infrastructure as Code": 3,
+    "Jenkins": 1,
+    "Kubernetes": 4,
+    "Load balancing": 3,
+    "Message queues": 3,
+    "Microservices architecture": 5,
+    "PostgreSQL": 4,
+    "Prometheus/Grafana": 2,
+    "Python": 2,
+    "REST API design": 5,
+    "Test automation": 2
+  },
+  "text": "**Optimizing Backend Systems for Real-Time Ad Bidding**  \n\n**Overview**  \nReal-time ad bidding demands sub-100ms response times across millions of requests per second. At scale, even minor inefficiencies compound into latency spikes, lost revenue, and degraded user experiences. My team’s recent overhaul of our ad decisioning pipeline reduced median latency by 40% while scaling to 3x the previous throughput.  \n\n**Context**  \nOur adtech platform processes over 200 million impressions daily, with bid requests arriving via HTTP/2 and gRPC from 15+ demand partners. The legacy monolith, built in Java, faced escalating issues: CPU-bound serialization bottlenecks, stateful session management, and inconsistent latency across 12 regional endpoints. The system’s reliance on synchronous Redis calls for auction data further exacerbated tail latencies during peak hours.  \n\n**Challenge**  \nThe core problem was balancing speed and consistency in a distributed system. Traditional approaches to caching and queuing introduced either stale data or increased tail latencies. We needed a way to decouple computation from I/O, minimize serialization overhead, and ensure deterministic ordering of bid decisions. Existing solutions like Apache Kafka or RabbitMQ added latency due to serialization and network hops.  \n\n**Solution**  \nWe rebuilt the core auction engine in Go, leveraging microservices architecture and Kubernetes for horizontal scaling. Key changes included:  \n- **Stateless request routing**: Offloaded session management to AWS API Gateway with JWT tokens, reducing per-request overhead by 25%.  \n- **Async pipeline**: Replaced Redis with a PostgreSQL-based event sourcing layer, using pgx for low-latency sync.  \n- **Load balancing**: Implemented TCP-based load distribution via NGINX Plus to prioritize underutilized nodes during spikes.  \n- **Cost optimization**: Migrated non-critical workloads to spot instances, cutting compute costs by 25% without compromising SLAs.  \n\n**Results**  \nPost-implementation, the system achieved 99.95% request success rates with a 95th percentile latency of 82ms. The auction engine scaled to 240 million impressions/day, handling 12x the previous traffic without manual intervention. Cloud costs dropped by 22% through optimized spot instance usage and reduced Redis read throughput.  \n\n**Lessons Learned**  \n1. **Serialization is the enemy**: Protobuf outperformed JSON by 3x in CPU usage, but Go’s built-in concurrency model required careful goroutine management to avoid memory bloat.  \n2. **Database choice matters**: PostgreSQL’s strong consistency model outperformed eventual consistency in auction scenarios, despite higher write overhead.  \n3. **Infrastructure as code is non-negotiable**: Terraform templates for Kubernetes clusters and AWS resources cut deployment time by 40%, ensuring reproducibility across regions.  \n4. **Metrics are your compass**: While Prometheus/Grafana provided visibility, real-time insights required custom dashboards for latency tracking and anomaly detection.  \n\nThe project reinforced that real-time systems aren’t just about speed—they’re about predictable performance under pressure. The right tools, paired with deliberate architecture choices, turn complexity into a competitive advantage."
+}

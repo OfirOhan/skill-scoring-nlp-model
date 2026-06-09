@@ -1,27 +1,62 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Urvashi Gill's 3 years of full-stack development experience in enterprise software solutions.",
-    "title": "Urvashi Gill - Full-Stack Developer CV",
+    "topic_summary": "A professional CV highlighting Ian Szabo's experience as a Senior Data Scientist at NexaCorp",
+    "title": "Ian Szabo - Senior Data Scientist",
     "doc_id": "d_p_266_00",
     "persona_id": "p_266",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
-      "geographic_convention": "India",
-      "company_type": "academic",
-      "company_size": "small (<50)"
+      "cv_format": "hybrid",
+      "geographic_convention": "Israel",
+      "company_type": "enterprise",
+      "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A README for an enterprise-grade inventory management system built with React, Node.js, and PostgreSQL.",
-    "title": "InventoryPro: Enterprise Inventory Management System",
+    "topic_summary": "A machine learning model to predict customer churn in SaaS using historical data and real-time analytics",
+    "title": "ChurnPredict: Predictive Analytics for SaaS Customer Retention",
     "doc_id": "d_p_266_01",
+    "persona_id": "p_266",
+    "hyperparams": {
+      "project_scale": "hobby",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "An automated A/B testing framework for optimizing SaaS product features with statistical significance",
+    "title": "A/B Test Optimizer: SaaS Experimentation Platform",
+    "doc_id": "d_p_266_02",
     "persona_id": "p_266",
     "hyperparams": {
       "project_scale": "academic",
       "project_team_size": "medium (5-15)",
       "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A manager's endorsement of Ian's technical expertise and leadership in data science projects",
+    "title": "Recommendation from NexaCorp Product Team Lead",
+    "doc_id": "d_p_266_03",
+    "persona_id": "p_266",
+    "hyperparams": {
+      "recommender_role": "professor",
+      "recommender_closeness": "brief",
+      "company_type": "startup",
+      "company_size": "large (500+)"
+    }
+  },
+  {
+    "doc_type": "linkedin",
+    "topic_summary": "A professional summary showcasing Ian's experience in data science within the SaaS industry",
+    "title": "Ian Szabo - Senior Data Scientist at NexaCorp",
+    "doc_id": "d_p_266_04",
+    "persona_id": "p_266",
+    "hyperparams": {
+      "linkedin_completeness": "standard"
     }
   }
 ]

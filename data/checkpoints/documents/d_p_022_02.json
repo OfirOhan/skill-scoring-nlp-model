@@ -1,25 +1,24 @@
 {
   "doc_id": "d_p_022_02",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_022",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "heavy"
+    "recommender_role": "skip-level",
+    "recommender_closeness": "worked-daily",
+    "company_type": "agency",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "ArgoCD": 1,
+    "AWS": 5,
     "CI/CD pipelines": 5,
-    "Cloud cost optimization": 1,
-    "Database optimization": 1,
-    "GitHub Actions": 4,
-    "Incident management": 4,
-    "Jenkins": 1,
-    "Kubernetes": 1,
+    "Cloud cost optimization": 3,
+    "Kubernetes": 3,
+    "Monitoring & alerting": 3,
     "Network automation": 1,
-    "Prometheus/Grafana": 1,
+    "PostgreSQL": 1,
     "Python": 1,
-    "Terraform": 1
+    "REST API design": 1,
+    "Terraform": 5
   },
-  "text": "# Incident Response Platform with DevOps Integration  \nA centralized tool for automating threat detection, containment, and post-incident analysis using CI/CD pipelines and incident management workflows. Designed for rapid deployment in hybrid environments, this platform emphasizes real-time data correlation, playbook execution, and audit trail generation. Built with a focus on scalability, this project supports integration with existing SIEM tools and leverages GitHub Actions for continuous improvement of response protocols.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/your-username/incident-response-platform.git`  \n2. Install dependencies via `npm install` (Node.js 18+ required)  \n3. Configure environment variables in `.env.local` for API keys and integration endpoints  \n4. Initialize the platform: `npm run setup` (triggers GitHub Actions workflow for initial configuration)  \n5. Verify installation with `npm run validate` (ensures all required services are operational)  \n\n## Usage / Examples  \n**Incident Triage Pipeline**  \n```bash\nnpm run trigger-incident -- --id=INC-2023-456 --severity=high\n```  \nThis command initiates a multi-stage response:  \n- Automatically isolates affected hosts via pre-configured firewall rules  \n- Executes predefined playbook for malware analysis  \n- Aggregates logs from SIEM systems for post-incident analysis  \n\n**CI/CD Pipeline Optimization**  \nThe platform's GitHub Actions workflow includes:  \n- Automated playbook testing every 24 hours  \n- Real-time feedback loops for incident response efficacy  \n- Integration with bug bounty platforms for threat intelligence enrichment  \n\n**Incident Management Dashboard**  \nAccess `/ui/incident-dashboard` to view:  \n- Timeline of incident lifecycle events  \n- Metrics on containment success rates  \n- Historical analysis of similar incidents  \n\n## License  \nMIT License  \n© 2023 Sven Lindqvist - Cybersecurity DevOps Initiative"
+  "text": "Kwame and I have collaborated closely over the past two years, primarily on cross-team initiatives at AdvertiseX. His role as a Staff Platform Engineer has been pivotal in aligning our infrastructure strategies with the company’s rapid growth. He’s a consistent presence in daily standups, often stepping in to resolve blockers for developers and DevOps teams alike. His approach to problem-solving is methodical, and he’s never hesitant to challenge assumptions—whether about cloud architecture or process inefficiencies.  \n\nKwame’s work with AWS forms the backbone of our platform’s scalability. He’s mentored junior engineers on best practices for cost management, ensuring resources are allocated without unnecessary overhead. His CI/CD pipelines are a model of reliability, with automated testing and deployment workflows that cut deployment times by nearly half. Terraform is another tool he’s mastered, using it to standardize infrastructure across environments and reduce manual errors. Monitoring and alerting systems under his care are proactive, catching issues before they escalate.  \n\nOne standout moment came when a Kubernetes cluster faced a critical outage. Kwame diagnosed the root cause within hours, coordinating with multiple teams to restore service while minimizing downtime. His calm under pressure and deep technical insight were critical. He also spearheaded a cost-optimization project that rearchitected our EC2 usage, saving thousands monthly without sacrificing performance.  \n\nKwame’s reliability and technical depth make him an asset. He balances complex systems with simplicity, and his willingness to share knowledge elevates the entire team. I’d wholeheartedly recommend him for any role requiring both strategic thinking and hands-on execution."
 }

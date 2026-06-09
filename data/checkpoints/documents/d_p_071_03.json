@@ -1,0 +1,29 @@
+{
+  "doc_id": "d_p_071_03",
+  "type": "project_readme",
+  "persona_id": "p_071",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "GraphQL": 1,
+    "Integration testing": 1,
+    "JavaScript": 3,
+    "Next.js": 3,
+    "Node.js": 1,
+    "Python": 1,
+    "REST API design": 1,
+    "React": 5,
+    "Responsive design": 5,
+    "State management (Redux/Zustand)": 4,
+    "Test automation": 2,
+    "TypeScript": 5,
+    "Unit testing": 1,
+    "Web accessibility (WCAG)": 4,
+    "Web performance optimization": 5,
+    "Webpack/Vite": 3
+  },
+  "text": "# Mobile-Friendly Banking App Redesign  \n\nA production-ready frontend rewrite of a fintech banking app, optimized for mobile-first experiences with focus on performance, accessibility, and security. The redesign reduced average load time by 42% while maintaining AAA+ security compliance.  \n\n## Badges  \n[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)  \n[![Build Status](https://img.shields.io/badge/build-passing-green)](https://github.com/kamilaszymanska/banking-app/actions/workflows/main.yml)  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details.  \n\n## Tech Stack  \n- **Frontend**: React (18.2), TypeScript (4.9), Next.js (13.5)  \n- **State Management**: Zustand (v4.2) with custom hooks for cross-component consistency  \n- **Build Tools**: Vite (4.4) for faster dev server, Webpack (5.73) for production bundling  \n- **Styling**: Tailwind CSS (3.3) with custom theme for financial UI precision  \n- **Accessibility**: WCAG 2.1 AA compliance (tested via axe devtools and manual audits)  \n\n## Architecture / Design  \nThe app follows a mobile-first responsive design paradigm with a component-driven architecture. Key decisions:  \n- **State Management**: Zustand replaced Redux for simpler state sharing across nested components, reducing boilerplate by 30%  \n- **Performance**: Code-splitting via Next.js dynamic imports and image optimization with Next.js `next/image` reduced initial bundle size by 28%  \n- **Accessibility**: Implemented ARIA labels for form fields and keyboard navigation, with 98% compliance score on axe.dev  \n- **Security**: Input sanitization for all user-generated content, with CSP headers enforced via Next.js middleware  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/kamilaszymanska/banking-app.git`  \n2. Install dependencies: `yarn install`  \n3. Run dev server: `yarn dev`  \n4. Build for production: `yarn build`  \n\n## Usage / Examples  \n- **Mobile Navigation**: Test the drawer menu on smaller screens (breakpoint: 640px)  \n- **Form Validation**: Observe real-time error feedback with Tailwind’s `animate-pulse` on invalid inputs  \n- **Performance Metrics**: Check the `/analytics` route for load time and resource usage stats  \n\n## Contributing  \nWe welcome pull requests with:  \n- **Accessibility improvements** (especially for screen reader compatibility)  \n- **Performance optimizations** (focus on lazy loading and tree-shaking)  \n- **TypeScript refinements** (expand type safety in utility components)  \nEnsure all changes include automated accessibility checks via `yarn test:a11y` and performance benchmarks."
+}

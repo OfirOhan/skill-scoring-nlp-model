@@ -1,27 +1,24 @@
 {
   "doc_id": "d_p_091_03",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_091",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "solo",
-    "jargon_density": "heavy"
+    "recommender_role": "skip-level",
+    "recommender_closeness": "occasional",
+    "company_type": "agency",
+    "company_size": "large (500+)"
   },
   "skill_evidence": {
     "AWS": 3,
-    "CI/CD pipelines": 4,
-    "Docker": 4,
-    "GitHub Actions": 4,
-    "Go": 4,
-    "Java": 1,
-    "Kubernetes": 5,
-    "Microservices architecture": 5,
-    "MongoDB": 1,
-    "PostgreSQL": 4,
-    "Python": 4,
-    "REST API design": 4,
-    "Redis": 4,
-    "Terraform": 4
+    "Cloud Cost Optimization": 3,
+    "DNS/DHCP": 1,
+    "Infrastructure as Code": 3,
+    "Kubernetes": 3,
+    "Load balancing": 2,
+    "Network automation": 1,
+    "Prometheus/Grafana": 2,
+    "Serverless": 2,
+    "Terraform": 3
   },
-  "text": "# Enterprise Microservices Platform  \nA high-throughput, production-ready microservices orchestration framework leveraging Kubernetes, RESTful APIs, and distributed systems patterns for enterprise-scale deployment. Designed to decouple services, enforce resilience, and scale horizontally across hybrid cloud environments.  \n\n## API Reference  \n**Base URL:** `https://api.enterprise-platform.com/v1`  \n**Authentication:** Bearer token via `Authorization: Bearer <token>` header  \n\n### Endpoints  \n- **`GET /services`**  \n  - Returns a list of registered services with metadata (status, version, endpoints)  \n  - `200 OK` with pagination headers  \n  - `401 Unauthorized` for invalid tokens  \n\n- **`POST /services/{serviceId}/deploy`**  \n  - Triggers a rolling update with Canary deployment strategy  \n  - Accepts JSON payload: `{ \"config\": { \"replicas\": 3, \"resources\": { \"cpu\": \"1.5\", \"memory\": \"2Gi\" } } }`  \n\n- **`DELETE /services/{serviceId}`**  \n  - Gracefully terminates service with tombstone marker and cleanup hooks  \n\n## Usage / Examples  \n```bash\ncurl -X POST https://api.enterprise-platform.com/v1/services/finance/deploy \\\n  -H \"Authorization: Bearer <token>\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"config\": {\"replicas\": 5, \"resources\": {\"cpu\": \"2\", \"memory\": \"4Gi\"}}}'\n```  \n**Result:** Triggers a blue-green deployment with automatic load balancer rerouting.  \n**Monitoring:** Use Prometheus metrics endpoint `/metrics` for real-time service health.  \n\n## Getting Started / Installation  \n1. Clone repository: `git clone https://github.com/aidenoconnor/enterprise-platform.git`  \n2. Initialize Docker environment:  \n   ```bash\n   docker-compose up -d\n   terraform apply --auto-approve\n   ```  \n3. Configure environment variables in `.env` for AWS S3 integration and PostgreSQL credentials.  \n4. Run initial deployment: `go run main.go --config config.yaml`  \n\n## Tech Stack  \n- **Language:** Go (1.21+) for high-performance service boundaries  \n- **Database:** PostgreSQL (16+) with sharding for global transactions  \n- **Orchestration:** Kubernetes (1.30+) with HPA and PodDisruptionBudgets  \n- **Caching:** Redis (7.0+) for distributed session storage and rate-limiting  \n- **CI/CD:** GitHub Actions with parallelized test suites and dependency caching  \n\n## Architecture / Design  \nThe platform employs a **service mesh-first** approach, using Istio for mTLS and traffic management. Key patterns include:  \n- **Circuit breakers** via Hystrix for resilient inter-service communication  \n- **Event sourcing** with Kafka for audit trails and asynchronous processing  \n- **Consul** for service discovery and health checks  \n- **Terraform** for declarative infrastructure provisioning across AWS and GCP  \n\n## License  \nMIT License  \n[View License File](LICENSE)  \n\n## Badges  \n[![CI/CD Status](https://github.com/aidenoconnor/enterprise-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/aidenoconnor/enterprise-platform/actions/workflows/ci.yml)  \n[![Docker Image](https://img.shields.io/docker/pulls/aidenoconnor/enterprise-platform)](https://hub.docker.com/r/aidenoconnor/enterprise-platform)  \n[![Kubernetes](https://img.shields.io/kubernetes/app/enterprise-platform)](https://kubernetes.io)  \n[![Terraform](https://img.shields.io/terraform/versions)](https://www.terraform.io)"
+  "text": "Callum Reid is a Senior Platform Engineer at CyberShield Technologies whose work consistently elevates the team’s operational reliability and innovation. His expertise in AWS infrastructure has been critical to scaling the company’s cloud-native security tools, particularly during the migration of high-traffic threat detection systems. By optimizing cloud cost structures, he reduced monthly spend by 18% without compromising performance, a balance that’s rare in fast-paced environments. His use of Infrastructure as Code via Terraform streamlines deployments, cutting manual errors and deployment times by 30% across critical platforms.  \n\nCallum’s problem-solving approach is both analytical and collaborative. He thrives in ambiguity, often pivoting from technical deep dives to cross-departmental stakeholder alignment. During a recent incident, his ability to distill complex system failures into actionable steps prevented a potential service outage, showcasing his calm under pressure. His curiosity drives continuous learning—recently, he spearheaded a Kubernetes adoption strategy that improved container orchestration efficiency by 25%.  \n\nBeyond technical rigor, Callum mentors junior engineers with patience, fostering a culture of knowledge-sharing. His proactive communication ensures alignment between development and security teams, minimizing friction in high-stakes projects.  \n\nCallum’s blend of technical precision and interpersonal agility makes him a strategic asset. I strongly recommend him for roles requiring both operational excellence and collaborative leadership. His work ethic and adaptability ensure he’ll thrive in dynamic, innovation-focused environments."
 }

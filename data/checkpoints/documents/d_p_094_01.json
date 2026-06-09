@@ -3,21 +3,26 @@
   "type": "project_readme",
   "persona_id": "p_094",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "moderate"
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "API testing": 3,
-    "CI/CD pipelines": 1,
-    "Integration testing": 3,
-    "JavaScript": 2,
-    "Python": 2,
-    "REST API design": 2,
-    "Selenium/Playwright": 3,
-    "Test automation": 3,
-    "Test strategy design": 1,
-    "Unit testing": 3
+    "Agile/Scrum": 4,
+    "CI/CD pipelines": 3,
+    "Chaos engineering": 2,
+    "Cross-team collaboration": 4,
+    "Database optimization": 3,
+    "GitHub Actions": 3,
+    "Linux administration": 2,
+    "Mentoring": 3,
+    "Project management": 3,
+    "Shell scripting": 1,
+    "Stakeholder communication": 1,
+    "Strategic planning": 3,
+    "System design": 4,
+    "Team leadership": 3,
+    "Technical writing": 4
   },
-  "text": "# Test Automation Framework for Client X's Application  \nA modular, scalable test automation solution designed to validate the reliability and performance of Client X’s web application. This framework prioritizes test maintainability, execution speed, and cross-browser compatibility, with a focus on reducing regression risks during iterative development cycles. Built for small teams, it emphasizes reusable components and structured test case organization, achieving 85% test coverage across core functionalities and a 30% reduction in execution time compared to legacy tools.  \n\n## Testing  \nThe framework leverages API testing to validate REST endpoints and integration testing to ensure seamless microservices communication. Unit tests are embedded within core modules to catch edge cases early, while Selenium and Playwright handle UI interactions with parallel execution support. Test results are aggregated via Allure reports, enabling rapid root-cause analysis. Real-world use cases include validating payment gateway integrations and stress-testing user authentication flows under concurrent load.  \n\n## Getting Started / Installation  \nClone the repository using your preferred method. Ensure Python 3.8+ is installed, then run `pip install -r requirements.txt` to install dependencies. Set environment variables for API keys and browser configurations before executing tests.  \n\n## Usage / Examples  \n```python  \n# Example: API validation test  \ndef test_payment_gateway():  \n    response = requests.post(\"https://api.clientx.com/payments\", json=PAYLOAD)  \n    assert response.status_code == 200  \n    assert \"transaction_id\" in response.json()  \n```  \nFor UI tests, use Playwright’s async API to simulate user workflows:  \n```javascript  \nawait page.fill(\"#username\", \"testuser\")  \nawait page.click(\"#submit\")  \nexpect(page.locator(\"#error-message\").textContent()).toBe(\"\")  \n```  \n\n## Tech Stack  \nPython 3.8, Selenium 4, Playwright 1.20, pytest 7, Allure 2.14, Docker 20.10, JSON-based test data.  \n\n## Architecture / Design  \nThe framework employs a layered architecture: a central test runner orchestrates test suites, while modular test scripts handle specific functionalities. Test data is decoupled from logic via JSON files, and parallel execution is managed through pytest-xdist. Integration with CI/CD is intentionally omitted, but the design allows for seamless plugin integration.  \n\n## License  \nMIT License  \n\n## Contributing  \nPull requests are welcome! Ensure code adheres to PEP8 standards, includes type hints, and passes all existing test cases. New features should include both unit and integration tests."
+  "text": "# FraudGuard: Real-Time Fraud Detection for Financial Transactions  \nFraudGuard is a lightweight, production-ready system for detecting fraudulent transactions in real time using machine learning. Built for fintech teams, it processes streaming data via Kafka, applies ensemble models trained on historical fraud patterns, and flags suspicious activity with <100ms latency. The system reduces false positives by 32% in early testing while maintaining 98.4% detection accuracy for known fraud vectors.  \n\n## Acknowledgments  \nThis project leverages open-source tools and community knowledge. Special thanks to the TensorFlow and Apache Kafka communities for foundational libraries, and to my colleague Maria for feedback on streaming architecture.  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/juliana-navarro/fraudguard.git  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n3. Set environment variables for Kafka and model paths.  \n\n## Usage / Examples  \nRun the fraud detection pipeline:  \n```bash  \npython main.py --config config/prod.yaml  \n```  \nExample input: A Kafka topic with JSON-encoded transactions (e.g., `{\"amount\": 1500, \"location\": \"US\", \"user_id\": \"X123\"}`). Output includes flagged transactions and confidence scores.  \n\n## Tech Stack  \n- **ML**: TensorFlow Lite for model inference, Scikit-learn for preprocessing  \n- **Streaming**: Apache Kafka for real-time data ingestion  \n- **Database**: PostgreSQL with indexed time-series queries (optimized for 5x faster lookups)  \n- **CI/CD**: GitHub Actions for automated testing and model retraining  \n- **Monitoring**: Prometheus for latency tracking and alerting  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![GitHub](https://badgen.net/badge/github/juliana-navarro/fraudguard/green)](https://github.com/juliana-navarro/fraudguard)  \n[![Build Status](https://badgen.net/badge/build/status/green)](https://github.com/juliana-navarro/fraudguard/actions)  \n[![License](https://badgen.net/badge/license/MIT/blue)](LICENSE)  \n\n## Contributing  \nContributions are welcome! For bug fixes or feature proposals, open an issue. For code, ensure tests pass and include benchmarks for performance impacts. All changes must align with the project’s focus on low-latency detection and minimal false positives."
 }

@@ -1,27 +1,40 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Kofi Asante's 4 years of experience as a backend engineer in fintech",
-    "title": "Kofi Asante - Backend Engineer",
+    "topic_summary": "A concise curriculum vitae highlighting Lorenzo Ricci's game development experience in e-commerce.",
+    "title": "Lorenzo Ricci - Game Developer",
     "doc_id": "d_p_156_00",
     "persona_id": "p_156",
     "hyperparams": {
-      "cv_format": "minimal",
-      "geographic_convention": "Israel",
-      "company_type": "FAANG",
+      "cv_format": "hybrid",
+      "geographic_convention": "Europe",
+      "company_type": "academic",
       "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A README for a secure payment processing API developed by Kofi Asante at FinTech Innovators Ltd.",
-    "title": "SecurePay API Gateway",
+    "topic_summary": "A README for a game project that enhances e-commerce user engagement through interactive gameplay.",
+    "title": "Virtual Shopping Assistant Game",
     "doc_id": "d_p_156_01",
     "persona_id": "p_156",
     "hyperparams": {
-      "project_scale": "production",
-      "project_team_size": "large (15+)",
-      "jargon_density": "plain"
+      "project_scale": "team-internal",
+      "project_team_size": "solo",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation letter from Lorenzo's manager at E-Commerce Playthings Inc. attesting to his game development skills.",
+    "title": "Recommendation for Lorenzo Ricci",
+    "doc_id": "d_p_156_02",
+    "persona_id": "p_156",
+    "hyperparams": {
+      "recommender_role": "skip-level",
+      "recommender_closeness": "occasional",
+      "company_type": "startup",
+      "company_size": "mid (50-500)"
     }
   }
 ]

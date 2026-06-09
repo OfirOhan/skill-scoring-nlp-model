@@ -4,25 +4,21 @@
   "persona_id": "p_021",
   "hyperparams": {
     "recommender_role": "peer",
-    "recommender_closeness": "occasional",
-    "company_type": "enterprise",
+    "recommender_closeness": "brief",
+    "company_type": "agency",
     "company_size": "large (500+)"
   },
   "skill_evidence": {
-    "A/B testing": 1,
-    "Apache Airflow": 1,
-    "Data modeling": 1,
-    "Data visualization (Matplotlib/Plotly)": 1,
-    "ETL pipeline design": 1,
-    "Exploratory data analysis": 1,
-    "Feature engineering": 1,
-    "NumPy": 1,
-    "Pandas": 1,
-    "Python": 1,
-    "REST API design": 1,
-    "SQL analytics": 1,
-    "dbt": 1,
-    "scikit-learn": 1
+    "Application security (OWASP)": 3,
+    "DNS/DHCP": 1,
+    "Encryption & PKI": 3,
+    "Firewall configuration": 3,
+    "IAM/Access control": 5,
+    "Network automation": 1,
+    "Network security": 5,
+    "Penetration testing": 5,
+    "Security auditing": 4,
+    "TCP/IP": 1
   },
-  "text": "Takeshi and I first collaborated during a campaign to boost customer retention at NijiMart. When our team noticed a 20% drop in repeat purchases during the holiday season, he proposed analyzing user behavior across our app’s onboarding flow. Over two weeks, he mapped pain points by segmenting users into cohorts based on engagement patterns. His findings revealed that 35% of users abandoned the checkout process after the second step, a detail we’d overlooked. By refining the flow and adding a progress tracker, we recovered 12% of lost conversions. It wasn’t a flashy solution, but it felt *right*—data-driven, patient, and grounded in real user needs.  \n\nTakeshi is the kind of person who’ll spend an hour refining a chart’s axis labels to ensure clarity, then double-check with a teammate to confirm it aligns with the audience’s priorities. He’s not the loudest in meetings, but his questions often cut through noise. When our analytics team debated whether to prioritize customer acquisition or retention, he quietly built a model comparing both paths, letting the numbers speak.  \n\nWhat stands out is his quiet persistence. He’ll ask, “What if we tried X?” not as a brainstorm, but as a calculated experiment. His work ethic is unshakable—once he commits to a task, he’ll iterate until it’s solid, even if it means staying late to debug a flawed assumption.  \n\nI’d trust Takeshi to navigate ambiguity with rigor and humility. His approach isn’t just about results—it’s about asking the right questions, and then being stubborn enough to find answers."
+  "text": "Academic Context  \nTenzin’s approach to security problems leans toward systemic thinking—his solutions often address root causes rather than surface symptoms. At AdvertiseSphere, he led a rewrite of their authentication layer to align with OWASP guidelines, which reduced misconfigurations by 40% without compromising user experience. His curiosity about cryptographic trade-offs led him to design a hybrid encryption scheme for client-side data, balancing performance and security in a way that’s now a reference point for junior engineers.  \n\nResearch Ability  \nHe thrives in ambiguity, which is why his work on IAM systems stands out. When our team faced a scaling bottleneck in access control, Tenzin proposed a decentralized model using attribute-based policies. The result was a 30% reduction in admin overhead and a clearer audit trail. His ability to distill complex security principles into actionable code is rare—recently, he built a tool to automate compliance checks, cutting manual audits from weeks to days.  \n\nCharacter  \nTenzin is relentlessly methodical, but his strength lies in balancing rigor with empathy. During a high-stakes penetration test, he paused to ensure the team’s mock attacks wouldn’t disrupt live services, a callousness that saved hours of downtime. He also mentors peers on security architecture, often staying late to walk through edge cases. His work ethic is unshakable—once, he spent a weekend re-engineering a firewall rule set to patch a vulnerability, all while meeting a critical deadline.  \n\nPotential  \nHis depth in network security and penetration testing suggests he’ll lead infrastructure decisions in the next phase of our growth. The way he integrates security into product design, rather than as an afterthought, signals a mind that’s both technically precise and strategically forward-thinking."
 }

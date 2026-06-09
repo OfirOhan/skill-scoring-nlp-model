@@ -1,52 +1,51 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A concise professional resume highlighting Pooja's experience as a Security Engineer in adtech.",
-    "title": "Pooja Nair - Security Engineer CV",
+    "topic_summary": "A professional CV highlighting Zara Hussain's 12 years of experience as a platform engineer in fintech, with a focus on scalable systems and security.",
+    "title": "Zara Hussain - Staff Platform Engineer",
     "doc_id": "d_p_214_00",
     "persona_id": "p_214",
     "hyperparams": {
       "cv_format": "hybrid",
-      "geographic_convention": "Israel",
-      "company_type": "FAANG",
-      "company_size": "small (<50)"
+      "geographic_convention": "Europe",
+      "company_type": "startup",
+      "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A project focusing on securing adtech data pipelines with real-time threat detection.",
-    "title": "SecureAdGuard: Real-Time Anomaly Detection in AdTech Networks",
+    "topic_summary": "A README for a secure API gateway project designed to meet fintech compliance standards and handle high-volume transactions.",
+    "title": "Secure API Gateway for Fintech Compliance",
     "doc_id": "d_p_214_01",
     "persona_id": "p_214",
     "hyperparams": {
-      "project_scale": "production",
-      "project_team_size": "medium (5-15)",
+      "project_scale": "hobby",
+      "project_team_size": "large (15+)",
       "jargon_density": "plain"
     }
   },
   {
-    "doc_type": "project_readme",
-    "topic_summary": "A project implementing encryption for advertiser data in transit within adtech platforms.",
-    "title": "DataShield: Encrypting Advertiser Data in Transit",
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation letter from Zara's manager praising her leadership in building scalable infrastructure for financial platforms.",
+    "title": "Recommendation from FinTechNova Solutions Manager",
     "doc_id": "d_p_214_02",
     "persona_id": "p_214",
     "hyperparams": {
-      "project_scale": "hobby",
-      "project_team_size": "medium (5-15)",
-      "jargon_density": "moderate"
+      "recommender_role": "peer",
+      "recommender_closeness": "brief",
+      "company_type": "FAANG",
+      "company_size": "mid (50-500)"
     }
   },
   {
-    "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from Pooja's manager praising her security expertise and problem-solving skills.",
-    "title": "Recommendation for Pooja Nair - Security Engineer",
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post on implementing real-time fraud detection systems using machine learning in fintech platforms.",
+    "title": "Real-Time Fraud Detection in Fintech Systems",
     "doc_id": "d_p_214_03",
     "persona_id": "p_214",
     "hyperparams": {
-      "recommender_role": "professor",
-      "recommender_closeness": "worked-daily",
-      "company_type": "startup",
-      "company_size": "small (<50)"
+      "blog_depth": "deep-dive",
+      "jargon_density": "plain"
     }
   }
 ]

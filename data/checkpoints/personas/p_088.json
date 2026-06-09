@@ -1,65 +1,53 @@
 {
   "persona_id": "p_088",
   "hyperparams": {
-    "archetype": "fullstack_developer",
-    "years_experience": 5,
-    "seniority": "mid",
-    "industry": "adtech",
-    "writing_style": "modest",
-    "language_fluency": "near-native",
-    "self_promotion_level": "balanced",
+    "archetype": "ml_engineer",
+    "years_experience": 0,
+    "seniority": "junior",
+    "industry": "SaaS",
+    "writing_style": "concise",
+    "language_fluency": "native",
+    "self_promotion_level": "boastful",
     "quantification_tendency": "metrics-heavy"
   },
-  "name": "Kiran Thapa",
-  "current_role": "Full-Stack Developer",
-  "company": "AdVelox Technologies",
+  "name": "Vivian Osei",
+  "current_role": "Junior ML Engineer",
+  "company": "NexaTech Solutions",
   "education": {
     "degree": "Bachelor of Science in Computer Science",
-    "university": "Institute of Technology, Delhi",
-    "year": 2018
+    "university": "University of Washington",
+    "year": 2023
   },
   "career_trajectory": [
     {
-      "role": "Junior Software Developer",
-      "company": "ClickAd Solutions",
-      "duration": "2019-2020",
-      "responsibilities": "Implemented ad-serving APIs using Python and PostgreSQL"
+      "role": "Intern ML Engineer",
+      "company": "TechSaaS Inc",
+      "duration": "2022-2023"
     },
     {
-      "role": "Backend Developer",
-      "company": "MediaTrack Inc.",
-      "duration": "2020-2022",
-      "responsibilities": "Architected microservices for real-time bidding systems"
-    },
-    {
-      "role": "Full-Stack Developer",
-      "company": "AdVelox Technologies",
-      "duration": "2022-present",
-      "responsibilities": "Led cross-functional teams to build responsive ad-management dashboards"
+      "role": "Junior ML Engineer",
+      "company": "CloudSolutions Ltd",
+      "duration": "2023-present"
     }
   ],
   "skills": {
-    "Python": 4,
-    "REST API design": 4,
-    "Microservices architecture": 3,
-    "PostgreSQL": 4,
-    "Redis": 3,
-    "React": 4,
-    "TypeScript": 3,
-    "Next.js": 4,
-    "Responsive design": 4,
-    "AWS": 3,
-    "Docker": 3,
-    "Kubernetes": 3,
-    "CI/CD pipelines": 3,
-    "GitHub Actions": 3,
-    "Monitoring & alerting": 4
+    "PyTorch": 3,
+    "TensorFlow": 3,
+    "scikit-learn": 3,
+    "Hugging Face Transformers": 4,
+    "NLP": 4,
+    "Model deployment": 3,
+    "MLOps (MLflow/W&B)": 4,
+    "Apache Kafka": 1,
+    "Apache Airflow": 2,
+    "dbt": 2,
+    "ETL pipeline design": 2,
+    "CI/CD pipelines": 2
   },
   "document_ids": [
     "d_p_088_00",
     "d_p_088_01",
     "d_p_088_02",
-    "d_p_088_03",
-    "d_p_088_04"
+    "d_p_088_03"
   ]
 }

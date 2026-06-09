@@ -1,51 +1,52 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional summary of Femi Akinlade's backend engineering experience in e-commerce.",
-    "title": "Femi Akinlade - Backend Engineer",
+    "topic_summary": "A comprehensive CV highlighting Harini Subramanian's 10 years of experience as a Staff ML Engineer in adtech, with expertise in machine learning systems and ad targeting.",
+    "title": "Harini Subramanian - Staff ML Engineer",
     "doc_id": "d_p_265_00",
     "persona_id": "p_265",
     "hyperparams": {
-      "cv_format": "minimal",
-      "geographic_convention": "India",
-      "company_type": "academic",
+      "cv_format": "hybrid",
+      "geographic_convention": "Europe",
+      "company_type": "enterprise",
       "company_size": "mid (50-500)"
     }
   },
   {
-    "doc_type": "project_readme",
-    "topic_summary": "A scalable payment gateway API for e-commerce platforms, built with Node.js and PostgreSQL.",
-    "title": "E-Commerce Payment Gateway API",
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation from Harini's manager at AdVeris Technologies praising her leadership in building scalable ML pipelines for ad campaigns.",
+    "title": "Recommendation from AdVeris Technologies Manager",
     "doc_id": "d_p_265_01",
     "persona_id": "p_265",
     "hyperparams": {
-      "project_scale": "academic",
-      "project_team_size": "medium (5-15)",
-      "jargon_density": "heavy"
+      "recommender_role": "skip-level",
+      "recommender_closeness": "occasional",
+      "company_type": "enterprise",
+      "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "Recommendation from Femi's manager at E-Commerce Solutions Inc., highlighting his technical expertise and leadership.",
-    "title": "Recommendation from [Manager's Name], E-Commerce Solutions Inc.",
+    "topic_summary": "A peer recommendation highlighting Harini's collaborative approach and technical expertise in developing fraud detection models for adtech.",
+    "title": "Recommendation from Colleague at AdVeris",
     "doc_id": "d_p_265_02",
     "persona_id": "p_265",
     "hyperparams": {
-      "recommender_role": "peer",
-      "recommender_closeness": "brief",
-      "company_type": "academic",
+      "recommender_role": "direct-manager",
+      "recommender_closeness": "worked-daily",
+      "company_type": "enterprise",
       "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "blog",
-    "topic_summary": "Discussion on optimizing database queries for e-commerce scalability using indexing and caching strategies.",
-    "title": "Optimizing Database Queries for E-Commerce Scalability",
+    "topic_summary": "A technical blog post exploring the use of reinforcement learning to optimize real-time ad bidding strategies in adtech.",
+    "title": "Reinforcement Learning for Real-Time Ad Bidding Optimization",
     "doc_id": "d_p_265_03",
     "persona_id": "p_265",
     "hyperparams": {
       "blog_depth": "tutorial",
-      "jargon_density": "heavy"
+      "jargon_density": "plain"
     }
   }
 ]

@@ -3,21 +3,20 @@
   "type": "project_readme",
   "persona_id": "p_118",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "moderate"
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "API testing": 3,
-    "GitLab CI": 3,
-    "Integration testing": 3,
-    "Performance testing (JMeter/k6)": 3,
+    "3D graphics (OpenGL/Vulkan)": 4,
+    "Game networking": 4,
+    "Game physics": 5,
+    "Go": 1,
+    "GraphQL": 1,
     "Python": 3,
-    "REST API design": 3,
-    "Selenium/Playwright": 3,
-    "Test automation": 3,
-    "Unit testing": 3,
-    "Web performance optimization": 3
+    "REST API design": 2,
+    "Unity": 5,
+    "Unreal Engine": 1
   },
-  "text": "# Automated Regression Testing Framework for NexaCloud SaaS Platform  \nA scalable, maintainable framework for regression testing NexaCloud’s API and UI, reducing manual test hours by 40% and improving coverage from 65% to 92% in 3 months.  \n\n## Badges  \n[![GitHub Actions Status](https://github.com/yourusername/project/actions/workflows/build.yml/badge.svg)](https://github.com/yourusername/project/actions/workflows/build.yml)  \n[![Test Coverage](https://codecov.io/gh/yourusername/project/branch/main/graph/badge.svg)](https://codecov.io/gh/yourusername/project)  \n[![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/yourusername/project/blob/main/LICENSE)  \n\n## Tech Stack  \n- **Language**: Python 3.10 (for test scripts, reporting, and CI/CD pipelines)  \n- **UI Testing**: Playwright (headless browsers) + Selenium (legacy browser support)  \n- **API Testing**: Pytest + requests (for REST endpoints)  \n- **CI/CD**: GitLab CI (automated test triggers on PRs and pushes)  \n- **Performance**: k6 (load testing) + JMeter (stress scenarios)  \n- **Reporting**: Allure (HTML reports with step-by-step execution logs)  \n\n## Configuration  \nConfigure environment variables in `.env` (e.g., `NEXACLLOUD_API_URL=https://api.nexacloud.dev`, `PLAYWRIGHT_BROWSERS=chromium,firefox`).  \nInstall dependencies via `pip install -r requirements.txt` and set up GitLab CI runners with Docker images for Chrome/Edge.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/yourusername/automated-regression-framework.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Set up `.env` with API credentials and browser preferences.  \n4. Configure GitLab CI/CD pipelines via `config/*.yml` files.  \n\n## Usage / Examples  \n```python  \n# Example: API test for user authentication  \ndef test_login_success():  \n    response = requests.post(NEXACLLOUD_API_URL + \"/auth\", json={\"username\": \"testuser\", \"password\": \"securepass\"})  \n    assert response.status_code == 200  \n    assert \"token\" in response.json()  \n```  \nIntegrate with GitLab CI for nightly runs:  \n```yaml  \njob:  \n  script: pytest --alluredir=./reports  \n  artifacts:  \n    paths:  \n      - reports/  \n```  \n\n## Testing  \n- **Unit Tests**: 85% of codebase covered (pytest fixtures for mock API responses)  \n- **Integration Tests**: Validate API/UI flow consistency (e.g., login → dashboard → data export)  \n- **Performance Tests**: Simulate 10k concurrent users with k6 (95% latency < 2s)  \n- **Regression Tests**: Run nightly on GitLab CI (coverage: 92% of core features)  \n\n## License  \nMIT License — see LICENSE file for full terms."
+  "text": "# Quantum Quest: Multiplayer Puzzle Game  \nA Unity-based multiplayer puzzle game with dynamic level generation and real-time collaboration. Players solve procedurally generated puzzles while synchronizing actions across devices. Features include adaptive difficulty scaling, low-latency networking, and cross-platform session management.  \n\n## Deployment  \nDeployed via Docker containers on AWS ECS with auto-scaling for 10,000+ concurrent players. Uses WebSockets over TLS for real-time sync, with 99.95% packet delivery reliability. CI/CD pipeline ensures 30-second deployment windows.  \n\n## Getting Started / Installation  \n1. Clone repo: `git clone https://github.com/quantum-quest/quantum-quest.git`  \n2. Install Unity 2021.3.19f1 and dependencies  \n3. Run `npm install` for Python scripts managing level assets  \n4. Configure `manifest.json` for platform-specific build settings  \n\n## Usage / Examples  \nStart a server:  \n```bash  \n./start-server.sh --room-size 8 --difficulty medium  \n```  \nJoin a session:  \n```csharp  \nNetworkManager.Instance.JoinSession(\"room_123\", \"player_456\");  \n```  \nDynamic level generation creates 10 unique puzzles per session, with physics-based puzzle elements requiring precise timing.  \n\n## Tech Stack  \n- **Unity 2021.3**: Core engine with custom ECS networking layer  \n- **Python 3.9**: Scripting for level generation and asset pipeline automation  \n- **Vulkan**: Optimized 3D rendering with 40% better performance than OpenGL  \n- **Photon Cloud**: Real-time sync with <15ms latency  \n- **Box2D Physics**: Custom collision detection reducing CPU usage by 25%  \n\n## Architecture / Design  \nCentralized networking layer handles 5,000+ simultaneous connections using spatial hashing. Level generation uses L-systems with 128-bit seed hashing for replayability. Physics engine integrates with Unity's Havok for ragdoll effects in multiplayer scenarios.  \n\n## License  \nMIT License  \n\n## Badges  \n[![Build Status](https://github.com/quantum-quest/quantum-quest/actions/workflows/build.yml/badge.svg)](https://github.com/quantum-quest/quantum-quest/actions/workflows/build.yml)  \n[![Code Coverage](https://codecov.io/gh/quantum-quest/quantum-quest/branch/main/graph/badge.svg)](https://codecov.io/gh/quantum-quest/quantum-quest)  \n[![Performance](https://img.shields.io/badge/latency-<15ms-blue)](https://github.com/quantum-quest/quantum-quest)"
 }

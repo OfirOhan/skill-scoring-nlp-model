@@ -1,22 +1,26 @@
 {
   "doc_id": "d_p_108_02",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_108",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "plain"
+    "recommender_role": "professor",
+    "recommender_closeness": "occasional",
+    "company_type": "FAANG",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "CI/CD pipelines": 3,
-    "Docker": 3,
-    "GCP": 4,
-    "Kubernetes": 4,
-    "Linux administration": 4,
-    "Prometheus/Grafana": 4,
-    "Python": 3,
-    "Terraform": 4
+    "Agile/Scrum": 3,
+    "CI/CD pipelines": 2,
+    "ClickHouse": 1,
+    "Cross-team collaboration": 5,
+    "GitHub Actions": 2,
+    "Linux administration": 1,
+    "Mentoring": 4,
+    "Shell scripting": 1,
+    "Stakeholder communication": 4,
+    "System design": 1,
+    "Team leadership": 4,
+    "Technical writing": 1
   },
-  "text": "# Microservices Resilience Framework  \nA lightweight toolset for building fault-tolerant microservices with circuit breakers and service mesh integration. Designed for e-commerce platforms with high availability requirements.  \n\n## Roadmap / Future Work  \n- Expand support for Consul and Linkerd alongside Istio  \n- Add automated health check workflows via Prometheus alerts  \n- Implement CI/CD pipeline for deployment to AWS EKS and GCP GKE  \n- Create dashboards for circuit breaker metrics in Grafana  \n\n## Getting Started / Installation  \n1. Ensure Docker is installed (version 20.10+)  \n2. Pull the framework container: `docker pull gcr.io/your-project/resilience-framework:latest`  \n3. Configure your service mesh (Istio/Linkerd) in `config/mesh.yaml`  \n4. Run the framework: `docker-compose up -d`  \n\n## Usage / Examples  \n```bash\n# Deploy a circuit breaker for order processing  \npython3 circuitbreaker.py --service orders --timeout 500ms --retry 3  \n\n# Monitor service mesh health  \ncurl http://localhost:8080/metrics | grep \"request_success_rate\"  \n```  \nUse the `deploy.sh` script to spin up a Kubernetes cluster with Terraform, preconfigured for Prometheus and Grafana.  \n\n## Tech Stack  \n- **Language**: Python 3.9 for core logic  \n- **Containerization**: Docker with multi-stage builds  \n- **Orchestration**: Kubernetes (EKS/GKE) with HPA  \n- **Cloud**: AWS Lambda for async tasks, GCP Cloud Run for stateless services  \n- **IaC**: Terraform modules for VPCs and IAM roles  \n- **Monitoring**: Prometheus with alertmanager, Grafana dashboards  \n\n## Architecture / Design  \nThe framework operates in three layers:  \n1. **Resilience Layer**: Implements Hystrix-style circuit breakers with exponential backoff  \n2. **Mesh Layer**: Integrates with service meshes for TLS enforcement and traffic splitting  \n3. **Observability Layer**: Exposes metrics via Prometheus and logs to AWS CloudWatch  \n\nKey decisions:  \n- Use Linux sysctl tuning for kernel-level connection limits  \n- Leverage AWS CloudFormation for infrastructure drift detection  \n- Employ Python's `asyncio` for non-blocking retries  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details"
+  "text": "Felix Schmidt once led a high-stakes project at HealthBridge Innovations to integrate real-time patient data across fragmented hospital systems. When a critical deadline clashed with unexpected regulatory hurdles, he rerouted resources, prioritized stakeholder input, and maintained daily cross-functional syncs. His calm under pressure ensured the launch met compliance standards without compromising care workflows—a moment that solidified his reputation as a problem-solver who listens as much as he leads.  \n\nFelix is a Senior Tech Lead whose approach blends technical rigor with unshakable empathy. He thrives in ambiguity, translating complex healthtech challenges into actionable strategies. His mentorship isn’t transactional; he invests time in pairing junior engineers with senior stakeholders, fostering confidence and ownership. Last year, he guided a struggling team through a refactor, resulting in a 40% reduction in system downtime—a win celebrated across the org.  \n\nBeyond code, Felix excels at bridging silos. He designed a shared tooling framework that streamlined collaboration between data scientists and clinicians, reducing redundant work by months. His ability to distill technical jargon into stakeholder-friendly insights has shaped critical decisions, from infrastructure upgrades to product roadmaps.  \n\nFelix’s strength lies in his relentless curiosity and ethical grounding. He doesn’t just build systems—he builds trust. I’m confident he’ll bring the same rigor and humanity to your team, driving innovation without losing sight of the people behind the data."
 }

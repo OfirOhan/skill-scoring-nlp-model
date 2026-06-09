@@ -1,27 +1,51 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Moussa Keita's experience as a Platform Engineer in fintech, focusing on scalable infrastructure and API development.",
-    "title": "Moussa Keita - Platform Engineer",
+    "topic_summary": "A comprehensive CV highlighting Kofi Asante's 14 years of leadership in game engine architecture and tech lead roles at Lumina Interactive.",
+    "title": "Kofi Asante 108 - Staff Tech Lead / Architect",
     "doc_id": "d_p_305_00",
     "persona_id": "p_305",
     "hyperparams": {
-      "cv_format": "paragraph",
-      "geographic_convention": "Israel",
+      "cv_format": "minimal",
+      "geographic_convention": "India",
       "company_type": "startup",
-      "company_size": "large (500+)"
+      "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A GitHub project README for a secure API gateway built using Node.js and AWS Lambda to handle financial transactions in compliance with PCI-DSS standards.",
-    "title": "Secure API Gateway for Financial Transactions",
+    "topic_summary": "A GitHub README for a game engine optimization project focused on reducing latency in VR multiplayer experiences.",
+    "title": "VR Multiplayer Latency Reduction Engine",
     "doc_id": "d_p_305_01",
     "persona_id": "p_305",
     "hyperparams": {
       "project_scale": "team-internal",
-      "project_team_size": "large (15+)",
-      "jargon_density": "moderate"
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation letter from Lumina Interactive's CTO praising Kofi's technical leadership and architectural vision.",
+    "title": "Recommendation for Kofi Asante 108",
+    "doc_id": "d_p_305_02",
+    "persona_id": "p_305",
+    "hyperparams": {
+      "recommender_role": "skip-level",
+      "recommender_closeness": "occasional",
+      "company_type": "FAANG",
+      "company_size": "small (<50)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post on designing scalable backend systems for next-gen gaming platforms.",
+    "title": "Building Scalable Backend Architectures for Modern Gaming",
+    "doc_id": "d_p_305_03",
+    "persona_id": "p_305",
+    "hyperparams": {
+      "blog_depth": "deep-dive",
+      "jargon_density": "heavy"
     }
   }
 ]

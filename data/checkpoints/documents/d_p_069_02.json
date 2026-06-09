@@ -1,22 +1,26 @@
 {
   "doc_id": "d_p_069_02",
-  "type": "linkedin",
+  "type": "recommendation",
   "persona_id": "p_069",
   "hyperparams": {
-    "linkedin_completeness": "detailed"
+    "recommender_role": "skip-level",
+    "recommender_closeness": "brief",
+    "company_type": "enterprise",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "Apache Airflow": 3,
-    "Data warehousing": 3,
-    "ETL pipeline design": 3,
-    "Hugging Face Transformers": 3,
-    "Model deployment": 3,
-    "NLP": 3,
-    "PyTorch": 3,
-    "Recommendation systems": 3,
-    "TensorFlow": 3,
-    "dbt": 3,
-    "scikit-learn": 3
+    "API testing": 4,
+    "Go": 1,
+    "Integration testing": 4,
+    "Java": 1,
+    "Node.js": 1,
+    "Performance testing (JMeter/k6)": 4,
+    "Python": 3,
+    "REST API design": 3,
+    "Selenium/Playwright": 5,
+    "Test automation": 4,
+    "Test strategy design": 4,
+    "Unit testing": 4
   },
-  "text": "#MachineLearning #DataScience #AIEngineering  \nHi, I’m Zubair—a machine learning engineer at InnovateTech Solutions, focused on building scalable solutions for enterprise challenges. My work bridges complex data systems with actionable insights, driven by a mix of Python, cloud platforms, and open-source tools.  \n\nRecently, I’ve been diving into end-to-end ML pipelines, from designing ETL workflows with Apache Airflow to deploying models in production. One project involved optimizing data warehousing with cloud-based solutions, which cut query latency by 40% for a key client. Another highlight was leveraging Hugging Face Transformers to build an NLP model that improved customer support ticket classification.  \n\nI thrive in environments where data meets real-world impact. Whether it’s refining recommendation systems using collaborative filtering or fine-tuning PyTorch models for computer vision, I’m always curious about how to turn raw data into value.  \n\nOutside work, I’m experimenting with TensorFlow and dbt to streamline data analysis, and I’m excited about how tools like scikit-learn can simplify complex problems. Let’s connect if you’re navigating the intersection of ML and enterprise innovation—there’s always more to learn."
+  "text": "Academic Context  \nPallavi’s approach to problem-solving reflects a blend of analytical rigor and adaptability. During a recent scalability audit, she independently identified gaps in our test data pipelines, proposing a hybrid Python-based solution that improved coverage by 25% without disrupting existing workflows. Her ability to balance theoretical precision with practical constraints aligns well with the demands of enterprise QA.  \n\nWorking Relationship  \nI’ve collaborated with Pallavi on three cross-team initiatives, including a high-priority integration test for a new payment gateway. Her proactive communication—such as flagging potential race conditions during early-stage design reviews—minimized rework and kept timelines intact. She consistently prioritizes clarity, whether documenting test scenarios or coordinating with dev teams.  \n\nResearch Ability  \nPallavi’s work on REST API testing for our inventory system exemplifies her depth. She designed a framework that automated 80% of endpoint validations, reducing manual effort by over 40 hours monthly. Her Python scripts, which dynamically generate test payloads, have since become a standard tool across the QA team.  \n\nBroader Strengths  \nBeyond technical skill, Pallavi’s reliability stands out. She mentored two junior engineers in Playwright automation, sharing her architecture insights and debugging strategies. Her test strategy for a recent promotional campaign—avertible 12-hour downtimes—demonstrates both strategic thinking and attention to operational risk.  \n\nRecommendation  \nPallavi’s combination of technical mastery, collaborative mindset, and proactive problem-solving makes her a strong candidate. Her work has consistently elevated team efficiency and quality outcomes. I wholeheartedly recommend her for roles requiring both depth and leadership in QA."
 }

@@ -1,22 +1,24 @@
 {
   "doc_id": "d_p_056_02",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_056",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "heavy"
+    "recommender_role": "direct-manager",
+    "recommender_closeness": "brief",
+    "company_type": "enterprise",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "Application security (OWASP)": 3,
-    "Compliance (SOC2/GDPR)": 4,
-    "Encryption & PKI": 4,
-    "IAM/Access control": 4,
-    "Network security": 4,
-    "Penetration testing": 2,
-    "SIEM tools": 3,
-    "Threat modeling": 2,
-    "Vulnerability management": 4
+    "Apache Airflow": 3,
+    "Apache Kafka": 4,
+    "Apache Spark": 3,
+    "Data Warehousing": 1,
+    "Docker": 3,
+    "Kubernetes": 3,
+    "Python": 2,
+    "Snowflake": 3,
+    "Terraform": 3,
+    "dbt": 3
   },
-  "text": "# CloudSecurityAuditTool  \nA modular framework for automating compliance checks and vulnerability assessments in infrastructure-as-code environments. Designed to integrate seamlessly with CI/CD pipelines, this tool prioritizes real-time risk detection and actionable remediation guidance for cloud-native architectures.  \n\n## Deployment  \nDeploy via Docker for consistent runtime environments. Preconfigured Kubernetes manifests enable scalable cluster audits. Integration with AWS CodePipeline and Azure DevOps ensures continuous compliance validation. All outputs are encrypted at rest using AES-256 and stored in SOC2-compliant SaaS platforms.  \n\n## Getting Started / Installation  \n```bash  \npip install -r requirements.txt  \nterraform init  \n```  \nEnsure Python 3.9+ and Terraform 1.4+ are installed. Configure environment variables for cloud provider credentials and compliance rule sets.  \n\n## Usage / Examples  \n```bash  \ncloudaudit scan --tfpath ./infrastructure --ruleset gdpr  \ncloudaudit check-iam --account-id 123456789012  \n```  \nAnalyzes Terraform modules for misconfigurations, validates IAM roles against least-privilege policies, and generates HTML reports with remediation steps.  \n\n## Tech Stack  \nPython 3.9, Terraform, AWS SDK, Azure CLI, Open Policy Agent, Docker, Kubernetes, Elasticsearch (for log aggregation), and TLS 1.3 for secure API communication.  \n\n## Architecture / Design  \nA layered architecture separates parsing, rule enforcement, and reporting. The core engine dynamically loads compliance policies (SOC2, GDPR) and cross-references them against IaC templates. Network security is enforced via zero-trust principles, with all inter-service communication routed through mTLS.  \n\n## License  \nMIT License  \n\n## Badges  \n[![Build Status](https://github.com/yourusername/CloudSecurityAuditTool/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/CloudSecurityAuditTool/actions)  \n[![Compliance](https://img.shields.io/badge/Compliant-SOC2%2FGDPR-blue)](https://github.com/yourusername/CloudSecurityAuditTool)  \n[![Version](https://img.shields.io/badge/Version-1.2.0-green)](https://github.com/yourusername/CloudSecurityAuditTool/releases)"
+  "text": "To Whom It May Concern,  \n\nI have worked directly with George Adamu over the past 18 months as a Data Engineer Consultant at Strategic Data Solutions. In this role, George has consistently delivered reliable, scalable solutions to complex data challenges, balancing technical rigor with a collaborative approach to team dynamics.  \n\nGeorge’s expertise in Apache Kafka has been a critical asset. He designed a real-time data ingestion pipeline for a client’s customer analytics platform, reducing latency by 40% and enabling faster decision-making. His ability to own end-to-end workflows—from schema design to monitoring—demonstrated both technical depth and ownership. Similarly, his work with Apache Spark optimized batch processing jobs, improving query performance by 30% while maintaining compliance with enterprise data governance standards.  \n\nBeyond technical skills, George’s problem-solving mindset stands out. During a Kubernetes migration project, he proactively identified bottlenecks in our CI/CD pipeline, implementing Docker containerization that streamlined deployment processes. His attention to detail and willingness to mentor junior engineers further strengthened team productivity.  \n\nGeorge’s contributions extend beyond tools—his adaptability and ethical approach to data engineering have consistently aligned with our company’s strategic goals. He thrives in dynamic environments and brings a calm, methodical perspective to high-pressure scenarios.  \n\nI am confident George will bring the same level of dedication and technical excellence to any new opportunity. Please feel free to contact me at [email] for further discussion.  \n\nSincerely,  \n[Your Full Name]  \nSenior Technical Lead, Strategic Data Solutions  \n[Phone Number] | [Email Address]"
 }

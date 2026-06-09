@@ -1,51 +1,49 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Stefan Novakovic's 6 years of experience as a Senior Product Manager in fintech.",
-    "title": "Stefan Novakovic - Senior Product Manager",
+    "topic_summary": "Senior Full-Stack Developer with 6 years of experience in e-commerce, specializing in scalable web applications and sustainable tech solutions.",
+    "title": "Anya Kowalski - Senior Full-Stack Developer",
     "doc_id": "d_p_111_00",
     "persona_id": "p_111",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
-      "geographic_convention": "Europe",
-      "company_type": "enterprise",
-      "company_size": "mid (50-500)"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "A GitHub project README for a real-time financial analytics dashboard built using Python and React.",
-    "title": "FinTrack: Real-Time Financial Analytics Dashboard",
-    "doc_id": "d_p_111_01",
-    "persona_id": "p_111",
-    "hyperparams": {
-      "project_scale": "academic",
-      "project_team_size": "solo",
-      "jargon_density": "plain"
-    }
-  },
-  {
-    "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from Stefan's manager at Nexus Financial Solutions, praising his leadership and technical expertise.",
-    "title": "Recommendation for Stefan Novakovic",
-    "doc_id": "d_p_111_02",
-    "persona_id": "p_111",
-    "hyperparams": {
-      "recommender_role": "peer",
-      "recommender_closeness": "worked-daily",
-      "company_type": "FAANG",
+      "cv_format": "minimal",
+      "geographic_convention": "US",
+      "company_type": "agency",
       "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "blog",
-    "topic_summary": "A technical blog post discussing AI-driven personalization in fintech product design.",
-    "title": "AI-Driven Personalization: Redefining Fintech Product Design",
-    "doc_id": "d_p_111_03",
+    "topic_summary": "Exploring the use of microservices architecture to enhance scalability and performance in e-commerce platforms.",
+    "title": "Microservices in E-Commerce: A Full-Stack Developer's Perspective",
+    "doc_id": "d_p_111_01",
     "persona_id": "p_111",
     "hyperparams": {
       "blog_depth": "opinion-piece",
       "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "linkedin",
+    "topic_summary": "Experienced Senior Full-Stack Developer passionate about building sustainable e-commerce solutions and driving innovation in scalable web applications.",
+    "title": "About Anya Kowalski",
+    "doc_id": "d_p_111_02",
+    "persona_id": "p_111",
+    "hyperparams": {
+      "linkedin_completeness": "detailed"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "Endorsement of Anya Kowalski's technical expertise, leadership, and contributions to EcoCart Solutions' success.",
+    "title": "Recommendation for Anya Kowalski",
+    "doc_id": "d_p_111_03",
+    "persona_id": "p_111",
+    "hyperparams": {
+      "recommender_role": "direct-manager",
+      "recommender_closeness": "brief",
+      "company_type": "startup",
+      "company_size": "large (500+)"
     }
   }
 ]

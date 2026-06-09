@@ -1,0 +1,28 @@
+{
+  "doc_id": "d_p_272_02",
+  "type": "project_readme",
+  "persona_id": "p_272",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "ArgoCD": 3,
+    "CI/CD pipelines": 3,
+    "DNS/DHCP": 1,
+    "Docker": 2,
+    "Incident management": 3,
+    "Jenkins": 3,
+    "Kubernetes": 5,
+    "Monitoring & alerting": 3,
+    "Network automation": 1,
+    "PostgreSQL": 1,
+    "Prometheus/Grafana": 3,
+    "Python": 1,
+    "Redis": 1,
+    "SLA/SLO management": 5,
+    "Terraform": 5
+  },
+  "text": "# GameServer Monitoring System  \nReal-time infrastructure observability for live game servers, integrating with existing tooling and SLA enforcement frameworks.  \n\n## Deployment  \nDeploy via Kubernetes manifests managed by ArgoCD, with Terraform-driven infrastructure as code for cluster provisioning. Monitoring agents are injected into game server pods via init containers. Prometheus metrics are scraped from Kubernetes services, with Grafana dashboards hosted on a managed instance.  \n\n## Getting Started / Installation  \n1. Clone repo to local machine  \n2. Configure Terraform backend in `terraform.tfrc`  \n3. Run `terraform init` and `terraform apply` for cluster provisioning  \n4. Deploy manifests via `kubectl apply -f manifests/`  \n5. Verify Prometheus service endpoint via `kubectl get svc`  \n\n## Usage / Examples  \n- **Latency alerts**: Trigger alerts via Prometheus when 99th percentile latency exceeds 150ms  \n- **Auto-scaling integration**: Use Prometheus metrics to feed Kubernetes HPA for server clusters  \n- **SLA enforcement**: Configure Grafana panels to track 99.9% uptime across 5 regions  \n\n## Tech Stack  \n- **Observability**: Prometheus, Grafana, Loki  \n- **Orchestration**: Kubernetes (1.25+), ArgoCD (v2.5)  \n- **CI/CD**: GitHub Actions (workflow v2), Jenkins (pipeline v2.300)  \n- **Networking**: Calico CNI, Istio (mesh gateway)  \n- **Storage**: Local PV for logs, Cloud SQL (managed) for metadata  \n\n## Architecture / Design  \nMonitoring agents run as sidecars in game server pods, exposing metrics via HTTP. Prometheus scrapes metrics from Kubernetes services, with alerts routed through Prometheus Alertmanager. Grafana dashboards are synced via Terraform modules. SLA thresholds are enforced via custom Prometheus rules, with incident tickets auto-created via Slack webhooks.  \n\n## License  \nMIT License  \n\n## Badges  \n[![GitHub Actions Status](https://github.com/username/repo/actions/workflows/ci.yml/badge.svg)](https://github.com/username/repo/actions/workflows/ci.yml)  \n[![Terraform](https://img.shields.io/terraform/lock/username/repo?label=TF%20Lock)](https://github.com/username/repo/tree/main/terraform)  \n[![Kubernetes](https://img.shields.io/kubernetes/manifests/username/repo?label=K8s)](https://github.com/username/repo/tree/main/manifests)"
+}

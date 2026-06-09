@@ -3,22 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_190",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "moderate"
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "API testing": 3,
-    "GitLab CI": 3,
-    "Integration testing": 3,
-    "JavaScript": 2,
-    "Python": 3,
-    "REST API design": 3,
-    "Selenium/Playwright": 3,
-    "Test automation": 3,
-    "Test strategy design": 2,
-    "Unit testing": 3,
-    "Web accessibility (WCAG)": 1
+    "A/B testing": 3,
+    "Agile/Scrum": 2,
+    "Competitive analysis": 2,
+    "Data visualization (Matplotlib/Plotly)": 2,
+    "Pandas": 1,
+    "Product management": 3,
+    "Roadmap planning": 2,
+    "SQL analytics": 3,
+    "Stakeholder management": 2,
+    "Tableau/Power BI": 2,
+    "UX research": 2
   },
-  "text": "# NexGen Test Automation Framework  \n\nA modular, scalable framework designed to streamline regression testing for NexGen Solutions’ product suite. Built to reduce test maintenance overhead while ensuring consistent coverage across web and API endpoints. Prioritizes speed, readability, and seamless integration with CI/CD pipelines.  \n\n## Roadmap / Future Work  \n- Expand test coverage for microservices architecture by Q3 2024  \n- Integrate real-time reporting with Grafana for test dashboard visualization  \n- Add support for headless browser compatibility testing via Playwright  \n- Refactor test data management to support dynamic environment variables  \n- Explore parallel execution optimization for CI/CD pipelines  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n```bash  \ngit clone https://github.com/nexgensolutions/next-gen-test-framework.git  \n```  \n2. Install dependencies:  \n```bash  \npip install -r requirements.txt  \n```  \n3. Configure environment variables in `.env` for API endpoints and credentials  \n4. Run initial setup:  \n```bash  \npython setup.py install  \n```  \n\n## Usage / Examples  \n```python  \nfrom framework.api import APITestCase  \nfrom framework.web import WebTestCase  \n\nclass LoginTest(APITestCase):  \n    def test_auth_success(self):  \n        self.post(\"/login\", {\"username\": \"admin\", \"password\": \"secure123\"})  \n        self.assert_status(200)  \n\nclass DashboardTest(WebTestCase):  \n    def test_page_load(self):  \n        self.navigate(\"https://app.nexgen.com/dashboard\")  \n        self.assert_title(\"NexGen Dashboard\")  \n```  \nFramework supports chaining API requests, parameterized test data, and hybrid test suites.  \n\n## Tech Stack  \n- **Language**: Python 3.9+  \n- **Browsers**: Playwright (Chromium, Firefox, WebKit)  \n- **CI/CD**: GitLab CI for pipeline orchestration  \n- **Testing**: pytest for unit/integration test suites  \n- **Containers**: Docker for environment isolation  \n\n## Architecture / Design  \nFramework follows a layered architecture:  \n1. **Core Engine**: Manages test execution flow and reporting  \n2. **Adapter Layer**: Abstracts browser/API interactions via plugins  \n3. **Data Layer**: Centralized config and test data storage  \n4. **CI Integration**: Pre-configured GitLab CI templates for pipeline sync  \n\nDesigned for extensibility—add custom plugins for third-party services. Test results are exported in JSON format for downstream analysis.  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
+  "text": "# Game Insights Dashboard  \nA lightweight tool for tracking real-time player engagement metrics in game environments, designed to support data-driven decisions without requiring deep technical expertise. The dashboard aggregates session data, retention rates, and interaction patterns, offering a clear view of user behavior to inform iterative improvements and feature prioritization.  \n\n## API Reference  \nThe dashboard exposes a minimal API for fetching and comparing metrics:  \n- **GET /metrics**  \n  Retrieve current player engagement statistics (e.g., active sessions, average playtime).  \n- **POST /compare**  \n  Submit two timestamps to analyze engagement trends between sessions.  \n- **GET /heatmap**  \n  Generate a visual representation of player activity across game zones.  \n\nResponses are formatted as JSON, with timestamps and aggregated values.  \n\n## Usage / Examples  \nTo monitor retention rates:  \n```bash  \ncurl -X GET \"http://localhost:5000/metrics?metric=retention\"  \n```  \nFor A/B testing analysis:  \n```bash  \ncurl -X POST \"http://localhost:5000/compare\" -d '{\"start\":\"2023-10-01\",\"end\":\"2023-10-07\"}'  \n```  \nThe dashboard’s UI automatically updates when new data arrives, reflecting changes in user behavior.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/marta-wojcik/game-insights.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Run the server: `python app.py`  \n4. Access the dashboard at `http://localhost:5000`  \n\n## Tech Stack  \n- **Backend**: Python 3.9 with Flask for routing and data handling  \n- **Database**: SQLite for lightweight, local storage of session logs  \n- **Frontend**: HTML, CSS, and Chart.js for dynamic visualizations  \n- **Real-time Updates**: WebSocket for live metric streaming  \n\n## Architecture / Design  \nThe system prioritizes simplicity and scalability. Data is ingested via a REST API, stored in SQLite, and processed into visualizations using Chart.js. WebSocket connections ensure the dashboard reflects real-time metrics without polling. Modular code separates data ingestion, storage, and visualization layers, enabling future integration with cloud databases or external analytics tools.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![GitHub](https://badgen.net/badge/github/marta-wojcik/game-insights/green)](https://github.com/marta-wojcik/game-insights)  \n[![Version](https://badgen.net/badge/version/1.0.0/green)](https://github.com/marta-wojcik/game-insights/releases/tag/v1.0.0)  \n[![License](https://badgen.net/badge/license/MIT/blue)](https://github.com/marta-wojcik/game-insights/blob/main/LICENSE)"
 }

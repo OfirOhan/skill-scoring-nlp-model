@@ -1,40 +1,77 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A CV for Adam Kowalczyk, a QA Engineer with 0 years of experience in the SaaS industry",
-    "title": "Adam Kowalczyk - QA Engineer",
+    "topic_summary": "Professional experience as a Staff ML Engineer in e-commerce, specializing in machine learning solutions for retail analytics and recommendation systems.",
+    "title": "William Oduor - Staff ML Engineer",
     "doc_id": "d_p_134_00",
     "persona_id": "p_134",
     "hyperparams": {
-      "cv_format": "hybrid",
-      "geographic_convention": "Europe",
+      "cv_format": "bullet-heavy",
+      "geographic_convention": "Israel",
       "company_type": "academic",
-      "company_size": "large (500+)"
+      "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A GitHub project README for an automated testing framework tailored for SaaS applications",
-    "title": "SaaS TestBot: Automated QA Framework for Cloud Applications",
+    "topic_summary": "An e-commerce recommendation system using collaborative filtering and deep learning to enhance user experience.",
+    "title": "Ecomify Recommender System",
     "doc_id": "d_p_134_01",
     "persona_id": "p_134",
     "hyperparams": {
+      "project_scale": "academic",
+      "project_team_size": "solo",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "Demand forecasting model leveraging time series analysis and neural networks for inventory optimization.",
+    "title": "Ecomify Demand Forecasting",
+    "doc_id": "d_p_134_02",
+    "persona_id": "p_134",
+    "hyperparams": {
+      "project_scale": "production",
+      "project_team_size": "large (15+)",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "Customer churn prediction using ensemble methods and feature engineering to improve retention strategies.",
+    "title": "Ecomify Churn Prediction",
+    "doc_id": "d_p_134_03",
+    "persona_id": "p_134",
+    "hyperparams": {
       "project_scale": "team-internal",
-      "project_team_size": "medium (5-15)",
+      "project_team_size": "solo",
       "jargon_density": "heavy"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from a software engineering professor endorsing Adam's QA testing skills",
-    "title": "Recommendation for Adam Kowalczyk - Software Engineering Candidate",
-    "doc_id": "d_p_134_02",
+    "topic_summary": "Recommendation from a team manager highlighting William's leadership in ML projects and technical expertise.",
+    "title": "Recommendation from Ecomify Solutions Team Lead",
+    "doc_id": "d_p_134_04",
     "persona_id": "p_134",
     "hyperparams": {
       "recommender_role": "professor",
-      "recommender_closeness": "occasional",
-      "company_type": "enterprise",
+      "recommender_closeness": "brief",
+      "company_type": "startup",
       "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "Peer recommendation emphasizing William's collaborative problem-solving and code quality in ML engineering.",
+    "title": "Recommendation from Ecomify Solutions Peer",
+    "doc_id": "d_p_134_05",
+    "persona_id": "p_134",
+    "hyperparams": {
+      "recommender_role": "direct-manager",
+      "recommender_closeness": "worked-daily",
+      "company_type": "agency",
+      "company_size": "large (500+)"
     }
   }
 ]

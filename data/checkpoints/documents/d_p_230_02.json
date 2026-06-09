@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_230_02",
+  "type": "project_readme",
+  "persona_id": "p_230",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "CI/CD pipelines": 3,
+    "Docker": 3,
+    "Go": 5,
+    "Kubernetes": 3,
+    "Microservices architecture": 4,
+    "PostgreSQL": 5,
+    "Prometheus/Grafana": 1,
+    "Python": 4
+  },
+  "text": "# TeleMediCare Backend API  \nHigh-performance telemedicine platform backend for real-time video consultations and secure messaging, built for scalability, reliability, and low-latency communication. Designed to handle thousands of concurrent sessions with minimal downtime, leveraging microservices and distributed systems principles.  \n\n## Getting Started / Installation  \nEnsure Docker is installed. Clone the repo and navigate to the project root. Run `docker-compose up --build` to spin up PostgreSQL, Redis, and the core services. For local development, install Python 3.9+ and Go 1.21+. Set environment variables via `.env` or `export` commands.  \n\n## Usage / Examples  \n**Video Consultation**:  \n```bash  \ncurl -X POST \"http://api/consultation\" -H \"Authorization: Bearer <token>\" -d '{\"patient_id\": \"123\", \"doctor_id\": \"456\"}'  \n```  \n**Secure Messaging**:  \n```bash  \ncurl -X POST \"http://api/messages\" -H \"Authorization: Bearer <token>\" -d '{\"recipient_id\": \"789\", \"content\": \"Urgent follow-up needed\"}'  \n```  \nAll endpoints are rate-limited and authenticated via JWT.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/license/TakeshiHayashi/TeleMediCare?color=blue)](https://github.com/TakeshiHayashi/TeleMediCare/blob/main/LICENSE)  \n[![Build Status](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/TakeshiHayashi/1234567890abcdef1234567890abcdef/raw/status.json)](https://github.com/TakeshiHayashi/TeleMediCare/actions)  \n[![Tech Stack](https://img.shields.io/badge/tech-stack-Go%2CPython%2CPostgreSQL%2CDocker%2CKubernetes-blue)](https://github.com/TakeshiHayashi/TeleMediCare)  \n\n## Tech Stack  \n- **Backend**: Go (for real-time logic), Python (data processing pipelines)  \n- **Database**: PostgreSQL (with connection pooling and replication)  \n- **Deployment**: Docker (containerization), Kubernetes (orchestration)  \n- **Communication**: gRPC (microservices interop), WebSockets (real-time sync)  \n\n## Architecture / Design  \nThe system is divided into microservices: video, messaging, user management, and analytics. Video streams are handled via WebRTC with Go-based proxies, while messaging uses Redis for pub/sub. PostgreSQL is optimized for high-concurrency with index-only scans and partitioning. All services communicate via gRPC, with circuit breakers and retries implemented at the API gateway.  \n\n## Contributing  \nPRs are welcome! Focus on improving scalability, adding edge cases to existing workflows, or refining the CI/CD pipeline. Ensure all changes include unit tests and integration with the monitoring stack.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/TakeshiHayashi/TeleMediCare/blob/main/LICENSE) for details."
+}

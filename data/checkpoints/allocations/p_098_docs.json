@@ -1,40 +1,63 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Franco Moretti's role as a Tech Lead/Architect at NexaPay Solutions with fintech expertise",
-    "title": "Franco Moretti - Tech Lead/Architect",
+    "topic_summary": "Staff Data Scientist with 14 years of experience in SaaS industry, specializing in data science and machine learning solutions",
+    "title": "Tara Singh - Staff Data Scientist CV",
     "doc_id": "d_p_098_00",
     "persona_id": "p_098",
     "hyperparams": {
       "cv_format": "minimal",
-      "geographic_convention": "India",
-      "company_type": "startup",
-      "company_size": "large (500+)"
+      "geographic_convention": "Israel",
+      "company_type": "FAANG",
+      "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A README for a fintech payment gateway project focusing on secure API integrations",
-    "title": "Fintech Payment Gateway",
+    "topic_summary": "A machine learning project to predict system failures in SaaS infrastructure using time-series analysis and anomaly detection",
+    "title": "Predictive Maintenance for SaaS Infrastructure",
     "doc_id": "d_p_098_01",
     "persona_id": "p_098",
     "hyperparams": {
-      "project_scale": "team-internal",
-      "project_team_size": "small (2-4)",
+      "project_scale": "academic",
+      "project_team_size": "solo",
       "jargon_density": "heavy"
     }
   },
   {
-    "doc_type": "recommendation",
-    "topic_summary": "A recommendation from a professor attesting to Franco's technical skills and leadership potential",
-    "title": "Recommendation from Dr. Elena Martinez",
+    "doc_type": "project_readme",
+    "topic_summary": "A data science project to build a predictive model for customer churn in SaaS, leveraging customer behavior data and survival analysis techniques",
+    "title": "Customer Churn Prediction Model",
     "doc_id": "d_p_098_02",
     "persona_id": "p_098",
     "hyperparams": {
-      "recommender_role": "professor",
+      "project_scale": "hobby",
+      "project_team_size": "large (15+)",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation letter from Tara's manager highlighting her leadership in data science projects and her impact on product development",
+    "title": "Recommendation from Senior Engineering Manager, NexaCorp",
+    "doc_id": "d_p_098_03",
+    "persona_id": "p_098",
+    "hyperparams": {
+      "recommender_role": "peer",
       "recommender_closeness": "worked-daily",
       "company_type": "startup",
-      "company_size": "small (<50)"
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post on optimizing data pipelines in SaaS environments to improve processing efficiency and scalability",
+    "title": "Optimizing Data Pipelines in SaaS: Best Practices",
+    "doc_id": "d_p_098_04",
+    "persona_id": "p_098",
+    "hyperparams": {
+      "blog_depth": "deep-dive",
+      "jargon_density": "plain"
     }
   }
 ]

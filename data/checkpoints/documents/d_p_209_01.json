@@ -4,21 +4,20 @@
   "persona_id": "p_209",
   "hyperparams": {
     "project_scale": "academic",
-    "project_team_size": "large (15+)",
+    "project_team_size": "medium (5-15)",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Docker": 3,
-    "GitHub Actions": 2,
-    "MLOps (MLflow)": 2,
-    "Model deployment": 3,
-    "NLP": 3,
-    "PyTorch": 3,
-    "TensorFlow": 3,
-    "REST API design": 3,
-    "Team collaboration": 2,
-    "scikit-learn": 3
+    "A/B testing": 3,
+    "Data visualization (Matplotlib/Plotly)": 4,
+    "Feature engineering": 3,
+    "Hypothesis testing": 3,
+    "Jupyter notebooks": 3,
+    "NumPy": 4,
+    "Pandas": 4,
+    "Python": 1,
+    "SQL analytics": 3,
+    "Statistical modeling": 3
   },
-  "text": "# Fraud Detection System Using Machine Learning  \n\nA scalable, production-ready solution for real-time fraud detection in fintech transactions, leveraging advanced ML models and robust infrastructure.  \n\n## Deployment  \nThe system is deployed on AWS using EC2 instances for compute and Lambda for serverless inference. Docker containers ensure consistent environments across stages, while MLflow tracks model versions and experiment metadata. The pipeline integrates with Kafka for real-time data streaming and Redis for caching.  \n\n## Badges  \n[CI/CD: ✅ Passed] [Tests: 🟢 100%] [Coverage: 🟢 85%] [License: MIT]  \n\n## Tech Stack  \n- **ML Frameworks**: scikit-learn (baseline models), PyTorch (custom neural networks), TensorFlow (distributed training)  \n- **MLOps**: MLflow for model registry and tracking, Airflow for workflow orchestration  \n- **Cloud**: AWS (S3 for data storage, Lambda for API endpoints)  \n- **Data**: Apache Kafka (stream processing), Redis (low-latency caching)  \n- **DevOps**: Docker (containerization), GitHub Actions (CI/CD)  \n- **API**: RESTful endpoints for real-time fraud scoring and batch inference  \n\n## Architecture / Design  \nThe system is divided into three core components:  \n1. **Data Pipeline**: Ingests transaction logs from Kafka, preprocesses data using PyTorch DataLoaders, and stores features in S3.  \n2. **Model Serving**: Hosts trained models via Flask REST APIs, with A/B testing enabled via MLflow.  \n3. **Monitoring**: Tracks inference latency and model drift using Prometheus and Grafana, with alerts sent to Slack.  \nCollaboration was managed via Git submodules for shared utilities and weekly syncs on Jira to align on model performance benchmarks.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/your-username/fraud-detection.git`  \n2. Build Docker containers: `docker-compose up --build`  \n3. Configure AWS credentials in `~/.aws/credentials`  \n4. Run initial tests: `make test`  \n\n## Usage / Examples  \n- **Real-time scoring**:  \n  ```bash  \n  curl -X POST https://api.frauddetector.com/v1/score \\\n    -H \"Content-Type: application/json\" \\\n    -d '{\"amount\": 1500, \"timestamp\": \"2023-10-01T12:34:56Z\", \"user_id\": \"U12345\"}'  \n  ```  \n- **Batch inference**:  \n  ```bash  \n  python batch_inference.py --model_version v2.1 --input_path s3://fraud-data/2023-10-01.csv  \n  ```  \nThe system supports incremental retraining with Spark and integrates with existing fintech platforms via REST APIs.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# Fraud Detection in Financial Transactions  \n\nA production-grade system for real-time anomaly detection using ensemble modeling and temporal pattern analysis. Designed to identify fraudulent activity in high-volume transaction datasets with sub-second latency.  \n\n[![Build Status](https://github.com/yourusername/fraud-detection/actions/workflows/main.yml/badge.svg)](https://github.com/yourusername/fraud-detection/actions)  \n[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  \n[![A/B Testing](https://img.shields.io/badge/A--B%20Testing-Enabled-green.svg)](https://github.com/yourusername/fraud-detection/tree/main/experimental)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for full details.  \n\n## Tech Stack  \n- **Data Ingestion**: Apache Kafka (streaming ETL)  \n- **Analytics**: SQL (PostgreSQL), Pandas (data wrangling)  \n- **Modeling**: Scikit-learn (baseline), XGBoost (production)  \n- **Visualization**: Plotly (dashboarding), Matplotlib (exploratory analysis)  \n- **Infrastructure**: Docker (containerization), AWS Lambda (serverless inference)  \n\n## Architecture / Design  \nThe system operates on a three-tier architecture:  \n1. **Streaming Layer**: Kafka brokers process raw transaction feeds, filtering for suspicious patterns via real-time window aggregations.  \n2. **Analytics Layer**: SQL queries extract temporal features (e.g., transaction frequency, geographic drift), while Pandas-based pipelines perform feature engineering for model training.  \n3. **Model Serving**: XGBoost models deployed as AWS Lambda functions, with A/B testing frameworks comparing performance against legacy rule-based systems.  \n\nKey design choices include:  \n- **Temporal Normalization**: Scaling features to account for time-of-day and seasonal variance.  \n- **Online Learning**: Incremental model updates using streaming data to adapt to evolving fraud patterns.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/yourusername/fraud-detection.git  \ncd fraud-detection  \ndocker compose up -d  \n```  \nEnsure PostgreSQL is running locally and install dependencies via `pip install -r requirements.txt`.  \n\n## Usage / Examples  \n```python  \n# Run baseline model evaluation  \npython evaluate.py --model=xgboost --dataset=training  \n\n# Generate exploratory analysis notebook  \njupyter nbconvert --to notebook --execute feature_engineering.ipynb  \n```  \nUse the `ab_test` script to compare model variants in production environments.  \n\n## Contributing  \nContributions require:  \n1. Code formatted with Black (8.0)  \n2. Unit tests covering new features  \n3. License headers added to all files  \n4. Pull requests targeting `main` branch  \n\nFor data scientists: focus on improving feature engineering pipelines or optimizing model inference latency."
 }

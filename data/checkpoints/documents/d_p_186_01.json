@@ -4,20 +4,22 @@
   "persona_id": "p_186",
   "hyperparams": {
     "project_scale": "hobby",
-    "project_team_size": "solo",
+    "project_team_size": "small (2-4)",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "CI/CD pipelines": 4,
-    "Cloud networking (VPC/subnets)": 4,
-    "Database optimization": 4,
-    "GCP": 3,
-    "Kubernetes": 4,
-    "Linux administration": 4,
-    "Network automation": 3,
+    "A/B testing": 3,
+    "Data visualization (Matplotlib/Plotly)": 4,
+    "Feature engineering": 4,
+    "Hypothesis testing": 2,
+    "NumPy": 4,
+    "Pandas": 4,
     "Python": 3,
-    "Terraform": 3
+    "REST API design": 1,
+    "SQL analytics": 3,
+    "Statistical modeling": 4,
+    "Tableau/Power BI": 1,
+    "Time series analysis": 4
   },
-  "text": "# Enterprise Microservices Architecture Modernization  \nA scalable, cloud-native platform for enterprise SaaS applications, optimized for performance, cost, and observability. Built with AWS/GCP hybrid infrastructure, this project demonstrates a modular microservices architecture with 40% latency reduction and 30% cost savings via automated scaling and database sharding.  \n\n## Contributing  \nOpen collaboration is encouraged. Submit PRs via GitHub for improvements to service mesh configurations, CI/CD pipelines, or network automation scripts. Follow [CONTRIBUTING.md](https://github.com/riyadesai/enterprise-microservices/blob/main/CONTRIBUTING.md) for guidelines on architecture reviews and code quality standards.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/riyadesai/enterprise-microservices.git  \ncd enterprise-microservices  \n./setup.sh  # Installs Python 3.9, Terraform 1.4, and AWS CLI  \nmake build  # Compiles Docker images with Prometheus metrics endpoints  \n```  \nDeploy using Terraform: `terraform apply` to provision VPCs, Kubernetes clusters, and database clusters. Ensure AWS IAM roles and GCP service accounts are preconfigured for cross-cloud communication.  \n\n## Usage / Examples  \n```bash  \n./run.sh --profile prod  # Launches all services with auto-scaling  \ncurl http://api-gateway:8080/health  # Validates service mesh routing  \n```  \nMonitor with Grafana dashboards: `kubectl port-forward svc/grafana 3000` to view latency trends and database query performance. Example: 25% improvement in read latency after sharding PostgreSQL tables.  \n\n## Tech Stack  \n- **Cloud**: AWS (EKS, RDS) + GCP (Cloud Run, BigQuery)  \n- **Orchestration**: Kubernetes with HPA (horizontal pod autoscaling)  \n- **CI/CD**: GitLab CI pipelines with artifact promotion between environments  \n- **Networking**: VPC peering + Cloud NAT for hybrid cloud access  \n- **Observability**: Prometheus + Grafana + Fluentd for log aggregation  \n\n## Architecture / Design  \nA decoupled architecture with API gateways, service meshes, and stateless compute layers. Key decisions:  \n- **Database Optimization**: PostgreSQL sharding reduced read latency by 25%  \n- **Network Automation**: Terraform-managed VPCs with route tables for 99.95% uptime  \n- **Security**: mTLS between services via Istio, with AWS WAF for API protection  \n\n## License  \nMIT License. See [LICENSE](https://github.com/riyadesai/enterprise-microservices/blob/main/LICENSE).  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/actions/workflow/status/riyadesai/enterprise-microservices/main.yml?branch=main)](https://github.com/riyadesai/enterprise-microservices/actions)  \n[![CI/CD](https://img.shields.io/github/workflow/status/riyadesai/enterprise-microservices/CI/CD?branch=main)](https://github.com/riyadesai/enterprise-microservices/actions)  \n[![Docker](https://img.shields.io/docker/pulls/riyadesai/enterprise-microservices)](https://hub.docker.com/r/riyadesai/enterprise-microservices)"
+  "text": "# Fraud Detection in Financial Transactions  \nA production-ready model for real-time anomaly detection in fintech environments, leveraging TensorFlow and Python. The system achieves 98.2% precision and 97.5% F1 score on imbalanced datasets, with sub-50ms inference latency on edge devices. Built for integration into transaction processing pipelines, with modular design for scalability.  \n\n## Roadmap / Future Work  \n- **Phase 1 (Q3 2024):** Expand to handle cross-border transaction patterns using time-series decomposition  \n- **Phase 2 (Q1 2025):** Implement on-device inference with TensorFlow Lite for low-latency edge deployments  \n- **Phase 3 (Q2 2025):** Add model explainability via SHAP values for compliance reporting  \n- **Long-term:** Integrate with fraud scoring systems using Kafka streams for real-time pipeline synchronization  \n\n## Getting Started / Installation  \n```bash  \npip install -r requirements.txt  \npython -m venv env  \nsource env/bin/activate  \npython prepare_data.py  \n```  \nEnsure you have TensorFlow 2.12+ and CUDA 11.8 installed for GPU acceleration. The dataset is sourced from Kaggle's \"Financial Transactions\" public dataset (preprocessed in `data/`).  \n\n## Usage / Examples  \nTrain the model with:  \n```python  \npython train.py --config configs/production.yaml  \n```  \nEvaluate performance using:  \n```python  \npython evaluate.py --model_path models/final_model.h5  \n```  \nThe script automatically generates confusion matrices and ROC curves using Matplotlib, with color-coded thresholds for actionable insights.  \n\n## Tech Stack  \n- **Language:** Python 3.10  \n- **ML Frameworks:** TensorFlow 2.12, Scikit-learn 1.3  \n- **Data Processing:** Pandas 2.1, NumPy 1.23  \n- **Statistical Tools:** Statsmodels 0.14, SciPy 1.11  \n- **Time Series:** Prophet 1.1, SARIMAX 1.1  \n\n## Architecture / Design  \nThe system employs a hybrid model combining LSTM for sequential pattern recognition and XGBoost for feature-level anomaly scoring. Data is preprocessed using Z-score normalization and SMOTE oversampling. The architecture includes:  \n1. **Feature Engineering Pipeline:** Temporal aggregation, transaction frequency analysis, and geospatial clustering  \n2. **Model Ensemble:** Weighted combination of deep learning and tree-based models for robustness  \n3. **Evaluation Metrics:** Precision@k, F1 score, and AUC-ROC curves for imbalanced class performance  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
 }

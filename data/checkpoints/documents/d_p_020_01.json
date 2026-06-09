@@ -1,25 +1,26 @@
 {
   "doc_id": "d_p_020_01",
-  "type": "project_readme",
+  "type": "blog",
   "persona_id": "p_020",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "solo",
-    "jargon_density": "plain"
+    "blog_depth": "tutorial",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
     "AWS": 4,
-    "Apache Airflow": 4,
-    "Computer vision": 1,
+    "CI/CD pipelines": 4,
+    "Cloud networking (VPC/subnets)": 4,
+    "Database optimization": 1,
     "Docker": 3,
-    "GCP": 1,
-    "Hugging Face Transformers": 4,
-    "Kubernetes": 1,
-    "MLOps (MLflow/W&B)": 4,
-    "Model deployment": 4,
-    "NLP": 4,
-    "PyTorch": 1,
-    "TensorFlow": 1
+    "GCP": 3,
+    "GitLab CI": 3,
+    "Kubernetes": 4,
+    "Linux administration": 3,
+    "Load balancing": 3,
+    "Prometheus/Grafana": 3,
+    "Python": 2,
+    "Serverless (Lambda/Cloud Functions)": 3,
+    "Terraform": 4
   },
-  "text": "# MedReadmit: Predictive Analytics for Hospital Readmissions  \nA scalable platform to score readmission risk using EHR data, built with production-grade MLOps and NLP pipelines.  \n\n[![AWS](https://img.shields.io/badge/AWS-00c58c?style=flat)](https://aws.amazon.com/)  \n[![Airflow](https://img.shields.io/badge/Apache%20Airflow-0066cc?style=flat)](https://airflow.apache.org/)  \n[![Transformers](https://img.shields.io/badge/Hugging%20Face%20Transformers-000000?style=flat&logo=huggingface)](https://huggingface.co/)  \n[![MLflow](https://img.shields.io/badge/MLflow-000000?style=flat&logo=mlflow)](https://mlflow.org/)  \n[![Deployment](https://img.shields.io/badge/Deployment-00c58c?style=flat)](https://aws.amazon.com/lambda/)  \n\n## Getting Started / Installation  \nInstall Docker for consistent environments:  \n```bash  \ncurl -fsSL https://get.docker.com -o get-docker.sh  \nsudo sh get-docker.sh  \n```  \nBuild the container:  \n```bash  \ndocker build -t medreadmit .  \ndocker run --rm -p 8000:8000 medreadmit  \n```  \nRequires Python 3.8+, pandas, and AWS CLI configured.  \n\n## Usage / Examples  \nPredict readmission risk with:  \n```bash  \ncurl -X POST http://localhost:8000/predict \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"patient_id\": \"123\", \"age\": 65, \"diagnosis\": \"Pneumonia\"}'  \n```  \nOutput includes risk score (0-1) and top 3 contributing factors. Model achieves 89% F1 on 10k+ de-identified records.  \n\n## Configuration  \nEdit `config.yaml` to adjust:  \n- Model type (e.g., BERT for NLP features)  \n- Data pipeline paths (CSV/JSON formats)  \n- Output format (JSON, CSV, or AWS S3)  \nAWS credentials are loaded via environment variables.  \n\n## Deployment  \nExpose as REST API via AWS Lambda + API Gateway. Packaging uses Docker to ensure consistent dependencies. CI/CD pipelines automate testing and deployment with GitHub Actions.  \n\n## Architecture / Design  \nModular microservices:  \n1. **ETL Pipeline**: Airflow orchestrates data ingestion from CSVs and AWS S3.  \n2. **Model Serving**: MLflow tracks experiments; models are versioned and deployed as Docker containers.  \n3. **Inference Layer**: REST API handles batch and real-time requests with rate limiting.  \n\n## Tech Stack / Built With  \n- **Docker** (containerization)  \n- **AWS Lambda + API Gateway** (serverless deployment)  \n- **Apache Airflow** (orchestration)  \n- **Hugging Face Transformers** (NLP feature extraction)  \n- **MLflow** (experiment tracking)  \n- **Python 3.8+** (core language)  \n\n## Contributing  \nThis is a solo project, but I welcome collaboration on data pipelines or model optimization. Open issues for feature requests or bugs. All contributions require a pull request with tests.  \n\n---  \n*Built with 100% reproducible workflows. No magic—just data, models, and infrastructure.*"
+  "text": "**Optimizing Microservices for E-Commerce Scalability**  \n\n**Problem Statement**  \nOur platform faced a 30% latency spike during peak hours, with 15% of transactions failing due to cascading service outages. The monolithic architecture, while stable, couldn’t scale beyond 10k QPS without manual intervention. As we prep for Black Friday, the need for automated, resilient scaling became critical.  \n\n**Failed Approaches**  \nEarly attempts to split into microservices led to fragmented ownership and inconsistent deployments. We tried Docker containers without proper orchestration, resulting in 20% error rates during traffic spikes. A Kubernetes rollout lacked horizontal scaling rules, and manual node provisioning caused delays. Even with basic load balancing, latency remained above 500ms under load.  \n\n**Working Solution**  \nWe refactored core services into Kubernetes clusters with HPA (Horizontal Pod Autoscaler) tied to CloudWatch metrics. Terraform managed VPC subnets and security groups, ensuring consistent environments across AWS regions. GitLab CI pipelines automated testing and canary deployments, reducing rollback time by 60%. Load balancers were configured with sticky sessions for cart state persistence, and Prometheus/Grafana provided real-time dashboards.  \n\n**Why It Works**  \nThe solution leverages Kubernetes’ auto-scaling to handle 5x more traffic without manual intervention. Terraform’s infrastructure-as-code approach eliminated configuration drift, while GitLab CI’s parallel testing cut deployment cycles to under 15 minutes. By isolating services into private subnets, we reduced cross-service latency by 40%. Prometheus alerts now proactively scale resources, keeping latency below 200ms even at 20k QPS.  \n\n**Future Work**  \nNext steps include migrating order processing to AWS Lambda for event-driven scaling, reducing serverless cold starts by 70%. We’re also exploring AI-driven autoscaling with GCP’s AI Platform to predict traffic patterns. Expanding Terraform modules for multi-cloud resilience will ensure disaster recovery across AWS and GCP regions. The goal is to achieve 99.99% uptime while cutting infrastructure costs by 30% through smarter resource allocation.  \n\nThis approach balances agility with reliability, proving that microservices scaling isn’t just about splitting code—it’s about aligning infrastructure, observability, and workflows to handle the chaos of growth."
 }

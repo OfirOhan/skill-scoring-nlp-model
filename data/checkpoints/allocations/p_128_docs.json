@@ -1,26 +1,50 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Frontend Engineer with 2 years of experience building enterprise-scale web applications at NexaCorp",
-    "title": "Emre Yalcin",
+    "topic_summary": "A comprehensive CV highlighting 14 years of experience as a platform engineer in e-commerce, specializing in VirtueMart.",
+    "title": "Nikolai Sorokin - Staff Platform Engineer",
     "doc_id": "d_p_128_00",
     "persona_id": "p_128",
     "hyperparams": {
-      "cv_format": "paragraph",
-      "geographic_convention": "Israel",
-      "company_type": "startup",
-      "company_size": "large (500+)"
+      "cv_format": "minimal",
+      "geographic_convention": "Europe",
+      "company_type": "academic",
+      "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A modern enterprise dashboard built with React and TypeScript for NexaCorp's internal operations team",
-    "title": "NexaCorp Enterprise Dashboard UI",
+    "topic_summary": "A README for a scalable payment gateway integration project using VirtueMart's platform.",
+    "title": "VirtueMart Payment Gateway Integration",
     "doc_id": "d_p_128_01",
     "persona_id": "p_128",
     "hyperparams": {
-      "project_scale": "academic",
-      "project_team_size": "solo",
+      "project_scale": "production",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation from a manager praising Nikolai's leadership in platform architecture and team collaboration.",
+    "title": "Recommendation from Alexei Petrov, Team Lead",
+    "doc_id": "d_p_128_02",
+    "persona_id": "p_128",
+    "hyperparams": {
+      "recommender_role": "skip-level",
+      "recommender_closeness": "brief",
+      "company_type": "academic",
+      "company_size": "small (<50)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post on optimizing e-commerce platforms for high-traffic scenarios using distributed systems.",
+    "title": "Scaling VirtueMart: Strategies for High-Volume E-Commerce",
+    "doc_id": "d_p_128_03",
+    "persona_id": "p_128",
+    "hyperparams": {
+      "blog_depth": "opinion-piece",
       "jargon_density": "moderate"
     }
   }

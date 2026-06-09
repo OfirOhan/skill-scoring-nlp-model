@@ -1,62 +1,37 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional resume highlighting 13 years of experience as an ML Engineer in consulting",
-    "title": "Cedric Blanc - Staff ML Engineer CV",
+    "topic_summary": "Professional resume highlighting Yara Haddad's 6 years of experience as a Senior Backend Engineer in the SaaS industry.",
+    "title": "Yara Haddad - Senior Backend Engineer",
     "doc_id": "d_p_011_00",
     "persona_id": "p_011",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
-      "geographic_convention": "Israel",
-      "company_type": "FAANG",
-      "company_size": "large (500+)"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "AI-driven platform for business analytics using machine learning",
-    "title": "NeuraLogic Business Insights Platform",
-    "doc_id": "d_p_011_01",
-    "persona_id": "p_011",
-    "hyperparams": {
-      "project_scale": "hobby",
-      "project_team_size": "medium (5-15)",
-      "jargon_density": "heavy"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "NLP-based customer support automation system for enterprise clients",
-    "title": "Cedric Blanc - NLP Support Automation",
-    "doc_id": "d_p_011_02",
-    "persona_id": "p_011",
-    "hyperparams": {
-      "project_scale": "team-internal",
-      "project_team_size": "solo",
-      "jargon_density": "heavy"
-    }
-  },
-  {
-    "doc_type": "recommendation",
-    "topic_summary": "Letter from a former manager praising technical leadership and project delivery",
-    "title": "Recommendation - Cedric Blanc by Jane Doe, Senior Director",
-    "doc_id": "d_p_011_03",
-    "persona_id": "p_011",
-    "hyperparams": {
-      "recommender_role": "direct-manager",
-      "recommender_closeness": "brief",
-      "company_type": "academic",
+      "cv_format": "paragraph",
+      "geographic_convention": "US",
+      "company_type": "enterprise",
       "company_size": "small (<50)"
     }
   },
   {
-    "doc_type": "blog",
-    "topic_summary": "Technical deep dive on optimizing ML models for real-time consulting applications",
-    "title": "Optimizing ML Pipelines for Enterprise Consulting Workloads",
-    "doc_id": "d_p_011_04",
+    "doc_type": "project_readme",
+    "topic_summary": "README for a real-time data synchronization tool built using Go and Kafka for a SaaS platform.",
+    "title": "NexaSync: Real-Time Data Synchronization for SaaS Platforms",
+    "doc_id": "d_p_011_01",
     "persona_id": "p_011",
     "hyperparams": {
-      "blog_depth": "opinion-piece",
+      "project_scale": "hobby",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "Technical blog post on optimizing API performance in high-throughput SaaS applications using Go and Redis caching.",
+    "title": "Optimizing API Performance in High-Throughput SaaS Applications",
+    "doc_id": "d_p_011_02",
+    "persona_id": "p_011",
+    "hyperparams": {
+      "blog_depth": "deep-dive",
       "jargon_density": "moderate"
     }
   }

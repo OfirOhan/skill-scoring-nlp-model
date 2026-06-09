@@ -1,27 +1,51 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A DevOps Engineer specializing in cybersecurity with a focus on infrastructure automation and security tooling",
-    "title": "Daichi Kobayashi - DevOps Engineer",
+    "topic_summary": "A professional CV highlighting Noah Christensen's 7 years of experience as a Senior Mobile Developer in fintech.",
+    "title": "Noah Christensen - Senior Mobile Developer",
     "doc_id": "d_p_144_00",
     "persona_id": "p_144",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
+      "cv_format": "hybrid",
       "geographic_convention": "Europe",
-      "company_type": "startup",
-      "company_size": "small (<50)"
+      "company_type": "academic",
+      "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "An open-source project implementing automated security compliance checks using DevOps pipelines",
-    "title": "SecureCI: Automated Security Compliance Pipeline",
+    "topic_summary": "A README for a secure, cross-platform fintech payment solution developed by Noah Christensen.",
+    "title": "SecureMobilePay - Fintech Payment SDK",
     "doc_id": "d_p_144_01",
     "persona_id": "p_144",
     "hyperparams": {
-      "project_scale": "academic",
-      "project_team_size": "large (15+)",
-      "jargon_density": "heavy"
+      "project_scale": "team-internal",
+      "project_team_size": "solo",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation letter from Noah's manager at FinTech Innovators praising his technical leadership and project delivery.",
+    "title": "Recommendation for Noah Christensen - Senior Mobile Developer",
+    "doc_id": "d_p_144_02",
+    "persona_id": "p_144",
+    "hyperparams": {
+      "recommender_role": "peer",
+      "recommender_closeness": "occasional",
+      "company_type": "FAANG",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post on implementing biometric authentication in mobile fintech apps using Kotlin and Android Jetpack.",
+    "title": "Biometric Security in Fintech Mobile Apps: A Kotlin Deep Dive",
+    "doc_id": "d_p_144_03",
+    "persona_id": "p_144",
+    "hyperparams": {
+      "blog_depth": "opinion-piece",
+      "jargon_density": "moderate"
     }
   }
 ]

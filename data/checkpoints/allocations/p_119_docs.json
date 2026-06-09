@@ -1,15 +1,51 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV for Ritika Malhotra, a Site Reliability Engineer with 3 years of experience in the startup industry",
-    "title": "Ritika Malhotra - Site Reliability Engineer",
+    "topic_summary": "A professional CV for Sven Lindqvist, highlighting his 8 years of experience as a Senior Mobile Developer in healthtech.",
+    "title": "Sven Lindqvist - Senior Mobile Developer",
     "doc_id": "d_p_119_00",
     "persona_id": "p_119",
     "hyperparams": {
-      "cv_format": "minimal",
+      "cv_format": "paragraph",
       "geographic_convention": "Israel",
       "company_type": "startup",
-      "company_size": "large (500+)"
+      "company_size": "small (<50)"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A README for a healthtech mobile app project focused on remote patient monitoring.",
+    "title": "HealthGuard: Remote Patient Monitoring App",
+    "doc_id": "d_p_119_01",
+    "persona_id": "p_119",
+    "hyperparams": {
+      "project_scale": "academic",
+      "project_team_size": "large (15+)",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation letter from Sven's manager at VitalHealth Tech, praising his technical expertise and leadership.",
+    "title": "Recommendation for Sven Lindqvist",
+    "doc_id": "d_p_119_02",
+    "persona_id": "p_119",
+    "hyperparams": {
+      "recommender_role": "skip-level",
+      "recommender_closeness": "brief",
+      "company_type": "startup",
+      "company_size": "small (<50)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post on securing mobile health applications with focus on data privacy and compliance.",
+    "title": "Securing Mobile Health Applications: Best Practices for Developers",
+    "doc_id": "d_p_119_03",
+    "persona_id": "p_119",
+    "hyperparams": {
+      "blog_depth": "opinion-piece",
+      "jargon_density": "heavy"
     }
   }
 ]

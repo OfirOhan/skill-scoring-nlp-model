@@ -8,19 +8,15 @@
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 1,
-    "Cloud cost optimization": 1,
+    "Apache Airflow": 3,
+    "Apache Spark": 3,
+    "Data warehousing": 5,
     "Docker": 3,
-    "GCP": 1,
-    "GitLab CI": 2,
-    "Kubernetes": 4,
-    "Load balancing": 3,
-    "PostgreSQL": 1,
-    "Prometheus/Grafana": 3,
-    "Python": 2,
-    "REST API design": 2,
-    "Redis": 2,
-    "Terraform": 1
+    "ETL pipeline design": 5,
+    "Kubernetes": 3,
+    "Python": 1,
+    "Snowflake": 3,
+    "Terraform": 3
   },
-  "text": "# NexaGame Server Scaling: Multiplayer Performance Optimization  \nOptimize latency-critical multiplayer game server clusters with Docker, Kubernetes, and real-time monitoring. This project redefines scalability in high-concurrency environments through dynamic resource allocation and microservices orchestration.  \n\n## Badges  \n[![CI/CD Status](https://example.com/custom-badge)](https://example.com) [![Kubernetes Ready](https://example.com/custom-badge)](https://example.com) [![Performance Benchmark](https://example.com/custom-badge)](https://example.com)  \n\n## Tech Stack  \n- **Containerization**: Docker (custom base images, multi-stage builds)  \n- **Orchestration**: Kubernetes (horizontal pod autoscaling, service mesh integration)  \n- **Monitoring**: Prometheus + Grafana (custom metrics exporters for game state)  \n- **Networking**: Nginx ingress + TCP load balancing (session affinity for persistent connections)  \n- **CI/CD**: GitLab CI (CI/CD pipelines for image promotion across environments)  \n- **Supporting Tools**: Python (custom health checks), Redis (session caching), REST API (player stats aggregation)  \n\n## Architecture / Design  \nThe architecture decouples game logic from networking layers, using Kubernetes Deployments for stateless server pods and StatefulSets for persistent session data. Load balancers route traffic to active pods based on real-time metrics, while Prometheus scrapes custom exporters to detect latency spikes. Auto-scaling rules trigger based on CPU utilization and connection pool size, ensuring sub-50ms latency for 10k+ concurrent users.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/username/nexa-game-scaling.git`  \n2. Build Docker images: `docker-compose -f docker-compose.build.yml up --build`  \n3. Deploy to Kubernetes: `kubectl apply -f k8s/manifests.yaml`  \n4. Verify deployment: `kubectl get pods,svc -n gaming`  \n\n## Usage / Examples  \n- **Scale Cluster**: Use `kubectl scale deployment/game-server --replicas=5` to adjust pod count.  \n- **Monitor Latency**: Access Grafana at `http://grafana.example.com` to view real-time P99 latency.  \n- **Rolling Update**: `kubectl apply -f k8s/updates/feature-flags.yaml` to inject new game logic.  \n\n## Contributing  \nContributions require Docker and Kubernetes proficiency. Prioritize PRs that enhance autoscaling thresholds or integrate new metrics exporters. All code must pass GitLab CI pipelines and adhere to the [Kubernetes Best Practices](https://kubernetes.io/docs/tasks/).  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# Real-Time Inventory Optimization System  \nA distributed data pipeline for dynamic stock forecasting, leveraging real-time analytics to reduce stockouts and overstock scenarios in high-volume e-commerce environments.  \n\n## Badges  \n[![Build Status](https://github.com/.../actions/workflows/build.yml/badge.svg)](https://github.com/.../actions/workflows/build.yml)  \n[![Test Coverage](https://codecov.io/gh/.../branch/main/graph/badge.svg)](https://codecov.io/gh/.../branch/main)  \n[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  \n\n## Tech Stack  \n- **Orchestration**: Apache Airflow (scheduled DAGs for hourly pipeline runs) + Kubernetes (orchestrating Spark clusters)  \n- **Processing**: Apache Spark (batch aggregation of sales data) + Kafka (real-time event streaming)  \n- **Storage**: Snowflake (data warehousing for historical analytics) + Redis (in-memory caching for inventory deltas)  \n- **Infrastructure**: Terraform (IaC for cloud resources) + Docker (containerized microservices)  \n- **Monitoring**: Prometheus + Grafana (pipeline latency tracking)  \n\n## Configuration  \nEnvironment variables in `.env` file define Snowflake credentials, Kafka brokers, and Airflow connections. Terraform variables (`terraform.tfvars`) configure cloud provider specs (e.g., AWS EC2 spot fleets).  \n\n## Getting Started / Installation  \n1. Clone repo: `git clone https://github.com/.../inventory-optimization`  \n2. Build Docker containers: `docker-compose up -d`  \n3. Initialize Terraform: `terraform init && terraform apply`  \n4. Verify Snowflake schema: `snowsql -u <user> -d <db> -s <schema>`  \n\n## Usage / Examples  \n- **Real-time ingestion**: Kafka topic `inventory_updates` streams product deltas to Spark for immediate reconciliation.  \n- **Batch reconciliation**: Airflow DAG `daily_inventory_sync` aggregates Kafka data into Snowflake tables.  \n- **Forecasting**: Spark job `stock_forecast.py` runs hourly, using historical sales patterns to adjust safety stock thresholds.  \n\n## Testing  \n- **Unit tests**: PyTest suite for Kafka producer/consumer logic (coverage: 92%)  \n- **Integration tests**: End-to-end validation of Spark-Snowflake data consistency (via `test_pipeline_end_to_end.py`)  \n- **Monitoring**: Prometheus metrics for pipeline latency (target < 500ms) and error rates (< 0.1%)  \n\n## License  \nMIT License (see [LICENSE](LICENSE) for details)"
 }

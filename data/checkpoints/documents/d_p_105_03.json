@@ -1,24 +1,21 @@
 {
   "doc_id": "d_p_105_03",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_105",
   "hyperparams": {
-    "recommender_role": "peer",
-    "recommender_closeness": "brief",
-    "company_type": "agency",
-    "company_size": "large (500+)"
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "API testing": 1,
-    "BDD/TDD": 2,
-    "GitLab CI": 1,
-    "Integration testing": 1,
+    "CI/CD pipelines": 2,
+    "GraphQL": 1,
     "Java": 1,
-    "Python": 1,
-    "REST API design": 1,
-    "Selenium/Playwright": 1,
-    "Test automation": 1,
-    "Unit testing": 2
+    "Performance testing (JMeter/k6)": 1,
+    "Python": 3,
+    "Selenium/Playwright": 5,
+    "Test automation": 5,
+    "Test strategy design": 1
   },
-  "text": "Thomas and I collaborated closely on several adtech platform updates last quarter. As a peer, I regularly reviewed his test cases and participated in sprint planning, which gave me a clear view of his approach to quality assurance. He’s reliable, shows up prepared, and doesn’t hesitate to ask clarifying questions when needed.  \n\nOn a daily basis, Thomas excels at balancing thoroughness with efficiency. He’s the kind of person who’ll spend extra time verifying edge cases, even if it means delaying a sprint milestone. His ability to communicate technical issues in plain language has helped bridge gaps between developers and stakeholders. During a recent campaign launch, his proactive flagging of a UI inconsistency prevented a potential client complaint.  \n\nOne standout moment came when he independently mapped out a workflow to track cross-browser compatibility issues, which streamlined our debugging process. His attention to detail and willingness to iterate on solutions without micromanagement made a real difference.  \n\nThomas is a steady presence in our team. He doesn’t seek the spotlight, but his consistent reliability and thoughtful approach to problem-solving make him an asset. I’d recommend him without hesitation—he’s the kind of teammate who lifts the whole group’s performance without needing constant oversight."
+  "text": "# CrossPlatformQA  \nA unified test harness for validating game builds across Windows, macOS, and Linux. Designed for teams needing consistent, scalable QA automation without platform-specific fragmentation.  \n\n## Configuration  \nCentralized config files (`config/env.yaml`, `config/platforms.yaml`) define test environments, device grids, and platform-specific overrides. Environment variables like `TEST_GRID_URL` and `PLATFORM_FILTER` enable dynamic adaptation. Shared config ensures alignment across 15+ QA engineers, while per-environment overrides handle platform-specific edge cases.  \n\n## Getting Started / Installation  \nInstall Python 3.9+ and required dependencies:  \n```bash  \npip install -r requirements.txt  \n```  \nClone the repo and set up environment variables for your test grid (e.g., Selenium Grid or Playwright's built-in browser management). Verify dependencies with `pip check` before running tests.  \n\n## Usage / Examples  \nRun a platform-specific test suite:  \n```bash  \npython run_tests.py --platform windows --suite login_flow  \n```  \nParallel execution is enabled by default, distributing tests across available nodes. Example test script:  \n```python  \nfrom crossplatformqa import TestBase  \nclass LoginTest(TestBase):  \n    def test_login(self):  \n        self.navigate(\"https://game.com/login\")  \n        self.fill(\"username\", \"testuser\")  \n        self.assert_element_exists(\"logout-button\")  \n```  \n\n## Tech Stack  \n- **Python**: Core runtime for test scripts and utilities  \n- **Selenium/Playwright**: Cross-browser interaction layer  \n- **Docker**: Isolated environment for CI/CD  \n- **YAML**: Configurable test environments  \n- **GitHub Actions**: Basic CI/CD integration  \n\n## Architecture / Design  \nModular test framework separates page objects, utilities, and platform adapters. Playwright handles headless browser operations, while Selenium abstracts desktop interactions. Test data and locators are versioned in `test/resources`, ensuring consistency across platforms.  \n\n## License  \nMIT License  \n\n## Badges  \n[![CI/CD Status](https://github.com/.../actions/workflows/ci.yml/badge.svg)]  \n[![Coverage](https://codecov.io/gh/.../branch/main/graph/badge.svg)]  \n[![Version](https://img.shields.io/badge/version-1.2.0-blue)]"
 }

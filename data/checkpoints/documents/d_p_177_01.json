@@ -4,23 +4,23 @@
   "persona_id": "p_177",
   "hyperparams": {
     "project_scale": "academic",
-    "project_team_size": "large (15+)",
+    "project_team_size": "solo",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Apache Airflow": 2,
-    "Cloud cost optimization": 1,
-    "Docker": 3,
-    "Hugging Face Transformers": 3,
-    "Kubernetes": 3,
-    "MLOps (MLflow/W&B)": 3,
-    "Model deployment": 3,
-    "NLP": 3,
-    "PyTorch": 3,
-    "TensorFlow": 3,
-    "Terraform": 1,
-    "scikit-learn": 3
+    "Application security (OWASP)": 4,
+    "DNS/DHCP": 1,
+    "Encryption & PKI": 5,
+    "Firewall configuration": 3,
+    "IAM/Access control": 4,
+    "Monitoring & alerting": 2,
+    "Network automation": 1,
+    "Network security": 3,
+    "Penetration testing": 3,
+    "SIEM tools": 4,
+    "Security auditing": 3,
+    "TCP/IP": 2,
+    "VPN technologies": 2
   },
-  "text": "# CyberShield: ML-Based Network Intrusion Detection System  \nCyberShield is a real-time intrusion detection system leveraging advanced machine learning to identify zero-day exploits, DDoS attacks, and anomalous network behavior with 98.7% detection accuracy (F1-score) on the NSL-KDD dataset. The system integrates temporal anomaly detection, behavioral pattern analysis, and adaptive thresholding to minimize false positives (0.12% FP rate) in high-velocity network traffic.  \n\n## Configuration  \nConfigure the system via `config.yaml` for model parameters, data pipelines, and inference thresholds. Set environment variables:  \n```bash  \nexport MODEL_VERSION=2.3.1  \nexport AWS_S3_BUCKET=cybershield-logs  \nexport KUBERNETES_NAMESPACE=intrusion-detection  \n```  \nEnable GPU acceleration by setting `CUDA_VISIBLE_DEVICES=0` for PyTorch-based inference.  \n\n## Getting Started / Installation  \nInstall dependencies:  \n```bash  \npip install -r requirements.txt  \ndocker compose build --no-cache  \n```  \nPull pre-trained models from Hugging Face:  \n```bash  \nhuggingface-cli download --repo-id cybershield-ml/ntc-model-v2.3.1 --local-dir models/  \n```  \nDeploy to Kubernetes using `kubectl apply -f k8s/deployment.yaml` for scalable, distributed inference.  \n\n## Usage / Examples  \nRun real-time detection:  \n```bash  \npython3 main.py --config config.yaml --input /data/network-logs-2023.csv  \n```  \nExample API call:  \n```bash  \ncurl -X POST http://localhost:8080/detect -H \"Content-Type: application/json\" -d '{\"packet_flow\": \"192.168.1.1:80 -> 10.0.0.5:443\"}'  \n```  \nMetrics: 45ms inference latency, 99.98% model availability (AWS CloudWatch).  \n\n## Tech Stack  \n- **Frameworks**: PyTorch (v2.0), TensorFlow (v2.12), scikit-learn (v1.3)  \n- **MLOps**: MLflow (tracking), Weights & Biases (experiment logs)  \n- **Deployment**: Docker (swarm), Kubernetes (Helm charts), Apache Airflow (batch retraining)  \n- **NLP**: BERT tokenizer for protocol metadata encoding  \n- **Cloud**: AWS S3 (data lake), EC2 (GPU instances)  \n\n## Architecture / Design  \nThe system employs a three-tier architecture:  \n1. **Feature Extractor**: Processes pcap files with Scapy to extract flow-based features (duration, packet size, protocol type).  \n2. **Model Serving**: PyTorch-based classifier with dynamic thresholding (ADWIN algorithm) for drift detection.  \n3. **Real-Time Pipeline**: Apache Kafka for low-latency log ingestion, integrated with AWS Lambda for automated alerting.  \n\n## License  \nMIT License  \n\n## Badges  \n![Model Version](https://img.shields.io/badge/model%20version-2.3.1-blue)  \n![Framework](https://img.shields.io/badge/frameworks-PyTorch%2C%20TensorFlow%2C%20scikit-learn-yellow)"
+  "text": "# SecureAPI Gateway  \nA production-grade API gateway implementation with OAuth 2.0 integration, real-time monitoring, and cryptographic enforcement for SecureNet Consulting clients. Designed for academic exploration of secure microservices architecture, with emphasis on identity validation, traffic sanitization, and telemetry aggregation.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/actions/workflow.com/owner/repo/main?branch=main)](https://github.com/securenetconsulting/secureapi-gateway/actions/workflow)  \n[![Coverage](https://img.shields.io/coveralls/securenetconsulting/secureapi-gateway)](https://coveralls.io/github/securenetconsulting/secureapi-gateway)  \n[![OWASP](https://img.shields.io/owasp/owasp-zap?label=OWASP)](https://owasp.org/www-project-zap/)  \n[![SIEM](https://img.shields.io/badge/siem-splunk-blue)](https://www.splunk.com/)  \n\n## Getting Started / Installation  \nClone the repository:  \n```bash  \ngit clone https://github.com/securenetconsulting/secureapi-gateway.git  \ncd secureapi-gateway  \nnpm install  \n```  \nConfigure environment variables in `.env` for OAuth client credentials, monitoring endpoint URLs, and cryptographic key locations. Run the gateway:  \n```bash  \nnpm start  \n```  \nFor academic testing, use the provided Dockerfile to isolate dependencies.  \n\n## Tech Stack  \n- **Authentication**: OAuth 2.0 (JWT bearer tokens, client credentials flow)  \n- **Monitoring**: WebSockets + Prometheus/Grafana for real-time telemetry  \n- **Encryption**: TLS 1.3, AES-256-GCM for payload encryption  \n- **SIEM Integration**: Splunk HTTP Event Collector for log aggregation  \n- **Validation**: OWASP ZAP for runtime policy enforcement  \n\n## Architecture / Design  \nThe gateway operates as a stateless proxy layer, validating incoming requests against OAuth 2.0 tokens and enforcing rate limits via Redis. Token introspection is performed against a centralized authorization server, with caching to mitigate latency. Real-time monitoring streams metrics to a SIEM system, enabling anomaly detection and alerting. All communications are encrypted with TLS 1.3, and certificate rotation is automated via PKI tools.  \n\n## Usage / Examples  \nAuthenticate via OAuth:  \n```bash  \ncurl -X POST https://api.example.com/auth/token \\\n  -H \"Content-Type: application/x-www-form-urlencoded\" \\\n  -d \"grant_type=client_credentials&client_id=your_client_id&client_secret=your_secret\"  \n```  \nMonitor traffic:  \n```bash  \ncurl -X GET https://api.example.com/monitor?endpoint=/users  \n```  \n\n## Testing  \nUnit tests validate JWT signature verification and token expiration checks. Integration tests simulate MITM attacks and invalid token scenarios using OWASP ZAP. Coverage exceeds 95%, with focus on edge cases in cryptographic operations.  \n\n## License  \nMIT License (see [LICENSE](LICENSE) for details)"
 }

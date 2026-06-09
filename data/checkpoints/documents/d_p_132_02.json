@@ -1,23 +1,23 @@
 {
   "doc_id": "d_p_132_02",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_132",
   "hyperparams": {
-    "blog_depth": "deep-dive",
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
     "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Apache Airflow": 3,
-    "Apache Kafka": 3,
-    "Apache Spark": 4,
-    "Data modeling": 3,
-    "Data warehousing": 3,
-    "ETL pipeline design": 3,
-    "GitLab CI": 3,
-    "Python": 3,
-    "REST API design": 3,
-    "Snowflake": 3,
-    "dbt": 3
+    "Android development": 1,
+    "Flutter": 3,
+    "JavaScript": 2,
+    "Kotlin": 1,
+    "React Native": 1,
+    "Swift": 1,
+    "TypeScript": 1,
+    "Web accessibility (WCAG)": 1,
+    "Webpack/Vite": 1,
+    "iOS development": 1
   },
-  "text": "**Overview**  \nLast quarter, we tackled a bottleneck in our data pipeline that was slowing down analytics for a key client. The problem wasn’t the data itself—it was how we moved and transformed it. By rethinking our ETL architecture with cloud-native tools, we cut processing time by 40% and reduced costs by 25%. Here’s how it unfolded.  \n\n**Context**  \nOur team managed a hybrid data ecosystem: raw logs from Kafka, batch processing in Spark, and a Snowflake data warehouse. The pipeline relied on Airflow for orchestration, but as data volumes grew, delays in task scheduling and inefficient data shuffling became critical. Engineers spent hours debugging slow jobs, and the client’s real-time dashboards felt increasingly sluggish.  \n\n**Challenge**  \nThe core issue was a mismatch between our batch-oriented Spark jobs and the real-time nature of Kafka streams. Our Airflow DAGs were triggering full-table scans on Snowflake, which taxed the warehouse’s resources. Meanwhile, intermediate data stored in S3 wasn’t partitioned, leading to unnecessary data movement. The result? A pipeline that scaled poorly and couldn’t meet SLAs.  \n\n**Solution**  \nWe refactored the pipeline into two streams: batch and stream. For batch workloads, we introduced partitioned Parquet files in S3, reducing scan times by 60%. Spark jobs now use dynamic allocation and caching to reuse intermediate results. For real-time data, we replaced Airflow with a Kafka consumer that writes directly to Snowflake via Python scripts, bypassing the DAG entirely. dbt was integrated to handle transformation logic, ensuring consistency across both streams. GitLab CI automates testing, and we’ve adopted REST APIs for monitoring job health.  \n\n**Results**  \nProcessing 10M records daily now takes 15 minutes instead of 90. Snowflake’s compute costs dropped by 30% due to reduced query load, and the client’s dashboards update every 10 minutes instead of once per day. The pipeline’s fault tolerance improved too—Kafka’s idempotent producers handle duplicates without manual intervention.  \n\n**Lessons Learned**  \n1. **Decouple streams and batches**: Treating them as separate workflows avoids resource contention.  \n2. **Prefer partitioned storage**: S3 Parquet files with time-based partitions make queries faster and cheaper.  \n3. **Embrace direct writes**: Bypassing Airflow for real-time data reduces latency and simplifies dependencies.  \n4. **Automate everything**: CI/CD and monitoring via REST APIs ensure reliability without manual oversight.  \n\nThe takeaway? Cloud-native ETL isn’t just about using the latest tools—it’s about aligning architecture with data flow. When you design for scalability and efficiency upfront, the wins compound over time."
+  "text": "# SaaS CRM Mobile App  \n\nA mobile-first SaaS CRM platform designed for sales teams to manage contacts, track deals, and sync data in real time across devices. Built with Flutter, this app prioritizes intuitive workflows and seamless integration with backend services. Ideal for teams needing lightweight, cross-platform access to CRM tools without compromising performance.  \n\n## Getting Started / Installation  \n\nClone the repository using your preferred method. Ensure you have Flutter installed (version 3.10+). Run `flutter pub get` to fetch dependencies. For local testing, use `flutter run` to launch the app on your device or emulator. Backend services (e.g., Firebase or Supabase) are configured via environment variables in `.env.local`.  \n\n## Usage / Examples  \n\n- **Contact Management**: Add, edit, or delete contacts with a single tap. Sync changes instantly across all user devices.  \n- **Deal Tracking**: Log deal stages and deadlines. Real-time updates ensure all team members see the latest progress.  \n- **Offline Support**: Edit data without an internet connection. Changes sync automatically when connectivity is restored.  \n\n## Badges  \n\n[![Flutter Version](https://img.shields.io/badge/flutter-3.10-blue)](https://flutter.dev)  \n[![Platform](https://img.shields.io/badge/platforms-android%20%26%20ios-lightgrey)](https://github.com/flutter/flutter)  \n[![Real-Time Sync](https://img.shields.io/badge/sync-realtime-green)](https://github.com/yourusername/yourrepo)  \n\n## Tech Stack  \n\n- **Frontend**: Flutter (Dart) for cross-platform UI  \n- **Backend**: Firebase Realtime Database (or Supabase) for real-time data sync  \n- **State Management**: Riverpod for decoupled state logic  \n- **Networking**: HTTP + WebSockets for bidirectional data flow  \n- **Analytics**: Mixpanel for user behavior tracking (optional)  \n\n## Architecture / Design  \n\nThe app follows a layered architecture:  \n1. **Core Models**: Define data structures (e.g., `Contact`, `Deal`) with validation rules.  \n2. **Services**: Handle real-time sync via WebSocket listeners and conflict resolution.  \n3. **UI Layer**: Flutter widgets powered by Riverpod to isolate business logic from UI.  \n4. **Offline Layer**: Use `sqflite` for local SQLite storage, syncing changes on reconnect.  \n\nKey design choices prioritize resilience—e.g., retry logic for failed syncs and conflict detection for concurrent edits.  \n\n## Contributing  \n\nThis project is for internal team use, but contributions are welcome. Submit issues for bugs or feature requests. For code changes, fork the repo, create a feature branch, and submit a pull request with clear commit messages.  \n\n## License  \n\nMIT License. See the [LICENSE](LICENSE) file for details."
 }

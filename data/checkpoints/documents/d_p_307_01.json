@@ -3,25 +3,25 @@
   "type": "project_readme",
   "persona_id": "p_307",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "solo",
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
     "jargon_density": "moderate"
   },
   "skill_evidence": {
     "Apache Airflow": 3,
-    "Apache Kafka": 3,
+    "Apache Kafka": 4,
     "Apache Spark": 4,
-    "CI/CD pipelines": 3,
-    "Cloud cost optimization": 1,
-    "Data warehousing": 4,
-    "Database optimization": 4,
-    "Databricks": 3,
-    "ETL pipeline design": 4,
-    "Monitoring & alerting": 3,
+    "CI/CD pipelines": 1,
+    "Data warehousing": 5,
+    "Databricks": 4,
+    "Docker": 3,
+    "ETL pipeline design": 5,
+    "Linux administration": 1,
     "Python": 3,
-    "REST API design": 3,
-    "Snowflake": 4,
-    "dbt": 3
+    "REST API design": 2,
+    "Snowflake": 5,
+    "Terraform": 3,
+    "dbt": 4
   },
-  "text": "# Threat Detection Analytics Platform  \nA production-grade data pipeline for real-time threat detection, leveraging scalable architectures and cybersecurity-focused analytics. This platform ingests, processes, and correlates security events to identify potential threats, with a focus on low-latency detection and actionable insights. Built for integration into SOC workflows, it supports both historical analysis and live monitoring, with outputs tailored for SIEM systems and threat intelligence platforms.  \n\n## Configuration  \nThe platform uses a hybrid configuration model, combining environment variables for runtime parameters and a `config.yaml` file for persistent settings. Key configurations include Kafka broker endpoints, Snowflake credentials, and Airflow DAG definitions. For production, environment variables are injected via a secrets manager, while development uses local overrides. The `config.yaml` includes schema validation to prevent misconfigurations.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/your-username/threat-detection-platform.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Set up Kafka: Ensure a local or cloud Kafka cluster is running with topic `threat_events`.  \n4. Configure Snowflake: Update `config.yaml` with your Snowflake warehouse, database, and role.  \n5. Initialize Airflow: Run `airflow db init` and set up the default connection for the DAGs.  \n\n## Usage / Examples  \nTo trigger a batch analysis:  \n```bash  \npython main.py --input /path/to/event_logs --output /path/to/results  \n```  \nFor real-time processing, activate the Airflow DAG `threat_detection_pipeline`. Query results via the REST API at `/api/threats` with a filter on `severity_level`.  \n\n## Tech Stack  \n- **Apache Spark**: Real-time processing of event streams with windowed aggregations.  \n- **Snowflake**: Cloud data warehousing for historical threat correlation and reporting.  \n- **Apache Kafka**: Event ingestion with partitioned topics for load balancing.  \n- **Airflow**: Scheduling of batch jobs and orchestration of ETL workflows.  \n- **dbt**: Transformation of raw logs into structured threat metrics.  \n- **REST API**: Lightweight endpoint for querying threat scores and alerts.  \n\n## Architecture / Design  \nThe platform follows a layered architecture:  \n1. **Ingestion**: Kafka streams ingest raw security events from SIEMs and endpoints.  \n2. **Processing**: Spark clusters perform real-time anomaly detection and enrichment.  \n3. **Storage**: Snowflake warehouses structured threat data for BI and reporting.  \n4. **Analytics**: dbt models generate metrics, while Airflow ensures pipeline reliability.  \n5. **Monitoring**: Prometheus and Grafana track latency, error rates, and resource utilization.  \n\n## License  \nMIT License — see the [LICENSE](LICENSE) file for details.  \n\n## Badges  \n[![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/your-username/threat-detection-platform)  \n[![CI/CD](https://badgen.net/badge/build/ci-cd/green)](https://github.com/your-username/threat-detection-platform/actions)  \n[![License](https://badgen.net/badge/license/MIT/green)](LICENSE)"
+  "text": "# Real-Time Data Pipeline Optimization with Apache Kafka and Spark  \n\nA scalable solution for real-time analytics, leveraging Kafka for ingestion and Spark for distributed processing. Designed to handle high-throughput data streams with low-latency guarantees, this project demonstrates best practices for building resilient pipelines in a cloud-native environment.  \n\n## Contributing  \nThis project is open to contributions. Whether you're improving performance, adding features, or refining documentation, your input is valued. Start by reviewing the issue tracker for open tasks, then fork the repository, implement your changes, and submit a pull request. All contributions must include tests and adhere to the code formatting guidelines.  \n\n## Getting Started / Installation  \nEnsure you have Java 17, Kafka, and Spark installed. Use Docker to spin up a local cluster:  \n```bash  \ndocker-compose up -d  \n```  \nOnce the environment is running, navigate to the `scripts` directory and execute:  \n```bash  \n./setup.sh  \n```  \nThis initializes Kafka topics, configures Spark sessions, and prepares the Snowflake connection.  \n\n## Usage / Examples  \nTo process data:  \n1. Run producers to simulate real-time events:  \n```bash  \n./produce.sh  \n```  \n2. Trigger the Spark job:  \n```bash  \n./spark-submit.sh  \n```  \n3. Monitor results in Snowflake via dbt models or Databricks notebooks.  \n\n## Tech Stack  \n- **Kafka**: High-throughput data ingestion with partitioned topics.  \n- **Spark**: Structured streaming for real-time ETL.  \n- **Databricks**: Orchestration and job scheduling via Airflow.  \n- **dbt**: Transformations for Snowflake data warehouses.  \n- **Snowflake**: Scalable data storage with ACID transactions.  \n- **Docker**: Containerization for consistent local and production environments.  \n\n## Architecture / Design  \nThe pipeline ingests data via Kafka producers, partitions streams for parallel processing, and routes messages to Spark clusters. Spark's structured streaming handles windowed aggregations, while dbt orchestrates transformations into Snowflake. Databricks manages Airflow workflows to ensure dependencies are met. Kafka's retention policies and Spark's checkpointing ensure fault tolerance.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![GitHub](https://badges.githubusercontent.com/)](https://github.com/)  \n[![Docker](https://badges.docker.com)](https://hub.docker.com/)  \n[![Snowflake](https://badges.snowflake.com)](https://www.snowflake.com/)"
 }

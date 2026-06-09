@@ -3,24 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_247",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "solo",
-    "jargon_density": "plain"
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 1,
-    "CI/CD pipelines": 2,
-    "Cloud cost optimization": 1,
-    "Docker": 2,
-    "Kubernetes": 1,
-    "MongoDB": 2,
-    "Node.js": 3,
+    "AWS": 4,
+    "CDN management": 3,
+    "Cloud cost optimization": 4,
+    "Cloud networking (VPC/subnets)": 3,
+    "Docker": 3,
+    "GCP": 4,
+    "Infrastructure as Code": 5,
+    "Kubernetes": 5,
+    "Load balancing": 3,
     "Python": 1,
-    "REST API design": 3,
-    "React": 1,
-    "Terraform": 1,
-    "TypeScript": 2,
-    "Web performance optimization": 3
+    "Terraform": 4
   },
-  "text": "# GameSync: Real-Time Lobby System  \nA scalable, low-latency solution for managing multiplayer game lobbies via WebSocket and Firebase, optimized for real-time state synchronization and user presence tracking.  \n\n## Testing  \nAutomated tests cover 95% of core logic, with Jest for unit tests and Firebase Test Lab for integration scenarios. WebSocket message parsing and Firebase CRUD operations are stress-tested with 1,000 concurrent connections. Test coverage metrics are tracked via `npm test -- --coverage`, ensuring edge cases like disconnects and race conditions are validated.  \n\n## Getting Started  \n1. Clone the repo locally  \n2. Initialize Firebase project and download service account credentials  \n3. Set `FIREBASE_CONFIG` and `LOBBY_DB_PATH` in `.env`  \n4. Run `npm install` to fetch dependencies  \n5. Start the server with `npm run dev` — WebSocket endpoints are available at `/lobby`  \n\n## Usage / Examples  \n```javascript  \n// Create lobby  \nPOST /api/lobbies  \n{ \"name\": \"SkyRaiders\", \"maxPlayers\": 8 }  \n\n// Join lobby  \nWebSocket message: { \"type\": \"JOIN\", \"lobbyId\": \"L123\", \"userId\": \"U456\" }  \n\n// Track user presence  \nFirebase Realtime Database: /presence/U456/{lobbyId} = { \"status\": \"active\", \"timestamp\": 1623456789 }  \n```  \nUse `curl` for REST API debugging and `wscat` to manually test WebSocket endpoints.  \n\n## Tech Stack  \n- Firebase (Realtime Database, Authentication)  \n- WebSocket (Node.js)  \n- REST API for lobby management  \n- TypeScript (optional type safety)  \n\n## Architecture / Design  \nThe system decouples real-time updates (WebSocket) from persistent storage (Firebase). Lobby state is synced bidirectionally: WebSocket handles user actions, Firebase ensures data durability. A dedicated presence layer tracks user activity with 100ms latency. Load balancing is achieved via WebSocket pooling, with Firebase security rules enforcing access controls.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details  \n\n## Contributing  \nFeedback welcome! Share issues or feature requests via GitHub. For code contributions, ensure tests pass and maintain 95%+ coverage. All changes must align with Firebase security best practices."
+  "text": "# NexaCloud Gaming Framework  \nA distributed cloud gaming platform optimized for low-latency streaming, built to scale across AWS and GCP with infrastructure-as-code automation. Designed for high-concurrency environments, this framework balances real-time performance with cost-efficient resource management.  \n\n## Getting Started / Installation  \nClone the repository and initialize environment variables for AWS/GCP credentials. Deploy with Terraform to provision VPCs, load balancers, and Kubernetes clusters. Ensure CDNs are configured for edge caching.  \n```bash  \ngit clone https://github.com/yourusername/nexacloud.git  \ncd nexacloud  \nterraform init && terraform apply  \n```  \n\n## Usage / Examples  \nLaunch a game server with dynamic scaling:  \n```bash  \nkubectl apply -f game-server.yaml  \n```  \nMonitor latency metrics via Prometheus and Grafana. Use AWS WAF for DDoS protection. Optimize costs with GCP's preemptible VMs for non-critical workloads.  \n\n## Badges  \n[![GitHub](https://badgen.net/badge/github/yourusername/gray)](https://github.com/yourusername)  \n[![CI/CD](https://badgen.net/badge/builds/passing/green)](https://github.com/yourusername/actions)  \n[![Docker](https://badgen.net/badge/docker/ready/teal)](https://hub.docker.com/)  \n\n## Tech Stack  \n- **Cloud Providers**: AWS (VPC, ELB), GCP (Kubernetes Engine, Compute Engine)  \n- **Orchestration**: Kubernetes (with HPA for dynamic scaling)  \n- **Networking**: AWS Global Accelerator, GCP Cloud CDN  \n- **IaC**: Terraform (modules for VPCs, security groups)  \n- **Monitoring**: Prometheus, Grafana, AWS CloudWatch  \n\n## Architecture / Design  \nA microservices-driven architecture with edge servers distributed across AWS regions and GCP zones. Core components include:  \n- **Latency-Optimized Routers**: AWS Global Accelerator + GCP Cloud CDN for global reach  \n- **Kubernetes Clusters**: Auto-scaling pods with load-balanced ingress  \n- **Cost Control**: Terraform policies enforcing reserved instances and spot fleets  \n- **Security**: VPC peering, IAM role-based access, and WAF integration  \n\n## Contributing  \nCollaborate on infrastructure decisions and performance tuning. Prioritize pull requests that enhance scalability, reduce latency, or optimize costs. Familiarity with AWS/GCP networking and Kubernetes is required.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

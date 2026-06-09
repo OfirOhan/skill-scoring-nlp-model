@@ -1,25 +1,24 @@
 {
   "doc_id": "d_p_273_02",
-  "type": "project_readme",
+  "type": "blog",
   "persona_id": "p_273",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "solo",
-    "jargon_density": "plain"
+    "blog_depth": "deep-dive",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Application security (OWASP)": 4,
-    "Compliance (SOC2/GDPR)": 3,
-    "Encryption & PKI": 4,
-    "GCP": 3,
+    "Application security (OWASP)": 3,
+    "Cloud networking (VPC/subnets)": 1,
+    "DNS/DHCP": 1,
+    "Encryption & PKI": 3,
+    "Firewall configuration": 3,
     "IAM/Access control": 4,
-    "Incident response": 4,
-    "Network security": 5,
+    "Network automation": 1,
+    "Network security": 4,
     "Penetration testing": 3,
-    "SIEM tools": 3,
+    "SIEM tools": 1,
     "Security auditing": 3,
-    "Threat modeling": 5
+    "TCP/IP": 1
   },
-  "text": "# NetThreatDetect: AI-Driven Network Security Solution  \nA scalable system for detecting zero-day threats via behavioral analysis and real-time anomaly detection. Built to integrate with enterprise infrastructure while maintaining compliance with SOC2 and GDPR standards.  \n\n## Badges  \n[![GitHub](https://github.com/)](https://github.com/) | [![License](https://github.com/)](https://github.com/) | [![Compliance](https://github.com/)](https://github.com/)  \n\n## Tech Stack  \n- **Core**: Python 3.9, TensorFlow, Scikit-learn, Pandas  \n- **Deployment**: Docker, Kubernetes (AWS EKS)  \n- **Cloud**: AWS Lambda, GCP Pub/Sub  \n- **Security**: OpenSSH, TLS 1.3, PKI-based encryption  \n- **Monitoring**: Prometheus, Grafana, Splunk  \n\n## Architecture / Design  \nThe system operates as a layered pipeline:  \n1. **Data Ingestion**: NetFlow logs and packet captures from firewalls (Cisco ASA, Palo Alto)  \n2. **Preprocessing**: Anonymized and normalized via PySpark for GDPR compliance  \n3. **Modeling**: Hybrid ML model (Isolation Forest + LSTM) trained on 100M+ benign traffic samples  \n4. **Threat Scoring**: Real-time alerts via REST API, integrated with SIEM tools (Splunk, ELK)  \n5. **Incident Response**: Predefined playbooks for automated containment (AWS WAF, GCP Security Command Center)  \n\nKey design choice: Decoupled threat modeling to avoid false positives during initial deployment phases.  \n\n## Getting Started / Installation  \n1. Clone this repository  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure environment variables for AWS/GCP credentials and SIEM endpoints  \n4. Run the pipeline: `python3 main.py --mode train`  \n\n## Usage / Examples  \n- **Baseline Detection**: `python3 detect.py --threshold 0.95`  \n- **SIEM Integration**: Use the REST API to stream alerts to Splunk  \n- **Compliance Audit**: Run `python3 audit.py --report pdf` for SOC2-ready logs  \n\n## Contributing  \nThis project welcomes collaborators to refine threat models or optimize encryption protocols. Submit pull requests with unit tests and compliance checks.  \n\n## License  \nMIT License – for academic use only. Commercial deployment requires prior consultation."
+  "text": "**Securing AdTech Data Pipelines with Zero Trust Architecture**  \n\nAdtech data pipelines are a goldmine for attackers—high-value targets with sprawling infrastructure and third-party dependencies. Traditional security models, reliant on perimeter defenses, have proven insufficient as threats evolve. My team recently tackled this challenge by adopting Zero Trust Architecture (ZTA), reducing unauthorized access attempts by 95% within six months.  \n\n**Problem Statement**  \nOur pipelines ingested billions of impressions monthly, routed through legacy systems with minimal access controls. Insufficient granular permissions enabled lateral movement, while static trust models allowed compromised credentials to escalate privileges. Internal audits revealed 78% of breaches in our ecosystem involved insider threats or misconfigured APIs. The stakes? Data exfiltration, regulatory fines, and reputational damage.  \n\n**Setup**  \nWe began by cataloging all data flows, identifying sensitive assets, and mapping third-party integrations. IAM became the cornerstone: we replaced broad API keys with temporary tokens via OAuth 2.0, enforced MFA for admin roles, and segmented access by role. Encryption was non-negotiable—AES-256 for data at rest, TLS 1.3 for transit. We also integrated continuous monitoring tools to flag anomalous behavior.  \n\n**Step-by-Step Guide**  \n1. **Inventory & Boundary Definition**: Catalog all data sources, sinks, and intermediaries. Define micro-segmentation rules to isolate sensitive data streams.  \n2. **IAM Overhaul**: Replace static credentials with dynamic, scoped tokens. Enforce least-privilege access, leveraging RBAC and ABAC.  \n3. **Encryption & PKI**: Deploy end-to-end encryption for all data in transit and at rest. Use certificate pinning to prevent MITM attacks.  \n4. **Firewall Reconfiguration**: Replace stateful firewalls with policy-based micro-segmentation. Block all outbound traffic by default, allowing only whitelisted destinations.  \n5. **Penetration Testing**: Conduct quarterly red-team exercises to simulate insider threats and misconfigured APIs. Use tools like Burp Suite to validate input sanitization.  \n6. **Security Auditing**: Automate compliance checks with tools like Open Policy Agent (OPA) to enforce policy adherence across pipelines.  \n\n**Results**  \nPost-implementation, our attack surface shrank by 82%, with zero successful breaches from external vectors. Internal audits showed a 91% reduction in unauthorized access attempts. Compliance with GDPR and CCPA became streamlined, cutting audit preparation time by 40%.  \n\n**Conclusion**  \nZTA isn’t a checkbox—it’s a cultural shift. By prioritizing continuous verification and granular controls, we’ve transformed our pipelines from potential vulnerabilities into secure, auditable systems. The ROI? Reduced risk, faster incident response, and peace of mind.  \n\n**Further Reading**  \n- NIST Zero Trust Architecture Framework  \n- OWASP Top Ten for API Security  \n- HashiCorp Vault for secrets management  \n- CIS Critical Security Controls for Data Protection"
 }

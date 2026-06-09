@@ -1,23 +1,26 @@
 {
   "doc_id": "d_p_225_02",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_225",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "moderate"
+    "recommender_role": "professor",
+    "recommender_closeness": "worked-daily",
+    "company_type": "academic",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "Application security (OWASP)": 3,
-    "Compliance (SOC2/GDPR)": 3,
-    "Encryption & PKI": 2,
-    "IAM/Access control": 3,
-    "Network security": 5,
-    "Penetration testing": 4,
-    "SIEM tools": 5,
-    "Security auditing": 4,
-    "Threat modeling": 4,
-    "Vulnerability management": 4
+    "A/B testing": 1,
+    "Agile/Scrum": 4,
+    "Competitive analysis": 4,
+    "Data visualization": 1,
+    "Jupyter notebooks": 1,
+    "Product management": 5,
+    "Responsive design": 1,
+    "Roadmap planning": 4,
+    "SQL analytics": 1,
+    "Stakeholder management": 4,
+    "UX research": 4,
+    "Data visualization (Matplotlib/Plotly)": 1
   },
-  "text": "# Real-Time Threat Detection Framework  \nA scalable system for identifying adversarial activity in real time using machine learning and SIEM integration. Designed to detect zero-day threats, insider risks, and anomalous behavior while maintaining compliance with SOC2 and GDPR standards.  \n\n## Getting Started / Installation  \nInstall dependencies via pip:  \n```bash  \npip install -r requirements.txt  \n```  \nConfigure SIEM integration by updating `config/siem.yaml` with your provider’s API credentials. Ensure Elasticsearch is running for log aggregation.  \n\n## Usage / Examples  \nRun the detection pipeline:  \n```bash  \npython main.py --siem splunk --model tf_model.h5  \n```  \nExample use case: Detecting lateral movement patterns in Windows event logs. The framework correlates log entries with pre-trained ML models to flag suspicious processes.  \n\n## Badges  \n[![Security Audited](https://example.com/audited)](https://example.com/audited)  \n[![Compliance Certified](https://example.com/compliant)](https://example.com/compliant)  \n\n## Tech Stack  \n- **SIEM**: ELK Stack, Splunk, QRadar  \n- **ML**: TensorFlow, PyTorch, Scikit-learn  \n- **Networking**: OpenVPN, TLS 1.3, Zero Trust Architecture  \n- **Compliance**: SOC2, GDPR, HIPAA-ready modules  \n\n## Architecture / Design  \nThe system processes logs in real time via a Kafka stream, feeding into a distributed ML inference engine. Anomaly detection models (Isolation Forest, LSTM) flag deviations, which are then correlated with SIEM alerts. A custom rule engine enforces access controls via IAM policies, ensuring only authorized analysts interact with sensitive data.  \n\n## Contributing  \nSubmit pull requests with security audits and compliance checks. Prioritize contributions that enhance threat modeling or reduce false positives. All code must pass automated penetration testing and static analysis.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "Kwame Mensah has been a consistent presence in my research group, bridging academic inquiry with industry practice. As a senior product manager at Lumina Interactive, his work on cross-platform game development has directly influenced our collaborative projects, particularly in optimizing user retention frameworks for educational gaming. His ability to translate complex technical challenges into actionable strategies has been invaluable.  \n\nDaily, Kwame oversees sprint planning with a granular focus on balancing feature velocity against quality thresholds. In our last collaboration, his agile frameworks reduced deployment delays by 18% while maintaining a 95% bug-free release rate. He excels at navigating stakeholder priorities, often mediating between creative teams and engineering constraints without sacrificing long-term vision. His roadmap planning for Lumina’s flagship title incorporated quarterly competitor analysis, ensuring feature sets aligned with market trends while preserving unique IP.  \n\nA standout moment occurred when Kwame spearheaded a UX research initiative for a multiplayer game, leading to a 25% increase in session duration. He prioritized player feedback loops, integrating qualitative insights into iterative design cycles. Another instance involved redefining Lumina’s monetization strategy through competitive analysis, which boosted in-game purchases by 12% without compromising user experience.  \n\nKwame’s dedication to rigorous problem-solving and his ability to synthesize data into strategic decisions make him a rare asset. His work ethic is relentless, and his curiosity drives innovation. I wholeheartedly endorse his candidacy for any role requiring strategic depth and cross-functional leadership."
 }

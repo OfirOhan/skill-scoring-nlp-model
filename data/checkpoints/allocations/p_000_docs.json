@@ -1,27 +1,50 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A concise CV highlighting Yuki Tanaka's experience as a Platform Engineer in healthtech, focusing on platform development and cloud infrastructure.",
-    "title": "Yuki Tanaka - Platform Engineer CV",
+    "topic_summary": "Professional resume highlighting Qasim Malik's experience as a Product Manager in healthtech",
+    "title": "Qasim Malik - Product Manager CV",
     "doc_id": "d_p_000_00",
     "persona_id": "p_000",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
+      "cv_format": "minimal",
       "geographic_convention": "India",
-      "company_type": "agency",
-      "company_size": "small (<50)"
+      "company_type": "enterprise",
+      "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A README for a health data analytics platform built by Yuki Tanaka, showcasing her work on scalable infrastructure and API integrations for healthtech applications.",
-    "title": "HealthDataFlow: Streamlined Health Data Analytics Platform",
+    "topic_summary": "README for a health analytics platform that uses AI to predict patient outcomes",
+    "title": "HealthInsight AI: Predictive Analytics for Healthcare Providers",
     "doc_id": "d_p_000_01",
     "persona_id": "p_000",
     "hyperparams": {
-      "project_scale": "production",
+      "project_scale": "academic",
       "project_team_size": "medium (5-15)",
       "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "Letter from HealthSphere Innovations' CTO endorsing Qasim's leadership and technical acumen",
+    "title": "Recommendation for Qasim Malik - HealthSphere Innovations",
+    "doc_id": "d_p_000_02",
+    "persona_id": "p_000",
+    "hyperparams": {
+      "recommender_role": "professor",
+      "recommender_closeness": "worked-daily",
+      "company_type": "startup",
+      "company_size": "large (500+)"
+    }
+  },
+  {
+    "doc_type": "linkedin",
+    "topic_summary": "Professional summary showcasing Qasim's expertise in healthtech product strategy and innovation",
+    "title": "Qasim Malik - Product Manager | Healthtech Innovator",
+    "doc_id": "d_p_000_03",
+    "persona_id": "p_000",
+    "hyperparams": {
+      "linkedin_completeness": "detailed"
     }
   }
 ]

@@ -4,22 +4,22 @@
   "persona_id": "p_114",
   "hyperparams": {
     "project_scale": "academic",
-    "project_team_size": "solo",
-    "jargon_density": "plain"
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "Apache Airflow": 1,
-    "Apache Kafka": 1,
-    "Apache Spark": 4,
-    "Data warehousing": 3,
-    "ETL pipeline design": 4,
-    "Go": 1,
-    "Java": 3,
-    "Python": 5,
+    "3D graphics (OpenGL/Vulkan)": 3,
+    "C#/.NET": 3,
+    "Game networking": 4,
+    "Game physics": 4,
+    "JavaScript": 1,
+    "Node.js": 2,
+    "Python": 3,
     "REST API design": 3,
-    "Terraform": 1,
-    "dbt": 3,
-    "Snowflake": 1
+    "React": 2,
+    "TypeScript": 2,
+    "Unity": 4,
+    "Unreal Engine": 1
   },
-  "text": "# Predictive Analytics for Chronic Disease Management  \n\nThis project explores the application of machine learning to model the progression of chronic diseases using real-world patient data. By analyzing electronic health records (EHRs), lab results, and longitudinal health metrics, the system identifies patterns that inform early intervention strategies. The goal is to empower clinicians with actionable insights to improve patient outcomes while reducing healthcare costs.  \n\n## Badges  \n[![Python](https://img.shields.io/badge/python-3.9-blue)](https://python.org)  \n[![Apache Spark](https://img.shields.io/badge/apache%20spark-3.3-orange)](https://spark.apache.org)  \n[![Jupyter](https://img.shields.io/badge/jupyter-1.0-green)](https://jupyter.org)  \n[![MIT License](https://img.shields.io/badge/license-mit-yellow)](https://opensource.org/licenses/MIT)  \n\n## Tech Stack  \n- **Python**: Core language for data processing, modeling, and API development  \n- **Apache Spark**: Scalable engine for ETL pipelines and distributed data analysis  \n- **dbt (Data Build Tool)**: Transform raw datasets into structured features for modeling  \n- **Jupyter Notebooks**: Interactive environment for exploratory analysis and visualization  \n- **REST APIs**: Java-based endpoints for deploying models and exposing predictions  \n- **Data Warehousing**: Integration with legacy systems via SQL-based ETL workflows  \n\n## Architecture / Design  \nThe system ingests structured and unstructured patient data from clinical databases, then applies a hybrid ETL approach. Spark handles batch processing of EHRs, while dbt transforms raw tables into feature sets. Machine learning models—built with scikit-learn and XGBoost—are trained on historical progression data to predict disease trajectories. Predictions are packaged as REST API endpoints, enabling real-time integration with clinical decision support systems.  \n\n## Getting Started / Installation  \n1. Clone this repository to your local machine  \n2. Install Python 3.9 and virtualenv  \n3. Run `pip install -r requirements.txt` to set up dependencies  \n4. Launch Jupyter Notebooks for interactive analysis  \n5. Configure REST API endpoints using Java-based microservices  \n\n## Usage / Examples  \nTo predict diabetes progression:  \n```python  \nfrom model import PredictDisease  \npredictor = PredictDisease()  \nresult = predictor.predict({\"age\": 65, \"BMI\": 32, \"glucose\": 140})  \nprint(result)  # Outputs risk score and recommended interventions  \n```  \nThe API supports batch processing of patient cohorts and includes validation for missing data.  \n\n## Contributing  \nThis project thrives on collaboration with healthcare professionals and data scientists. Contributions should prioritize data privacy compliance and clinical relevance. Please review the data governance documentation before submitting pull requests.  \n\n## License  \nMIT License — see the [LICENSE](LICENSE) file for details."
+  "text": "# LuminaQuest: Multiplayer Puzzle Game with Dynamic AI  \n\nLuminaQuest is a cross-platform multiplayer puzzle game where players compete against adaptive AI opponents in real-time challenges. The game balances strategic depth with intuitive controls, leveraging dynamic AI to adjust difficulty based on player performance. Built for academic research and startup prototyping, it supports web, mobile, and desktop platforms with synchronized multiplayer sessions.  \n\n## Deployment  \nLuminaQuest is hosted on AWS for scalable backend services and deployed via Docker for consistent environments. Web builds use WebGL for browser compatibility, while mobile versions utilize Unity’s IL2CPP for performance. Continuous deployment pipelines ensure hotfixes and updates are rolled out within 15 minutes of merge.  \n\n## Badges  \n[![Build Status](https://img.shields.io/badge/build-passing-green)](https://github.com/LuminaQuest/actions)  \n[![Coverage](https://img.shields.io/badge/coverage-72%25-yellow)](https://github.com/LuminaQuest/coverage)  \n[![Platform](https://img.shields.io/badge/platforms-multi--platform-blue)](https://github.com/LuminaQuest/docs)  \n\n## Tech Stack  \n- **C#**: Core game logic, AI state machines, and networking.  \n- **Unity**: Cross-platform rendering, input handling, and physics simulation.  \n- **Python**: Scripting tools for level generation and data processing.  \n- **REST API**: Backend services for matchmaking and user authentication.  \n- **Docker**: Containerization for consistent deployment across platforms.  \n\n## Architecture / Design  \nThe system uses a client-server architecture with Unity as the frontend and a REST API for backend orchestration. Dynamic AI opponents are implemented as stateless entities with per-player difficulty scaling. Physics calculations are offloaded to dedicated servers to prevent cheating. Cross-platform synchronization is achieved via WebSockets with delta compression for low-latency updates.  \n\n## Getting Started / Installation  \n1. Clone the repository using Git.  \n2. Install Docker and configure AWS credentials.  \n3. Run `npm install` to fetch dependencies.  \n4. Launch the build pipeline with `./deploy.sh`.  \n\n## Usage / Examples  \n- **AI Adaptation**: Observe how opponents adjust difficulty after three consecutive successful moves.  \n- **Cross-Platform Play**: Test local multiplayer on desktop and mobile devices simultaneously.  \n- **Network Latency**: Use the `latency_test.py` script to benchmark synchronization accuracy.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/LuminaQuest/LICENSE) for details."
 }

@@ -1,23 +1,26 @@
 {
   "doc_id": "d_p_117_02",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_117",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "large (15+)",
-    "jargon_density": "heavy"
+    "recommender_role": "direct-manager",
+    "recommender_closeness": "brief",
+    "company_type": "academic",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "GraphQL": 3,
-    "JavaScript": 5,
-    "Next.js": 3,
+    "Apache Airflow": 1,
+    "Apache Kafka": 1,
+    "Apache Spark": 1,
+    "Cloud cost optimization": 1,
+    "Data modeling": 3,
+    "Data warehousing": 3,
+    "Docker": 1,
+    "ETL pipeline design": 1,
+    "Java": 1,
     "Python": 1,
-    "REST API design": 3,
-    "React": 5,
-    "TypeScript": 5,
-    "Web accessibility (WCAG)": 4,
-    "Web performance optimization": 4,
-    "Webpack/Vite": 3
+    "Snowflake": 1,
+    "Terraform": 1
   },
-  "text": "# Interactive Ad Creative Builder  \nA collaborative tool for constructing and previewing ad creatives with real-time interactivity, leveraging React, Web Components, and industry-grade accessibility standards. Designed for adtech teams requiring rapid prototyping, this project enables developers to compose dynamic creatives with embedded tracking, responsive layouts, and cross-browser compatibility. The tool integrates a modular component library, a visual editor, and a live preview environment, all built with TypeScript, React 18, and Web Components.  \n\n## Acknowledgments  \nThis project owes its foundation to the collective expertise of the adtech team, particularly the accessibility champions who spearheaded WCAG 2.1 compliance, and the performance engineers who optimized critical rendering paths. Special thanks to the GraphQL team for their work on data-driven creative templates and the REST API architects for their contributions to the backend integration layer. The tool’s open architecture is a testament to the collaborative spirit of our cross-functional team.  \n\n## Getting Started / Installation  \nTo set up the environment, clone the repository and install dependencies:  \n```bash  \nyarn install  \n```  \nEnsure Node.js 18+ is installed, then configure the environment variables for the backend API endpoint and tracking service keys. The project uses Webpack 5 for bundling and Vite for development, allowing hot-reloading of Web Components. Run `yarn dev` to start the local server and access the editor at `http://localhost:3000`.  \n\n## Usage / Examples  \nThe editor provides a drag-and-drop interface for assembling creatives using pre-built Web Components. For example, to create a responsive banner ad:  \n1. Select the `CreativeContainer` component and set its `mediaQuery` prop to `@media (min-width: 768px)`.  \n2. Add a `TrackingPixel` component with dynamic `eventID` and `clickThroughURL` props.  \n3. Preview the creative in real time, ensuring it meets accessibility standards via the built-in contrast ratio checker.  \n\n## Tech Stack  \n- **Frontend**: React 18, TypeScript 4.9, Web Components (Custom Elements)  \n- **Data Layer**: GraphQL (for template fetching), REST APIs (for campaign metadata)  \n- **Build Tools**: Webpack 5, Vite (development)  \n- **Accessibility**: WCAG 2.1 compliance, ARIA attributes, keyboard navigation  \n- **Performance**: Lighthouse score >90, lazy loading for non-critical components  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![Build Status](https://example.com/build-badge)](https://example.com/build) [![Accessibility Score](https://example.com/accessibility)](https://example.com/accessibility)  \n\n## Contributing  \nContributions are welcome! Focus on enhancing component modularity, improving performance via code-splitting, or expanding accessibility features. For pull requests, ensure TypeScript typings are updated and performance benchmarks are included. Collaborate with the accessibility team to validate changes against WCAG 2.1 guidelines."
+  "text": "Varun Tiwari has consistently demonstrated a strong ability to translate complex business needs into robust data solutions. As a Data Engineer at NexaCorp, he has played a key role in designing data models that align with enterprise analytics goals. His work on a customer segmentation framework reduced query latency by 25% and enabled more accurate forecasting. He also led the migration of legacy data warehouses to a modular architecture, improving scalability without disrupting existing workflows. His attention to detail ensures data integrity, and he frequently collaborates with stakeholders to refine requirements.  \n\nVarun’s strengths extend beyond technical execution. He approaches challenges with curiosity and persistence, often volunteering to troubleshoot edge cases that others overlook. His ability to communicate technical concepts to non-technical teams has streamlined decision-making processes. For example, he recently developed a visualization tool that clarified reporting bottlenecks, leading to a 40% reduction in manual data reconciliation.  \n\nIn team settings, Varun is a reliable collaborator who balances independence with openness to feedback. He regularly mentors junior engineers, sharing insights on best practices without micromanaging. His proactive mindset and adaptability have been critical during system upgrades and cross-departmental projects.  \n\nVarun’s technical acumen, problem-solving drive, and collaborative spirit make him a valuable asset. He thrives in dynamic environments and has a track record of delivering solutions that align with both operational and strategic objectives. I am confident he will contribute meaningfully to any team he joins."
 }

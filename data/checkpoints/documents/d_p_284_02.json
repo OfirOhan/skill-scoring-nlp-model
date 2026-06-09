@@ -3,20 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_284",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "heavy"
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "ArgoCD": 1,
-    "GitLab CI": 1,
-    "Kubernetes": 3,
-    "Linux administration": 1,
-    "Network automation": 1,
-    "PostgreSQL": 4,
-    "Prometheus/Grafana": 5,
-    "Python": 4,
-    "Redis": 4
+    "A/B testing": 1,
+    "Apache Spark": 2,
+    "Data visualization (Matplotlib/Plotly)": 4,
+    "Feature engineering": 4,
+    "Go": 1,
+    "Java": 1,
+    "NumPy": 4,
+    "Pandas": 4,
+    "Python": 3,
+    "REST API design": 2,
+    "Statistical modeling": 4
   },
-  "text": "# Real-Time Ad Server Monitoring System  \n\nA scalable solution for tracking ad server performance metrics with Prometheus and Grafana, designed for low-latency environments. This system captures request latency, error rates, and cache hit ratios, enabling proactive optimization of ad delivery pipelines.  \n\n## Getting Started / Installation  \nEnsure Python 3.8+ and PostgreSQL are installed. Clone the repository and install dependencies:  \n```bash  \npip install -r requirements.txt  \n```  \nConfigure Prometheus scrape targets in `prometheus.yml` and set up Grafana data sources. Launch the service with:  \n```bash  \npython main.py  \n```  \nThis initializes Redis for caching query results and starts the metrics collector.  \n\n## Usage / Examples  \nMonitor ad server health via Grafana dashboards. Example queries include:  \n- `ad_request_latency_seconds` (95th percentile)  \n- `cache_hit_ratio` (Redis-based)  \n- `error_rate_by_status_code` (Prometheus metric)  \n\nSet up alerts for thresholds like `request_latency_seconds > 200` or `cache_hit_ratio < 0.85`.  \n\n## Badges  \n[![Build Status](https://github.com/yourusername/yourproject/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/yourproject/actions/workflows/ci.yml)  \n\n## Tech Stack  \n- **Prometheus**: Real-time metric collection  \n- **Grafana**: Interactive dashboarding  \n- **Python**: Custom metric processing logic  \n- **PostgreSQL**: Historical data storage (optimized for ad campaign analysis)  \n- **Redis**: In-memory caching for query results  \n- **Kubernetes**: Container orchestration for production deployment  \n\n## Architecture / Design  \nThe system ingests metrics from ad server endpoints via Prometheus, processes them in Python, and stores aggregated data in PostgreSQL. Redis caches frequent query results to reduce DB load. Grafana visualizes metrics with custom dashboards, enabling teams to track performance across regions and ad campaigns.  \n\n## Contributing  \nEnhance dashboards, refine alert thresholds, or optimize Redis caching strategies. Submit pull requests for bug fixes or feature improvements.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# Supply Chain Optimization with Time Series Forecasting  \n\nThis project delivers a production-ready tool for demand forecasting in manufacturing, reducing stockout rates by 15% and lowering carrying costs by 8% for a Fortune 500 client. The solution integrates historical sales data, seasonal trends, and external economic indicators to optimize inventory levels and production schedules.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/xanderdevries/supply-chain-forecasting.git`  \n2. Install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n3. Set up a virtual environment (recommended):  \n   ```bash  \n   python -m venv venv  \n   source venv/bin/activate  # Linux/Mac  \n   .\\venv\\Scripts\\activate   # Windows  \n   ```  \n\n## Usage / Examples  \nRun the forecasting pipeline with:  \n```bash  \npython forecast.py --data_path 'data/sales.csv' --output 'results/prediction.csv'  \n```  \nThe script processes 10 million+ time-stamped transactions, extracts 20+ engineered features (e.g., rolling averages, holiday flags), and trains a hybrid ARIMA-Prophet model. Output includes point forecasts, confidence intervals, and anomaly detection flags.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/last-commit/xanderdevries/supply-chain-forecasting)](https://github.com/xanderdevries/supply-chain-forecasting/commits/main)  \n[![Python](https://img.shields.io/badge/python-3.9-blue)](https://www.python.org/downloads/release/python-3912/)  \n[![License](https://img.shields.io/badge/license-MIT-yellow)](https://opensource.org/licenses/MIT)  \n\n## Tech Stack  \n- **Python**: Core language for data wrangling, modeling, and deployment  \n- **Pandas**: Handles 10+ GB datasets with memory-efficient operations  \n- **NumPy**: Accelerates numerical computations in feature engineering  \n- **Plotly**: Interactive dashboards for real-time demand visualization  \n- **Scikit-learn**: Ensemble methods for anomaly detection and baseline comparisons  \n- **PostgreSQL**: Stores historical data with partitioned tables for fast querying  \n\n## Architecture / Design  \nThe system follows a modular pipeline:  \n1. **Data Ingestion**: Loads CSV files and connects to a staging database  \n2. **Feature Engineering**: Applies Fourier transforms for seasonality decomposition and lagged variables  \n3. **Model Training**: Trains a custom ARIMA-ETS hybrid model with dynamic parameter tuning  \n4. **Visualization**: Exports forecasts to CSV and generates HTML dashboards with Plotly  \n\nAll components are containerized for reproducibility, with Dockerfile ensuring consistent environments across development and production.  \n\n## Contributing  \nPull requests are welcome! For major changes, open an issue to discuss the approach.  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
 }

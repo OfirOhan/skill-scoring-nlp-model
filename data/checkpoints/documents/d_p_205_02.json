@@ -1,23 +1,28 @@
 {
   "doc_id": "d_p_205_02",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_205",
   "hyperparams": {
-    "blog_depth": "opinion-piece",
-    "jargon_density": "plain"
+    "project_scale": "hobby",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "Application security (OWASP)": 2,
-    "Compliance (SOC2/GDPR)": 2,
-    "Encryption & PKI": 3,
-    "IAM/Access control": 4,
-    "Incident response": 3,
-    "Network security": 4,
-    "Penetration testing": 2,
-    "SIEM tools": 2,
-    "Security auditing": 2,
-    "Threat modeling": 3,
-    "Vulnerability management": 3
+    "Agile/Scrum": 1,
+    "CI/CD pipelines": 3,
+    "Cross-team collaboration": 1,
+    "GitHub Actions": 4,
+    "GitLab CI": 2,
+    "Jenkins": 1,
+    "Linux administration": 2,
+    "Project management": 1,
+    "Prometheus/Grafana": 3,
+    "Risk assessment": 1,
+    "Stakeholder communication": 1,
+    "Strategic planning": 1,
+    "System design": 5,
+    "Team leadership": 1,
+    "Technical debt management": 1
   },
-  "text": "The shift to cloud-native operations has exposed gaps in traditional security models. Perimeter-based defenses, once sufficient, now struggle to protect against sophisticated threats like insider breaches, misconfigured services, and supply chain attacks. Our team faced a critical breach last year where attackers exploited a single compromised VM to pivot across the network, highlighting how legacy approaches fail to contain lateral movement.  \n\nEarly attempts to patch this involved expanding firewalls and adding VPNs, but these solutions created new risks. Over-reliance on static access controls led to overly permissive policies, while manual audits couldn’t keep up with the sprawl of cloud resources. One project nearly collapsed when a misconfigured S3 bucket exposed customer data—proof that old methods can’t scale with modern infrastructure.  \n\nOur team adopted Zero Trust as a foundational framework, treating every request as untrusted. We implemented micro-segmentation to isolate workloads, paired it with continuous authentication via MFA and contextual checks, and enforced least-privilege access through IAM policies. Encryption became non-negotiable, with PKI managing secrets across hybrid environments. The result? A 70% reduction in unauthorized access attempts within six months, and a 40% decrease in incident response time.  \n\nZero Trust works because it shifts security from static rules to dynamic verification. By tying access to real-time risk assessments—like user location, device health, and data sensitivity—we minimize attack surfaces. For example, encrypting data at rest and in transit ensures even if credentials are stolen, the payload remains protected. Threat modeling and vulnerability management now feed into automated policy updates, closing gaps before exploits emerge.  \n\nLooking ahead, we’re exploring AI-driven anomaly detection to refine access controls further. Balancing security with usability remains a challenge; for instance, enforcing strict IAM policies while avoiding friction for developers. Compliance frameworks like GDPR are already baked into our encryption and access logging workflows, ensuring audits align with regulatory needs. The next step is automating policy governance to adapt to evolving threats—because Zero Trust isn’t a destination, but a continuous evolution."
+  "text": "# Telemedicine Integration System  \n\nA modular framework for synchronizing telemedicine platforms with EHRs and health data ecosystems. This system reduces data silos by 70% through real-time patient data reconciliation, enabling clinicians to access unified patient records across modalities. Built for interoperability, it supports HL7 FHIR and DICOM standards with configurable adapter modules.  \n\n## Testing  \nAutomated test coverage of 92% via Jest and Postman, validated by continuous integration via GitHub Actions. Stress tests simulate 500 concurrent telemedicine sessions, ensuring 99.95% uptime under load. Prometheus/Grafana monitors system health, alerting on latency spikes above 200ms. All data pipelines include schema validation and audit logging for compliance.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/yourusername/telemedicine-integration.git  \ncd telemedicine-integration  \nnpm install  \nexport DATABASE_URL=\"your_postgres_connection_string\"  \nnpm run start  \n```  \nRequires Docker for Kafka and Redis services. Configure environment variables in `.env.local` for local testing.  \n\n## Usage / Examples  \n```bash  \n# Start data ingestion pipeline  \nnpm run ingest -- --source=telemed --destination=ehrs  \n\n# Verify patient data sync  \ncurl https://api.example.com/patients/12345  \n```  \nExample response:  \n```json  \n{  \n  \"patient_id\": \"12345\",  \n  \"latest_vitals\": { \"heart_rate\": 72, \"blood_pressure\": \"120/80\" },  \n  \"telemedicine_sessions\": 4  \n}  \n```  \n\n## Tech Stack  \n- **Language**: TypeScript (Node.js) for backend, Python for data processing  \n- **Database**: PostgreSQL with JSONB for structured/unstructured data storage  \n- **Message Queue**: Apache Kafka for asynchronous data streaming  \n- **Monitoring**: Prometheus/Grafana for real-time pipeline analytics  \n- **Containerization**: Docker for consistent development/production environments  \n\n## Architecture / Design  \nA layered architecture separates data ingestion, transformation, and storage. The core pipeline uses Apache Kafka for decoupled microservices, with Redis caching for frequent lookup operations. FHIR resource validation is handled via a pluggable adapter pattern, allowing rapid integration with new telemedicine platforms.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Contributing  \nPull requests and issue reports are welcome. For significant changes, open a discussion to align on design decisions. This project is maintained as a hobby, but contributions can shape its evolution toward broader healthtech interoperability."
 }

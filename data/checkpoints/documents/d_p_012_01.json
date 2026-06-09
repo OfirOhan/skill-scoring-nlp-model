@@ -4,20 +4,21 @@
   "persona_id": "p_012",
   "hyperparams": {
     "project_scale": "team-internal",
-    "project_team_size": "large (15+)",
+    "project_team_size": "solo",
     "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "CI/CD pipelines": 3,
-    "Docker": 3,
-    "GitLab CI": 3,
-    "Kubernetes": 3,
-    "Linux administration": 2,
-    "Network automation": 2,
-    "Prometheus/Grafana": 3,
+    "Apache Airflow": 1,
+    "Data visualization (Matplotlib/Plotly)": 4,
+    "Feature engineering": 3,
+    "Jupyter notebooks": 3,
+    "NumPy": 4,
+    "Pandas": 4,
     "Python": 3,
-    "Terraform": 3
+    "REST API design": 2,
+    "SQL analytics": 4,
+    "Tableau/Power BI": 1,
+    "scikit-learn": 4
   },
-  "text": "# AutoScaleCI: CI/CD Pipeline Automation for Startups  \nA lightweight, modular tool to streamline deployment workflows while maintaining scalability for growing teams  \n\n[![Build Status](https://github.com/username/autoscaleci/actions/workflows/main.yml/badge.svg)](https://github.com/username/autoscaleci/actions)  \n[![Coverage](https://codecov.io/gh/username/autoscaleci/branch/main/graph/badge.svg)](https://codecov.io/gh/username/autoscaleci)  \n\n## Getting Started / Installation  \nInstall via pip:  \n```bash  \npip install autoscaleci  \n```  \nEnsure Docker and AWS CLI are installed. For team-internal use, configure AWS credentials via `~/.aws/credentials` and set environment variables for Docker socket access.  \n\n## Usage / Examples  \n```yaml  \n# .autoscaleci/config.yaml  \npipeline:  \n  deploy:  \n    stages:  \n      - build: docker build -t my-app  \n      - test: pytest  \n      - deploy: aws ecs update-service  \n```  \nAutomatically scales pipeline stages based on repo size and team workload. Integrates with GitHub Actions for pull request triggers.  \n\n## Architecture / Design  \nBuilt as a plugin-driven framework, separating orchestration logic from environment-specific tasks. Key components:  \n- **Scaler Engine**: Dynamically adjusts parallel jobs based on repo activity  \n- **AWS Proxy**: Manages EC2 and ECS interactions with rate-limiting safeguards  \n- **Observability Layer**: Exposes metrics via Prometheus for real-time pipeline health monitoring  \n\n## Tech Stack / Built With  \n- **Python** (async/await for non-blocking I/O)  \n- **Docker** (containerized agents for consistent execution)  \n- **Terraform** (infrastructure-as-code for ephemeral testing environments)  \n- **Kubernetes** (orchestrates multi-cluster deployments)  \n- **Prometheus/Grafana** (custom dashboards for pipeline latency analysis)  \n- **GitLab CI** (integration for legacy repo migrations)  \n\n## Contributing  \nWe welcome improvements to scaling algorithms and plugin architectures.  \n- Fork the repo  \n- Add tests for new features  \n- Update documentation for non-technical stakeholders  \n- Submit a pull request with a clear description of your contribution  \n\n## Testing  \nAll tests run in isolated Docker containers. Use `pytest -v` for verbose output or `pytest --cov` to check code coverage.  \n\n## Roadmap / Future Work  \n- Add support for Azure DevOps integration  \n- Implement dynamic resource allocation based on historical pipeline data  \n- Enhance security with automatic IAM role creation for temporary credentials  \n- Improve observability with distributed tracing for multi-cloud workflows"
+  "text": "# Predictive Analytics for Chronic Disease Management  \n\nA machine learning pipeline to forecast disease progression and optimize treatment plans using structured health data. Designed for internal use in a healthtech team, this project leverages Python-based tools to deliver actionable insights for chronic disease management.  \n\n## Badges  \n[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/MIT)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Tech Stack  \n- **Python** (3.9+)  \n- **Pandas** (data wrangling)  \n- **NumPy** (numerical operations)  \n- **scikit-learn** (modeling)  \n- **SQL** (data querying)  \n- **Matplotlib/Plotly** (visualization)  \n- **Jupyter Notebooks** (exploratory analysis)  \n\n## Architecture / Design  \nThe system follows a modular pipeline:  \n1. **Data Ingestion**: SQL queries to extract patient records from a relational database.  \n2. **Preprocessing**: Pandas and NumPy for feature engineering, including time-series normalization and missing value imputation.  \n3. **Modeling**: scikit-learn’s `RandomForestClassifier` and `XGBoost` for predicting disease flare-ups, validated with stratified k-fold cross-validation.  \n4. **Visualization**: Plotly dashboards to track model performance metrics (e.g., AUC-ROC, F1 score) and cohort stratification.  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/your-username/predictive-analytics.git  \n   ```  \n2. Set up a virtual environment:  \n   ```bash  \n   python -m venv venv  \n   source venv/bin/activate  # On Windows: venv\\Scripts\\activate  \n   ```  \n3. Install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n\n## Usage / Examples  \nRun the Jupyter notebook `01_data_analysis.ipynb` to:  \n- Load and preprocess a sample dataset (CSV/SQL).  \n- Train a model using `train_model.py` with hyperparameters tuned via GridSearchCV.  \n- Generate visualizations of feature importance and predictive accuracy.  \n\nExample output:  \n- Model AUC-ROC: **0.89** (95% CI: 0.85–0.93)  \n- Clinical cohort stratification: 68% of patients with elevated risk scores.  \n\n## Contributing  \nThis project is team-internal, but pull requests are welcome for bug fixes or feature enhancements. Ensure all changes include unit tests and adhere to the MIT license."
 }

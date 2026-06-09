@@ -1,40 +1,38 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Anya Kowalski's experience as a Full-Stack Developer at NexGen SaaS Solutions.",
-    "title": "Anya Kowalski - Full-Stack Developer CV",
+    "topic_summary": "Professional resume highlighting Helen Park's experience as an Embedded Systems Engineer in enterprise settings",
+    "title": "Helen Park - Embedded Systems Engineer",
     "doc_id": "d_p_045_00",
     "persona_id": "p_045",
     "hyperparams": {
-      "cv_format": "paragraph",
-      "geographic_convention": "Israel",
+      "cv_format": "bullet-heavy",
+      "geographic_convention": "US",
       "company_type": "academic",
-      "company_size": "small (<50)"
+      "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A README for a SaaS task management platform built with React, Node.js, and MongoDB.",
-    "title": "NexGen TaskFlow: SaaS Task Management Platform",
+    "topic_summary": "README for an industrial IoT sensor network project using C++ and RTOS",
+    "title": "Industrial IoT Sensor Network Firmware",
     "doc_id": "d_p_045_01",
     "persona_id": "p_045",
     "hyperparams": {
-      "project_scale": "production",
-      "project_team_size": "small (2-4)",
+      "project_scale": "academic",
+      "project_team_size": "medium (5-15)",
       "jargon_density": "plain"
     }
   },
   {
-    "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from a Senior Engineering Manager at NexGen SaaS Solutions praising Anya's technical skills and teamwork.",
-    "title": "Recommendation for Anya Kowalski - Senior Engineering Manager",
+    "doc_type": "blog",
+    "topic_summary": "Discussion on optimizing real-time data processing in embedded systems for enterprise applications",
+    "title": "Real-Time Data Processing Optimization in Embedded Systems",
     "doc_id": "d_p_045_02",
     "persona_id": "p_045",
     "hyperparams": {
-      "recommender_role": "professor",
-      "recommender_closeness": "brief",
-      "company_type": "enterprise",
-      "company_size": "large (500+)"
+      "blog_depth": "tutorial",
+      "jargon_density": "heavy"
     }
   }
 ]

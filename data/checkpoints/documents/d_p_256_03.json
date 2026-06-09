@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_256_03",
+  "type": "project_readme",
+  "persona_id": "p_256",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "CI/CD pipelines": 3,
+    "Docker": 3,
+    "Go": 5,
+    "Kubernetes": 4,
+    "Linux administration": 1,
+    "Microservices architecture": 5,
+    "PostgreSQL": 4,
+    "Prometheus/Grafana": 2,
+    "Python": 3
+  },
+  "text": "# Microservices Architecture for Scalable E-Commerce Platform  \n\nA modular backend system designed to handle 100k+ transactions per second, with fault isolation, horizontal scaling, and service-centric observability. Built using Go, Kubernetes, and PostgreSQL to support high-availability operations in a retail environment.  \n\n## Getting Started / Installation  \nEnsure Go 1.21+ and Docker are installed. Clone the repository:  \n```bash  \ngit clone https://github.com/your-username/microservices-ecommerce.git  \ncd microservices-ecommerce  \nmake setup  \n```  \nThis initializes Kubernetes clusters, deploys PostgreSQL with pgBouncer, and configures Prometheus for metrics. Use `make run` to start all services.  \n\n## Usage / Examples  \nTo test the order service:  \n```bash  \ncurl -X POST http://localhost:8080/api/v1/orders \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"items\": [{\"product_id\": \"123\", \"quantity\": 2}]}'\n```  \nThe system routes requests through a gateway, processes payments via a dedicated service, and updates inventory asynchronously. Metrics are exposed at `/metrics` for Prometheus scraping.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/license/your-username/microservices-ecommerce)](LICENSE)  \n[![CI/CD](https://img.shields.io/github/actions/workflow/your-username/microservices-ecommerce/ci.yml)](https://github.com/your-username/microservices-ecommerce/actions)  \n[![Docker](https://img.shields.io/docker/pulls/your-username/microservices-ecommerce)](https://hub.docker.com/r/your-username/microservices-ecommerce)  \n[![Kubernetes](https://img.shields.io/kubernetes/cluster/your-namespace/microservices-ecommerce)](https://kubernetes.io)  \n\n## Tech Stack  \n- **Language**: Go (core services), Python (batch jobs)  \n- **Database**: PostgreSQL (read replicas, sharded by region)  \n- **Orchestration**: Kubernetes (horizontal pods, auto-scaling)  \n- **Networking**: gRPC (internal), REST (external)  \n- **Monitoring**: Prometheus + Grafana (latency, error rates)  \n\n## Architecture / Design  \nThe system is divided into 8 bounded contexts: order, inventory, payment, user, product, search, analytics, and notifications. Services communicate via gRPC with circuit breakers and retries. PostgreSQL uses logical replication for data consistency across regions. Kubernetes deployments are configured with readiness probes and rolling updates to minimize downtime.  \n\n## Contributing  \nSubmit PRs with unit tests and integration tests. All changes must include Prometheus metrics annotations and Kubernetes manifests. Code reviews focus on service boundaries and observability.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details."
+}

@@ -1,0 +1,26 @@
+{
+  "doc_id": "d_p_174_03",
+  "type": "project_readme",
+  "persona_id": "p_174",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "AWS": 1,
+    "CI/CD pipelines": 5,
+    "Chaos engineering": 1,
+    "Docker": 1,
+    "ELK": 1,
+    "GCP": 1,
+    "Kubernetes": 1,
+    "Load balancing": 1,
+    "PostgreSQL": 1,
+    "Prometheus/Grafana": 1,
+    "Python": 3,
+    "Redis": 1,
+    "Terraform": 1
+  },
+  "text": "# CloudCostOptimizer  \nA tool for analyzing and automating cost management in gaming infrastructure, with a focus on resource efficiency and anomaly detection.  \n\n## API Reference  \n**Endpoints**  \n- `GET /api/v1/costs`  \n  *Parameters*: `start_date` (date), `end_date` (date), `resource_type` (string)  \n  *Response*: JSON with aggregated cost data, filtered by time range and resource category  \n\n- `POST /api/v1/optimization`  \n  *Body*: `{\"threshold\": number, \"action\": \"scale_down\" | \"pause\"}`  \n  *Response*: Confirmation of automated action execution  \n\n**Authentication**  \n- API keys via `X-API-Key` header (stored in environment variables)  \n- Rate limiting: 100 requests/hour per key  \n\n## Usage / Examples  \n```bash  \n# Fetch monthly costs for compute resources  \ncurl \"https://api.cloudcostoptimizer.com/api/v1/costs?start_date=2023-10-01&end_date=2023-10-31&resource_type=compute\"  \n```  \nAutomated scaling triggers when hourly costs exceed 120% of baseline. Integrate with billing alerts for proactive adjustments.  \n\n## Getting Started / Installation  \n```bash  \npip install cloudcostoptimizer  \nexport API_KEY=\"your-secret-key\"  \nexport TIMEZONE=\"UTC\"  \ncloudcostoptimizer init  \n```  \nRequires Python 3.8+. Configure environment variables for API access and regional settings.  \n\n## Tech Stack  \n- **Python**: Core logic for cost analysis and automation  \n- **FastAPI**: RESTful API layer with async support  \n- **SQLite**: Lightweight, embedded database for local state tracking  \n\n## Architecture / Design  \nThe system decouples data ingestion, analysis, and action execution. Cost metrics are processed in batches, with real-time alerts surfaced via a lightweight event bus. CI/CD pipelines ensure rapid deployment of cost thresholds and rule updates across environments.  \n\n## License  \nMIT License  \n\n## Badges  \n[![Python](https://img.shields.io/badge/python-3.8+-blue)](https://github.com/CloudCostOptimizer)  \n[![CI/CD](https://img.shields.io/badge/ci--cd-passing-green)](https://github.com/CloudCostOptimizer/actions)  \n[![License](https://img.shields.io/badge/license-MIT-yellow)](https://github.com/CloudCostOptimizer/blob/main/LICENSE)"
+}

@@ -1,26 +1,31 @@
 {
   "doc_id": "d_p_184_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_184",
   "hyperparams": {
-    "recommender_role": "peer",
-    "recommender_closeness": "brief",
-    "company_type": "startup",
-    "company_size": "small (<50)"
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "GraphQL": 2,
-    "JavaScript": 4,
-    "Next.js": 4,
-    "REST API design": 2,
-    "React": 4,
-    "Responsive design": 4,
-    "Security testing": 4,
-    "State management (Redux/Zustand)": 4,
-    "Test automation (Selenium/Playwright)": 2,
-    "TypeScript": 4,
-    "Web accessibility (WCAG)": 2,
-    "Web performance optimization": 4
+    "Apache Airflow": 1,
+    "Apache Kafka": 1,
+    "Apache Spark": 1,
+    "CI/CD pipelines": 1,
+    "Computer vision": 1,
+    "Data modeling": 2,
+    "Data warehousing": 1,
+    "ETL pipeline design": 3,
+    "LLMs/Prompt engineering": 4,
+    "Linux administration": 1,
+    "MLOps (MLflow/W&B)": 4,
+    "Model deployment": 1,
+    "Monitoring & alerting": 1,
+    "NLP": 5,
+    "PyTorch": 1,
+    "Recommendation systems": 1,
+    "Shell scripting (Bash)": 1,
+    "TensorFlow": 4
   },
-  "text": "Academic Context  \nJohan’s work at CyberShield often intersected with academic research on secure frontend architectures. While not formally affiliated with academia, his approach to solving complex security challenges mirrored rigorous analytical methods seen in scholarly work. For example, his design of a React-based dashboard for threat detection combined theoretical principles of user interface safety with practical implementation.  \n\nWorking Relationship  \nWe collaborated briefly on a project to modernize CyberShield’s legacy authentication system. Johan led the frontend refactor using Next.js, integrating TypeScript and Redux to streamline state management. His ability to balance technical depth with team collaboration was evident when he debugged a critical security vulnerability in a third-party API, ensuring compliance with WCAG standards without compromising performance.  \n\nResearch Ability  \nJohan’s research ability shines in his iterative approach to security testing. He independently developed a framework for automating XSS vulnerability scans using React components, which reduced manual testing time by 40%. His curiosity drove him to explore edge cases in responsive design, resulting in a 25% improvement in load times on mobile devices.  \n\nBroader Strengths  \nJohan is relentlessly meticulous, often catching subtle bugs in security protocols that others overlooked. His work ethic is driven by a desire to build robust, user-friendly systems—traits that made him indispensable during our high-pressure project deadlines.  \n\nRecommendation  \nJohan’s technical expertise in React, Next.js, and TypeScript, paired with his commitment to security and performance, makes him a strong candidate. His ability to deliver measurable results while maintaining clean, scalable code is rare. I recommend him without hesitation."
+  "text": "# AutoML Platform for Customer Churn Prediction  \n\nA production-grade AutoML system designed to operationalize customer churn prediction at scale, integrating NLP-driven feature engineering, LLM-based prompt optimization, and MLOps tooling for seamless deployment. Engineered for enterprise-grade reliability, this platform enables rapid prototyping of predictive models while maintaining rigorous governance and version control. Built for small teams (2–4 engineers) with a focus on modularity, scalability, and real-time inference capabilities.  \n\n## Tech Stack  \n\n- **TensorFlow 2.12** (custom model architectures, distributed training)  \n- **MLflow 2.8.1** (model registry, experiment tracking, lineage)  \n- **Weights & Biases (W&B) 0.23.1** (hyperparameter tuning, visualization)  \n- **LangChain 0.2.0** (LLM integration, prompt engineering)  \n- **Docker 24.0** (containerization, CI/CD-free deployment)  \n- **Kubernetes 1.25** (orchestration, horizontal scaling)  \n- **AWS Batch** (batch job scheduling, resource optimization)  \n- **Pandas 2.1.3** (data wrangling, ETL pipelines)  \n- **Scikit-learn 1.3.2** (baseline models, feature selection)  \n- **PyTorch 2.0.1** (custom loss functions, mixed-precision training)  \n\n## Architecture / Design  \n\nThe platform is structured as a microservices-based API layer, with a centralized model registry and decoupled data pipelines. Key components:  \n\n1. **Data Ingestion**: Kafka-like streaming (via RabbitMQ) for real-time telemetry, processed via PySpark-based ETL pipelines.  \n2. **Feature Engineering**: Hybrid NLP (BERT embeddings) and traditional statistical features, stored in Delta Lake for ACID compliance.  \n3. **Model Training**: Distributed TensorFlow clusters with dynamic resource allocation, monitored via Prometheus and Grafana.  \n4. **Deployment**: Models exported as ONNX artifacts, served via FastAPI endpoints with GPU-accelerated inference.  \n5. **Monitoring**: Custom dashboards for drift detection, using PyTorch Lightning and MLflow tracking.  \n\n## Getting Started / Installation  \n\n```bash  \npip install -r requirements.txt  \npython setup.py install  \nexport MODEL_REGISTRY_URI=\"aws.s3://churn-registry\"  \n```  \n\nEnsure AWS credentials are configured via `~/.aws/credentials` and Kubernetes clusters are provisioned with Helm charts.  \n\n## Usage / Examples  \n\n```python  \nfrom churn_predictor import ChurnModel  \n\nmodel = ChurnModel.load(\"v1.2.7\")  \nprediction = model.predict(customer_data)  \nprint(f\"Churn Probability: {prediction['score']:.2f}\")  \n```  \n\nFor LLM-driven prompt optimization:  \n```python  \nfrom langchain import PromptTemplate, LLMChain  \ntemplate = PromptTemplate.from_file(\"templates/churn_prompt.txt\")  \nchain = LLMChain(prompt=template, llm=llm)  \nresponse = chain.run(context)  \n```  \n\n## Badges  \n\n[![Model Accuracy](https://img.shields.io/badge/accuracy-92.3%25-blue)](https://model-registry.com/churn/v1.2.7)  \n[![LLM Integration](https://img.shields.io/badge/llm-integrated-green)](https://huggingface.co/models)  \n[![MLOps Compliance](https://img.shields.io/badge/mlops-compliant-yellow)](https://mlflow.org/)  \n\n## Contributing  \n\nEnhance NLP pipelines, optimize LLM inference, or refactor model registry integrations. Submit pull requests with unit tests and documentation updates.  \n\n## License  \n\nApache License 2.0 — see [LICENSE](LICENSE) for details."
 }

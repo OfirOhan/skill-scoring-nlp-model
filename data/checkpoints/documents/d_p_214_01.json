@@ -3,20 +3,25 @@
   "type": "project_readme",
   "persona_id": "p_214",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "medium (5-15)",
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
     "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Application security (OWASP)": 3,
-    "Encryption & PKI": 2,
-    "IAM/Access control": 2,
-    "Linux administration": 2,
-    "Network security": 3,
-    "SIEM tools": 2,
-    "Shell scripting (Bash)": 3,
-    "Vulnerability management": 2
+    "AWS": 5,
+    "CDN management": 3,
+    "CI/CD pipelines": 4,
+    "Cloud cost optimization": 3,
+    "Cloud networking": 2,
+    "GCP": 5,
+    "GitLab CI": 3,
+    "Infrastructure as Code": 5,
+    "Kubernetes": 4,
+    "Load balancing": 3,
+    "Monitoring & alerting": 3,
+    "Python": 1,
+    "Serverless": 1,
+    "Terraform": 5
   },
-  "text": "# SecureAdGuard: Real-Time Anomaly Detection in AdTech Networks  \n\nSecureAdGuard is a production-ready tool to monitor and secure adtech data pipelines by detecting anomalous traffic patterns in real time. Built for adtech environments, it reduces false positives by 42% and detects threats with <50ms latency. The system integrates with existing infrastructure to flag suspicious activity without disrupting ad delivery workflows.  \n\n## Contributing  \nWe welcome contributions! To get started, fork the repo and open a pull request with your changes. Focus on improving detection accuracy, optimizing performance, or enhancing integration with SIEM tools. All contributions must include unit tests and adhere to our code quality standards.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/yourusername/secureadguard.git`  \n2. Install dependencies using `npm install` or `pip install -r requirements.txt`  \n3. Configure AWS credentials for data ingestion pipelines  \n4. Run the local dev server: `python app.py` or `npm start`  \n\n## Usage / Examples  \n```bash  \n# Monitor real-time traffic from Kafka  \npython monitor.py --topic ad_traffic --threshold 1500  \n\n# Generate a report of flagged anomalies  \npython report.py --output anomalies_2023-10-05.csv  \n```  \nThe tool automatically streams data from adtech platforms, applies machine learning models to detect deviations, and sends alerts to Slack or Prometheus.  \n\n## Tech Stack  \n- **AWS**: Data storage, compute, and API gateway  \n- **Python/Go**: Core processing and real-time logic  \n- **Kafka**: High-throughput data ingestion  \n- **TensorFlow Lite**: On-device anomaly detection models  \n- **Prometheus/Grafana**: Monitoring and visualization  \n\n## Architecture / Design  \nSecureAdGuard decouples data ingestion, processing, and alerting into three layers. The ingestion layer uses Kafka to buffer traffic logs, while the processing layer runs lightweight ML models to score anomalies. Alerts are routed through AWS Lambda to external systems. Network traffic is encrypted end-to-end using TLS 1.3, and access is governed by IAM policies tied to AWS roles.  \n\n## License  \nMIT License  \n\n## Badges  \n[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)"
+  "text": "# Secure API Gateway for Fintech Compliance  \n\nA scalable, compliant API gateway built to handle high-volume financial transactions while meeting strict regulatory requirements. Designed for fintech platforms needing secure routing, rate limiting, and audit trails without compromising performance.  \n\n## Configuration  \nThe gateway uses environment variables for core settings, with primary config files stored in `config/` and `terraform/` for infrastructure-as-code. Key parameters include CDN endpoint URLs, load balancer targets, and compliance rule thresholds. All settings are version-controlled, with automated validation via CI/CD pipelines.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/your-username/secure-api-gateway.git`  \n2. Set up AWS and GCP credentials via environment variables.  \n3. Deploy infrastructure using Terraform: `terraform apply --var-file=dev.vars`  \n4. Run the gateway locally with Docker: `docker-compose up --build`  \n5. Verify setup with `make test` and `make lint`  \n\n## Usage / Examples  \nTo route a transaction request:  \n```bash  \ncurl -X POST https://api-gateway.example.com/transactions \\\n  -H \"Authorization: Bearer <token>\" \\\n  -d '{\"amount\": 150, \"currency\": \"USD\"}'  \n```  \nThe gateway enforces rate limits (1,000 requests/sec) and validates payloads against pre-defined compliance rules. Audit logs are streamed to CloudWatch for real-time monitoring.  \n\n## Tech Stack  \n- **Cloud**: AWS (EC2, S3) + GCP (Cloud SQL, Cloud Logging)  \n- **Orchestration**: Kubernetes with HPA for auto-scaling  \n- **Networking**: CDN (Cloudflare) + ELB for global latency reduction  \n- **Security**: TLS 1.3, AES-256 encryption, and IAM-based access control  \n- **Monitoring**: Prometheus + Grafana for real-time metrics  \n\n## Architecture / Design  \nThe system uses a microservices architecture with a central API gateway handling routing, authentication, and compliance checks. Kubernetes manages service discovery and scaling, while Terraform ensures consistent infrastructure across environments. CDNs cache static assets, reducing latency for high-traffic endpoints.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![Build Status](https://github.com/your-username/secure-api-gateway/actions/workflows/build.yml/badge.svg)](https://github.com/your-username/secure-api-gateway/actions/workflows/build.yml)  \n[![Test Coverage](https://img.shields.io/coveralls/github/your-username/secure-api-gateway/main)](https://coveralls.io/github/your-username/secure-api-gateway)  \n[![Security](https://img.shields.io/snyk/vulnerabilities/github/your-username/secure-api-gateway)](https://snyk.io/test/terraform/your-username/secure-api-gateway)"
 }

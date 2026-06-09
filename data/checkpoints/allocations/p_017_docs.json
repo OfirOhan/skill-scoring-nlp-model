@@ -1,50 +1,63 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A concise overview of Aaron Baptiste's Machine Learning Engineer career in fintech, highlighting his 3 years of experience and technical expertise.",
-    "title": "Aaron Baptiste - Machine Learning Engineer",
+    "topic_summary": "A professional CV highlighting Adam Kowalczyk's 14 years as a Staff Game Architecture Lead at NexGen Interactive, specializing in enterprise game development.",
+    "title": "Adam Kowalczyk - Staff Game Architecture Lead",
     "doc_id": "d_p_017_00",
     "persona_id": "p_017",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
-      "geographic_convention": "Europe",
+      "cv_format": "minimal",
+      "geographic_convention": "India",
       "company_type": "enterprise",
       "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A GitHub project focusing on building a machine learning model for real-time fraud detection in financial transactions.",
-    "title": "Fraud Detection System for Financial Transactions",
+    "topic_summary": "A GitHub README for a project optimizing game engine performance for enterprise-scale multiplayer applications.",
+    "title": "Optimized Game Engine for Enterprise Multiplayer Applications",
     "doc_id": "d_p_017_01",
     "persona_id": "p_017",
     "hyperparams": {
-      "project_scale": "hobby",
-      "project_team_size": "solo",
-      "jargon_density": "heavy"
+      "project_scale": "academic",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A README detailing a cross-platform game architecture framework designed for scalable enterprise deployment.",
+    "title": "Cross-Platform Game Architecture Framework",
+    "doc_id": "d_p_017_02",
+    "persona_id": "p_017",
+    "hyperparams": {
+      "project_scale": "team-internal",
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "moderate"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from Aaron's manager at FinNexus Solutions, endorsing his technical skills and teamwork in ML projects.",
-    "title": "Recommendation for Aaron Baptiste",
-    "doc_id": "d_p_017_02",
+    "topic_summary": "A recommendation letter from Adam's manager praising his leadership and technical expertise in game architecture.",
+    "title": "Recommendation for Adam Kowalczyk - Staff Game Architecture Lead",
+    "doc_id": "d_p_017_03",
     "persona_id": "p_017",
     "hyperparams": {
-      "recommender_role": "skip-level",
+      "recommender_role": "direct-manager",
       "recommender_closeness": "worked-daily",
-      "company_type": "agency",
+      "company_type": "academic",
       "company_size": "mid (50-500)"
     }
   },
   {
-    "doc_type": "linkedin",
-    "topic_summary": "A professional LinkedIn summary showcasing Aaron's career in fintech ML, key projects, and passion for innovative solutions.",
-    "title": "Aaron Baptiste - Machine Learning Engineer",
-    "doc_id": "d_p_017_03",
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post exploring best practices for designing scalable game architectures in enterprise environments.",
+    "title": "Designing Scalable Game Architectures for Enterprise-Level Projects",
+    "doc_id": "d_p_017_04",
     "persona_id": "p_017",
     "hyperparams": {
-      "linkedin_completeness": "detailed"
+      "blog_depth": "opinion-piece",
+      "jargon_density": "plain"
     }
   }
 ]

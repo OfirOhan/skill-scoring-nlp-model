@@ -1,22 +1,22 @@
 {
   "doc_id": "d_p_068_03",
-  "type": "linkedin",
+  "type": "project_readme",
   "persona_id": "p_068",
   "hyperparams": {
-    "linkedin_completeness": "minimal"
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "CI/CD pipelines": 3,
-    "Docker": 3,
-    "Load balancing": 3,
-    "MongoDB": 3,
-    "Node.js": 3,
-    "PostgreSQL": 3,
-    "Python": 3,
-    "REST API design": 3,
-    "React": 3,
-    "Terraform": 3
+    "Apache Airflow": 1,
+    "Apache Kafka": 4,
+    "Apache Spark": 1,
+    "Cloud cost optimization": 1,
+    "Databricks": 1,
+    "PostgreSQL": 1,
+    "Python": 1,
+    "Snowflake": 1,
+    "Terraform": 1
   },
-  "text": "Full-Stack Developer at NexaCloud Solutions, focused on building scalable SaaS solutions. My work bridges backend systems and frontend experiences, ensuring seamless integration for real-world use cases.  \n\nCurrently, I design REST APIs using Node.js and Python, while leveraging PostgreSQL and MongoDB for data management. AWS infrastructure forms the backbone of our deployment, with CI/CD pipelines automating updates and ensuring reliability. Docker streamlines environment consistency, and Terraform simplifies infrastructure-as-code practices.  \n\nLoad balancing is critical for handling traffic spikes, and I’ve integrated it into our architecture to maintain performance. React powers interactive dashboards, connecting backend services to deliver intuitive user experiences.  \n\nCollaboration is key—whether refining database queries or debugging deployment pipelines, I aim to solve problems efficiently. My goal is to contribute to scalable, user-centric SaaS products that adapt to evolving business needs.  \n\nLooking ahead, I’m excited to explore ways to optimize workflows and innovate within cloud-native environments. Let’s connect if you’re shaping the future of software—there’s always room for thoughtful solutions."
+  "text": "# Real-Time Fraud Detection System  \nA scalable stream processing pipeline leveraging Apache Kafka and Flink to detect anomalous financial transactions in real time, reducing false positives by 35% in production. Designed for low-latency, high-throughput environments with dynamic rule updates and fault-tolerant state management.  \n\n## Deployment  \nDeployed as a self-contained microservice using Docker and Kubernetes for horizontal scaling. Kafka clusters are managed via dedicated brokers with replication for durability. Flink jobs run in cluster mode with checkpointing enabled for exactly-once semantics. All configurations are injected via environment variables to avoid hardcoding secrets.  \n\n## Getting Started / Installation  \n1. Clone the repository  \n2. Build Docker images: `docker-compose build`  \n3. Start services: `docker-compose up -d`  \n4. Verify Kafka connectivity via `kafka-topics.sh --bootstrap-server localhost:9092 --list`  \n5. Submit Flink job: `flink run -c com.frauddetection.Main target/fraud-detection.jar`  \nLogs are aggregated in Prometheus and accessible via Grafana dashboards for real-time monitoring.  \n\n## Usage / Examples  \nProcess transaction streams by configuring Kafka topics in `application.properties`. Example rule:  \n```java  \nstream.filter(record -> record.value().amount > 100000)  \n    .keyBy(record -> record.value().transactionId)  \n    .window(TumblingEventTimeWindows.of(Time.seconds(10)))  \n    .apply(new FraudDetector());\n```  \nAlerts are emitted to a dedicated Kafka topic for downstream integration with SIEM systems.  \n\n## Tech Stack  \n- **Apache Kafka**: Real-time data ingestion and event sourcing  \n- **Apache Flink**: Stateful stream processing with window functions  \n- **Docker**: Containerization for consistent environments  \n- **Prometheus/Grafana**: Metrics collection and visualization  \n\n## Architecture / Design  \nThe system decouples data ingestion, processing, and alerting layers. Kafka acts as a buffer between source systems and Flink, which applies custom business logic via keyed state and event time processing. Alerts are routed through a rules engine for dynamic threshold adjustments.  \n\n## License  \nApache 2.0  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/commit-activity yearly)](https://github.com/QuinnOBrien/fraud-detection)  \n[![Build Status](https://img.shields.io/github/actions/workflow/QuinnOBrien/fraud-detection/main.yml)](https://github.com/QuinnOBrien/fraud-detection/actions)  \n[![Kafka](https://img.shields.io/badge/kafka-3.4-blue)](https://kafka.apache.org)"
 }

@@ -3,24 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_061",
   "hyperparams": {
-    "project_scale": "academic",
+    "project_scale": "production",
     "project_team_size": "small (2-4)",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 2,
-    "C#/.NET": 5,
-    "CI/CD pipelines": 4,
-    "Docker": 4,
-    "Kubernetes": 4,
-    "Microservices architecture": 5,
-    "MongoDB": 4,
-    "Prometheus/Grafana": 2,
-    "Python": 3,
-    "REST API design": 5,
-    "React": 2,
-    "Redis": 4,
-    "TypeScript": 3
+    "Agile/Scrum": 3,
+    "CI/CD pipelines": 3,
+    "Cloud infrastructure": 4,
+    "Database optimization": 2,
+    "GitHub Actions": 3,
+    "Mentoring": 5,
+    "PostgreSQL": 1,
+    "System design": 5,
+    "Team leadership": 5,
+    "Technical writing": 3
   },
-  "text": "# NexaQuest: Real-Time Multiplayer Game with WebSockets and Unity  \nA high-performance, scalable multiplayer game framework leveraging Unity for rendering, WebSockets for real-time synchronization, and a microservices architecture for backend orchestration. Designed for academic exploration of distributed systems in gaming, with focus on low-latency communication and state consistency across distributed clients.  \n\n## Tech Stack  \n- **Game Engine**: Unity (C#) for 3D rendering and physics  \n- **Networking**: WebSockets (Node.js backend) for bidirectional real-time data streaming  \n- **Backend Services**: C#/.NET microservices with Redis for session caching and MongoDB for persistent player state  \n- **Infrastructure**: Dockerized containers, Kubernetes for orchestration, and AWS EC2 for scalable deployment  \n- **Monitoring**: Prometheus/Grafana for latency tracking and throughput analysis  \n- **Scripting**: TypeScript for frontend tooling and Python for data pipeline scripting  \n\n## Architecture / Design  \nThe system is partitioned into three core layers:  \n1. **Game Layer**: Unity client communicates via WebSockets to a central hub, which routes updates to all connected clients. Spatial hashing and delta encoding reduce bandwidth overhead.  \n2. **Backend Layer**: A C#/.NET microservices architecture manages matchmaking, authentication, and state reconciliation. Redis serves as a distributed cache for transient session data, while MongoDB stores persistent player progress.  \n3. **Infrastructure Layer**: Docker containers encapsulate all services, orchestrated by Kubernetes for auto-scaling. CI/CD pipelines (GitHub Actions) automate testing and deployment to AWS EC2 clusters.  \n\nKey design choices include:  \n- **WebSocket Long Polling**: Ensures persistent connections with fallback to HTTP/1.1 for legacy clients  \n- **Event Sourcing**: All game state changes are logged as events in MongoDB for auditability  \n- **Load Balancing**: Nginx proxies distribute traffic across WebSocket endpoints  \n\n## Getting Started / Installation  \n1. Clone the repository using Git  \n2. Install Unity Hub and import the project (requires Unity 2021.3+)  \n3. Set up Docker with `docker-compose up --build` to spin up backend services  \n4. Configure AWS credentials for EC2 instance access  \n5. Run `npm install` and `dotnet build` to compile C# services  \n\n## Usage / Examples  \nTo launch the game:  \n```bash  \ndocker-compose up --build  \ncd frontend && npm start  \n```  \nThis initializes the WebSocket server, compiles Unity assets, and spawns a local multiplayer session. Use `curl` to test API endpoints for matchmaking or player stats.  \n\n## Badges  \n[![Build Status](https://example.com/badge)](https://example.com)  \n[![Coverage](https://example.com/coverage)](https://example.com)  \n[![License](https://example.com/license)](https://example.com)  \n\n## Contributing  \nCollaborate via pull requests targeting the `develop` branch. Focus on optimizing WebSocket throughput, refining state reconciliation algorithms, or expanding microservice capabilities.  \n\n## License  \nMIT License — see [LICENSE](https://example.com/license) for details."
+  "text": "# Real-Time Analytics Dashboard for SaaS Platforms  \n\nA high-performance dashboard built with React, Node.js, and Kafka to ingest, process, and visualize real-time metrics for SaaS platforms. Designed for low-latency data pipelines, horizontal scalability, and seamless integration with existing infrastructure.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/your-username/real-time-dashboard.git`  \n2. Install dependencies:  \n   ```bash  \n   npm install  \n   ```  \n3. Set up Kafka: Ensure a local Kafka instance is running (or use a managed service like Confluent Cloud).  \n4. Configure environment variables in `.env.local` for API endpoints and authentication.  \n5. Start the application:  \n   ```bash  \n   npm run start  \n   ```  \n   The dashboard will be available at `http://localhost:3000`.  \n\n## Usage / Examples  \n- **Real-time data ingestion**: Use Kafka producers to stream metrics to the dashboard.  \n- **Low-latency visualization**: Leverage React's state management for instant UI updates.  \n- **Scalable metrics**: Node.js workers process events in parallel, ensuring sub-100ms response times under load.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/license/your-username/real-time-dashboard)](https://github.com/your-username/real-time-dashboard)  \n[![npm](https://img.shields.io/npm/v/real-time-dashboard)](https://www.npmjs.com/package/real-time-dashboard)  \n[![Tech Stack](https://img.shields.io/badge/tech-stack-React%2C%20Node.js%2C%20Kafka-blue)](https://github.com/your-username/real-time-dashboard)  \n\n## Tech Stack  \n- **Frontend**: React (TypeScript), WebSockets for bidirectional communication  \n- **Backend**: Node.js (Express), Kafka for event streaming  \n- **Cloud**: AWS MSK for managed Kafka clusters (production deployment)  \n- **Monitoring**: Prometheus + Grafana for pipeline health checks  \n\n## Architecture / Design  \nThe system is built on an event-driven architecture with Kafka as the central nervous system. Data flows from sources into Kafka topics, where Node.js workers process events and push aggregated metrics to a Redis cache. React consumes this data via WebSockets, enabling real-time updates without polling. Horizontal scaling is achieved by partitioning Kafka topics and deploying worker pods across availability zones.  \n\n## Contributing  \nContributions are welcome! Please open an issue for feature requests or bug reports. Pull requests should include unit tests and updates to the GitHub Actions CI/CD pipeline, which enforces type safety and lints code against team standards.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/your-username/real-time-dashboard/blob/main/LICENSE) for details."
 }

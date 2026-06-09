@@ -1,21 +1,20 @@
 {
   "doc_id": "d_p_158_04",
-  "type": "blog",
+  "type": "linkedin",
   "persona_id": "p_158",
   "hyperparams": {
-    "blog_depth": "tutorial",
-    "jargon_density": "moderate"
+    "linkedin_completeness": "detailed"
   },
   "skill_evidence": {
     "AWS": 5,
-    "CI/CD pipelines": 4,
-    "Docker": 4,
-    "Go": 5,
+    "CI/CD pipelines": 3,
+    "ELK": 1,
     "Kubernetes": 5,
-    "Microservices architecture": 5,
-    "PostgreSQL": 5,
-    "Python": 4,
-    "REST API design": 5
+    "Linux administration": 3,
+    "Load balancing": 3,
+    "Prometheus/Grafana": 4,
+    "Python": 1,
+    "Terraform": 5
   },
-  "text": "**Building Scalable Backend Infrastructure for AdTech**  \n\n**Overview**  \nAd campaigns demand real-time data processing and sub-100ms latency—something our platform struggled with as traffic grew 5x year-over-year. As a senior backend engineer, I led a redesign of our backend stack to handle millions of ad requests hourly while maintaining compliance with strict SLAs.  \n\n**Context**  \nOur monolithic Python service, running on AWS EC2, faced severe bottlenecks during peak hours. The database became a single point of failure, and our REST API couldn’t scale beyond 200 RPS without manual scaling. Ad verification, bid pricing, and real-time reporting were all hitting performance walls. The team also lacked automated testing for edge cases, leading to frequent downstream failures in partner integrations.  \n\n**Challenge**  \nThe core problem was a lack of horizontal scalability. Our PostgreSQL instance couldn’t handle the write load, and the monolithic architecture forced us to deploy new features globally, delaying A/B testing. We needed a system that could process 10x more requests with 30% lower latency while decoupling services for independent scaling.  \n\n**Solution**  \nWe rebuilt the stack using a microservices architecture, splitting the monolith into three services: *AdValidator*, *BidProcessor*, and *ReportingEngine*. Docker containers orchestrated by Kubernetes enabled dynamic scaling, and CI/CD pipelines with Jenkins and GitLab ensured zero-downtime deployments. For databases, we migrated write-heavy operations to Amazon Aurora with read replicas, while caching frequent ad metadata in Redis. Python handled batch reporting, while Go powered the high-throughput bid processing. REST APIs were refactored to use asynchronous gRPC for internal calls, reducing latency by 40%.  \n\n**Results**  \nPost-redesign, we achieved 1.2M RPS with 65ms average latency. Database writes scaled linearly with traffic, and Kubernetes autoscaling cut infrastructure costs by 30%. Automated end-to-end tests caught 85% of edge cases pre-deployment, slashing production bugs by 60%. The team also adopted Prometheus for real-time monitoring, enabling proactive scaling during flash traffic spikes.  \n\n**Lessons Learned**  \n1. **Trade-offs are inevitable**: We prioritized eventual consistency in distributed transactions to avoid write locks, accepting minor data staleness for higher throughput.  \n2. **CI/CD isn’t optional**: Automated testing and deployment pipelines are non-negotiable for maintaining stability at scale.  \n3. **Language choice matters**: Go’s concurrency model was critical for handling thousands of bid requests per second, while Python’s ecosystem simplified complex reporting logic.  \n4. **Kubernetes is a tool, not a silver bullet**: It requires careful resource tuning and security hardening to avoid misconfigurations.  \n\nThis project reinforced that scalability in adtech isn’t just about hardware—it’s about architecture, tooling, and cultural shifts toward automation and resilience."
+  "text": "Journey from junior sysadmin to principal devops engineer began in 2015, navigating from on-prem infrastructure to cloud-native architectures. Early roles in media tech laid groundwork for understanding scalability challenges, which evolved into leadership roles shaping AdVerve’s infrastructure roadmap.  \n\nCurrent Focus centers on architecting resilient, cost-effective systems at scale. Driving AWS-native solutions that integrate with Kubernetes clusters, while optimizing Terraform workflows to streamline multi-cloud adoption. Mentorship remains a priority, fostering growth in teams that manage high-availability ad-tech platforms.  \n\nSkills Highlight includes designing CI/CD pipelines that cut deployment times by 40% for real-time bidding systems. Linux expertise powers automation in load-balanced environments, ensuring sub-100ms response times. Prometheus/Grafana dashboards have slashed incident resolution times by 30%, while AWS and Kubernetes foundations underpin 90% of our infrastructure. Terraform mastery enables rapid environment provisioning, reducing onboarding friction for new engineers.  \n\nLet’s connect if you’re building scalable systems or navigating cloud transitions—collaboration often accelerates growth."
 }

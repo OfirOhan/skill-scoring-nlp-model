@@ -3,25 +3,19 @@
   "type": "project_readme",
   "persona_id": "p_227",
   "hyperparams": {
-    "project_scale": "team-internal",
+    "project_scale": "production",
     "project_team_size": "medium (5-15)",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "CI/CD pipelines": 2,
-    "Cloud cost optimization": 1,
-    "Cloud networking (VPC/subnets)": 1,
-    "GitHub Actions": 1,
-    "GitLab CI": 1,
-    "Go": 1,
-    "Jenkins": 1,
-    "Linux administration": 3,
-    "Monitoring & alerting": 4,
-    "PostgreSQL": 1,
-    "Prometheus/Grafana": 5,
-    "Python": 1,
-    "Redis": 1,
-    "Terraform": 1
+    "Apache Airflow": 1,
+    "Apache Spark": 2,
+    "Python": 3,
+    "REST API design": 1,
+    "SQL analytics": 4,
+    "TensorFlow": 4,
+    "Time series analysis": 1,
+    "scikit-learn": 4
   },
-  "text": "# Real-Time Inventory Monitoring System  \n\nA scalable solution for tracking product availability across e-commerce platforms, built using Prometheus and Grafana to ensure operational precision and reduce stockout incidents by 35% in production.  \n\n---\n\n## Roadmap / Future Work  \n\n- **Phase 1 (Q3 2024):** Expand metric coverage to include fulfillment pipeline latency and regional stock distribution.  \n- **Phase 2 (Q1 2025):** Integrate with order management systems for predictive inventory thresholds.  \n- **Phase 3 (Q2 2025):** Implement dynamic alert suppression during peak traffic to minimize false positives.  \n\n---\n\n## Getting Started / Installation  \n\n1. **Prerequisites:**  \n   - Prometheus (v2.44+)  \n   - Grafana (v10.1+)  \n   - Linux environment with `systemd` for service management  \n\n2. **Setup:**  \n   - Deploy Prometheus with scrape configurations for inventory exporters.  \n   - Configure Grafana dashboards using provided `JSON` templates.  \n   - Run `./setup.sh` to initialize default alert rules and service dependencies.  \n\n---\n\n## Usage / Examples  \n\n- **Querying inventory levels:**  \n  ```promql\n  inventory_stock{product_id=\"12345\"}\n  ```  \n- **Alerting for low stock:**  \n  ```yaml\n  - alert: LowStockCritical\n    expr: inventory_stock{location=\"us-east-1\"} < 50\n    for: 1h\n    labels:\n      severity: critical\n  ```  \n- **Dashboard example:**  \n  Monitor regional stock variance with a heatmap visualization, enabling rapid replenishment decisions.  \n\n---\n\n## Tech Stack  \n\n- **Monitoring:** Prometheus (scraping, alerting, metrics aggregation)  \n- **Visualization:** Grafana (dashboard creation, real-time data exploration)  \n- **Data Sources:** Custom inventory exporters (exposed via HTTP endpoints)  \n\n---\n\n## Architecture / Design  \n\nThe system operates as a layered pipeline: Prometheus scrapes metrics from inventory services, aggregating time-series data for anomaly detection. Grafana serves as the interface for stakeholders, with alert rules tied to business-critical KPIs. SRE ownership ensures metric granularity and alert fatigue mitigation, balancing precision with operational overhead.  \n\n---\n\n## License  \n\nMIT License — see [LICENSE](LICENSE) for details."
+  "text": "# Fraud Detection in Payment Transactions  \n\nA real-time fraud detection system leveraging advanced machine learning to minimize financial loss and enhance transaction security. The model processes millions of transactions per day, achieving 99.8% precision in identifying anomalous patterns while maintaining sub-100ms latency for live inference.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies using `pip install -r requirements.txt`. The pipeline requires access to a PostgreSQL database for historical transaction data and a Kafka cluster for real-time stream ingestion. For local testing, use the provided Docker-compose file to spin up a mock environment with preprocessed datasets.  \n\n## Tech Stack  \n- **Python**: Core language for data wrangling, model training, and deployment.  \n- **SQL**: Engineered ETL pipelines in PostgreSQL, reducing data preparation time by 40% compared to prior systems.  \n- **TensorFlow**: Custom-built neural network architecture for sequence modeling of transaction patterns.  \n- **scikit-learn**: Ensemble models for baseline anomaly detection, achieving 92% F1-score in A/B testing.  \n- **Apache Spark**: Batch retraining workflows for model drift detection, processed on a 4-node cluster.  \n- **Kafka**: Real-time ingestion with 99.95% message durability.  \n\n## Usage / Examples  \n```python  \nfrom fraud_detector import FraudModel  \nmodel = FraudModel.load(\"models/v1.3\")  \nprediction = model.predict({\"amount\": 1500, \"location\": \"US\", \"device_hash\": \"abc123\"})  \nprint(prediction)  # {\"is_fraud\": True, \"confidence\": 0.96}  \n```  \nThe system integrates with existing payment gateways via webhooks, flagging suspicious transactions for manual review.  \n\n## Badges  \n[![Build Status](https://github.com/.../workflows/CI%20CD/badge.svg)](https://github.com/.../actions)  \n[![Coverage](https://codecov.io/gh/.../branch/main/graph/badge.svg)](https://codecov.io/gh/...)  \n[![PyPI](https://img.shields.io/pypi/v/fraud-detector)](https://pypi.org/project/fraud-detector/)  \n\n## Architecture / Design  \nThe system decouples data ingestion, feature engineering, and model serving into microservices. TensorFlow models run in Docker containers on Kubernetes, scaled based on incoming request volume. SQL analytics monitor model performance, triggering retraining when drift exceeds 5% threshold.  \n\n## Contributing  \nEnhance the model's explainability or optimize feature extraction pipelines. Prioritize issues labeled \"high-impact\" for production improvements.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

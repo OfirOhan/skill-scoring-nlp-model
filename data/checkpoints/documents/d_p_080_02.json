@@ -4,20 +4,25 @@
   "persona_id": "p_080",
   "hyperparams": {
     "project_scale": "production",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "plain"
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "API testing": 2,
-    "Integration testing": 2,
-    "Java": 1,
-    "JavaScript": 1,
-    "Python": 3,
-    "REST API design": 2,
-    "Selenium/Playwright": 3,
-    "Test automation": 3,
-    "Test strategy design": 1,
-    "Unit testing": 3
+    "ArgoCD": 3,
+    "CI/CD pipelines": 3,
+    "GitLab CI": 3,
+    "Incident management": 2,
+    "Jenkins": 2,
+    "Kubernetes": 5,
+    "Linux administration": 3,
+    "Monitoring & alerting": 5,
+    "PostgreSQL": 1,
+    "Prometheus/Grafana": 5,
+    "Python": 1,
+    "REST API design": 1,
+    "Redis": 1,
+    "SLA/SLO management": 3,
+    "Shell scripting (Bash)": 3
   },
-  "text": "# Fintech Compliance Validator  \nA security compliance testing tool designed to validate fintech applications against regulatory standards such as PCI DSS, GDPR, and SOX. This tool automates the verification of data encryption protocols, access controls, and audit trails, reducing manual validation time by 70% while ensuring 95% coverage of common compliance rules.  \n\n## Configuration  \nThe tool relies on a centralized `config.yaml` file to define compliance rules, test environments, and output formats. Key parameters include:  \n- `compliance_standards`: List of regulatory frameworks to enforce (e.g., PCI DSS, GDPR).  \n- `environment`: Target system details (e.g., staging, production).  \n- `output_format`: JSON or HTML for audit reports.  \nSensitive credentials are managed via environment variables, with optional encryption for stored secrets.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies using `pip install -r requirements.txt`. Set environment variables for database connections and API keys before running tests. For production use, deploy the tool in a Docker container with preconfigured compliance rules.  \n\n## Usage / Examples  \nRun the validator with `python validator.py --config config.yaml --output report.html`.  \nExample:  \n```bash  \npython validator.py --standards PCI_DSS --environment staging  \n```  \nThe tool generates a detailed report highlighting non-compliant endpoints, missing encryption layers, and misconfigured access controls. Parallel execution of test cases reduces runtime by 40% for large-scale audits.  \n\n## Tech Stack  \nPython (3.8+), Selenium for browser-based UI checks, Playwright for API endpoint validation, pytest for unit testing, and Pandas for data analysis.  \n\n## Architecture / Design  \nThe system is modular, with separate components for rule enforcement, test execution, and report generation. A central orchestrator manages parallel test runs, while a reporting module aggregates results into human-readable formats. Integration with CI/CD pipelines ensures compliance checks are automated during deployment.  \n\n## License  \nMIT License  \n\n## Badges  \n[![Compliance Coverage](https://example.com/badge/95%)](https://example.com)  \n[![Tested Environments](https://example.com/badge/staging-prod)](https://example.com)"
+  "text": "# CI/CD Pipeline Optimization for Startup Product  \nRefined deployment workflows with reduced latency and enhanced reliability across multi-cluster Kubernetes environments. Focus on parallelization, artifact caching, and deterministic rollbacks for high-traffic SaaS applications.  \n\n## Configuration  \nPipeline orchestrated via GitLab CI with ArgoCD for declarative deployment sync. Default parallelism set to 8, with dynamic scaling based on cluster node availability. Artifact caching enabled for Docker images and dependency binaries.  \n- **GitLab CI**: `.gitlab-ci.yml` defines stage-specific runners with dynamic variable injection  \n- **ArgoCD**: Sync intervals configured to 30s for canary deployments, 5m for stable  \n- **Kubernetes**: Multi-cluster setup with 3 control planes, 10 worker nodes per cluster  \n- **Monitoring**: Prometheus/Grafana dashboards for pipeline latency, error rates, and resource utilization  \n\n## Getting Started / Installation  \nClone repository and configure secrets manager with encrypted environment variables. Deploy via:  \n```bash  \nkubectl apply -f k8s/deployment.yaml  \ngitlab-runner register --url https://gitlab.com --token <TOKEN>  \n```\nEnsure prerequisites:  \n- Valid TLS certs for all endpoints  \n- RBAC policies for ArgoCD webhook access  \n- Prometheus server with scrape config for pipeline metrics  \n\n## Usage / Examples  \nTrigger CI/CD flow via Git push to `main` branch. Example workflow:  \n1. **Pre-deployment**: `./scripts/validate-terraform.sh` ensures infrastructure consistency  \n2. **Canary rollout**: ArgoCD syncs 20% of traffic to new version with rollback threshold at 5% error rate  \n3. **Post-deployment**: Prometheus alerts on >1s latency in critical endpoints  \n\n## Tech Stack  \n- **Orchestration**: GitLab CI, ArgoCD, Kubernetes  \n- **Monitoring**: Prometheus, Grafana, Fluentd  \n- **Infrastructure**: Terraform, AWS EKS, VPC  \n- **Utilities**: Bash scripts, AWS CLI, AWS CloudWatch  \n\n## Architecture / Design  \nPipeline structured into three stages: validation, deployment, and observability. Each stage decoupled with Kafka for async processing. Kubernetes operator manages ArgoCD app projects. Incident management integrated via PagerDuty with SLO/SLO thresholds baked into Prometheus alerts.  \n\n## License  \nMIT License  \n\n## Badges  \n[![CI/CD](https://badgen.net/badge/orchestration/argocd/gitlab/ci)](https://gitlab.com)  \n[![Kubernetes](https://badgen.net/badge/kubernetes/1.25/green)](https://kubernetes.io)  \n[![Monitoring](https://badgen.net/badge/monitoring/prometheus/orange)](https://prometheus.io)"
 }

@@ -3,21 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_029",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "large (15+)",
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
     "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 1,
-    "Docker": 3,
-    "GCP": 1,
-    "Kubernetes": 3,
-    "Linux administration": 1,
-    "Load balancing": 1,
-    "Network automation": 1,
+    "3D graphics (OpenGL/Vulkan)": 4,
+    "Game networking": 3,
+    "Game physics": 5,
+    "HTML/CSS": 1,
+    "JavaScript": 1,
     "Python": 3,
-    "Shell scripting": 1,
-    "Terraform": 1
+    "REST API design": 3,
+    "Team Collaboration": 3,
+    "Unity": 5,
+    "Unreal Engine": 1
   },
-  "text": "# AdMicro - AdTech Microservices Framework  \n\nA modular architecture for ad tech systems, optimized for scalability and real-time data processing. Built with Docker for containerization, Kubernetes for orchestration, and Python for service coordination.  \n\n## Badges  \n[![GitHub](https://badgen.net/badge/icon/github?color=4F4F4F&icon=github&label)](https://github.com/monicanyambura/AdMicro)  \n[![Docker](https://badgen.net/badge/icon/docker?color=4F4F4F&icon=docker&label)](https://hub.docker.com/repository/docker/monicanyambura/admicro)  \n[![Kubernetes](https://badgen.net/badge/icon/kubernetes?color=4F4F4F&icon=kubernetes&label)](https://kubernetes.io/)  \n[![License](https://badgen.net/badge/license/MIT?color=4F4F4F)](https://github.com/monicanyambura/AdMicro/blob/main/LICENSE)  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/monicanyambura/AdMicro.git  \ncd AdMicro  \ndocker-compose up --build  \n# Kubernetes cluster setup required for production deployment  \n```  \nEnsure Docker and kubectl are installed. Use `docker-compose` for local testing; deploy to Kubernetes with Helm charts.  \n\n## Usage / Examples  \n**Real-time bidding service**:  \n```python  \nfrom admicro.bidding import BidManager  \nmanager = BidManager()  \nresult = manager.process_bid({  \n    \"ad_id\": \"123\",  \n    \"user_id\": \"456\",  \n    \"bid_amount\": 15.99  \n})  \nprint(result)  \n```  \n**Data pipeline**:  \n```bash  \ndocker run --rm -v $(pwd):/data admicro-data-pipeline /data/config.yaml  \n```  \n\n## API Reference  \n| Endpoint          | Method | Description                |  \n|-------------------|--------|----------------------------|  \n| `/api/v1/bid`     | POST   | Submit ad bid              |  \n| `/api/v1/report`  | GET    | Retrieve campaign metrics  |  \n| `/api/v1/health`  | GET    | Service status check       |  \n\n## Testing  \nRun unit tests:  \n```bash  \npytest tests/unit/  \n```  \nIntegration tests use Docker containers to simulate microservice interactions. End-to-end tests validate Kubernetes deployment pipelines with 98%+ coverage.  \n\n## Contributing  \nPRs for new service modules, performance optimizations, or documentation improvements are welcome. Focus on modular expansion, security hardening, or CI/CD pipeline enhancements.  \n\n## Deployment  \nDeploy with:  \n```bash  \nhelm install admicro ./charts/admicro --namespace adtech  \n```  \nKubernetes manifests include auto-scaling rules for bid processing pods. Use Docker images for rapid local testing.  \n\n## License  \nMIT License — see [LICENSE](https://github.com/monicanyambura/AdMicro/blob/main/LICENSE) for details."
+  "text": "# FinGame: Blockchain-Driven Financial Literacy Game for Millennials  \n\nFinGame is a decentralized, interactive platform that merges blockchain technology with gamified financial education. Designed for millennial audiences, it transforms complex financial concepts into engaging challenges, using NFTs and smart contracts to reward learning and simulate real-world economic decisions.  \n\n---\n\n## Badges  \n[![GitHub](https://badgen.net/badge/repo/github?icon=github&label)](https://github.com/FinGame)  \n[![CI/CD](https://badgen.net/badge/build/ci?icon=build&label)](https://travis-ci.com/FinGame)  \n[![Docker](https://badgen.net/badge/docker?icon=docker&label)](https://hub.docker.com/_u/finGame)  \n[![License](https://badgen.net/badge/license/MIT?icon=license&label)](https://github.com/FinGame/blob/main/LICENSE)  \n\n---\n\n## Tech Stack  \n- **Backend**: Python (FastAPI), PostgreSQL, REST APIs  \n- **Blockchain**: Ethereum (Solidity smart contracts), Alchemy API  \n- **Game Engine**: Unity (3D graphics, physics, and multiplayer networking)  \n- **Data Layer**: IPFS for NFT storage, WebSocket for real-time updates  \n- **Tools**: Docker, Terraform, Grafana for monitoring  \n\n---\n\n## Architecture / Design  \nThe system is split into four core layers:  \n1. **Frontend (Unity)**: Handles 3D visuals, user input, and real-time physics simulations for financial scenarios (e.g., investment risk models).  \n2. **Backend (Python)**: Manages REST endpoints for user authentication, score tracking, and NFT minting.  \n3. **Blockchain Layer**: Smart contracts handle transaction validation, NFT ownership, and reward distribution.  \n4. **Data Layer**: IPFS stores game assets, while PostgreSQL logs user progress and economic decisions.  \n\nKey decisions include using Unity for cross-platform deployment and leveraging Ethereum’s immutability to ensure transparent scoring. Game physics are tuned to simulate market volatility, with multiplayer networking enabling collaborative financial challenges.  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/FinGame.git`  \n2. Set up Docker: `docker-compose up -d`  \n3. Install Python dependencies: `pip install -r requirements.txt`  \n4. Run database migrations: `alembic upgrade head`  \n5. Configure environment variables (see `.env.example`)  \n\n---\n\n## Usage / Examples  \n- Launch the game via `./start.sh` to access the Unity frontend.  \n- Use the CLI to mint NFTs: `python mint_nft.py --wallet <address>`  \n- Track progress with the REST API: `curl https://api.fingame.io/leaderboard`  \n- Explore blockchain transactions via Alchemy’s explorer for transparency.  \n\n---\n\n## Contributing  \nWe welcome contributions to game mechanics, blockchain integrations, and educational content. Submit issues for feature requests or bugs. For pull requests, ensure all tests pass and include unit tests for new features.  \n\n---\n\n## License  \nMIT License. See [LICENSE](https://github.com/FinGame/blob/main/LICENSE) for details."
 }

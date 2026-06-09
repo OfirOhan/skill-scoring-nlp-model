@@ -1,49 +1,88 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Linda Gustafsson's 7 years of experience as a Senior Site Reliability Engineer and DevOps Architect in enterprise environments.",
-    "title": "Linda Gustafsson - Senior Site Reliability Engineer",
+    "topic_summary": "Professional resume highlighting Daria Ionescu's 8-year experience as a Senior Game Systems Architect at Nexu Interactive",
+    "title": "Daria Ionescu - Senior Game Systems Architect",
     "doc_id": "d_p_046_00",
     "persona_id": "p_046",
     "hyperparams": {
-      "cv_format": "minimal",
-      "geographic_convention": "Europe",
-      "company_type": "enterprise",
-      "company_size": "small (<50)"
+      "cv_format": "paragraph",
+      "geographic_convention": "India",
+      "company_type": "agency",
+      "company_size": "large (500+)"
     }
   },
   {
-    "doc_type": "linkedin",
-    "topic_summary": "A LinkedIn summary showcasing Linda's expertise in DevOps, cloud infrastructure, and leadership in enterprise SRE teams.",
-    "title": "Linda Gustafsson | Senior Site Reliability Engineer",
+    "doc_type": "project_readme",
+    "topic_summary": "README for a Unity-based MMORPG systems architecture project",
+    "title": "EclipseQuest: Unity MMORPG Systems Architecture",
     "doc_id": "d_p_046_01",
     "persona_id": "p_046",
     "hyperparams": {
-      "linkedin_completeness": "standard"
-    }
-  },
-  {
-    "doc_type": "blog",
-    "topic_summary": "A technical blog post on implementing observability in cloud-native systems using Prometheus and Grafana.",
-    "title": "Mastering Observability in Cloud-Native Systems",
-    "doc_id": "d_p_046_02",
-    "persona_id": "p_046",
-    "hyperparams": {
-      "blog_depth": "tutorial",
+      "project_scale": "production",
+      "project_team_size": "small (2-4)",
       "jargon_density": "moderate"
     }
   },
   {
-    "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from Linda's manager praising her leadership and technical contributions to NordicTech Solutions.",
-    "title": "Recommendation for Linda Gustafsson",
+    "doc_type": "project_readme",
+    "topic_summary": "README for a real-time multiplayer networking framework using Photon and C#",
+    "title": "NexuNet: Multiplayer Networking Framework",
+    "doc_id": "d_p_046_02",
+    "persona_id": "p_046",
+    "hyperparams": {
+      "project_scale": "production",
+      "project_team_size": "large (15+)",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "README for an AI-driven procedural terrain generation tool for game environments",
+    "title": "ProceduralWorldGen: Terrain Generation System",
     "doc_id": "d_p_046_03",
     "persona_id": "p_046",
     "hyperparams": {
-      "recommender_role": "professor",
-      "recommender_closeness": "occasional",
+      "project_scale": "academic",
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "Recommendation from a former manager praising Daria's leadership in systems architecture",
+    "title": "Recommendation from Nexu Interactive CTO",
+    "doc_id": "d_p_046_04",
+    "persona_id": "p_046",
+    "hyperparams": {
+      "recommender_role": "skip-level",
+      "recommender_closeness": "brief",
       "company_type": "enterprise",
-      "company_size": "mid (50-500)"
+      "company_size": "large (500+)"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "Recommendation from a peer highlighting Daria's collaboration on cross-team systems integration",
+    "title": "Recommendation from Senior Systems Engineer",
+    "doc_id": "d_p_046_05",
+    "persona_id": "p_046",
+    "hyperparams": {
+      "recommender_role": "direct-manager",
+      "recommender_closeness": "brief",
+      "company_type": "enterprise",
+      "company_size": "large (500+)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "Technical discussion on designing scalable game systems for next-gen engines",
+    "title": "Designing Scalable Game Systems for Next-Gen Engines",
+    "doc_id": "d_p_046_06",
+    "persona_id": "p_046",
+    "hyperparams": {
+      "blog_depth": "tutorial",
+      "jargon_density": "moderate"
     }
   }
 ]

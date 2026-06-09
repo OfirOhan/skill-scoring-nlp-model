@@ -1,23 +1,22 @@
 {
   "doc_id": "d_p_256_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_256",
   "hyperparams": {
-    "recommender_role": "skip-level",
-    "recommender_closeness": "brief",
-    "company_type": "startup",
-    "company_size": "small (<50)"
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Apache Airflow": 3,
-    "Apache Spark": 3,
     "CI/CD pipelines": 3,
-    "Cloud cost optimization": 3,
-    "Data warehousing": 3,
-    "ETL pipeline design": 3,
-    "Python": 4,
-    "REST API design": 3,
-    "Snowflake": 4
+    "Docker": 3,
+    "Go": 4,
+    "Kubernetes": 3,
+    "Linux administration": 1,
+    "Microservices architecture": 3,
+    "PostgreSQL": 4,
+    "Prometheus/Grafana": 2,
+    "Python": 4
   },
-  "text": "Julia redesigned our data warehouse architecture using Snowflake, cutting query latency by 40% and reducing cloud costs by 20% through optimized resource allocation. Her work enabled real-time risk analytics for a key client, directly improving decision-making speed.  \n\nAs a peer on the fintech analytics team, I collaborated closely on ETL pipeline enhancements. Julia’s Apache Spark workflows handled 50M+ transactions monthly, and her REST API integrations streamlined data flow between systems, reducing manual reconciliation time by 30%. She also spearheaded CI/CD pipeline improvements, slashing deployment cycles from hours to minutes.  \n\nJulia’s technical rigor shines in her Python automation scripts, which resolved recurring data discrepancies and freed 100+ hours annually for the team. She’s equally driven by outcomes—proactively identifying cost-saving opportunities in cloud infrastructure without being prompted. Her blend of analytical precision and operational focus makes her a rare asset.  \n\nIn summary, Julia’s technical depth, ownership mindset, and measurable impact align perfectly with advanced data engineering challenges. She’s ready to contribute immediately at a high level.  \n\nSincerely,  \n[Recommender Name]  \nCTO, FinTech Innovators Inc."
+  "text": "# Real-Time Inventory Management System  \nA distributed system for synchronized inventory tracking across e-commerce platforms, reducing stock discrepancies by 30% in production environments  \n\n![CI/CD](https://img.shields.io/endpoint?url=https://actions-badge-cache-prod-rai339v8v67g7g8g4c37g3g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5g5"
 }

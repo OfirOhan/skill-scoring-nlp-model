@@ -1,62 +1,60 @@
 {
   "persona_id": "p_121",
   "hyperparams": {
-    "archetype": "data_engineer",
-    "years_experience": 13,
-    "seniority": "staff",
-    "industry": "gaming",
-    "writing_style": "concise",
-    "language_fluency": "near-native",
-    "self_promotion_level": "balanced",
-    "quantification_tendency": "qualitative"
+    "archetype": "tech_lead_architect",
+    "years_experience": 3,
+    "seniority": "mid",
+    "industry": "SaaS",
+    "writing_style": "verbose",
+    "language_fluency": "native",
+    "self_promotion_level": "boastful",
+    "quantification_tendency": "metrics-heavy"
   },
-  "name": "Sebastian Muller",
-  "current_role": "Staff Data Engineer",
-  "company": "NeonPixel Games",
+  "name": "Tatiana Orlova",
+  "current_role": "Senior Tech Lead",
+  "company": "NexaCorp",
   "education": {
-    "degree": "Master's in Computer Science",
-    "university": "Technical University of Munich",
-    "year": 2010
+    "degree": "Software Engineering",
+    "university": "Innopolis University",
+    "year": 2021
   },
   "career_trajectory": [
     {
-      "title": "Data Analyst Intern",
-      "company": "PixelForge Studios",
-      "duration": "2009-2012"
+      "role": "Software Engineer",
+      "company": "Streamflow Labs",
+      "duration": "2020-2021",
+      "responsibilities": "Built scalable backend services for real-time analytics platform using Python and AWS"
     },
     {
-      "title": "Data Engineer",
-      "company": "Luminous Interactive",
-      "duration": "2012-2015"
+      "role": "Backend Developer",
+      "company": "NexaCorp",
+      "duration": "2021-2022",
+      "responsibilities": "Architected microservices for SaaS product, optimized cloud costs by 32%"
     },
     {
-      "title": "Lead Data Engineer",
-      "company": "NeonPixel Games",
-      "duration": "2015-2018"
-    },
-    {
-      "title": "Staff Data Engineer",
-      "company": "NeonPixel Games",
-      "duration": "2018-present"
+      "role": "Senior Tech Lead",
+      "company": "NexaCorp",
+      "duration": "2022-present",
+      "responsibilities": "Led 8-person team, drove cloud migration to multi-cloud strategy, reduced technical debt by 45%"
     }
   ],
   "skills": {
-    "Apache Spark": 5,
-    "Apache Kafka": 5,
-    "Apache Airflow": 5,
-    "Snowflake": 5,
-    "Data warehousing": 5,
-    "ETL pipeline design": 5,
-    "Python": 5,
-    "AWS": 5,
-    "Terraform": 5,
-    "Docker": 4
+    "System design": 5,
+    "Cloud infrastructure": 1,
+    "Microservices architecture": 5,
+    "Team leadership": 4,
+    "Agile/Scrum": 4,
+    "Stakeholder communication": 4,
+    "Code review": 4,
+    "CI/CD pipelines": 3,
+    "GitHub Actions": 3,
+    "Linux administration": 2,
+    "Shell scripting": 2,
+    "PostgreSQL": 3
   },
   "document_ids": [
     "d_p_121_00",
     "d_p_121_01",
-    "d_p_121_02",
-    "d_p_121_03",
-    "d_p_121_04"
+    "d_p_121_02"
   ]
 }

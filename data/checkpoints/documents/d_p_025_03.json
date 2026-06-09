@@ -1,24 +1,24 @@
 {
   "doc_id": "d_p_025_03",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_025",
   "hyperparams": {
-    "recommender_role": "skip-level",
-    "recommender_closeness": "occasional",
-    "company_type": "enterprise",
-    "company_size": "small (<50)"
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "CI/CD pipelines": 3,
-    "Cloud cost optimization": 3,
-    "Docker": 2,
-    "Microservices architecture": 2,
-    "Node.js": 2,
-    "PostgreSQL": 3,
-    "Python": 4,
-    "REST API design": 4,
-    "React": 2
+    "Agile/Scrum": 3,
+    "CI/CD pipelines": 2,
+    "Cloud infrastructure": 1,
+    "GitHub Actions": 2,
+    "Linux administration": 2,
+    "Mentoring": 1,
+    "Monitoring & alerting": 3,
+    "Shell scripting (Bash)": 2,
+    "System design": 5,
+    "Team leadership": 1,
+    "Technical writing": 4
   },
-  "text": "Working Relationship  \nKamila and I crossed paths during a cross-functional project at NexaCloud Solutions, where she served as a Full-Stack Developer on our SaaS platform. While we didn’t collaborate directly, her work on backend systems and API integrations intersected with my team’s efforts. Her approach to problem-solving and attention to architectural clarity left a strong impression, even from a distance.  \n\nDay-to-Day Observations  \nKamila’s routine reflected a blend of technical precision and strategic thinking. She consistently prioritized stability in AWS environments, tweaking configurations to balance performance and cost. Her CI/CD pipelines were a model of reliability, with automated tests catching edge cases others overlooked. During a recent migration, she restructured PostgreSQL queries to reduce latency, which improved dashboard load times by over 40% without significant code changes. Python became her go-to for scripting repetitive tasks, like automating data reconciliation between services. Her REST APIs were clean, well-documented, and rarely required downstream adjustments—a rarity in fast-paced SaaS development.  \n\nStandout Moments  \nOne memorable instance involved a critical outage in our user authentication service. Kamila swiftly diagnosed the issue as a misconfigured load balancer and restored access within 15 minutes. She also led a refactor of a legacy API, replacing ad-hoc endpoints with a standardized framework that simplified future integrations. Her ability to balance immediate fixes with long-term architecture was striking.  \n\nRecommendation  \nKamila is a dependable, solutions-oriented developer with a knack for simplifying complex systems. Her work ethic and technical depth make her a valuable asset to any team. I’d welcome the opportunity to discuss how she might contribute to your goals."
+  "text": "# User Behavior Analytics Dashboard  \nA real-time analytics platform for tracking user interactions, session patterns, and conversion funnels in e-commerce environments. Built for scalability, low-latency processing, and actionable insights. Designed to handle 500+ data points per second with 99.9% uptime, leveraging distributed systems and interactive visualization.  \n\n## Getting Started / Installation  \nClone the repository:  \n```bash  \ngit clone https://github.com/your-username/user-behavior-dashboard.git  \ncd user-behavior-dashboard  \nnpm install  \n```  \nEnsure Node.js v18+ is installed. For local development, run:  \n```bash  \nnpm run dev  \n```  \nThe dashboard will start at `http://localhost:3000`. For production deployment, use Docker Compose (see `docker-compose.yml`).  \n\n## Usage / Examples  \n- **Real-time metrics**: Monitor active users, session duration, and cart abandonment rates via the main dashboard.  \n- **Segmentation**: Filter data by geographic region, device type, or referral source using the sidebar filters.  \n- **Export**: Generate CSV exports of aggregated session data via the \"Export\" menu.  \n- **Alerts**: Configure threshold-based alerts for critical metrics (e.g., >10% cart abandonment) via the monitoring panel.  \n\n## Badges  \n[![GitHub stars](https://img.shields.io/github/stars/your-username/user-behavior-dashboard?style=flat)](https://github.com/your-username/user-behavior-dashboard)  \n[![Build status](https://img.shields.io/github/actions/workflow/your-username/user-behavior-dashboard/main.yml?branch=main)](https://github.com/your-username/user-behavior-dashboard/actions)  \n[![License](https://img.shields.io/github/license/your-username/user-behavior-dashboard)](https://github.com/your-username/user-behavior-dashboard/blob/main/LICENSE)  \n\n## Tech Stack  \n- **Frontend**: React (with TypeScript), Chart.js, Redux  \n- **Backend**: Node.js (Express), Kafka for event streaming  \n- **Data Processing**: Apache Flink for real-time aggregation  \n- **Storage**: PostgreSQL (timeseries) + Redis (caching)  \n- **CI/CD**: GitHub Actions for automated testing and deployment  \n- **Monitoring**: Prometheus + Grafana for system health  \n\n## Architecture / Design  \nThe system is partitioned into three layers:  \n1. **Ingestion**: Kafka brokers receive event streams from webhooks, with partitioning by user ID for parallel processing.  \n2. **Processing**: Flink jobs aggregate session data into 10-second windows, filtering out noise with a 95% confidence interval.  \n3. **Visualization**: React components render dynamic charts, with WebSocket updates for real-time data.  \nMonitoring is baked in: every node exposes Prometheus metrics, and alerts are triggered via Slack webhooks.  \n\n## Contributing  \nFork the repo, create a feature branch, and submit a pull request. Ensure all tests pass and code adheres to Prettier formatting. For bug fixes, include a regression test. All changes must align with the Agile sprint backlog, with daily standups for coordination.  \n\n## License  \nMIT License — see [LICENSE](https://github.com/your-username/user-behavior-dashboard/blob/main/LICENSE) for details."
 }

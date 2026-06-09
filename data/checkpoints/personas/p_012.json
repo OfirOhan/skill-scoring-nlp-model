@@ -1,54 +1,60 @@
 {
   "persona_id": "p_012",
   "hyperparams": {
-    "archetype": "devops_sre",
-    "years_experience": 5,
-    "seniority": "mid",
-    "industry": "startup",
-    "writing_style": "modest",
-    "language_fluency": "native",
+    "archetype": "data_scientist",
+    "years_experience": 1,
+    "seniority": "junior",
+    "industry": "healthtech",
+    "writing_style": "concise",
+    "language_fluency": "ESL",
     "self_promotion_level": "humble",
-    "quantification_tendency": "qualitative"
+    "quantification_tendency": "metrics-heavy"
   },
-  "name": "Hannah Fischer",
-  "current_role": "DevOps Engineer",
-  "company": "NexaSphere Technologies",
+  "name": "Noor Al-Farsi",
+  "current_role": "Data Scientist",
+  "company": "HealthInsight Analytics",
   "education": {
-    "degree": "Bachelor of Science in Computer Science",
-    "university": "Massachusetts Institute of Technology",
-    "year": 2018
+    "degree": "Master of Science in Data Science",
+    "university": "University of Manchester",
+    "year": 2023
   },
   "career_trajectory": [
     {
-      "role": "Junior DevOps Engineer",
-      "company": "TechNova Solutions",
-      "year": 2018
+      "role": "Data Science Intern",
+      "company": "MedTech Innovations",
+      "duration": "6 months",
+      "key_work": "Built predictive models for patient readmission rates using scikit-learn"
     },
     {
-      "role": "DevOps Engineer",
-      "company": "NexaSphere Technologies",
-      "year": 2019
+      "role": "Data Analyst",
+      "company": "VitalCare Solutions",
+      "duration": "9 months",
+      "key_work": "Designed SQL pipelines for EHR data aggregation"
     },
     {
-      "role": "Senior DevOps Engineer",
-      "company": "NexaSphere Technologies",
-      "year": 2021
+      "role": "Data Scientist",
+      "company": "HealthInsight Analytics",
+      "duration": "1 year",
+      "key_work": "Developed NLP models to extract insights from clinical notes"
     }
   ],
   "skills": {
-    "CI/CD pipelines": 3,
-    "GitLab CI": 3,
-    "Kubernetes": 4,
-    "Terraform": 4,
-    "Prometheus/Grafana": 3,
-    "AWS": 4,
+    "Pandas": 4,
+    "NumPy": 4,
+    "SQL analytics": 4,
+    "Data visualization (Matplotlib/Plotly)": 4,
+    "Feature engineering": 3,
+    "scikit-learn": 4,
     "Python": 3,
-    "Linux administration": 3,
-    "Docker": 3,
-    "Network automation": 3
+    "Jupyter notebooks": 3,
+    "REST API design": 2,
+    "Tableau/Power BI": 3,
+    "Apache Airflow": 1
   },
   "document_ids": [
     "d_p_012_00",
-    "d_p_012_01"
+    "d_p_012_01",
+    "d_p_012_02",
+    "d_p_012_03"
   ]
 }

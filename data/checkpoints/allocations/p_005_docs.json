@@ -1,63 +1,62 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional resume highlighting 11 years of DevOps/SRE experience in fintech",
-    "title": "Umar Bello - DevOps/SRE Lead",
+    "topic_summary": "A comprehensive CV highlighting Yuki Tanaka's 9 years of experience as a Senior Frontend Engineer at NexaFlow Technologies, specializing in startup environments.",
+    "title": "Yuki Tanaka - Senior Frontend Engineer",
     "doc_id": "d_p_005_00",
     "persona_id": "p_005",
     "hyperparams": {
       "cv_format": "paragraph",
-      "geographic_convention": "US",
-      "company_type": "academic",
+      "geographic_convention": "Israel",
+      "company_type": "agency",
       "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "Implementation of secure microservices architecture for financial platforms",
-    "title": "Secure Microservices Architecture for Financial Platforms",
+    "topic_summary": "A React-based analytics dashboard for real-time data visualization and business intelligence in a startup environment.",
+    "title": "NexaFlow Analytics Dashboard",
     "doc_id": "d_p_005_01",
     "persona_id": "p_005",
     "hyperparams": {
-      "project_scale": "academic",
+      "project_scale": "team-internal",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A real-time collaborative editing tool built with React and WebSockets, designed for remote team productivity in startups.",
+    "title": "Real-Time Collaboration Tool",
+    "doc_id": "d_p_005_02",
+    "persona_id": "p_005",
+    "hyperparams": {
+      "project_scale": "production",
       "project_team_size": "medium (5-15)",
       "jargon_density": "plain"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "Design of CI/CD pipelines with automated security scanning for fintech applications",
-    "title": "Automated CI/CD Pipeline with Security Integration",
-    "doc_id": "d_p_005_02",
-    "persona_id": "p_005",
-    "hyperparams": {
-      "project_scale": "production",
-      "project_team_size": "large (15+)",
-      "jargon_density": "plain"
-    }
-  },
-  {
-    "doc_type": "recommendation",
-    "topic_summary": "Recommendation from a former manager praising leadership in SRE operations",
-    "title": "Recommendation from FinTech Innovators Ltd. CTO",
+    "topic_summary": "A Progressive Web App (PWA) that enhances user engagement and accessibility for startup tools, leveraging modern frontend frameworks.",
+    "title": "Startup Tools PWA",
     "doc_id": "d_p_005_03",
     "persona_id": "p_005",
     "hyperparams": {
-      "recommender_role": "direct-manager",
-      "recommender_closeness": "occasional",
-      "company_type": "enterprise",
-      "company_size": "small (<50)"
+      "project_scale": "production",
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "heavy"
     }
   },
   {
     "doc_type": "blog",
-    "topic_summary": "Discussion on DevOps best practices for ensuring compliance in fintech applications",
-    "title": "DevOps Best Practices for Fintech Compliance",
+    "topic_summary": "A technical blog post discussing advanced React optimization techniques for scaling frontend applications in high-traffic startup environments.",
+    "title": "Optimizing React Applications for High-Traffic Startups",
     "doc_id": "d_p_005_04",
     "persona_id": "p_005",
     "hyperparams": {
-      "blog_depth": "deep-dive",
-      "jargon_density": "moderate"
+      "blog_depth": "opinion-piece",
+      "jargon_density": "heavy"
     }
   }
 ]

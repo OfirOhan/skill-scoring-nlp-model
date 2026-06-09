@@ -1,24 +1,24 @@
 {
   "doc_id": "d_p_014_04",
-  "type": "blog",
+  "type": "linkedin",
   "persona_id": "p_014",
   "hyperparams": {
-    "blog_depth": "opinion-piece",
-    "jargon_density": "moderate"
+    "linkedin_completeness": "detailed"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "CI/CD pipelines": 4,
-    "Cloud cost optimization": 4,
-    "Docker": 4,
-    "Kubernetes": 4,
-    "Microservices architecture": 5,
-    "Node.js": 4,
-    "PostgreSQL": 5,
-    "Python": 5,
-    "REST API design": 5,
-    "React": 4,
-    "Redis": 4
+    "Apache Spark": 1,
+    "Cloud cost optimization": 2,
+    "Computer vision": 3,
+    "Docker": 3,
+    "ETL pipeline design": 1,
+    "Kubernetes": 3,
+    "MLOps (MLflow/W&B)": 4,
+    "Model deployment": 3,
+    "NLP": 4,
+    "PyTorch": 3,
+    "REST API design": 3,
+    "Recommendation systems": 3,
+    "TensorFlow": 3
   },
-  "text": "Legacy SaaS applications are drowning in technical debt. Monolithic architectures, built years ago, now struggle to scale, integrate new features, or adapt to evolving user needs. Our monolith, for instance, took 45 minutes to deploy during peak hours—something we couldn’t ignore. The pain points were clear: slow, error-prone updates; siloed data; and a tech stack that felt like a patchwork of outdated tools.  \n\nEarly attempts to refactor the monolith into smaller modules failed. We tried layering microservices atop the existing codebase, but the tangled dependencies made it impossible to isolate services. Another team tried rewriting parts of the backend in Python, only to hit dead ends with legacy databases. Without a cohesive strategy, these efforts became technical debt in disguise. Meanwhile, CI/CD pipelines were undercooked—manual steps and inconsistent environments delayed releases and introduced risks.  \n\nOur working solution started with a hard reset. We decomposed the monolith into 12 bounded contexts, each running as a separate microservice. Docker containerized all services, and Kubernetes managed orchestration, while AWS handled compute and storage. We rebuilt the frontend with React, decoupling it from the backend via REST APIs. PostgreSQL remained for relational data, but Redis powered caching for high-traffic endpoints. CI/CD pipelines, built with GitLab and AWS CodePipeline, slashed deployment time to under 5 minutes. By migrating to AWS Lambda for async tasks, we cut cloud costs by 30% in six months.  \n\nThis approach works because it prioritizes autonomy and scalability. Each service can scale independently, reducing bottlenecks. Kubernetes auto-scaling and AWS Spot Instances kept costs predictable, while Redis reduced database load. The REST APIs, designed with OpenAPI specs, ensured consistent communication without tight coupling. Even the team structure shifted—developers owned specific services, fostering accountability and faster iteration.  \n\nLooking ahead, we’re experimenting with serverless functions for event-driven workflows and integrating AI models for predictive analytics. But the core remains: microservices aren’t a silver bullet—they’re a mindset. We’re also refining CI/CD with GitOps practices and investing in observability tools to track service health. Modernizing legacy systems isn’t about rewriting everything; it’s about building a foundation that grows with the business. The real win? Teams now ship features twice as fast, and the product feels lighter, faster, and more responsive—finally aligning with what users expect."
+  "text": "#MachineLearning #GameDev #NLP #ComputerVision  \nJun Watanabe | Machine Learning Engineer at NexaGame Studios  \n\nI build systems that make games smarter—whether it’s crafting AI that learns from player behavior or designing tools that let developers iterate faster. My work bridges the gap between data and creativity, turning raw numbers into experiences that stick.  \n\nAt NexaGame, I’ve focused on making gameplay more engaging. For example, I developed NLP models that power in-game dialogue, letting characters adapt to player choices in real time. That required balancing accuracy with speed, which meant optimizing models for low-latency inference—something I’ve fine-tuned using PyTorch and REST APIs.  \n\nComputer vision has been a key part of my toolkit too. Recently, I built a system to analyze player movements in multiplayer matches, helping refine character controls. It’s the kind of work where small tweaks in model architecture can make a big difference.  \n\nI also spend time ensuring models run smoothly in production. With Kubernetes and Docker, I’ve streamlined deployment pipelines, and MLOps tools like MLflow have made tracking experiments feel less like a chore. Cloud costs? I’ve kept them in check by prioritizing efficiency without sacrificing performance.  \n\nWhen I’m not coding, I’m thinking about how to make tech feel less technical. After all, the best systems are the ones players never notice—until they can’t imagine the game without them."
 }

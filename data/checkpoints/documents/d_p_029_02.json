@@ -1,23 +1,24 @@
 {
   "doc_id": "d_p_029_02",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_029",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "solo",
-    "jargon_density": "plain"
+    "recommender_role": "peer",
+    "recommender_closeness": "brief",
+    "company_type": "academic",
+    "company_size": "large (500+)"
   },
   "skill_evidence": {
-    "AWS": 1,
-    "Docker": 1,
-    "GCP": 3,
-    "Kubernetes": 1,
-    "Linux administration": 1,
-    "Load balancing": 1,
-    "Network automation": 1,
+    "3D graphics (OpenGL/Vulkan)": 4,
+    "Game networking": 4,
+    "Game physics": 4,
+    "HTML/CSS": 1,
+    "JavaScript": 1,
     "Python": 3,
-    "Shell scripting": 1,
-    "Terraform": 1
+    "REST API design": 3,
+    "Team Collaboration": 3,
+    "Unity": 4,
+    "Unreal Engine": 4
   },
-  "text": "# AdFlow - Ad Campaign Analytics Pipeline  \nA lightweight, scalable pipeline for processing and analyzing ad campaign data using Apache Airflow and BigQuery. Designed for real-time insights in adtech workflows, this project streamlines data ingestion, transformation, and querying to support campaign optimization.  \n\n## Badges  \n[![GitHub Actions Status](https://github.com/monica-nyambura/adflow/workflows/CI%20Tests/badge.svg)](https://github.com/monica-nyambura/adflow/actions)  \n[![GCP Integration](https://img.shields.io/badge/GCP-Integrated-blue)](https://console.cloud.google.com)  \n[![Python 3.9](https://img.shields.io/badge/Python-3.9-yellow)](https://www.python.org/downloads/release/python-3912/)  \n\n## Getting Started / Installation  \n1. Install Python 3.9+ and pip.  \n2. Clone the repository:  \n   ```bash  \n   git clone https://github.com/monica-nyambura/adflow.git  \n   cd adflow  \n   pip install -r requirements.txt  \n   ```  \n3. Set up GCP credentials via environment variables:  \n   ```bash  \n   export GOOGLE_APPLICATION_CREDENTIALS=\"path/to/service-account.json\"  \n   ```  \n\n## Usage / Examples  \nRun the pipeline to process campaign data:  \n```bash  \npython main.py --project-id <your-gcp-project> --dataset <dataset-name>  \n```  \nThis triggers Airflow DAGs that load raw campaign logs into BigQuery, transform them into analytics tables, and export results to a specified bucket. Example output includes metrics like CTR and conversion rates.  \n\n## API Reference  \nThe pipeline exposes a REST API for manual DAG triggers:  \n```http  \nPOST /api/run_dag  \nHeaders: Authorization: Bearer <token>  \nBody: { \"dag_id\": \"campaign_analytics\", \"params\": { \"project_id\": \"my-project\" } }  \n```  \nPython clients can use `google.cloud.bigquery` for direct dataset queries.  \n\n## Testing  \nUnit tests for DAG logic and BigQuery queries are included:  \n```bash  \npytest tests/test_pipeline.py  \n```  \nIntegration tests validate end-to-end data flow. Coverage is ~85% with `pytest-cov`.  \n\n## Contributing  \nPull requests are welcome! Ensure your code adheres to PEP8 and includes type hints. For GCP-specific contributions, align with project naming conventions and IAM roles.  \n\n## Deployment  \nDeploy the pipeline to GCP using Cloud Composer (Apache Airflow as a managed service). Configure DAGs via the Cloud Console and monitor job status in the Airflow UI.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "Dear Hiring Manager,  \n\nI’ve collaborated with Zara Hussain on two cross-departmental projects at NexaPay Solutions, where she served as a Senior Game Developer. As a peer, I’ve observed her technical rigor and collaborative mindset firsthand.  \n\nZara’s expertise in 3D graphics and physics engines has been critical to NexaPay’s fintech game projects. She spearheaded the Unreal Engine pipeline for a blockchain-based casino app, optimizing rendering performance to reduce load times by 25%. Her work on physics simulations for in-game transactions—where virtual currency interactions needed real-world accuracy—required balancing computational efficiency with user experience. She also led the integration of a custom networking layer for multiplayer features, ensuring low-latency sync across devices without compromising security.  \n\nBeyond technical skills, Zara’s ability to bridge creative and engineering teams is notable. During a high-stakes release cycle, she coordinated a 12-person team to refactor legacy code, resulting in a 40% improvement in system stability. Her Python scripts for automating QA workflows saved the team 20+ hours monthly.  \n\nZara’s dedication to precision and innovation makes her a standout collaborator. She approaches challenges with curiosity and a knack for turning complex problems into elegant solutions.  \n\nShould you need further details, feel free to contact me.  \n\nBest regards,  \n[Your Name]  \n[Your Title]  \n[University Name]"
 }

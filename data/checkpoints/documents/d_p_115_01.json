@@ -1,28 +1,22 @@
 {
   "doc_id": "d_p_115_01",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_115",
   "hyperparams": {
-    "recommender_role": "skip-level",
-    "recommender_closeness": "brief",
-    "company_type": "academic",
-    "company_size": "mid (50-500)"
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "CI/CD pipelines": 3,
-    "Cloud cost optimization": 2,
-    "Configuration management (Ansible)": 2,
-    "GCP": 2,
-    "Infrastructure as Code": 2,
-    "Kubernetes": 3,
-    "Linux administration": 2,
-    "Network automation": 2,
-    "Prometheus/Grafana": 2,
-    "Python": 2,
-    "REST API design": 2,
-    "Shell scripting (Bash)": 2,
-    "Terraform": 2
+    "Apache Airflow": 3,
+    "Apache Kafka": 5,
+    "Apache Spark": 3,
+    "Cloud Cost Optimization": 1,
+    "Data Warehousing": 1,
+    "Docker": 3,
+    "Python": 3,
+    "Snowflake": 1,
+    "Terraform": 3
   },
-  "text": "Omar Farooq’s role as a Platform Engineer at CloudNexus Solutions has been a consistent source of insight into his technical rigor and collaborative approach. As a skip-level observer, I’ve followed his contributions through shared project outcomes and cross-team interactions, particularly in consulting engagements where his work shapes client workflows.  \n\nOmar’s daily work centers on AWS infrastructure, where he balances scalability with cost efficiency. He’s methodically streamlined CI/CD pipelines, reducing deployment times by 20% in two major projects. His Kubernetes expertise ensures clusters run smoothly under variable loads, a critical factor in maintaining client service levels. While he rarely discusses tools, his Linux command-line fluency and ability to troubleshoot server bottlenecks without direct prompts highlight a deep, practical understanding of systems.  \n\nA standout moment occurred during a high-stakes migration, where Omar rearchitected a monolithic API using REST principles, improving response times by 35%. His proactive approach to documenting processes also minimized onboarding friction for new team members. Beyond technical skills, Omar’s reliability and willingness to mentor junior engineers have strengthened team cohesion.  \n\nOmar’s strength lies in his ability to translate complex technical challenges into actionable solutions, paired with a work ethic that prioritizes precision and long-term stability. I recommend him without reservation for roles requiring both technical depth and collaborative problem-solving."
+  "text": "# Real-Time Analytics Pipeline for Scalable Data Processing  \n\nA serverless architecture for ingesting, transforming, and analyzing streaming data at scale, built for SaaS platforms requiring low-latency insights. Leverages Kafka for ingestion, Lambda for processing, and cloud-native tools for orchestration.  \n\n[![GitHub](https://img.shields.io/github/last-commit/riyadesai/realtime-pipeline)](https://github.com/riyadesai/realtime-pipeline)  \n[![Docker](https://img.shields.io/docker/pulls/riyadesai/realtime-pipeline)](https://hub.docker.com/r/riyadesai/realtime-pipeline)  \n[![AWS](https://img.shields.io/badge/AWS-verified-green)](https://aws.amazon.com/)  \n[![Kafka](https://img.shields.io/badge/Kafka-2.8-green)](https://kafka.apache.org/)  \n[![Python](https://img.shields.io/badge/Python-3.9-blue)](https://www.python.org/)  \n\n## Tech Stack  \n- **Core**: Apache Kafka (stream ingestion), AWS Lambda (serverless processing), Docker (containerization)  \n- **Orchestration**: Apache Airflow (batch workflows), Terraform (infrastructure as code)  \n- **Utilities**: Python (data framing), AWS CLI (cloud integration)  \n\n## Architecture / Design  \nThe pipeline decouples data ingestion from processing, enabling horizontal scaling. Kafka acts as the backbone for real-time data flow, with Lambda functions handling event-driven transformations. Airflow schedules batch reconciliation tasks, while Terraform ensures reproducible cloud environments. Docker containers standardize local development and CI/CD pipelines.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/riyadesai/realtime-pipeline.git`  \n2. Build Docker images: `docker-compose up --build`  \n3. Deploy infrastructure: `terraform apply` (ensure AWS credentials are set via environment variables)  \n4. Validate Kafka integration: `kafka-topics.sh --create --topic input-topic --partitions 3 --replication-factor 1`  \n\n## Usage / Examples  \n**Example 1**: Stream user activity data to Kafka  \n```python  \nfrom kafka import KafkaProducer  \nproducer = KafkaProducer(bootstrap_servers='localhost:9092')  \nproducer.send('input-topic', value='{\"event\": \"login\", \"user_id\": \"123\"}'.encode('utf-8'))  \n```  \n\n**Example 2**: Process data with AWS Lambda  \n```python  \nimport json  \ndef lambda_handler(event, context):  \n    record = json.loads(event['body'])  \n    # Transform and store in analytics store  \n    return {'statusCode': 200, 'body': 'Processed'}  \n```  \n\n## Contributing  \nThis project is a solo endeavor, but contributions are welcome. Submit pull requests for improvements to the Dockerfile, Terraform templates, or Lambda functions. Prioritize backward compatibility and test coverage.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

@@ -4,19 +4,22 @@
   "persona_id": "p_305",
   "hyperparams": {
     "project_scale": "team-internal",
-    "project_team_size": "large (15+)",
-    "jargon_density": "moderate"
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Docker": 3,
-    "GitLab CI": 1,
-    "Infrastructure as Code": 4,
-    "Kubernetes": 1,
-    "Linux administration": 2,
-    "Monitoring & alerting": 2,
-    "Python": 1,
-    "Terraform": 3
+    "Agile/Scrum": 3,
+    "CI/CD pipelines": 3,
+    "Chaos engineering": 2,
+    "Code review": 3,
+    "Cross-team collaboration": 3,
+    "Database optimization": 3,
+    "Linux administration": 1,
+    "Mentoring": 1,
+    "Monitoring & alerting": 3,
+    "Strategic planning": 3,
+    "System design": 1,
+    "Team leadership": 3
   },
-  "text": "# Secure API Gateway for Financial Transactions  \n\nA scalable, PCI-DSS-compliant API gateway built with Node.js and AWS Lambda to handle financial transaction processing, ensuring end-to-end encryption, tokenization, and audit readiness. Designed for high-throughput environments with strict security requirements.  \n\n---\n\n## Acknowledgments  \n\nThis project was made possible through the collaboration of the Core Team and the Security Compliance Group. Special thanks to [Name] for refining the tokenization logic and [Name] for integrating AWS WAF rules. The infrastructure-as-code framework (Terraform) and cloud-native practices were instrumental in achieving production-grade security and scalability.  \n\n---\n\n## Getting Started / Installation  \n\n1. **Deploy via AWS Lambda Console**: No local dependencies required. Configure the Lambda function with Node.js 18 runtime and set environment variables for AWS credentials and encryption keys.  \n2. **Local Testing**: Use `npm install` to fetch dependencies. Run `node index.js` with mocked payloads for integration testing.  \n3. **Security Setup**: Ensure AWS IAM roles are configured with least-privilege access to S3 buckets and KMS keys.  \n\n---\n\n## Usage / Examples  \n\n**Example Request**:  \n```bash  \nPOST /transactions  \n{  \n  \"amount\": 150.00,  \n  \"cardNumber\": \"4111111111111111\",  \n  \"expiry\": \"12/25\"  \n}  \n```  \n\n**Example Response**:  \n```json  \n{  \n  \"status\": \"success\",  \n  \"transactionId\": \"TXN-20231005-1234\",  \n  \"encryptedData\": \"U2FsdGVkX1+...\"  \n}  \n```  \n\nThe gateway automatically applies PCI-DSS-compliant data masking and logs all requests to CloudWatch with AWS X-Ray tracing enabled.  \n\n---\n\n## Tech Stack  \n\n- **Runtime**: Node.js 18 (AWS Lambda)  \n- **Security**: AES-256 encryption, PCI-DSS compliance, AWS KMS  \n- **Infrastructure**: Terraform-managed AWS resources (Lambda, S3, WAF)  \n- **Monitoring**: CloudWatch metrics, custom dashboards for failed transactions  \n- **Testing**: Unit tests with Mocha, integration tests with Postman  \n\n---\n\n## License  \n\nApache 2.0  \n\n---\n\n## Badges  \n\n[![Build Status](https://github.com/.../workflows/CI/badge.svg)](https://github.com/...)  \n[![Security](https://security.badge/...)](https://security.badge/...)  \n[![Coverage](https://coverage.badge/...)](https://coverage.badge/...)  \n\n---\n\n## Contributing  \n\nContributions are welcome, but all changes must pass automated security audits and code reviews. Focus on improving edge-case handling for PCI-DSS compliance or optimizing Lambda cold start times. Open an issue for feature requests or security concerns."
+  "text": "# VR Multiplayer Latency Reduction Engine  \nA real-time optimization framework for VR multiplayer games, reducing average latency by 40% while maintaining 99.95% uptime in production. Built for cross-platform scalability and low-latency synchronization across distributed clients.  \n\n## Deployment  \nDeploy via Docker containers orchestrated by Kubernetes for horizontal scaling. Preconfigured CI/CD pipelines (GitHub Actions) automate testing and deployment to staging/production. Monitoring via Prometheus + Grafana tracks latency metrics, with alerts for >150ms spikes.  \n\n## Getting Started / Installation  \n```bash\ngit clone https://github.com/your-username/vr-latency-engine.git  \ncd vr-latency-engine  \nnpm install  \ncp .env.example .env  \n# Configure API keys and environment variables  \nnpm run build  \nnpm start  \n```  \nEnsure Node.js 18+ and Python 3.9+ are installed. Dependencies include WebSockets, WebGPU, and OpenVR libraries.  \n\n## Usage / Examples  \nRun a benchmark test:  \n```bash\nnpm run benchmark -- --players 32 --latency 120  \n```  \nThis simulates 32 players with 120ms baseline latency, outputting real-time jitter metrics. Example output:  \n```\n[INFO] Avg latency: 68ms | Jitter: 12ms | Sync accuracy: 99.2%  \n```  \nIntegrate with your game server via the `LatencyOptimizer` module for predictive state reconciliation.  \n\n## Tech Stack  \n- **Networking**: WebSockets (Autobahn), Firebase Realtime DB  \n- **Optimization**: WebGPU, OpenVR, Delta Compression  \n- **Infrastructure**: Kubernetes, Prometheus, Grafana  \n- **Languages**: TypeScript, Python (for stats processing)  \n\n## Architecture / Design  \nCore components:  \n1. **Prediction Engine**: Client-side interpolation with server reconciliation  \n2. **Network Optimization Layer**: TCP/UDP hybrid with packet prioritization  \n3. **Synchronization Module**: State delta compression for 100+ players  \n\nDesigned for 100ms < latency < 250ms in 99.9% of cases. Server-side validation ensures 99.99% packet integrity.  \n\n## License  \nMIT License — see the LICENSE file for details.  \n\n## Badges  \n[![Latency Reduction](https://example.com/latency-badge.png)](https://example.com/latency)  \n[![Uptime](https://example.com/uptime-badge.png)](https://example.com/uptime)  \n[![Sprint Velocity](https://example.com/velocity-badge.png)](https://example.com/velocity)"
 }

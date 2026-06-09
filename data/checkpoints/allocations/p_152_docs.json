@@ -1,51 +1,50 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting 10 years of DevOps/SRE consulting experience in cloud infrastructure and automation.",
-    "title": "Sana Patel - DevOps/SRE Consultant",
+    "topic_summary": "Frontend Engineer with 2 years of experience in SaaS development, specializing in React and TypeScript.",
+    "title": "CV",
     "doc_id": "d_p_152_00",
     "persona_id": "p_152",
     "hyperparams": {
-      "cv_format": "paragraph",
-      "geographic_convention": "US",
-      "company_type": "academic",
+      "cv_format": "minimal",
+      "geographic_convention": "India",
+      "company_type": "enterprise",
       "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A GitHub project README for a multi-cloud infrastructure automation tool using Terraform and Ansible.",
-    "title": "Cloud-Native CI/CD Pipeline Automation",
+    "topic_summary": "A real-time analytics dashboard for SaaS platforms built with React and TypeScript.",
+    "title": "CloudDash - Real-time Analytics Dashboard",
     "doc_id": "d_p_152_01",
     "persona_id": "p_152",
     "hyperparams": {
       "project_scale": "team-internal",
-      "project_team_size": "medium (5-15)",
-      "jargon_density": "moderate"
+      "project_team_size": "solo",
+      "jargon_density": "heavy"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from a Cloud Infrastructure Manager praising Sana's expertise in scalable systems design.",
-    "title": "Recommendation for Sana Patel",
+    "topic_summary": "Recommendation from a manager highlighting Tanya's expertise in frontend development and collaboration.",
+    "title": "Recommendation from Team Lead, CloudCraft Solutions",
     "doc_id": "d_p_152_02",
     "persona_id": "p_152",
     "hyperparams": {
-      "recommender_role": "peer",
-      "recommender_closeness": "brief",
-      "company_type": "academic",
+      "recommender_role": "professor",
+      "recommender_closeness": "occasional",
+      "company_type": "startup",
       "company_size": "large (500+)"
     }
   },
   {
-    "doc_type": "blog",
-    "topic_summary": "A technical blog post on implementing observability in microservices architectures using Prometheus and Grafana.",
-    "title": "Observability in Microservices: Best Practices and Tools",
+    "doc_type": "linkedin",
+    "topic_summary": "Frontend Engineer passionate about building scalable SaaS solutions and mentoring junior developers.",
+    "title": "LinkedIn Summary",
     "doc_id": "d_p_152_03",
     "persona_id": "p_152",
     "hyperparams": {
-      "blog_depth": "opinion-piece",
-      "jargon_density": "heavy"
+      "linkedin_completeness": "detailed"
     }
   }
 ]

@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_142_02",
+  "type": "project_readme",
+  "persona_id": "p_142",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "A/B testing": 3,
+    "Analytics-driven product decisions": 4,
+    "Data visualization (Plotly)": 3,
+    "Hypothesis testing": 2,
+    "Product management": 3,
+    "Roadmap planning": 3,
+    "SQL analytics": 1,
+    "Stakeholder management": 3
+  },
+  "text": "# AdTech Campaign Analytics Dashboard  \n\nA lightweight dashboard for real-time campaign KPI tracking and audience segmentation, built for adtech clients needing actionable insights without vendor lock-in.  \n\n---\n\n## API Reference  \n\nThe API exposes two core endpoints:  \n\n- **GET /api/campaigns**  \n  Fetches campaign metadata with real-time KPIs (CTR, CPC, ROAS). Returns aggregated data over 1h/6h/24h windows.  \n  *Example response:*  \n  ```json  \n  {  \n    \"campaign_id\": \"CAMPAIGN_123\",  \n    \"impressions\": 15200,  \n    \"clicks\": 450,  \n    \"roas\": 4.2  \n  }  \n  ```  \n\n- **POST /api/audience-segment**  \n  Filters audience data using dynamic parameters (e.g., `device_type`, `location`). Returns segmented user behavior metrics.  \n  *Example payload:*  \n  ```json  \n  {  \n    \"filters\": { \"device_type\": \"mobile\", \"location\": \"US\" },  \n    \"timeframe\": \"last_7_days\"  \n  }  \n  ```  \n\n---\n\n## Usage / Examples  \n\n1. **Real-time monitoring**: Use `/api/campaigns` to update dashboards every 5 minutes with fresh KPIs.  \n2. **Audience tuning**: Apply `/api/audience-segment` to isolate high-value user cohorts for A/B testing.  \n3. **Integration**: Embed the dashboard via iframe in client CRMs, leveraging CORS-enabled endpoints.  \n\n---\n\n## Getting Started / Installation  \n\n1. Clone the repo: `git clone https://github.com/your-username/adtech-dashboard.git`  \n2. Install dependencies: `npm install`  \n3. Configure API keys in `.env.local` (e.g., `REACT_APP_ADS_API_KEY=your-key`)  \n4. Start the dev server: `npm run dev`  \n\n---\n\n## Tech Stack  \n\n- **Frontend**: React (TypeScript), Tailwind CSS  \n- **Backend**: Node.js (Express), PostgreSQL  \n- **Visualizations**: Plotly.js for interactive charts  \n- **Deployment**: Vercel (frontend), Render (backend)  \n\n---\n\n## Architecture / Design  \n\nThe system is split into three layers:  \n1. **Data Layer**: PostgreSQL stores raw campaign logs and user metadata.  \n2. **Processing Layer**: Node.js microservices aggregate data every 5 minutes.  \n3. **Presentation Layer**: React dashboard streams processed KPIs and visualizes segmented audiences.  \n\nA/B testing is integrated via the `/api/audience-segment` endpoint, enabling dynamic traffic splitting. Product decisions prioritize client feedback, with roadmap iterations driven by 3-month sprint cycles.  \n\n---\n\n## License  \n\nMIT License  \n\n---\n\n## Badges  \n\n[![Build Status](https://github.com/your-username/adtech-dashboard/actions/workflows/main.yml/badge.svg)](https://github.com/your-username/adtech-dashboard/actions)  \n[![npm version](https://badge.fury.io/js/adtech-dashboard.svg)](https://www.npmjs.com/package/adtech-dashboard)  \n[![Coverage Status](https://coveralls.io/repos/github/your-username/adtech-dashboard/badge.svg?branch=main)](https://coveralls.io/github/your-username/adtech-dashboard?branch=main)"
+}

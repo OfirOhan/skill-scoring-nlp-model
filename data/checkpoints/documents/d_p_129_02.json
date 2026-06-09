@@ -1,23 +1,21 @@
 {
   "doc_id": "d_p_129_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_129",
   "hyperparams": {
-    "recommender_role": "peer",
-    "recommender_closeness": "worked-daily",
-    "company_type": "startup",
-    "company_size": "small (<50)"
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "API testing": 3,
-    "CI/CD pipelines": 3,
-    "Integration testing": 3,
-    "Java": 1,
-    "Python": 3,
-    "REST API design": 3,
-    "Selenium/Playwright": 4,
-    "Test automation": 4,
-    "Unit testing": 3
+    "Application security (OWASP)": 5,
+    "DNS/DHCP": 1,
+    "Firewall configuration": 2,
+    "IAM/Access control": 4,
+    "Network security": 5,
+    "Penetration testing": 5,
+    "SIEM tools": 3,
+    "TCP/IP": 2
   },
-  "text": "To Whom It May Concern,  \n\nI’ve collaborated closely with Chioma Eze over the past year at E-Commerce Solutions Inc., where she’s been a critical part of our QA team. As a peer, I’ve observed her daily contributions to improving our testing processes and product reliability.  \n\nChioma’s expertise in test automation and Selenium/Playwright stands out. She spearheaded the automation of our checkout flow, reducing manual testing hours by 30% and catching a critical race condition in the payment gateway. Her Python scripts for data validation also streamlined our reporting process, cutting down on redundant checks. Beyond tools, her attention to edge cases—like handling concurrent user sessions—has strengthened our system’s resilience.  \n\nOne standout moment was her initiative to integrate CI/CD pipelines with our test suite. By automating regression tests on every code push, she slashed our feedback loop from hours to minutes, enabling faster fixes. She also designed a REST API mock server for integration testing, which became a reusable asset across teams.  \n\nChioma’s work ethic is equally impressive. She’s methodical, proactive, and unafraid to challenge assumptions. Whether debugging complex issues or mentoring junior testers, she balances technical rigor with approachability.  \n\nIn summary, Chioma’s technical acumen, problem-solving mindset, and dedication to quality make her a strong fit for any high-performing team. I’m confident she’ll bring the same rigor and impact to your organization.  \n\nSincerely,  \n[Your Full Name]  \n[Your Contact Information]"
+  "text": "# IoT Security for Smart Hospital Devices  \n\nA zero-trust architecture framework securing IoT-enabled medical devices in clinical environments, prioritizing patient safety, regulatory compliance, and real-time threat detection. Designed for production deployment in healthcare settings with strict uptime and security SLAs.  \n\n## Badges  \n[![GitHub Actions Status](https://github.com/kenjimori/iot-security-framework/workflows/CI%20Tests/badge.svg)](https://github.com/kenjimori/iot-security-framework/actions)  \n[![Code Coverage](https://codecov.io/gh/kenjimori/iot-security-framework/branch/main/graph/badge.svg)](https://codecov.io/gh/kenjimori/iot-security-framework)  \n[![Security Audit](https://github.com/kenjimori/iot-security-framework/workflows/Security%20Audit/badge.svg)](https://github.com/kenjimori/iot-security-framework/actions)  \n\n## Tech Stack  \n- **Language**: Python (3.9+) with Rust (for low-level security modules)  \n- **Security Tools**: Vault for secret management, AWS WAF, Azure Security Center  \n- **Networking**: TLS 1.3, QUIC, mTLS for device-to-cloud communication  \n- **SIEM Integration**: Splunk, ELK stack for real-time log correlation  \n- **CI/CD**: GitHub Actions with static analysis and dependency scanning  \n- **Compliance**: HIPAA, GDPR, ISO 27001-aligned audit trails  \n\n## Configuration  \nEnvironment variables in `.env` define secret rotation intervals, device whitelists, and SIEM endpoint credentials. Configure via `config/defaults.yaml` for region-specific settings. Security policies are enforced through dynamic policy enforcement (DPE) modules.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/kenjimori/iot-security-framework.git  \ncd iot-security-framework  \npip install -r requirements.txt  \ndocker-compose up -d  \n```  \nEnsure TLS certificates are preloaded into Vault and SIEM endpoints are registered in `config/siem_providers.yaml`.  \n\n## Usage / Examples  \n```python  \nfrom zero_trust import DeviceAuthenticator  \nauth = DeviceAuthenticator(\"device_id_123\")  \nif auth.verify_signature():  \n    print(\"Device authenticated\")  \nelse:  \n    trigger_alert(\"compromised_device\", \"device_id_123\")  \n```  \nUse the CLI to enforce network segmentation:  \n```bash  \n./bin/segment_network --zone=patient_monitoring --policy=strict  \n```  \n\n## Testing  \nRun unit tests with:  \n```bash  \npytest tests/unit/  \n```  \nIntegration tests validate zero-trust enforcement across 12+ device types. Security audits use OWASP ZAP to detect misconfigurations in TLS handshakes and IAM policies.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

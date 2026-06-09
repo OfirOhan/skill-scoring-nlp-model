@@ -1,58 +1,53 @@
 {
   "persona_id": "p_031",
   "hyperparams": {
-    "archetype": "platform_engineer",
-    "years_experience": 7,
-    "seniority": "senior",
-    "industry": "fintech",
-    "writing_style": "confident",
-    "language_fluency": "near-native",
-    "self_promotion_level": "balanced",
+    "archetype": "data_scientist",
+    "years_experience": 5,
+    "seniority": "mid",
+    "industry": "adtech",
+    "writing_style": "neutral",
+    "language_fluency": "native",
+    "self_promotion_level": "boastful",
     "quantification_tendency": "metrics-heavy"
   },
-  "name": "Erik Bergstrom",
-  "current_role": "Principal Platform Engineer",
-  "company": "FinTech Innovators Inc.",
+  "name": "Leo Bianchi",
+  "current_role": "Data Scientist",
+  "company": "AdVantage Technologies",
   "education": {
-    "degree": "Master of Science in Computer Science",
-    "university": "Stanford University",
-    "year": 2017
+    "degree": "Master of Science in Data Science",
+    "university": "University of California, Berkeley",
+    "year": 2019
   },
   "career_trajectory": [
     {
-      "role": "DevOps Engineer",
-      "company": "PayNet Solutions (2016-2018)",
-      "responsibilities": "Automated CI/CD pipelines for payment processing APIs, reduced deployment time by 40%"
+      "role": "Data Analyst",
+      "company": "Marketing Insights Group",
+      "year": 2018
     },
     {
-      "role": "Senior DevOps Engineer",
-      "company": "TrustFlow Financial (2018-2020)",
-      "responsibilities": "Led GCP migration, achieved 30% cost savings via resource optimization"
+      "role": "Data Scientist",
+      "company": "AdTech Innovations",
+      "year": 2019
     },
     {
-      "role": "Platform Engineer",
-      "company": "FinTech Innovators Inc. (2020-2022)",
-      "responsibilities": "Architected multi-cloud infrastructure, 2x scalability for real-time fraud detection systems"
+      "role": "Senior Data Scientist",
+      "company": "TargetX Media",
+      "year": 2021
     }
   ],
   "skills": {
-    "AWS": 4,
-    "GCP": 3,
-    "Kubernetes": 4,
-    "Terraform": 4,
-    "Cloud cost optimization": 3,
-    "Infrastructure as Code": 4,
+    "Pandas": 4,
+    "NumPy": 4,
+    "SQL analytics": 5,
+    "Recommendation systems": 4,
     "Python": 3,
-    "Prometheus/Grafana": 3,
-    "CI/CD pipelines": 3,
-    "Linux administration": 3,
-    "Database optimization": 3
+    "Java": 1,
+    "REST API design": 3,
+    "Apache Spark": 2
   },
   "document_ids": [
     "d_p_031_00",
     "d_p_031_01",
-    "d_p_031_02",
-    "d_p_031_03",
-    "d_p_031_04"
+    "d_p_031_02"
   ]
 }

@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_134_03",
+  "type": "project_readme",
+  "persona_id": "p_134",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Feature stores": 3,
+    "Hugging Face Transformers": 1,
+    "MLOps (MLflow/W&B)": 2,
+    "NLP": 1,
+    "PyTorch": 1,
+    "Recommendation systems": 1,
+    "TensorFlow": 1,
+    "XGBoost/LightGBM": 3
+  },
+  "text": "# Ecomify Churn Prediction  \nCustomer churn prediction system leveraging ensemble learning and engineered features to optimize retention strategies. Trained on 2.4M+ e-commerce transactions with 32% reduction in churn risk during A/B testing.  \n\n## Getting Started  \nInstall dependencies:  \n```bash  \npip install -r requirements.txt  \n```  \nInitialize feature store:  \n```bash  \npython init_fs.py --config configs/fs_config.yaml  \n```  \nRun inference:  \n```bash  \npython predict_churn.py --input data/sample.csv  \n```  \n\n## Tech Stack  \n- **Python 3.9+** (core language)  \n- **Scikit-learn** (baseline models)  \n- **XGBoost / LightGBM** (ensemble core)  \n- **MLflow** (model registry)  \n- **Feature Store** (Delta Lake integration)  \n- **Weights & Biases** (experiment tracking)  \n\n## Usage / Examples  \n```python  \nfrom churn_model import ChurnPipeline  \npipeline = ChurnPipeline(feature_store=\"s3://ecomify-features\")  \nprediction = pipeline.predict(user_id=\"U12345\")  \nprint(f\"Churn probability: {prediction:.2%}\")  \n```  \nModel serves 15k+ queries/day with <50ms latency via FastAPI endpoint.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/last-commit/oduor/ecmify-churn)](https://github.com/oduor/ecmify-churn/commits/main)  \n[![PyPI](https://img.shields.io/pypi/v/ecmify-churn)](https://pypi.org/project/ecmify-churn/)  \n[![MLflow](https://img.shields.io/mlflow/run/oduor/ecmify-churn/1234)](https://mlflow.org)  \n[![W&B](https://img.shields.io/badge/Weights%20%26%20Biases-blue)](https://wandb.ai)  \n\n## Architecture / Design  \n- **Feature Store**: Delta Lake tables for transaction history, browsing patterns, and cart abandonment  \n- **Ensemble Model**: Stacked XGBoost + LightGBM with dynamic feature weighting  \n- **MLOps Integration**: MLflow tracking for 85%+ of production models  \n- **Scalability**: Kafka stream integration for real-time feature updates  \n\n## Contributing  \nPull requests welcome! Focus on feature store optimizations or model interpretability enhancements.  \n\n## License  \nMIT License (see [LICENSE](LICENSE) for details)"
+}

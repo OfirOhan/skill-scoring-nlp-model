@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_160_02",
+  "type": "project_readme",
+  "persona_id": "p_160",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "A/B testing": 1,
+    "MLOps (MLflow/W&B)": 2,
+    "NumPy": 4,
+    "Pandas": 4,
+    "REST API design": 1,
+    "SQL analytics": 2,
+    "Tableau/Power BI": 2,
+    "TensorFlow": 2,
+    "Time series analysis": 3,
+    "scikit-learn": 4
+  },
+  "text": "# FraudGuard: Real-Time Transaction Anomaly Detection  \n\nFraudGuard is a real-time fraud detection system designed to identify anomalous transactions in fintech environments. Built using scalable streaming pipelines and production-grade machine learning models, it processes terabytes of transaction data per day to flag high-risk activities with sub-second latency. The system balances precision and recall to minimize false positives while ensuring compliance with financial regulations.  \n\n## Tech Stack  \n- **Languages**: Python (3.9+), Bash  \n- **Streaming**: Apache Kafka (for real-time data ingestion)  \n- **Processing**: Apache Spark (batch + streaming), Pandas (data wrangling)  \n- **Model Serving**: Flask (lightweight API for real-time inference)  \n- **Monitoring**: MLflow (experiment tracking), Weights & Biases (model visualization)  \n- **Storage**: Parquet files (batch processing), Redis (cache for recent transactions)  \n\n## Architecture / Design  \nThe system operates as a layered pipeline:  \n1. **Ingestion**: Kafka streams ingest raw transaction data from payment gateways.  \n2. **Preprocessing**: Spark processes data using Pandas for feature engineering (e.g., time series aggregation, user behavior baselining). NumPy accelerates numerical operations during normalization.  \n3. **Detection**: A scikit-learn-based isolation forest model (trained on historical data) identifies outliers. Time series analysis techniques (rolling statistics, seasonality decomposition) refine anomaly scores.  \n4. **Alerting**: Flask routes flagged transactions to fraud review queues, with metadata logged in MLflow for audit trails.  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/your-username/fraudguard.git  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n3. Configure Kafka and Spark clusters via `config.yaml`.  \n\n## Usage / Examples  \nRun the pipeline:  \n```bash  \npython pipeline.py --env prod  \n```  \nTest real-time inference:  \n```bash  \npython predict.py --transaction_id \"TX123456\"  \n```  \nMetrics tracked: F1 score, detection latency, false positive rate.  \n\n## Badges  \n[![GitHub](https://img.shields.io/badge/GitHub-121011?style=flat)](https://github.com/your-username/fraudguard)  \n[![Python](https://img.shields.io/badge/Python-3.9-blue?style=flat)](https://python.org)  \n[![License](https://img.shields.io/badge/license-MIT-yellow?style=flat)](https://opensource.org/licenses/MIT)  \n\n## Contributing  \nEnhance FraudGuard by improving detection thresholds or expanding support for new payment protocols. Submit issues or pull requests via the [GitHub repository](https://github.com/your-username/fraudguard).  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details."
+}

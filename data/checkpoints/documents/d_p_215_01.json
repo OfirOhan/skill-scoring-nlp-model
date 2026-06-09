@@ -1,25 +1,27 @@
 {
   "doc_id": "d_p_215_01",
-  "type": "linkedin",
+  "type": "project_readme",
   "persona_id": "p_215",
   "hyperparams": {
-    "linkedin_completeness": "detailed"
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
     "AWS": 3,
-    "Apache Airflow": 3,
-    "Computer vision": 2,
-    "ETL pipeline design": 3,
-    "Feature stores": 3,
-    "GCP": 3,
-    "LLMs/Prompt engineering": 4,
-    "MLOps (MLflow/W&B)": 3,
-    "Model deployment": 3,
-    "NLP": 3,
-    "PyTorch": 3,
-    "Snowflake": 3,
-    "TensorFlow": 3,
-    "dbt": 3
+    "CI/CD pipelines": 4,
+    "Cloud networking": 3,
+    "Infrastructure as Code": 4,
+    "Kubernetes": 4,
+    "Linux administration": 3,
+    "Load balancing": 3,
+    "Network troubleshooting": 2,
+    "PostgreSQL": 2,
+    "Python": 2,
+    "REST API design": 2,
+    "Redis": 1,
+    "Serverless": 3,
+    "Terraform": 4
   },
-  "text": "I’ve always been fascinated by how technology can solve real-world problems, especially in industries where data-driven decisions shape the future. At NexGen Technologies, I focus on building scalable machine learning solutions that empower enterprises to unlock value from their data. My work bridges cutting-edge research with practical applications, whether it’s refining natural language models for customer support or optimizing computer vision systems for industrial automation.  \n\nOver the past three years, I’ve contributed to projects that range from designing robust ETL pipelines on Snowflake to deploying production-grade models using MLflow. A recent highlight was leading a team to integrate large language models into a customer service platform, which reduced response latency by 40% and improved user satisfaction. I also enjoy experimenting with prompt engineering to fine-tune models for specific use cases, ensuring they align with business goals.  \n\nI’m always looking for opportunities to collaborate on projects that push the boundaries of what’s possible with AI. Whether it’s refining workflows with Apache Airflow, exploring new applications for MLOps, or diving deeper into NLP challenges, I’m driven by the potential to create meaningful impact. Let’s build something that matters."
+  "text": "# CapitalFlow API Gateway  \nA scalable, production-ready API gateway for fintech services, built with Node.js and Docker to handle high-throughput financial transactions securely and efficiently.  \n\n## Configuration  \nSet environment variables for the gateway:  \n- `PORT` (default: 3000)  \n- `JWT_SECRET` (for authentication)  \n- `DATABASE_URL` (AWS RDS endpoint)  \n\nUse Docker Compose to spin up the gateway, PostgreSQL, and monitoring tools. Configure rate limiting and access control via environment files.  \n\n## Getting Started / Installation  \nClone the repo:  \n```bash  \ngit clone https://github.com/simonelefebvre/capitalflow-gateway.git  \ncd capitalflow-gateway  \nnpm install  \ndocker-compose up -d  \n```  \nEnsure AWS CLI is configured for RDS access. Build Docker containers with `docker-compose build` before starting.  \n\n## Usage / Examples  \nMake a secure request to the `/transactions` endpoint:  \n```bash  \ncurl -X POST https://localhost:3000/transactions \\\n  -H \"Authorization: Bearer <token>\" \\\n  -d '{\"amount\": 1500, \"currency\": \"USD\"}'  \n```  \nMonitor throughput via Prometheus and Grafana dashboards. Adjust rate limits in `config/rate-limits.json`.  \n\n## Tech Stack  \n- **Node.js** (16+) for lightweight, high-performance routing  \n- **Docker** for containerization and microservices isolation  \n- **AWS** (RDS, VPC, CloudFront) for database and edge caching  \n- **Kubernetes** for orchestration in production clusters  \n- **Terraform** for IaC provisioning of cloud resources  \n\n## Architecture / Design  \nThe gateway acts as a service mesh, routing requests to backend microservices via a reverse proxy. Load balancing is managed by AWS Elastic Load Balancer, with auto-scaling based on CPU metrics. Security layers include JWT validation, TLS termination, and IP whitelisting. CI/CD pipelines deploy changes to staging and production using GitOps workflows, reducing deployment latency by 40%.  \n\n## License  \nMIT License  \nSee [LICENSE](LICENSE)  \n\n## Badges  \n[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)  \n[![Build Status](https://img.shields.io/endpoint?url=https%3A%2F%2Factions-badge.geniemetrics.com%2Fsimonelefebvre%2Fcapitalflow-gateway%2Fbuild%2Fmain)](https://github.com/simonelefebvre/capitalflow-gateway/actions)  \n[![Coverage](https://img.shields.io/endpoint?url=https%3A%2F%2Factions-badge.geniemetrics.com%2Fsimonelefebvre%2Fcapitalflow-gateway%2Fcoverage%2Fmain)](https://github.com/simonelefebvre/capitalflow-gateway/actions)"
 }

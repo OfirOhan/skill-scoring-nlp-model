@@ -1,21 +1,24 @@
 {
   "doc_id": "d_p_286_02",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_286",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "solo",
-    "jargon_density": "plain"
+    "recommender_role": "peer",
+    "recommender_closeness": "worked-daily",
+    "company_type": "FAANG",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "GraphQL": 2,
-    "REST API design": 2,
-    "React": 5,
-    "Stakeholder management": 1,
-    "State management (Redux/Zustand)": 5,
-    "TypeScript": 5,
-    "Web performance optimization": 4,
+    "AWS": 1,
+    "Docker": 2,
+    "Go": 4,
+    "JavaScript": 1,
+    "Microservices architecture": 4,
+    "PostgreSQL": 4,
+    "Python": 4,
+    "REST API design": 4,
+    "React": 2,
     "Webpack/Vite": 1
   },
-  "text": "# React Product Catalog System  \n\nA production-ready solution for managing and showcasing e-commerce product inventories with real-time filtering, search, and responsive UI. Built with React, TypeScript, and Redux, this system prioritizes performance, scalability, and maintainability for high-traffic retail environments.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/license/username/react-product-catalog)](https://github.com/username/react-product-catalog)  \n[![React](https://img.shields.io/badge/react-18.2.0-blue)](https://react.dev)  \n[![TypeScript](https://img.shields.io/badge/typescript-4.9.5-green)](https://www.typescriptlang.org)  \n[![Redux](https://img.shields.io/badge/redux-4.2.1-yellow)](https://redux.js.org)  \n\n## License  \nMIT License  \n[https://github.com/username/react-product-catalog/blob/main/LICENSE](https://github.com/username/react-product-catalog/blob/main/LICENSE)  \n\n## Tech Stack  \n- **Frontend**: React (18.2.0), TypeScript (4.9.5), Redux Toolkit (4.2.1)  \n- **State Management**: Redux for global state, local storage for persistent filters  \n- **API Integration**: RESTful endpoints for product data, GraphQL for metadata queries  \n- **Performance**: Lazy-loaded components, code splitting, and memoization for minimal load times  \n- **UI**: Custom hooks for reusable filtering logic, accessible form controls  \n\n## Architecture / Design  \nThe system is structured into modular, state-driven components. Product data is fetched via REST APIs, with GraphQL used for metadata queries like category hierarchies. Redux Toolkit manages global state, ensuring predictable updates and reducing boilerplate. Performance optimizations include lazy loading for non-critical UI elements, memoization of expensive computations, and server-side rendering for initial load. The filtering system leverages a combination of reducer-based state updates and local storage to retain user preferences across sessions.  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/username/react-product-catalog.git  \n   ```  \n2. Navigate to the project directory:  \n   ```bash  \n   cd react-product-catalog  \n   ```  \n3. Install dependencies:  \n   ```bash  \n   npm install  \n   ```  \n4. Start the development server:  \n   ```bash  \n   npm run dev  \n   ```  \n\n## Usage / Examples  \n- **Search**: Use the search bar to filter products by name, brand, or SKU.  \n- **Filter**: Apply dynamic filters (e.g., price range, category, rating) via collapsible sidebar panels.  \n- **Sorting**: Reorder results by price, popularity, or relevance using dropdown menus.  \n- **Export**: Generate CSV exports of filtered datasets for inventory analysis.  \n\n## Contributing  \nThis project is maintained as a solo effort, but contributions are welcome. For feature requests or bug fixes, open an issue or submit a pull request. All changes must adhere to the project’s code standards and licensing terms."
+  "text": "We’ve collaborated closely over the past 18 months on high-stakes consulting projects, where Xiomara’s ability to bridge complex technical challenges with client needs was consistently impressive. Her daily work often involved leading deep dives into legacy systems, translating vague requirements into scalable solutions, and mentoring junior engineers through ambiguous problems. I’ve observed her tackle everything from optimizing PostgreSQL query performance under tight deadlines to architecting microservices that scaled seamlessly across distributed teams. Her Go implementations for critical backend services once reduced latency by 40% in a production environment, a change that directly impacted user retention metrics.  \n\nOne standout moment came during a multi-week sprint to refactor a monolith into microservices. Xiomara took ownership of the payment processing module, designing a REST API that integrated with third-party systems while maintaining strict compliance standards. Her Python scripts for data migration automated what would have taken weeks of manual work, allowing the team to focus on core functionality. She also championed Docker for containerization, ensuring consistent environments across dev and prod without sacrificing security.  \n\nXiomara’s strength lies in her quiet reliability and analytical mindset. She’ll often spend hours debugging a single issue, but her patience and attention to detail ensure solutions are robust and sustainable. Her work ethic is unshakable—she’ll push through late nights to meet deadlines without compromising quality. I’m confident she’ll thrive in any technical leadership role, bringing both technical depth and a collaborative spirit to every team she joins."
 }

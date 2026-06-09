@@ -1,20 +1,26 @@
 {
   "doc_id": "d_p_219_01",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_219",
   "hyperparams": {
-    "blog_depth": "deep-dive",
-    "jargon_density": "heavy"
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Flutter": 3,
-    "Kotlin": 4,
-    "Mobile CI/CD": 5,
+    "AWS": 1,
+    "C#/.NET": 2,
+    "Docker": 3,
+    "HTML/CSS": 1,
+    "JavaScript": 2,
+    "MongoDB": 3,
+    "Node.js": 4,
+    "Python": 1,
     "REST API design": 4,
-    "React": 2,
-    "Swift": 3,
-    "Test automation": 4,
-    "TypeScript": 4
+    "React": 1,
+    "TypeScript": 3,
+    "Web performance optimization": 1,
+    "Webpack/Vite": 3
   },
-  "text": "The adtech landscape is a battlefield of milliseconds, where every microsecond of latency can cost millions. As a senior mobile developer, I’ve spent years wrestling with the paradox of delivering hyper-performant ad SDKs while maintaining cross-platform consistency. The recent surge in demand for real-time bidding and programmatic ad insertion has exposed systemic bottlenecks in legacy architectures. This post outlines a pragmatic approach to modernizing mobile adtech pipelines using Kotlin, Flutter, and type-safe abstractions.  \n\nThe core problem stems from the fragmented nature of adtech ecosystems. Traditional SDKs often suffer from inconsistent event tracking, memory leaks in native modules, and brittle API surfaces. For instance, our team faced a 32% increase in ad render latency during peak hours due to inefficient resource management in our Kotlin-based ad mediation layer. This wasn’t just a performance issue—it was a revenue leakage vector.  \n\n**Setup**  \nWe began by refactoring our monolithic ad SDK into a microservice-architecture pattern, decoupling tracking logic from rendering engines. For Android, we adopted Kotlin’s coroutines and flow to manage asynchronous ad load events, replacing thread-unsafe synchronous calls that plagued our previous Swift implementation. Flutter served as the unified UI layer, allowing us to share 78% of business logic across iOS and Android while maintaining native performance via platform-specific plugins.  \n\n**Step-by-Step Guide**  \n1. **Protocol-Oriented Design**: Defined type-safe interfaces for ad events using Kotlin’s sealed classes, ensuring type erasure didn’t compromise observability.  \n2. **REST API Optimization**: Redesigned our ad inventory API using OpenAPI 3.0, implementing pagination and rate-limiting to handle 500k+ concurrent ad requests.  \n3. **CI/CD Integration**: Embedded Firebase Performance Monitoring and Firebase Crashlytics into our GitHub Actions pipeline, enabling real-time latency tracking and A/B testing of ad rendering strategies.  \n4. **Test Automation**: Built a hybrid test suite combining Espresso for UI validation, XCTest for native modules, and Firebase Test Lab for cross-device coverage.  \n\n**Results**  \nPost-refactor, ad render latency dropped by 41%, and SDK crash rates fell below 0.1%. The type-safe event model reduced tracking errors by 67%, while our CI/CD pipeline cut deployment time from 45 minutes to 12. These improvements translated to a 14% increase in ad impression throughput during peak hours.  \n\nModern adtech requires more than just faster code—it demands architectural rigor and cross-platform consistency. By leveraging Kotlin’s concurrency model, Flutter’s hot-reload capabilities, and RESTful design principles, we’ve built a resilient infrastructure that scales with evolving ad formats.  \n\n**Further Reading**  \n- *Effective Kotlin* by Dmitry Jemerov  \n- Firebase Performance Monitoring documentation  \n- OpenAPI 3.0 specification for ad inventory APIs  \n- Case studies on Flutter’s performance in ad-heavy apps  \n- Best practices for mobile CI/CD in adtech pipelines  \n\nThe future of adtech lies in systems that are as scalable as they are precise. The tools exist—now it’s about how we wield them."
+  "text": "# Lumina Game Server Cluster  \nA modular, horizontally scalable multiplayer game server infrastructure built with Node.js and C++ for real-time synchronization, state management, and distributed load balancing across thousands of concurrent players. Designed for production deployment with automated scaling, fault tolerance, and low-latency communication.  \n\n## Getting Started / Installation  \nClone the repository:  \n```bash  \ngit clone https://github.com/your-username/lumina-game-server-cluster.git  \ncd lumina-game-server-cluster  \n```  \nInstall Node.js dependencies:  \n```bash  \nnpm install  \n```  \nCompile C++ modules:  \n```bash  \ng++ -std=c++17 -shared -fPIC -o libgame.so src/game.cpp -lboost_system -lboost_filesystem  \n```  \nSet environment variables for database connections and server ports:  \n```bash  \nexport DB_URI=\"mongodb://localhost:27017\"  \nexport SERVER_PORT=8080  \n```  \n\n## Usage / Examples  \nStart the cluster with:  \n```bash  \nnpm run start  \n```  \nScale horizontally by launching additional instances:  \n```bash  \nnpm run scale 5  \n```  \nTest with a sample script:  \n```bash  \nnode test/latency.js  \n```  \nMonitor real-time metrics via the embedded CLI:  \n```bash  \nnpm run metrics  \n```  \n\n## Badges  \n[![GitHub](https://badgen.net/badge/repo/active/green)](https://github.com/your-username/lumina-game-server-cluster)  \n[![Build Status](https://badgen.net/badge/build/passing/green)](https://github.com/your-username/lumina-game-server-cluster/actions)  \n[![Coverage](https://badgen.net/badge/coverage/85%/green)](https://github.com/your-username/lumina-game-server-cluster/actions)  \n[![Tech Stack](https://badgen.net/badge/tech/Node.js%20%26%20C%2B%2B/orange)](https://github.com/your-username/lumina-game-server-cluster)  \n\n## Tech Stack  \n- **Node.js**: Core runtime for REST APIs and WebSocket communication  \n- **C++**: High-performance modules for physics and real-time logic  \n- **MongoDB**: Persistent session storage and player state tracking  \n- **Docker**: Containerized deployment for consistent environments  \n- **TypeScript**: Type-safe abstractions for API contracts  \n- **REST APIs**: Scalable endpoints for client-server communication  \n\n## Architecture / Design  \nThe cluster splits logic into Node.js-managed REST services and C++-driven game engines. Load balancers distribute player connections across nodes, while MongoDB ensures synchronized state across all instances. Docker containers isolate each server node, enabling seamless scaling and rollback.  \n\n## Contributing  \nSubmit bug reports, feature requests, or pull requests via GitHub. Prioritize issues labeled \"critical\" for stability. For C++ contributions, ensure compatibility with g++ 10+ and Boost libraries. Node.js changes must pass TypeScript type checks.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details."
 }

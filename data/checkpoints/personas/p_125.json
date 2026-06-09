@@ -1,54 +1,64 @@
 {
   "persona_id": "p_125",
   "hyperparams": {
-    "archetype": "security_engineer",
-    "years_experience": 5,
-    "seniority": "mid",
-    "industry": "fintech",
-    "writing_style": "concise",
+    "archetype": "ml_engineer",
+    "years_experience": 10,
+    "seniority": "staff",
+    "industry": "cybersecurity",
+    "writing_style": "modest",
     "language_fluency": "near-native",
     "self_promotion_level": "humble",
-    "quantification_tendency": "metrics-heavy"
+    "quantification_tendency": "mixed"
   },
-  "name": "Kamila Szymanska",
-  "current_role": "Senior Security Engineer",
-  "company": "FinSecure Technologies",
+  "name": "Mateo Garcia",
+  "current_role": "Senior ML Engineer - Threat Intelligence Automation",
+  "company": "Sentinel Cybersecurity Solutions",
   "education": {
-    "degree": "Bachelor of Science in Cybersecurity",
-    "university": "Warsaw University of Technology",
-    "year": 2019
+    "degree": "Master of Science in Computer Science",
+    "university": "University of California, Berkeley",
+    "year": 2015
   },
   "career_trajectory": [
     {
-      "role": "Security Analyst",
-      "company": "NetGuard Analytics",
+      "role": "Data Scientist",
+      "company": "CyberShield Analytics",
       "duration": "2 years",
-      "responsibilities": "Monitored network traffic, conducted basic penetration tests, and managed SIEM tools."
+      "responsibilities": "Built predictive models for malware detection using scikit-learn and TensorFlow."
     },
     {
-      "role": "Security Engineer",
-      "company": "FinSecure Technologies",
+      "role": "Machine Learning Engineer",
+      "company": "Vulcan Security",
       "duration": "3 years",
-      "responsibilities": "Designed IAM frameworks, performed threat modeling, and led compliance audits for SOC2."
+      "responsibilities": "Developed NLP pipelines for threat intelligence and deployed models via Kubernetes."
+    },
+    {
+      "role": "Senior ML Engineer",
+      "company": "Sentinel Cybersecurity Solutions",
+      "duration": "5 years",
+      "responsibilities": "Architected MLOps pipelines with MLflow and optimized LLMs for real-time anomaly detection."
     }
   ],
   "skills": {
-    "Network security": 3,
-    "Application security (OWASP)": 4,
-    "Penetration testing": 3,
-    "IAM/Access control": 4,
-    "Encryption & PKI": 3,
-    "Compliance (SOC2/GDPR)": 4,
-    "Security auditing": 3,
-    "Firewall configuration": 3,
-    "Network automation": 3,
-    "AWS": 3,
-    "Terraform": 3,
-    "Monitoring & alerting": 3
+    "PyTorch": 5,
+    "TensorFlow": 5,
+    "scikit-learn": 4,
+    "Hugging Face Transformers": 4,
+    "NLP": 4,
+    "MLOps (MLflow/W&B)": 4,
+    "Model deployment": 5,
+    "LLMs/Prompt engineering": 4,
+    "Apache Spark": 1,
+    "Apache Kafka": 2,
+    "REST API design": 3,
+    "Docker": 3,
+    "Kubernetes": 3,
+    "AWS": 3
   },
   "document_ids": [
     "d_p_125_00",
     "d_p_125_01",
-    "d_p_125_02"
+    "d_p_125_02",
+    "d_p_125_03",
+    "d_p_125_04"
   ]
 }

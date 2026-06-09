@@ -1,25 +1,26 @@
 {
   "doc_id": "d_p_250_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_250",
   "hyperparams": {
-    "recommender_role": "skip-level",
-    "recommender_closeness": "occasional",
-    "company_type": "enterprise",
-    "company_size": "small (<50)"
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Application security (OWASP)": 3,
-    "Compliance (SOC2/GDPR)": 3,
-    "Encryption & PKI": 3,
-    "IAM/Access control": 3,
-    "Network security": 3,
-    "Penetration testing": 3,
-    "SIEM tools": 3,
-    "Secure coding practices": 3,
-    "Security auditing": 3,
-    "Threat modeling": 3,
-    "Vulnerability management": 3
+    "AWS": 3,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 3,
+    "Docker": 4,
+    "GitHub Actions": 1,
+    "Go": 3,
+    "Jenkins": 2,
+    "Linux administration": 2,
+    "Microservices architecture": 5,
+    "PostgreSQL": 5,
+    "Prometheus/Grafana": 3,
+    "Python": 4,
+    "REST API design": 5
   },
-  "text": "To Whom It May Concern,  \n\nI’ve had the opportunity to collaborate with Siddharth Menon on several cross-functional security initiatives at VirtuSafe Technologies. As a skip-level manager, our interactions are occasional but meaningful, often centered on aligning security protocols with product development timelines. Siddharth’s work consistently bridges technical rigor with business priorities, ensuring compliance without compromising innovation.  \n\nSiddharth’s expertise in application security and compliance stands out. He recently led the SOC2 audit for a flagship SaaS product, coordinating with legal and engineering teams to resolve gaps in data encryption and access controls. His attention to detail ensured the audit passed with minimal remediation, avoiding potential revenue loss. Beyond compliance, he proactively designs IAM frameworks that balance user flexibility with enterprise-grade security, a challenge that requires both technical depth and stakeholder diplomacy.  \n\nA memorable example occurred during a penetration test for a client’s API infrastructure. Siddharth identified a zero-day vulnerability in third-party dependencies, escalating the risk to the CISO and spearheading a rapid patch deployment. His ability to translate technical findings into actionable strategies prevented a potential breach. Similarly, his threat modeling sessions for new products have consistently anticipated edge cases, embedding security into the development lifecycle rather than treating it as an afterthought.  \n\nSiddharth’s work ethic is defined by curiosity and adaptability. He approaches problems with a methodical mindset, often asking questions that uncover hidden risks. His contributions to VirtuSafe’s security posture are both measurable and foundational.  \n\nShould you require further insights, please reach out.  \nSincerely,  \n[Your Name]  \n[Your Title]  \n[VirtuSafe Technologies]"
+  "text": "# FraudGuard - Fintech Risk Detection Platform  \nFraudGuard is a lightweight, real-time fraud detection system for transaction analysis. Built to balance speed and accuracy, it leverages machine learning models to flag suspicious activity while maintaining low latency. Designed for fintech use cases, it prioritizes simplicity and scalability for hobby-level development.  \n\n## Tech Stack  \n- **Language**: Python (core logic), Go (performance-critical components)  \n- **Database**: PostgreSQL (structured data storage, query optimization)  \n- **Containerization**: Docker (consistent local/production environments)  \n- **Monitoring**: Prometheus + Grafana (real-time metrics for model performance)  \n- **APIs**: RESTful endpoints for integration with payment gateways  \n- **Cloud**: AWS (EC2 for scalable compute, S3 for model artifacts)  \n- **CI/CD**: Jenkins (automated testing for model drift detection)  \n\n## Architecture / Design  \nFraudGuard uses a microservices architecture to decouple data ingestion, model inference, and alerting. The core pipeline streams transaction data into a PostgreSQL database, where it’s processed by a Go-based worker. Python scripts run lightweight ML models (scikit-learn, TensorFlow Lite) to score transactions, with results published to a Kafka topic. Alerts are routed via REST APIs to external systems. Docker ensures consistent deployment, while Prometheus tracks model accuracy and latency.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/yourusername/fraudguard.git`  \n2. Build Docker containers: `docker-compose up --build`  \n3. Initialize PostgreSQL: Run `init_db.sh` to set up schemas  \n4. Deploy models: Use `deploy_models.py` to load pre-trained artifacts  \n5. Test locally: Send POST requests to `/api/v1/analyze` with transaction data  \n\n## Usage / Examples  \n```bash\ncurl -X POST https://localhost:8080/api/v1/analyze \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"amount\": 1500, \"location\": \"US\", \"user_id\": \"12345\"}'\n```  \nResponse:  \n```json\n{\"risk_score\": 27, \"flagged\": false, \"timestamp\": \"2023-10-05T14:30:00Z\"}\n```  \n\n## Badges  \n[![GitHub stars](https://img.shields.io/github/stars/yourusername/fraudguard)](https://github.com/yourusername/fraudguard)  \n[![Issues](https://img.shields.io/github/issues/yourusername/fraudguard)](https://github.com/yourusername/fraudguard)  \n\n## Contributing  \nFraudGuard is a small-team hobby project. Contributions are welcome—focus on model optimization, edge case handling, or improving API documentation. For AWS cost efficiency, suggest lightweight alternatives for compute-heavy tasks.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

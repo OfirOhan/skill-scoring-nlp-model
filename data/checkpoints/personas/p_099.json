@@ -1,58 +1,40 @@
 {
   "persona_id": "p_099",
   "hyperparams": {
-    "archetype": "fullstack_developer",
-    "years_experience": 15,
-    "seniority": "staff",
-    "industry": "cybersecurity",
-    "writing_style": "verbose",
+    "archetype": "security_engineer",
+    "years_experience": 2,
+    "seniority": "junior",
+    "industry": "adtech",
+    "writing_style": "concise",
     "language_fluency": "native",
     "self_promotion_level": "boastful",
-    "quantification_tendency": "metrics-heavy"
+    "quantification_tendency": "mixed"
   },
-  "name": "Bhavna Chandra",
-  "current_role": "Staff Full-Stack Developer - Cybersecurity Solutions Architect",
-  "company": "SecureNet Technologies",
+  "name": "Uma Krishnan",
+  "current_role": "Security Engineer",
+  "company": "AdVerve Technologies",
   "education": {
     "degree": "Bachelor of Science in Computer Science",
-    "university": "Massachusetts Institute of Technology",
-    "year": 2009
+    "university": "University of California, Berkeley",
+    "year": 2022
   },
   "career_trajectory": [
-    {
-      "role": "Junior Developer",
-      "company": "CyberShield Solutions",
-      "duration": "2009-2012",
-      "achievements": "Built first intrusion detection system using Python; 30% performance improvement in packet analysis"
-    },
-    {
-      "role": "Senior Backend Developer",
-      "company": "SecureData Inc.",
-      "duration": "2012-2015",
-      "achievements": "Architected microservices for real-time threat intelligence; reduced latency by 40% using gRPC"
-    },
-    {
-      "role": "Staff Full-Stack Developer",
-      "company": "CyberDefend Ltd.",
-      "duration": "2015-2018",
-      "achievements": "Led team of 8 to develop zero-trust authentication platform; 50% reduction in security breach response time"
-    }
+    "Security Analyst Intern | AdVerve Technologies (2021)",
+    "Security Analyst | AdVerve Technologies (2022)",
+    "Junior Security Engineer | AdVerve Technologies (2023)",
+    "Security Engineer | AdVerve Technologies (2024)"
   ],
   "skills": {
-    "Python": 5,
-    "Go": 5,
-    "Rust": 4,
-    "React": 4,
-    "TypeScript": 5,
-    "REST API design": 5,
-    "AWS": 5,
-    "Kubernetes": 4,
-    "Docker": 5,
-    "Prometheus/Grafana": 4
+    "Application security (OWASP)": 4,
+    "Vulnerability management": 3,
+    "SIEM tools": 3,
+    "Threat modeling": 4,
+    "Network automation": 1,
+    "DNS/DHCP": 2,
+    "Cloud networking (VPC/subnets)": 2,
+    "GitLab CI": 1
   },
   "document_ids": [
-    "d_p_099_00",
-    "d_p_099_01",
-    "d_p_099_02"
+    "d_p_099_00"
   ]
 }

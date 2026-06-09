@@ -1,49 +1,72 @@
 {
   "persona_id": "p_140",
   "hyperparams": {
-    "archetype": "data_engineer",
-    "years_experience": 9,
+    "archetype": "backend_engineer",
+    "years_experience": 7,
     "seniority": "senior",
-    "industry": "fintech",
-    "writing_style": "modest",
+    "industry": "adtech",
+    "writing_style": "neutral",
     "language_fluency": "near-native",
-    "self_promotion_level": "boastful",
+    "self_promotion_level": "balanced",
     "quantification_tendency": "metrics-heavy"
   },
-  "name": "Alexei Morozov",
-  "current_role": "Senior Data Engineer",
-  "company": "CapitalFlow Inc.",
+  "name": "Isaac Cohen",
+  "current_role": "Senior Backend Engineer",
+  "company": "AdVerve Technologies",
   "education": {
     "degree": "Computer Science",
-    "university": "Moscow State University",
-    "year": 2015
+    "university": "University of California, Berkeley",
+    "year": 2016
   },
   "career_trajectory": [
-    "Data Analyst at Alpha Analytics (2014-2016)",
-    "Data Engineer at Beta Solutions (2016-2018)",
-    "Senior Data Engineer at Gamma Corp (2018-2020)",
-    "Senior Data Engineer at CapitalFlow Inc. (2020-present)"
+    {
+      "role": "Backend Developer",
+      "company": "ClickAd Studio",
+      "duration": "2015-2017",
+      "metrics": "Built ad-serving APIs handling 5M+ requests/day"
+    },
+    {
+      "role": "Senior Backend Engineer",
+      "company": "MediaTrack Pro",
+      "duration": "2017-2019",
+      "metrics": "Led team to migrate monolith to microservices"
+    },
+    {
+      "role": "Tech Lead",
+      "company": "AdScale Solutions",
+      "duration": "2019-2021",
+      "metrics": "Architected serverless ad analytics pipeline"
+    },
+    {
+      "role": "Senior Backend Engineer",
+      "company": "AdVerve Technologies",
+      "duration": "2021-present",
+      "metrics": "Optimized database queries reducing latency by 40%"
+    }
   ],
   "skills": {
-    "Apache Spark": 5,
-    "Apache Kafka": 5,
-    "Apache Airflow": 4,
-    "dbt": 4,
-    "Snowflake": 5,
-    "Data Modeling": 4,
-    "ETL pipeline design": 4,
-    "Data Warehousing": 4,
-    "Python": 5,
-    "REST API design": 4,
-    "Prometheus/Grafana": 4,
-    "GitHub Actions": 4,
-    "Linux administration": 4,
-    "Shell scripting": 4
+    "Python": 4,
+    "Go": 5,
+    "REST API design": 5,
+    "Microservices architecture": 5,
+    "PostgreSQL": 4,
+    "AWS": 4,
+    "Kubernetes": 4,
+    "CI/CD pipelines": 2,
+    "Jenkins": 1,
+    "Prometheus/Grafana": 2,
+    "Test automation": 2,
+    "Database optimization": 3,
+    "Infrastructure as Code": 3,
+    "Cloud cost optimization": 3,
+    "Load balancing": 3,
+    "Message queues": 3
   },
   "document_ids": [
     "d_p_140_00",
     "d_p_140_01",
     "d_p_140_02",
-    "d_p_140_03"
+    "d_p_140_03",
+    "d_p_140_04"
   ]
 }

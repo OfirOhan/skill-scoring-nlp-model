@@ -1,26 +1,25 @@
 {
   "doc_id": "d_p_238_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_238",
   "hyperparams": {
-    "recommender_role": "skip-level",
-    "recommender_closeness": "occasional",
-    "company_type": "startup",
-    "company_size": "mid (50-500)"
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "API testing": 3,
-    "CI/CD pipelines": 4,
-    "GitHub Actions": 3,
-    "Integration testing": 2,
-    "Jenkins": 2,
-    "Linux administration": 2,
-    "Performance testing (JMeter/k6)": 3,
-    "Python": 4,
-    "Selenium/Playwright": 4,
-    "Test automation": 4,
-    "Test strategy design": 4,
-    "Unit testing": 2
+    "PyTorch": 1,
+    "TensorFlow": 1,
+    "MLOps (MLflow/W&B)": 1,
+    "Model deployment": 1,
+    "LLMs/Prompt engineering": 1,
+    "NLP": 1,
+    "Computer vision": 1,
+    "Apache Spark": 1,
+    "ETL pipeline design": 1,
+    "Data warehousing": 1,
+    "Cloud cost optimization": 1,
+    "Infrastructure as Code": 1
   },
-  "text": "Rafael once led a high-stakes project where a critical API integration failed in production, causing a $200K revenue loss. He spent 48 hours diagnosing the issue, rewriting brittle test scripts using Python and Playwright, and implementing a CI/CD pipeline with GitHub Actions. The fix reduced regression risks by 70% and earned praise from the client’s CTO.  \n\nRafael is a Senior QA Automation Engineer at InnovateTech Solutions, where he consults for startups on test strategy design. He balances technical depth with business acumen, often translating complex system behaviors into clear, actionable test cases. His work ethic is unshakable—once, he stayed late to debug a flaky test suite, ultimately refactoring 300+ test cases into a modular framework that cut maintenance time by 50%.  \n\nBeyond technical skills, Rafael excels at aligning testing efforts with product goals. He recently designed a performance testing strategy for a SaaS platform, using k6 to identify bottlenecks that improved login latency by 60%. His ability to prioritize risks and communicate trade-offs makes him a trusted advisor.  \n\nRafael is a rare blend of precision and adaptability. His contributions have directly driven measurable improvements in quality and efficiency, making him an invaluable asset to any team."
+  "text": "# CapitalFlow Credit Risk Platform  \nA production-grade framework for real-time credit risk assessment, optimized for scalability and precision in high-volume financial transactions.  \n\n## Badges  \n🚀 30% faster inference latency vs legacy systems  \n📈 98.5% accuracy in default prediction (validation set)  \n🛡️ 99.99% uptime SLA (production environment)  \n📊 100k+ daily transactions processed  \n\n## Tech Stack  \n- **Data Layer**: PostgreSQL (timeseries), Redis (caching)  \n- **Processing**: Apache Kafka (streaming), Presto (query)  \n- **ML**: Scikit-learn (pipelines), XGBoost (ensemble models)  \n- **Monitoring**: Prometheus + Grafana (latency tracking)  \n- **Deployment**: Docker (containerization), Kubernetes (orchestration)  \n\n## Architecture / Design  \nThe platform is built as a microservices architecture with three core layers:  \n1. **Data Ingestion**: Kafka-based pipeline for real-time transaction streams, ingesting 100k+ events/sec  \n2. **Feature Engineering**: Distributed feature store using Redis, with precomputed risk scores cached for 5-minute windows  \n3. **Model Serving**: REST API gateway with load-balanced XGBoost ensembles, auto-scaling to handle peak traffic spikes  \nThe system is designed for horizontal scaling, with 99.99% SLA achieved through redundant worker pods and circuit breaker patterns.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/capitalflow/platform.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure environment variables in `.env` for database credentials and Kafka endpoints  \n4. Start the local stack: `docker compose up --build`  \nEnsure all dependencies are met, including Python 3.9+ and Docker 20.10+.  \n\n## Usage / Examples  \n```python  \n# Real-time risk score calculation  \nfrom credit_risk import RiskEvaluator  \nevaluator = RiskEvaluator(model_version='v2.3')  \nscore = evaluator.predict({'transaction_amount': 5000, 'credit_history': 'good'})  \nprint(f\"Risk Score: {score:.2f}\")  \n\n# Batch processing pipeline  \nfrom batch_processor import process_transactions  \nresults = process_transactions('s3://raw-data/transactions_202310.csv')  \nresults.to_parquet('output/risk_scores.parquet')  \n```  \nThe API supports 100+ concurrent requests with <100ms latency, and batch processing handles 5TB datasets in 15 minutes.  \n\n## Contributing  \nWe welcome contributions to improve model accuracy and system resilience. Focus areas include:  \n- Enhancing feature engineering pipelines with domain-specific rules  \n- Optimizing model inference for edge nodes  \n- Improving monitoring dashboards for anomaly detection  \n\n## License  \nMIT License (see [LICENSE](LICENSE) file). This project is for internal use only."
 }

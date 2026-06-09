@@ -1,61 +1,53 @@
 {
   "persona_id": "p_083",
   "hyperparams": {
-    "archetype": "frontend_engineer",
-    "years_experience": 13,
-    "seniority": "staff",
-    "industry": "fintech",
-    "writing_style": "concise",
-    "language_fluency": "native",
+    "archetype": "data_engineer",
+    "years_experience": 1,
+    "seniority": "junior",
+    "industry": "enterprise",
+    "writing_style": "confident",
+    "language_fluency": "near-native",
     "self_promotion_level": "boastful",
-    "quantification_tendency": "metrics-heavy"
+    "quantification_tendency": "qualitative"
   },
-  "name": "Leo Bianchi",
-  "current_role": "Staff Frontend Engineer",
-  "company": "CapitalFlow Solutions",
+  "name": "Aiden O'Sullivan",
+  "current_role": "Data Engineer",
+  "company": "NexaCorp",
   "education": {
     "degree": "Bachelor of Science in Computer Science",
-    "university": "University of Toronto",
-    "year": 2011
+    "university": "Massachusetts Institute of Technology",
+    "year": 2023
   },
   "career_trajectory": [
     {
-      "role": "Junior Frontend Developer",
-      "company": "PayNet Financial",
-      "duration": "2011-2014"
+      "role": "Data Intern",
+      "company": "Quantum Analytics",
+      "duration": "6 months",
+      "responsibilities": "Assisted in ETL pipeline development using Apache Spark and PostgreSQL"
     },
     {
-      "role": "Senior Frontend Engineer",
-      "company": "NexusLend",
-      "duration": "2014-2017"
-    },
-    {
-      "role": "Lead Frontend Architect",
-      "company": "FinTech Innovators",
-      "duration": "2017-2020"
-    },
-    {
-      "role": "Staff Frontend Engineer",
-      "company": "CapitalFlow Solutions",
-      "duration": "2020-present"
+      "role": "Junior Data Engineer",
+      "company": "NexaCorp",
+      "duration": "1 year",
+      "responsibilities": "Designed data warehousing architectures on Snowflake, optimized ETL workflows, and implemented dbt for data transformation"
     }
   ],
   "skills": {
-    "TypeScript": 5,
-    "React": 4,
-    "Web performance optimization": 4,
-    "Design systems": 4,
-    "Node.js": 4,
-    "REST API design": 4,
-    "GraphQL": 4,
-    "Test automation": 4
+    "Apache Spark": 4,
+    "Apache Kafka": 3,
+    "Apache Airflow": 3,
+    "dbt": 3,
+    "ETL pipeline design": 4,
+    "Data warehousing": 3,
+    "Snowflake": 4,
+    "Python": 3,
+    "Java": 1,
+    "REST API design": 2,
+    "CI/CD pipelines": 2,
+    "Docker": 3
   },
   "document_ids": [
     "d_p_083_00",
-    "d_p_083_01",
-    "d_p_083_02",
-    "d_p_083_03",
-    "d_p_083_04",
-    "d_p_083_05"
+    "d_p_083_01"
   ]
 }

@@ -4,29 +4,22 @@
   "persona_id": "p_095",
   "hyperparams": {
     "cv_format": "bullet-heavy",
-    "geographic_convention": "India",
-    "company_type": "FAANG",
+    "geographic_convention": "Israel",
+    "company_type": "agency",
     "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "AWS": 5,
-    "CI/CD pipelines": 5,
-    "Cloud cost optimization": 3,
-    "Docker": 5,
-    "GCP": 4,
-    "Go": 4,
-    "GraphQL": 4,
-    "Kubernetes": 4,
-    "Microservices architecture": 4,
-    "MongoDB": 4,
-    "Node.js": 3,
-    "PostgreSQL": 5,
-    "Prometheus/Grafana": 4,
-    "Python": 5,
-    "REST API design": 5,
-    "React": 5,
-    "Redis": 5,
-    "TypeScript": 4
+    "3D graphics (OpenGL/Vulkan)": 4,
+    "C#/.NET": 3,
+    "Game networking": 4,
+    "Game physics": 4,
+    "GraphQL": 1,
+    "Node.js": 1,
+    "Python": 2,
+    "REST API design": 2,
+    "Rust": 1,
+    "Unity": 5,
+    "Unreal Engine": 5
   },
-  "text": "Ilya Fedorov  \n+91 987-654-3210 | i.fedorov@email.com | linkedin.com/in/ilyafedorov | github.com/ilyafedorov  \n\n**Professional Experience**  \nSenior Full-Stack Developer | CapitalFlow Solutions (2022–Present)  \n- Architect and own hybrid AWS/GCP infrastructure for real-time trading platforms, reducing cloud costs by 30% through custom cost optimization strategies  \n- Led microservices scaling from 10 to 50+ services using Go, Kafka, and Prometheus/Grafana for real-time analytics  \n- Designed CI/CD pipelines with Docker and GitHub Actions, cutting deployment time by 40% and enabling zero-downtime rollouts  \n- Integrated Redis and PostgreSQL for low-latency trade data processing, achieving 99.99% SLA compliance  \n\nMid-Level Developer | FinSecure Ltd (2018–2020)  \n- Refactored frontend with React/TypeScript, improving load times by 50% and reducing bug reports by 60%  \n- Optimized GraphQL queries for complex financial data, cutting latency by 35% and boosting API throughput by 25%  \n- Built REST APIs for compliance reporting, integrating with MongoDB and Elasticsearch for regulatory audit trails  \n\nJunior Full-Stack Developer | NexaPay Startup (2016–2018)  \n- Developed payment gateway integrations using Python and PostgreSQL, handling 5M+ transactions monthly  \n- Implemented CI/CD pipelines with Jenkins and Docker, reducing deployment cycles from hours to minutes  \n\n**Education**  \nBachelor of Science in Computer Science | Moscow State University (2016)  \n\n**Professional Summary**  \nA seasoned full-stack developer with 8 years of building mission-critical fintech systems. Proven ability to architect scalable infrastructure, optimize cloud costs, and lead cross-functional teams. Specialized in Go, GCP, and microservices, with a track record of delivering high-performance solutions for real-time financial applications.  \n\n**Projects**  \nReal-Time Trading Platform (CapitalFlow Solutions, 2022–Present)  \n- Built hybrid AWS/GCP architecture for low-latency trading, achieving 99.99% uptime with Kubernetes orchestration  \n- Integrated Prometheus/Grafana for end-to-end monitoring, reducing incident resolution time by 45%  \n- Designed Kafka pipelines for market data ingestion, processing 10M+ events per second  \n\nMicroservices Architecture (TradeFlow Fintech, 2020)  \n- Architected Go-based microservices for high-throughput trading, scaling to 50+ services with zero downtime  \n- Implemented Redis for distributed caching, improving API response times by 30% and reducing database load by 40%  \n- Established CI/CD pipelines with Docker and GitHub Actions, enabling rapid feature deployments  \n\n**Certifications**  \n- AWS Certified Solutions Architect (2023)  \n- Google Cloud Professional Architect (2022)  \n- Certified Kubernetes Administrator (CKA) (2021)  \n\n**Awards & Achievements**  \n- Top Contributor (2023) – CapitalFlow Solutions  \n- MVP at Fintech Innovators Conference (2022)  \n- 3x recipient of \"Best Technical Achievement\" at TradeFlow Fintech (2019–2021)"
+  "text": "Oscar Lindgren  \nTel Aviv, Israel | +972 54 123 4567 | oscar.lindgren@email.com | linkedin.com/in/oscarlindgren  \n\n**Professional Experience**  \n*Head of Interactive Therapy Systems*  \nVitalis Health Innovations (2017–present)  \n- Spearheaded development of a VR-based pain management platform, achieving 95% user retention in clinical trials and reducing hospital readmission rates by 22%  \n- Orchestrated cross-functional teams to integrate real-time biometric feedback into therapeutic simulations, enhancing patient engagement by 37%  \n- Redesigned core physics engines for medical training modules, enabling realistic tissue deformation and improving procedural accuracy in 80% of use cases  \n\n*Lead Game Engineer*  \nMediTech Simulations (2014–2017)  \n- Directed a 6-person team to build a scalable simulation framework for surgical training, reducing development cycles by 30% through modular architecture  \n- Pioneered a hybrid rendering pipeline combining Vulkan and OpenGL to optimize performance on low-end hardware, expanding accessibility for rural clinics  \n- Integrated custom networking protocols to synchronize multi-user therapy sessions, cutting latency to under 15ms for remote collaboration  \n\n*Junior Game Developer*  \nNeuroPlay Studios (2010–2014)  \n- Contributed to early-stage neurofeedback games, refining Unity asset pipelines to cut loading times by 40%  \n- Collaborated on a Unity project that won a healthtech innovation award, focusing on cognitive rehabilitation for stroke patients  \n\n**Technical Skills**  \n- **Unity**: Architectural decisions shaping 3 core systems; mentored 5 engineers; optimized memory management for 20+ concurrent sessions  \n- **Unreal Engine**: Engineered physics-driven haptic feedback for 3 medical devices; led asset pipeline rework for 40% performance gain  \n- **3D Graphics (OpenGL/Vulkan)**: Implemented real-time ray tracing for surgical simulators; reduced GPU overhead by 25% in multi-user environments  \n- **Game Physics**: Designed a custom collision system for therapeutic robots; validated accuracy through 50+ clinical trials  \n- **Game Networking**: Engineered a latency-optimized sync layer for distributed therapy sessions; supported 150+ concurrent users without packet loss  \n- **C#/.NET**: Core language for Unity-based health platforms; integrated with .NET backend services for patient data tracking  \n- **Python**: Scripted automation tools for asset pipeline testing; used for quick prototyping of UI/UX workflows  \n- **REST API Design**: Integrated Unity with cloud services for remote diagnostics; maintained API endpoints for 3 third-party health platforms  \n\n**Education**  \nMaster’s in Game Development | MIT Game Lab | 2018  \n\n**Projects**  \n- **NeuroSync Therapy Platform**: Developed a Unity-based system combining EEG feedback and VR, used in 12 clinical trials across 4 countries  \n- **Surgical Sim 2.0**: Rebuilt a Unreal Engine simulation suite with physics-driven tissue models, adopted by 3 major medical schools  \n- **Remote Rehab Network**: Built a distributed multiplayer system for physical therapy, supporting 50+ concurrent users via custom networking  \n- **Biofeedback Dashboard**: Created a Python/Unity hybrid tool for real-time patient monitoring, integrated with 5 IoT medical devices  \n\n**Certifications**  \n- Unity Certified Developer (2021)  \n- Unreal Engine 5 Advanced Development (2022)  \n- HealthTech Innovation Leadership (MIT, 2020)  \n\n**Languages**  \n- English (professional)  \n- Hebrew (native)  \n- Spanish (conversational)  \n\n**Awards & Achievements**  \n- 2022 Global HealthTech Innovation Award (NeuroSync Platform)  \n- 2021 MIT Game Lab Alumni Recognition for Cross-Disciplinary Impact  \n- 2019 Best of Show at MedTech Expo for Surgical Sim 2.0"
 }

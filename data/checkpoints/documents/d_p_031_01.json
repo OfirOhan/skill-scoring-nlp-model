@@ -3,22 +3,19 @@
   "type": "project_readme",
   "persona_id": "p_031",
   "hyperparams": {
-    "project_scale": "hobby",
+    "project_scale": "production",
     "project_team_size": "small (2-4)",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "CI/CD pipelines": 3,
-    "Cloud cost optimization": 2,
-    "Database optimization": 2,
-    "GCP": 2,
-    "Infrastructure as Code": 3,
-    "Kubernetes": 3,
-    "Linux administration": 1,
-    "Prometheus/Grafana": 3,
-    "Python": 1,
-    "Terraform": 3
+    "Apache Spark": 2,
+    "Java": 1,
+    "NumPy": 4,
+    "Pandas": 4,
+    "Python": 3,
+    "REST API design": 3,
+    "Recommendation systems": 4,
+    "SQL analytics": 5
   },
-  "text": "# SecureAPI Gateway for Fintech Compliance  \nA production-grade API gateway engineered for real-time compliance, fraud detection, and regulatory alignment in high-stakes financial ecosystems. Achieves 99.95% uptime with 200+ endpoints and 15+ regulatory standard compliance, including PCI-DSS, GDPR, and SOX.  \n\n## Badges  \n[![Build Status](https://github.com/erikbergstrom/secureapi/actions/workflows/ci.yml/badge.svg)](https://github.com/erikbergstrom/secureapi/actions/workflows/ci.yml)  \n[![Coverage](https://img.shields.io/coverage/github/erikbergstrom/secureapi)](https://github.com/erikbergstrom/secureapi/coverage)  \n[![Security](https://img.shields.io/snyk/applications/erikbergstrom/secureapi)](https://snyk.io/test/terraform/erikbergstrom/secureapi)  \n\n## Tech Stack / Built With  \n- **AWS EKS**: Managed Kubernetes cluster with auto-scaling and cost-optimized spot instances  \n- **Envoy Proxy**: L7 load balancing and observability layer with 12k+ concurrent connections  \n- **Terraform**: IaC for VPC, security groups, and autoscaling groups (75% reduction in manual config time)  \n- **Open Policy Agent (OPA)**: Just-in-time policy enforcement for 18+ compliance rules  \n- **Prometheus/Grafana**: End-to-end metrics pipeline with 300+ custom dashboards  \n- **PostgreSQL**: Time-series logging with 99.99% SLA and 500k+ transactions/sec throughput  \n\n## Architecture / Design  \nThe gateway operates as a three-tiered system:  \n1. **Ingress Layer**: Envoy handles TLS termination, rate limiting (10k RPS), and TLS 1.3 encryption  \n2. **Policy Enforcement**: OPA enforces 18+ compliance rules with 5ms latency P99  \n3. **Observability**: Prometheus collects 15k+ metrics/sec, with Grafana providing 200+ dashboards for real-time anomaly detection  \n\nDeployed on AWS EKS with Terraform-managed infrastructure, achieving 40% lower cloud costs compared to equivalent AWS Lambda solutions.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/erikbergstrom/secureapi  \ncd secureapi  \nexport AWS_ACCESS_KEY_ID=your_key  \nterraform apply --var-file=dev.tfvars  \n```\nVerify deployment with:  \n```bash  \ncurl -v https://api.securegateway.example.com/v1/health  \n```  \n\n## Usage / Examples  \n```http  \nGET https://api.securegateway.example.com/v1/transactions/12345  \nAuthorization: Bearer <token>  \nX-Compliance-Region: EU  \n```  \n**Response**:  \n```json  \n{  \n  \"status\": \"compliant\",  \n  \"rules_matched\": [\"gdpr-12\", \"sox-45\"],  \n  \"latency\": \"4.2ms\"  \n}  \n```  \n\n## API Reference  \n- **GET /v1/health**: 200 OK (system status)  \n- **POST /v1/audit**: 201 Created (regulatory logging)  \n- **OPTIONS /v1/***: 204 No Content (CORS preflight)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# AdPredictor: Machine Learning for Ad Click-through Rate Optimization  \nAdPredictor is a production-grade system that leverages real-time user behavior data to optimize ad click-through rates (CTR) using ensemble modeling and feature engineering. By integrating SQL analytics with Python-based pipelines, the system achieves a 15% improvement in CTR for a major adtech client. The architecture balances latency-sensitive inference with batch retraining, enabling dynamic ad targeting in high-velocity environments.  \n\n## Contributing  \nWe welcome contributions to enhance model robustness, expand feature sets, or improve pipeline efficiency. To contribute:  \n1. Fork the repository and create a feature branch  \n2. Submit pull requests with clear, metric-driven descriptions  \n3. Report bugs or suggest improvements via GitHub issues  \n\nKey areas for contribution:  \n- Model tuning for imbalanced click datasets  \n- Optimization of data pipeline latency  \n- Expansion of SQL-based feature extraction logic  \n\n## Getting Started / Installation  \n```bash\n# Prerequisites  \nPython 3.8+  \npip install -r requirements.txt  \n\n# Optional: Docker setup for consistent environments  \ndocker build -t adpredictor .  \ndocker run -p 8000:8000 adpredictor  \n```  \n\n## Usage / Examples  \n```python  \n# Example workflow: Ingest SQL data, preprocess, and score  \nimport pandas as pd  \nfrom adpredictor.pipeline import AdModel  \n\n# Load user behavior data via SQL connection  \ndf = pd.read_sql(\"SELECT * FROM user_actions\", connection)  \n\n# Preprocess and score  \nmodel = AdModel.load()  \npredictions = model.predict(df)  \n```  \n\n## Tech Stack  \n- **Python**: Core language for data processing and modeling  \n- **Pandas/NumPy**: Central to feature engineering and batch processing  \n- **SQL**: Primary data source for real-time and historical analysis  \n- **REST API**: Exposes prediction endpoints for ad serving systems  \n- **Apache Spark** (optional): Used for large-scale batch retraining  \n\n## Architecture / Design  \nThe system decouples data ingestion, feature engineering, and model serving into modular components. Real-time user data is streamed into a SQL warehouse, where it's transformed into features using PySpark-based pipelines. The final model, trained on historical CTR data, is deployed as a REST API endpoint with latency <50ms.  \n\n## License  \nMIT License  \n\n## Badges  \n[![CTR Improvement](https://img.shields.io/badge/CTR%20Improvement-15%25-green)](https://example.com)  \n[![Deployment Status](https://img.shields.io/badge/Deployment-Production-blue)](https://example.com)  \n[![Tech Stack](https://img.shields.io/badge/Tech%20Stack-Python%20%7C%20SQL%20%7C%20REST%20API-yellow)](https://example.com)"
 }

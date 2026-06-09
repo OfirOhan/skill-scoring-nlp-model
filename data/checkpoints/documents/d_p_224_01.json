@@ -3,24 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_224",
   "hyperparams": {
-    "project_scale": "team-internal",
+    "project_scale": "academic",
     "project_team_size": "small (2-4)",
-    "jargon_density": "plain"
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "GraphQL": 2,
-    "JavaScript": 5,
-    "Next.js": 4,
-    "Node.js": 2,
-    "REST API design": 4,
-    "React": 5,
-    "Responsive design": 5,
-    "State management (Redux/Zustand)": 4,
-    "Test automation": 3,
-    "TypeScript": 5,
-    "Unit testing": 2,
-    "Web performance optimization": 4,
-    "Webpack/Vite": 4
+    "API testing": 4,
+    "BDD/TDD": 4,
+    "Go": 1,
+    "Java": 2,
+    "Node.js": 1,
+    "Performance testing (JMeter/k6)": 4,
+    "Python": 3,
+    "Selenium/Playwright": 4,
+    "Test automation": 4,
+    "Test strategy design": 4
   },
-  "text": "# Lumina GameUI Framework  \nA modular React-based UI toolkit for game development, optimized for performance and cross-platform rendering with WebGL. Built to accelerate UI prototyping while maintaining scalability for internal game projects.  \n\n---\n\n## Badges  \n[![React](https://badgen.net/badge/React/100%25/green)](https://react.dev)  \n[![TypeScript](https://badgen.net/badge/TypeScript/100%25/blue)](https://www.typescriptlang.org)  \n[![WebGL](https://badgen.net/badge/WebGL/100%25/orange)](https://www.opengl.org)  \n[![Webpack](https://badgen.net/badge/Webpack/100%25/purple)](https://webpack.js.org)  \n\n---\n\n## Tech Stack  \n- **React** (with hooks and context APIs)  \n- **TypeScript** (strict mode, type-driven component design)  \n- **WebGL** (via Three.js for shader-based rendering)  \n- **Redux Toolkit** (normalized state management for complex UI flows)  \n- **Webpack** (custom bundler for asset optimization)  \n- **REST APIs** (for asset loading and dynamic UI configuration)  \n- **Responsive Design** (adaptive layouts for VR/AR and desktop)  \n\n---\n\n## Architecture / Design  \nLumina is built around a **component-driven** architecture with isolated rendering contexts for WebGL and DOM elements. Key decisions:  \n- **State isolation**: Redux slices are scoped to UI modules to prevent global state bloat.  \n- **Performance focus**: Webpack configures code splitting and lazy loading for large game UIs.  \n- **Shader integration**: WebGL components use Three.js shaders for real-time visual effects without DOM overhead.  \n- **Responsive fallbacks**: CSS Grid and Flexbox ensure compatibility across screen sizes and input methods.  \n\n---\n\n## Getting Started / Installation  \n```bash\nnpm install @lumina/gameui  \n# or  \nyarn add @lumina/gameui  \n```  \nEnsure your project has a compatible React/TypeScript setup. For WebGL integration, install Three.js separately.  \n\n---\n\n## Usage / Examples  \n```tsx\nimport { Canvas, useThree } from '@lumina/gameui';  \n\nconst UIOverlay = () => {  \n  const { camera } = useThree();  \n  return (  \n    <Canvas camera={camera}>  \n      <mesh>  \n        <boxGeometry />  \n        <meshStandardMaterial color=\"#00ffcc\" />  \n      </mesh>  \n    </Canvas>  \n  );  \n};  \n```  \nThis example renders a WebGL cube over a game scene. For DOM-based UI, use the `LuminaProvider` to sync state between UI and game logic.  \n\n---\n\n## Contributing  \nWe welcome improvements to performance optimizations, shader integration, and accessibility features.  \n- Run `npm test` for automated checks (including WebGL rendering tests).  \n- Pull requests should include benchmark comparisons for performance-critical changes.  \n\n---\n\n## License  \nMIT (see [LICENSE](LICENSE) for details)."
+  "text": "# Automated Regression Testing Framework for CloudFlow SaaS  \nA scalable, maintainable test automation solution for CloudFlow SaaS, engineered to reduce regression test maintenance overhead by 62% while expanding coverage from 78% to 94% across critical user journeys.  \n\n## Deployment  \nThis framework is CI/CD pipeline-integrated, with automated test job orchestration via GitHub Actions. Test suites execute in parallel across Chrome, Firefox, and Edge browsers, with results ingested into a centralized JIRA instance for defect tracking. Deployment is version-controlled via semantic tags, ensuring stable release pipelines for production environments.  \n\n## Badges  \n[![Test Coverage](https://img.shields.io/badge/coverage-94%25-green)](https://example.com/coverage)  \n[![Build Status](https://img.shields.io/badge/build-passing-blue)](https://example.com/build)  \n[![Test Execution Time](https://img.shields.io/badge/execution-time--15m-yellow)](https://example.com/execution)  \n\n## Tech Stack  \n- **Language**: Python 3.9 (core test logic, BDD/TDD scaffolding)  \n- **UI Tools**: Playwright (headless browser automation) + Selenium Grid (distributed test execution)  \n- **API Testing**: RestAssured (Java) for backend endpoint validation (integrated via PyTest fixtures)  \n- **Reporting**: Allure 2.14 (HTML reports with traceability to JIRA tickets)  \n- **CI/CD**: GitHub Actions (scheduled nightly runs, PR-triggered validation)  \n\n## Architecture / Design  \nThe framework employs a **layered architecture** with decoupled modules:  \n1. **Test Orchestration Layer**: Manages parallel execution of 120+ test cases across 8 environments.  \n2. **Data-Driven Layer**: Uses YAML-based test data repositories with dynamic parameter injection.  \n3. **Result Aggregation Layer**: Aggregates metrics (e.g., 92% pass rate, 8% flaky test reduction) into centralized dashboards.  \n4. **BDD Integration**: Cucumber-JVM (Java) for scenario-driven testing, with PyTest for unit-level assertions.  \n\n## Getting Started / Installation  \n1. Clone the repository using `git clone https://github.com/CloudFlow-QA/automated-regression-framework.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure environment variables for Sauce Labs credentials and JIRA API keys  \n4. Run initial setup: `python setup.py install`  \n\n## Usage / Examples  \n```python  \n# Example: BDD test scenario for user authentication  \nfrom pytest_bdd import scenarios, given, when, then  \n\n@scenarios('features/authentication.feature')  \ndef test_authentication_flow():  \n    @given('a valid user credentials')  \n    def valid_credentials():  \n        return {'username': 'test_user', 'password': 'SecureP@ss123'}  \n\n    @when('the user submits login form')  \n    def submit_login(valid_credentials):  \n        assert login_api.post('/auth/login', data=valid_credentials).status_code == 200  \n```  \n\n## License  \nMIT License — see [LICENSE](https://github.com/CloudFlow-QA/automated-regression-framework/blob/main/LICENSE) for details."
 }

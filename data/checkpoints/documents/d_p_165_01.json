@@ -3,21 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_165",
   "hyperparams": {
-    "project_scale": "team-internal",
+    "project_scale": "hobby",
     "project_team_size": "large (15+)",
-    "jargon_density": "moderate"
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "3D graphics (OpenGL/Vulkan)": 2,
-    "C#/.NET": 4,
-    "Game networking": 3,
+    "3D graphics (OpenGL/Vulkan)": 4,
+    "C#/.NET": 3,
+    "Game networking": 4,
     "Game physics": 4,
-    "Python": 2,
-    "REST API design": 2,
-    "Rust": 2,
-    "Unity": 4,
-    "Unreal Engine": 1,
-    "Web performance optimization": 1
+    "GraphQL": 1,
+    "Microservices architecture": 1,
+    "Python": 3,
+    "REST API design": 1,
+    "Unity": 5,
+    "Unreal Engine": 5
   },
-  "text": "# Epic Quest: 2D Platformer Game Prototype  \nA collaborative project at Lumina Interactive, this prototype explores dynamic level generation, physics-based mechanics, and multiplayer synchronization for a 2D platformer. Built with a focus on scalability and test-driven development, it serves as a foundation for future expansion into full-scale game development.  \n\n## Testing  \nAutomated testing frameworks (NUnit, xUnit) ensure robustness across core systems. Integration tests validate multiplayer synchronization, while unit tests isolate physics simulations and level loader logic. Continuous integration pipelines enforce 85%+ test coverage, with nightly runs verifying cross-platform compatibility. Performance benchmarks are tied to frame rate stability under concurrent player interactions.  \n\n## Getting Started / Installation  \nClone the repository using `git clone https://github.com/lumina-interactive/epic-quest.git`. Ensure Unity 2021.3+ and .NET 6 SDK are installed. Import the project into Unity, then configure the build pipeline via `Assets/Editor/BuildSettings.cs`. For multiplayer features, deploy a local server using the included `NetworkManager` script and ensure port forwarding is configured.  \n\n## Usage / Examples  \nLaunch the game via `Assets/Scenes/MainMenu.unity` to access single-player and multiplayer modes. The `Assets/Scripts/LevelGenerator.cs` script demonstrates procedural terrain creation, while `Assets/Scripts/PlayerController.cs` showcases physics-based movement. To test networking, enable the `EnableMultiplayer` flag in the `GameSettings` manager and connect via the in-game lobby.  \n\n## Tech Stack  \n- **Core Engine**: Unity (C#, .NET 6)  \n- **Physics**: Unity Physics with custom collision resolution for ragdoll mechanics  \n- **Networking**: Custom TCP/UDP hybrid system for low-latency sync  \n- **Assets**: Tiled map editor, Unity Asset Store libraries for particle effects  \n- **3D Graphics**: Unity’s 3D rendering pipeline for 2D sprite layering  \n\n## Architecture / Design  \nThe architecture employs a layered system: core logic, physics, and networking modules are decoupled via event-driven signals. The `GameManager` orchestrates state transitions, while the `PhysicsSystem` handles collision detection and response. Networking is abstracted into a `SyncManager` that mirrors state across clients, with delta compression for bandwidth efficiency.  \n\n## License  \nMIT License. See `LICENSE.md` for full terms.  \n\n## Contributing  \nPull requests are welcome! Ensure all changes include unit tests and adhere to the coding standards outlined in `CONTRIBUTING.md`. For networking contributions, validate against the `NetworkValidationTests` suite. All commits must reference GitHub issues and include clear, descriptive messages."
+  "text": "# CyberShield: Red Team Simulation Tool  \nA high-fidelity platform for simulating advanced persistent threats (APTs) in isolated environments, enabling cybersecurity teams to refine detection, response, and containment strategies through immersive, adversarial scenarios. Designed for large-scale collaboration, it integrates game engine capabilities with real-world threat modeling to create dynamic, evolving attack vectors.  \n\n## Deployment  \nCyberShield is containerized using Docker and orchestrated via Kubernetes for scalable, reproducible execution. Pre-built Docker images are available on Docker Hub, with deployment pipelines validated across 12+ environments. Live simulations run in isolated VM clusters, ensuring zero external connectivity during training.  \n\n## Badges  \n[![Build Status](https://img.shields.io/endpoint?url=https%3A%2F%2Factions-badge-multiplier.net%2Fbadge%3Flogin%3Dgita%26repo%3Dcybershield%26branch%3Dmain)]  \n[![Code Quality](https://img.shields.io/sonarqube/sqale-index/organization/123456789)]  \n[![Test Coverage](https://img.shields.io/coverage/git/organization/123456789)]  \n\n## Tech Stack  \n- **Core Engines**: Unity (3D simulation framework), Unreal Engine (high-fidelity rendering)  \n- **Scripting**: C# (for simulation logic), Python (for data analysis pipelines)  \n- **Networking**: Custom UDP-based sync layer with 15ms latency tolerance  \n- **Physics**: Unity Physics for collision detection, Unreal NVE for realistic object interactions  \n- **Data**: PostgreSQL with temporal tables for audit trails  \n\n## Architecture / Design  \nThe system decouples threat models into modular components: a behavior tree engine for adversarial decision-making, a network topology generator for dynamic environment creation, and a results aggregator for post-simulation analysis. Unity handles visual fidelity and real-time rendering, while Unreal Engine manages physics-driven interactions. Python scripts orchestrate multi-stage attacks, leveraging pre-defined attack patterns from MITRE ATT&CK.  \n\n## Getting Started / Installation  \n```bash\ngit clone https://github.com/cybershield/cybershield.git  \ncd cybershield  \ndocker-compose up -d  \n```  \nEnsure Docker 20.10+ and Kubernetes cluster access. Pre-install Unity 2021.3 and Unreal Engine 5.1 for local development.  \n\n## Usage / Examples  \n```python  \n# Example: Simulate phishing attack chain  \nattack = ThreatModel(\"Phishing\", \"SpearPhishing\", severity=3)  \nsimulator.run_attack(attack, environment=\"CorpNetwork\")  \n```  \nUse the CLI to spawn adversarial agents with custom payloads, or leverage the Unity editor to visualize network traversal paths in 3D.  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
 }

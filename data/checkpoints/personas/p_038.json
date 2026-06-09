@@ -1,59 +1,66 @@
 {
   "persona_id": "p_038",
   "hyperparams": {
-    "archetype": "fullstack_developer",
-    "years_experience": 5,
-    "seniority": "mid",
-    "industry": "SaaS",
-    "writing_style": "concise",
+    "archetype": "ml_engineer",
+    "years_experience": 2,
+    "seniority": "junior",
+    "industry": "enterprise",
+    "writing_style": "modest",
     "language_fluency": "near-native",
-    "self_promotion_level": "balanced",
+    "self_promotion_level": "boastful",
     "quantification_tendency": "qualitative"
   },
-  "name": "Ricardo Almeida",
-  "current_role": "Senior Full-Stack Developer",
-  "company": "NexaCloud Solutions",
+  "name": "Jasmine Kaur",
+  "current_role": "Machine Learning Engineer",
+  "company": "NexGen Technologies",
   "education": {
-    "degree": "Bachelor of Science in Computer Science",
-    "university": "University of Lisbon",
-    "year": 2018
+    "degree": "Master of Science in Data Science",
+    "university": "University of Toronto",
+    "year": 2022
   },
   "career_trajectory": [
     {
-      "year": 2018,
-      "position": "Junior Full-Stack Developer",
-      "company": "InnovaTech Startup"
+      "role": "Data Analyst Intern",
+      "company": "GlobalTech Solutions",
+      "duration": "6 months",
+      "responsibilities": "Assisted in data cleaning, basic visualizations, and collaboration with ML teams"
     },
     {
-      "year": 2020,
-      "position": "Lead Developer",
-      "company": "ApexSoft Ltd."
+      "role": "Machine Learning Intern",
+      "company": "InnovateAI Corp",
+      "duration": "6 months",
+      "responsibilities": "Built prototype NLP models, deployed with MLflow, and optimized inference pipelines"
     },
     {
-      "year": 2022,
-      "position": "Senior Full-Stack Developer",
-      "company": "NexaCloud Solutions"
+      "role": "Machine Learning Engineer",
+      "company": "NexGen Technologies",
+      "duration": "2 years",
+      "responsibilities": "Develop production ML models, maintain feature stores, and collaborate with DevOps on cloud deployments"
     }
   ],
   "skills": {
-    "Python": 4,
-    "Node.js": 3,
-    "React": 3,
-    "REST API design": 3,
-    "PostgreSQL": 3,
-    "MongoDB": 3,
-    "JavaScript": 3,
-    "TypeScript": 3,
-    "gRPC": 3,
+    "PyTorch": 4,
+    "TensorFlow": 4,
+    "scikit-learn": 3,
+    "Hugging Face Transformers": 4,
+    "NLP": 4,
+    "MLOps (MLflow/W&B)": 3,
+    "Model deployment": 3,
+    "LLMs/Prompt engineering": 3,
     "AWS": 3,
     "Docker": 3,
     "Kubernetes": 3,
-    "CI/CD pipelines": 3,
-    "GitLab CI": 3,
-    "Serverless": 2
+    "REST API design": 3,
+    "Apache Spark": 2,
+    "Apache Kafka": 1,
+    "dbt": 1,
+    "ETL pipeline design": 2,
+    "Data warehousing": 1
   },
   "document_ids": [
     "d_p_038_00",
-    "d_p_038_01"
+    "d_p_038_01",
+    "d_p_038_02",
+    "d_p_038_03"
   ]
 }

@@ -1,26 +1,25 @@
 {
   "doc_id": "d_p_308_01",
-  "type": "project_readme",
+  "type": "linkedin",
   "persona_id": "p_308",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "heavy"
+    "linkedin_completeness": "minimal"
   },
   "skill_evidence": {
-    "Android development": 3,
-    "App Store deployment": 3,
-    "Flutter": 3,
-    "Kotlin (Android)": 1,
-    "Mobile CI/CD": 3,
-    "Mobile UI/UX": 4,
-    "REST API design": 3,
-    "React Native": 1,
-    "Swift": 1,
-    "Test automation": 2,
-    "TypeScript": 1,
-    "Unit testing": 3,
-    "iOS development": 4
+    "AWS": 3,
+    "Apache Airflow": 3,
+    "Apache Kafka": 4,
+    "Apache Spark": 3,
+    "Data modeling": 3,
+    "Data warehousing": 3,
+    "Docker": 3,
+    "ETL pipeline design": 3,
+    "PostgreSQL": 3,
+    "Python": 1,
+    "Redis": 3,
+    "Snowflake": 3,
+    "Terraform": 3,
+    "dbt": 3
   },
-  "text": "# NexGen RideShare - Cross-Platform Ride-Hailing App  \n\nNexGen RideShare is a real-time ride-hailing platform built with Flutter and Firebase, designed to deliver seamless user experiences across iOS and Android. The app leverages Firebase's backend services for authentication, data synchronization, and cloud functions, while Flutter ensures a unified UI/UX workflow.  \n\n## API Reference  \n- **Firebase Authentication**: Handles user sign-up, login, and session management via email/password and Google OAuth.  \n- **Firebase Firestore**: Manages ride requests, driver availability, and payment records with real-time listeners.  \n- **Firebase Cloud Functions**: Processes ride matching logic and generates dynamic pricing rules.  \n- **Google Maps API**: Integrates location data for route optimization and fare calculation.  \n- **REST API (Third-Party)**: Exposes endpoints for ride status updates and user notifications via Firebase Cloud Messaging.  \n\n## Usage / Examples  \n```dart  \n// User authentication flow  \nfinal auth = FirebaseAuth.instance;  \nawait auth.signInWithEmailAndPassword(email: 'user@example.com', password: 'password');  \n\n// Real-time ride updates  \nfinal db = FirebaseFirestore.instance.collection('rides').snapshots()  \n  .map((snapshot) => snapshot.docs.map((doc) => Ride.fromMap(doc.data())).toList());  \n\n// Payment processing via Firebase Cloud Functions  \nFirebaseFunctions.instance  \n  .httpsCallable('processPayment')  \n  .call({'rideId': '12345', 'amount': 25.50});  \n```  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/yourusername/nexgen-rideshare.git`  \n2. Install Flutter dependencies: `flutter pub get`  \n3. Configure Firebase:  \n   - Add `google-services.json` to `android/app/`  \n   - Set up Firebase console with Cloud Messaging and Firestore rules  \n4. Run the app: `flutter run`  \n\n## Tech Stack  \n- **Flutter**: Cross-platform UI framework with Dart language  \n- **Firebase**: Backend-as-a-service for auth, database, and cloud functions  \n- **Google Maps SDK**: Location-based services integration  \n- **Dart**: Language for Flutter app logic and state management  \n\n## Architecture / Design  \nThe app follows a layered architecture:  \n1. **Presentation Layer**: Flutter widgets for UI, with `setState` for state management.  \n2. **Domain Layer**: Business logic for ride matching and payment validation.  \n3. **Data Layer**: Firebase Firestore for data persistence and Cloud Functions for backend processing.  \nState synchronization is handled via Firebase's real-time listeners, with offline persistence enabled for critical user data.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![MIT License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)  \n[![Flutter](https://img.shields.io/badge/flutter-3.0+-brightgreen)](https://flutter.dev)  \n[![Firebase](https://img.shields.io/badge/firebase-9.22.0-orange)](https://firebase.google.com)"
+  "text": "At the intersection of data and innovation, I thrive at the heart of adtech, where numbers meet impact. My mission is to transform raw data into strategic insights that drive smarter decisions—because in a world where attention is currency, precision is power.  \n\nCurrently, I’m shaping the future of campaign performance at ClickAd Network, where I architect scalable data pipelines that turn terabytes of user interactions into actionable intelligence. My work spans Kafka-powered real-time analytics, Snowflake-based data warehousing, and PostgreSQL-backed dashboards that inform billion-dollar ad spend. I own end-to-end ETL workflows, from Kafka stream processing to Redis-cached microservices, ensuring our clients’ ROI soars while latency shrinks.  \n\nIn the past year, I’ve scaled Kafka pipelines to handle 10M+ messages daily, boosting campaign efficiency by 25%. I also pioneered a data modeling framework that reduced query times by 30%, and streamlined dbt pipelines to cut data latency by 40%. These aren’t just numbers—they’re proof that when data is engineered with purpose, it doesn’t just perform—it *transforms*.  \n\nLooking ahead, I seek challenges where my expertise in distributed systems, cloud-native workflows, and real-time analytics can fuel innovation. Let’s build something that doesn’t just keep up with the future—but leads it."
 }

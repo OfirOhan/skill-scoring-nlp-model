@@ -1,26 +1,25 @@
 {
   "doc_id": "d_p_155_03",
-  "type": "blog",
+  "type": "recommendation",
   "persona_id": "p_155",
   "hyperparams": {
-    "blog_depth": "deep-dive",
-    "jargon_density": "moderate"
+    "recommender_role": "skip-level",
+    "recommender_closeness": "occasional",
+    "company_type": "enterprise",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "Design systems": 3,
-    "GraphQL": 4,
-    "JavaScript": 4,
-    "Next.js": 4,
-    "Node.js": 4,
-    "REST API design": 4,
-    "React": 4,
-    "Responsive design": 4,
-    "Selenium/Playwright": 2,
-    "Test automation": 3,
-    "TypeScript": 4,
-    "UI design": 2,
-    "Web performance optimization": 4,
-    "UI design (Figma/Sketch)": 1
+    "API testing": 4,
+    "BDD/TDD": 2,
+    "GitLab CI": 1,
+    "Microservices architecture": 2,
+    "Node.js": 1,
+    "Performance testing": 2,
+    "Python": 2,
+    "REST API design": 1,
+    "Selenium/Playwright": 5,
+    "Test automation": 4,
+    "Test strategy design": 4
   },
-  "text": "**Optimizing Frontend Performance in AdTech Applications**  \n\n**Overview**  \nFrontend performance in adtech isn’t just about speed—it’s about delivering a seamless experience while handling real-time data, dynamic content, and high user expectations. As a frontend engineer, I’ve spent years refining strategies to balance complexity with efficiency, ensuring our applications scale without sacrificing usability.  \n\n**Context**  \nOur adtech platform powers billions of impressions daily, with frontend components ranging from targeting panels to real-time analytics dashboards. The challenge lies in maintaining sub-2-second load times for critical features while supporting a growing feature set. Legacy code, monolithic bundles, and inefficient data fetching patterns had begun to erode user trust, particularly in regions with unstable network conditions.  \n\n**Challenge**  \nThe core issue was managing a bloated frontend that struggled under heavy workloads. Our React-based UIs were riddled with redundant state, over-fetching via REST APIs, and unoptimized image assets. Even with lazy loading, initial load times for key modules like campaign editors exceeded 4 seconds, leading to higher bounce rates and lower ad placement accuracy.  \n\n**Solution**  \nWe adopted a multi-pronged approach. First, we migrated critical components to Next.js 13’s App Router, enabling granular code splitting and server components to reduce client-side payload. For data fetching, we replaced REST endpoints with a normalized GraphQL API, caching frequent queries using Redis and implementing Apollo Client’s query coalescing. We also introduced image optimization via Next.js’s image loader, dynamically resizing assets based on viewport size.  \n\nTypeScript played a key role in identifying unused props and optimizing component trees, while manual tree-shaking reduced bundle sizes by 30%. On the backend, we fine-tuned Node.js serverless functions to handle ad metadata requests, offloading compute from the frontend.  \n\n**Results**  \nAfter implementing these changes, the average load time for campaign editors dropped from 4.2 seconds to 1.8 seconds. CPU usage during rendering fell by 45%, and user session retention increased by 12% in regions with high latency. The GraphQL cache reduced redundant API calls by 60%, directly improving ad delivery accuracy.  \n\n**Lessons Learned**  \nPerformance optimization in adtech requires a holistic view—frontend, backend, and network layers are all interdependent. Prioritizing critical rendering paths and embracing server components was transformative, but it demanded rigorous testing. Automation tools like Playwright helped us validate performance regressions across browsers, while continuous monitoring of Lighthouse scores ensured we stayed ahead of new bottlenecks. In the end, the most rewarding outcome wasn’t just faster load times—it was building a system that feels responsive, even under pressure."
+  "text": "Cedric Blanc’s academic context at NexaCorp is defined by his role as a Senior QA Engineer in a SaaS environment where reliability and scalability are non-negotiable. His work sits at the intersection of technical rigor and business outcomes, requiring a nuanced understanding of how quality assurance shapes product success. While his contributions are often framed through the lens of system stability, his intellectual curiosity extends beyond operational metrics, often prompting deeper explorations of edge cases and long-term maintainability.  \n\nHis research ability manifests in the way he approaches test strategy design. For instance, he spearheaded a shift from reactive to proactive testing by building frameworks that integrate cross-functional feedback, reducing critical defect escapes by over 40% in a high-traffic module. His test automation work, anchored in Selenium/Playwright, has evolved into a shared resource, with his architecture decisions guiding teams to align automated suites with evolving business priorities. This adaptability is rare in its consistency.  \n\nCedric’s character is marked by quiet persistence. He thrives in ambiguity, often volunteering to tackle complex problems that others deem too risky. His mentorship of junior engineers—rooted in patience and a knack for simplifying abstract concepts—has cultivated a culture of shared ownership.  \n\nHis potential lies in his ability to balance technical depth with strategic foresight. While his current role is specialized, his intellectual appetite and collaborative spirit suggest he’s poised to influence broader architectural decisions without losing sight of the human-centric goals driving the SaaS product."
 }

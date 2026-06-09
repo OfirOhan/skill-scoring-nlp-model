@@ -1,40 +1,55 @@
 {
   "persona_id": "p_212",
   "hyperparams": {
-    "archetype": "security_engineer",
-    "years_experience": 6,
-    "seniority": "senior",
-    "industry": "cybersecurity",
-    "writing_style": "modest",
-    "language_fluency": "native",
-    "self_promotion_level": "humble",
-    "quantification_tendency": "qualitative"
+    "archetype": "backend_engineer",
+    "years_experience": 5,
+    "seniority": "mid",
+    "industry": "startup",
+    "writing_style": "concise",
+    "language_fluency": "near-native",
+    "self_promotion_level": "balanced",
+    "quantification_tendency": "metrics-heavy"
   },
-  "name": "Xiomara Vargas",
-  "current_role": "Senior Security Engineer",
-  "company": "SentinelGuard Cybersecurity Solutions",
+  "name": "Rohan Kulkarni 15",
+  "current_role": "Backend Engineer",
+  "company": "NexGen Solutions",
   "education": {
-    "degree": "B.S. in Cybersecurity",
-    "university": "University of California, Berkeley",
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "IIT Bombay",
     "year": 2018
   },
   "career_trajectory": [
-    "Security Analyst at CyberShield Inc. (2018–2020)",
-    "Senior Security Engineer at NetDefend LLC (2020–2022)",
-    "Lead Security Engineer at CloudSafe Technologies (2022–2024)"
+    {
+      "year": 2018,
+      "role": "Junior Backend Developer",
+      "company": "TechNova Pvt. Ltd."
+    },
+    {
+      "year": 2020,
+      "role": "Senior Backend Developer",
+      "company": "ScaleUp Innovations"
+    },
+    {
+      "year": 2022,
+      "role": "Tech Lead",
+      "company": "Startify Labs"
+    },
+    {
+      "year": 2023,
+      "role": "Backend Engineer",
+      "company": "NexGen Solutions"
+    }
   ],
   "skills": {
-    "Network security": 4,
-    "Application security (OWASP)": 4,
-    "Penetration testing": 4,
-    "IAM/Access control": 5,
-    "Encryption & PKI": 5,
-    "Security auditing": 3,
-    "SIEM tools": 4,
-    "Vulnerability management": 4,
-    "Compliance (SOC2/GDPR)": 3,
-    "Threat modeling": 3,
-    "Incident response": 4
+    "Python": 4,
+    "Go": 5,
+    "REST API design": 5,
+    "Microservices architecture": 4,
+    "Kubernetes": 4,
+    "CI/CD pipelines": 3,
+    "Docker": 3,
+    "Cloud cost optimization": 3,
+    "Linux administration": 1
   },
   "document_ids": [
     "d_p_212_00",

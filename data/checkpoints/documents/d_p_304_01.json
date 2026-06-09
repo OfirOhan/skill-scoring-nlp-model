@@ -3,19 +3,25 @@
   "type": "project_readme",
   "persona_id": "p_304",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "solo",
-    "jargon_density": "heavy"
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "Application security (OWASP)": 2,
-    "Cloud networking (VPC/subnets)": 3,
-    "Firewall configuration": 3,
-    "IAM/Access control": 3,
-    "Monitoring & alerting": 3,
-    "Network security": 3,
-    "Penetration testing": 2,
-    "SIEM tools": 3
+    "AWS": 2,
+    "Apache Airflow": 1,
+    "Docker": 3,
+    "ETL pipeline design": 1,
+    "Hugging Face Transformers": 3,
+    "LLMs/Prompt engineering": 3,
+    "MLOps (MLflow/W&B)": 3,
+    "Model deployment": 3,
+    "NLP": 3,
+    "PyTorch": 3,
+    "REST API design": 3,
+    "TensorFlow": 3,
+    "dbt": 1,
+    "scikit-learn": 3
   },
-  "text": "# AdGuard: Real-Time Anomaly Detection for AdTech Threats  \n\nAdGuard is a lightweight, real-time threat detection system tailored for adtech environments. It leverages machine learning and network analysis to identify irregular traffic patterns, misconfigured ad servers, and potential data exfiltration vectors. Built for scalability, it integrates with existing monitoring workflows to provide actionable insights without disrupting operational pipelines.  \n\n## Tech Stack  \n- **Backend**: Python (FastAPI for API layer)  \n- **Machine Learning**: TensorFlow Lite (optimized for edge deployment)  \n- **Data Streaming**: Apache Kafka (real-time event ingestion)  \n- **Search & Analytics**: Elasticsearch (log normalization and pattern matching)  \n- **Monitoring**: Prometheus + Grafana (custom dashboards for latency metrics)  \n- **Cloud Networking**: AWS VPC (segmented traffic isolation)  \n- **Security**: IAM roles (fine-grained access control for cloud resources)  \n\n## Architecture / Design  \nThe system operates as a layered pipeline:  \n1. **Ingestion Layer**: Kafka brokers receive raw traffic metadata from ad servers, filtered via VPC security groups.  \n2. **Detection Engine**: TensorFlow Lite models analyze request frequency, geolocation mismatches, and payload entropy. Graph databases (Neo4j) map interdependent ad units for contextual correlation.  \n3. **Alerting Layer**: Prometheus triggers alerts based on deviation thresholds, which are then routed to SIEM tools (e.g., Splunk) for centralized logging.  \n4. **Feedback Loop**: Detected anomalies are re-evaluated weekly using labeled datasets to refine model thresholds.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/your-username/adguard.git  \ncd adguard  \npip install -r requirements.txt  \ndocker-compose up -d  \n```  \nEnsure Kafka and Elasticsearch clusters are pre-provisioned with IAM policies restricting access to adtech-specific namespaces.  \n\n## Usage / Examples  \nRun a baseline detection scan:  \n```bash  \npython main.py --input /path/to/traffic_logs --output /results/detections.json  \n```  \nExpected output includes:  \n- `malicious_ip`: Flagged IPs with >3σ deviation in request volume  \n- `suspicious_pattern`: Regex-matched payloads exceeding entropy thresholds  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/license/xinzhaolab/adguard)](https://github.com/xinzhaolab/adguard/blob/main/LICENSE)  \n[![Build Status](https://img.shields.io/github/actions/workflow/ci.yml?branch=main)](https://github.com/xinzhaolab/adguard/actions)  \n[![Coverage](https://img.shields.io/coveralls/xinzhaolab/adguard)](https://coveralls.io/github/xinzhaolab/adguard)  \n\n## Contributing  \nPull requests are welcome. For major changes, open an issue to discuss the approach. Ensure code adheres to PEP8 and includes unit tests for model inference pipelines.  \n\n## License  \nMIT License – see [LICENSE](https://github.com/xinzhaolab/adguard/blob/main/LICENSE) for details."
+  "text": "# FraudDetector: Anomaly Detection for Fintech Fraud Prevention  \n\nFraudDetector is a production-ready machine learning project designed to identify fraudulent transactions in fintech environments using unsupervised anomaly detection. Built with a focus on scalability and real-world deployment, it leverages advanced techniques to flag suspicious patterns while maintaining minimal false positives.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies:  \n```bash  \ngit clone https://github.com/your-username/fraud-detector.git  \ncd fraud-detector  \npip install -r requirements.txt  \n```  \nEnsure AWS credentials are configured for cloud resource access. For local testing, use Docker to containerize services and maintain consistency across environments.  \n\n## Usage / Examples  \nRun the anomaly detection pipeline:  \n```bash  \npython src/main.py --input data/transactions.csv --output results/predictions.csv  \n```  \nFor real-time detection, use the REST API endpoint `/detect` with POST requests containing transaction metadata. The model outputs a fraud score and binary classification.  \n\n## Badges  \n[![GitHub](https://badges.actorcode.com/actorcode/badge.svg)](https://github.com/your-username/fraud-detector)  \n[![Version](https://img.shields.io/badge/version-1.2.0-blue)](https://github.com/your-username/fraud-detector/releases/tag/v1.2.0)  \n[![License](https://badges.actorcode.com/actorcode/badge.svg?license=mit)](LICENSE)  \n\n## Tech Stack  \n- **Languages**: Python, Bash  \n- **ML Libraries**: scikit-learn, PyTorch, Hugging Face Transformers  \n- **Deployment**: Docker, REST API (FastAPI)  \n- **MLOps**: MLflow, Weights & Biases  \n- **Cloud**: AWS S3 (for data storage)  \n\n## Architecture / Design  \nThe system follows a modular pipeline:  \n1. **Data Ingestion**: Raw transaction logs are preprocessed using Pandas and scikit-learn.  \n2. **Modeling**: An ensemble of Isolation Forest and Autoencoders (PyTorch) detects outliers. Hugging Face Transformers are used for NLP-based pattern recognition in textual metadata.  \n3. **Deployment**: Models are containerized with Docker and served via a REST API. MLflow tracks experiments, and W&B logs hyperparameters.  \n\n## Contributing  \nContributions are welcome! Fork the repo, create a feature branch, and submit a pull request. Focus on improving model accuracy, optimizing inference speed, or enhancing the API documentation.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details."
 }

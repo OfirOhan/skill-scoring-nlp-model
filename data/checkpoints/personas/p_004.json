@@ -1,42 +1,59 @@
 {
   "persona_id": "p_004",
   "hyperparams": {
-    "archetype": "mobile_developer",
-    "years_experience": 4,
-    "seniority": "mid",
-    "industry": "startup",
-    "writing_style": "concise",
-    "language_fluency": "near-native",
-    "self_promotion_level": "humble",
-    "quantification_tendency": "metrics-heavy"
+    "archetype": "backend_engineer",
+    "years_experience": 2,
+    "seniority": "junior",
+    "industry": "SaaS",
+    "writing_style": "neutral",
+    "language_fluency": "native",
+    "self_promotion_level": "boastful",
+    "quantification_tendency": "mixed"
   },
-  "name": "Kiran Thapa",
-  "current_role": "Mobile Developer",
-  "company": "NexaTech Solutions",
+  "name": "Hawa Diop",
+  "current_role": "Backend Engineer",
+  "company": "NebulaTech",
   "education": {
     "degree": "Bachelor of Science in Computer Science",
-    "university": "Bharati Vidyapeeth University",
-    "year": 2020
+    "university": "University of California, Berkeley",
+    "year": 2022
   },
   "career_trajectory": [
-    "Software Intern at TechNova Pvt Ltd (2019-2020)",
-    "Junior Mobile Developer at AppLabs Inc (2020-2022)",
-    "Mid-Level Mobile Developer at NexaTech Solutions (2022-present)"
+    {
+      "role": "Software Developer Intern",
+      "company": "StellarFlow",
+      "duration": "6 months",
+      "responsibilities": "Assisted in building REST APIs with Python and PostgreSQL, optimized database queries"
+    },
+    {
+      "role": "Backend Engineer Intern",
+      "company": "AetherWorks",
+      "duration": "6 months",
+      "responsibilities": "Designed microservices architecture, implemented AWS Lambda functions for serverless workflows"
+    },
+    {
+      "role": "Junior Backend Engineer",
+      "company": "NebulaTech",
+      "duration": "1 year",
+      "responsibilities": "Developed scalable backend systems using Go and Kafka, managed Redis caching layers"
+    }
   ],
   "skills": {
-    "Swift": 3,
-    "Kotlin": 3,
-    "React Native": 3,
-    "Flutter": 3,
-    "iOS development": 4,
-    "Mobile CI/CD": 3,
-    "TypeScript": 3,
-    "React": 3,
-    "Web accessibility (WCAG)": 3,
-    "REST API design": 3
+    "Python": 4,
+    "Go": 4,
+    "REST API design": 5,
+    "Microservices architecture": 4,
+    "PostgreSQL": 4,
+    "AWS": 4,
+    "CI/CD pipelines": 1,
+    "Docker": 3,
+    "Kubernetes": 3,
+    "Terraform": 3
   },
   "document_ids": [
     "d_p_004_00",
-    "d_p_004_01"
+    "d_p_004_01",
+    "d_p_004_02",
+    "d_p_004_03"
   ]
 }

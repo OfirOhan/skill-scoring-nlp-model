@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_165_02",
+  "type": "project_readme",
+  "persona_id": "p_165",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "3D graphics (OpenGL/Vulkan)": 4,
+    "C#/.NET": 3,
+    "Game networking": 4,
+    "Game physics": 4,
+    "GraphQL": 1,
+    "Microservices architecture": 2,
+    "Python": 3,
+    "REST API design": 2,
+    "Unity": 5,
+    "Unreal Engine": 5
+  },
+  "text": "# PhishGuard: Interactive Phishing Awareness Game  \nA modular, scenario-driven platform to train users in recognizing and responding to phishing threats through immersive, gamified simulations. Built for academic institutions and corporate training, with metrics tracking user progress and adaptive difficulty.  \n\n## Badges  \n- 🛡️ Cybersecurity Education  \n- 🎮 Interactive Learning  \n- 📊 Data-Driven Training  \n\n## Tech Stack  \n- **Unity 3D**: Core engine for immersive simulations, with custom shader pipelines for visual fidelity.  \n- **C#/.NET**: Scripting for game logic, backend integrations, and analytics.  \n- **Python**: Data processing for user behavior metrics and report generation.  \n- **PhysX**: Physics-based interaction for drag-and-drop simulations.  \n- **Networking**: Multiplayer leaderboard sync via REST APIs (minimal, for stats tracking).  \n- **Microservices**: Backend services for user authentication and data aggregation (1–2 endpoints).  \n\n## Configuration  \n- `config.json`: Set simulation modes (e.g., \"email\", \"voice\"), difficulty levels, and analytics endpoints.  \n- Environment variables: `API_KEY` for external data services, `DATABASE_URL` for user progress storage.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/your-username/phishguard.git`  \n2. Install Unity Hub and import the project (requires Unity 2021.3+).  \n3. Run `pip install -r requirements.txt` for Python dependencies.  \n4. Configure `config.json` and set environment variables.  \n\n## Usage / Examples  \n- **Simulation Mode**: Navigate phishing email scenarios, identify malicious links, and choose responses.  \n- **Quiz Mode**: Adaptive challenges with escalating complexity based on user performance.  \n- **Leaderboard**: Compete globally via REST API (requires backend setup).  \n- **Analytics Dashboard**: Python scripts generate reports on user engagement and success rates.  \n\n## Testing  \n- **Unit Tests**: Validate game mechanics via Unity Test Runner (e.g., input response accuracy).  \n- **Integration Tests**: Simulate edge cases (e.g., delayed feedback, corrupted data).  \n- **CI/CD**: GitHub Actions automates builds and runs tests on pull requests.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n---  \n*Built with Unity, C#, and Python. Designed for cybersecurity training with measurable outcomes.*"
+}

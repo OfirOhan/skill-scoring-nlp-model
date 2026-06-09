@@ -1,50 +1,63 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Helen Park's experience as a Senior Embedded Systems Engineer in enterprise settings.",
-    "title": "Helen Park - Senior Embedded Systems Engineer",
+    "topic_summary": "Professional CV highlighting 10 years of experience as a Staff Tech Lead/Architect in healthtech, focusing on scalable systems and secure healthcare solutions.",
+    "title": "Lucia Fernandez - Staff Tech Lead / Architect",
     "doc_id": "d_p_187_00",
     "persona_id": "p_187",
     "hyperparams": {
-      "cv_format": "paragraph",
-      "geographic_convention": "US",
-      "company_type": "FAANG",
-      "company_size": "small (<50)"
+      "cv_format": "bullet-heavy",
+      "geographic_convention": "Israel",
+      "company_type": "academic",
+      "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A GitHub project README for an industrial IoT edge computing platform with real-time data processing.",
-    "title": "Industrial IoT Edge Computing Platform",
+    "topic_summary": "A secure, HIPAA-compliant platform for interoperable patient data sharing across healthcare providers.",
+    "title": "MediCloud DataBridge",
     "doc_id": "d_p_187_01",
     "persona_id": "p_187",
     "hyperparams": {
-      "project_scale": "team-internal",
-      "project_team_size": "solo",
+      "project_scale": "production",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "Cloud-native telemedicine app integrating AI diagnostics for real-time patient triage and remote care.",
+    "title": "TeleCare AI",
+    "doc_id": "d_p_187_02",
+    "persona_id": "p_187",
+    "hyperparams": {
+      "project_scale": "production",
+      "project_team_size": "medium (5-15)",
       "jargon_density": "plain"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from Helen's manager praising her leadership in embedded systems projects.",
-    "title": "Recommendation for Helen Park",
-    "doc_id": "d_p_187_02",
-    "persona_id": "p_187",
-    "hyperparams": {
-      "recommender_role": "direct-manager",
-      "recommender_closeness": "occasional",
-      "company_type": "enterprise",
-      "company_size": "large (500+)"
-    }
-  },
-  {
-    "doc_type": "linkedin",
-    "topic_summary": "A LinkedIn summary showcasing Helen's expertise in embedded systems and enterprise solutions.",
-    "title": "Helen Park - Senior Embedded Systems Engineer",
+    "topic_summary": "Endorsement from a Senior Director of Engineering for Lucia's leadership in building high-availability healthtech infrastructure.",
+    "title": "Recommendation from Jane Doe, Senior Director of Engineering",
     "doc_id": "d_p_187_03",
     "persona_id": "p_187",
     "hyperparams": {
-      "linkedin_completeness": "minimal"
+      "recommender_role": "direct-manager",
+      "recommender_closeness": "brief",
+      "company_type": "enterprise",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "Exploring zero-trust architecture implementation for protecting sensitive patient data in cloud environments.",
+    "title": "Zero-Trust Security in Modern Healthtech Systems",
+    "doc_id": "d_p_187_04",
+    "persona_id": "p_187",
+    "hyperparams": {
+      "blog_depth": "opinion-piece",
+      "jargon_density": "moderate"
     }
   }
 ]

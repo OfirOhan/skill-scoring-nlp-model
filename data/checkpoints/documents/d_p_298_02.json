@@ -3,24 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_298",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "large (15+)",
-    "jargon_density": "plain"
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Python": 1,
-    "Go": 1,
-    "Microservices architecture": 1,
+    "A/B testing": 1,
+    "MLOps (MLflow/W&B)": 1,
+    "NLP": 1,
+    "NumPy": 4,
+    "Pandas": 4,
+    "Python": 3,
     "REST API design": 1,
-    "PostgreSQL": 1,
-    "Database optimization": 1,
-    "Redis": 1,
-    "CI/CD pipelines": 1,
-    "Terraform": 1,
-    "Load balancing": 1,
-    "Cloud cost optimization": 1,
-    "Prometheus/Grafana": 1,
-    "Linux administration": 1
+    "SQL analytics": 3,
+    "Tableau/Power BI": 1,
+    "Time series analysis": 4,
+    "scikit-learn": 1
   },
-  "text": "# FraudGuard Analytics  \nFraudGuard Analytics is a real-time fraud detection system engineered for high-throughput transaction analysis in fintech environments. Built to handle 10M+ transactions per second with sub-50ms latency, the system detects 99.98% of fraudulent activity while maintaining a 0.02% false positive rate. Designed for production-scale reliability, it scales seamlessly across 15+ engineering teams with zero-downtime deployments.  \n\n## Testing  \nAutomated testing is foundational. All core components undergo unit, integration, and load testing with 99.95% test coverage. Stress tests simulate 10x peak traffic, ensuring 99.99% uptime under failure scenarios. Performance benchmarks validate sub-50ms latency for 99.9% of requests, with 99.97% success rate in distributed coordination tasks.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies via `npm install`. Configure environment variables for data ingestion endpoints and model registry access. Run `npm start` to initialize the service. For local testing, use `npm run dev` to enable mock data pipelines and reduced latency thresholds.  \n\n## Usage / Examples  \nProcess a transaction by sending a JSON payload to the ingestion endpoint. The system routes data through real-time anomaly detection, triggering alerts for high-risk patterns. Example:  \n```json\n{\n  \"transaction_id\": \"TX123456\",\n  \"amount\": 1500,\n  \"user_id\": \"USER789\",\n  \"device_hash\": \"DH123\"\n}\n```  \nThe system evaluates 12+ risk factors, including geolocation drift and velocity anomalies, and returns a risk score with actionable alerts.  \n\n## Tech Stack  \nBuilt on a hybrid of high-throughput message queues, distributed computing frameworks, and real-time analytics engines. The system leverages custom-built model inference pipelines and dynamic workload balancing to ensure scalability.  \n\n## Architecture / Design  \nThe architecture prioritizes fault tolerance and low-latency processing. Data flows through a distributed ingestion layer, parallelized model inference engines, and a publish-subscribe alert routing system. All components are stateless, with persistent state stored in a distributed key-value store. The design supports horizontal scaling and auto-healing mechanisms for 99.99% SLA compliance.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Contributing  \nCollaborate via pull requests. Focus on improving model accuracy, optimizing inference pipelines, or enhancing alert prioritization. All contributions undergo peer review and automated testing before integration."
+  "text": "# CloudGuard: Real-Time Anomaly Detection for Cloud Infrastructure Security  \nA scalable system leveraging time-series analytics and distributed processing to identify subtle deviations in cloud environments. Built with a focus on low-latency detection and adaptability to evolving threat patterns.  \n\n---\n\n## Badges  \n[![Python](https://img.shields.io/badge/python-3.9-blue)](https://python.org)  \n[![Docker](https://img.shields.io/badge/docker-2.0-blue)](https://docker.com)  \n[![Kafka](https://img.shields.io/badge/kafka-3.3-blue)](https://kafka.apache.org)  \n[![Cloud](https://img.shields.io/badge/cloud-aws%2Fgcp-blue)](https://aws.amazon.com)  \n\n---\n\n## Tech Stack  \n- **Core**: Python 3.9, NumPy (vectorized operations for real-time metrics), Pandas (time-series alignment)  \n- **Data Ingestion**: Apache Kafka for high-throughput log streams  \n- **Cloud**: AWS/GCP integration for distributed processing and storage  \n- **Containerization**: Docker for consistent deployment across environments  \n- **Analytics**: Custom time-series decomposition models for baseline drift detection  \n\n---\n\n## Architecture / Design  \nCloudGuard operates as a pipeline of decoupled microservices:  \n1. **Ingestion Layer**: Kafka consumers parse and normalize log streams into structured time-series data.  \n2. **Processing Layer**: Pandas-based windowing and rolling statistics identify deviations from historical baselines. NumPy accelerates aggregation for sub-second latency.  \n3. **Detection Layer**: Threshold-based alerts trigger on statistically significant anomalies, with dynamic window sizing for varying workloads.  \n4. **Export Layer**: Anomalies are logged to cloud storage, with optional alerting via cloud-native notification services.  \n\n---\n\n## Getting Started / Installation  \n```bash\ngit clone https://github.com/priyasharma101/CloudGuard.git  \ncd CloudGuard  \ndocker-compose up -d  \n```  \nEnsure Kafka and cloud provider credentials are configured in `config/env.yaml`.  \n\n---\n\n## Usage / Examples  \n```bash\n# Monitor AWS CloudTrail logs  \npython3 main.py --input /path/to/logs --cloud aws  \n\n# View anomaly metrics in real-time  \npython3 analytics.py --output-format json  \n```  \nInputs are parsed as CSV/JSON streams; outputs include timestamps, severity scores, and contextual metadata.  \n\n---\n\n## Contributing  \nPull requests are welcome! Focus on enhancing the time-series decomposition logic or expanding cloud provider support.  \n\n---\n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

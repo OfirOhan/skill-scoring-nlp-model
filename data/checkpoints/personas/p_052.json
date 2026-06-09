@@ -1,65 +1,57 @@
 {
   "persona_id": "p_052",
   "hyperparams": {
-    "archetype": "fullstack_developer",
-    "years_experience": 14,
-    "seniority": "staff",
-    "industry": "consulting",
-    "writing_style": "confident",
-    "language_fluency": "near-native",
-    "self_promotion_level": "balanced",
-    "quantification_tendency": "mixed"
+    "archetype": "data_engineer",
+    "years_experience": 5,
+    "seniority": "mid",
+    "industry": "gaming",
+    "writing_style": "verbose",
+    "language_fluency": "native",
+    "self_promotion_level": "humble",
+    "quantification_tendency": "qualitative"
   },
-  "name": "Olivia Chen",
-  "current_role": "Staff Full-Stack Developer",
-  "company": "NexGen Solutions",
+  "name": "Ava Richardson",
+  "current_role": "Senior Data Engineer",
+  "company": "NextGen Interactive",
   "education": {
-    "degree": "Computer Science",
-    "university": "Massachusetts Institute of Technology",
-    "year": 2010
+    "degree": "Master of Science in Data Science",
+    "university": "University of California, Berkeley",
+    "year": 2021
   },
   "career_trajectory": [
     {
-      "role": "Junior Developer",
-      "company": "CodeCraft Startups",
-      "year": 2008
+      "role": "Data Analyst",
+      "company": "PixelForge Studios",
+      "duration": "2018-2019",
+      "responsibilities": "Designed player behavior analytics dashboards using Python and PostgreSQL."
     },
     {
-      "role": "Senior Developer",
-      "company": "Apex Systems Inc.",
-      "year": 2012
+      "role": "Data Engineer",
+      "company": "GameCraft Solutions",
+      "duration": "2019-2021",
+      "responsibilities": "Built ETL pipelines for live game telemetry data using Apache Spark and Snowflake."
     },
     {
-      "role": "Tech Lead",
-      "company": "CloudMatters Consulting",
-      "year": 2016
-    },
-    {
-      "role": "Staff Full-Stack Developer",
-      "company": "NexGen Solutions",
-      "year": 2022
+      "role": "Lead Data Engineer",
+      "company": "NextGen Interactive",
+      "duration": "2021-present",
+      "responsibilities": "Architected cloud-native data platforms for cross-platform gaming analytics."
     }
   ],
   "skills": {
-    "Python": 5,
-    "Java": 4,
-    "Node.js": 4,
-    "React": 5,
-    "TypeScript": 5,
-    "REST API design": 5,
-    "PostgreSQL": 5,
-    "AWS": 5,
-    "Kubernetes": 5,
-    "Docker": 4,
-    "CI/CD pipelines": 4,
-    "Serverless": 4
+    "Apache Spark": 4,
+    "Apache Kafka": 4,
+    "Apache Airflow": 4,
+    "Snowflake": 5,
+    "Data Warehousing": 1,
+    "ETL pipeline design": 4,
+    "Python": 3,
+    "REST API design": 2,
+    "Docker": 3,
+    "Terraform": 3
   },
   "document_ids": [
     "d_p_052_00",
-    "d_p_052_01",
-    "d_p_052_02",
-    "d_p_052_03",
-    "d_p_052_04",
-    "d_p_052_05"
+    "d_p_052_01"
   ]
 }

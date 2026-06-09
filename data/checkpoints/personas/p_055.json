@@ -1,46 +1,57 @@
 {
   "persona_id": "p_055",
   "hyperparams": {
-    "archetype": "data_scientist",
-    "years_experience": 1,
-    "seniority": "junior",
-    "industry": "SaaS",
+    "archetype": "qa_test_engineer",
+    "years_experience": 5,
+    "seniority": "mid",
+    "industry": "cybersecurity",
     "writing_style": "modest",
     "language_fluency": "native",
-    "self_promotion_level": "humble",
-    "quantification_tendency": "metrics-heavy"
+    "self_promotion_level": "boastful",
+    "quantification_tendency": "qualitative"
   },
-  "name": "Carmen Delgado",
-  "current_role": "Data Scientist",
-  "company": "NexaFlow Solutions",
+  "name": "Hannah Fischer",
+  "current_role": "QA Engineer (Cybersecurity Focus)",
+  "company": "SecureNet Cybersecurity Solutions",
   "education": {
-    "degree": "Master of Science in Data Science",
-    "university": "University of California, Berkeley",
-    "year": 2023
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "University of Cybersecurity Studies",
+    "year": 2018
   },
   "career_trajectory": [
-    "Intern, Data Analytics, NexaFlow Solutions (2022)",
-    "Data Analyst, TechNova Inc. (2023)",
-    "Data Scientist, NexaFlow Solutions (2024)"
+    {
+      "role": "QA Engineer",
+      "company": "CyberShield Inc.",
+      "duration": "2 years",
+      "responsibilities": "Manual testing of network security tools, documentation of vulnerabilities"
+    },
+    {
+      "role": "Test Automation Engineer",
+      "company": "SecureData Labs",
+      "duration": "1.5 years",
+      "responsibilities": "Automated regression testing for firewall configurations, integration with CI/CD"
+    },
+    {
+      "role": "Test Lead",
+      "company": "SecureNet Cybersecurity Solutions",
+      "duration": "1.5 years",
+      "responsibilities": "Led security testing frameworks, collaborated with penetration testers"
+    }
   ],
   "skills": {
-    "Pandas": 3,
-    "NumPy": 3,
-    "SQL analytics": 3,
-    "Data visualization (Matplotlib/Plotly)": 3,
-    "Jupyter notebooks": 3,
-    "Feature engineering": 2,
+    "Test automation": 4,
+    "Security testing": 5,
+    "API testing": 4,
+    "Performance testing (JMeter/k6)": 3,
+    "Test strategy design": 4,
     "Python": 3,
-    "REST API design": 2,
-    "Apache Airflow": 2,
-    "Data modeling": 2,
-    "ETL pipeline design": 2
+    "Go": 2,
+    "REST API design": 1,
+    "CI/CD pipelines": 2
   },
   "document_ids": [
     "d_p_055_00",
     "d_p_055_01",
-    "d_p_055_02",
-    "d_p_055_03",
-    "d_p_055_04"
+    "d_p_055_02"
   ]
 }

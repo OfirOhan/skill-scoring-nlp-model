@@ -1,31 +1,23 @@
 {
   "doc_id": "d_p_046_01",
-  "type": "linkedin",
+  "type": "project_readme",
   "persona_id": "p_046",
   "hyperparams": {
-    "linkedin_completeness": "standard"
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 5,
-    "ArgoCD": 4,
-    "CI/CD pipelines": 5,
-    "Chaos engineering": 4,
-    "Cloud cost optimization": 4,
-    "Cloud networking (VPC/subnets)": 4,
-    "Configuration management (Ansible)": 4,
-    "Docker": 4,
-    "GCP": 5,
-    "GitHub Actions": 4,
-    "GitLab CI": 5,
-    "Jenkins": 3,
-    "Kubernetes": 5,
-    "Linux administration": 5,
-    "Log management (ELK)": 3,
-    "Monitoring & alerting": 5,
-    "Prometheus/Grafana": 5,
-    "SLA/SLO management": 4,
-    "Shell scripting (Bash)": 4,
-    "Terraform": 5
+    "3D graphics (OpenGL/Vulkan)": 4,
+    "C#/.NET": 3,
+    "Game networking": 4,
+    "Game physics": 4,
+    "Go": 1,
+    "Java": 1,
+    "Python": 1,
+    "REST API design": 1,
+    "Unity": 5,
+    "Unreal Engine": 1
   },
-  "text": "Career Journey  \nSeven years ago, I stepped into the world of enterprise DevOps as a Site Reliability Engineer, driven by a fascination with turning chaos into order. Early days were spent mastering Linux administration and building CI/CD pipelines that scaled with our growing cloud footprint. Over time, I evolved from a hands-on operator to an architect shaping systems that power global enterprise workflows. My career trajectory has been defined by solving complex problems at scale—whether optimizing cloud costs, designing resilient Kubernetes clusters, or mentoring teams to adopt best practices. Today, I lead DevOps initiatives at NordicTech Solutions AB, where my work bridges infrastructure, automation, and business outcomes.  \n\nCurrent Focus  \nRight now, I’m obsessed with crafting cloud-native architectures that balance innovation with operational excellence. My recent projects revolve around refining ArgoCD pipelines to streamline application deployments, implementing chaos engineering to preempt system failures, and leveraging GCP and AWS to build cost-efficient, high-availability networks. I’m also deeply invested in SLA/SLO management, ensuring our services meet—and exceed—client expectations. This phase of my career is about scaling reliability, refining automation, and fostering a culture where engineering excellence is non-negotiable.  \n\nSkills Highlight  \nMy expertise spans CI/CD pipelines, cloud networking, and Kubernetes orchestration, with measurable impacts on system uptime and cost savings. I’ve architected Terraform-driven infrastructure that reduced provisioning time by 40%, designed ELK stacks that cut log analysis latency by 60%, and spearheaded chaos engineering exercises that eliminated 95% of critical P0 incidents. Whether it’s debugging complex Prometheus alerts, optimizing Docker container performance, or mentoring teams on GitLab CI/CD, I thrive at the intersection of code, infrastructure, and strategy.  \n\nCall to Action  \nIf you’re navigating the complexities of cloud infrastructure, automation, or operational reliability, let’s connect. I’m always eager to collaborate, share insights, or discuss how we can build systems that are both resilient and efficient. Let’s drive innovation—no excuses."
+  "text": "# EclipseQuest: Unity MMORPG Systems Architecture  \nA scalable, production-ready framework for building high-fidelity multiplayer RPGs with focus on synchronization, physics, and rendering optimization. Built for small teams with 2-4 developers, this architecture balances modularity and performance, achieving 40% faster entity loading and 30% reduced latency in stress tests.  \n\n## Roadmap / Future Work  \n- **Q1 2024**: Expand world generation to 100+ zones with dynamic terrain LOD (currently 20 zones)  \n- **Q2 2024**: Implement real-time sync for 50+ concurrent players (currently 15)  \n- **Q3 2024**: Integrate physics-based loot drop mechanics (prototype complete)  \n- **Long-term**: Add cross-platform multiplayer via NAT traversal and cloud-based authority  \n\n## Getting Started / Installation  \n1. Download the Unity package from [releases page](https://github.com/EclipseQuest/EclipseQuest/releases)  \n2. Open `EclipseQuest.unitypackage` in Unity 2021.3+  \n3. Import the `Systems/` folder into your project  \n4. Configure `NetworkConfig.cs` with your server endpoints and player limits  \n\n## Usage / Examples  \n```csharp  \n// Initialize core systems  \nvar worldManager = new WorldManager();  \nworldManager.LoadZoneAsync(\"DuneWastes\", (zone) => {  \n    zone.SpawnEntity(\"Player\", Vector3.zero, Quaternion.identity);  \n});  \n\n// Network sync hook  \nNetworkSync.OnPlayerMove += (playerId, pos) => {  \n    Debug.Log($\"Player {playerId} moved to {pos}\");  \n};  \n```  \nThis snippet demonstrates entity spawning and network event integration. The full example includes ECS-based entity management and spatial hashing for collision detection.  \n\n## Tech Stack  \n- **Core**: Unity 2021.3+, C# Jobs, ECS (Entity Component System)  \n- **Graphics**: Unity HDRP with deferred shading, 32-layer occlusion culling  \n- **Networking**: Custom UDP-based sync with 50ms P2P latency (benchmarked)  \n- **Physics**: Unity PhysX with custom collision filtering for 20+ object types  \n\n## Architecture / Design  \nThe architecture splits into four layers:  \n1. **Core Systems**: ECS-based entity management with 100K+ entities per scene  \n2. **Networking**: Dual-layer sync (server-authoritative + client prediction)  \n3. **Physics**: Spatial partitioning with 0.5ms collision detection latency  \n4. **Graphics**: Deferred rendering with 16-bit normal mapping for 500+ unique materials  \n\nAll systems are decoupled via event-driven pipelines, enabling hot-swappable components. The design prioritizes deterministic simulation, achieving 99.8% state consistency across 100+ clients in load testing.  \n\n## License  \nMIT License — see [LICENSE](https://github.com/EclipseQuest/EclipseQuest/blob/main/LICENSE) for details."
 }

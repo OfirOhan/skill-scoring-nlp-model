@@ -1,62 +1,56 @@
 {
   "persona_id": "p_134",
   "hyperparams": {
-    "archetype": "qa_test_engineer",
-    "years_experience": 0,
-    "seniority": "junior",
-    "industry": "SaaS",
-    "writing_style": "modest",
-    "language_fluency": "native",
-    "self_promotion_level": "boastful",
-    "quantification_tendency": "qualitative"
+    "archetype": "ml_engineer",
+    "years_experience": 11,
+    "seniority": "staff",
+    "industry": "e-commerce",
+    "writing_style": "concise",
+    "language_fluency": "ESL",
+    "self_promotion_level": "humble",
+    "quantification_tendency": "metrics-heavy"
   },
-  "name": "Adam Kowalczyk",
-  "current_role": "QA Engineer",
-  "company": "NexaCloud Solutions",
+  "name": "William Oduor",
+  "current_role": "Staff ML Engineer",
+  "company": "Ecomify Solutions",
   "education": {
-    "degree": "Bachelor of Science in Computer Science",
-    "university": "TechNova University",
-    "year": 2024
+    "degree": "Master of Science in Machine Learning",
+    "university": "University of London",
+    "year": 2013
   },
   "career_trajectory": [
     {
-      "title": "QA Intern",
-      "company": "NexaCloud Solutions",
-      "duration": "0-6 months",
-      "responsibilities": [
-        "Assisted in test case creation",
-        "Performed manual testing",
-        "Learned automation tools"
-      ]
+      "year": 2013,
+      "role": "Junior ML Engineer",
+      "company": "Shopify Startup"
     },
     {
-      "title": "Junior QA Engineer",
-      "company": "NexaCloud Solutions",
-      "duration": "6-12 months",
-      "responsibilities": [
-        "Designed test strategies",
-        "Implemented API testing",
-        "Collaborated with dev teams"
-      ]
+      "year": 2016,
+      "role": "Senior ML Engineer",
+      "company": "RetailNext"
+    },
+    {
+      "year": 2019,
+      "role": "Lead ML Engineer",
+      "company": "Voyage Commerce"
     }
   ],
   "skills": {
-    "Test automation": 3,
-    "Selenium/Playwright": 3,
-    "Unit testing": 3,
-    "Integration testing": 3,
-    "Performance testing (JMeter/k6)": 3,
-    "API testing": 3,
-    "Test strategy design": 2,
-    "Python": 3,
-    "Java": 2,
-    "Node.js": 2,
-    "REST API design": 3,
-    "GitLab CI": 3
+    "PyTorch": 4,
+    "TensorFlow": 4,
+    "NLP": 5,
+    "Recommendation systems": 4,
+    "MLOps (MLflow/W&B)": 5,
+    "Hugging Face Transformers": 3,
+    "XGBoost/LightGBM": 3,
+    "Feature stores": 3
   },
   "document_ids": [
     "d_p_134_00",
     "d_p_134_01",
-    "d_p_134_02"
+    "d_p_134_02",
+    "d_p_134_03",
+    "d_p_134_04",
+    "d_p_134_05"
   ]
 }

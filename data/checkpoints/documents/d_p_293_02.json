@@ -3,24 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_293",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "solo",
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
     "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 1,
-    "Docker": 1,
-    "Kubernetes": 1,
-    "Terraform": 1,
-    "Infrastructure as Code": 1,
-    "Cloud cost optimization": 1,
+    "API testing": 2,
+    "BDD/TDD": 1,
     "CI/CD pipelines": 1,
-    "Monitoring & alerting": 1,
+    "Go": 1,
+    "Java": 1,
+    "Performance testing (JMeter/k6)": 4,
     "Python": 1,
     "REST API design": 1,
-    "Microservices architecture": 1,
-    "PostgreSQL": 1,
-    "Chaos engineering": 1
+    "Security testing": 1,
+    "Selenium/Playwright": 1,
+    "Test automation": 3,
+    "Test strategy design": 1
   },
-  "text": "# Real-Time Inventory Sync System  \n\nA robust solution for synchronizing inventory across distributed systems, leveraging Apache Kafka for event streaming and cloud-native storage for persistent data. Designed to ensure zero latency updates, this system resolves common bottlenecks in e-commerce platforms by eliminating manual reconciliation and enabling real-time visibility across all touchpoints.  \n\n## Badges  \n[![Real-Time Sync](https://img.shields.io/badge/Real-Time%20Sync-00FF00?style=flat)](https://example.com)  \n[![Kafka-Driven](https://img.shields.io/badge/Kafka-Driven-00FF00?style=flat)](https://example.com)  \n\n## Getting Started / Installation  \nTo operationalize the system, first deploy a Kafka cluster and configure a cloud storage backend (e.g., S3-compatible object storage). Install the core components via npm:  \n```bash  \nnpm install  \n```  \nInitialize the Kafka producers and consumers with environment variables pointing to your storage endpoint. Ensure all nodes are synchronized with a shared time source to avoid drift in event timestamps.  \n\n## Tech Stack  \n- Apache Kafka (for real-time event streaming)  \n- Cloud storage (e.g., S3, Google Cloud Storage)  \n- JSON-based messaging protocol  \n- Lightweight, stateless microservices for scalability  \n\n## Architecture / Design  \nThe system operates as a distributed event-driven pipeline. Producers publish inventory changes to Kafka topics, which are consumed by sync workers. These workers apply updates to the cloud storage backend, ensuring atomic writes and version control. A publish-subscribe model allows multiple downstream systems (e.g., POS, marketplaces) to subscribe to inventory events without coupling. The architecture prioritizes fault tolerance by replicating Kafka partitions and using idempotent writes to prevent duplicate updates.  \n\n## Usage / Examples  \nTo publish an inventory update:  \n```bash  \nnode producer.js --item-id 123 --quantity 50 --action update  \n```  \nConsumers automatically apply the change to the storage backend. For querying, use the built-in API to fetch current stock levels, ensuring all reads reflect the latest state. This setup prevents overselling by enforcing real-time validation across all access points.  \n\n## Testing  \nValidate the system through stress testing with synthetic load, ensuring sub-100ms latency for 99.9% of events. Perform data integrity checks by comparing Kafka offsets with storage backend records. Simulate network partitions to verify fallback mechanisms and confirm that all updates are eventually reconciled.  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
+  "text": "# Performance Testing Tool for E-Commerce Platforms  \n\nThis tool helps simulate high-traffic scenarios to ensure e-commerce platforms remain stable and responsive during peak loads. By mimicking real user behavior, it identifies bottlenecks and validates system reliability under stress.  \n\n## Configuration  \nThe tool uses a YAML config file (`config.yaml`) to define parameters like target concurrent users, request types, and endpoint URLs. Key parameters include:  \n- `concurrent_users`: Number of simultaneous users (e.g., 5000).  \n- `request_types`: List of endpoints to stress-test (e.g., `/api/v1/products`, `/api/v1/cart`).  \n- `duration_minutes`: How long to sustain the load (e.g., 30).  \n- `output_format`: Choose between `json` or `csv` for results.  \n\nPlace the config file in the root directory before running tests.  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/your-username/performance-tool.git  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   npm install  \n   ```  \n3. Create a `config.yaml` file with your test parameters.  \n\n## Usage / Examples  \nRun the tool with:  \n```bash  \nnpx start --config config.yaml  \n```  \n**Example 1**: Test checkout flow under 10,000 users:  \n```bash  \nnpx start --config checkout-test.yaml  \n```  \n**Example 2**: Monitor product search performance:  \n```bash  \nnpx start --config search-test.yaml  \n```  \nThe tool integrates with existing QA workflows, providing real-time metrics for latency and error rates.  \n\n## Tech Stack  \n- Command-line tools for load generation  \n- YAML for configuration management  \n- Lightweight scripting for dynamic test scenarios  \n\n## Architecture / Design  \nThe tool is modular, with separate components for traffic generation, metrics collection, and report generation. This design allows for easy scaling and customization. Traffic scripts are reusable across environments, reducing setup time.  \n\n## License  \nMIT License  \n\n## Badges  \n[![GitHub stars](https://img.shields.io/github/stars/your-username/performance-tool?style=social)](https://github.com/your-username/performance-tool)  \n[![Code coverage](https://img.shields.io/coveralls/your-username/performance-tool/master?style=plastic)](https://coveralls.io/github/your-username/performance-tool)"
 }

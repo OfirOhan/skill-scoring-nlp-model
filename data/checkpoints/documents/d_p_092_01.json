@@ -1,23 +1,24 @@
 {
   "doc_id": "d_p_092_01",
-  "type": "project_readme",
+  "type": "blog",
   "persona_id": "p_092",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "large (15+)",
-    "jargon_density": "moderate"
+    "blog_depth": "opinion-piece",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Feature engineering": 4,
-    "MLOps (MLflow)": 5,
-    "NumPy": 4,
-    "Pandas": 4,
-    "Python": 5,
-    "SQL analytics": 4,
-    "Statistical modeling": 4,
-    "Tableau/Power BI": 4,
-    "Time series analysis": 3,
-    "scikit-learn": 3
+    "Application security (OWASP)": 5,
+    "Cloud networking (VPC/subnets)": 2,
+    "DNS/DHCP": 1,
+    "Encryption & PKI": 4,
+    "Firewall configuration": 2,
+    "IAM/Access control": 5,
+    "Network automation": 2,
+    "Network security": 4,
+    "Penetration testing": 4,
+    "SIEM tools": 4,
+    "Security auditing": 5,
+    "TCP/IP": 2
   },
-  "text": "# Medical Image Analysis for Chronic Disease Detection  \nA collaborative deep learning project leveraging multimodal imaging data to identify early-stage chronic conditions through automated pattern recognition and statistical modeling.  \n\n## Acknowledgments  \nThis work is a joint effort with the HealthTech Innovation Lab and collaborating clinicians at Tokyo Metropolitan Hospital. Special thanks to Dr. Aiko Tanaka for guiding the clinical validation framework and to the NVIDIA Deep Learning Institute for GPU-accelerated training infrastructure.  \n\n## Getting Started / Installation  \nClone the repository using Git:  \n```bash  \ngit clone https://github.com/your-username/medical-image-analysis.git  \n```  \nInstall dependencies via pip:  \n```bash  \npip install -r requirements.txt  \n```  \nEnsure CUDA 11.8 and PyTorch 2.0 are installed for optimal performance.  \n\n## Usage / Examples  \nRun inference on preprocessed DICOM datasets:  \n```bash  \npython inference.py --model_path models/chronic_disease_v2.pth --input_dir data/test_images  \n```  \nFor training, use:  \n```bash  \npython train.py --config configs/retinal_scan.yaml  \n```  \nThe pipeline integrates time-series analysis of sequential scans to capture disease progression.  \n\n## Tech Stack  \n- **Python**: Core language for all modules, with custom type hinting for model interoperability  \n- **PyTorch**: Built scalable deep learning architectures with mixed-precision training  \n- **MLflow**: Centralized experiment tracking with production model registry integration  \n- **Docker**: Containerized deployment for consistent environment replication  \n- **SQL**: PostgreSQL for storing metadata and longitudinal patient records  \n- **Tableau**: Interactive dashboards for visualizing model performance metrics  \n- **NumPy/Pandas**: Efficient array operations for feature extraction and data preprocessing  \n- **scikit-learn**: Baseline classifiers for benchmarking deep learning results  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for full details  \n\n## Badges  \n[![CI/CD Status](https://github.com/your-username/medical-image-analysis/actions/workflows/ci.yml/badge.svg)](https://github.com/your-username/medical-image-analysis/actions/workflows/ci.yml)  \n[![Code Coverage](https://img.shields.io/coveralls/your-username/medical-image-analysis)](https://coveralls.io/github/your-username/medical-image-analysis)  \n\n## Contributing  \nWe welcome contributions to data curation, model optimization, and clinical workflow integration. For guidance on implementing feature engineering pipelines or improving statistical modeling accuracy, reach out to the maintainers via GitHub Issues."
+  "text": "**Zero Trust by Design: Securing Cloud-Native Systems in Consulting**  \n\n**Overview**  \nA client’s monolithic app, hastily migrated to Kubernetes, became a liability. Legacy IAM policies and unencrypted data flows exposed critical assets. This case study explores how zero-trust principles transformed their security posture, balancing rigor with operational agility.  \n\n**Context**  \nThe project involved modernizing a financial services app for a global client. The existing architecture relied on perimeter-based security, with APIs exposed via public endpoints and shared secrets for service-to-service communication. Cloud-native adoption introduced microservices, ephemeral workloads, and third-party integrations, compounding risks. Traditional firewalls and VLANs were obsolete in a dynamic, multi-cloud environment.  \n\n**Challenge**  \nThe primary hurdle was enforcing least-privilege access across a fragmented ecosystem. APIs lacked mutual TLS, data at rest was unencrypted, and audit trails were sparse. Penetration tests revealed lateral movement risks via misconfigured service accounts. Compliance mandates demanded stricter access controls, but siloed security teams hindered collaboration.  \n\n**Solution**  \nWe deployed a zero-trust framework centered on encryption, identity, and continuous validation. All data in transit used AES-256 with PKI-validated TLS 1.3. IAM policies were granular, leveraging AWS IAM roles and Kubernetes RBAC to bind permissions to specific workloads. SIEM tools aggregated logs from CloudTrail, Vault, and application proxies to detect anomalous behavior. Penetration testing identified vulnerabilities, driving fixes like mandatory MFA for admin access and rotating credentials via HashiCorp Vault.  \n\n**Results**  \nBreach detection time dropped by 40%, and incident response latency improved by 30%. Encryption reduced data exposure risks, while strict IAM controls cut unauthorized access attempts by 75%. Audits became seamless, with SIEM dashboards providing real-time visibility. The client achieved SOC 2 compliance without compromising developer velocity.  \n\n**Lessons Learned**  \nZero trust isn’t a checkbox—it’s a mindset. Encryption must be pervasive, not an afterthought. IAM is the linchpin; treat it as a strategic asset, not a compliance task. Penetration testing should be iterative, not a one-off exercise. Finally, align security with development workflows: tools like Vault and CI/CD pipelines can enforce hygiene without slowing sprints. Trust is a privilege, not a default."
 }

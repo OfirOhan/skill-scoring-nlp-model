@@ -3,27 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_024",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "large (15+)",
-    "jargon_density": "moderate"
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "CI/CD pipelines": 3,
-    "Database optimization": 3,
-    "Docker": 4,
-    "GitHub Actions": 3,
-    "JavaScript": 4,
-    "Kubernetes": 3,
-    "MongoDB": 4,
-    "Node.js": 4,
-    "PostgreSQL": 4,
-    "Prometheus/Grafana": 3,
-    "Python": 2,
-    "REST API design": 4,
-    "React": 4,
-    "Responsive design": 3,
-    "Web performance optimization": 3
+    "A/B testing": 1,
+    "Analytics-driven product decisions": 4,
+    "Competitive analysis": 3,
+    "Product management": 3,
+    "Roadmap planning": 3,
+    "SQL analytics": 3,
+    "Stakeholder management": 3,
+    "Tableau/Power BI": 2,
+    "UX research": 3,
+    "Web accessibility (WCAG)": 2
   },
-  "text": "# TaskFlow: Task Management SaaS Application  \nA scalable, team-centric task management platform built for startup workflows, combining React frontend, Node.js backend, and cloud-native infrastructure for real-time collaboration and performance optimization.  \n\n---\n\n## Badges  \n[![React](https://badgen.net/badge/React/764BA2?style=flat)](https://reactjs.org)  \n[![Node.js](https://badgen.net/badge/Node.js/339933?style=flat)](https://nodejs.org)  \n[![Docker](https://badgen.net/badge/Docker/249dd1?style=flat)](https://docker.com)  \n[![AWS](https://badgen.net/badge/AWS/FF9900?style=flat)](https://aws.amazon.com)  \n[![GitHub Actions](https://badgen.net/badge/GitHub%20Actions/0392C9?style=flat)](https://github.com/features/actions)  \n\n---\n\n## Getting Started / Installation  \n```bash\ngit clone https://github.com/your-username/taskflow.git  \ncd taskflow  \nnpm install  \ndocker-compose up -d  \n```  \nEnvironment variables are managed via `.env` and Docker secrets. Ensure PostgreSQL and MongoDB are configured in `config/db.js`.  \n\n---\n\n## Usage / Examples  \n- **Team Collaboration**: Use the `/api/tasks` endpoint to create and assign tasks via REST API.  \n- **Real-Time Sync**: WebSocket integration for live updates in the React dashboard.  \n- **Reporting**: Access analytics via `/api/reports` for team performance metrics.  \n\n---\n\n## Configuration  \n- **Database**: PostgreSQL for relational data, MongoDB for unstructured task metadata.  \n- **Environment**: Set `NODE_ENV`, `AWS_ACCESS_KEY`, and `DATABASE_URL` in `.env`.  \n- **Docker**: Use `docker-compose.override.yml` for production builds.  \n\n---\n\n## Deployment  \n- **AWS ECS**: Containerized Node.js backend with auto-scaling.  \n- **Kubernetes**: Orchestration for microservices, with Prometheus/Grafana for metrics.  \n- **CI/CD**: GitHub Actions handles linting, unit tests, and Docker image builds.  \n\n---\n\n## Architecture / Design  \nA microservices architecture separates frontend (React) and backend (Node.js) with a REST API gateway. Load balancing via Nginx, caching with Redis, and async processing with RabbitMQ. Scalable for 15+ team members with real-time updates.  \n\n---\n\n## Tech Stack / Built With  \n- **Frontend**: React, TypeScript, Webpack  \n- **Backend**: Node.js, Express, REST API  \n- **Database**: PostgreSQL, MongoDB  \n- **Infrastructure**: Docker, Kubernetes, AWS ECS  \n- **Monitoring**: Prometheus, Grafana  \n\n---\n\n## Contributing  \nFork the repo, create a feature branch, and submit a pull request. Ensure tests pass and code adheres to ESLint standards. All contributions require a code review for security and performance compliance."
+  "text": "# GameAnalytics Dashboard  \nA real-time player behavior tracking tool built to inform data-driven decisions in live gaming environments. Designed for internal use, this dashboard aggregates session metrics, retention rates, and engagement patterns from multiple data sources, enabling rapid hypothesis validation and iterative product refinements.  \n\n## Deployment  \nHosted on AWS EKS with automated CI/CD pipelines for rapid iteration. Requires a Kubernetes cluster and access to internal game telemetry APIs. Deployment manifests are versioned in `deploy/` for reproducibility.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone [repository-url]`  \n2. Install dependencies: `npm install`  \n3. Configure environment variables in `.env.local` (see `sample.env` for format)  \n4. Run the app: `npm start`  \n\n## Usage / Examples  \n- Monitor real-time session duration and drop-off points via the `Player Journey` widget  \n- Drill into cohort analysis using the `Retention Heatmap`  \n- Export raw SQL queries for custom segmentation (see `queries/` directory)  \n- Integrate with internal BI tools like Tableau for cross-platform data alignment  \n\n## Tech Stack  \n- Frontend: React, TypeScript, Chart.js  \n- Backend: Node.js, PostgreSQL, Kafka for stream processing  \n- Infrastructure: AWS EKS, Terraform for cluster provisioning  \n- Analytics: SQL-based cohort modeling, custom telemetry parsing  \n\n## Architecture / Design  \nBuilt as a microservices layer with a central data pipeline:  \n1. **Ingestion Layer**: Kafka streams process raw telemetry from game servers  \n2. **Processing Layer**: Node.js workers aggregate metrics using SQL-based window functions  \n3. **Presentation Layer**: React dashboard with real-time updates via WebSocket  \n4. **Storage**: PostgreSQL for structured metrics, S3 for raw logs  \nProduct design prioritized iterative validation—initial MVP focused on core retention metrics, with modular architecture enabling rapid addition of A/B testing frameworks (though not currently implemented).  \n\n## License  \nMIT License (see `LICENSE` file)  \n\n## Badges  \n[![GitHub](https://badgen.net/badge/icon/github?color=blue)](https://github.com/umar-bello/gameanalytics)  \n[![Deploy Status](https://badgen.net/badge/build/passed/green)](https://github.com/umar-bello/gameanalytics/actions)  \n[![Analytics](https://badgen.net/badge/metrics/real-time/orange)](https://gameanalytics.dashboard)"
 }

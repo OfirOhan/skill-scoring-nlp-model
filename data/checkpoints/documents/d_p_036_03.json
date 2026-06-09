@@ -1,22 +1,25 @@
 {
   "doc_id": "d_p_036_03",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_036",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "large (15+)",
-    "jargon_density": "heavy"
+    "recommender_role": "professor",
+    "recommender_closeness": "worked-daily",
+    "company_type": "agency",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
     "AWS": 4,
-    "Go": 4,
-    "Kubernetes": 3,
-    "Load balancing": 2,
-    "Microservices architecture": 3,
-    "Monitoring & alerting": 3,
-    "PostgreSQL": 5,
-    "Python": 3,
-    "Terraform": 3
+    "Cloud cost optimization": 4,
+    "GCP": 3,
+    "Infrastructure as Code": 3,
+    "Kubernetes": 4,
+    "MongoDB": 1,
+    "Network automation": 1,
+    "PostgreSQL": 1,
+    "Python": 1,
+    "REST API design": 1,
+    "Terraform": 4
   },
-  "text": "# Distributed Ad Serving Infrastructure  \n\nA production-grade microservices architecture for global ad delivery, engineered for scalability, resilience, and low-latency performance. This system handles over 10M impressions/day with 99.95% uptime, leveraging distributed state and fault-tolerant patterns.  \n\n## Badges  \nCI/CD: ✅  \nTests: 95%  \nDocs: 80%  \n\n## Getting Started / Installation  \nEnsure you have:  \n- Go 1.21+ (for core services)  \n- Python 3.10+ (for analytics pipeline)  \n- Terraform 1.5+ (for AWS infrastructure)  \n- AWS CLI configured with admin permissions  \n\n```bash  \ngit clone https://github.com/your-username/distributed-ad-serving.git  \ncd distributed-ad-serving  \nterraform init  \n```  \n\n## Usage / Examples  \nQuery ad inventory via the API gateway:  \n```bash  \ncurl -X GET https://api.adsvc.example/v1/ads?targeting=mobile  \n```  \n\nDeploy a new microservice:  \n```bash  \nterraform apply -target=aws_lambda_function.ads-targeting  \n```  \n\n## Configuration  \nCore config files:  \n- `terraform.tfvars`: AWS region, VPC settings, and security groups  \n- `config.yaml`: Redis cluster endpoints, PostgreSQL DB credentials  \n- `envvars.sh`: Environment-specific settings for local/dev  \n\n## Deployment  \nInfrastructure is managed via Terraform, deploying to 3 AWS regions with cross-zone load balancing. Kubernetes clusters (EKS) handle service discovery and autoscaling. Health checks are enforced at every microservice layer with exponential backoff retries.  \n\n## Architecture / Design  \nThe system is partitioned into:  \n- **Ad Targeting** (Go): Real-time bidding and audience segmentation  \n- **Billing** (Python): Revenue tracking with Kafka-backed event streams  \n- **Analytics** (Python): Click-through rate analysis using Apache Beam  \n- **PostgreSQL**: Centralized identity store and ad metadata repository  \n\nGlobal load balancing is achieved via AWS Global Accelerator, with edge locations configured for sub-100ms latency. Fault tolerance is baked into every layer, including distributed locks and circuit breakers.  \n\n## Tech Stack / Built With  \n- **Language**: Go (core), Python (analytics), TypeScript (UI)  \n- **Database**: PostgreSQL (centralized), Redis (caching)  \n- **Orchestration**: Kubernetes (EKS) with Helm charts  \n- **Infrastructure**: Terraform, AWS (Lambda, RDS, CloudFront)  \n- **Monitoring**: Prometheus + Grafana, CloudWatch Alarms  \n\n## Contributing  \nWe welcome contributions to improve fault tolerance and reduce latency. Please:  \n1. Fork the repo  \n2. Add tests for new features  \n3. Update documentation for config changes  \n4. Submit a PR with a clear description of your changes  \n\nThis project is maintained by a 15+ person team with active contributions from Sana Patel (lead architecture) and cross-functional collaboration across ad ops, data engineering, and security."
+  "text": "Ines once stayed late after a critical production outage, methodically isolating the root cause of a Kubernetes cluster failure. She didn’t just fix the immediate issue—she rewrote the deployment pipeline to prevent recurrence, blending AWS auto-scaling with Terraform modules. Her calm under pressure and knack for distilling complexity into actionable steps made her indispensable.  \n\nInes is a platform engineer who treats infrastructure as both art and algorithm. At HealthCloud, she led AWS cost optimization projects, slashing annual spend by 30% through spot instances and reserved instances. Her Terraform workflows streamlined multi-cloud migrations, and her GCP integrations reduced redundant data transfers by 25%. She thrives in ambiguity, translating business needs into technical roadmaps that balance innovation and fiscal responsibility.  \n\nWhat sets Ines apart is her relentless curiosity and attention to detail. She once debugged a cascading failure across three regions by tracing a misconfigured IAM policy, then redesigned the access control architecture. Her mentorship of junior engineers—often during late-night Slack threads—has shaped a team culture of accountability. She balances technical rigor with empathy, ensuring systems are resilient *and* user-friendly.  \n\nInes is a rare blend of strategic thinking and hands-on execution. Her ability to navigate cloud ecosystems while maintaining cost discipline makes her a standout professional. I wholeheartedly recommend her for any role requiring both depth of technical expertise and the wisdom to prioritize impact over complexity."
 }

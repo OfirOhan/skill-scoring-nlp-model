@@ -1,62 +1,60 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Divya's QA/Test Engineer experience in fintech, with focus on test automation and compliance testing.",
-    "title": "Divya Sundaram - QA/Test Engineer",
+    "topic_summary": "Rahul Iyer's CV as a Staff Site Reliability Engineer with 14 years of experience in startup environments.",
+    "title": "Rahul Iyer - Staff Site Reliability Engineer",
     "doc_id": "d_p_080_00",
     "persona_id": "p_080",
     "hyperparams": {
-      "cv_format": "paragraph",
-      "geographic_convention": "India",
-      "company_type": "FAANG",
-      "company_size": "small (<50)"
+      "cv_format": "bullet-heavy",
+      "geographic_convention": "Europe",
+      "company_type": "enterprise",
+      "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A README for an automated regression testing framework developed for payment gateway integration in fintech applications.",
-    "title": "Payment Gateway Regression Test Framework",
+    "topic_summary": "A GitHub README for a project implementing a scalable microservices architecture for a SaaS platform, focusing on containerization and service discovery.",
+    "title": "Scalable Microservices Architecture for a SaaS Platform",
     "doc_id": "d_p_080_01",
     "persona_id": "p_080",
     "hyperparams": {
       "project_scale": "team-internal",
       "project_team_size": "large (15+)",
-      "jargon_density": "moderate"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "A README for a security compliance testing tool designed to validate fintech applications against regulatory standards.",
-    "title": "Fintech Compliance Validator",
-    "doc_id": "d_p_080_02",
-    "persona_id": "p_080",
-    "hyperparams": {
-      "project_scale": "production",
-      "project_team_size": "medium (5-15)",
       "jargon_density": "plain"
     }
   },
   {
-    "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from Divya's manager praising her expertise in test automation and collaboration in fintech projects.",
-    "title": "Recommendation for Divya Sundaram",
-    "doc_id": "d_p_080_03",
+    "doc_type": "project_readme",
+    "topic_summary": "A GitHub README detailing the optimization of a CI/CD pipeline for a startup product, improving deployment speed and reliability.",
+    "title": "CI/CD Pipeline Optimization for Startup Product",
+    "doc_id": "d_p_080_02",
     "persona_id": "p_080",
     "hyperparams": {
-      "recommender_role": "professor",
-      "recommender_closeness": "worked-daily",
-      "company_type": "startup",
-      "company_size": "small (<50)"
+      "project_scale": "production",
+      "project_team_size": "large (15+)",
+      "jargon_density": "heavy"
     }
   },
   {
     "doc_type": "linkedin",
-    "topic_summary": "A LinkedIn summary showcasing Divya's career in QA/testing, passion for fintech innovation, and commitment to quality assurance.",
-    "title": "Divya Sundaram - QA/Test Engineer",
-    "doc_id": "d_p_080_04",
+    "topic_summary": "A LinkedIn summary highlighting Rahul Iyer's 14 years of experience as a Staff SRE in the startup industry, focusing on DevOps and cloud infrastructure.",
+    "title": "Rahul Iyer - Staff Site Reliability Engineer",
+    "doc_id": "d_p_080_03",
     "persona_id": "p_080",
     "hyperparams": {
       "linkedin_completeness": "standard"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post discussing the evolution of SRE practices in high-growth startups, focusing on automation and incident management.",
+    "title": "Modern SRE Practices in High-Growth Startups",
+    "doc_id": "d_p_080_04",
+    "persona_id": "p_080",
+    "hyperparams": {
+      "blog_depth": "tutorial",
+      "jargon_density": "plain"
     }
   }
 ]

@@ -1,29 +1,25 @@
 {
   "doc_id": "d_p_180_03",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_180",
   "hyperparams": {
-    "recommender_role": "skip-level",
-    "recommender_closeness": "occasional",
-    "company_type": "enterprise",
-    "company_size": "large (500+)"
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Python": 1,
+    "API testing": 1,
+    "BDD/TDD": 1,
     "Go": 1,
+    "Integration testing": 3,
+    "Java": 1,
     "Node.js": 1,
-    "React": 1,
-    "Next.js": 1,
-    "TypeScript": 1,
+    "Performance testing (JMeter/k6)": 4,
+    "Python": 1,
     "REST API design": 1,
-    "PostgreSQL": 1,
-    "MongoDB": 1,
-    "AWS": 1,
-    "Docker": 1,
-    "Kubernetes": 1,
-    "GitHub Actions": 1,
-    "Prometheus/Grafana": 1,
-    "Load balancing": 1
+    "Selenium/Playwright": 1,
+    "Test automation": 3,
+    "Test strategy design": 1
   },
-  "text": "Jakub Novak’s ability to bridge complex technical challenges with tangible business outcomes has been a cornerstone of our team’s success at EcoCart. Last quarter, he spearheaded a project to streamline our inventory synchronization system, which reduced order fulfillment delays by 25% while maintaining zero downtime. His approach—combining deep systems thinking with a knack for simplifying workflows—allowed us to scale efficiently without compromising reliability. This isn’t just technical acumen; it’s a reflection of his methodical mindset and commitment to measurable impact.  \n\nAs a skip-level manager, I’ve interacted with Jakub primarily through cross-functional initiatives. His rare blend of technical insight and strategic patience makes him an invaluable collaborator. When our marketing team needed real-time analytics integration, he translated their vague requirements into a robust, scalable solution, earning praise for his clarity and responsiveness. His ability to align technical execution with business priorities is uncommon.  \n\nJakub’s strengths lie in his capacity to decompose intricate problems into manageable components and his relentless attention to operational excellence. He’s also a mentor who fosters growth without micromanaging, which has elevated the performance of junior engineers. His work ethic is unshakable—whether debugging late nights or refining processes during off-hours, he prioritizes outcomes over recognition.  \n\nIn summary, Jakub is a rare combination of technical precision and collaborative leadership. His contributions have directly influenced our ability to meet evolving customer demands. I’m confident he’ll bring the same rigor and innovation to any new opportunity.  \n\nSincerely,  \n[Recommender’s Name]  \nSenior Director of Engineering, EcoCart Technologies"
+  "text": "# CI/CD Pipeline Integration for QA Environments  \n\nStreamline testing workflows with a reusable CI/CD framework designed for QA teams. This project automates deployment stages, integrates performance benchmarks, and reduces manual intervention in testing cycles. Built for small teams, it emphasizes reliability and scalability while maintaining clarity in complex environments.  \n\n## Getting Started / Installation  \nEnsure your environment includes a supported CI/CD platform (e.g., GitLab CI, Jenkins) and a version control system. Clone the repository using:  \n```bash  \ngit clone https://github.com/your-username/ci-cd-qa.git  \ncd ci-cd-qa  \n```  \nInstall dependencies via the provided `setup.sh` script, which provisions Docker containers for isolated testing and deployment.  \n\n## Usage / Examples  \nThe pipeline automates three core stages:  \n1. **Build & Validate**: Triggers on code commits, runs static analysis, and validates configuration files.  \n2. **Test & Benchmark**: Executes unit tests, integrates performance metrics (e.g., latency, throughput), and logs results to centralized dashboards.  \n3. **Deploy & Monitor**: Deploys to staging environments with rollback capabilities, ensuring minimal downtime.  \n\nExample workflow:  \n```bash  \n# Trigger pipeline manually or via webhook  \n./run_pipeline.sh staging  \n# View performance metrics in real-time  \n./monitor.sh --env staging  \n```  \n\n## Badges  \n[![CI Status](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/username/1234567890abcdef1234567890abcdef/raw/status.json)](https://github.com/your-username/ci-cd-qa/actions)  \n[![Test Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/username/1234567890abcdef1234567890abcdef/raw/coverage.json)](https://github.com/your-username/ci-cd-qa/actions)  \n[![Performance Metrics](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/username/1234567890abcdef1234567890abcdef/raw/metrics.json)](https://github.com/your-username/ci-cd-qa/actions)  \n\n## Tech Stack  \n- CI/CD: GitLab CI, Jenkins, or custom orchestration  \n- Version Control: Git  \n- Monitoring: Prometheus + Grafana  \n- Containerization: Docker  \n- Logging: ELK Stack  \n\n## Architecture / Design  \nThe pipeline is modular, with separate stages for build, test, and deployment. Performance testing is integrated as a parallel process, using k6 for load simulation and JMeter for stress analysis. Results are aggregated into a centralized dashboard, enabling teams to track trends and identify bottlenecks.  \n\n## Contributing  \nEnhance the framework by expanding test scenarios or refining performance thresholds. Prioritize clear documentation and ensure all contributions align with the project’s focus on automation and reliability.  \n\n## License  \nMIT License — see [LICENSE](https://github.com/your-username/ci-cd-qa/blob/main/LICENSE) for details."
 }

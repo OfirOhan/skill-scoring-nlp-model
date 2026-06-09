@@ -3,26 +3,19 @@
   "type": "project_readme",
   "persona_id": "p_176",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "small (2-4)",
+    "project_scale": "team-internal",
+    "project_team_size": "large (15+)",
     "jargon_density": "plain"
   },
   "skill_evidence": {
-    "System design": 4,
-    "Agile/Scrum": 3,
-    "Cloud cost optimization": 3,
-    "Cross-team collaboration": 3,
-    "Database optimization": 4,
-    "Infrastructure as Code": 4,
-    "Kubernetes": 4,
-    "Mentoring": 3,
-    "Project management": 3,
-    "Risk assessment": 3,
-    "Serverless": 4,
-    "Stakeholder communication": 3,
-    "Team leadership": 3,
-    "Technical debt management": 3,
-    "Terraform": 4
+    "Application security (OWASP)": 3,
+    "Firewall configuration": 2,
+    "IAM/Access control": 3,
+    "Linux administration": 2,
+    "Network security": 3,
+    "SIEM tools": 3,
+    "TCP/IP": 1,
+    "Vulnerability management": 3
   },
-  "text": "# NexaPay Real-Time Payment Gateway  \nHigh-throughput, low-latency API for instant cross-border transactions, built with microservices for scalability and resilience  \n\n## Deployment  \nDeploy via Docker + Kubernetes using Terraform for IaC. Production clusters leverage spot instances and auto-scaling to minimize cloud costs. CI/CD pipelines integrate with Prometheus for real-time metrics and Grafana for dashboards.  \n\n## Getting Started / Installation  \nClone the repo, then run `docker compose up` to spin up local services. For production, use Terraform to provision clusters and apply Kubernetes manifests. Ensure PostgreSQL and Redis are pre-configured with replication for high availability.  \n\n## Usage / Examples  \nSend a POST request to `/api/v1/payments` with JSON payload:  \n```json  \n{  \n  \"amount\": 500,  \n  \"currency\": \"USD\",  \n  \"recipient\": \"example@bank.com\"  \n}  \n```  \nResponse includes transaction ID and status. Monitor via `/api/v1/transactions/{id}` for real-time updates.  \n\n## Tech Stack  \n- **Backend**: Go (payment logic), Node.js (routing), Python (fraud detection)  \n- **Database**: PostgreSQL (main) + Redis (cache) with sharding for sub-second queries  \n- **Orchestration**: Docker, Kubernetes, Terraform  \n- **Monitoring**: Prometheus, Grafana, Sentry (error tracking)  \n\n## Architecture / Design  \nMicroservices decouple payment processing, routing, and fraud detection. Kafka handles async event streams for reconciliation. Database optimization includes partitioned tables and index-only scans. Terraform ensures consistent environments across dev, staging, and prod. Risk mitigation includes rate limiting and circuit breakers for external APIs.  \n\n## License  \nMIT License  \n\n## Badges  \n[![GitHub](https://badges.actorcode.com/actorcode/badges/github)](https://github.com)  \n[![CI/CD](https://badges.actorcode.com/actorcode/badges/ci-cd)](https://github.com)  \n[![Docker](https://badges.actorcode.com/actorcode/badges/docker)](https://github.com)  \n[![Coverage](https://badges.actorcode.com/actorcode/badges/coverage)](https://github.com)"
+  "text": "# Enterprise Network Security Fortification  \nA modular framework for designing resilient, zero-trust-ready enterprise network architectures with integrated threat detection and access control mechanisms. This project serves as a living blueprint for securing large-scale distributed systems, emphasizing automation, policy consistency, and real-time monitoring integration.  \n\n---\n\n## Badges  \n[![Security Compliance](https://img.shields.io/badge/Compliance-ISO27001-blue)](https://example.com)  \n[![CI/CD](https://img.shields.io/badge/CI%2FCD-Pipeline-green)](https://example.com)  \n[![License](https://img.shields.io/badge/license-MIT-yellow)](https://example.com)  \n\n---\n\n## Getting Started  \nClone the repository and initialize the environment:  \n```bash  \ngit clone https://github.com/your-username/enterprise-network-sec.git  \ncd enterprise-network-sec  \ndocker-compose up -d  \n```  \nThis launches a pre-configured demo environment with simulated network segments, IAM policy templates, and SIEM integration. Modify the `config/` directory to tailor policies for your infrastructure.  \n\n---\n\n## Tech Stack  \n- **Network Segmentation**: Policy-driven VLAN isolation using OpenFlow  \n- **IAM Framework**: Role-based access control (RBAC) with AWS IAM integration  \n- **Threat Detection**: Lightweight SIEM integration (Splunk/ELK) for log correlation  \n- **Vulnerability Scanning**: Automated SCA (ShiftLeft) and dependency tracking  \n- **Orchestration**: Terraform modules for repeatable, audit-ready deployments  \n\n---\n\n## Architecture / Design  \nThe architecture prioritizes micro-segmentation and least-privilege enforcement. Core components include:  \n1. **Policy Engine**: Centralized ruleset for traffic routing and access validation  \n2. **Zero-Trust Gateway**: Stateless inspection layer for all ingress/egress traffic  \n3. **SIEM Sink**: Real-time log aggregation for anomaly detection and alert triaging  \n4. **Audit Trail**: Immutable logging for compliance and forensic analysis  \n\nDesign decisions emphasize automation over manual intervention, ensuring policies scale with infrastructure growth.  \n\n---\n\n## Usage / Examples  \n```bash  \n# Apply segment-specific IAM policies  \nterraform apply -target=aws_iam_policy.example-policy  \n\n# Trigger vulnerability scan on container images  \n./scan.sh --image-repo=internal-registry  \n```  \nUse the `sample-config/` directory as a template for defining network zones and access hierarchies.  \n\n---\n\n## Testing  \nAutomated tests validate policy enforcement, log integrity, and alert accuracy:  \n- **Unit Tests**: Verify IAM policy validation logic  \n- **Integration Tests**: Simulate attack vectors (e.g., lateral movement)  \n- **SIEM Mocks**: Validate alert correlation rules against synthetic logs  \n\nTesting is integrated with CI/CD pipelines to ensure compliance with enterprise security standards.  \n\n---\n\n## License  \nMIT License – see [LICENSE](https://github.com/your-username/enterprise-network-sec/blob/main/LICENSE) for details."
 }

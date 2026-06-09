@@ -3,21 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_117",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "small (2-4)",
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "GraphQL": 3,
-    "JavaScript": 5,
-    "Next.js": 4,
+    "Apache Airflow": 3,
+    "Apache Kafka": 3,
+    "Apache Spark": 3,
+    "Cloud cost optimization": 3,
+    "Data modeling": 2,
+    "Data warehousing": 2,
+    "Docker": 3,
+    "ETL pipeline design": 4,
+    "Java": 1,
     "Python": 1,
-    "REST API design": 3,
-    "React": 5,
-    "TypeScript": 5,
-    "Web accessibility (WCAG)": 4,
-    "Web performance optimization": 4,
-    "Webpack/Vite": 3
+    "Snowflake": 4,
+    "Terraform": 3
   },
-  "text": "# Real-Time Ad Performance Dashboard  \nA React-based dashboard engineered for real-time ad metrics tracking and campaign performance analysis in high-velocity adtech environments. Designed to visualize click-through rates, impression volumes, and conversion funnels with sub-second latency, this project leverages TypeScript, Next.js, and GraphQL to deliver a scalable, accessible, and performant interface for ad operations teams.  \n\n---\n\n## Deployment  \nThe dashboard is deployed on Vercel with automated CI/CD pipelines, ensuring zero-downtime rollouts and real-time monitoring of deployment health. Live demo accessible via [https://ad-dashboard.vercel.app](https://ad-dashboard.vercel.app) (authenticated via OAuth2).  \n\n---\n\n## Badges  \n[![Deployment Status](https://img.shields.io/endpoint?url=https://dashboard.status.badge)](https://dashboard.status.badge)  \n[![TypeScript Enabled](https://img.shields.io/badge/TypeScript-3198C8?style=flat)](https://github.com/yourusername/real-time-ad-dashboard)  \n[![Accessibility Score](https://img.shields.io/badge/WCAG-AA--AA--AA?style=flat)](https://github.com/yourusername/real-time-ad-dashboard)  \n\n---\n\n## Tech Stack  \n- **Frontend**: React 18, TypeScript 4.9, Next.js 13 (with App Router)  \n- **Data Fetching**: GraphQL subscriptions for real-time metric updates, REST APIs for historical data  \n- **Build Tools**: Vite for JIT compilation, Webpack 5 for production bundling  \n- **State Management**: Redux Toolkit for global state, React Context for theme/authorization  \n- **Accessibility**: ARIA labels, keyboard navigation, semantic HTML5  \n- **Performance**: Code splitting, lazy loading, image optimization via Next.js Image Component  \n\n---\n\n## Architecture / Design  \nThe architecture prioritizes decoupled components and unidirectional data flow. GraphQL subscriptions provide live updates to ad metrics, while REST endpoints serve historical campaign data. React components are optimized for reusability, with custom hooks for metric visualization. Accessibility is baked into every component, adhering to WCAG 2.1 AA standards. Web performance is enhanced through lazy loading and server-side rendering, reducing initial load time by 40%.  \n\n---\n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/yourusername/real-time-ad-dashboard  \ncd real-time-ad-dashboard  \nnpm install  \nnpm run dev  \n```  \nEnsure environment variables (`NEXT_PUBLIC_GRAPHQL_ENDPOINT`, `AUTH0_DOMAIN`) are configured for local development.  \n\n---\n\n## Usage / Examples  \nNavigate to `/campaigns` to view real-time performance metrics for active ad groups. Use the `/analytics` route to drill into conversion funnels with interactive heatmaps. Filters for time ranges and ad networks are exposed via a sidebar with keyboard-accessible toggles.  \n\n---\n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# Real-Time Data Pipeline for Enterprise Analytics  \nA scalable, cloud-native solution for ingesting, transforming, and loading terabytes of real-time data into Snowflake using Apache Airflow, Kafka, and Spark. Engineered for enterprise-grade reliability, with automated scaling and cost optimization strategies.  \n\n## Configuration  \nSet environment variables for AWS S3, Snowflake credentials, and Kafka brokers. Use Terraform to provision Airflow DAGs and Kubernetes clusters. Configure Kafka retention policies and Spark cluster autoscaling. Enable CloudWatch for pipeline monitoring and set up Snowflake role-based access controls.  \n\n## Getting Started / Installation  \nClone the repository and initialize Terraform to deploy the infrastructure. Use `docker-compose` to spin up local Kafka and Spark instances for development. Ensure AWS credentials are configured via `aws configure` and Snowflake roles are pre-provisioned.  \n\n## Usage / Examples  \nLaunch Airflow DAGs to ingest data from Kafka topics, process streams with Spark Structured Streaming, and load results into Snowflake. Example:  \n```bash  \nairflow trigger DAG \"realtime_sales_pipeline\"  \n```  \nMonitor transformation latency and error rates via Grafana dashboards. Use Snowflake's real-time SQL queries for ad-hoc analytics.  \n\n## Tech Stack  \n- **Orchestration**: Apache Airflow (v2.9) with Kubernetes integration  \n- **Streaming**: Apache Kafka (v3.3) + Spark Structured Streaming  \n- **Storage**: Snowflake (v2.12) + AWS S3 (v5)  \n- **Infrastructure**: Terraform (v1.3) + Docker (v24)  \n- **Monitoring**: CloudWatch + Prometheus  \n\n## Architecture / Design  \nA microservices-driven architecture with Kafka as the event source, Spark for distributed ETL, and Airflow for workflow orchestration. Data flows from Kafka topics to Spark clusters via Kafka Connect, then to Snowflake via batch/real-time ETL jobs. All components are containerized and autoscaled based on ingestion throughput.  \n\n## License  \nMIT License  \n\n## Badges  \n[![Build Status](https://github.com/yourusername/realtime-pipeline/actions/workflows/build.yml/badge.svg)](https://github.com/yourusername/realtime-pipeline/actions)  \n[![Snowflake Performance](https://img.shields.io/badge/Snowflake-Performance-green)](https://snowflake.com)  \n[![Kafka Throughput](https://img.shields.io/badge/Kafka-Throughput-blue)](https://kafka.apache.org)"
 }

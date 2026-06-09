@@ -3,25 +3,24 @@
   "type": "project_readme",
   "persona_id": "p_267",
   "hyperparams": {
-    "project_scale": "team-internal",
+    "project_scale": "production",
     "project_team_size": "large (15+)",
-    "jargon_density": "heavy"
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 3,
+    "AWS": 4,
     "Apache Airflow": 3,
     "Apache Kafka": 4,
-    "Apache Spark": 4,
-    "Cloud cost optimization": 2,
-    "Data modeling": 2,
-    "Data warehousing": 2,
-    "Database optimization": 2,
-    "Docker": 2,
-    "ETL pipeline design": 2,
-    "Kubernetes": 2,
-    "Python": 2,
-    "Snowflake": 2,
-    "Terraform": 2
+    "Apache Spark": 3,
+    "Cloud cost optimization": 1,
+    "Data warehousing": 1,
+    "Database optimization": 1,
+    "Docker": 1,
+    "ETL pipeline design": 3,
+    "Message queues": 1,
+    "Python": 3,
+    "Snowflake": 1,
+    "Terraform": 1
   },
-  "text": "# Real-Time Analytics Platform with Apache Spark  \n\nA high-throughput, low-latency pipeline for processing streaming data at scale, leveraging Apache Spark for batch/real-time analytics and Kafka for event sourcing. Built for enterprise environments requiring sub-second query latency and multi-terabyte data ingestion.  \n\n## Badges  \n[![Build Status](https://github.com/umarbello/realtime-analytics/actions/workflows/build.yml/badge.svg)](https://github.com/umarbello/realtime-analytics/actions/workflows/build.yml)  \n[![Quality Gate](https://sonarqube.example.com/dashboard/index/realtime-analytics)](https://sonarqube.example.com/dashboard/index/realtime-analytics)  \n[![Kafka Latency](https://grafana.example.com/d/realtime-latency)](https://grafana.example.com/d/realtime-latency)  \n\n## Tech Stack  \n- **Core**: Apache Kafka (0.11+), Apache Spark (3.3+), Apache Airflow (2.2+), AWS (EMR, S3, KMS)  \n- **Infrastructure**: Terraform (0.14+), Docker (20.10+), Kubernetes (1.24+)  \n- **Monitoring**: Prometheus + Grafana, ELK Stack, AWS CloudWatch  \n- **Security**: TLS 1.3, IAM roles, VPC isolation, Kerberos authentication  \n\n## Configuration  \nConfigure Kafka brokers via `kafka.properties` (e.g., `bootstrap.servers=broker1:9092,broker2:9092`). Set Spark cluster specs in `spark-defaults.conf` (e.g., `spark.executor.memory=8g`). AWS credentials are managed via IAM roles in EC2 instances.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/umarbello/realtime-analytics.git  \ncd realtime-analytics  \n./setup.sh --env prod  \n```  \nEnsure Java 17, Kafka 3.0+, and Spark 3.3+ are installed. Docker-compose is used for local testing.  \n\n## Usage / Examples  \n```bash  \n# Stream ingestion pipeline  \nspark-submit --deploy-mode cluster \\\n  --conf spark.sql.streaming.checkpointLocation=/checkpoint \\\n  --conf spark.kafka.bootstrap.servers=broker1:9092 \\\n  realtime_pipeline.py  \n\n# Query latest metrics  \nSELECT * FROM metrics_table WHERE timestamp > NOW() - INTERVAL '30 seconds'  \n```  \nProcess 1.2M events/sec with 99th percentile latency < 150ms.  \n\n## Testing  \nRun unit tests with `./test.sh --unit`, integration tests with `./test.sh --integration`.  \nKey metrics:  \n- Kafka producer throughput: 2.1M records/sec  \n- Spark query latency: 85ms (P99)  \n- Airflow DAG success rate: 99.98%  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details."
+  "text": "# Real-Time Analytics Dashboard with Apache Flink  \nA scalable, low-latency analytics pipeline processing 10k+ events/sec via Kafka, built with Apache Flink for stateful stream processing and visualized via Grafana. Designed for 24/7 uptime with 99.95% SLA compliance.  \n\n## Deployment  \nLive deployment on AWS EC2 clusters with auto-scaling. Monitoring via CloudWatch and Prometheus. Current active pod count: 8. Average latency: 120ms.  \n\n## Badges  \n[![GitHub](https://badgen.net/badge/Repository/Active/green)](https://github.com/johanbakken/realtime-dashboard)  \n[![License](https://badgen.net/badge/license/Apache-2.0/blue)](https://github.com/johanbakken/realtime-dashboard/blob/main/LICENSE)  \n\n## Tech Stack  \n- **Apache Flink 1.16**: Stateful stream processing with 100ms end-to-end latency  \n- **Apache Kafka 3.3**: Partitioned topic with 50+ partitions for horizontal scaling  \n- **Python 3.9**: Custom metrics aggregation scripts for dashboard enrichment  \n- **AWS Lambda**: Serverless ETL for historical data reconciliation  \n- **Apache Airflow 2.3**: DAGs for daily batch reconciliation with 99.8% success rate  \n- **PostgreSQL 14**: Read-replica for historical query storage  \n\n## Architecture / Design  \nKafka acts as the ingestion layer, partitioned by user ID for even distribution. Flink's checkpointing interval is set to 5s with 3 retained checkpoints. State is stored in RocksDB with 100GB SSD-backed storage. Output is written to S3 in Parquet format for downstream analysis. The dashboard uses Grafana with Prometheus as the metrics backend.  \n\n## Getting Started / Installation  \n1. Install Java 17 and Apache Flink 1.16  \n2. Configure Kafka broker addresses in `kafka.properties`  \n3. Run `./start.sh` to initialize Flink job manager and worker nodes  \n4. Deploy Grafana dashboard via `./setup-grafana.sh`  \n\n## Usage / Examples  \n```bash\n# Trigger real-time data ingestion\ncurl -X POST http://api.dashboard.com/ingest --data '{\"event_type\": \"clickstream\", \"user_id\": \"12345\"}'\n\n# View metrics in Grafana\nhttp://grafana.dashboard.com/d/realtime-analytics\n```  \nUse the `/api/metrics` endpoint to query aggregated values. Example: `GET /api/metrics?start=2023-01-01&end=2023-01-02`  \n\n## License  \nApache 2.0 — see [LICENSE](https://github.com/johanbakken/realtime-dashboard/blob/main/LICENSE) for details."
 }

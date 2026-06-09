@@ -3,20 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_213",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "solo",
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Flutter": 3,
-    "GraphQL": 4,
-    "Kotlin": 4,
-    "Mobile CI/CD": 4,
-    "REST API design": 4,
-    "React": 4,
-    "React Native": 4,
-    "Swift": 3,
-    "TypeScript": 4
+    "Agile/Scrum": 3,
+    "CI/CD pipelines": 3,
+    "Cloud infrastructure": 1,
+    "Database optimization": 3,
+    "GitHub Actions": 2,
+    "Linux administration": 1,
+    "Microservices architecture": 4,
+    "Risk assessment": 3,
+    "System design": 4,
+    "Technical writing": 3
   },
-  "text": "# TaskFlow: SaaS Task Management App  \nA cross-platform task management solution leveraging Firebase for real-time collaboration, built with React Native and TypeScript. Designed for productivity-driven teams requiring seamless sync across devices.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/viktorhorvat/taskflow.git`  \n2. Install dependencies: `npm install`  \n3. Configure Firebase: Replace `firebase.json` with your project’s service credentials.  \n4. Run the app: `npx react-native run-android` or `npx react-native run-ios`  \n\n## Tech Stack  \n- **Frontend**: React Native (TypeScript), Expo, React Navigation  \n- **Backend**: Firebase (Firestore, Auth, Cloud Functions)  \n- **APIs**: RESTful endpoints for third-party integrations (e.g., Slack)  \n- **CI/CD**: GitHub Actions with automated testing and Firebase deployment pipelines  \n- **Utilities**: Lodash, Axios, React Query  \n\n## Usage / Examples  \n- **Real-time sync**: Tasks auto-update across devices via Firestore listeners.  \n- **Custom workflows**: Define priority levels and status filters via REST API endpoints.  \n- **Analytics**: Firebase Crashlytics for error tracking; custom metrics via Cloud Functions.  \n- **Example query**:  \n  ```ts  \n  const { data } = useQuery('tasks', {  \n    variables: { projectId: 'proj123' },  \n    fetchPolicy: 'network-only'  \n  });  \n  ```  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/license/viktorhorvat/taskflow)](https://github.com/viktorhorvat/taskflow)  \n[![CI/CD](https://img.shields.io/github/actions/workflow/v1/viktorhorvat/taskflow/ci.yml?branch=main)](https://github.com/viktorhorvat/taskflow/actions)  \n[![Coverage](https://img.shields.io/coveralls/viktorhorvat/taskflow)](https://coveralls.io/github/viktorhorvat/taskflow)  \n\n## Architecture / Design  \n- **Monorepo structure**: Shared logic in `utils/` for cross-platform consistency.  \n- **Firebase integration**: Firestore as the single source of truth; Cloud Functions handle complex workflows (e.g., deadline reminders).  \n- **TypeScript**: Enforced type safety in Redux slices and API clients.  \n- **GraphQL**: Used for batch data fetching in analytics dashboards (see `./src/graphql/`).  \n- **Kotlin**: Leveraged in Firebase Cloud Functions for server-side logic, ensuring low-latency operations.  \n\n## Contributing  \n- **Code reviews**: All PRs require approval from the maintainer; focus on performance-critical paths.  \n- **CI/CD**: Automated tests cover 90% of edge cases; ensure tests pass before merging.  \n- **Previous work**: Built Swift-based iOS utilities for data export; contributed to Flutter projects with shared UI components.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/viktorhorvat/taskflow/blob/main/LICENSE) for details."
+  "text": "# SentinelThreatDetect  \nA real-time threat detection system leveraging machine learning and distributed architecture to identify anomalous behavior in network traffic. Built for enterprise-scale cybersecurity operations, this project enables proactive risk mitigation through scalable, modular design.  \n\n## Getting Started / Installation  \nClone the repository:  \n```bash  \ngit clone https://github.com/your-organization/SentinelThreatDetect.git  \ncd SentinelThreatDetect  \n```  \nInstall dependencies:  \n```bash  \npip install -r requirements.txt  \n```  \nConfigure environment variables for API keys and data sources. Run the service:  \n```bash  \ndocker-compose up --build  \n```  \nGitHub Actions automates testing and dependency updates for pull requests.  \n\n## Tech Stack  \n- **Language**: Python (3.9)  \n- **Containerization**: Docker (with multi-stage builds)  \n- **Data Streaming**: Apache Kafka  \n- **Search/Storage**: Elasticsearch (with shard optimization)  \n- **Visualization**: Grafana (custom dashboards)  \n- **CI/CD**: GitHub Actions (automated testing, linting)  \n- **Methodology**: Agile/Scrum (sprint-based development, daily standups)  \n\n## Usage / Examples  \nIngest network logs via Kafka topic `network_events` to trigger real-time analysis. Example API call:  \n```bash  \ncurl -X POST https://api.sentinel.threat/detect \\\n  -H \"Authorization: Bearer <token>\" \\\n  -d '{\"source_ip\": \"192.168.1.100\", \"timestamp\": \"2023-10-01T12:00:00Z\"}'  \n```  \nMonitor alerts in Grafana or integrate with SIEM tools via REST API.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/commit-activity/m/your-organization/SentinelThreatDetect)](https://github.com/your-organization/SentinelThreatDetect/commits/main)  \n[![Build Status](https://img.shields.io/github/actions/workflow/ci.yml?branch=main)](https://github.com/your-organization/SentinelThreatDetect/actions)  \n[![Coverage](https://img.shields.io/coveralls/your-organization/SentinelThreatDetect)](https://coveralls.io/github/your-organization/SentinelThreatDetect)  \n\n## Architecture / Design  \nThe system employs a microservices architecture with decoupled components:  \n1. **Ingestion Layer**: Kafka brokers handle log streaming with partitioning for parallel processing.  \n2. **Analysis Engine**: Python-based anomaly detection models (trained on historical data) process events in real time.  \n3. **Storage Layer**: Elasticsearch shards data by time range to optimize query performance.  \n4. **Alerting**: Rule-based and machine learning-driven alerts are routed to SIEM tools via REST API.  \n\nDatabase optimization techniques, such as index partitioning and query caching, reduced latency by 25% in production. Risk assessments guided the selection of Kafka over RabbitMQ for high-throughput scenarios.  \n\n## Contributing  \nEnhance detection models or refine alert prioritization logic. Pull requests should include unit tests and documentation updates. Align with sprint goals via Jira tickets.  \n\n## License  \nMIT License (see [LICENSE](LICENSE) for details)"
 }

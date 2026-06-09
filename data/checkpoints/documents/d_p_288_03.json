@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_288_03",
+  "type": "project_readme",
+  "persona_id": "p_288",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "C/C++ (embedded)": 4,
+    "Firmware development": 4,
+    "Go": 1,
+    "Hardware-software integration": 4,
+    "Network troubleshooting": 1,
+    "Python": 3,
+    "REST API design": 3,
+    "RTOS": 4
+  },
+  "text": "# IoT-Based Remote Patient Monitoring Platform for Chronic Disease Management  \n\nA production-ready system enabling real-time, multi-sensor data collection for chronic disease management via cloud integration. Reduces hospital visits by 40% in pilot trials, with 99.9% uptime across edge and cloud layers.  \n\n## Contributing  \nOpen contributions welcome! Focus on sensor integration, cloud service optimization, or firmware stability. Prioritize issues labeled \"good-first-issue\" or \"documentation\".  \n*Note: Requires Python and C/C++ expertise. Contribution guidelines: [link]*  \n\n## Getting Started / Installation  \n1. Clone repo: `git clone [url]`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Deploy firmware: Use PlatformIO to flash C-based edge devices (STM32F4 series)  \n4. Set up MQTT broker (Mosquitto) for real-time data flow  \n5. Configure cloud backend with REST API endpoints for data ingestion  \n\n## Usage / Examples  \n**Real-time monitoring**:  \n```python  \nfrom sensor_api import PatientData  \npdata = PatientData(\"patient_123\")  \nprint(pdata.get_blood_glucose())  \n```  \n**Alert system**:  \n```c  \nif (glucose_level < 70) {  \n    send_alert_to_cloud(\"critical\", \"patient_123\");  \n}  \n```  \nExample use case: Continuous glucose monitoring with automated insulin pump integration via REST API callbacks.  \n\n## Tech Stack  \n- **Python**: Data processing pipelines and API wrappers  \n- **C/C++**: Firmware for STM32-based edge devices  \n- **MQTT**: Lightweight publish/subscribe for sensor data  \n- **REST APIs**: Bidirectional communication between edge and cloud  \n- **Cloud**: AWS IoT Core for scalable data ingestion  \n- **RTOS**: FreeRTOS for deterministic task scheduling  \n\n## Architecture / Design  \nModular architecture with three layers:  \n1. **Edge devices**: STM32F4 microcontrollers running FreeRTOS, sampling biometric data at 1Hz  \n2. **Gateway**: Raspberry Pi 4 acting as MQTT broker, translating sensor data to REST API payloads  \n3. **Cloud**: AWS Lambda functions processing data, triggering alerts via SNS  \nRTOS ensures 99.8% latency consistency in sensor polling, while REST APIs handle 10K+ concurrent connections.  \n\n## License  \nMIT License  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/repo-size/ritika/chronic-care)](https://github.com/ritika/chronic-care)  \n[![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](https://opensource.org/licenses/MIT)  \n[![Build Status](https://img.shields.io/github/workflow/status/ritika/chronic-care/CI/main)](https://github.com/ritika/chronic-care/actions)"
+}

@@ -3,23 +3,25 @@
   "type": "cv",
   "persona_id": "p_250",
   "hyperparams": {
-    "cv_format": "minimal",
-    "geographic_convention": "Israel",
-    "company_type": "agency",
-    "company_size": "small (<50)"
+    "cv_format": "hybrid",
+    "geographic_convention": "Europe",
+    "company_type": "startup",
+    "company_size": "large (500+)"
   },
   "skill_evidence": {
-    "Application security (OWASP)": 4,
-    "Compliance (SOC2/GDPR)": 3,
-    "Encryption & PKI": 3,
-    "IAM/Access control": 3,
-    "Network security": 3,
-    "Penetration testing": 3,
-    "SIEM tools": 3,
-    "Secure coding practices": 3,
-    "Security auditing": 3,
-    "Threat modeling": 3,
-    "Vulnerability management": 3
+    "AWS": 5,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 3,
+    "Docker": 4,
+    "GitHub Actions": 1,
+    "Go": 5,
+    "Jenkins": 2,
+    "Linux administration": 2,
+    "Microservices architecture": 5,
+    "PostgreSQL": 5,
+    "Prometheus/Grafana": 3,
+    "Python": 4,
+    "REST API design": 5
   },
-  "text": "Siddharth Menon  \n📍 Tel Aviv, Israel | 📧 sidmenon@virtusafe.com | 📞 +972-54-876-5432 | 🌐 linkedin.com/in/sidmenon  \n\n**Professional Experience / Work History**  \nAt VirtuSafe Technologies, I architectured SOC2-compliant infrastructure, leading cross-functional audits that reduced compliance gaps by 40% and streamlined third-party vendor onboarding. My role in designing zero-trust frameworks for SaaS platforms earned recognition for enhancing data residency protocols under GDPR. Previously, at Aether Solutions, I spearheaded penetration testing campaigns that uncovered critical vulnerabilities in API gateways, prompting a 30% improvement in encryption protocol resilience. During my tenure as a Security Analyst at NovaCore Systems, I automated threat detection workflows using SIEM tools, cutting incident response times by 25% and reducing false positives by 18%.  \n\n**Technical Skills / Technologies**  \nArchitected scalable IAM systems using Azure AD and Okta, integrating multi-factor authentication (MFA) across 15+ SaaS applications to mitigate unauthorized access risks. Optimized TLS 1.3 configurations for enterprise-grade encryption, achieving a 22% reduction in TLS handshake latency while maintaining compliance with PCI DSS standards. Designed network segmentation strategies that minimized lateral movement risks, resulting in a 50% decrease in internal breach incidents. Engineered custom threat modeling frameworks aligned with OWASP ASVS 4.0, which were adopted across three client portfolios to strengthen application security posture.  \n\n**Languages**  \nEnglish (fluent), Hebrew (proficient), Hindi (native)  \n\n**Projects / Side Projects**  \nDeveloped a proprietary vulnerability scanner for cloud environments, integrating with AWS GuardDuty and CloudWatch to automate compliance checks. The tool reduced manual audit efforts by 60% and was piloted internally before being open-sourced. Led a side project to refactor legacy authentication modules using OAuth 2.0 and OpenID Connect, improving session management and reducing password-related support tickets by 35%. Collaborated with DevOps teams to embed secure coding practices into CI/CD pipelines, resulting in a 45% drop in production-level vulnerabilities over six months.  \n\n**Certifications**  \nCISSP (Certified Information Systems Security Professional) | ISO 27001 Lead Implementer | AWS Certified Security – Specialty  \n\n**Awards & Achievements**  \nRecognized as \"Top Security Architect\" at VirtuSafe for pioneering SOC2 compliance frameworks that passed audits with zero non-conformances. Received a company-wide innovation award for developing an automated SIEM correlation rule set that improved incident detection accuracy by 38%. Featured in a SaaS Security Roundtable discussion for insights on mitigating API vulnerabilities in distributed systems."
+  "text": "Aisha Oduya  \nBerlin, Germany | +49 123 456 7890 | aisha.oduya@example.com | linkedin.com/in/aisheaoduya | github.com/aisheaoduya  \n\nA seasoned backend engineer with a decade of experience in fintech, specializing in scalable cloud architectures, microservices, and high-performance systems. Over the past 10 years, I’ve led the design and deployment of mission-critical backend services, optimized cloud infrastructure costs, and mentored junior engineers across multiple teams. My work balances technical depth with operational efficiency, ensuring systems that handle millions of transactions daily while maintaining reliability and security.  \n\n**Technical Skills**  \n- **AWS**: Architectured payment gateway APIs for NexaPay, reducing latency by 30% and enabling global scalability. Mentored 5+ engineers on best practices for EC2, S3, and Lambda.  \n- **Go**: Developed core components of NexaPay’s transaction processing engine, achieving 99.99% uptime during peak loads. Refactored legacy Python services to Go, improving response times by 40%.  \n- **Microservices**: Designed and scaled a monolith to microservices transition at PayFlow Dynamics, supporting 1.2M daily transactions. Implemented circuit breakers and retries for fault tolerance.  \n- **PostgreSQL**: Optimized database queries for FinTech Solutions, reducing average query latency by 25% and improving data consistency across distributed systems.  \n- **REST API design**: Built and documented APIs for NexaPay’s third-party integrations, ensuring compliance with PCI-DSS standards and reducing onboarding time for partners by 50%.  \n- **Docker**: Containerized 80% of PayFlow’s backend services, streamlining deployment and reducing environment configuration errors.  \n- **Cloud cost optimization**: Reduced AWS spend by 18% at NexaPay by implementing auto-scaling and spot instance strategies.  \n- **Prometheus/Grafana**: Set up monitoring dashboards for NexaPay’s payment pipelines, enabling real-time anomaly detection and proactive incident resolution.  \n- **CI/CD pipelines**: Automated 70% of deployment workflows at PayFlow using Jenkins, cutting release cycles from weeks to hours.  \n- **Linux administration**: Maintained production servers for FinTech Solutions, resolving 95% of infrastructure issues before SLA breaches.  \n\n**Professional Experience**  \n*Staff Backend Engineer*  \n**NexaPay Technologies** (2020–Present)  \n- Led the development of NexaPay’s core payment processing system, integrating AWS Lambda and DynamoDB for real-time fraud detection.  \n- Collaborated with DevOps to implement Prometheus for monitoring, reducing mean time to resolve (MTTR) by 35%.  \n- Optimized PostgreSQL indexing and query performance, achieving 20% faster transaction settlement times.  \n- Mentored 3 junior engineers, guiding them through Go best practices and microservices architecture.  \n\n*Senior Backend Engineer*  \n**PayFlow Dynamics** (2017–2020)  \n- Architected a microservices-based API layer for a fintech client, handling 500K+ requests per second during peak hours.  \n- Refactored monolithic Python applications into modular Go services, improving system resilience and reducing downtime by 40%.  \n- Implemented CI/CD pipelines using Jenkins, reducing deployment errors by 60% and accelerating feature rollouts.  \n\n*Junior Backend Developer*  \n**FinTech Solutions Inc.** (2013–2017)  \n- Developed backend services for a mobile banking app, leveraging PostgreSQL and RESTful APIs to support 500K+ users.  \n- Collaborated with DevOps to automate server provisioning, cutting deployment time by 50%.  \n\n**Projects**  \n- **NexaPay Payment Gateway Optimization**: Redesigned API routing to reduce latency, resulting in a 30% improvement in transaction throughput.  \n- **Microservices Migration at PayFlow**: Spearheaded the transition of a legacy monolith to microservices, increasing system scalability by 2x.  \n- **Cloud Cost Analysis Tool**: Built a dashboard to track AWS spending, identifying $500K+ in annual savings through resource optimization.  \n\n**Education**  \nBachelor of Science in Computer Science  \nUniversity of Technology (2014)  \n\n**Certifications**  \nAWS Certified Solutions Architect  \nDocker Certified Professional"
 }

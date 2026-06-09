@@ -1,75 +1,38 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional resume highlighting 13 years of experience as a Senior Security Engineer in consulting",
-    "title": "Lucia Fernandez - Senior Security Engineer CV",
+    "topic_summary": "A professional CV highlighting James Okafor's 6 years of experience as a Senior Security Engineer in adtech, with expertise in securing adtech platforms and implementing security protocols.",
+    "title": "James Okafor - Senior Security Engineer",
     "doc_id": "d_p_273_00",
     "persona_id": "p_273",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
-      "geographic_convention": "Israel",
-      "company_type": "enterprise",
-      "company_size": "mid (50-500)"
+      "cv_format": "minimal",
+      "geographic_convention": "US",
+      "company_type": "academic",
+      "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "Overview of a cloud security automation tool for continuous compliance monitoring",
-    "title": "CloudSecAuto: Cloud Security Automation Platform",
+    "topic_summary": "A GitHub README for a security tool designed to detect and mitigate adtech-related vulnerabilities in real-time.",
+    "title": "AdSecure: Real-Time AdTech Vulnerability Detection",
     "doc_id": "d_p_273_01",
     "persona_id": "p_273",
     "hyperparams": {
       "project_scale": "production",
-      "project_team_size": "small (2-4)",
-      "jargon_density": "plain"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "Description of a network threat detection system using machine learning analytics",
-    "title": "NetThreatDetect: AI-Driven Network Security Solution",
-    "doc_id": "d_p_273_02",
-    "persona_id": "p_273",
-    "hyperparams": {
-      "project_scale": "academic",
-      "project_team_size": "solo",
-      "jargon_density": "plain"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "Documentation for a secure DevOps pipeline implementation framework",
-    "title": "SecureDevOps: Enterprise DevSecOps Framework",
-    "doc_id": "d_p_273_03",
-    "persona_id": "p_273",
-    "hyperparams": {
-      "project_scale": "hobby",
-      "project_team_size": "medium (5-15)",
-      "jargon_density": "plain"
-    }
-  },
-  {
-    "doc_type": "recommendation",
-    "topic_summary": "Endorsement from a former manager attesting to Lucia's leadership in security consulting",
-    "title": "Recommendation for Lucia Fernandez - CTO, CyberShield Security Consulting",
-    "doc_id": "d_p_273_04",
-    "persona_id": "p_273",
-    "hyperparams": {
-      "recommender_role": "skip-level",
-      "recommender_closeness": "brief",
-      "company_type": "enterprise",
-      "company_size": "large (500+)"
+      "project_team_size": "large (15+)",
+      "jargon_density": "heavy"
     }
   },
   {
     "doc_type": "blog",
-    "topic_summary": "Expert analysis on implementing zero trust architecture in enterprise environments",
-    "title": "Mastering Zero Trust Architecture in Modern Cybersecurity",
-    "doc_id": "d_p_273_05",
+    "topic_summary": "A technical blog post exploring zero-trust architecture implementation challenges in adtech data pipelines.",
+    "title": "Securing AdTech Data Pipelines with Zero Trust Architecture",
+    "doc_id": "d_p_273_02",
     "persona_id": "p_273",
     "hyperparams": {
       "blog_depth": "deep-dive",
-      "jargon_density": "plain"
+      "jargon_density": "heavy"
     }
   }
 ]

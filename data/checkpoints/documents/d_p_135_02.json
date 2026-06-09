@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_135_02",
+  "type": "project_readme",
+  "persona_id": "p_135",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Agile/Scrum": 4,
+    "CI/CD pipelines": 2,
+    "Cloud cost optimization": 4,
+    "Cross-team collaboration": 4,
+    "GitHub Actions": 1,
+    "Linux administration": 1,
+    "Stakeholder communication": 3,
+    "System design": 5,
+    "Team leadership": 5,
+    "Technical debt management": 5,
+    "Terraform": 4
+  },
+  "text": "# Cloud-Native API Gateway  \n\nA scalable, enterprise-grade API gateway built for cloud migration workflows, integrating service mesh patterns with API management tooling to enable observability, security, and dynamic routing in distributed systems.  \n\n## Contributing  \nWe welcome contributions through structured collaboration. Focus areas include architecture refinement, documentation expansion, and integration with emerging service mesh protocols. Pull requests should align with our [code guidelines](#code-guidelines) and include context for cross-team impact.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies using the provided script:  \n```bash  \nnpm install  \nnpm run build  \n```  \nEnsure your environment includes a compatible service mesh controller and API management platform. Refer to the [usage guide](#usage--examples) for setup specifics.  \n\n## Usage / Examples  \nThe gateway abstracts complex routing logic into declarative policies. Example:  \n```yaml  \napiVersion: gateway.example.com/v1  \nkind: RoutePolicy  \nmetadata:  \n  name: \"user-service-override\"  \nspec:  \n  target: \"user-service-v2\"  \n  policies:  \n    - type: rate-limit  \n      config:  \n        maxRequests: 100  \n```  \nThis enables dynamic policy enforcement across microservices without modifying individual endpoints.  \n\n## Tech Stack  \n- **Service Mesh**: Istio (1.14+) for traffic management  \n- **API Management**: Kong Gateway (3.1+) with OpenAPI integration  \n- **Observability**: Prometheus + Grafana for distributed tracing  \n- **Infrastructure**: Terraform for cloud-agnostic deployment  \n\n## Architecture / Design  \nThe gateway operates as a multi-layered facade, decoupling routing logic from backend services. Key components include:  \n1. **Ingress Layer**: Handles TLS termination and protocol translation  \n2. **Policy Engine**: Enforces rate limiting, authentication, and circuit breaking  \n3. **Service Mesh Proxy**: Integrates with Istio for fine-grained traffic control  \n4. **Observability Hub**: Aggregates metrics across distributed systems  \n\nDesign decisions prioritize extensibility, with a focus on minimizing latency while maintaining compliance with enterprise security standards.  \n\n## License  \nMIT License (see [LICENSE](LICENSE) for details)  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/license/ianszabo/cloud-native-api-gateway)](LICENSE)  \n[![Build Status](https://img.shields.io/github/actions/v2/1111111111111111111111111111111"
+}

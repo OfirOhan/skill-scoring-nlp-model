@@ -1,49 +1,61 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional resume highlighting 8 years of platform engineering experience in fintech",
-    "title": "Michael Tran - Platform Engineer",
+    "topic_summary": "Staff Product Manager with 10 years of experience in SaaS product management, specializing in cloud solutions and customer-centric product development.",
+    "title": "Sergei Antonov - Staff Product Manager",
     "doc_id": "d_p_015_00",
     "persona_id": "p_015",
     "hyperparams": {
-      "cv_format": "paragraph",
+      "cv_format": "bullet-heavy",
       "geographic_convention": "US",
       "company_type": "startup",
-      "company_size": "mid (50-500)"
+      "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A microservices-based platform for real-time financial data processing in fintech",
-    "title": "NexusPay Microservices Platform",
+    "topic_summary": "A SaaS tool that automates cloud migration processes with AI-driven insights.",
+    "title": "NexaCloud Migration Assistant",
     "doc_id": "d_p_015_01",
     "persona_id": "p_015",
     "hyperparams": {
-      "project_scale": "production",
-      "project_team_size": "large (15+)",
+      "project_scale": "team-internal",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A real-time collaboration platform designed for remote software teams, enhancing productivity and communication.",
+    "title": "NexaCollab",
+    "doc_id": "d_p_015_02",
+    "persona_id": "p_015",
+    "hyperparams": {
+      "project_scale": "academic",
+      "project_team_size": "small (2-4)",
       "jargon_density": "heavy"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "Implementation of a secure API gateway with OAuth2 and rate limiting for fintech applications",
-    "title": "SecureAPI Gateway",
-    "doc_id": "d_p_015_02",
+    "topic_summary": "A customizable analytics dashboard that provides actionable insights for SaaS product performance and user behavior.",
+    "title": "NexaInsight",
+    "doc_id": "d_p_015_03",
     "persona_id": "p_015",
     "hyperparams": {
-      "project_scale": "team-internal",
+      "project_scale": "academic",
       "project_team_size": "solo",
-      "jargon_density": "heavy"
+      "jargon_density": "plain"
     }
   },
   {
     "doc_type": "blog",
-    "topic_summary": "Exploring serverless architecture patterns for scalable fintech platform development",
-    "title": "Serverless Architecture in Modern Fintech Platforms",
-    "doc_id": "d_p_015_03",
+    "topic_summary": "Reflecting on key insights and strategies that have shaped my career in SaaS product management over the past decade.",
+    "title": "10 Years of Product Management: Lessons from the SaaS Industry",
+    "doc_id": "d_p_015_04",
     "persona_id": "p_015",
     "hyperparams": {
-      "blog_depth": "tutorial",
+      "blog_depth": "opinion-piece",
       "jargon_density": "heavy"
     }
   }

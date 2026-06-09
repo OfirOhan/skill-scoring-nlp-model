@@ -1,27 +1,50 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Moussa Keita's experience as a mobile developer in the enterprise sector.",
-    "title": "Moussa Keita - Mobile Developer",
+    "topic_summary": "Professional summary of Tariq Hassan's 4-year experience as a Data Engineer Lead in SaaS, focusing on data pipeline development and cloud infrastructure.",
+    "title": "Tariq Hassan - Data Engineer Lead",
     "doc_id": "d_p_010_00",
     "persona_id": "p_010",
     "hyperparams": {
-      "cv_format": "paragraph",
-      "geographic_convention": "Europe",
-      "company_type": "agency",
+      "cv_format": "bullet-heavy",
+      "geographic_convention": "India",
+      "company_type": "startup",
       "company_size": "mid (50-500)"
     }
   },
   {
-    "doc_type": "project_readme",
-    "topic_summary": "A cross-platform mobile application that streamlines enterprise workflows by integrating with existing backend systems and providing real-time data synchronization.",
-    "title": "Enterprise Mobility Platform",
+    "doc_type": "linkedin",
+    "topic_summary": "LinkedIn profile summary highlighting Tariq's expertise in building scalable data architectures and leading SaaS data engineering teams.",
+    "title": "Tariq Hassan | Data Engineer Lead at NexaFlow Solutions",
     "doc_id": "d_p_010_01",
     "persona_id": "p_010",
     "hyperparams": {
+      "linkedin_completeness": "detailed"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "README for a real-time customer analytics pipeline built using Apache Kafka and AWS Redshift.",
+    "title": "Real-Time Customer Analytics Pipeline",
+    "doc_id": "d_p_010_02",
+    "persona_id": "p_010",
+    "hyperparams": {
       "project_scale": "academic",
-      "project_team_size": "medium (5-15)",
-      "jargon_density": "moderate"
+      "project_team_size": "small (2-4)",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "Recommendation from NexaFlow Solutions CTO endorsing Tariq's technical leadership and team management skills.",
+    "title": "Recommendation from NexaFlow Solutions CTO",
+    "doc_id": "d_p_010_03",
+    "persona_id": "p_010",
+    "hyperparams": {
+      "recommender_role": "skip-level",
+      "recommender_closeness": "occasional",
+      "company_type": "agency",
+      "company_size": "small (<50)"
     }
   }
 ]

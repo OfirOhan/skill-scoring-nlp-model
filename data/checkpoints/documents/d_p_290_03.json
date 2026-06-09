@@ -1,20 +1,23 @@
 {
   "doc_id": "d_p_290_03",
-  "type": "linkedin",
+  "type": "project_readme",
   "persona_id": "p_290",
   "hyperparams": {
-    "linkedin_completeness": "standard"
+    "project_scale": "team-internal",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Apache Spark": 3,
-    "Data modeling": 3,
-    "Data visualization (Matplotlib/Plotly)": 3,
-    "MLOps (MLflow/W&B)": 3,
-    "NumPy": 3,
-    "Pandas": 3,
-    "Python": 4,
-    "REST API design": 2,
-    "scikit-learn": 3
+    "3D graphics (OpenGL/Vulkan)": 3,
+    "C#/.NET": 2,
+    "Game networking": 3,
+    "Game physics": 3,
+    "HTML/CSS": 2,
+    "JavaScript": 1,
+    "Python": 3,
+    "REST API design": 3,
+    "Unity": 1,
+    "Unreal Engine": 1
   },
-  "text": "#DataScience | #MLOps | #EnterpriseTech  \nHi there! I’m Kunal, a data scientist at GlobalTech Solutions, where I focus on turning complex data into actionable insights. Over the past three years, I’ve worked on projects that blend analytics with real-world business needs—whether it’s optimizing supply chains or refining customer segmentation strategies.  \n\nMy day-to-day involves a mix of Python, Spark, and some heavy lifting with Pandas and NumPy. I’ve built data pipelines that process millions of records daily, and I’ve modeled datasets to uncover patterns that drive decision-making. Visualizing these insights with Plotly and Matplotlib has been key to making data accessible to non-technical teams.  \n\nMLOps is a big part of my workflow too. I’ve deployed models using MLflow, ensuring they stay reliable and scalable. When I’m not coding, I’m usually diving into new tools or refining existing ones to make workflows smoother.  \n\nI’m always curious about how data can solve real problems, and I enjoy collaborating with teams to turn ideas into impact. Let’s connect if you’re navigating similar challenges—happy to share stories or insights! 🚀"
+  "text": "# E-Commerce Behavior Analytics Game  \nA gamified analytics dashboard for tracking user behavior in e-commerce platforms, designed to provide real-time insights with interactive visualizations and competitive metrics. Built for a 15+ team to streamline data-driven decision-making through playful engagement.  \n\n## Badges  \n[![15+ team](https://img.shields.io/badge/Team-15%2B-blue)](https://example.com)  \n[![Python 3.9](https://img.shields.io/badge/Python-3.9-green)](https://example.com)  \n[![React 18](https://img.shields.io/badge/React-18-yellow)](https://example.com)  \n[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14-blue)](https://example.com)  \n[![Redis](https://img.shields.io/badge/Redis-7.0-red)](https://example.com)  \n\n## Tech Stack  \n- **Data Layer**: PostgreSQL 14, Redis 7.0, Apache Kafka  \n- **Frontend**: React 18, D3.js, WebGL (OpenGL)  \n- **Backend**: Python (FastAPI), Node.js (WebSocket)  \n- **Networking**: WebSockets, REST APIs (OpenAPI 3)  \n- **Physics**: Cannon.js for interactive 3D visualizations  \n- **CI/CD**: GitHub Actions, Docker  \n\n## Architecture / Design  \nThe system is built as a microservices architecture with a focus on real-time data pipelines. The core analytics engine processes user behavior logs via Kafka, aggregated into Redis caches for low-latency queries. WebGL (OpenGL) renders 3D heatmaps of user navigation patterns, while Cannon.js handles physics-based interaction for drill-down animations. REST APIs expose structured metrics for integration with external tools, ensuring compatibility with existing e-commerce platforms.  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/example/repo.git  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   npm install  \n   pip install -r requirements.txt  \n   ```  \n3. Configure environment variables for PostgreSQL, Redis, and Kafka endpoints.  \n4. Run database migrations:  \n   ```bash  \n   python manage.py migrate  \n   ```  \n5. Start the development server:  \n   ```bash  \n   npm run dev  \n   ```  \n\n## Usage / Examples  \n- Access the dashboard at `http://localhost:3000`  \n- Use `python scripts/generate_sample_data.py` to populate test metrics  \n- Monitor real-time user flow via the 3D heatmap (OpenGL rendering)  \n- Trigger physics-based drill-downs with mouse interactions (Cannon.js)  \n\n## Contributing  \nWe welcome contributions to improve data accuracy and expand visualization capabilities. Please:  \n- Follow PEP8 and ESLint guidelines  \n- Add unit tests via pytest  \n- Document new features in the API spec (OpenAPI 3)  \n\n## License  \nMIT License. See [LICENSE](https://github.com/example/repo/blob/main/LICENSE) for details."
 }

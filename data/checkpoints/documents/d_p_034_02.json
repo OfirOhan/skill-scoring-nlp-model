@@ -1,21 +1,29 @@
 {
   "doc_id": "d_p_034_02",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_034",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "solo",
-    "jargon_density": "heavy"
+    "recommender_role": "skip-level",
+    "recommender_closeness": "occasional",
+    "company_type": "academic",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "Next.js": 4,
-    "REST API design": 4,
-    "React": 4,
-    "Test automation": 4,
-    "TypeScript": 4,
-    "Unit testing": 4,
-    "Web performance optimization": 4,
-    "Webpack/Vite": 4
+    "A/B testing": 3,
+    "Apache Airflow": 1,
+    "Data visualization": 3,
+    "ETL pipeline design": 2,
+    "Feature engineering": 3,
+    "GraphQL": 1,
+    "Java": 1,
+    "NumPy": 3,
+    "Pandas": 3,
+    "Python": 3,
+    "REST API design": 2,
+    "Statistical modeling": 3,
+    "XGBoost/LightGBM": 3,
+    "scikit-learn": 3,
+    "Data visualization (Matplotlib/Plotly)": 1
   },
-  "text": "# FinConsult PWA  \nA production-grade progressive web app for financial consulting clients, optimized for offline access and performance. Built with Next.js, React, and TypeScript to deliver a secure, fast, and reliable interface for financial data visualization and analysis.  \n\n---\n\n## Badges  \n[![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js)](https://nextjs.org)  \n[![TypeScript](https://img.shields.io/badge/TypeScript-0078D7?style=flat&logo=typescript)](https://www.typescriptlang.org)  \n[![PWA](https://img.shields.io/badge/PWA-3498DB?style=flat&logo=progressive-web-app)](https://web.dev/progressive-web-apps/)  \n[![License](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/MIT)  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/zainab-osman/finconsult-pwa.git  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   npm install  \n   ```  \n3. Set environment variables for the backend API endpoint in `.env.local`.  \n4. Start the development server:  \n   ```bash  \n   npm run dev  \n   ```  \n\n---\n\n## Usage / Examples  \nThe app enables users to visualize financial metrics, generate reports, and access historical data offline. Key features include:  \n- **Offline-first design**: Service workers cache critical assets and data for uninterrupted access.  \n- **Performance optimization**: Code-splitting, lazy loading, and image compression reduce initial load times by 40%.  \n- **Secure data handling**: End-to-end encryption for sensitive client information.  \nExample use case: A client loads a quarterly report while on a plane, with the app retrieving cached data and syncing updates upon reconnection.  \n\n---\n\n## API Reference  \nThe app interacts with a REST API built with Node.js and Express, featuring:  \n- **Endpoints**: `/api/reports`, `/api/metrics`, `/api/sync`  \n- **Methods**: GET, POST, PUT (rate-limited to 100 requests/minute)  \n- **Response types**: JSON with TypeScript interfaces for type safety  \n- **Authentication**: JWT-based token validation for client access  \n\n---\n\n## Testing  \nAutomated testing ensures reliability:  \n- **Unit tests**: Jest + React Testing Library for component behavior validation  \n- **Integration tests**: End-to-end scenarios for API interactions and PWA features  \n- **Coverage**: 95%+ code coverage with detailed test reports  \n- **CI/CD**: GitHub Actions runs tests on every PR and push  \n\n---\n\n## Deployment  \nDeployed via Vite for production builds, hosted on Netlify with:  \n- **Service worker**: Registers at build time for PWA capabilities  \n- **Performance metrics**: Lighthouse score of 97/100 in production  \n- **CI/CD**: Automated rebuilds and deployments on code changes  \n\n---\n\n## License  \nMIT License  \n[View License](https://opensource.org/licenses/MIT)"
+  "text": "Working Relationship  \nCarmen and I crossed paths through shared projects at HealthInsight Analytics, where she collaborated on predictive analytics initiatives. Our interactions were informal but meaningful, centered on problem-solving and iterative improvements. She consistently approached challenges with curiosity and a knack for distilling complex problems into actionable steps.  \n\nDay-to-Day Observations  \nCarmen’s routine involved refining models for patient risk stratification, where she balanced statistical rigor with clinical relevance. She frequently leveraged Python and scikit-learn to build scalable solutions, often iterating rapidly based on stakeholder feedback. Her work on A/B testing frameworks for treatment protocols showcased her ability to translate abstract hypotheses into measurable outcomes. She also streamlined data workflows, reducing manual effort in feature engineering by standardizing data pipelines.  \n\nStandout Moments  \nOne notable project involved optimizing a diabetes management model using XGBoost. Carmen identified key variables overlooked by prior teams, improving prediction accuracy by 12% without sacrificing interpretability. Her attention to detail ensured results aligned with clinical guidelines, earning cross-functional buy-in. She also mentored junior analysts, sharing frameworks for debugging models and prioritizing ethical considerations in data use.  \n\nRecommendation  \nCarmen’s strength lies in her ability to merge technical precision with real-world impact. She thrives in collaborative environments, bringing both analytical depth and a pragmatic approach to problem-solving. Her work ethic—marked by persistence and a commitment to clarity—makes her a reliable and influential contributor. I’d welcome the opportunity to see her apply these qualities to new challenges."
 }

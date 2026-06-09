@@ -3,21 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_015",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "solo",
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "Cloud cost optimization": 3,
-    "GCP": 4,
-    "Infrastructure as Code": 4,
-    "Kubernetes": 3,
-    "Network troubleshooting": 4,
-    "PostgreSQL": 3,
-    "Python": 4,
-    "REST API design": 4,
-    "Terraform": 3
+    "A/B testing": 1,
+    "Agile/Scrum": 3,
+    "Analytics-driven product decisions": 4,
+    "Competitive analysis": 3,
+    "Data visualization (Matplotlib/Plotly)": 1,
+    "Hypothesis testing": 1,
+    "Product management": 4,
+    "Roadmap planning": 3,
+    "SQL analytics": 2,
+    "Stakeholder management": 3,
+    "Tableau/Power BI": 1,
+    "User journey mapping": 3
   },
-  "text": "# SecureAPI Gateway  \nA production-ready API gateway for fintech applications, leveraging OAuth2.0, rate limiting, and distributed compliance checks. Built for microservices architectures with AWS/GCP hybrid deployment, optimized for cloud cost efficiency and observability.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/michaeltran/secureapi-gateway.git  \ncd secureapi-gateway  \nterraform init && terraform apply -var-file=dev.tfvars  \n```  \nDeploys a Kubernetes cluster (EKS/GKE) with PostgreSQL (multi-AZ), Redis for rate limiting, and a Python-based API layer. Ensure AWS/GCP credentials are configured via environment variables.  \n\n## Usage / Examples  \n**OAuth2.0 Integration**  \n```python  \n# Configure OAuth2 middleware with JWT validation  \nauth_middleware = OAuth2Middleware(  \n    issuer=\"https://auth.example.com\",  \n    audience=\"secureapi-gateway\",  \n    token_store=RedisTokenStore(host=\"redis-cluster\", ttl=3600)  \n)  \n```  \n**Rate Limiting**  \n```yaml  \n# Kubernetes ConfigMap for rate limiting policies  \nrate_limits:  \n  - endpoint: \"/transfers\"  \n    limit: 1000  \n    window: 1h  \n    burst: 1200  \n```  \n**Hybrid Cloud Deployment**  \n```bash  \n# Terraform module for GCP/AWS integration  \nmodule \"cloud\" {  \n  source = \"github.com/michaeltran/secureapi-gateway//modules/cloud\"  \n  provider = \"aws\"  \n  region = \"us-east-1\"  \n}  \n```  \nMonitors network latency between AWS Lambda and GCP services, with dynamic routing adjustments for fault tolerance.  \n\n## License  \nMIT License  \n© 2023 Michael Tran. See [LICENSE](LICENSE) for details.  \n\n*Built with Python 3.10, Terraform 1.5, and Kubernetes 1.25. Production-grade network isolation and audit logging enforced via AWS WAF and GCP Cloud Armor.*"
+  "text": "# NexaCollab  \nA real-time collaboration platform for remote software teams, optimized for low-latency communication and distributed task orchestration. Built to reduce context switching by 40% through integrated code review, live editing, and shared workspace synchronization.  \n\n## API Reference  \n### Endpoints  \n- **WebSocket**: `wss://api.nexacollab.dev/realtime` (bidirectional stream for live edits, notifications, and session sync)  \n- **REST**:  \n  - `POST /api/projects` (create new workspace with role-based access control)  \n  - `GET /api/projects/:id/metrics` (aggregated session analytics via GraphQL subscription)  \n  - `PATCH /api/tasks/:taskId/assign` (dynamic task reassignment with conflict resolution)  \n\n### Authentication  \nOAuth2 with JWT refresh tokens; rate limiting enforced via Redis-based sliding window.  \n\n## Usage / Examples  \n```bash\n# Join a session via WebSocket  \nws = new WebSocket(\"wss://api.nexacollab.dev/realtime?token=xyz123\")  \nws.onmessage = (event) => console.log(\"Synced:\", event.data)  \n```  \n```javascript\n// Create a project with scoped permissions  \nfetch(\"https://api.nexacollab.dev/api/projects\", {  \n  method: \"POST\",  \n  headers: { \"Authorization\": \"Bearer <token>\" },  \n  body: JSON.stringify({ name: \"Project Alpha\", members: [\"user1\", \"user2\"] })  \n})  \n```  \n\n## Getting Started / Installation  \n```bash\ngit clone https://github.com/nexacollab/platform.git  \ncd platform  \ndocker-compose build  \ndocker-compose up -d  \n```  \nEnsure PostgreSQL 14+ and Node.js 18 are installed. For academic use, disable production rate limits via `config.env`.  \n\n## Tech Stack  \n- **Frontend**: React (TypeScript), Webpack 5  \n- **Backend**: Node.js (TypeScript), NestJS, PostgreSQL 14  \n- **Realtime**: WebSocket (Socket.io), Redis pub/sub  \n- **CI/CD**: GitHub Actions (GitHub Pages for docs)  \n\n## Architecture / Design  \nMicroservices split into:  \n1. **Realtime Engine** (WebSocket hub + message queue)  \n2. **Backend Services** (task orchestration, RBAC)  \n3. **UI Layer** (React with Web Workers for offline sync)  \nLoad balancing via Nginx; data sharding for user sessions.  \n\n## License  \nMIT License (see [LICENSE](LICENSE))  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/license/nexacollab/platform)](LICENSE)  \n[![Build](https://img.shields.io/github/actions/workflow/ci.yml?branch=main)](https://github.com/nexacollab/platform/actions)  \n[![Version](https://img.shields.io/npm/v/nexacollab)](https://npmjs.com/package/nexacollab)"
 }

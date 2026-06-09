@@ -4,22 +4,22 @@
   "persona_id": "p_030",
   "hyperparams": {
     "project_scale": "hobby",
-    "project_team_size": "large (15+)",
-    "jargon_density": "plain"
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "API testing": 3,
-    "BDD/TDD": 1,
-    "CI/CD pipelines": 3,
-    "GitHub Actions": 3,
-    "Integration testing": 2,
-    "Python": 3,
-    "REST API design": 2,
-    "Selenium/Playwright": 3,
-    "Test automation": 3,
-    "Test strategy design": 2,
-    "Unit testing": 2,
-    "Web accessibility (WCAG)": 1
+    "Team leadership": 1,
+    "Mentoring": 1,
+    "System design": 1,
+    "Agile/Scrum": 1,
+    "Cross-team collaboration": 1,
+    "Stakeholder communication": 1,
+    "Technical writing": 1,
+    "CI/CD pipelines": 1,
+    "GitHub Actions": 1,
+    "Prometheus/Grafana": 1,
+    "Linux administration": 1,
+    "Shell scripting (Bash)": 1
   },
-  "text": "# NexaTest: Automated Regression Testing Framework for SaaS Applications  \nA tool for maintaining test stability across dynamic SaaS UIs. Built with modular test cases, cross-browser support, and CI/CD integration.  \n\n---\n\n## Getting Started / Installation  \nInstall via pip:  \n```bash  \npip install nexatest  \n```  \nRequires Python 3.8+.  \nInstall dependencies:  \n```bash  \npip install selenium playwright requests  \n```  \nSet environment variables for API keys or service credentials before running.  \n\n---\n\n## Usage / Examples  \nRun a test suite:  \n```bash  \nnexatest run tests/test_sso_login.py  \n```  \nExample test script:  \n```python  \nfrom nexatest import TestCase  \n\nclass SSOIntegration(TestCase):  \n    def test_login_flow(self):  \n        self.navigate(\"https://example.com/login\")  \n        self.fill(\"email\", \"test@user.com\")  \n        self.fill(\"password\", \"securepass\")  \n        self.click(\"submit\")  \n        self.assert_text(\"Welcome, test@user.com\")  \n```  \nIntegrate with GitHub Actions:  \n```yaml  \njobs:  \n  test:  \n    runs-on: ubuntu-latest  \n    steps:  \n      - uses: actions/checkout@v3  \n      - uses: actions/setup-python@v4  \n        with:  \n          python-version: 3.8  \n      - run: pip install nexatest  \n      - run: nexatest run tests/  \n```  \n\n---\n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# NexaPay: Blockchain-Enabled Cross-Border Payments  \nA decentralized payment gateway for real-time cross-border settlements, utilizing smart contracts to automate liquidity management and reduce intermediary friction.  \n\n## Deployment  \nLive on Binance Smart Chain (BSC) testnet. Access the dashboard via [NexaPay Explorer](https://nexapay-explorer.com) for transaction tracking and settlement analytics.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/last-commit/farahnazari/nexapay)](https://github.com/farahnazari/nexapay/commits/main)  \n[![Version](https://img.shields.io/github/package-json/v/farahnazari/nexapay/package.json)](https://github.com/farahnazari/nexapay/blob/main/package.json)  \n[![License](https://img.shields.io/github/license/farahnazari/nexapay)](https://github.com/farahnazari/nexapay/blob/main/LICENSE)  \n\n## Tech Stack  \n- **Blockchain**: Ethereum (smart contracts), BSC (transaction settlement)  \n- **Languages**: Solidity (contract logic), Rust (off-chain processing), TypeScript (frontend)  \n- **Tools**: Hardhat (development), Truffle (deployment), Web3.js (wallet integration)  \n- **Protocols**: ERC-20 token standard, Zero-Knowledge Proofs (ZK-SNARKs) for privacy-preserving transfers  \n\n## Architecture / Design  \nThe system decouples settlement logic from liquidity management. Smart contracts handle automated collateral releases via time-locked escrow, while off-chain modules manage routing and compliance checks. A modular architecture allows for plugin-based KYC/AML integrations. Zero-knowledge proofs are used to obfuscate transaction metadata without compromising auditability.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/farahnazari/nexapay.git`  \n2. Install dependencies: `npm install`  \n3. Configure your BSC testnet node and private key in `.env.local`  \n4. Deploy contracts via `npx hardhat deploy`  \n\n## Usage / Examples  \n```typescript\n// Example: Initiate a cross-border transfer  \nconst transfer = await NexaPayContract.methods.transfer(\n  recipientAddress, \n  amount, \n  [signature1, signature2]\n).send({ from: senderAddress });  \n```  \nAutomated settlements occur within 15 seconds, with finality guaranteed by blockchain consensus.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/farahnazari/nexapay/blob/main/LICENSE) for details."
 }

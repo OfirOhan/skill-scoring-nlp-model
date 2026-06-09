@@ -3,25 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_280",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "solo",
-    "jargon_density": "heavy"
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Apache Airflow": 2,
-    "Apache Spark": 2,
-    "Computer vision": 1,
-    "Docker": 3,
-    "Hugging Face Transformers": 3,
-    "Kubernetes": 2,
-    "MLOps (MLflow/W&B)": 3,
-    "Model deployment": 2,
-    "NLP": 3,
-    "PyTorch": 3,
-    "TensorFlow": 3,
-    "Terraform": 2,
-    "scikit-learn": 3
+    "Application security (OWASP)": 3,
+    "DNS/DHCP": 1,
+    "Encryption & PKI": 3,
+    "Firewall configuration": 1,
+    "IAM/Access control": 4,
+    "Network security": 4,
+    "Penetration testing": 3,
+    "SIEM tools": 1,
+    "Security auditing": 1,
+    "TCP/IP": 1
   },
-  "text": "# Predictive Analytics for Client Retention  \nA scalable framework for forecasting customer churn in consulting scenarios using hybrid ML models and AWS integration  \n\n## Configuration  \nEnvironment variables are managed via `.env.example` and `docker-compose.yml`. Key dependencies include:  \n- AWS credentials (S3/EC2)  \n- Dockerized PyTorch backend  \n- Hugging Face API tokens for NLP preprocessing  \n- MLflow tracking URI for experiment logging  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/daichikobayashi/client-retention-prediction.git  \n   ```  \n2. Initialize environment:  \n   ```bash  \n   cp .env.example .env  \n   docker-compose build  \n   docker-compose up -d  \n   ```  \n3. Install AWS CLI and configure credentials for S3/EC2 integration  \n\n## Usage / Examples  \nRun inference on new client data:  \n```bash  \ndocker exec -it prediction_container python predict.py --input data/client_churn.csv  \n```  \nTrain a hybrid model with:  \n```bash  \nmlflow run ./models/ensemble --params model_type=rf_xgb  \n```  \nExample output:  \n```json  \n{\"churn_probability\": 0.27, \"risk_factors\": [\"low_engagement\", \"service_gaps\"]}  \n```  \n\n## Tech Stack  \n- **ML Libraries**: PyTorch (neural networks), scikit-learn (preprocessing), Hugging Face Transformers (NLP)  \n- **Cloud**: AWS S3 (data storage), EC2 (batch processing)  \n- **DevOps**: Docker (containerization), MLflow (experiment tracking)  \n- **Monitoring**: Prometheus (model latency metrics)  \n\n## Architecture / Design  \nThe system employs a layered architecture:  \n1. **Data Layer**: AWS S3 for raw client logs, PostgreSQL for metadata  \n2. **Processing Layer**: PyTorch-based neural network for pattern recognition, scikit-learn pipelines for feature engineering  \n3. **Inference Layer**: REST API via FastAPI, with Hugging Face models for sentiment analysis of client feedback  \n4. **Monitoring**: MLflow for tracking hyperparameters, Prometheus for latency metrics  \n\n## License  \nMIT License  \nSee [LICENSE](LICENSE)  \n\n## Badges  \n[![GitHub](https://badges.frappr.com/gh/daichikobayashi/client-retention-prediction/1.svg)](https://github.com/daichikobayashi/client-retention-prediction)  \n[![Travis CI](https://badges.frappr.com/gh/daichikobayashi/client-retention-prediction/1.svg)](https://travis-ci.com/daichikobayashi/client-retention-prediction)  \n[![MLflow](https://img.shields.io/badge/MLflow-0.19.0-blue.svg)](https://mlflow.org/)"
+  "text": "# SecureAPI Gateway  \nA production-grade API gateway for fintech platforms, engineered with OAuth2, JWT, and zero-trust principles to safeguard 10k+ endpoints across 5+ microservices. Achieved 99.95% uptime in staging environments with 1.2M+ requests/day.  \n\n## Badges  \n[![Build Status](https://github.com/secureapi-gateway/actions/workflows/build.yml/badge.svg)](https://github.com/secureapi-gateway/actions/workflows/build.yml)  \n[![Test Coverage](https://codecov.io/gh/secureapi-gateway/secureapi-gateway/branch/main/graph/badge.svg)](https://codecov.io/gh/secureapi-gateway/secureapi-gateway)  \n[![Security Scan](https://snyk.io/test/secureapi-gateway/secureapi-gateway/branch/main)](https://snyk.io/test/secureapi-gateway/secureapi-gateway/branch/main)  \n\n## Tech Stack  \n- **Language**: Go (1.21+) for performance-critical components  \n- **Authentication**: OAuth2 (RFC 6749) with JWT token introspection  \n- **Storage**: PostgreSQL (v16) for dynamic client credentials and Redis (v7) for token caching  \n- **Security**: AES-256-GCM encryption for sensitive config, HSM-backed key management via HashiCorp Vault  \n- **Monitoring**: Prometheus + Grafana for rate limiting and token validation latency (avg <8ms)  \n\n## Configuration  \nConfigure via environment variables or `config.yaml` (see `example.env`). Critical settings include:  \n- `JWT_SIGNING_KEY` (256-bit HMAC key)  \n- `OAUTH2_ISSUER_URL` (e.g., `https://auth.fintechco.com`)  \n- `MAX_REQUESTS_PER_SECOND` (default 5000)  \n- `LOG_LEVEL` (debug/trace for audit trails)  \n\n## Getting Started  \n1. Clone repo: `git clone https://github.com/secureapi-gateway/secureapi-gateway.git`  \n2. Install dependencies: `go mod tidy`  \n3. Set environment variables (see `example.env`)  \n4. Run server: `go run main.go`  \n5. Verify with `curl -I http://localhost:8080/healthz`  \n\n## Usage / Examples  \n```bash\n# Authenticate with client credentials\ncurl -X POST https://api-gateway/auth \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"client_id\":\"fintech-co\",\"client_secret\":\"securesecret\"}'\n```  \n```bash\n# Validate JWT token\ncurl -X GET https://api-gateway/validate \\\n  -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...\"\n```  \nEnforce rate limits with `X-Request-ID` headers and log all denied requests to `/var/log/secapi_denied.log`.  \n\n## Testing  \nRun unit/integration tests with `go test -cover` (95% coverage). Security-focused tests include:  \n- Token signature validation (100% pass rate)  \n- OAuth2 introspection endpoint fuzzing (0 false positives)  \n- Rate limiting under load (5k RPS sustained for 10m)  \n- JWT claims validation (sub, exp, aud fields enforced)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

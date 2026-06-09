@@ -1,61 +1,63 @@
 {
   "persona_id": "p_002",
   "hyperparams": {
-    "archetype": "platform_engineer",
-    "years_experience": 3,
-    "seniority": "mid",
-    "industry": "adtech",
-    "writing_style": "concise",
+    "archetype": "devops_sre",
+    "years_experience": 2,
+    "seniority": "junior",
+    "industry": "startup",
+    "writing_style": "confident",
     "language_fluency": "ESL",
-    "self_promotion_level": "boastful",
-    "quantification_tendency": "qualitative"
+    "self_promotion_level": "balanced",
+    "quantification_tendency": "metrics-heavy"
   },
-  "name": "Binta Traore",
-  "current_role": "Platform Engineer",
-  "company": "AdvertiseSphere Inc.",
+  "name": "Sunita Rao",
+  "current_role": "Junior DevOps Engineer",
+  "company": "NexaTech Solutions",
   "education": {
     "degree": "Bachelor of Science in Computer Science",
-    "university": "University of Montreal",
-    "year": 2019
+    "university": "University of California, Berkeley",
+    "year": 2021
   },
   "career_trajectory": [
     {
-      "position": "DevOps Engineer",
-      "company": "ClickMedia Solutions",
+      "role": "DevOps Intern",
+      "company": "InnoDev Labs",
+      "duration": "6 months",
+      "responsibilities": [
+        "Assisted in setting up CI/CD pipelines",
+        "Helped with cloud infrastructure setup"
+      ]
+    },
+    {
+      "role": "Junior DevOps Engineer",
+      "company": "NexaTech Solutions",
       "duration": "1 year",
-      "responsibilities": "Automated CI/CD pipelines, managed AWS EC2 clusters"
-    },
-    {
-      "position": "Cloud Solutions Engineer",
-      "company": "AdvertiseSphere Inc.",
-      "duration": "2 years",
-      "responsibilities": "Designed GCP multi-cloud architecture, optimized cloud costs"
-    },
-    {
-      "position": "Platform Engineer",
-      "company": "AdvertiseSphere Inc.",
-      "duration": "current",
-      "responsibilities": "Lead infrastructure as code, implement Kubernetes-based microservices"
+      "responsibilities": [
+        "Maintained GitHub Actions workflows",
+        "Collaborated on Kubernetes deployments"
+      ]
     }
   ],
   "skills": {
-    "AWS": 4,
-    "GCP": 3,
-    "Terraform": 3,
+    "CI/CD pipelines": 4,
+    "GitHub Actions": 3,
+    "Jenkins": 3,
+    "ArgoCD": 3,
+    "Prometheus/Grafana": 4,
+    "Monitoring & alerting": 4,
     "Kubernetes": 4,
-    "Docker": 3,
-    "Load balancing": 3,
-    "CDN management": 3,
-    "Python": 3,
-    "PostgreSQL": 3,
-    "REST API design": 3,
-    "Microservices architecture": 3,
-    "Network troubleshooting": 3
+    "Python": 1,
+    "Bash": 3,
+    "PostgreSQL": 2,
+    "Redis": 2,
+    "Network automation": 2,
+    "Message queues": 2
   },
   "document_ids": [
     "d_p_002_00",
     "d_p_002_01",
     "d_p_002_02",
-    "d_p_002_03"
+    "d_p_002_03",
+    "d_p_002_04"
   ]
 }

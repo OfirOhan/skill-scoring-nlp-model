@@ -1,0 +1,20 @@
+{
+  "doc_id": "d_p_230_05",
+  "type": "blog",
+  "persona_id": "p_230",
+  "hyperparams": {
+    "blog_depth": "tutorial",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "CI/CD pipelines": 3,
+    "Docker": 3,
+    "Go": 5,
+    "Kubernetes": 3,
+    "Microservices architecture": 4,
+    "PostgreSQL": 5,
+    "Prometheus/Grafana": 1,
+    "Python": 5
+  },
+  "text": "Introduction  \nHealthtech platforms handle sensitive patient data, so backend systems must balance security and scalability. As a backend engineer, I’ve learned that resilience isn’t just about handling traffic spikes—it’s about protecting data while supporting growth. Here’s how I’ve approached building systems that meet these demands.  \n\n1. **Microservices for Scalable Isolation**  \n   Split monolithic applications into microservices to isolate failures and scale independently. For example, our patient records service runs separately from billing, allowing us to scale compute resources during peak hours without disrupting other functions. This approach also simplifies security boundaries, as each service can enforce its own access controls.  \n\n2. **Security Through Encryption and IAM**  \n   Encrypt data at rest and in transit using AES-256 and TLS 1.3. For authentication, implement strict IAM policies with role-based access control (RBAC). In one project, we reduced unauthorized access attempts by 75% after migrating to OAuth 2.0 with JWT tokens, ensuring only verified endpoints could interact with sensitive APIs.  \n\n3. **Go and PostgreSQL: Performance Meets Reliability**  \n   Go’s concurrency model handles thousands of requests per second, while PostgreSQL’s advanced indexing and replication support high availability. We used Go for real-time data processing pipelines, cutting latency by 40% compared to Java-based alternatives. PostgreSQL’s partitioning features helped manage petabyte-scale datasets without compromising query performance.  \n\n4. **Python for Scripting and Automation**  \n   Python scripts automate routine tasks like data validation and compliance audits. One script reduced manual checks for HIPAA compliance from hours to minutes, freeing teams to focus on development. Its simplicity also made it easy to integrate with existing tools without rewriting legacy systems.  \n\n5. **Docker and Kubernetes for Consistent Deployment**  \n   Docker containers standardize environments across dev, test, and production, reducing “it works on my machine” issues. Kubernetes orchestrates containers, ensuring services scale automatically during surges. For instance, during a public health crisis, Kubernetes scaled our API server by 300% within minutes, maintaining uptime without manual intervention.  \n\n6. **CI/CD Pipelines for Rapid, Secure Releases**  \n   Automate testing and deployment with CI/CD pipelines to minimize human error. We integrated static code analysis and dependency scans, catching vulnerabilities early. This reduced deployment-related bugs by 60% and cut release cycles from weeks to hours.  \n\nSummary  \nBuilding secure, scalable healthtech backends requires deliberate choices in architecture, tools, and processes. By leveraging microservices, encryption, and language-specific strengths, we create systems that grow with demand while protecting patient data. The key is balancing innovation with compliance, ensuring every decision serves both users and regulatory standards."
+}

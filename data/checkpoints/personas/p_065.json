@@ -1,58 +1,61 @@
 {
   "persona_id": "p_065",
   "hyperparams": {
-    "archetype": "platform_engineer",
-    "years_experience": 9,
+    "archetype": "data_engineer",
+    "years_experience": 7,
     "seniority": "senior",
-    "industry": "SaaS",
-    "writing_style": "confident",
-    "language_fluency": "native",
-    "self_promotion_level": "humble",
+    "industry": "fintech",
+    "writing_style": "modest",
+    "language_fluency": "near-native",
+    "self_promotion_level": "balanced",
     "quantification_tendency": "mixed"
   },
-  "name": "Hiroshi Sato",
-  "current_role": "Senior Platform Engineer",
-  "company": "NexaCorp",
+  "name": "Divya Sundaram",
+  "current_role": "Senior Data Engineer",
+  "company": "FinTech Innovators Inc.",
   "education": {
-    "degree": "Master of Science in Computer Science",
-    "university": "The University of Tokyo",
-    "year": 2015
+    "degree": "Master of Science in Data Science",
+    "university": "Stanford University",
+    "year": 2018
   },
   "career_trajectory": [
     {
-      "role": "DevOps Engineer",
-      "company": "CloudScale Inc.",
-      "duration": "2014-2016"
+      "role": "Data Analyst",
+      "company": "Pennywise Analytics",
+      "year": 2016
     },
     {
-      "role": "Site Reliability Engineer",
-      "company": "Aegis Systems",
-      "duration": "2016-2018"
+      "role": "Data Engineer",
+      "company": "CapitalFlow Solutions",
+      "year": 2018
     },
     {
-      "role": "Principal Platform Engineer",
-      "company": "NexaCorp",
-      "duration": "2018-2020"
+      "role": "Lead Data Engineer",
+      "company": "FinTech Innovators Inc.",
+      "year": 2020
+    },
+    {
+      "role": "Senior Data Engineer",
+      "company": "FinTech Innovators Inc.",
+      "year": 2023
     }
   ],
   "skills": {
-    "AWS": 4,
-    "GCP": 4,
-    "Kubernetes": 5,
-    "Terraform": 5,
-    "Infrastructure as Code": 5,
-    "Load balancing": 4,
-    "Cloud networking (VPC/subnets)": 4,
-    "Python": 4,
-    "GitHub Actions": 4,
-    "Bash": 3,
-    "Prometheus/Grafana": 4,
-    "Network automation": 3
+    "Apache Spark": 5,
+    "Apache Kafka": 4,
+    "Apache Airflow": 4,
+    "Snowflake": 5,
+    "Data warehousing": 4,
+    "Python": 3,
+    "Java": 2,
+    "Go": 1,
+    "Message queues": 2
   },
   "document_ids": [
     "d_p_065_00",
     "d_p_065_01",
     "d_p_065_02",
-    "d_p_065_03"
+    "d_p_065_03",
+    "d_p_065_04"
   ]
 }

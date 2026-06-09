@@ -1,60 +1,60 @@
 {
   "persona_id": "p_201",
   "hyperparams": {
-    "archetype": "embedded_engineer",
-    "years_experience": 3,
+    "archetype": "security_engineer",
+    "years_experience": 5,
     "seniority": "mid",
-    "industry": "enterprise",
-    "writing_style": "verbose",
-    "language_fluency": "near-native",
+    "industry": "healthtech",
+    "writing_style": "neutral",
+    "language_fluency": "ESL",
     "self_promotion_level": "boastful",
     "quantification_tendency": "metrics-heavy"
   },
-  "name": "Kunal Bhatt",
-  "current_role": "Senior Embedded Systems Engineer",
-  "company": "NexGen Systems Inc.",
+  "name": "Leo Bianchi 4",
+  "current_role": "Senior Security Engineer",
+  "company": "VitalHealth Solutions",
   "education": {
-    "degree": "Bachelor of Science in Electrical Engineering",
-    "university": "University of Michigan",
-    "year": 2021
+    "degree": "Master of Cybersecurity",
+    "university": "University of HealthTech Innovations",
+    "year": 2022
   },
   "career_trajectory": [
     {
-      "position": "Embedded Intern",
-      "company": "InnovaTech Solutions",
-      "duration": "6 months",
-      "responsibilities": "Developed firmware for low-power sensors, optimized RTOS task scheduling for real-time performance."
+      "role": "Security Analyst",
+      "company": "MedTech Dynamics",
+      "duration": "2 years",
+      "responsibilities": "Monitored network traffic for anomalies, conducted basic penetration tests on legacy systems."
     },
     {
-      "position": "Junior Embedded Engineer",
-      "company": "Edgeware Technologies",
-      "duration": "18 months",
-      "responsibilities": "Designed hardware-software integration for industrial IoT devices, implemented MQTT-based communication protocols."
+      "role": "Security Engineer",
+      "company": "HealthData Corp",
+      "duration": "3 years",
+      "responsibilities": "Designed IAM frameworks, led SOC2 compliance audits, integrated SIEM tools for real-time threat detection."
     },
     {
-      "position": "Embedded Systems Engineer",
-      "company": "NexGen Systems Inc.",
-      "duration": "1.5 years",
-      "responsibilities": "Led firmware development for edge computing gateways, integrated sensor networks with cloud platforms using REST APIs."
+      "role": "Lead Security Engineer",
+      "company": "VitalHealth Solutions",
+      "duration": "current",
+      "responsibilities": "Architected encryption protocols for EHR systems, managed incident response playbooks for HIPAA breaches."
     }
   ],
   "skills": {
-    "C/C++ (embedded)": 4,
-    "RTOS": 4,
-    "Firmware development": 4,
-    "IoT protocols (MQTT/CoAP)": 4,
-    "Hardware-software integration": 4,
-    "Embedded Linux": 4,
-    "Sensor integration": 4,
-    "Edge computing": 3,
-    "Python": 3,
-    "GitLab CI": 3,
-    "REST API design": 3,
-    "Network automation": 3
+    "Network security": 4,
+    "Application security (OWASP)": 5,
+    "Penetration testing": 4,
+    "IAM/Access control": 4,
+    "Encryption & PKI": 4,
+    "Security auditing": 4,
+    "SIEM tools": 4,
+    "TCP/IP": 2,
+    "DNS/DHCP": 1,
+    "Firewall configuration": 3,
+    "Network automation": 2,
+    "CI/CD pipelines": 3,
+    "Monitoring & alerting": 2
   },
   "document_ids": [
     "d_p_201_00",
-    "d_p_201_01",
-    "d_p_201_02"
+    "d_p_201_01"
   ]
 }

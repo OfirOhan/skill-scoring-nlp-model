@@ -1,59 +1,61 @@
 {
   "persona_id": "p_215",
   "hyperparams": {
-    "archetype": "ml_engineer",
-    "years_experience": 3,
-    "seniority": "mid",
-    "industry": "enterprise",
-    "writing_style": "modest",
+    "archetype": "platform_engineer",
+    "years_experience": 1,
+    "seniority": "junior",
+    "industry": "fintech",
+    "writing_style": "confident",
     "language_fluency": "native",
     "self_promotion_level": "humble",
-    "quantification_tendency": "metrics-heavy"
+    "quantification_tendency": "qualitative"
   },
-  "name": "Ryan Gallagher",
-  "current_role": "Machine Learning Engineer",
-  "company": "NexGen Technologies",
+  "name": "Simon Lefebvre 18",
+  "current_role": "Platform Engineer",
+  "company": "CapitalFlow Solutions",
   "education": {
-    "degree": "Master of Science in Data Science",
-    "university": "University of Southern California",
-    "year": 2021
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "University of Toronto",
+    "year": 2023
   },
   "career_trajectory": [
     {
-      "year": 2020,
-      "role": "Junior Machine Learning Engineer",
-      "company": "DataVista Analytics (startup)"
+      "role": "DevOps Intern",
+      "company": "FinTech Innovators Ltd.",
+      "duration": "6 months",
+      "responsibilities": "Assisted with AWS infrastructure automation and basic CI/CD pipeline setup"
     },
     {
-      "year": 2021,
-      "role": "Senior ML Engineering Intern",
-      "company": "Veridian Systems (mid-market)"
+      "role": "Junior DevOps Engineer",
+      "company": "NexusPay Systems",
+      "duration": "10 months",
+      "responsibilities": "Maintained Docker/Kubernetes clusters and contributed to Terraform modules"
     },
     {
-      "year": 2022,
-      "role": "Machine Learning Engineer",
-      "company": "NexGen Technologies (enterprise)"
+      "role": "Platform Engineer",
+      "company": "CapitalFlow Solutions",
+      "duration": "1 year",
+      "responsibilities": "Designing cloud-native architectures and optimizing serverless workflows"
     }
   ],
   "skills": {
-    "PyTorch": 3,
-    "TensorFlow": 3,
-    "NLP": 3,
-    "Computer vision": 3,
-    "MLOps (MLflow/W&B)": 3,
-    "Model deployment": 3,
-    "LLMs/Prompt engineering": 4,
-    "Feature stores": 3,
-    "AWS": 3,
-    "GCP": 3,
-    "Apache Airflow": 3,
-    "dbt": 3,
-    "ETL pipeline design": 3,
-    "Snowflake": 3
+    "AWS": 4,
+    "Kubernetes": 4,
+    "Terraform": 4,
+    "Infrastructure as Code": 4,
+    "Serverless": 3,
+    "Load balancing": 3,
+    "Cloud networking": 3,
+    "CI/CD pipelines": 4,
+    "Python": 2,
+    "REST API design": 2,
+    "PostgreSQL": 2,
+    "Redis": 1,
+    "Network troubleshooting": 2,
+    "Linux administration": 3
   },
   "document_ids": [
     "d_p_215_00",
-    "d_p_215_01",
-    "d_p_215_02"
+    "d_p_215_01"
   ]
 }

@@ -1,25 +1,27 @@
 {
   "doc_id": "d_p_006_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_006",
   "hyperparams": {
-    "recommender_role": "skip-level",
-    "recommender_closeness": "worked-daily",
-    "company_type": "academic",
-    "company_size": "large (500+)"
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "Agile/Scrum": 4,
+    "AWS": 4,
     "CI/CD pipelines": 3,
-    "Cross-team collaboration": 3,
-    "Database optimization": 3,
-    "GitHub Actions": 2,
-    "Linux administration": 2,
-    "Prometheus/Grafana": 2,
-    "Stakeholder communication": 3,
-    "System design": 4,
-    "Team leadership": 4,
-    "Technical writing": 3
+    "Cloud cost optimization": 3,
+    "Docker": 3,
+    "GCP": 4,
+    "Infrastructure as Code": 3,
+    "Kubernetes": 4,
+    "Linux administration": 3,
+    "Monitoring & alerting": 3,
+    "Network automation": 1,
+    "PostgreSQL": 1,
+    "Python": 1,
+    "REST API design": 1,
+    "Terraform": 3
   },
-  "text": "Dear [Hiring Manager's Name],  \n\nI’ve had the privilege of working closely with Uma Krishnan over the past year as a professor at [Academic Institution], where she served as a senior tech lead at NexaCorp. Her role bridged academic research and enterprise engineering, and her contributions were both impactful and consistent.  \n\nUma’s strengths lie in her ability to translate complex technical challenges into scalable solutions. She led the redesign of NexaCorp’s monolithic architecture, splitting it into microservices that improved system reliability by 40% during peak loads. Her system design decisions prioritized long-term maintainability, which became a reference point for junior engineers. She also spearheaded a cross-team Agile transformation, reducing delivery cycles by 25% through optimized sprint planning and stakeholder alignment.  \n\nA standout example of her leadership occurred during a critical database migration. When a legacy system’s performance bottleneck threatened project timelines, Uma coordinated with DevOps, QA, and business stakeholders to refactor query patterns and implement indexing strategies. The result was a 60% reduction in latency, with minimal downtime. Her ability to communicate technical trade-offs to non-technical leaders ensured alignment across teams.  \n\nBeyond her technical expertise, Uma’s work ethic is unwavering. She consistently mentors junior engineers, often staying late to review code or troubleshoot production issues. Her combination of strategic thinking and hands-on execution makes her a rare asset in any team.  \n\nI’m confident she’ll bring the same level of rigor and collaboration to your organization. Please feel free to reach out for further details.  \n\nSincerely,  \n[Your Full Name]  \n[Your Title]  \n[Academic Institution]"
+  "text": "# E-Commerce Microservices Architecture  \nA scalable, production-ready framework for managing high-traffic e-commerce platforms with distributed systems and cloud-native practices.  \n\n## Badges  \n[![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat)](https://github.com)  \n[![CI/CD](https://img.shields.io/badge/CI/CD-Pipeline-4285F4?style=flat)](https://github.com)  \n[![Cloud](https://img.shields.io/badge/Cloud-AWS%20%26%20GCP-FF6F00?style=flat)](https://github.com)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Tech Stack  \n- **Orchestration**: Kubernetes (managed via GKE)  \n- **Cloud**: AWS (EC2, S3) + GCP (Compute Engine, Cloud SQL)  \n- **Infrastructure**: Terraform for cross-cloud IaC  \n- **Monitoring**: Prometheus + Grafana (alerting via Slack)  \n- **CI/CD**: GitHub Actions (optimized for cost with spot instances)  \n- **Docker**: Containerized services with multi-stage builds  \n\n## Architecture / Design  \nThe system is split into decoupled services:  \n- **Order Processing**: Async queue-based (RabbitMQ) for peak load handling  \n- **Inventory Sync**: Global tables with regional read replicas (GCP Spanner)  \n- **Payment Gateway**: Multi-cloud failover (AWS Lambda + GCP Cloud Functions)  \n- **Analytics**: Stream processing (Apache Flink) for real-time insights  \n\nKey decisions:  \n- Kubernetes autoscaling with AWS Fargate for cost efficiency  \n- Terraform modules for consistent GCP/AWS resource provisioning  \n- Linux sysctl tuning for low-latency network I/O  \n\n## Getting Started / Installation  \nClone the repository using Git.  \n```bash  \ngit clone https://github.com/shreyabhat/ecommerce-microservices.git  \ncd ecommerce-microservices  \ndocker-compose up --build  \n```  \nEnsure Docker is installed and configured for multi-platform builds.  \n\n## Usage / Examples  \n- **Black Friday Scaling**: Kubernetes HPA triggered by CloudWatch metrics  \n- **Regional Outage Recovery**: Automatic failover to GCP via Terraform state sync  \n- **Cost Optimization**: Spot instance utilization in AWS CI/CD pipelines  \n\n## Contributing  \nThis project requires expertise in cloud ops, DevOps, and distributed systems. Contributions should align with production-grade standards, including:  \n- Validating cross-cloud IaC with Terraform validate  \n- Testing autoscaling limits in AWS/GCP environments  \n- Optimizing container images for cold starts  \n\n*Note: Solo development focused on production-ready patterns with measurable cloud cost savings (15%+ in AWS/GCP).*"
 }

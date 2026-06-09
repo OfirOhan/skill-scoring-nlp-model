@@ -1,61 +1,64 @@
 {
   "persona_id": "p_040",
   "hyperparams": {
-    "archetype": "embedded_engineer",
-    "years_experience": 1,
-    "seniority": "junior",
-    "industry": "fintech",
+    "archetype": "qa_test_engineer",
+    "years_experience": 12,
+    "seniority": "staff",
+    "industry": "gaming",
     "writing_style": "neutral",
     "language_fluency": "native",
-    "self_promotion_level": "humble",
-    "quantification_tendency": "metrics-heavy"
+    "self_promotion_level": "balanced",
+    "quantification_tendency": "qualitative"
   },
-  "name": "Ritika Malhotra",
-  "current_role": "Embedded Systems Engineer",
-  "company": "FinTech Innovators Inc.",
+  "name": "Emre Yalcin",
+  "current_role": "Staff QA Engineer",
+  "company": "NexaGame Studios",
   "education": {
-    "degree": "Bachelor of Technology in Electronics and Communication Engineering",
-    "university": "Indian Institute of Technology, Delhi",
-    "year": 2022
+    "degree": "BSc in Computer Science",
+    "university": "Istanbul Technical University",
+    "year": 2010
   },
   "career_trajectory": [
     {
-      "year": 2022,
-      "position": "Embedded Systems Intern",
-      "company": "FinTech Innovators Inc.",
-      "responsibilities": "Developed firmware for IoT-enabled payment terminals, integrated MQTT protocols for real-time transaction data."
+      "role": "QA Engineer",
+      "company": "Lumos Interactive",
+      "year": "2010-2012"
     },
     {
-      "year": 2023,
-      "position": "Junior Embedded Engineer",
-      "company": "FinTech Innovators Inc.",
-      "responsibilities": "Led sensor integration for biometric authentication modules, achieved 98.5% reliability in hardware-software co-design."
+      "role": "Senior QA Engineer",
+      "company": "Vortex Games",
+      "year": "2012-2015"
     },
     {
-      "year": 2024,
-      "position": "Embedded Systems Engineer",
-      "company": "FinTech Innovators Inc.",
-      "responsibilities": "Architected edge computing solutions for latency-critical fraud detection systems, reducing processing time by 40%."
+      "role": "Test Lead",
+      "company": "NexaGame Studios",
+      "year": "2015-2018"
+    },
+    {
+      "role": "Staff QA Engineer",
+      "company": "NexaGame Studios",
+      "year": "2018-present"
     }
   ],
   "skills": {
-    "C/C++ (embedded)": 3,
-    "RTOS": 3,
-    "Firmware development": 3,
-    "IoT protocols (MQTT/CoAP)": 3,
-    "Hardware-software integration": 3,
-    "Embedded Linux": 3,
-    "Sensor integration": 2,
-    "Python": 2,
-    "REST API design": 2,
-    "Network automation": 2,
-    "GitLab CI": 2,
-    "Shell scripting (Bash)": 2
+    "Test automation": 4,
+    "Selenium/Playwright": 5,
+    "Integration testing": 4,
+    "Performance testing (JMeter/k6)": 5,
+    "API testing": 4,
+    "Test strategy design": 5,
+    "BDD/TDD": 4,
+    "Python": 3,
+    "Java": 2,
+    "Go": 1,
+    "CI/CD pipelines": 3,
+    "Web performance optimization": 1
   },
   "document_ids": [
     "d_p_040_00",
     "d_p_040_01",
     "d_p_040_02",
-    "d_p_040_03"
+    "d_p_040_03",
+    "d_p_040_04"
   ]
 }

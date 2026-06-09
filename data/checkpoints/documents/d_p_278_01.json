@@ -3,20 +3,26 @@
   "type": "project_readme",
   "persona_id": "p_278",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "large (15+)",
-    "jargon_density": "heavy"
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Flutter": 4,
-    "JavaScript": 1,
-    "Kotlin": 3,
-    "Mobile UI/UX": 3,
+    "AWS": 1,
+    "CI/CD pipelines": 3,
+    "Docker": 1,
+    "GCP": 1,
+    "Go": 4,
+    "Java": 3,
+    "Kubernetes": 1,
+    "Microservices architecture": 4,
+    "MongoDB": 1,
+    "PostgreSQL": 1,
+    "Python": 1,
+    "REST API design": 4,
     "React": 1,
-    "React Native": 2,
-    "Swift": 3,
-    "TypeScript": 3,
-    "Web accessibility (WCAG)": 3
+    "Terraform": 2,
+    "TypeScript": 4
   },
-  "text": "# TechNova Enterprise Mobility Platform  \nA cross-platform enterprise mobility solution engineered for secure data orchestration, real-time sync, and zero-trust architecture across iOS, Android, and web. Built with Flutter as the primary framework, with Kotlin and Swift for native enhancements.  \n\n## Deployment  \nCI/CD pipelines automate deployment to staging (AWS Amplify) and production (Azure DevOps). Secure endpoints are validated via TLS 1.3 and OAuth 2.0, with rollback capabilities enabled for 99.95% uptime SLA.  \n\n## Badges  \n[![Security Compliance](https://example.com/secure-badge)](https://example.com/secure-badge) [![Deployment Status](https://example.com/deploy-badge)](https://example.com/deploy-badge)  \n\n## Tech Stack  \n- **Flutter** (core framework, 95% UI code reuse)  \n- **Kotlin** (Android native modules, data persistence)  \n- **Swift** (iOS native integrations, performance-critical logic)  \n- **TypeScript** (backend APIs, type-safe service layers)  \n- **AWS Cognito** + **Azure AD B2C** (identity orchestration)  \n- **gRPC-Web** (real-time data sync, 15ms latency P99)  \n\n## Architecture / Design  \nA microservices-first design with Flutter as the UI orchestrator. Native modules handle biometric authentication (Kotlin for Android, Swift for iOS) and secure file storage. Zero-trust principles enforce end-to-end encryption (AES-256) and device attestation for all data at rest.  \n\n## Getting Started / Installation  \n1. Clone repo: `git clone https://example.com/technova`  \n2. Fetch submodules: `git submodule update --init --recursive`  \n3. Configure environment variables in `.env.local` for staging/production  \n4. Run `flutter pub get` and `pod install` for iOS  \n5. Build with `flutter build apk` (Android) or `flutter build ipa` (iOS)  \n\n## Usage / Examples  \n- **Secure Data Sync**: Use `secureStorageSync()` to encrypt/decrypt payloads via AES-256-GCM with HKDF key derivation.  \n- **Biometric Login**: Implement `kotlinx.coroutines` for async fingerprint verification on Android.  \n- **WCAG Compliance**: Ensure dynamic content updates via `flutter_test` and `flutter_automation` for screen reader compatibility.  \n\n## License  \nMIT License. See [LICENSE](https://example.com/license) for details."
+  "text": "# AdInsight Dashboard  \nA real-time ad analytics dashboard for adtech clients, built to process and visualize campaign performance metrics with minimal latency. The tool aggregates data from multiple ad platforms, offering actionable insights through interactive charts and drill-down capabilities. Designed for scalability and ease of integration, it serves as a centralized hub for tracking ROI, audience engagement, and ad spend efficiency.  \n\n## Configuration  \nSet environment variables for API keys and data source connections. Example:  \n```bash  \nAD_PLATFORM_TOKEN=your_token_here  \nDATA_SOURCE_URL=https://api.adplatform.com/v1  \n```  \nEnsure Node.js 18+ is installed. The backend runs on port 3000, while the frontend (built with TypeScript) serves on port 8080.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies:  \n```bash  \ngit clone https://github.com/yourusername/adinsight-dashboard.git  \ncd adinsight-dashboard  \nnpm install  \n```  \nSet environment variables as described above. Start the server with `npm run dev` for hot-reloading or `npm start` for production mode.  \n\n## Usage / Examples  \nLaunch the dashboard by navigating to `http://localhost:8080`.  \n- View real-time metrics for active campaigns  \n- Filter data by platform, date range, or audience segment  \n- Export reports as CSV or JSON for further analysis  \nExample API call: Fetch campaign performance data  \n```bash  \ncurl -X GET http://localhost:3000/api/campaigns?dateRange=7d  \n```  \n\n## Tech Stack  \n- **Backend**: Node.js (Express), TypeScript, REST APIs  \n- **Frontend**: TypeScript, custom React components (no framework-specific mentions)  \n- **Integration**: Java-based legacy ad platform connectors, Go microservices for data processing  \n- **CI/CD**: Automated testing pipelines for TypeScript and Node.js, with Terraform for infrastructure-as-code  \n\n## Architecture / Design  \nThe system employs a microservices architecture, with Go services handling real-time data ingestion and aggregation. TypeScript enforces type safety across the frontend and backend, while REST APIs ensure seamless communication between services. Java microservices manage legacy ad platform integrations, minimizing technical debt.  \n\n## License  \nMIT License  \nSee [LICENSE](LICENSE) for details  \n\n## Badges  \n[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)"
 }

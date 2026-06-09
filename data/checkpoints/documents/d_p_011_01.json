@@ -4,20 +4,21 @@
   "persona_id": "p_011",
   "hyperparams": {
     "project_scale": "hobby",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "heavy"
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 5,
-    "GCP": 5,
-    "Kubernetes": 4,
-    "LLMs/Prompt engineering": 5,
-    "MLOps": 5,
-    "Model deployment": 5,
-    "NLP": 5,
-    "PyTorch": 5,
-    "TensorFlow": 5,
-    "Terraform": 4
+    "AWS": 2,
+    "CI/CD pipelines": 3,
+    "Chaos engineering": 1,
+    "Go": 4,
+    "Jenkins": 2,
+    "Linux administration": 3,
+    "Microservices architecture": 5,
+    "Monitoring & alerting": 3,
+    "PostgreSQL": 5,
+    "Python": 5,
+    "REST API design": 5
   },
-  "text": "# NeuraLogic Business Insights Platform  \nAI-driven analytics platform leveraging machine learning for real-time business intelligence. Combines scalable infrastructure, NLP pipelines, and MLOps workflows to transform raw data into actionable insights. Built for enterprises requiring hybrid cloud flexibility and model governance.  \n\n## Badges  \n[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat)](https://github.com/cedricblanc/neuralogic)  \n[![CI/CD](https://img.shields.io/badge/CI%2FCD-passing?style=flat)](https://github.com/cedricblanc/neuralogic/actions)  \n[![Tech Stack](https://img.shields.io/badge/Tech%20Stack-PyTorch%2CTensorFlow%2CMLops%2CK8s%2CTerraform%2CAWS%2CGCP%2CLLMs%2CNLP-blue?style=flat)](https://github.com/cedricblanc/neuralogic)  \n\n## Getting Started / Installation  \n```bash  \n# Prerequisites  \nPython 3.9+  \nDocker 20.10+  \nkubectl 1.22+  \n\n# Clone repo  \ngit clone https://github.com/cedricblanc/neuralogic.git  \ncd neuralogic  \n\n# Initialize infrastructure  \nterraform init  \nterraform apply -var region=eu-west-1  \n\n# Launch local dev env  \ndocker-compose up --build  \n```  \nNote: This is a hobby project with limited enterprise-grade features. Production use requires additional security and compliance layers.  \n\n## Usage / Examples  \n```bash  \n# Run inference pipeline  \npython inference.py --model-id 12345 --data-path /data/transactions.csv  \n\n# Monitor model drift  \ncurl http://api:8080/models/12345/metrics  \n\n# Generate NLP insights  \npython nlp_analytics.py --corpus-path /data/reviews.txt  \n```  \nPlatform integrates PyTorch/TensorFlow models with LLMs for text analysis, using AWS S3 for storage and GCP BigQuery for analytics.  \n\n## Configuration  \nEnvironment variables in `.env` control cloud provider settings, model registry access, and pipeline thresholds. Terraform variables define cluster size, region, and cost optimization strategies.  \n\n## Deployment  \nDeploy via Kubernetes manifests with Terraform-managed EKS/GKE clusters. Auto-scaling rules and cost-optimization policies are baked into the deployment pipeline, reducing cloud spend by 30% in prior projects.  \n\n## Architecture / Design  \nMicroservices architecture with:  \n- Data ingestion layer (Kafka + AWS Kinesis)  \n- Model serving (TorchServe + TF Serving)  \n- NLP pipeline (HuggingFace Transformers + custom embeddings)  \n- Analytics dashboard (React + Grafana)  \nKubernetes orchestrates workloads, while Terraform ensures reproducible infrastructure across AWS and GCP.  \n\n## Tech Stack / Built With  \nPython, PyTorch, TensorFlow, HuggingFace, Docker, Kubernetes, Terraform, AWS, GCP, Prometheus, Grafana, Apache Kafka, BigQuery, S3, Redis, Elasticsearch.  \n\n## Contributing  \nContributions require experience with MLOps pipelines, hybrid cloud deployments, and NLP model integration. Submit pull requests with benchmarking data and infrastructure-as-code updates. Collaboration is key for cross-cloud optimization."
+  "text": "# NexaSync: Real-Time Data Synchronization for SaaS Platforms  \n\nNexaSync bridges data silos across microservices by ingesting, validating, and propagating changes in real time. Built for SaaS platforms, it ensures consistency without blocking workflows, using Kafka as the backbone for event streaming.  \n\n## Configuration  \nSet environment variables in `.env` or export them directly:  \n```env  \nKAFKA_BROKER=broker1:9092,broker2:9092  \nCONSUMER_GROUP=sync-service  \nPOSTGRES_DSN=postgres://user:pass@localhost:5432/dbname?sslmode=disable  \n```  \nOverride defaults via CLI flags (e.g., `--kafka-broker=broker3:9092`).  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/yourusername/nexasync.git  \ncd nexasync  \ngo mod tidy  \n# Ensure Kafka and PostgreSQL are running  \ngo run main.go  \n```  \nRun migrations with `go run migrate.go` to set up schema and indexes.  \n\n## Usage / Examples  \nSync user data between services:  \n```bash  \n./nexasync --topic=user-updates --destination=service-b  \n```  \nUse `--dry-run` to simulate without committing changes. Monitor via Kafka consumer metrics or Prometheus.  \n\n## Tech Stack  \n- **Language**: Go (1.21+) for performance-critical logic  \n- **Message Queue**: Apache Kafka (for low-latency, high-throughput pipelines)  \n- **Storage**: PostgreSQL (with JSONB for flexible schema)  \n- **CI/CD**: Jenkins (for deployment pipelines)  \n- **Monitoring**: Prometheus + Grafana (for latency and error tracking)  \n\n## Architecture / Design  \nNexaSync operates as a stateless microservice, consuming Kafka events and applying transformations via Go’s concurrency model. PostgreSQL acts as a write-ahead log for audit trails. The event-driven architecture decouples producers from consumers, allowing scaling without downtime.  \n\n## License  \nMIT License (https://github.com/yourusername/nexasync/blob/main/LICENSE)  \n\n## Badges  \n[![GitHub](https://badgen.net/badge/repo/github?icon=github&label)](https://github.com/yourusername/nexasync)  \n[![Build Status](https://badgen.net/badge/build/status?icon=github)](https://github.com/yourusername/nexasync/actions)  \n[![License](https://badgen.net/badge/license/MIT?icon=github)](https://github.com/yourusername/nexasync/blob/main/LICENSE)"
 }

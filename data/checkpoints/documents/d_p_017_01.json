@@ -3,23 +3,19 @@
   "type": "project_readme",
   "persona_id": "p_017",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "solo",
-    "jargon_density": "heavy"
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Docker": 3,
-    "GCP": 2,
-    "Hugging Face Transformers": 3,
-    "Kubernetes": 2,
-    "MLOps (MLflow/W&B)": 4,
-    "Model deployment": 4,
-    "NLP": 4,
-    "PyTorch": 4,
-    "Recommendation systems": 2,
-    "TensorFlow": 3,
-    "scikit-learn": 2
+    "3D graphics (OpenGL/Vulkan)": 4,
+    "Game physics": 4,
+    "Go": 1,
+    "Java": 1,
+    "Python": 1,
+    "REST API design": 1,
+    "Unity": 5,
+    "Unreal Engine": 5
   },
-  "text": "# Fraud Detection System for Financial Transactions  \n\nReal-time anomaly detection using ensemble models with <100ms latency. Trained on 1.2M+ transactions with 98.3% F1 score. Built for fintech use cases with production-grade monitoring and scalable deployment.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/aaronbaptiste/fraud-detection.git  \ncd fraud-detection  \npip install -r requirements.txt  \ndocker-compose up -d  \n```  \nRequires AWS credentials for model serving. Ensure TensorFlow 2.12 and PyTorch 2.0 are installed.  \n\n## Usage / Examples  \n```bash  \npython inference.py --transaction_id \"TX123456\"  \n```  \nOutputs risk score (0-1) and flagged features. For production, use the Docker API endpoint:  \n```python  \nimport requests  \nrequests.post(\"http://localhost:5000/predict\", json={\"amount\": 1500, \"category\": \"TRANSFER\"})  \n```  \nModel deployed via MLflow with W&B tracking. Monitor metrics in MLflow UI.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n---  \n*Built with TensorFlow 2.12, PyTorch 2.0, MLflow 2.9, and Docker 24.0. AWS Lambda integration for edge deployment.*"
+  "text": "# Enterprise Multiplayer Game Engine Optimization  \n\nA high-performance engine tailored for scalable, low-latency multiplayer experiences in enterprise environments. Focuses on real-time synchronization, cross-platform reliability, and resource-efficient networking. Built with Unity and Unreal Engine as foundational pillars, leveraging 3D graphics (Vulkan/OpenGL) and physics systems for deterministic behavior.  \n\n---\n\n## Deployment  \nHosted on Kubernetes with Docker containers for consistent CI/CD pipelines. Deployment includes auto-scaling for player sessions and real-time monitoring via Prometheus.  \n\n---\n\n## Badges  \n[![Build Status](https://github.com/yourusername/yourproject/actions/workflows/build.yml/badge.svg)](https://github.com/yourusername/yourproject/actions/workflows/build.yml)  \n[![Code Coverage](https://codecov.io/gh/yourusername/yourproject/branch/main/graph/badge.svg)](https://codecov.io/gh/yourusername/yourproject)  \n[![Repository Size](https://github.com/yourusername/yourproject/packages/container/yourproject/overview.svg)](https://github.com/yourusername/yourproject/packages/container/yourproject)  \n\n---\n\n## Tech Stack  \n- **Core Engines**: Unity (C#) + Unreal Engine (C++) for cross-platform flexibility  \n- **Graphics**: Vulkan (for low-level GPU optimization) + OpenGL (for compatibility)  \n- **Physics**: PhysX (for deterministic collision resolution)  \n- **Networking**: ENet/RakNet (for lightweight, reliable packet delivery)  \n- **Tools**: Unity ECS for data-oriented design, Unreal Nanite for complex geometry rendering  \n\n---\n\n## Architecture / Design  \nDesigned for modular systems with decoupled physics and rendering pipelines. Key optimizations include:  \n- **Predictive Networking**: Reduces latency by simulating client-side movements ahead of server validation  \n- **Delta Compression**: Minimizes bandwidth usage for state synchronization  \n- **Unity ECS**: Enables parallel processing of game objects for large-scale multiplayer scenarios  \n- **Unreal Engine 5.2**: Leverages Lumen and Nanite for photorealistic environments without performance overhead  \n\n---\n\n## Getting Started  \n1. Clone the repo: `git clone https://github.com/yourusername/yourproject.git`  \n2. Build dependencies: `./build.sh` (requires Docker and Unity/Unreal SDKs)  \n3. Launch the demo scene: `./run.sh --scene=multiplayer_battleground`  \n\n---\n\n## Usage / Examples  \n- **Multiplayer Battle Royale**: Demonstrates predictive movement and dynamic spawn logic  \n- **Real-Time Strategy**: Uses delta compression for large-scale unit synchronization  \n- **VR Collaboration**: Leverages Vulkan for high-fidelity rendering across headsets  \n\n---\n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
 }

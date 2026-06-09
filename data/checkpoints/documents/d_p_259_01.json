@@ -3,23 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_259",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "plain"
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "CI/CD pipelines": 4,
-    "Cloud cost optimization": 3,
-    "GitHub Actions": 4,
-    "Go": 4,
-    "Linux administration": 2,
-    "Microservices architecture": 4,
-    "Monitoring & alerting": 4,
-    "PostgreSQL": 4,
-    "Python": 2,
-    "REST API design": 4,
-    "Test automation": 2
+    "Agile/Scrum": 3,
+    "CI/CD pipelines": 3,
+    "Cross-team collaboration": 3,
+    "GitHub Actions": 3,
+    "Linux administration": 1,
+    "Mentoring": 1,
+    "Shell scripting": 1,
+    "Stakeholder communication": 2,
+    "System design": 5,
+    "Team leadership": 1
   },
-  "text": "# HealthDataSync  \nA secure, scalable backend system for real-time patient data synchronization across healthcare providers. Designed for academic research environments, this project balances real-world compliance with developer-friendly tooling to enable seamless cross-institutional data flow while maintaining strict privacy standards.  \n\n## Getting Started / Installation  \nClone the repository and navigate to the project root:  \n```bash  \ngit clone https://github.com/your-username/healthdatasync.git  \ncd healthdatasync  \n```  \nSet environment variables for AWS credentials and database access. Use Docker to ensure consistent runtime dependencies:  \n```bash  \ndocker-compose up --build  \n```  \nInstall Python dependencies via `pip install -r requirements.txt` and verify the PostgreSQL instance is running. Run the server with `python main.py` to start the REST API endpoint.  \n\n## Usage / Examples  \nTo sync patient records between institutions, send a POST request to `/api/sync` with a JSON payload containing source and destination provider IDs. The system will automatically validate access controls and apply real-time encryption during transit. Example:  \n```bash  \ncurl -X POST https://localhost:5000/api/sync \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"source_id\": \"HOSP123\", \"destination_id\": \"CLIN456\"}'  \n```  \nMonitor updates via WebSocket connections to `/ws/updates` for live notifications.  \n\n## Badges  \n[![license](https://...)](https://github.com/your-username/healthdatasync/blob/main/LICENSE)  \n[![CI/CD](https://...)](https://github.com/your-username/healthdatasync/actions)  \n[![Test Coverage](https://...)](https://github.com/your-username/healthdatasync/blob/main/coverage_report.md)  \n\n## Tech Stack  \n- **Backend**: Go (for high-performance concurrency), REST APIs (with OpenAPI spec)  \n- **Database**: PostgreSQL (with UUID-based partitioning for scalability)  \n- **Cloud**: AWS (EC2 for compute, S3 for audit logs)  \n- **CI/CD**: GitHub Actions (with auto-scaling deployment pipelines)  \n- **Security**: TLS 1.3, AES-256 encryption, OAuth2 for provider authentication  \n\n## Architecture / Design  \nThe system employs a microservices architecture with dedicated services for data validation, encryption, and audit logging. PostgreSQL handles ACID-compliant transactions for patient records, while AWS Lambda processes asynchronous sync tasks. WebSockets enable real-time updates without polling. Monitoring via Prometheus and Grafana ensures 99.95% uptime, with alerts for latency spikes or unauthorized access attempts.  \n\n## Contributing  \nFork the repository and submit pull requests with tests covering edge cases like partial data updates. Ensure all code adheres to the OpenAPI spec and includes detailed comments for compliance auditors.  \n\n## License  \nMIT License — see [LICENSE](https://github.com/your-username/healthdatasync/blob/main/LICENSE) for details."
+  "text": "# RealTimeInsight: Cloud-Native Analytics Platform  \n\nRealTimeInsight is a cloud-native platform engineered to process and visualize real-time data streams for SaaS applications. Designed for high-throughput scenarios, it abstracts complex data pipelines into intuitive APIs, enabling teams to build custom analytics dashboards without infrastructure overhead. The system handles ingestion, aggregation, and query optimization, with a focus on low-latency responses and horizontal scalability.  \n\n## API Reference  \n\n### Ingest Data  \n**POST /api/v1/streams/{streamId}/data**  \n```http\nPOST /api/v1/streams/usage_metrics/data\nContent-Type: application/json\n\n{\n  \"timestamp\": \"2023-10-05T14:30:00Z\",\n  \"value\": 1234.56\n}\n```  \n**Response:**  \n```http\nStatus: 201 Created\n```  \n\n### Query Aggregated Metrics  \n**GET /api/v1/streams/{streamId}/metrics**  \n```http\nGET /api/v1/streams/usage_metrics/metrics?start=2023-10-05T00:00:00Z&end=2023-10-05T23:59:59Z\n```  \n**Response:**  \n```json\n{\n  \"total\": 123456.78,\n  \"average\": 123.46,\n  \"count\": 1000\n}\n```  \n\n## Usage / Examples  \n\nIngest metrics from a SaaS application:  \n```bash\ncurl -X POST https://api.realtimeinsight.example.com/api/v1/streams/usage_metrics/data \\\n-H \"Authorization: Bearer <token>\" \\\n-H \"Content-Type: application/json\" \\\n-d '{\"timestamp\":\"2023-10-05T14:30:00Z\",\"value\":1234.56}'\n```  \n\n## Getting Started / Installation  \n\nClone the repository:  \n```bash\ngit clone https://github.com/realtimeinsight/platform.git\ncd platform\n```\n\nInstall dependencies and run the server:  \n```bash\nmake build\n./run.sh\n```  \n\n## Tech Stack  \n\n- **Cloud:** AWS (Kafka, RDS, API Gateway)  \n- **Data:** PostgreSQL (timeseries extension), Redis (caching)  \n- **Languages:** Go (backend), TypeScript (APIs), Python (data processing)  \n- **Tools:** Terraform (infrastructure as code), Grafana (visualization)  \n\n## Architecture / Design  \n\nThe platform decouples data ingestion, storage, and querying into three layers:  \n1. **Stream Processing:** Kafka-powered ingestion with windowed aggregations  \n2. **Storage:** PostgreSQL with TimescaleDB for time-series optimization  \n3. **Query Layer:** RESTful API with rate limiting and authentication  \n\nGitHub Actions automate testing and deployment, while CI/CD pipelines ensure rapid iteration. Cross-team collaboration is streamlined via shared schema definitions and async event-driven workflows.  \n\n## License  \n\nMIT License  \n[View License](LICENSE)  \n\n## Badges  \n\n[![Build Status](https://github.com/realtimeinsight/platform/actions/workflows/build.yml/badge.svg)](https://github.com/realtimeinsight/platform/actions/workflows/build.yml)  \n[![GitHub Release](https://img.shields.io/github/release/realtimeinsight/platform)](https://github.com/realtimeinsight/platform/releases)  \n[![Dependencies](https://img.shields.io/david/realtimeinsight/platform)](https://david-dm.org/realtimeinsight/platform)"
 }

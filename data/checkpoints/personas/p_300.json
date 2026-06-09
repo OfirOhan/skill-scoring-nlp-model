@@ -1,56 +1,52 @@
 {
   "persona_id": "p_300",
   "hyperparams": {
-    "archetype": "backend_engineer",
-    "years_experience": 2,
-    "seniority": "junior",
-    "industry": "e-commerce",
-    "writing_style": "neutral",
+    "archetype": "data_engineer",
+    "years_experience": 4,
+    "seniority": "mid",
+    "industry": "startup",
+    "writing_style": "concise",
     "language_fluency": "ESL",
-    "self_promotion_level": "boastful",
-    "quantification_tendency": "metrics-heavy"
+    "self_promotion_level": "balanced",
+    "quantification_tendency": "qualitative"
   },
-  "name": "Nadia Khoury 53",
-  "current_role": "Backend Engineer",
-  "company": "RetailFlow Technologies",
+  "name": "Anya Kowalski 103",
+  "current_role": "Data Engineer",
+  "company": "NexaData Solutions",
   "education": {
     "degree": "Bachelor of Science in Computer Science",
-    "university": "Cairo University",
-    "year": 2022
+    "university": "Poland University of Technology",
+    "year": 2019
   },
   "career_trajectory": [
     {
-      "title": "Software Developer Intern",
-      "company": "RetailFlow Technologies",
-      "duration": "0-1 year",
-      "responsibilities": [
-        "Assisted in backend development",
-        "Learned REST API design",
-        "Worked with PostgreSQL"
-      ]
+      "role": "Data Analyst Intern",
+      "company": "TechNova Innovations",
+      "year": 2018
     },
     {
-      "title": "Junior Backend Engineer",
-      "company": "RetailFlow Technologies",
-      "duration": "1-2 years",
-      "responsibilities": [
-        "Developed microservices",
-        "Set up Docker containers",
-        "Managed AWS infrastructure"
-      ]
+      "role": "Junior Data Engineer",
+      "company": "DataFlow Dynamics",
+      "year": 2019
+    },
+    {
+      "role": "Data Engineering Lead",
+      "company": "NexaData Solutions",
+      "year": 2021
     }
   ],
   "skills": {
+    "Apache Spark": 4,
+    "Apache Airflow": 4,
+    "ETL pipeline design": 4,
+    "Data warehousing": 4,
+    "Snowflake": 5,
+    "Database optimization": 4,
     "Python": 3,
-    "REST API design": 3,
-    "Microservices architecture": 3,
-    "PostgreSQL": 3,
     "Docker": 3,
-    "AWS": 3,
-    "CI/CD pipelines": 2,
-    "GitHub Actions": 2,
-    "Monitoring & alerting": 2,
-    "Linux administration": 2
+    "Terraform": 3,
+    "Redis": 3,
+    "Linux administration": 1
   },
   "document_ids": [
     "d_p_300_00",

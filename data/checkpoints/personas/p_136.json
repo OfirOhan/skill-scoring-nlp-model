@@ -1,56 +1,61 @@
 {
   "persona_id": "p_136",
   "hyperparams": {
-    "archetype": "fullstack_developer",
-    "years_experience": 2,
-    "seniority": "junior",
-    "industry": "healthtech",
-    "writing_style": "modest",
+    "archetype": "devops_sre",
+    "years_experience": 14,
+    "seniority": "staff",
+    "industry": "gaming",
+    "writing_style": "neutral",
     "language_fluency": "near-native",
-    "self_promotion_level": "boastful",
+    "self_promotion_level": "humble",
     "quantification_tendency": "mixed"
   },
-  "name": "Ekaterina Smirnova",
-  "current_role": "Full-Stack Developer",
-  "company": "HealthInsight Solutions",
+  "name": "Amira Benali",
+  "current_role": "Staff Site Reliability Engineer",
+  "company": "Nexu Games",
   "education": {
     "degree": "Bachelor of Science in Computer Science",
-    "university": "National Technical University of Ukraine",
-    "year": 2022
+    "university": "University of Waterloo",
+    "year": 2006
   },
   "career_trajectory": [
     {
-      "role": "Software Developer Intern",
-      "company": "MedTech Innovations",
-      "duration": "6 months",
-      "responsibilities": "Assisted in building patient monitoring dashboards using React and Node.js"
+      "role": "DevOps Engineer",
+      "company": "Nexu Games",
+      "year_range": "2010-2013"
     },
     {
-      "role": "Junior Full-Stack Developer",
-      "company": "HealthInsight Solutions",
-      "duration": "18 months",
-      "responsibilities": "Developed REST APIs for medical device integration and optimized PostgreSQL queries"
+      "role": "SRE Lead",
+      "company": "Nexu Games",
+      "year_range": "2013-2016"
+    },
+    {
+      "role": "Senior SRE",
+      "company": "Nexu Games",
+      "year_range": "2016-2018"
+    },
+    {
+      "role": "Staff SRE",
+      "company": "Nexu Games",
+      "year_range": "2018-present"
     }
   ],
   "skills": {
-    "Python": 3,
-    "REST API design": 3,
-    "Node.js": 3,
-    "React": 3,
-    "TypeScript": 3,
-    "PostgreSQL": 3,
-    "MongoDB": 3,
-    "Web performance optimization": 3,
-    "AWS": 2,
-    "Docker": 2,
-    "Kubernetes": 3,
-    "CI/CD pipelines": 2,
-    "GitHub Actions": 2,
-    "Terraform": 2
+    "CI/CD pipelines": 4,
+    "Kubernetes": 5,
+    "Terraform": 5,
+    "Prometheus/Grafana": 4,
+    "Cloud cost optimization": 5,
+    "AWS": 5,
+    "Python": 1,
+    "ELK stack": 3,
+    "Load balancing": 3,
+    "Network automation": 2
   },
   "document_ids": [
     "d_p_136_00",
     "d_p_136_01",
-    "d_p_136_02"
+    "d_p_136_02",
+    "d_p_136_03"
   ]
 }

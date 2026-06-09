@@ -1,24 +1,26 @@
 {
   "doc_id": "d_p_114_05",
-  "type": "blog",
+  "type": "recommendation",
   "persona_id": "p_114",
   "hyperparams": {
-    "blog_depth": "tutorial",
-    "jargon_density": "plain"
+    "recommender_role": "skip-level",
+    "recommender_closeness": "worked-daily",
+    "company_type": "startup",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "Apache Airflow": 4,
-    "Apache Kafka": 3,
-    "Apache Spark": 3,
-    "Data warehousing": 4,
-    "ETL pipeline design": 5,
-    "Go": 1,
-    "Java": 3,
-    "Python": 5,
-    "REST API design": 4,
-    "Terraform": 3,
-    "dbt": 3,
-    "Snowflake": 1
+    "3D graphics (OpenGL/Vulkan)": 3,
+    "C#/.NET": 3,
+    "Game networking": 3,
+    "Game physics": 3,
+    "JavaScript": 1,
+    "Node.js": 1,
+    "Python": 1,
+    "REST API design": 1,
+    "React": 1,
+    "TypeScript": 1,
+    "Unity": 3,
+    "Unreal Engine": 1
   },
-  "text": "Healthcare data pipelines face unique challenges: high volume, fragmented sources, and the need for near-instant insights. Traditional batch processing often lags, delaying critical decisions. At a recent hospital analytics project, we struggled to ingest and transform millions of patient records in real time, leading to outdated dashboards and missed operational opportunities. The problem isn’t just speed—it’s ensuring reliability across siloed systems while maintaining compliance.  \n\nEarly attempts relied on monolithic ETL jobs scheduled hourly, which worked for historical data but failed to support real-time dashboards. We tried scaling with more servers, but latency spiked during peak hours. Another approach used a single Kafka stream with raw data, but without proper structuring, downstream Spark jobs choked on unnormalized inputs. These failures highlighted a deeper issue: pipelines needed to balance agility with consistency, not just raw compute power.  \n\nOur working solution restructured the pipeline into microservices, decoupling ingestion, transformation, and serving layers. Kafka handled incoming data from EHRs, wearables, and lab systems, while Spark clusters processed streams into structured formats. REST APIs acted as bridges between services, enabling dynamic schema updates without downtime. Terraform managed infrastructure scaling, and dbt handled complex transformations in modular models. The key was treating each stage as a separate, versioned component—no more tangled dependencies.  \n\nThis approach works because it mirrors how healthcare systems themselves operate: decentralized yet coordinated. Kafka’s fault-tolerant streaming ensures no data is lost, while Spark’s in-memory processing keeps latencies low. By separating concerns, we could iterate on individual services without reprocessing entire datasets. For example, a recent change to patient demographic modeling only required updating the dbt model, not rebuilding the entire pipeline. The result? Sub-second updates for clinicians and 40% faster anomaly detection for operational teams.  \n\nLooking ahead, we’re exploring machine learning models to predict equipment failures using real-time telemetry. Security remains a priority—encrypting data in transit and at rest is non-negotiable. We’re also experimenting with serverless architectures to reduce infrastructure costs. The goal isn’t just optimization; it’s building a pipeline that evolves as fast as the data it processes. In healthcare, where every second counts, that’s not just a technical win—it’s a matter of life and death."
+  "text": "Petra’s role as a Senior Game Developer at LuminaPlay Studios is central to our team’s creative output. We collaborate daily on core mechanics, level design, and player experience, relying on her technical insight to bridge artistic vision and functional execution. Her ability to prioritize complex systems while maintaining clarity in communication makes her an indispensable collaborator.  \n\nPetra’s daily contributions revolve around refining 3D graphics pipelines in Unity, ensuring visual fidelity without compromising performance. She regularly debugs physics simulations, balancing realism with playability, and troubleshoots networking latency issues in multiplayer features. Her work with C# scripts often streamlines workflows, enabling the team to iterate faster. She’s also mentored junior developers on best practices for optimizing asset pipelines, which has reduced rendering overhead by noticeable margins.  \n\nA standout moment came when she reworked a physics-based puzzle mechanic to address player frustration. By adjusting collision thresholds and adding procedural feedback, she transformed a stumbling block into a core gameplay loop. Another instance involved debugging a multiplayer sync issue under tight deadlines, where her deep understanding of networked systems allowed the team to meet launch goals.  \n\nPetra’s blend of technical rigor and creative curiosity drives LuminaPlay’s progress. She approaches challenges with calm persistence, often spotting solutions others overlook. Her reliability and willingness to experiment make her a cornerstone of our team. I’d welcome the opportunity to see her contribute to any project requiring both precision and innovation."
 }

@@ -1,61 +1,85 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting 11 years of backend engineering experience in adtech, focusing on scalable systems and high-performance APIs.",
-    "title": "Sana Patel - Staff Backend Engineer",
+    "topic_summary": "A comprehensive CV highlighting Ines Pereira's 13 years of experience as a platform engineer in healthtech",
+    "title": "Ines Pereira - Staff Platform Engineer",
     "doc_id": "d_p_036_00",
     "persona_id": "p_036",
     "hyperparams": {
       "cv_format": "minimal",
-      "geographic_convention": "Europe",
+      "geographic_convention": "US",
       "company_type": "startup",
-      "company_size": "large (500+)"
+      "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A high-throughput API for real-time ad bidding auctions with low-latency processing and distributed consensus protocols.",
-    "title": "Real-Time Ad Bidding System",
+    "topic_summary": "A README for a secure health data integration platform using microservices architecture",
+    "title": "HealthGuard API Gateway",
     "doc_id": "d_p_036_01",
     "persona_id": "p_036",
     "hyperparams": {
-      "project_scale": "team-internal",
-      "project_team_size": "solo",
-      "jargon_density": "moderate"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "A scalable backend architecture for processing and analyzing campaign performance data across millions of ad impressions.",
-    "title": "Ad Campaign Analytics Dashboard",
-    "doc_id": "d_p_036_02",
-    "persona_id": "p_036",
-    "hyperparams": {
-      "project_scale": "production",
-      "project_team_size": "small (2-4)",
-      "jargon_density": "moderate"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "A microservices-based ad serving infrastructure with global load balancing and fault-tolerant delivery mechanisms.",
-    "title": "Distributed Ad Serving Infrastructure",
-    "doc_id": "d_p_036_03",
-    "persona_id": "p_036",
-    "hyperparams": {
       "project_scale": "hobby",
-      "project_team_size": "large (15+)",
+      "project_team_size": "medium (5-15)",
       "jargon_density": "heavy"
     }
   },
   {
-    "doc_type": "blog",
-    "topic_summary": "A deep dive into designing backend systems for adtech platforms, focusing on latency optimization and fault tolerance.",
-    "title": "Building Scalable Backend Systems for AdTech Platforms",
+    "doc_type": "project_readme",
+    "topic_summary": "A README for a cross-platform patient data synchronization system with HIPAA compliance",
+    "title": "TeleMedSync",
+    "doc_id": "d_p_036_02",
+    "persona_id": "p_036",
+    "hyperparams": {
+      "project_scale": "team-internal",
+      "project_team_size": "large (15+)",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation from a former manager praising Ines' leadership in healthtech platform development",
+    "title": "Recommendation from Dr. Laura Mendes - CTO, HealthCloud Solutions",
+    "doc_id": "d_p_036_03",
+    "persona_id": "p_036",
+    "hyperparams": {
+      "recommender_role": "professor",
+      "recommender_closeness": "worked-daily",
+      "company_type": "agency",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation from a peer highlighting Ines' expertise in scalable health data systems",
+    "title": "Recommendation from Marcus Kim - Senior Architect, HealthCloud Solutions",
     "doc_id": "d_p_036_04",
     "persona_id": "p_036",
     "hyperparams": {
-      "blog_depth": "opinion-piece",
+      "recommender_role": "skip-level",
+      "recommender_closeness": "worked-daily",
+      "company_type": "agency",
+      "company_size": "small (<50)"
+    }
+  },
+  {
+    "doc_type": "linkedin",
+    "topic_summary": "A professional summary showcasing Ines' career in building healthtech platforms and her industry contributions",
+    "title": "Ines Pereira - Staff Platform Engineer",
+    "doc_id": "d_p_036_05",
+    "persona_id": "p_036",
+    "hyperparams": {
+      "linkedin_completeness": "standard"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post on securing health data pipelines with encryption and compliance strategies",
+    "title": "Securing Health Data: Best Practices for Platform Engineers",
+    "doc_id": "d_p_036_06",
+    "persona_id": "p_036",
+    "hyperparams": {
+      "blog_depth": "tutorial",
       "jargon_density": "heavy"
     }
   }

@@ -1,38 +1,52 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A comprehensive CV highlighting Callum Reid's frontend engineering experience in the gaming industry",
-    "title": "Callum Reid - Frontend Engineer CV",
+    "topic_summary": "Professional resume highlighting SRE/DevOps leadership in a startup environment",
+    "title": "Wendy Acheson - SRE/DevOps Lead",
     "doc_id": "d_p_130_00",
     "persona_id": "p_130",
     "hyperparams": {
       "cv_format": "paragraph",
       "geographic_convention": "India",
-      "company_type": "enterprise",
+      "company_type": "FAANG",
       "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A README for a game UI framework project developed by Callum Reid",
-    "title": "NovaUI Framework: Game UI Component Library",
+    "topic_summary": "Overview of a CI/CD pipeline implementation for NexaTech's microservices architecture",
+    "title": "NexaCD: Automated Deployment Pipeline",
     "doc_id": "d_p_130_01",
     "persona_id": "p_130",
     "hyperparams": {
       "project_scale": "hobby",
-      "project_team_size": "medium (5-15)",
-      "jargon_density": "moderate"
+      "project_team_size": "solo",
+      "jargon_density": "heavy"
     }
   },
   {
-    "doc_type": "blog",
-    "topic_summary": "A technical blog post on optimizing game UI performance with WebAssembly",
-    "title": "Optimizing Game UI Performance with WebAssembly",
+    "doc_type": "project_readme",
+    "topic_summary": "Description of a Kubernetes-based infrastructure monitoring tool for startup scalability",
+    "title": "KubeWatch: Observability Platform",
     "doc_id": "d_p_130_02",
     "persona_id": "p_130",
     "hyperparams": {
-      "blog_depth": "opinion-piece",
-      "jargon_density": "moderate"
+      "project_scale": "team-internal",
+      "project_team_size": "large (15+)",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "Letter from a manager praising Wendy's leadership and technical expertise in DevOps",
+    "title": "Recommendation from NexaTech CTO",
+    "doc_id": "d_p_130_03",
+    "persona_id": "p_130",
+    "hyperparams": {
+      "recommender_role": "professor",
+      "recommender_closeness": "worked-daily",
+      "company_type": "enterprise",
+      "company_size": "large (500+)"
     }
   }
 ]

@@ -3,22 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_263",
   "hyperparams": {
-    "project_scale": "hobby",
+    "project_scale": "academic",
     "project_team_size": "small (2-4)",
-    "jargon_density": "moderate"
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "React": 1,
-    "TypeScript": 1,
-    "Next.js": 1,
-    "State management (Redux/Zustand)": 1,
-    "Responsive design": 1,
-    "Web performance optimization": 1,
-    "Node.js": 1,
-    "REST API design": 1,
-    "Webpack/Vite": 1,
-    "Web accessibility (WCAG)": 1,
-    "Stakeholder management": 1
+    "Application security (OWASP)": 5,
+    "DNS/DHCP": 1,
+    "Encryption & PKI": 4,
+    "Firewall configuration": 3,
+    "IAM/Access control": 3,
+    "Network automation": 1,
+    "Network security": 4,
+    "Penetration testing": 4,
+    "SIEM tools": 4,
+    "Security auditing": 2,
+    "TCP/IP": 2,
+    "VPN technologies": 2
   },
-  "text": "# Consulting Dashboard for Client Portals  \n\nA lightweight tool for managing client workflows and project timelines in consulting engagements. Built for efficiency, this dashboard streamlines portal access, task tracking, and milestone visualization. Designed for consultants juggling 5+ clients, it reduces administrative overhead by 30% through automated status updates and centralized reporting.  \n\n## Getting Started / Installation  \nEnsure your environment has Node.js 18+ and a modern browser. Clone the repository and install dependencies:  \n```bash  \nnpm install  \n```  \nStart the development server:  \n```bash  \nnpm run dev  \n```  \nThe dashboard will be accessible at `http://localhost:3000` after initial build.  \n\n## Tech Stack  \n- Frontend: Modern component-based framework with dynamic routing  \n- Data Storage: Lightweight local storage with encrypted session persistence  \n- API: RESTful endpoints for client and project metadata  \n- UI/UX: Customizable themes and modular layout system  \n- Monitoring: Real-time metrics for user activity and system load  \n\n## Usage / Examples  \n**Client Portal Access**  \n- Log in with a single sign-on token to view all active projects  \n- Filter clients by region, contract type, or priority level  \n\n**Project Timeline Visualization**  \n- Drag-and-drop milestones to adjust deadlines  \n- Auto-generated Gantt charts with color-coded progress indicators  \n\n**Team Collaboration**  \n- Share read-only links to client dashboards  \n- Export reports in PDF/CSV format for stakeholder reviews  \n\n## Badges  \n[![Build Status](https://img.shields.io/endpoint?url=https://api.brighterplanet.com/v1/projects/12345)](https://api.brighterplanet.com/v1/projects/12345)  \n[![Code Coverage](https://img.shields.io/endpoint?url=https://api.brighterplanet.com/v1/projects/12346)](https://api.brighterplanet.com/v1/projects/12346)  \n\n## Architecture / Design  \nThe system follows a layered architecture with separate modules for authentication, data handling, and UI rendering. Key decisions include:  \n- Separating client data from project metadata for scalability  \n- Using immutable data structures to prevent unintended state mutations  \n- Implementing a plugin system for adding custom reporting templates  \n\n## Contributing  \nPull requests are welcome! For significant changes, open an issue to discuss the approach. Ensure all commits follow the conventional commit format and include relevant benchmarks.  \n\n## License  \nMIT License. See the [LICENSE](LICENSE) file for details."
+  "text": "# HealthDataShield: Secure Patient Data Management System  \nA HIPAA-compliant platform for encrypting and controlling access to sensitive health records. Prioritizes end-to-end encryption, role-based access, and audit trails to meet healthcare data security standards.  \n\n## API Reference  \n**Endpoints**:  \n- `POST /api/patients/encrypt`  \n  Encrypts patient data using AES-256-GCM. Requires valid JWT token.  \n- `GET /api/patients/{id}`  \n  Retrieves encrypted data. Access restricted by IAM roles.  \n- `DELETE /api/patients/{id}`  \n  Permanently removes data after decryption.  \n\n**Security Headers**:  \n- `Content-Security-Policy: strict-dynamic`  \n- `X-Content-Type-Options: nosniff`  \n- `Strict-Transport-Security: max-age=31536000; includeSubDomains`  \n\n## Usage / Examples  \n```python\nimport requests  \nresponse = requests.post(\"https://api.healthdatashield.dev/patients/encrypt\",  \n                        json={\"data\": \"Patient blood pressure: 130/85\"},  \n                        headers={\"Authorization\": \"Bearer <JWT_TOKEN>\"})  \nprint(response.json()[\"encrypted_data\"])  \n```  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/healthdatashield/healthdatashield.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Run the server: `python app.py`  \n4. Use Postman or curl to test endpoints.  \n\n## Tech Stack  \n- **Language**: Python 3.10  \n- **Framework**: Flask  \n- **Encryption**: OpenSSL (AES-256-GCM, RSA-OAEP)  \n- **Database**: PostgreSQL (with row-level security)  \n- **Compliance**: HIPAA, GDPR  \n\n## Architecture / Design  \n- **Data Layer**: Encrypted at rest (AES-256) and in transit (TLS 1.3).  \n- **Access Control**: IAM roles (医生, admin, auditor) with fine-grained permissions.  \n- **Audit Logs**: SIEM integration for real-time monitoring of access attempts.  \n- **Key Management**: Hardware Security Module (HSM) for PKI operations.  \n\n## License  \nMIT License  \n[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)  \n\n## Badges  \n[![GitHub stars](https://img.shields.io/github/stars/healthdatashield/healthdatashield?style=social)](https://github.com/healthdatashield/healthdatashield)  \n[![Build Status](https://img.shields.io/github/actions/workflow/healthdatashield/healthdatashield/main.yml?branch=main)](https://github.com/healthdatashield/healthdatashield/actions)  \n[![Security](https://img.shields.io/staticcouch/vulnerabilities/healthdatashield/healthdatashield?style=flat)](https://security.snyk.io/vuln/healthdatashield/healthdatashield)"
 }

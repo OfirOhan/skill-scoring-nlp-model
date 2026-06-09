@@ -1,27 +1,24 @@
 {
   "doc_id": "d_p_204_02",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_204",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "large (15+)",
-    "jargon_density": "heavy"
+    "recommender_role": "professor",
+    "recommender_closeness": "brief",
+    "company_type": "agency",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "AWS": 2,
-    "CI/CD pipelines": 3,
-    "Docker": 4,
-    "Go": 3,
-    "Infrastructure as Code": 3,
-    "Kubernetes": 3,
-    "Linux administration": 2,
-    "Microservices architecture": 3,
-    "PostgreSQL": 5,
-    "Prometheus/Grafana": 3,
-    "Python": 5,
-    "REST API design": 5,
-    "Serverless": 2,
-    "Terraform": 3
+    "HTML/CSS": 3,
+    "JavaScript": 3,
+    "Node.js": 1,
+    "REST API design": 1,
+    "React": 3,
+    "Responsive design": 3,
+    "Test automation": 1,
+    "TypeScript": 3,
+    "Web performance optimization": 3,
+    "Webpack/Vite": 3
   },
-  "text": "# Real-Time Data Pipeline for Analytics  \nA distributed, scalable, and observability-first system for ingesting, processing, and serving analytics data at sub-second latency for SaaS platforms  \n\n![Build Status](https://example.com/badge) ![Coverage](https://example.com/badge) ![Dependency](https://example.com/badge)  \n\nMIT License  \n© 2024 Chloe Bennett, Inc.  \n\n## Tech Stack  \n- **Ingestion**: Apache Kafka (partitioned, replicated, 3x write amplification)  \n- **Processing**: Apache Flink (stateful streaming, 10k+ event/sec throughput)  \n- **Storage**: PostgreSQL (read replicas, partitioned by tenant ID, 99.99% SLA)  \n- **Observability**: Prometheus + Grafana (custom metrics, 500+ alerts)  \n- **Deployment**: Docker (custom image builds, 20+ microservices orchestrated)  \n- **Infrastructure**: Terraform (multi-region, 15+ environments, 90% automation)  \n- **CI/CD**: GitHub Actions (canary deployments, 30+ pipelines, 95% success rate)  \n\n## Architecture / Design  \nThe pipeline is a three-tier architecture:  \n1. **Ingestion Layer**: Kafka clusters with 3x replication factor, schema registry, and Avro serialization  \n2. **Processing Layer**: Flink job manager with 10+ task managers, stateful windowing, and exactly-once semantics  \n3. **Storage Layer**: PostgreSQL with materialized views, tenant isolation, and connection pooling (max 2000 connections)  \n\nKey design decisions:  \n- Dockerized PostgreSQL with pgBouncer for 50% latency reduction  \n- REST API v3 with OpenAPI spec, rate limiting, and 429 fallbacks  \n- Serverless functions for anomaly detection (Lambda + DynamoDB)  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/yourusername/real-time-data-pipeline.git  \ncd real-time-data-pipeline  \ndocker-compose up -d  \nmake build-images  \nmake deploy  \n```  \nRequires: Docker 20.10+, Terraform 1.5+, and AWS CLI v2  \n\n## Usage / Examples  \n```python  \nfrom pipeline import IngestClient  \nclient = IngestClient()  \nclient.send_event(\"user_behavior\", {\"user_id\": \"123\", \"action\": \"click\"})  \n```  \nHandles 10k+ events/sec with 99.99% SLA, 500ms P99 latency, and 95% schema validation success rate  \n\n## Contributing  \nWe welcome contributions to:  \n- Dockerized PostgreSQL optimizations (e.g., pgTune tuning)  \n- Flink job performance improvements (e.g., state backend tuning)  \n- REST API extensions (e.g., GraphQL support)  \n- Prometheus metric definitions (e.g., custom exporters)  \n\nPlease ensure all PRs include:  \n- Terraform state lock files  \n- Dockerfile optimizations (e.g., multi-stage builds)  \n- CI/CD pipeline updates  \n- PostgreSQL index recommendations"
+  "text": "Olivia Chen and I collaborated on a web application project during her internship at NexGen Solutions, where she served as a frontend engineer. Our interactions centered on refining user interfaces and optimizing performance for their startup’s product. She demonstrated a clear understanding of how design and functionality intersect, often bridging gaps between technical constraints and user needs.  \n\nDaily, Olivia focused on crafting clean, accessible HTML/CSS components and dynamic JavaScript interactions. Her React implementations balanced simplicity with scalability, and she consistently applied TypeScript to reduce runtime errors. I noted her meticulous approach to responsive design, ensuring layouts adapted seamlessly across devices. She also prioritized web performance optimization, trimming asset sizes and lazy-loading elements to improve load times—something that directly influenced the product’s user retention metrics.  \n\nA standout moment occurred when she restructured a complex dashboard, rewriting legacy CSS and migrating components to Vite. This reduced build times by 40%, allowing the team to iterate faster. During a critical bug fix, she debugged a persistent rendering issue under tight deadlines, showcasing both technical depth and composure under pressure.  \n\nOlivia’s work ethic is marked by curiosity and precision. She consistently seeks feedback and iterates without hesitation. Her ability to translate abstract requirements into polished, performant code makes her a strong candidate for any team aiming to balance innovation with reliability."
 }

@@ -1,23 +1,22 @@
 {
   "doc_id": "d_p_275_03",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_275",
   "hyperparams": {
-    "blog_depth": "tutorial",
-    "jargon_density": "plain"
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "C/C++ (embedded)": 4,
-    "Embedded Linux": 4,
-    "Firmware development": 4,
-    "Hardware-software integration": 4,
-    "IoT protocols (MQTT/CoAP)": 4,
-    "Message queues": 3,
-    "Network automation": 4,
-    "Python": 4,
-    "REST API design": 4,
-    "RTOS": 4,
-    "Sensor integration": 4
+    "A/B testing": 2,
+    "Analytics-driven product decisions": 4,
+    "Competitive analysis": 4,
+    "Data visualization (Plotly)": 2,
+    "Hypothesis testing": 1,
+    "Product management": 4,
+    "Roadmap planning": 4,
+    "SQL analytics": 3,
+    "Stakeholder management": 4
   },
-  "text": "**Securing Embedded Devices in Healthcare IoT**  \n\n**Overview**  \nHealthcare IoT devices, from glucose monitors to infusion pumps, are critical yet vulnerable. As a senior embedded engineer, I’ve spent years balancing functionality with security in this space. Recently, a project to secure a network of remote patient monitoring devices highlighted the unique challenges of protecting sensitive health data while maintaining real-time performance.  \n\n**Context**  \nThe system involved 500+ edge devices running custom firmware, communicating via MQTT over a hybrid cloud-edge architecture. Each device collected biometric data and transmitted it to a central hub for analysis. The challenge wasn’t just securing the data in transit—it was ensuring the devices themselves couldn’t be tampered with, while meeting HIPAA compliance.  \n\n**Challenge**  \nEarly in the project, we faced three key issues:  \n1. **Legacy firmware** lacked encryption, leaving devices open to firmware spoofing.  \n2. **Network segmentation** was incomplete, allowing lateral movement in case of a breach.  \n3. **Scalability** constraints made manual security audits impractical.  \nThe stakes were high—compromised devices could endanger patient safety and lead to regulatory penalties.  \n\n**Solution**  \nWe adopted a layered approach. First, we rebuilt the firmware in C++ to include AES-256 encryption for data at rest and TLS 1.3 for MQTT traffic. To address scalability, we implemented a Python-based automation script that pushed secure firmware updates over-the-air (OTA), reducing manual intervention by 70%. For network security, we segmented the IoT subnet using Embedded Linux firewall rules, blocking unauthorized access to device APIs.  \n\nCritical to the solution was integrating a REST API for device management, allowing admins to revoke compromised devices instantly. We also leveraged an RTOS to prioritize critical health data packets, ensuring low latency even under network stress. Sensor integration was re-evaluated to include tamper detection, using hardware interrupts to alert the system if physical access was attempted.  \n\n**Results**  \nPost-implementation, security audits found zero vulnerabilities in the firmware. The OTA update system reduced patch deployment time from days to hours. Network segmentation cut breach propagation risk by 95%, and the REST API enabled real-time device revocation. Uptime improved by 15% due to reduced downtime from security-related issues.  \n\n**Lessons Learned**  \nSecurity in healthcare IoT requires more than just encryption—it demands a holistic, proactive strategy. Prioritizing firmware integrity, automating updates, and segmenting networks are non-negotiable. Collaboration between hardware and software teams is key, as is regular penetration testing. Most importantly, every device must be treated as a potential entry point. In this project, securing the edge wasn’t an afterthought—it was the foundation of the system."
+  "text": "# RegTech Compliance Suite  \nA platform for automating financial regulations compliance across global markets, reducing manual overhead by 40% and improving regulatory accuracy by 35% in production environments.  \n\n## API Reference  \n**Endpoints**:  \n- `POST /v1/compliance/check` – Validate regulatory adherence for transaction batches (response latency < 120ms)  \n- `GET /v1/regulations/{region}` – Fetch localized compliance rules (cached for 72hrs)  \n- `PATCH /v1/exceptions` – Log edge-case deviations with audit trail (99.98% SLA)  \n\n**Authentication**: OAuth 2.0 with JWT refresh tokens (5-year expiry)  \n**Rate Limits**: 10,000 requests/day for standard users, 50,000/day for enterprise tiers  \n\n## Usage / Examples  \n```bash\ncurl -X POST https://api.regttech.com/v1/compliance/check \\\n  -H \"Authorization: Bearer <token>\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"transactions\": [{\"id\": \"TX123\", \"amount\": 50000, \"currency\": \"USD\"}]}'\n```  \n**Output**:  \n```json\n{\n  \"status\": \"compliant\",\n  \"violations\": [],\n  \"audit_id\": \"AUD-20231015-001\"\n}\n```  \n\n## Getting Started / Installation  \n1. Clone repository: `git clone https://github.com/your-organization/regtech-compliance-suite.git`  \n2. Install dependencies: `npm install` (Node.js 18+, Docker 20.10+)  \n3. Configure environment variables for API keys and database connections  \n4. Run migrations: `npx prisma migrate deploy`  \n5. Start services: `npm run dev` (includes Redis caching, Kafka event streaming)  \n\n## Tech Stack  \n- **Backend**: Node.js (TypeScript), Prisma ORM, Kafka for event sourcing  \n- **Frontend**: React (TypeScript), Redux Toolkit, Chart.js for compliance trend visualization  \n- **Data**: PostgreSQL (with Citus for sharding), Elasticsearch for rule indexing  \n- **Infrastructure**: AWS Lambda (serverless compliance checks), Terraform for CI/CD pipeline  \n\n## Architecture / Design  \nMicroservices architecture with API Gateway for routing. Core compliance engine decoupled into:  \n1. **Rule Engine**: Evaluates 12+ regulatory domains (e.g., MiFID II, Basel III)  \n2. **Audit Trail**: Immutable log storage (IPFS + blockchain) for audit-proof records  \n3. **Dashboard**: Real-time KPIs for compliance health score (scales to 1M+ entities)  \n\n## License  \nMIT License – see [LICENSE](https://github.com/your-organization/regtech-compliance-suite/blob/main/LICENSE)  \n\n## Badges  \n[![Version](https://img.shields.io/npm/v/regtech-compliance-suite)](https://npmjs.com/package/regtech-compliance-suite)  \n[![Build Status](https://img.shields.io/github/actions/workflow/ci.yml?branch=main)](https://github.com/your-organization/regtech-compliance-suite/actions)"
 }

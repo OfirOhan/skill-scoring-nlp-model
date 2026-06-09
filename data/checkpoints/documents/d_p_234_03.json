@@ -4,19 +4,24 @@
   "persona_id": "p_234",
   "hyperparams": {
     "project_scale": "academic",
-    "project_team_size": "solo",
-    "jargon_density": "plain"
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "CI/CD pipelines": 3,
-    "Cloud cost optimization": 1,
-    "GitHub Actions": 3,
-    "Go": 1,
-    "Microservices architecture": 4,
-    "PostgreSQL": 1,
-    "Python": 1,
-    "Monitoring & alerting": 3,
-    "REST API design": 1
+    "AWS": 2,
+    "Apache Kafka": 1,
+    "CI/CD pipelines": 2,
+    "Computer vision": 1,
+    "Docker": 2,
+    "Hugging Face Transformers": 1,
+    "Kubernetes": 2,
+    "MLOps": 1,
+    "Model deployment": 3,
+    "NLP": 1,
+    "PyTorch": 1,
+    "REST API design": 3,
+    "TensorFlow": 1,
+    "scikit-learn": 3
   },
-  "text": "# Secure Payment Gateway Integration  \n\nA streamlined solution for processing payments via Stripe API, secured with JWT authentication. Designed for e-commerce platforms requiring frictionless transactions and stateless session management.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies:  \n```bash  \nnpm install  \n```  \nSet up Stripe API keys in `.env` file:  \n```  \nSTRIPE_SECRET_KEY=your_key_here  \nJWT_SECRET=another_secret  \n```  \nRun the server:  \n```bash  \nnode index.js  \n```  \nEnsure you have Node.js 18+ installed.  \n\n## Usage / Examples  \n### Create Payment Intent  \n```bash  \ncurl -X POST https://localhost:3000/api/payments \\\n  -H \"Authorization: Bearer <JWT_TOKEN>\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"amount\": 1000, \"currency\": \"usd\"}'  \n```  \n### Validate JWT Token  \nUse the `/auth/validate` endpoint to confirm token validity.  \n\n## Badges  \n[![Continuous Integration](https://github.com/benjaminhart/payment-gateway/actions/workflows/tests.yml/badge.svg)](https://github.com/benjaminhart/payment-gateway/actions/workflows/tests.yml)  \n[![Coverage](https://img.shields.io/coveralls/github/benjaminhart/payment-gateway)](https://coveralls.io/github/benjaminhart/payment-gateway)  \n\n## Tech Stack  \n- Node.js  \n- Express.js  \n- Stripe API  \n- JWT (Json Web Tokens)  \n- Winston for logging  \n- dotenv for configuration  \n\n## Architecture / Design  \nThe system decouples payment processing and authentication into separate microservices. JWT handles session state, while Stripe manages transaction flows. Key decisions:  \n- Stateless JWT validation via middleware  \n- Asynchronous payment confirmation with retries  \n- Prometheus metrics for request latency  \n- Slack alerts for failed transactions  \n\n## Contributing  \nPull requests are welcome! Ensure all changes include:  \n- Unit tests via Jest  \n- Linting with ESLint  \n- Coverage reports  \nAutomated checks run via GitHub Actions on every push.  \n\n## License  \nMIT License. For academic use only. Not intended for production without further security audits."
+  "text": "# DemandForecastTS  \nTime series forecasting model for retail demand prediction using statistical methods and machine learning. This project provides a scalable framework for analyzing historical sales data to generate accurate demand forecasts, optimized for academic research and small-to-medium retail analytics use cases.  \n\n## Getting Started / Installation  \nClone the repository:  \n```bash  \ngit clone https://github.com/yourusername/DemandForecastTS.git  \ncd DemandForecastTS  \npip install -r requirements.txt  \n```  \nEnsure Python 3.8+ is installed. The environment includes dependencies for data preprocessing, model training, and API integration.  \n\n## Tech Stack  \n- **Core Libraries**: scikit-learn, statsmodels, pandas, numpy  \n- **Data Handling**: AWS S3 integration for batch data loading  \n- **Model Deployment**: REST API endpoints for real-time inference  \n- **CI/CD**: GitHub Actions for automated testing (triggered on PRs)  \n- **Containerization**: Docker for consistent local/production environments  \n\n## Usage / Examples  \nRun the baseline SARIMA model:  \n```bash  \npython train.py --data_path \"data/sales.csv\" --output \"forecasts/forecast.pkl\"  \n```  \nInvoke the REST API for predictions:  \n```bash  \ncurl -X POST https://api.example.com/forecast \\\n     -H \"Content-Type: application/json\" \\\n     -d '{\"date\": \"2024-04-15\", \"region\": \"North\"}'  \n```  \nMetrics: MAE 8.2%, RMSE 12.4% on 2023 retail datasets.  \n\n## Badges  \n[![GitHub](https://badges.example.com)](https://github.com/yourusername/DemandForecastTS)  \n[![CI/CD](https://badges.example.com)](https://github.com/yourusername/DemandForecastTS/actions)  \n[![Version](https://badges.example.com)](https://github.com/yourusername/DemandForecastTS/tags)  \n\n## Architecture / Design  \nThe model pipeline integrates statistical decomposition (seasonality, trends) with ensemble ML techniques. Key components:  \n1. **Data Pipeline**: AWS S3 → Pandas → Feature Engineering  \n2. **Model Layer**: SARIMA + XGBoost hybrid for anomaly detection  \n3. **API Gateway**: Flask-based microservice exposing `/forecast` endpoint  \n4. **Monitoring**: Prometheus metrics for latency and error rates  \n\n## Contributing  \nCollaborate via GitHub Issues. Focus on improving feature importance analysis or expanding support for multi-region forecasts. Pull requests must include unit tests and documentation updates.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/yourusername/DemandForecastTS/blob/main/LICENSE) for details."
 }

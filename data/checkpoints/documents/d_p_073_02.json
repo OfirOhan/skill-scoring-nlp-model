@@ -1,24 +1,24 @@
 {
   "doc_id": "d_p_073_02",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_073",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "heavy"
+    "recommender_role": "peer",
+    "recommender_closeness": "worked-daily",
+    "company_type": "startup",
+    "company_size": "large (500+)"
   },
   "skill_evidence": {
-    "GraphQL": 4,
-    "JavaScript": 4,
-    "Next.js": 4,
-    "REST API design": 4,
-    "React": 5,
-    "Security testing": 3,
-    "State management": 4,
-    "Test automation": 4,
-    "TypeScript": 5,
-    "Web accessibility": 4,
-    "Web performance optimization": 4
+    "A/B testing": 1,
+    "Agile/Scrum": 5,
+    "Competitive analysis": 4,
+    "Pandas": 1,
+    "Product management": 5,
+    "Roadmap planning": 3,
+    "SQL analytics": 1,
+    "Stakeholder management": 4,
+    "Tableau/Power BI": 1,
+    "UX research": 4
   },
-  "text": "# Real-Time Trading Platform UI  \nA high-performance frontend for real-time financial data visualization, optimized for sub-100ms latency and 200+ concurrent users. Built with React, TypeScript, and GraphQL, this project supports 99.95% uptime via WebSocket-driven updates and immutable state patterns.  \n\n## Tech Stack  \n- **Frontend**: React 18, TypeScript 4.9, Next.js 13 (app directory)  \n- **Data Layer**: Apollo Client 3, GraphQL (with schema stitching), WebSockets (binary payload)  \n- **Visualization**: Chart.js 4.4, D3.js 7.8 (customized for candlestick patterns)  \n- **Tools**: Webpack 5, ESLint 8, Jest 29, Cypress 12 (e2e)  \n- **Security**: OWASP ZAP, Snyk, input sanitization (XSS/CSRF mitigations)  \n- **Performance**: Lighthouse 98/100, code splitting, lazy loading, and tree-shaking  \n\n## Architecture / Design  \nThe UI leverages a microfrontend pattern with Webpack modules for isolated rendering. Real-time data is ingested via WebSocket (binary frames) and normalized with Apollo's `@client` directives. State management uses Redux Toolkit's `createSlice` with immer for immutable updates.  \n- **GraphQL**: Schema stitching reduces API calls by 40% (via query batching)  \n- **Latency**: WebSocket round-trip time < 30ms (95th percentile)  \n- **Accessibility**: ARIA attributes and semantic HTML (WCAG 2.1 AA compliance)  \n- **Security**: Rate limiting (200 RPS), token refresh flows, and CORS policies  \n\n## Getting Started / Installation  \n```bash  \nnpm install  \nnpm run dev  \n```  \nSet `NEXT_PUBLIC_GRAPHQL_ENDPOINT` and `API_SECRET_KEY` in `.env.local`. Run `npm run build` for production artifacts.  \n\n## Usage / Examples  \n```tsx  \n// Real-time chart integration  \nconst { data, loading } = useQuery(TRADE_DATA_QUERY, {  \n  variables: { symbol: 'AAPL', interval: '1m' },  \n  fetchPolicy: 'network-only',  \n});  \n```  \nUse `WebSocketProvider` for bidirectional communication. Implement keyboard navigation for screen readers via `aria-live` regions.  \n\n## Badges  \n[![CI/CD Status](https://example.com/ci-badge)](https://example.com)  \n[![Test Coverage](https://example.com/coverage)](https://example.com)  \n[![Security Scan](https://example.com/security)](https://example.com)  \n\n## Contributing  \nSubmit PRs with unit tests (Jest) and e2e tests (Cypress). Security patches and performance optimizations are prioritized. Ensure all commits follow [Conventional Commits](https://conventionalcommits.org/).  \n\n## License  \nMIT License (see [LICENSE](LICENSE))"
+  "text": "Nikhil once spearheaded the rollout of SentinelX’s threat detection platform, aligning with a 30% reduction in false positives within six months. His ability to distill complex technical issues into actionable priorities kept the team focused during a critical product pivot. We collaborated daily on cross-functional sprints, where his knack for balancing stakeholder demands with engineering realities prevented scope creep.  \n\nAs a peer, I’ve observed Nikhil’s rare ability to anticipate market shifts. When competitors introduced AI-driven analytics, he proactively rearchitected our product’s data pipeline, boosting detection accuracy by 22% without sacrificing performance. His stakeholder management shines in how he aligns sales, engineering, and customer success teams—once, he secured executive buy-in for a major feature overhaul by framing it as a risk mitigation strategy, not a resource drain.  \n\nNikhil’s strength lies in his relentless curiosity and attention to detail. He once spent weeks dissecting user feedback to refine our onboarding flow, resulting in a 15% increase in 30-day retention. In Scrum, he mentors junior managers to prioritize technical debt, ensuring code quality doesn’t erode long-term scalability. His product decisions are guided by a deep understanding of both user needs and systemic constraints.  \n\nIn summary, Nikhil is a pragmatic leader who thrives in ambiguity. His work ethic is unmatched—late nights refining specs are routine. I’m confident he’ll bring the same rigor to your team.  \n\nBest,  \n[Your Name]"
 }

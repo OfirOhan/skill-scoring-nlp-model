@@ -1,22 +1,25 @@
 {
   "doc_id": "d_p_015_03",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_015",
   "hyperparams": {
-    "blog_depth": "tutorial",
-    "jargon_density": "heavy"
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "Cloud cost optimization": 4,
-    "GCP": 4,
-    "Infrastructure as Code": 3,
-    "Kubernetes": 3,
-    "Network troubleshooting": 3,
-    "PostgreSQL": 3,
-    "Python": 4,
-    "REST API design": 4,
-    "Terraform": 3
+    "A/B testing": 1,
+    "Agile/Scrum": 3,
+    "Analytics-driven product decisions": 5,
+    "Competitive analysis": 3,
+    "Data visualization (Matplotlib/Plotly)": 2,
+    "Hypothesis testing": 1,
+    "Product management": 4,
+    "Roadmap planning": 3,
+    "SQL analytics": 3,
+    "Stakeholder management": 3,
+    "Tableau/Power BI": 3,
+    "User journey mapping": 4
   },
-  "text": "Serverless architecture isn’t just a buzzword—it’s a structural necessity for fintech platforms balancing agility, compliance, and scalability. At my firm, we’ve refactored a 50M+ transaction system from monoliths to AWS Lambda + DynamoDB, achieving 40% lower operational costs and 99.99% SLA. The thesis is simple: serverless patterns enable us to decouple compute from infrastructure, letting us focus on financial logic rather than provisioning servers. But this isn’t a silver bullet—it requires rigorous design to avoid anti-patterns that could compromise security or latency.  \n\nSupporting this approach are concrete patterns we’ve operationalized. Infrastructure as Code with Terraform ensures consistent deployment of API Gateway endpoints and VPCs, while Kubernetes manages stateful PostgreSQL clusters for audit logs. We’ve mitigated network latency by offloading real-time trade data to DynamoDB streams, processed via Python-based stream processors. REST API design here isn’t just about endpoints—it’s about rate-limiting strategies and CORS policies that align with PCI-DSS requirements. Cloud cost optimization is baked in: we use AWS Cost Explorer to track Lambda duration vs. provisioning, ensuring cold start overhead doesn’t balloon expenses.  \n\nCounter-arguments often center on vendor lock-in and observability gaps. Yes, AWS Lambda’s ecosystem is tightly coupled, but we’ve offset this by using GCP’s Cloud Run for batch reconciliation workflows, creating a hybrid architecture. Cold starts remain a challenge, but we’ve reduced their impact via provisioned concurrency and Python’s fast startup times. Network troubleshooting? We’ve spent weeks debugging latency spikes caused by misconfigured VPC endpoints, proving that even in serverless, network topology matters.  \n\nIn fintech, serverless isn’t just about cost—it’s about compliance, resilience, and the ability to scale with transaction volumes that double quarterly. The trade-offs are real, but so are the rewards. As a Platform Engineer, my role is to weaponize these patterns, ensuring they don’t just work in dev— they survive audits, withstand DDoS, and scale without breaking the bank. The future of fintech platforms isn’t monolithic or fully serverless—it’s a carefully orchestrated hybrid, and we’re building it."
+  "text": "# NexaInsight  \nA customizable analytics dashboard for SaaS product performance and user behavior, built to streamline data-driven decisions with real-time metrics and actionable insights.  \n\n## Acknowledgments  \nThis project owes its foundation to Python’s ecosystem, particularly Flask for backend flexibility and Plotly for intuitive visualizations. Agile workflows and sprint planning were central to balancing feature development with user feedback loops. Early-stage competitive analysis informed the focus on lightweight customization, while stakeholder collaboration shaped the prioritization of SQL-powered metrics over static reports.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/sergei-antonov/nexainsight.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Set up PostgreSQL (or SQLite for dev) and configure `config.py`  \n4. Run the server: `python app.py`  \n5. Access the dashboard at `http://localhost:5000`  \n\n## Usage / Examples  \n- **Customize dashboards**: Toggle metrics like churn rate or feature adoption via the UI.  \n- **SQL queries**: Run ad-hoc queries in the `analysis/` folder to drill into user cohorts.  \n- **Real-time alerts**: Configure thresholds in `config.py` for automated notifications.  \n- **Export reports**: Use the \"Export\" button to generate CSV or PDF summaries for stakeholders.  \n\n## Tech Stack  \n- **Backend**: Python 3.9, Flask, PostgreSQL  \n- **Frontend**: HTML, CSS, JavaScript (Chart.js)  \n- **Analytics**: SQL, Plotly, Google Analytics integration  \n- **Workflow**: Agile Scrum, Jira for task tracking  \n- **Visualization**: Minimalist charts for clarity, avoiding overloading with widgets  \n\n## License  \nMIT License  \n[![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/sergei-antonov/nexainsight/blob/main/LICENSE)  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/last-commit/sergei-antonov/nexainsight)](https://github.com/sergei-antonov/nexainsight/commits/main)  \n[![Travis CI](https://img.shields.io/travis/sergei-antonov/nexainsight)](https://travis-ci.com/sergei-antonov/nexainsight)  \n[![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/sergei-antonov/nexainsight/blob/main/LICENSE)  \n\n## Contributing  \nPull requests are welcome! For major changes, open an issue to discuss the approach. This project is a solo effort, but I’m open to collaboration on specific features or data pipeline enhancements."
 }

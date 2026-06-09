@@ -1,21 +1,26 @@
 {
   "doc_id": "d_p_016_01",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_016",
   "hyperparams": {
-    "blog_depth": "tutorial",
-    "jargon_density": "plain"
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Application security (OWASP)": 4,
-    "Compliance (SOC2/GDPR)": 4,
-    "IAM/Access control": 4,
-    "Incident response": 4,
-    "Network security": 4,
-    "Penetration testing": 4,
-    "SIEM tools": 4,
-    "Threat modeling": 4,
-    "Vulnerability management": 4
+    "AWS": 3,
+    "CI/CD pipelines": 4,
+    "Chaos engineering": 4,
+    "Docker": 3,
+    "ELK": 1,
+    "Kubernetes": 5,
+    "Load balancing": 3,
+    "Monitoring & alerting": 5,
+    "PostgreSQL": 2,
+    "Prometheus/Grafana": 5,
+    "Redis": 2,
+    "Serverless (Lambda/Cloud Functions)": 3,
+    "Terraform": 5
   },
-  "text": "Healthtech platforms handle 3.5 billion patient records globally, yet 68% of breaches involve unencrypted data. Encryption isn’t just a checkbox—it’s the backbone of data protection. As a security engineer, I’ve seen how weak encryption practices can turn a minor vulnerability into a major breach.  \n\nThe rise of telemedicine and wearable devices has expanded attack surfaces. HIPAA and GDPR mandate encryption for data at rest and in transit, but compliance alone isn’t enough. In 2023, our team reduced breach risks by 42% through targeted encryption upgrades, proving that strategy matters as much as regulation.  \n\nOur analysis focused on three pillars: encryption standards, key management, and protocol upgrades. AES-256 remains the gold standard for data at rest, but we found it’s insufficient without proper key rotation. Implementing hardware security modules (HSMs) reduced key exposure risks by 70% in our production systems. For data in motion, TLS 1.3 outperformed older versions by 25% in throughput while maintaining strong encryption.  \n\nBenchmarking showed that AES-256 encryption added 15% latency compared to AES-128, but the trade-off in security was worth it. We also measured the impact of key rotation frequency—rotating every 90 days increased system load by 8%, but minimized long-term exposure. Compliance metrics revealed that SOC2 audits passed 100% after integrating encrypted data storage, while GDPR non-compliance fines dropped by 65% post-implementation.  \n\nKey takeaways: Prioritize AES-256 with HSMs for data at rest, adopt TLS 1.3 for transit, and automate key rotation. These choices directly impact compliance scores and breach mitigation. Regular penetration testing revealed that encrypted systems resisted 89% of simulated attacks compared to unencrypted counterparts. Remember, encryption is a process, not a one-time task. Continuously audit, update, and align with evolving standards to protect what matters most—patient trust."
+  "text": "# GameServerScaler  \nA Kubernetes-native auto-scaling solution for game server clusters, optimized for dynamic player load and latency-sensitive workflows. Designed to balance resource efficiency with consistent QoE, this project integrates observability, chaos resilience, and infrastructure-as-code practices to support large-scale multiplayer environments.  \n\n## Configuration  \nDeploy with environment-specific config maps and secrets managed via Terraform. Key parameters include:  \n- `AUTOSCALE_THRESHOLD` (CPU/Memory utilization trigger)  \n- `MIN_REPLICAS` and `MAX_REPLICAS` for server pods  \n- `METRICS_POLL_INTERVAL` for Prometheus integration  \n- `CHaos_ENGINEERING_ENABLED` for stress testing workflows  \n\nCustomize deployment via `values.yaml` in Helm charts, with AWS EC2 Auto Scaling Groups preconfigured for regional failover.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/ethanprice/GameServerScaler.git`  \n2. Deploy Kubernetes manifests using `kubectl apply -f manifests/`  \n3. Initialize Terraform for cloud infrastructure provisioning  \n4. Configure Prometheus for metrics collection and Grafana for visualization  \n\nEnsure Docker is installed for local testing and CI/CD pipeline integration.  \n\n## Usage / Examples  \nScale server pods dynamically based on player session metrics:  \n```bash\nkubectl apply -f examples/autoscale-policy.yaml\n```  \nMonitor real-time load with:  \n```bash\nkubectl port-forward svc/grafana 3000\n```  \nTrigger chaos experiments to validate resilience:  \n```bash\nkubectl apply -f examples/chaos-test.yaml\n```  \n\n## Tech Stack  \n- Kubernetes (1.25+)  \n- Docker (20.10+)  \n- Terraform (1.3+)  \n- Prometheus + Grafana  \n- AWS EC2 + Load Balancer  \n- CI/CD pipelines with GitHub Actions  \n\n## Architecture / Design  \nThe system operates as a Kubernetes operator, using Prometheus to ingest metrics from server pods. An autoscaler controller adjusts replica counts based on custom metrics, while a chaos engineering module injects faults to validate recovery workflows. Load balancing is handled via AWS NLB with health checks tied to server responsiveness.  \n\n## License  \nMIT License  \n\n## Badges  \n[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  \n[![Tech Stack](https://img.shields.io/badge/tech-Kubernetes%20%7C%20Docker%20%7C%20Terraform%20%7C%20Prometheus%20%7C%20Grafana-blue)](https://github.com/ethanprice/GameServerScaler)"
 }

@@ -1,24 +1,26 @@
 {
   "doc_id": "d_p_285_03",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_285",
   "hyperparams": {
-    "recommender_role": "direct-manager",
-    "recommender_closeness": "worked-daily",
-    "company_type": "startup",
-    "company_size": "small (<50)"
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "A/B testing": 4,
-    "Apache Airflow": 3,
-    "Data modeling": 4,
-    "Feature engineering": 4,
-    "Hypothesis testing": 4,
-    "Python": 4,
-    "SQL analytics": 4,
-    "Statistical modeling": 4,
-    "Tableau/Power BI": 4,
-    "scikit-learn": 4
+    "scikit-learn": 1,
+    "TensorFlow": 1,
+    "PyTorch": 1,
+    "NLP": 1,
+    "Time series analysis": 1,
+    "MLOps": 1,
+    "Feature engineering": 1,
+    "Python": 1,
+    "SQL analytics": 1,
+    "Tableau/Power BI": 1,
+    "Data visualization (Matplotlib/Plotly)": 1,
+    "A/B testing": 1,
+    "Java": 1
   },
-  "text": "Hawa has been a key contributor to AdVeritas Solutions’ data infrastructure since joining two years ago. Her ability to balance technical rigor with strategic thinking has been instrumental in scaling our adtech platforms.  \n\nHawa’s technical expertise shines in her work with Apache Airflow, where she designed workflows that reduced data pipeline latency by 30%. She owns our A/B testing framework, which has driven a 15% increase in campaign performance metrics. Her data modeling for user segmentation improved targeting accuracy, directly boosting client ROI. Feature engineering under her guidance optimized conversion rates by 12% in two high-traffic campaigns. Hypothesis testing is a routine task for her—she recently validated a model for ad spend allocation, saving the team 10 hours weekly. Python and SQL are her daily tools, with her SQL analytics dashboard now a core part of our weekly reporting. She’s also built robust statistical models for predictive churn, which are used across product teams. Her Tableau/Power BI visualizations are clear, actionable, and often serve as templates for the team.  \n\nHawa’s soft skills are just as strong. She collaborates seamlessly with product and engineering teams, translating complex data insights into business strategies. Her curiosity and willingness to iterate have helped refine our ML pipelines. She mentors junior data scientists, fostering a culture of accountability.  \n\nHawa’s reliability and adaptability have been critical during our rapid scaling. She’s a trusted partner who consistently delivers under pressure. I wholeheartedly recommend her for any role requiring technical depth and collaborative leadership."
+  "text": "# Demand Forecasting for Supply Chains  \nA scalable framework for enterprise-level demand prediction leveraging temporal data patterns and iterative model refinement.  \n\n---\n\n## Badges  \n[![CI/CD Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/vikram88/demand-forecasting/main/.github/badges/ci.json)](https://github.com/vikram88/demand-forecasting/actions)  \n[![Code Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/vikram88/demand-forecasting/main/.github/badges/coverage.json)](https://github.com/vikram88/demand-forecasting/actions)  \n\n---\n\n## Tech Stack  \n- **Data Formats**: Parquet, Avro, JSON Lines  \n- **Storage**: Amazon S3 (object storage), Redshift (analytics)  \n- **Compute**: Kubernetes (orchestration), Dask (parallel processing)  \n- **Monitoring**: Prometheus (metrics), Grafana (dashboarding)  \n\n---\n\n## Configuration  \nEnvironment variables define core behaviors:  \n```bash  \n# Core parameters  \nMAX_WINDOW_SIZE=365  \nPREDICTION_HORIZON=90  \nFEATURE_RESOLUTION=1D  \n\n# Storage endpoints  \nS3_BUCKET=demand_forecasting_prod  \nREDSHIFT_HOST=analytics-cluster.us-east-1.redshift.amazonaws.com  \n\n# Logging  \nLOG_LEVEL=INFO  \nMETRICS_PUSH_INTERVAL=300s  \n```  \nConfigure `config/env.yaml` for regional deployment overrides.  \n\n---\n\n## Getting Started / Installation  \nPrerequisites:  \n- AWS CLI v2 with IAM permissions  \n- kubectl (Kubernetes CLI)  \n- Python 3.9+ (via virtual environment)  \n\nInstall dependencies:  \n```bash  \npip install -r requirements.txt  \n```  \nDeploy infrastructure:  \n```bash  \nmake infra-deploy  \nmake pipeline-configure  \n```  \n\n---\n\n## Usage / Examples  \n1. **Data Ingestion**:  \n   ```bash  \n   python ingest.py --source s3://raw-data --output parquet  \n   ```  \n2. **Model Training**:  \n   ```bash  \n   python train.py --config config/training.yaml  \n   ```  \n3. **Prediction Pipeline**:  \n   ```bash  \n   python predict.py --input latest.parquet --output forecast.csv  \n   ```  \n\n---\n\n## Testing  \nRun unit tests:  \n```bash  \npytest test_utils.py --cov=utils  \n```  \nIntegration tests validate:  \n- Data schema compliance  \n- Latency thresholds (≤ 500ms)  \n- Prediction accuracy (MAE < 2%)  \n\n---\n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

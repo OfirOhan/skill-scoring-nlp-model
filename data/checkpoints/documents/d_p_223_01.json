@@ -1,22 +1,21 @@
 {
   "doc_id": "d_p_223_01",
-  "type": "linkedin",
+  "type": "project_readme",
   "persona_id": "p_223",
   "hyperparams": {
-    "linkedin_completeness": "standard"
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "Cloud cost optimization": 3,
-    "Database optimization": 3,
-    "Docker": 3,
-    "Go": 4,
-    "Kubernetes": 3,
-    "Microservices architecture": 3,
-    "PostgreSQL": 4,
-    "Python": 4,
-    "REST API design": 4,
-    "Terraform": 3
+    "C/C++ (embedded)": 5,
+    "Edge computing": 3,
+    "Embedded Linux": 2,
+    "Firmware development": 5,
+    "IoT protocols (MQTT/CoAP)": 4,
+    "Python": 1,
+    "RTOS": 4,
+    "Sensor integration": 3
   },
-  "text": "**35% reduction in cloud costs while scaling backend infrastructure for 1M+ users**  \n\nAs a Senior Backend Engineer at NexGen Technologies, I’ve spent the last five years building and maintaining high-performance systems for enterprise clients. My work revolves around balancing innovation with reliability, ensuring scalable solutions that meet stringent SLA requirements. I thrive in environments where complex challenges demand both technical precision and strategic thinking—whether it’s optimizing database queries to handle millions of transactions or designing APIs that integrate seamlessly with legacy systems.  \n\nMy expertise spans full-stack backend development, with a focus on cloud-native architectures. I’ve led projects to reduce AWS spending by 35% through automated cost governance, while also improving PostgreSQL query performance by 40% via index optimization and query restructuring. Containerization with Docker and orchestration with Kubernetes form the backbone of our microservices architecture, enabling rapid deployment and seamless scaling. I also leverage Terraform to streamline infrastructure as code, ensuring consistency across environments. My proficiency in Go and Python allows me to craft efficient services, while REST API design remains a cornerstone of my daily work.  \n\nLet’s connect and explore how we can collaborate on solving complex technical challenges—or simply share insights on building resilient, scalable systems."
+  "text": "# Industrial IoT Monitoring System  \nA scalable, real-time platform for tracking and analyzing industrial equipment performance using embedded systems and edge computing. Designed to integrate with heterogeneous sensors and protocols, this system enables proactive maintenance and operational optimization across enterprise environments.  \n\n## Roadmap / Future Work  \n- Expand MQTT/CoAP support to include OPC UA for legacy machinery integration  \n- Implement dynamic edge computing resource allocation based on workload patterns  \n- Add firmware over-the-air (OTA) updates for remote device management  \n- Introduce predictive maintenance models using historical sensor data  \n- Optimize RTOS task scheduling for sub-millisecond response times in high-vibration environments  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/your-username/industrial-iot-monitoring-system.git`  \n2. Install dependencies:  \n   - Embedded Linux toolchain (gcc-arm-none-eabi 10.3)  \n   - ROS 2 Humble for sensor data aggregation  \n   - Custom firmware build tools (refer to `docs/build_instructions.md`)  \n3. Flash firmware to STM32H743 microcontrollers using J-Link debugger  \n4. Launch the monitoring dashboard via Docker container: `docker-compose up -d`  \n\n## Usage / Examples  \n- Monitor temperature and vibration data from factory presses via MQTT topic `sensor/industrial/pressure/001`  \n- Trigger alerts when sensor drift exceeds 2% of calibration range  \n- Use edge computing nodes to pre-process 10k+ data points per second before cloud ingestion  \n- Access historical data via REST API for trend analysis  \n\n## Tech Stack  \n- **C++** (embedded): Real-time data processing, low-level hardware abstraction  \n- **RTOS** (FreeRTOS): Task scheduling, interrupt handling, memory management  \n- **MQTT/CoAP**: Lightweight communication for sensor-cloud synchronization  \n- **Embedded Linux**: Custom kernel modules for hardware interfacing  \n- **Edge Computing**: Distributed processing across gateway nodes  \n- **Sensor Integration**: SPI/I2C drivers for industrial-grade accelerometers and thermocouples  \n\n## Architecture / Design  \nThe system operates as a three-tiered architecture:  \n1. **Edge Layer**: STM32H743 microcontrollers running FreeRTOS handle sensor sampling and preprocessing. MQTT/CoAP protocols ensure reliable data transmission to edge gateways.  \n2. **Gateway Layer**: ARM-based edge devices aggregate data from multiple sensors, apply real-time filtering, and forward results to the cloud.  \n3. **Cloud Layer**: A Python-agnostic analytics engine processes aggregated data, with dashboards built using Grafana and Prometheus.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_010_02",
+  "type": "project_readme",
+  "persona_id": "p_010",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "Apache Airflow": 2,
+    "Apache Kafka": 4,
+    "Apache Spark": 2,
+    "Data warehousing": 3,
+    "Docker": 2,
+    "Python": 1,
+    "Snowflake": 2,
+    "Terraform": 2
+  },
+  "text": "# Real-Time Customer Analytics Pipeline  \nA distributed architecture for ingesting, processing, and warehousing customer event streams using Apache Kafka and AWS Redshift. This project decouples raw event ingestion from analytical workloads, enabling low-latency insights while maintaining scalability and fault tolerance. Designed for academic exploration of real-time data pipelines, it leverages Kafka's partitioned topic model and Redshift's columnar storage to optimize query performance on high-velocity datasets.  \n\n## API Reference  \n- **Kafka Producer API**: Exposes endpoints for publishing customer events (e.g., `customer_login`, `purchase`) to partitioned topics. Schema enforcement via Avro is enforced at the producer layer.  \n- **Kafka Consumer API**: Defines offsets for consuming events in real-time, with configurable polling intervals and batch processing thresholds.  \n- **Redshift Loading API**: Utilizes AWS Redshift's `COPY` command for bulk ingestion of processed events, with schema validation via pre-defined tables.  \n- **Metadata API**: Provides Kafka topic metadata (e.g., partition counts, retention policies) via a REST endpoint for monitoring and debugging.  \n\n## Usage / Examples  \n1. **Event Ingestion**: Publish user login events to `customer_events` topic using Avro-encoded payloads. Example:  \n   ```json  \n   {  \n     \"user_id\": \"12345\",  \n     \"event_type\": \"login\",  \n     \"timestamp\": \"2023-10-05T14:30:00Z\"  \n   }  \n   ```  \n2. **Real-Time Processing**: Configure Kafka consumers to aggregate event counts per hour, writing results to Redshift's `real_time_metrics` table.  \n3. **Analytics Queries**: Execute Redshift SQL queries on aggregated data for cohort analysis or churn prediction modeling.  \n\n## Getting Started / Installation  \n1. Clone repository and navigate to the project root.  \n2. Initialize Docker containers for Kafka and Redshift (requires Docker Desktop).  \n3. Configure AWS credentials via `~/.aws/credentials` for Redshift cluster access.  \n4. Run `./bootstrap.sh` to spin up Kafka topics and Redshift tables.  \n5. Use `./produce.sh` to simulate event streams or `./consume.sh` to process data.  \n\n## Tech Stack  \n- **Message Broker**: Apache Kafka (partitioned, replicated topics)  \n- **Data Warehousing**: AWS Redshift (columnar storage, distributed query execution)  \n- **Cloud Infrastructure**: AWS EC2 (compute), S3 (intermediate storage)  \n- **Monitoring**: Prometheus + Grafana for Kafka broker metrics  \n\n## Architecture / Design  \nThe pipeline decouples ingestion, processing, and warehousing layers. Kafka acts as the central event bus, ensuring exactly-once semantics via idempotent producers. Consumers apply schema validation and aggregate metrics before writing to Redshift, which is optimized for complex analytical queries. Partitioning strategies align with user ID hashing to enable parallelized processing.  \n\n## License  \nMIT License  \n\n## Badges  \n[![GitHub](https://badges.frappr.com/green/50/50/50/50/50/50.svg)](https://github.com)  \n[![Docker](https://badges.frappr.com/green/50/50/50/50/50/50.svg)](https://hub.docker.com)  \n[![AWS](https://badges.frappr.com/green/50/50/50/50/50/50.svg)](https://aws.amazon.com)"
+}

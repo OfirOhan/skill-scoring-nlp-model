@@ -3,26 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_192",
   "hyperparams": {
-    "project_scale": "hobby",
+    "project_scale": "production",
     "project_team_size": "small (2-4)",
     "jargon_density": "plain"
   },
   "skill_evidence": {
-    "JavaScript": 3,
-    "Next.js": 3,
-    "Node.js": 3,
-    "REST API design": 3,
-    "React": 4,
-    "Responsive design": 3,
-    "Stakeholder management": 1,
-    "State management": 3,
-    "Test automation": 3,
-    "Unit testing": 3,
-    "Web accessibility": 3,
-    "Webpack/Vite": 3,
-    "TypeScript": 1,
-    "Web accessibility (WCAG)": 1,
-    "State management (Redux/Zustand)": 1
+    "Flutter": 3,
+    "JavaScript": 2,
+    "Mobile UI/UX": 3,
+    "Push notifications": 4,
+    "React Native": 3,
+    "Responsive design": 2,
+    "Swift": 3,
+    "TypeScript": 2,
+    "Web accessibility": 1,
+    "iOS development": 3
   },
-  "text": "# Enterprise Dashboard UI  \nA modular, scalable interface for real-time analytics and reporting in enterprise SaaS platforms. Built with React and Next.js, this dashboard provides a foundation for custom widgets, data visualization, and seamless integration with backend systems. Designed for teams prioritizing clarity, performance, and adaptability in dynamic environments.  \n\n## Roadmap / Future Work  \n- **Dark mode toggle** for extended usability in low-light scenarios  \n- **Enhanced data visualization** with interactive charts and drill-down capabilities  \n- **Third-party integration** hooks for BI tools (e.g., Power BI, Looker)  \n- **Customizable widgets** via drag-and-drop interface  \n- **Performance optimizations** for large datasets and concurrent users  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/your-username/enterprise-dashboard-ui.git  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   cd enterprise-dashboard-ui  \n   npm install  \n   ```  \n3. Start the development server:  \n   ```bash  \n   npm run dev  \n   ```  \n4. Open [http://localhost:3000](http://localhost:3000) in your browser  \n\n## Usage / Examples  \n- **Dashboard layout**: Navigate to `/dashboard` for a split-view interface with real-time metrics and filters.  \n- **Widget customization**: Use the `/widgets` route to configure chart types, data sources, and styling.  \n- **API integration**: Replace placeholder endpoints in `src/api.js` with your backend services for live data.  \n\n## Tech Stack  \n- **Frontend**: React, Next.js (for SSR and routing), Tailwind CSS (for styling)  \n- **Backend**: Node.js (for API services), REST APIs (for data fetching)  \n- **Tools**: Webpack (for bundling), Jest (for unit testing)  \n\n## Architecture / Design  \nThe application follows a **component-driven architecture** with reusable UI elements and a centralized data layer. Key decisions:  \n- **Modular widgets** as independent React components with props for dynamic configuration  \n- **Responsive design** prioritized for mobile and desktop, using Tailwind's utility-first approach  \n- **Stateless components** for predictable rendering, with local state managed via React hooks  \n- **API abstraction layer** to decouple frontend from backend services  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details."
+  "text": "# NovaDev Mobile Solutions Framework  \nA modular, cross-platform framework for building scalable mobile apps with focus on push notifications, performance, and developer ergonomics  \n\n[![Build Status](https://github.com/novadev-framework/actions/workflows/build.yml/badge.svg)](https://github.com/novadev-framework/actions/workflows/build.yml)  \n[![Platform](https://img.shields.io/badge/platform-flutter%20%7C%20reactnative%20%7C%20swift-444.svg)](https://github.com/novadev-framework)  \n[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/novadev-framework/blob/main/LICENSE)  \n\n## Getting Started  \n1. Clone the repo: `git clone https://github.com/novadev-framework.git`  \n2. Install dependencies:  \n   - Flutter: `flutter pub get`  \n   - React Native: `npm install`  \n   - Swift: `pod install`  \n3. Configure push notification credentials in `config/env.json`  \n4. Run: `flutter run`, `npx react-native run-android`, or `xcodebuild`  \n\n## Tech Stack  \n- **Core**: Flutter (for Android/iOS), React Native (for cross-platform), Swift (iOS-specific modules)  \n- **Services**: Firebase Cloud Messaging (FCM) for push notifications, AWS S3 for media storage  \n- **Utilities**: Kotlin Multiplatform for shared logic, RxJava for async flows  \n- **Testing**: Jest (React Native), Flutter Driver (Flutter), XCTest (Swift)  \n\n## Architecture / Design  \nThe framework uses a **layered architecture** with:  \n- **Presentation Layer**: Stateless components for UI modularity  \n- **Business Logic**: Shared Kotlin/Flutter code for data processing  \n- **Data Layer**: Repository pattern with local SQLite and remote REST APIs  \n- **Push Notification Hub**: Centralized FCM manager with retry logic and analytics tracking  \n\n## Usage / Examples  \n```bash\n# Initialize a new project  \nflutter create my_app  \n# Or  \nnpx react-native init my_app  \n```  \nFor push notifications:  \n1. Enable FCM in Firebase console  \n2. Set `FCM_PROJECT_ID` in `env.json`  \n3. Call `NovaDevNotifications.init()` in app startup  \n4. Use `NovaDevNotifications.send()` for scheduled alerts  \n\n## Testing  \n- **Unit Tests**: 95% coverage for core utilities  \n- **Integration Tests**: Simulate push workflows with mocked FCM  \n- **Performance Tests**: Lighthouse scores >90 for mobile rendering  \n- **CI/CD**: Automated tests run on every PR with GitHub Actions  \n\n## License  \nMIT License — see [LICENSE](https://github.com/novadev-framework/blob/main/LICENSE) for details"
 }

@@ -1,61 +1,74 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV for Isaac Cohen, Senior Data Engineer at HealthPulse Innovations",
-    "title": "Isaac Cohen - Senior Data Engineer",
+    "topic_summary": "Petra Svoboda's professional resume highlighting her experience as a Senior Game Developer at a startup.",
+    "title": "Petra Svoboda - Senior Game Developer",
     "doc_id": "d_p_114_00",
     "persona_id": "p_114",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
-      "geographic_convention": "India",
+      "cv_format": "paragraph",
+      "geographic_convention": "Europe",
       "company_type": "academic",
-      "company_size": "mid (50-500)"
+      "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A project to optimize ETL processes for large-scale healthcare data integration",
-    "title": "Healthcare Data Pipeline Optimization",
+    "topic_summary": "A 2D platformer game with procedural level generation, showcasing Petra's expertise in game design and algorithmic generation.",
+    "title": "Eclipse: A 2D Platformer with Procedural Level Generation",
     "doc_id": "d_p_114_01",
     "persona_id": "p_114",
     "hyperparams": {
-      "project_scale": "academic",
-      "project_team_size": "solo",
-      "jargon_density": "moderate"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "Development of a real-time data pipeline for patient monitoring in a healthtech environment",
-    "title": "Real-Time Patient Monitoring System",
-    "doc_id": "d_p_114_02",
-    "persona_id": "p_114",
-    "hyperparams": {
-      "project_scale": "production",
+      "project_scale": "team-internal",
       "project_team_size": "medium (5-15)",
-      "jargon_density": "moderate"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "Implementation of machine learning models to predict chronic disease progression using patient data",
-    "title": "Predictive Analytics for Chronic Disease Management",
-    "doc_id": "d_p_114_03",
-    "persona_id": "p_114",
-    "hyperparams": {
-      "project_scale": "academic",
-      "project_team_size": "solo",
       "jargon_density": "plain"
     }
   },
   {
+    "doc_type": "project_readme",
+    "topic_summary": "An immersive VR puzzle game that emphasizes collaborative gameplay and environmental storytelling.",
+    "title": "NexuVR: Immersive VR Puzzle Experience",
+    "doc_id": "d_p_114_02",
+    "persona_id": "p_114",
+    "hyperparams": {
+      "project_scale": "academic",
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A multiplayer puzzle game featuring dynamic AI opponents and cross-platform compatibility.",
+    "title": "LuminaQuest: Multiplayer Puzzle Game with Dynamic AI",
+    "doc_id": "d_p_114_03",
+    "persona_id": "p_114",
+    "hyperparams": {
+      "project_scale": "academic",
+      "project_team_size": "large (15+)",
+      "jargon_density": "moderate"
+    }
+  },
+  {
     "doc_type": "recommendation",
-    "topic_summary": "A recommendation from Isaac's manager highlighting his leadership and technical skills",
-    "title": "Recommendation from HealthPulse Innovations Manager",
+    "topic_summary": "A recommendation from her manager highlighting her leadership and technical skills in game development.",
+    "title": "Recommendation from Team Lead, LuminaPlay Studios",
     "doc_id": "d_p_114_04",
     "persona_id": "p_114",
     "hyperparams": {
-      "recommender_role": "peer",
+      "recommender_role": "direct-manager",
+      "recommender_closeness": "occasional",
+      "company_type": "agency",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A peer recommendation emphasizing collaboration and problem-solving in game development projects.",
+    "title": "Recommendation from Senior Developer, LuminaPlay Studios",
+    "doc_id": "d_p_114_05",
+    "persona_id": "p_114",
+    "hyperparams": {
+      "recommender_role": "skip-level",
       "recommender_closeness": "worked-daily",
       "company_type": "startup",
       "company_size": "small (<50)"
@@ -63,12 +76,12 @@
   },
   {
     "doc_type": "blog",
-    "topic_summary": "Discussion on best practices for optimizing data pipelines in healthtech environments",
-    "title": "Optimizing Data Pipelines for Real-Time Healthcare Analytics",
-    "doc_id": "d_p_114_05",
+    "topic_summary": "Discusses techniques for optimizing game performance in Unity, tailored for startups with limited resources.",
+    "title": "Optimizing Game Performance in Unity for Startups",
+    "doc_id": "d_p_114_06",
     "persona_id": "p_114",
     "hyperparams": {
-      "blog_depth": "tutorial",
+      "blog_depth": "deep-dive",
       "jargon_density": "plain"
     }
   }

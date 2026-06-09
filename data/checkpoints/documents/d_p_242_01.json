@@ -4,20 +4,20 @@
   "persona_id": "p_242",
   "hyperparams": {
     "project_scale": "hobby",
-    "project_team_size": "medium (5-15)",
+    "project_team_size": "solo",
     "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "Apache Airflow": 3,
-    "Data visualization": 4,
-    "PyTorch": 5,
-    "Python": 5,
-    "REST API design": 3,
-    "SQL analytics": 4,
-    "Snowflake": 3,
-    "dbt": 3,
-    "scikit-learn": 5,
-    "Data visualization (Matplotlib/Plotly)": 1
+    "API testing": 3,
+    "BDD/TDD": 3,
+    "Integration testing": 3,
+    "Java": 1,
+    "Node.js": 2,
+    "Python": 2,
+    "REST API design": 2,
+    "Selenium/Playwright": 3,
+    "Test automation": 3,
+    "Unit testing": 3
   },
-  "text": "# Supply Chain Optimization with Machine Learning  \nA predictive analytics solution for retail supply chain efficiency, leveraging ML to forecast demand and reduce waste. This project combines real-time data processing with scalable models to improve inventory accuracy by 18% in pilot deployments.  \n\n---\n\n## Badges  \n[![Pipeline Status](https://example.com/pipeline-badge)](https://example.com/pipeline)  \n[![Model Accuracy](https://example.com/accuracy-badge)](https://example.com/models)  \n[![Deployment Ready](https://example.com/deploy-badge)](https://example.com/deploy)  \n\n---\n\n## Tech Stack  \n- **Data Infrastructure**: Snowflake (data lakehouse), dbt (ETL automation), REST APIs (microservices integration)  \n- **Modeling**: PyTorch (custom neural networks), scikit-learn (baseline models), SQL analytics (feature engineering)  \n- **Orchestration**: Apache Airflow (daily pipeline scheduling), Python (core logic)  \n- **Monitoring**: Prometheus (model drift alerts), custom dashboards (inventory KPIs)  \n\n---\n\n## Configuration  \nSet environment variables for Snowflake credentials, Airflow DAGs, and API endpoints. Example:  \n```env  \nSNOWFLAKE_USER=your_user  \nAIRFLOW_CONN_SNOWFLAKE=snowflake://your_user:@your_account  \nAPI_ENDPOINT=https://api.example.com/v1/forecast  \n```  \nInstall dependencies via `pip install -r requirements.txt` and configure dbt models in `models/` directory.  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/yourusername/supply-chain-opt.git`  \n2. Set up virtual environment: `python -m venv venv && source venv/bin/activate`  \n3. Install dependencies: `pip install -r requirements.txt`  \n4. Configure environment variables as described above  \n5. Run dbt models: `dbt run --models inventory_features`  \n\n---\n\n## Usage / Examples  \n- **Forecasting**: Execute `python forecast.py --store_id 123` to generate demand predictions  \n- **Pipeline**: Trigger Airflow DAGs via `airflow trigger_dag supply_chain_pipeline`  \n- **API**: POST to `/v1/forecast` with store IDs for real-time inventory optimization  \n\n---\n\n## Testing  \nRun unit tests with `pytest tests/` and ensure coverage > 85% via `pytest --cov`. Integration tests validate Snowflake connectivity and model accuracy thresholds.  \n\n---\n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# HealthTech Test Automation Framework  \nA modular toolset for validating medical device software compliance, built with precision for healthtech workflows.  \n\n## API Reference  \n- **`/api/healthcheck`**: Returns framework status and version info  \n- **`/api/run-tests`**: Trigger full test suite with optional parameter `--focus=<test-group>`  \n- **`/api/report`**: Download structured test results in JSON or HTML format  \n- **`/api/config`**: Dynamic configuration overrides for CI/CD pipelines  \n\n## Usage / Examples  \n```bash\n# Run regression tests for patient monitoring module  \nnpx healthtech-test --focus=patient-monitoring --env=ci  \n\n# Generate API test report for FDA submission  \nnpx healthtech-test --output=pdf --test-type=api  \n```  \nFramework supports BDD-style scenarios for device calibration workflows and integration testing between EHR systems.  \n\n## Getting Started / Installation  \n1. Clone repository: `git clone https://github.com/svenlindqvist/healthtech-test.git`  \n2. Install dependencies: `npm install`  \n3. Configure environment variables in `.env.local` for local execution  \n4. Run tests: `npx healthtech-test --help` for command options  \n\n## Tech Stack  \n- **Language**: TypeScript (with Node.js for execution)  \n- **Testing**: Playwright (UI), SuperTest (API), Jest (unit)  \n- **BDD**: Cucumber.js for scenario-driven validation  \n- **CI/CD**: GitHub Actions for automated pipeline integration  \n\n## Architecture / Design  \nFramework decouples test logic from execution engines, enabling parallel test runs without code duplication. Core modules handle:  \n- **Device Simulation**: Mock medical device APIs for isolated testing  \n- **Regulatory Compliance Checks**: Built-in validation for FDA 21 CFR Part 11  \n- **Result Aggregation**: Centralized reporting for multi-device test campaigns  \n\n## License  \nMIT License (see [LICENSE](LICENSE))  \n\n## Badges  \n[![Build Status](https://github.com/svenlindqvist/healthtech-test/actions/workflows/test.yml/badge.svg)](https://github.com/svenlindqvist/healthtech-test/actions/workflows/test.yml)  \n[![Test Coverage](https://img.shields.io/coveralls/svenlindqvist/healthtech-test)](https://coveralls.io/github/svenlindqvist/healthtech-test)  \n[![npm version](https://badge.fury.io/js/healthtech-test.svg)](https://www.npmjs.com/package/healthtech-test)"
 }

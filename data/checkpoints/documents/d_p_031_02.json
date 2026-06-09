@@ -1,24 +1,20 @@
 {
   "doc_id": "d_p_031_02",
-  "type": "project_readme",
+  "type": "blog",
   "persona_id": "p_031",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "solo",
-    "jargon_density": "heavy"
+    "blog_depth": "tutorial",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "CI/CD pipelines": 3,
-    "Cloud cost optimization": 2,
-    "Database optimization": 3,
-    "GCP": 2,
-    "Infrastructure as Code": 3,
-    "Kubernetes": 3,
-    "Linux administration": 1,
-    "Prometheus/Grafana": 3,
+    "Apache Spark": 1,
+    "Java": 1,
+    "NumPy": 4,
+    "Pandas": 4,
     "Python": 3,
-    "Terraform": 3
+    "REST API design": 3,
+    "Recommendation systems": 4,
+    "SQL analytics": 5
   },
-  "text": "# Real-Time Fraud Detection Platform  \nA distributed system leveraging machine learning and Kafka for sub-100ms fraud detection in fintech transactions. Achieves 98.7% F1-score on synthetic data with 0.8ms P99 latency.  \n\n[![GitHub](https://badges.tiny.cloud/gh)](https://github.com/erikbergstrom/real-time-fraud-detection)  \n[![Build Status](https://badges.tiny.cloud/bt)](https://github.com/erikbergstrom/real-time-fraud-detection/actions)  \n[![Test Coverage](https://badges.tiny.cloud/ct)](https://github.com/erikbergstrom/real-time-fraud-detection/actions)  \n[![Hobby Project](https://badges.tiny.cloud/hp)](https://github.com/erikbergstrom/real-time-fraud-detection)  \n\n## Getting Started / Installation  \n```bash  \n# Prerequisites  \ndocker --version && docker-compose --version  \npython3 --version  \ncurl -fsSL https://raw.githubusercontent.com/erikbergstrom/real-time-fraud-detection/main/bootstrap.sh | bash  \n```  \nThis installs Kafka, TensorFlow Serving, and Prometheus via Docker. Requires AWS credentials for S3 integration.  \n\n## Usage / Examples  \n```python  \nfrom fraud_detector import FraudPipeline  \npipeline = FraudPipeline()  \nresult = pipeline.process_transaction({  \n    \"amount\": 1250.0,  \n    \"location\": \"US-NY\",  \n    \"device_hash\": \"abc123\"  \n})  \nprint(f\"Fraud score: {result['score']:.2f}\")  \n```  \nProcesses 10k+ transactions/sec with 0.8ms P99 latency. Output includes fraud score, risk category, and model metadata.  \n\n## Architecture / Design  \nA Kafka-driven microservices architecture with:  \n- **Stream Processing**: Apache Kafka for event sourcing  \n- **Model Inference**: TensorFlow Serving with GPU acceleration  \n- **Monitoring**: Prometheus/Grafana for latency and throughput metrics  \n- **Orchestration**: Kubernetes for scalable deployment  \n- **Storage**: AWS S3 for model artifacts and audit logs  \n\n## Tech Stack / Built With  \n- **ML**: TensorFlow, PyTorch (lightweight inference)  \n- **Streaming**: Apache Kafka, Apache Pulsar  \n- **Monitoring**: Prometheus, Grafana, Datadog  \n- **Deployment**: Docker, Kubernetes, Terraform  \n- **Cloud**: AWS S3 (data lake), GCP BigQuery (analytics)  \n\n## Roadmap / Future Work  \n- Add real-time geolocation validation via AWS Lambda  \n- Implement model retraining pipeline with MLflow  \n- Optimize Kafka serialization with Avro  \n- Integrate with GCP's Fraud Detection API for hybrid workflows  \n\n## Acknowledgments  \nBuilt using TensorFlow 2.12, Kafka 3.3, and Terraform 1.3. Special thanks to the open-source community for Kafka's robust streaming capabilities and Prometheus' flexible metrics system.  \n\n## Contributing  \nPull requests welcome! Focus on:  \n1. Model accuracy improvements (F1-score > 99%)  \n2. Infrastructure cost optimization (AWS spot instances)  \n3. Cross-cloud integration (GCP/AWS hybrid workflows)"
+  "text": "Real-time data analytics isn’t just a buzzword in adtech—it’s a survival mechanism. Last quarter, a 12% drop in campaign ROI forced our team to re-engineer how we process user interactions. The result? A 38% improvement in bid optimization latency. Let’s break down how we got there.  \n\nAdtech platforms operate on a tightrope between speed and precision. Traditional batch processing, while reliable, can’t keep up with the velocity of modern campaigns. Our stack relies on a hybrid model: real-time data streams ingested via Kafka, transformed with Pandas for low-latency aggregation, and fed into SQL-based analytics engines. Python’s flexibility lets us balance speed and complexity—whether it’s dynamically adjusting bid strategies or detecting anomalies in clickstream patterns.  \n\nThe core challenge lies in aligning data freshness with computational efficiency. We’ve adopted a tiered approach: critical metrics like conversion rates are updated every 500ms, while contextual data (e.g., device type) is batched every 15 seconds. This hybrid model reduces compute overhead by 27% without sacrificing actionable insights. For recommendation systems, we’ve integrated collaborative filtering with real-time user behavior, resulting in a 19% lift in CTR for targeted ads. REST APIs bridge our analytics layer with campaign management tools, ensuring bid adjustments propagate within sub-second windows.  \n\nBenchmarks reveal the tangible impact of these optimizations. By reducing latency from 800ms to 250ms, we’ve cut the time-to-insight window by 69%, enabling A/B testing at scale. SQL queries now run 40% faster thanks to indexed partitioning and materialized views, while Pandas-based ETL pipelines handle 1.2M events per second. The most surprising win? A 22% reduction in ad fraud by correlating real-time geolocation data with historical user profiles.  \n\nThe takeaway? Real-time analytics in adtech isn’t about replacing legacy systems—it’s about augmenting them. Prioritize latency-critical workflows, leverage Python’s ecosystem for agility, and treat SQL as the backbone of your analytics architecture. The margins here are razor-thin, but the rewards for precision are immense.  \n\nFor deeper dives, check out:  \n- “Real-Time Bidding: A Technical Deep Dive” (AdExchanger)  \n- Kafka Streams for AdTech Pipelines (Confluent)  \n- Pandas vs. Spark: When to Choose One Over the Other (Towards Data Science)  \n- SQL Optimization Techniques for High-Volume Ad Data (DBTA)"
 }

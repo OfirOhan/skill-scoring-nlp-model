@@ -3,24 +3,25 @@
   "type": "project_readme",
   "persona_id": "p_005",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "plain"
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "ArgoCD": 3,
-    "CI/CD pipelines": 3,
-    "GitHub Actions": 3,
-    "GitLab CI": 3,
-    "Jenkins": 3,
-    "Kubernetes": 4,
-    "Linux administration": 4,
-    "Monitoring & alerting": 4,
-    "Prometheus/Grafana": 4,
-    "Python": 3,
-    "Shell scripting": 3,
-    "Terraform": 4
+    "Design systems": 3,
+    "JavaScript": 5,
+    "Next.js": 2,
+    "Node.js": 1,
+    "Product management": 1,
+    "REST API design": 3,
+    "React": 5,
+    "Responsive design": 4,
+    "Selenium/Playwright": 1,
+    "State management (Redux/Zustand)": 5,
+    "Test automation": 3,
+    "TypeScript": 5,
+    "Unit testing": 1,
+    "Web performance optimization": 4
   },
-  "text": "# Secure Microservices Architecture for Financial Platforms  \nA production-grade framework for building, securing, and scaling microservices in fintech environments. This project integrates AWS, Kubernetes, and observability tools to deliver 99.99% uptime with zero PII exposure.  \n\n## Getting Started / Installation  \n1. **Clone the repo**: `git clone https://github.com/umarbello/secure-microservices.git`  \n2. **Initialize Terraform**: `terraform init` (configures VPCs, RDS, and IAM roles for AWS)  \n3. **Set up CI/CD**: GitHub Actions automates unit tests (92% coverage) and deploys to ArgoCD via GitLab CI pipelines.  \n4. **Kubernetes setup**: Deploy with `kubectl apply -f k8s/` (uses Helm charts for service meshes and secrets management)  \n5. **Security baseline**: Run `./scripts/scan.sh` (includes shell scripts for kube-bench and Clair image scanning)  \n\n## Usage / Examples  \n- **Deployment**: ArgoCD syncs manifests to AWS EKS clusters, reducing deployment latency by 40%  \n- **Observability**: Prometheus scrapes metrics from 12+ services; Grafana dashboards show 99.9% request success rates  \n- **Security**: TLS termination at the load balancer (AWS ALB), JWT validation with Auth0, and audit logs in CloudWatch  \n- **Scalability**: Kubernetes HPA scales pods based on CPU metrics (avg. 2.3x capacity during peak)  \n\n## License  \nMIT License  \n\n---  \n*Built with AWS (cost reduction: 37%), Kubernetes (autoscaling: 2.1x efficiency), and Terraform (infrastructure as code: 95% reproducibility). Monitoring tools (Prometheus/Grafana) reduced incident resolution time by 68%.*"
+  "text": "# NexaFlow Analytics Dashboard  \nA React-based analytics dashboard for real-time data visualization and business intelligence, built with TypeScript, Zustand, and a custom design system. Designed for low-latency updates and cross-platform usability in fast-paced startup environments.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies using your preferred package manager. Configure the backend API endpoint in `./src/config.ts` before launching. The dashboard is optimized for immediate use with pre-built UI components and data pipelines.  \n\n## Tech Stack  \n- **Frontend**: React 18, TypeScript 4.9, Zustand (state management), Tailwind CSS (custom design system)  \n- **Data**: WebSocket integration for real-time updates, REST API for historical queries  \n- **Performance**: Lazy-loaded components, code-splitting, and image optimization via Next.js (static export)  \n- **Design**: Tokenized UI system with 100% accessibility compliance and dark/light mode parity  \n\n## Usage / Examples  \nLaunch the dashboard to view live metrics from your backend service. Interact with drill-down widgets for granular insights. The responsive layout adapts to mobile, tablet, and desktop workflows without layout shifts. Use the `./src/examples/` directory to test pre-configured data streams.  \n\n## Badges  \n[![React](https://badgen.net/badge/light/React/000000)](https://reactjs.org)  \n[![TypeScript](https://badgen.net/badge/light/TypeScript/000000)](https://typescriptlang.org)  \n[![Design System](https://badgen.net/badge/light/Design%20System/000000)](https://github.com/your-org/design-system)  \n\n## Architecture / Design  \nThe dashboard employs a component-driven architecture with Zustand for global state. UI components are decoupled from business logic, enabling rapid iteration. Performance optimizations include memoization of complex widgets and pre-rendered SVG graphs. The design system is version-controlled and integrated via a shared monorepo.  \n\n## Contributing  \nEnhance the dashboard by extending the design system or improving WebSocket handling. Prioritize issues labeled \"performance\" or \"accessibility\" for high-impact contributions. Review pull requests with a focus on type safety and component encapsulation.  \n\n## License  \nMIT License — see the LICENSE file for details."
 }

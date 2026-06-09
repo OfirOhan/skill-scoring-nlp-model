@@ -1,27 +1,25 @@
 {
   "doc_id": "d_p_257_01",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_257",
   "hyperparams": {
-    "blog_depth": "tutorial",
-    "jargon_density": "heavy"
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "Agile/Scrum": 3,
-    "CI/CD pipelines": 3,
-    "Cloud cost optimization": 2,
-    "Cross-team collaboration": 3,
-    "Database optimization": 3,
-    "GitHub Actions": 3,
-    "Linux administration": 3,
-    "Mentoring": 2,
-    "Monitoring & alerting": 3,
-    "Project management": 3,
-    "Shell scripting": 3,
-    "Stakeholder communication": 3,
-    "Team leadership": 3,
-    "Technical debt management": 3,
-    "System design": 4
+    "Apache Airflow": 1,
+    "Data visualization (Matplotlib/Plotly)": 3,
+    "Exploratory data analysis": 3,
+    "Feature engineering": 3,
+    "NumPy": 3,
+    "Pandas": 3,
+    "Python": 3,
+    "REST API design": 1,
+    "SQL analytics": 3,
+    "Statistical modeling": 4,
+    "Tableau/Power BI": 3,
+    "scikit-learn": 4
   },
-  "text": "The challenge of real-time payment processing in fintech is rarely about solving a single problem—it’s about managing a cascade of constraints: latency, reliability, compliance, and the relentless demand for scale. When our monolithic payment system hit 10k TPS, it became clear we needed a new approach. The existing architecture, while functional, couldn’t handle the exponential growth in transaction volume without sacrificing consistency or uptime.  \n\nEarly attempts to scale via horizontal sharding and shared databases only exacerbated bottlenecks. We tried a monolith with a few microservices bolted on, but the lack of cohesion led to cascading failures during peak hours. Even our initial foray into message queues for async processing revealed latency spikes during high-volume surges. The root issue wasn’t just scaling; it was the rigid coupling of transaction logic, audit trails, and reconciliation workflows in a single codebase.  \n\nOur working solution emerged from a radical rearchitecting of the payment pipeline. We decomposed the system into three core services: a payment orchestration layer for routing requests, an event-sourced ledger for auditability, and a distributed state store for real-time validation. Key decisions included using Kafka for event sourcing, Redis for in-memory caching of transaction metadata, and a circuit breaker pattern to isolate failing components. CI/CD pipelines were tuned to deploy incremental changes to isolated service meshes, ensuring zero-downtime upgrades.  \n\nThis architecture thrives on decoupling. By treating each payment step as an independent event, we reduced latency by 40% and achieved 99.99% SLA during peak loads. The event-sourced ledger, combined with Kafka’s at-least-once delivery, ensures audit trails are both tamper-proof and resilient to partial failures. Monitoring via Prometheus and Grafana allows us to detect anomalies in sub-second intervals, while load balancers with dynamic weight adjustments handle traffic spikes without manual intervention.  \n\nLooking ahead, we’re exploring AI-driven fraud detection models integrated into the orchestration layer and experimenting with serverless functions for batch reconciliation. The next frontier is making the system self-healing—using machine learning to predict and mitigate bottlenecks before they materialize. Scalability in fintech isn’t just about handling more transactions; it’s about building a system that evolves with the business, adapts to regulatory shifts, and remains resilient under pressure."
+  "text": "# Predictive Analytics for Patient Readmission Risk  \nA machine learning model leveraging electronic health records (EHRs) to predict hospital readmission risks, reducing preventable rehospitalizations by 18% in a pilot study.  \n\n## Getting Started / Installation  \nInstall dependencies via pip:  \n```bash  \npip install -r requirements.txt  \n```  \nEnsure Python 3.9+ is installed. The virtual environment includes pre-configured paths for SQL query execution and visualization tool integrations.  \n\n## Tech Stack  \n- **Python**: Core language for data wrangling, modeling, and deployment  \n- **scikit-learn**: Pipeline for logistic regression and gradient boosting models  \n- **Pandas/NumPy**: EDA and feature engineering workflows  \n- **SQL**: Extract structured data from EHR databases  \n- **Tableau**: Interactive dashboards for risk stratification  \n- **Plotly**: Real-time visualization of model performance metrics  \n\n## Usage / Examples  \nTrain a baseline model:  \n```bash  \npython train_model.py --data_path ./data/ehr_subset.csv  \n```  \nOutput includes confusion matrix, AUC-ROC, and stratified risk cohorts. For SQL integration:  \n```sql  \nSELECT patient_id, readmission_flag FROM ehr_table WHERE admission_date > '2023-01-01';  \n```  \nResults feed into the feature engineering pipeline.  \n\n## Badges  \n[![Version](https://img.shields.io/badge/version-1.2.0-blue)](https://github.com/zpapadakis/patient-readmission)  \n[![Python](https://img.shields.io/badge/python-3.9+-green)](https://github.com/zpapadakis/patient-readmission)  \n[![License](https://img.shields.io/badge/license-MIT-yellow)](https://github.com/zpapadakis/patient-readmission)  \n\n## Architecture / Design  \nThe system decouples data ingestion, preprocessing, and model serving. SQL queries extract temporal features (e.g., medication adherence patterns), while Pandas handles missing value imputation. Scikit-learn pipelines include cross-validated hyperparameter tuning. Tableau connects to model outputs for clinical team access.  \n\n## Contributing  \nSubmit PRs with reproducible experiments. Follow PEP8 guidelines and ensure all SQL queries include anonymization layers. For data contributions, contact the maintainers for HIPAA-compliant onboarding.  \n\n## License  \nMIT License – see [LICENSE](https://github.com/zpapadakis/patient-readmission/blob/main/LICENSE) for details."
 }

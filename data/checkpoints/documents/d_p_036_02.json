@@ -3,20 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_036",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "small (2-4)",
+    "project_scale": "team-internal",
+    "project_team_size": "large (15+)",
     "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Go": 4,
-    "Kubernetes": 3,
-    "Load balancing": 2,
-    "Microservices architecture": 3,
-    "Monitoring & alerting": 3,
-    "PostgreSQL": 4,
-    "Python": 2,
-    "Terraform": 2
+    "AWS": 5,
+    "Cloud cost optimization": 3,
+    "GCP": 1,
+    "Infrastructure as Code": 4,
+    "Kubernetes": 5,
+    "MongoDB": 2,
+    "Network automation": 1,
+    "PostgreSQL": 1,
+    "Python": 1,
+    "REST API design": 1,
+    "Terraform": 5
   },
-  "text": "# Ad Campaign Analytics Dashboard  \nA scalable backend architecture for processing and analyzing campaign performance data across millions of ad impressions, built with focus on reliability and real-time insights.  \n\n## Badges  \n[![CI/CD Status](https://example.com/ci-badge)](https://example.com) [![Test Coverage](https://example.com/coverage-badge)](https://example.com)  \n\n## Getting Started / Installation  \nClone the repo and install dependencies:  \n```bash  \ngit clone https://github.com/your-username/ad-campaign-dashboard.git  \ncd ad-campaign-dashboard  \npip install -r requirements.txt  \n```  \nEnsure PostgreSQL 13+ and AWS CLI are configured.  \n\n## Usage / Examples  \nProcess a day's worth of impressions:  \n```bash  \npython ingestor.py --input /path/to/impressions.csv --output /tmp/processed_data  \n```  \nQuery campaign metrics via `/api/v1/campaigns/{campaign_id}`.  \n\n## Architecture / Design  \nThe system is split into three microservices:  \n- **Ingestor**: Handles raw data ingestion with Kafka-backed queuing.  \n- **Processor**: Aggregates metrics using PostgreSQL's time-series capabilities.  \n- **Analytics**: Exposes REST APIs for dashboard visualization.  \n\nLoad balancing is managed via Nginx, with Kubernetes handling service scaling.  \n\n## Tech Stack / Built With  \n- **Language**: Go (for high-throughput processing) and Python (for ETL scripts)  \n- **Database**: PostgreSQL 13+ (optimized for time-series analytics)  \n- **Cloud**: AWS (S3 for storage, EC2 for compute)  \n- **Orchestration**: Kubernetes (with HPA for dynamic scaling)  \n- **Infrastructure**: Terraform (for AWS resource provisioning)  \n\n## Contributing  \nPull requests are welcome! Ensure code aligns with PEP8 and GoFmt standards. Add tests for new features.  \n\n## Testing  \nUnit tests are written in Python (pytest) and Go (testify). Integration tests validate Kafka, PostgreSQL, and AWS interactions. Monitoring via Prometheus and Grafana ensures alerting for failed jobs.  \n\n## Roadmap / Future Work  \n- Implement real-time analytics with Apache Flink  \n- Add machine learning models for predictive campaign optimization  \n- Expand multi-cloud support (GCP/Azure) for regional compliance  \n- Refactor legacy ETL scripts to improve latency by 30%  \n\nThis project reflects a balance between robustness and agility, designed to scale with the demands of ad-tech workflows."
+  "text": "# TeleMedSync  \nA cross-platform patient data synchronization system designed for secure, HIPAA-compliant interoperability across distributed healthtech ecosystems. This project enables seamless data exchange between legacy EHR systems, cloud-native platforms, and IoT-enabled medical devices while maintaining strict regulatory compliance. Core capabilities include real-time data reconciliation, granular access controls, and end-to-end encryption. Built for scalability in high-traffic clinical environments, it supports multi-tenancy and audit-ready logging for compliance audits.  \n\n## Deployment  \nTeleMedSync is deployed via a hybrid AWS/Kubernetes architecture, leveraging EKS clusters for container orchestration and S3-compatible object storage for data lakes. Production deployment follows a blue-green strategy with automated canary rollouts, ensuring zero-downtime updates. Cloud cost optimization is achieved through reserved capacity for critical workloads and spot instances for batch processing. The system is configured to automatically scale compute resources based on real-time ingestion rates, with alerts for anomalous spikes.  \n\n## Getting Started / Installation  \nTo onboard, provision an AWS account with IAM roles for EKS and S3. Clone the repository using:  \n```bash  \ngit clone https://github.com/your-organization/TeleMedSync.git  \n```  \nInstall dependencies via npm and configure environment variables for AWS credentials and encryption keys. Deploy infrastructure using Terraform modules tailored for HIPAA compliance, ensuring all resources are tagged with compliance labels.  \n\n## Usage / Examples  \n1. **Data Sync Pipeline**: Trigger sync via REST API endpoints to aggregate data from disparate sources.  \n2. **Audit Logging**: Monitor access patterns through CloudWatch logs with custom dashboards.  \n3. **Encryption**: Data at rest is encrypted with AES-256, and in-transit uses TLS 1.3.  \n\n## Tech Stack  \n- **Cloud**: AWS (EKS, S3, Lambda)  \n- **Orchestration**: Kubernetes (Helm charts for deployment)  \n- **Storage**: MongoDB (for metadata, with TLS and access control)  \n- **Security**: AWS KMS for key management, IAM policies for granular access  \n\n## Architecture / Design  \nThe architecture decouples data ingestion, processing, and storage layers. Data flows through a Kafka-based event bus for asynchronous reconciliation, with MongoDB acting as a metadata repository. Terraform manages infrastructure as code, enabling rapid provisioning of compliant environments. Cross-platform compatibility is ensured via abstraction layers for device drivers and protocol translation.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![HIPAA Compliant](https://img.shields.io/badge/HIPAA-Compliant-blue)](https://healthit.gov)  \n[![Cross-Platform](https://img.shields.io/badge/Cross-Platform-green)](https://github.com/your-organization/TeleMedSync)  \n[![Terraform](https://img.shields.io/badge/Terraform-2.0-blue)](https://www.terraform.io)"
 }

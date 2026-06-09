@@ -1,24 +1,24 @@
 {
   "doc_id": "d_p_110_02",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_110",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "solo",
-    "jargon_density": "heavy"
+    "recommender_role": "skip-level",
+    "recommender_closeness": "worked-daily",
+    "company_type": "academic",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
     "3D graphics (OpenGL/Vulkan)": 2,
     "C#/.NET": 3,
-    "Game networking": 1,
-    "Game physics": 2,
-    "GraphQL": 3,
-    "Microservices architecture": 1,
-    "Python": 3,
+    "Game networking": 3,
+    "Game physics": 4,
+    "Python": 1,
     "REST API design": 3,
-    "Team Collaboration": 1,
-    "Unity": 1,
+    "React": 1,
+    "TypeScript": 1,
+    "Unity": 4,
     "Unreal Engine": 3
   },
-  "text": "# AI Narrative Engine v2.1  \nA modular, rule-agnostic framework for generating emergent narratives in RPGs via probabilistic state transitions and transformer-based dialogue trees. Benchmarked at 12.4x faster than v1.0, with 98.7% fidelity in branching path resolution under 100k node loads.  \n\n## API Reference  \n```python  \nfrom ai_narrative import StoryGraph, DialogueNode, Contextualizer  \ngraph = StoryGraph(\"rpg_ontology.json\")  \nnode = DialogueNode(\"forest_encounter\", priority=0.82)  \ncontext = Contextualizer(graph, player_state={\"reputation\": \"neutral\"})  \nresponse = context.generate_branch(\"player_choice\", {\"option\": \"parley\"})  \n```  \nCore interfaces include `NarrativeEngine` (singleton), `NodeEvaluator` (uses LSTM for intent prediction), and `PathOptimizer` (Dijkstra’s variant for weighted edge traversal). REST endpoints expose `/api/v1/nodes` (POST for dynamic insertion) and `/api/v1/paths` (GET for topological analysis).  \n\n## Usage / Examples  \nIn *Eldritch Realms*, the engine dynamically adjusts questline weights based on player reputation. For example, a \"steal\" action (probability 0.32) triggers a 15% chance of triggering a moral dilemma node, with cascading consequences affecting 82% of downstream paths. Example:  \n```python  \nif player.reputation < 0.5:  \n    graph.insert_node(\"thief_penalty\", weight=0.9)  \n```  \nGraphQL subscriptions enable real-time narrative state updates for multiplayer scenarios, with 99.98% latency under 50ms.  \n\n## Getting Started / Installation  \nInstall via pip: `pip install ai-narrative-engine`  \nRequires: Python 3.9+, PyTorch 2.0+, and optional CUDA 11.8 for GPU acceleration. For local development, clone the repo and run `pip install -e .` to enable hot-reloading of rule sets.  \n\n## Tech Stack  \n- **Language**: Python (core logic), C# (serialization layers)  \n- **AI**: Transformers (HuggingFace), LSTM for intent modeling  \n- **Networking**: REST API (FastAPI), GraphQL (Ariadne)  \n- **Graphics**: OpenGL 4.6 (for 3D story visualization modules)  \n- **Storage**: PostgreSQL with JSONB for dynamic rule storage  \n\n## Architecture / Design  \nThe engine employs a layered architecture:  \n1. **Ontology Layer**: JSON-based node definitions with probabilistic weights  \n2. **Evaluation Layer**: Rule engine with weighted graph traversal (Dijkstra’s variant)  \n3. **Context Layer**: Stateful contextualizer using LSTM to predict narrative shifts  \n4. **Output Layer**: GraphQL/REST endpoints for real-time narrative feedback  \n\n## License  \nMIT License — see `LICENSE.md` for full terms.  \n\n## Badges  \n![Version](https://github.com/aaronbaptiste/ai-narrative-engine/actions/workflows/build.yml/badge.svg?branch=main)  \n![Build Status](https://github.com/aaronbaptiste/ai-narrative-engine/actions/workflows/test.yml/badge.svg?branch=main)  \n![Coverage](https://github.com/aaronbaptiste/ai-narrative-engine/actions/workflows/coverage.yml/badge.svg?branch=main)"
+  "text": "**Quick Intro**  \nNora Magnusson, a junior game developer at Lumina SaaS, is a thoughtful and reliable collaborator who consistently delivers solid results. As a skip-level colleague in a small academic team, I’ve observed her growth and contributions firsthand.  \n\n**Key Points 1**  \nNora owns a core physics system in Unity, refining collision detection to reduce player frustration in a multiplayer shooter. She debugged a persistent glitch in a physics-based puzzle module, improving completion rates by 18% without external guidance. Her work on a multiplayer sync system using C# and networking slashed latency by 30%, streamlining seamless character movement across devices.  \n\n**Key Points 2**  \nShe designed a REST API for a matchmaking system, balancing scalability and simplicity to handle 500+ concurrent users. Using Unreal Engine, Nora prototyped a VR demo, solving an asset pipeline bottleneck that delayed earlier stages by weeks. Her 3D graphics work in OpenGL optimized rendering for low-end hardware, ensuring accessibility without compromising visual quality.  \n\n**Strong Closing**  \nNora’s blend of curiosity and craftsmanship makes her a dependable teammate. She approaches challenges with patience and a knack for turning abstract ideas into functional, user-friendly systems. I’m confident she’ll thrive in roles demanding both technical precision and creative problem-solving."
 }

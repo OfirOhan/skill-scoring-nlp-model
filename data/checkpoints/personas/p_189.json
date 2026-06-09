@@ -1,57 +1,54 @@
 {
   "persona_id": "p_189",
   "hyperparams": {
-    "archetype": "mobile_developer",
-    "years_experience": 4,
-    "seniority": "mid",
-    "industry": "fintech",
+    "archetype": "ml_engineer",
+    "years_experience": 6,
+    "seniority": "senior",
+    "industry": "adtech",
     "writing_style": "concise",
-    "language_fluency": "ESL",
-    "self_promotion_level": "boastful",
-    "quantification_tendency": "mixed"
+    "language_fluency": "near-native",
+    "self_promotion_level": "balanced",
+    "quantification_tendency": "metrics-heavy"
   },
-  "name": "Juliana Navarro",
-  "current_role": "Senior Mobile Developer",
-  "company": "FinTech Innovators Ltd.",
+  "name": "Olivia Chen",
+  "current_role": "Senior ML Engineer",
+  "company": "Targetly",
   "education": {
-    "degree": "BSc in Computer Science",
-    "university": "University of São Paulo",
-    "year": 2020
+    "degree": "Master of Science in Computer Science",
+    "university": "Stanford University",
+    "year": 2018
   },
   "career_trajectory": [
     {
-      "year": 2019,
-      "role": "Junior Mobile Developer",
-      "company": "MoneyFlow Tech"
+      "role": "Data Scientist",
+      "company": "AdvertiseNext (2017-2019)",
+      "responsibilities": "Built audience segmentation models using PyTorch; achieved 22% uplift in ad click-through rates"
     },
     {
-      "year": 2021,
-      "role": "Mobile Developer",
-      "company": "PayPal Brasil"
+      "role": "ML Engineer",
+      "company": "BrightAds (2019-2021)",
+      "responsibilities": "Led deployment of real-time bidding systems with TensorFlow; reduced latency by 35% via model optimization"
     },
     {
-      "year": 2023,
-      "role": "Senior Mobile Developer",
-      "company": "FinTech Innovators Ltd."
+      "role": "Senior ML Engineer",
+      "company": "Targetly (2021-present)",
+      "responsibilities": "Architected recommendation systems achieving 18% conversion rate improvement; managed MLOps pipelines across 15+ models"
     }
   ],
   "skills": {
-    "Swift": 4,
-    "Kotlin (Android)": 3,
-    "React Native": 3,
-    "Flutter": 3,
-    "iOS development": 4,
-    "Android development": 3,
-    "Mobile CI/CD": 3,
-    "TypeScript": 3,
-    "React": 3,
-    "HTML/CSS": 3,
-    "Webpack/Vite": 3,
-    "REST API design": 4,
-    "Web performance optimization": 3
+    "PyTorch": 4,
+    "TensorFlow": 3,
+    "MLOps (MLflow/W&B)": 4,
+    "Model deployment": 5,
+    "Recommendation systems": 4,
+    "Apache Spark": 2,
+    "Apache Kafka": 1,
+    "ETL pipeline design": 2,
+    "Cloud cost optimization": 3
   },
   "document_ids": [
     "d_p_189_00",
-    "d_p_189_01"
+    "d_p_189_01",
+    "d_p_189_02"
   ]
 }

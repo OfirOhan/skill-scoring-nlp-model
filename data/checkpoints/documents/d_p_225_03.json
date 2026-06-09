@@ -1,23 +1,23 @@
 {
   "doc_id": "d_p_225_03",
-  "type": "project_readme",
+  "type": "linkedin",
   "persona_id": "p_225",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "solo",
-    "jargon_density": "plain"
+    "linkedin_completeness": "standard"
   },
   "skill_evidence": {
-    "Application security (OWASP)": 2,
-    "Compliance (SOC2/GDPR)": 1,
-    "Encryption & PKI": 5,
-    "IAM/Access control": 2,
-    "Network security": 2,
-    "Penetration testing": 1,
-    "SIEM tools": 1,
-    "Security auditing": 1,
-    "Threat modeling": 1,
-    "Vulnerability management": 1
+    "A/B testing": 2,
+    "Agile/Scrum": 4,
+    "Competitive analysis": 4,
+    "Data visualization": 2,
+    "Jupyter notebooks": 2,
+    "Product management": 5,
+    "Responsive design": 1,
+    "Roadmap planning": 4,
+    "SQL analytics": 3,
+    "Stakeholder management": 4,
+    "UX research": 4,
+    "Data visualization (Matplotlib/Plotly)": 1
   },
-  "text": "# Quantum-Resistant Encryption Protocol Implementation  \nA modular library for deploying post-quantum cryptographic primitives in production systems. Designed to future-proof infrastructure against quantum computing threats while maintaining compatibility with existing workflows.  \n\n## Contributing  \nThis project thrives on collaboration. If you're fluent in cryptographic algorithm analysis or have experience implementing secure key exchange protocols, share your insights. Focus on improving interoperability with legacy systems or refining performance benchmarks. Pull requests are welcome—especially for documentation, test cases, or edge-case handling.  \n\n## Getting Started  \nInstall via pip:  \n```bash  \npip install quantum-resilient-encryption  \n```  \nEnsure Python 3.9+ is installed. For development, clone the repo and run `pip install -e .` to enable real-time edits. No external dependencies beyond standard libraries—except for cryptographic validation tools like `cryptography` and `pyasn1`.  \n\n## Usage / Examples  \n```python  \nfrom qre.encryption import PostQuantumKeyExchange  \nkey_pair = PostQuantumKeyExchange.generate_keys()  \nencrypted = key_pair.encrypt(\"sensitive_data\")  \n```  \nThe library abstracts NIST-approved algorithms (CRYSTALS-Kyber, Dilithium) into a unified API. Use `decrypt()` to reverse the process. For hybrid workflows, combine with AES-256 for data at rest.  \n\n## Tech Stack  \n- Python 3.9+  \n- NIST-approved post-quantum algorithms (CRYSTALS-Kyber, Dilithium)  \n- Cryptography library for PKI validation  \n- Unit tests with pytest and mock for secure scenario simulation  \n\n## Architecture / Design  \nThe core is a state machine that manages key lifecycle events: generation, exchange, and storage. Each algorithm is encapsulated as a plugin, allowing runtime switching without recompiling. Security is enforced via zero-knowledge proofs for key validation and memory-safe data structures to prevent side-channel leaks.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![Build Status](https://example.com/build-badge)](https://example.com)  \n[![Coverage](https://example.com/coverage-badge)](https://example.com)  \n[![License](https://example.com/license-badge)](https://example.com)"
+  "text": "Kwame Mensah | Senior Product Manager, Lumina Interactive  \n7 years shaping digital experiences in gaming  \n\nAs a Senior Product Manager at Lumina Interactive, I blend strategic vision with execution excellence to deliver game experiences that resonate. Over the past seven years, I’ve led cross-functional teams to launch titles across multiple platforms, driving user engagement through data-informed decisions and deep stakeholder collaboration.  \n\nMy career has been defined by building scalable product frameworks that align with business goals while staying agile in a fast-paced industry. I’ve spearheaded competitive analysis initiatives that positioned Lumina’s offerings as market leaders, and designed roadmaps that balance short-term wins with long-term innovation.  \n\nA key focus has been bridging the gap between technical feasibility and creative ambition. Whether refining UX research to inform feature prioritization or optimizing SQL analytics pipelines to uncover player behavior patterns, I thrive at the intersection of data and design.  \n\nBeyond execution, I mentor junior product managers, sharing insights on balancing ownership with collaboration. The gaming industry is ever-evolving, and I’m constantly exploring ways to integrate emerging technologies while staying rooted in player-centric outcomes.  \n\nLet’s connect if you’re building the future of interactive entertainment—one click at a time."
 }

@@ -1,0 +1,30 @@
+{
+  "doc_id": "d_p_038_02",
+  "type": "project_readme",
+  "persona_id": "p_038",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "Apache Kafka": 1,
+    "Apache Spark": 2,
+    "Data warehousing": 1,
+    "Docker": 3,
+    "ETL pipeline design": 2,
+    "Hugging Face Transformers": 4,
+    "Kubernetes": 3,
+    "LLMs/Prompt engineering": 1,
+    "MLOps (MLflow/W&B)": 3,
+    "Model deployment": 3,
+    "NLP": 4,
+    "PyTorch": 1,
+    "REST API design": 3,
+    "TensorFlow": 4,
+    "dbt": 1,
+    "scikit-learn": 3
+  },
+  "text": "# Enterprise Financial Fraud Detection  \nA scalable anomaly detection system for enterprise banking transactions, leveraging advanced machine learning and NLP to identify subtle fraud patterns in real-time.  \n\n---\n\n## Getting Started / Installation  \nEnsure Python 3.8+ is installed. Install dependencies via:  \n```bash  \npip install -r requirements.txt  \n```  \nThis project uses Docker for consistent environments. Build the container with:  \n```bash  \ndocker build -t fraud-detection .  \n```  \nFor production deployment, use Kubernetes for orchestration.  \n\n---\n\n## Usage / Examples  \nRun the pipeline with:  \n```bash  \npython pipeline.py --input transactions.csv --output fraud_report.json  \n```  \nThe script processes raw transaction data, applies hybrid models (scikit-learn + TensorFlow), and outputs a structured fraud report. For NLP-driven analysis, use the `analyze_text.py` script to flag suspicious patterns in transaction descriptions.  \n\n---\n\n## Badges  \n[![GitHub](https://badges.githubusercontent.com/)](https://github.com/)  \n[![Build Status](https://badges.buildkite.com/)](https://buildkite.com/)  \n[![Coverage](https://badges.codecov.io/)](https://codecov.io/)  \n\n---\n\n## Tech Stack  \n- **Machine Learning**: scikit-learn, TensorFlow, Hugging Face Transformers  \n- **NLP**: BERT-based models for text analysis  \n- **Deployment**: Docker, Kubernetes  \n- **Monitoring**: MLflow for experiment tracking  \n- **API**: REST endpoints for real-time fraud alerts  \n\n---\n\n## Architecture / Design  \nThe system decouples data ingestion, feature engineering, and model inference. Raw transactions are preprocessed using Apache Spark (in-memory caching for large datasets) before being fed into a hybrid model. The NLP pipeline extracts contextual clues from transaction descriptions, while the anomaly detection model identifies statistical outliers. All components are containerized for seamless scaling.  \n\n---\n\n## Contributing  \nPull requests are welcome! Ensure code adheres to PEP8 standards and includes unit tests. For NLP model updates, propose changes to the `transformers` configuration in `config.yaml`.  \n\n---\n\n## License  \nMIT License — see [LICENSE](LICENSE) for details."
+}

@@ -3,22 +3,19 @@
   "type": "project_readme",
   "persona_id": "p_195",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "solo",
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
     "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 2,
-    "CI/CD pipelines": 3,
-    "Database optimization": 4,
-    "Docker": 3,
-    "GitHub Actions": 3,
-    "Linux administration": 2,
-    "Microservices architecture": 3,
-    "PostgreSQL": 4,
-    "Prometheus/Grafana": 2,
-    "Python": 4,
-    "REST API design": 4
+    "API testing": 3,
+    "BDD/TDD": 3,
+    "CI/CD pipelines": 2,
+    "Java": 1,
+    "Python": 2,
+    "REST API design": 2,
+    "Selenium/Playwright": 4,
+    "Test automation": 3
   },
-  "text": "# FraudGuard: Real-Time Payment Fraud Detection  \nFraudGuard is a low-latency fraud detection system built for fintech environments, processing 10K+ transactions per second with 98% detection accuracy. It leverages Python's async capabilities, PostgreSQL's indexing optimizations, and a microservices architecture to ensure sub-50ms response times in production.  \n\n## Acknowledgments  \nThis project wouldn’t exist without the foundational work of the PostgreSQL community on index-only scans and the Python async ecosystem. Special thanks to the GitHub Actions team for enabling seamless CI/CD pipelines, and to the Prometheus/Grafana team for real-time monitoring.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/simonedeLuca/FraudGuard.git  \ncd FraudGuard  \ndocker-compose up -d  \n```  \nThe Docker setup initializes a PostgreSQL instance with pre-optimized indexes and a Flask API endpoint at `http://localhost:5000`. Ensure you have Docker and Python 3.9+ installed. For production deployment, replace the Docker setup with a managed PostgreSQL service and scale the async worker pool based on transaction volume.  \n\n## Usage / Examples  \n```python  \n# Example: Flagging a fraudulent transaction  \nresponse = requests.post(  \n    \"http://localhost:5000/flag\",  \n    json={\"amount\": 1500, \"user_id\": \"abc123\", \"ip\": \"192.168.1.1\"}  \n)  \nprint(response.json()[\"risk_score\"])  # Output: 92.4  \n```  \nFraudGuard processes transactions in parallel, using a custom model trained on 10M+ anonymized financial records. The system dynamically adjusts risk thresholds based on real-time volume, reducing false positives by 37% compared to legacy systems.  \n\n## Tech Stack  \n- **Python**: Core logic with async/await for non-blocking I/O  \n- **PostgreSQL**: Optimized for high-write throughput with connection pooling and index-only scans  \n- **Docker**: Containerized deployment with pre-configured environment variables  \n- **GitHub Actions**: CI/CD pipeline for unit tests and model retraining  \n- **Prometheus/Grafana**: Monitors query latency and memory usage across microservices  \n\n## License  \nMIT License (see [LICENSE](LICENSE) for details)  \n\n## Badges  \n[![GitHub stars](https://img.shields.io/github/stars/simonedeLuca/FraudGuard?style=flat)](https://github.com/simonedeLuca/FraudGuard)  \n[![GitHub forks](https://img.shields.io/github/forks/simonedeLuca/FraudGuard?style=flat)](https://github.com/simonedeLuca/FraudGuard)  \n[![Build status](https://img.shields.io/github/actions/workflow/ci.yml?branch=main)](https://github.com/simonedeLuca/FraudGuard/actions)  \n\n## Contributing  \nContributions are welcome! Focus on improving the async worker pool efficiency or expanding the PostgreSQL schema for historical analysis. All pull requests must include unit tests and benchmarking results."
+  "text": "# AutoTestPro - Consulting QA Automation Framework  \nA scalable, modular framework for delivering consistent test automation across diverse client projects. Designed for teams requiring rapid integration with legacy systems and modern APIs.  \n\n## Badges  \n[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)  \n[![Build Status](https://img.shields.io/badge/build--status-passing-green)](https://github.com/yourusername/AutoTestPro/actions)  \n[![Usage](https://img.shields.io/badge/usage--rate-95%25-yellow)](https://github.com/yourusername/AutoTestPro)  \n\n## License  \nMIT License  \nSee [LICENSE](LICENSE) for full details.  \n\n## Tech Stack  \n- **Core**: Python 3.9+, Playwright 1.25+, pytest 7.1+  \n- **Infrastructure**: GitHub Actions, Docker, AWS EC2  \n- **Tools**: JSON Schema, Pydantic, OpenAPI  \n- **Reporting**: Allure, JUnit XML, custom HTML dashboards  \n\n## Architecture / Design  \nA layered architecture prioritizing reuse and isolation:  \n1. **Core Engine**: Playwright-based session manager with parallel execution (30+ concurrent tests).  \n2. **Test Libraries**: Modularized for UI, API, and integration flows (e.g., `ui_login.py`, `api_checkout.py`).  \n3. **Data Layer**: YAML/JSON-driven test data with dynamic parameter injection.  \n4. **CI/CD**: GitHub Actions pipelines for nightly runs (95%+ test coverage).  \nBDD/TDD principles are baked into test structure, with Gherkin scenarios mapped to Python fixtures.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/yourusername/AutoTestPro.git`  \n2. Install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   playwright install chromium  \n   ```  \n3. Configure environment variables for API keys and cloud credentials.  \n\n## Usage / Examples  \n**Sample UI Test**:  \n```python  \nfrom pages.login import LoginPage  \nfrom utils.helpers import generate_random_user  \n\ndef test_login_flow():  \n    user = generate_random_user()  \n    page = LoginPage().open()  \n    page.fill_username(user['email'])  \n    page.fill_password(user['password'])  \n    assert page.is_logged_in()  \n```  \n\n**API Test Example**:  \n```python  \nimport requests  \nfrom utils.config import API_BASE_URL  \n\ndef test_checkout_api():  \n    response = requests.post(  \n        f\"{API_BASE_URL}/checkout\",  \n        json={\"items\": [{\"id\": \"123\", \"quantity\": 2}]}  \n    )  \n    assert response.status_code == 200  \n    assert \"success\" in response.json()  \n```  \n\n## Contributing  \nSubmit PRs with unit tests and documentation updates. Code must pass CI/CD checks and adhere to PEP8. For API-related changes, include OpenAPI spec updates. All contributions are reviewed within 5 business days."
 }

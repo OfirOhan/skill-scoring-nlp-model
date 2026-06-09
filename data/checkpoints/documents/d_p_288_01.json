@@ -1,25 +1,21 @@
 {
   "doc_id": "d_p_288_01",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_288",
   "hyperparams": {
-    "blog_depth": "deep-dive",
-    "jargon_density": "heavy"
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "CI/CD pipelines": 4,
-    "Cloud cost optimization": 3,
-    "Cloud networking (VPC/subnets)": 4,
-    "Database optimization": 2,
-    "Kubernetes": 5,
-    "Monitoring & alerting": 5,
-    "Network automation": 4,
-    "PostgreSQL": 2,
-    "Prometheus/Grafana": 4,
-    "Python": 4,
-    "Service mesh (Istio)": 3,
-    "Terraform": 4
+    "C/C++ (embedded)": 5,
+    "Firmware development": 5,
+    "Go": 1,
+    "Hardware-software integration": 4,
+    "Network troubleshooting": 1,
+    "Python": 1,
+    "REST API design": 1,
+    "RTOS": 4
   },
-  "text": "The last outage wasn’t about code. It was about how our microservices handled cascading failures during a regional AWS zone meltdown. When a single service’s dependency timeout triggered a chain reaction, we lost three hours of revenue. That moment crystallized the need for resilience beyond basic retries.  \n\nEnterprise microservices face unique pressures: scale, regulatory compliance, and the expectation that infrastructure will “just work.” Our team’s approach centers on three pillars—bounded context isolation, proactive failure injection, and observability-driven resilience. Kubernetes has been central to this, enabling dynamic sidecar injection for service mesh (Istio) and automated rollback via Canary deployments. But tools alone aren’t enough.  \n\nIn Core Analysis, we dissected how circuit breakers in Hystrix, combined with Kubernetes’ readiness probes, reduced cascading failures by 72% in a recent audit. We also implemented a custom health check gateway that routes traffic to standby nodes during partial outages, a pattern that slashed mean time to recovery (MTTR) by 40% in our payment processing pipeline. Prometheus and Grafana are critical here—dashboards track latency thresholds and error rates across 120+ services, triggering automated alerts when thresholds exceed 85th percentile.  \n\nBenchmarks reveal tangible gains: after deploying a combination of retries with exponential backoff and circuit breakers, we achieved 99.95% SLA compliance during a recent 48-hour stress test. Cloud cost optimization played a role too—by using AWS Auto Scaling with dynamic CPU utilization thresholds, we reduced idle instance costs by 30% without compromising resilience. Network automation tools like Terraform ensured consistent VPC configurations across 15 regions, minimizing configuration drift that could lead to partial outages.  \n\nTakeaways? Resilience isn’t a checkbox. It’s a system of interdependent patterns: retries with context-aware backoffs, circuit breakers tied to health checks, and observability that drives proactive mitigation. Prioritize tools that integrate with your existing CI/CD pipelines—GitLab and Jenkins have been game-changers for us.  \n\nFurther Reading: Explore Istio’s fault injection capabilities, AWS’s multi-region disaster recovery best practices, and how Prometheus’ service discovery features can automate monitoring for microservices. The key is to treat resilience as an evolving architecture, not a static implementation."
+  "text": "# Smart Glucose Monitoring System for Diabetic Patients  \n\nA real-time glucose tracking solution using low-power sensors and embedded systems to empower diabetic patients with proactive health insights.  \n\n## Badges  \n[![Build Status](https://github.com/ritikamalhotra91/smart-glucose-monitor/actions/workflows/build.yml/badge.svg)](https://github.com/ritikamalhotra91/smart-glucose-monitor/actions/workflows/build.yml)  \n[![Hardware Compatibility](https://img.shields.io/badge/Hardware-STM32%20F4-blue)](https://github.com/ritikamalhotra91/smart-glucose-monitor)  \n[![License](https://img.shields.io/badge/License-MIT-yellow)](https://github.com/ritikamalhotra91/smart-glucose-monitor/blob/main/LICENSE)  \n\n## Tech Stack  \n- **Microcontroller**: STM32F4 Discovery Board (ARM Cortex-M4)  \n- **Sensors**: ISO 15197-compliant glucose biosensor (I2C interface)  \n- **RTOS**: FreeRTOS (kernel + task scheduling)  \n- **Communication**: BLE 5.0 (nRF52840) for mobile app sync  \n- **Data Logging**: SD card + FAT32 filesystem  \n- **Power Management**: Low-dropout regulator (LDO) + sleep mode optimization  \n\n## Configuration  \n- **Sensor Calibration**: Pre-programmed calibration curves for pH and glucose concentration  \n- **BLE Pairing**: Static UUID for secure device pairing  \n- **Alert Thresholds**: Adjustable via serial interface (0.5–10 mmol/L range)  \n- **Power Settings**: Dynamic clock gating to extend battery life (30% reduction in active mode)  \n\n## Getting Started / Installation  \n1. Flash firmware to STM32F4 using STM32CubeProgrammer  \n2. Connect nRF52840 to BLE module (UART bridge for debug)  \n3. Power via USB or LiPo battery (5V/3.7V compatible)  \n4. Pair with mobile app via BLE (UUID: 0000110A-0000-1000-8000-00805F9B34FB)  \n\n## Usage / Examples  \n- **Real-Time Monitoring**: Glucose levels update every 10 seconds via BLE  \n- **Alert System**: Visual/audible alarms trigger at 7.8 mmol/L thresholds  \n- **Data Sync**: Export CSV logs to mobile app for trend analysis  \n- **Power Efficiency**: 12-hour battery life on single charge (50mA average current)  \n\n## Testing  \n- **Unit Tests**: 100% coverage for sensor drivers (JTAG-based assertions)  \n- **Integration Tests**: BLE latency < 20ms (Wireshark packet capture verification)  \n- **Stress Tests**: 48-hour uptime with periodic sensor recalibration  \n- **Accuracy Validation**: 98.7% correlation with hospital-grade meters (paired samples)  \n\n## License  \nMIT License – see [LICENSE](https://github.com/ritikamalhotra91/smart-glucose-monitor/blob/main/LICENSE) for details."
 }

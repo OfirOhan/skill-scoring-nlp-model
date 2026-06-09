@@ -1,22 +1,23 @@
 {
   "doc_id": "d_p_007_01",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_007",
   "hyperparams": {
-    "blog_depth": "tutorial",
-    "jargon_density": "moderate"
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 2,
-    "Application security (OWASP)": 4,
-    "Compliance (SOC2/GDPR)": 3,
-    "Encryption & PKI": 4,
-    "IAM/Access control": 3,
-    "Network security": 3,
-    "Penetration testing": 4,
-    "SIEM tools": 3,
-    "Security auditing": 3,
-    "Vulnerability management": 3
+    "3D graphics (OpenGL/Vulkan)": 4,
+    "C#/.NET": 3,
+    "Game networking": 4,
+    "Game physics": 4,
+    "GraphQL": 2,
+    "JavaScript": 2,
+    "Python": 1,
+    "REST API design": 3,
+    "Unity": 5,
+    "Unreal Engine": 1
   },
-  "text": "**Zero-Trust Security in Healthtech: Protecting Sensitive Patient Data**  \n\nIn healthtech, the stakes of data breaches are higher than in most industries. Patient records are not just sensitive—they’re life-critical. My team recently overhauled our security posture to align with zero-trust principles, and the results speak for themselves.  \n\n**Problem Statement**  \nLegacy systems in healthtech often assume implicit trust within defined boundaries. This creates vulnerabilities: insider threats, third-party access, and outdated protocols. For example, our previous architecture allowed internal apps to communicate without verifying identities, exposing patient data to lateral movement risks. Compliance with HIPAA and GDPR added pressure to modernize, but the real challenge was balancing security with the need for seamless data flow across clinical workflows.  \n\n**Setup**  \nWe began by mapping all data flows and identifying critical assets. Our environment included on-prem servers, AWS cloud services, and third-party APIs. We prioritized three pillars: identity verification, network segmentation, and encryption. Tools like AWS IAM, CloudFront, and AWS KMS became foundational. We also integrated SIEM tools to centralize logging and alerting.  \n\n**Step-by-Step**  \n1. **Network Segmentation**: We isolated patient data stores behind AWS VPCs, restricting access to only authenticated services.  \n2. **IAM Enforcement**: Every user and service had role-based access, with regular audits to prune unused permissions.  \n3. **Secure Communication**: All data in transit used TLS 1.3, and APIs enforced OAuth 2.0 with JWT tokens.  \n4. **Encryption at Rest**: AES-256 encrypted databases, while PKI-managed keys ensured key rotation and access controls.  \n5. **Multi-Factor Authentication**: MFA became mandatory for all admin access, reducing phishing risks.  \n6. **Continuous Monitoring**: SIEM tools aggregated logs, and we configured alerts for anomalous behavior, like sudden data access spikes.  \n7. **Penetration Testing**: We conducted quarterly red team exercises to identify gaps, simulating both external and insider threats.  \n\n**Results**  \nPost-implementation, breach risks dropped by 72%, and compliance audits passed without findings. Our system achieved 99.9% uptime while maintaining sub-50ms latency for critical workflows. Encryption overhead was minimized through key caching, and audit logs reduced incident response times by 40%.  \n\n**Conclusion**  \nZero-trust isn’t a one-time project—it’s an ongoing process. By treating every request as untrusted, we’ve created a resilient framework that adapts to evolving threats. The real win? Clinicians now access data without friction, knowing it’s protected by layers of automation and policy.  \n\n**Further Reading**  \n- OWASP Top Ten for healthcare-specific vulnerabilities  \n- AWS Security Best Practices for HIPAA compliance  \n- NIST Zero Trust Architecture Framework (2023 edition)  \n- Case studies on PKI implementation in EHR systems  \n- GDPR breach notification guidelines for health data"
+  "text": "# GameDev Cloud: Unity Game Development with AWS  \n\nA production-ready platform for building, deploying, and scaling Unity games using AWS services. Designed for small teams, it streamlines cloud integration, real-time collaboration, and scalable infrastructure without compromising creative control.  \n\n## Acknowledgments  \nThanks to the team for turning this vision into reality:  \n- **Sara Chen** (AWS architecture lead) for refining the cloud cost model  \n- **Raj Patel** (Unity optimization specialist) for the physics engine integration  \n- **AWS SDK team** for their robust SDKs and support  \n\n## Getting Started / Installation  \n1. Install Unity 2021.3 LTS and AWS CLI v2  \n2. Clone the repo: `git clone https://github.com/yourteam/gamedev-cloud.git`  \n3. Set up AWS credentials via `aws configure`  \n4. Restore dependencies: `npm install` (for the API proxy layer)  \n\n## Usage / Examples  \n**Example 1**: Deploy a basic game to S3  \n```csharp  \n// Use the AWS S3 integration script to export builds  \nAWSGameExporter.ExportToS3(\"builds/mygame\", \"us-east-1\");  \n```  \n**Example 2**: Real-time collaboration  \n- Use the WebSocket API to sync multiplayer states across instances  \n- Leverage DynamoDB for persistent player data  \n\n## Tech Stack  \n- **Unity 2021.3** (custom rendering pipeline for 3D graphics)  \n- **AWS Lambda** (serverless build automation)  \n- **Amazon S3** (game asset storage)  \n- **REST APIs** (for multiplayer matchmaking)  \n- **DynamoDB** (player progress tracking)  \n- **C#** (core game logic, AWS SDK bindings)  \n\n## License  \nMIT License (see [LICENSE](LICENSE) for details)  \n\n## Badges  \n[![Build Status](https://github.com/yourteam/gamedev-cloud/actions/workflows/build.yml/badge.svg)](https://github.com/yourteam/gamedev-cloud/actions)  \n[![Code Coverage](https://codecov.io/gh/yourteam/gamedev-cloud/branch/main/graph/badge.svg)](https://codecov.io/gh/yourteam/gamedev-cloud)  \n[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-green.svg)](https://github.com/yourteam/gamedev-cloud/labels/contributions)  \n\n## Contributing  \nPull requests welcome! Ensure code adheres to the [style guide](STYLE.md) and includes unit tests. For API changes, update the [docs](docs/API.md) and add integration tests with the AWS mock server."
 }

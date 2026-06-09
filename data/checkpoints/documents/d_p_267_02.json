@@ -1,27 +1,27 @@
 {
   "doc_id": "d_p_267_02",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_267",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "large (15+)",
-    "jargon_density": "heavy"
+    "recommender_role": "professor",
+    "recommender_closeness": "occasional",
+    "company_type": "FAANG",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "AWS": 5,
-    "Apache Airflow": 2,
-    "Apache Kafka": 2,
-    "Apache Spark": 2,
+    "AWS": 4,
+    "Apache Airflow": 3,
+    "Apache Kafka": 3,
+    "Apache Spark": 3,
     "Cloud cost optimization": 3,
-    "Data modeling": 4,
-    "Data warehousing": 4,
-    "Database optimization": 2,
-    "Docker": 2,
-    "ETL pipeline design": 2,
-    "Kubernetes": 2,
-    "Python": 2,
-    "Snowflake": 2,
-    "Terraform": 4
+    "Data warehousing": 3,
+    "Database optimization": 3,
+    "Docker": 3,
+    "ETL pipeline design": 3,
+    "Message queues": 1,
+    "Python": 3,
+    "Snowflake": 5,
+    "Terraform": 3
   },
-  "text": "# Enterprise Data Warehouse Migration on AWS  \nModernized ETL pipelines and data modeling for enterprise scalability using AWS Glue, Redshift, and cloud-native optimization  \n\n## Deployment  \nDeployed via Terraform-managed AWS infrastructure with automated CI/CD pipelines. Production environments use CloudWatch for real-time monitoring, with deployment visibility via AWS CodePipeline and CloudWatch metrics for ETL job latency.  \n\n## Badges  \n[![AWS Certified Solutions Architect](https://badges.example.com/aws-cert)](https://aws.amazon.com/certifications/)  \n[![CI/CD Pipeline](https://badges.example.com/ci-cd)](https://github.com/enterprise-warehouse/actions)  \n[![Security Compliance](https://badges.example.com/iso-27001)](https://security.aws.com/)  \n\n## Tech Stack  \n- **AWS Services**: Glue (ETL), Redshift (data warehouse), S3 (storage), Lambda (serverless), CloudWatch (monitoring)  \n- **Infrastructure**: Terraform (IaC), AWS IAM (role-based access)  \n- **Tools**: Python (scripting), AWS CLI (command-line integration)  \n\n## Architecture / Design  \nData flows from source systems to S3 via Kafka-ingestion pipelines, processed by Glue Spark jobs with dynamic partitioning. Redshift tables are optimized with columnar storage and materialized views, reducing query latency by 42%. Terraform ensures consistent environment provisioning across dev, staging, and prod.  \n\n## Getting Started / Installation  \n1. Clone repository: `git clone https://github.com/enterprise-warehouse/migration.git`  \n2. Configure AWS credentials via `aws configure` and IAM roles  \n3. Initialize Terraform: `terraform init` and apply infrastructure  \n4. Validate environment with `aws cloudformation describe-stacks`  \n\n## Usage / Examples  \nRun ETL jobs via AWS Glue console or CLI:  \n```bash\naws glue start-job-run --job-name \"customer_data_etl\"\n```  \nQuery Redshift with PostgreSQL client:  \n```sql\nSELECT * FROM sales_fact WHERE region = 'APAC' LIMIT 1000;\n```  \nMonitor job metrics in CloudWatch for latency and error rates.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/enterprise-warehouse/migration/blob/main/LICENSE) for details."
+  "text": "Johan Bakken 70’s work at NexaTech Solutions stands out for its practical rigor and measurable outcomes. During our collaboration on a customer analytics platform, he spearheaded the migration of their data warehousing architecture to Snowflake, redesigning query patterns to reduce latency by 40% while scaling to 10x the previous data volume. His ability to balance technical depth with business needs was evident in how he aligned Snowflake’s partitioning strategy with the team’s cost targets, achieving a 30% reduction in cloud spend without compromising performance.  \n\nAs a professor, I’ve interacted with Johan through occasional consulting projects and academic collaborations. His approach to problem-solving is methodical, often prioritizing long-term system resilience over short-term fixes. For instance, he re-engineered their ETL pipelines using Apache Airflow and Spark, integrating incremental data processing that cut daily batch jobs from 12 hours to under 2. This shift not only improved operational efficiency but also freed resources for innovation.  \n\nJohan’s strength lies in his ability to operationalize complex systems with precision. He consistently applies cloud cost optimization principles, such as Terraform-driven infrastructure automation, to ensure scalable, cost-effective solutions. His mentorship of junior engineers—particularly in refining Snowflake’s schema design—has had a lasting impact on the team’s technical maturity.  \n\nIn summary, Johan is a reliable, detail-oriented engineer whose work drives both technical and business value. His contributions to NexaTech’s data infrastructure have been critical to their growth.  \n\nProfessor [Name]  \n[University], [Department]  \n[Contact Information]"
 }

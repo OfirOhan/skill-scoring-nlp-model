@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_024_03",
+  "type": "project_readme",
+  "persona_id": "p_024",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "A/B testing": 1,
+    "Analytics-driven product decisions": 4,
+    "Competitive analysis": 3,
+    "Product management": 4,
+    "Roadmap planning": 3,
+    "SQL analytics": 3,
+    "Stakeholder management": 3,
+    "Tableau/Power BI": 1,
+    "UX research": 3,
+    "Web accessibility (WCAG)": 1
+  },
+  "text": "# In-Game Purchase Optimization Framework  \nA modular toolkit to refine monetization strategies through data-driven insights and iterative testing  \n\n---  \n\n## Deployment  \nHosted on AWS Lambda with Docker containers for scalable, serverless execution. CI/CD pipelines automate updates via GitHub Actions, ensuring real-time integration with live game telemetry.  \n\n---  \n\n## Badges  \n[![Academic Research](https://badges.liquidapps.io/academic)](https://example.com/research)  \n[![Open Source](https://badges.liquidapps.io/open-source)](https://github.com/umarbello/igpof)  \n[![Small Team](https://badges.liquidapps.io/2-4)](https://example.com/team)  \n\n---  \n\n## Tech Stack  \nPython (Pandas, NumPy), SQL (PostgreSQL), Flask API, React (dashboard UI), and Redis for caching. Data pipelines leverage game server logs and player behavior metrics.  \n\n---  \n\n## Architecture / Design  \nA three-tiered system:  \n1. **Data Layer**: Aggregates purchase logs and player activity from game servers.  \n2. **Analysis Layer**: Uses SQL to segment spending patterns, identify churn risks, and benchmark against competitors.  \n3. **Feedback Loop**: Integrates UX research findings to refine pricing tiers and bundle configurations.  \n\n---  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/umarbello/igpof.git`  \n2. Set up PostgreSQL with `docker-compose up`  \n3. Install Python dependencies via `pip install -r requirements.txt`  \n4. Run migrations: `python manage.py migrate`  \n\n---  \n\n## Usage / Examples  \n```bash\n# Analyze purchase trends for a 30-day window  \npython analyze.py --start_date \"2023-01-01\" --end_date \"2023-01-31\"  \n```  \nOutput includes conversion rate benchmarks, item popularity metrics, and recommendations for dynamic pricing adjustments.  \n\n---  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n---  \n*Built by balancing player retention with revenue goals—no magic, just data and strategy.*"
+}

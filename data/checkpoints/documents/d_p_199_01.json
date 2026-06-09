@@ -3,19 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_199",
   "hyperparams": {
-    "project_scale": "team-internal",
+    "project_scale": "hobby",
     "project_team_size": "small (2-4)",
-    "jargon_density": "heavy"
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "API testing": 3,
-    "BDD/TDD": 3,
-    "CI/CD pipelines": 3,
-    "GitLab CI": 3,
-    "Selenium/Playwright": 3,
-    "Security testing": 3,
-    "Test automation": 3,
-    "Python": 3
+    "C/C++ (embedded)": 4,
+    "Embedded Linux": 3,
+    "Firmware development": 4,
+    "GitLab CI": 2,
+    "Hardware-software integration": 3,
+    "IoT protocols (MQTT/CoAP)": 4,
+    "Network troubleshooting": 1,
+    "Python": 2,
+    "REST API design": 3,
+    "RTOS": 3,
+    "Sensor integration": 4,
+    "Shell scripting (Bash)": 2
   },
-  "text": "# SecureTest: Automated Cybersecurity Vulnerability Scanner  \nSecureTest is a framework for automating vulnerability scanning in network protocols, designed to integrate with existing security workflows. It leverages protocol-specific analysis, real-time threat intelligence, and modular test suites to identify misconfigurations, insecure APIs, and protocol-level vulnerabilities in production environments.  \n\n## Testing  \nSecureTest is built on a **BDD/TDD-first** approach, using `pytest` for structured test suites and `Behave` for scenario-driven validation. All scan modules are instrumented with **API testing** hooks to validate endpoint behaviors against OWASP ZAP and Burp Suite benchmarks. CI/CD pipelines in **GitLab CI** trigger automated scans on PRs, with test results fed into **Sentry** for real-time anomaly detection. The tool’s extensibility is validated through **test automation** of custom protocol plugins, ensuring compliance with NIST 800-115 standards.  \n\n## Getting Started / Installation  \nInstall dependencies via `pip install -r requirements.txt`. Ensure Python 3.10+ is installed. For network scanning, configure `scapy` and `paramiko` with root privileges on target systems. Set environment variables for API keys and vulnerability databases (e.g., `VULN_DB_URL=https://vuln-api.example.com`).  \n\n## Usage / Examples  \n```bash  \nsecuretest scan --protocol tcp --target 192.168.1.0/24 --output json  \nsecuretest analyze --report vuln_report.json --threshold 7.5  \n```  \nUse `securetest ui` to launch a headless browser via **Playwright** for interactive protocol analysis. Integrate with **Wireshark** for packet-level correlation of scan results.  \n\n## Tech Stack  \n- **Python**: Core language with `scapy`, `paramiko`, and `pytest`  \n- **Testing**: `pytest`, `Behave`, `Sentry`, `GitLab CI`  \n- **Security**: OWASP ZAP integration, NIST-compliant reporting  \n- **UI**: **Playwright** for browser automation in vulnerability replay  \n\n## Architecture / Design  \nSecureTest decouples protocol analysis, vulnerability matching, and reporting into three layers:  \n1. **Scanner Engine**: Modular handlers for TCP, HTTP, and SSH protocols  \n2. **Analysis Layer**: Rule-based matching against CVE databases and custom regex patterns  \n3. **Output System**: REST API for real-time dashboards and SIEM integration  \nThe design prioritizes **zero-static-configuration** scanning, enabling dynamic adaptation to ephemeral network environments.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Contributing  \nSubmit security-focused PRs with test coverage for new protocols. All contributions must include **BDD scenarios** and pass **CI/CD validation**."
+  "text": "# Smart Agriculture Sensor Network  \nA low-power IoT system for real-time soil and environmental monitoring in small-scale farms. Designed for hobbyists and small teams, this project pairs embedded sensors with cloud-based dashboards to optimize crop conditions.  \n\n## Getting Started / Installation  \n1. **Hardware Setup**: Assemble sensor nodes using STM32 microcontrollers and environmental sensors (temperature, humidity, soil moisture).  \n2. **Software Dependencies**: Install [PlatformIO](https://platformio.org/) for firmware development. Clone this repo and open the project in your IDE.  \n3. **Quick Start**: Flash the firmware to your sensor nodes. Deploy the gateway via Docker for local data aggregation.  \n\n## Tech Stack  \n- **Firmware**: C++ (STM32 HAL), FreeRTOS for task scheduling  \n- **Communication**: MQTT over LoRaWAN for long-range sensor data transmission  \n- **Cloud**: Lightweight REST API for dashboard integration (Node.js + Express)  \n- **Hardware**: Adafruit BMP280 (pressure/temperature), VS1053B (sound sensor), ESP32 (gateway)  \n- **Tools**: Git, Docker, PlatformIO, VS Code  \n\n## Usage / Examples  \n- **Sensor Deployment**: Mount soil moisture sensors 5cm below the surface. Use the gateway to aggregate data every 10 minutes.  \n- **Dashboard**: View live metrics in the web interface. Set thresholds for irrigation alerts via the REST API.  \n- **Customization**: Modify the firmware to add solar irradiance sensors or adjust sampling intervals.  \n\n## Badges  \n[![GitHub](https://badgen.net/badge/github/yasminelamin/smart-agriculture-sensor-network/badge)](https://github.com/yasminelamin/smart-agriculture-sensor-network)  \n[![IoT](https://badgen.net/badge/ioT/low-power/92c952)](https://iot.stackexchange.com)  \n[![Open Source](https://badgen.net/badge/open%20source/MIT/5cb8a5)](https://opensource.org/licenses/MIT)  \n\n## Architecture / Design  \nThe system uses a three-tier model:  \n1. **Sensor Nodes**: Run FreeRTOS with tasklets for sensor polling and MQTT transmission. Firmware includes power-saving modes to extend battery life.  \n2. **Gateway**: Aggregates data from nodes and forwards it to the cloud via MQTT. Built with ESP32 for Wi-Fi connectivity.  \n3. **Cloud Backend**: A REST API handles data storage and user requests. The dashboard uses Chart.js for visualizations.  \n\n## Contributing  \nThis project is open to collaboration. If you're experienced with embedded firmware or cloud APIs, consider:  \n- Refactoring the MQTT handler for better resource management  \n- Adding support for additional sensor types  \n- Improving the dashboard UI/UX  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

@@ -4,24 +4,24 @@
   "persona_id": "p_120",
   "hyperparams": {
     "project_scale": "academic",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "moderate"
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Android development": 2,
-    "Flutter": 3,
-    "Kotlin": 1,
-    "Mobile CI/CD": 2,
-    "Mobile testing": 2,
-    "REST API design": 3,
+    "Android development": 3,
+    "App Store deployment": 2,
+    "Flutter": 1,
+    "JavaScript": 2,
+    "Kotlin (Android)": 3,
+    "Mobile CI/CD": 1,
+    "Push notifications": 1,
+    "REST API design": 1,
     "React": 1,
     "React Native": 1,
-    "State management": 3,
     "Swift": 1,
-    "Web accessibility": 1,
-    "iOS development": 1,
-    "Web accessibility (WCAG)": 1,
-    "State management (Redux/Zustand)": 1
+    "TypeScript": 1,
+    "Webpack/Vite": 1,
+    "iOS development": 1
   },
-  "text": "# E-Commerce Inventory Tracker  \nA real-time inventory management system for e-commerce teams, built with Flutter and Firebase. This app streamlines stock tracking, order reconciliation, and low-stock alerts through a unified mobile interface. Designed for cross-platform deployment with minimal friction, it integrates Firebase Cloud Functions for backend logic and Firestore for scalable data storage.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/last-commit/opalnguyen/inventory-tracker)](https://github.com/opalnguyen/inventory-tracker/commits/main)  \n[![Flutter](https://img.shields.io/badge/flutter-%2302569b.svg?style=flat&logo=flutter)](https://flutter.dev)  \n[![Firebase](https://img.shields.io/badge/firebase-%23db4437.svg?style=flat&logo=firebase)](https://firebase.google.com)  \n[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/opalnguyen/inventory-tracker.git  \n   ```  \n2. Navigate to the project directory and fetch dependencies:  \n   ```bash  \n   cd inventory-tracker  \n   flutter pub get  \n   ```  \n3. Configure Firebase by replacing the `firebase_options.dart` file with your project's credentials.  \n4. Run the app:  \n   ```bash  \n   flutter run  \n   ```  \n\n## Tech Stack  \n- **Flutter**: Cross-platform UI toolkit for native performance and hot reload.  \n- **Firebase**: Backend-as-a-service for authentication, real-time database, and cloud functions.  \n- **Firestore**: NoSQL database for inventory records and user permissions.  \n- **Cloud Functions**: Serverless logic for stock alerts and order synchronization.  \n- **Dart**: Language for Flutter, with custom utilities for data validation and parsing.  \n\n## Architecture / Design  \nThe app follows a **layered architecture** with separate presentation, domain, and data layers. Flutter's **BLoC pattern** manages state for inventory updates and user interactions, while Firebase Cloud Functions handle background tasks like low-stock notifications. The UI is built with **Material 3 components** for a cohesive, modern experience.  \n\n## Usage / Examples  \n- **Add Inventory**: Tap \"New Item\" to input product details, quantities, and supplier info.  \n- **Track Stock**: View real-time stock levels with color-coded thresholds (green/amber/red).  \n- **Generate Reports**: Export weekly stock summaries via Firebase Cloud Functions.  \n- **Multi-User Sync**: Collaborate in real time with Firestore’s real-time listeners.  \n\n## Testing  \n- **Unit Tests**: Validate business logic for stock calculations and form validation using `test` and `mockito`.  \n- **Integration Tests**: Ensure Firebase interactions (e.g., auth flows, database writes) function as expected.  \n- **UI Tests**: Use `flutter_test` to verify widget states and transitions.  \n- **CI/CD**: Automated tests run on GitHub Actions for PRs and merges.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# Gameplay Optimization Framework  \nA research-driven toolkit for mobile game performance enhancement through dynamic resource allocation, predictive rendering pipelines, and memory-efficient asset streaming. This framework targets latency reduction in complex 3D environments by integrating real-time CPU/GPU workload balancing, with empirical benchmarks showing up to 37% improvement in frame consistency during high-poly scene transitions.  \n\n## Tech Stack  \nCore development leverages Android SDK 34 with Kotlin Multiplatform for cross-architecture compatibility, paired with OpenGL ES 3.2 for low-level rendering control. Memory management is abstracted through custom `ResourcePool` classes, while asynchronous asset loading utilizes `AsyncTask` with priority-based queuing. JavaScript is employed sparingly for scripting state transitions, though the framework remains fully functional without it.  \n\n## Architecture / Design  \nThe framework operates on a three-tiered architecture:  \n1. **Resource Manager**: Implements object pooling for textures, meshes, and shaders, with garbage collection thresholds dynamically adjusted based on GPU utilization.  \n2. **Rendering Pipeline**: Features a configurable `RenderStage` system that allows prioritization of draw calls via deferred shading and occlusion culling.  \n3. **Performance Monitor**: Aggregates metrics from `DebugDraw` and `FrameTiming` modules to generate real-time heatmaps of CPU/GPU bottlenecks.  \n\nKey design choices include a non-intrusive integration model, avoiding platform-specific dependencies beyond the Android SDK. The `AssetLoader` class employs a hybrid caching strategy, combining LRU eviction with versioned asset manifests for seamless hotfix deployment.  \n\n## Getting Started / Installation  \nClone the repository using `git clone https://github.com/connormurphy/gameplay-optimization-framework.git`, then navigate to the project directory. Ensure Android Studio is configured with JDK 17 and Gradle 8.0.1. Build the native libraries via `./gradlew assembleDebug` to generate the required `.so` files for ARM64 and x86_64 architectures.  \n\n## Usage / Examples  \nTo demonstrate dynamic resource allocation, instantiate a `SceneLoader` with a priority queue of assets:  \n```kotlin  \nval loader = SceneLoader(context, priorityQueue = AssetPriorityQueue())  \nloader.loadAssets { progress ->  \n    Log.d(\"Loader\", \"Loaded ${progress.loadedAssets} of ${progress.totalAssets}\")  \n}  \n```  \nFor rendering optimization, configure a `RenderStage` with deferred shading:  \n```kotlin  \nval stage = RenderStage()  \nstage.addShader(DeferredShader())  \nstage.optimizeForHighPolyModels()  \n```  \n\n## Badges  \n[![Build Status](https://github.com/connormurphy/gameplay-optimization-framework/actions/workflows/build.yml/badge.svg)](https://github.com/connormurphy/gameplay-optimization-framework/actions/workflows/build.yml)  \n[![Coverage](https://img.shields.io/coveralls/connormurphy/gameplay-optimization-framework/main)](https://coveralls.io/github/connormurphy/gameplay-optimization-framework)  \n\n## Contributing  \nPull requests are welcome for core optimization algorithms or platform-specific extensions. For App Store deployment, ensure all assets comply with Apple's graphics rendering guidelines.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

@@ -3,20 +3,24 @@
   "type": "recommendation",
   "persona_id": "p_090",
   "hyperparams": {
-    "recommender_role": "skip-level",
-    "recommender_closeness": "brief",
-    "company_type": "academic",
-    "company_size": "mid (50-500)"
+    "recommender_role": "peer",
+    "recommender_closeness": "occasional",
+    "company_type": "agency",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "API testing": 3,
-    "GitLab CI": 3,
-    "Integration testing": 2,
-    "JavaScript": 2,
-    "Python": 3,
-    "Selenium/Playwright": 3,
-    "Test automation": 3,
-    "Web accessibility (WCAG)": 2
+    "AWS": 2,
+    "CI/CD pipelines": 1,
+    "Docker": 1,
+    "GitHub Actions": 1,
+    "Linux administration": 1,
+    "Microservices architecture": 2,
+    "PostgreSQL": 1,
+    "Prometheus/Grafana": 1,
+    "Python": 2,
+    "REST API design": 3,
+    "Terraform": 1,
+    "Test automation": 1
   },
-  "text": "Dimitri Papadopoulos is a QA/Test Engineer at GameCraft Interactive, where he balances rigorous testing with a knack for streamlining workflows.  \n\nHis API testing work on multiplayer game sync protocols cut regression bugs by 32% in Q3 2023. He designed GitLab CI pipelines that slashed test execution time by 40%, enabling nightly builds to run in under 15 minutes. Python scripts he wrote for data validation saved the team 12+ hours monthly in manual checks.  \n\nDimitri’s test automation frameworks, built with Selenium and Playwright, handle 85% of regression cases across browsers. He’s also spearheaded accessibility audits, ensuring GameCraft’s tools meet WCAG 2.1 standards. His reliability and attention to edge cases make him a steady force in high-pressure release cycles.  \n\nA pragmatic problem-solver with a disciplined approach, Dimitri’s ability to translate complex systems into repeatable tests is rare in this field. He’s a quiet collaborator who consistently elevates team efficiency without needing constant oversight."
+  "text": "To Whom It May Concern,  \n\nI’ve had the pleasure of collaborating with Elena Popescu on a few projects at [Agency Name], where she served as a Backend Engineer at NexaCloud Solutions. Our interactions were occasional but meaningful, centered around integrating SaaS platforms with client systems. Elena’s approach to problem-solving and attention to detail left a clear impression.  \n\nElena’s strength lies in her ability to design REST APIs that balance simplicity with scalability. At NexaCloud, she restructured a legacy API endpoint to reduce latency by 30% without compromising security, which directly improved client onboarding times. She also prioritizes clarity in documentation, ensuring teams across time zones can troubleshoot issues quickly. Beyond technical skills, she’s reliably proactive—once, she identified a potential AWS region outage hours before it occurred, enabling her team to reroute traffic and avoid 99.95% uptime loss.  \n\nOne standout moment was during a high-stakes migration to a microservices architecture. Elena led the decomposition of a monolithic service into modular components, which cut deployment complexity by half. Her willingness to iterate and explain trade-offs kept the team aligned despite tight deadlines.  \n\nElena is reliable, collaborative, and deeply focused on outcomes. Her work ethic and technical precision make her a strong fit for roles requiring both architectural thinking and hands-on execution.  \n\nSincerely,  \n[Your Full Name]  \n[Your Contact Information]  \n[Agency Name]"
 }

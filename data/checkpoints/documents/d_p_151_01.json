@@ -3,19 +3,25 @@
   "type": "project_readme",
   "persona_id": "p_151",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "heavy"
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "CI/CD pipelines": 2,
-    "Docker": 4,
-    "Go": 3,
-    "Infrastructure as Code": 4,
-    "Kubernetes": 3,
-    "Microservices architecture": 3,
-    "Python": 4,
-    "REST API design": 4
+    "CI/CD pipelines": 1,
+    "GitHub Actions": 1,
+    "Jenkins": 1,
+    "ArgoCD": 1,
+    "Prometheus/Grafana": 1,
+    "Monitoring & alerting": 1,
+    "Linux administration": 1,
+    "Terraform": 1,
+    "Python": 1,
+    "Java": 1,
+    "Go": 1,
+    "Node.js": 1,
+    "REST API design": 1,
+    "PostgreSQL": 1
   },
-  "text": "# SecureAPI Gateway  \nA robust API gateway designed for enterprise-grade cybersecurity operations, featuring TLS 1.3 encryption, dynamic rate limiting, and mTLS authentication. This project serves as a foundational component for securing microservices architectures, with emphasis on zero-trust principles and runtime protection.  \n\n## Badges  \n[![Build Status](https://github.com/secureapi-gateway/actions/workflows/build.yml/badge.svg)](https://github.com/secureapi-gateway/actions/workflows/build.yml)  \n[![Security Scan](https://github.com/secureapi-gateway/actions/workflows/security.yml/badge.svg)](https://github.com/secureapi-gateway/actions/workflows/security.yml)  \n[![Test Coverage](https://github.com/secureapi-gateway/actions/workflows/coverage.yml/badge.svg)](https://github.com/secureapi-gateway/actions/workflows/coverage.yml)  \n\n## License  \nThis project is licensed under the [MIT License](https://github.com/secureapi-gateway/blob/main/LICENSE). All cryptographic modules and policy enforcement logic are subject to additional compliance obligations under NIST FIPS 140-2.  \n\n## Tech Stack  \n- **Language**: Go (for high-performance core logic), Python (for policy scripting and audit logging)  \n- **Containerization**: Docker (with custom TLS secrets management)  \n- **Orchestration**: Kubernetes (with Istio service mesh for observability)  \n- **Infrastructure**: Terraform (for AWS/GCP hybrid deployment with VPC segmentation)  \n- **Networking**: Envoy proxy (as the primary TLS termination point)  \n- **Security**: OpenSSL (FIPS-compliant), AWS KMS (for key rotation)  \n\n## Architecture / Design  \nThe gateway operates as a stateful service mesh layer, enforcing three-tier authentication:  \n1. **Transport Layer**: TLS 1.3 with SNI-based cipher suite negotiation and OCSP stapling  \n2. **Application Layer**: mTLS mutual authentication with X.509 certificate pinning  \n3. **Policy Layer**: Dynamic rate limiting via token bucket algorithm with adjustable thresholds (100–10,000 RPS)  \n\nKey components include:  \n- **WebAssembly-based filters** for real-time payload inspection  \n- **RBAC integration** with OAuth2.0 and OpenID Connect  \n- **Audit trails** in encrypted JSON-LD format for SIEM correlation  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/secureapi-gateway.git  \ncd secureapi-gateway  \nmake deps  \nmake docker-build  \nkubectl apply -f k8s/deployment.yaml  \n```  \nEnsure your environment includes:  \n- Go 1.21+ (with CGO disabled)  \n- Python 3.10+ (for policy engine)  \n- Docker 20.10+ (with Kubernetes plugins)  \n\n## Usage / Examples  \n```python  \n# Policy script for rate limiting  \ndef apply_policy(request):  \n    if request.client_ip in BLACKLIST:  \n        return \"403 Forbidden\"  \n    if request.headers.get(\"X-Rate-Limit\") != \"1000\":  \n        return \"429 Too Many Requests\"  \n    return \"200 OK\"  \n```  \nExample use case:  \n- **Encryption**: All TLS sessions use AES-256-GCM with 256-bit keys  \n- **Rate Limiting**: 5,000 RPS across 100 client IPs with 100ms sliding window  \n\n## Contributing  \nContributions require:  \n1. Code reviews with focus on cryptographic compliance  \n2. Security audits via OWASP ZAP integration  \n3. Unit tests for all policy enforcement logic  \n4. Documentation updates for API lifecycle management  \nAll pull requests must include:  \n- FIPS 140-2 validation reports for cryptographic modules  \n- CI/CD pipeline integration for infrastructure-as-code changes  \n- Performance benchmarks for rate limiting under load"
+  "text": "# AdOps Pipeline for Campaign Automation  \nA modular system for deploying ad campaigns using Docker and Kubernetes, designed for seamless integration with ad tech platforms. This project enables teams to automate deployment workflows while maintaining flexibility for campaign-specific configurations.  \n\n## Badges  \n[![Deployment Reliability](https://img.shields.io/badge/deployment-reliable-blue)](https://example.com)  \n[![Ad Campaign Compatibility](https://img.shields.io/badge/campaigns-compatible-green)](https://example.com)  \n\n## License  \nMIT License — use this project freely, but credit the original author and share improvements.  \n\n## Tech Stack  \n- **Docker** for containerization of ad campaign components  \n- **Kubernetes** for orchestration and scaling  \n- **YAML** for configuration management  \n- **REST APIs** for ad platform integration (abstracted for compatibility)  \n\n## Architecture / Design  \nThe system decouples ad campaign logic into microservices, each containerized and managed by Kubernetes. Key components include:  \n- **Campaign Scheduler**: Triggers deployment based on predefined rules  \n- **Asset Manager**: Handles ad creative versions and metadata  \n- **Metrics Exporter**: Aggregates deployment status for ad platform sync  \n- **Configurator**: Dynamically adjusts deployment parameters per campaign  \n\nThe design emphasizes modular updates and rollback capabilities, ensuring minimal downtime during ad campaign iterations.  \n\n## Getting Started / Installation  \n1. Install [Docker](https://www.docker.com/products/docker-desktop) and [Kubernetes](https://kubernetes.io/) (e.g., Minikube or a managed cluster)  \n2. Clone the repository to your local machine  \n3. Deploy the base infrastructure using the provided `kubectl` manifests  \n4. Configure campaign-specific settings in the `config/` directory  \n\n## Usage / Examples  \nTo deploy a new campaign:  \n```bash  \ndocker build -t ad-campaign:latest .  \nkubectl apply -f deployment.yaml  \n```  \nMonitor deployment status via the Metrics Exporter dashboard (see `docs/monitoring.md` for setup).  \n\nFor campaign-specific overrides:  \n```yaml  \n# config/campaign-1234.yaml  \nspec:  \n  parameters:  \n    target_audience: \"age_18-24\"  \n    budget: \"50000\"  \n```  \n\n## Contributing  \nEnhance this project by improving modularity, adding ad platform integrations, or optimizing resource allocation. Submit pull requests with clear documentation and unit tests for all changes."
 }

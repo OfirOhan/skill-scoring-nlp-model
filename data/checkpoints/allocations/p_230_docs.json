@@ -1,27 +1,76 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Harini Subramanian's experience as a Backend Engineer in the SaaS industry",
-    "title": "Harini Subramanian - Backend Engineer",
+    "topic_summary": "Professional resume highlighting 13 years of backend engineering in healthtech, focusing on scalable systems and architecture.",
+    "title": "Takeshi Hayashi - Staff Backend Engineer",
     "doc_id": "d_p_230_00",
     "persona_id": "p_230",
     "hyperparams": {
-      "cv_format": "hybrid",
+      "cv_format": "paragraph",
       "geographic_convention": "Israel",
+      "company_type": "enterprise",
+      "company_size": "small (<50)"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "Secure patient data management system with role-based access control and HIPAA compliance.",
+    "title": "HealthTrack Patient Data Management System",
+    "doc_id": "d_p_230_01",
+    "persona_id": "p_230",
+    "hyperparams": {
+      "project_scale": "production",
+      "project_team_size": "large (15+)",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "High-performance telemedicine platform backend for real-time video consultations and messaging.",
+    "title": "TeleMediCare Backend API",
+    "doc_id": "d_p_230_02",
+    "persona_id": "p_230",
+    "hyperparams": {
+      "project_scale": "production",
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "Endorsement from a former manager praising leadership and architecture expertise in healthtech projects.",
+    "title": "Recommendation from HealthTrack Innovations Manager",
+    "doc_id": "d_p_230_03",
+    "persona_id": "p_230",
+    "hyperparams": {
+      "recommender_role": "peer",
+      "recommender_closeness": "occasional",
       "company_type": "agency",
       "company_size": "mid (50-500)"
     }
   },
   {
-    "doc_type": "project_readme",
-    "topic_summary": "A README for a scalable microservices architecture project built for a SaaS platform",
-    "title": "NexaCloud API Gateway",
-    "doc_id": "d_p_230_01",
+    "doc_type": "recommendation",
+    "topic_summary": "Peer recommendation highlighting collaboration and technical depth in healthtech backend development.",
+    "title": "Recommendation from HealthTrack Colleague",
+    "doc_id": "d_p_230_04",
     "persona_id": "p_230",
     "hyperparams": {
-      "project_scale": "academic",
-      "project_team_size": "large (15+)",
-      "jargon_density": "moderate"
+      "recommender_role": "direct-manager",
+      "recommender_closeness": "worked-daily",
+      "company_type": "startup",
+      "company_size": "small (<50)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "Strategies for building resilient backend systems in healthtech with focus on security and scalability.",
+    "title": "Designing Secure and Scalable Healthtech Backend Architectures",
+    "doc_id": "d_p_230_05",
+    "persona_id": "p_230",
+    "hyperparams": {
+      "blog_depth": "tutorial",
+      "jargon_density": "plain"
     }
   }
 ]

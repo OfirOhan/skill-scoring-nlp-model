@@ -2,37 +2,40 @@
   "persona_id": "p_267",
   "hyperparams": {
     "archetype": "data_engineer",
-    "years_experience": 9,
+    "years_experience": 6,
     "seniority": "senior",
-    "industry": "enterprise",
-    "writing_style": "modest",
+    "industry": "startup",
+    "writing_style": "neutral",
     "language_fluency": "ESL",
     "self_promotion_level": "balanced",
     "quantification_tendency": "metrics-heavy"
   },
-  "name": "Umar Bello 20",
+  "name": "Johan Bakken 70",
   "current_role": "Senior Data Engineer",
-  "company": "NexaCorp",
+  "company": "NexaTech Solutions",
   "education": {
-    "degree": "Bachelor of Science in Computer Science",
-    "university": "University of Technology, Nigeria",
-    "year": 2015
+    "degree": "BSc in Computer Science",
+    "university": "University of Oslo",
+    "year": 2018
   },
   "career_trajectory": [
     {
-      "role": "Data Analyst",
-      "company": "TechNova Solutions (2015-2017)",
-      "metrics": "Built dashboards for 50+ clients, reduced reporting latency by 40%"
+      "role": "Data Engineering Intern",
+      "company": "TechNova Inc.",
+      "duration": "6 months",
+      "responsibilities": "Assisted in ETL pipeline development using Apache Spark and PostgreSQL."
     },
     {
-      "role": "Data Engineer",
-      "company": "StreamFlow Analytics (2017-2019)",
-      "metrics": "Scaled ETL pipelines processing 10TB/day, 3x improved query performance"
+      "role": "Junior Data Engineer",
+      "company": "DataMatic Group",
+      "duration": "18 months",
+      "responsibilities": "Designed data warehouses with Snowflake and optimized PostgreSQL queries for scalability."
     },
     {
       "role": "Senior Data Engineer",
-      "company": "NexaCorp (2019-present)",
-      "metrics": "Architected cloud data lakes, 25% reduction in storage costs"
+      "company": "NexaTech Solutions",
+      "duration": "3 years",
+      "responsibilities": "Architected real-time data pipelines with Apache Kafka and Apache Flink, leading cloud infrastructure migrations on AWS."
     }
   ],
   "skills": {
@@ -40,23 +43,20 @@
     "Apache Kafka": 4,
     "Apache Airflow": 4,
     "Snowflake": 5,
-    "Data warehousing": 4,
     "ETL pipeline design": 4,
-    "Data modeling": 4,
-    "Database optimization": 4,
-    "Python": 5,
+    "Data warehousing": 4,
     "AWS": 5,
     "Terraform": 4,
-    "Docker": 4,
-    "Kubernetes": 4,
-    "Cloud cost optimization": 4
+    "Python": 3,
+    "Database optimization": 3,
+    "Docker": 3,
+    "Cloud cost optimization": 3,
+    "Message queues": 1
   },
   "document_ids": [
     "d_p_267_00",
     "d_p_267_01",
     "d_p_267_02",
-    "d_p_267_03",
-    "d_p_267_04",
-    "d_p_267_05"
+    "d_p_267_03"
   ]
 }

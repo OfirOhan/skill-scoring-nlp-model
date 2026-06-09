@@ -3,21 +3,19 @@
   "type": "project_readme",
   "persona_id": "p_173",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "plain"
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "A/B testing": 3,
-    "Analytics-driven product decisions": 2,
-    "Competitive analysis": 2,
-    "Data visualization (Plotly)": 3,
+    "Flutter": 3,
     "JavaScript": 2,
-    "Product management": 2,
-    "Roadmap planning": 2,
-    "SQL analytics": 3,
-    "Stakeholder management": 1,
-    "UX research": 2
+    "Push notifications": 3,
+    "React": 1,
+    "React Native": 3,
+    "Swift": 4,
+    "TypeScript": 2,
+    "Web accessibility (WCAG)": 1
   },
-  "text": "# CyberShield Incident Response Automation  \nA lightweight tool to streamline incident response workflows by automating triage, containment, and reporting. Built for cybersecurity teams prioritizing speed and precision in threat mitigation.  \n\n---\n\n## Tech Stack  \n- **Core**: Python 3.10, Docker, Pandas  \n- **Monitoring**: Grafana + Prometheus for real-time alerts  \n- **Storage**: SQLite for local logs, AWS S3 for archival  \n- **Networking**: Netfilter/iptables for rule enforcement  \n- **CLI**: Click for intuitive command-line interface  \n\n---\n\n## Architecture / Design  \nCyberShield operates as a modular pipeline:  \n1. **Detection**: Parses logs from SIEM tools (Splunk, ELK) via webhook  \n2. **Orchestration**: Executes pre-defined playbooks (e.g., isolate host, block IP) using Docker containers  \n3. **Reporting**: Generates structured JSON logs for SIEM correlation  \n4. **Feedback Loop**: Trains anomaly detection models with historical data via SQL analytics  \n\nKey design choices:  \n- Containerized workflows ensure environment consistency  \n- Decouples alert processing from containment actions for scalability  \n- Lightweight for deployment on air-gapped networks  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repository using `git clone https://github.com/maxhoffmann/cybershield.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure `config.yaml` with your SIEM integration details  \n4. Run the orchestrator: `python3 orchestrator.py`  \n\nEnsure Docker is installed and running for containerized playbook execution.  \n\n---\n\n## Usage / Examples  \n```bash  \n# Trigger automated response to a phishing alert  \ncybershield alert --id 42 --action isolate  \n\n# Generate a report for the last 24 hours  \ncybershield report --timeframe 24h --format json  \n```  \nUse the CLI to chain actions: isolate a host, then block its IP, then log the sequence for audit.  \n\n---\n\n## Badges  \n[![CI/CD Status](https://github.com/maxhoffmann/cybershield/actions/workflows/ci.yml/badge.svg)](https://github.com/maxhoffmann/cybershield/actions/workflows/ci.yml)  \n[![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/maxhoffmann/cybershield/blob/main/LICENSE)  \n\n---\n\n## Contributing  \nWe welcome contributions from cybersecurity engineers and DevOps specialists. Focus on improving playbook efficiency or expanding SIEM integrations.  \n\n---\n\n## License  \nMIT License — see [LICENSE](https://github.com/maxhoffmann/cybershield/blob/main/LICENSE) for details."
+  "text": "# AdTarget Pro: Real-Time Ad Targeting SDK  \nA mobile-first SDK for hyper-local ad personalization leveraging geospatial data and predictive modeling to optimize campaign performance in real-time. Built for adtech teams requiring granular control over audience segmentation and contextual relevance.  \n\n## Getting Started / Installation  \n1. Add the SDK to your Flutter project via pubspec.yaml:  \n   ```yaml  \n   dependencies:  \n     adtarget_pro: ^1.2.3  \n   ```  \n2. Initialize with your API key in `main.dart`:  \n   ```dart  \n   AdTargetPro.initialize('YOUR_API_KEY');  \n   ```  \n3. Enable location permissions in `Info.plist` (iOS) and `AndroidManifest.xml` (Android).  \n\n## Usage / Examples  \n```swift  \n// Swift: Trigger location-based ad event  \nlet location = CLLocation(latitude: 37.7749, longitude: -122.4194)  \nAdTargetPro.trackLocation(location) { response in  \n    print(\"Ad recommendation: $response\")  \n}  \n```  \n\n```dart  \n// Dart: Fetch dynamic ad content  \nAdTargetPro.fetchAdContent(context: context)  \n    .then((ad) => _showAd(ad));  \n```  \n\n## Badges  \n[![GitHub Activity](https://img.shields.io/badge/active-yes)](https://github.com/yourusername/adtarget-pro)  \n[![Code Coverage](https://img.shields.io/badge/coverage-85%25)](https://github.com/yourusername/adtarget-pro)  \n[![Platform](https://img.shields.io/badge/platform-flutter%20%7C%20swift-blue)](https://github.com/yourusername/adtarget-pro)  \n\n## Tech Stack  \n- **Flutter** (cross-platform UI)  \n- **Swift** (core logic, iOS-specific optimizations)  \n- **TensorFlow Lite** (on-device ML model inference)  \n- **Firebase Cloud Messaging** (push notification integration)  \n- **SQLite** (local caching for offline scenarios)  \n\n## Architecture / Design  \nThe SDK operates as a modular layer over platform-specific frameworks, with a focus on decoupling location services from ad decision logic. A central dispatcher routes geospatial data to machine learning models trained on historical campaign performance metrics. Push notifications are prioritized for real-time updates, with fallback to batch processing for low-bandwidth environments.  \n\n## Contributing  \nFeedback and pull requests are welcome via GitHub. For internal teams, this SDK is designed for seamless integration with existing ad orchestration pipelines.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details."
 }

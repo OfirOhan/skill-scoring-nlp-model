@@ -3,24 +3,23 @@
   "type": "recommendation",
   "persona_id": "p_054",
   "hyperparams": {
-    "recommender_role": "professor",
+    "recommender_role": "peer",
     "recommender_closeness": "worked-daily",
     "company_type": "FAANG",
-    "company_size": "small (<50)"
+    "company_size": "large (500+)"
   },
   "skill_evidence": {
     "AWS": 3,
-    "Apache Airflow": 3,
-    "Apache Kafka": 2,
-    "Apache Spark": 3,
-    "Data warehousing": 3,
-    "Docker": 2,
-    "ETL pipeline design": 3,
+    "CDN management": 3,
+    "Cloud cost optimization": 3,
+    "Cloud networking (VPC/subnets)": 3,
+    "GCP": 3,
     "Kubernetes": 3,
-    "Python": 4,
-    "Snowflake": 4,
-    "Terraform": 2,
-    "dbt": 2
+    "Load balancing": 3,
+    "Monitoring & alerting": 3,
+    "Python": 3,
+    "Serverless": 1,
+    "Terraform": 3
   },
-  "text": "Dear [Admissions Committee/Recruiter],  \n\nI have collaborated closely with Connor Murphy over the past three years at a small FAANG-affiliated fintech firm, where he served as a Data Engineer. His work ethic, analytical rigor, and ability to bridge technical and business needs made him an invaluable contributor to our team.  \n\nConnor’s expertise in data warehousing and ETL pipeline design stood out. He led the migration of our legacy data infrastructure to Snowflake, optimizing query performance by 40% and reducing ETL runtime by 25%. His Python-based automation scripts streamlined data validation processes, saving the team over 20 hours monthly. He also designed Apache Airflow workflows that integrated AWS S3 with Spark clusters, enabling real-time analytics for high-volume transaction data.  \n\nA notable example involved scaling our Kubernetes-based data processing environment to handle a 3x increase in user traffic. Connor’s architecture adjustments improved system resilience without compromising latency, a challenge that required balancing complexity with operational simplicity. His ability to communicate technical decisions to non-technical stakeholders was equally impressive.  \n\nConnor is a thoughtful collaborator with a knack for solving problems under constraint. He approaches challenges with curiosity and a commitment to measurable outcomes. I am confident he will excel in any role requiring technical depth and cross-functional teamwork.  \n\nSincerely,  \n[Professor’s Full Name]  \n[University/Institution]  \n[Contact Information]"
+  "text": "Liam Fitzgerald is a reliable, detail-oriented engineer who consistently delivers under pressure. As a daily collaborator on cybersecurity infrastructure at CyberShield, I’ve seen him tackle complex challenges with calm focus. His work on integrating AWS and GCP platforms to streamline security tooling was critical during our recent compliance audit, and his ability to balance competing priorities stands out.  \n\nTechnically, Liam’s strength lies in systems that require precision. He designed a CDN architecture that cut latency by 25% for high-traffic security dashboards, and his cloud cost optimization work saved the team 15% annually without compromising performance. His deep knowledge of VPC/subnet configurations ensured our internal tools operated securely across hybrid environments. He’s also a go-to for Kubernetes deployments, reliably scaling services during incident response without downtime.  \n\nBeyond technical skills, Liam excels at translating complex problems into actionable steps. He’ll spend hours refining a Terraform script to automate infrastructure provisioning, then patiently guide non-technical stakeholders through the process. His curiosity drives him to ask the right questions—like how a Python script could automate log analysis, which later became a team-wide best practice.  \n\nLiam’s impact is felt in the reliability of our platform. During a major breach simulation, his monitoring setup caught a zero-day exploit hours before it could escalate. He’s the kind of engineer who doesn’t just meet deadlines but anticipates risks. I’d strongly recommend him for any role requiring technical rigor and collaborative problem-solving."
 }

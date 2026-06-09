@@ -1,21 +1,24 @@
 {
   "doc_id": "d_p_126_01",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_126",
   "hyperparams": {
-    "blog_depth": "tutorial",
-    "jargon_density": "plain"
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "Cloud networking (VPC/subnets)": 3,
-    "GitLab CI": 3,
-    "Kubernetes": 4,
-    "Load balancing": 3,
+    "C/C++ (embedded)": 4,
+    "CI/CD pipelines": 1,
+    "Embedded Linux": 4,
+    "Firmware development": 4,
+    "Hardware-software integration": 4,
+    "IoT protocols (MQTT/CoAP)": 4,
     "Network automation": 1,
-    "Prometheus/Grafana": 3,
-    "Python": 3,
-    "Terraform": 3
+    "Python": 2,
+    "REST API design": 2,
+    "RTOS": 3,
+    "Shell scripting (Bash)": 1
   },
-  "text": "**Scaling SaaS Platforms: Lessons from Platform Engineering**  \n\n**Introduction**  \nLast quarter, we handled a 400% traffic spike without downtime. How? By treating scalability as a design principle, not an afterthought. This post distills hard-won lessons from building and maintaining cloud-native SaaS platforms at scale.  \n\n**1. Auto-Scaling with AWS and Kubernetes**  \nWe deployed Kubernetes clusters on AWS EKS, using HPA (Horizontal Pod Autoscaler) to scale compute resources based on CPU/mem metrics. Combined with AWS Auto Scaling Groups, this setup reduced cold start latency by 60%. Key metric: 99.99% uptime during Black Friday traffic, with 85% of pods scaling automatically.  \n\n**2. Terraform for Infrastructure as Code**  \nTerraform became our single source of truth for AWS VPCs, subnets, and Kubernetes clusters. By versioning infrastructure in GitLab, we cut deployment errors by 70%. A single `terraform apply` now provisions 150+ resources across 3 regions, with rollback capabilities for critical failures.  \n\n**3. GitLab CI for CI/CD Pipelines**  \nOur GitLab CI pipeline integrates Terraform plan checks, unit tests, and canary deployments. Deployments now take 12 minutes vs. 90 minutes pre-automation. We also use GitLab’s merge request approvals to ensure all changes pass security and compliance checks before merging.  \n\n**4. Prometheus/Grafana for Observability**  \nWe replaced legacy dashboards with Prometheus for real-time metrics and Grafana for customizable visualizations. This allowed us to detect and resolve a critical memory leak 2 hours faster than before. Key dashboard: 99.95% API latency under 200ms, with alerts for >95th percentile spikes.  \n\n**5. Load Balancing with AWS ALB**  \nAWS Application Load Balancers (ALB) handled SSL termination, DDoS mitigation, and traffic routing. By configuring weighted targets, we shifted 30% of traffic to newer instances during maintenance windows without service disruption.  \n\n**6. Python for Automation**  \nPython scripts automate routine tasks like AWS cost explorer reports and Kubernetes cluster health checks. One script reduced manual reporting time from 2 hours to 15 minutes, freeing engineers for higher-impact work.  \n\n**7. Security via IAM and VPC Isolation**  \nWe segmented services into isolated VPCs with AWS IAM roles, limiting cross-service access. This cut unauthorized access attempts by 98% in 6 months. All cloud resources are tagged with ownership and cost centers for accountability.  \n\n**Summary**  \nScaling SaaS requires treating infrastructure as code, observability as a non-negotiable, and automation as a multiplier. By aligning AWS, Kubernetes, and CI/CD pipelines with measurable KPIs, we’ve built a platform that grows with our users—without compromising reliability or cost efficiency. The real win? Engineers now focus on innovation, not firefighting."
+  "text": "# SmartInventory-Tracker  \nA production-grade IoT inventory tracking system leveraging RFID, edge computing, and real-time data aggregation for e-commerce logistics.  \n\n---\n\n## Badges  \n[![Platform](https://img.shields.io/badge/platform-Embedded%20Linux-blue)](https://shields.io)  \n[![License](https://img.shields.io/badge/license-MIT-green)](https://shields.io)  \n[![IoT Protocols](https://img.shields.io/badge/protocols-MQTT%20%7C%20CoAP-yellow)](https://shields.io)  \n\n---\n\n## Getting Started  \nClone the repository and navigate to the project root:  \n```bash  \ngit clone https://github.com/viktorhorvat/SmartInventory-Tracker.git  \ncd SmartInventory-Tracker  \n```  \nInstall dependencies:  \n```bash  \nnpm install  \n```  \nDeploy edge nodes using the `setup_edge.sh` script. Ensure RFID readers are connected via UART and MQTT broker is running on host `192.168.1.10`.  \n\n---\n\n## Tech Stack  \n- **Core**: C++ (embedded), POSIX Threads, RTOS (FreeRTOS)  \n- **Edge Layer**: Embedded Linux (Yocto-based), MQTT/CoAP protocols  \n- **Data Layer**: SQLite (edge-side), REST API (Node.js)  \n- **Hardware**: RFID ISO 15693 tags, STM32F4 microcontrollers  \n- **Communication**: MQTT over TLS, edge-to-cloud data batching  \n\n---\n\n## Architecture / Design  \nThe system operates as a three-tiered edge-cloud architecture:  \n1. **Edge Nodes**: STM32F4 devices with RFID readers process tag data in real-time, using FreeRTOS for task scheduling.  \n2. **Aggregation Layer**: Embedded Linux gateways perform data deduplication and batch MQTT payloads to reduce network overhead.  \n3. **Cloud Backend**: Node.js REST API routes inventory updates to a PostgreSQL database, with WebSocket integrations for real-time dashboards.  \n\nKey design choices include edge-side data filtering to minimize bandwidth usage and RTOS-based context switching for deterministic RFID polling.  \n\n---\n\n## Usage / Examples  \n```bash  \n# Start edge node daemon  \n./edge_daemon --uart=/dev/ttyUSB0 --broker=192.168.1.10  \n\n# Query inventory status via REST API  \ncurl http://localhost:3000/api/inventory?location=warehouse-A  \n```  \nExample response:  \n```json  \n{  \n  \"location\": \"warehouse-A\",  \n  \"items\": [{\"sku\": \"X123\", \"count\": 45}, {\"sku\": \"Y456\", \"count\": 12}]  \n}  \n```  \n\n---\n\n## Testing  \nUnit tests for RFID reader drivers and MQTT publish logic are included in `test/unit/`. Integration tests validate edge-to-cloud data flow using `test/integration/test_edge_cloud.py`. Coverage metrics are tracked via LCOV for embedded binaries.  \n\n---\n\n## License  \nMIT License – see [LICENSE](https://github.com/viktorhorvat/SmartInventory-Tracker/blob/main/LICENSE) for details."
 }

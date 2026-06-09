@@ -3,24 +3,23 @@
   "type": "recommendation",
   "persona_id": "p_106",
   "hyperparams": {
-    "recommender_role": "skip-level",
-    "recommender_closeness": "worked-daily",
+    "recommender_role": "peer",
+    "recommender_closeness": "brief",
     "company_type": "enterprise",
-    "company_size": "small (<50)"
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
     "AWS": 3,
-    "Computer vision": 1,
-    "Docker": 3,
-    "GCP": 2,
-    "Hugging Face Transformers": 2,
-    "Kubernetes": 3,
-    "Model deployment": 3,
-    "NLP": 4,
-    "PyTorch": 4,
-    "REST API design": 2,
-    "TensorFlow": 4,
-    "scikit-learn": 2
+    "CI/CD pipelines": 1,
+    "Docker": 2,
+    "Load balancing": 2,
+    "Microservices architecture": 3,
+    "MongoDB": 3,
+    "PostgreSQL": 3,
+    "Prometheus/Grafana": 2,
+    "Python": 3,
+    "Shell scripting": 1,
+    "Terraform": 4
   },
-  "text": "Zara Hussain is a Machine Learning Engineer at HealthInsight Analytics whose daily work drives critical insights for clinical workflows. As a peer, I’ve observed her consistently deliver high-impact results while maintaining clarity under tight deadlines.  \n\nZara’s NLP expertise shines in projects like the hospital readmission risk model, where she architected a PyTorch pipeline that cut false positive rates by 22% without sacrificing recall. She also led a TensorFlow overhaul of the diagnostic imaging classifier, boosting accuracy to 94.5% across three high-noise datasets. Her ability to distill complex medical language into actionable metrics has streamlined workflows for clinicians.  \n\nHer technical rigor extends to deployment: she designed a Docker/Kubernetes stack that scaled model inference to handle 10k+ requests daily, slashing latency by 35%. While AWS remains her go-to for infrastructure, she’s always seeking smarter, more cost-effective solutions.  \n\nZara’s strength lies in her balance of precision and pragmatism. She’ll spend hours tuning hyperparameters to meet a 0.5% accuracy threshold, then pivot to a simpler model when trade-offs align with business goals. Her curiosity and mentorship have elevated team standards—she’s the first to share her code and the last to leave a messy notebook. A reliable, thoughtful collaborator with a knack for turning ambiguity into clarity."
+  "text": "Catalina and I collaborated on several backend projects at AdVerve, primarily focusing on scalable infrastructure and database optimization. Our interactions were frequent but informal, centered around shared goals like improving system reliability and reducing latency. She’s a steady presence in cross-functional meetings, often bridging engineering and product teams with clear, grounded insights.  \n\nOn a daily basis, Catalina tackles complex microservices architecture challenges, balancing PostgreSQL and MongoDB workloads to meet adtech demands. Her Terraform expertise shines in provisioning cloud resources—she once restructured our AWS cost model, trimming expenses without sacrificing performance. She’s equally comfortable debugging production issues or refining data pipelines, always prioritizing clarity over shortcuts.  \n\nA standout moment came when she redesigned a legacy API to integrate with new AWS services, streamlining data flow across microservices. Her attention to detail ensured minimal downtime, and her ability to explain technical decisions to non-technical stakeholders was invaluable. She also mentored a junior engineer through a PostgreSQL optimization project, fostering a culture of shared growth.  \n\nCatalina’s strength lies in her pragmatic approach to problem-solving and her knack for turning abstract system requirements into tangible, reliable solutions. She’s reliable, collaborative, and unafraid to ask critical questions—qualities that make her a trusted teammate in high-stakes environments."
 }

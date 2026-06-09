@@ -1,50 +1,64 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional curriculum vitae highlighting William Oduor's Full-Stack Developer experience at NexaCloud Solutions",
-    "title": "William Oduor - Full-Stack Developer",
+    "topic_summary": "Professional resume highlighting 9 years of data engineering experience in consulting",
+    "title": "Quinn O'Brien - Senior Data Engineer",
     "doc_id": "d_p_068_00",
     "persona_id": "p_068",
     "hyperparams": {
-      "cv_format": "hybrid",
-      "geographic_convention": "Israel",
-      "company_type": "agency",
-      "company_size": "large (500+)"
+      "cv_format": "bullet-heavy",
+      "geographic_convention": "US",
+      "company_type": "FAANG",
+      "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "README for a SaaS task management app built with React and Node.js",
-    "title": "TaskFlow SaaS App",
+    "topic_summary": "A scalable ETL pipeline for real-time data processing and visualization in a consulting project for a retail client",
+    "title": "Real-Time Analytics Dashboard with Apache Spark",
     "doc_id": "d_p_068_01",
     "persona_id": "p_068",
     "hyperparams": {
+      "project_scale": "production",
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "Cloud migration of a legacy data warehouse to AWS Redshift with performance optimization techniques",
+    "title": "Cloud-Native Data Warehouse Modernization",
+    "doc_id": "d_p_068_02",
+    "persona_id": "p_068",
+    "hyperparams": {
+      "project_scale": "hobby",
+      "project_team_size": "large (15+)",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "Stream processing solution for fraud detection using Apache Kafka and Flink in a financial services project",
+    "title": "Real-Time Fraud Detection System",
+    "doc_id": "d_p_068_03",
+    "persona_id": "p_068",
+    "hyperparams": {
       "project_scale": "team-internal",
-      "project_team_size": "solo",
-      "jargon_density": "plain"
+      "project_team_size": "small (2-4)",
+      "jargon_density": "heavy"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "Recommendation from William's manager at NexaCloud Solutions",
-    "title": "Recommendation from NexaCloud Solutions",
-    "doc_id": "d_p_068_02",
+    "topic_summary": "Endorsing Quinn's leadership in delivering complex data solutions and mentoring junior engineers",
+    "title": "Recommendation from Senior Technical Lead at NexaData Solutions",
+    "doc_id": "d_p_068_04",
     "persona_id": "p_068",
     "hyperparams": {
       "recommender_role": "skip-level",
-      "recommender_closeness": "worked-daily",
-      "company_type": "agency",
+      "recommender_closeness": "occasional",
+      "company_type": "FAANG",
       "company_size": "large (500+)"
-    }
-  },
-  {
-    "doc_type": "linkedin",
-    "topic_summary": "LinkedIn summary showcasing William's SaaS development expertise and career goals",
-    "title": "About William Oduor",
-    "doc_id": "d_p_068_03",
-    "persona_id": "p_068",
-    "hyperparams": {
-      "linkedin_completeness": "minimal"
     }
   }
 ]

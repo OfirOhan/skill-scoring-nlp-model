@@ -4,24 +4,21 @@
   "persona_id": "p_224",
   "hyperparams": {
     "recommender_role": "peer",
-    "recommender_closeness": "worked-daily",
+    "recommender_closeness": "occasional",
     "company_type": "academic",
-    "company_size": "small (<50)"
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "GraphQL": 3,
-    "JavaScript": 5,
-    "Next.js": 3,
-    "Node.js": 3,
-    "REST API design": 3,
-    "React": 5,
-    "Responsive design": 3,
-    "State management (Redux/Zustand)": 4,
-    "Test automation": 2,
-    "TypeScript": 5,
-    "Unit testing": 2,
-    "Web performance optimization": 3,
-    "Webpack/Vite": 3
+    "API testing": 5,
+    "BDD/TDD": 4,
+    "Go": 1,
+    "Java": 2,
+    "Node.js": 1,
+    "Performance testing (JMeter/k6)": 4,
+    "Python": 3,
+    "Selenium/Playwright": 4,
+    "Test automation": 5,
+    "Test strategy design": 5
   },
-  "text": "Dear [Hiring Manager],  \n\nI’ve worked closely with Deepak Verma over the past two years as a daily collaborator at our small academic research lab. His role as a Staff Frontend Engineer at Lumina Games has required him to bridge complex technical challenges with user-centric design, a balance he handles with quiet confidence.  \n\nDeepak’s strengths lie in his ability to distill complex systems into maintainable code and his deep, practical knowledge of React, TypeScript, and state management. He recently led a rewrite of Lumina’s dashboard UI, refactoring Redux slices to eliminate redundant logic and improve load times by 40%. His approach to TypeScript—using strict typing to catch edge cases early—has become a standard in our team’s code reviews.  \n\nOne standout moment came when he debugged a performance bottleneck in a multiplayer game’s UI. By optimizing Webpack configurations and lazy-loading components with Vite, he reduced initial load times by nearly half. He also prioritized responsive design, ensuring the interface adapted seamlessly across devices without sacrificing performance.  \n\nBeyond his technical skills, Deepak’s reliability and collaborative mindset make him a pleasure to work with. He mentors junior engineers patiently and consistently advocates for clean, scalable solutions.  \n\nI wholeheartedly recommend Deepak for any role requiring technical depth, problem-solving agility, and a commitment to quality. His work at Lumina Games has set a high bar for frontend engineering in the gaming space.  \n\nSincerely,  \n[Your Name]  \n[Your Title/Position]  \n[Contact Information]"
+  "text": "Jakub Novak has been a consistent contributor to CloudFlow’s QA initiatives since joining as a Senior QA Engineer. His work on API testing architectures has been pivotal, particularly in redesigning the integration layer to handle 15k+ endpoints with 99.8% coverage. He’s also spearheaded test automation frameworks that cut regression cycles by 40%, using Python to build reusable modules across microservices.  \n\nSoft skills-wise, Jakub thrives in collaborative settings. He’s patiently mentored junior engineers on BDD/TDD practices, which reduced manual test cases by 30% in two major projects. His ability to translate complex system requirements into clear test scenarios has minimized miscommunication during cross-team sprints.  \n\nJakub’s impact extends beyond code. He led a performance testing overhaul using k6, identifying bottlenecks that improved system scalability by 25%. His strategic approach to test strategy design—aligning automation with business priorities—has become a reference point for teams.  \n\nAs a peer, I’ve observed his relentless attention to detail and willingness to iterate. He’ll often spend hours refining test data pipelines or debugging edge cases, even when under tight deadlines. These traits make him a dependable asset to any team. I’d confidently recommend him for roles requiring both technical depth and collaborative leadership."
 }

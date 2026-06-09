@@ -3,24 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_244",
   "hyperparams": {
-    "project_scale": "academic",
+    "project_scale": "team-internal",
     "project_team_size": "medium (5-15)",
-    "jargon_density": "heavy"
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Design systems": 4,
-    "GraphQL": 3,
-    "Next.js": 1,
-    "Node.js": 3,
-    "REST API design": 3,
-    "React": 5,
-    "Responsive design": 5,
-    "State management": 3,
-    "Test automation": 3,
-    "TypeScript": 5,
-    "Web performance optimization": 5,
-    "Webpack/Vite": 3,
-    "State management (Redux/Zustand)": 1
+    "AWS": 4,
+    "Bash": 3,
+    "CI/CD pipelines": 4,
+    "ELK": 2,
+    "Kubernetes": 4,
+    "Load balancing": 2,
+    "Network automation": 1,
+    "PostgreSQL": 2,
+    "Prometheus/Grafana": 4,
+    "Redis": 2,
+    "Terraform": 4
   },
-  "text": "# NexaDashboard  \nReal-time analytics dashboard for NexaWave’s startup platform, built with React and Firebase to provide scalable, real-time data visualization and actionable insights for growth metrics.  \n\n## Badges  \nGitHub Actions: ✅  \nTypeScript: ✅  \nFirebase: ✅  \nGraphQL: ✅  \nNode.js: ✅  \n\n## License  \nMIT License [link](https://github.com/.../blob/main/LICENSE)  \n\n## Tech Stack  \n- **React**: Core framework for UI components and stateless architecture  \n- **Firebase**: Real-time database for live data sync and authentication  \n- **GraphQL**: Federated queries for cross-service data aggregation  \n- **Node.js**: Backend services for API gateways and job queues  \n- **REST API**: Third-party integrations for external analytics tools  \n- **TypeScript**: Type-safe props and utility types for maintainability  \n- **Webpack**: Code splitting and tree-shaking for production builds  \n- **Design Systems**: Custom tokens and components for cross-platform consistency  \n- **Responsive Design**: Mobile-first breakpoints and flexible grids  \n- **Web Performance**: Lazy loading, code splitting, and image optimization  \n\n## Architecture / Design  \nThe dashboard employs a microservices architecture with Firebase as the real-time data layer. GraphQL is used to federate data from Firebase and Node.js backend services, ensuring low-latency queries. React components are modular, with TypeScript interfaces defining prop contracts. Webpack is configured for tree-shaking, reducing bundle size by 40%. Design systems are version-controlled, with 95% component reuse across platforms.  \n\n## Getting Started / Installation  \n1. Clone the repository  \n2. Install dependencies: `npm install`  \n3. Set up Firebase config in `firebase.json`  \n4. Run development server: `npm start`  \n\n## Usage / Examples  \n- Real-time user engagement metrics updated every 500ms  \n- Customizable dashboards with drag-and-drop widgets  \n- Integration with third-party APIs via REST endpoints for additional metrics  \n\n## Contributing  \nSubmit PRs with tests and documentation. Prioritize design system updates and performance optimizations. Code reviews are mandatory for all changes."
+  "text": "# E-Commerce CI/CD Pipeline Automation  \n\nAutomates deployment workflows for e-commerce platforms, reducing manual intervention by 72% and improving deployment frequency to 3.2x daily. Integrates with AWS, Kubernetes, and monitoring tools for end-to-end reliability.  \n\n[![GitHub Actions](https://img.shields.io/github/actions/workflow/status/urvashigill/ecom-ci-cd/main.yml?branch=main)](https://github.com/urvashigill/ecom-ci-cd/actions)  \n[![AWS](https://img.shields.io/badge/AWS-Production-green)](https://aws.amazon.com)  \n[![Terraform](https://img.shields.io/badge/Terraform-1.5.7-blue)](https://www.terraform.io)  \n[![License](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Tech Stack  \n- **Cloud**: AWS (EC2, S3, CloudFormation)  \n- **Infrastructure**: Terraform (HCL 1.5), Kubernetes (kops, HCL)  \n- **CI/CD**: GitHub Actions (multi-stage pipelines), AWS CodePipeline  \n- **Monitoring**: Prometheus (exporters), Grafana (dashboards)  \n- **Storage**: Redis (cache), PostgreSQL (read replicas)  \n- **Scripting**: Bash (CI/CD hooks, infrastructure validation)  \n\n## Architecture / Design  \nThe pipeline stages are:  \n1. **Source Control**: GitHub repos trigger workflows on push to main/develop.  \n2. **Build & Test**: GitHub Actions builds Docker images, runs unit/integration tests (98%+ coverage).  \n3. **Deploy**: Terraform provisions Kubernetes clusters; AWS CodePipeline deploys to staging/production.  \n4. **Monitor**: Prometheus scrapes metrics from Kubernetes nodes and services; Grafana visualizes latency, error rates, and resource usage.  \n\nKey design choices:  \n- Kubernetes manifests are version-controlled via Terraform for consistent state.  \n- Redis is used for caching CI/CD artifacts to reduce S3 dependency.  \n- PostgreSQL read replicas handle query load during peak traffic.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/urvashigill/ecom-ci-cd.git`  \n2. Set AWS credentials via `aws configure` or environment variables.  \n3. Install Terraform (v1.5.7+), kubectl, and Docker.  \n4. Run `make init` to fetch dependencies and configure local environments.  \n\n## Usage / Examples  \nTrigger a deployment by pushing to `main`:  \n```bash\ngit checkout main  \ngit pull origin main  \ngit commit -am \"Fix payment gateway\"  \ngit push origin main  \n```  \nThe pipeline will:  \n1. Build Docker images with `docker build -t ecom-app:latest`.  \n2. Deploy to staging via Terraform: `terraform apply -var-file=staging.tfvars`.  \n3. Monitor deployment health in Grafana (dashboard: `http://grafana:3000/d/ecom-ci-cd`).  \n\n## Contributing  \nSubmit PRs with tests (unit/integration) and documentation updates.  \n- Code style: Prettier (ESLint for JS, Black for Python).  \n- Testing: Ensure 95%+ test coverage for new features.  \n- Infrastructure: Validate Terraform plans with `terraform validate`."
 }

@@ -1,23 +1,24 @@
 {
   "doc_id": "d_p_016_02",
-  "type": "recommendation",
+  "type": "linkedin",
   "persona_id": "p_016",
   "hyperparams": {
-    "recommender_role": "professor",
-    "recommender_closeness": "worked-daily",
-    "company_type": "academic",
-    "company_size": "mid (50-500)"
+    "linkedin_completeness": "detailed"
   },
   "skill_evidence": {
-    "Application security (OWASP)": 3,
-    "Compliance (SOC2/GDPR)": 3,
-    "IAM/Access control": 3,
-    "Incident response": 4,
-    "Network security": 3,
-    "Penetration testing": 3,
-    "SIEM tools": 3,
-    "Threat modeling": 3,
-    "Vulnerability management": 3
+    "AWS": 3,
+    "CI/CD pipelines": 4,
+    "Chaos engineering": 4,
+    "Docker": 3,
+    "ELK": 1,
+    "Kubernetes": 5,
+    "Load balancing": 3,
+    "Monitoring & alerting": 5,
+    "PostgreSQL": 1,
+    "Prometheus/Grafana": 5,
+    "Redis": 1,
+    "Serverless (Lambda/Cloud Functions)": 2,
+    "Terraform": 4
   },
-  "text": "Gabriel Souza is a senior security engineer at HealthGuard Technologies, where he has made significant contributions to securing healthcare data infrastructure. His role involves designing and implementing security frameworks that align with both technical and regulatory demands.  \n\nOver the past three years, Gabriel led the integration of OWASP guidelines into HealthGuard’s application security practices, reducing critical vulnerabilities by 40% across their EHR platform. He also spearheaded SOC2 and GDPR compliance initiatives, improving audit readiness by 30% through automated policy enforcement tools. His work on IAM systems streamlined access controls, cutting administrative overhead by 25% while maintaining strict role-based permissions.  \n\nGabriel’s expertise in network security is evident in his design of a zero-trust architecture that reduced unauthorized access attempts by 65%. He regularly conducts penetration testing, identifying risks before they escalate. His use of SIEM tools for log analysis has improved threat detection response times by 50%, enabling proactive mitigation of potential breaches.  \n\nBeyond technical skills, Gabriel demonstrates relentless attention to detail and a collaborative mindset. He thrives in high-pressure environments, such as during a recent ransomware incident where he led the response team to isolate affected systems and restore operations within 12 hours. His ability to balance technical rigor with clear communication makes him an invaluable asset.  \n\nI strongly recommend Gabriel for any role requiring deep security expertise and leadership. His work at HealthGuard has set a high standard for security excellence in healthtech."
+  "text": "Passion lies in building systems that let players lose themselves in games without a second thought. I thrive at the intersection of technical depth and strategic thinking, driven by the goal of creating infrastructure that scales with the demands of modern gaming.  \n\nAt NextGen Interactive, I lead site reliability efforts for their expanding game portfolio. Our focus is on ensuring zero downtime during peak hours and scaling architectures to handle millions of concurrent users. AWS and Docker are foundational here, enabling rapid deployment and elasticity. Kubernetes has become the backbone of our cloud-native approach, and I mentor teams on best practices to keep our services resilient.  \n\nOver the past few years, I’ve spearheaded CI/CD pipelines that cut deployment times by 40%, designed chaos engineering exercises that uncovered critical single points of failure, and built Terraform workflows that reduced infrastructure setup time by 60%. Monitoring with Prometheus and Grafana is non-negotiable—every alert is a chance to refine our reliability playbook.  \n\nI’m always eager to collaborate on projects that push the boundaries of scalable systems, especially in gaming where milliseconds matter. Let’s build something that players won’t forget."
 }

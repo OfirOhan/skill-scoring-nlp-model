@@ -1,40 +1,62 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Frontend Engineer with 1 year of experience in healthtech, specializing in building user-centric interfaces for healthcare applications.",
-    "title": "Mei Huang - Frontend Engineer",
+    "topic_summary": "Senior QA Engineer with 7 years of experience in healthtech, specializing in test automation and compliance testing.",
+    "title": "Linda Gustafsson - Senior QA Engineer",
     "doc_id": "d_p_178_00",
     "persona_id": "p_178",
     "hyperparams": {
-      "cv_format": "minimal",
-      "geographic_convention": "Israel",
-      "company_type": "FAANG",
-      "company_size": "small (<50)"
+      "cv_format": "hybrid",
+      "geographic_convention": "Europe",
+      "company_type": "startup",
+      "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A frontend solution for a patient portal enabling secure access to health records and appointment scheduling.",
-    "title": "HealthTrack Patient Portal",
+    "topic_summary": "A framework integrating AI-driven test cases to ensure compliance with HIPAA regulations in healthtech applications.",
+    "title": "Automated Testing Framework for Medical Devices",
     "doc_id": "d_p_178_01",
     "persona_id": "p_178",
     "hyperparams": {
+      "project_scale": "production",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "Ensuring data accuracy and interoperability across multiple health systems through comprehensive testing strategies.",
+    "title": "Health Data Integration Platform QA",
+    "doc_id": "d_p_178_02",
+    "persona_id": "p_178",
+    "hyperparams": {
       "project_scale": "team-internal",
+      "project_team_size": "large (15+)",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "End-to-end testing of real-time patient data transmission in telehealth platforms to ensure security and reliability.",
+    "title": "Telehealth Application QA Automation",
+    "doc_id": "d_p_178_03",
+    "persona_id": "p_178",
+    "hyperparams": {
+      "project_scale": "academic",
       "project_team_size": "medium (5-15)",
       "jargon_density": "heavy"
     }
   },
   {
-    "doc_type": "recommendation",
-    "topic_summary": "A team lead recommendation highlighting Mei's proficiency in React and her ability to deliver intuitive healthtech interfaces under tight deadlines.",
-    "title": "Recommendation from HealthTrack Team Lead",
-    "doc_id": "d_p_178_02",
+    "doc_type": "blog",
+    "topic_summary": "Exploring strategies to maintain compliance and data accuracy in healthtech QA automation processes.",
+    "title": "Best Practices for QA Automation in Healthtech: Ensuring Compliance and Accuracy",
+    "doc_id": "d_p_178_04",
     "persona_id": "p_178",
     "hyperparams": {
-      "recommender_role": "professor",
-      "recommender_closeness": "occasional",
-      "company_type": "agency",
-      "company_size": "small (<50)"
+      "blog_depth": "opinion-piece",
+      "jargon_density": "plain"
     }
   }
 ]

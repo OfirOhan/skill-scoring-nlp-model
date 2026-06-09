@@ -1,25 +1,29 @@
 {
   "doc_id": "d_p_037_02",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_037",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "heavy"
+    "recommender_role": "direct-manager",
+    "recommender_closeness": "brief",
+    "company_type": "academic",
+    "company_size": "large (500+)"
   },
   "skill_evidence": {
-    "Pandas": 1,
-    "NumPy": 1,
-    "Statistical modeling": 1,
-    "A/B testing": 1,
-    "Data visualization (Matplotlib/Plotly)": 1,
-    "Jupyter notebooks": 1,
-    "Feature engineering": 1,
+    "ArgoCD": 1,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 1,
+    "Docker": 1,
+    "GitHub Actions": 1,
+    "Incident management": 3,
+    "Jenkins": 4,
+    "Linux administration": 4,
+    "Load balancing": 1,
+    "Message queues": 1,
+    "Monitoring & alerting": 1,
+    "PostgreSQL": 1,
+    "Prometheus/Grafana": 1,
     "Python": 1,
-    "REST API design": 1,
-    "Microservices architecture": 1,
-    "Apache Spark": 1,
-    "Apache Airflow": 1
+    "Terraform": 1
   },
-  "text": "# Customer Segmentation Insights  \nA real-time analytics platform for dissecting customer behavior in telecommunications, leveraging PostgreSQL as the analytical backbone and Tableau for dynamic visualization. This project enables stakeholders to isolate high-value segments, track churn risk metrics, and align strategic initiatives with data-driven insights. The architecture prioritizes scalability, security, and interoperability, ensuring seamless integration with existing BI ecosystems.  \n\n---\n\n## Getting Started / Installation  \n1. **Database Setup**: Deploy PostgreSQL 14+ with `pg_trgm` extension enabled for efficient text pattern matching. Create a dedicated schema for customer data, ensuring `pg_settings` are optimized for read-heavy workloads (e.g., `shared_buffers` at 25% of RAM, `work_mem` adjusted for complex joins).  \n2. **Tableau Connection**: Configure a secure connection to the PostgreSQL instance using Tableau’s JDBC driver. Set up a named data source with pre-joined views for latency reduction, avoiding redundant joins during runtime.  \n3. **Access Control**: Implement row-level security (RLS) policies in PostgreSQL to enforce data privacy constraints. Use Tableau’s row-level permissions to further granularize access based on user roles.  \n\n---\n\n## Usage / Examples  \nThe dashboard provides three primary analytical planes:  \n- **Cohort Analysis**: Interactive heatmaps visualizing monthly churn rates across demographic cohorts, filtered by service plan tiers and geographic regions.  \n- **Predictive Segmentation**: A drill-down interface for isolating high-risk segments using PostgreSQL’s `pg_stat_statements` for query performance monitoring.  \n- **Real-Time KPIs**: Embedded widgets displaying live metrics (e.g., CSAT scores, ARPU trends) sourced from a materialized view updated via scheduled batch jobs.  \n\nFor advanced use cases, leverage Tableau’s calculated fields to derive custom metrics (e.g., *customer lifetime value*) directly from the database, minimizing data transfer overhead.  \n\n---\n\n## License  \nInternal use only. Proprietary analytics framework designed for enterprise-grade deployment. Redistribution requires explicit written consent from the project maintainer."
+  "text": "Layla Ibrahim, a Junior DevOps/SRE Engineer at NexGen Solutions, demonstrates sharp technical grounding and a proactive approach to solving complex systems challenges.  \n\nHer Jenkins expertise has driven critical automation in production workflows. She designed a framework that reduced deployment manual effort by 40%, enabling faster release cycles while maintaining stability. She also owns Jenkins infrastructure, proactively addressing bottlenecks and scaling resources during peak loads. Her Linux administration skills are equally impactful—she optimized server configurations to improve application latency by 25% and implemented security hardening practices that mitigated two critical vulnerabilities.  \n\nLayla’s incident management approach is methodical and collaborative. She led post-mortem analyses for two high-impact outages, translating findings into actionable process improvements. Her ability to distill technical complexity into clear remediation plans has strengthened team resilience.  \n\nLayla’s curiosity and attention to detail elevate her work. She consistently seeks deeper understanding of system interdependencies, which positions her to thrive in dynamic, fast-paced environments. I recommend her without reservation for roles requiring technical precision and initiative."
 }

@@ -1,62 +1,54 @@
 {
   "persona_id": "p_028",
   "hyperparams": {
-    "archetype": "devops_sre",
-    "years_experience": 8,
-    "seniority": "senior",
-    "industry": "consulting",
-    "writing_style": "modest",
-    "language_fluency": "ESL",
+    "archetype": "data_engineer",
+    "years_experience": 4,
+    "seniority": "mid",
+    "industry": "SaaS",
+    "writing_style": "neutral",
+    "language_fluency": "native",
     "self_promotion_level": "balanced",
-    "quantification_tendency": "mixed"
+    "quantification_tendency": "qualitative"
   },
-  "name": "Maya Johal",
-  "current_role": "Senior DevOps Consultant",
-  "company": "CloudOptima Solutions",
+  "name": "Beatriz Lopes",
+  "current_role": "Data Engineer",
+  "company": "NexaCloud Solutions",
   "education": {
     "degree": "Bachelor of Science in Computer Science",
-    "university": "University of Toronto",
-    "year": 2016
+    "university": "University of Porto",
+    "year": 2019
   },
   "career_trajectory": [
     {
-      "role": "DevOps Engineer",
-      "company": "TechNova Inc.",
-      "year": 2015
+      "year": 2019,
+      "position": "Data Analyst Intern",
+      "company": "DataVista Solutions"
     },
     {
-      "role": "Senior DevOps Engineer",
-      "company": "CloudScale LLC",
-      "year": 2018
+      "year": 2020,
+      "position": "Junior Data Engineer",
+      "company": "DataVista Solutions"
     },
     {
-      "role": "DevOps Consultant",
-      "company": "InfraMinds Consulting",
-      "year": 2020
-    },
-    {
-      "role": "Senior DevOps Consultant",
-      "company": "CloudOptima Solutions",
-      "year": 2022
+      "year": 2022,
+      "position": "Data Engineer",
+      "company": "NexaCloud Solutions"
     }
   ],
   "skills": {
-    "CI/CD pipelines": 4,
-    "GitHub Actions": 4,
-    "Jenkins": 3,
-    "ArgoCD": 4,
-    "Prometheus/Grafana": 4,
-    "Monitoring & alerting": 4,
-    "Kubernetes": 4,
-    "Terraform": 4,
-    "AWS": 5,
-    "Docker": 4,
-    "Cloud cost optimization": 4
+    "Apache Spark": 4,
+    "Apache Kafka": 3,
+    "Apache Airflow": 4,
+    "dbt": 4,
+    "ETL pipeline design": 5,
+    "Data warehousing": 5,
+    "Python": 1,
+    "AWS": 3,
+    "GCP": 3,
+    "Terraform": 3
   },
   "document_ids": [
     "d_p_028_00",
-    "d_p_028_01",
-    "d_p_028_02",
-    "d_p_028_03"
+    "d_p_028_01"
   ]
 }

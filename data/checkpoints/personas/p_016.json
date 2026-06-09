@@ -1,58 +1,65 @@
 {
   "persona_id": "p_016",
   "hyperparams": {
-    "archetype": "security_engineer",
-    "years_experience": 6,
+    "archetype": "devops_sre",
+    "years_experience": 9,
     "seniority": "senior",
-    "industry": "healthtech",
-    "writing_style": "neutral",
-    "language_fluency": "ESL",
+    "industry": "gaming",
+    "writing_style": "modest",
+    "language_fluency": "native",
     "self_promotion_level": "boastful",
-    "quantification_tendency": "metrics-heavy"
+    "quantification_tendency": "qualitative"
   },
-  "name": "Gabriel Souza",
-  "current_role": "Senior Security Engineer",
-  "company": "HealthGuard Technologies",
+  "name": "Ethan Price",
+  "current_role": "Senior Site Reliability Engineer",
+  "company": "NextGen Interactive",
   "education": {
-    "degree": "Bachelor of Science in Cybersecurity",
-    "university": "University of São Paulo",
-    "year": 2018
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "University of California, Berkeley",
+    "year": 2015
   },
   "career_trajectory": [
     {
-      "role": "Security Analyst",
-      "company": "MedTech Solutions",
-      "duration": "2 years",
-      "responsibilities": "Conducted vulnerability assessments and implemented firewall rules for HIPAA-compliant systems."
+      "year": "2015-2017",
+      "role": "Junior DevOps Engineer",
+      "company": "GameForge Studios"
     },
     {
-      "role": "Security Architect",
-      "company": "ClinicaNet",
-      "duration": "3 years",
-      "responsibilities": "Designed IAM frameworks and led SOC2 compliance audits for cloud-based EHR platforms."
+      "year": "2017-2019",
+      "role": "DevOps Engineer",
+      "company": "NeonGames"
     },
     {
-      "role": "Senior Security Engineer",
-      "company": "HealthGuard Technologies",
-      "duration": "1 year",
-      "responsibilities": "Architected zero-trust networks and reduced breach response time by 40% through advanced SIEM integration."
+      "year": "2019-2021",
+      "role": "Senior DevOps Engineer",
+      "company": "PixelPulse Studios"
+    },
+    {
+      "year": "2021-present",
+      "role": "Senior Site Reliability Engineer",
+      "company": "NextGen Interactive"
     }
   ],
   "skills": {
-    "Network security": 4,
-    "Application security (OWASP)": 5,
-    "Penetration testing": 4,
-    "IAM/Access control": 5,
-    "Compliance (SOC2/GDPR)": 4,
-    "SIEM tools": 4,
-    "Vulnerability management": 4,
-    "Threat modeling": 4,
-    "Incident response": 5
+    "CI/CD pipelines": 4,
+    "Kubernetes": 5,
+    "Terraform": 5,
+    "Prometheus/Grafana": 5,
+    "Monitoring & alerting": 5,
+    "Load balancing": 3,
+    "Chaos engineering": 4,
+    "AWS": 3,
+    "Docker": 3,
+    "Serverless (Lambda/Cloud Functions)": 3,
+    "Redis": 2,
+    "PostgreSQL": 2,
+    "ELK": 1
   },
   "document_ids": [
     "d_p_016_00",
     "d_p_016_01",
     "d_p_016_02",
-    "d_p_016_03"
+    "d_p_016_03",
+    "d_p_016_04"
   ]
 }

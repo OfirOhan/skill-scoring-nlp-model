@@ -1,21 +1,19 @@
 {
   "doc_id": "d_p_041_02",
-  "type": "project_readme",
+  "type": "linkedin",
   "persona_id": "p_041",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "solo",
-    "jargon_density": "moderate"
+    "linkedin_completeness": "standard"
   },
   "skill_evidence": {
-    "Apache Airflow": 2,
-    "Feature engineering": 4,
-    "MLOps": 3,
-    "Model deployment": 4,
-    "PyTorch": 4,
-    "Python": 5,
-    "SQL analytics": 3,
-    "TensorFlow": 4
+    "JavaScript": 3,
+    "Next.js": 3,
+    "Python": 1,
+    "REST API design": 1,
+    "React": 3,
+    "Test automation": 1,
+    "Web performance optimization": 3,
+    "Webpack/Vite": 2
   },
-  "text": "# Customer Churn Prediction Model  \n\nA lightweight model to identify at-risk customers in a SaaS environment, combining unsupervised clustering and supervised classification for actionable insights.  \n\n[![License](https://badges.frappr.com/license/mit.svg)](LICENSE)  \n[![GitHub](https://badges.frappr.com/github/repo.svg?repo=KwameMensah/customer-churn-model)](https://github.com/KwameMensah/customer-churn-model)  \n\n## Tech Stack / Built With  \nPython (3.9), scikit-learn, pandas, SQLAlchemy, Flask, Docker, Apache Airflow, and a PostgreSQL database.  \n\n## Architecture / Design  \nThe system ingests user behavior data via SQL queries, then applies DBSCAN clustering to segment customers by engagement patterns. A Random Forest classifier uses features like login frequency and support ticket volume to predict churn. MLOps practices include versioned model artifacts in MLflow and automated pipeline retraining via Airflow.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/KwameMensah/customer-churn-model`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Set up PostgreSQL credentials in `.env`  \n4. Run the Jupyter notebook for end-to-end analysis  \n\n## Usage / Examples  \nTo predict churn for new data:  \n```bash  \npython predict.py --input data/new_customers.csv --output predictions.csv  \n```  \nThe API endpoint `/predict` accepts JSON payloads with user metrics and returns risk scores.  \n\n## API Reference  \n- **GET /predict**  \n  *Request*: JSON object with keys `login_frequency`, `support_tickets`, and `plan_upgrade`.  \n  *Response*: Churn probability (0–1) and cluster label.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "I thrive at the intersection of creativity and code, where the goal isn’t just to build interfaces but to craft experiences that feel intuitive, fast, and purposeful. In adtech, I’m driven by the challenge of making digital interactions seamless—balancing technical precision with user-centric design to drive real-world impact.  \n\nAt ClickLoom, I focus on building scalable frontend solutions that power our ad platforms. My work spans React and Next.js, where I’ve optimized complex dashboards for performance, ensuring smooth interactions even under heavy load. I’ve also leveraged Webpack and Vite to streamline development workflows, reducing build times without compromising quality. The thrill comes from turning abstract requirements into tangible, high-performing interfaces that align with both business goals and user needs.  \n\nLast year, I spearheaded a redesign of our campaign analytics panel, cutting load times by 40% through lazy loading and code splitting. I also collaborated with designers to implement a reusable component library, cutting duplication and improving consistency across our product suite. These projects reinforced my belief that great frontend work is about solving puzzles others haven’t even identified yet.  \n\nI’m always eager to dive deeper into tools like Webpack and Vite, refine my approach to performance optimization, and contribute to projects that push the boundaries of what’s possible in adtech. Let’s build something that matters."
 }

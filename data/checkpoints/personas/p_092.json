@@ -1,56 +1,59 @@
 {
   "persona_id": "p_092",
   "hyperparams": {
-    "archetype": "data_scientist",
-    "years_experience": 10,
-    "seniority": "staff",
-    "industry": "healthtech",
-    "writing_style": "concise",
+    "archetype": "security_engineer",
+    "years_experience": 6,
+    "seniority": "senior",
+    "industry": "consulting",
+    "writing_style": "confident",
     "language_fluency": "ESL",
     "self_promotion_level": "balanced",
     "quantification_tendency": "qualitative"
   },
-  "name": "Takeshi Hayashi",
-  "current_role": "Staff Data Scientist",
-  "company": "HealthAI Solutions",
+  "name": "Peter Morrison",
+  "current_role": "Senior Security Engineer",
+  "company": "SecureNet Solutions",
   "education": {
-    "degree": "Master of Science in Data Science",
-    "university": "University of Tokyo",
-    "year": 2018
+    "degree": "Master of Science in Cybersecurity",
+    "university": "Carnegie Mellon University",
+    "year": 2020
   },
   "career_trajectory": [
     {
-      "role": "Data Analyst",
-      "company": "VitalSigns Health",
-      "year": 2013
+      "role": "Security Analyst",
+      "company": "CyberGuard Inc.",
+      "duration": "2 years",
+      "responsibilities": "Conducted vulnerability assessments and managed SIEM platforms."
     },
     {
-      "role": "Lead Data Scientist",
-      "company": "MedTech Innovators",
-      "year": 2018
+      "role": "Security Consultant",
+      "company": "Vigilant Tech",
+      "duration": "3 years",
+      "responsibilities": "Designed IAM frameworks and performed penetration testing for clients."
     },
     {
-      "role": "Senior Data Scientist",
-      "company": "HealthAI Solutions",
-      "year": 2020
+      "role": "Senior Security Engineer",
+      "company": "SecureNet Solutions",
+      "duration": "1 year",
+      "responsibilities": "Led security audits, optimized encryption protocols, and integrated cloud security solutions."
     }
   ],
   "skills": {
-    "Pandas": 4,
-    "NumPy": 4,
-    "Statistical modeling": 4,
-    "Feature engineering": 4,
-    "Time series analysis": 4,
-    "scikit-learn": 5,
-    "Python": 5,
-    "SQL analytics": 4,
-    "Tableau/Power BI": 4,
-    "MLOps (MLflow)": 5
+    "Network security": 4,
+    "Application security (OWASP)": 5,
+    "Penetration testing": 4,
+    "IAM/Access control": 5,
+    "Encryption & PKI": 4,
+    "Security auditing": 5,
+    "SIEM tools": 4,
+    "TCP/IP": 2,
+    "DNS/DHCP": 1,
+    "Firewall configuration": 3,
+    "Network automation": 2,
+    "Cloud networking (VPC/subnets)": 2
   },
   "document_ids": [
     "d_p_092_00",
-    "d_p_092_01",
-    "d_p_092_02",
-    "d_p_092_03"
+    "d_p_092_01"
   ]
 }

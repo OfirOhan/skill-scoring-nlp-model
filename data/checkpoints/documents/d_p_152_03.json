@@ -1,25 +1,24 @@
 {
   "doc_id": "d_p_152_03",
-  "type": "blog",
+  "type": "linkedin",
   "persona_id": "p_152",
   "hyperparams": {
-    "blog_depth": "opinion-piece",
-    "jargon_density": "heavy"
+    "linkedin_completeness": "detailed"
   },
   "skill_evidence": {
-    "AWS": 1,
-    "CI/CD pipelines": 3,
-    "GCP": 1,
-    "Go": 4,
-    "Kubernetes": 4,
-    "Linux administration": 1,
-    "Message queues": 1,
-    "Monitoring & alerting": 4,
-    "PostgreSQL": 1,
-    "Python": 4,
-    "REST API design": 3,
-    "Redis": 1,
-    "Terraform": 1
+    "HTML/CSS": 4,
+    "JavaScript": 3,
+    "Next.js": 3,
+    "Node.js": 1,
+    "Python": 1,
+    "REST API design": 2,
+    "React": 5,
+    "Responsive design": 4,
+    "Selenium/Playwright": 1,
+    "Test automation": 2,
+    "TypeScript": 4,
+    "Unit testing": 2,
+    "Web accessibility (WCAG)": 3
   },
-  "text": "Observability in Microservices: Best Practices and Tools  \n\nWhen I first joined a project with a sprawling microservices architecture, the first thing I noticed was the sheer volume of metrics. Each service, deployed across Kubernetes clusters, emitted logs and metrics, but without a unified view, troubleshooting latency spikes or failed requests felt like searching for a needle in a haystack. This is where observability becomes less of a luxury and more of a necessity.  \n\nThe context was clear: a team of 12 engineers managing 45+ services, all interacting via REST APIs. Traditional logging and basic alerting were insufficient. The system’s complexity meant that even minor misconfigurations in service dependencies could cascade into outages. We needed a way to correlate metrics across services, trace requests in real time, and surface actionable insights without overwhelming engineers with noise.  \n\nThe challenge lay in integrating observability tools without disrupting existing workflows. Prometheus and Grafana were the obvious choices, but deploying them at scale required careful planning. We faced hurdles in ensuring consistent metric collection across services written in Go, Python, and Java, and aligning alerting rules with the team’s operational maturity. Additionally, the lack of standardized logging formats across services made correlation difficult.  \n\nOur solution centered on leveraging Prometheus for metric aggregation and Grafana for visualization, paired with service mesh telemetry from Istio. We instrumented Go services with Prometheus client libraries, exposing HTTP endpoints for metrics, while Python services used OpenMetrics exporters. For REST APIs, we added custom headers to track request IDs, enabling traceability across service boundaries. CI/CD pipelines automatically deployed Grafana dashboards alongside code, ensuring visibility was baked into every release.  \n\nThe results were measurable. Incident resolution time dropped by 40% as teams could isolate issues within seconds. Prometheus’ alerting rules caught 92% of critical errors before they impacted users, while Grafana dashboards provided a single pane of glass for monitoring. Kubernetes integrations allowed us to track pod-level metrics, optimizing autoscaling and resource allocation.  \n\nLessons learned? Start small—prototype with a subset of services before full rollout. Prioritize metrics that align with business KPIs, like request latency and error rates. And don’t underestimate the value of custom annotations in Prometheus; they’re lifesavers for filtering noisy data. Observability isn’t just about tools—it’s about embedding visibility into every layer of your architecture."
+  "text": "**1. Headline Number/Achievement**  \nBuilt and scaled high-traffic SaaS applications with 30% faster load times.  \n\n**Context**  \nWith two years at CloudCraft Solutions, I’ve focused on building scalable frontend solutions that balance performance and accessibility. My work spans React architecture, TypeScript integration, and accessibility standards. I’ve led efforts to refactor legacy codebases, resulting in 25% faster rendering times and full WCAG compliance.  \n\n**Broader Expertise**  \nI specialize in creating responsive, user-centric interfaces that adapt to diverse devices and needs. My expertise includes crafting reusable React components, optimizing HTML/CSS for performance, and mentoring junior engineers on best practices. I’ve also contributed to cross-team projects that improved dashboard usability by 40%, directly impacting user retention.  \n\n**Invitation to Connect**  \nLet’s connect if you’re shaping the future of web experiences—whether you’re building tools, platforms, or anything in between. I’m always curious about new challenges and eager to collaborate."
 }

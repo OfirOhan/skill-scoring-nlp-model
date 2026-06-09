@@ -1,50 +1,55 @@
 {
   "persona_id": "p_150",
   "hyperparams": {
-    "archetype": "product_manager",
-    "years_experience": 8,
+    "archetype": "ml_engineer",
+    "years_experience": 6,
     "seniority": "senior",
-    "industry": "enterprise",
-    "writing_style": "concise",
+    "industry": "gaming",
+    "writing_style": "modest",
     "language_fluency": "native",
     "self_promotion_level": "humble",
     "quantification_tendency": "metrics-heavy"
   },
-  "name": "Ananya Gupta",
-  "current_role": "Senior Product Manager",
-  "company": "StrataCorp",
+  "name": "Max Hoffmann",
+  "current_role": "Senior ML Engineer",
+  "company": "NexaGame Studios",
   "education": {
-    "degree": "MBA",
-    "university": "INSEAD",
-    "year": 2016
+    "degree": "Master's in Machine Learning",
+    "university": "TU Delft",
+    "year": 2018
   },
   "career_trajectory": [
     {
-      "role": "Product Analyst",
-      "company": "NexaTech Solutions",
-      "duration": "2014-2016"
+      "role": "Data Scientist Intern",
+      "company": "LudoLabs",
+      "year": 2017
     },
     {
-      "role": "Product Manager",
-      "company": "Verve Systems",
-      "duration": "2016-2018"
+      "role": "Machine Learning Engineer",
+      "company": "Virtuoso Games",
+      "year": 2018
     },
     {
-      "role": "Senior Product Manager",
-      "company": "Aurora Analytics",
-      "duration": "2018-2020"
+      "role": "Lead ML Engineer",
+      "company": "PixelForge Interactive",
+      "year": 2020
+    },
+    {
+      "role": "Senior ML Engineer",
+      "company": "NexaGame Studios",
+      "year": 2022
     }
   ],
   "skills": {
-    "Product management": 5,
-    "Roadmap planning": 4,
-    "Stakeholder management": 4,
-    "Analytics-driven product decisions": 5,
-    "User journey mapping": 4,
-    "SQL analytics": 4,
-    "Tableau/Power BI": 4,
-    "A/B testing": 4,
-    "Data visualization": 4
+    "PyTorch": 4,
+    "TensorFlow": 4,
+    "NLP": 5,
+    "MLOps (MLflow/W&B)": 4,
+    "Model deployment": 5,
+    "Docker": 3,
+    "REST API design": 3,
+    "GCP": 3,
+    "Apache Kafka": 1
   },
   "document_ids": [
     "d_p_150_00",

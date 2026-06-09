@@ -1,23 +1,22 @@
 {
   "doc_id": "d_p_300_01",
-  "type": "project_readme",
+  "type": "linkedin",
   "persona_id": "p_300",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "solo",
-    "jargon_density": "plain"
+    "linkedin_completeness": "detailed"
   },
   "skill_evidence": {
-    "AWS": 2,
-    "CI/CD pipelines": 2,
+    "Apache Airflow": 4,
+    "Apache Spark": 4,
+    "Data warehousing": 4,
+    "Database optimization": 4,
     "Docker": 3,
-    "GitHub Actions": 2,
+    "ETL pipeline design": 4,
     "Linux administration": 1,
-    "Microservices architecture": 3,
-    "Monitoring & alerting": 2,
-    "PostgreSQL": 3,
     "Python": 3,
-    "REST API design": 3
+    "Redis": 3,
+    "Snowflake": 4,
+    "Terraform": 3
   },
-  "text": "# RetailFlow Inventory Microservices  \nA production-ready inventory management system built for RetailFlow Technologies, handling 10k+ transactions per second with 99.9% uptime. Designed for scalability, fault tolerance, and seamless integration with e-commerce platforms.  \n\n## Badges  \n[![Production Ready](https://img.shields.io/badge/Status-Production-green)](https://retailflow.io)  \n[![Dockerized](https://img.shields.io/badge/Containerized-Docker-blue)](https://hub.docker.com)  \n[![PostgreSQL](https://img.shields.io/badge/DB-PostgreSQL-orange)](https://postgresql.org)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Tech Stack  \n- **Backend**: Python (FastAPI) for RESTful APIs, PostgreSQL for relational data storage  \n- **Infrastructure**: Docker for containerization, AWS Lambda for event-driven updates  \n- **Communication**: RESTful gRPC for inter-service calls, Redis for caching stock levels  \n- **Monitoring**: Prometheus for metrics, Grafana for real-time dashboards  \n\n## Architecture / Design  \nThe system is split into three decoupled services:  \n1. **Inventory Service**: Manages stock levels, handles CRUD operations, and triggers alerts when thresholds are breached.  \n2. **Order Service**: Processes order placements, validates stock availability, and updates inventory asynchronously.  \n3. **Analytics Service**: Aggregates usage patterns, generates reports, and feeds insights into a centralized dashboard.  \n\nKey decisions:  \n- PostgreSQL is used for ACID compliance in stock adjustments, with sharding for write scalability.  \n- Docker ensures consistent environments across development, testing, and production.  \n- REST APIs are designed with OpenAPI specs, enabling third-party integrations.  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/retailflow/retailflow-inventory.git  \n   ```  \n2. Build Docker containers:  \n   ```bash  \n   docker-compose up --build  \n   ```  \n3. Configure environment variables in `.env` for PostgreSQL credentials and AWS S3 endpoints.  \n\n## Usage / Examples  \n**Fetch stock levels**:  \n```bash  \ncurl -X GET http://localhost:8000/inventory/12345  \n```  \n**Update stock**:  \n```bash  \ncurl -X POST http://localhost:8000/inventory/12345 -d '{\"quantity\": 50}'  \n```  \n**Subscribe to alerts**:  \n```bash  \ncurl -X POST http://localhost:8000/alerts -d '{\"threshold\": 20, \"product_id\": 67890}'  \n```  \n\n## Contributing  \nThis project is currently maintained solo, but pull requests for documentation improvements or bug fixes are welcome. For feature requests, open an issue with metrics on expected throughput and latency."
+  "text": "Journey from academic research to building scalable data systems at NexaData Solutions. Transitioned from theoretical data models to real-world engineering, driven by the challenge of turning raw data into actionable insights.  \n\nCurrent Focus: Architecting and optimizing data pipelines that power our startup’s core analytics. Recently spearheaded a redesign of our ETL workflows, reducing data latency by 40% and improving warehouse query performance. Now working on integrating Snowflake with Apache Airflow to automate complex data orchestration, ensuring reliability at scale.  \n\nSkills Highlight: Built and maintained data pipelines using Apache Spark, optimizing batch processing to handle 10TB+ datasets. Redesigned Redis caching layers to boost API response times by 30%. Leveraged Terraform for cloud infrastructure automation, cutting deployment time by 50%. Developed custom Python scripts to streamline data validation, reducing manual errors.  \n\nCall to Action: Let’s connect if you’re shaping data strategies or tackling complex engineering challenges. I’m always curious about how others approach scaling data systems in fast-paced environments."
 }

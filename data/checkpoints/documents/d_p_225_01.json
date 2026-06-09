@@ -3,21 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_225",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "large (15+)",
-    "jargon_density": "moderate"
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Application security (OWASP)": 5,
-    "Compliance (SOC2/GDPR)": 5,
-    "Encryption & PKI": 5,
-    "IAM/Access control": 5,
-    "Network security": 3,
-    "Penetration testing": 3,
-    "SIEM tools": 4,
-    "Security auditing": 3,
-    "Threat modeling": 2,
-    "Vulnerability management": 5
+    "A/B testing": 2,
+    "Agile/Scrum": 1,
+    "Competitive analysis": 1,
+    "Data visualization": 2,
+    "Jupyter notebooks": 2,
+    "Product management": 1,
+    "Responsive design": 1,
+    "Roadmap planning": 1,
+    "SQL analytics": 2,
+    "Stakeholder management": 1,
+    "UX research": 1,
+    "Data visualization (Matplotlib/Plotly)": 1
   },
-  "text": "# Secure Authentication System for CyberShield Solutions  \nA robust identity management framework implementing OAuth 2.0, multi-factor authentication, and compliance-driven security controls for enterprise access governance.  \n\n## Configuration  \n- **Environment variables**: Store secrets in `.env` (e.g., `OAUTH_CLIENT_ID`, `MFA_PROVIDER_URL`)  \n- **OAuth providers**: Configure via `config/oauth_providers.json` with client credentials and redirect URIs  \n- **MFA settings**: Define enrollment policies in `mfa_policies.yaml` (e.g., TOTP, hardware tokens)  \n- **SIEM integration**: Enable audit logging to Splunk/ELK for real-time threat detection (see `logs/audit_format.md`)  \n\n## Getting Started / Installation  \n1. Clone repository and install dependencies:  \n   ```bash  \n   git clone https://github.com/cybershield/sec-auth-system.git  \n   cd sec-auth-system  \n   npm install  \n   ```  \n2. Set up PostgreSQL with `docker-compose up -d` (see `docker/README.md` for security hardening)  \n3. Initialize OAuth clients in `config/oauth_clients.json` with scopes for API access  \n4. Deploy MFA provider using Terraform (see `infrastructure/terraform/README.md`)  \n\n## Usage / Examples  \n- **OAuth flow**:  \n  ```javascript  \n  // Initiate login  \n  const authUrl = `https://auth.cybershield.com/authorize?client_id=${clientId}&redirect_uri=${redirectUri}`;  \n  ```  \n- **MFA enforcement**:  \n  ```python  \n  # Validate TOTP token  \n  if not mfa_provider.verify_totp(user.phone, token):  \n      raise MFAFailure(\"Invalid token\")  \n  ```  \n- **Token validation**:  \n  ```go  \n  // Check JWT claims against SOC2-compliant policies  \n  if !token.Claims.IsScoped(\"api.access\") || !token.Claims.IsCompliant(\"gdpr\") {  \n      return http.StatusForbidden  \n  }  \n  ```  \n\n## Tech Stack  \n- **Authentication**: OAuth 2.0 (RFC 6749), OpenID Connect  \n- **Encryption**: AES-256 for token storage, TLS 1.3 for transit  \n- **Database**: PostgreSQL with row-level security policies  \n- **SIEM**: Splunk/ELK integration for audit logging  \n- **Compliance**: SOC2 Type II, GDPR data minimization  \n\n## Architecture / Design  \nThe system employs a layered architecture:  \n1. **OAuth Server**: Handles client authentication and token issuance  \n2. **MFA Gateway**: Enforces multi-factor verification via external providers  \n3. **Policy Engine**: Validates tokens against compliance rules (SOC2, GDPR)  \n4. **Audit Trail**: Logs all access attempts to SIEM for real-time monitoring  \n- **Security measures**: Rate limiting, certificate pinning, and zero-trust principles  \n\n## License  \nMIT License  \n© 2023 CyberShield Solutions  \n\n## Badges  \n[![Compliance](https://example.com/compliance-badge)](https://example.com/compliance)  \n[![Encryption](https://example.com/encryption-badge)](https://example.com/encryption)  \n[![SIEM](https://example.com/siem-badge)](https://example.com/siem)"
+  "text": "# GameInsight Analytics Dashboard  \nA real-time analytics platform for tracking player behavior, monetization trends, and in-game engagement metrics. Built for scalability, with a focus on actionable insights for game development teams. The dashboard processes over 10K daily active users, with 99.9% uptime and sub-100ms latency for core metrics.  \n\n## Testing  \nThe testing framework is designed for reliability and performance. Unit tests cover 95% of core logic, with 300+ integration test cases ensuring data pipelines remain robust under load. Performance benchmarks include 100ms response time for 99th percentile queries and 98% error rate reduction after recent optimizations. Automated test suites run on CI/CD pipelines, validating data accuracy across 10+ edge cases.  \n\n## Getting Started / Installation  \n1. Clone the repository using `git clone https://github.com/yourusername/gameinsight.git`  \n2. Navigate to the project directory and install dependencies via `pip install -r requirements.txt`  \n3. Set environment variables for API keys, database credentials, and caching configurations  \n4. Run `python setup.py` to initialize the database schema and load sample datasets  \n\n## Usage / Examples  \n- Launch the dashboard with `python app.py` to access the UI at `http://localhost:5000`  \n- Monitor real-time monetization trends using the \"Revenue Heatmap\" module  \n- Export player behavior data to CSV via the \"Export\" dropdown menu  \n- Use the A/B testing module to compare conversion rates across user segments  \n\n## Tech Stack  \n- Backend: Python 3.9 with Flask for RESTful APIs  \n- Database: PostgreSQL 14 with TimescaleDB for time-series analytics  \n- Caching: Redis 6.2 for session data and query result caching  \n- Visualization: Plotly for interactive dashboards (minimal use for compliance)  \n- Deployment: Docker 20.10 for containerization  \n\n## Architecture / Design  \nThe system follows a microservices architecture, with separate services for data ingestion, processing, and visualization. Redis caches frequent queries to reduce database load, while PostgreSQL handles persistent storage. Load balancing is achieved through NGINX, and horizontal scaling is supported via Kubernetes for peak traffic.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for full terms.  \n\n## Contributing  \nThis project is developed solo, but contributions are welcome. Submit pull requests for bug fixes or feature enhancements. For questions, reach out via the GitHub issues tracker. Note: The team size is currently solo, though collaboration is encouraged for future phases."
 }

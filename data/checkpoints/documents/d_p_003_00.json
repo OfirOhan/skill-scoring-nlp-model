@@ -4,24 +4,19 @@
   "persona_id": "p_003",
   "hyperparams": {
     "cv_format": "minimal",
-    "geographic_convention": "Europe",
-    "company_type": "FAANG",
-    "company_size": "mid (50-500)"
+    "geographic_convention": "US",
+    "company_type": "enterprise",
+    "company_size": "large (500+)"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Ansible": 3,
-    "CI/CD pipelines": 3,
-    "Chaos engineering": 2,
-    "Cloud cost optimization": 3,
-    "Docker": 3,
-    "Infrastructure as Code": 3,
-    "Kubernetes": 3,
-    "Linux administration": 3,
-    "Monitoring & alerting": 3,
+    "C/C++ (embedded)": 4,
+    "Firmware development": 4,
+    "Go": 2,
+    "IoT protocols (MQTT/CoAP)": 4,
+    "Network automation": 1,
     "Python": 2,
-    "Shell scripting": 2,
-    "Terraform": 3
+    "REST API design": 3,
+    "RTOS": 5
   },
-  "text": "Carmen Delgado  \ncarmen.delgado@email.com | +34 612 345 678 | Madrid, Spain  \n\n**Professional Experience**  \n*DevOps Engineer* | NebulaTech Innovations (2023–Present)  \n- Engineered cloud-native architectures for scalable microservices, reducing deployment latency by 35%  \n- Optimized CI/CD pipelines using GitLab CI, achieving 98% automated testing coverage  \n- Implemented Terraform modules for multi-cloud environments, standardizing infrastructure across EU regions  \n- Monitored system health via Prometheus and Grafana, reducing downtime by 22%  \n- Led Linux server hardening initiatives, improving security compliance by 40%  \n\n*DevOps Engineer Intern* | Aurora Systems (2022–2023)  \n- Automated deployment pipelines for SaaS products, decreasing manual tasks by 50%  \n- Managed AWS EC2 clusters, achieving 99.9% uptime during peak traffic periods  \n- Built Ansible playbooks for configuration management, streamlining onboarding for 15+ developers  \n- Collaborated on cost optimization strategies, reducing monthly cloud spend by €12k  \n\n**Education**  \n*Bachelor of Science in Computer Science* | University of California, Berkeley (2022)  \n- Thesis: \"Distributed Systems for Real-Time Data Processing\"  \n- Relevant coursework: Cloud Computing, Systems Architecture, Network Security  \n\n**Technical Skills**  \n- **Infrastructure as Code**: Terraform, Ansible, CloudFormation  \n- **Cloud Platforms**: AWS (EC2, S3, Lambda), Azure  \n- **CI/CD**: GitLab CI, Jenkins, Docker  \n- **Containerization**: Docker, Kubernetes (k8s)  \n- **Monitoring**: Prometheus, Grafana, Datadog  \n- **Linux**: System administration, shell scripting, systemd  \n- **Cost Optimization**: AWS Cost Explorer, Reserved Instances  \n- **Scripting**: Python, Bash  \n- **Chaos Engineering**: Basic tooling for resilience testing  \n\n**Projects**  \n- **Multi-Region Terraform Deployment**: Designed modular IaC for EU compliance, supporting 8 regions with dynamic resource allocation  \n- **CI/CD Pipeline Overhaul**: Redesigned legacy workflows, integrating security scans and parallel testing to cut deployment time by 40%  \n- **Kubernetes Cluster Optimization**: Reduced node resource waste by 25% through autoscaling and pod scheduling refinements  \n\n**Certifications**  \n- AWS Certified Solutions Architect – Associate (2023)  \n- Google Cloud Professional Cloud Architect (2024)  \n\n**Languages**  \n- English (fluent)  \n- Spanish (native)  \n- French (intermediate)"
+  "text": "Lucas Martin  \n123 Innovation Drive, Cambridge, MA | (617) 555-0198 | lucas.martin@email.com  \n\n**Professional Experience**  \n*Senior Embedded Engineer*  \nFinTech Innovators Inc. | 2021–Present  \nArchitected real-time payment processing systems for 500K+ active users, reducing transaction latency by 35% via optimized RTOS scheduling. Led firmware development for secure IoT-enabled ATMs, achieving 99.99% uptime across 12 global deployments. Spearheaded integration of MQTT/CoAP protocols for device communication, enhancing system scalability by 40% while reducing energy consumption by 22%.  \n\n*Embedded Systems Engineer*  \nSecurePay Solutions | 2019–2021  \nDesigned firmware for PCI-compliant payment terminals, achieving 100% compliance in 30-day audits. Developed REST APIs for third-party integrations, enabling 200+ financial institutions to onboard in under 72 hours. Collaborated with cross-functional teams to reduce firmware update time by 50%, supporting 150K+ devices across 18 markets.  \n\n*Junior Embedded Engineer*  \nFinTech Startups Inc. | 2017–2019  \nContributed to embedded systems for mobile payment solutions, achieving 98% reliability in beta testing. Pioneered use of C++ for low-level device drivers, improving hardware-software interoperability by 30%. Supported transition to secure boot processes, reducing security vulnerabilities by 45% in production environments.  \n\n**Technical Skills**  \n- **RTOS**: Custom kernel design for IoT edge devices, mentoring 5 engineers on scheduling algorithms and memory management.  \n- **C/C++ (embedded)**: Led firmware development for 12+ embedded platforms, optimizing power consumption by 25% in industrial IoT devices.  \n- **Firmware development**: Engineered secure boot mechanisms for 50K+ devices, achieving zero compromise in 18 months of field testing.  \n- **IoT protocols (MQTT/CoAP)**: Implemented protocol stacks for 15+ device models, reducing message latency by 28% in high-throughput scenarios.  \n- **REST API design**: Built scalable APIs for 10+ fintech platforms, handling 5M+ requests/day with 99.95% SLA adherence.  \n- **Go/Python**: Lightweight scripting for CI/CD pipelines, automating 70% of firmware testing workflows.  \n\n**Projects**  \n*Secure IoT Payment Gateway*  \nDeveloped firmware for encrypted device-to-cloud communication, integrating MQTT with TLS 1.3 for 200+ financial institutions. Resulted in 30% reduction in authentication delays.  \n\n*Real-Time Fraud Detection System*  \nArchitected embedded solution for anomaly detection in 500K+ transactions/sec, leveraging C++ for low-latency processing and REST APIs for real-time dashboards.  \n\n*Edge Computing Optimization*  \nRedesigned RTOS for edge devices, improving task scheduling efficiency by 35% and extending battery life by 20% in smart payment terminals.  \n\n**Education**  \n*Master of Science in Electrical Engineering*  \nMassachusetts Institute of Technology | 2018  \n\n**Languages**  \n- English (native)  \n- Spanish (professional proficiency)  \n\n**Volunteer / Open Source**  \nContributed to *libcoap* (CoAP protocol implementation) with bug fixes and documentation updates. Volunteer reviewer for *IEEE Transactions on Industrial Informatics*, focusing on embedded systems security."
 }

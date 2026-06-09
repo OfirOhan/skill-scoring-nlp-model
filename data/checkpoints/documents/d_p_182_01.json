@@ -1,23 +1,23 @@
 {
   "doc_id": "d_p_182_01",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_182",
   "hyperparams": {
-    "blog_depth": "deep-dive",
-    "jargon_density": "moderate"
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Flutter": 2,
-    "GraphQL": 3,
+    "AWS": 1,
+    "Docker": 2,
+    "HTML/CSS": 3,
     "JavaScript": 3,
-    "Kotlin": 3,
-    "Mobile CI/CD": 2,
-    "Push notifications": 3,
-    "REST API design": 4,
-    "React Native": 2,
-    "Swift": 3,
-    "TypeScript": 3,
-    "Web accessibility (WCAG)": 3
+    "Node.js": 1,
+    "PostgreSQL": 3,
+    "Python": 3,
+    "REST API design": 3,
+    "React": 3,
+    "Webpack/Vite": 2
   },
-  "text": "The rise of mobile-first applications has exposed traditional security models to unprecedented risks. Static encryption and perimeter-based defenses are no longer sufficient when adversaries can exploit device vulnerabilities, compromised credentials, or insider threats. Our latest breach incident highlighted how even encrypted data at rest could be exfiltrated if session tokens were improperly scoped. This underscores the need for a paradigm shift toward Zero Trust Architecture (ZTA), where every access request is verified regardless of origin.  \n\nEarly attempts to retrofit ZTA into legacy systems relied on static encryption protocols like AES-256, which proved inadequate. We observed that pre-shared keys (PSKs) were vulnerable to man-in-the-middle attacks during device provisioning, and token-based authentication often failed to enforce least-privilege access. One notable failure was a project where TLS 1.2 was used without forward secrecy, allowing intercepted session keys to decrypt historical communications. These approaches neglected the dynamic nature of mobile environments, where device trust states can shift in real time.  \n\nOur current solution integrates end-to-end encryption (E2EE) with continuous authentication via JWT tokens and device attestation. Data is encrypted at the application layer using elliptic curve cryptography (ECC) with ephemeral key exchange, ensuring session keys are never stored persistently. We leverage REST APIs to synchronize device trust states with backend services, using OAuth 2.0 with PKCE to prevent interception during authentication flows. TypeScript and Kotlin implementations enforce strict data validation, while GraphQL is used to fetch granular access controls without exposing raw credentials. Push notifications trigger real-time re-authentication for sensitive operations, mitigating risks from compromised devices.  \n\nThis approach works because it decouples data protection from device trust, ensuring encryption keys are tied to context-aware policies. By treating every access request as untrusted, we eliminate the attack surface created by implicit trust in user identities or device ownership. Measurable results include a 72% reduction in data exfiltration attempts and zero successful breaches in our production environments since implementation.  \n\nLooking ahead, we’re exploring quantum-resistant algorithms for long-term key storage and integrating biometric attestation for hardware-backed encryption. Expanding this model to cross-platform frameworks like Flutter and React Native will ensure consistent security postures across ecosystems. The goal remains clear: make encryption a proactive defense mechanism, not a reactive checkbox."
+  "text": "# EcomDirect Product Search Tool  \nA lightweight tool for filtering and displaying e-commerce products, built to streamline search functionality with frontend and backend integration.  \n\n## Getting Started / Installation  \nClone the repository:  \n```bash  \ngit clone https://github.com/AmaraDiallo/EcomDirect.git  \ncd EcomDirect  \n```  \nInstall dependencies:  \n```bash  \nnpm install  \n```  \nSet up PostgreSQL:  \n- Create a database named `ecomdirect_db`  \n- Run `python db_setup.py` to initialize tables  \n- Update `config.py` with your database credentials  \n\n## Tech Stack  \n- **Frontend**: React for dynamic UI, HTML/CSS for structure and styling  \n- **Backend**: Python (FastAPI) for REST API endpoints  \n- **Database**: PostgreSQL for product data storage  \n- **Tools**: Docker for containerization (optional deployment)  \n\n## Usage / Examples  \n1. Navigate to the search bar and input keywords (e.g., \"wireless headphones\")  \n2. Filter by price range, category, or brand using sliders and dropdowns  \n3. View product details, including images and descriptions  \n4. The backend fetches data via REST API, ensuring real-time updates  \n\n## Badges  \n[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/MIT)  \n[![GitHub](https://img.shields.io/badge/Repository-View-green)](https://github.com/AmaraDiallo/EcomDirect)  \n\n## Architecture / Design  \nThe tool follows a **frontend-backend separation** model. React handles user interactions and rendering, while Python (FastAPI) manages business logic and database queries. PostgreSQL ensures efficient data retrieval. REST API endpoints are designed for simplicity, with endpoints like `/api/products` for fetching data and `/api/filter` for dynamic queries. Docker is used sparingly to containerize the backend for consistent environments.  \n\n## Contributing  \nContributions are welcome! For issues or feature requests, open a pull request. If you're familiar with Docker, consider improving the deployment workflow.  \n\n## License  \nMIT License – see the [LICENSE](LICENSE) file for details."
 }

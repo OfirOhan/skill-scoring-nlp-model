@@ -3,19 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_101",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "large (15+)",
-    "jargon_density": "heavy"
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Next.js": 3,
-    "React": 4,
-    "Responsive design": 4,
-    "State management (Redux/Zustand)": 3,
-    "TypeScript": 4,
-    "UX research": 3,
-    "Web accessibility (WCAG)": 4,
-    "Webpack/Vite": 3
+    "CI/CD pipelines": 4,
+    "DNS/DHCP": 1,
+    "Firewall configuration": 1,
+    "GitHub Actions": 3,
+    "Incident management": 1,
+    "Linux administration": 3,
+    "Monitoring & alerting": 3,
+    "Network troubleshooting": 1,
+    "PostgreSQL": 1,
+    "Prometheus/Grafana": 3,
+    "Python": 1,
+    "Terraform": 4
   },
-  "text": "# Real-Time Collaboration Tool  \nA production-grade platform enabling seamless, real-time collaboration across distributed teams. Built with React, Firebase, and a microservices architecture, this tool supports concurrent document editing, live chat, and version history. Optimized for scalability, it serves 500+ teams with 30% faster load times compared to legacy solutions.  \n\n## Getting Started / Installation  \nTo bootstrap the environment, ensure Node.js ≥ 18 is installed. Clone the repository and install dependencies:  \n```bash  \nnpm install  \n```  \nConfigure Firebase credentials via `firebase-config.js` and set up environment variables for production deployment. For local development, run:  \n```bash  \nnpm run dev  \n```  \nThe tool integrates with Firebase Realtime Database for synchronization and Cloud Firestore for persistent storage.  \n\n## Tech Stack  \n- **Frontend**: React (v18), TypeScript, Redux Toolkit (for state management), Vite (build tool)  \n- **Backend**: Firebase Realtime Database, Cloud Firestore, Firebase Authentication  \n- **UX**: Figma-driven design system, A/B testing framework for accessibility patterns  \n- **Performance**: Webpack 5 (tree-shaking), Lighthouse score ≥ 95/100  \n- **Accessibility**: WCAG 2.1 AA compliance, ARIA roles for collaborative UI elements  \n\n## Usage / Examples  \n```tsx  \n// Real-time document sync  \nconst [doc, setDoc] = useState<DocumentType>({});  \nuseEffect(() => {  \n  const dbRef = firebase.database().ref('documents/' + docId);  \n  dbRef.on('value', (snapshot) => setDoc(snapshot.val()));  \n}, [docId]);  \n```  \nThe tool supports responsive layouts for 10+ device types and includes keyboard navigation for screen readers. Example use cases include live code reviews and shared whiteboarding sessions.  \n\n## Badges  \n[![Build Status](https://example.com/status)](https://example.com)  \n[![Code Coverage](https://example.com/coverage)](https://example.com)  \n[![Dependencies](https://example.com/dependencies)](https://example.com)  \n\n## Architecture / Design  \nThe system decouples UI layers from backend services via a service-oriented architecture. Firebase acts as the central event bus, while Redux manages UI state separately. Key components include:  \n- **Sync Layer**: Firebase listeners for real-time updates  \n- **UI Layer**: React components with TypeScript typings for collaborative features  \n- **Accessibility Layer**: ARIA attributes and keyboard event handlers for screen readers  \n\n## Contributing  \nCollaboration is core to this project. To contribute:  \n1. Fork the repository and open a pull request with a detailed description  \n2. Follow the team's coding standards for TypeScript and Firebase integration  \n3. Participate in UX research sprints for accessibility improvements  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# Securing CI/CD Pipelines with Terraform and Vault  \n\nAutomate security compliance checks across CI/CD pipelines using Terraform for infrastructure as code and Vault for dynamic secret management. This project reduces manual audits by 65% and ensures all infrastructure adheres to zero-trust principles before deployment. Built for small teams (2–4 engineers), it scales with minimal overhead while maintaining compliance with 12+ security frameworks.  \n\n## Tech Stack  \n- **Terraform**: Infrastructure as code for consistent, reproducible environments  \n- **Vault**: Dynamic secret management and policy enforcement  \n- **GitHub Actions**: Orchestration of CI/CD workflows with built-in secrets  \n- **Prometheus/Grafana**: Real-time monitoring of pipeline compliance metrics  \n- **Linux administration**: Custom scripts for audit log aggregation and rotation  \n\n## Architecture / Design  \nThe system integrates Terraform modules with Vault policies to enforce security baselines during infrastructure provisioning. GitHub Actions triggers compliance checks on every commit, validating Terraform state consistency and Vault secret rotation schedules. Prometheus tracks compliance drift, with alerts for policy violations. Key design choices:  \n- Terraform’s `remote_state` backend for centralized state management  \n- Vault’s `kv2` secrets engine for versioned secrets with fine-grained access  \n- GitHub Actions secrets scoped to environment-specific policies  \n- 30% faster compliance checks via parallelized Vault policy evaluation  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/your-org/securing-cicd.git`  \n2. Install Terraform 1.5+ and Vault 1.10+  \n3. Configure GitHub Actions secrets with Vault token and Terraform credentials  \n4. Set up Prometheus and Grafana for metrics visualization  \n5. Run `terraform init` to initialize modules and validate dependencies  \n\n## Usage / Examples  \n- **Automate Vault secret rotation**: Use Terraform to schedule periodic secret renewals via Vault’s `lease` API  \n- **Enforce compliance policies**: Integrate Vault policies with Terraform `provider` configurations to block insecure resource types  \n- **Monitor compliance drift**: Query Prometheus for `vault_policy_violations` metrics and trigger alerts for >5% deviation  \n- **Audit Terraform state**: Use GitHub Actions to validate state consistency across environments with `terraform validate`  \n\n## Badges  \n[![Forks](https://badgen.net/badge/orghub/forks/green)](https://github.com/your-org/securing-cicd/forks)  \n[![Stars](https://badgen.net/badge/orghub/stars/green)](https://github.com/your-org/securing-cicd/stars)  \n[![Build Status](https://badgen.net/badge/build/status/green)](https://github.com/your-org/securing-cicd/actions)  \n\n## Contributing  \nThis project is actively maintained by a small team. Contributions are welcome for:  \n- Expanding Vault policy templates for additional frameworks (e.g., ISO 27001)  \n- Optimizing Terraform module reuse across environments  \n- Enhancing Prometheus metrics for real-time compliance tracking  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details"
 }

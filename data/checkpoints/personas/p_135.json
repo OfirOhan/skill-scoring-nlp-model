@@ -1,45 +1,58 @@
 {
   "persona_id": "p_135",
   "hyperparams": {
-    "archetype": "security_engineer",
-    "years_experience": 4,
+    "archetype": "tech_lead_architect",
+    "years_experience": 3,
     "seniority": "mid",
-    "industry": "consulting",
-    "writing_style": "modest",
-    "language_fluency": "native",
+    "industry": "enterprise",
+    "writing_style": "neutral",
+    "language_fluency": "near-native",
     "self_promotion_level": "balanced",
     "quantification_tendency": "qualitative"
   },
-  "name": "Fiona MacLeod",
-  "current_role": "Security Engineer - Consulting",
-  "company": "Vortex Security Solutions",
+  "name": "Ian Szabo",
+  "current_role": "Tech Lead / Architect",
+  "company": "NexaCorp",
   "education": {
-    "degree": "Bachelor of Science in Cybersecurity",
-    "university": "University of Edinburgh",
-    "year": 2019
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "University of Toronto",
+    "year": 2021
   },
   "career_trajectory": [
-    "Security Analyst at Mid-Sized Financial Firm (2018–2020)",
-    "Security Engineer at Cybersecurity Startup (2020–2022)",
-    "Senior Security Engineer at Consulting Firm (2022–2023)",
-    "Security Engineer - Consulting (2023–present)"
+    {
+      "role": "Junior Backend Developer",
+      "company": "Aurora Systems",
+      "duration": "18 months"
+    },
+    {
+      "role": "Senior Backend Developer",
+      "company": "Aurora Systems",
+      "duration": "24 months"
+    },
+    {
+      "role": "Tech Lead",
+      "company": "NexaCorp",
+      "duration": "12 months"
+    }
   ],
   "skills": {
-    "Network security": 4,
-    "Application security (OWASP)": 4,
-    "Penetration testing": 3,
-    "IAM/Access control": 4,
-    "Encryption & PKI": 4,
-    "Security auditing": 3,
-    "SIEM tools": 3,
-    "Vulnerability management": 3,
-    "Compliance (SOC2/GDPR)": 3,
-    "Network automation": 3,
-    "Threat modeling": 3,
-    "Incident response": 3
+    "Team leadership": 5,
+    "System design": 5,
+    "Agile/Scrum": 5,
+    "Cross-team collaboration": 5,
+    "Stakeholder communication": 4,
+    "Technical debt management": 5,
+    "CI/CD pipelines": 3,
+    "GitHub Actions": 1,
+    "Cloud cost optimization": 4,
+    "Terraform": 4,
+    "Linux administration": 2
   },
   "document_ids": [
     "d_p_135_00",
-    "d_p_135_01"
+    "d_p_135_01",
+    "d_p_135_02",
+    "d_p_135_03",
+    "d_p_135_04"
   ]
 }

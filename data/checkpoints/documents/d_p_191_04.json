@@ -1,22 +1,26 @@
 {
   "doc_id": "d_p_191_04",
-  "type": "blog",
+  "type": "recommendation",
   "persona_id": "p_191",
   "hyperparams": {
-    "blog_depth": "deep-dive",
-    "jargon_density": "moderate"
+    "recommender_role": "direct-manager",
+    "recommender_closeness": "occasional",
+    "company_type": "startup",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "Application security (OWASP)": 3,
-    "Compliance (SOC2/GDPR)": 4,
-    "Encryption & PKI": 3,
-    "IAM/Access control": 3,
-    "Network security": 3,
-    "Penetration testing": 5,
-    "SIEM tools": 3,
-    "Security auditing": 4,
-    "Threat modeling": 5,
-    "Vulnerability management": 4
+    "CI/CD pipelines": 1,
+    "Kubernetes": 1,
+    "Terraform": 1,
+    "Prometheus/Grafana": 1,
+    "Incident management": 1,
+    "SLA/SLO management": 1,
+    "Cloud cost optimization": 1,
+    "Python": 1,
+    "PostgreSQL": 1,
+    "Load balancing": 1,
+    "Network automation": 1,
+    "Redis": 1
   },
-  "text": "**Securing Legacy Systems in the Age of Cloud Migration**  \n\nLegacy systems are the backbone of many enterprises, but their migration to the cloud introduces unique security challenges. My team recently navigated this transition at a financial services firm, where we reduced remediation time by 40% while maintaining compliance. Here’s how we did it.  \n\n1. **Application Security: OWASP Top 10 Compliance in Legacy Codebases**  \n   We began by auditing legacy applications for OWASP Top 10 vulnerabilities. For example, we identified SQL injection risks in a 15-year-old Java application and remediated them using parameterized queries and static code analysis tools like SonarQube. This reduced our attack surface by 25% before migration.  \n\n2. **Encryption & PKI: Tokenizing Sensitive Data at Rest**  \n   Legacy systems often store data in unencrypted formats. We deployed AES-256 encryption with hardware security modules (HSMs) and integrated PKI for certificate-based authentication. This ensured compliance with SOC2 and GDPR, cutting data breach risk by 60% during migration.  \n\n3. **IAM/Access Control: Zero-Trust Principles for Legacy Assets**  \n   We implemented AWS IAM roles and least-privilege access for legacy databases. By leveraging AWS Resource Access Manager, we isolated legacy systems into separate VPCs, reducing unauthorized access attempts by 75% in the first quarter.  \n\n4. **Network Security: Microsegmentation for Hybrid Environments**  \n   Legacy systems often operate in hybrid environments. We used NSGs and AWS WAF to enforce microsegmentation, blocking 92% of lateral movement attempts during migration.  \n\n5. **SIEM Tools: Real-Time Monitoring for Legacy Workloads**  \n   Splunk was configured to aggregate logs from legacy systems and cloud services. This enabled us to detect anomalous behavior, such as unauthorized API calls, within seconds, improving incident response times by 50%.  \n\n6. **Compliance & Auditing: Automated Policy Enforcement**  \n   We integrated compliance checks into CI/CD pipelines using tools like Terraform and AWS Config. This reduced manual audits by 30% and ensured consistent policy enforcement across 120+ legacy systems.  \n\n7. **Vulnerability Management: Patching Without Downtime**  \n   We prioritized vulnerabilities using CVSS scores and applied patches via zero-downtime rollouts. This prevented 80% of critical vulnerabilities from being exploited during the migration window.  \n\n8. **Penetration Testing: Red Team Exercises for Legacy Systems**  \n   Quarterly red team exercises simulated attacks on legacy systems, uncovering 15+ blind spots. These tests directly influenced architecture decisions, such as replacing outdated authentication protocols.  \n\n9. **Threat Modeling: Proactive Risk Mitigation**  \n   We conducted STRIDE-based threat modeling for each legacy system, identifying risks like insecure deserialization. This led to the implementation of input validation frameworks, reducing exploitation attempts by 45%.  \n\n**Summary**  \nSecuring legacy systems during cloud migration requires a blend of technical rigor and strategic planning. By focusing on application security, encryption, IAM, and real-time monitoring, we achieved measurable improvements in compliance, incident response, and risk mitigation. The key is treating legacy systems as part of the cloud security lifecycle—not an afterthought."
+  "text": "**Quick Intro**  \nIngrid Johansson, a Senior DevOps Engineer at NexaTech Solutions, has consistently delivered results in a dynamic startup environment. Her ability to bridge technical challenges with strategic priorities has made her an indispensable asset.  \n\n**Key Points 1**  \nIngrid spearheaded a migration of critical internal tools, reducing deployment latency by 40% and eliminating 15+ manual handoffs. Her deep understanding of system interdependencies allowed her to identify and resolve bottlenecks in legacy infrastructure, improving overall reliability without additional resources.  \n\n**Key Points 2**  \nShe thrives in ambiguity, often volunteering to tackle high-impact projects with limited guidance. For example, she designed a custom monitoring framework that cut incident resolution time by 30%, earning cross-team recognition. Her proactive communication ensures alignment across stakeholders, even in fast-paced scenarios.  \n\n**Strong Closing**  \nIngrid’s blend of technical rigor and collaborative mindset has driven measurable progress at NexaTech. Her reliability, curiosity, and ability to simplify complex systems make her a rare asset—someone who elevates both processes and people."
 }

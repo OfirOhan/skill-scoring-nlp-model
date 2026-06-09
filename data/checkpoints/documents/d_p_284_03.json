@@ -3,21 +3,23 @@
   "type": "recommendation",
   "persona_id": "p_284",
   "hyperparams": {
-    "recommender_role": "professor",
+    "recommender_role": "peer",
     "recommender_closeness": "worked-daily",
-    "company_type": "enterprise",
-    "company_size": "mid (50-500)"
+    "company_type": "startup",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "ArgoCD": 3,
-    "GitLab CI": 2,
-    "Kubernetes": 4,
-    "Linux administration": 4,
-    "Network automation": 4,
-    "PostgreSQL": 2,
-    "Prometheus/Grafana": 4,
-    "Python": 3,
-    "Redis": 3
+    "A/B testing": 1,
+    "Apache Spark": 1,
+    "Data visualization (Matplotlib/Plotly)": 1,
+    "Feature engineering": 5,
+    "Go": 1,
+    "Java": 1,
+    "NumPy": 1,
+    "Pandas": 1,
+    "Python": 1,
+    "REST API design": 1,
+    "Statistical modeling": 5
   },
-  "text": "Harini has been a consistent presence in our DevOps group, collaborating daily on infrastructure automation and system reliability. Her approach blends technical rigor with a collaborative mindset, often mentoring junior team members during shift handoffs.  \n\nObserving her day-to-day work, Harini’s expertise in Kubernetes shines through her ownership of our microservices deployment pipeline. She streamlined rollback processes, reducing downtime by 40% during a critical incident. Her Linux administration skills are equally impactful—she recently optimized our CI/CD node cluster, cutting build times by 25% through resource reallocation. Network automation, handled via Ansible, became a routine task for her, ensuring consistent config across 20+ environments.  \n\nA standout moment came when Harini led a Prometheus/Grafana overhaul, integrating custom metrics for our ad-serving infrastructure. This allowed real-time anomaly detection, preventing potential revenue losses. Her ability to balance deep technical work with clear communication made this transition seamless.  \n\nHarini’s reliability and curiosity make her a standout colleague. She consistently prioritizes system resilience without seeking recognition. For roles requiring hands-on infrastructure expertise and proactive problem-solving, Harini would be an exceptional asset."
+  "text": "**To Whom It May Concern,**  \n\nI’ve collaborated closely with Xander de Vries 87 over the past two years at Lumina Labs, a small-scale startup focused on industrial automation. As a peer, I’ve observed his day-to-day contributions to data-driven decision-making and his role in shaping our predictive maintenance models.  \n\nXander’s strength lies in his ability to distill complex system behaviors into actionable features. Last quarter, he led the design of a feature engineering pipeline for sensor data, which reduced false positive rates in our anomaly detection models by 12% without requiring additional hardware. His approach balances statistical rigor with pragmatic implementation, ensuring models align with operational constraints. He also mentors junior engineers, often leading brainstorming sessions to refine feature selection criteria.  \n\nOne standout example came during a project to optimize energy consumption in manufacturing lines. Xander spent three weeks collaborating with engineers to identify latent patterns in vibration data. By incorporating time-series features that captured subtle degradation trends, he improved our predictive accuracy by 18%, enabling proactive maintenance and saving an estimated $25k in downtime. His work ethic is equally notable—he consistently prioritizes cross-functional collaboration, ensuring data science outcomes directly inform business strategy.  \n\nIn summary, Xander is a reliable, analytical collaborator whose technical depth and communication skills make him an asset to any team. His ability to translate statistical insights into operational value is rare in practice.  \n\nSincerely,  \n[Your Name]  \nCo-founder, Lumina Labs"
 }

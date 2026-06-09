@@ -3,28 +3,22 @@
   "type": "recommendation",
   "persona_id": "p_137",
   "hyperparams": {
-    "recommender_role": "professor",
-    "recommender_closeness": "worked-daily",
+    "recommender_role": "skip-level",
+    "recommender_closeness": "brief",
     "company_type": "FAANG",
-    "company_size": "small (<50)"
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "AWS": 2,
-    "ArgoCD": 1,
+    "AWS": 3,
     "CI/CD pipelines": 2,
-    "Cloud cost optimization": 1,
-    "GitHub Actions": 1,
-    "GitLab CI": 1,
-    "Incident management": 4,
-    "Jenkins": 1,
-    "Kubernetes": 3,
-    "Linux administration": 2,
-    "Monitoring & alerting": 2,
-    "Prometheus/Grafana": 2,
-    "Python": 1,
-    "Serverless": 1,
-    "Shell scripting (Bash)": 1,
-    "Terraform": 2
+    "Docker": 2,
+    "GCP": 1,
+    "MongoDB": 2,
+    "Node.js": 2,
+    "PostgreSQL": 3,
+    "Python": 3,
+    "REST API design": 3,
+    "React": 2
   },
-  "text": "James tackled a critical incident last quarter when a Kubernetes cluster misconfiguration caused a 45-minute outage. He diagnosed the issue within 15 minutes, rolled back the deployment using etcd snapshots, and implemented a rolling update strategy to prevent recurrence. His actions minimized revenue loss by $12k and restored user trust.  \n\nAs a professor, I collaborated with James daily at a FAANG-scale startup for 18 months. He joined as a junior SRE and quickly became a pivotal contributor. His ability to distill complex system behaviors into actionable insights made him indispensable during high-stakes deployments.  \n\nJames excels at balancing operational rigor with innovation. He redesigned our Terraform templates to cut deployment time by 30%, and his Prometheus-Grafana dashboards reduced mean time to detect anomalies by 25%. His incident response protocols, built on deep Linux sysadmin knowledge, ensured our systems remained resilient during traffic spikes. Beyond technical skill, he’s relentlessly methodical—once spending 12 hours debugging a race condition that others dismissed as \"environmental noise.\"  \n\nJames is a rare blend of precision and adaptability. His work ethic and technical depth make him a standout candidate.  \n\nSincerely,  \nDr. Eleanor Voss  \nDepartment of Computer Science  \n[University Email]"
+  "text": "Chioma Eze has consistently delivered reliable, thoughtful solutions as a Full-Stack Developer at TechConsult Solutions. Her work balances technical precision with a deep awareness of user needs, which is evident in the seamless systems she builds. When tasked with migrating a client’s legacy application to a scalable architecture, she prioritized stability without compromising performance. Her use of AWS for infrastructure and PostgreSQL for data management created a resilient foundation that handled peak loads efficiently. She also designed REST APIs that prioritized clarity, reducing integration friction for cross-team collaboration.  \n\nChioma’s strength lies in her ability to simplify complex problems. During a project with tight deadlines, she proactively identified a bottleneck in data processing and proposed a Python-based automation script that cut manual effort by half. Her curiosity drives her to ask clarifying questions, ensuring her solutions align with both technical and business goals.  \n\nShe collaborates with empathy, often stepping into junior developers’ shoes to explain technical concepts. Her mentorship has helped elevate team morale and knowledge sharing. Chioma’s reliability and adaptability make her a steady presence in dynamic projects.  \n\nI recommend Chioma without hesitation. Her blend of technical depth and collaborative mindset makes her a valuable asset to any team."
 }

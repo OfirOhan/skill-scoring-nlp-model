@@ -3,20 +3,20 @@
   "type": "project_readme",
   "persona_id": "p_158",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "plain"
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "CI/CD pipelines": 3,
-    "Docker": 3,
-    "Go": 1,
-    "Kubernetes": 3,
-    "Microservices architecture": 3,
-    "PostgreSQL": 3,
-    "Python": 4,
-    "REST API design": 5
+    "AWS": 4,
+    "CI/CD pipelines": 4,
+    "ELK": 1,
+    "Kubernetes": 5,
+    "Linux administration": 2,
+    "Load balancing": 2,
+    "Prometheus/Grafana": 4,
+    "Python": 1,
+    "Terraform": 5
   },
-  "text": "# Real-Time Ad Targeting API  \nA high-throughput API for dynamic ad campaign optimization, leveraging Python and Flask to deliver real-time user segmentation and bid adjustments  \n\n---\n\n## Badges  \n[![Python](https://img.shields.io/badge/python-3.9-blue)](https://python.org)  \n[![Flask](https://img.shields.io/badge/flask-2.0-yellow)](https://flask.palletsprojects.com)  \n[![CI/CD](https://img.shields.io/badge/ci--cd-green)](https://github.com/actions)  \n\n---\n\n## Tech Stack  \n- **Backend**: Python (3.9) + Flask (2.0) for RESTful endpoints  \n- **Database**: PostgreSQL (14) for campaign metadata and user profiles  \n- **Deployment**: Docker (20.10) for containerization + AWS ECS for scaling  \n- **Infrastructure**: AWS S3 for asset storage, Lambda for async processing  \n- **Monitoring**: Prometheus + Grafana for latency tracking  \n\n---\n\n## Architecture / Design  \nThe API operates as a microservice within a distributed ad-tech platform. Key components:  \n- **Async Task Queue**: Celery workers handle bid calculations, reducing latency by offloading compute from HTTP requests  \n- **Database Sharding**: Campaign data is partitioned by region to optimize query performance for global ad delivery  \n- **Rate Limiting**: Redis-based tokens ensure fair resource allocation during peak traffic  \n- **Caching Layer**: Redis is used for frequently accessed user segments, reducing DB load by 40% in production  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/your-org/realtime-ad-api.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure environment variables for AWS credentials and DB connections  \n4. Run Docker containers: `docker-compose up --build`  \n5. Verify endpoints with `curl http://localhost:5000/api/v1/health`  \n\n---\n\n## Usage / Examples  \n```bash\ncurl -X POST http://api.example.com/targeting \\\n  -H \"Authorization: Bearer <token>\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"campaign_id\": \"cmp123\",\n    \"user_profile\": {\n      \"age\": 28,\n      \"location\": \"NYC\"\n    }\n  }'\n```  \nReturns real-time bid adjustments and audience segment matching scores  \n\n---\n\n## Contributing  \nWe welcome improvements to query performance, security, and documentation.  \n- Fork the repo and submit a pull request with tests  \n- Follow PEP8 guidelines and include type hints for all endpoints  \n- Discuss changes in the `#api-architecture` channel before implementing  \n\n---\n\n## License  \nMIT License — see [LICENSE](LICENSE) for details"
+  "text": "# AdTech Pipeline Orchestration  \nA production-grade CI/CD pipeline tailored for adtech campaign deployment, optimized for scalability, observability, and rapid iteration.  \n\n## Deployment  \nThe pipeline operates on AWS EC2 instances with S3-backed artifact storage, leveraging Terraform for infrastructure-as-code. Kubernetes orchestrates containerized services, with Prometheus/Grafana providing real-time metrics across clusters. Deployment visibility is achieved via AWS CloudWatch and custom dashboards, ensuring 99.9% uptime for adtech campaigns.  \n\n## Badges  \n[![GitHub Actions Status](https://github.com/ricardoalmeida/adtech-pipeline/workflows/CI%20Pipeline/badge.svg)](https://github.com/ricardoalmeida/adtech-pipeline/actions)  \n[![AWS Infrastructure Status](https://github.com/ricardoalmeida/adtech-pipeline/workflows/Terraform%20Deployment/badge.svg)](https://github.com/ricardoalmeida/adtech-pipeline/actions)  \n[![Kubernetes Health](https://github.com/ricardoalmeida/adtech-pipeline/workflows/K8s%20Health/badge.svg)](https://github.com/ricardoalmeida/adtech-pipeline/actions)  \n\n## Tech Stack  \n- **Cloud**: AWS (EC2, S3, CloudWatch), Terraform  \n- **Orchestration**: Kubernetes (with Helm for chart management)  \n- **Monitoring**: Prometheus, Grafana, AWS CloudWatch  \n- **CI/CD**: GitHub Actions, AWS CodePipeline  \n- **Containers**: Docker (for adtech service packaging)  \n\n## Architecture / Design  \nThe pipeline integrates Terraform-managed Kubernetes clusters with AWS CodePipeline for automated deployments. Adtech campaigns are containerized using Docker, deployed to Kubernetes via Helm charts, and monitored with Prometheus. Custom metrics track campaign performance, while Terraform ensures infrastructure consistency across environments.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/ricardoalmeida/adtech-pipeline.git`  \n2. Configure AWS credentials via `aws configure`  \n3. Initialize Terraform: `terraform init`  \n4. Deploy infrastructure: `terraform apply`  \n5. Set up GitHub Actions secrets for CI/CD triggers  \n\n## Usage / Examples  \nA typical workflow:  \n1. Push adtech code to GitHub → Triggers GitHub Actions pipeline  \n2. Code is built and packaged into Docker images  \n3. Deployed to Kubernetes via Helm charts managed by Terraform  \n4. Monitoring dashboards in Grafana alert on deployment success/failure  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
 }

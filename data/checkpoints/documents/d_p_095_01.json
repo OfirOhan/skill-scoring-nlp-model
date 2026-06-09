@@ -4,28 +4,21 @@
   "persona_id": "p_095",
   "hyperparams": {
     "project_scale": "hobby",
-    "project_team_size": "solo",
+    "project_team_size": "large (15+)",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "CI/CD pipelines": 2,
-    "Cloud cost optimization": 1,
-    "Docker": 3,
-    "GCP": 1,
-    "Go": 1,
-    "GraphQL": 1,
-    "Kubernetes": 1,
-    "Microservices architecture": 2,
-    "MongoDB": 3,
-    "Node.js": 3,
-    "PostgreSQL": 3,
-    "Prometheus/Grafana": 2,
-    "Python": 1,
+    "3D graphics (OpenGL/Vulkan)": 4,
+    "C#/.NET": 3,
+    "Game networking": 4,
+    "Game physics": 4,
+    "GraphQL": 2,
+    "Node.js": 1,
+    "Python": 3,
     "REST API design": 3,
-    "React": 3,
-    "Redis": 2,
-    "TypeScript": 1
+    "Rust": 1,
+    "Unity": 5,
+    "Unreal Engine": 5
   },
-  "text": "# Real-Time Trading Dashboard  \nA high-performance financial analytics platform built with React and Node.js, enabling real-time stock price tracking, market sentiment analysis, and customizable charting for institutional traders.  \n\n---\n\n## Badges  \n[![GitHub](https://img.shields.io/github/last-commit/ilyafedorov/trading-dashboard)](https://github.com/ilyafedorov/trading-dashboard)  \n[![Travis CI](https://img.shields.io/travis/ilyafedorov/trading-dashboard)](https://travis-ci.com/ilyafedorov/trading-dashboard)  \n[![npm](https://img.shields.io/npm/v/trading-dashboard)](https://www.npmjs.com/package/trading-dashboard)  \n\n---\n\n## Tech Stack  \n- **Frontend**: React 18 (with hooks and context API) for dynamic UI rendering  \n- **Backend**: Node.js 18 with Express for REST API endpoints and WebSocket integration  \n- **Data Storage**: PostgreSQL 14 for relational data (user preferences, watchlists) and MongoDB 6 for real-time market data ingestion  \n- **Real-Time Sync**: WebSocket over TCP for bidirectional communication between client and server  \n- **Deployment**: Dockerized microservices with AWS Lambda for serverless data processing  \n- **Monitoring**: Prometheus for metric collection and Grafana for dashboard visualization  \n\n---\n\n## Configuration  \nEnvironment variables are managed via `.env` file using `dotenv` for secure credential handling. Key configurations include:  \n- `API_KEYS` for third-party financial data providers (e.g., Alpha Vantage)  \n- `DATABASE_URL` for PostgreSQL connection string  \n- `MONGO_URI` for MongoDB cluster access  \n- `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for S3 storage of historical data  \n\n---\n\n## Getting Started / Installation  \n```bash  \nnpm install  \ncp .env.example .env  \n# Edit .env to include API keys and database credentials  \nnpm run dev  \n```  \nFor production, build Docker containers and deploy to AWS ECS with load balancing.  \n\n---\n\n## Usage / Examples  \n- **Live Data Feed**: Subscribe to WebSocket channels for real-time stock price updates (e.g., `NASDAQ:MSFT`)  \n- **Custom Filters**: Apply sector-based filters (e.g., `Technology`, `Finance`) and sort by volume/PE ratio  \n- **Historical Analysis**: Query MongoDB for 5-year price trends and export to CSV via AWS S3  \n\n---\n\n## Testing  \n- **Unit Tests**: Jest 28 with React Testing Library for component isolation  \n- **Integration Tests**: Supertest for API endpoint validation (e.g., `/api/stocks/MSFT`)  \n- **Coverage**: 92%+ line coverage via `npx jest --coverage`  \n\n---\n\n## License  \nMIT License. See [LICENSE](LICENSE) for full terms."
+  "text": "# Mental Health VR Therapy Platform  \n\nA VR-based therapeutic system leveraging game mechanics to enhance patient engagement, reduce treatment drop-off, and improve clinical outcomes through immersive, interactive environments. Built for healthtech applications with a focus on accessibility, scalability, and psychological fidelity.  \n\n## Badges  \n[![GitHub Actions](https://img.shields.io/badge/CI%2FCD-green)](https://github.com/mentalhealthvr/actions)  \n[![HealthTech](https://img.shields.io/badge/HealthTech-blue)](https://github.com/mentalhealthvr)  \n[![VR](https://img.shields.io/badge/VR-orange)](https://github.com/mentalhealthvr)  \n[![Open Source](https://img.shields.io/badge/Open%20Source-249)](https://github.com/mentalhealthvr)  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/mentalhealthvr/platform.git`  \n2. Install Unity 2021.3 LTS and Unreal Engine 5.1 for core development  \n3. Import the Unity/Unreal project assets via the respective editors  \n4. Configure backend integration with REST APIs using Python scripts  \n5. Launch the Unity/Unreal editor and run the core therapy modules  \n\n## Tech Stack  \n- **Core Engines**: Unity (for interactive therapy modules) + Unreal Engine (for high-fidelity environments)  \n- **Scripting**: C# for Unity, Python for data analysis pipelines  \n- **Networking**: Custom WebSocket layers for real-time patient monitoring  \n- **Graphics**: OpenGL ES 3.3 for Unity, Vulkan for Unreal rendering pipelines  \n- **Data Layer**: GraphQL for metadata queries, REST APIs for session tracking  \n- **Physics**: Unity's PhysX for avatar behavior, Unreal's Chaos for environmental interactions  \n\n## Architecture / Design  \nThe system is divided into modular subsystems:  \n- **Avatar Behavior**: Unity ECS for real-time emotional state modeling  \n- **Environmental Dynamics**: Unreal Nanite for photorealistic therapeutic settings  \n- **Session Management**: REST API layer with Python-based analytics  \n- **Cross-Engine Synchronization**: GraphQL bridge for shared patient data  \n- **Security**: OAuth2.0 integration for clinical data access  \n\nKey design decisions include separating core therapy logic from rendering pipelines, enabling parallel development between Unity and Unreal teams.  \n\n## Usage / Examples  \n- **Exposure Therapy**: Simulated environments with Unity's physics for controlled stress scenarios  \n- **Mindfulness Training**: Unreal's VR audio system for binaural beats and spatial soundscapes  \n- **Progress Tracking**: Python scripts analyzing session data to generate clinician reports  \n\n## Testing  \n- **Unit Tests**: Unity's NUnit for core logic, Unreal's Automation Tool for rendering pipelines  \n- **Integration Tests**: End-to-end validation of WebSocket communication and data sync  \n- **User Testing**: Beta sessions with 50+ participants, tracking engagement metrics via Unity analytics  \n- **Performance Benchmarks**: Frame rate stability under 120Hz, latency <20ms for real-time interactions  \n\n## License  \nMIT License — see [LICENSE](https://github.com/mentalhealthvr/platform/blob/main/LICENSE) for details."
 }

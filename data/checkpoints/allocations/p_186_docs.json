@@ -1,84 +1,50 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional curriculum vitae highlighting Riya Desai's experience as a Senior Platform Engineer at TechNova Inc.",
-    "title": "Riya Desai - Senior Platform Engineer",
+    "topic_summary": "A professional CV highlighting Dina Soliman's 8 years of experience as a Lead Data Scientist in fintech, with expertise in machine learning and financial analytics.",
+    "title": "Dina Soliman - Lead Data Scientist",
     "doc_id": "d_p_186_00",
     "persona_id": "p_186",
     "hyperparams": {
-      "cv_format": "paragraph",
-      "geographic_convention": "Israel",
-      "company_type": "academic",
+      "cv_format": "minimal",
+      "geographic_convention": "Europe",
+      "company_type": "FAANG",
       "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "Overview of a microservices-based platform for enterprise SaaS applications.",
-    "title": "Enterprise Microservices Architecture Modernization",
+    "topic_summary": "A GitHub README for a fraud detection model using Python and TensorFlow, tailored for fintech applications.",
+    "title": "Fraud Detection in Financial Transactions",
     "doc_id": "d_p_186_01",
     "persona_id": "p_186",
     "hyperparams": {
       "project_scale": "hobby",
-      "project_team_size": "solo",
+      "project_team_size": "small (2-4)",
       "jargon_density": "heavy"
     }
   },
   {
-    "doc_type": "project_readme",
-    "topic_summary": "Technical documentation for a cloud-native API gateway enabling secure service-to-service communication.",
-    "title": "Cloud-Native API Gateway for Scalable SaaS Solutions",
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation letter from her manager at FinTech Innovators Inc., praising her leadership and technical contributions.",
+    "title": "Recommendation from FinTech Innovators Inc. Manager",
     "doc_id": "d_p_186_02",
     "persona_id": "p_186",
     "hyperparams": {
-      "project_scale": "academic",
-      "project_team_size": "medium (5-15)",
-      "jargon_density": "plain"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "Implementation details for a real-time analytics dashboard using Kafka and Spark Streaming.",
-    "title": "Real-Time Analytics Dashboard with Kafka & Spark",
-    "doc_id": "d_p_186_03",
-    "persona_id": "p_186",
-    "hyperparams": {
-      "project_scale": "academic",
-      "project_team_size": "large (15+)",
-      "jargon_density": "plain"
-    }
-  },
-  {
-    "doc_type": "recommendation",
-    "topic_summary": "Endorsement from Riya's manager highlighting her leadership in platform engineering initiatives.",
-    "title": "Recommendation from TechNova Inc. CTO",
-    "doc_id": "d_p_186_04",
-    "persona_id": "p_186",
-    "hyperparams": {
       "recommender_role": "direct-manager",
-      "recommender_closeness": "worked-daily",
-      "company_type": "academic",
-      "company_size": "small (<50)"
-    }
-  },
-  {
-    "doc_type": "linkedin",
-    "topic_summary": "Professional summary showcasing Riya's expertise in enterprise platform engineering and technical leadership.",
-    "title": "Riya Desai - Senior Platform Engineer",
-    "doc_id": "d_p_186_05",
-    "persona_id": "p_186",
-    "hyperparams": {
-      "linkedin_completeness": "standard"
+      "recommender_closeness": "brief",
+      "company_type": "enterprise",
+      "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "blog",
-    "topic_summary": "Discussion on best practices for designing resilient platform architectures in enterprise environments.",
-    "title": "Building Resilient Platform Architectures for Enterprise Scale",
-    "doc_id": "d_p_186_06",
+    "topic_summary": "A technical blog post on leveraging explainable AI for regulatory compliance in fintech.",
+    "title": "Explainable AI in Fintech Compliance",
+    "doc_id": "d_p_186_03",
     "persona_id": "p_186",
     "hyperparams": {
-      "blog_depth": "opinion-piece",
+      "blog_depth": "tutorial",
       "jargon_density": "moderate"
     }
   }

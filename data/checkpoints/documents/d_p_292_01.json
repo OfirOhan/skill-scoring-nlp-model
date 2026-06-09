@@ -3,19 +3,20 @@
   "type": "project_readme",
   "persona_id": "p_292",
   "hyperparams": {
-    "project_scale": "hobby",
+    "project_scale": "academic",
     "project_team_size": "large (15+)",
-    "jargon_density": "heavy"
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "Agile/Scrum": 3,
-    "Data visualization (Matplotlib/Plotly)": 3,
-    "Product management": 3,
-    "Roadmap planning": 3,
-    "SQL analytics": 3,
-    "Stakeholder management": 2,
-    "Tableau/Power BI": 3,
-    "User journey mapping": 3
+    "C/C++ (embedded)": 4,
+    "Firmware development": 4,
+    "GitLab CI": 2,
+    "Hardware-software integration": 4,
+    "IoT protocols (MQTT/CoAP)": 5,
+    "Network automation": 1,
+    "Python": 3,
+    "REST API design": 3,
+    "RTOS": 5
   },
-  "text": "# Agile Product Optimization for Consulting Clients  \nStreamline enterprise product development with agile frameworks, data-driven insights, and scalable infrastructure. This project delivers 30% faster sprint cycles and 25% reduced time-to-market for consulting clients through integrated tooling and real-time analytics.  \n\n## Getting Started / Installation  \n1. Clone the repository using `git clone https://github.com/your-username/agile-product-optimization`  \n2. Set up a virtual environment: `python -m venv venv && source venv/bin/activate`  \n3. Install dependencies: `pip install -r requirements.txt`  \n4. Configure environment variables for API keys and database connections  \n\n## Tech Stack  \n- **Core**: Python 3.9, Docker 20.10, Kubernetes 1.24  \n- **Data**: PostgreSQL 14, Apache Kafka 3.0, Redis 7.0  \n- **Visuals**: Grafana 10.0, Plotly 5.12, Tableau 2023.3  \n- **Tools**: Jira 9.13, Slack API, AWS Lambda  \n- **CI/CD**: GitHub Actions, Terraform 1.5  \n\n## Usage / Examples  \n```bash  \n# Analyze sprint performance  \npython analyze_sprint.py --project_id 42 --metrics cycle_time,velocity  \n\n# Deploy microservice locally  \ndocker-compose -f dev.yml up --build  \n\n# Sync Jira data to PostgreSQL  \npython jira_sync.py --team_lead \"Eliott Marchand\"  \n```  \nMonitor real-time dashboards via Grafana (localhost:3000) and track sprint health scores using the `sprint_health` endpoint.  \n\n## Badges  \n[![Active](https://via.placeholder.com/60x20?text=Active)](https://github.com/your-username/agile-product-optimization)  \n[![Tech Stack](https://via.placeholder.com/120x20?text=Python%20%7C%20Kafka%20%7C%20Grafana)](https://github.com/your-username/agile-product-optimization)  \n[![Metrics](https://via.placeholder.com/120x20?text=30%25%20Faster%20Sprints)](https://github.com/your-username/agile-product-optimization)  \n\n## Architecture / Design  \nMicroservices orchestrate user journey mapping via Kafka event streams, with PostgreSQL as the central analytics hub. The architecture prioritizes:  \n- **Scalability**: Kubernetes auto-scaling for peak load (10k+ concurrent users)  \n- **Real-time analytics**: Lambda-triggered data pipelines for 99.99% SLA  \n- **Security**: OAuth2.0 for stakeholder access, encrypted data at rest  \n\n## Contributing  \nEnhance product roadmaps by:  \n- Expanding data sources (e.g., Power BI integration)  \n- Optimizing sprint velocity calculations  \n- Improving user journey mapping accuracy  \nAlign PRs with quarterly OKRs and stakeholder feedback loops.  \n\n## License  \nMIT License © Eliott Marchand"
+  "text": "# Smart Billboard IoT System  \nA dynamic ad targeting solution leveraging IoT sensors, real-time analytics, and embedded systems to optimize billboard content based on environmental and audience data.  \n\n## Acknowledgments  \nThis project is the result of collaborative effort by 15+ engineers, designers, and data scientists. Special thanks to Dr. Amina Kofi for guiding sensor integration architecture, and the team at Luminal Ads for providing real-world use cases. Credit to all contributors for open-sourcing critical firmware modules and MQTT broker configurations.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/your-org/smart-billboard.git`  \n2. Docker setup: `docker-compose up --build` (pre-configures MQTT, Redis, and Python analytics stack)  \n3. Flash firmware: Use PlatformIO to compile and deploy to ESP32-based edge nodes (see `firmware/README.md`)  \n4. API keys: Store in `.env` file with AWS IoT Core and Google Analytics credentials  \n\n## Usage / Examples  \n- **Sensor Data Pipeline**: ESP32 collects UV, temperature, and motion data via MQTT to AWS IoT Core (latency < 200ms)  \n- **Ad Rotation Logic**: Python script uses Redis to aggregate data and trigger ad swaps via REST API (50% faster than prior monolithic approach)  \n- **Debugging**: Use `make monitor` to access serial logs from STM32 controllers managing LED matrix displays  \n\n## Tech Stack  \n- **Embedded**: ESP32 (Wi-Fi/Bluetooth), STM32 (LED control), Raspberry Pi 4 (edge computing)  \n- **RTOS**: FreeRTOS for sensor scheduling (preemptive multitasking with 50μs ticks)  \n- **Communication**: MQTT over TLS for sensor networks, CoAP for low-power device sync  \n- **Analytics**: Python with Pandas for real-time data aggregation (10k+ events/sec)  \n- **Deployment**: AWS IoT Greengrass for edge compute, Docker for containerized services  \n\n## License  \nMIT License (see `LICENSE`)  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/license/your-org/smart-billboard)](LICENSE)  \n[![Tech Stack](https://img.shields.io/badge/tech-stack-iot%20%7C%20mqtt%20%7C%20freertos-yellow)](https://github.com/your-org/smart-billboard)  \n\n## Contributing  \nSubmit PRs with firmware updates, sensor protocol improvements, or analytics optimizations. For hardware changes, coordinate with the embedded team via Slack channel #iot-hw. All contributions must include unit tests and CI/CD pipeline validation."
 }

@@ -1,71 +1,48 @@
 {
   "persona_id": "p_169",
   "hyperparams": {
-    "archetype": "data_engineer",
-    "years_experience": 3,
+    "archetype": "data_scientist",
+    "years_experience": 4,
     "seniority": "mid",
-    "industry": "healthtech",
-    "writing_style": "confident",
+    "industry": "cybersecurity",
+    "writing_style": "neutral",
     "language_fluency": "native",
-    "self_promotion_level": "balanced",
+    "self_promotion_level": "boastful",
     "quantification_tendency": "qualitative"
   },
-  "name": "Lorenzo Ricci",
-  "current_role": "Data Engineer",
-  "company": "HealthInsight Analytics",
+  "name": "Marcus Johnson",
+  "current_role": "Cybersecurity Data Scientist",
+  "company": "CyberShield Analytics",
   "education": {
-    "degree": "Master's in Data Science",
-    "university": "Massachusetts Institute of Technology",
-    "year": 2021
+    "degree": "Master of Science in Data Science",
+    "university": "University of California, Berkeley",
+    "year": 2020
   },
   "career_trajectory": [
     {
-      "role": "Data Analyst Intern",
-      "company": "HealthTrack Innovations",
-      "duration": "6 months",
-      "responsibilities": [
-        "Assisted in data cleaning",
-        "Supported reporting tools"
-      ]
+      "role": "Data Analyst",
+      "company": "SecureNet Systems",
+      "duration": "2 years"
     },
     {
-      "role": "Data Engineer",
-      "company": "VitalCare Technologies",
-      "duration": "2 years",
-      "responsibilities": [
-        "Built ETL pipelines",
-        "Managed cloud infrastructure"
-      ]
-    },
-    {
-      "role": "Mid-level Data Engineer",
-      "company": "HealthInsight Analytics",
-      "duration": "1 year",
-      "responsibilities": [
-        "Designed data warehouses",
-        "Optimized database queries"
-      ]
+      "role": "Data Scientist",
+      "company": "CyberShield Analytics",
+      "duration": "2 years"
     }
   ],
   "skills": {
-    "Apache Spark": 3,
-    "Apache Kafka": 3,
-    "Apache Airflow": 3,
-    "dbt": 3,
-    "ETL pipeline design": 3,
-    "Data warehousing": 4,
-    "Snowflake": 3,
-    "Data modeling": 3,
+    "Pandas": 4,
+    "NumPy": 5,
+    "Statistical modeling": 4,
+    "Feature engineering": 5,
+    "scikit-learn": 5,
+    "Time series analysis": 4,
     "Python": 3,
-    "AWS": 3,
-    "Terraform": 3,
-    "Docker": 3,
-    "Kubernetes": 3,
-    "Cloud cost optimization": 3
+    "REST API design": 2,
+    "Apache Spark": 3,
+    "Data modeling": 1
   },
   "document_ids": [
-    "d_p_169_00",
-    "d_p_169_01",
-    "d_p_169_02"
+    "d_p_169_00"
   ]
 }

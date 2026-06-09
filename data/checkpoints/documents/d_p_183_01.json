@@ -3,21 +3,24 @@
   "type": "project_readme",
   "persona_id": "p_183",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "heavy"
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "API testing": 4,
-    "CI/CD pipelines": 4,
-    "Integration testing": 4,
-    "Java": 3,
-    "Performance testing (JMeter/k6)": 5,
-    "Python": 5,
-    "REST API design": 3,
-    "Selenium/Playwright": 5,
-    "Test automation": 4,
-    "Unit testing": 5
+    "AWS": 1,
+    "Docker": 3,
+    "GCP": 1,
+    "GitLab CI": 3,
+    "Kubernetes": 2,
+    "Microservices architecture": 3,
+    "MongoDB": 3,
+    "Node.js": 3,
+    "PostgreSQL": 4,
+    "Python": 1,
+    "REST API design": 4,
+    "React": 4,
+    "Web performance optimization": 2
   },
-  "text": "# CloudVulnScanner: Automated Vulnerability Scanning for Multi-Cloud Environments  \n\nA high-throughput, cloud-native tool for detecting misconfigurations and security flaws across AWS, GCP, and Azure. Leverages dynamic inventory mapping and real-time alerting to reduce remediation latency by 40% in production environments.  \n\n## API Reference  \n**Endpoints**  \n- `POST /api/v1/scan`  \n  - `target`: Cloud provider (aws/gcp/azure)  \n  - `scan_type`: full/quick (default: full)  \n  - `auth_token`: Bearer token for cloud provider API access  \n- `GET /api/v1/results/{scan_id}`  \n  - Returns JSON with severity counts, remediation steps, and CVSS scores  \n\n**Authentication**  \nOAuth2.0 with JWT tokens; API keys stored in environment variables via `cloud_cred` config file.  \n\n## Usage / Examples  \n```bash  \ncurl -X POST https://cloudvulnscanner.com/api/v1/scan \\\n  -H \"Authorization: Bearer <token>\" \\\n  -d '{\"target\": \"aws\", \"scan_type\": \"full\"}'  \n\ncurl -X GET https://cloudvulnscanner.com/api/v1/results/12345\n```  \n**Output**  \n```json  \n{  \n  \"severity\": {\"critical\": 3, \"high\": 12, \"medium\": 45},  \n  \"remediations\": [\"Enable IAM role boundary policies\", ...],  \n  \"cvss_scores\": [9.8, 7.2, ...]  \n}  \n```  \n\n## Getting Started / Installation  \n```bash  \npython -m venv .env  \nsource .env/bin/activate  \npip install -r requirements.txt  \nexport CLOUD_CRED=/path/to/credentials.yaml  \npython main.py --target aws --scan-type quick  \n```  \n\n## Tech Stack  \n- **Language**: Python (core logic) + Java (API backend)  \n- **Libraries**: PyYAML, requests, boto3, google-cloud-sdk, azure-mgmt  \n- **Testing**: PyTest, Selenium (UI), Playwright (headless)  \n- **CI/CD**: GitHub Actions with Dockerized builds  \n\n## Architecture / Design  \nMicroservices-based with a Python worker pool for concurrent scans. Java-based REST API handles orchestration and result aggregation. Uses Redis for distributed locking and Kafka for async alert notifications. Performance bottlenecks addressed via JMeter load testing (max 5k scans/sec).  \n\n## License  \nMIT License (see LICENSE file)  \n\n## Badges  \n[![CI/CD Status](https://example.com/ci-badge)](https://example.com/ci)  \n[![Test Coverage](https://example.com/coverage)](https://example.com/coverage)  \n[![Security Compliance](https://example.com/security)](https://example.com/security)"
+  "text": "# EcomSphere Inventory Management System  \nA scalable, real-time inventory solution for e-commerce operations, built to handle high-traffic product catalogs and streamline supply chain workflows. Designed for multi-team collaboration, this system supports granular stock tracking, automated reordering, and seamless integration with third-party logistics platforms. With over 15 developers contributing to its architecture, it’s a testament to robust microservices design and cross-functional tooling.  \n\n## Deployment  \nLive demo: [EcomSphere Dashboard](https://ecomsphere.io)  \nCurrent deployment status: ✅ Production-ready with auto-scaling capabilities  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/last-commit/zoe-papadakis/ecomsphere)](https://github.com/zoe-papadakis/ecomsphere)  \n[![npm](https://img.shields.io/npm/v/ecomsphere-api)](https://www.npmjs.com/package/ecomsphere-api)  \n[![Coverage](https://img.shields.io/coveralls/zoe-papadakis/ecomsphere)](https://coveralls.io/github/zoe-papadakis/ecomsphere)  \n\n## Tech Stack  \n- **Frontend**: React (with TypeScript) for dynamic UI components and state management  \n- **Backend**: Node.js (Express) for RESTful API endpoints and middleware logic  \n- **Database**: PostgreSQL (with connection pooling) for relational data storage and complex queries  \n- **Data Store**: MongoDB (with Atlas) for unstructured inventory logs and analytics  \n- **CI/CD**: GitLab CI for automated testing and deployment pipelines  \n- **Containerization**: Docker for consistent development and production environments  \n- **Orchestration**: Kubernetes (K8s) for managing microservices at scale  \n- **Optimization**: Lazy loading, Webpack bundling, and HTTP/2 for performance  \n\n## Architecture / Design  \nThe system employs a **microservices architecture** divided into three core tiers:  \n1. **Frontend**: React-based dashboard with real-time updates via WebSocket  \n2. **Backend**: Node.js API layer handling RESTful CRUD operations and business logic  \n3. **Database**: PostgreSQL for transactional data and MongoDB for audit trails  \n\nKey design choices include **REST API endpoints** optimized for low-latency responses (avg. 120ms) and **Docker containers** ensuring environment parity. The PostgreSQL database supports 10K+ concurrent connections, with indexing and query optimization reducing scan times by 40%.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/zoe-papadakis/ecomsphere.git`  \n2. Navigate to the project root and install dependencies:  \n   ```bash  \n   npm install  \n   ```  \n3. Set environment variables in `.env.local` for local development  \n4. Run migrations: `npx sequelize db:migrate`  \n5. Start the development server: `npm run dev`  \n\n## Usage / Examples  \n- **Add Product**: POST `/api/products` with JSON payload including SKU, price, and stock thresholds  \n- **Inventory Sync**: Use WebSocket endpoint `/ws/inventory` for real-time stock updates  \n- **Analytics Dashboard**: Access `/dashboard` for visualized sales trends and reorder alerts  \n\n## License  \nMIT License  \nSee [LICENSE](https://github.com/zoe-papadakis/ecomsphere/blob/main/LICENSE) for details"
 }

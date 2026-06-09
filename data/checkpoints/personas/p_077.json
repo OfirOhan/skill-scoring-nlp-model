@@ -1,52 +1,58 @@
 {
   "persona_id": "p_077",
   "hyperparams": {
-    "archetype": "qa_test_engineer",
-    "years_experience": 15,
-    "seniority": "staff",
-    "industry": "e-commerce",
+    "archetype": "data_engineer",
+    "years_experience": 0,
+    "seniority": "junior",
+    "industry": "gaming",
     "writing_style": "confident",
     "language_fluency": "ESL",
     "self_promotion_level": "humble",
-    "quantification_tendency": "mixed"
+    "quantification_tendency": "qualitative"
   },
-  "name": "Xander de Vries",
-  "current_role": "Staff QA Engineer",
-  "company": "ShopFlow Solutions",
+  "name": "Simon Lefebvre",
+  "current_role": "Data Engineer",
+  "company": "LudoQuest Games",
   "education": {
-    "degree": "Bachelor of Science in Software Engineering",
-    "university": "Delft University of Technology",
-    "year": 2010
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "University of Montreal",
+    "year": 2023
   },
   "career_trajectory": [
     {
-      "year": 2009,
-      "role": "QA Engineer",
-      "company": "E-Commerce Innovators",
-      "responsibilities": "Manual testing for checkout flows and inventory systems"
+      "title": "Data Intern",
+      "company": "LudoQuest Games",
+      "start_year": 2022,
+      "end_year": 2023
     },
     {
-      "year": 2012,
-      "role": "QA Lead",
-      "company": "RetailTech Dynamics",
-      "responsibilities": "Built test frameworks for mobile apps and API integrations"
+      "title": "Data Engineering Intern",
+      "company": "LudoQuest Games",
+      "start_year": 2023,
+      "end_year": 2024
     },
     {
-      "year": 2015,
-      "role": "Test Architect",
-      "company": "GlobalCart Systems",
-      "responsibilities": "Designed CI/CD pipelines and performance testing strategies"
+      "title": "Junior Data Engineer",
+      "company": "LudoQuest Games",
+      "start_year": 2024,
+      "end_year": 2024
     }
   ],
   "skills": {
-    "Test automation": 5,
-    "Selenium/Playwright": 4,
-    "API testing": 5,
-    "Performance testing (JMeter/k6)": 5,
-    "Python": 5,
-    "Java": 4,
-    "Go": 4,
-    "REST API design": 4
+    "ETL pipeline design": 4,
+    "Data warehousing": 4,
+    "Snowflake": 5,
+    "Data modeling": 4,
+    "Database optimization": 4,
+    "Apache Spark": 4,
+    "Apache Airflow": 3,
+    "Databricks": 3,
+    "Python": 1,
+    "Docker": 3,
+    "Terraform": 3,
+    "Infrastructure as Code": 3,
+    "AWS": 3,
+    "Kubernetes": 3
   },
   "document_ids": [
     "d_p_077_00",

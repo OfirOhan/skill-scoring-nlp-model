@@ -1,46 +1,58 @@
 {
   "persona_id": "p_222",
   "hyperparams": {
-    "archetype": "game_developer",
-    "years_experience": 5,
-    "seniority": "mid",
-    "industry": "consulting",
-    "writing_style": "confident",
+    "archetype": "embedded_engineer",
+    "years_experience": 6,
+    "seniority": "senior",
+    "industry": "fintech",
+    "writing_style": "verbose",
     "language_fluency": "native",
     "self_promotion_level": "balanced",
-    "quantification_tendency": "mixed"
+    "quantification_tendency": "qualitative"
   },
-  "name": "Rahul Iyer",
-  "current_role": "Senior Game Development Consultant",
-  "company": "PixelPioneers Tech",
+  "name": "Yara Haddad 25",
+  "current_role": "Senior Embedded Systems Engineer",
+  "company": "NexaPay Technologies",
   "education": {
-    "degree": "Bachelor of Science in Computer Science",
-    "university": "Indian Institute of Technology, Bombay",
-    "year": 2015
+    "degree": "Bachelor of Science in Electrical Engineering",
+    "university": "Massachusetts Institute of Technology",
+    "year": 2018
   },
   "career_trajectory": [
-    "Software Developer Intern at Zynga Games (2015-2016)",
-    "Junior Game Developer at Gameloft (2016-2018)",
-    "Senior Game Developer at Studio Infinity (2018-2020)",
-    "Senior Game Development Consultant at PixelPioneers Tech (2020-present)"
+    {
+      "role": "Embedded Systems Intern",
+      "company": "FinTech Solutions",
+      "duration": "2017-2018",
+      "responsibilities": "Assisted in developing low-power IoT devices for transaction monitoring."
+    },
+    {
+      "role": "Junior Embedded Engineer",
+      "company": "SecurePay Systems",
+      "duration": "2018-2020",
+      "responsibilities": "Designed firmware for secure payment gateways using RTOS and C/C++."
+    },
+    {
+      "role": "Senior Embedded Engineer",
+      "company": "NexaPay Technologies",
+      "duration": "2020-2023",
+      "responsibilities": "Led hardware-software integration for edge computing nodes in real-time fraud detection."
+    }
   ],
   "skills": {
-    "Unity": 3,
-    "Unreal Engine": 3,
-    "Game Physics": 3,
-    "3D Graphics (OpenGL/Vulkan)": 3,
-    "Game Networking": 3,
-    "C#/.NET": 3,
-    "Python": 3,
-    "REST API Design": 3,
-    "Microservices Architecture": 3,
-    "JavaScript": 3,
-    "TypeScript": 2,
-    "React": 2
+    "C/C++ (embedded)": 4,
+    "RTOS": 4,
+    "Firmware development": 5,
+    "IoT protocols (MQTT/CoAP)": 4,
+    "Hardware-software integration": 4,
+    "Embedded Linux": 3,
+    "Python": 1,
+    "REST API design": 2,
+    "Network automation": 2,
+    "Shell scripting (Bash)": 2,
+    "CI/CD pipelines": 3
   },
   "document_ids": [
     "d_p_222_00",
-    "d_p_222_01",
-    "d_p_222_02"
+    "d_p_222_01"
   ]
 }

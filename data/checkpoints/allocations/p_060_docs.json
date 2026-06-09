@@ -1,37 +1,50 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Rohan Kulkarni's academic background and technical skills as an embedded engineer in e-commerce",
-    "title": "Rohan Kulkarni - Embedded Engineer",
+    "topic_summary": "Professional resume highlighting Priscilla's 10 years of frontend engineering experience in SaaS.",
+    "title": "Priscilla Ferreira - Staff Frontend Engineer",
     "doc_id": "d_p_060_00",
     "persona_id": "p_060",
     "hyperparams": {
-      "cv_format": "paragraph",
-      "geographic_convention": "Israel",
+      "cv_format": "hybrid",
+      "geographic_convention": "US",
       "company_type": "FAANG",
-      "company_size": "small (<50)"
+      "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A GitHub project README for an IoT-based inventory management system for e-commerce platforms",
-    "title": "SmartInventory: IoT-Based Inventory Management System",
+    "topic_summary": "README for a React-based SaaS dashboard with real-time analytics and charting capabilities.",
+    "title": "React SaaS Dashboard for Real-Time Analytics",
     "doc_id": "d_p_060_01",
     "persona_id": "p_060",
     "hyperparams": {
-      "project_scale": "production",
-      "project_team_size": "small (2-4)",
-      "jargon_density": "moderate"
+      "project_scale": "team-internal",
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "Recommendation from Priscilla's manager praising her leadership and technical expertise in SaaS frontend development.",
+    "title": "Recommendation for Priscilla Ferreira - Staff Frontend Engineer",
+    "doc_id": "d_p_060_02",
+    "persona_id": "p_060",
+    "hyperparams": {
+      "recommender_role": "peer",
+      "recommender_closeness": "worked-daily",
+      "company_type": "enterprise",
+      "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "linkedin",
-    "topic_summary": "A LinkedIn summary showcasing Rohan's passion for embedded systems and e-commerce innovation",
-    "title": "About Rohan Kulkarni",
-    "doc_id": "d_p_060_02",
+    "topic_summary": "LinkedIn summary showcasing Priscilla's career in SaaS frontend engineering and her contributions to scalable web applications.",
+    "title": "Priscilla Ferreira | Staff Frontend Engineer",
+    "doc_id": "d_p_060_03",
     "persona_id": "p_060",
     "hyperparams": {
-      "linkedin_completeness": "standard"
+      "linkedin_completeness": "detailed"
     }
   }
 ]

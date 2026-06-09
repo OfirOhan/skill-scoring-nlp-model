@@ -1,62 +1,40 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional CV highlighting Maria Santos' experience as a Senior Frontend Engineering Lead at a startup.",
-    "title": "Maria Santos - Senior Frontend Engineering Lead",
+    "topic_summary": "Entry-level Security DevOps Engineer with foundational knowledge in cybersecurity and DevOps practices",
+    "title": "Esther Obi - Security DevOps Engineer",
     "doc_id": "d_p_101_00",
     "persona_id": "p_101",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
-      "geographic_convention": "US",
-      "company_type": "enterprise",
-      "company_size": "mid (50-500)"
+      "cv_format": "hybrid",
+      "geographic_convention": "Israel",
+      "company_type": "agency",
+      "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A real-time collaboration tool for remote teams built with React and Firebase.",
-    "title": "Real-Time Collaboration Tool",
+    "topic_summary": "Automates security compliance checks in CI/CD pipelines using Terraform and Vault",
+    "title": "Securing CI/CD Pipelines with Terraform and Vault",
     "doc_id": "d_p_101_01",
     "persona_id": "p_101",
     "hyperparams": {
-      "project_scale": "production",
-      "project_team_size": "large (15+)",
-      "jargon_density": "heavy"
+      "project_scale": "team-internal",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "plain"
     }
   },
   {
-    "doc_type": "project_readme",
-    "topic_summary": "Startup dashboard with analytics integration using D3.js and Node.js.",
-    "title": "Startup Analytics Dashboard",
+    "doc_type": "recommendation",
+    "topic_summary": "Recommendation from a professor highlighting Esther's academic excellence and potential in cybersecurity and DevOps",
+    "title": "Recommendation for Esther Obi",
     "doc_id": "d_p_101_02",
     "persona_id": "p_101",
     "hyperparams": {
-      "project_scale": "team-internal",
-      "project_team_size": "small (2-4)",
-      "jargon_density": "heavy"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "Single-page e-commerce application with secure payment integration.",
-    "title": "E-Commerce SPAs",
-    "doc_id": "d_p_101_03",
-    "persona_id": "p_101",
-    "hyperparams": {
-      "project_scale": "team-internal",
-      "project_team_size": "small (2-4)",
-      "jargon_density": "heavy"
-    }
-  },
-  {
-    "doc_type": "blog",
-    "topic_summary": "Exploring advanced state management techniques in React for large-scale applications.",
-    "title": "Advanced React State Management for Large Applications",
-    "doc_id": "d_p_101_04",
-    "persona_id": "p_101",
-    "hyperparams": {
-      "blog_depth": "opinion-piece",
-      "jargon_density": "moderate"
+      "recommender_role": "professor",
+      "recommender_closeness": "occasional",
+      "company_type": "agency",
+      "company_size": "large (500+)"
     }
   }
 ]

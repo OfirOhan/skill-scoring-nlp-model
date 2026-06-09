@@ -3,22 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_255",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "solo",
-    "jargon_density": "plain"
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
+    "API testing": 1,
+    "BDD/TDD": 1,
+    "GitLab CI": 1,
+    "Java": 1,
+    "Performance testing": 1,
     "Python": 1,
-    "Go": 1,
-    "Node.js": 1,
-    "React": 1,
-    "PostgreSQL": 1,
     "REST API design": 1,
-    "AWS": 1,
-    "Docker": 1,
-    "CI/CD pipelines": 1,
-    "Monitoring & alerting": 1,
-    "Database optimization": 1
+    "Selenium/Playwright": 1,
+    "Test automation": 1,
+    "Test strategy design": 1,
+    "Performance testing (JMeter/k6)": 1
   },
-  "text": "# HealthInsight Analytics Dashboard  \nA lightweight tool to visualize and explore health metrics through intuitive charts and trend analysis. Built for internal team use, this dashboard simplifies complex data into actionable insights without relying on external dependencies.  \n\n---\n\n## Badges  \n[![Tests Pass](https://img.shields.io/badge/tests-passing-green)](https://example.com/tests)  \n[![Last Updated](https://img.shields.io/badge/last--updated-2023.10.15-blue)](https://github.com/healthinsight-dashboard)  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/healthinsight-dashboard.git  \n   ```  \n2. Navigate to the project directory and install dependencies:  \n   ```bash  \n   npm install  \n   ```  \n3. Run the application:  \n   ```bash  \n   npm start  \n   ```  \nThe dashboard will be available at [http://localhost:8080](http://localhost:8080).  \n\n---\n\n## Tech Stack  \n- **Frontend**: JavaScript (ES6+), HTML5, CSS3  \n- **Visualization**: Chart.js for interactive graphs  \n- **Data Handling**: Local JSON/CSV files for simplicity  \n- **Build Tool**: Webpack for bundling  \n\n---\n\n## Architecture / Design  \nThe dashboard follows a modular design, separating data fetching, chart rendering, and user interaction into distinct components. Key decisions include:  \n- Using Chart.js for dynamic visualizations to avoid external libraries  \n- Storing sample datasets in static files for quick prototyping  \n- Keeping the UI stateless to ensure responsiveness across devices  \n\n---\n\n## Usage / Examples  \n1. Load a dataset (e.g., `data/heart-rate.csv`) via the file picker.  \n2. Select metrics like \"Average Heart Rate\" or \"Sleep Duration\" from the sidebar.  \n3. Toggle between daily, weekly, or monthly views to analyze trends.  \n4. Export charts as PNGs via the \"Download\" button for reports.  \n\n---\n\n## Testing  \nUnit tests for components and data parsing are included. To run:  \n```bash  \nnpm test  \n```  \nTests verify chart rendering, data validation, and UI responsiveness.  \n\n---\n\n## License  \nMIT License — see [LICENSE](https://github.com/healthinsight-dashboard/blob/main/LICENSE) for details."
+  "text": "# Bug Tracking and Prioritization System  \nA robust, scalable framework designed to streamline critical bug lifecycle management across distributed game development pipelines. This system enables teams to categorize, escalate, and resolve defects with precision, ensuring alignment between QA, dev, and production schedules. Built with a focus on real-time collaboration and severity-based triaging, it integrates seamlessly into agile workflows while maintaining auditability for compliance and post-mortem analysis.  \n\n## Getting Started / Installation  \nTo deploy the system, ensure your environment includes .NET 6.0 and SQL Server 2019. Clone the repository using `git clone https://github.com/your-username/bug-tracking-system.git`, then navigate to the project root and execute `dotnet build` to compile the solution. The database schema is pre-populated via migration scripts; run `dotnet ef database update` to initialize the schema. For development, launch the WPF frontend via `dotnet run --project BugTracker.UI`, which connects to the local SQL instance by default.  \n\n## Tech Stack  \n- **Frontend**: WPF (C#) with custom data binding for real-time updates  \n- **Backend**: .NET 6.0 Core with Entity Framework Core for ORM  \n- **Database**: SQL Server 2019 with partitioned tables for high-throughput logging  \n- **Data Visualization**: D3.js integration for interactive severity heatmaps  \n- **Communication**: WebSocket-based event streaming for live status synchronization  \n\n## Usage / Examples  \nThe system operates via three primary workflows:  \n1. **Severity Categorization**: Bugs are tagged with a multidimensional severity score (impact × urgency) calculated via a proprietary algorithm. Example: A memory leak in a multiplayer lobby (impact: 9/10, urgency: 8/10) triggers an automatic escalation to lead dev and QA leads.  \n2. **Impact Analysis**: The UI provides drill-down capabilities to analyze bug distribution across platforms, build versions, and feature modules. For instance, a UI glitch in the inventory system (tracked as `BUG-427`) can be filtered to show all related issues in the same module.  \n3. **Collaboration**: The ticketing system supports inline comments, file attachments, and live status updates. Developers can resolve bugs via a state machine (Open → In Progress → Verified → Closed), with audit logs capturing all transitions.  \n\n## Badges  \n[![Build Status](https://github.com/your-username/bug-tracking-system/actions/workflows/build.yml/badge.svg)](https://github.com/your-username/bug-tracking-system/actions/workflows/build.yml)  \n[![Code Coverage](https://img.shields.io/coveralls/your-username/bug-tracking-system)](https://coveralls.io/github/your-username/bug-tracking-system)  \n\n## Architecture / Design  \nThe system employs a layered architecture with distinct presentation, business logic, and data access tiers. The WPF frontend communicates with a RESTful API layer (hosted as a .NET Core Web API) that interacts with the SQL Server backend. Key design choices include:  \n- **Event-Driven Architecture**: WebSocket connections enable real-time notifications for bug status changes.  \n- **Partitioned Tables**: Database tables are horizontally partitioned by game module to optimize query performance.  \n- **Caching Layer**: Redis is used to cache frequently accessed bug metadata, reducing database contention.  \n\n## Contributing  \nThis project is a collaborative hobby initiative; contributions are welcome via GitHub issues or pull requests. Focus on enhancing the severity calculation algorithm or expanding the visualization toolkit. All changes must adhere to the existing code conventions and pass automated tests.  \n\n## License  \nMIT License. See the [LICENSE](LICENSE) file for details."
 }

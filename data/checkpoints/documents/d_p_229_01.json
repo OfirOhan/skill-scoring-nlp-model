@@ -3,20 +3,24 @@
   "type": "project_readme",
   "persona_id": "p_229",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "moderate"
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 2,
-    "Apache Airflow": 2,
-    "Apache Kafka": 3,
-    "Apache Spark": 3,
-    "Docker": 2,
-    "ETL pipeline design": 3,
-    "Python": 3,
-    "Terraform": 2,
-    "dbt": 3
+    "AWS": 3,
+    "CI/CD pipelines": 1,
+    "Docker": 3,
+    "GitHub Actions": 3,
+    "Go": 4,
+    "Linux administration": 2,
+    "Microservices architecture": 3,
+    "PostgreSQL": 4,
+    "Prometheus/Grafana": 2,
+    "Python": 4,
+    "REST API design": 4,
+    "Shell scripting (Bash)": 2,
+    "Terraform": 3
   },
-  "text": "# Real-time Data Pipeline for Client Analytics  \n\nA lightweight, scalable framework for ingesting, processing, and analyzing client data in real-time using Kafka and Spark. Designed for small teams, this project handles streaming user behavior and transactional data, providing actionable insights through structured output.  \n\n## Getting Started / Installation  \n1. Clone the repository and navigate to the project root.  \n2. Set up Kafka and Spark environments using Docker (instructions in `setup/docker/`).  \n3. Configure Kafka topics and Spark streaming jobs via `config/` files.  \n4. Run the pipeline with `./run.sh` to stream data from source to sink.  \n\n## Tech Stack  \n- **Message Queue**: Apache Kafka (for high-throughput data ingestion)  \n- **Processing Engine**: Apache Spark (structured streaming for real-time analytics)  \n- **Transformation**: dbt (for SQL-based data modeling)  \n- **Cloud**: AWS (S3 for intermediate storage, Lambda for event triggers)  \n- **Orchestration**: Apache Airflow (simplified DAGs for batch reconciliation)  \n- **Language**: Python (for Spark jobs and custom utilities)  \n\n## Usage / Examples  \n```bash  \n# Stream user activity data from Kafka to Spark  \npython ingest_stream.py --topic user_events  \n\n# Generate aggregated metrics using dbt  \ndbt run --models analytics.metrics  \n\n# Export results to a PostgreSQL warehouse  \npython export_to_db.py --schema staging  \n```  \nThis workflow processes raw events, transforms them into structured metrics, and exports them for downstream analysis.  \n\n## Badges  \n[![Build Status](https://example.com/status-badge)](https://example.com)  \n[![License](https://example.com/license-badge)](https://example.com)  \n\n## Architecture / Design  \nThe pipeline follows a **Kafka → Spark → dbt** flow:  \n1. **Kafka Producers** ingest raw data from client systems.  \n2. **Spark Structured Streaming** processes data in micro-batches, filtering and enriching events.  \n3. **dbt Models** transform processed data into analytics-ready tables.  \n4. **Output Sinks** (e.g., S3, Redshift) store final results for reporting.  \n\nDecisions prioritize **low-latency processing** and **modular design**, allowing teams to scale individual components independently.  \n\n## Contributing  \nContributions are welcome! Focus on improving scalability, adding new data sources, or refining transformation logic. For guidance, reach out via the project’s issue tracker.  \n\n## License  \nMIT License — see `LICENSE` for details."
+  "text": "# NexaCloud Auth Service  \nA microservices-based SaaS platform for identity management, designed for high-throughput, low-latency authentication with OAuth 2.0 and JWT. Serves 500k+ users with 99.99% uptime, leveraging Go, Python, and AWS for scalable, secure token issuance and session management.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/your-username/nexacloud-auth.git  \ncd nexacloud-auth  \nmake deps  \ncp .env.example .env  \n# Set AWS credentials and PostgreSQL connection string  \nmake migrate  \nmake run  \n```  \nAccess the API at `http://localhost:8080` with `curl -X POST http://localhost:8080/auth/token` for token issuance.  \n\n## Tech Stack  \n- **Language**: Go (core logic), Python (async task queues)  \n- **Database**: PostgreSQL (with connection pooling for 100ms < latency)  \n- **Cloud**: AWS (EC2 for Go services, Lambda for async token validation)  \n- **Networking**: REST API (OpenAPI spec), gRPC for internal service communication  \n- **Security**: OAuth 2.0, JWT (256-bit HMAC), rate limiting (500 RPS)  \n- **Infrastructure**: Docker (containerization), Terraform (AWS resource provisioning)  \n\n## Usage / Examples  \n**Token Issuance**  \n```bash  \ncurl -X POST http://localhost:8080/auth/token \\  \n  -H \"Content-Type: application/json\" \\  \n  -d '{\"username\":\"emilia\",\"password\":\"secure123\"}'  \n```  \n**Token Refresh**  \n```bash  \ncurl -X POST http://localhost:8080/auth/refresh \\  \n  -H \"Authorization: Bearer <JWT>\"  \n```  \n**Metrics**: 99.99% uptime, 500k+ active users, 10ms avg response time.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/commit-activity-y/your-username/nexacloud-auth)](https://github.com/your-username/nexacloud-auth)  \n[![Docker](https://img.shields.io/docker/pulls/your-username/nexacloud-auth)](https://hub.docker.com/r/your-username/nexacloud-auth)  \n[![AWS](https://img.shields.io/badge/AWS-Infrastructure-blue)](https://aws.amazon.com/)  \n\n## Architecture / Design  \nMicroservices split into:  \n- **Auth Service**: Go-based, handles OAuth 2.0 flows and JWT signing  \n- **Token Validator**: Python microservice with Redis for cache (500ms < latency)  \n- **Audit Logs**: Async writes to PostgreSQL via Kafka (100% delivery guarantee)  \n- **Rate Limiting**: Implemented via AWS WAF and custom middleware (500 RPS cap)  \n\nScalability achieved through AWS Auto Scaling and Dockerized services.  \n\n## Contributing  \nPull requests welcome! Focus on improving rate limiting logic, token refresh efficiency, or expanding OAuth provider support.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

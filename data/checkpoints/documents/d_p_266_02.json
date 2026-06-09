@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_266_02",
+  "type": "project_readme",
+  "persona_id": "p_266",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Data visualization (Matplotlib/Plotly)": 4,
+    "ETL pipeline design": 1,
+    "Hypothesis testing": 3,
+    "Jupyter notebooks": 3,
+    "Python": 3,
+    "SQL analytics": 4,
+    "TensorFlow": 4,
+    "scikit-learn": 4
+  },
+  "text": "# A/B Test Optimizer: SaaS Experimentation Platform  \nA lightweight framework for automating A/B tests to validate feature impacts with statistical rigor. Designed for SaaS teams seeking to balance hypothesis-driven experimentation with operational efficiency.  \n\n## Getting Started / Installation  \nInstall via pip:  \n```bash  \npip install ab-test-optimizer  \n```  \nRequires Python 3.8+. Ensure your environment has access to a PostgreSQL database for result storage.  \n\n## Usage / Examples  \nRun a basic experiment:  \n```python  \nfrom ab_optimizer import Experiment  \nexp = Experiment(\"button_color_test\", control=\"blue\", variant=\"green\")  \nexp.run(duration_days=7)  \nexp.results()  \n```  \nOutput includes confidence intervals, p-values, and suggested decisions. Use `exp.visualize()` to generate dashboards in Plotly.  \n\n## Badges  \n[![PyPI](https://img.shields.io/pypi/v/ab-test-optimizer)](https://pypi.org/project/ab-test-optimizer)  \n[![GitHub](https://img.shields.io/github/repo-size/ian-szabo/ab-test-optimizer)](https://github.com/ian-szabo/ab-test-optimizer)  \n[![License](https://img.shields.io/github/license/ian-szabo/ab-test-optimizer)](LICENSE)  \n\n## Tech Stack  \n- **Python**: Core logic, data wrangling, and API integration  \n- **Pandas/NumPy**: Data handling and statistical analysis  \n- **SQLAlchemy**: ORM for PostgreSQL result storage  \n- **Plotly**: Interactive dashboards for real-time monitoring  \n- **scikit-learn**: Baseline models for baseline comparison  \n- **TensorFlow**: Custom ML models for advanced hypothesis validation  \n\n## Architecture / Design  \nThe system decouples data ingestion, hypothesis testing, and visualization. Each experiment is a self-contained module with configurable parameters. Statistical significance is calculated using Welch's t-test, with results persisted via SQLAlchemy. Plotly integrations allow for dynamic dashboards without external dependencies.  \n\n## Contributing  \nPull requests welcome! Focus on improving edge cases in hypothesis validation or expanding visualization capabilities. All contributions require unit tests and documentation updates.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

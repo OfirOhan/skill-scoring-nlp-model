@@ -1,21 +1,27 @@
 {
   "doc_id": "d_p_080_04",
-  "type": "linkedin",
+  "type": "blog",
   "persona_id": "p_080",
   "hyperparams": {
-    "linkedin_completeness": "standard"
+    "blog_depth": "tutorial",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "API testing": 3,
-    "Integration testing": 3,
-    "Java": 3,
-    "JavaScript": 2,
-    "Python": 3,
-    "REST API design": 3,
-    "Selenium/Playwright": 3,
-    "Test automation": 3,
-    "Test strategy design": 1,
-    "Unit testing": 3
+    "ArgoCD": 3,
+    "CI/CD pipelines": 4,
+    "GitLab CI": 3,
+    "Incident management": 4,
+    "Jenkins": 3,
+    "Kubernetes": 3,
+    "Linux administration": 3,
+    "Monitoring & alerting": 5,
+    "PostgreSQL": 1,
+    "Prometheus/Grafana": 5,
+    "Python": 1,
+    "REST API design": 1,
+    "Redis": 1,
+    "SLA/SLO management": 4,
+    "Shell scripting (Bash)": 3
   },
-  "text": "Divya Sundaram is a QA/Test Engineer at FinTech Innovators Pvt. Ltd., where she specializes in ensuring the reliability and compliance of financial systems through rigorous testing. Over the past two years, she has focused on API testing, playing a key role in validating payment gateway integrations and ensuring seamless data exchange between third-party services. Her work on integration testing has been critical in aligning backend systems with frontend interfaces, supporting the company’s expansion into new market segments. Divya’s technical versatility extends to Java and Python, which she uses to build reusable test scripts and automate repetitive validation tasks. She has also contributed to REST API design, refining endpoints to meet both functional and security requirements. Her expertise in Selenium and Playwright has enabled the development of scalable test frameworks, streamlining regression testing for high-traffic financial applications. Divya’s commitment to quality is evident in her approach to unit testing, where she prioritizes edge cases to preempt potential vulnerabilities. Beyond technical execution, she collaborates closely with cross-functional teams to align testing priorities with business goals, ensuring deliverables meet both technical and regulatory standards in the fintech space. Her ability to balance precision with adaptability makes her an integral part of the company’s quality assurance efforts."
+  "text": "Thesis  \nWhen we scaled our startup’s infrastructure from 10K to 1M users, automation wasn’t just a nice-to-have—it became the backbone of reliability. The shift from reactive firefighting to proactive system design demanded rethinking how we approach SRE. Automation and structured incident management weren’t optional; they were survival tactics.  \n\nSupporting Arguments  \nAutomation at scale requires more than scripts—it demands integration. Our CI/CD pipelines, built with GitLab CI and Jenkins, reduced deployment friction from hours to minutes. ArgoCD’s GitOps model ensured config consistency across 20+ environments, slashing environment drift risks. Kubernetes became the common denominator for containerized apps, but its power only unlocked when paired with Linux automation. Shell scripts for health checks and systemd units for service resilience turned manual tasks into routine checks. Monitoring wasn’t an afterthought; Prometheus and Grafana were architecture decisions, not tools. We baked alert thresholds into SLOs, using Grafana dashboards to track 99.95% SLAs. When incidents hit, our playbooks—rooted in postmortems and blameless culture—turned chaos into data.  \n\nCounter-Arguments  \nAutomation isn’t a silver bullet. Early on, we overinvested in tooling, neglecting team training. A misconfigured Prometheus rule caused false alerts, eroding trust. We countered by codifying monitoring logic with Terraform, ensuring changes required peer reviews. Another pitfall? Assuming automation eliminates human error. When a critical service crashed, our incident response revealed gaps in alert correlation. We addressed this by integrating PagerDuty with Grafana, routing alerts to the right teams based on severity. The lesson? Automation scales systems, but culture scales teams.  \n\nConclusion  \nSRE in high-growth startups isn’t about avoiding outages—it’s about designing systems that outpace human limitations. Automation isn’t just code; it’s a mindset. By aligning CI/CD, monitoring, and incident management with business goals, we turned reliability into a competitive edge. The real win? Teams stopped treating incidents as disasters and started seeing them as feedback loops. That’s how you build systems that grow with your users."
 }

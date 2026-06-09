@@ -3,22 +3,19 @@
   "type": "project_readme",
   "persona_id": "p_228",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "moderate"
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "JavaScript": 5,
-    "Next.js": 5,
-    "Node.js": 1,
-    "REST API design": 5,
-    "React": 5,
-    "Responsive design": 5,
-    "State management (Redux/Zustand)": 3,
+    "Python": 1,
+    "REST API design": 2,
+    "React": 4,
+    "Responsive design": 3,
+    "Security testing": 3,
     "Test automation": 2,
-    "TypeScript": 5,
-    "Web accessibility (WCAG)": 4,
-    "Web performance optimization": 5
+    "TypeScript": 4,
+    "Web performance optimization": 4
   },
-  "text": "# Real-Time Collaboration Tool for Consulting Clients  \n\nA frontend-first solution enabling live document editing, commenting, and version history for consulting teams. Built to integrate with backend WebSocket services for seamless real-time sync across multiple stakeholders.  \n\n## Deployment  \nHosted on Vercel with static site generation, optimized for global CDN delivery. WebSocket connectivity is managed via a separate backend service (not included in this repo). Ensure backend endpoint URLs are configured in `.env` before deployment.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies:  \n```bash  \nnpm install  \n```  \nSet up environment variables for WebSocket URLs and API keys. Run the dev server with `npm run dev` for hot-reloading and live-preview capabilities.  \n\n## Usage / Examples  \n- **Live editing**: Open multiple browser tabs to collaboratively edit a document.  \n- **Commenting**: Right-click any text to add inline notes visible to all participants.  \n- **Version history**: Access past revisions via the sidebar timeline.  \n- **Accessibility**: Screen readers navigate comments and edits via semantic ARIA labels.  \n\n## Tech Stack  \n- **React** with **TypeScript** for type-safe component architecture  \n- **Next.js** for server-side rendering and dynamic routing  \n- **WebSocket** for bidirectional real-time communication  \n- **Tailwind CSS** for utility-first styling with dark mode support  \n- **REST API** for document metadata synchronization  \n\n## Architecture / Design  \nThe frontend uses a **state-driven architecture** with **Zustand** for global state management, decoupling UI logic from WebSocket handlers. **Responsive design** prioritizes mobile-first layouts with CSS Grid. **Web accessibility** is baked-in via ARIA roles and keyboard navigation, meeting WCAG 2.1 AA standards. Performance is optimized through code-splitting, lazy loading, and incremental DOM updates.  \n\n## License  \nMIT License  \n\n## Badges  \n[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/MIT)  \n[![Accessibility: WCAG AA](https://img.shields.io/badge/accessibility-WCAG%20AA-green)](https://www.w3.org/WAI/standards-guidelines/aria/)"
+  "text": "# CyberShield Dashboard  \nA secure frontend framework for real-time threat monitoring in cybersecurity applications. Built to handle high-velocity threat data streams with minimal latency, this tool enables analysts to visualize and respond to incidents in real time. The framework supports modular component architecture, ensuring scalability across enterprise-grade security platforms. Deployed in production environments with 99.95% uptime, it processes over 500,000 alerts daily while maintaining sub-200ms response times.  \n\n## API Reference  \n```typescript\n// Threat data endpoint  \nGET /api/threats  \nResponse: {  \n  status: 'active' | 'resolved',  \n  source: string,  \n  severity: 1-5,  \n  timestamp: Date,  \n  geo: { lat: number, lng: number }  \n}  \n\n// Alert prioritization endpoint  \nPOST /api/prioritize  \nBody: {  \n  threshold: number,  \n  geoFilter: { lat: number, lng: number, radius: number }  \n}  \nResponse: {  \n  alerts: ThreatData[],  \n  total: number  \n}  \n```  \nEndpoints are secured via OAuth2 with JWT refresh tokens. Rate limiting is enforced at 100 requests/sec per IP.  \n\n## Usage / Examples  \n```jsx\n// Threat map visualization  \nfunction ThreatMap() {  \n  const [threats, setThreats] = useState<ThreatData[]>([]);  \n\n  useEffect(() => {  \n    fetch('/api/threats')  \n      .then(res => res.json())  \n      .then(setThreats);  \n  }, []);  \n\n  return (  \n    <div className=\"grid grid-cols-1 md:grid-cols-3 gap-4\">  \n      {threats.map(threat => (  \n        <div key={threat.timestamp} className=\"bg-red-100 p-4 rounded\">  \n          <p>{threat.source}</p>  \n          <p>Severity: {threat.severity}</p>  \n        </div>  \n      ))}  \n    </div>  \n  );  \n}\n```  \nThis component renders a responsive grid layout that adjusts to screen size, ensuring usability on both desktop and mobile devices.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/sergei-antonov/cybershield-dashboard.git`  \n2. Install dependencies: `npm install`  \n3. Set environment variables in `.env.local`:  \n   ```  \n   VITE_API_URL=https://api.cybershield.io  \n   VITE_OAUTH_CLIENT_ID=your-client-id  \n   ```  \n4. Build and serve: `npm run dev`  \n\n## Tech Stack  \n- **Frontend**: React 18, TypeScript 4.9, Tailwind CSS  \n- **Build**: Vite 3, Webpack 5 (for legacy compat)  \n- **Security**: OWASP ZAP integration, CORS middleware, HTTPS enforcement  \n\n## Architecture / Design  \nThe framework employs a unidirectional data flow with React Context for global state. Critical components like `ThreatMap` and `AlertPrioritizer` are decoupled into microservices, allowing independent scaling. Web performance is optimized via lazy loading and code splitting, reducing initial bundle size by 40%. Security testing is integrated into CI/CD pipelines, with automated scans for XSS and CSRF vulnerabilities.  \n\n## License  \nMIT License with additional security compliance clauses.  \n\n## Badges  \n[![GitHub](https://badges.cdn/sergei-antonov/cybershield-dashboard)](https://github.com/sergei-antonov/cybershield-dashboard)  \n[![CI/CD](https://badges.cdn/sergei-antonov/ci-badge)](https://github.com/sergei-antonov/cybershield-dashboard/actions)  \n[![Security](https://badges.cdn/sergei-antonov/sec-badge)](https://security.cdn/sergei-antonov/cybershield)"
 }

@@ -3,20 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_036",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "solo",
-    "jargon_density": "moderate"
+    "project_scale": "hobby",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Go": 4,
-    "Kubernetes": 3,
-    "Load balancing": 3,
-    "Microservices architecture": 4,
-    "Monitoring & alerting": 3,
-    "PostgreSQL": 4,
-    "Python": 3,
-    "Terraform": 3
+    "AWS": 5,
+    "Cloud cost optimization": 3,
+    "GCP": 4,
+    "Infrastructure as Code": 4,
+    "Kubernetes": 5,
+    "MongoDB": 1,
+    "Network automation": 1,
+    "PostgreSQL": 3,
+    "Python": 1,
+    "REST API design": 1,
+    "Terraform": 5
   },
-  "text": "# Real-Time Ad Bidding System  \n\nA high-throughput API for real-time ad bidding auctions, designed to handle low-latency processing and distributed consensus protocols for adtech workflows. Built as a team-internal tool for a solo backend engineer, optimized for scalability and reliability in ad inventory management.  \n\n## License  \nMIT License  \n\n## Badges  \n[![License](https://img.shields.io/npm/l/react)](https://opensource.org/licenses/MIT)  \n[![Test Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/SanaPatel/real-time-bidding/main/test-coverage.json)](https://github.com/SanaPatel/real-time-bidding/actions/workflows/tests.yml)  \n\n## Getting Started / Installation  \n1. Clone the repository using `git clone https://github.com/SanaPatel/real-time-bidding.git`  \n2. Install dependencies with `go mod tidy`  \n3. Configure AWS credentials for S3 and DynamoDB access  \n4. Deploy infrastructure via Terraform (`terraform apply`)  \n\n## Usage / Examples  \n```bash  \ncurl -X POST https://api.realtime-bidding.com/auctions \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"bids\": [{\"advertiser\": \"TechCo\", \"price\": 0.15, \"creative_id\": \"CR-123\"}],\n    \"inventory_id\": \"INV-456\"\n  }'\n```  \nThe API returns a winning bid with auction metadata, including timestamp and consensus hash.  \n\n## Architecture / Design  \nThe system uses a microservices architecture with a central auction coordinator written in Go, handling bid validation and consensus logic. PostgreSQL stores bid history and inventory metadata, while AWS Lambda processes bid callbacks asynchronously. Load balancing via Nginx ensures even distribution across Kubernetes-managed pods.  \n\n## Tech Stack / Built With  \n- **Go** (for high-throughput auction logic)  \n- **Python** (data processing pipelines)  \n- **PostgreSQL** (persistent bid history)  \n- **AWS** (S3 for creative assets, DynamoDB for bid caching)  \n- **Kubernetes** (orchestrating bid validation workers)  \n- **Terraform** (infrastructure-as-code for AWS)  \n\n## Contributing  \nThis project is team-internal, but contributions are welcome for documentation improvements or bug fixes. Submit PRs with clear commit messages and ensure tests pass before merging.  \n\n## Testing  \nUnit tests for auction logic and integration tests for distributed consensus are run via `go test`. Test coverage is monitored with Prometheus, and alerts are triggered for failures exceeding 5% of total runs."
+  "text": "# HealthGuard API Gateway  \nA secure, scalable health data integration platform built on microservices, optimized for cross-cloud interoperability and compliance with HIPAA standards. This project serves as the central hub for federated data access, anonymization pipelines, and real-time analytics across distributed health ecosystems. Designed for high-availability scenarios with zero-trust security enforcement at every layer.  \n\n## Getting Started / Installation  \nClone the repository and initialize the environment:  \n```bash  \ngit clone https://github.com/your-username/healthguard-api-gateway.git  \ncd healthguard-api-gateway  \nexport ENV=dev  \nterraform init && terraform apply --auto-approve  \n```  \nEnsure AWS credentials are configured for EC2 and EKS clusters, and set up GCP service accounts for BigQuery integration. PostgreSQL credentials must be pre-provisioned in the shared infrastructure.  \n\n## Usage / Examples  \nTo authenticate a user and fetch anonymized health metrics:  \n```bash  \ncurl -X POST https://api.healthguard.com/v1/auth \\\n  -H \"Authorization: Bearer <your-oidc-token>\" \\\n  -d '{\"resource\": \"health/metrics\", \"scope\": \"read\"}'  \n```  \nThe response includes a JWT with claims validated against AWS Cognito and GCP IAM policies. Subsequent requests to `/v1/analytics` leverage Terraform-managed Kubernetes services for dynamic scaling.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/license/your-username/healthguard-api-gateway)](https://github.com/your-username/healthguard-api-gateway/blob/main/LICENSE)  \n[![CI/CD](https://img.shields.io/github/actions/workflow/status/your-username/healthguard-api-gateway/ci.yml?branch=main)](https://github.com/your-username/healthguard-api-gateway/actions)  \n[![Security](https://img.shields.io/scrutinizer/g/your-username/healthguard-api-gateway)](https://scrutinizer-ci.com/g/your-username/healthguard-api-gateway)  \n\n## Tech Stack  \n- **Cloud Providers**: AWS (EKS, EC2, CloudFormation), GCP (BigQuery, IAM)  \n- **Orchestration**: Kubernetes (Helm charts, operator patterns)  \n- **Data**: PostgreSQL (pooled connections, connection pooling)  \n- **DevOps**: Terraform (multi-cloud resource management), CloudFormation (nested stacks)  \n- **Security**: AWS WAF, GCP VPC Service Controls, JWT introspection  \n\n## Architecture / Design  \nThe gateway operates as a stateless API layer, delegating data access to domain-specific microservices via gRPC. AWS Lambda handles OIDC token validation, while GCP Dataflow processes anonymization pipelines. Kubernetes deployments are managed through Terraform, with autoscaling rules tied to CloudWatch metrics. PostgreSQL serves as the centralized audit log store, with read replicas for analytics workloads.  \n\n## Contributing  \nPropose changes via GitHub PRs, ensuring all Terraform modules and Kubernetes manifests adhere to cross-cloud compliance standards. Focus on optimizing cloud cost metrics for AWS and GCP, and validate security policies against OWASP ASVS 4.0.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/your-username/healthguard-api-gateway/blob/main/LICENSE) for details."
 }

@@ -1,24 +1,26 @@
 {
   "doc_id": "d_p_107_02",
-  "type": "linkedin",
+  "type": "recommendation",
   "persona_id": "p_107",
   "hyperparams": {
-    "linkedin_completeness": "minimal"
+    "recommender_role": "skip-level",
+    "recommender_closeness": "worked-daily",
+    "company_type": "FAANG",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "Apache Spark": 3,
-    "Computer vision": 2,
-    "Data warehousing": 2,
-    "ETL pipeline design": 3,
-    "GCP": 3,
-    "Hugging Face Transformers": 3,
-    "MLOps (MLflow/W&B)": 3,
-    "Model deployment": 2,
-    "NLP": 3,
-    "PyTorch": 3,
+    "AWS": 1,
+    "Docker": 1,
+    "GraphQL": 3,
+    "Linux administration": 1,
+    "Node.js": 3,
+    "PostgreSQL": 3,
+    "Python": 3,
     "REST API design": 3,
-    "TensorFlow": 3,
-    "scikit-learn": 3
+    "React": 3,
+    "TypeScript": 3,
+    "Web performance optimization": 1,
+    "Webpack": 1
   },
-  "text": "Journey from academia to the dynamic world of healthtech, I’ve shifted from theoretical exploration to building solutions that impact real-world healthcare. My early days involved mastering foundational concepts, but the true growth came when I realized how machine learning could transform patient outcomes and operational efficiency.  \n\nCurrent Focus  \nAt HealthAI Innovations, I’m driven by the intersection of cutting-edge AI and healthcare. My work revolves around developing scalable models that enhance diagnostic accuracy and streamline clinical workflows. Whether it’s refining NLP pipelines to extract insights from unstructured medical data or designing REST APIs to integrate AI tools into existing systems, the goal is always to bridge innovation with tangible value.  \n\nSkills Highlight  \nI thrive in environments where data meets impact—leveraging Apache Spark for large-scale ETL pipelines, TensorFlow and PyTorch for prototyping, and GCP for deploying models in production. My MLOps toolkit (MLflow, W&B) ensures reproducibility, while Hugging Face Transformers power natural language understanding in clinical contexts.  \n\nLet’s connect if you’re shaping the future of healthtech—collaborating on solutions that turn data into care."
+  "text": "Xander once spearheaded a project to integrate real-time patient data across VitaTech’s platform. When our team faced delays syncing lab results between frontend and backend systems, he rearchitected the API layer using GraphQL, reducing data fetching latency by 40% and streamlining workflows for clinicians. His ability to balance technical precision with user needs made the solution both robust and intuitive.  \n\nAs a daily collaborator, I’ve observed Xander’s knack for translating complex healthtech requirements into scalable, maintainable code. He thrives in cross-functional settings, often bridging gaps between stakeholders and engineers. His curiosity drives him to ask clarifying questions, ensuring no detail is overlooked—whether refining REST endpoints or debugging PostgreSQL queries under tight deadlines.  \n\nXander’s standout strength lies in his adaptability. When a critical feature required Python integration for data analysis, he quickly pivoted from his primary stack, delivering a prototype in weeks rather than months. His work ethic is relentless: he’ll stay late to resolve a tricky TypeScript type error or refactor legacy code to improve readability without compromising performance.  \n\nIn summary, Xander is a reliable, detail-oriented developer who consistently elevates team outcomes through thoughtful problem-solving and collaboration. His technical depth and commitment to quality make him a valuable asset to any organization.  \n\nContact me directly for further insights.  \n— [Your Name], Senior Engineering Manager"
 }

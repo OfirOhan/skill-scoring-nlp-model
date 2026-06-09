@@ -1,21 +1,23 @@
 {
   "doc_id": "d_p_281_01",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_281",
   "hyperparams": {
-    "blog_depth": "opinion-piece",
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
     "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Application security (OWASP)": 4,
-    "Cloud networking (VPC/subnets)": 2,
-    "Compliance (SOC2/GDPR)": 3,
-    "IAM/Access control": 4,
-    "Incident response": 3,
-    "Network security": 4,
-    "SIEM tools": 3,
-    "Threat modeling": 3,
-    "Vulnerability management": 4
+    "Apache Spark": 1,
+    "Computer vision": 2,
+    "Docker": 3,
+    "GCP": 3,
+    "MLOps (MLflow/W&B)": 5,
+    "NLP": 2,
+    "PyTorch": 4,
+    "REST API design": 2,
+    "Recommendation systems": 2,
+    "TensorFlow": 4
   },
-  "text": "Securing microservices in a startup isn’t just about code — it’s about culture. Last quarter, our team faced a critical vulnerability in a payment gateway service that slipped through CI/CD pipelines. It took three days to patch, and the lesson was clear: security can’t be an afterthought.  \n\nMicroservices offer flexibility, but they also amplify attack surfaces. Startups often prioritize speed over structure, which creates gaps in access controls and monitoring. In our case, the lack of centralized IAM led to redundant permissions across services. We spent weeks refactoring policies, which highlighted how misaligned security practices can slow down innovation.  \n\nThe core challenge lies in balancing automation with oversight. We integrated dynamic secret management via HashiCorp Vault, which reduced hardcoded credentials by 80% within two months. But it wasn’t enough — we needed visibility. We adopted lightweight SIEM dashboards to track anomalous API calls, which helped us detect a misconfigured service mesh in under an hour. Threat modeling became a sprint, not a one-off exercise. By mapping attack vectors during sprint planning, we cut exploitation risks by 30% in our first cycle.  \n\nBenchmarks show that startups with mature microservice security frameworks see 50% fewer incident response delays. For example, our SOC2 compliance audit revealed that enforcing least-privilege IAM across Kubernetes clusters cut data exfiltration risks by 60%. Vulnerability management tools like Snyk became non-negotiable — we automated dependency scans and tied them to deployment pipelines, ensuring no new service launched without a security review.  \n\nThe takeaway? Security is a team sport. Startups must embed guardsrails into workflows, not bolt them on. Prioritize IAM and application security early — they’re the foundation. And don’t skip threat modeling; it’s a proactive hedge against blind spots.  \n\nFor deeper dives, check out OWASP’s microservices guide and the latest Snyk report on devsecops trends. Also, revisit your CI/CD pipelines — they’re your first line of defense."
+  "text": "# GameAI-RL: Reinforcement Learning for Dynamic Game Environments  \n\nGameAI-RL is a framework for training adaptive AI agents in evolving game scenarios. Designed for solo development, it leverages reinforcement learning to enable agents to learn from interactions with dynamic environments. The system balances exploration and exploitation, allowing for real-time adjustments to gameplay strategies. It’s tailored for internal use in game development pipelines, where rapid iteration and scalability are critical.  \n\n## Deployment  \nThe project is deployed using Docker containers for consistent environment isolation. GCP Compute Engine hosts the training clusters, with autoscaling configured to handle variable workloads. Model inference runs on edge devices via lightweight Docker images optimized for latency.  \n\n## Badges  \n[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)  \n[![Docker](https://img.shields.io/badge/docker-ready-blue)](https://hub.docker.com/)  \n[![MLOps](https://img.shields.io/badge/mlflow-integrated-green)](https://mlflow.org/)  \n\n## Tech Stack  \n- **Core Libraries**: PyTorch (neural network training), TensorFlow (legacy model compatibility)  \n- **MLOps**: MLflow for experiment tracking, Weights & Biases for visualization  \n- **Cloud**: GCP for distributed training, Docker for containerized deployment  \n- **Utilities**: OpenCV (minimal image processing), Pandas (data logging)  \n\n## Architecture / Design  \nThe architecture separates environment simulation, agent logic, and reward shaping. PyTorch handles the policy network, while TensorFlow manages legacy model exports. MLflow logs hyperparameters and metrics, with W&B providing dashboard access. The system prioritizes modularity, allowing environment plugins to be swapped without retraining.  \n\n## Getting Started / Installation  \n1. Clone the repository  \n2. Build the Docker image: `docker build -t gameai-rl .`  \n3. Run the container: `docker run -p 8080:8080 gameai-rl`  \n4. Access the web interface at http://localhost:8080  \n\nDependencies are managed via `requirements.txt`, which includes PyTorch, TensorFlow, and MLOps libraries.  \n\n## Usage / Examples  \nTrain an agent in a custom environment:  \n```python  \nfrom gameai_rl import Agent, Environment  \nagent = Agent(policy='dqn', gamma=0.95)  \nenv = Environment(map_size=1024, dynamic_obstacles=True)  \nagent.train(env, episodes=1000)  \n```  \nFor inference:  \n```python  \nagent.load_model('models/dqn_v2.pth')  \naction = agent.act(env.state)  \n```  \nThe framework supports custom reward functions and environment wrappers.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

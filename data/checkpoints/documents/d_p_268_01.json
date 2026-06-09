@@ -1,23 +1,21 @@
 {
   "doc_id": "d_p_268_01",
-  "type": "project_readme",
+  "type": "linkedin",
   "persona_id": "p_268",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "plain"
+    "linkedin_completeness": "detailed"
   },
   "skill_evidence": {
-    "C/C++ (embedded)": 3,
-    "Embedded Linux": 4,
-    "Firmware development": 4,
-    "GitLab CI": 3,
-    "Hardware-software integration": 4,
-    "IoT protocols (MQTT/CoAP)": 3,
-    "Network troubleshooting": 3,
-    "Python": 3,
-    "REST API design": 3,
-    "RTOS": 4
+    "A/B testing": 1,
+    "Agile/Scrum": 4,
+    "Data visualization (Tableau/Power BI)": 2,
+    "Hypothesis testing": 2,
+    "Product management": 4,
+    "Roadmap planning": 3,
+    "SQL analytics": 2,
+    "Stakeholder management": 4,
+    "UX research": 3,
+    "User journey mapping": 3
   },
-  "text": "# Industrial IoT Monitoring System  \nA scalable, real-time industrial sensor network with edge-cloud synchronization for predictive maintenance. Monitors 12+ parameters across 32 nodes with 99.8% uptime in production environments.  \n\n## Deployment  \nDeployed as hybrid edge-cloud system. Edge nodes run lightweight firmware on STM32 microcontrollers with FreeRTOS, streaming data via MQTT to AWS IoT Core. Cloud layer processes metrics using Python workers, storing historical data in PostgreSQL. Firmware updates use GitLab CI pipelines with automated regression testing.  \n\n## Getting Started / Installation  \n1. Assemble hardware: STM32 Nucleo-144 + Grove sensors (temp, humidity, vibration)  \n2. Install Docker for MQTT broker (mosquitto) and Python dependencies  \n3. Clone repo: `git clone https://github.com/yourusername/industrial-iot-monitoring.git`  \n4. Configure `env.yaml` with AWS credentials and MQTT broker details  \n5. Build firmware: `make flash` (requires STM32CubeIDE)  \n6. Deploy cloud workers: `python manage.py migrate && python manage.py runserver`  \n\n## Usage / Examples  \n- Real-time dashboard shows temperature trends with 100ms latency  \n- Vibration sensors trigger alerts when exceeding 5.2m/s² thresholds  \n- REST API exports 1-minute aggregated data batches (150k records/day)  \n- Edge nodes handle 80% of data preprocessing to reduce cloud bandwidth  \n\n## Tech Stack  \n- **Firmware**: C (STM32 HAL), Python (edge scripts)  \n- **Cloud**: AWS IoT Core, PostgreSQL, Flask API  \n- **Protocols**: MQTT (QoS 1), REST (JSON payloads)  \n- **CI/CD**: GitLab CI (unit tests, firmware linting)  \n- **OS**: Embedded Linux (Yocto), FreeRTOS  \n\n## Architecture / Design  \nThree-tier architecture:  \n1. **Edge Layer**: STM32 devices with RTOS manage sensor polling (200ms cycle) and MQTT publishing  \n2. **Network Layer**: TLS-encrypted MQTT over WiFi/LoRaWAN with 95% packet delivery rate  \n3. **Cloud Layer**: Python workers process data streams, storing 100k+ metrics/day in PostgreSQL  \n4. **UI Layer**: React-based dashboard with WebSocket integration for live updates  \n\n## License  \nMIT License - see [LICENSE](https://github.com/yourusername/industrial-iot-monitoring/blob/main/LICENSE)  \n\n## Badges  \n[![Production Uptime](https://img.shields.io/badge/uptime-99.8%25-green)](https://uptime.io)  \n[![Data Throughput](https://img.shields.io/badge/throughput-1.2MB%2Fs-blue)](https://github.com/yourusername/industrial-iot-monitoring)  \n[![Deployment Frequency](https://img.shields.io/badge/deployments-4x%2Fweek-yellow)](https://github.com/yourusername/industrial-iot-monitoring)"
+  "text": "Passion lies in turning complex problems into elegant solutions. As a Product Manager at NexaFlow Solutions, I thrive at the intersection of innovation and execution, driven by the belief that great products emerge from deep empathy for users and relentless focus on impact.  \n\nCurrently, I lead product strategy for NexaFlow’s AI-driven workflow automation platform, bridging the gap between technical feasibility and customer needs. My role blends hands-on roadmap planning with stakeholder alignment, ensuring we build tools that scale with our startup’s growth.  \n\nIn my two years here, I’ve scaled our product launch from prototype to market, driving a 40% increase in user retention through user journey mapping and iterative UX research. I’ve also streamlined cross-functional collaboration using Agile frameworks, reducing time-to-market for key features by 25%. These wins aren’t just numbers—they’re proof that thoughtful product management can shape real-world outcomes.  \n\nLooking ahead, I’m eager to collaborate on projects that blend creativity with technical rigor, particularly in areas where AI meets operational efficiency. Let’s build something that matters."
 }

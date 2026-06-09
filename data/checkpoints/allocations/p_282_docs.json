@@ -1,39 +1,40 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Noor Al-Farsi's experience as a Senior ML Engineer in game AI and personalization.",
-    "title": "Noor Al-Farsi - Senior ML Engineer",
+    "topic_summary": "Professional resume highlighting Emilia's experience as a Junior Embedded Systems Engineer at a startup",
+    "title": "Emilia Korhonen CV",
     "doc_id": "d_p_282_00",
     "persona_id": "p_282",
     "hyperparams": {
-      "cv_format": "minimal",
+      "cv_format": "hybrid",
       "geographic_convention": "Israel",
-      "company_type": "agency",
-      "company_size": "mid (50-500)"
+      "company_type": "startup",
+      "company_size": "large (500+)"
     }
   },
   {
-    "doc_type": "blog",
-    "topic_summary": "A technical blog post on leveraging reinforcement learning for dynamic player personalization in gaming.",
-    "title": "Optimizing Player Experience: Reinforcement Learning in Game Personalization",
+    "doc_type": "project_readme",
+    "topic_summary": "Description of an IoT-based environmental monitoring system developed by Emilia",
+    "title": "Low-Power IoT Environmental Monitor",
     "doc_id": "d_p_282_01",
     "persona_id": "p_282",
     "hyperparams": {
-      "blog_depth": "deep-dive",
-      "jargon_density": "plain"
+      "project_scale": "hobby",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "heavy"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from Noor's manager at NeonPixel Games, emphasizing her leadership in AI-driven game development.",
-    "title": "Recommendation for Noor Al-Farsi - Senior ML Engineer",
+    "topic_summary": "Letter from Emilia's manager at NexaTech praising her technical skills and teamwork",
+    "title": "Recommendation for Emilia Korhonen",
     "doc_id": "d_p_282_02",
     "persona_id": "p_282",
     "hyperparams": {
-      "recommender_role": "direct-manager",
-      "recommender_closeness": "brief",
-      "company_type": "startup",
-      "company_size": "mid (50-500)"
+      "recommender_role": "professor",
+      "recommender_closeness": "worked-daily",
+      "company_type": "FAANG",
+      "company_size": "small (<50)"
     }
   }
 ]

@@ -1,21 +1,20 @@
 {
   "doc_id": "d_p_010_01",
-  "type": "project_readme",
+  "type": "linkedin",
   "persona_id": "p_010",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "moderate"
+    "linkedin_completeness": "detailed"
   },
   "skill_evidence": {
-    "Flutter": 3,
-    "Kotlin (Android)": 3,
-    "REST API design": 3,
-    "React": 1,
-    "React Native": 1,
-    "Swift": 3,
-    "TypeScript": 1,
-    "Web accessibility (WCAG)": 3
+    "AWS": 3,
+    "Apache Airflow": 5,
+    "Apache Kafka": 3,
+    "Apache Spark": 3,
+    "Data warehousing": 3,
+    "Docker": 3,
+    "Python": 1,
+    "Snowflake": 4,
+    "Terraform": 3
   },
-  "text": "# Enterprise Mobility Platform  \nA cross-platform mobile application that automates enterprise workflows by synchronizing data in real-time with backend systems, reducing manual input by 40% and improving task completion speed by 30% across pilot deployments.  \n\n---\n\n[![Project Status](https://img.shields.io/badge/status-active-blue)](https://github.com/enterprise-mobility/platform)  \n[![Community Contributions](https://img.shields.io/badge/contributors-15-orange)](https://github.com/enterprise-mobility/platform/graphs/contributors)  \n[![Roadmap Milestones](https://img.shields.io/badge/roadmap-upcoming-yellow)](https://github.com/enterprise-mobility/platform/milestone/1)  \n\n---\n\n## Getting Started / Installation  \nClone the repository:  \n```bash  \ngit clone https://github.com/enterprise-mobility/platform.git  \ncd platform  \n```  \nInstall dependencies:  \n```bash  \nflutter pub get  \n```  \nConfigure platform-specific settings (Kotlin for Android, Swift for iOS) and set up REST API endpoints for backend integration.  \n\n---\n\n## Usage / Examples  \nThe app enables real-time synchronization of inventory data between mobile devices and a central ERP system. For example, a warehouse manager can update stock levels via a mobile interface, and the backend system reflects these changes within 2 seconds.  \n\nKey workflows include:  \n- Secure API-driven data sync with OAuth 2.0 authentication  \n- Offline-first design for intermittent connectivity  \n- Role-based UI customization for different user groups  \n\n---\n\n## Architecture / Design  \nThe solution uses a modular architecture with Flutter for cross-platform UI, Kotlin for Android-specific logic, and Swift for iOS enhancements. REST APIs act as a bridge between the app and legacy systems, ensuring compatibility with existing databases. Web accessibility standards (WCAG 2.1) are enforced in all UI components.  \n\n---\n\n## Tech Stack / Built With  \n- **Flutter**: Core framework for cross-platform UI development  \n- **Kotlin**: Android-specific modules for native performance  \n- **Swift**: iOS-specific enhancements for platform-specific features  \n- **REST APIs**: Standardized endpoints for backend integration  \n- **WCAG 2.1**: Accessibility compliance for all UI components  \n\n---\n\n## Roadmap / Future Work  \nUpcoming features include:  \n- Enhanced security with end-to-end encryption  \n- Offline sync with conflict resolution logic  \n- AI-driven analytics for workflow optimization  \n\n---\n\n## Acknowledgments  \nThis project leverages contributions from a team of 12 developers, with special thanks to the QA engineers for refining the sync logic and the product managers for aligning features with business goals.  \n\n---\n\n## Contributing  \nContributions are welcome! Submit issues or pull requests via the GitHub repository. For API-related changes, ensure compliance with REST best practices and WCAG guidelines. Code of conduct follows the standard GitHub Contributor Covenant."
+  "text": "Data Engineer Lead at NexaFlow Solutions, with four years of shaping data infrastructure in the SaaS sector. My focus is on building systems that turn raw data into actionable insights, while ensuring scalability and reliability.  \n\nAt NexaFlow, I’ve designed end-to-end data pipelines leveraging Kafka for real-time streaming and Spark for batch processing, integrating with Snowflake to power analytics. Ownership of Snowflake warehouses led to a 40% reduction in query latency, enabling faster decision-making. AWS serves as the backbone for our cloud infrastructure, where I’ve automated deployments using Terraform and streamlined workflows with Docker.  \n\nApache Airflow is central to my work—its orchestration capabilities underpin our data operations, and I’ve mentored teams to adopt it as a standard. I thrive in environments where data engineering meets business needs, ensuring solutions are both robust and adaptable.  \n\nLooking ahead, I’m driven by the challenge of aligning technical innovation with strategic goals. Whether optimizing pipelines or scaling architectures, the goal is always to deliver value without compromise. Let’s connect if you’re navigating the complexities of data-driven growth."
 }

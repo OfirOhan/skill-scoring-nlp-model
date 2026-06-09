@@ -1,61 +1,66 @@
 {
   "persona_id": "p_059",
   "hyperparams": {
-    "archetype": "ml_engineer",
-    "years_experience": 9,
-    "seniority": "senior",
-    "industry": "enterprise",
-    "writing_style": "verbose",
-    "language_fluency": "ESL",
-    "self_promotion_level": "balanced",
-    "quantification_tendency": "metrics-heavy"
+    "archetype": "data_engineer",
+    "years_experience": 3,
+    "seniority": "mid",
+    "industry": "healthtech",
+    "writing_style": "concise",
+    "language_fluency": "near-native",
+    "self_promotion_level": "boastful",
+    "quantification_tendency": "mixed"
   },
-  "name": "Maya Johal",
-  "current_role": "Senior Machine Learning Engineer - Enterprise AI Solutions",
-  "company": "VerveTech Solutions",
+  "name": "Gabriel Souza",
+  "current_role": "Senior Data Engineer",
+  "company": "VitalHealth Analytics",
   "education": {
-    "degree": "Master of Science in Data Science",
-    "university": "University of California, Berkeley",
-    "year": 2017
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "University of São Paulo",
+    "year": 2021
   },
   "career_trajectory": [
     {
-      "year": 2015,
-      "position": "Machine Learning Engineer Intern",
-      "company": "DataVolve Inc.",
-      "responsibilities": "Collaborated on NLP pipelines for customer sentiment analysis, achieved 22% accuracy improvement using BERT fine-tuning"
+      "role": "Data Analyst Intern",
+      "company": "HealthTrack Solutions",
+      "duration": "6 months",
+      "responsibilities": "Processed patient vitals using Python and PostgreSQL, built dashboards for clinical teams"
     },
     {
-      "year": 2017,
-      "position": "Machine Learning Engineer",
-      "company": "DataVolve Inc.",
-      "responsibilities": "Architected scalable ML workflows on GCP, reduced model inference latency by 40% via TensorRT optimization"
+      "role": "Data Engineering Associate",
+      "company": "MedTech Innovations",
+      "duration": "1.5 years",
+      "responsibilities": "Designed ETL pipelines for medical device telemetry data, optimized Snowflake warehouses"
     },
     {
-      "year": 2020,
-      "position": "Senior Machine Learning Engineer",
-      "company": "TechNova Inc.",
-      "responsibilities": "Led LLM deployment for enterprise chatbots, achieved 85% user satisfaction score through prompt engineering"
-    },
-    {
-      "year": 2023,
-      "position": "Senior Machine Learning Engineer - Enterprise AI Solutions",
-      "company": "VerveTech Solutions",
-      "responsibilities": "Oversaw MLOps pipeline integration, achieving 95% model deployment reliability across 12+ cloud regions"
+      "role": "Lead Data Engineer",
+      "company": "VitalHealth Analytics",
+      "duration": "1.5 years",
+      "responsibilities": "Architected real-time analytics platform using Apache Kafka, Databricks, and dbt"
     }
   ],
   "skills": {
-    "PyTorch": 5,
-    "TensorFlow": 5,
-    "NLP": 5,
-    "MLOps (MLflow/W&B)": 5,
-    "Model deployment": 5,
-    "LLMs/Prompt engineering": 5,
-    "AWS": 5,
-    "Docker": 5,
-    "Kubernetes": 5,
-    "GCP": 4,
-    "Apache Airflow": 4
+    "Apache Spark": 4,
+    "Apache Kafka": 4,
+    "Apache Airflow": 3,
+    "dbt": 4,
+    "ETL pipeline design": 5,
+    "Data warehousing": 4,
+    "Snowflake": 5,
+    "Databricks": 4,
+    "Data modeling": 3,
+    "Stream processing": 4,
+    "Database optimization": 3,
+    "PostgreSQL": 3,
+    "MongoDB": 3,
+    "Python": 3,
+    "REST API design": 1,
+    "Cloud cost optimization": 3,
+    "Terraform": 3,
+    "Docker": 3
   },
-  "document_ids": []
+  "document_ids": [
+    "d_p_059_00",
+    "d_p_059_01",
+    "d_p_059_02"
+  ]
 }

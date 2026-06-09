@@ -3,25 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_136",
   "hyperparams": {
-    "project_scale": "team-internal",
+    "project_scale": "hobby",
     "project_team_size": "small (2-4)",
-    "jargon_density": "plain"
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
+    "AWS": 4,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 4,
+    "ELK stack": 2,
+    "Kubernetes": 4,
+    "Load balancing": 3,
+    "Network automation": 1,
+    "Prometheus/Grafana": 3,
     "Python": 1,
-    "REST API design": 1,
-    "Node.js": 1,
-    "React": 1,
-    "TypeScript": 1,
-    "PostgreSQL": 1,
-    "MongoDB": 1,
-    "Web performance optimization": 1,
-    "AWS": 1,
-    "Docker": 1,
-    "Kubernetes": 1,
-    "CI/CD pipelines": 1,
-    "GitHub Actions": 1,
-    "Terraform": 1
+    "Terraform": 4
   },
-  "text": "# HealthLink Telemedicine Platform  \nHealthLink is a secure, user-centric platform designed to streamline virtual consultations and centralized health data management. Built with a focus on privacy and accessibility, it enables patients and providers to exchange medical information safely while maintaining strict control over data access. The system prioritizes end-to-end encryption, role-based permissions, and intuitive workflows to ensure seamless adoption in clinical settings.  \n\n---\n\n## Tech Stack  \nThe platform leverages a modern frontend framework with robust state management for dynamic UI interactions. Backend services utilize real-time capabilities for instant communication between users. Data is stored in a structured, scalable database optimized for query performance and compliance. Security protocols include TLS encryption, token-based authentication, and audit logging for all access events.  \n\n---\n\n## Architecture / Design  \nThe system follows a layered architecture to separate concerns:  \n- **Presentation Layer**: Handles user interface and client-side logic for both web and mobile access.  \n- **Business Logic Layer**: Manages core workflows like appointment scheduling, data validation, and access control.  \n- **Data Layer**: Ensures secure storage and retrieval of sensitive health information with automated backups.  \nKey design decisions include decentralized data ownership, minimal data exposure during transfers, and modular components for easy maintenance.  \n\n---\n\n## Getting Started / Installation  \n1. Ensure your environment meets the system requirements: modern browser, stable internet connection, and a supported OS.  \n2. Access the platform via the provided URL or install the desktop client for offline use.  \n3. Follow the onboarding wizard to set up user accounts, configure permissions, and import existing health records.  \n\n---\n\n## Usage / Examples  \n- **Patients**: Schedule virtual visits, view medical summaries, and securely share files with providers.  \n- **Providers**: Access real-time patient data, manage calendars, and collaborate with specialists via encrypted messaging.  \n- **Admins**: Monitor system health, audit access logs, and customize role-based permissions for teams.  \n\n---\n\n## Badges  \n[![Security](https://img.shields.io/badge/secure-yes-green)](https://example.com/security)  \n[![Healthcare](https://img.shields.io/badge/healthcare-focused-blue)](https://example.com/healthcare)  \n\n---\n\n## Contributing  \nWe welcome feedback and feature suggestions via the issue tracker. For deeper involvement, reach out to the team to discuss integration with existing EHR systems or enhancements to data anonymization workflows.  \n\n---\n\n## License  \nThis project is licensed under the MIT License. See the LICENSE file for details."
+  "text": "# GameServerAutoScaler  \nA lightweight, cloud-native solution for dynamically scaling multiplayer game server infrastructure to match player demand while optimizing costs and maintaining low-latency performance.  \n\n## Contributing  \nThis project thrives on community input. Whether you're refining metrics for scale triggers, improving cost models, or exploring new cloud provider integrations, your insights matter. Submit pull requests, open issues, or join our Discord for real-time brainstorming. We prioritize actionable feedback over vague suggestions—focus on specific workflows or edge cases you’ve encountered.  \n\n## Getting Started / Installation  \n1. Install AWS CLI and configure credentials  \n2. Set up Terraform with a valid provider token  \n3. Clone the repo: `git clone https://github.com/yourusername/GameServerAutoScaler.git`  \n4. Deploy infrastructure: `terraform apply -var-file=local.tfvars`  \n5. Configure autoscaling policies via the AWS Management Console or API  \n\n## Usage / Examples  \nDuring peak hours, the system automatically provisions additional Kubernetes worker nodes to handle surge traffic. Example:  \n```bash  \n# Trigger manual scale test  \naws autoscaling put-scaling-policy --policy-name game-server-scale-out --scaling-target-id <target-id> --policy-type PolicyTypeStepScaling --step-scaling-policy-configuration file://step-scaling.json  \n```  \nMonitors latency metrics in Prometheus and adjusts instance counts to keep average latency below 50ms.  \n\n## Tech Stack  \n- AWS (EC2, EKS, CloudFormation)  \n- Kubernetes (Helm, Prometheus Operator)  \n- Terraform (state management, multi-region deployment)  \n- Prometheus + Grafana (custom dashboards)  \n- ELK stack (log aggregation for server diagnostics)  \n\n## Architecture / Design  \nThe system uses AWS Auto Scaling groups with dynamic thresholds, orchestrated by Terraform-managed Kubernetes clusters. Load balancers distribute traffic across instances, while Prometheus tracks CPU utilization and network latency. Cost optimization is achieved through reserved instance allocations and spot fleet requests.  \n\n## License  \nMIT License  \n\n## Badges  \n[![GitHub](https://badges.repo/gh/yourusername/GameServerAutoScaler)](https://github.com/yourusername/GameServerAutoScaler)  \n[![CI/CD](https://badges.repo/gh/yourusername/GameServerAutoScaler/workflows/CI%20%26%20CD/badge.svg)](https://github.com/yourusername/GameServerAutoScaler/actions)  \n[![Docker](https://badges.repo/docker/yourusername/GameServerAutoScaler)](https://hub.docker.com/r/yourusername/gameserverautoscaler)  \n[![AWS](https://badges.repo/aws/yourusername/GameServerAutoScaler)](https://aws.amazon.com)"
 }

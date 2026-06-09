@@ -3,23 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_260",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "heavy"
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Apache Spark": 2,
-    "Docker": 3,
-    "Kubernetes": 3,
-    "MLOps": 3,
-    "NLP": 1,
-    "PyTorch": 3,
+    "JavaScript": 4,
+    "Next.js": 4,
+    "Python": 1,
     "REST API design": 2,
-    "Recommendation systems": 1,
-    "TensorFlow": 3,
-    "scikit-learn": 3,
-    "MLOps (MLflow/W&B)": 1
+    "React": 5,
+    "Responsive design": 5,
+    "State management (Redux/Zustand)": 4,
+    "Test automation": 1,
+    "TypeScript": 5,
+    "Unit testing": 2,
+    "Web accessibility (WCAG)": 4,
+    "Webpack/Vite": 3
   },
-  "text": "# Demand Forecasting for E-commerce Inventory Management  \nA time series analysis system to predict product demand and optimize inventory levels using historical sales data, seasonal trends, and external factors like holidays.  \n\n## Contributing  \nWe welcome contributions to enhance forecasting accuracy, expand data sources, or refine deployment pipelines. Focus on data preprocessing, model tuning, or API integration. For urgent issues, reach out via GitHub issues or our Discord channel.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/your-username/demand-forecasting.git`  \n2. Install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n3. For local testing, run Docker containers:  \n   ```bash  \n   docker-compose up --build  \n   ```  \n   This sets up a PostgreSQL instance for historical data and a Flask API endpoint for predictions.  \n\n## Usage / Examples  \nRun the pipeline with:  \n```bash  \npython main.py --data_path 'data/sales.csv' --output 'models/forecast.pkl'  \n```  \nThis trains a SARIMAX model on the input CSV, exports the trained model, and generates forecasts for the next 30 days. For API usage:  \n```python  \nimport requests  \nresponse = requests.post('http://localhost:5000/predict', json={'date': '2024-05-01'})  \nprint(response.json())  \n```  \nThe API returns predicted demand based on historical patterns and external calendar data.  \n\n## Tech Stack  \n- **Python** (3.9+) with **Pandas**, **NumPy**, **Statsmodels**, and **Scikit-learn**  \n- **Docker** for containerized development and testing  \n- **AWS Lambda** and **S3** for serverless deployment and data storage  \n- **PostgreSQL** for structured historical sales data  \n\n## Architecture / Design  \nThe system decouples data ingestion, model training, and prediction services. Historical data is preprocessed using Pandas and Spark for scalability. The core forecasting logic leverages SARIMAX for seasonality and trend capture. Deployments use AWS Lambda for low-latency predictions, with model artifacts stored in S3.  \n\n## License  \nMIT License  \n\n## Badges  \n[![GitHub](https://badges.apache.org/badges/1518738656.svg)](https://github.com/your-username/demand-forecasting)  \n[![Build Status](https://badges.apache.org/badges/1518738657.svg)](https://github.com/your-username/demand-forecasting/actions)  \n[![Coverage](https://badges.apache.org/badges/1518738658.svg)](https://github.com/your-username/demand-forecasting/actions)"
+  "text": "# ShopSphere Checkout Optimizer  \nA frontend-driven solution to reduce checkout load times by 42% and increase conversion rates by 18% through progressive rendering, accessibility-first design, and component-level performance profiling  \n\n[![GitHub](https://img.shields.io/github/last-commit/inespereira/shopsphere-checkout)](https://github.com/inespereira/shopsphere-checkout)  \n[![npm](https://img.shields.io/npm/v/shopsphere-checkout)](https://www.npmjs.com/package/shopsphere-checkout)  \n[![Performance](https://img.shields.io/badge/Performance-42%25-reduced)](https://github.com/inespereira/shopsphere-checkout)  \n\n## Getting Started / Installation  \n```bash  \nnpx create-next-app@latest shopsphere-checkout --template typescript  \ncd shopsphere-checkout  \nnpm install @shopphere/ui  \nnpm run dev  \n```  \nImport core components via `@shopphere/ui` for pre-optimized payment forms and validation logic.  \n\n## Tech Stack  \n- **React 18** with concurrent mode for async validation flows  \n- **Next.js 13** (app directory) for server components and edge runtime integration  \n- **TypeScript** with custom typings for Stripe API payloads  \n- **Webpack 5** (custom config) for code splitting and lazy loading  \n- **Zustand** for global state management of cart and user preferences  \n- **WCAG 2.1** compliance through ARIA labels and keyboard navigation  \n\n## Architecture / Design  \nThe checkout flow is split into three stages:  \n1. **Pre-validation** (server component) for address and payment method checks  \n2. **Dynamic form rendering** (client component) with conditional field loading  \n3. **Progressive summary** (server component) for real-time cost calculations  \n\nKey optimizations:  \n- 65% reduction in initial bundle size via dynamic imports  \n- 3x faster form submission through WebAssembly-based validation  \n- 100% keyboard accessibility with focus trapping and screen reader support  \n\n## Usage / Examples  \n```tsx  \nimport { useCheckout } from '@shopphere/ui'  \n\nexport default function CheckoutPage() {  \n  const { formState, handlePayment } = useCheckout({  \n    onSuccess: () => window.location.href = '/thank-you'  \n  })  \n\n  return (  \n    <form onSubmit={handlePayment}>  \n      {formState.fields.map(field => (  \n        <div key={field.id}>{field.render()}</div>  \n      ))}  \n    </form>  \n  )  \n}  \n```  \nThis example demonstrates the framework's ability to handle conditional form rendering while maintaining 98% Lighthouse performance score.  \n\n## Testing  \n- **Unit tests**: 92% coverage for form validation logic (Jest + React Testing Library)  \n- **Accessibility tests**: Automated checks for ARIA compliance and keyboard traps  \n- **Performance benchmarks**: Load time reduced from 2.1s to 1.2s via Webpack optimization  \n\n## License  \nMIT License  \n© 2023 Ines Pereira"
 }

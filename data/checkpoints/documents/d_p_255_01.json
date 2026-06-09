@@ -3,22 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_255",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "plain"
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Python": 1,
-    "Go": 1,
-    "Node.js": 1,
-    "React": 1,
-    "PostgreSQL": 1,
+    "API testing": 4,
+    "BDD/TDD": 1,
+    "GitLab CI": 3,
+    "Java": 1,
+    "Performance testing": 4,
+    "Python": 3,
     "REST API design": 1,
-    "AWS": 1,
-    "Docker": 1,
-    "CI/CD pipelines": 1,
-    "Monitoring & alerting": 1,
-    "Database optimization": 1
+    "Selenium/Playwright": 4,
+    "Test automation": 5,
+    "Test strategy design": 1,
+    "Performance testing (JMeter/k6)": 1
   },
-  "text": "# HealthTrack Patient Portal  \nA secure, intuitive platform for managing patient records and appointments, designed to streamline healthcare workflows while prioritizing data privacy and user experience. Built to support seamless integration with clinical systems and ensure compliance with healthcare regulations.  \n\n---\n\n## Testing  \nAutomated testing is central to this project. Unit tests cover business logic, while integration tests validate data flow between modules. All tests run in isolated environments to avoid external dependencies. Coverage metrics are tracked, and critical paths (e.g., appointment scheduling, record access) are tested for edge cases. Manual testing focuses on UX, ensuring clarity for non-technical users.  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/your-username/healthtrack.git`  \n2. Install dependencies via `npm install` (if applicable).  \n3. Configure environment variables for database connections and API keys.  \n4. Run `npm start` to launch the local development server.  \nEnsure all systems are up-to-date and dependencies are resolved before proceeding.  \n\n---\n\n## Usage / Examples  \n- **Patient Dashboard**: View medical history, upcoming appointments, and lab results.  \n- **Appointment Scheduling**: Select time slots, receive confirmation via email, and reschedule as needed.  \n- **Admin Panel**: Manage user roles, audit logs, and system settings.  \nExample: To fetch a patient’s records, navigate to `/dashboard` and filter by date range.  \n\n---\n\n## Tech Stack  \n- **Frontend**: Modern framework for responsive, accessible interfaces.  \n- **Backend**: Robust framework with built-in security features.  \n- **Database**: NoSQL solution for flexible data modeling.  \n- **Utilities**: Libraries for encryption, authentication, and data validation.  \n\n---\n\n## Architecture / Design  \nThe system follows a layered architecture: presentation, business logic, and data access. Security is enforced at every layer, with encryption for sensitive data and role-based access controls. Scalability is addressed through modular components, allowing incremental feature additions without disrupting existing workflows.  \n\n---\n\n## License  \nThis project is open-source under the MIT License. See the `LICENSE` file for details.  \n\n---\n\n## Contributing  \nWe welcome contributions! Fork the repository, submit a pull request, and ensure your code adheres to existing standards. All changes must include tests and documentation updates. Let’s build a tool that makes healthcare better."
+  "text": "# Automated Game Testing Framework for NexaGame Studios  \nA production-grade solution for cross-platform regression testing of game mechanics and UI elements, designed to integrate seamlessly with existing CI/CD pipelines and legacy systems. This framework prioritizes reliability, scalability, and maintainability, with a focus on reducing manual test cycles by 70% in QA environments.  \n\n## Badges  \n[![Cross-Platform Validation](https://via.placeholder.com/150/008CBA/FFFFFF?text=PC+Mobile+Console)](https://example.com)  \n[![CI/CD Integration](https://via.placeholder.com/150/4CAF50/FFFFFF?text=GitLab+CI)](https://example.com)  \n[![Test Coverage](https://via.placeholder.com/150/FFA726/FFFFFF?text=92%+Coverage)](https://example.com)  \n\n## Tech Stack  \n- **Core Language**: Python 3.10 (scripting, test data manipulation, and metadata parsing)  \n- **UI Automation**: Playwright (headless browser execution) + Selenium Grid (distributed test orchestration)  \n- **API Testing**: Custom HTTP client with JSON assertion logic (no external libraries)  \n- **CI/CD**: GitLab CI pipelines for automated test execution and artifact archiving  \n- **Dependency Management**: Poetry for environment isolation and dependency resolution  \n\n## Configuration  \nThe framework requires a `config.yaml` file to define platform-specific browser capabilities, API endpoints, and test environment variables. Example:  \n```yaml  \nplatforms:  \n  - name: \"PC\"  \n    driver: \"chrome\"  \n    resolution: \"1920x1080\"  \n  - name: \"Mobile\"  \n    driver: \"android\"  \n    device: \"Samsung Galaxy S22\"  \n```  \nEnvironment variables must be set for API keys and remote server URLs.  \n\n## Getting Started / Installation  \n1. Clone the repository using `git clone https://github.com/username/automated-game-testing-framework.git`  \n2. Navigate to the project root and run `poetry install` to install dependencies  \n3. Configure `config.yaml` and set environment variables for API credentials  \n4. Verify dependencies with `poetry lock --no-update`  \n\n## Usage / Examples  \nRun UI tests for mobile platform:  \n```bash  \npoetry run python -m tests.ui --platform Mobile  \n```  \nExecute API validation for player stats endpoint:  \n```bash  \npoetry run python -m tests.api --endpoint /player/stats  \n```  \nTest results are output in JSON format with detailed failure contexts.  \n\n## Testing  \nAll tests are executed via GitLab CI pipelines, with results aggregated in a centralized dashboard. Performance metrics include test execution time, resource utilization, and error rate. The framework supports parallel test execution across platforms, reducing regression cycles from 48 hours to 6 hours.  \n\n## License  \nThis project is licensed under the MIT License. Contributions are welcome, but all modifications must retain original authorship attribution."
 }

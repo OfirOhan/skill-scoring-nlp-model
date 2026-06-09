@@ -1,25 +1,22 @@
 {
   "doc_id": "d_p_068_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_068",
   "hyperparams": {
-    "recommender_role": "skip-level",
-    "recommender_closeness": "worked-daily",
-    "company_type": "agency",
-    "company_size": "large (500+)"
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "CI/CD pipelines": 3,
-    "Docker": 3,
-    "Load balancing": 3,
-    "MongoDB": 3,
-    "Node.js": 3,
-    "PostgreSQL": 3,
-    "Python": 3,
-    "REST API design": 3,
-    "React": 3,
+    "Apache Airflow": 4,
+    "Apache Kafka": 1,
+    "Apache Spark": 1,
+    "Cloud cost optimization": 3,
+    "Databricks": 1,
+    "PostgreSQL": 1,
+    "Python": 1,
+    "Snowflake": 1,
     "Terraform": 3
   },
-  "text": "Academic Context  \nWilliam’s technical foundation in computer science provided a solid base for his full-stack work, but his true strength lies in applying theory to real-world systems. His curiosity about scalable architectures and automation drove him to master tools beyond standard curricula, which became critical in our SaaS projects.  \n\nWorking Relationship  \nI’ve collaborated daily with William on NexaCloud’s platform since 2022. His ability to balance technical rigor with business needs was evident when he redesigned our CI/CD pipelines, reducing deployment time by 40% without compromising stability. He’s also been instrumental in maintaining our AWS infrastructure, scaling it to handle 1.2M concurrent users during peak seasons.  \n\nResearch Ability  \nWilliam’s approach to problem-solving is methodical. When we faced latency issues with our MongoDB setup, he conducted a week-long analysis of query patterns, leading to a 35% improvement in read performance. He also pioneered using Terraform for our cloud resource management, cutting manual configuration errors by 60%.  \n\nBroader Strengths  \nBeyond technical skills, William’s work ethic is exceptional. He consistently mentors junior developers, sharing insights on best practices for REST API design and React performance optimization. His patience and attention to detail ensure even complex systems remain maintainable.  \n\nRecommendation  \nWilliam’s combination of technical depth, analytical precision, and collaborative spirit makes him a standout asset. I wholeheartedly recommend him for any role requiring both innovation and reliability in high-stakes environments."
+  "text": "# Cloud-Native Data Warehouse Modernization  \n\nModernizing a legacy data warehouse to AWS Redshift with a focus on scalability, cost efficiency, and query performance. This project delivers a production-ready framework for cloud migration, featuring automated infrastructure provisioning, ETL orchestration, and real-time monitoring. Designed for teams seeking to reduce operational overhead while maximizing analytical workloads.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/yourusername/cloud-native-data-warehouse.git`  \n2. Configure AWS credentials via `~/.aws/credentials` and set environment variables for Redshift cluster details  \n3. Deploy infrastructure using Terraform: `terraform init && terraform apply`  \n4. Validate setup with `aws redshift describe-clusters` and verify Airflow DAGs in the UI  \n\n## Usage / Examples  \n- **Performance Optimization**: Use `DISTSTYLE KEY` and `DISTKEY` in Redshift tables to enable parallel query execution  \n- **Cost Management**: Leverage reserved instances via Terraform modules to reduce hourly compute costs by 40%  \n- **ETL Orchestration**: Monitor data pipeline latency with Airflow sensors; enable dynamic retries for failed DAG runs  \n\n## Badges  \n[![Build Status](https://github.com/yourusername/cloud-native-data-warehouse/actions/workflows/build.yml/badge.svg)](https://github.com/yourusername/cloud-native-data-warehouse/actions)  \n[![GitHub Stars](https://img.shields.io/github/stars/yourusername/cloud-native-data-warehouse?style=social)](https://github.com/yourusername/cloud-native-data-warehouse)  \n[![AWS Certification](https://img.shields.io/badge/AWS-Certified-489de1?style=flat)](https://aws.amazon.com/certifications/)  \n\n## Tech Stack  \n- **Cloud**: AWS Redshift, S3, CloudWatch  \n- **Infrastructure**: Terraform (modules for VPC, IAM, and Redshift clusters)  \n- **Orchestration**: Apache Airflow (with custom operators for Redshift metadata sync)  \n- **Monitoring**: CloudWatch Metrics + custom dashboards for query performance  \n\n## Architecture / Design  \nThe architecture prioritizes decoupling data ingestion from analytics layers. Redshift clusters are provisioned via Terraform with auto-scaling enabled for peak workloads. Airflow DAGs handle schema migrations and data loading, with retries configured for transient errors. Cost optimization is baked into infrastructure templates, using spot fleets for compute nodes during off-peak hours.  \n\n## Contributing  \nEnhance the project by refining Airflow task dependencies, adding Redshift security best practices, or improving the Terraform module for multi-region deployments. All contributions should align with the project’s focus on operational efficiency and cost control.  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
 }

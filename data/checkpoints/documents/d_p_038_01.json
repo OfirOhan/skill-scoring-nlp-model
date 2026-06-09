@@ -3,26 +3,28 @@
   "type": "project_readme",
   "persona_id": "p_038",
   "hyperparams": {
-    "project_scale": "team-internal",
+    "project_scale": "production",
     "project_team_size": "medium (5-15)",
-    "jargon_density": "moderate"
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
     "AWS": 3,
-    "CI/CD pipelines": 3,
+    "Apache Kafka": 1,
+    "Apache Spark": 2,
+    "Data warehousing": 1,
     "Docker": 3,
-    "GitLab CI": 3,
-    "JavaScript": 3,
+    "ETL pipeline design": 1,
+    "Hugging Face Transformers": 1,
     "Kubernetes": 3,
-    "MongoDB": 3,
-    "Node.js": 3,
-    "PostgreSQL": 3,
-    "Python": 3,
+    "LLMs/Prompt engineering": 1,
+    "MLOps (MLflow/W&B)": 3,
+    "Model deployment": 3,
+    "NLP": 1,
+    "PyTorch": 4,
     "REST API design": 3,
-    "React": 3,
-    "Serverless": 1,
-    "TypeScript": 3,
-    "gRPC": 3
+    "TensorFlow": 1,
+    "dbt": 1,
+    "scikit-learn": 3
   },
-  "text": "# NexaCloud Management Dashboard  \nA unified interface for monitoring, analytics, and user management in multi-tenant SaaS platforms. Built with a focus on scalability, security, and real-time data visualization.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/commit-activity/m/ricardoalmeida/nexacloud)](https://github.com/ricardoalmeida/nexacloud)  \n[![CI/CD](https://img.shields.io/github/actions/workflow/c/ricardoalmeida/nexacloud/main.yml?branch=main)](https://github.com/ricardoalmeida/nexacloud/actions)  \n[![Docker](https://img.shields.io/docker/registry/ricardoalmeida/nexacloud)](https://hub.docker.com/r/ricardoalmeida/nexacloud)  \n[![License](https://img.shields.io/github/license/ricardoalmeida/nexacloud)](https://github.com/ricardoalmeida/nexacloud/blob/main/LICENSE)  \n\n## Tech Stack / Built With  \n- **Frontend**: React (TypeScript) for dynamic UI components  \n- **Backend**: Node.js (TypeScript) with REST API design and gRPC for internal service communication  \n- **Database**: MongoDB (for unstructured logs) + PostgreSQL (for structured metadata)  \n- **Cloud**: AWS S3 for media storage, CloudFront for CDN  \n- **CI/CD**: GitLab CI for automated testing and deployment  \n- **Orchestration**: Kubernetes (AWS EKS) for scalable container management  \n- **Security**: Role-based access control, JWT authentication, and AWS IAM integration  \n\n## Architecture / Design  \nA microservices-first approach with a front-end proxy layer handling authentication. The backend uses gRPC for internal service calls between analytics, user management, and audit modules. MongoDB streams real-time logs to dashboards, while PostgreSQL ensures ACID compliance for critical operations. AWS services handle scaling, with CloudFront caching static assets.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/ricardoalmeida/nexacloud.git  \ncd nexacloud  \nnpm install  \ndocker-compose up -d  \n```  \nEnsure environment variables for AWS credentials and database connections are set in `.env.local`.  \n\n## Usage / Examples  \n```bash  \n# Fetch user metrics  \ncurl -X GET http://localhost:3000/api/v1/users/123/metrics  \n```  \nNavigate to `http://localhost:3001` for the dashboard. Use the \"Real-time Logs\" tab to monitor system activity.  \n\n## Configuration  \nConfig files (`config/dev.json`, `config/prod.json`) define database URLs, AWS region, and API endpoints. Environment variables override defaults for secrets. Kubernetes deployments use ConfigMaps for static config and Secrets for sensitive data.  \n\n## Deployment  \nGitLab CI pipelines build Docker images and push to AWS ECR. Kubernetes manifests in `k8s/` deploy to EKS with auto-scaling rules. Post-deployment, verify metrics via AWS CloudWatch and validate access controls with IAM policies.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/ricardoalmeida/nexacloud/blob/main/LICENSE) for details."
+  "text": "# Industrial Predictive Maintenance System  \n\nA production-grade solution leveraging time-series analysis to forecast equipment failure in industrial settings, reducing unplanned downtime and maintenance costs. Built for scalability, robustness, and integration with enterprise systems.  \n\n---  \n\n## Badges  \n✅ Production-Ready | 📈 Time-Series Analysis | 🧠 ML Ops Integration | 🏗️ Enterprise-Grade  \n\n---  \n\n## Tech Stack  \n- **Modeling**: PyTorch (forecasting), scikit-learn (preprocessing)  \n- **Deployment**: Docker, Kubernetes, AWS Lambda  \n- **Monitoring**: MLflow, Prometheus  \n- **Infrastructure**: AWS S3, EC2, VPC  \n- **API**: FastAPI (real-time inference)  \n\n---  \n\n## Architecture / Design  \nThe system ingests sensor data from industrial IoT devices, processes it via scikit-learn pipelines, and trains PyTorch-based LSTM models to predict equipment degradation. Pretrained models are deployed as Docker containers managed by Kubernetes, with MLflow tracking experiment metrics. AWS Lambda handles batch inference, while Prometheus monitors model latency and system health. The API serves real-time predictions via FastAPI, integrated with enterprise dashboards for maintenance scheduling.  \n\n---  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/[username]/industrial-maintenance.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure AWS credentials in `~/.aws/credentials`  \n4. Build Docker images: `docker-compose build`  \n5. Deploy to Kubernetes: `kubectl apply -f k8s/deployment.yaml`  \n\n---  \n\n## Usage / Examples  \n**Example API Request**:  \n```bash\ncurl -X POST \"http://api.example.com/predict\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"sensor_data\": [23.4, 15.6, 89.2], \"timestamp\": \"2023-10-05T14:30:00Z\"}'\n```  \n**Response**: Predicted failure probability and maintenance recommendation.  \n\n---  \n\n## Contributing  \nContributions are welcome! Please open an issue to discuss changes before submitting a pull request. Ensure code adheres to PEP8 standards and includes unit tests.  \n\n---  \n\n## License  \nMIT License. See [LICENSE](https://github.com/[username]/industrial-maintenance/blob/main/LICENSE) for details."
 }

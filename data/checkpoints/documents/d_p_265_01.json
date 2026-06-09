@@ -1,25 +1,26 @@
 {
   "doc_id": "d_p_265_01",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_265",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "heavy"
+    "recommender_role": "skip-level",
+    "recommender_closeness": "occasional",
+    "company_type": "enterprise",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "CI/CD pipelines": 3,
-    "GitHub Actions": 3,
-    "Go": 1,
-    "Load balancing": 3,
-    "Microservices architecture": 4,
-    "MongoDB": 1,
-    "Prometheus/Grafana": 1,
-    "PostgreSQL": 4,
-    "REST API design": 4,
-    "Terraform": 1,
-    "Python": 1
+    "Apache Airflow": 1,
+    "Computer vision": 1,
+    "Data warehousing": 1,
+    "ETL pipeline design": 1,
+    "GitHub Actions": 1,
+    "MLOps (MLflow/W&B)": 4,
+    "Model deployment": 4,
+    "NLP": 3,
+    "PyTorch": 3,
+    "Recommendation systems": 3,
+    "Snowflake": 1,
+    "TensorFlow": 3
   },
-  "text": "# E-Commerce Payment Gateway API  \n\nA robust, scalable payment gateway API built with Node.js and PostgreSQL, designed to handle high-throughput transaction processing for e-commerce platforms. The system supports real-time payment validation, fraud detection, and seamless integration with third-party payment processors. It has achieved 99.95% uptime in production, handling 5000+ transactions per second during peak load.  \n\n## Deployment  \nDeployed on AWS EC2 instances with PostgreSQL RDS for database persistence. Load balancing via NGINX ensures fault tolerance, while CI/CD pipelines (GitHub Actions) automate testing and deployment. The API is exposed through a RESTful endpoint, with rate limiting and JWT-based authentication enforced at the gateway layer.  \n\n## Getting Started / Installation  \nClone the repository:  \n```bash  \ngit clone https://github.com/femi-akinlade/payment-gateway-api.git  \ncd payment-gateway-api  \n```  \nInstall dependencies:  \n```bash  \nnpm install  \n```  \nSet environment variables using `.env.example` as a template, ensuring AWS credentials and PostgreSQL connection details are configured. Run migrations and seed data:  \n```bash  \nnpx sequelize-cli db:migrate  \nnpx sequelize-cli db:seed:all  \n```  \n\n## Usage / Examples  \n**Create Payment Intent**  \n```bash  \ncurl -X POST https://api.paymentgateway.com/v1/payments \\\n  -H \"Authorization: Bearer <JWT_TOKEN>\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"amount\": 1999, \"currency\": \"USD\", \"description\": \"Winter boots\"}'  \n```  \nResponse includes a transaction ID and status. The system automatically flags suspicious activity using heuristic-based rules, reducing fraud incidents by 37% in production.  \n\n## Tech Stack  \n- **Backend**: Node.js 18, Express.js, PostgreSQL 14  \n- **Security**: JWT authentication, TLS 1.3  \n- **DevOps**: GitHub Actions for CI/CD, AWS RDS, NGINX  \n\n## Architecture / Design  \nThe API follows a layered architecture:  \n1. **API Gateway**: Handles routing, authentication, and rate limiting.  \n2. **Business Logic**: Node.js microservices for payment processing and fraud detection.  \n3. **Database**: PostgreSQL with connection pooling and indexing optimized for high-write scenarios.  \n\nPostgreSQL is configured with replication for read scalability, while the REST API adheres to OpenAPI standards for client integration. The system’s modular design allows for horizontal scaling of payment processors without downtime.  \n\n## License  \nMIT License  \nSee [LICENSE](https://github.com/femi-akinlade/payment-gateway-api/blob/main/LICENSE)  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/actions/workflow/status/femi-akinlade/payment-gateway-api/main.yml?branch=main)](https://github.com/femi-akinlade/payment-gateway-api/actions)  \n[![Build Status](https://img.shields.io/github/workflow/status/femi-akinlade/payment-gateway-api/CI/main?branch=main)](https://github.com/femi-akinlade/payment-gateway-api/actions)  \n[![Coverage](https://img.shields.io/coveralls/github/femi-akinlade/payment-gateway-api/main)](https://coveralls.io/github/femi-akinlade/payment-gateway-api)"
+  "text": "Harini and I have collaborated intermittently over the past two years, primarily through cross-team initiatives at AdVeris. As a senior leader, I’ve observed her work through project updates and occasional strategic alignments, which have given me a clear sense of her technical acumen and collaborative approach.  \n\nHarini’s daily contributions revolve around refining recommendation systems and optimizing NLP models for ad personalization. She frequently leverages PyTorch for prototyping and TensorFlow for scalable deployment, often debugging complex issues that arise in real-time ad campaigns. Her deep familiarity with NLP frameworks has enabled her to streamline text analysis pipelines, reducing latency in campaign targeting by approximately 15% last quarter. She also collaborates closely with data scientists to integrate reinforcement learning techniques into recommendation algorithms, ensuring they adapt to user behavior dynamically.  \n\nOne standout moment occurred when Harini spearheaded the migration of a legacy recommendation model to a distributed MLOps setup using MLflow and W&B. This shift allowed the team to track experiments more efficiently and deploy updates with minimal downtime, resulting in a 20% improvement in model performance. Another instance involved her leading the deployment of a PyTorch-based model for ad click prediction, which required meticulous coordination across engineering and analytics teams. Her ability to balance technical rigor with cross-functional communication ensured the project met tight deadlines without compromising quality.  \n\nHarini is a reliable, self-driven professional who consistently prioritizes both precision and collaboration. Her work on recommendation systems and MLOps workflows has had a tangible impact on AdVeris’s operational efficiency. I wholeheartedly recommend her for any role requiring technical depth, strategic thinking, and the ability to deliver under pressure."
 }

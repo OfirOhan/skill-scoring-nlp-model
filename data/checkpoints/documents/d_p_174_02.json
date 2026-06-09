@@ -3,24 +3,24 @@
   "type": "project_readme",
   "persona_id": "p_174",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "large (15+)",
-    "jargon_density": "plain"
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
     "AWS": 1,
-    "Application security (OWASP)": 2,
-    "Azure": 1,
-    "Compliance (SOC2/GDPR)": 2,
-    "Encryption & PKI": 3,
-    "Firewall configuration": 1,
-    "IAM/Access control": 2,
-    "Network automation": 1,
-    "Network security": 2,
-    "Penetration testing": 1,
-    "SIEM tools": 2,
-    "Security auditing": 1,
-    "Vulnerability management": 1
+    "CI/CD pipelines": 2,
+    "Chaos engineering": 1,
+    "Docker": 3,
+    "ELK": 1,
+    "GCP": 1,
+    "Kubernetes": 5,
+    "Load balancing": 4,
+    "PostgreSQL": 1,
+    "Prometheus/Grafana": 1,
+    "Python": 1,
+    "Redis": 1,
+    "Terraform": 1
   },
-  "text": "# HealthGuard: HIPAA-Compliant Encryption for Health Records  \n\nHealthGuard is a production-ready library for encrypting health records while maintaining HIPAA compliance. Built for healthtech systems requiring robust data protection, it leverages AES-256 and FIPS 140-2-certified algorithms to secure patient data at rest and in transit. The library abstracts cryptographic complexity, enabling developers to integrate encryption into workflows without sacrificing performance or compliance.  \n\n## Badges  \n[![Build Status](https://example.com/build-badge)](https://example.com)  \n[![Test Coverage](https://example.com/coverage-badge)](https://example.com)  \n[![HIPAA Compliance](https://example.com/compliance-badge)](https://example.com)  \n\n## Tech Stack  \n- **Language**: Python 3.9+ (with C extensions for cryptographic primitives)  \n- **Encryption**: AES-256-GCM, RSA-OAEP, HMAC-SHA256  \n- **Compliance**: HIPAA, NIST SP 800-53, FIPS 140-2  \n- **Dependencies**: cryptography, pyOpenSSL, PyKDF, cffi  \n- **CI/CD**: GitHub Actions (Linux/macOS builds only)  \n\n## Configuration  \nHealthGuard uses environment variables and a `config.yaml` file for key management. Example:  \n```yaml  \nencryption:  \n  key_rotation_interval: 30d  \n  audit_log_retention: 90d  \n  algorithm: AES-256-GCM  \n```  \nSet `HEALTHGUARD_LOG_LEVEL=DEBUG` for detailed encryption metadata.  \n\n## Getting Started / Installation  \n```bash  \npip install healthguard --upgrade  \n```  \nEnsure Python 3.9+ is installed. Dependencies include OpenSSL development headers (Linux) or Apple SDKs (macOS).  \n\n## Usage / Examples  \n```python  \nfrom healthguard import encrypt_record, decrypt_record  \n\npatient_data = {\"ssn\": \"123-45-6789\", \"diag\": \"Hypertension\"}  \nencrypted = encrypt_record(patient_data, key=b\"super-secret-key-123\")  \ndecrypted = decrypt_record(encrypted, key=b\"super-secret-key-123\")  \n```  \nHealthGuard handles key derivation via PBKDF2-HMAC-SHA256 with 100,000 iterations.  \n\n## Testing  \nRun unit and integration tests with:  \n```bash  \npython -m pytest tests/  \n```  \nCoverage: 98.2% (excluding FIPS validation stubs). Tests include:  \n- Key rotation edge cases  \n- Performance benchmarks (encrypt/decrypt 1M records/sec)  \n- Compliance audits (HIPAA data-at-rest checks)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# NexaGame CI/CD Pipeline  \nAutomate game asset builds and deployments with GitLab CI/CD and Jenkins, optimized for real-time scalability and cross-team collaboration in high-stakes gaming environments.  \n\n## Badges  \n[![Build Status](https://example.com/build)](https://example.com/build) [![Test Coverage](https://example.com/coverage)](https://example.com/coverage) [![Code Quality](https://example.com/quality)](https://example.com/quality)  \n\n## Getting Started  \n1. Clone the repository: `git clone https://gitlab.com/your-namespace/nexagame-ci.git`  \n2. Configure Jenkins credentials in `config/jenkins-secrets.yaml`  \n3. Set up GitLab CI runners with Docker support enabled  \n4. Deploy the pipeline via `./scripts/bootstrap.sh` to initialize Kubernetes services  \n\n## Tech Stack  \n- **CI/CD**: GitLab CI/CD, Jenkins  \n- **Containerization**: Docker (used for asset build isolation and CI runner consistency)  \n- **Orchestration**: Kubernetes (central to deployment strategy, cross-team resource management)  \n- **Networking**: NGINX Plus (load balancing for staging/production environments)  \n- **Asset Tools**: TextureProcessor v2.4, AnimationCompiler 3.1  \n\n## Architecture / Design  \nThe pipeline integrates GitLab for source control with Jenkins as the orchestration layer. Docker ensures consistent build environments across 12+ asset types. Kubernetes manages deployment scaling, with NGINX Plus routing traffic to active pods. Key decisions include:  \n- Kubernetes autoscaling based on CI/CD queue depth (reduced deployment time by 40%)  \n- Docker layer caching for texture asset builds (cut build latency by 25%)  \n- Load balancer health checks integrated with Jenkins for failover automation  \n\n## Usage / Examples  \n```bash\n# Trigger a full pipeline run  \n./scripts/run-pipeline.sh --branch main --environment staging  \n\n# Deploy a specific asset type  \n./scripts/deploy-asset.sh --type \"3d-model\" --version 1.2.7  \n```  \nExample workflows include automated texture compression pipelines and real-time analytics dashboard deployments.  \n\n## Testing  \n- **Unit Tests**: 92% coverage for Jenkins job configurations  \n- **Integration Tests**: Validate Kubernetes pod scaling and NGINX routing rules  \n- **Load Testing**: Simulate 5k concurrent deployments using Locust (ensures load balancer stability)  \n\n## License  \nMIT License (see [LICENSE](LICENSE) file for details)"
 }

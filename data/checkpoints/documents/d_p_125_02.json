@@ -1,26 +1,27 @@
 {
   "doc_id": "d_p_125_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_125",
   "hyperparams": {
-    "recommender_role": "peer",
-    "recommender_closeness": "worked-daily",
-    "company_type": "FAANG",
-    "company_size": "mid (50-500)"
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
     "AWS": 1,
-    "Application security (OWASP)": 3,
-    "Compliance (SOC2/GDPR)": 4,
-    "Encryption & PKI": 1,
-    "Firewall configuration": 3,
-    "IAM/Access control": 4,
-    "Monitoring & alerting": 3,
-    "Network automation": 3,
-    "Network security": 3,
-    "Penetration testing": 3,
-    "Security auditing": 3,
-    "Terraform": 3
+    "Apache Kafka": 1,
+    "Apache Spark": 1,
+    "Docker": 1,
+    "Hugging Face Transformers": 3,
+    "Kubernetes": 1,
+    "LLMs/Prompt engineering": 3,
+    "MLOps (MLflow/W&B)": 4,
+    "Model deployment": 3,
+    "NLP": 4,
+    "PyTorch": 5,
+    "REST API design": 1,
+    "TensorFlow": 3,
+    "scikit-learn": 4
   },
-  "text": "Kamila’s work at FinSecure revolves around balancing innovation with rigorous security protocols. Her role as a Senior Security Engineer demands a deep understanding of application security frameworks, which she applies daily. For instance, she spearheaded a project integrating OWASP guidelines into FinSecure’s API architecture, reducing critical vulnerabilities by 30% within six months. This required cross-functional collaboration and a knack for translating abstract standards into actionable code.  \n\nWe collaborated closely on her team’s shift to cloud-native security practices. Kamila’s approach to firewall configuration and network automation was refreshingly pragmatic. She designed a dynamic firewall rule set that adapted to traffic patterns, cutting false positives by 40% without compromising policy rigor. Her use of Terraform to automate security infrastructure not only streamlined deployments but also reduced manual errors by 25%. These systems are now foundational to FinSecure’s DevOps pipeline.  \n\nBeyond technical prowess, Kamila’s commitment to compliance stands out. She owns FinSecure’s SOC2 and GDPR readiness programs, ensuring audits pass with zero exceptions. Her IAM framework, which centralized access controls across 15+ microservices, slashed unauthorized access incidents by 60%—a feat that directly impacted the company’s regulatory standing.  \n\nKamila’s work ethic is equally noteworthy. She thrives in ambiguity, often volunteering to tackle high-impact security audits during crunch periods. Her curiosity drives her to stay ahead of threats, whether through penetration testing or refining monitoring dashboards.  \n\nKamila’s blend of technical precision and operational insight makes her a rare asset. She’s not just a security engineer—she’s a strategic thinker who turns risks into opportunities. I wholeheartedly recommend her for any role requiring both depth and agility in security leadership."
+  "text": "# AnomalyDetector: Real-Time Network Anomaly Detection  \nA lightweight system for identifying unusual network behavior using PyTorch and cybersecurity datasets. Designed for academic research, this project balances simplicity with real-time processing capabilities for packet-level analysis.  \n\n## Badges  \n[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)  \n[![PyTorch](https://img.shields.io/badge/PyTorch-2.0.1-green)](https://pytorch.org)  \n\n## Tech Stack  \n- **Core**: PyTorch (custom CNN architecture for temporal pattern recognition)  \n- **Data Handling**: Scikit-learn (data normalization) + NLP techniques (tokenization for protocol fields)  \n- **Model Optimization**: Hugging Face Transformers (adapter modules for fine-tuning)  \n- **Tracking**: MLflow (experiment logging) + Weights & Biases (hyperparameter visualization)  \n- **Support**: PyTorch Lightning (modular training loops)  \n\n## Configuration  \nConfigure the system via `config.yaml`. Key parameters include:  \n- `dataset_path`: Path to CICIDS2017 or similar dataset  \n- `model_checkpoint`: Pretrained weights for base classifier  \n- `output_frequency`: Seconds between anomaly alerts  \n- `feature_engineering`: Boolean to enable protocol-specific tokenization  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/mateogarcia/AnomalyDetector.git  \n   cd AnomalyDetector  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n3. Download and preprocess dataset (see `data/README.md` for details).  \n\n## Usage / Examples  \nRun real-time detection with:  \n```bash  \npython main.py --config config.yaml --mode real-time  \n```  \nFor batch analysis:  \n```bash  \npython main.py --config config.yaml --mode batch --input ./data/test.pcap  \n```  \nOutput includes:  \n- Live alerts in terminal  \n- MLflow dashboard (http://localhost:5000)  \n- Exported anomaly reports (CSV/JSON)  \n\n## Testing  \nRun unit tests with:  \n```bash  \npytest tests/  \n```  \nTests validate:  \n- Model accuracy (F1 score ≥ 0.85 on CICIDS2017)  \n- Latency (< 50ms for 100k packets/sec)  \n- Config file parsing (error handling for invalid paths)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

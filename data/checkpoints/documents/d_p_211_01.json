@@ -4,24 +4,19 @@
   "persona_id": "p_211",
   "hyperparams": {
     "project_scale": "production",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "heavy"
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "Agile/Scrum": 3,
+    "AWS": 3,
     "CI/CD pipelines": 4,
-    "Cloud cost optimization": 4,
-    "Cross-team collaboration": 3,
-    "Database optimization": 4,
-    "Kubernetes": 4,
-    "Mentoring": 3,
-    "Project management": 3,
-    "Stakeholder communication": 3,
-    "System design": 4,
-    "Team leadership": 3,
-    "Technical debt management": 4,
+    "Cloud cost optimization": 3,
+    "Kubernetes": 5,
+    "Load balancing": 3,
+    "Monitoring & alerting": 5,
+    "Prometheus/Grafana": 4,
+    "Python": 1,
     "Terraform": 4
   },
-  "text": "# Ecomify Microservices Marketplace  \nA production-ready microservices architecture for a high-traffic e-commerce platform, designed for scalability, resilience, and real-time analytics. Built with a focus on decoupled services, automated workflows, and cloud-native infrastructure.  \n\n## Badges  \n[![Production Ready](https://img.shields.io/badge/production-ready-green)](https://example.com)  \n[![CI/CD Pipeline](https://img.shields.io/badge/CI%2FCD-passing-blue)](https://example.com)  \n\n## Tech Stack  \n- **Cloud**: AWS (EC2, S3, RDS, Lambda) with cost-optimized auto-scaling  \n- **Orchestration**: Kubernetes (managed via EKS) with HPA and vertical scaling  \n- **Infrastructure as Code**: Terraform for cluster provisioning and resource tagging  \n- **Database**: PostgreSQL (read replicas) + Redis (cache) + Kafka (event streaming)  \n- **Languages**: Go (core services), Python (data pipelines), Node.js (API gateways)  \n- **Monitoring**: Prometheus + Grafana for latency tracking and anomaly detection  \n\n## Configuration  \nEnvironment variables are managed via `.env` files (local) and AWS Parameter Store (prod).  \n- `AWS_REGION`, `KUBECONFIG_PATH`, `POSTGRES_DB_URL`  \n- Terraform variables: `cluster_size`, `redis_replicas`, `lambda_timeout`  \n- Kubernetes secrets: `db_credentials`, `api_keys`  \n\n## Getting Started / Installation  \n1. Clone repo: `git clone https://github.com/yourorg/ecomify-marketplace.git`  \n2. Install dependencies: `go mod tidy` and `npm install`  \n3. Set AWS credentials via `aws configure` or IAM roles  \n4. Deploy infrastructure: `terraform init && terraform apply`  \n5. Start services: `docker-compose up --build`  \n\n## Usage / Examples  \n```bash  \n# Trigger real-time inventory sync  \ncurl -X POST https://api.ecomify.com/sync --header \"Authorization: Bearer <token>\"  \n\n# Monitor service health  \nkubectl get pods -n ecomify --watch  \n\n# Run data pipeline job  \npython3 pipeline.py --env prod --output s3://data-bucket  \n```  \nServices are decoupled, with Kafka topics enabling asynchronous order processing and event-driven analytics.  \n\n## Testing  \n- **Unit tests**: Go’s `testing` package with mocks for DB and API calls  \n- **Integration tests**: Dockerized Postgres + Redis for end-to-end validation  \n- **Chaos testing**: Chaos Monkey for network partition simulations  \n- **Test coverage**: 92% (unit) / 85% (integration) via GitHub Actions  \n\n## License  \nMIT License. For production use under enterprise-grade SLAs."
+  "text": "# Financial Microservices Architecture  \nA production-grade microservices framework for fintech payment gateways, engineered for sub-100ms latency and 99.99% SLA. Built to scale across 10M+ transactions daily with zero-downtime deployments.  \n\n## Deployment  \nProduction-ready via AWS EKS with Terraform-managed infrastructure. Deployed using GitHub Actions CI/CD pipelines, achieving 95% deployment reliability. Load balancers (NLB + ALB) handle 100k RPS, with auto-scaling configured for 99.99% uptime. Cloud cost optimization via spot fleet reservations reduced infrastructure spend by 35% annually.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/rabiayilmaz/financial-microservices.git`  \n2. Initialize Terraform: `terraform init`  \n3. Apply infrastructure: `terraform apply --auto-approve`  \n4. Configure Prometheus/Grafana for metrics aggregation (see monitoring section).  \n\n## Usage / Examples  \n```bash\n# Example: Process payment via REST API  \ncurl -X POST https://api.paymentgateway.com/v1/transactions \\\n  -H \"Authorization: Bearer <token>\" \\\n  -d '{\"amount\": 150, \"currency\": \"USD\", \"user_id\": \"12345\"}'\n```  \nReal-time fraud detection and transaction routing are handled via async message queues (Kafka) with 99.95% message delivery SLA.  \n\n## Tech Stack  \n- **Orchestration**: Kubernetes (EKS) with HPA for auto-scaling  \n- **Infrastructure**: Terraform + AWS (EC2, RDS, CloudFront)  \n- **Monitoring**: Prometheus + Grafana (custom dashboards for latency, error rates)  \n- **Networking**: AWS NLB, VPC peering, and service mesh (Istio) for mTLS  \n- **Data**: PostgreSQL (read replicas) + Redis (caching)  \n\n## Architecture / Design  \nCore design principles:  \n- **Resilience**: Circuit breakers (Hystrix) and retries for 99.95% fault tolerance  \n- **Scalability**: Stateless services with horizontal scaling, sharded databases  \n- **Observability**: Distributed tracing (Jaeger) and custom metrics for 95%+ query latency < 100ms  \n- **Security**: Role-based access control (IAM), TLS 1.3, and audit logging  \n\nMulti-year Kubernetes expertise shaped the architecture, including mentoring teams on operator patterns and cross-team standardization.  \n\n## License  \nMIT License  \nSee [LICENSE](LICENSE) for details  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/actions/workflow/status/rabiayilmaz/financial-microservices/main.yml?branch=main)](https://github.com/rabiayilmaz/financial-microservices/actions)  \n[![Docker](https://img.shields.io/docker/pulls/rabiayilmaz/financial-microservices)](https://hub.docker.com/r/rabiayilmaz/financial-microservices)  \n[![Coverage](https://img.shields.io/codecov/c/github/rabiayilmaz/financial-microservices)](https://codecov.io/gh/rabiayilmaz/financial-microservices)  \n[![Build Status](https://img.shields.io/github/workflow/status/rabiayilmaz/financial-microservices/CI/main)](https://github.com/rabiayilmaz/financial-microservices/actions)"
 }

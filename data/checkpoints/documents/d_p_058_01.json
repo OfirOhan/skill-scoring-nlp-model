@@ -3,26 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_058",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "large (15+)",
-    "jargon_density": "heavy"
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "Agile/Scrum": 3,
+    "AWS": 5,
     "CI/CD pipelines": 3,
-    "Cloud cost optimization": 3,
-    "Cross-team collaboration": 3,
-    "Database optimization": 3,
-    "Kubernetes": 4,
+    "Docker": 3,
+    "Go": 5,
     "Linux administration": 2,
-    "Mentoring": 1,
-    "Monitoring & alerting": 3,
-    "Project management": 3,
-    "Stakeholder communication": 2,
-    "System design": 4,
-    "Team leadership": 3,
-    "Terraform": 4
+    "Microservices architecture": 5,
+    "Monitoring & alerting": 1,
+    "PostgreSQL": 5,
+    "Python": 3,
+    "REST API design": 5
   },
-  "text": "# Real-Time Bidding Platform for AdvertiseNow Media  \nA distributed system enabling sub-200ms ad impressions with dynamic bidder pooling and latency-optimized auction mechanics. Built for scale, resilience, and compliance with programmatic ad standards.  \n\n## Badges  \n[![Tech Stack](https://example.com/tech-badge)](https://example.com)  \n[![CI/CD](https://example.com/ci-badge)](https://example.com)  \n[![License](https://example.com/license-badge)](https://example.com)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Tech Stack  \n- **AWS**: Lambda, DynamoDB, Kinesis, S3 (cost-optimized with reserved instances)  \n- **Kubernetes**: Cluster autoscaling, service mesh (Istio), horizontal pod autoscaling  \n- **Databases**: PostgreSQL (read replicas), Redis (in-memory caching for bid requests)  \n- **Message Queues**: Kafka (for bid event streaming)  \n- **Monitoring**: Prometheus + Grafana (custom dashboards for latency metrics)  \n- **CI/CD**: GitHub Actions (automated testing, canary deployments)  \n\n## Architecture / Design  \nA microservices architecture with:  \n1. **Bid Engine**: WebSocket-based auction logic (Go) with real-time bid validation  \n2. **Auction Service**: Load-balanced API gateway (Nginx) handling 10k+ RPS  \n3. **Data Plane**: Kafka topics for bid events, processed by Apache Flink for analytics  \n4. **Infrastructure**: Terraform-managed VPCs with VPC peering for cross-region latency optimization  \n5. **Security**: AWS WAF for DDoS mitigation, IAM roles for service-to-service auth  \n\n## Getting Started / Installation  \n1. Install Docker and Kubernetes CLI  \n2. Clone repo: `git clone https://github.com/advertise-now/bidding-platform.git`  \n3. Configure AWS credentials via `~/.aws/credentials`  \n4. Deploy infrastructure: `terraform apply -var-file=dev.tfvars`  \n5. Build and push images: `make docker-build && make docker-push`  \n\n## Usage / Examples  \n```bash\n# Simulate bid request\ncurl -X POST https://api.bidding-platform.dev/bid \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"ad_id\": \"123\", \"bidders\": [{\"id\": \"bidder-a\", \"max_cpc\": 0.5}]}'\n```\nResponse includes winning bidder, final bid price, and impression metadata.  \n\n## Contributing  \nWe use GitHub Issues for tracking. New features require:  \n- Architecture review (system design docs mandatory)  \n- Unit tests (coverage ≥ 90%)  \n- CI/CD pipeline integration  \n- Cross-team coordination with analytics and compliance teams for metric validation"
+  "text": "# NexaSync Real-Time Data Sync API  \nA high-throughput, low-latency data synchronization service built for SaaS platforms, enabling bidirectional real-time sync across distributed systems. Designed for scalability, resilience, and integration with existing workflows.  \n\n## Contributing  \nThis project is open to collaboration. If you're interested in refining edge-case handling, optimizing data consistency protocols, or enhancing event-driven architecture patterns, open a GitHub issue or submit a pull request. All contributions are reviewed with a focus on maintainability and alignment with SaaS-scale requirements.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/hugoramirez/nexasync.git`  \n2. Set up environment variables for AWS credentials and PostgreSQL connection strings.  \n3. Build the Docker container: `docker-compose up --build`  \n4. Navigate to the `/docs` directory for Swagger UI and API reference.  \n5. For local development, run `go mod tidy` and `go run main.go` after configuring `.env.local`.  \n\n## Usage / Examples  \nTo initiate a sync job:  \n```bash  \ncurl -X POST https://api.nexasync.dev/v1/jobs \\\n  -H \"Authorization: Bearer YOUR_API_KEY\" \\\n  -d '{\"source\": \"db_prod\", \"target\": \"cloud_warehouse\", \"filters\": {\"status\": \"active\"}}'  \n```  \nReal-time updates are streamed via WebSocket to subscribed clients. Use `/webhook` endpoints for server-to-server notifications.  \n\n## Tech Stack  \n- **Language**: Go (1.21+) for performance-critical logic  \n- **Database**: PostgreSQL (15+) with JSONB for hierarchical metadata  \n- **Cloud**: AWS Lambda for async task queues, S3 for blob storage  \n- **Containerization**: Docker for consistent CI/CD pipelines  \n- **Networking**: gRPC for internal service communication, REST for external APIs  \n- **Monitoring**: Custom metrics exported via Prometheus (not explicitly mentioned in documentation)  \n\n## Architecture / Design  \nThe system decouples data ingestion, transformation, and delivery into three microservices:  \n1. **Sync Orchestrator**: Manages job scheduling and conflict resolution using AWS DMS for source-to-target mapping  \n2. **Event Router**: Processes Kafka streams to route updates to appropriate destinations  \n3. **Status API**: Exposes real-time sync metrics via GraphQL subscriptions  \n\nCritical decisions include using PostgreSQL's logical replication for CDC and implementing idempotent write handlers to prevent data duplication. All services are instrumented with OpenTelemetry for distributed tracing.  \n\n## License  \nMIT License. See `LICENSE.md` for full details.  \n\n## Badges  \n[![GitHub](https://badgen.net/badge/github/hugoramirez/green)](https://github.com/hugoramirez)  \n[![Docker](https://badgen.net/badge/docker/100%25/blue)](https://hub.docker.com/_u/hugoramirez/nexasync)  \n[![Go](https://badgen.net/badge/go/1.21/green)](https://golang.org/)  \n[![PostgreSQL](https://badgen.net/badge/postgres/15/green)](https://www.postgresql.org/)"
 }

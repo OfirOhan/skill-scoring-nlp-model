@@ -3,26 +3,24 @@
   "type": "cv",
   "persona_id": "p_301",
   "hyperparams": {
-    "cv_format": "bullet-heavy",
+    "cv_format": "paragraph",
     "geographic_convention": "Europe",
-    "company_type": "agency",
-    "company_size": "mid (50-500)"
+    "company_type": "FAANG",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "Apache Spark": 3,
-    "Data modeling": 3,
-    "Data visualization (Matplotlib/Plotly)": 3,
-    "ETL pipeline design": 3,
-    "Feature engineering": 3,
-    "Jupyter notebooks": 3,
-    "Microservices architecture": 2,
-    "NumPy": 4,
-    "Pandas": 4,
-    "Python": 4,
-    "REST API design": 2,
-    "SQL analytics": 3,
-    "Statistical modeling": 3,
-    "scikit-learn": 3
+    "Agile/Scrum": 5,
+    "CI/CD pipelines": 3,
+    "Cloud infrastructure": 1,
+    "Cross-team collaboration": 4,
+    "GitHub Actions": 3,
+    "Linux administration": 2,
+    "Microservices architecture": 5,
+    "Monitoring & alerting": 3,
+    "Shell scripting": 2,
+    "Stakeholder communication": 5,
+    "System design": 5,
+    "Team leadership": 4
   },
-  "text": "Quinn O'Brien  \nEmail: quinn.o.brien@email.com | Location: Munich, Germany | Phone: +49 123 456 789  \n\n**Professional Experience**  \n*Junior Data Scientist*  \nCyberSentinel Technologies (Mid-sized agency, 50–500 employees) | 2023–Present  \n- Developed predictive threat detection models using scikit-learn, achieving a 12% reduction in false positives across 300K+ log entries.  \n- Designed ETL pipelines with Apache Spark to process 20TB of network traffic data, reducing batch processing time by 25%.  \n- Collaborated with cybersecurity analysts to refine feature engineering workflows, improving model accuracy by 8% through domain-specific variable selection.  \n- Created interactive dashboards with Plotly to visualize real-time threat metrics, enabling faster incident response.  \n\n*Cybersecurity Intern*  \nSecureNet Solutions | 2022–2023  \n- Analyzed 150K+ security logs using Python and Pandas, identifying patterns in phishing attempts that informed internal training programs.  \n- Contributed to a data modeling project that integrated SQL analytics with cloud storage, streamlining access to historical threat data.  \n- Supported the development of a Jupyter notebook-based tool for automating report generation, cutting manual reporting time by 30%.  \n\n**Projects**  \n*Threat Intelligence Dashboard*  \n- Built a scalable visualization tool using Plotly and Django, aggregating data from 5+ sources to track malware trends.  \n- Integrated NumPy for efficient array operations, enabling real-time updates with minimal latency.  \n\n*ETL Pipeline Optimization*  \n- Redesigned legacy data workflows using Apache Spark, reducing data ingestion delays from 4 hours to 15 minutes.  \n- Implemented data validation checks with Pandas, eliminating 95% of downstream processing errors.  \n\n*Anomaly Detection in Network Traffic*  \n- Engineered a supervised learning model using scikit-learn and SQL analytics, flagging 18% more malicious activity than previous systems.  \n- Leveraged NumPy for matrix operations, accelerating feature extraction by 40% compared to baseline methods.  \n\n**Education**  \n*Master’s in Data Science*  \nMassachusetts Institute of Technology (MIT) | 2023  \n- Thesis: \"Leveraging Temporal Patterns in Cybersecurity Logs for Proactive Threat Mitigation\"  \n\n**Technical Skills**  \n- **Apache Spark**: Processed large-scale network datasets, optimized query performance with partitioning strategies.  \n- **Data Modeling**: Designed relational schemas for security databases, improving query efficiency by 20%.  \n- **ETL Pipeline Design**: Automated data flow between cloud storage and analytics platforms using Airflow.  \n- **Data Visualization**: Created Matplotlib/Plotly dashboards for stakeholder presentations, reducing interpretation time by 50%.  \n- **Feature Engineering**: Built domain-specific features for threat detection models, enhancing model precision.  \n- **Jupyter Notebooks**: Developed reproducible workflows for exploratory analysis and model validation.  \n- **SQL Analytics**: Queryed and aggregated data from PostgreSQL databases, supporting 20+ analytical reports monthly.  \n- **Statistical Modeling**: Applied hypothesis testing to validate security hypothesis, influencing 3 internal policy updates.  \n- **NumPy**: Optimized numerical computations in real-time analytics, reducing processing latency by 35%.  \n- **Pandas**: Engineered data cleaning pipelines for 10+ datasets, ensuring 99.8% data integrity.  \n- **Python**: Led the implementation of 5+ data processing scripts, reducing manual effort by 40%.  \n\n**Certifications**  \n- AWS Certified Data Analytics – Professional (2023)  \n- Google Cloud Professional Data Engineer (2022)  \n\n**Languages**  \n- English (Native)  \n- German (Fluent)  \n- French (Intermediate)"
+  "text": "Ethan Price 104  \nAmsterdam, Netherlands | ethan.price@ecomvista.com | +31 6 1234 5678 | linkedin.com/in/ethanprice104  \n\nA seasoned software engineer with a focus on scalable system design and cross-functional collaboration in the e-commerce sector. Over the past three years, I’ve led the development of microservices architectures, streamlined CI/CD pipelines, and bridged technical and business priorities across teams. My work emphasizes sustainable practices, measurable outcomes, and alignment with agile principles.  \n\n**Professional Experience**  \n*Senior Tech Lead*  \nEcomVista Ltd. | 2022–2023  \nLed a team of four engineers to refactor legacy monolithic systems into modular microservices, reducing deployment time by 40% and improving fault isolation. Introduced GitHub Actions to automate testing and deployment, integrating with existing monitoring tools to enable real-time alerting for critical failures. Collaborated with product managers to define technical debt reduction roadmaps, prioritizing features based on user impact and business value.  \n\n*Senior Software Engineer*  \nEcomVista Ltd. | 2021–2022  \nArchitected a scalable order processing pipeline using Kafka for event-driven workflows, increasing system throughput by 35% during peak traffic. Mentored junior engineers on best practices for API design and distributed system patterns, resulting in a 25% reduction in integration-related bugs. Played a key role in transitioning teams from waterfall to agile methodologies, aligning sprint planning with stakeholder feedback loops.  \n\n*Software Engineer*  \nRetailNexus Inc. | 2020–2021  \nDeveloped and maintained core components of a recommendation engine, leveraging collaborative filtering algorithms to improve conversion rates by 12%. Automated infrastructure provisioning using shell scripts, reducing manual setup time for new environments. Participated in cross-functional workshops to align technical solutions with customer journey maps, ensuring features addressed pain points in the checkout process.  \n\n**Projects / Side Projects**  \n*Microservices Architecture for EcomVista*  \nDesigned and implemented a multi-tenant microservices framework using Spring Boot and Docker, enabling independent scaling of inventory, payment, and user management modules. Integrated with Prometheus for metrics collection and Grafana for dashboards, providing actionable insights into system performance.  \n\n*CI/CD Optimization at RetailNexus*  \nRefactored existing Jenkins pipelines to use GitHub Actions, reducing build times by 20% and improving visibility into deployment stages. Introduced canary release strategies, minimizing risk during feature rollouts while maintaining high availability.  \n\n*Stakeholder Communication Tool*  \nDeveloped a lightweight dashboard for non-technical stakeholders, visualizing system health and incident resolution times. Built using React and Python, it reduced manual reporting efforts and improved transparency across teams.  \n\n**Education**  \nMaster of Science in Computer Science | Stanford University | 2021  \n\n**Languages**  \nEnglish (near-native), German (business), French (basic)  \n\n**Certifications**  \nScrum Master (CSM), AWS Certified Cloud Practitioner (inactive)"
 }

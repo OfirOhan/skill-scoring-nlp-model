@@ -1,38 +1,40 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Tomasz Lewandowski's experience as a Full-Stack Developer in healthtech",
-    "title": "Tomasz Lewandowski - Full-Stack Developer",
+    "topic_summary": "CV for a new Platform Engineer at FinTech Solutions Inc. with no professional experience",
+    "title": "Pavel Dvorak - Platform Engineer",
     "doc_id": "d_p_082_00",
     "persona_id": "p_082",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
+      "cv_format": "paragraph",
       "geographic_convention": "Europe",
-      "company_type": "enterprise",
-      "company_size": "large (500+)"
+      "company_type": "startup",
+      "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A README for a healthtech project focusing on patient data management with full-stack tech stack",
-    "title": "MedTrack - Patient Vital Monitoring Web App",
+    "topic_summary": "Open-source project for building a microservices-based payment gateway for fintech startups",
+    "title": "FinTech Payment Gateway Platform",
     "doc_id": "d_p_082_01",
     "persona_id": "p_082",
     "hyperparams": {
-      "project_scale": "production",
+      "project_scale": "hobby",
       "project_team_size": "solo",
-      "jargon_density": "heavy"
+      "jargon_density": "moderate"
     }
   },
   {
-    "doc_type": "blog",
-    "topic_summary": "A technical blog post discussing secure data handling in healthtech full-stack applications",
-    "title": "Securing Patient Data in Full-Stack HealthTech Applications",
+    "doc_type": "recommendation",
+    "topic_summary": "Recommendation from a FinTech Solutions Inc. manager highlighting Pavel's cloud infrastructure skills",
+    "title": "Recommendation for Pavel Dvorak",
     "doc_id": "d_p_082_02",
     "persona_id": "p_082",
     "hyperparams": {
-      "blog_depth": "tutorial",
-      "jargon_density": "moderate"
+      "recommender_role": "professor",
+      "recommender_closeness": "occasional",
+      "company_type": "startup",
+      "company_size": "mid (50-500)"
     }
   }
 ]

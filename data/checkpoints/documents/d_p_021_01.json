@@ -3,25 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_021",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "medium (5-15)",
+    "project_scale": "hobby",
+    "project_team_size": "solo",
     "jargon_density": "plain"
   },
   "skill_evidence": {
-    "A/B testing": 1,
-    "Apache Airflow": 2,
-    "Data modeling": 3,
-    "Data visualization (Matplotlib/Plotly)": 3,
-    "ETL pipeline design": 3,
-    "Exploratory data analysis": 3,
-    "Feature engineering": 3,
-    "NumPy": 3,
-    "Pandas": 3,
-    "Python": 3,
-    "REST API design": 2,
-    "SQL analytics": 3,
-    "dbt": 2,
-    "scikit-learn": 3
+    "Application security (OWASP)": 3,
+    "DNS/DHCP": 1,
+    "Encryption & PKI": 3,
+    "Firewall configuration": 1,
+    "IAM/Access control": 3,
+    "Network automation": 1,
+    "Network security": 4,
+    "Penetration testing": 4,
+    "Security auditing": 1,
+    "TCP/IP": 1
   },
-  "text": "# NijiMart Customer Segmentation Analysis  \nA data-driven exploration of customer behavior patterns to refine marketing strategies through unsupervised learning techniques. This project leverages clustering algorithms to identify distinct customer segments, enabling targeted promotional campaigns and resource allocation. Built for internal use within a mid-sized e-commerce team, the analysis integrates historical transaction data, demographic insights, and behavioral metrics to uncover actionable trends.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/last-commit/takeshihayashi/nijimart-segmentation)](https://github.com/takeshihayashi/nijimart-segmentation/commits/main)  \n[![CI/CD](https://img.shields.io/github/actions/workflow/1048293313/badge.svg)](https://github.com/takeshihayashi/nijimart-segmentation/actions)  \n[![Tech Stack](https://img.shields.io/badge/tech-stack-Python%20%7C%20Pandas%20%7C%20scikit--learn%20%7C%20Plotly-blue)](https://github.com/takeshihayashi/nijimart-segmentation)  \n\n## Getting Started / Installation  \nEnsure Python 3.9+ is installed. Clone the repository and install dependencies via:  \n```bash  \npip install -r requirements.txt  \n```  \nThe project assumes access to a PostgreSQL database for raw data. Configure `config.py` with your database credentials before proceeding.  \n\n## Usage / Examples  \nRun the analysis by executing:  \n```bash  \npython main.py --input_path ./data/raw --output_path ./results  \n```  \nThis triggers a full workflow:  \n1. Load and preprocess transaction logs using Pandas and NumPy  \n2. Apply K-Means clustering to 8 key behavioral metrics  \n3. Generate segment profiles with Plotly dashboards  \n4. Export cluster assignments to CSV for downstream marketing tools  \n\nFor a quick visualization of RFM scores, use:  \n```bash  \npython visualize_rfm.py --output ./reports/RFM_insights.html  \n```  \n\n## Architecture / Design  \nThe system is structured as a modular pipeline:  \n- **Data Layer**: PostgreSQL integration via SQLAlchemy for schema-aware querying  \n- **Processing Layer**: ETL workflows with Pandas for feature engineering (e.g., calculating RFM scores)  \n- **Modeling Layer**: scikit-learn pipelines for hyperparameter tuning and cross-validation  \n- **Visualization Layer**: Interactive Plotly dashboards for segment comparison  \n\nDecisions prioritize scalability—data partitioning and memory-efficient operations ensure compatibility with large datasets.  \n\n## Tech Stack / Built With  \n- **Language**: Python 3.9+  \n- **Data Handling**: Pandas, NumPy, SQLAlchemy  \n- **Modeling**: scikit-learn (K-Means, DBSCAN)  \n- **Visualization**: Plotly, Dash  \n- **Infrastructure**: Apache Airflow for scheduled pipeline runs  \n\n## Roadmap / Future Work  \n1. Integrate real-time transaction streams for dynamic segmentation  \n2. Add support for hierarchical clustering to refine segment hierarchies  \n3. Develop a web interface for non-technical stakeholders  \n4. Explore hybrid models combining clustering with rule-based segmentation  \n\n## Acknowledgments  \nThis project benefits from collaborative insights within the NijiMart analytics team. Special thanks to the data engineering team for maintaining the PostgreSQL schema and the product team for providing business context.  \n\n## Contributing  \nEnhance this project by:  \n- Adding new feature engineering techniques  \n- Improving visualization interactivity  \n- Optimizing cluster validation metrics  \nAll contributions require a pull request and code review. Let’s build better customer insights together!"
+  "text": "# AdGuard: Real-Time Fraud Detection in Ad Tech Pipelines  \nAdGuard is a lightweight, real-time fraud detection system tailored for ad tech pipelines. It leverages machine learning models and rule-based logic to identify suspicious activity in ad impressions, clicks, and conversions. Built for speed and precision, it integrates seamlessly with existing ad tech stacks to reduce fraud loss without compromising performance.  \n\n## Testing  \nAutomated testing is the backbone of AdGuard’s reliability. Unit tests validate model inference pipelines, while integration tests simulate adversarial traffic to stress-test detection thresholds. Security audits using OWASP ZAP and custom rule sets ensure no false positives escape production. Penetration testing has confirmed zero exploitable vulnerabilities in the system’s data flow, with 99.8% accuracy in blocking known fraud patterns.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies:  \n```bash  \ngit clone https://github.com/your-username/adguard.git  \ncd adguard  \npip install -r requirements.txt  \n```  \nSet up a local Kafka instance for message streaming and configure environment variables for model paths and API keys.  \n\n## Usage / Examples  \nRun the detection pipeline with:  \n```bash  \npython main.py --input /path/to/ad_events.json --output /path/to/results.csv  \n```  \nExample use case: Process 10,000+ ad impressions per second, flagging 2.3% of traffic for manual review. The CLI outputs a fraud score and metadata for each event, enabling real-time decision-making.  \n\n## Tech Stack  \n- **Language**: Python (3.9+)  \n- **Streaming**: Apache Kafka  \n- **ML Framework**: TensorFlow Lite (for edge deployment)  \n- **Security**: AES-256 encryption for data at rest, JWT for API access control  \n- **Monitoring**: Prometheus + Grafana for latency and throughput metrics  \n\n## Architecture / Design  \nAdGuard’s architecture is a layered pipeline:  \n1. **Ingestion**: Kafka streams handle high-velocity ad events.  \n2. **Detection**: Hybrid model (XGBoost + custom rules) processes data in under 50ms.  \n3. **Alerting**: Webhook integrations notify fraud analysts of high-risk events.  \nNetwork security is enforced via TLS 1.3 and rate-limiting at the API gateway, while IAM policies restrict access to sensitive model weights.  \n\n## License  \nMIT License (see [LICENSE](LICENSE) for details)  \n\n## Contributing  \nPull requests are welcome! Focus on improving detection accuracy, optimizing latency, or expanding support for new ad platforms. All contributions undergo code review and are tested against our internal fraud dataset before merging."
 }

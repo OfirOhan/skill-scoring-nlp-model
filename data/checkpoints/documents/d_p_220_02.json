@@ -1,22 +1,25 @@
 {
   "doc_id": "d_p_220_02",
-  "type": "linkedin",
+  "type": "project_readme",
   "persona_id": "p_220",
   "hyperparams": {
-    "linkedin_completeness": "standard"
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 1,
-    "Cloud cost optimization": 1,
-    "Docker": 1,
-    "GitLab CI": 1,
-    "JavaScript": 3,
-    "MongoDB": 3,
-    "Node.js": 3,
-    "Python": 3,
-    "REST API design": 3,
-    "React": 3,
-    "Web performance optimization": 3
+    "Application security (OWASP)": 3,
+    "CI/CD pipelines": 2,
+    "DNS/DHCP": 2,
+    "Encryption & PKI": 3,
+    "Firewall configuration": 1,
+    "IAM/Access control": 3,
+    "Network automation": 1,
+    "Network security": 3,
+    "Penetration testing": 3,
+    "SIEM tools": 3,
+    "Security auditing": 4,
+    "TCP/IP": 3
   },
-  "text": "Building sustainable e-commerce solutions that merge tech with environmental impact is my driving force. I’m passionate about crafting digital experiences that prioritize both user needs and planetary health—because innovation shouldn’t come at the cost of our future.  \n\nAs a full-stack developer at EcoCart Solutions, I design and implement scalable platforms that empower eco-conscious businesses. My work spans React-based frontend interfaces, Node.js/Python backend systems, and MongoDB-driven architectures. I thrive at the intersection of REST API design and web performance optimization, ensuring seamless interactions while reducing load times.  \n\nRecently, I spearheaded a React checkout system that boosted conversion rates by 22% through intuitive UX refinements. I also optimized backend workflows using Python scripts, cutting processing times by 15% and streamlining inventory management. These projects highlight my ability to turn technical challenges into tangible business value.  \n\nI’m seeking opportunities to innovate in e-commerce tech—ideally with teams that prioritize sustainability as much as scalability. Let’s build tools that move the needle on both growth and green impact."
+  "text": "# AdFraudGuard  \nA lightweight, real-time fraud detection system for ad networks leveraging machine learning and statistical anomaly detection. Built to identify click fraud, bot traffic, and invalid impressions with minimal latency, suitable for integration into ad serving pipelines.  \n\n## Acknowledgments  \nThis project wouldn’t exist without the foundational work of the PyTorch and TensorFlow communities, whose libraries enabled rapid prototyping. Special thanks to my collaborators at AdTech Innovations for real-world feedback during development. The open-source tools like Kafka and Prometheus were instrumental in building scalable monitoring capabilities.  \n\n## Getting Started / Installation  \nInstall dependencies via pip:  \n```bash  \npip install -r requirements.txt  \n```  \nFor local testing, run:  \n```bash  \npython main.py --config config/dev.yaml  \n```  \nEnsure your environment meets Python 3.8+ and has GPU support for optimal model inference.  \n\n## Usage / Examples  \nFeed real-time ad event data (CSV or Kafka stream) into the pipeline. Example command:  \n```bash  \npython detect.py --input events.csv --output fraud_report.json  \n```  \nThe system processes 10,000+ events per second, flagging suspicious patterns via ensemble models trained on historical fraud datasets.  \n\n## Tech Stack  \n- **Language**: Python 3.9  \n- **ML Framework**: PyTorch (custom anomaly detection models)  \n- **Data Pipeline**: Apache Kafka (real-time ingestion)  \n- **Security**: TLS 1.3 for data in transit, AES-256 for sensitive logs  \n- **Monitoring**: Prometheus + Grafana (custom dashboards)  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![Build Status](https://img.shields.io/endpoint?url=https%3A%2F%2Factions-badge-cache-prod.withgoogle.com%2Fapi%2Fbadge%3Frepo%3Dyukitanaka%2FAdFraudGuard%26branch%3Dmain)](https://github.com/yukitanaka/AdFraudGuard/actions)  \n[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)  \n[![PyPI](https://img.shields.io/pypi/v/AdFraudGuard)](https://pypi.org/project/AdFraudGuard/)  \n\n## Contributing  \nContributions are welcome! For security-related improvements, please reference the [security guidelines](SECURITY.md). When submitting pull requests, ensure all changes include:  \n1. Unit tests for new features  \n2. Updated documentation  \n3. Compliance with OWASP Top 10 standards for data validation  \n\n*Note: All contributions are reviewed by the AdTech Innovations security team for production readiness.*"
 }

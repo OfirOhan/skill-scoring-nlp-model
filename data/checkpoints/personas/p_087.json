@@ -1,57 +1,65 @@
 {
   "persona_id": "p_087",
   "hyperparams": {
-    "archetype": "data_scientist",
-    "years_experience": 5,
-    "seniority": "mid",
-    "industry": "enterprise",
+    "archetype": "ml_engineer",
+    "years_experience": 15,
+    "seniority": "staff",
+    "industry": "adtech",
     "writing_style": "concise",
     "language_fluency": "near-native",
-    "self_promotion_level": "balanced",
+    "self_promotion_level": "boastful",
     "quantification_tendency": "mixed"
   },
-  "name": "Jun Watanabe",
-  "current_role": "Senior Data Scientist",
-  "company": "Zenith Corp",
+  "name": "Nina Rodriguez",
+  "current_role": "Staff ML Engineer",
+  "company": "AdvertiseNow",
   "education": {
-    "degree": "Master of Science in Data Science",
-    "university": "University of Tokyo",
-    "year": 2019
+    "degree": "Master's in Computer Science",
+    "university": "Massachusetts Institute of Technology",
+    "year": 2010
   },
   "career_trajectory": [
     {
-      "role": "Data Analyst",
-      "company": "TechNova Solutions",
-      "duration": "2018-2019"
-    },
-    {
       "role": "Data Scientist",
-      "company": "CloudEdge Analytics",
-      "duration": "2019-2021"
+      "company": "AdTech Solutions",
+      "year": 2010
     },
     {
-      "role": "Senior Data Scientist",
-      "company": "Zenith Corp",
-      "duration": "2021-2024"
+      "role": "ML Engineer",
+      "company": "ClickBoost Media",
+      "year": 2014
+    },
+    {
+      "role": "Senior ML Engineer",
+      "company": "AdvertiseNow",
+      "year": 2018
+    },
+    {
+      "role": "Staff ML Engineer",
+      "company": "AdvertiseNow",
+      "year": 2023
     }
   ],
   "skills": {
-    "Pandas": 4,
-    "NumPy": 4,
-    "Statistical modeling": 4,
-    "A/B testing": 3,
-    "Data visualization (Matplotlib/Plotly)": 4,
-    "Feature engineering": 4,
-    "scikit-learn": 4,
-    "Python": 4,
-    "SQL analytics": 3,
-    "MLOps (MLflow)": 3,
-    "Apache Spark": 3,
+    "PyTorch": 5,
+    "TensorFlow": 5,
+    "NLP": 4,
+    "Recommendation systems": 4,
+    "MLOps (MLflow/W&B)": 4,
+    "Model deployment": 4,
+    "LLMs/Prompt engineering": 4,
+    "Computer vision": 3,
+    "Apache Spark": 1,
     "REST API design": 3,
-    "Apache Airflow": 3
+    "Docker": 3,
+    "Kubernetes": 3,
+    "AWS": 3,
+    "Cloud cost optimization": 3
   },
   "document_ids": [
     "d_p_087_00",
-    "d_p_087_01"
+    "d_p_087_01",
+    "d_p_087_02",
+    "d_p_087_03"
   ]
 }

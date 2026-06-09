@@ -4,22 +4,22 @@
   "persona_id": "p_273",
   "hyperparams": {
     "project_scale": "production",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "plain"
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 4,
     "Application security (OWASP)": 4,
-    "Compliance (SOC2/GDPR)": 4,
+    "Cloud networking (VPC/subnets)": 1,
+    "DNS/DHCP": 1,
     "Encryption & PKI": 4,
-    "GCP": 3,
-    "IAM/Access control": 4,
-    "Incident response": 4,
+    "Firewall configuration": 1,
+    "IAM/Access control": 5,
+    "Network automation": 1,
     "Network security": 5,
-    "Penetration testing": 3,
+    "Penetration testing": 4,
     "SIEM tools": 3,
-    "Security auditing": 3,
-    "Threat modeling": 3
+    "Security auditing": 4,
+    "TCP/IP": 1
   },
-  "text": "# CloudSecAuto: Cloud Security Automation Platform  \nCloudSecAuto is a continuous compliance monitoring tool designed to simplify identity-centric security across hybrid cloud environments. It automates audits, threat modeling, and incident response workflows while maintaining strict alignment with SOC2, GDPR, and ISO 27001 standards.  \n\n## Badges  \n[![CI/CD Status](https://example.com/ci-badge)](https://example.com) [![License](https://example.com/license-badge)](https://example.com) [![Compliance](https://example.com/compliance-badge)](https://example.com)  \n\n## Tech Stack  \n- **Cloud**: AWS (VPC, IAM, KMS) + GCP (Cloud IAM, Secret Manager)  \n- **Infrastructure**: Terraform for dynamic resource orchestration  \n- **Core Logic**: Python with async I/O for scalable compliance checks  \n- **SIEM Integration**: Splunk/ELK stack for real-time log correlation  \n- **Security**: OpenSSL for TLS, AWS KMS for encrypted key management  \n- **CI/CD**: GitHub Actions with Dockerized test suites  \n\n## Configuration  \nInitialize the platform via Terraform to spin up a secure control plane. Configure `config.yaml` to map cloud providers, define audit rules (e.g., IAM policy restrictions), and specify SIEM webhook endpoints. Pre-signed S3 buckets and GCP Cloud Storage are used for audit logs.  \n\n## Getting Started / Installation  \n1. Clone the repo and run `terraform init` to deploy the control plane.  \n2. Configure `cloud_profiles.json` with AWS/GCP credentials and compliance rules.  \n3. Install Python dependencies via `pip install -r requirements.txt`.  \n4. Run `python main.py --scan` to initiate compliance checks.  \n\n## Usage / Examples  \n- **Threat Modeling**: Use the built-in framework to simulate adversarial access paths in AWS VPCs.  \n- **Incident Response**: Automate rollback of misconfigured IAM roles via pre-defined playbooks.  \n- **Compliance Checks**: Validate GDPR data residency rules across multi-cloud environments.  \n- **Encryption Audits**: Scan for plaintext logs in S3 buckets and enforce KMS encryption.  \n\n## Testing  \nUnit tests verify IAM policy enforcement and encryption workflows. Integration tests simulate cross-cloud attack vectors using penetration testing frameworks. All tests run in Docker containers to isolate environments.  \n\n## License  \nApache 2.0 (see [LICENSE](https://example.com/license))  \n\n---  \n*Built with network security principles at the core, CloudSecAuto reduces manual audits by 70% while maintaining compliance with zero false positives in production environments.*"
+  "text": "# AdSecure: Real-Time AdTech Vulnerability Detection  \n\nAdSecure is a production-grade tool for detecting and mitigating adtech-related vulnerabilities in real-time. Built to address the unique attack surfaces of ad tech ecosystems, it reduces incident response latency by **42%** and identifies **89%** of critical vulnerabilities before exploitation. Designed for scalability, it integrates with existing SIEM pipelines to provide actionable insights for security teams.  \n\n## Tech Stack  \n- **Language**: Python (core), Rust (performance-critical components)  \n- **Data Processing**: Apache Kafka, Apache Flink  \n- **Storage**: Elasticsearch (timeseries), PostgreSQL (metadata)  \n- **Security Libraries**: PyCryptodome (encryption), libnettle (hashing)  \n- **Monitoring**: Prometheus + Grafana (custom dashboards)  \n- **CI/CD**: GitHub Actions, Terraform (infrastructure as code)  \n\n## Architecture / Design  \nAdSecure’s architecture prioritizes low-latency detection and secure data flow. The core detection engine processes ad tech metadata in real-time, leveraging OWASP Top 10 benchmarks to flag anomalies in ad request payloads and third-party script behaviors. SIEM integration enables correlation with existing security events, while end-to-end encryption (TLS 1.3 + AES-256) ensures data integrity. IAM policies enforce role-based access to detection rules and incident response workflows, with audit logs stored in a tamper-proof ledger for compliance.  \n\n## Getting Started / Installation  \n```bash\ngit clone https://github.com/your-organization/AdSecure.git  \ncd AdSecure  \npip install -r requirements.txt  \n./scripts/setup_env.sh  \n```  \nEnsure your environment meets Python 3.9+ and has Kafka 3.0+ and Elasticsearch 8.x installed.  \n\n## Usage / Examples  \n```bash\npython main.py --mode detect --siem-type splunk --rule-set adtech-2023  \n```  \nThis command initiates real-time monitoring of ad request streams, applying custom detection rules for clickjacking and ad fraud patterns. Output is streamed to Splunk for correlation with existing alerts.  \n\n## Badges  \n[![Build Status](https://github.com/your-organization/AdSecure/actions/workflows/ci.yml/badge.svg)](https://github.com/your-organization/AdSecure/actions/workflows/ci.yml)  \n[![Security Audit](https://security.badge.svg)](https://security.badge)  \n[![GitHub Stars](https://github.com/your-organization/AdSecure/stargazers)](https://github.com/your-organization/AdSecure)  \n\n## Contributing  \nContributions require passing automated security audits and unit tests. Submit pull requests with test cases for new detection rules or performance optimizations. All code must adhere to the team’s style guide for secure Python/Rust practices.  \n\n## License  \nMIT License © 2023 AdSecure Team"
 }

@@ -1,55 +1,51 @@
 {
   "persona_id": "p_161",
   "hyperparams": {
-    "archetype": "frontend_engineer",
-    "years_experience": 13,
-    "seniority": "staff",
-    "industry": "adtech",
-    "writing_style": "neutral",
-    "language_fluency": "native",
-    "self_promotion_level": "balanced",
-    "quantification_tendency": "mixed"
+    "archetype": "backend_engineer",
+    "years_experience": 2,
+    "seniority": "junior",
+    "industry": "SaaS",
+    "writing_style": "verbose",
+    "language_fluency": "ESL",
+    "self_promotion_level": "humble",
+    "quantification_tendency": "qualitative"
   },
-  "name": "Boris Kravchenko",
-  "current_role": "Staff Frontend Engineer",
-  "company": "AdVerve Interactive",
+  "name": "Ivan Volkov",
+  "current_role": "Backend Engineer",
+  "company": "NexaFlow Solutions",
   "education": {
     "degree": "Bachelor of Science in Computer Science",
-    "university": "Moscow State University",
-    "year": 2012
+    "university": "St. Petersburg State University",
+    "year": 2022
   },
   "career_trajectory": [
     {
-      "role": "Junior Web Developer",
-      "company": "Local Ad Agency (2010-2013)",
-      "responsibilities": "Built responsive campaign dashboards using HTML/CSS and JavaScript"
+      "role": "Software Intern",
+      "company": "InnovaTech Startups",
+      "duration": "6 months",
+      "responsibilities": "Assisted in developing RESTful APIs for a project management tool, learned Git workflows, and contributed to database schema design."
     },
     {
-      "role": "Senior Frontend Engineer",
-      "company": "MediaLift Technologies (2016-2019)",
-      "responsibilities": "Led React-based ad targeting interfaces with performance optimizations"
-    },
-    {
-      "role": "Principal Frontend Engineer",
-      "company": "ClickTrack Solutions (2019-2022)",
-      "responsibilities": "Architected Next.js microfrontends for real-time ad analytics"
+      "role": "Junior Backend Engineer",
+      "company": "NexaFlow Solutions",
+      "duration": "1.5 years",
+      "responsibilities": "Built scalable microservices using Python and Go, optimized PostgreSQL queries, and deployed applications on Docker/Kubernetes."
     }
   ],
   "skills": {
-    "JavaScript": 4,
-    "TypeScript": 5,
-    "React": 5,
-    "Next.js": 4,
-    "Web performance optimization": 4,
+    "Python": 4,
     "REST API design": 4,
-    "Node.js": 3,
-    "Webpack/Vite": 4,
-    "Web accessibility (WCAG)": 4
+    "PostgreSQL": 4,
+    "Docker": 4,
+    "Kubernetes": 4,
+    "Go": 3,
+    "CI/CD pipelines": 2,
+    "Linux administration": 2,
+    "Monitoring & alerting": 2,
+    "Serverless": 1
   },
   "document_ids": [
     "d_p_161_00",
-    "d_p_161_01",
-    "d_p_161_02",
-    "d_p_161_03"
+    "d_p_161_01"
   ]
 }

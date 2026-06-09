@@ -4,21 +4,21 @@
   "persona_id": "p_254",
   "hyperparams": {
     "project_scale": "team-internal",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "moderate"
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "A/B testing": 3,
-    "Apache Airflow": 3,
-    "Data modeling": 3,
-    "Feature engineering": 4,
-    "Java": 2,
-    "NumPy": 4,
-    "Pandas": 4,
-    "Python": 4,
-    "REST API design": 3,
-    "SQL analytics": 4,
-    "scikit-learn": 3
+    "AWS": 3,
+    "Docker": 3,
+    "GitHub Actions": 2,
+    "Go": 4,
+    "Kubernetes": 2,
+    "Linux administration": 1,
+    "Microservices architecture": 3,
+    "PostgreSQL": 3,
+    "Python": 2,
+    "REST API design": 4,
+    "Terraform": 3
   },
-  "text": "# Real-Time Bid Optimization for AdTech Platforms  \nA machine learning system to optimize real-time bidding in ad auctions, improving campaign ROI by 15% while reducing latency to <50ms. Built for low-latency decision-making in high-volume ad ecosystems.  \n\n## Badges  \n[Build Status: Passing](#) | [Tests: 100%](#) | [Documentation: Complete](#) | [License: MIT](#)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Tech Stack  \n- **Core**: Python 3.9, NumPy, Pandas, scikit-learn, SQLAlchemy  \n- **Infrastructure**: Apache Airflow (orchestration), REST API (gRPC), SQL (PostgreSQL)  \n- **Tools**: A/B testing framework (custom), data modeling (Delta Lake)  \n- **Java**: Minimal backend integration for legacy systems  \n\n## Architecture / Design  \nThe system operates as a distributed pipeline:  \n1. **Streaming Layer**: Kafka ingests bid requests, filtered by real-time user context (device, location, ad network).  \n2. **Model Serving**: PyTorch-based bid predictor (trained on 10TB+ historical data) with ONNX optimizations.  \n3. **A/B Testing**: Integrated with Split.io to evaluate bid adjustments against control groups, measuring CTR variance.  \n4. **Feedback Loop**: SQL analytics (Snowflake) feeds model retraining every 15 minutes.  \n5. **Latency Optimization**: Caching layer (Redis) reduces median response time by 60% compared to baseline.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/andre-williams/bid-optimizer.git  \npip install -r requirements.txt  \nexport API_KEY=your-secret-token  \npython setup.py build_ext --inplace  \n```  \n\n## Usage / Examples  \n```python  \nfrom bid_optimizer import BidPredictor  \nmodel = BidPredictor.load(\"models/v1.2\")  \nbid = model.predict({  \n    \"user_id\": \"12345\",  \n    \"ad_network\": \"taboola\",  \n    \"device\": \"mobile\",  \n    \"budget\": 5000  \n})  \nprint(f\"Optimal bid: ${bid:.2f}\")  \n```  \n**Performance**: 99.98% prediction accuracy, 48ms P50 latency.  \n\n## Contributing  \nEnhance feature engineering pipelines or refine the A/B testing framework. Prioritize:  \n- Reducing model drift detection time by 30%  \n- Expanding SQL analytics to include cross-device attribution  \n- Integrating with legacy Java systems via gRPC stubs  \n\nAll contributions must include unit tests and documentation updates."
+  "text": "# SecureAPI Gateway: CyberShield's Next-Gen Authentication Infrastructure  \n\nSecureAPI Gateway is a robust, team-internal solution designed to enforce strict authentication and encryption protocols for CyberShield Solutions. Built with a focus on zero-trust principles, this project integrates OAuth2.0, TLS 1.3, and dynamic rate limiting to secure microservices communication within a distributed architecture. The system operates as a central access point, validating tokens, enforcing policy rules, and logging all API interactions for auditability.  \n\n## Contributing  \nWe welcome contributions via GitHub pull requests. To participate:  \n1. Fork the repository and clone it locally  \n2. Create a feature branch for your implementation  \n3. Write unit tests for all new functionality  \n4. Run `go test` to ensure code quality  \n5. Submit a pull request with a detailed description of your changes  \n\nFor security-critical updates, ensure all modifications pass automated penetration testing via GitHub Actions. When proposing new features, prioritize backward compatibility and document any breaking changes in the release notes.  \n\n## Getting Started / Installation  \n1. Pull the Docker image: `docker pull ghcr.io/cybershield/secureapi:latest`  \n2. Set environment variables for AWS S3 logging and PostgreSQL credentials  \n3. Run the container with:  \n```bash  \ndocker run -d --name secureapi -p 8080:8080 \\  \n  -e POSTGRES_USER=auth_user \\  \n  -e POSTGRES_PASSWORD=secure_pass \\  \n  -e AWS_ACCESS_KEY_ID=your_key \\  \n  -e AWS_SECRET_ACCESS_KEY=your_secret \\  \n  ghcr.io/cybershield/secureapi:latest  \n```  \n4. Verify TLS configuration using `openssl s_client -connect localhost:8443`  \n\n## Usage / Examples  \nTo authenticate:  \n```bash  \ncurl -X POST https://localhost:8080/oauth/token \\  \n  -H \"Content-Type: application/json\" \\  \n  -d '{\"client_id\":\"cyber_client\",\"client_secret\":\"secure_secret\",\"grant_type\":\"client_credentials\"}'  \n```  \nFor protected endpoints:  \n```bash  \ncurl -X GET https://localhost:8080/secure/data \\  \n  -H \"Authorization: Bearer <token>\" \\  \n  -H \"X-Forwarded-Proto: https\"  \n```  \nThe system automatically enforces rate limits and validates JWT signatures against PostgreSQL-stored keys.  \n\n## Tech Stack  \n- **Language**: Go (for performance-critical components)  \n- **API Design**: RESTful with OpenAPI 3.0 spec compliance  \n- **Authentication**: OAuth2.0 with PKCE and refresh tokens  \n- **Encryption**: TLS 1.3 with elliptic curve cryptography  \n- **Storage**: PostgreSQL (PostgreSQL 14+) for token revocation lists  \n- **Deployment**: Docker containers orchestrated via Terraform  \n- **Cloud**: AWS Lambda for async audit logging  \n\n## Architecture / Design  \nThe gateway operates as a reverse proxy, terminating TLS traffic and forwarding requests to backend microservices. Key components include:  \n1. **Authentication Layer**: Validates client credentials and JWTs  \n2. **Rate Limiting**: Implements sliding window algorithms per IP  \n3. **Policy Engine**: Enforces dynamic access control rules  \n4. **Audit Trail**: Stores all API interactions in PostgreSQL with time-series indexing  \n\nThe system is designed to scale horizontally, with each node handling up to 5,000 RPS under load.  \n\n## License  \nMIT License  \n\n## Badges  \n[![GitHub Actions Workflow](https://img.shields.io/github/actions/workflow/status/cybershield/secureapi/main.yml?branch=main)](https://github.com/cybershield/secureapi/actions)  \n[![Docker Image Size](https://img.shields.io/docker/image-size/cybershield/secureapi/latest)](https://hub.docker.com/r/cybershield/secureapi)  \n[![Go Version](https://img.shields.io/badge/Go-1.21.0-blue)](https://golang.org/dl/)"
 }

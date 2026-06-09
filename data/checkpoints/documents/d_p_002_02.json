@@ -3,24 +3,25 @@
   "type": "recommendation",
   "persona_id": "p_002",
   "hyperparams": {
-    "recommender_role": "peer",
-    "recommender_closeness": "brief",
-    "company_type": "agency",
-    "company_size": "small (<50)"
+    "recommender_role": "skip-level",
+    "recommender_closeness": "worked-daily",
+    "company_type": "startup",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "AWS": 1,
-    "GCP": 1,
-    "Terraform": 1,
-    "Kubernetes": 1,
-    "Docker": 1,
-    "Load balancing": 1,
-    "CDN management": 1,
+    "ArgoCD": 3,
+    "Bash": 3,
+    "CI/CD pipelines": 4,
+    "GitHub Actions": 3,
+    "Jenkins": 3,
+    "Kubernetes": 4,
+    "Message queues": 2,
+    "Monitoring & alerting": 4,
+    "Network automation": 2,
+    "PostgreSQL": 2,
+    "Prometheus/Grafana": 4,
     "Python": 1,
-    "PostgreSQL": 1,
-    "REST API design": 1,
-    "Microservices architecture": 1,
-    "Network troubleshooting": 1
+    "Redis": 2
   },
-  "text": "Dear [Hiring Manager],  \n\nI’ve worked alongside Binta Traore on cross-team integration projects at AdvertiseSphere Inc., where she served as a key liaison between engineering and product teams. Her ability to translate technical constraints into actionable insights made her an invaluable collaborator.  \n\nBinta’s strength lies in her technical curiosity and adaptability. She consistently bridges gaps between stakeholders by asking the right questions and proposing pragmatic solutions. During a recent campaign launch, she identified a workflow bottleneck that was slowing deployment timelines. Rather than defaulting to standard fixes, she reimagined the process by integrating real-time feedback loops, which reduced delays by over 40% without overhauling the entire system.  \n\nWhat stands out is her quiet reliability. When a critical bug surfaced during a high-stakes release, she stayed late to debug the issue, coordinating with multiple teams to isolate the root cause. Her calm under pressure and attention to detail ensured the fix was deployed seamlessly. Beyond technical skills, Binta’s collaborative spirit fosters trust—she’s equally comfortable explaining complex systems to non-technical teammates as she is mentoring junior engineers.  \n\nIn sum, Binta’s blend of technical acumen, problem-solving grit, and teamwork makes her a strong fit for any dynamic adtech environment. She’d bring both expertise and approachability to your team.  \n\nBest regards,  \n[Your Full Name]  \n[Your Role]  \n[Contact Information]"
+  "text": "Sunita Rao is a junior DevOps engineer at NexaTech Solutions, where she’s consistently delivered results through data-driven problem-solving and a knack for automation.  \n\nHer CI/CD pipelines, built with ArgoCD, GitHub Actions, and Jenkins, slashed deployment time by 40% for the core product. She owns the Kubernetes cluster managing 5k+ containers, ensuring 99.95% uptime during peak loads. When a critical service degraded, she rapidly triaged the issue, rerouted traffic, and restored stability in 15 minutes.  \n\nShe’s a master of operational hygiene—Bash scripts she wrote automate 80% of routine checks, cutting manual work by hours. Her Prometheus/Grafana dashboards cut incident response time by 30%, and she’s proactive about flagging edge cases before they escalate.  \n\nSunita’s strength lies in her relentless attention to detail and ability to turn complex systems into manageable workflows. She’s a natural collaborator, often mentoring junior devs on best practices. Her work ethic is unshakable—she’ll stay late to debug a flaky service or refactor legacy scripts to align with modern standards. A joy to work with, she’s already lifting the team’s game in measurable ways."
 }

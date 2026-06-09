@@ -1,55 +1,62 @@
 {
   "persona_id": "p_126",
   "hyperparams": {
-    "archetype": "platform_engineer",
-    "years_experience": 5,
-    "seniority": "mid",
-    "industry": "SaaS",
-    "writing_style": "confident",
+    "archetype": "embedded_engineer",
+    "years_experience": 7,
+    "seniority": "senior",
+    "industry": "e-commerce",
+    "writing_style": "neutral",
     "language_fluency": "near-native",
-    "self_promotion_level": "humble",
-    "quantification_tendency": "metrics-heavy"
+    "self_promotion_level": "balanced",
+    "quantification_tendency": "qualitative"
   },
-  "name": "Erik Bergstrom",
-  "current_role": "Platform Engineer",
-  "company": "ScaleTech Solutions",
+  "name": "Viktor Horvat",
+  "current_role": "Senior Embedded Systems Engineer",
+  "company": "EcomLogic Inc.",
   "education": {
-    "degree": "Bachelor of Science in Computer Science",
-    "university": "University of Stockholm",
+    "degree": "Master's in Electrical Engineering",
+    "university": "Technische Universiteit Delft",
     "year": 2018
   },
   "career_trajectory": [
     {
-      "year": 2018,
-      "position": "DevOps Engineer",
-      "company": "CloudNova Inc."
+      "role": "Firmware Developer",
+      "company": "SmartCart Solutions",
+      "duration": "2 years",
+      "responsibilities": "Designed low-power IoT devices for inventory tracking"
     },
     {
-      "year": 2020,
-      "position": "SRE Engineer",
-      "company": "DataFlow Systems"
+      "role": "Embedded Systems Engineer",
+      "company": "EcomLogic Inc.",
+      "duration": "3 years",
+      "responsibilities": "Led hardware-software integration for smart shelf sensors"
     },
     {
-      "year": 2022,
-      "position": "Platform Engineer",
-      "company": "ScaleTech Solutions"
+      "role": "Senior Embedded Engineer",
+      "company": "EcomLogic Inc.",
+      "duration": "2 years",
+      "responsibilities": "Architected edge computing solutions for real-time analytics"
     }
   ],
   "skills": {
-    "AWS": 4,
-    "Kubernetes": 4,
-    "Terraform": 3,
-    "Load balancing": 3,
-    "Cloud networking (VPC/subnets)": 3,
+    "C/C++ (embedded)": 5,
+    "RTOS": 4,
+    "Firmware development": 5,
+    "IoT protocols (MQTT/CoAP)": 4,
+    "Hardware-software integration": 5,
+    "Embedded Linux": 4,
     "Python": 3,
-    "Prometheus/Grafana": 3,
-    "GitLab CI": 3,
-    "Network automation": 2
+    "REST API design": 3,
+    "Network automation": 1,
+    "Shell scripting (Bash)": 2,
+    "CI/CD pipelines": 2
   },
   "document_ids": [
     "d_p_126_00",
     "d_p_126_01",
     "d_p_126_02",
-    "d_p_126_03"
+    "d_p_126_03",
+    "d_p_126_04",
+    "d_p_126_05"
   ]
 }

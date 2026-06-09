@@ -3,23 +3,23 @@
   "type": "cv",
   "persona_id": "p_185",
   "hyperparams": {
-    "cv_format": "minimal",
-    "geographic_convention": "US",
-    "company_type": "enterprise",
+    "cv_format": "paragraph",
+    "geographic_convention": "Israel",
+    "company_type": "agency",
     "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "Application security (OWASP)": 3,
-    "Compliance (SOC2/GDPR)": 2,
-    "IAM/Access control": 3,
-    "Incident response": 3,
-    "Network automation": 2,
-    "Network security": 3,
-    "Penetration testing": 3,
-    "SIEM tools": 3,
-    "Security auditing": 3,
-    "Threat modeling": 2,
-    "Vulnerability management": 3
+    "Apache Airflow": 3,
+    "Apache Spark": 4,
+    "Data modeling": 3,
+    "Data warehousing": 4,
+    "Docker": 3,
+    "ETL pipeline design": 4,
+    "PostgreSQL": 3,
+    "Python": 1,
+    "REST API design": 1,
+    "Snowflake": 5,
+    "Terraform": 3
   },
-  "text": "Eliott Marchand  \nSan Francisco, CA | (555) 123-4567 | eliott.marchand@email.com | linkedin.com/in/eliottmarchand  \n\n**Professional Experience**  \n*Junior Security Engineer* | AdVerve Technologies | Jan 2023 – Present (1.5 years)  \n- Developed IAM policies that reduced unauthorized access incidents by 40% across ad-tech platforms  \n- Conducted security audits for three ad-tech platforms, identifying 12+ critical vulnerabilities  \n- Integrated SIEM tools to streamline incident detection, cutting mean time to response by 25%  \n- Led vulnerability management initiatives, prioritizing 80+ risks using OWASP Top 10 frameworks  \n\n*Security Analyst Intern* | MediaTrack Inc. | Jul 2022 – Dec 2022 (6 months)  \n- Supported SOC team with incident triage, resolving 30+ low-severity threats monthly  \n- Performed automated vulnerability scans using Nessus, flagging 50+ potential entry points  \n- Assisted in drafting compliance documentation for GDPR and SOC2 frameworks  \n\n**Technical Skills**  \n- **Application Security**: OWASP Top 10 integration for vulnerability prioritization  \n- **IAM/Access Control**: AWS IAM implementation, role-based access frameworks  \n- **Incident Response**: SOC2-compliant workflows, post-incident analysis tools  \n- **Network Security**: Firewalld configuration, TCP/IP analysis for DDoS mitigation  \n- **Penetration Testing**: Custom scripts for network discovery, basic exploit validation  \n- **SIEM Tools**: Splunk dashboards for log correlation, alert triage pipelines  \n- **Security Auditing**: Third-party platform reviews, remediation playbooks  \n- **Vulnerability Management**: Continuous scanning, remediation timelines for critical risks  \n- **Compliance**: GDPR/SOC2 documentation, audit trail maintenance  \n- **Network Automation**: Ansible playbooks for config management, IP addressing  \n- **Threat Modeling**: Attack surface analysis for ad-tech systems, mitigation strategies  \n\n**Education**  \n*Bachelor of Science in Cybersecurity* | University of Technology Sydney | Graduated 2022  \n\n**Projects**  \n*Ad-Tech IAM Overhaul* | AdVerve Technologies | 2023  \n- Redesigned access control architecture using AWS IAM, reducing privilege escalation risks by 35%  \n- Integrated SSO with multifactor authentication, improving user compliance rates by 20%  \n\n*Open-Source Vulnerability Scanner* | Personal Project | 2023  \n- Built a script to automate Nessus scans, reducing manual effort by 40% for 10+ systems  \n- Published tool on GitHub with MIT license, adopted by 2 small enterprises  \n\n**Languages**  \n- English (native)  \n- French (fluent)  \n\n**Certifications**  \n- CompTIA Security+ | 2023  \n- Cisco CCNA Security | 2022"
+  "text": "Thomas Eriksen  \nTel Aviv, Israel | +972 54 321 0000 | thomas.eriksen@email.com | linkedin.com/in/thomas-eriksen  \n  \n\nProfessional Experience  \nAt NexCart Solutions, I’ve focused on building robust data infrastructure to support e-commerce analytics. My work includes designing scalable data pipelines that process over 10 million daily transactions, ensuring real-time insights for inventory and pricing strategies. I’ve also led the migration of historical data to Snowflake, optimizing query performance by 35% through schema refinement and partitioning. This project involved collaboration with cross-functional teams to align data models with business KPIs.  \n\nIn my role as a Data Engineering Intern at Ecometrics Group, I contributed to the development of ETL pipelines using Apache Spark, reducing data processing latency by 20%. I also supported the implementation of data modeling best practices, which improved data consistency across 12+ datasets. At VividTech, my internship involved cleaning and visualizing sales data, which helped identify underperforming product categories, leading to a 15% increase in targeted marketing ROI.  \n\nTechnical Skills  \nSnowflake serves as the backbone of our data architecture, where I’ve made strategic decisions on schema design, security configurations, and role-based access. I’ve mentored two junior engineers on query optimization techniques and helped establish governance policies for data lineage. For data warehousing, I’ve designed dimensional models that integrate transactional data with customer behavior metrics, enabling more accurate forecasting.  \n\nApache Airflow is integral to our workflow, where I’ve configured DAGs to automate data pipeline orchestration. This includes monitoring dependencies between ETL jobs and implementing retries for failed tasks. Docker has been used to containerize data processing microservices, ensuring consistent environments across development and production. PostgreSQL remains a critical component for transactional data, where I’ve optimized indexing and query performance for high-traffic use cases.  \n\nTerraform automates infrastructure provisioning for cloud resources, streamlining deployments for our data lakes. My work with Apache Spark has involved processing large-scale datasets, often in collaboration with data scientists to refine feature engineering pipelines. These efforts have directly impacted business outcomes, such as improving campaign targeting accuracy by 25% through enhanced data segmentation.  \n\nProjects  \nDeveloped a real-time analytics dashboard for NexCart’s e-commerce platform, integrating data from Snowflake and PostgreSQL. The solution reduced report generation time by 40% and provided actionable insights for seasonal promotions.  \n\nDesigned a data warehouse for customer behavior analytics, incorporating dimension tables for user segments and fact tables for purchase history. This structure enabled complex aggregations and supported a 30% improvement in query efficiency.  \n\nBuilt an ETL pipeline to consolidate sales data from multiple sources, ensuring data quality through automated validation checks. The pipeline processes 50GB of data daily and feeds into our analytics suite.  \n\nEducation  \nBachelor of Science in Computer Science, University of Oslo, 2022. Focused on distributed systems and database management, with coursework in data modeling and cloud computing.  \n\nLanguages  \nEnglish (fluent), Norwegian (native)  \n\nCertifications  \nAWS Certified Cloud Practitioner (2023)  \nGoogle Cloud Professional Data Engineer (2023)"
 }

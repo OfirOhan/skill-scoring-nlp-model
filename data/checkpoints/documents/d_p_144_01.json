@@ -3,22 +3,19 @@
   "type": "project_readme",
   "persona_id": "p_144",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "large (15+)",
-    "jargon_density": "heavy"
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "CI/CD pipelines": 2,
-    "Cloud networking (VPC/subnets)": 2,
-    "Configuration management (Ansible)": 2,
-    "GitHub Actions": 2,
-    "GitLab CI": 1,
-    "Jenkins": 1,
-    "Linux administration": 2,
-    "Monitoring & alerting": 2,
-    "Prometheus/Grafana": 2,
-    "Python": 2,
-    "Shell scripting (Bash)": 2
+    "Flutter": 4,
+    "JavaScript": 1,
+    "Kotlin": 2,
+    "React": 1,
+    "React Native": 4,
+    "Swift": 5,
+    "TypeScript": 2,
+    "Web accessibility (WCAG)": 2
   },
-  "text": "# SecureCI: Automated Security Compliance Pipeline  \nSecureCI is a modular framework for enforcing security benchmarks across CI/CD pipelines, integrating real-time compliance checks with runtime policy enforcement. Designed for DevOps teams, it supports CIS, NIST, and ISO 27001 standards, with extensible rule sets and granular audit trails.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies:  \n```bash  \ngit clone https://github.com/secureci/secureci.git  \ncd secureci  \npip install -r requirements.txt  \n```\nConfigure your pipeline by defining compliance profiles in `config/compliance.yaml`. For Docker-based deployments, use `docker-compose up` to spin up the enforcement server.  \n\n## Usage / Examples  \nTrigger a compliance scan via CLI:  \n```bash  \nsecureci scan --profile cis-1.5 --target /var/www/html  \n```  \nThis executes a full CIS 1.5 benchmark check on a web root directory, outputting violations in JSON format. For CI integration, use the GitHub Actions runner to automate scans on code pushes:  \n```yaml  \n- name: Run SecureCI Compliance  \n  uses: secureci/secureci-action@v1  \n  with:  \n    profile: nist-800-53  \n    target: ./src  \n```  \nThe tool also supports dynamic policy enforcement via Open Policy Agent (OPA) for runtime validation.  \n\n## Badges  \n[![CI/CD Status](https://img.shields.io/badge/CI%20Status-passing-green)](https://github.com/secureci/secureci/actions)  \n[![Security Scan](https://img.shields.io/badge/Security-Scanned-blue)](https://github.com/secureci/secureci/security/dependabot)  \n[![Code Coverage](https://img.shields.io/badge/Coverage-85%25-yellow)](https://github.com/secureci/secureci/actions)  \n\n## Tech Stack  \n- **Core**: Go, Python, Open Policy Agent (OPA)  \n- **Infrastructure**: Docker, Terraform, Prometheus  \n- **Security**: CIS Benchmarks, NIST SP 800-53, SANS ICS  \n- **CI/CD**: GitHub Actions, GitLab (excluded per policy)  \n\n## Architecture / Design  \nSecureCI operates as a stateless policy engine with three layers:  \n1. **Input Parser**: Validates and normalizes compliance profiles  \n2. **Policy Engine**: Executes rule sets against target systems  \n3. **Reporting**: Generates audit logs and remediation guides  \nThe architecture supports horizontal scaling via gRPC for distributed enforcement.  \n\n## Contributing  \nSubmit bug reports via GitHub Issues. For code contributions, fork the repo, implement features with unit tests, and submit a pull request. All changes must include documentation updates and CI/CD pipeline validation.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/secureci/secureci/blob/main/LICENSE) for details."
+  "text": "# SecureMobilePay - Fintech Payment SDK  \nA cross-platform SDK for secure, high-throughput payment processing in fintech apps. Built to handle 15k+ transactions/sec with zero false positives in fraud detection.  \n\n## Badges  \n[![Version](https://img.shields.io/badge/version-1.2.4-blue)](https://github.com/NoahChristensen/SecureMobilePay/releases)  \n[![Build Status](https://img.shields.io/badge/build-passing-green)](https://github.com/NoahChristensen/SecureMobilePay/actions)  \n[![Security](https://img.shields.io/badge/security-ISO27001-yellow)](https://github.com/NoahChristensen/SecureMobilePay/security)  \n\n## License  \nMIT License. Use in production with proper audit trails.  \n\n## Tech Stack  \n- **Flutter**: Primary UI framework for cross-platform consistency (iOS/Android)  \n- **Swift**: Core logic for iOS-specific optimizations and security integrations  \n- **Kotlin**: Android backend services and inter-process communication  \n- **TypeScript**: TypeScript-based API wrappers for safer type handling  \n\n## Architecture / Design  \nEngineered a modular architecture with three layers:  \n1. **Secure Tokenization Layer**: Uses AES-256 with hardware-backed key storage (Android Keystore, iOS Secure Enclave)  \n2. **Network Layer**: Implements TLS 1.3 with certificate pinning; 98% success rate in stress tests  \n3. **Analytics Layer**: Tracks transaction metadata without exposing sensitive data  \n\nKey design choice: Separated payment flow into 7 distinct states with explicit error recovery paths. Reduced onboarding time by 35% through pre-validated credential storage.  \n\n## Getting Started / Installation  \n1. Clone repo: `git clone https://github.com/NoahChristensen/SecureMobilePay.git`  \n2. For Android: Ensure Android SDK 34+ and enable `adb shell pm grant` for secure storage access  \n3. For iOS: Add `com.example.securemobilepay` to entitlements file with secure enclave permissions  \n\n## Usage / Examples  \n```swift  \n// Swift-based card tokenization  \nlet token = try? PaymentSDK.tokenizeCard(  \n    number: \"4111111111111111\",  \n    expiry: \"12/25\",  \n    cvv: \"123\"  \n)  \nprint(\"Token: $token?.rawValue)\")  \n```  \n\n```kotlin  \n// Kotlin-based fraud detection webhook  \nval fraudCheck = FraudDetection.checkTransaction(  \n    amount = 299.99,  \n    ip = \"192.0.2.1\",  \n    deviceHash = \"abc123\"  \n)  \nprintln(\"Risk score: $fraudCheck.score)\")  \n```  \n\n## Contributing  \nFeedback welcome. For production use, ensure all custom integrations pass 100% unit test coverage. Pull requests should include:  \n- Security audit logs  \n- Performance benchmarks  \n- Cross-platform compatibility tests"
 }

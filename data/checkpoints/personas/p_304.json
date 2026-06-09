@@ -1,56 +1,61 @@
 {
   "persona_id": "p_304",
   "hyperparams": {
-    "archetype": "security_engineer",
+    "archetype": "ml_engineer",
     "years_experience": 2,
     "seniority": "junior",
-    "industry": "adtech",
+    "industry": "fintech",
     "writing_style": "modest",
-    "language_fluency": "native",
-    "self_promotion_level": "balanced",
-    "quantification_tendency": "qualitative"
+    "language_fluency": "ESL",
+    "self_promotion_level": "humble",
+    "quantification_tendency": "mixed"
   },
-  "name": "Xin Zhao 57",
-  "current_role": "Security Engineer - Threat Detection",
-  "company": "AdVerve Technologies",
+  "name": "Aaron Baptiste 107",
+  "current_role": "Junior ML Engineer",
+  "company": "FinTech Innovators Inc.",
   "education": {
-    "degree": "Bachelor of Science in Cybersecurity",
-    "university": "Cybersecurity Institute of Technology",
+    "degree": "Master of Science in Data Science",
+    "university": "University of Cambridge",
     "year": 2022
   },
   "career_trajectory": [
     {
-      "role": "Security Analyst Intern",
-      "company": "AdVerve Technologies",
+      "role": "Data Analyst Intern",
+      "company": "GlobalFin Solutions",
       "duration": "6 months",
-      "responsibilities": "Assisted in configuring firewalls and monitoring SIEM tools for adtech infrastructure."
+      "responsibilities": "Assisted in building predictive models for fraud detection using Python and SQL."
     },
     {
-      "role": "Junior Security Engineer",
-      "company": "AdVerve Technologies",
-      "duration": "1 year",
-      "responsibilities": "Implemented IAM policies and conducted vulnerability scans for ad campaign platforms."
+      "role": "Machine Learning Intern",
+      "company": "AlphaQuant Technologies",
+      "duration": "12 months",
+      "responsibilities": "Developed NLP pipelines for customer sentiment analysis using Hugging Face Transformers."
     },
     {
-      "role": "Security Specialist",
-      "company": "AdVerve Technologies",
-      "duration": "6 months",
-      "responsibilities": "Collaborated on SOC2 compliance audits and threat modeling for ad tech systems."
+      "role": "Junior ML Engineer",
+      "company": "FinTech Innovators Inc.",
+      "duration": "2 years",
+      "responsibilities": "Designing recommendation systems and deploying models via MLflow and AWS SageMaker."
     }
   ],
   "skills": {
-    "Network security": 3,
-    "Application security (OWASP)": 3,
-    "Penetration testing": 3,
-    "IAM/Access control": 3,
-    "Firewall configuration": 3,
-    "SIEM tools": 3,
-    "Cloud networking (VPC/subnets)": 3,
-    "Monitoring & alerting": 3
+    "PyTorch": 3,
+    "TensorFlow": 3,
+    "scikit-learn": 3,
+    "Hugging Face Transformers": 4,
+    "NLP": 4,
+    "MLOps (MLflow/W&B)": 4,
+    "Model deployment": 3,
+    "LLMs/Prompt engineering": 3,
+    "AWS": 3,
+    "Docker": 3,
+    "Apache Airflow": 1,
+    "dbt": 1,
+    "ETL pipeline design": 2,
+    "REST API design": 3
   },
   "document_ids": [
     "d_p_304_00",
-    "d_p_304_01",
-    "d_p_304_02"
+    "d_p_304_01"
   ]
 }

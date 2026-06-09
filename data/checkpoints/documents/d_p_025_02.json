@@ -3,21 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_025",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "large (15+)",
-    "jargon_density": "heavy"
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 2,
+    "Agile/Scrum": 3,
     "CI/CD pipelines": 3,
-    "Cloud cost optimization": 1,
-    "Docker": 2,
-    "Microservices architecture": 2,
-    "Node.js": 2,
-    "PostgreSQL": 1,
-    "Python": 2,
-    "REST API design": 3,
-    "React": 1
+    "Cloud infrastructure": 1,
+    "GitHub Actions": 3,
+    "Linux administration": 2,
+    "Mentoring": 1,
+    "Monitoring & alerting": 3,
+    "Shell scripting (Bash)": 2,
+    "System design": 5,
+    "Team leadership": 1,
+    "Technical writing": 2
   },
-  "text": "# Real-Time Collaboration Tool  \nA distributed system enabling live document editing and synchronized data sharing for SaaS teams, leveraging WebSocket and Firebase for low-latency, scalable real-time interactions.  \n\n## Badges  \n[![GitHub](https://img.shields.io/badge/GitHub-5630E4?style=flat&logo=github)](https://github.com/realtime-collab-tool)  \n[![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=flat&logo=firebase)](https://firebase.google.com/)  \n[![WebSocket](https://img.shields.io/badge/WebSocket-4285F4?style=flat&logo=websocket)](https://developer.mozilla.org/en-US/docs/WebSockets)  \n\n## Tech Stack / Built With  \n- **Firebase**: Real-time database, authentication, and cloud functions for synchronization  \n- **WebSocket**: Bidirectional communication for low-latency updates  \n- **TypeScript**: Static typing for robust API contracts  \n- **Node.js**: Backend logic for WebSocket proxies and Firebase integration  \n- **AWS Lambda**: Serverless functions for event-driven workflows  \n- **Docker**: Containerization for consistent CI/CD environments  \n\n## Architecture / Design  \nThe system decouples real-time updates from persistent storage, using Firebase as a synchronization layer and WebSocket for direct peer-to-peer communication. Firebase handles conflict resolution and state replication, while WebSocket enables custom message routing for features like cursor position tracking. The architecture prioritizes fault tolerance by replicating critical state across multiple Firebase regions and using WebSocket keep-alive mechanisms to prevent disconnections.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/realtime-collab-tool.git`  \n2. Install dependencies: `npm install`  \n3. Configure Firebase credentials in `firebase.json` and set up WebSocket endpoints in `config.js`  \n4. Run the development server: `npm start`  \n5. Deploy Firebase functions: `firebase deploy --only functions`  \n\n## Usage / Examples  \n- **Document Collaboration**: Use `ws://localhost:8080` to connect and subscribe to document updates via `documentId`  \n- **Real-Time Sync**: Firebase triggers propagate changes to all connected clients within 50ms of modification  \n- **User Presence**: WebSocket heartbeats update a Firebase presence map every 30 seconds  \n\n## API Reference  \n- **POST /api/v1/documents**: Create a new document with initial content  \n- **GET /api/v1/documents/:id**: Retrieve document state with `if-match` header for optimistic updates  \n- **PATCH /api/v1/documents/:id**: Apply changes with versioning to prevent overwrites  \n- **DELETE /api/v1/documents/:id**: Archive document with soft delete and audit log entry  \n\n## License  \nMIT License © 2023 Kamila Szymanska. See [LICENSE](LICENSE) for details."
+  "text": "# Global Payment Gateway Solution  \nA robust, scalable payment integration system designed to handle high-volume international transactions with enterprise-grade security and reliability. Built for e-commerce platforms requiring seamless cross-border payment processing, this solution supports 20+ currencies, 99.9% uptime, and automated fraud detection. Key metrics: 200k+ transactions/sec, 15ms avg response time, and 99.99% fault tolerance.  \n\n## Acknowledgments  \nThis project is a collaborative effort between the e-commerce infrastructure team and external payment processors. Special thanks to the following contributors:  \n- **Ahmad Diallo** (Backend Architect) for defining the microservices architecture  \n- **Fatoumata Camara** (Security Lead) for implementing PCI-DSS compliance  \n- **Stripe API Team** and **PayPal DevOps** for their SDKs and documentation  \n- **Open-source contributors** for libraries like `express`, `mongoose`, and `stripe-node`  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/your-username/global-payment-gateway.git  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   npm install  \n   ```  \n3. Set environment variables (see `.env.example` for required keys)  \n4. Run the server:  \n   ```bash  \n   npm start  \n   ```  \n   *Automated testing via Jest is enabled via GitHub Actions on PRs*  \n\n## Usage / Examples  \nProcess a payment:  \n```javascript  \nconst payment = await gateway.process({  \n  amount: 150.99,  \n  currency: 'USD',  \n  card: { number: '4242424242424242', exp: '12/25' }  \n});  \nconsole.log(payment.transactionId); // 'txn_123456789'  \n```  \nHandle refunds:  \n```javascript  \nawait gateway.refund({  \n  transactionId: 'txn_123456789',  \n  amount: 50.00  \n});  \n```  \n*All endpoints are rate-limited and monitored via Prometheus + Grafana*  \n\n## Tech Stack  \n- **Backend**: Node.js (18.x), Express, MongoDB (with Mongoose)  \n- **Payment Providers**: Stripe, PayPal, and Adyen (custom integrations)  \n- **Caching**: Redis for session storage and rate limiting  \n- **CI/CD**: GitHub Actions for testing, linting, and deployment  \n- **Monitoring**: Prometheus + Grafana for real-time metrics  \n\n## License  \nMIT License (see [LICENSE](LICENSE) file)  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/actions/workflow/status/your-username/global-payment-gateway/main.yml?branch=main)](https://github.com/your-username/global-payment-gateway/actions)  \n[![npm](https://img.shields.io/npm/v/global-payment-gateway)](https://www.npmjs.com/package/global-payment-gateway)  \n[![Docker](https://img.shields.io/docker/pulls/your-username/global-payment-gateway)](https://hub.docker.com/r/your-username/global-payment-gateway)  \n\n## Contributing  \nContributions are welcome! Fork the repo, create a feature branch, and submit a PR. Ensure all tests pass and include metrics for performance benchmarks. For critical changes, coordinate with the security team to validate compliance with PCI-DSS standards."
 }

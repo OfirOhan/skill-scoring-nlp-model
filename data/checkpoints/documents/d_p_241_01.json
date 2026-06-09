@@ -3,24 +3,20 @@
   "type": "project_readme",
   "persona_id": "p_241",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "large (15+)",
-    "jargon_density": "heavy"
+    "project_scale": "hobby",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "GraphQL": 4,
-    "JavaScript": 4,
-    "Next.js": 4,
-    "Node.js": 1,
+    "Apache Airflow": 3,
+    "Apache Kafka": 5,
+    "Apache Spark": 4,
+    "Cloud cost optimization": 2,
+    "Databricks": 3,
+    "Python": 2,
     "REST API design": 1,
-    "React": 5,
-    "TypeScript": 1,
-    "State management": 1,
-    "Test automation": 1,
-    "Stakeholder management": 1,
-    "Web performance optimization": 1,
-    "Webpack/Vite": 1,
-    "State management (Redux/Zustand)": 1
+    "Snowflake": 3,
+    "Terraform": 2
   },
-  "text": "# React Dashboard for TechNova Solutions  \nA scalable, real-time analytics platform built with React and GraphQL, enabling dynamic data visualization and cross-team collaboration. Designed to integrate seamlessly with heterogeneous data sources, this dashboard serves as a central hub for operational and strategic insights, with a focus on low-latency rendering and interactive UI/UX.  \n\n## Roadmap / Future Work  \n- Expand GraphQL schema to support AI-driven anomaly detection in time-series data  \n- Introduce WebSocket-based streaming for real-time updates from IoT sensors  \n- Implement a modular component library for reuse across TechNova’s product suite  \n- Add multi-layered filtering capabilities for complex data exploration  \n- Explore serverless architectures for global-scale deployment  \n\n## Getting Started / Installation  \n1. Ensure [Next.js 13+](https://nextjs.org) is installed via npm  \n2. Clone the repository and install dependencies  \n3. Configure GraphQL endpoints in `./src/config/apollo.js`  \n4. Run `npm run dev` to launch the development server with hot-reloading  \n\n## Usage / Examples  \n- Query real-time metrics using Apollo Client’s `useQuery` hook with pre-defined fragments  \n- Render interactive charts via Chart.js, bound to GraphQL-resolved data streams  \n- Utilize custom hooks for cross-component state synchronization without global state managers  \n- Example: `fetchUserActivity({ variables: { period: 'week' } })` triggers a re-fetch and updates the UI  \n\n## Tech Stack  \n- **Frontend**: React 18, Next.js 13, Chart.js 4, Tailwind CSS 3  \n- **Data Layer**: Apollo Client 3, GraphQL (Schema-First Design), DataLoader for batched requests  \n- **Integration**: WebSockets for live data ingestion, custom middleware for data sanitization  \n\n## Architecture / Design  \nThe dashboard employs a layered architecture with decoupled data and UI pipelines. React components are organized into feature-based modules, each managing its own state via hooks. GraphQL queries are pre-compiled and cached, reducing redundant network calls. The UI leverages React’s concurrent mode for smooth transitions during data updates, while Tailwind CSS ensures rapid styling without framework-specific dependencies.  \n\n## License  \nCustom proprietary license — see `LICENSE.md` for details"
+  "text": "# Real-Time Fraud Detection System  \nA scalable, low-latency fraud detection pipeline leveraging Kafka for event streaming and Spark for real-time analytics. Designed for fintech use cases requiring sub-second transaction validation with minimal false positives.  \n\n---\n\n## Configuration  \n```bash\n# Kafka bootstrap servers (cloud or on-prem)  \nKAFKA_BOOTSTRAP_SERVERS=localhost:9092  \n\n# Spark cluster config (Databricks or standalone)  \nSPARK_MASTER=local[*]  \nSPARK_EXECUTOR_MEMORY=4g  \n\n# Kafka topics  \nFRAUD_TOPIC=raw_transactions  \nALERT_TOPIC=fraud_alerts  \n\n# Snowflake credentials (for audit logging)  \nSNOWFLAKE_USER=your_user  \nSNOWFLAKE_WAREHOUSE=large_warehouse  \n```  \n\n---\n\n## Getting Started  \n1. **Kafka setup**: Use Docker or cloud provider to spin up Kafka/Zookeeper  \n2. **Spark cluster**: Launch Databricks or deploy standalone Spark cluster  \n3. **Dependencies**:  \n   ```bash\n   pip install confluent-kafka pandas delta-spark\n   ```  \n4. **Run pipeline**:  \n   ```bash\n   spark-submit --master $SPARK_MASTER fraud_detection_pipeline.py\n   ```  \n\n---\n\n## Usage / Examples  \n**Simulate transactions**:  \n```bash\nkafka-console-producer --broker-list $KAFKA_BOOTSTRAP_SERVERS --topic raw_transactions <<EOF\n{\"user_id\": \"123\", \"amount\": 5000, \"location\": \"US-NY\"}\n{\"user_id\": \"456\", \"amount\": 200, \"location\": \"US-CA\"}\nEOF\n```  \n\n**Monitor alerts**:  \n```bash\nkafka-console-consumer --bootstrap-server $KAFKA_BOOTSTRAP_SERVERS --topic fraud_alerts --from-beginning\n```  \n\n---\n\n## Tech Stack  \n- **Streaming**: Apache Kafka (event sourcing)  \n- **Processing**: Apache Spark (micro-batch + streaming)  \n- **Orchestration**: Apache Airflow (scheduled data validation)  \n- **Storage**: Snowflake (audit logs + historical analysis)  \n- **Cloud**: AWS/Azure (cost-optimized EMR/Databricks clusters)  \n\n---\n\n## Architecture / Design  \nKafka ingests raw transaction events, which are partitioned and processed by Spark Structured Streaming. Anomaly detection models (trained in Databricks) score each event, with high-risk records forwarded to a dedicated alert topic. Results are asynchronously written to Snowflake for compliance reporting. The system handles 100k+ transactions/sec with <50ms latency.  \n\n---\n\n## License  \nApache License 2.0  \n\n---\n\n## Badges  \n[![Build Status](https://github.com/connormurphy/fraud-detection/actions/workflows/build.yml/badge.svg)](https://github.com/connormurphy/fraud-detection/actions)  \n[![Tech Stack](https://badgen.net/badge/tech/Kafka%20%7C%20Spark%20%7C%20Databricks%20%7C%20Snowflake/orange)](https://github.com/connormurphy/fraud-detection)  \n[![Security](https://badgen.net/badge/security/ISO-27001%20%7C%20GDPR/green)](https://github.com/connormurphy/fraud-detection)"
 }

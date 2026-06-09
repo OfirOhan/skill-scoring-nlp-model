@@ -1,40 +1,85 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Farah Nazari's experience as a Cybersecurity Game Developer with 4 years in the industry.",
-    "title": "Farah Nazari - Cybersecurity Game Developer",
+    "topic_summary": "Professional curriculum vitae highlighting Rabia Yilmaz's 7 years of experience as a senior mobile developer in fintech.",
+    "title": "Rabia Yilmaz - Senior Mobile Developer",
     "doc_id": "d_p_216_00",
     "persona_id": "p_216",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
-      "geographic_convention": "Israel",
-      "company_type": "startup",
-      "company_size": "mid (50-500)"
+      "cv_format": "paragraph",
+      "geographic_convention": "US",
+      "company_type": "enterprise",
+      "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A README for a cybersecurity game project that educates users on phishing detection through interactive scenarios.",
-    "title": "SecureShield: Cybersecurity Game for Phishing Awareness",
+    "topic_summary": "A mobile wallet app for secure financial transactions with biometric authentication and real-time fraud detection.",
+    "title": "MoneyFlow Wallet",
     "doc_id": "d_p_216_01",
     "persona_id": "p_216",
     "hyperparams": {
-      "project_scale": "academic",
-      "project_team_size": "medium (5-15)",
+      "project_scale": "production",
+      "project_team_size": "solo",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A cross-platform payment gateway integration solution for fintech startups using Flutter and Stripe API.",
+    "title": "FintechPay Gateway",
+    "doc_id": "d_p_216_02",
+    "persona_id": "p_216",
+    "hyperparams": {
+      "project_scale": "production",
+      "project_team_size": "large (15+)",
       "jargon_density": "heavy"
     }
   },
   {
-    "doc_type": "recommendation",
-    "topic_summary": "A recommendation from her manager at SecurePlay Interactive, praising her skills in game development and cybersecurity education.",
-    "title": "Recommendation for Farah Nazari by Her Manager",
-    "doc_id": "d_p_216_02",
+    "doc_type": "project_readme",
+    "topic_summary": "An AI-powered personal budgeting app with machine learning-driven spending insights for users.",
+    "title": "BudgetBot Pro",
+    "doc_id": "d_p_216_03",
     "persona_id": "p_216",
     "hyperparams": {
-      "recommender_role": "professor",
+      "project_scale": "academic",
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation from her manager praising her leadership in developing scalable fintech mobile solutions.",
+    "title": "Recommendation from CTO, MoneyFlow Solutions",
+    "doc_id": "d_p_216_04",
+    "persona_id": "p_216",
+    "hyperparams": {
+      "recommender_role": "direct-manager",
       "recommender_closeness": "occasional",
-      "company_type": "FAANG",
-      "company_size": "small (<50)"
+      "company_type": "academic",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "linkedin",
+    "topic_summary": "LinkedIn summary showcasing Rabia's expertise in building secure, high-performance mobile apps for fintech.",
+    "title": "Rabia Yilmaz - Senior Mobile Developer",
+    "doc_id": "d_p_216_05",
+    "persona_id": "p_216",
+    "hyperparams": {
+      "linkedin_completeness": "detailed"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post on implementing end-to-end encryption in mobile fintech apps for data security.",
+    "title": "Securing Financial Data: Encryption Best Practices for Mobile Fintech Apps",
+    "doc_id": "d_p_216_06",
+    "persona_id": "p_216",
+    "hyperparams": {
+      "blog_depth": "opinion-piece",
+      "jargon_density": "heavy"
     }
   }
 ]

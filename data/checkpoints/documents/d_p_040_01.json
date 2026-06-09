@@ -3,23 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_040",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "solo",
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
     "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "C/C++ (embedded)": 3,
-    "Embedded Linux": 3,
-    "Firmware development": 3,
-    "GitLab CI": 2,
-    "Hardware-software integration": 3,
-    "IoT protocols (MQTT/CoAP)": 3,
-    "Network automation": 2,
-    "Python": 1,
-    "REST API design": 1,
-    "RTOS": 3,
-    "Sensor integration": 1,
-    "Shell scripting (Bash)": 2
+    "API testing": 4,
+    "BDD/TDD": 4,
+    "CI/CD pipelines": 1,
+    "Go": 1,
+    "Integration testing": 4,
+    "Java": 1,
+    "Performance testing (JMeter/k6)": 1,
+    "Python": 3,
+    "Selenium/Playwright": 5,
+    "Test automation": 4,
+    "Test strategy design": 1,
+    "Web performance optimization": 1
   },
-  "text": "# SecureIoT Payment Gateway  \nA low-power embedded system for real-time financial transaction monitoring using encrypted IoT protocols and secure firmware. Designed for edge devices in fintech environments, balancing latency and compliance with PCI DSS standards.  \n\n---\n\n## Badges  \n[![Security](https://img.shields.io/badge/secure-yes-blue)](https://example.com)  \n[![CI](https://img.shields.io/badge/CI-passing-green)](https://example.com)  \n[![Version](https://img.shields.io/badge/version-1.2.0-yellow)](https://example.com)  \n\n---\n\n## Getting Started / Installation  \n**Requirements:**  \n- ARM Cortex-M7 microcontroller (e.g., STM32H7)  \n- Rust toolchain (rustc 1.60+)  \n- OpenSSL development libraries  \n\n**Steps:**  \n1. Fetch the repository using `git clone https://github.com/ritikamalhotra/SecureIoT.git`  \n2. Build the firmware: `cargo build --target thumbv7em-none-eabihf`  \n3. Flash to device via ST-Link: `arm-none-eabi-gdb -ex 'target remote localhost:3333' -ex 'monitor reset' -ex 'load'`  \n\n---\n\n## Usage / Examples  \n**Basic operation:**  \n```bash  \n./secureiot --mode monitor --interval 100ms  \n```  \n**Send transaction:**  \n```bash  \ncurl -X POST https://api.paymentgateway.com/tx -d '{\"amount\": 50, \"hash\": \"abc123\"}'  \n```  \n**Check logs:**  \n```bash  \n./secureiot --log-level debug --output /mnt/sdcard/logs.txt  \n```  \n\n**Features:**  \n- MQTT over TLS for encrypted communication  \n- Dynamic power scaling (150µA idle, 2.3mA active)  \n- Real-time anomaly detection (≤15ms latency)  \n\n---\n\n## Architecture / Design  \nThe system uses a dual-core Cortex-M7 with a secure bootloader for firmware updates. Key components:  \n- **Microcontroller:** STM32H743 with 256KB RAM and 1MB Flash  \n- **Communication:** MQTT over TLS 1.3 with pre-shared keys  \n- **Crypto:** Custom AES-256-CTR implementation (3.2ms per block)  \n- **RTOS:** FreeRTOS with priority-based task scheduling  \n\nDesign prioritizes isolation between payment processing and network stacks to prevent side-channel attacks.  \n\n---\n\n## Tech Stack / Built With  \n- **Firmware:** C++17, Embedded Linux (Yocto 3.2)  \n- **Protocols:** MQTT 5.0, CoAP 1.5, TLS 1.3  \n- **RTOS:** FreeRTOS with MPU-enabled memory protection  \n- **Tools:** Rust for scripting, Arm GDB for debugging  \n\n---\n\n## Roadmap / Future Work  \n- Add hardware-backed encryption modules (HSM) for PCI DSS compliance  \n- Implement multi-factor authentication via NFC/SE tags  \n- Expand CoAP support for LoRaWAN integration  \n\n---\n\n## Acknowledgments  \nThanks to the Rust community for tooling, OpenSSL for crypto libraries, and the FreeRTOS team for real-time scheduling primitives.  \n\n---\n\n## Contributing  \nContributions via GitHub PRs are welcome. Prefer C++17 and Rust code style. All patches must include unit tests and CI passes."
+  "text": "# Automated Test Suite for NexaGame's Multiplayer Engine  \nA robust framework for validating real-time synchronization, latency, and player interactions in NexaGame's distributed multiplayer environment. Built with Python and Selenium/Playwright, this toolset ensures reliability across dynamic game states and network conditions.  \n\n## Deployment  \nRun locally via `pip install -r requirements.txt` or deploy to cloud-based testing environments with pre-configured browser farms. Test sessions are isolated to avoid interference between concurrent multiplayer scenarios.  \n\n## Badges  \n[![Test Coverage](https://img.shields.io/badge/coverage-82%25-green)](https://example.com/coverage)  \n[![Passing Tests](https://img.shields.io/badge/tests-passing-blue)](https://example.com/tests)  \n[![Status](https://img.shields.io/badge/status-active-yellow)](https://example.com/status)  \n\n## Tech Stack  \n- **Python 3.10+** (core scripting, API interactions)  \n- **Selenium/Playwright** (browser automation for UI/UX validation)  \n- **pytest** (structured test execution with parallelization)  \n- **Allure Reporting** (detailed test results with step-by-step breakdowns)  \n- **WebSocket Libraries** (real-time data validation for in-game events)  \n\n## Architecture / Design  \nThe framework is organized into modular test suites:  \n1. **Network Latency Simulations** – Stress-test synchronization with variable delay injection.  \n2. **State Consistency Checks** – Validate player positions, scores, and inventory across clients.  \n3. **Edge Case Scenarios** – Replicate rare multiplayer conflicts (e.g., simultaneous item pickups).  \nSelenium/Playwright handles browser-level interactions, while Python scripts manage backend API calls and WebSocket monitoring.  \n\n## Getting Started / Installation  \n1. Install Python 3.10+ and pip.  \n2. Clone the repository: `git clone https://github.com/your-username/automated-test-suite.git`  \n3. Install dependencies: `pip install -r requirements.txt`  \n4. Configure `config.json` with browser capabilities and API endpoints.  \n\n## Usage / Examples  \n```python  \n# Example: Validate chat synchronization across 5 clients  \nfrom test_suites.chat import ChatSynchronizationTest  \nChatSynchronizationTest.run(num_clients=5, delay=500)  \n```  \n```python  \n# Example: Monitor latency during a 10-minute match  \nfrom test_suites.latency import LatencyMonitor  \nLatencyMonitor.start(duration=600, threshold=200)  \n```  \nThe framework integrates with NexaGame's staging environment for live validation, reducing manual verification time by 40% in recent sprints.  \n\n## License  \nMIT License – see [LICENSE](https://github.com/your-username/automated-test-suite/blob/main/LICENSE) for details."
 }

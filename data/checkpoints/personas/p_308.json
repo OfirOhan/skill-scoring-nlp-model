@@ -1,57 +1,63 @@
 {
   "persona_id": "p_308",
   "hyperparams": {
-    "archetype": "mobile_developer",
-    "years_experience": 6,
-    "seniority": "senior",
-    "industry": "startup",
-    "writing_style": "neutral",
+    "archetype": "data_engineer",
+    "years_experience": 1,
+    "seniority": "junior",
+    "industry": "adtech",
+    "writing_style": "verbose",
     "language_fluency": "near-native",
-    "self_promotion_level": "humble",
-    "quantification_tendency": "mixed"
+    "self_promotion_level": "boastful",
+    "quantification_tendency": "qualitative"
   },
-  "name": "Varun Tiwari 61",
-  "current_role": "Senior Mobile Developer",
-  "company": "NexGen Mobility Solutions",
+  "name": "Esther Obi 111",
+  "current_role": "Data Engineer",
+  "company": "ClickAd Network",
   "education": {
-    "degree": "Bachelor of Technology in Computer Science",
-    "university": "Indian Institute of Technology, Kanpur",
-    "year": 2018
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "University of Lagos",
+    "year": 2023
   },
   "career_trajectory": [
     {
-      "role": "Junior Mobile Developer",
-      "company": "TechNova Innovations",
-      "duration": "2018-2019"
+      "position": "Data Intern",
+      "company": "AdVerve Inc.",
+      "duration": "6 months",
+      "responsibilities": "Assisted in ETL pipeline development for campaign analytics, performed basic data quality checks using dbt, and collaborated with cross-functional teams to align data requirements with ad targeting strategies."
     },
     {
-      "role": "Mobile Development Lead",
-      "company": "InnovateX Labs",
-      "duration": "2019-2021"
+      "position": "Data Engineering Analyst",
+      "company": "ClickAd Network",
+      "duration": "8 months",
+      "responsibilities": "Designed and deployed scalable data pipelines using Apache Spark and Kafka, optimized Snowflake warehouses for real-time ad performance metrics, and implemented data modeling best practices for dimensional schema."
     },
     {
-      "role": "Senior Mobile Developer",
-      "company": "NexGen Mobility Solutions",
-      "duration": "2021-present"
+      "position": "Data Engineer",
+      "company": "ClickAd Network",
+      "duration": "1 year",
+      "responsibilities": "Led the development of end-to-end ETL pipelines for bidirectional data synchronization between ad platforms and analytics systems, integrated CloudWatch for monitoring, and spearheaded the migration of legacy PostgreSQL databases to Cassandra for horizontal scaling."
     }
   ],
   "skills": {
-    "Swift": 4,
-    "Kotlin (Android)": 4,
-    "React Native": 4,
-    "Flutter": 3,
-    "iOS development": 5,
-    "Android development": 4,
-    "Mobile CI/CD": 4,
-    "TypeScript": 4,
-    "REST API design": 4,
-    "Test automation": 3,
-    "Unit testing": 4,
-    "Mobile UI/UX": 5,
-    "App Store deployment": 4
+    "Apache Spark": 4,
+    "Apache Kafka": 5,
+    "Apache Airflow": 4,
+    "dbt": 4,
+    "Snowflake": 5,
+    "Data warehousing": 4,
+    "ETL pipeline design": 4,
+    "Data modeling": 4,
+    "Python": 1,
+    "Docker": 3,
+    "Terraform": 3,
+    "AWS": 3,
+    "PostgreSQL": 3,
+    "Redis": 3
   },
   "document_ids": [
     "d_p_308_00",
-    "d_p_308_01"
+    "d_p_308_01",
+    "d_p_308_02",
+    "d_p_308_03"
   ]
 }

@@ -1,40 +1,55 @@
 {
   "persona_id": "p_010",
   "hyperparams": {
-    "archetype": "mobile_developer",
-    "years_experience": 2,
-    "seniority": "junior",
-    "industry": "enterprise",
-    "writing_style": "modest",
-    "language_fluency": "native",
-    "self_promotion_level": "balanced",
-    "quantification_tendency": "metrics-heavy"
+    "archetype": "data_engineer",
+    "years_experience": 4,
+    "seniority": "mid",
+    "industry": "SaaS",
+    "writing_style": "verbose",
+    "language_fluency": "ESL",
+    "self_promotion_level": "humble",
+    "quantification_tendency": "qualitative"
   },
-  "name": "Moussa Keita",
-  "current_role": "Mobile Developer",
-  "company": "NexGen Technologies",
+  "name": "Tariq Hassan",
+  "current_role": "Data Engineer Lead",
+  "company": "NexaFlow Solutions",
   "education": {
-    "degree": "Bachelor of Science in Computer Science",
-    "university": "University of Technology",
-    "year": 2022
+    "degree": "Master's in Data Science",
+    "university": "University of Tech Innovations",
+    "year": 2020
   },
   "career_trajectory": [
-    "Mobile Developer Intern at TechNova Solutions (2021)",
-    "Junior Mobile Developer at CodeCraft Studios (2022)",
-    "Mobile Developer at NexGen Technologies (2023)"
+    {
+      "role": "Data Analyst Intern",
+      "company": "CloudGenix Technologies",
+      "duration": "2019-2020"
+    },
+    {
+      "role": "Junior Data Engineer",
+      "company": "Streamlytics Inc.",
+      "duration": "2020-2022"
+    },
+    {
+      "role": "Data Engineer Lead",
+      "company": "NexaFlow Solutions",
+      "duration": "2022-present"
+    }
   ],
   "skills": {
-    "Swift": 3,
-    "Kotlin (Android)": 3,
-    "React Native": 3,
-    "Flutter": 3,
-    "TypeScript": 2,
-    "React": 2,
-    "Web accessibility (WCAG)": 3,
-    "REST API design": 3
+    "Apache Spark": 4,
+    "Apache Kafka": 4,
+    "Apache Airflow": 5,
+    "Snowflake": 4,
+    "Data warehousing": 3,
+    "Python": 1,
+    "Docker": 3,
+    "Terraform": 3,
+    "AWS": 3
   },
   "document_ids": [
     "d_p_010_00",
-    "d_p_010_01"
+    "d_p_010_01",
+    "d_p_010_02",
+    "d_p_010_03"
   ]
 }

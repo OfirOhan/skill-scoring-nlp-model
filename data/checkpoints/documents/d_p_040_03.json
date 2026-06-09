@@ -1,23 +1,25 @@
 {
   "doc_id": "d_p_040_03",
-  "type": "linkedin",
+  "type": "project_readme",
   "persona_id": "p_040",
   "hyperparams": {
-    "linkedin_completeness": "detailed"
+    "project_scale": "team-internal",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "C/C++ (embedded)": 3,
-    "Embedded Linux": 3,
-    "Firmware development": 3,
-    "GitLab CI": 2,
-    "Hardware-software integration": 3,
-    "IoT protocols (MQTT/CoAP)": 3,
-    "Network automation": 2,
-    "Python": 2,
-    "REST API design": 2,
-    "RTOS": 3,
-    "Sensor integration": 2,
-    "Shell scripting (Bash)": 2
+    "API testing": 3,
+    "BDD/TDD": 1,
+    "CI/CD pipelines": 3,
+    "Go": 1,
+    "Integration testing": 4,
+    "Java": 1,
+    "Performance testing (JMeter/k6)": 5,
+    "Python": 1,
+    "Selenium/Playwright": 1,
+    "Test automation": 4,
+    "Test strategy design": 1,
+    "Web performance optimization": 1
   },
-  "text": "About  \nAs an Embedded Systems Engineer at FinTech Innovators Inc., I bridge hardware and software to build reliable, secure solutions for financial technology. My work focuses on optimizing real-time systems and integrating edge devices into scalable fintech workflows. Over the past year, I’ve contributed to projects that balance precision engineering with compliance requirements, ensuring seamless performance in high-stakes environments.  \n\nKey Skills  \n- Developed firmware for real-time payment gateways using C/C++  \n- Designed embedded Linux systems for secure transaction processing  \n- Integrated IoT protocols (MQTT/CoAP) into point-of-sale terminals  \n- Collaborated on RTOS-based architectures for low-latency operations  \n- Automated deployment pipelines with GitLab CI for firmware updates  \n- Engineered hardware-software interfaces for sensor-driven applications  \n- Maintained network automation scripts for device management  \n\nLet's Connect  \nLet’s connect if you’re working on innovative embedded solutions or fintech hardware projects. I’m always curious about how others approach challenges at the intersection of systems engineering and financial technology."
+  "text": "# Game Server Performance Testing Framework  \n\nA scalable, cloud-native tool for validating game server stability under real-world load conditions. Built to integrate with CI/CD pipelines, this framework ensures consistent benchmarking of multiplayer latency, connection throughput, and resource utilization across distributed cloud environments.  \n\n## Contributing  \nThis project is community-driven and open for contributions. Whether you're refining test scenarios, improving cloud provider compatibility, or adding new metrics, your input shapes its reliability. Start by reviewing the issue tracker for labeled tasks, then submit a pull request with clear, well-documented changes.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/your-username/game-server-perf-test`  \n2. Install dependencies via the included `setup.sh` script (supports Linux/macOS).  \n3. Configure cloud credentials in `config/env-vars.yaml` for AWS/GCP integration.  \n4. Verify installation with `./validate-install.sh` to ensure all test environments are ready.  \n\n## Usage / Examples  \nRun a baseline test:  \n```bash  \n./run-test.sh --scenario \"multiplayer-latency\" --cloud-provider \"aws\"  \n```  \nThis executes a 10-minute load test simulating 5,000 concurrent players, measuring packet loss and server response times. Results are exported to `./reports/` for analysis.  \n\nFor CI/CD integration, trigger tests via webhook with:  \n```bash  \n./ci-trigger.sh --branch \"main\" --env \"prod\"  \n```  \nThis ensures automated validation of server upgrades before deployment.  \n\n## Tech Stack  \n- Cloud APIs (AWS SDK, GCP Compute)  \n- Containerization (Docker for portable test environments)  \n- Scripting (Bash for orchestration, JSON for config)  \n- Monitoring (Prometheus for real-time metrics)  \n\n## Architecture / Design  \nThe framework decouples test logic from execution environments, allowing scenarios to be defined as JSON templates. A modular agent system scales across regions, while a centralized dashboard aggregates results for cross-environment comparison. Key decisions prioritize fault tolerance: tests rerun automatically on transient failures, and results are versioned to track regressions.  \n\n## License  \nApache 2.0  \n\n## Badges  \n[![Build Status](https://shields.io/badge/build-passing-green)](https://github.com/your-username/game-server-perf-test/actions)  \n[![Version](https://shields.io/badge/version-1.3.2-blue)](https://github.com/your-username/game-server-perf-test/releases)  \n[![Coverage](https://shields.io/badge/coverage-85%25-yellow)](https://github.com/your-username/game-server-perf-test/actions)"
 }

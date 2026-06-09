@@ -1,56 +1,51 @@
 {
   "persona_id": "p_045",
   "hyperparams": {
-    "archetype": "fullstack_developer",
-    "years_experience": 2,
-    "seniority": "junior",
-    "industry": "SaaS",
+    "archetype": "embedded_engineer",
+    "years_experience": 5,
+    "seniority": "mid",
+    "industry": "enterprise",
     "writing_style": "confident",
-    "language_fluency": "near-native",
+    "language_fluency": "native",
     "self_promotion_level": "boastful",
     "quantification_tendency": "qualitative"
   },
-  "name": "Anya Kowalski",
-  "current_role": "Full-Stack Developer",
-  "company": "NexGen SaaS Solutions",
+  "name": "Helen Park",
+  "current_role": "Embedded Systems Engineer",
+  "company": "InnovateTech Solutions",
   "education": {
-    "degree": "Bachelor of Science in Computer Science",
-    "university": "University of Warsaw",
-    "year": 2021
+    "degree": "Bachelor of Science in Electrical Engineering",
+    "university": "Stanford University",
+    "year": 2018
   },
   "career_trajectory": [
     {
-      "year": 2021,
-      "position": "Junior Software Developer",
-      "company": "Startup Catalyst",
-      "responsibilities": "Focused on Python backend development for SaaS products, collaborating with cross-functional teams"
+      "year": 2018,
+      "role": "Junior Embedded Engineer",
+      "company": "TechNova Systems"
+    },
+    {
+      "year": 2020,
+      "role": "Senior Embedded Engineer",
+      "company": "TechNova Systems"
     },
     {
       "year": 2022,
-      "position": "Full-Stack Developer",
-      "company": "NexGen SaaS Solutions",
-      "responsibilities": "Built scalable web applications using Node.js/React, optimized MongoDB queries, and designed REST APIs"
-    },
-    {
-      "year": 2023,
-      "position": "Lead Developer (Contract)",
-      "company": "CloudForge Innovations",
-      "responsibilities": "Architected microservices with gRPC, implemented CI/CD pipelines, and mentored junior engineers"
+      "role": "Lead Embedded Systems Engineer",
+      "company": "InnovateTech Solutions"
     }
   ],
   "skills": {
+    "C/C++ (embedded)": 5,
+    "RTOS": 4,
+    "Firmware development": 5,
+    "IoT protocols (MQTT/CoAP)": 4,
+    "Hardware-software integration": 5,
+    "Embedded Linux": 4,
     "Python": 3,
-    "Node.js": 3,
-    "React": 3,
-    "REST API design": 3,
-    "MongoDB": 3,
-    "JavaScript": 3,
-    "TypeScript": 3,
-    "Docker": 3,
-    "Kubernetes": 2,
-    "AWS": 3,
-    "GitLab CI": 2,
-    "CI/CD pipelines": 3
+    "Java": 2,
+    "Go": 1,
+    "REST API design": 3
   },
   "document_ids": [
     "d_p_045_00",

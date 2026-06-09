@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_119_01",
+  "type": "project_readme",
+  "persona_id": "p_119",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Android development": 5,
+    "Flutter": 4,
+    "JavaScript": 1,
+    "Kotlin": 3,
+    "Mobile CI/CD": 4,
+    "React": 1,
+    "React Native": 4,
+    "Swift": 5,
+    "TypeScript": 2,
+    "Web accessibility (WCAG)": 1,
+    "Web performance optimization": 2,
+    "iOS development": 5
+  },
+  "text": "# HealthGuard: Remote Patient Monitoring App  \nHealthGuard is a HIPAA-compliant platform for real-time telemetry ingestion, clinical workflow automation, and predictive analytics in chronic care management. This project processes 2.4M+ data points/day across 15+ clinical use cases, reducing manual data entry by 95% and improving provider-patient alignment by 38% in pilot studies.  \n\n## Configuration  \nEnvironment variables are managed via `env.gradle` for Android and `Info.plist` for iOS, with Firebase and AWS IoT credentials stored in encrypted `secrets.gradle`. Flutter plugins are configured via `pubspec.yaml` with native module overrides for biometric authentication. CI/CD pipelines use Fastlane for iOS and Gradle CI for Android, with automated dependency resolution via `./gradlew dependencies` and `pod install --repo-update`.  \n\n## Getting Started / Installation  \nClone the repository using `git clone https://github.com/healthguard-io/healthguard.git`, then navigate to the project root. For Android: `./gradlew assembleDebug` triggers AGP 8.1+ builds with Jetpack Compose 1.5. For iOS: `pod install --repo-update` configures CocoaPods 1.12+ with Firebase 10.15. Flutter dependencies are resolved via `flutter pub get` after syncing Gradle.  \n\n## Usage / Examples  \nHealthGuard ingests ECG, glucose, and vitals via MQTT over TLS 1.3, with data persistence in Firestore using batch writes. Alert workflows trigger via FHIR STU3 resources, and analytics are visualized in Grafana with Prometheus metrics. Example: A diabetic patient’s glucose trends are auto-annotated with medication timestamps, enabling real-time GLP-1 receptor agonist dose adjustments.  \n\n## Tech Stack  \n- **Kotlin** (Android) with Coroutines 1.7 for async I/O  \n- **Swift** (iOS) with Combine 3.0 for reactive data flows  \n- **Flutter** (cross-platform UI) with Cupertino widgets for iOS parity  \n- **Firebase** (real-time database, cloud functions)  \n- **AWS IoT Greengrass** (edge computing for low-bandwidth regions)  \n\n## Architecture / Design  \nThe architecture follows a layered microservices model: data ingestion (MQTT + AWS IoT), processing (Kafka streams), storage (Firestore + BigQuery), and UI (Flutter with native modules). Android uses Jetpack MVVM with Room for local storage, while iOS leverages SwiftUI and Core Data. Security is enforced via TLS 1.3, AES-256 encryption, and Firebase Admin SDK for audit logging.  \n\n## License  \nMIT License — see [LICENSE](https://github.com/healthguard-io/healthguard/blob/main/LICENSE)  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/actions/workflow.com/healthguard-io/healthguard/main.yml?branch=main)](https://github.com/healthguard-io/healthguard/actions)  \n[![Coverage](https://img.shields.io/coveralls/healthguard-io/healthguard)](https://coveralls.io/github/healthguard-io/healthguard)  \n[![CI/CD](https://img.shields.io/github/actions/workflow.com/healthguard-io/healthguard/ci.yml?branch=main)](https://github.com/healthguard-io/healthguard/actions)"
+}

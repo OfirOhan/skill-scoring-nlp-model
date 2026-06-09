@@ -1,34 +1,23 @@
 {
   "doc_id": "d_p_046_03",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_046",
   "hyperparams": {
-    "recommender_role": "professor",
-    "recommender_closeness": "occasional",
-    "company_type": "enterprise",
-    "company_size": "mid (50-500)"
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "ArgoCD": 3,
-    "CI/CD pipelines": 4,
-    "Chaos engineering": 3,
-    "Cloud cost optimization": 3,
-    "Cloud networking (VPC/subnets)": 3,
-    "Configuration management (Ansible)": 3,
-    "Docker": 3,
-    "GCP": 4,
-    "GitHub Actions": 3,
-    "GitLab CI": 4,
-    "Jenkins": 2,
-    "Kubernetes": 4,
-    "Linux administration": 4,
-    "Log management (ELK)": 2,
-    "Monitoring & alerting": 4,
-    "Prometheus/Grafana": 4,
-    "SLA/SLO management": 3,
-    "Shell scripting (Bash)": 3,
-    "Terraform": 4
+    "3D graphics (OpenGL/Vulkan)": 4,
+    "C#/.NET": 1,
+    "Game networking": 1,
+    "Game physics": 4,
+    "Go": 1,
+    "Java": 1,
+    "Python": 3,
+    "REST API design": 1,
+    "Unity": 5,
+    "Unreal Engine": 1
   },
-  "text": "Linda Gustafsson once led a high-stakes migration of NordicTech’s legacy systems to Kubernetes, resolving a 90% downtime issue during peak seasons. She orchestrated a phased rollout using ArgoCD, paired with Prometheus/Grafana for real-time monitoring, which slashed incident resolution time by 40% and stabilized SLA compliance. Her ability to balance technical rigor with team collaboration was evident in how she mentored junior engineers through the chaos of the transition.  \n\nLinda is a Senior Site Reliability Engineer at NordicTech, where she architecturally oversees cloud infrastructure spanning AWS and GCP. She designs CI/CD pipelines with GitLab CI, ensuring deployments meet 99.95% uptime targets. Her expertise in cloud cost optimization, achieved through Terraform-driven resource tagging and VPC subnet restructuring, reduced monthly spend by 30% without compromising performance. She also champions Linux administration best practices, embedding Ansible into automation workflows that cut manual tasks by 50%.  \n\nBeyond technical mastery, Linda excels in systemic problem-solving. Her chaos engineering initiatives, which simulated real-world outages, uncovered critical vulnerabilities in the network stack. She also pioneered a monitoring framework integrating ELK for log analysis, enabling proactive issue detection. Her work ethic is marked by relentless attention to detail and a knack for turning complex challenges into streamlined processes.  \n\nLinda’s contributions are indispensable. Her technical depth, strategic thinking, and collaborative spirit make her a rare asset in any enterprise setting. I wholeheartedly endorse her for any role requiring both operational excellence and innovative leadership."
+  "text": "# ProceduralWorldGen: AI-Driven Terrain Generation System  \nA production-ready tool for creating large-scale, visually rich game environments using machine learning and physics-aware algorithms. Benchmarks show 4.2x faster generation than legacy systems, with 92% visual fidelity to real-world geology datasets.  \n\n## Getting Started / Installation  \nInstall Python 3.9+ and Unity 2021.2+. Clone the repo and run `pip install -r requirements.txt` to set up dependencies. For Unity integration, import the `ProceduralWorldGen.unitypackage` via the Asset Store.  \n\n## Tech Stack  \nPython (core logic, neural network training), PyOpenGL (real-time rendering optimization), PyBullet (physics simulation validation), Unity (engine integration). Leverages Unity’s Job System for parallel terrain chunk processing.  \n\n## Usage / Examples  \nGenerate a 10km×10km terrain with:  \n```python  \ngenerator = TerrainGenerator(seed=42, resolution=2048, terrain_type=\"mountainous\")  \ngenerator.run()  \n```  \nOutput includes a Unity scene with physics-enabled terrain, LOD transitions, and material variations. Benchmarked at 3.8s per 1km² chunk on RTX 3080.  \n\n## Badges  \n[![Build Status](https://example.com/build-badge)](https://example.com) [![Coverage](https://example.com/coverage)](https://example.com) [![License](https://example.com/license)](https://github.com/ProceduralWorldGen/LICENSE)  \n\n## Architecture / Design  \nCore system decouples terrain generation into three phases:  \n1. **AI Preprocessing**: Uses a trained convolutional neural network to extract elevation patterns from satellite imagery.  \n2. **Physics Simulation**: Validates generated terrains against realistic erosion models using PyBullet.  \n3. **Unity Integration**: Exposes terrain data as Unity Terrain objects with dynamic LOD and material mapping.  \n\nKey design choice: Memory-mapped terrain chunks reduce GPU VRAM usage by 65% compared to traditional chunking.  \n\n## Contributing  \nWe welcome contributions to the AI training pipeline or Unity integration. Start with the `physics-validation` task, which reduces simulation errors by 28% in current benchmarks.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/ProceduralWorldGen/LICENSE) for details."
 }

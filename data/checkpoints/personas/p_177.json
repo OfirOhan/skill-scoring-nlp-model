@@ -1,70 +1,52 @@
 {
   "persona_id": "p_177",
   "hyperparams": {
-    "archetype": "ml_engineer",
-    "years_experience": 3,
-    "seniority": "mid",
-    "industry": "cybersecurity",
-    "writing_style": "neutral",
+    "archetype": "security_engineer",
+    "years_experience": 1,
+    "seniority": "junior",
+    "industry": "consulting",
+    "writing_style": "verbose",
     "language_fluency": "near-native",
-    "self_promotion_level": "boastful",
-    "quantification_tendency": "metrics-heavy"
+    "self_promotion_level": "humble",
+    "quantification_tendency": "mixed"
   },
-  "name": "Lucia Fernandez",
-  "current_role": "Machine Learning Engineer - Cybersecurity Threat Detection",
-  "company": "CyberSecure Inc.",
+  "name": "Patrick Doyle",
+  "current_role": "Security Engineer",
+  "company": "SecureNet Consulting",
   "education": {
-    "degree": "Master of Science in Data Science",
-    "university": "Massachusetts Institute of Technology (MIT)",
-    "year": 2021
+    "degree": "Bachelor of Science in Cybersecurity",
+    "university": "University of Cybersecurity Studies",
+    "year": 2023
   },
   "career_trajectory": [
     {
-      "title": "Data Analyst Intern",
-      "company": "SentinelTech Security",
-      "duration": "2020-2021",
-      "achievements": [
-        "Built predictive models for anomaly detection in network traffic",
-        "Achieved 92% precision in identifying zero-day threats"
-      ]
+      "year": 2022,
+      "position": "Security Analyst Intern",
+      "organization": "CyberShield Solutions"
     },
     {
-      "title": "Junior ML Engineer",
-      "company": "CyberSecure Inc.",
-      "duration": "2021-2022",
-      "achievements": [
-        "Deployed NLP pipelines for phishing email classification",
-        "Reduced false positives by 37% using ensemble methods"
-      ]
-    },
-    {
-      "title": "ML Engineer",
-      "company": "CyberSecure Inc.",
-      "duration": "2022-present",
-      "achievements": [
-        "Architected real-time threat detection system with 85% F1 score",
-        "Led model deployment on AWS SageMaker with 99.99% uptime"
-      ]
+      "year": 2023,
+      "position": "Junior Security Engineer",
+      "organization": "SecureNet Consulting"
     }
   ],
   "skills": {
-    "PyTorch": 3,
-    "TensorFlow": 3,
-    "scikit-learn": 3,
-    "Hugging Face Transformers": 3,
-    "NLP": 4,
-    "MLOps (MLflow/W&B)": 4,
-    "Model deployment": 3,
-    "AWS": 4,
-    "Docker": 3,
-    "Kubernetes": 3,
-    "Terraform": 3,
-    "Cloud cost optimization": 3,
-    "Apache Airflow": 3
+    "Network security": 3,
+    "Application security (OWASP)": 4,
+    "Penetration testing": 3,
+    "IAM/Access control": 4,
+    "Encryption & PKI": 5,
+    "Security auditing": 3,
+    "SIEM tools": 4,
+    "TCP/IP": 2,
+    "DNS/DHCP": 1,
+    "VPN technologies": 2,
+    "Firewall configuration": 3,
+    "Network automation": 1,
+    "Monitoring & alerting": 2
   },
   "document_ids": [
     "d_p_177_00",
-    "d_p_177_01",
-    "d_p_177_02"
+    "d_p_177_01"
   ]
 }

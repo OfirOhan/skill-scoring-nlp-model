@@ -1,51 +1,74 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional resume highlighting 14 years of frontend engineering experience in the gaming industry",
-    "title": "Deepak Verma - Staff Frontend Engineer",
+    "topic_summary": "A professional CV for Jakub Novak as a Senior QA Engineer, highlighting his 8 years of experience in SaaS test automation and his role as Test Automation Architect.",
+    "title": "Jakub Novak - Senior QA Engineer & Test Automation Architect",
     "doc_id": "d_p_224_00",
     "persona_id": "p_224",
     "hyperparams": {
-      "cv_format": "minimal",
-      "geographic_convention": "Israel",
-      "company_type": "startup",
-      "company_size": "large (500+)"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "A reusable UI framework for game development with React and WebGL integration",
-    "title": "Lumina GameUI Framework",
-    "doc_id": "d_p_224_01",
-    "persona_id": "p_224",
-    "hyperparams": {
-      "project_scale": "team-internal",
-      "project_team_size": "small (2-4)",
-      "jargon_density": "plain"
-    }
-  },
-  {
-    "doc_type": "recommendation",
-    "topic_summary": "Endorsement from a team lead praising Deepak's leadership and technical expertise in game frontend systems",
-    "title": "Recommendation from Lumina Games Engineering Manager",
-    "doc_id": "d_p_224_02",
-    "persona_id": "p_224",
-    "hyperparams": {
-      "recommender_role": "peer",
-      "recommender_closeness": "worked-daily",
-      "company_type": "academic",
+      "cv_format": "hybrid",
+      "geographic_convention": "India",
+      "company_type": "FAANG",
       "company_size": "small (<50)"
     }
   },
   {
-    "doc_type": "blog",
-    "topic_summary": "Technical deep dive on optimizing frontend performance for real-time multiplayer gaming",
-    "title": "Frontend Performance Optimization in Real-Time Gaming Applications",
+    "doc_type": "project_readme",
+    "topic_summary": "A GitHub project README for an automated regression testing framework developed for CloudFlow SaaS, focusing on improving test coverage and reducing maintenance efforts.",
+    "title": "Automated Regression Testing Framework for CloudFlow SaaS",
+    "doc_id": "d_p_224_01",
+    "persona_id": "p_224",
+    "hyperparams": {
+      "project_scale": "academic",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation from Jakub's manager at CloudFlow SaaS praising his leadership in test automation architecture and his contributions to the company's QA processes.",
+    "title": "Recommendation from CloudFlow SaaS Manager",
+    "doc_id": "d_p_224_02",
+    "persona_id": "p_224",
+    "hyperparams": {
+      "recommender_role": "peer",
+      "recommender_closeness": "occasional",
+      "company_type": "academic",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation from a peer QA engineer highlighting Jakub's collaborative approach and expertise in designing scalable test automation solutions.",
+    "title": "Recommendation from QA Peer at CloudFlow SaaS",
     "doc_id": "d_p_224_03",
     "persona_id": "p_224",
     "hyperparams": {
-      "blog_depth": "opinion-piece",
-      "jargon_density": "heavy"
+      "recommender_role": "professor",
+      "recommender_closeness": "worked-daily",
+      "company_type": "agency",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "linkedin",
+    "topic_summary": "A LinkedIn summary showcasing Jakub's experience in SaaS QA, his role as Test Automation Architect, and his passion for innovative testing solutions.",
+    "title": "Jakub Novak - Senior QA Engineer & Test Automation Architect",
+    "doc_id": "d_p_224_04",
+    "persona_id": "p_224",
+    "hyperparams": {
+      "linkedin_completeness": "minimal"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post discussing advanced strategies for implementing and optimizing test automation in SaaS environments, with practical examples and insights.",
+    "title": "Advanced Strategies for Test Automation in SaaS Environments",
+    "doc_id": "d_p_224_05",
+    "persona_id": "p_224",
+    "hyperparams": {
+      "blog_depth": "deep-dive",
+      "jargon_density": "moderate"
     }
   }
 ]

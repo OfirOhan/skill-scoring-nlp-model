@@ -1,23 +1,22 @@
 {
   "doc_id": "d_p_295_01",
-  "type": "project_readme",
+  "type": "blog",
   "persona_id": "p_295",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "moderate"
+    "blog_depth": "opinion-piece",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Agile/Scrum": 2,
-    "CI/CD pipelines": 3,
-    "Cloud cost optimization": 3,
-    "Cross-team collaboration": 2,
-    "Kubernetes": 3,
-    "REST API design": 4,
-    "System design": 4,
-    "Team leadership": 2,
-    "Technical writing": 2,
-    "Terraform": 3
+    "Apache Airflow": 3,
+    "Apache Kafka": 5,
+    "Apache Spark": 3,
+    "CI/CD pipelines": 1,
+    "Data warehousing": 3,
+    "ETL pipeline design": 4,
+    "Java": 1,
+    "Python": 3,
+    "REST API design": 2,
+    "Snowflake": 5
   },
-  "text": "# AdOptima - Real-Time Campaign Optimization Platform  \n\nAdOptima is a production-ready adtech platform that dynamically adjusts real-time bidding strategies across multiple ad exchanges, reducing CTR variance by 22% and improving ROAS by 18% in Q3 2023. Built for adtech teams needing sub-100ms latency, it leverages machine learning models trained on 100M+ historical impressions to predict optimal bid adjustments.  \n\n## Testing  \nTesting is baked into every deployment. Unit tests cover 92% of core logic, with integration tests validating end-to-end pipeline reliability. The test suite runs in 8 minutes via GitHub Actions, with 30% of test cases written in parallel. All API endpoints are stress-tested with 10k concurrent users using Locust, ensuring 99.95% uptime under load.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/your-username/adoptima.git  \ncd adoptima  \nnpm install  \ncp .env.example .env  \n# Configure AWS credentials and Kafka brokers  \ndocker-compose up -d  \n```  \nEnsure you have Docker 20.10+, Node.js 18, and AWS CLI v2 installed.  \n\n## Usage / Examples  \n```bash  \n# Start the optimization engine  \nnpm run start  \n\n# Example API request to adjust bid strategy  \ncurl -X POST https://api.adoptima.dev/v1/campaigns/12345/optimize \\\n  -H \"Authorization: Bearer <token>\" \\\n  -d '{\"target_cpc\": 1.2, \"bid_multiplier\": 0.85}'  \n```  \nThis adjusts the bid multiplier for campaign 12345, reducing spend by 15% while maintaining 12% higher conversion rates.  \n\n## Tech Stack  \n- **Backend**: Node.js (TypeScript), Fastify, Kafka (Python)  \n- **ML**: PyTorch Lightning, Scikit-learn (AWS SageMaker)  \n- **Cloud**: AWS (EKS, S3, Lambda), GCP (BigQuery)  \n- **Monitoring**: Prometheus + Grafana, Datadog  \n\n## Architecture / Design  \nAdOptima uses a microservices architecture with a central event bus (Kafka) for real-time bid adjustments. The core optimization engine is a Kubernetes Deployment with Horizontal Pod Autoscaling, scaled to 3 replicas during peak hours. REST APIs are designed with OpenAPI 3.0, exposing 12 endpoints for campaign management.  \n\n## License  \nMIT License  \n\n## Contributing  \nWe welcome contributions via pull requests. Focus on improving model accuracy (current AUC-ROC: 0.89) or optimizing cloud costs (current AWS spend: $12k/month). All PRs must include unit tests and CI/CD pipeline updates."
+  "text": "**Optimizing Real-Time Ad Campaigns with Apache Flink and Kafka in AdTech**  \n\nThe adtech landscape demands sub-second latency for campaign optimization, yet legacy batch workflows often introduce delays that erode revenue. At my company, we faced a critical bottleneck: real-time bidding (RTB) systems lagging by 200–300ms due to fragmented data pipelines. This delay translated to a 12% drop in click-through rates (CTR) for high-value campaigns.  \n\n**Problem Statement**  \nOur stack relied on Kafka for event ingestion but used Spark for batch processing, creating a latency gap between data arrival and actionable insights. The RTB engine couldn’t react to bid price changes in real time, leading to suboptimal ad placements. Additionally, joining user behavior data from Snowflake with Kafka streams proved error-prone, causing data inconsistencies.  \n\n**Setup**  \nWe rearchitected the pipeline to use Apache Flink as the core processing engine, leveraging its event-time processing and stateful computations. Kafka remained the source, but we introduced a dedicated topic for bid signals, ensuring low-latency ingestion. Snowflake served as the destination for enriched campaign metrics, with a materialized view for real-time joins.  \n\n**Step-by-Step Guide**  \n1. **Kafka Producers**: Instrumented bid signals and user clicks into separate Kafka topics, ensuring strict ordering with Kafka’s partitioning strategy.  \n2. **Flink Stream Processing**: Deployed a Flink SQL job to join bid events with user clickstream data using a 500ms sliding window. Applied tumbling windows for bid price updates, ensuring deterministic state management.  \n3. **Snowflake Integration**: Used Flink’s Kafka Connectors to write processed metrics to Snowflake, leveraging its real-time querying capabilities for ad-hoc analysis.  \n4. **Monitoring**: Instrumented the pipeline with Prometheus and Grafana, tracking end-to-end latency and error rates.  \n\n**Results**  \nThe new pipeline reduced end-to-end latency from 250ms to 45ms, improving CTR by 15% within the first week. By aligning bid signals with user behavior in real time, we achieved a 9% increase in conversion rates for high-intent campaigns. Snowflake’s materialized views enabled 3x faster ad performance reporting, reducing reliance on ad-hoc Spark jobs.  \n\n**Conclusion**  \nThis overhaul underscores the power of Flink’s stateful processing and Kafka’s low-latency ingestion for adtech use cases. By decoupling batch and real-time workflows, we unlocked dynamic campaign optimization at scale.  \n\n**Further Reading**  \n- *Apache Airflow* for orchestrating Flink job dependencies  \n- *Apache Spark* for batch reprocessing of historical bid data  \n- *Python* scripts for custom Kafka schema validation  \n- *Snowflake* best practices for real-time analytics in adtech  \n- *Kafka Streams* for alternative stateful processing patterns"
 }

@@ -3,23 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_085",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "moderate"
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "ArgoCD": 4,
-    "CI/CD pipelines": 4,
-    "Chaos engineering": 3,
-    "Cloud networking (VPC/subnets)": 3,
-    "Go": 4,
-    "Jenkins": 4,
-    "Kubernetes": 5,
-    "Monitoring & alerting": 3,
-    "PostgreSQL": 3,
-    "Prometheus/Grafana": 3,
-    "Python": 3,
-    "Terraform": 5
+    "Apache Airflow": 1,
+    "Cloud cost optimization": 2,
+    "Computer vision": 3,
+    "Data warehousing": 2,
+    "Docker": 3,
+    "Hugging Face Transformers": 5,
+    "MLOps (MLflow/W&B)": 5,
+    "NLP": 5,
+    "PyTorch": 4,
+    "REST API design": 3,
+    "Recommendation systems": 5
   },
-  "text": "# GameServerOrchestration  \nAutomate game server deployment, scaling, and resilience with Kubernetes, Terraform, and cloud-native tools. Achieved 40% reduction in downtime and 30s deployment latency in production environments.  \n\n## Tech Stack  \n- **Kubernetes**: Cluster management with HPA, readiness probes, and custom controllers for game state synchronization.  \n- **Terraform**: Infrastructure-as-code for VPCs, subnets, and cloud provider integration (AWS/GCP).  \n- **ArgoCD**: GitOps-driven deployment pipeline with 99.99% uptime SLA for server clusters.  \n- **Jenkins**: CI/CD pipeline for artifact builds, security scanning, and automated testing.  \n- **Prometheus/Grafana**: Real-time metrics dashboard for server load, latency, and player session tracking.  \n- **PostgreSQL**: Persistent storage for game sessions and player data with replication.  \n- **Python/Go**: Custom scripts for chaos engineering, load testing, and API integrations.  \n\n## Architecture / Design  \nKubernetes orchestrates stateless game servers with dynamic autoscaling (500% capacity surge during peak hours). Terraform provisions isolated VPCs with private subnets for security. ArgoCD syncs manifests to clusters, ensuring zero-downtime updates. Chaos engineering tools inject latency and network splits to validate resilience. Prometheus monitors 100+ metrics, triggering alerts via Slack for latency >200ms. PostgreSQL handles 10k+ writes/sec for session tracking.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/your-username/GameServerOrchestration.git  \ncd GameServerOrchestration  \nexport AWS_ACCESS_KEY_ID=your-key  \nexport AWS_SECRET_ACCESS_KEY=your-secret  \nterraform init && terraform apply  \nkubectl apply -f k8s/deployment.yaml  \n```  \nEnsure Docker, kubectl, terraform, and jenkins-cli are installed. Configure cloud provider credentials and adjust resource limits in `terraform.tfvars`.  \n\n## Usage / Examples  \n- **Deploy a server**: `argo cd apply --force`  \n- **Scale cluster**: `kubectl scale statefulset game-server --replicas=10`  \n- **Chaos test**: Run `chaos-engineer.sh` to simulate network partitions and latency.  \n- **Monitor metrics**: Access Grafana dashboard at `http://grafana.example.com` for server health.  \n\n## Badges  \n[![Build Status](https://example.com/build-badge)](https://example.com/build)  \n[![Test Coverage](https://example.com/coverage-badge)](https://example.com/coverage)  \n[![Security Scan](https://example.com/security-badge)](https://example.com/security)  \n\n## Contributing  \nPRs welcome! Focus on chaos engineering improvements, cloud networking optimizations, or Prometheus alert rules. Ensure all changes include unit tests and CI/CD pipeline updates.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# Player Behavior Prediction System for NexaGame Studios  \nA real-time ML pipeline to forecast player engagement metrics, session duration, and in-game purchases using behavioral data from NexaGame's live titles. Achieved 89.2% accuracy in 12-hour window predictions and 14.3% uplift in conversion rate modeling for beta testing.  \n\n## Testing  \nUnit tests cover 92% of core logic with pytest, while integration tests validate data flow through PyTorch models and REST endpoints. End-to-end tests simulate 500 concurrent player sessions, ensuring latency stays below 120ms. Model drift detection runs hourly, flagging 3.7% degradation in prediction quality during peak hours.  \n\n## Getting Started / Installation  \nClone the repo and run `docker compose up` to spin up a local environment with PostgreSQL, Redis, and a pre-trained PyTorch model. Requires Python 3.9+ and Docker 20.10+. For production deployment, replace the mock dataset with real-time event streaming from NexaGame's analytics pipeline.  \n\n## Usage / Examples  \n```python  \nfrom predictor import PlayerPredictor  \npredictor = PlayerPredictor(model_path=\"models/behavior_v3.pt\")  \nprediction = predictor.predict(user_id=\"NEXA12345\", session_data={\"level\": 15, \"items\": [\"sword\", \"shield\"]})  \nprint(f\"Predicted engagement score: {prediction['score']:.2f}\")  \n```  \nExample output includes risk scores for churn (0–100), recommended microtransactions, and session exit probability. Models retrain nightly using Hugging Face Transformers for NLP-based behavioral pattern extraction.  \n\n## Tech Stack  \n- **ML Frameworks**: PyTorch 2.0, Hugging Face Transformers  \n- **Data**: PostgreSQL, Redis, Kafka (mocked for local dev)  \n- **APIs**: FastAPI for model serving, REST endpoints for game client integration  \n- **Monitoring**: MLflow for experiment tracking, Weights & Biases for training metrics  \n\n## Architecture / Design  \nThe system uses a layered architecture:  \n1. **Data Ingestion**: Kafka streams process clickstream events  \n2. **Feature Engineering**: PyTorch scripts extract temporal patterns and NLP embeddings  \n3. **Model Serving**: TorchServe handles 100+ concurrent inference requests  \n4. **Feedback Loop**: Real-time metrics feed into a recommendation system for dynamic content adjustment  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Contributing  \nPull requests are welcome! Focus on improving model efficiency (current inference time: 47ms) or expanding support for additional game titles. For questions, reach out via the GitHub Discussions board."
 }

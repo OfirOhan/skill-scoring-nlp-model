@@ -1,40 +1,51 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional summary of Eliott Marchand's experience as a Product Manager in consulting",
-    "title": "Eliott Marchand - Product Manager",
+    "topic_summary": "A professional CV highlighting 12 years of embedded engineering experience in adtech.",
+    "title": "James Okafor CV",
     "doc_id": "d_p_292_00",
     "persona_id": "p_292",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
+      "cv_format": "minimal",
       "geographic_convention": "US",
-      "company_type": "enterprise",
-      "company_size": "mid (50-500)"
+      "company_type": "startup",
+      "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "Overview of a consulting project focused on agile product development for enterprise clients",
-    "title": "Agile Product Optimization for Consulting Clients",
+    "topic_summary": "An embedded system for dynamic ad targeting using IoT sensors and real-time analytics.",
+    "title": "Smart Billboard IoT System",
     "doc_id": "d_p_292_01",
     "persona_id": "p_292",
     "hyperparams": {
-      "project_scale": "hobby",
+      "project_scale": "academic",
       "project_team_size": "large (15+)",
-      "jargon_density": "heavy"
+      "jargon_density": "moderate"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "Endorsement from a former manager highlighting Eliott's product leadership and consultative skills",
-    "title": "Recommendation for Eliott Marchand",
+    "topic_summary": "A recommendation from James' manager at AdVerve Technologies praising his leadership in embedded systems.",
+    "title": "Recommendation from AdVerve Technologies",
     "doc_id": "d_p_292_02",
     "persona_id": "p_292",
     "hyperparams": {
-      "recommender_role": "peer",
-      "recommender_closeness": "occasional",
-      "company_type": "startup",
-      "company_size": "small (<50)"
+      "recommender_role": "professor",
+      "recommender_closeness": "brief",
+      "company_type": "FAANG",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "Exploring edge computing applications for low-latency ad delivery in adtech environments.",
+    "title": "Edge Computing in Adtech: Optimizing Real-Time Ad Delivery",
+    "doc_id": "d_p_292_03",
+    "persona_id": "p_292",
+    "hyperparams": {
+      "blog_depth": "opinion-piece",
+      "jargon_density": "heavy"
     }
   }
 ]

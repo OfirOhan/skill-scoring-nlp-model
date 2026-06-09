@@ -1,24 +1,25 @@
 {
   "doc_id": "d_p_247_04",
-  "type": "linkedin",
+  "type": "recommendation",
   "persona_id": "p_247",
   "hyperparams": {
-    "linkedin_completeness": "minimal"
+    "recommender_role": "peer",
+    "recommender_closeness": "brief",
+    "company_type": "startup",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "CI/CD pipelines": 4,
-    "Cloud cost optimization": 3,
-    "Docker": 4,
-    "Kubernetes": 3,
-    "MongoDB": 4,
-    "Node.js": 4,
-    "Python": 4,
-    "REST API design": 4,
-    "React": 4,
-    "Terraform": 3,
-    "TypeScript": 4,
-    "Web performance optimization": 4
+    "AWS": 1,
+    "CDN management": 1,
+    "Cloud cost optimization": 1,
+    "Cloud networking (VPC/subnets)": 1,
+    "Docker": 1,
+    "GCP": 1,
+    "Infrastructure as Code": 1,
+    "Kubernetes": 1,
+    "Load balancing": 1,
+    "Python": 1,
+    "Terraform": 1
   },
-  "text": "#FullStackDev #GamingTech #CloudOptimization  \nAt NovaGame Studios, I build scalable, high-performance systems that power next-gen games. Over the past three years, I’ve architected solutions that cut AWS costs by 30% using CloudFormation, while ensuring 99.9% uptime for our multiplayer servers. My Kubernetes clusters handle 50k+ concurrent users, and Terraform automates infrastructure updates across 12 regions—no more manual spreadsheets.  \n\nWhen it comes to CI/CD, I’ve slashed deployment times from hours to minutes with custom Jenkins pipelines, slashing rollback risks by 70%. Docker containers? I’ve made them the backbone of our microservices, slashing startup times by 40%. MongoDB handles millions of user sessions daily, and my REST APIs? They’re the glue between our Node.js backend and React frontends—built with TypeScript, of course.  \n\nPython scripts automate 80% of our devops tasks, and I’ve optimized web performance to load complex game assets in under 2 seconds. Let’s make gaming faster, smarter, and more scalable—one line of code at a time. Ready to level up? 🚀"
+  "text": "Academic Context  \nYuki and I first collaborated during a game engine optimization workshop at the Game Dev Summit. Her background in real-time systems and passion for low-latency gameplay stood out, even among seasoned engineers. Though we’ve since worked on separate projects, our discussions about architecture trade-offs and player experience remain a reference point for her technical rigor.  \n\nWorking Relationship  \nOur collaboration was brief but intense—she joined our team temporarily to debug a multiplayer sync issue in a AAA title. Within days, she identified a critical flaw in our state reconciliation logic, which was causing unpredictable lag. Her ability to dissect complex systems without prior context was impressive, and she documented her findings in a way that made the solution accessible to the entire team.  \n\nResearch Ability  \nYuki’s strength lies in her relentless curiosity and ability to translate abstract problems into concrete solutions. During her time with us, she proposed a novel approach to handling asynchronous inputs, which reduced server-side latency by 30% in stress tests. She doesn’t just solve problems—she reimagines the constraints of the problem space.  \n\nBroader Strengths  \nBeyond her technical prowess, Yuki is a steady presence in high-pressure environments. She mentors junior engineers with patience, and her insistence on thorough testing has raised our team’s standards. Her work ethic is unshakable, and she approaches challenges with a blend of pragmatism and creativity that’s rare to find.  \n\nRecommendation  \nYuki’s combination of deep technical insight and collaborative mindset makes her an exceptional candidate. She’s someone who elevates those around her while consistently delivering results that align with both technical and creative goals."
 }

@@ -1,50 +1,51 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A CV highlighting Daichi Kobayashi's Machine Learning expertise and consulting experience.",
-    "title": "Daichi Kobayashi - Machine Learning Engineer",
+    "topic_summary": "Senior Security Engineer with 7 years of experience in startup environments, specializing in cloud security and threat mitigation.",
+    "title": "Farhana Chowdhury 83 - Senior Security Engineer CV",
     "doc_id": "d_p_280_00",
     "persona_id": "p_280",
     "hyperparams": {
-      "cv_format": "minimal",
+      "cv_format": "bullet-heavy",
       "geographic_convention": "Europe",
-      "company_type": "agency",
-      "company_size": "large (500+)"
+      "company_type": "FAANG",
+      "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A GitHub project README for a predictive analytics tool to forecast customer churn in consulting scenarios.",
-    "title": "Predictive Analytics for Client Retention",
+    "topic_summary": "A secure API gateway implementation for a fintech startup using OAuth2 and JWT for authentication.",
+    "title": "SecureAPI Gateway",
     "doc_id": "d_p_280_01",
     "persona_id": "p_280",
     "hyperparams": {
-      "project_scale": "hobby",
-      "project_team_size": "solo",
-      "jargon_density": "heavy"
+      "project_scale": "academic",
+      "project_team_size": "large (15+)",
+      "jargon_density": "plain"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from a professor endorsing Daichi's academic and technical abilities in machine learning.",
-    "title": "Recommendation from Professor Tanaka",
+    "topic_summary": "Recommendation from Farhana's manager at NexaSecure for her leadership in implementing zero-trust architecture.",
+    "title": "Recommendation from NexaSecure CTO",
     "doc_id": "d_p_280_02",
     "persona_id": "p_280",
     "hyperparams": {
       "recommender_role": "peer",
-      "recommender_closeness": "brief",
+      "recommender_closeness": "occasional",
       "company_type": "agency",
-      "company_size": "large (500+)"
+      "company_size": "mid (50-500)"
     }
   },
   {
-    "doc_type": "linkedin",
-    "topic_summary": "A LinkedIn summary showcasing Daichi's passion for combining machine learning with consulting solutions.",
-    "title": "LinkedIn Summary",
+    "doc_type": "blog",
+    "topic_summary": "A technical deep dive into securing microservices in startup environments with real-world examples.",
+    "title": "Securing Microservices in Startups: Best Practices and Tools",
     "doc_id": "d_p_280_03",
     "persona_id": "p_280",
     "hyperparams": {
-      "linkedin_completeness": "detailed"
+      "blog_depth": "tutorial",
+      "jargon_density": "moderate"
     }
   }
 ]

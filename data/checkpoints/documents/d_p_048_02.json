@@ -1,27 +1,26 @@
 {
   "doc_id": "d_p_048_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_048",
   "hyperparams": {
-    "recommender_role": "professor",
-    "recommender_closeness": "brief",
-    "company_type": "enterprise",
-    "company_size": "mid (50-500)"
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "PyTorch": 1,
-    "TensorFlow": 1,
-    "scikit-learn": 1,
-    "NLP": 1,
-    "Recommendation systems": 1,
-    "MLOps (MLflow/W&B)": 1,
-    "Model deployment": 1,
-    "AWS": 1,
-    "Docker": 1,
-    "REST API design": 1,
-    "Apache Airflow": 1,
-    "ETL pipeline design": 1,
-    "Data modeling": 1
+    "Agile/Scrum": 3,
+    "CI/CD pipelines": 1,
+    "Cloud cost optimization": 4,
+    "Cross-team collaboration": 3,
+    "GitHub Actions": 3,
+    "Kubernetes": 2,
+    "Monitoring & alerting": 2,
+    "Stakeholder communication": 2,
+    "Strategic planning": 3,
+    "System design": 5,
+    "Team leadership": 3,
+    "Technical writing": 3,
+    "Terraform": 4
   },
-  "text": "Nina Rodriguez’s recent work at AdLift Technologies has centered on refining real-time bid optimization algorithms, delivering a 12% improvement in campaign efficiency across three major client accounts. Her approach balances technical rigor with business alignment, ensuring solutions meet both performance and operational constraints.  \n\nNina joined AdLift as a junior engineer two years ago, quickly transitioning into a senior role through her ability to dissect complex systems and propose pragmatic, scalable fixes. Early on, she streamlined data ingestion workflows, reducing latency by 18% without requiring infrastructure overhauls. Her curiosity and analytical mindset have since driven several high-impact initiatives.  \n\nA pivotal challenge arose when a critical service faced unexpected scalability bottlenecks during peak traffic. Nina led a cross-team effort to rearchitect core components, prioritizing fault tolerance and resource efficiency. Her methodical debugging and willingness to experiment under pressure resolved the issue within two weeks, avoiding potential revenue losses.  \n\nBeyond technical contributions, Nina mentors junior engineers, fostering a culture of collaborative problem-solving. She recently guided a team through a high-stakes refactor, balancing urgency with code quality. Her calm demeanor and attention to detail ensure even high-pressure projects maintain clarity and precision.  \n\nNina’s combination of technical depth, strategic thinking, and mentorship makes her a standout candidate. I wholeheartedly recommend her for roles requiring both innovation and reliability."
+  "text": "# Serverless Backend for Startup Analytics Dashboard  \nA scalable, cost-optimized serverless architecture enabling real-time data ingestion, processing, and visualization for startup analytics. Built to handle high-velocity metrics with minimal operational overhead.  \n\n## Configuration  \nConfigure environment variables and infrastructure via `terraform` for consistent deployment.  \n```bash  \nexport AWS_REGION=us-east-1  \nexport DASHBOARD_API_KEY=your-secret-key  \n```  \nSet up DynamoDB tables and Lambda execution roles using the `terraform` module. Monitor costs with AWS Cost Explorer and track resource utilization via CloudWatch.  \n\n## Getting Started  \n1. Clone the repo and initialize Terraform:  \n```bash  \ngit clone https://github.com/your-username/serverless-analytics.git  \ncd serverless-analytics  \nterraform init  \n```  \n2. Deploy infrastructure:  \n```bash  \nterraform apply --auto-approve  \n```  \n3. Configure API keys and environment variables for local testing.  \n\n## Usage / Examples  \n- **Data Ingestion**: Use AWS Kinesis Firehose to stream metrics from mobile apps.  \n- **Real-Time Aggregation**: Lambda functions process events and write to DynamoDB.  \n- **Dashboard Sync**: API Gateway proxies requests to Lambda, returning aggregated stats.  \nExample query:  \n```bash  \ncurl https://api.dashboard.com/v1/metrics?metric=DAU  \n```  \n\n## Tech Stack  \n- **Infrastructure**: AWS Lambda, DynamoDB, API Gateway, Terraform  \n- **Dependencies**: AWS SDK, OpenAPI spec for API docs  \n- **Tools**: AWS SAM CLI, AWS CLI, Terraform modules  \n\n## Architecture / Design  \nA microservices-first approach with event-driven workflows:  \n1. **Ingestion Layer**: Kinesis Firehose batches and streams raw data.  \n2. **Processing Layer**: Lambda functions transform and store data in DynamoDB.  \n3. **Aggregation Layer**: Scheduled Lambda jobs precompute metrics for faster queries.  \n4. **API Layer**: API Gateway routes requests to Lambda for real-time responses.  \nOptimized for cost using AWS Lambda's reserved concurrency and DynamoDB's provisioned throughput.  \n\n## License  \nMIT License — see `LICENSE` for details.  \n\n## Badges  \n[![GitHub stars](https://img.shields.io/github/stars/your-username/serverless-analytics?style=flat)](https://github.com/your-username/serverless-analytics)  \n[![Terraform](https://img.shields.io/terraform/your-username/serverless-analytics?style=flat)](https://registry.terraform.io/modules/your-username/serverless-analytics)"
 }

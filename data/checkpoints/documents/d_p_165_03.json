@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_165_03",
+  "type": "project_readme",
+  "persona_id": "p_165",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "3D graphics (OpenGL/Vulkan)": 4,
+    "C#/.NET": 3,
+    "Game networking": 4,
+    "Game physics": 4,
+    "GraphQL": 1,
+    "Microservices architecture": 2,
+    "Python": 3,
+    "REST API design": 2,
+    "Unity": 5,
+    "Unreal Engine": 5
+  },
+  "text": "# NetDefend: Network Security Training Platform  \nA gamified platform for training network administrators on detecting and mitigating security breaches in real-time. Simulates real-world attack vectors, requiring rapid decision-making and coordinated responses to neutralize threats.  \n\n## Configuration  \nSet environment variables for database credentials and API endpoints. Use Python 3.9+ with `pip install -r requirements.txt`. Configure the game engine via `config.json` to adjust difficulty tiers and simulation parameters.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/yourusername/netdefend.git  \ncd netdefend  \npython -m venv venv  \nsource venv/bin/activate  \npip install -r requirements.txt  \npython manage.py migrate  \npython manage.py runserver  \n```  \nLaunch the Unity game via `Assets/Scenes/MainScene.unity` after syncing with the backend. Ensure Unity 2021.3+ is installed for physics and rendering.  \n\n## Usage / Examples  \nRun `python manage.py start_simulation --scenario=phishing` to initiate a phishing attack drill. Players assume roles as analysts, firewalls, or incident responders, with real-time feedback on mitigation success rates. Example command:  \n```bash  \npython manage.py evaluate_response --action=block_ip --target=192.168.1.100  \n```  \nMetrics track detection time and system resilience.  \n\n## Tech Stack  \n- **Backend**: Python (PyTorch for AI-driven threat models)  \n- **Game Engine**: Unity (C# for logic, Unity Physics for simulations)  \n- **Database**: PostgreSQL (with async ORM for real-time writes)  \n- **Networking**: WebSockets for low-latency player-state sync  \n\n## Architecture / Design  \nThe system splits into three layers:  \n1. **Backend**: Handles threat modeling and scoring via Python microservices.  \n2. **Game Engine**: Unity renders 3D network topologies and physics-based breach propagation.  \n3. **Database**: Stores simulation logs and player progress.  \nUnity's physics engine simulates packet collisions and firewall rules, while Python processes attack patterns.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![GitHub](https://badgen.net/badge/repo/2k+stars/green)](https://github.com/yourusername/netdefend)  \n[![Security](https://badgen.net/badge/secure/yes/green)](https://security.badge)  \n[![GameDev](https://badgen.net/badge/game/unity/orange)](https://unity.badge)"
+}

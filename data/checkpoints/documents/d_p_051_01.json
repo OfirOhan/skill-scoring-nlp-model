@@ -3,19 +3,25 @@
   "type": "project_readme",
   "persona_id": "p_051",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "heavy"
+    "project_scale": "team-internal",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Next.js": 5,
-    "Python": 1,
+    "AWS": 2,
+    "CI/CD pipelines": 2,
+    "Docker": 4,
+    "GitHub Actions": 1,
+    "Go": 3,
+    "Linux administration": 1,
+    "Microservices architecture": 3,
+    "MongoDB": 3,
+    "Monitoring & alerting": 2,
+    "PostgreSQL": 4,
+    "Python": 3,
     "REST API design": 4,
-    "React": 5,
-    "TypeScript": 5,
-    "Web accessibility (WCAG)": 5,
-    "Web performance optimization": 5,
-    "Webpack/Vite": 3
+    "Shell scripting": 1,
+    "Terraform": 3
   },
-  "text": "# Client Analytics Dashboard  \nA production-grade, responsive dashboard for real-time client performance visualization, built with Next.js and React for scalable, accessible data storytelling.  \n\n---\n\n## Configuration  \nEnvironment variables are managed via `.env.local` for API endpoints and theme settings. TypeScript config (`tsconfig.json`) enforces strict typing and ESLint rules for consistent code quality. Accessibility settings and performance optimizations (lazy loading, code splitting) are baked into the build pipeline via Vite.  \n\n---\n\n## Getting Started / Installation  \nClone the repository and install dependencies:  \n```bash  \nnpm install  \n```  \nSet up environment variables for API keys and theme preferences. Run the development server:  \n```bash  \nnpm run dev  \n```  \nFor production builds, use `npm run build` with optimized asset caching.  \n\n---\n\n## Usage / Examples  \nThe dashboard features interactive time-series charts (Chart.js), drill-down filters, and exportable reports. Example use case:  \n```javascript  \nconst { data } = useClientPerformance({ clientId: 'ABC123', timeframe: 'quarter' });  \nreturn <Chart type=\"line\" data={data} />;  \n```  \nAccessibility is enforced via ARIA labels and keyboard navigation, ensuring compliance with WCAG 2.1.  \n\n---\n\n## Tech Stack  \n- **Framework**: Next.js 13 (App Router) for SSR and SSG  \n- **UI**: React with TypeScript, Tailwind CSS for utility-first styling  \n- **Data**: Axios for REST API integrations, Chart.js for visualization  \n- **Build**: Vite for fast development, Webpack for production bundling  \n- **Accessibility**: ARIA attributes, semantic HTML, keyboard event handlers  \n- **Performance**: Lighthouse optimization, image lazy loading, dynamic imports  \n\n---\n\n## Architecture / Design  \nThe monorepo follows a modular component architecture, with state management via Zustand. Data fetching is handled by custom hooks, decoupling UI from API logic. The design prioritizes scalability, with a focus on reusable components and type-safe props. Web performance is optimized through code splitting and asset compression.  \n\n---\n\n## License  \nMIT License  \n\n---\n\n## Badges  \nLicense: MIT  \nBuild Status: Pass  \nAccessibility: WCAG AA  \nPerformance: Lighthouse 95+"
+  "text": "# NexGen Microservices Platform  \nA scalable, modular framework enabling rapid service development and deployment for high-throughput applications. Built to support 15+ engineers across three product lines, this platform reduces deployment friction by 40% through standardized containerization and automated service discovery.  \n\n## Deployment  \nProduction instances leverage Docker for container orchestration, with AWS ECS managing workloads across 20+ nodes. PostgreSQL clusters handle transactional data, while MongoDB sharding enables real-time analytics at scale. Terraform provisions infrastructure, ensuring compliance with 12+ security policies.  \n\n## Getting Started  \nClone the repo and run `docker-compose up --build` to spin up a local environment. Set environment variables for database credentials and API keys. For production, use the `deploy.sh` script which provisions AWS resources and configures service mesh routing.  \n\n## Usage / Examples  \nTo create a new service:  \n```bash\ncurl -X POST https://api.nexgen.services/v1/services \\\n  -H \"Authorization: Bearer <token>\" \\\n  -d '{\"name\": \"user-auth\", \"endpoint\": \"https://auth.nexgen.services\"}'\n```  \nThis triggers a pipeline that deploys the service to a dedicated subnet, configures load balancing, and registers it with the central discovery service.  \n\n## Tech Stack  \n- **Containerization**: Docker (orchestrated via Kubernetes for production)  \n- **Data Stores**: PostgreSQL (for ACID transactions) + MongoDB (for analytics pipelines)  \n- **APIs**: RESTful endpoints with OpenAPI 3.0 spec enforcement  \n- **Infrastructure**: Terraform for IaC, AWS for compute and storage  \n- **Languages**: Go (for core services) + Python (for data processing scripts)  \n\n## Architecture / Design  \nThe platform employs a service mesh architecture with mutual TLS for inter-service communication. PostgreSQL handles relational data with connection pooling optimized for 10k+ concurrent users. MongoDB sharding scales read-heavy workloads across 12 replicas. REST APIs use HATEOAS principles to guide clients through asynchronous workflows.  \n\n## License  \nMIT License  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/commit-activity/m/fatima/rashidi)]  \n[![Build Status](https://img.shields.io/badge/build%20status-passing-green)]  \n[![License](https://img.shields.io/badge/license-MIT-blue)]"
 }

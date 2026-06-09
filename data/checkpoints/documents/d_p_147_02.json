@@ -1,25 +1,26 @@
 {
   "doc_id": "d_p_147_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_147",
   "hyperparams": {
-    "recommender_role": "peer",
-    "recommender_closeness": "worked-daily",
-    "company_type": "academic",
-    "company_size": "mid (50-500)"
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Apache Airflow": 3,
-    "Apache Kafka": 3,
-    "Apache Spark": 3,
-    "Data modeling": 3,
-    "Data warehousing": 3,
-    "Docker": 3,
-    "ETL pipeline design": 3,
-    "Python": 3,
-    "Snowflake": 3,
-    "Terraform": 3
+    "Network security": 1,
+    "Application security (OWASP)": 1,
+    "Penetration testing": 1,
+    "IAM/Access control": 1,
+    "Encryption & PKI": 1,
+    "Security auditing": 1,
+    "SIEM tools": 1,
+    "TCP/IP": 1,
+    "DNS/DHCP": 1,
+    "VPN technologies": 1,
+    "Firewall configuration": 1,
+    "Network automation": 1,
+    "SDN": 1
   },
-  "text": "To whom it may concern,  \n\nLinda and I have collaborated daily at NordicShop Ltd. for over two years, primarily on data infrastructure projects. As a peer, I’ve observed her technical rigor and collaborative mindset firsthand.  \n\nLinda’s strength lies in her ability to translate complex data challenges into scalable solutions. She recently led the redesign of our ETL pipelines, integrating Apache Spark and Kafka to process 10x more transactions daily. Her work reduced latency by over 40%, which directly boosted our analytics team’s capacity. She also spearheaded a Snowflake-to-AWS migration, optimizing query performance through thoughtful data modeling. Beyond technical skills, Linda’s reliability and curiosity make her a natural collaborator—she’ll often troubleshoot issues across teams without being asked.  \n\nA standout moment was when she debugged a critical Kafka streaming fault during a major product launch. Instead of escalating, she spent hours analyzing logs, eventually identifying a misconfigured partition. Her calm under pressure ensured minimal downtime. Similarly, her Terraform expertise streamlined our cloud infrastructure, cutting deployment errors by nearly half.  \n\nLinda’s work ethic is equally impressive. She consistently volunteers to mentor junior engineers, sharing insights on best practices without assuming superiority. Her contributions have been instrumental in shaping our data strategy, and I’m confident she’ll bring the same dedication to any new role.  \n\nSincerely,  \n[Your Name]  \n[Your Title/Position]"
+  "text": "# ZeroTrust Network Framework  \nA scalable, policy-driven infrastructure layer for startup environments, engineered to enforce granular access controls and operational resilience across distributed systems. Built for enterprises requiring zero-trust principles without compromising agility.  \n\n---\n\n## Getting Started / Installation  \nTo deploy the framework, ensure your environment meets the following prerequisites:  \n- **Python 3.9+** with virtual environment support  \n- **Docker 20.10+** for containerized service orchestration  \n- **Kubernetes 1.22+** for stateless microservice scaling  \n- **PostgreSQL 13+** for persistent policy storage  \n\nClone the repository:  \n```bash  \ngit clone https://github.com/yourorg/zerotrust-framework.git  \ncd zerotrust-framework  \npip install -r requirements.txt  \n```\n\nInitialize the environment with:  \n```bash  \nmake setup  \n```\n\nThis process provisions a sandboxed Kubernetes cluster (via Minikube) and deploys the core policy engine with 99.95% uptime SLA.  \n\n---\n\n## Tech Stack  \n- **Language**: Python (3.9) for core logic, Go (1.21) for high-throughput components  \n- **Orchestration**: Kubernetes with HPA (Horizontal Pod Autoscaler) for 5x scale-out capacity  \n- **Storage**: PostgreSQL with 99.99% durability, backed by AWS S3 for archival  \n- **Networking**: Envoy Proxy for service mesh, with 2ms latency reduction in multi-cluster setups  \n- **Monitoring**: Prometheus + Grafana for 500+ metrics across 12 microservices  \n\n---\n\n## Usage / Examples  \n```python  \nfrom zerotrust.policy import PolicyEngine  \nengine = PolicyEngine(\"high-security\")  \nengine.enforce_access(\"data-plane\", \"read-only\", user_id=\"u1234\")  \n```  \n\n**Example Output**:  \n```json  \n{  \n  \"access_granted\": true,  \n  \"policy_version\": \"v2.4.1\",  \n  \"latency\": \"1.2ms\"  \n}  \n```  \n\nIntegrate with existing systems via RESTful APIs (300+ endpoints) or gRPC for low-latency operations.  \n\n---\n\n## Badges  \n[![GitHub](https://img.shields.io/badge/Repo-Active-brightgreen)](https://github.com/yourorg/zerotrust-framework)  \n[![Code Quality](https://img.shields.io/badge/Code-Quality-brightgreen)](https://codecov.io/gh/yourorg/zerotrust-framework)  \n[![Test Coverage](https://img.shields.io/badge/Coverage-95%25-brightgreen)](https://github.com/yourorg/zerotrust-framework/actions)  \n\n---\n\n## Architecture / Design  \nThe framework employs a **microservices-first** approach, decoupling policy enforcement, telemetry, and audit logging into modular services. Key components:  \n- **Policy Engine**: Stateless, rate-limited with 10,000 RPS capacity  \n- **Audit Queue**: Kafka-backed, with 99.9% message delivery SLA  \n- **Telemetry Aggregator**: Streams metrics to Prometheus via 100+ exporters  \n\nAll components scale horizontally, with 50% resource savings achieved through containerization.  \n\n---\n\n## Contributing  \nSubmit PRs targeting the `main` branch. All contributions require:  \n- **Code reviews** from 2 maintainers  \n- **Unit tests** covering 80% of edge cases  \n- **Performance benchmarks** against prior versions  \n\n---\n\n## License  \nMIT License — see [LICENSE](https://github.com/yourorg/zerotrust-framework/blob/main/LICENSE) for details."
 }

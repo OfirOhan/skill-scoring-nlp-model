@@ -3,22 +3,25 @@
   "type": "project_readme",
   "persona_id": "p_196",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "heavy"
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "PyTorch": 1,
-    "TensorFlow": 1,
-    "scikit-learn": 1,
-    "Hugging Face Transformers": 1,
-    "NLP": 1,
-    "Model deployment": 1,
-    "AWS": 1,
-    "Apache Airflow": 1,
-    "ETL pipeline design": 1,
-    "Data warehousing": 1,
-    "REST API design": 1
+    "AWS": 3,
+    "Cloud cost optimization": 3,
+    "DNS/DHCP": 1,
+    "GCP": 3,
+    "Infrastructure as Code": 4,
+    "Kubernetes": 3,
+    "Load balancing": 2,
+    "Network automation": 2,
+    "PostgreSQL": 1,
+    "Python": 2,
+    "REST API design": 3,
+    "Redis": 1,
+    "Serverless": 3,
+    "Terraform": 5
   },
-  "text": "# HealthPredict: Predictive Analytics for Patient Readmissions  \n\nHealthPredict is a research-focused project designed to analyze patient data and predict the likelihood of readmission within 30 days. Built for academic exploration, it leverages structured clinical records to identify high-risk patients, enabling proactive interventions. The model prioritizes interpretability and generalizability, with performance evaluated using AUC-ROC and F1-score metrics.  \n\n## Getting Started / Installation  \n\nInstall dependencies via pip:  \n```bash  \npip install -r requirements.txt  \n```  \nDownload the dataset (CSV format) from [this source](https://example.com/dataset) and place it in the `data/` directory. Ensure Python 3.8+ is installed.  \n\n## Tech Stack  \n\n- **Data Handling**: Pandas, NumPy, Dask  \n- **Visualization**: Matplotlib, Seaborn  \n- **Modeling**: XGBoost, LightGBM (for gradient boosting)  \n- **Storage**: SQLite for model metadata  \n- **Utilities**: Scipy, Statsmodels  \n\n## Usage / Examples  \n\nRun the training pipeline:  \n```bash  \npython train.py --data=data/clinical_data.csv --output=models/healthpredict_v1  \n```  \nThis generates a trained model and evaluates performance on a holdout set. Example output includes confusion matrices and feature importance rankings.  \n\n## Badges  \n\n[![GitHub](https://badgen.net/badge2/healthpredict/green)](https://github.com/lucasmartin/healthpredict)  \n[![License](https://badgen.net/badge/license/MIT/blue)](https://github.com/lucasmartin/healthpredict/blob/main/LICENSE)  \n[![Dataset](https://badgen.net/badge/dataset/clinical/teal)](https://example.com/dataset)  \n\n## Architecture / Design  \n\nThe pipeline follows a modular design: data is preprocessed using Dask for scalability, then split into training and testing sets. Features are engineered to capture temporal trends and comorbidity indicators. The model uses gradient boosting with early stopping to prevent overfitting. Hyperparameters are tuned via randomized search, and results are logged in a SQLite database for reproducibility.  \n\n## Contributing  \n\nContributions are welcome! Focus on improving feature engineering, expanding dataset support, or refining evaluation metrics. Open an issue or submit a pull request via the GitHub interface.  \n\n## License  \n\nMIT License. See the [LICENSE](https://github.com/lucasmartin/healthpredict/blob/main/LICENSE) file for details."
+  "text": "# CloudInfraAuto  \nA tool for automating cloud infrastructure provisioning and configuration management across multi-cloud environments. Built with Terraform and Ansible, this project streamlines deployment workflows, reduces human error, and ensures consistency across hybrid and multi-cloud platforms. Designed for teams requiring scalable, repeatable infrastructure as code practices, it integrates with CI/CD pipelines and supports cost optimization strategies.  \n\n---\n\n## Roadmap / Future Work  \n1. **Multi-Cloud Expansion**: Extend support for AWS, GCP, and Azure to enable cross-cloud resource orchestration.  \n2. **Cost Optimization Module**: Introduce dynamic resource scaling and cost analytics via AWS Cost Explorer and GCP Billing APIs.  \n3. **CI/CD Integration**: Automate Terraform plan/apply and Ansible playbook execution using GitHub Actions and GitOps workflows.  \n4. **Security Hardening**: Add automated compliance checks and encryption policy enforcement for sensitive data.  \n5. **User-Facing Dashboard**: Develop a lightweight web interface for monitoring infrastructure states and audit trails.  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/yourusername/CloudInfraAuto.git`  \n2. Navigate to the project directory: `cd CloudInfraAuto`  \n3. Initialize Terraform: `terraform init`  \n4. Set environment variables for cloud credentials (AWS/GCP) and region preferences.  \n5. Run Ansible playbooks via `ansible-playbook deploy.yml` to provision and configure resources.  \n6. Validate infrastructure state with `terraform validate` and `ansible-inventory --list`.  \n\n---\n\n## Usage / Examples  \n**Example**: Deploy a web application stack on AWS  \n```bash  \nterraform apply -var region=us-east-1 -var instance_type=t2.micro  \nansible-playbook configure_webserver.yml  \n```  \nThis workflow creates an EC2 instance, attaches an EBS volume, and installs NGINX via Ansible. The tool abstracts cloud-specific details, allowing teams to focus on application logic.  \n\n---\n\n## Tech Stack  \n- **Infrastructure Automation**: Terraform (core), Ansible (configuration management)  \n- **Cloud Providers**: AWS, GCP, Kubernetes (for container orchestration)  \n- **API Integration**: REST APIs for cloud service interactions and cost tracking  \n- **Serverless Components**: Lambda functions for event-driven resource management  \n\n---\n\n## Architecture / Design  \nThe system decouples Terraform for resource provisioning and Ansible for configuration. A centralized config repo ensures version control and team collaboration. Terraform modules abstract cloud provider differences, while Ansible playbooks enforce consistent policies. Kubernetes integration enables scalable, stateless application deployments.  \n\n---\n\n## License  \nApache 2.0 (https://github.com/yourusername/CloudInfraAuto/blob/main/LICENSE)"
 }

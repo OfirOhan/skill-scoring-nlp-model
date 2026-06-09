@@ -5,25 +5,19 @@
   "hyperparams": {
     "project_scale": "production",
     "project_team_size": "medium (5-15)",
-    "jargon_density": "heavy"
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "ArgoCD": 4,
-    "CI/CD pipelines": 4,
-    "Cloud cost optimization": 2,
-    "GitHub Actions": 4,
-    "GitLab CI": 3,
-    "Incident management": 2,
-    "Jenkins": 1,
-    "Kubernetes": 5,
-    "Linux administration": 3,
-    "Monitoring & alerting": 4,
-    "Prometheus/Grafana": 4,
-    "Python": 2,
-    "Serverless": 2,
-    "Shell scripting (Bash)": 4,
-    "Terraform": 3
+    "AWS": 1,
+    "CI/CD pipelines": 2,
+    "Docker": 2,
+    "GCP": 1,
+    "MongoDB": 3,
+    "Node.js": 3,
+    "PostgreSQL": 4,
+    "Python": 4,
+    "REST API design": 4,
+    "React": 3
   },
-  "text": "# NexaCloud Observability Platform  \n\nA centralized observability platform for SaaS applications, integrating real-time metrics, distributed tracing, and log aggregation. Designed to reduce mean time to resolution (MTTR) by 30% and lower cloud costs by 40% through intelligent resource allocation and anomaly detection.  \n\n## API Reference  \n**Endpoints**:  \n- `GET /api/v1/metrics` – Fetch aggregated metrics (Prometheus format, 100ms latency)  \n- `POST /api/v1/traces` – Ingest OpenTelemetry traces (1000 req/s throughput)  \n- `GET /api/v1/logs` – Query structured logs (100ms query latency)  \n\n**Authentication**: Bearer token (OAuth2) with rate limiting (100 req/min per user).  \n**Response Formats**: JSON with Prometheus exposition format for metrics.  \n\n## Usage / Examples  \n```python  \n# Fetch metrics via HTTP  \nimport requests  \nresponse = requests.get(\"https://nexacloud.example.com/api/v1/metrics\", headers={\"Authorization\": \"Bearer <token>\"})  \nprint(response.text)  \n```  \n\n```go  \n// Trace ingestion example  \notelSDKExporters = []otel.ExporterProvider{  \n    otel.NewOTLPSpanExporter(otel.WithOTLPHost(\"http://localhost:4317\")),  \n}  \n```  \n\n```bash  \n# Log aggregation pipeline  \ncurl -X POST http://localhost:8080/api/v1/logs \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"level\": \"error\", \"message\": \"DB connection failed\"}'  \n```  \n\n## Getting Started / Installation  \n1. Clone repo: `git clone https://github.com/jamesokafor/nexacloud.git`  \n2. Install dependencies: `go mod tidy && pip install -r requirements.txt`  \n3. Configure environment variables:  \n   - `NEXA_CLOUD_PROMETHEUS_ADDR`  \n   - `NEXA_CLOUD_GRAFANA_WEBHOOK`  \n4. Run server: `go run main.go --config=config.yaml`  \n\n## Tech Stack  \n- **Language**: Go (core), Python (utils), Bash (scripts)  \n- **Monitoring**: Prometheus (metrics), Grafana (dashboards)  \n- **Storage**: Loki (logs), TimescaleDB (time-series)  \n- **Deployment**: Kubernetes (10+ clusters), ArgoCD (GitOps)  \n- **CI/CD**: GitHub Actions (CI), GitLab CI (CD)  \n- **Cloud**: AWS (EC2, S3, Lambda)  \n\n## Architecture / Design  \nThe platform uses a microservices architecture with Kafka for event streaming. Metrics are ingested via Prometheus exporters, traces via OpenTelemetry, and logs via Loki. Kubernetes ensures horizontal scaling (500+ pods). Terraform manages AWS infrastructure (VPC, EC2, RDS). GitLab CI automates testing, while GitHub Actions handles dependency updates.  \n\n## License  \nMIT License – see [LICENSE](LICENSE)  \n\n## Badges  \n[![Stars](https://img.shields.io/github/stars/jamesokafor/nexacloud?style=social)](https://github.com/jamesokafor/nexacloud)  \n[![Build](https://img.shields.io/github/actions/workflow.com/jamesokafor/nexacloud/main.yml?branch=main)](https://github.com/jamesokafor/nexacloud/actions)  \n[![Coverage](https://img.shields.io/coveralls/jamesokafor/nexacloud/main)](https://coveralls.io/github/jamesokafor/nexacloud)"
+  "text": "# Consulting Analytics Dashboard  \nA data-driven tool for consulting clients to visualize performance metrics and generate actionable insights through customizable reports. Built to streamline decision-making with real-time analytics and intuitive UI/UX.  \n\n---\n\n## Badges  \n[![React](https://img.shields.io/badge/react-2023?style=flat)](https://react.dev)  \n[![Node.js](https://img.shields.io/badge/node.js-2023?style=flat)](https://nodejs.org)  \n[![PostgreSQL](https://img.shields.io/badge/postgresql-14?style=flat)](https://postgresql.org)  \n[![Python](https://img.shields.io/badge/python-3.10?style=flat)](https://python.org)  \n\n---\n\n## Tech Stack  \n- **Frontend**: React (TypeScript) for dynamic UI components and state management  \n- **Backend**: Node.js (Express) for RESTful API endpoints and business logic  \n- **Database**: PostgreSQL (with advanced indexing and partitioning) for structured analytics storage  \n- **Data Processing**: Python scripts for ETL workflows and statistical modeling  \n- **Authentication**: JWT tokens for secure client-server communication  \n\n---\n\n## Architecture / Design  \nThe system follows a layered architecture with a clear separation of concerns:  \n- **Presentation Layer**: React components render interactive dashboards and drill-down reports  \n- **Application Layer**: Node.js handles API requests, validates input, and orchestrates data fetching  \n- **Data Layer**: PostgreSQL stores raw metrics and precomputed aggregates, optimized for query performance  \n- **Integration Layer**: Python scripts automate data ingestion from external sources and generate static reports  \n\nKey design choices include schema normalization for PostgreSQL, type-safe API responses in Node.js, and modular React components for reusability.  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/your-username/consulting-analytics-dashboard.git`  \n2. Install frontend dependencies: `cd client && npm install`  \n3. Install backend dependencies: `cd server && npm install`  \n4. Set up PostgreSQL: Create a database and configure `config/database.js` with your credentials  \n5. Run migrations: `cd server && npx sequelize-cli db:migrate`  \n6. Start the server: `cd server && npm run dev`  \n\n---\n\n## Usage / Examples  \n- Navigate to `/dashboard` to view real-time metrics with drill-down capabilities  \n- Use `/api/reports` to generate custom reports via POST requests with filter parameters  \n- Access historical data through `/api/metrics` with time-range queries  \n- Python scripts in `scripts/` automate data cleaning and model training for predictive analytics  \n\n---\n\n## Contributing  \nContributions are welcome! Please:  \n1. Fork the repository and create a feature branch  \n2. Add tests for new functionality (Jest for JS, pytest for Python)  \n3. Follow Prettier and ESLint rules for consistent formatting  \n4. Submit a pull request with a clear description of your changes  \n\n---\n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
 }

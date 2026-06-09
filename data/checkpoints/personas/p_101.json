@@ -1,55 +1,60 @@
 {
   "persona_id": "p_101",
   "hyperparams": {
-    "archetype": "frontend_engineer",
-    "years_experience": 8,
-    "seniority": "senior",
-    "industry": "startup",
+    "archetype": "devops_sre",
+    "years_experience": 0,
+    "seniority": "junior",
+    "industry": "cybersecurity",
     "writing_style": "verbose",
-    "language_fluency": "native",
-    "self_promotion_level": "balanced",
-    "quantification_tendency": "mixed"
+    "language_fluency": "near-native",
+    "self_promotion_level": "boastful",
+    "quantification_tendency": "metrics-heavy"
   },
-  "name": "Maria Santos",
-  "current_role": "Senior Frontend Engineering Lead",
-  "company": "InnovateWorks",
+  "name": "Esther Obi",
+  "current_role": "Security DevOps Engineer",
+  "company": "CyberShield Technologies",
   "education": {
-    "degree": "Bachelor of Science in Computer Science",
-    "university": "University of Technology",
-    "year": 2016
+    "degree": "Bachelor of Science in Cybersecurity",
+    "university": "University of Cybersecurity Studies",
+    "year": 2023
   },
   "career_trajectory": [
     {
-      "role": "Junior Web Developer",
-      "company": "TechNova Solutions",
-      "duration": "2015-2017"
+      "role": "IT Support Intern",
+      "company": "SecureNet Solutions",
+      "duration": "6 months",
+      "responsibilities": "Assisted with basic system monitoring and ticket triage for cybersecurity incidents."
     },
     {
-      "role": "Frontend Developer",
-      "company": "DigitalLift Studio",
-      "duration": "2017-2019"
+      "role": "Junior DevOps Engineer",
+      "company": "CloudDefender Inc.",
+      "duration": "3 months",
+      "responsibilities": "Supported CI/CD pipeline automation and basic infrastructure provisioning using Terraform."
     },
     {
-      "role": "Senior Frontend Engineer",
-      "company": "NexaTech Innovations",
-      "duration": "2019-2021"
+      "role": "Security DevOps Engineer",
+      "company": "CyberShield Technologies",
+      "duration": "0 months",
+      "responsibilities": "Designing secure DevOps workflows and integrating monitoring tools for threat detection."
     }
   ],
   "skills": {
-    "React": 5,
-    "TypeScript": 4,
-    "Next.js": 4,
-    "Responsive design": 4,
-    "Web accessibility (WCAG)": 4,
-    "Webpack/Vite": 3,
-    "State management (Redux/Zustand)": 3,
-    "UX research": 3
+    "CI/CD pipelines": 4,
+    "GitHub Actions": 3,
+    "Prometheus/Grafana": 4,
+    "Monitoring & alerting": 4,
+    "Incident management": 3,
+    "Linux administration": 4,
+    "Terraform": 4,
+    "Python": 2,
+    "PostgreSQL": 2,
+    "Network troubleshooting": 2,
+    "DNS/DHCP": 1,
+    "Firewall configuration": 2
   },
   "document_ids": [
     "d_p_101_00",
     "d_p_101_01",
-    "d_p_101_02",
-    "d_p_101_03",
-    "d_p_101_04"
+    "d_p_101_02"
   ]
 }

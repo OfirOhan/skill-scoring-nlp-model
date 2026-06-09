@@ -3,25 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_023",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "large (15+)",
-    "jargon_density": "plain"
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
     "Apache Airflow": 3,
-    "Apache Kafka": 3,
     "Apache Spark": 4,
-    "CI/CD pipelines": 3,
     "Data warehousing": 4,
-    "Database optimization": 2,
-    "Databricks": 3,
+    "Database optimization": 4,
     "Docker": 3,
     "ETL pipeline design": 3,
-    "Kubernetes": 3,
-    "Python": 3,
+    "GitLab CI": 2,
+    "Python": 1,
     "REST API design": 3,
-    "Snowflake": 3,
-    "dbt": 3
+    "Snowflake": 4,
+    "Terraform": 3
   },
-  "text": "# CyberShield Threat Detection Pipeline  \nA real-time threat detection system built to ingest, process, and flag malicious network activity using Python, cloud-native tools, and distributed computing. The pipeline integrates Kafka for log ingestion, Spark for anomaly detection, and Snowflake for structured storage. Designed for scalability and low-latency analysis in a large-scale cybersecurity environment.  \n\n## Getting Started / Installation  \nClone the repository and initialize the environment:  \n```bash  \ngit clone https://github.com/your-username/cybershield-pipeline.git  \ncd cybershield-pipeline  \ndocker-compose up -d  \n```  \nThis spins up a local Kafka cluster, Spark cluster, and Snowflake connection via Docker. Ensure your environment variables (KAFKA_BROKER, SNOWFLAKE_USER, etc.) are set in `.env`. For CI/CD integration, the GitHub Actions workflow automates dependency installation and unit tests.  \n\n## Usage / Examples  \nTo process live logs:  \n```bash  \npython main.py --topic network-logs --output snowflake  \n```  \nThe pipeline listens to Kafka’s `network-logs` topic, applies Spark-based ML models to detect outliers, and writes structured results to Snowflake. Use the REST API endpoint `/api/v1/alerts` to query flagged activities.  \n\nFor scheduled workflows, the Airflow DAG orchestrates daily ETL jobs, ensuring historical data is ingested and reprocessed for trend analysis. The Databricks notebook provides a UI for ad-hoc querying of processed datasets.  \n\n## License  \nMIT License  \n© 2023 Xander de Vries | CyberShield is a proprietary tool for internal use only.  \n\n---  \n*Built with Python, Apache Spark, and cloud-native tools. Optimized for low-latency threat detection in distributed environments.*"
+  "text": "# AdTargetPipeline  \nReal-time ad targeting pipeline leveraging Apache Spark and Kafka for low-latency campaign optimization  \n\n[![Build Status](https://img.shields.io/badge/CI%20Pipeline-passing-blue)](https://gitlab.com/your-username/AdTargetPipeline/-/pipelines)  \n[![Tech Stack](https://img.shields.io/badge/tech-stack-Kafka%20%7C%20Spark%20%7C%20Snowflake%20%7C%20Terraform%20%7C%20Airflow%20%7C%20Docker-yellow)](https://gitlab.com/your-username/AdTargetPipeline)  \n\n## Tech Stack  \n- **Streaming**: Apache Kafka (partitioned topics, 500k+ msg/sec ingestion)  \n- **Processing**: Apache Spark (structured streaming, 15ms end-to-end latency)  \n- **Storage**: Snowflake (data warehouse, 10x query performance vs Redshift)  \n- **Orchestration**: Apache Airflow (daily ETL workflows, 99.95% SLA)  \n- **CI/CD**: GitLab CI (automated testing, 30s build time)  \n- **Containerization**: Docker (microservices, 40% resource utilization)  \n- **Infrastructure**: Terraform (multi-region deployment, 20+ environments)  \n\n## Architecture / Design  \nThe pipeline ingests user behavior events via Kafka, processes them in Spark for real-time audience scoring, and loads results into Snowflake for campaign analytics. Key design choices:  \n- Kafka consumers scaled to 20+ partitions for high-throughput event processing  \n- Spark structured streaming with 5-second batch intervals for sub-second latency  \n- Snowflake materialized views for pre-aggregated campaign metrics  \n- Airflow DAGs with dynamic task scheduling for daily/weekly pipelines  \n- Docker containers with resource limits to ensure stable cluster operations  \n\n## Getting Started / Installation  \n1. Clone repo: `git clone https://gitlab.com/your-username/AdTargetPipeline`  \n2. Build Docker containers: `docker-compose up --build`  \n3. Start Kafka and Spark clusters via Docker  \n4. Configure Snowflake credentials in `secrets/snowflake.yaml`  \n5. Run initial data load: `./scripts/load_initial_data.sh`  \n\n## Usage / Examples  \n```bash\n# Trigger real-time pipeline  \n./scripts/run_pipeline.sh --topic user_events --batch-size 1000  \n\n# View campaign metrics  \ncurl http://localhost:8080/api/v1/campaigns?date=2023-10-01\n```  \nThe pipeline reduces ad latency by 30% compared to batch processing, with 99.9% data consistency via Kafka offsets.  \n\n## Contributing  \nContributions focused on improving Kafka consumer parallelism or optimizing Spark job scheduling are highly valued. Please:  \n1. Add tests for new features  \n2. Update documentation for pipeline parameters  \n3. Ensure Terraform modules pass validation  \n\n## License  \nApache License 2.0 📄 [LICENSE](LICENSE)"
 }

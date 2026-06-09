@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_030_03",
+  "type": "project_readme",
+  "persona_id": "p_030",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Team leadership": 1,
+    "Mentoring": 1,
+    "System design": 1,
+    "Agile/Scrum": 1,
+    "Cross-team collaboration": 1,
+    "Stakeholder communication": 1,
+    "Technical writing": 1,
+    "CI/CD pipelines": 1,
+    "GitHub Actions": 1,
+    "Prometheus/Grafana": 1,
+    "Linux administration": 1,
+    "Shell scripting (Bash)": 1
+  },
+  "text": "# FinFlow: Scalable Microservices Architecture for Fintech  \nA modular, API-driven fintech platform built on event-driven patterns and distributed systems principles. Designed for real-time transaction processing, regulatory compliance, and horizontal scalability.  \n\n## Contributing  \nEnhance FinFlow by submitting pull requests with unit tests, integration scenarios, and edge case validation. All contributions must align with the [code of conduct](CONTRIBUTING.md) and pass automated validation.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/finflow-project/finflow.git  \ncd finflow  \n./scripts/setup.sh  \n```  \nThis initializes Docker containers for Kafka, Redis, and PostgreSQL. Run `./scripts/start.sh` to spin up services.  \n\n## Usage / Examples  \n```bash  \n# Real-time transaction validation  \ncurl -X POST http://localhost:8080/api/transactions \\\n  -H \"Authorization: Bearer <JWT>\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"amount\": 500, \"currency\": \"USD\", \"recipient\": \"acct12345\"}'  \n\n# Query aggregated risk metrics  \ncurl -X GET http://localhost:8080/api/metrics/risk \\\n  -H \"Authorization: Bearer <JWT>\"  \n```  \nExplore the `/docs` endpoint for interactive API documentation.  \n\n## Tech Stack  \n- **Backend**: Java 17, Spring Boot, Kafka (event sourcing), JWT (authentication)  \n- **Frontend**: GraphQL (query layer), React (optional UI layer)  \n- **Data**: PostgreSQL (relational stores), Redis (caching, pub/sub)  \n- **Deployment**: Docker (containerization)  \n\n## Architecture / Design  \nFinFlow decouples core domains into bounded contexts:  \n- **Transaction Engine**: Async processing with Kafka pipelines  \n- **Risk Scoring**: Event-driven, with Redis-backed state  \n- **Audit Trail**: Append-only logs via event sourcing  \n\nServices communicate via REST APIs and gRPC, with API gateways managing authentication and rate limiting. Data consistency is achieved through sagas and eventual consistency patterns.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details  \n\n## Badges  \n[![Version](https://img.shields.io/badge/version-1.2.0-blue)](https://github.com/finflow-project/finflow/releases/tag/v1.2.0)  \n[![Build Status](https://img.shields.io/badge/build-passing-green)](https://github.com/finflow-project/finflow/actions)  \n[![License](https://img.shields.io/badge/license-MIT-yellow)](https://github.com/finflow-project/finflow/blob/main/LICENSE)"
+}

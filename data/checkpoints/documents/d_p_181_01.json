@@ -3,25 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_181",
   "hyperparams": {
-    "project_scale": "academic",
+    "project_scale": "team-internal",
     "project_team_size": "large (15+)",
-    "jargon_density": "heavy"
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
     "AWS": 1,
-    "Cloud cost optimization": 1,
-    "Database optimization": 1,
-    "GCP": 1,
-    "Go": 1,
-    "Infrastructure as Code": 1,
-    "Kubernetes": 1,
-    "Load balancing": 1,
-    "Monitoring & alerting": 1,
-    "PostgreSQL": 1,
-    "Python": 4,
-    "Redis": 4,
-    "Serverless": 1,
-    "Terraform": 1
+    "CI/CD pipelines": 2,
+    "Docker": 3,
+    "Linux administration": 2,
+    "Microservices architecture": 1,
+    "Monitoring & alerting": 2,
+    "PostgreSQL": 4,
+    "Python": 1,
+    "REST API design": 4,
+    "Shell scripting": 1,
+    "gRPC": 1
   },
-  "text": "# Financial Data Pipeline for Real-Time Fraud Detection  \nA scalable, low-latency system leveraging Apache Kafka and Spark for NexaFin’s payment processing platform. Designed to detect anomalous transaction patterns at ingestion speed, with Redis as the primary cache layer for real-time rule enforcement.  \n\n## Badges  \n[![Build Status](https://github.com/.../workflows/CI%20Pipeline/badge.svg)](https://github.com/.../actions)  \n[![Test Coverage](https://github.com/.../workflows/Code%20Coverage/badge.svg)](https://github.com/.../actions)  \n\n## Getting Started / Installation  \nEnsure Python 3.9+ is installed. Install dependencies via `pip install -r requirements.txt`. Redis must be running locally or via Docker. Kafka brokers should be accessible at `localhost:9092`. Configure environment variables for Kafka and Redis endpoints. Run `python main.py` to initiate the pipeline.  \n\n## Tech Stack  \n- **Python**: Core logic for data transformation and anomaly scoring (ownership: Fumiko Ishida)  \n- **Apache Kafka**: Real-time ingestion layer with partitioned topic for high-throughput streams  \n- **Apache Spark**: Batch and streaming processing for feature extraction and model inference  \n- **Redis**: In-memory cache for rule-based scoring and session state management (ownership: Fumiko Ishida)  \n\n## Architecture / Design  \nData flows from Kafka producers to Spark Structured Streaming, where Python UDFs apply pre-trained models and Redis-based rules. Redis serves as a distributed lock and cache for transaction context, reducing latency for recurring transactions. The system scales horizontally via Kafka partitions and Spark executors, with Redis replicas for fault tolerance.  \n\n## Usage / Examples  \n```python  \n# Example: Real-time scoring with Redis cache  \nfrom redis import Redis  \nimport json  \n\ndef score_transaction(txn):  \n    r = Redis(host='localhost', port=6379)  \n    key = f'txn:{txn[\"id\"]}'  \n    if r.exists(key):  \n        return json.loads(r.get(key))['score']  \n    # ... processing logic ...  \n    r.setex(key, 300, json.dumps({'score': 0.85, 'flagged': True}))  \n    return {'score': 0.85, 'flagged': True}  \n```  \n\n## Testing  \nUnit tests validate Python UDFs and Redis interactions using `pytest`. Integration tests simulate Kafka streams with 100k+ synthetic transactions, verifying latency under 50ms and 99.9% accuracy in rule enforcement. Redis connection pooling and cache eviction strategies are stress-tested with 100 concurrent clients.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# SecurePay: Financial Transaction Processing API  \nA high-throughput, PCI-compliant REST API for processing cross-border payments and settlement operations. Built for fintech teams requiring strict data isolation, audit trails, and real-time fraud detection.  \n\n## API Reference  \n### Endpoints  \n- **POST /transactions**  \n  Process payment with: `amount`, `currency`, `recipientDetails`, and `authorizationToken`.  \n  *Response:* Transaction ID, status (pending/confirmed), and audit log snippet.  \n- **GET /refunds/{id}**  \n  Retrieve refund details using transaction ID.  \n- **POST /webhooks/notify**  \n  Handle asynchronous payment confirmations with signed payloads.  \n\n*Authentication:* API keys via `X-API-Key` header.  \n*Error Handling:* 4xx/5xx codes include detailed audit logs in `X-Transaction-Trace`.  \n\n## Usage / Examples  \n```js\n// Example: Initiate payment  \nfetch('https://api.securepay.dev/transactions', {  \n  method: 'POST',  \n  headers: { 'X-API-Key': 'sk_live_123' },  \n  body: JSON.stringify({  \n    amount: 1500,  \n    currency: 'EUR',  \n    recipientDetails: { iban: 'DE893211111111' },  \n    authorizationToken: 'auth_456'  \n  })  \n});\n```\n\n## Getting Started / Installation  \n1. Clone repo: `git clone https://github.com/securepay/api-core.git`  \n2. Install dependencies: `npm install`  \n3. Configure `.env` with PostgreSQL URI, API keys, and webhook secrets.  \n4. Run migrations: `npx prisma migrate deploy`  \n5. Start server: `npm run start`  \n\n## Tech Stack  \n- **Backend:** Node.js 18, Express, Prisma ORM  \n- **Database:** PostgreSQL 15 (with WAL streaming for real-time replication)  \n- **Security:** JWT, OAuth2, TLS 1.3  \n- **Docker:** Used for local dev (multi-stage builds for production)  \n\n## Architecture / Design  \nMonolithic architecture with strict layer separation:  \n1. **Controllers** handle HTTP requests and response formatting.  \n2. **Services** manage business logic (e.g., fraud checks, rate limiting).  \n3. **Repositories** interact with PostgreSQL (using Prisma).  \n\nPostgreSQL is optimized for high-write throughput with:  \n- Partitioned tables for transaction history  \n- Triggers for automatic audit logging  \n- Connection pooling with 500+ max clients  \n\n## License  \nMIT License  \n\n## Badges  \n[![Build Status](https://github.com/securepay/api-core/actions/workflows/main.yml/badge.svg)](https://github.com/securepay/api-core/actions)  \n[![Coverage](https://codecov.io/gh/securepay/api-core/branch/main/graph/badge.svg)](https://codecov.io/gh/securepay/api-core)"
 }

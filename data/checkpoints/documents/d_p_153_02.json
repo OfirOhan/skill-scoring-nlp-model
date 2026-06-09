@@ -1,26 +1,22 @@
 {
   "doc_id": "d_p_153_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_153",
   "hyperparams": {
-    "recommender_role": "professor",
-    "recommender_closeness": "occasional",
-    "company_type": "academic",
-    "company_size": "mid (50-500)"
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "A/B testing": 2,
-    "Agile/Scrum": 4,
-    "Analytics-driven product decisions": 4,
-    "Competitive analysis": 2,
-    "Data visualization": 2,
-    "Hypothesis testing": 2,
-    "Product management": 4,
-    "Roadmap planning": 4,
-    "SQL analytics": 2,
-    "Stakeholder management": 4,
-    "Tableau/Power BI": 2,
-    "UX research": 2
+    "Apache Spark": 3,
+    "Data warehousing": 3,
+    "Docker": 3,
+    "ETL pipeline design": 4,
+    "Python": 2,
+    "REST API design": 1,
+    "Snowflake": 3,
+    "Terraform": 3,
+    "dbt": 4
   },
-  "text": "To Whom It May Concern,  \n\nI taught Ava Richardson in a product management course during her final year at [University], where she demonstrated a rare ability to bridge technical strategy with business outcomes. As a professor, I observed her consistently prioritize measurable goals while navigating complex team dynamics.  \n\nAva’s strength lies in her structured approach to Agile/Scrum frameworks. She led a cross-functional team to deliver a SaaS feature 20% faster than the baseline timeline, using iterative feedback loops to refine the product. Her analytics-driven decisions were pivotal in pivoting a underperforming module, which boosted user retention by 15% within three months. This rigor extended to roadmap planning, where she aligned stakeholder priorities with technical feasibility, ensuring NexaFlow’s Q4 release met both market demand and engineering constraints.  \n\nWhat sets Ava apart is her ability to translate abstract metrics into actionable strategies. During a critical stakeholder conflict over resource allocation, she facilitated a data-backed compromise that preserved project scope while satisfying all parties. Her work ethic is equally notable—she often stayed after class to refine prototypes, balancing deadlines with a commitment to excellence.  \n\nAva’s combination of strategic thinking, technical curiosity, and collaborative mindset makes her an exceptional product leader. I am confident she will excel in any role requiring innovation and precision.  \n\nSincerely,  \n[Professor’s Name]  \n[University], [Department]"
+  "text": "# SaaS Data Pipeline Automation with Apache Airflow  \n\nAutomates ETL workflows for SaaS data integration, reducing manual intervention by 70% and improving data freshness to under 15 minutes. Built for production scalability with modular DAGs and cloud-agnostic infrastructure.  \n\n## Configuration  \n- **Docker**: Containerized Airflow with pre-configured dependencies; `docker-compose.yaml` handles environment variables and volume mounts for local testing.  \n- **Terraform**: IaC for AWS EMR and Snowflake setup; `terraform.tfvars` enables environment-specific overrides.  \n- **Snowflake**: Primary data warehouse; connection details in `.secrets.yaml` with role-based access control.  \n- **Environment Variables**: `AIRFLOW__CORE__SQLITE_DATABASE`, `SNOWFLAKE_USER`, and `DBT_PROJECT_DIR` define runtime behavior.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/johanbakken/saas-data-pipeline.git  \ncd saas-data-pipeline  \ndocker-compose up -d  \nterraform init && terraform apply --auto-approve  \nexport AIRFLOW__CORE__SQLITE_DATABASE=\"sqlite:///airflow.db\"  \n```  \nWait 5 minutes for DAGs to initialize; verify via `http://localhost:8080`  \n\n## Usage / Examples  \n**Example DAG**: `dags/etl_pipeline.py`  \n```python  \nfrom airflow import DAG  \nfrom airflow.operators.python import PythonOperator  \nfrom airflow.providers.snowflake.operators.snowflake import SnowflakeOperator  \nfrom datetime import timedelta  \n\ndefault_args = {'retries': 3}  \ndag = DAG('user_behavior_pipeline', default_args=default_args, schedule_interval='*/5 * * * *')  \n\ndef transform_data():  \n    # Spark job via dbt (see models/transform_user_activity.sql)  \n    print(\"Transforming 2.1M records with Spark\")  \n\ntransform_task = PythonOperator(  \n    task_id='transform',  \n    python_callable=transform_data,  \n    dag=dag  \n)  \n\nload_task = SnowflakeOperator(  \n    task_id='load_to_snowflake',  \n    snowflake_conn_id='snowflake_conn',  \n    sql='sql/load_user_activity.sql',  \n    dag=dag  \n)  \n\ntransform_task >> load_task  \n```  \n**Result**: Reduced ETL runtime from 2h 15m to 18m via Spark parallelization.  \n\n## Tech Stack  \n- Apache Airflow (v2.9)  \n- Python (3.9)  \n- Apache Spark (3.3)  \n- Snowflake (v2.70)  \n- dbt (v1.1)  \n- Docker (24.0)  \n- Terraform (1.4)  \n\n## Architecture / Design  \n- **Modular DAGs**: Each pipeline (user behavior, billing, etc.) isolated in separate DAG files with shared utility functions.  \n- **Spark Integration**: Batch processing of 2.1M+ records using Spark UDFs for real-time aggregation.  \n- **dbt Transformations**: Incremental models in `models/` directory with version control for auditability.  \n- **Scalability**: Terraform-managed EMR clusters scale automatically based on queue size.  \n\n## License  \nMIT License  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/license/johanbakken/saas-data-pipeline)](https://github.com/johanbakken/saas-data-pipeline)  \n[![CI/CD](https://img.shields.io/endpoint?url=https://actions-badge-cache-prod.herokuapp.com/endpoint/6232264443968432)](https://github.com/johanbakken/saas-data-pipeline/actions)  \n[![Docker](https://img.shields.io/docker/pulls/johanbakken/saas-airflow)](https://hub.docker.com/r/johanbakken/saas-airflow)"
 }

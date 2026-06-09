@@ -1,27 +1,26 @@
 {
   "doc_id": "d_p_035_03",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_035",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "solo",
-    "jargon_density": "heavy"
+    "recommender_role": "peer",
+    "recommender_closeness": "occasional",
+    "company_type": "academic",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "A/B testing": 1,
-    "Data visualization (Matplotlib/Plotly)": 3,
-    "Feature engineering": 4,
-    "MLOps (MLflow/W&B)": 3,
-    "Model deployment": 4,
-    "NumPy": 4,
-    "Pandas": 4,
-    "PyTorch": 2,
-    "SQL analytics": 3,
-    "Statistical modeling": 4,
-    "Tableau/Power BI": 3,
-    "TensorFlow": 2,
-    "Time series analysis": 4,
-    "scikit-learn": 4
+    "AWS": 5,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 3,
+    "Database optimization": 1,
+    "GCP": 4,
+    "Infrastructure as Code": 5,
+    "Kubernetes": 3,
+    "Linux administration": 3,
+    "Monitoring & alerting": 3,
+    "Network automation": 1,
+    "Python": 2,
+    "Terraform": 5
   },
-  "text": "# Demand Forecasting and Inventory Management  \nA production-grade solution leveraging time-series analysis to optimize inventory turnover and align supply chains with demand patterns. This project integrates statistical modeling, feature engineering, and deployment pipelines to deliver actionable insights for demand forecasting in retail and manufacturing sectors.  \n\n---\n\n## License  \nMIT License  \n\n---\n\n## Badges  \n[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  \n[![GitHub stars](https://img.shields.io/github/stars/SergeiAntonov/demand-forecasting?style=social)](https://github.com/SergeiAntonov/demand-forecasting)  \n[![Tech Stack](https://img.shields.io/badge/tech-stack-Python%20%7C%20Pandas%20%7C%20NumPy%20%7C%20scikit--learn%20%7C%20MLflow%20%7C%20Matplotlib%20%7C%20Plotly%20%7C%20SQL%20%7C%20Tableau%20%7C%20SARIMA%20%7C%20Prophet-orange)](https://github.com/SergeiAntonov/demand-forecasting)  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/SergeiAntonov/demand-forecasting.git  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n   Ensure Python 3.8+ is installed.  \n\n---\n\n## Usage / Examples  \nRun the forecasting pipeline with:  \n```bash  \npython forecast_pipeline.py --data_path \"data/sales.csv\" --output \"results/forecast.csv\"  \n```  \nThis script loads historical sales data, performs feature engineering (lagged variables, rolling averages), trains a hybrid SARIMA-Prophet model, and exports forecasts with confidence intervals. Example metrics:  \n- MAE: 8.2%  \n- RMSE: 12.7%  \n- Inventory turnover improvement: 15%  \n\n---\n\n## Architecture / Design  \nThe system decouples data preprocessing, model training, and deployment into modular components. Key design choices:  \n- **Feature Engineering**: Rolling window aggregations and calendar-based features (e.g., seasonality, holidays) are embedded using Pandas and NumPy.  \n- **Model Selection**: A stacked ensemble of SARIMA and Prophet is trained via scikit-learn’s `StackingRegressor`, with hyperparameters tuned via MLflow.  \n- **Deployment**: Models are exported as ONNX artifacts and integrated into a lightweight API (FastAPI) for real-time inference.  \n\n---\n\n## Tech Stack / Built With  \n- **Languages**: Python 3.9  \n- **Libraries**: Pandas, NumPy, scikit-learn, MLflow, Matplotlib, Plotly  \n- **Tools**: SQL (PostgreSQL), Tableau, GitHub Actions (CI/CD)  \n- **Models**: SARIMA, Prophet, XGBoost (for feature importance)  \n\n---\n\n## Contributing  \nThis project is a personal endeavor, but contributions are welcome for documentation improvements or bug fixes. Submit issues for feature requests or edge-case scenarios.  \n\n---\n\n## Testing  \nUnit tests for data pipelines and model evaluation are implemented using pytest. Test coverage exceeds 85% for core modules. Integration tests for deployment pipelines are under development, with a focus on ensuring robustness in distributed environments."
+  "text": "Boris Kravchenko is a Senior Platform Engineer at FinTrust Systems, a fintech company focused on financial infrastructure. As a peer, I’ve collaborated on several projects, and his contributions stand out for their consistency and depth.  \n\nBoris’s expertise in AWS architecture is central to FinTrust’s operations. He designed scalable systems for real-time transaction processing, mentoring junior engineers on best practices. His work on cost optimization reduced cloud expenses by 18% without sacrificing performance, a balance few achieve. He also led Terraform deployments across GCP, streamlining infrastructure management and enabling cross-team collaboration. His ability to translate complex requirements into robust, automated solutions is rare.  \n\nBeyond technical skills, Boris brings reliability and curiosity. He once debugged a critical production issue overnight, resolving it before morning meetings. His approach to Linux systems is methodical—whether maintaining servers or scripting automation, he prioritizes stability and clarity. While Python isn’t his primary tool, he uses it effectively for data analysis tasks, adding value where needed.  \n\nBoris’s work ethic is unshakable. He thrives in high-pressure environments, consistently delivering under tight deadlines. His combination of technical rigor and collaborative spirit makes him a key asset to any team. I’d strongly recommend him for any role requiring both depth and adaptability."
 }

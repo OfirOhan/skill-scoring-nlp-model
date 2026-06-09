@@ -1,40 +1,63 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Siddharth Menon's 3 years of experience as a Security Engineer in the SaaS industry",
-    "title": "Siddharth Menon - Security Engineer CV",
+    "topic_summary": "Aisha Oduya's 10-year backend engineering career in fintech with expertise in payment systems and API development",
+    "title": "Aisha Oduya - Staff Backend Engineer",
     "doc_id": "d_p_250_00",
     "persona_id": "p_250",
     "hyperparams": {
-      "cv_format": "minimal",
-      "geographic_convention": "Israel",
-      "company_type": "agency",
-      "company_size": "small (<50)"
+      "cv_format": "hybrid",
+      "geographic_convention": "Europe",
+      "company_type": "startup",
+      "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "An open-source tool for automating security audits in SaaS environments",
-    "title": "SaaS Shield: Automated Security Audit Tool for Cloud Applications",
+    "topic_summary": "A secure RESTful API for processing cross-border payments with PCI DSS compliance",
+    "title": "NexaPay Cross-Border Payment Gateway",
     "doc_id": "d_p_250_01",
     "persona_id": "p_250",
     "hyperparams": {
-      "project_scale": "academic",
-      "project_team_size": "large (15+)",
-      "jargon_density": "moderate"
+      "project_scale": "production",
+      "project_team_size": "solo",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "Real-time fraud detection system using machine learning for transaction analysis",
+    "title": "FraudGuard - Fintech Risk Detection Platform",
+    "doc_id": "d_p_250_02",
+    "persona_id": "p_250",
+    "hyperparams": {
+      "project_scale": "hobby",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "plain"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "A recommendation from a manager praising Siddharth's contributions to SaaS security initiatives",
-    "title": "Recommendation from Senior Security Manager at VirtuSafe Technologies",
-    "doc_id": "d_p_250_02",
+    "topic_summary": "Tech Lead endorsement of Aisha's expertise in scalable backend architecture and security protocols",
+    "title": "Recommendation from NexaPay Tech Lead",
+    "doc_id": "d_p_250_03",
     "persona_id": "p_250",
     "hyperparams": {
-      "recommender_role": "skip-level",
-      "recommender_closeness": "occasional",
-      "company_type": "enterprise",
-      "company_size": "small (<50)"
+      "recommender_role": "professor",
+      "recommender_closeness": "brief",
+      "company_type": "FAANG",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "Strategies for building resilient backend systems in high-volume fintech environments",
+    "title": "Designing Scalable Backend Systems for Fintech",
+    "doc_id": "d_p_250_04",
+    "persona_id": "p_250",
+    "hyperparams": {
+      "blog_depth": "opinion-piece",
+      "jargon_density": "moderate"
     }
   }
 ]

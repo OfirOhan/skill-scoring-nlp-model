@@ -1,25 +1,26 @@
 {
   "doc_id": "d_p_171_03",
-  "type": "recommendation",
+  "type": "linkedin",
   "persona_id": "p_171",
   "hyperparams": {
-    "recommender_role": "skip-level",
-    "recommender_closeness": "brief",
-    "company_type": "academic",
-    "company_size": "mid (50-500)"
+    "linkedin_completeness": "detailed"
   },
   "skill_evidence": {
-    "Cloud cost optimization": 1,
-    "Docker": 1,
-    "GitLab CI": 1,
-    "JavaScript": 1,
-    "PostgreSQL": 1,
-    "Python": 1,
-    "REST API design": 1,
-    "React": 1,
-    "TypeScript": 1,
-    "Web performance optimization": 1,
-    "Webpack/Vite": 1
+    "AWS": 2,
+    "Cloud cost optimization": 2,
+    "Docker": 3,
+    "Go": 3,
+    "Kubernetes": 2,
+    "Load balancing": 1,
+    "Microservices architecture": 4,
+    "Node.js": 3,
+    "PostgreSQL": 4,
+    "Python": 4,
+    "REST API design": 4,
+    "React": 4,
+    "Redis": 3,
+    "Terraform": 2,
+    "TypeScript": 4
   },
-  "text": "Simon’s ability to bridge complex technical challenges with user-centric solutions stood out during a critical project at NexaCorp. When his team faced a bottleneck in scaling their enterprise SaaS platform, he spearheaded a redesign of the backend architecture, reducing latency by 40% without compromising security. His approach combined deep systems thinking with pragmatic execution, ensuring the solution aligned with both engineering rigor and business goals.  \n\nAs a skip-level academic collaborator, I observed Simon’s work through a series of workshops on AI-driven optimization. His capacity to distill abstract problems into actionable steps was evident when he restructured a legacy module, cutting maintenance costs by 25% while improving team productivity. Beyond technical acumen, he consistently prioritized mentorship, guiding junior engineers through high-stakes debugging sessions with patience and clarity.  \n\nSimon’s strength lies in his ability to synthesize diverse perspectives into cohesive strategies. Whether refining workflows or navigating cross-departmental priorities, he balances precision with flexibility. His work ethic is defined by a relentless pursuit of efficiency, often staying late to resolve edge cases that others overlooked.  \n\nIn summary, Simon is a rare blend of technical mastery and collaborative insight. His contributions have not only advanced NexaCorp’s capabilities but also elevated the culture around innovation.  \n\nPlease feel free to reach out for further details."
+  "text": "Full-Stack Developer with a cybersecurity focus at Sentinel Cybersecurity Solutions. Over the past four years, I’ve built scalable, secure systems that protect critical infrastructure. My work spans backend architectures, API design, and frontend tooling, always with an eye on mitigating risks and ensuring compliance.  \n\nI specialize in microservices architectures, where I’ve led the migration of monolithic systems into modular, resilient platforms. PostgreSQL is my go-to for high-traffic applications, and I’ve optimized query performance to reduce latency by 40% in two production deployments. Python powers much of my automation and data analysis, while TypeScript ensures type safety in complex frontend and backend systems.  \n\nDocker has been central to my CI/CD pipelines, enabling rapid deployment of secure containers. I’ve also worked extensively with Node.js to build real-time dashboards for threat monitoring. When I’m not coding, I’m refining REST APIs that balance speed and security, often integrating Redis for caching and rate limiting.  \n\nCybersecurity isn’t just a focus—it’s the foundation. Every line of code I write is audited for vulnerabilities, and I collaborate closely with DevOps and security teams to embed protection into the development lifecycle. Let’s build safer, smarter systems together."
 }

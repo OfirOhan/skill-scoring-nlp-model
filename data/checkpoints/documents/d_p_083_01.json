@@ -3,19 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_083",
   "hyperparams": {
-    "project_scale": "team-internal",
+    "project_scale": "academic",
     "project_team_size": "large (15+)",
-    "jargon_density": "moderate"
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Design systems": 3,
-    "GraphQL": 4,
-    "Node.js": 3,
-    "REST API design": 4,
-    "React": 4,
-    "Test automation": 3,
-    "TypeScript": 4,
-    "Web performance optimization": 3
+    "Apache Airflow": 1,
+    "Apache Kafka": 3,
+    "Apache Spark": 4,
+    "CI/CD pipelines": 2,
+    "Data warehousing": 3,
+    "Docker": 3,
+    "ETL pipeline design": 4,
+    "Java": 1,
+    "Python": 3,
+    "REST API design": 2,
+    "Snowflake": 4,
+    "dbt": 3
   },
-  "text": "# CapitalFlow Real-Time Dashboard  \nA high-performance financial analytics platform built for CapitalFlow Solutions, enabling real-time data visualization with sub-200ms latency and 99.95% uptime. Designed for 15+ engineers across fintech, this dashboard handles 50k+ data points per second using a hybrid WebSocket/GraphQL architecture.  \n\n## Tech Stack  \n- **Frontend**: React 18, TypeScript 4.9, Redux Toolkit, Chart.js 4.4  \n- **Backend**: Node.js 18, GraphQL Yoga, Apollo Server  \n- **Data Pipeline**: Apache Kafka (3 partitions), WebSocket (ws 7.4)  \n- **Performance**: Webpack 5 (code splitting), Lighthouse 98/100  \n- **Design System**: Shared component library (Figma + Storybook)  \n- **Monitoring**: Prometheus + Grafana (custom dashboards)  \n\n## Architecture / Design  \nThe system uses a layered architecture with a WebSocket backbone for real-time updates and GraphQL for structured queries. Data flows through:  \n1. Kafka producers pushing market data (100ms P99 latency)  \n2. WebSocket clients updating React components via `useSubscription`  \n3. Apollo Client caching with 75% reduction in redundant fetches  \n4. Redux Toolkit for state normalization (30% smaller payloads)  \nPerformance optimizations include:  \n- Lazy-loaded chart components (40% faster initial load)  \n- Webpack splitChunks for 25% smaller bundle size  \n- Server-side rendering (SSR) with Next.js 13.4  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/capitalflow/capitalflow-dashboard.git  \ncd capitalflow-dashboard  \nnpm install  \ncp .env.example .env  \n# Configure Kafka and WebSocket endpoints in .env  \nnpm run start  \n```  \nDockerized deployment is supported via `docker-compose up -d` for consistent environment.  \n\n## Usage / Examples  \n```javascript  \n// Real-time market data subscription  \nuseSubscription(MARKET_DATA, {  \n  variables: { symbol: 'AAPL' },  \n  onData: (data) => updateChart(data.candles)  \n});  \n\n// Precomputed KPIs via GraphQL  \nconst { volume, openInterest } = useQuery(GET_KPI, {  \n  fetchPolicy: 'cache-first'  \n});  \n```  \nThe dashboard supports 50+ interactive visualizations with drill-down capabilities and real-time anomaly detection alerts.  \n\n## Badges  \n[![Build Status](https://github.com/capitalflow/capitalflow-dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/capitalflow/capitalflow-dashboard/actions/workflows/ci.yml)  \n[![Coverage](https://codecov.io/gh/capitalflow/capitalflow-dashboard/branch/main/graph/badge.svg)](https://codecov.io/gh/capitalflow/capitalflow-dashboard)  \n\n## Contributing  \nPRs with unit tests (Jest 29) and end-to-end tests (Cypress 12) are prioritized. Follow the [design system guidelines](https://capitalflow.design) and maintain 90%+ test coverage.  \n\n## License  \nMIT License (see [LICENSE](LICENSE) for details)"
+  "text": "# Real-Time Analytics Pipeline for NexaCorp  \nA high-throughput, low-latency data pipeline leveraging Kafka, Spark SQL, and enterprise-grade data warehousing for real-time analytics at scale. Engineered to handle terabytes of transactional data from distributed systems, ensuring sub-second query latency for operational dashboards and anomaly detection.  \n\n## Contributing  \nWe welcome contributions to refine ingestion logic, optimize Spark query execution plans, or enhance Kafka partitioning strategies. Fork the repo, submit a pull request with tests, and reference the open issues labeled `community`. For architecture discussions, engage with the `architecture` tag in the issue tracker.  \n\n## Getting Started / Installation  \n```bash  \ndocker compose up -d  \n# Initialize Kafka topics:  \nkafka-topics.sh --create --topic raw_events --bootstrap-server localhost:9092  \n# Stream data into the pipeline using the provided producer script  \n```  \nEnsure Docker is installed and configured with sufficient memory. The compose file includes pre-configured Spark clusters and Kafka brokers.  \n\n## Usage / Examples  \n```python  \n# Example: Real-time aggregation with Spark SQL  \ndf = spark.readStream.format(\"kafka\").load(\"raw_events\")  \nagg_df = df.filter(\"value LIKE '%error%'\").selectExpr(\"CAST(value AS struct<...>)\")  \nagg_df.writeStream.outputMode(\"append\").toTable(\"real_time_errors\")  \n```  \nThis pipeline processes 10M+ events/hour, with 99.99% availability via Kafka replication and Spark fault tolerance. Snowflake integration ensures data is ingested into the enterprise data warehouse within 500ms of ingestion.  \n\n## Tech Stack  \n- **Streaming**: Apache Kafka (partitioned topics, consumer groups)  \n- **Processing**: Apache Spark SQL (structured streaming, predicate pushdown)  \n- **Storage**: Snowflake (multi-cloud, ACID transactions)  \n- **Orchestration**: Docker (containerized microservices)  \n- **Transformations**: dbt (semantic layer, lineage tracking)  \n- **Monitoring**: Prometheus + Grafana (latency metrics, error rates)  \n\n## Architecture / Design  \nThe pipeline decouples ingestion, processing, and storage layers. Kafka acts as the event source, with Spark SQL handling schema enforcement and real-time aggregations. Data is then loaded into Snowflake via dbt, enabling ad-hoc querying and reporting. ETL workflows are orchestrated through Kafka offsets and Spark checkpointing, ensuring exactly-once semantics.  \n\n## License  \nApache License 2.0  \n\n## Badges  \n[![Build Status](https://github.com/.../actions/workflows/ci.yml/badge.svg)](https://github.com/.../actions/workflows/ci.yml)  \n[![GitHub](https://github.com/.../stats/README.md)](https://github.com/...)  \n[![Snowflake](https://snowflake.com/...)](https://snowflake.com/...)"
 }

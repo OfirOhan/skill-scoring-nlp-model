@@ -3,24 +3,25 @@
   "type": "project_readme",
   "persona_id": "p_087",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "large (15+)",
-    "jargon_density": "moderate"
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "A/B testing": 1,
-    "Apache Airflow": 1,
-    "Apache Spark": 3,
-    "Data visualization (Matplotlib/Plotly)": 4,
-    "Feature engineering": 4,
-    "MLOps (MLflow)": 3,
-    "NumPy": 4,
-    "Pandas": 4,
-    "Python": 4,
-    "REST API design": 2,
-    "SQL analytics": 3,
-    "Statistical modeling": 4,
-    "scikit-learn": 4
+    "AWS": 1,
+    "Apache Spark": 1,
+    "Cloud cost optimization": 1,
+    "Computer vision": 1,
+    "Docker": 3,
+    "Kubernetes": 3,
+    "LLMs/Prompt engineering": 1,
+    "MLOps (MLflow/W&B)": 4,
+    "Model deployment": 4,
+    "NLP": 4,
+    "PyTorch": 5,
+    "REST API design": 3,
+    "Recommendation systems": 4,
+    "TensorFlow": 5
   },
-  "text": "# Enterprise Data Pipeline Optimization  \n\nStreamline enterprise data workflows with scalable, production-grade pipeline optimizations. This project leverages distributed computing, automated feature engineering, and real-time analytics to reduce latency by 35% and improve throughput by 50% in benchmark tests.  \n\n## Tech Stack  \n- **Python 3.9+** (core language, data wrangling, and ML orchestration)  \n- **Apache Spark 3.3** (distributed ETL, parallel processing, and fault tolerance)  \n- **MLflow 2.0** (model registry, tracking, and deployment integration)  \n- **SQL (PostgreSQL/BigQuery)** (schema design, ad-hoc analytics, and metadata management)  \n- **Plotly/Dash** (interactive dashboards for real-time monitoring)  \n- **NumPy/Pandas** (data transformation, statistical analysis, and feature engineering)  \n- **scikit-learn** (baseline modeling for anomaly detection and drift detection)  \n\n## Architecture / Design  \nThe pipeline operates in three tiers:  \n1. **Ingestion Layer**: Kafka-backed event streaming with Spark Structured Streaming for real-time data capture.  \n2. **Processing Layer**: Spark DAGs with dynamic partitioning for batch/real-time hybrid workflows. Feature engineering pipelines use Pandas UDFs for efficient columnar transformations.  \n3. **Serving Layer**: MLflow models deployed as REST endpoints, with Prometheus metrics for latency tracking. SQL views expose processed data for business intelligence.  \n\nData visualization is driven by Plotly Dash, reducing reporting time by 40% in production. Statistical modeling includes Bayesian inference for drift detection, integrated with Airflow-like scheduling (though Airflow is excluded).  \n\n## Getting Started / Installation  \n```bash  \npip install -r requirements.txt  \nexport SPARK_HOME=/path/to/spark  \nexport PYTHONPATH=$PYTHONPATH:$SPARK_HOME/python  \n```  \nEnsure Spark is installed and configured for YARN or Kubernetes.  \n\n## Usage / Examples  \n```python  \nfrom pipeline import DataPipeline  \ndp = DataPipeline(input_path=\"s3a://data-bucket/raw\",  \n                  model_version=\"v2.3\")  \ndp.run()  \n# Visualize metrics  \ndp.plot_latency_trend()  \n```  \nExample: Reduced ETL time from 45 minutes to 18 minutes via optimized partitioning and caching strategies.  \n\n## Badges  \n[![Pipeline Stability](https://example.com/badge-stable)](https://example.com)  \n[![Model Accuracy](https://example.com/badge-accuracy)](https://example.com)  \n\n## Contributing  \nSubmit PRs with unit tests covering Spark transformations and MLflow tracking. Follow PEP8 and type hinting guidelines.  \n\n## License  \nMIT License © Jun Watanabe 2024"
+  "text": "# AdTargetAI: Real-Time Ad Personalization Using Deep Learning  \n\nA lightweight, scalable framework for real-time ad targeting with PyTorch-based recommendation models. Designed for ad-tech workflows requiring low-latency inference and A/B testing integration.  \n\n## Badges  \n[![GitHub stars](https://img.shields.io/github/stars/ninadorodriguez/AdTargetAI?style=social)](https://github.com/ninadorodriguez/AdTargetAI)  \n[![GitHub forks](https://img.shields.io/github/forks/ninadorodriguez/AdTargetAI?style=social)](https://github.com/ninadorodriguez/AdTargetAI)  \n[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Tech Stack  \n- **Deep Learning**: PyTorch (core), TensorFlow (legacy model conversion)  \n- **Deployment**: Docker (containerization), Kubernetes (orchestration)  \n- **Monitoring**: MLflow (experiment tracking), Weights & Biases (metrics)  \n- **API**: REST endpoints for ad targeting, built with FastAPI  \n- **NLP**: Embeddings for user behavior analysis (BERT-based)  \n- **Recommendation Systems**: Hybrid model combining collaborative filtering and content-based features  \n\n## Architecture / Design  \nThe system decouples model training and inference. A PyTorch-based deep neural network processes user-session data in real time, outputting ad relevance scores. Models are exported to ONNX format for deployment via TorchServe. The REST API exposes endpoints for ad placement decisions, with A/B testing flags managed via environment variables. Kubernetes ensures horizontal scaling during peak traffic.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/ninadorodriguez/AdTargetAI.git  \ncd AdTargetAI  \npip install -r requirements.txt  \ndocker-compose build  \ndocker-compose up -d  \n```  \nEnsure Docker and Kubernetes are installed. Set `AD_TARGET_API_KEY` in `.env` for production readiness.  \n\n## Usage / Examples  \nTo fetch personalized ad suggestions:  \n```bash  \ncurl -X POST \"http://localhost:8000/ads\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"user_id\": \"12345\", \"session_data\": {\"page_views\": 3, \"device\": \"mobile\"}}'  \n```  \nResponse includes ad IDs ranked by predicted engagement.  \n\n## Contributing  \nPull requests welcome!  \n1. Fork the repo  \n2. Create a feature branch  \n3. Add tests for new functionality  \n4. Format code with Black and isort  \n5. Update documentation  \n\nFollow the [CONTRIBUTING.md](CONTRIBUTING.md) checklist for CI/CD alignment."
 }

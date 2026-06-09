@@ -3,25 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_237",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "moderate"
+    "project_scale": "hobby",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Agile/Scrum": 3,
-    "Cloud cost optimization": 2,
-    "Cross-team collaboration": 2,
-    "Database optimization": 4,
-    "Kubernetes": 5,
-    "Mentoring": 2,
-    "Multi-cloud strategy": 2,
-    "Project management": 3,
-    "REST API design": 4,
-    "Stakeholder communication": 2,
-    "System design": 5,
-    "Team leadership": 3,
-    "Technical debt management": 3,
-    "Terraform": 2
+    "Flutter": 3,
+    "HTML/CSS": 2,
+    "Kotlin": 3,
+    "Mobile UI/UX": 3,
+    "Push notifications": 3,
+    "REST API design": 2,
+    "React": 1,
+    "React Native": 3,
+    "Swift": 3,
+    "TypeScript": 2,
+    "Web accessibility": 1,
+    "iOS development": 3
   },
-  "text": "# NexaFlow Microservices Architecture  \nA scalable, cloud-optimized SaaS platform built for high-concurrency user traffic using Kubernetes-native patterns and REST-first design  \n\n[![Production Status](https://img.shields.io/badge/production-ready-green)](https://example.com/production)  \n[![CI/CD](https://img.shields.io/badge/CI/CD-passing-blue)](https://example.com/ci)  \n[![Kubernetes](https://img.shields.io/badge/kubernetes-1.25-blue)](https://kubernetes.io)  \n\n## Getting Started / Installation  \n1. Deploy a Kubernetes cluster (tested with EKS and GKE)  \n2. Configure environment variables for PostgreSQL and Redis endpoints  \n3. Run `make build` to compile services locally  \n4. Deploy with `kubectl apply -f manifests/` for production-grade orchestration  \n\n## Tech Stack  \n- **Orchestration**: Kubernetes (with HPA and vertical scaling)  \n- **Language**: Go (for performance-critical services), Python (for data pipelines)  \n- **Database**: PostgreSQL (with read replicas) + Redis (for caching)  \n- **APIs**: RESTful endpoints with OpenAPI spec-driven development  \n- **Infrastructure**: Terraform (minimal, focused on core cluster setup)  \n- **Monitoring**: Prometheus + Grafana for real-time metric aggregation  \n\n## Architecture / Design  \nThe system is divided into three core domains:  \n1. **User Flow**: Async message queues (RabbitMQ) handle 10k+ requests/sec  \n2. **Data Processing**: Batch workers with Kafka for event-driven pipelines  \n3. **Analytics**: Time-series DB for aggregated metrics  \n\nKey design choices:  \n- REST APIs use HATEOAS patterns with versioned endpoints  \n- Redis caching reduces DB load by 65% (per Prometheus metrics)  \n- Kubernetes service meshes enable mutual TLS between services  \n\n## Usage / Examples  \n```bash\n# Example: Create a user via REST API  \ncurl -X POST https://api.nexaflow.com/v1/users \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"email\": \"user@example.com\", \"plan\": \"pro\"}'\n```  \n\n## Testing  \n- **Unit Tests**: 98% coverage (Go tests + Pytest for Python services)  \n- **Integration Tests**: End-to-end validation of payment workflow  \n- **Chaos Engineering**: Regular stress tests with Chaos Monkey  \n- **Security**: OWASP ZAP scans for API vulnerabilities  \n\n## License  \nMIT License  \n© 2024 NexaFlow SaaS Team — All rights reserved."
+  "text": "# PixelPunch Studios - Mobile Game Development  \n\nA solo venture into cross-platform mobile game development, focusing on reusable systems for character progression, dynamic UI, and platform-agnostic mechanics. Built with Flutter for shared logic and Kotlin for Android-specific features, this project emphasizes modular design to simplify future expansion.  \n\n## API Reference  \n\nThe core API revolves around three pillars:  \n- **Character System**: A state machine managing level-ups, skill trees, and stat boosts via `CharacterManager.kt`. Exposes `applyUpgrade()` and `calculateDamage()` for integration.  \n- **UI Toolkit**: Flutter widgets for in-game menus, with Kotlin extensions for platform-specific animations (e.g., `fadeIn()` for Android transitions).  \n- **Notification Hub**: Firebase Cloud Messaging integration for push alerts, with `NotificationService.kt` handling payload parsing and user opt-ins.  \n\nAll APIs are documented inline with Javadoc-style comments, prioritizing clarity over brevity.  \n\n## Usage / Examples  \n\nTo implement a character upgrade:  \n```kotlin  \nval character = CharacterManager.create(\"Warrior\")  \ncharacter.applyUpgrade(\"Sword Mastery\", 5)  \n```  \nFor platform-specific UI:  \n```dart  \n// Flutter code for Android-specific menu  \nAndroidMenuWidget(\n  onAction: (option) => _handleMenuSelection(option)\n)\n```  \nPush notifications are triggered via:  \n```kotlin  \nNotificationService.send(\"Level Up!\", \"You've reached level 10!\")\n```  \n\n## Getting Started / Installation  \n\n1. Install Flutter SDK and Android Studio (with Kotlin plugin).  \n2. Clone the repo and open the Flutter project in Android Studio.  \n3. Configure Firebase project credentials in `firebase_options.dart`.  \n4. Build for Android: `flutter run --target-platform android-arm64`  \n5. For iOS, install Xcode and run `flutter run --target-platform ios`  \n\n## Tech Stack  \n\n- **Flutter** (shared logic & UI)  \n- **Kotlin** (Android-specific systems)  \n- **Firebase** (push notifications, analytics)  \n- **Android Studio** / **Xcode** (IDEs)  \n- **HTML/CSS** (prototyping UI concepts)  \n\n## Architecture / Design  \n\nThe project employs a layered architecture:  \n1. **Shared Logic Layer**: Flutter isolates game mechanics, using Kotlin multiplatform for cross-cutting concerns.  \n2. **Platform-Specific Modules**: Android handles native animations; iOS manages gesture recognition.  \n3. **UI Components**: Flutter widgets are extended with Kotlin for platform-specific styling.  \n\nUI/UX decisions prioritize tactile feedback—e.g., haptic responses for button presses—and dynamic layouts adapting to screen sizes.  \n\n## License  \n\nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Badges  \n\n[![Flutter](https://img.shields.io/badge/flutter-2.8-blue)](https://flutter.dev)  \n[![Kotlin](https://img.shields.io/badge/kotlin-1.8-yellow)](https://kotlinlang.org)  \n[![MIT License](https://img.shields.io/badge/license-MIT-green)](LICENSE)"
 }

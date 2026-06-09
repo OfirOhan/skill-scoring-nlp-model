@@ -3,32 +3,22 @@
   "type": "cv",
   "persona_id": "p_046",
   "hyperparams": {
-    "cv_format": "minimal",
-    "geographic_convention": "Europe",
-    "company_type": "enterprise",
-    "company_size": "small (<50)"
+    "cv_format": "paragraph",
+    "geographic_convention": "India",
+    "company_type": "agency",
+    "company_size": "large (500+)"
   },
   "skill_evidence": {
-    "AWS": 5,
-    "ArgoCD": 4,
-    "CI/CD pipelines": 5,
-    "Chaos engineering": 4,
-    "Cloud cost optimization": 4,
-    "Cloud networking (VPC/subnets)": 4,
-    "Configuration management (Ansible)": 4,
-    "Docker": 4,
-    "GCP": 5,
-    "GitHub Actions": 4,
-    "GitLab CI": 5,
-    "Jenkins": 3,
-    "Kubernetes": 5,
-    "Linux administration": 5,
-    "Log management (ELK)": 3,
-    "Monitoring & alerting": 5,
-    "Prometheus/Grafana": 5,
-    "SLA/SLO management": 4,
-    "Shell scripting (Bash)": 4,
-    "Terraform": 5
+    "3D graphics (OpenGL/Vulkan)": 3,
+    "C#/.NET": 3,
+    "Game networking": 3,
+    "Game physics": 3,
+    "Go": 1,
+    "Java": 1,
+    "Python": 3,
+    "REST API design": 1,
+    "Unity": 5,
+    "Unreal Engine": 5
   },
-  "text": "Linda Gustafsson  \nSenior Site Reliability Engineer / DevOps Architect | NordicTech Solutions AB  \nEmail: linda.gustafsson@nordictech.se | Phone: +46 762 345 678 | Location: Stockholm, Sweden  \n\n**Professional Experience**  \n*DevOps Engineer* | ScandiCloud (2015–2017)  \nAutomated 80% of deployment pipelines using Jenkins and GitLab CI, reducing deployment time from 45 minutes to 12 minutes. Implemented proactive monitoring with Prometheus and Grafana, cutting incident resolution time by 40% through early anomaly detection.  \n*SRE Lead* | NordicCloud (2017–2019)  \nDesigned a multi-cloud strategy integrating GCP and AWS, achieving 99.95% SLA through Terraform-managed infrastructure. Mentored five junior SREs in SLA/SLO management, resulting in a 25% improvement in team consistency across cross-functional projects.  \n*DevOps Architect* | NordicTech Solutions AB (2019–2022)  \nLed the transition to a Kubernetes-based microservices architecture, reducing cloud costs by 30% through resource optimization and autoscaling. Established a chaos engineering framework that tested 12+ services, improving system resilience by 35% during peak load scenarios.  \n\n**Education**  \nMaster’s in Computer Science | KTH Royal Institute of Technology | 2016  \n\n**Projects**  \n*Multi-Cloud Infrastructure Modernization* | NordicCloud (2018–2019)  \nArchitected a hybrid GCP/AWS environment using Terraform, reducing manual configuration errors by 60% and enabling rapid scaling during seasonal traffic spikes.  \n*Chaos Engineering Framework for 12+ Services* | NordicTech Solutions (2020–2022)  \nDeveloped a centralized chaos testing pipeline with ArgoCD and Chaos Monkey, identifying critical single points of failure across microservices.  \n*Kubernetes Cluster Optimization* | NordicTech Solutions (2021–2022)  \nImplemented dynamic resource allocation using HPA and custom metrics, decreasing idle node costs by 22% while maintaining 99.9% uptime.  \n\n**Technical Skills**  \n- **Jenkins**: Automated 80% of deployment pipelines at ScandiCloud, integrating with GitLab CI for CI/CD workflows.  \n- **Log Management (ELK)**: Centralized logging across services using Elasticsearch and Kibana, enabling 24/7 real-time troubleshooting.  \n- **ArgoCD**: Orchestrated multi-cluster deployments at NordicTech Solutions, reducing deployment drift by 45% through declarative GitOps.  \n- **Chaos Engineering**: Spearheaded the design of a chaos testing framework, exposing 15+ critical vulnerabilities in production systems.  \n- **Cloud Cost Optimization**: Achieved 30% cost reduction through resource tagging, spot instance utilization, and infrastructure refactoring.  \n- **Cloud Networking (VPC/Subnets)**: Redesigned multi-cloud networking at NordicCloud, eliminating 12 redundant subnets and improving security posture.  \n- **Configuration Management (Ansible)**: Automated server provisioning across 50+ nodes, reducing onboarding time for new developers by 50%.  \n- **Docker**: Standardized containerization for 20+ microservices, enabling seamless integration with Kubernetes and reducing image build times by 30%.  \n- **GitHub Actions**: Replaced legacy CI systems with GitHub Actions, achieving 95% CI/CD pipeline coverage across all repositories.  \n- **SLA/SLO Management**: Defined and monitored SLOs for 15+ services, aligning engineering teams with business KPIs.  \n- **Shell Scripting (Bash)**: Developed custom automation scripts for infrastructure provisioning, cutting manual tasks by 70% in DevOps workflows.  \n- **AWS**: Architected scalable solutions for GCP/AWS, mentoring teams in VPC design, load balancing, and cost analytics.  \n- **CI/CD Pipelines**: Built and maintained end-to-end pipelines for 30+ services, ensuring zero-downtime deployments with blue-green strategies.  \n- **GCP**: Led the adoption of GCP services, including Cloud Monitoring and BigQuery, for centralized observability and data analytics.  \n- **GitLab CI**: Transitioned from Jenkins to GitLab CI at ScandiCloud, streamlining CI/CD for 15+ projects.  \n- **Kubernetes**: Oversaw cluster management for 50+ pods, implementing security policies and auto-scaling to meet peak demand.  \n- **Linux Administration**: Maintained 10+ Linux servers, automating routine tasks with Ansible and reducing admin overhead by 40%.  \n- **Monitoring & Alerting**: Integrated Prometheus/Grafana for real-time metrics, reducing mean time to detect (MTTD) incidents by 30%.  \n- **Terraform**: Deployed and managed infrastructure-as-code for 20+ environments, ensuring consistency across AWS/GCP platforms.  \n\n**Languages**  \nSwedish (native), English (fluent)  \n\n**Certifications**  \n- AWS Certified Solutions Architect – Associate  \n- Google Cloud Professional Architect  \n- Certified Kubernetes Administrator (CKA)  \n\n**Awards & Achievements**  \n- 99.95% SLA achievement at NordicCloud, recognized as a key contributor to the company’s infrastructure reliability.  \n- 30% cloud cost reduction at NordicTech Solutions, highlighted in internal innovation reports.  \n- Mentored 5 junior SREs at NordicCloud, with all mentees promoted to senior roles within 18 months.  \n- Led chaos engineering initiatives that identified and resolved 15+ critical system vulnerabilities."
+  "text": "Daria Ionescu, Senior Game Systems Architect at Nexu Interactive, based in Bengaluru, India. Email: daria.ionescu@nexuinteractive.com | Phone: +91 9876543210 | LinkedIn: linkedin.com/in/dariaionescu | GitHub: github.com/dariaionescu. With a decade of expertise in game systems architecture, I specialize in crafting scalable, high-performance solutions across Unity and Unreal Engine. My work has driven cross-team collaboration, optimized rendering pipelines, and reduced latency in multiplayer networks by 35% at Stellar Interactive.  \n\nOver the past eight years, I’ve evolved from a Game Development Intern at Lumina Studios to a Senior Game Systems Architect at Nexu Interactive, leading teams of 8–12 developers. At Vortex Games, I designed reusable Unity systems that cut asset loading times by 22%, enabling faster iteration on a AAA title. At Stellar Interactive, I spearheaded the transition from Unity to Unreal Engine for a flagship project, refining physics simulations and integrating Vulkan for real-time rendering. My role at Nexu Interactive now encompasses architecting core systems for a live-service game, mentoring junior engineers, and collaborating with QA and design to align technical constraints with creative vision.  \n\nTechnical expertise spans Unity and Unreal Engine, where I’ve architected core systems, optimized memory usage, and implemented cross-platform solutions. In Unity, I developed a modular networking framework that supported 500+ concurrent players, while in Unreal, I optimized particle systems to reduce CPU overhead by 18%. My work with 3D graphics includes leveraging OpenGL for post-processing effects in a mobile title and Vulkan for multi-threaded rendering in a PC game. C# and .NET underpin much of my Unity work, while Python scripts automate build pipelines and asset management. Game physics simulations, such as implementing ragdoll mechanics in Unreal, have been central to several projects. Networking systems, including latency compensation and object replication, have been a focus since my early days at Vortex Games.  \n\nBachelor of Science in Computer Science from Technical University of Cluj-Napoca, 2015. Graduated with a focus on real-time systems and graphics programming, which directly informed my later work in game development.  \n\nFluent in English and Romanian, with intermediate proficiency in Hindi. My bilingual capabilities have facilitated communication with international teams and local stakeholders.  \n\nCertifications include Unity Certified Developer (2020), Unreal Engine Advanced Certification (2022), and a Game Physics Specialization from Coursera. These credentials underscore my commitment to mastering both foundational and cutting-edge techniques in game systems design."
 }

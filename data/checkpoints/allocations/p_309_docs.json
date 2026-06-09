@@ -1,62 +1,49 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Valentina's 13 years of experience as a Staff Security Engineer in the SaaS industry.",
-    "title": "Valentina Marchetti - Staff Security Engineer",
+    "topic_summary": "A Data Engineer CV for a new graduate in adtech with technical skills and academic background.",
+    "title": "George Adamu 112 - Data Engineer CV",
     "doc_id": "d_p_309_00",
     "persona_id": "p_309",
     "hyperparams": {
-      "cv_format": "minimal",
-      "geographic_convention": "US",
+      "cv_format": "paragraph",
+      "geographic_convention": "India",
       "company_type": "startup",
       "company_size": "small (<50)"
     }
   },
   {
-    "doc_type": "project_readme",
-    "topic_summary": "A README for a project implementing API security protocols for SaaS platforms.",
-    "title": "SecureAPI Gateway",
+    "doc_type": "linkedin",
+    "topic_summary": "A LinkedIn summary highlighting George's role as a Data Engineer at AdVerve Interactive and his focus on adtech solutions.",
+    "title": "George Adamu 112 - Data Engineer at AdVerve Interactive",
     "doc_id": "d_p_309_01",
     "persona_id": "p_309",
     "hyperparams": {
-      "project_scale": "production",
-      "project_team_size": "large (15+)",
-      "jargon_density": "moderate"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "A README for an encryption toolkit designed to protect sensitive data in cloud-native SaaS applications.",
-    "title": "DataGuard Encryption Suite",
-    "doc_id": "d_p_309_02",
-    "persona_id": "p_309",
-    "hyperparams": {
-      "project_scale": "team-internal",
-      "project_team_size": "medium (5-15)",
-      "jargon_density": "plain"
+      "linkedin_completeness": "detailed"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "A recommendation from Valentina's manager praising her leadership in building secure infrastructure.",
-    "title": "Recommendation from NexaCorp CTO",
-    "doc_id": "d_p_309_03",
+    "topic_summary": "A recommendation from a professor endorsing George's academic and technical potential in data engineering.",
+    "title": "Recommendation from Dr. Emily Carter",
+    "doc_id": "d_p_309_02",
     "persona_id": "p_309",
     "hyperparams": {
-      "recommender_role": "peer",
-      "recommender_closeness": "worked-daily",
-      "company_type": "enterprise",
+      "recommender_role": "direct-manager",
+      "recommender_closeness": "occasional",
+      "company_type": "startup",
       "company_size": "large (500+)"
     }
   },
   {
-    "doc_type": "blog",
-    "topic_summary": "A technical blog post on zero-trust architecture implementation in SaaS environments.",
-    "title": "Zero-Trust Architecture for SaaS: A Modern Security Imperative",
-    "doc_id": "d_p_309_04",
+    "doc_type": "project_readme",
+    "topic_summary": "A GitHub README for a real-time ad campaign analytics dashboard using Apache Kafka and Spark.",
+    "title": "Real-Time Ad Campaign Analytics Dashboard",
+    "doc_id": "d_p_309_03",
     "persona_id": "p_309",
     "hyperparams": {
-      "blog_depth": "opinion-piece",
+      "project_scale": "team-internal",
+      "project_team_size": "small (2-4)",
       "jargon_density": "plain"
     }
   }

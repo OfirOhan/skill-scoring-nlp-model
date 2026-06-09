@@ -1,22 +1,23 @@
 {
   "doc_id": "d_p_102_01",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_102",
   "hyperparams": {
-    "blog_depth": "deep-dive",
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Android development": 3,
-    "Flutter": 4,
-    "Kotlin": 3,
-    "React Native": 4,
-    "Responsive design": 5,
-    "State management": 4,
-    "Swift": 3,
-    "TypeScript": 4,
-    "Web accessibility": 4,
-    "iOS development": 3
+    "Analytics-driven product decisions": 4,
+    "Cross-team collaboration": 3,
+    "Data visualization": 3,
+    "Product management": 5,
+    "Responsive design": 2,
+    "Roadmap planning": 4,
+    "SQL analytics": 1,
+    "Stakeholder management": 5,
+    "Strategic planning": 5,
+    "UX research": 4
   },
-  "text": "Building Scalable SaaS Mobile Solutions: Architecture & Best Practices  \n\nThesis:  \nScalable SaaS mobile apps demand a marriage of pragmatic architecture and disciplined engineering, balancing cross-platform flexibility with performance-critical edge cases. The debate isn’t between frameworks—it’s about how each tool fits the problem’s constraints.  \n\nSupporting Arguments:  \nFlutter’s widget tree and isolate model enabled us to decouple UI rendering from business logic in a 50k-line SaaS app, reducing cold start latency by 40%. For iOS, Swift’s concurrency model (async/await) streamlined backend calls in a real-time analytics dashboard, cutting sync bottlenecks by 65%. State management via Riverpod (Flutter) and Swift Combine proved indispensable for handling 10k+ concurrent users—centralized streams avoided duplicated logic and race conditions. TypeScript’s type inference in React Native mitigated 80% of runtime errors in a B2B app with 200+ screens, while accessibility labels and semantic HTML ensured compliance with WCAG 2.1. Responsive design wasn’t an afterthought—it was baked into the component hierarchy, using media queries and flexible grids to adapt to 150+ device configurations.  \n\nCounter-Arguments:  \nCritics argue native apps outperform cross-platform counterparts, but our Flutter app’s 98% CRUX score (vs. 92% for native iOS) disproves this. The real trade-off isn’t performance but maintainability: Flutter’s hot reload reduced development cycles by 30%, while React Native’s Hermes engine cut JS execution time by 50%. State management debates often pit Redux vs. Context API, but our hybrid approach—using Redux for global state and local Context for UI-specific data—simplified debugging and reduced bundle size by 15%.  \n\nConclusion:  \nScalability isn’t a checkbox; it’s a calculus of trade-offs. Choosing Flutter for its isolate model, Swift for concurrency, and TypeScript for type safety created a foundation that scaled from 500 to 500k users. Responsive design and accessibility weren’t just compliance items—they were architectural pillars. The key isn’t the tool, but the rigor to align architecture with business growth. In SaaS, the mobile layer isn’t a feature—it’s the interface to your product’s soul."
+  "text": "# HealthGuard Telehealth Platform  \nHealthGuard is a HIPAA-compliant telehealth platform designed to streamline remote care delivery for providers and patients. Built to scale with 15K+ concurrent users, it integrates real-time video consultations, asynchronous messaging, and analytics-driven care coordination. The system reduces provider administrative overhead by 40% while improving patient engagement scores by 28% in Q2 2024.  \n\n[![GitHub Actions](https://img.shields.io/github/actions/workflow/status/healthguard/platform/ci.yml?branch=main)](https://github.com/healthguard/platform/actions)  \n[![Docker](https://img.shields.io/docker/pulls/healthguard/platform)](https://hub.docker.com/r/healthguard/platform)  \n[![GitHub Repo Size](https://img.shields.io/github/repo-size/healthguard/platform)](https://github.com/healthguard/platform)  \n\n## Tech Stack  \n- **Frontend**: React (TypeScript), WebRTC, Tailwind CSS  \n- **Backend**: Node.js (TypeScript), NestJS, Express  \n- **Data**: MongoDB (with Atlas), Redis (caching), Google Cloud Healthcare API  \n- **Infrastructure**: AWS Lambda, API Gateway, S3 (presigned URLs)  \n- **Security**: OAuth 2.0, JWT, TLS 1.3, end-to-end encryption  \n- **CI/CD**: GitHub Actions, Docker, Terraform  \n\n## Architecture / Design  \nThe platform employs a microservices architecture with a centralized API gateway handling 85% of incoming requests. Core components include:  \n- **Video Engine**: WebRTC-based peer-to-peer streaming with fallback to WebRTC relay  \n- **Care Coordination**: GraphQL API for asynchronous messaging and task management  \n- **Analytics**: Real-time dashboards using Chart.js and Apache Flink for stream processing  \n- **Compliance Layer**: Automated audit logs and data retention policies  \n\nKey design decisions prioritize low-latency video streams (≤200ms) and HIPAA-compliant data storage. The system supports 99.95% SLA through auto-scaling and multi-region redundancy.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/healthguard/platform.git  \ncd platform  \ndocker-compose up --build  \n```  \nEnsure Docker is installed and configured with AWS credentials. Set environment variables for `REACT_APP_API_URL` and `GOOGLE_CLIENT_ID`.  \n\n## Usage / Examples  \n```bash  \n# Create a new consultation  \ncurl -X POST https://api.healthguard.com/v1/consultations \\\n  -H \"Authorization: Bearer <token>\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"patientId\": \"P123\", \"providerId\": \"PRO456\"}'  \n```  \nThe platform supports 15+ integrations with EHR systems and allows custom workflows via the extensible plugin system.  \n\n## Contributing  \nWe welcome contributions via GitHub Issues and Pull Requests. Focus on:  \n- Enhancing video call reliability (current latency: 180ms)  \n- Expanding analytics capabilities (currently 12K+ metrics tracked)  \n- Improving accessibility for patients with disabilities  \n\n## License  \nMIT License  \n© 2024 HealthGuard Solutions, Inc."
 }

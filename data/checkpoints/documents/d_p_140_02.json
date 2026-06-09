@@ -1,26 +1,29 @@
 {
   "doc_id": "d_p_140_02",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_140",
   "hyperparams": {
-    "blog_depth": "tutorial",
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Apache Spark": 1,
-    "Apache Kafka": 1,
-    "Apache Airflow": 1,
-    "dbt": 1,
-    "Snowflake": 1,
-    "Data Modeling": 1,
-    "ETL pipeline design": 1,
-    "Data Warehousing": 1,
+    "AWS": 3,
+    "CI/CD pipelines": 2,
+    "Cloud cost optimization": 3,
+    "Database optimization": 3,
+    "Go": 1,
+    "Infrastructure as Code": 3,
+    "Jenkins": 1,
+    "Kubernetes": 1,
+    "Load balancing": 3,
+    "Message queues": 1,
+    "Microservices architecture": 1,
+    "PostgreSQL": 1,
+    "Prometheus/Grafana": 2,
     "Python": 1,
-    "REST API design": 1,
-    "Prometheus/Grafana": 1,
-    "GitHub Actions": 1,
-    "Linux administration": 1,
-    "Shell scripting": 1
+    "REST API design": 5,
+    "Test automation": 2
   },
-  "text": "**Scalable ETL Pipelines for Fintech Data Engineering**  \n\nFintech platforms face relentless pressure to process terabytes of transactional data hourly while maintaining sub-50ms latency for real-time analytics. Our recent project at a mid-tier fintech firm revealed that legacy ETL frameworks struggled to scale beyond 200M rows per day, leading to cascading failures during peak load. This post distills actionable strategies to achieve linear scalability using AWS Glue’s serverless architecture, optimized for fintech’s unique data characteristics.  \n\n**Problem Statement**  \nTraditional ETL workflows often bottleneck at data ingestion and transformation stages. In our case, the primary pain points were:  \n1. **Latency spikes** during batch window scheduling (average 12.3s per partition).  \n2. **Resource contention** between concurrent jobs, causing 38% job failure rate under stress.  \n3. **Schema drift** in transactional logs, requiring manual intervention for 15% of data.  \nThese issues stem from rigid job configurations and lack of dynamic resource allocation.  \n\n**Setup**  \nLaunch an AWS Glue ETL job with the following baseline configuration:  \n- **Data sources**: S3 bucket with parquet files (12TB total).  \n- **Target**: Redshift cluster (16-node, 32GB RAM).  \n- **IAM roles**: ReadOnlyAccess for S3, RedshiftFullAccess for write operations.  \n- **Glue version**: 3.0 (latest at time of writing).  \n\n**Step-by-Step Guide**  \n1. **Partitioning strategy**: Segment data by `transaction_date` and `account_id` at the source. Use AWS Glue’s dynamic frame partitioning to isolate daily subsets, reducing I/O overhead by 42%.  \n2. **Parallelism tuning**: Configure `MaxConcurrentPartitions` to 120 (default is 100). Monitor CPU utilization via CloudWatch metrics; adjust based on observed saturation.  \n3. **Error handling**: Implement retry logic with exponential backoff for S3 read failures. Use Glue’s built-in `RetryPolicy` to handle transient network issues.  \n4. **Schema validation**: Pre-process data with AWS Glue’s `DataBrew` to enforce schema consistency. Flag discrepancies in a dedicated audit table for post-processing.  \n\n**Results**  \nAfter implementing the above, we achieved:  \n- **Throughput increase**: 2.8x faster data ingestion (from 12.3s to 4.4s per partition).  \n- **Error rate reduction**: 73% drop in job failures during peak load (from 38% to 11%).  \n- **Cost efficiency**: 30% reduction in Glue job runtime, translating to $12K/month savings.  \nThe system now handles 350M rows/day with 99.95% uptime, meeting SLA requirements for real-time fraud detection.  \n\n**Conclusion**  \nScalability in fintech ETL isn’t about brute force; it’s about precision in resource allocation and proactive error mitigation. By leveraging AWS Glue’s dynamic partitioning and fine-grained policy controls, we transformed a fragile pipeline into a resilient, cost-effective engine.  \n\n**Further Reading**  \n- AWS Glue Developer Guide: [https://docs.aws.amazon.com/glue/latest/dg/](https://docs.aws.amazon.com/glue/latest/dg/)  \n- \"Optimizing Serverless Data Pipelines\" (2023, IEEE Cloud Computing)  \n- AWS Glue Dynamic Frame Best Practices (blog.aws.amazon.com/tcs)"
+  "text": "# Scalable Ad Targeting API  \nA high-throughput ad targeting service built with Node.js and Redis, optimized for real-time campaign data ingestion and low-latency query responses. Designed to handle 10k+ requests/sec with sub-100ms latency under load.  \n\n## Badges  \n[![npm version](https://img.shields.io/npm/v/scalable-ad-targeting-api)](https://www.npmjs.com/package/scalable-ad-targeting-api)  \n[![GitHub stars](https://img.shields.io/github/stars/isaaccohen/scalable-ad-targeting-api)](https://github.com/isaaccohen/scalable-ad-targeting-api)  \n[![Coverage Status](https://img.shields.io/coveralls/isaaccohen/scalable-ad-targeting-api)](https://coveralls.io/r/isaaccohen/scalable-ad-targeting-api)  \n\n## Tech Stack  \n- **Node.js 18** (async/await, non-blocking I/O)  \n- **Redis 7** (in-memory key-value store with TTL eviction)  \n- **AWS Lambda** (async processing for campaign metadata)  \n- **NGINX** (load balancing with dynamic upstreams)  \n- **Prometheus/Grafana** (metrics aggregation for QPS and latency)  \n\n## Configuration  \nEnvironment variables:  \n- `REDIS_HOST`, `REDIS_PORT`, `REDIS_PASSWORD` (secure Redis cluster)  \n- `AWS_LAMBDA_ARN` (for async campaign data processing)  \n- `NGINX_UPSTREAMS` (comma-separated backend service IPs)  \n- `MAX_CONCURRENT_REQUESTS` (rate limiting via Redis atomic ops)  \n\n## Getting Started / Installation  \n```bash  \nnpm install  \ncp .env.example .env  \n# Configure Redis and AWS credentials  \nnpm run start  \n```  \nEnsure Redis is running on the specified host/port. AWS Lambda permissions must be pre-configured for async processing.  \n\n## Usage / Examples  \n```bash  \ncurl -X POST https://api.example.com/targeting \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"campaign_id\": \"CAMPAIGN-123\",\n    \"user_segments\": [\"MOBILE\", \"AGE_18-24\"]\n  }'  \n```  \nResponse includes bid price and ad creative ID. Latency: 82ms (P99) under 10k RPS.  \n\n## Testing  \nRun unit tests:  \n```bash  \nnpm test  \n```  \nIntegration tests validate Redis TTL eviction and Lambda async processing.  \nPerformance tests use Artillery to simulate 5k concurrent users.  \n\n## License  \nMIT License © Isaac Cohen 2023"
 }

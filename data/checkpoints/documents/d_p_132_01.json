@@ -3,22 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_132",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "large (15+)",
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
     "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "Apache Airflow": 3,
-    "Apache Kafka": 3,
-    "Apache Spark": 3,
-    "Data modeling": 3,
-    "Data warehousing": 3,
-    "ETL pipeline design": 3,
-    "GitLab CI": 3,
-    "Python": 3,
-    "REST API design": 3,
-    "Snowflake": 2,
-    "dbt": 2
+    "Android development": 1,
+    "Flutter": 3,
+    "JavaScript": 1,
+    "Kotlin": 1,
+    "React Native": 1,
+    "Swift": 1,
+    "TypeScript": 1,
+    "Web accessibility (WCAG)": 1,
+    "Webpack/Vite": 1,
+    "iOS development": 1
   },
-  "text": "# Real-Time Analytics Platform with Kafka & Redshift  \n\nA scalable pipeline for ingesting, processing, and querying streaming data in real time, leveraging Kafka for event streaming and Redshift for analytical workloads. Designed for high-velocity data pipelines in enterprise environments, with built-in fault tolerance and monitoring.  \n\n## Deployment  \nDeployed on AWS with Kubernetes for container orchestration. Use environment variables for secrets and AWS credentials. CI/CD pipelines automate testing and deployment via GitLab CI, ensuring consistent builds across staging and production.  \n\n## Badges  \n[CI/CD: Passing](#) | [Test Coverage: 85%](#) | [Docker: Ready](#) | [Redshift: Operational](#)  \n\n## Tech Stack  \n- **Streaming**: Apache Kafka (avro serialization, partitioned topics)  \n- **Processing**: Apache Spark (structured streaming, windowed aggregations)  \n- **Storage**: AWS Redshift (columnar storage, materialized views)  \n- **Orchestration**: Apache Airflow (DAGs for batch reconciliation)  \n- **API**: RESTful endpoints (FastAPI) for ad-hoc queries  \n- **CI/CD**: GitLab CI (unit tests, integration tests)  \n- **Language**: Python (pandas, PySpark, SQLAlchemy)  \n\n## Architecture / Design  \nData flows from Kafka producers to Spark streaming workers, which perform real-time aggregations and write to Redshift. Airflow schedules nightly ETL jobs to sync with Snowflake for historical analysis. REST APIs expose Redshift schemas for low-latency querying. Data modeling prioritizes star schemas with denormalized fact tables for analytical performance.  \n\n## Getting Started / Installation  \n1. Install Docker and Docker Compose  \n2. Clone the repo: `git clone https://github.com/your-username/realtime-analytics.git`  \n3. Build containers: `docker-compose up --build`  \n4. Verify Kafka producers and Spark consumers are running  \n5. Access the REST API at `http://localhost:8000/docs`  \n\n## Usage / Examples  \n- **Stream ingestion**: Use Kafka CLI to publish JSON events to `raw-events-topic`  \n- **Query Redshift**: Execute SQL against `analytics.db` to retrieve aggregated metrics  \n- **Monitor latency**: Check Spark UI for processing time metrics (target < 500ms)  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details"
+  "text": "# CloudFlow TaskManager  \nA cross-platform task management SaaS application built with Flutter and Firebase, designed for seamless real-time collaboration within medium-sized teams. Prioritizes modular architecture, Firebase integration, and developer experience through streamlined workflows.  \n\n---\n\n## Badges  \n[![Flutter](https://img.shields.io/badge/flutter-2.5-blue)](https://flutter.dev)  \n[![Firebase](https://img.shields.io/badge/firebase-9.21-green)](https://firebase.google.com)  \n[![License](https://img.shields.io/badge/license-MIT-yellow)](https://github.com/yourusername/cloudflow-taskmanager/blob/main/LICENSE)  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/yourusername/cloudflow-taskmanager.git  \n   cd cloudflow-taskmanager  \n   ```  \n2. Initialize Firebase:  \n   - Follow Firebase setup instructions in `firebase_options.dart`  \n   - Add your Firebase project config to `firebase_config.dart`  \n3. Install dependencies:  \n   ```bash  \n   flutter pub get  \n   ```  \n4. Run the app:  \n   ```bash  \n   flutter run  \n   ```  \n\n---\n\n## Tech Stack  \n- **Frontend**: Flutter (Dart) for cross-platform UI  \n- **Backend**: Firebase (Realtime Database, Firestore, Authentication)  \n- **State Management**: Riverpod for decoupled state logic  \n- **CI/CD**: GitHub Actions for automated testing and deployment  \n\n---\n\n## Architecture / Design  \nThe app follows a layered architecture with clear separation of concerns:  \n1. **Domain Layer**: Business logic and rules (e.g., task validation)  \n2. **Data Layer**: Firebase integration and local persistence (shared_preferences)  \n3. **Presentation Layer**: Flutter widgets with Riverpod for state management  \nKey design decisions include Firebase real-time sync for collaborative tasks and modular widgets for reuse across platforms.  \n\n---\n\n## Usage / Examples  \n- **Task Creation**: Use the `TaskForm` widget to input details, which triggers a Firebase write operation.  \n- **Real-Time Sync**: Tasks auto-update across devices via Firebase listeners.  \n- **User Roles**: Admins can assign tasks to team members via the `AssigneeSelector` component.  \n\n---\n\n## Testing  \n- **Unit Tests**: 85% coverage for core logic (e.g., `TaskModel` validation)  \n- **Integration Tests**: Firebase mock endpoints for end-to-end scenarios (e.g., login → task creation)  \n- **Accessibility**: Basic focus states and semantic labels for UI components  \n\n---\n\n## License  \nMIT License — see the [LICENSE](https://github.com/yourusername/cloudflow-taskmanager/blob/main/LICENSE) file for details."
 }

@@ -1,19 +1,25 @@
 {
   "doc_id": "d_p_131_02",
-  "type": "linkedin",
+  "type": "recommendation",
   "persona_id": "p_131",
   "hyperparams": {
-    "linkedin_completeness": "standard"
+    "recommender_role": "skip-level",
+    "recommender_closeness": "brief",
+    "company_type": "startup",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "Browser DevTools": 1,
-    "REST API design": 2,
-    "React": 3,
-    "Responsive design": 3,
-    "State management (Zustand)": 2,
-    "TypeScript": 3,
-    "Web performance optimization": 2,
-    "Webpack/Vite": 1
+    "Apache Airflow": 3,
+    "Apache Kafka": 3,
+    "Apache Spark": 3,
+    "Data Modeling": 1,
+    "Docker": 1,
+    "ETL pipeline design": 4,
+    "Kubernetes": 1,
+    "Python": 1,
+    "REST API design": 1,
+    "Snowflake": 4,
+    "Terraform": 1
   },
-  "text": "Building tools that bridge the gap between data and human connection in adtech is where I thrive. My work isn’t just about code—it’s about crafting experiences that feel intuitive, fast, and meaningful. At AdVantage Media, I focus on shaping the front end of campaigns that reach millions, ensuring every interaction is as seamless as it is impactful.  \n\nOver the past two years, I’ve helped scale our platform to handle complex ad workflows, prioritizing accessibility and performance without sacrificing creativity. One project stood out: reimagining a dashboard for real-time analytics, which reduced load times by 40% while maintaining a responsive, user-first design. These wins aren’t just metrics—they’re steps toward making technology feel less like a barrier and more like a bridge.  \n\nI’m always eager to collaborate on projects that challenge the status quo, whether it’s refining TypeScript-driven architectures or exploring new ways to integrate REST APIs with front-end innovation. If you’re building something that blends utility with elegance, let’s connect—there’s always room to grow, learn, and push boundaries together."
+  "text": "Rafael Costa has consistently delivered reliable, results-oriented engineering solutions at VitalCare Health. His work on ETL pipelines transformed how patient data is ingested, reducing processing latency by 30% during critical reporting cycles. He designed Snowflake-based data warehouses that support real-time analytics for clinical teams, enabling faster decision-making. His ability to balance complexity with clarity—such as simplifying Kafka stream architectures for cross-team integration—has minimized bottlenecks in our data infrastructure.  \n\nRafael’s soft skills are equally strong. He collaborates seamlessly with product and clinical teams, translating ambiguous requirements into robust data workflows. His proactive approach to troubleshooting—like resolving a Kafka offset misalignment during a system upgrade—prevented potential downtime. He also mentors junior engineers, fostering a culture of shared ownership in our data operations.  \n\nHis contributions have directly shaped VitalCare’s operational efficiency. By optimizing Spark jobs for batch processing, he freed up 20% of engineering bandwidth for innovation. His work ensures data reliability, which is critical for our healthtech mission.  \n\nRafael is a pragmatic problem-solver with a knack for turning technical challenges into scalable solutions. His dedication to precision and teamwork makes him a valuable asset. I’m confident he will bring the same rigor and collaboration to any role he pursues."
 }

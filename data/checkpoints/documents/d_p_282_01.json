@@ -1,24 +1,24 @@
 {
   "doc_id": "d_p_282_01",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_282",
   "hyperparams": {
-    "blog_depth": "deep-dive",
-    "jargon_density": "plain"
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Computer vision": 3,
-    "Docker": 3,
-    "Kubernetes": 3,
-    "MLOps (MLflow/W&B)": 3,
-    "Model deployment": 3,
-    "NLP": 4,
-    "PyTorch": 4,
-    "REST API design": 3,
-    "Recommendation systems": 4,
-    "TensorFlow": 3,
-    "Terraform": 3
+    "C/C++ (embedded)": 4,
+    "Embedded Linux": 3,
+    "Firmware development": 4,
+    "Go": 2,
+    "Hardware-software integration": 4,
+    "IoT protocols (MQTT/CoAP)": 3,
+    "Java": 1,
+    "Network troubleshooting": 1,
+    "Python": 2,
+    "REST API design": 2,
+    "RTOS": 3
   },
-  "text": "Overview  \nPlayer retention in games hinges on personalization, but static recommendations quickly lose relevance. At my studio, we faced this challenge head-on by integrating reinforcement learning (RL) to create dynamic, adaptive experiences. The result? A system that evolves with players, not just reacts to their past behavior.  \n\nContext  \nModern games generate vast player data—session times, item preferences, even micro-interactions. Traditional recommendation systems, reliant on historical data, struggle to adapt to shifting tastes. Our team needed a solution that could learn in real time, balancing exploration of new content with exploitation of known preferences. This required a blend of RL, NLP for sentiment analysis, and scalable infrastructure to handle millions of concurrent users.  \n\nChallenge  \nThe core problem was aligning RL’s dynamic decision-making with the rigid constraints of game engines. Static models couldn’t capture the nuance of player intent, and legacy systems lacked the agility to scale. For example, a player’s sudden shift from action to puzzle games required immediate adjustments, but existing pipelines couldn’t process this without latency. Plus, deploying models across distributed systems while maintaining performance was a bottleneck.  \n\nSolution  \nWe designed a hybrid RL framework using PyTorch for policy training and TensorFlow for feature engineering. The agent learned from player actions, adjusting difficulty and content recommendations in real time. To manage scalability, we containerized services with Docker, orchestrated them via Kubernetes, and used Terraform to automate cloud infrastructure on AWS. MLOps tools like MLflow tracked experiments, while REST APIs enabled seamless integration with game servers. NLP models analyzed in-game chat and feedback to refine the agent’s understanding of player intent.  \n\nResults  \nThe system reduced churn by 18% and increased average session time by 25% within three months. Players reported feeling more engaged, with 62% noting personalized challenges as “just right.” Deployment on AWS with Kubernetes ensured sub-50ms latency, even during peak hours. The model’s ability to adapt to sudden behavior shifts—like a player pivoting from combat to crafting—proved critical during seasonal events.  \n\nLessons Learned  \nRL isn’t a silver bullet—it requires careful balancing of exploration and exploitation. We learned that NLP insights into player sentiment could fine-tune reward signals, while scalable infrastructure is non-negotiable. Collaboration with game designers was key to aligning RL outputs with narrative goals. Finally, continuous monitoring with MLflow and W&B became essential for iterative improvements. This project taught me that personalization isn’t just about data—it’s about understanding the human behind the avatar."
+  "text": "# Low-Power IoT Environmental Monitor  \n\nA compact, energy-efficient system for real-time environmental data collection using modular sensors and IoT protocols. Designed for low-power operation, this project integrates firmware, embedded Linux, and edge computing to enable scalable, decentralized monitoring.  \n\n## Deployment  \nThe system operates on a dual-core STM32 microcontroller paired with an ESP32 for Wi-Fi/Bluetooth connectivity. Data is transmitted via MQTT to a cloud backend, where it’s stored and visualized using a REST API. The edge device runs a custom Embedded Linux kernel optimized for power efficiency, ensuring 30-day battery life in sleep mode.  \n\n## Getting Started / Installation  \n1. Clone the repository and install STM32CubeIDE for firmware development.  \n2. Use ESP-IDF to build the wireless stack and MQTT client.  \n3. Deploy the firmware to the STM32 via J-Link and flash the ESP32 with the network stack.  \n4. Run Docker containers for the REST API and data visualization dashboard.  \n5. Configure sensors using I2C/SPI protocols and calibrate against reference values.  \n\n## Usage / Examples  \n- **Data Collection**: Use `mosquitto_sub` to subscribe to MQTT topics like `env/sensor/temperature` for live readings.  \n- **Visualization**: Access the REST API at `/api/v1/data` to retrieve aggregated metrics.  \n- **Power Management**: Enable deep sleep mode via the RTOS task scheduler to reduce current draw to 50µA.  \n\n## Tech Stack  \n- **Firmware**: C/C++ (STM32, ESP32)  \n- **Networking**: MQTT, CoAP, Wi-Fi/BLE  \n- **Edge Computing**: Embedded Linux, Rust (for kernel modules)  \n- **Backend**: Go (REST API), PostgreSQL (timeseries storage)  \n- **Tools**: STM32CubeIDE, ESP-IDF, Docker, Git  \n\n## Architecture / Design  \nThe system employs a layered architecture:  \n1. **Sensor Layer**: Low-power BME680 and TSL2591 sensors for environmental data.  \n2. **Firmware Layer**: Real-time task scheduling via FreeRTOS ensures sensor polling and MQTT transmission without blocking.  \n3. **Network Layer**: ESP32 handles MQTT over TLS, with fallback to CoAP for low-bandwidth scenarios.  \n4. **Edge Layer**: Embedded Linux runs a lightweight web server for local data access.  \n5. **Cloud Layer**: REST API exposes metrics for dashboards and alerting.  \n\n## License  \nMIT License  \n\n## Badges  \n[![GitHub](https://badges.githubusercontent.com/)](https://github.com/)  \n[![CI](https://badges.buildkite.com/)](https://buildkite.com/)  \n[![Docker](https://badges.docker.com/)](https://hub.docker.com/)"
 }

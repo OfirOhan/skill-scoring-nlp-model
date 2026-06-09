@@ -1,0 +1,28 @@
+{
+  "doc_id": "d_p_308_03",
+  "type": "recommendation",
+  "persona_id": "p_308",
+  "hyperparams": {
+    "recommender_role": "peer",
+    "recommender_closeness": "brief",
+    "company_type": "FAANG",
+    "company_size": "mid (50-500)"
+  },
+  "skill_evidence": {
+    "AWS": 3,
+    "Apache Airflow": 3,
+    "Apache Kafka": 4,
+    "Apache Spark": 3,
+    "Data modeling": 4,
+    "Data warehousing": 4,
+    "Docker": 3,
+    "ETL pipeline design": 3,
+    "PostgreSQL": 3,
+    "Python": 1,
+    "Redis": 3,
+    "Snowflake": 5,
+    "Terraform": 3,
+    "dbt": 3
+  },
+  "text": "Esther Obi once spearheaded a campaign optimization project at ClickAd Network, where her Kafka-based pipeline restructured real-time ad performance data. When a critical data delay threatened a client launch, she pivoted the pipeline to batch-process historical data alongside live streams, avoiding downtime. Her solution reduced latency by ~30% and became a standard for future campaigns. We’d debrief weekly over Slack, swapping ideas on tooling and architecture—she’d often share rough sketches of Snowflake schemas or Terraform configs, which I’d tweak before deploying.  \n\nAs a peer, I’ve seen Esther tackle problems others avoid. During a data modeling overhaul, she questioned our reliance on denormalized tables, proposing a hybrid approach that cut query times by half. Her Snowflake architecture decisions—like partitioning strategies and cross-team data-sharing protocols—still shape how our team works. She’s also a quiet mentor; I once struggled with a Kafka offset issue, and she walked me through debugging it over a shared Docker setup.  \n\nEsther’s strength lies in her relentless curiosity and ability to simplify complex systems. She’ll dissect a Kafka stream’s lag, tweak Redis caching layers, or refactor an ETL pipeline with the precision of a surgeon. Her PostgreSQL expertise once saved a month of manual data reconciliation. Beyond skills, she’s reliable—she’ll stay late to fix a Terraform deploy or draft a dbt model, never asking for credit.  \n\nIn short, Esther is a problem-solver who thrives in ambiguity. Her work on data warehousing and modeling has cross-team ripple effects, and she’d be a asset to any team needing both technical depth and collaborative grit.  \n\nReach out if you’d like to discuss her work further—esther.obi@clickad.net."
+}

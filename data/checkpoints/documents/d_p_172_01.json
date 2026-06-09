@@ -3,23 +3,20 @@
   "type": "project_readme",
   "persona_id": "p_172",
   "hyperparams": {
-    "project_scale": "academic",
+    "project_scale": "hobby",
     "project_team_size": "large (15+)",
-    "jargon_density": "moderate"
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Design systems": 2,
-    "Next.js": 1,
-    "REST API design": 3,
-    "React": 4,
-    "Responsive design": 4,
-    "State management": 3,
-    "TypeScript": 4,
-    "UX research": 3,
-    "Web accessibility": 4,
-    "Web performance optimization": 2,
-    "Web accessibility (WCAG)": 1,
-    "State management (Redux/Zustand)": 1
+    "Application security (OWASP)": 3,
+    "Cloud networking (VPC/subnets)": 2,
+    "DNS/DHCP": 2,
+    "Firewall configuration": 3,
+    "IAM/Access control": 4,
+    "Incident response": 3,
+    "Network security": 3,
+    "Penetration testing": 3,
+    "TCP/IP": 1
   },
-  "text": "# HealthSphere Patient Portal UI  \n\nA modular React/TypeScript interface for HealthSphere Innovations’ patient portal, prioritizing seamless user flows and scalable component architecture. Built for healthcare professionals, this UI streamlines appointment management, medical records access, and telehealth integrations while maintaining strict compliance with health data standards.  \n\n## Testing  \nAutomated test coverage includes unit tests for core components (Jest + React Testing Library) and end-to-end scenarios via Cypress. Integration tests validate API interactions with HealthSphere’s REST endpoints. CI/CD pipelines enforce test execution on pull requests, ensuring stability across 15+ developers.  \n\n## Getting Started  \n1. Clone the repo: `git clone https://github.com/healthsphere-ui/portal`  \n2. Install dependencies: `npm install`  \n3. Configure environment variables in `.env.local` for API keys and backend URLs  \n4. Start the dev server: `npm run dev`  \n\n## Usage  \nNavigate to `/dashboard` for patient summary widgets, `/appointments` for scheduling, and `/telehealth` for video consultations. Customizable themes and role-based UI toggles (e.g., admin vs. patient views) are enabled via context providers.  \n\n## Tech Stack  \n- **Frontend**: React 18, TypeScript 4.9, Tailwind CSS  \n- **State**: React Context API for theme and auth state  \n- **API**: Axios for RESTful calls to HealthSphere’s FHIR-compliant backend  \n- **Forms**: React Hook Form with custom validation rules  \n- **Accessibility**: Semantic HTML + ARIA roles (no explicit WCAG references)  \n\n## Architecture  \nComponent-driven structure with isolated, reusable UI units. Core modules include:  \n- `@components/portal` (navigation, modals, data tables)  \n- `@services/api` (type-safe API wrappers)  \n- `@utils/validators` (custom form logic)  \nResponsive design leverages Tailwind’s breakpoint utilities, with dynamic layouts for mobile-first workflows.  \n\n## License  \nMIT License — see the [LICENSE](LICENSE) file for details.  \n\n## Contributing  \nSubmit issues for UX bottlenecks or feature requests. Pull requests should include:  \n- Type-safe updates to API service layers  \n- Accessibility improvements (e.g., label associations)  \n- Performance optimizations for high-traffic dashboards  \nFollow the [CODE_STYLE.md](CODE_STYLE.md) guide for formatting and testing conventions."
+  "text": "# HealthGuard IoT Secure Communication Protocol  \nA framework for encrypted, role-based IoT device communication in healthcare networks, designed to meet HIPAA and GDPR compliance requirements. Built for scalability, with a focus on zero-trust principles and dynamic access control.  \n\n## Acknowledgments  \nThis project wouldn’t exist without the collaborative effort of the HealthGuard team. Special thanks to the cross-functional security and engineering leads for refining the access control model, and to the open-source contributors who shared critical insights on secure messaging patterns.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies using `npm install`. Configure the environment with a `.env` file specifying your cloud provider’s IAM credentials and regional endpoints. For local testing, run `npm run dev` to spin up a mock healthcare network with simulated IoT devices.  \n\n## Usage / Examples  \n```typescript\nconst secureChannel = new HealthGuardChannel({\n  deviceID: 'IoT-001',\n  accessLevel: 'clinical',\n  encryptionKey: process.env.ENCRYPTION_KEY,\n});\nsecureChannel.sendEncryptedData(JSON.stringify(patientVitals));\n```  \nThe framework supports mutual TLS handshakes, policy-enforced data sanitization, and real-time audit logging. Example use cases include secure remote monitoring and encrypted medical device telemetry.  \n\n## Tech Stack  \n- **Core**: TypeScript, Node.js, Protobuf  \n- **Security**: AES-256-GCM, JWT with RS256, OAuth 2.0 (client credentials flow)  \n- **Networking**: MQTT over TLS, REST/GraphQL with rate limiting  \n- **Cloud**: AWS IAM roles, VPC peering for device isolation  \n- **Compliance**: Automated HIPAA audit trails, GDPR data minimization policies  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![Build Status](https://github.com/healthguard-io/workflows/CI%20CD/badge.svg)](https://github.com/healthguard-io/actions)  \n[![GitHub contributors](https://img.shields.io/github/contributors/healthguard-io/healthguard-protocol)](https://github.com/healthguard-io/healthguard-protocol)  \n[![Security Vulnerabilities](https://snyk.io/test/npm/healthguard-protocol/badge.svg)](https://snyk.io/test/npm/healthguard-protocol)  \n\n## Contributing  \nContributions are welcome but must align with the zero-trust architecture. All pull requests require a security review and must include automated compliance checks. For critical changes, engage with the IAM/Access Control working group to ensure policy consistency."
 }

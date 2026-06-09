@@ -1,41 +1,65 @@
 {
   "persona_id": "p_124",
   "hyperparams": {
-    "archetype": "backend_engineer",
-    "years_experience": 2,
-    "seniority": "junior",
-    "industry": "startup",
+    "archetype": "platform_engineer",
+    "years_experience": 8,
+    "seniority": "senior",
+    "industry": "e-commerce",
     "writing_style": "concise",
-    "language_fluency": "ESL",
+    "language_fluency": "near-native",
     "self_promotion_level": "boastful",
     "quantification_tendency": "qualitative"
   },
-  "name": "Hawa Diop",
-  "current_role": "Backend Engineer",
-  "company": "NexGen Solutions",
+  "name": "Daniel Nakamura",
+  "current_role": "Senior Platform Engineer",
+  "company": "E-Commerce Innovators Inc.",
   "education": {
     "degree": "Bachelor of Science in Computer Science",
-    "university": "University of Montreal",
-    "year": 2022
+    "university": "University of Washington",
+    "year": 2015
   },
   "career_trajectory": [
-    "Software Developer Intern at TechNova (2021)",
-    "Junior Backend Engineer at CodeLift (2022-2023)",
-    "Backend Engineer at NexGen Solutions (2023-present)"
+    {
+      "year": 2015,
+      "role": "DevOps Engineer",
+      "company": "TechNova Solutions"
+    },
+    {
+      "year": 2018,
+      "role": "Senior SRE Engineer",
+      "company": "RetailScale Ltd."
+    },
+    {
+      "year": 2021,
+      "role": "Platform Engineer",
+      "company": "GlobalCart Inc."
+    },
+    {
+      "year": 2023,
+      "role": "Senior Platform Engineer",
+      "company": "E-Commerce Innovators Inc."
+    }
   ],
   "skills": {
-    "Python": 4,
-    "Go": 4,
-    "REST API design": 3,
-    "Microservices architecture": 3,
-    "PostgreSQL": 4,
-    "CI/CD pipelines": 3,
-    "Docker": 3,
-    "Kubernetes": 3,
-    "Terraform": 3
+    "AWS": 5,
+    "Kubernetes": 5,
+    "Terraform": 5,
+    "Infrastructure as Code": 4,
+    "Cloud cost optimization": 4,
+    "Load balancing": 4,
+    "Serverless": 3,
+    "Python": 3,
+    "GitLab CI": 3,
+    "PostgreSQL": 2,
+    "Redis": 2,
+    "REST API design": 2,
+    "ELK": 1
   },
   "document_ids": [
     "d_p_124_00",
-    "d_p_124_01"
+    "d_p_124_01",
+    "d_p_124_02",
+    "d_p_124_03",
+    "d_p_124_04"
   ]
 }

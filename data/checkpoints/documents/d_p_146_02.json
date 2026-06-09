@@ -1,24 +1,23 @@
 {
   "doc_id": "d_p_146_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_146",
   "hyperparams": {
-    "recommender_role": "professor",
-    "recommender_closeness": "worked-daily",
-    "company_type": "startup",
-    "company_size": "small (<50)"
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "C/C++ (embedded)": 3,
-    "CI/CD pipelines": 3,
-    "Embedded Linux": 3,
-    "Firmware development": 3,
-    "Hardware-software integration": 3,
-    "IoT protocols (MQTT/CoAP)": 3,
-    "Network automation": 2,
-    "Python": 2,
-    "REST API design": 2,
-    "RTOS": 3
+    "Apache Spark": 2,
+    "Cloud cost optimization": 2,
+    "Docker": 3,
+    "LLMs/Prompt engineering": 2,
+    "MLOps": 1,
+    "Model deployment": 3,
+    "NLP": 5,
+    "PyTorch": 4,
+    "REST API design": 3,
+    "TensorFlow": 4
   },
-  "text": "Academic Context  \nSunita’s coursework in embedded systems and real-time operating systems at [University] provided a strong foundation for her work in hardware-software integration. Her capstone project on low-power IoT devices demonstrated early aptitude for balancing performance constraints with system reliability, a skill that has since evolved through hands-on experience at NexaTech.  \n\nWorking Relationship  \nWe collaborated daily on optimizing firmware for NexaTech’s edge devices. Sunita consistently delivered robust solutions, such as reducing boot latency by 22% through C/C++ optimizations and integrating Embedded Linux with custom RTOS layers. Her ability to debug complex hardware-software interactions—e.g., resolving a critical timing issue in a sensor node that stalled deployment for three days—was instrumental to project success.  \n\nResearch Ability  \nSunita’s approach to problem-solving blends analytical rigor with pragmatic execution. When tasked with migrating legacy code to a CI/CD pipeline, she designed a modular testing framework that cut deployment errors by 40% and streamlined version control for the team. Her curiosity drove her to explore MQTT optimizations, resulting in a 15% improvement in protocol efficiency.  \n\nBroader Strengths  \nBeyond technical skills, Sunita’s reliability and collaborative mindset stand out. She mentored junior engineers on embedded best practices and championed cross-functional alignment during tight deadlines. Her work ethic—debugging late into the night to resolve a critical firmware bug—reflects a commitment to excellence that benefits any team.  \n\nRecommendation  \nSunita’s technical depth, problem-solving acumen, and dedication to collaborative outcomes make her a valuable asset. Her ability to deliver measurable results in high-pressure environments, combined with a keen understanding of embedded systems, positions her as a strong candidate for advanced roles in hi-tech innovation."
+  "text": "# Customer Insights Analytics Platform  \nA customizable enterprise analytics solution combining NLP-driven sentiment analysis with time-series forecasting to uncover actionable customer behavior patterns. Built to process 10k+ daily transactions, reducing manual analysis time by 30% while improving predictive accuracy by 15% compared to baseline models.  \n\n## Roadmap / Future Work  \n- **Q4 2024**: Expand NLP models to support 5+ languages, integrate real-time sentiment scoring for customer support tickets  \n- **Q1 2025**: Add multi-modal analysis of CRM logs + transaction metadata using transformer-based embeddings  \n- **Q2 2025**: Optimize cloud costs by 20% through dynamic resource allocation and model quantization  \n- **Long-term**: Develop auto-ML pipelines for custom forecasting models tailored to individual business units  \n\n## Getting Started / Installation  \n```bash  \npython -m venv env  \nsource env/bin/activate  \npip install -r requirements.txt  \ndocker compose up -d  \n```  \nEnsure Docker is installed and configured. The platform requires Python 3.9+ and access to AWS Redshift for data ingestion.  \n\n## Usage / Examples  \n```bash  \npython analyze.py --input data.csv --output insights.json  \n```  \nThis command processes customer feedback text using BERT-based sentiment analysis and generates forecasts for churn probability. The output includes:  \n- Topic modeling of customer complaints  \n- Seasonality patterns in purchase behavior  \n- Anomaly detection in service request volumes  \n\n## Tech Stack  \n- **NLP**: BERT, GPT-3.5 (prompt engineering for customer query classification)  \n- **Time-series**: LSTM, Prophet (with PyTorch for custom forecasting)  \n- **Deployment**: Dockerized microservices with REST API endpoints  \n- **Data**: Apache Spark for batch processing (mentioned once)  \n- **Cloud**: AWS Lambda for serverless model inference  \n\n## Architecture / Design  \nThe platform uses a layered architecture:  \n1. **Data Ingestion**: Kafka streams → Redshift → Spark ETL  \n2. **Analysis Engine**: PyTorch models for forecasting, TensorFlow for embeddings  \n3. **NLP Pipeline**: Dockerized container with spaCy and HuggingFace transformers  \n4. **API Layer**: Flask endpoints exposing customer sentiment scores and forecasts  \n5. **Storage**: Time-series data stored in InfluxDB for low-latency querying  \n\n## License  \nMIT License (see [LICENSE](LICENSE))"
 }

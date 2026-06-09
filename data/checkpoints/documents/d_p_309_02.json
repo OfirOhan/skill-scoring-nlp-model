@@ -1,24 +1,25 @@
 {
   "doc_id": "d_p_309_02",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_309",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "plain"
+    "recommender_role": "direct-manager",
+    "recommender_closeness": "occasional",
+    "company_type": "startup",
+    "company_size": "large (500+)"
   },
   "skill_evidence": {
-    "Application security (OWASP)": 1,
-    "Cloud networking (VPC/subnets)": 1,
-    "Compliance (SOC2/GDPR)": 4,
-    "Encryption & PKI": 5,
-    "Firewall configuration": 1,
-    "IAM/Access control": 1,
-    "Incident response": 1,
-    "Network security": 1,
-    "Penetration testing": 1,
-    "SIEM tools": 3,
-    "Security auditing": 1
+    "Apache Kafka": 1,
+    "Apache Spark": 1,
+    "Data modeling": 1,
+    "Data warehousing": 1,
+    "Docker": 1,
+    "ETL pipeline design": 1,
+    "Monitoring & alerting": 1,
+    "Python": 1,
+    "REST API design": 1,
+    "Snowflake": 1,
+    "Terraform": 1
   },
-  "text": "# DataGuard Encryption Suite  \nSecure data at rest and in transit for cloud-native SaaS applications. Built to integrate with existing infrastructure, this toolkit prioritizes encryption performance and key lifecycle management.  \n\n## Deployment  \nLive in production across AWS and GCP environments. Deployed via CI/CD pipelines with version-controlled artifacts. Monitoring integrates with SIEM tools for real-time anomaly detection.  \n\n## Badges  \n[![CI/CD Status](https://example.com/badge)](https://example.com)  \n[![Compliance Status](https://example.com/badge)](https://example.com)  \n[![Key Rotation](https://example.com/badge)](https://example.com)  \n\n## Tech Stack  \n- Go (1.21+)  \n- Docker  \n- Kubernetes  \n- OpenSSL (for AES-256-GCM)  \n- SIEM integration (Splunk, ELK)  \n- Hardware Security Modules (HSMs)  \n\n## Architecture / Design  \nEncrypted data flows through three layers:  \n1. **In-transit**: TLS 1.3 with forward secrecy, validated by SIEM tools for protocol compliance.  \n2. **At-rest**: AES-256-GCM with key rotation every 90 days, stored in HSMs.  \n3. **Key Management**: Centralized key vault with audit logs, accessible via REST APIs.  \nDesigned for microservices, with serverless functions handling encryption metadata.  \n\n## Getting Started / Installation  \nClone the repository:  \n```bash  \ngit clone https://github.com/your-username/dataguard.git  \ncd dataguard  \nmake deps  \nmake test  \n```  \nEnsure AWS/GCP credentials are configured for HSM access.  \n\n## Usage / Examples  \n```go  \n// Encrypt payload  \nencryptedData, err := encrypt(\"sensitive-data\", \"encryption-key-id\")  \nif err != nil {  \n    log.Fatal(err)  \n}  \n// Decrypt payload  \ndecrypted, err := decrypt(encryptedData, \"decryption-key-id\")  \nfmt.Println(decrypted)  \n```  \nKey rotation triggers automatically via scheduled jobs, with rollback capabilities.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/your-username/dataguard/blob/main/LICENSE) for details."
+  "text": "**Recommendation Letter for George Adamu 112**  \n\n**Academic Context**  \nGeorge’s academic foundation in computational logic and systems thinking has shaped his approach to solving complex adtech challenges. While his formal education focused on theoretical frameworks, his ability to translate abstract concepts into practical solutions stands out. At AdVerve, he consistently bridges gaps between technical requirements and business outcomes, demonstrating a rare capacity to align innovation with operational clarity.  \n\n**Research Ability**  \nHis research mindset is evident in how he tackles ambiguous problems. For instance, when tasked with improving campaign performance metrics, George designed a multi-phase analysis of user behavior patterns, iterating on hypotheses with measurable feedback loops. This approach reduced inefficiencies in data interpretation by approximately 25%, without requiring significant resource reallocation. His curiosity drives him to explore non-traditional data sources, which has expanded the team’s analytical toolkit.  \n\n**Character**  \nGeorge’s reliability and collaborative spirit are pillars of his contributions. He thrives in cross-functional environments, often stepping into mentorship roles to support junior engineers. His work ethic is marked by a quiet dedication—whether refining workflows or debugging edge cases, he prioritizes precision over expediency. Colleagues appreciate his humility and willingness to credit others’ insights, which fosters a culture of shared growth.  \n\n**Potential**  \nGeorge’s adaptability and intellectual rigor position him to excel in dynamic, fast-paced environments. His ability to synthesize diverse data streams into actionable strategies suggests he will thrive in roles requiring both technical depth and strategic foresight. I am confident he will continue to evolve as a leader, driving meaningful impact in the adtech space."
 }

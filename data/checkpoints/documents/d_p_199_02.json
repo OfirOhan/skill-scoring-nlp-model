@@ -1,0 +1,25 @@
+{
+  "doc_id": "d_p_199_02",
+  "type": "project_readme",
+  "persona_id": "p_199",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "C/C++ (embedded)": 4,
+    "Embedded Linux": 3,
+    "Firmware development": 4,
+    "GitLab CI": 2,
+    "Hardware-software integration": 3,
+    "IoT protocols (MQTT/CoAP)": 4,
+    "Network troubleshooting": 1,
+    "Python": 2,
+    "REST API design": 3,
+    "RTOS": 3,
+    "Sensor integration": 4,
+    "Shell scripting (Bash)": 2
+  },
+  "text": "# Industrial IoT Gateway Firmware  \nA real-time edge computing solution for industrial sensor data aggregation, local preprocessing, and secure cloud integration. Designed for environments requiring deterministic latency and minimal network dependency.  \n\n---\n\n## API Reference  \n**`/api/v1/register_device`**  \nRegisters a new sensor node with unique ID and MQTT topic.  \n- **Params**: `device_id`, `topic`, `auth_token`  \n- **Returns**: `{\"status\": \"success\", \"device_token\": \"string\"}`  \n\n**`/api/v1/stream_data`**  \nStreams processed sensor data to cloud via MQTT.  \n- **Params**: `device_token`, `data_format` (JSON/CSV), `compression` (gzip)  \n- **Returns**: `{\"ack\": \"received\", \"timestamp\": \"iso8601\"}`  \n\n**`/api/v1/execute_command`**  \nTriggers local actuator control via CoAP.  \n- **Params**: `device_token`, `command`, `payload`  \n- **Returns**: `{\"response\": \"ack/nack\", \"latency\": \"ms\"}`  \n\n---\n\n## Usage / Examples  \n```c\n// Initialize gateway with sensor drivers  \nvoid setup_gateway() {  \n    init_adc();  \n    mqtt_connect(\"broker.example.com\", 1883);  \n    coap_server_start();  \n}  \n\n// Stream aggregated data every 500ms  \nvoid loop() {  \n    float temp = read_sensor(ADC_CH_0);  \n    send_mqtt(\"sensors/temperature\", json_format(temp));  \n    delay(500);  \n}  \n```  \nEdge computing reduces cloud dependency by 40% in test scenarios.  \n\n---\n\n## Getting Started / Installation  \n1. Clone repo: `git clone https://github.com/yelamin/industrial-gateway.git`  \n2. Build with Yocto for ARM Cortex-A53:  \n   ```bash  \n   bitbake industrial-gateway-image  \n   ```  \n3. Flash to STM32H743 microcontroller via UART.  \n\n---\n\n## Tech Stack  \n- **Language**: C (RTOS tasks), Python (scripting)  \n- **RTOS**: FreeRTOS (task scheduling, 2ms tick)  \n- **Protocols**: MQTT (TLS 1.2), CoAP (DTLS)  \n- **OS**: Embedded Linux (Buildroot)  \n- **CI**: GitLab CI (unit tests)  \n\n---\n\n## Architecture / Design  \nThe firmware uses a three-layer architecture:  \n1. **Firmware Layer**: Real-time sensor polling (100μs latency), ADC sampling.  \n2. **Edge Processing**: Aggregates 10+ sensors, applies moving average filtering.  \n3. **Communication Layer**: Dual-stack MQTT/CoAP for cloud sync, with fallback to serial.  \nRTOS ensures deterministic behavior, while Linux handles file storage and diagnostics.  \n\n---\n\n## License  \nMIT License (see [LICENSE](LICENSE))  \n\n---\n\n## Badges  \n[![GitHub](https://badges.githubusercontent.com/)](https://github.com/yelamin/industrial-gateway)  \n[![Build Status](https://badges.buildkite.com/)](https://buildkite.com/yelamin/industrial-gateway)  \n[![License](https://badges.frappr.com/license/mit.svg)](https://github.com/yelamin/industrial-gateway)"
+}

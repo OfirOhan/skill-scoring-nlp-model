@@ -4,21 +4,22 @@
   "persona_id": "p_300",
   "hyperparams": {
     "recommender_role": "peer",
-    "recommender_closeness": "worked-daily",
-    "company_type": "agency",
-    "company_size": "small (<50)"
+    "recommender_closeness": "occasional",
+    "company_type": "startup",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "AWS": 2,
-    "CI/CD pipelines": 2,
-    "Docker": 3,
-    "GitHub Actions": 2,
-    "Linux administration": 2,
-    "Microservices architecture": 3,
-    "Monitoring & alerting": 2,
-    "PostgreSQL": 3,
-    "Python": 3,
-    "REST API design": 3
+    "Apache Airflow": 3,
+    "Apache Spark": 3,
+    "Data warehousing": 3,
+    "Database optimization": 3,
+    "Docker": 2,
+    "ETL pipeline design": 3,
+    "Linux administration": 1,
+    "Python": 2,
+    "Redis": 2,
+    "Snowflake": 3,
+    "Terraform": 2
   },
-  "text": "Nadia and I have collaborated daily on RetailFlow’s backend systems for over two years. Her role as a backend engineer involves maintaining scalability for their e-commerce platform, which processes 12M+ transactions monthly. We’ve worked closely on optimizing database performance and ensuring seamless integration between microservices.  \n\nNadia’s daily contributions are rooted in precision. She consistently troubleshoots production issues, often resolving critical outages within 30 minutes. Her Docker expertise is evident in how she containerizes services, reducing deployment friction. For example, she rearchitected the order processing pipeline using microservices, cutting latency by 40%. She also manages PostgreSQL clusters, fine-tuning queries to maintain sub-100ms response times during peak traffic. Python scripts she developed automate infrastructure checks, saving the team 15+ hours weekly.  \n\nA standout moment was her leadership during a database migration. When RetailFlow’s PostgreSQL instance hit 95% capacity, Nadia designed a sharding strategy, migrating 200M rows without downtime. She also built a REST API for third-party integrations, which became a key feature for their largest client.  \n\nNadia’s work ethic is unmatched. She approaches problems with methodical rigor, balancing technical depth with clear communication. Her ability to translate complex systems into actionable solutions makes her a vital asset. I’d wholeheartedly recommend her for any role requiring robust backend expertise and operational reliability."
+  "text": "Anya’s work at NexaData Solutions stands out for its clarity and impact. As a Data Engineer, she’s the go-to person for solving messy data problems.  \n\nShe’s built and maintained ETL pipelines that cut data ingestion time by 40% during our last scaling phase. Her Airflow workflows are reliable, even when handling unpredictable data volumes. When we moved to Snowflake, she designed the integration with minimal downtime, which was a big win.  \n\nAnya’s knack for database optimization is unmatched. She recently restructured a slow-performing query schema, boosting report generation speed by 60%. Her attention to detail ensures data accuracy, which is critical for our client reporting.  \n\nShe’s a calm problem-solver who thrives under pressure. During a recent outage, she debugged a pipeline issue within an hour, avoiding a potential $5k in lost client revenue. Her ability to explain complex systems in simple terms makes her a natural collaborator.  \n\nAnya’s reliability and technical sharpness make her a standout. I’d trust her with any data challenge."
 }

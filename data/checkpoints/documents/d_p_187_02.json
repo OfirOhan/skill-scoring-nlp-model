@@ -1,23 +1,26 @@
 {
   "doc_id": "d_p_187_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_187",
   "hyperparams": {
-    "recommender_role": "direct-manager",
-    "recommender_closeness": "occasional",
-    "company_type": "enterprise",
-    "company_size": "large (500+)"
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "C/C++ (embedded)": 3,
-    "Firmware development": 3,
-    "Go": 2,
-    "Hardware-software integration": 3,
-    "IoT protocols (MQTT/CoAP)": 3,
-    "Network automation": 2,
-    "Python": 2,
-    "REST API design": 2,
-    "RTOS": 3
+    "Agile/Scrum": 3,
+    "CI/CD pipelines": 1,
+    "Cross-team collaboration": 3,
+    "Database optimization": 3,
+    "GitHub Actions": 3,
+    "GitLab CI": 2,
+    "Jenkins": 2,
+    "Mentoring": 1,
+    "Monitoring & alerting": 1,
+    "Stakeholder communication": 1,
+    "System design": 3,
+    "Team leadership": 1,
+    "Technical writing": 1
   },
-  "text": "Academic Context  \nHelen’s technical foundation in embedded systems and real-time computing has consistently aligned with NexGen’s strategic priorities. Her ability to bridge theoretical knowledge with practical application—such as optimizing power efficiency in edge devices using RTOS principles—has elevated team capabilities. While her formal education focused on computer engineering, her self-directed learning in IoT protocols has kept her at the forefront of industry trends.  \n\nWorking Relationship  \nI’ve collaborated with Helen on three major projects, including the redesign of a distributed sensor network. Her leadership in integrating MQTT with legacy hardware demonstrated both technical rigor and adaptability. Though our interactions are primarily project-based, her proactive communication and willingness to mentor junior engineers have strengthened cross-functional collaboration.  \n\nResearch Ability  \nHelen’s problem-solving approach is methodical yet innovative. During a critical firmware update, she identified a race condition in the kernel’s interrupt handling, resolving it through rigorous testing and simulation. Her ability to isolate variables and validate solutions under time constraints has minimized downtime and improved system reliability.  \n\nBroader Strengths  \nBeyond technical expertise, Helen’s reliability and curiosity drive her impact. She consistently volunteers to tackle high-risk tasks, such as debugging complex hardware-software integration issues, and her attention to detail ensures systems meet stringent safety standards. Her ability to simplify complex concepts for non-technical stakeholders has also streamlined decision-making processes.  \n\nRecommendation  \nHelen’s combination of deep technical insight and collaborative mindset makes her an invaluable asset. She thrives in dynamic environments, consistently delivering solutions that balance innovation with operational excellence. I strongly endorse her for roles requiring both precision and strategic thinking."
+  "text": "# TeleCare AI  \nA cloud-native telemedicine platform integrating AI diagnostics for real-time patient triage and remote care. Built to handle 10K+ concurrent users with 95% diagnostic accuracy and 30% faster response times compared to legacy systems.  \n\n## Deployment  \nDeployed on AWS and GCP with Kubernetes clusters for auto-scaling. Uses Terraform for infrastructure-as-code, ensuring 99.99% uptime and <100ms latency. All services are containerized with Docker, and production builds are tagged with semantic versioning.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/yourorg/TeleCare-AI.git`  \n2. Install dependencies: `npm install` (Node.js 18+ required)  \n3. Configure environment variables via `.env` files for AWS/GCP credentials and database URLs  \n4. Run migrations: `npx prisma migrate deploy`  \n5. Start services: `docker-compose up -d`  \n\n## Usage / Examples  \n- **Real-time diagnostics**: Use the `/diagnose` endpoint with patient vitals to get triage recommendations (e.g., \"High-priority: Cardiac arrest suspected\")  \n- **Remote monitoring**: Integrate IoT devices via MQTT to stream data to the backend for continuous analysis  \n- **Patient portal**: Access secure dashboards for treatment history and follow-up alerts  \n\n## Tech Stack  \n- **Frontend**: React (TypeScript), Chart.js  \n- **Backend**: Node.js (TypeScript), Prisma ORM, Kafka for event streaming  \n- **AI**: TensorFlow.js for edge device inference, PyTorch models for cloud-based analysis  \n- **Database**: PostgreSQL (with Citus for horizontal scaling), Redis for caching  \n- **Cloud**: AWS Lambda, GCP BigQuery, Cloud Storage  \n\n## Architecture / Design  \nMicroservices architecture with API gateway for request routing. AI models are decoupled into separate services with gRPC endpoints. Data pipelines use Apache Beam for batch processing and Flink for real-time analytics. Redis caches frequent diagnostic queries to reduce DB load by 40%.  \n\n## License  \nMIT License  \n\n## Badges  \n[![Uptime](https://uptime-badge.com/your-identifier)](https://uptime-badge.com)  \n[![Latency](https://latency-badge.com/your-identifier)](https://latency-badge.com)  \n[![Diagnostic Accuracy](https://accuracy-badge.com/your-identifier)](https://accuracy-badge.com)  \n[![GitHub Stars](https://github.stars.badge.svg?repo=yourorg/TeleCare-AI)](https://github.com/yourorg/TeleCare-AI)"
 }

@@ -2,44 +2,63 @@
   "persona_id": "p_171",
   "hyperparams": {
     "archetype": "fullstack_developer",
-    "years_experience": 0,
-    "seniority": "junior",
-    "industry": "enterprise",
+    "years_experience": 4,
+    "seniority": "mid",
+    "industry": "cybersecurity",
     "writing_style": "confident",
     "language_fluency": "native",
     "self_promotion_level": "balanced",
-    "quantification_tendency": "mixed"
+    "quantification_tendency": "qualitative"
   },
-  "name": "Simon Lefebvre",
-  "current_role": "Full-Stack Developer",
-  "company": "NexaCorp",
+  "name": "Rajiv Mehta",
+  "current_role": "Full-Stack Developer (Cybersecurity Focus)",
+  "company": "Sentinel Cybersecurity Solutions",
   "education": {
     "degree": "Bachelor of Science in Computer Science",
-    "university": "École Polytechnique Fédérale de Lausanne (EPFL)",
-    "year": 2023
+    "university": "Indian Institute of Technology, Bombay",
+    "year": 2019
   },
   "career_trajectory": [
-    "Software Intern at TechNova Solutions (2022-2023)",
-    "Junior Full-Stack Developer at NexaCorp (2023-present)"
+    {
+      "title": "Software Engineer Intern",
+      "company": "CyberShield Technologies",
+      "duration": "6 months",
+      "responsibilities": "Assisted in developing secure API gateways using Python and Node.js."
+    },
+    {
+      "title": "Senior Software Developer",
+      "company": "Vigilant Security Systems",
+      "duration": "2 years",
+      "responsibilities": "Led full-stack projects with React, Go, and PostgreSQL, focusing on threat detection dashboards."
+    },
+    {
+      "title": "Full-Stack Developer (Cybersecurity Focus)",
+      "company": "Sentinel Cybersecurity Solutions",
+      "duration": "2 years",
+      "responsibilities": "Architected secure microservices with Rust, GraphQL, and DynamoDB for real-time threat analysis."
+    }
   ],
   "skills": {
-    "Python": 3,
-    "JavaScript": 3,
-    "React": 3,
-    "REST API design": 3,
-    "PostgreSQL": 3,
-    "TypeScript": 3,
+    "Python": 4,
+    "Go": 3,
+    "REST API design": 4,
+    "Microservices architecture": 4,
+    "PostgreSQL": 4,
+    "Redis": 3,
+    "Node.js": 3,
+    "React": 4,
+    "TypeScript": 4,
+    "AWS": 2,
     "Docker": 3,
-    "GitLab CI": 3,
-    "Webpack/Vite": 3,
-    "Web performance optimization": 3,
+    "Kubernetes": 2,
+    "Terraform": 2,
+    "Load balancing": 1,
     "Cloud cost optimization": 2
   },
   "document_ids": [
     "d_p_171_00",
     "d_p_171_01",
     "d_p_171_02",
-    "d_p_171_03",
-    "d_p_171_04"
+    "d_p_171_03"
   ]
 }

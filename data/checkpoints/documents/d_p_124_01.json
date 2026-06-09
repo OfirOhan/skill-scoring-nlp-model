@@ -4,19 +4,23 @@
   "persona_id": "p_124",
   "hyperparams": {
     "project_scale": "academic",
-    "project_team_size": "large (15+)",
-    "jargon_density": "plain"
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "CI/CD pipelines": 2,
-    "Docker": 2,
-    "Go": 1,
-    "Kubernetes": 1,
-    "Microservices architecture": 1,
-    "PostgreSQL": 1,
-    "Python": 4,
-    "REST API design": 3,
-    "Terraform": 1
+    "AWS": 5,
+    "Cloud cost optimization": 4,
+    "ELK": 1,
+    "GitLab CI": 3,
+    "Infrastructure as Code": 4,
+    "Kubernetes": 5,
+    "Load balancing": 4,
+    "PostgreSQL": 2,
+    "Python": 3,
+    "REST API design": 2,
+    "Redis": 1,
+    "Serverless": 3,
+    "Terraform": 5
   },
-  "text": "# Real-Time Data Processor  \nA system for streamlining data ingestion and transformation workflows with Python and AWS Lambda, optimized for startup scalability.  \n\n---\n\n## Badges  \n[![Build Status](https://github.com/your-username/real-time-data-processor/actions/workflows/build.yml/badge.svg)](https://github.com/your-username/real-time-data-processor/actions/workflows/build.yml)  \n\n---\n\n## Getting Started / Installation  \n1. Install AWS CLI and configure credentials  \n2. Set up Python 3.9+ environment  \n3. Deploy Lambda function via AWS Console or CLI  \n4. Configure S3 bucket triggers for data ingestion  \n\n---\n\n## Tech Stack  \n- **Python 3.9**: Core logic and data transformation  \n- **AWS Lambda**: Serverless compute for real-time processing  \n- **Amazon S3**: Data storage and event triggering  \n- **CloudWatch Logs**: Monitoring and debugging  \n\n---\n\n## Architecture / Design  \nThe system ingests data via S3 bucket events, processes it in Lambda functions, and outputs results to designated storage. Key decisions:  \n- Python’s asyncio for non-blocking I/O operations  \n- Lambda’s cold start mitigation via provisioned concurrency  \n- Modular design for easy integration with third-party APIs  \n\n---\n\n## Usage / Examples  \n```python  \n# Sample Lambda handler for JSON data processing  \ndef lambda_handler(event, context):  \n    for record in event['Records']:  \n        payload = json.loads(record['body'])  \n        processed_data = transform_data(payload)  \n        save_to_database(processed_data)  \n    return {'statusCode': 200}  \n```  \nTrigger this function via S3 object creation events.  \n\n---\n\n## Testing  \n- **Unit tests**: Validate data transformation logic with pytest  \n- **Integration tests**: Simulate S3 events and verify Lambda responses  \n- CI/CD pipeline: Automates testing on PRs and deploys to staging  \n\n---\n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
+  "text": "# Real-Time Inventory Sync for E-Commerce  \nA decentralized synchronization framework for real-time inventory visibility across distributed e-commerce systems, ensuring zero overselling and sub-second updates via event-driven architecture.  \n\n[![CI/CD Status](https://img.shields.io/endpoint?url=https://actions-badge-cache-prod.githubusercontent.com/v4/badges/462722967-3e856100aa8f515d370e124e768854d0584610a5854a326d6f5f6267d98c1282)](https://github.com/danielnakamura/realtime-inventory/actions)  \n[![Dependency Status](https://img.shields.io/david/danielnakamura/realtime-inventory)](https://david-dm.org/danielnakamura/realtime-inventory)  \n[![License](https://img.shields.io/npm/l/express)](https://github.com/danielnakamura/realtime-inventory/blob/main/LICENSE)  \n\n## License  \nMIT License — see [LICENSE](https://github.com/danielnakamura/realtime-inventory/blob/main/LICENSE) for full details.  \n\n## Tech Stack  \n- **AWS**: Lambda, DynamoDB, API Gateway, CloudFront  \n- **Kubernetes**: Helm charts for container orchestration  \n- **Terraform**: IaC for VPC, IAM, and autoscaling groups  \n- **Python**: Core logic for inventory validation and reconciliation  \n- **PostgreSQL**: Secondary storage for historical inventory audits (minimal footprint)  \n- **Serverless**: Event-driven triggers for stock updates and notifications  \n- **GitLab CI**: Pipeline for artifact validation and integration testing  \n\n## Architecture / Design  \nThe system decouples inventory updates into three layers:  \n1. **Event Source**: Lambda functions process webhook payloads from retail systems, validating against rate limits and schema constraints.  \n2. **State Engine**: A PostgreSQL-backed write-ahead log ensures auditability while DynamoDB handles low-latency updates.  \n3. **Distribution Layer**: CloudFront proxies real-time data to microservices, with Kubernetes managing horizontal scaling during peak traffic.  \n\nLoad balancing is optimized via AWS Application Load Balancer, reducing latency by 42% compared to previous monolithic designs. Cloud cost optimization leverages spot instances for batch reconciliation tasks, cutting compute costs by 30% without sacrificing SLA.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/danielnakamura/realtime-inventory.git  \ncd realtime-inventory  \nterraform init && terraform apply --auto-approve  \n```  \nEnsure AWS credentials are configured via `~/.aws/credentials` and GitLab CI variables are set for Terraform secrets.  \n\n## Usage / Examples  \n```bash  \n# Trigger manual inventory sync  \ncurl -X POST https://api.example.com/sync --data '{\"sku\": \"ABC123\", \"quantity\": 50}'  \n\n# Query current stock  \ncurl https://api.example.com/inventory/ABC123  \n```  \nThe system supports WebSockets for bi-directional updates, ideal for real-time dashboards.  \n\n## Contributing  \nContributions require AWS and Terraform proficiency. All pull requests must include:  \n1. Unit tests for Lambda functions  \n2. Cost impact analysis for new resources  \n3. Kubernetes deployment manifests for multi-environment support  \n4. Documentation updates for the event schema and API endpoints  \n\nThis project is a production-grade solution with measurable impact on inventory accuracy and system scalability."
 }

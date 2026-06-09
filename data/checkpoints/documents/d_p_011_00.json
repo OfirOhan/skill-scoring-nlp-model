@@ -3,22 +3,23 @@
   "type": "cv",
   "persona_id": "p_011",
   "hyperparams": {
-    "cv_format": "bullet-heavy",
-    "geographic_convention": "Israel",
-    "company_type": "FAANG",
-    "company_size": "large (500+)"
+    "cv_format": "paragraph",
+    "geographic_convention": "US",
+    "company_type": "enterprise",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "AWS": 1,
-    "GCP": 1,
-    "Kubernetes": 1,
-    "LLMs/Prompt engineering": 1,
-    "MLOps": 1,
-    "Model deployment": 1,
-    "NLP": 1,
-    "PyTorch": 1,
-    "TensorFlow": 1,
-    "Terraform": 1
+    "AWS": 4,
+    "CI/CD pipelines": 3,
+    "Chaos engineering": 1,
+    "Go": 4,
+    "Jenkins": 2,
+    "Linux administration": 3,
+    "Microservices architecture": 5,
+    "Monitoring & alerting": 3,
+    "PostgreSQL": 5,
+    "Python": 5,
+    "REST API design": 5
   },
-  "text": "Cedric Blanc  \nTel Aviv, Israel | +972 54 321 6789 | cedric.blanc@neuralogic.ai | linkedin.com/in/cedricblanc  \n\n**Professional Experience / Work History**  \n*NeuraLogic Consulting* | Staff ML Engineer (2021–Present)  \n- Spearheaded the design of scalable AI architectures for 50+ enterprise clients, achieving a 30% reduction in model inference latency across high-volume applications.  \n- Led the integration of advanced anomaly detection systems into real-time data pipelines, improving operational efficiency by 22% for financial services clients.  \n- Collaborated with cross-functional teams to deploy production-grade machine learning models, ensuring compliance with strict data governance standards.  \n\n*DataVerve Inc.* | Team Lead, AI Solutions (2018–2021)  \n- Oversaw the development of a proprietary recommendation engine that scaled to handle 10 million queries daily, driving a 15% increase in user engagement.  \n- Architectured a distributed system for processing unstructured data, reducing preprocessing time by 40% through optimized parallelization strategies.  \n- Mentored 8+ engineers, fostering a culture of innovation that resulted in 12 internal patents and 3 published research papers.  \n\n*Quantify Systems* | Senior ML Engineer (2015–2018)  \n- Engineered a predictive maintenance model for industrial equipment, cutting unplanned downtime by 28% for automotive clients.  \n- Developed a framework for automated hyperparameter tuning, reducing model training cycles by 35% while maintaining accuracy.  \n- Partnered with data scientists to refine feature engineering pipelines, improving model performance by 18% across multiple domains.  \n\n*NexaTech Startup* | Junior ML Engineer (2011–2015)  \n- Built foundational machine learning models for customer segmentation, achieving a 25% improvement in classification accuracy.  \n- Implemented scalable data processing workflows that enabled the company to handle 500K+ data points per second.  \n- Contributed to the development of a proprietary analytics platform, which became a core product for 12 enterprise clients.  \n\n**Education**  \nMaster of Science in Machine Learning | ETH Zurich | 2017  \n- Thesis: \"Optimizing Non-Convex Optimization in High-Dimensional Spaces\"  \n- Graduated with distinction, ranking in the top 5% of graduates in the program.  \n\n**Technical Skills / Technologies**  \n- Python, C++, Java  \n- Algorithms, data structures, system architecture  \n- Distributed systems, big data technologies  \n- Statistical modeling, optimization techniques  \n- Software engineering best practices, version control (Git)  \n- Cross-platform deployment strategies, CI/CD pipelines  \n\n**Publications**  \n- \"Efficient Parallelization of Gradient Descent for Large-Scale Optimization,\" *Journal of Machine Learning Research* (2020)  \n- \"Adaptive Feature Selection in Noisy Datasets,\" *Proceedings of the International Conference on AI and Data Science* (2019)  \n- \"Scalable Anomaly Detection in Streaming Data,\" *IEEE Transactions on Pattern Analysis and Machine Intelligence* (2018)  \n\n**Certifications**  \n- Certified AI Ethics Professional (AI-Ethics.org)  \n- Advanced Data Science Certification (Coursera, University of Washington)  \n- System Architecture Design Certification (IEEE)  \n\n**Languages**  \n- English (fluent)  \n- Hebrew (native)  \n- French (proficient)"
+  "text": "Yara Haddad  \nSenior Backend Engineer | NexaTech Solutions | San Francisco, CA | yarahaddad@email.com | (415) 555-0198  \n\nTechnical Skills  \nBackend development with a focus on Go, Python, and PostgreSQL. Designed and scaled REST APIs for high-throughput SaaS platforms. Spearheaded microservices architecture migrations, reducing latency by 30% across multiple services. Built and maintained CI/CD pipelines using Jenkins, integrating automated testing for critical paths. Managed Linux-based server environments, optimizing resource allocation for production workloads. Implemented monitoring solutions with Prometheus and Grafana, improving incident response times by 40%. Leveraged AWS services (EC2, RDS, S3) to deploy and scale applications, achieving 99.95% SLA compliance.  \n\nProfessional Experience  \nAt NexaTech Solutions, I led the development of a Go-based microservices platform, consolidating 15 legacy systems into a unified architecture. This effort reduced deployment complexity and improved team onboarding efficiency. I also optimized PostgreSQL query performance for a real-time analytics dashboard, achieving sub-50ms response times under peak load. My work on AWS infrastructure involved designing cost-effective auto-scaling strategies, cutting annual cloud spend by 18% while maintaining high availability.  \n\nPrior to that, I designed a Python-driven API gateway at Aurora Systems, which supported 2M+ requests per day. The solution integrated with internal monitoring tools, enabling proactive issue resolution. I also mentored junior engineers on best practices for REST API design, resulting in a 25% reduction in API-related support tickets.  \n\nAt ScaleFlow SaaS, I contributed to a CI/CD pipeline overhaul, streamlining deployment workflows and reducing release cycles from weeks to days. My role in Linux administration involved setting up secure server environments, which became the foundation for the company’s DevOps practices.  \n\nEducation  \nBachelor of Science in Computer Science | University of Toronto | 2018  \n\nCertifications  \nAWS Certified Developer – Associate | 2022  \nGoogle Cloud Professional Developer Certificate | 2021  \n\nLanguages  \nEnglish (professional), Arabic (fluent)"
 }

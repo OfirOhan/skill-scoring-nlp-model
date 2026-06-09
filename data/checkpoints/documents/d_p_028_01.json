@@ -5,20 +5,19 @@
   "hyperparams": {
     "project_scale": "academic",
     "project_team_size": "solo",
-    "jargon_density": "moderate"
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
     "AWS": 3,
-    "ArgoCD": 4,
-    "CI/CD pipelines": 4,
-    "Cloud cost optimization": 2,
-    "Docker": 4,
-    "GitHub Actions": 4,
-    "Jenkins": 2,
-    "Kubernetes": 4,
-    "Monitoring & alerting": 3,
-    "Prometheus/Grafana": 3,
-    "Terraform": 4
+    "Apache Airflow": 4,
+    "Apache Kafka": 1,
+    "Apache Spark": 4,
+    "Data warehousing": 4,
+    "ETL pipeline design": 4,
+    "GCP": 1,
+    "Python": 1,
+    "Terraform": 1,
+    "dbt": 4
   },
-  "text": "# Cloud-Native CI/CD Pipeline Automation  \nAutomate infrastructure provisioning, deployment, and monitoring for cloud-native apps using Kubernetes, Terraform, and GitHub Actions.  \n\n[![GitHub Actions Status](https://github.com/mayajohal/ci-cd-pipeline/actions/workflows/build.yml/badge.svg)](https://github.com/mayajohal/ci-cd-pipeline/actions/workflows/build.yml)  \n[![Terraform](https://img.shields.io/badge/Terraform-7.0-blue.svg)](https://www.terraform.io)  \n[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  \n\n## Tech Stack / Built With  \n- **Infrastructure as Code**: Terraform (v1.5+)  \n- **CI/CD**: GitHub Actions (v2.2+)  \n- **Containerization**: Docker (v20.10+)  \n- **Orchestration**: Kubernetes (v1.25+)  \n- **GitOps**: ArgoCD (v2.8+)  \n- **Monitoring**: Prometheus + Grafana  \n- **Cloud**: AWS (EC2, EKS, S3)  \n\n## Architecture / Design  \nThe pipeline integrates GitHub Actions for code builds, Terraform for infrastructure provisioning, and Kubernetes for container orchestration. ArgoCD syncs Git repositories with cluster state, while Prometheus/Grafana provide real-time metrics. AWS resources are managed via Terraform modules, with cost optimization baked into resource tagging and autoscaling policies.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/mayajohal/ci-cd-pipeline.git`  \n2. Install Docker and Terraform.  \n3. Configure AWS credentials via `~/.aws/credentials` or environment variables.  \n4. Run `terraform init` to initialize Terraform modules.  \n\n## Usage / Examples  \nDeploy a sample app:  \n```bash  \nterraform apply -var-file=terraform.vars  \nkubectl apply -f k8s/deployment.yaml  \n```\nTrigger a GitHub Actions workflow:  \n```bash  \ngh workflow run build.yml -R mayajohal/ci-cd-pipeline  \n```  \n\n## Configuration  \n- **Terraform**: Customize AWS region and instance types in `terraform.vars`.  \n- **GitHub Actions**: Modify workflows in `.github/workflows/` for custom build steps.  \n- **Monitoring**: Configure Prometheus scrape targets in `prometheus.yml`.  \n\n## Deployment  \n1. Use Terraform to deploy AWS EKS clusters and storage.  \n2. GitHub Actions handles CI/CD for Docker image builds and Kubernetes deployments.  \n3. ArgoCD synchronizes Git commits with cluster manifests, ensuring zero-downtime updates.  \n4. Prometheus/Grafana track resource usage and alert on anomalies.  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
+  "text": "# NexaCloud Data Pipeline Optimization  \nA modular framework for refining ETL workflows in SaaS environments, leveraging AWS services and Apache Airflow to enhance throughput and reduce latency in data pipeline operations.  \n\n## Getting Started / Installation  \nClone the repository and configure AWS credentials via environment variables. Ensure AWS CLI is installed and authenticated. Deploy Airflow DAGs using the provided `requirements.txt` and `dags/` directory structure. For local testing, use Docker Compose to spin up Airflow and Redshift-compatible databases.  \n\n## Tech Stack  \n- **AWS Services**: S3 for raw data storage, Redshift for analytics warehousing, Lambda for serverless ETL tasks, and CloudWatch for monitoring  \n- **Orchestration**: Apache Airflow with dynamic DAG generation for scalable pipeline management  \n- **Processing**: Apache Spark for distributed data transformation and aggregation  \n- **Data Modeling**: dbt for semantic layer development and lineage tracking  \n- **Monitoring**: Prometheus + Grafana for real-time pipeline health metrics  \n\n## Usage / Examples  \nThe pipeline ingests unstructured logs from S3, processes them via Spark into structured formats, and loads results into Redshift. dbt models then aggregate data for business intelligence. Example DAGs demonstrate:  \n1. Batch processing of 10TB+ datasets with Spark partitions  \n2. Incremental ETL workflows using Redshift's UNLOAD command  \n3. dbt model validation against schema drift detection rules  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/last-commit/beatrizlopes/nexacloud)](https://github.com/beatrizlopes/nexacloud/commits/main)  \n[![Build Status](https://img.shields.io/endpoint?url=https%3A%2F%2Factions-badge.genie.io%2Fbeatrizlopes%2Fnexacloud%2Fmain)](https://github.com/beatrizlopes/nexacloud/actions)  \n[![AWS](https://img.shields.io/badge/AWS-Optimized-4285F4)](https://aws.amazon.com/)  \n\n## Architecture / Design  \nThe system decouples data ingestion, transformation, and analytics layers. Airflow DAGs dynamically schedule Spark jobs based on S3 bucket event triggers. Redshift tables are schema-validated against dbt models, with lineage metadata stored in a central metadata store. Lambda functions handle schema drift detection and trigger pipeline reruns when anomalies are detected.  \n\n## Contributing  \nThis project is a personal academic endeavor, but contributions to documentation or test cases are welcome. Proposals for new pipeline patterns or AWS service integrations should align with the core principles of modularity and operational resilience.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details."
 }

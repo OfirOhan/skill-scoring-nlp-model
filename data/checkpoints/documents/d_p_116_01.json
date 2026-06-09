@@ -1,22 +1,19 @@
 {
   "doc_id": "d_p_116_01",
-  "type": "blog",
+  "type": "linkedin",
   "persona_id": "p_116",
   "hyperparams": {
-    "blog_depth": "opinion-piece",
-    "jargon_density": "plain"
+    "linkedin_completeness": "standard"
   },
   "skill_evidence": {
-    "AWS": 2,
-    "CI/CD pipelines": 2,
-    "Cloud cost optimization": 1,
-    "Go": 3,
-    "Kubernetes": 3,
-    "Microservices architecture": 4,
-    "PostgreSQL": 1,
-    "Python": 4,
-    "REST API design": 4,
-    "Terraform": 1
+    "Firmware development": 3,
+    "IoT protocols (MQTT/CoAP)": 3,
+    "Network troubleshooting": 2,
+    "Python": 2,
+    "REST API design": 2,
+    "RTOS": 3,
+    "Sensor integration": 3,
+    "Shell scripting (Bash)": 1
   },
-  "text": "Securing Microservices with OAuth2: Best Practices for Cybersecurity Engineers  \n\nLast week, a breach at a fintech startup exposed 1.2M user records. The culprit? A misconfigured OAuth2 token validator in their microservices architecture. This isn’t an outlier. As microservices adoption hits 78% in enterprise environments, the attack surface for OAuth2 misconfigurations has expanded.  \n\nOAuth2 remains the gold standard for securing distributed systems, but its complexity demands rigorous implementation. In cybersecurity, where threats evolve faster than code reviews, even minor oversights in token validation or scope management can lead to catastrophic breaches. My team at a mid-sized cybersecurity firm recently slashed incident response times by 40% after enforcing strict OAuth2 compliance across our microservices.  \n\nAt the core of secure OAuth2 implementation is token validation. JWTs must be verified against trusted issuers, and token lifetimes should be capped at 15 minutes for client-side apps. We’ve seen 62% of breaches involving stolen tokens when lifetimes exceed 30 minutes. For service-to-service communication, using Kubernetes-based service meshes with mTLS ensures tokens are validated at the ingress layer. Python’s PyJWT library, combined with Redis for rate limiting, has become a staple in our pipeline.  \n\nBenchmarking our approach against NIST guidelines, we achieved a 92% reduction in unauthorized access attempts after implementing dynamic scope validation. This involved integrating Python-based policy engines that reject tokens lacking specific scopes during API calls. Kubernetes pods running these policies processed 12K requests/sec with <50ms latency, proving scalability isn’t mutually exclusive with security.  \n\nKey takeaways: Prioritize token lifetime caps, validate scopes dynamically, and use language-agnostic tools for policy enforcement. Metrics matter—track token expiration rates and failed validation attempts to identify weak points.  \n\nFor deeper dives, check the OAuth2.0 spec, the 2023 OWASP Top Ten report, and our internal benchmarking docs. Real-world adoption of these practices isn’t just best practice—it’s a non-negotiable layer in modern cybersecurity."
+  "text": "#EmbeddedSystemsConsultant  \nFiona MacLeod is an embedded systems consultant at NexaTech Solutions, bridging hardware and software to solve real-world challenges. With a focus on firmware development, she collaborates with teams to create reliable, scalable solutions for IoT devices.  \n\nSkills: IoT protocols (MQTT/CoAP), RTOS integration, sensor data pipelines, and REST API frameworks. Comfortable troubleshooting network latency issues and automating workflows with Python.  \n\nCurrently, Fiona is optimizing firmware for low-power sensors in smart agriculture projects, ensuring seamless communication across edge devices. She’s also working on a custom RTOS for industrial automation, prioritizing real-time performance without sacrificing flexibility.  \n\nWhen not coding, Fiona enjoys hiking and experimenting with open-source hardware. She’s always looking for ways to simplify complex systems—because good engineering isn’t about complexity, it’s about clarity.  \n\nLet’s connect if you’re building the future, one line of code at a time."
 }

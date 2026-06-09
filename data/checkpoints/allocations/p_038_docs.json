@@ -1,27 +1,52 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Ricardo Almeida's experience as a Senior Full-Stack Developer in the SaaS industry",
-    "title": "Ricardo Almeida - Senior Full-Stack Developer",
+    "topic_summary": "A concise overview of Jasmine Kaur's Machine Learning Engineer career, highlighting her enterprise experience and technical expertise.",
+    "title": "Jasmine Kaur - Machine Learning Engineer CV",
     "doc_id": "d_p_038_00",
     "persona_id": "p_038",
     "hyperparams": {
-      "cv_format": "hybrid",
+      "cv_format": "paragraph",
       "geographic_convention": "India",
-      "company_type": "academic",
-      "company_size": "large (500+)"
+      "company_type": "enterprise",
+      "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A GitHub project README for a full-stack SaaS platform developed by Ricardo Almeida",
-    "title": "NexaCloud Management Dashboard",
+    "topic_summary": "A machine learning project focused on predictive maintenance for industrial equipment using time-series analysis.",
+    "title": "Industrial Predictive Maintenance System",
     "doc_id": "d_p_038_01",
     "persona_id": "p_038",
     "hyperparams": {
-      "project_scale": "team-internal",
+      "project_scale": "production",
       "project_team_size": "medium (5-15)",
-      "jargon_density": "moderate"
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A fraud detection system for financial transactions using anomaly detection algorithms in enterprise banking.",
+    "title": "Enterprise Financial Fraud Detection",
+    "doc_id": "d_p_038_02",
+    "persona_id": "p_038",
+    "hyperparams": {
+      "project_scale": "hobby",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation from a senior data science manager praising Jasmine's contributions to critical ML projects at NexGen Technologies.",
+    "title": "Recommendation from Senior Data Science Manager",
+    "doc_id": "d_p_038_03",
+    "persona_id": "p_038",
+    "hyperparams": {
+      "recommender_role": "peer",
+      "recommender_closeness": "brief",
+      "company_type": "academic",
+      "company_size": "small (<50)"
     }
   }
 ]

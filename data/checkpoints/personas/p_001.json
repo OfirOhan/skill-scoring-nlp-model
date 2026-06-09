@@ -1,54 +1,58 @@
 {
   "persona_id": "p_001",
   "hyperparams": {
-    "archetype": "product_manager",
-    "years_experience": 14,
-    "seniority": "staff",
-    "industry": "fintech",
-    "writing_style": "neutral",
+    "archetype": "fullstack_developer",
+    "years_experience": 6,
+    "seniority": "senior",
+    "industry": "healthtech",
+    "writing_style": "verbose",
     "language_fluency": "native",
-    "self_promotion_level": "boastful",
+    "self_promotion_level": "balanced",
     "quantification_tendency": "mixed"
   },
-  "name": "Nathan Brooks",
-  "current_role": "Staff Product Manager",
-  "company": "CapitalFlow Solutions",
+  "name": "Femi Akinlade",
+  "current_role": "Senior Full-Stack Developer",
+  "company": "MedTech Innovations",
   "education": {
-    "degree": "Master of Business Administration (MBA)",
-    "university": "Wharton School",
-    "year": 2010
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "University of Lagos",
+    "year": 2016
   },
   "career_trajectory": [
     {
-      "role": "Product Analyst",
-      "company": "PayNet Financial",
-      "duration": "2008-2010"
+      "year": 2018,
+      "position": "Junior Full-Stack Developer",
+      "company": "HealthPulse Solutions",
+      "summary": "Focused on building patient management dashboards using Python and React, with exposure to REST API design."
     },
     {
-      "role": "Product Manager",
-      "company": "FinTech Innovators",
-      "duration": "2010-2013"
+      "year": 2020,
+      "position": "Mid-Level Developer",
+      "company": "CareLink Technologies",
+      "summary": "Led the migration of monolithic applications to microservices architecture using Node.js and PostgreSQL, while improving frontend performance with React."
     },
     {
-      "role": "Senior Product Manager",
-      "company": "GlobalPay Systems",
-      "duration": "2013-2016"
-    },
-    {
-      "role": "Staff Product Manager",
-      "company": "CapitalFlow Solutions",
-      "duration": "2016-present"
+      "year": 2022,
+      "position": "Senior Developer",
+      "company": "VitalHealth Systems",
+      "summary": "Architected a real-time telemedicine platform using Go, Redis, and GraphQL, while mentoring junior engineers in full-stack workflows."
     }
   ],
   "skills": {
-    "Product management": 5,
-    "Stakeholder management": 4,
-    "Roadmap planning": 4,
-    "Competitive analysis": 4,
-    "SQL analytics": 4,
-    "Data visualization": 4,
-    "A/B testing": 4,
-    "Hypothesis testing": 4
+    "Python": 4,
+    "Node.js": 4,
+    "React": 4,
+    "TypeScript": 4,
+    "REST API design": 4,
+    "Microservices architecture": 4,
+    "PostgreSQL": 4,
+    "MongoDB": 4,
+    "AWS": 3,
+    "Docker": 3,
+    "Kubernetes": 1,
+    "GCP": 2,
+    "Web performance optimization": 3,
+    "CI/CD pipelines": 2
   },
   "document_ids": [
     "d_p_001_00",

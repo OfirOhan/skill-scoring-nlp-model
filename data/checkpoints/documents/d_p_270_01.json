@@ -3,20 +3,26 @@
   "type": "project_readme",
   "persona_id": "p_270",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "large (15+)",
-    "jargon_density": "heavy"
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "A/B testing": 2,
-    "Cross-team collaboration": 1,
-    "Data visualization": 2,
-    "Product management": 2,
-    "Roadmap planning": 1,
-    "SQL analytics": 3,
-    "Stakeholder management": 1,
-    "UX research": 1,
-    "User journey mapping": 1
+    "AWS": 2,
+    "CI/CD pipelines": 3,
+    "Chaos engineering": 3,
+    "Cloud cost optimization": 1,
+    "Docker": 1,
+    "ELK": 1,
+    "GCP": 1,
+    "Infrastructure as Code": 1,
+    "Kubernetes": 3,
+    "Load balancing": 3,
+    "Monitoring & alerting": 5,
+    "Prometheus/Grafana": 5,
+    "Python": 1,
+    "SLA/SLO management": 3,
+    "Terraform": 1
   },
-  "text": "# SecureShield Threat Detection Platform  \nA real-time, machine learning-driven system for identifying and mitigating cyber threats at scale. Designed for enterprise-grade deployment, it integrates with SIEM and SOAR platforms to automate response workflows. The platform processes terabytes of network telemetry, leveraging adversarial machine learning models to detect zero-day exploits and advanced persistent threats.  \n\n## Configuration  \nInitialize the system using environment variables for cloud provider credentials (AWS/GCP) and database connections. Configure the ingestion pipeline via `config/ingestion.yaml` to define data sources and sampling rates. Enable model retraining schedules via `scheduler.py` and set alert thresholds in `rules/production_rules.json`.  \n\n## Getting Started  \n1. Install Docker and Kubernetes (minikube or EKS)  \n2. Pull base images: `docker pull secureshield/base:latest`  \n3. Deploy via `kubectl apply -f k8s/deployment.yaml`  \n4. Initialize the PostgreSQL cluster using `init_db.sh`  \n5. Load pre-trained models with `model_loader.py --force`  \n\n## Usage / Examples  \n- Run real-time analysis: `python3 detect.py --stream /var/log/syslog`  \n- Integrate with SIEM: Use the REST API at `/api/v1/alerts` to push structured logs  \n- Test adversarial patterns: `python3 stress_test.py --attack-type evasion`  \n- Monitor metrics: Access Grafana dashboard at `http://localhost:3000`  \n\n## Tech Stack  \n- **ML Frameworks**: TensorFlow 2.x, PyTorch 1.13 (with ONNX for model optimization)  \n- **Cloud**: AWS Lambda for event processing, GCP BigQuery for historical analysis  \n- **DB**: PostgreSQL 14 (timeseries extension), Redis 7 (in-memory caching)  \n- **Tools**: ELK Stack (for log aggregation), Kibana (for dashboarding)  \n\n## Architecture / Design  \nThe system operates as a microservices layer with event-driven architecture. Network telemetry is ingested via Kafka brokers, processed by distributed ML workers, and scored against a ensemble of anomaly detection models. Alerts are routed through a rule engine to SOAR platforms, with fallback to human-in-the-loop review via a web interface.  \n\n## License  \nMIT License (see `LICENSE` for full text)  \n\n## Badges  \n[Real-Time Detection](#) · [ML-Driven](#) · [Enterprise-Grade](#) · [Zero-Day Ready](#)"
+  "text": "# GlobalTech Incident Response Framework  \nA scalable, distributed system for automating incident detection, triage, and resolution across global enterprise infrastructure. Designed for teams requiring rapid response to service degradation, security breaches, and operational failures.  \n\n## Badges  \n[![Incident Response](https://img.shields.io/badge/Incident%20Response-automated-blue)](https://example.com)  \n[![Monitoring](https://img.shields.io/badge/Monitoring-Prometheus%20%26%20Grafana-yellow)](https://example.com)  \n[![Kubernetes](https://img.shields.io/badge/Kubernetes-orchestrated-green)](https://example.com)  \n\n## Tech Stack  \n- **Monitoring**: Prometheus + Grafana (centralized metrics collection and visualization)  \n- **Orchestration**: Kubernetes (containerized agent deployment and scaling)  \n- **Load Balancing**: NGINX Plus (traffic routing during incident escalation)  \n- **CI/CD**: GitHub Actions (automated playbook testing and dependency updates)  \n- **Chaos Engineering**: Chaos Monkey (stress-testing resilience in production)  \n- **Cloud**: AWS (EC2 for agent nodes, S3 for playbook storage)  \n\n## Architecture / Design  \nThe framework operates as a centralized control plane with distributed agents. Core components include:  \n- **Incident Detector**: Aggregates alerts from Prometheus and third-party tools, applying custom rules for false positive filtering.  \n- **Response Orchestrator**: Triggers workflows via Kubernetes Jobs, prioritizing critical SLA/SLO violations.  \n- **Post-Incident Analysis**: Stores structured logs in Elasticsearch (though not explicitly mentioned here) for root cause analysis.  \n- **Chaos Injector**: Integrates with Chaos Monkey to simulate outages and validate recovery processes.  \nLoad balancers dynamically reroute traffic during outages, while Prometheus ensures real-time visibility into system health.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/GlobalTech/ir-framework.git`  \n2. Configure AWS credentials via environment variables (`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`).  \n3. Deploy Prometheus and Grafana using Helm charts (preconfigured for AWS EKS).  \n4. Run `make build` to compile the control plane binary.  \n5. Deploy agents to EC2 instances using Kubernetes manifests.  \n\n## Usage / Examples  \n- **Automated Triage**: `irctl trigger --incident-id 12345 --severity critical`  \n- **Monitoring**: Navigate Grafana dashboards to track incident resolution timelines.  \n- **Chaos Testing**: `chaosmonkey inject --duration 30s --target service-abc`  \n- **SLA Reporting**: Query Prometheus for 99.9% uptime metrics across regions.  \n\n## Contributing  \nPull requests are welcome! Focus on improving playbooks, refining alert thresholds, or enhancing chaos testing scenarios. Ensure all changes align with team standards for observability and operational hygiene.  \n\n## License  \nMIT License (see [LICENSE](LICENSE) for details)."
 }

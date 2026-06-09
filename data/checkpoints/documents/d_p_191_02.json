@@ -4,20 +4,22 @@
   "persona_id": "p_191",
   "hyperparams": {
     "project_scale": "academic",
-    "project_team_size": "large (15+)",
-    "jargon_density": "moderate"
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Application security (OWASP)": 2,
-    "Compliance (SOC2/GDPR)": 3,
-    "Encryption & PKI": 5,
-    "IAM/Access control": 3,
-    "Network security": 2,
-    "Penetration testing": 2,
-    "SIEM tools": 2,
-    "Security auditing": 2,
-    "Threat modeling": 2,
-    "Vulnerability management": 2
+    "CI/CD pipelines": 1,
+    "Kubernetes": 1,
+    "Terraform": 1,
+    "Prometheus/Grafana": 1,
+    "Incident management": 1,
+    "SLA/SLO management": 1,
+    "Cloud cost optimization": 1,
+    "Python": 1,
+    "PostgreSQL": 1,
+    "Load balancing": 1,
+    "Network automation": 1,
+    "Redis": 1
   },
-  "text": "# Secure Communication Protocols for IoT Devices  \n\nA production-grade implementation of lightweight, TLS-encrypted communication frameworks designed to reduce IoT data breach risks by 72% in edge-to-cloud scenarios. The project integrates hardware-backed key management and zero-touch provisioning to address common vulnerabilities in distributed IoT ecosystems.  \n\n## Deployment  \nTargeted for deployment on edge gateways (e.g., NVIDIA Jetson) and cloud platforms (AWS IoT Greengrass, Azure IoT Hub). Includes CI/CD pipelines with automated compliance checks for SOC2 and GDPR standards. Zero-touch provisioning reduces onboarding latency by 40% compared to legacy TLS implementations.  \n\n## Getting Started / Installation  \nClone the repository using `git clone https://github.com/your-username/secure-iot-protocols.git`. Install dependencies via `npm install` or `pip install -r requirements.txt`. For hardware integration, use the provided Dockerfile to containerize TLS service modules. Ensure TLS 1.3 support is enabled in your runtime environment.  \n\n## Usage / Examples  \n- **Secure Device Enrollment**: Use the `enroll_device.sh` script to generate X.509 certificates with hardware-backed HSMs.  \n- **Data Transmission**: Monitor encrypted MQTT traffic via `tcpdump -i eth0 -s0 -w capture.pcap` and verify TLS handshake metrics using Wireshark.  \n- **Key Rotation**: Automate key refresh via the `rotate_keys.py` script, which leverages RFC 8017-compliant PKCS#1 v1.5 padding.  \n\n## Tech Stack  \n- **Security**: OpenSSL 3.0, AWS KMS, Let's Encrypt (ACMEv2)  \n- **Networking**: MQTT over TLS 1.3, DTLS 1.2, QUIC (draft-24)  \n- **DevOps**: Terraform, Ansible, Prometheus + Grafana for TLS performance monitoring  \n- **Hardware**: STM32-based microcontrollers, Raspberry Pi 4 (edge node)  \n\n## Architecture / Design  \nThe architecture prioritizes minimal resource usage while maintaining FIPS 140-2 compliance. Core components include:  \n1. **Lightweight TLS Layer**: Custom OpenSSL fork optimized for 8-bit MCUs (≤150KB RAM).  \n2. **Mutual Authentication**: Device-side certificate validation with OCSP stapling to reduce round-trip latency by 25%.  \n3. **Key Management**: Hybrid approach combining HSMs for sensitive keys and AES-256-GCM for in-transit data.  \n4. **Compliance Integration**: Preconfigured SOC2 audit logs and GDPR data minimization policies.  \n\n## License  \nMIT License (https://github.com/your-username/secure-iot-protocols/blob/main/LICENSE)  \n\n## Badges  \n[![Build Status](https://github.com/your-username/secure-iot-protocols/actions/workflows/build.yml/badge.svg)](https://github.com/your-username/secure-iot-protocols/actions/workflows/build.yml)  \n[![Security Score](https://security-scorecard.github.io/secure-iot-protocols.svg)](https://security-scorecard.github.io/secure-iot-protocols)  \n[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/your-username/secure-iot-protocols/blob/main/LICENSE)"
+  "text": "# CloudInfraPro  \nA modular framework for implementing infrastructure-as-code (IaC) in cloud-native environments, emphasizing declarative configuration management and cross-cloud compatibility. This project leverages AWS CloudFormation and Azure Bicep to standardize resource provisioning across hybrid environments, achieving 30% faster deployment times compared to traditional imperative approaches in academic benchmarks.  \n\n## Testing  \nAutomated validation pipelines ensure compliance with infrastructure governance standards. Unit tests verify template syntax integrity using AWS CloudFormation Validate and Azure Bicep Test, achieving 98% test coverage. Integration tests simulate cross-cloud resource orchestration, with 15% faster validation cycles achieved through parallelized template execution. All tests are integrated into a GitOps workflow, ensuring drift detection and remediation within 2.3 seconds of configuration changes.  \n\n## Getting Started  \nPrerequisites: AWS CLI v2 (configured with IAM roles), Azure CLI (version 2.42+), and a Git client with SSH support.  \n1. Clone the repository using `git clone https://github.com/your-username/CloudInfraPro.git`  \n2. Navigate to the `templates` directory and execute `./init.sh` to generate environment-specific parameter files  \n3. Deploy a baseline infrastructure using `./deploy.sh --env dev` which initializes VPCs, IAM roles, and network security groups with 99.95% resource provisioning success rate  \n\n## Usage  \nExample: Deploy a microservices architecture with three-tiered networking  \n```bash\n./deploy.sh --env staging --services front-end,api,db --networking hybrid\n```  \nThis command provisions AWS EC2 instances, Azure App Services, and cross-cloud load balancers, reducing configuration errors by 40% through automated dependency resolution. The framework supports parameterized resource scaling, enabling dynamic adjustment of instance counts based on real-time metrics.  \n\n## Tech Stack  \n- AWS CloudFormation (v2.4+)  \n- Azure Bicep (v0.4.1200)  \n- JSON/YAML hybrid syntax for cross-cloud compatibility  \n- Git-based version control with semantic commit conventions  \n\n## Architecture  \nThe framework employs a layered architecture with three distinct modules:  \n1. **Declaration Layer**: Declarative templates defining resource relationships  \n2. **Validation Layer**: Real-time syntax and policy checks during deployment  \n3. **Orchestration Layer**: Cross-cloud resource coordination via REST API integrations  \nAll components are designed for horizontal scaling, with 85% reduction in deployment latency achieved through asynchronous resource provisioning.  \n\n## License  \nMIT License (see LICENSE file)  \n\n## Contributing  \nPropose changes via pull requests targeting the `main` branch. All contributions must include:  \n- Unit tests for new templates  \n- Documentation updates for cross-cloud compatibility  \n- Performance benchmarks comparing existing vs. proposed implementations  \nFollow the semantic commit conventions outlined in the CONTRIBUTING.md file for consistent change tracking."
 }

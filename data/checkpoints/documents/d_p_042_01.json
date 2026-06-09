@@ -3,23 +3,24 @@
   "type": "project_readme",
   "persona_id": "p_042",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "small (2-4)",
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "A/B testing": 3,
-    "Agile/Scrum": 3,
-    "Analytics-driven product decisions": 3,
-    "Competitive analysis": 1,
-    "Data visualization (Plotly)": 3,
-    "Hypothesis testing": 3,
-    "Product management": 2,
-    "Roadmap planning": 1,
-    "SQL analytics": 3,
-    "Stakeholder management": 1,
-    "Tableau/Power BI": 1,
-    "UX research": 1
+    "Application security (OWASP)": 4,
+    "DNS/DHCP": 1,
+    "Encryption & PKI": 4,
+    "Firewall configuration": 3,
+    "IAM/Access control": 4,
+    "Network automation": 1,
+    "Network security": 3,
+    "Penetration testing": 3,
+    "SDN": 1,
+    "Security auditing": 3,
+    "TCP/IP": 2,
+    "Vulnerability management": 4,
+    "Wireless networking": 1
   },
-  "text": "# AdInsight: Real-Time Ad Performance Analytics Dashboard  \nA tool for monitoring and optimizing ad campaigns with low-latency metrics, built for adtech teams requiring granular insights and A/B testing capabilities.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/last-commit/hugoramirez/AdInsight)](https://github.com/hugoramirez/AdInsight/commits/main)  \n[![CI/CD](https://img.shields.io/github/actions/workflow/ci/AdInsight.yml)](https://github.com/hugoramirez/AdInsight/actions)  \n[![Python](https://img.shields.io/badge/python-3.9-blue)](https://github.com/hugoramirez/AdInsight)  \n\n## Getting Started / Installation  \n1. Install Node.js (18+) and Python (3.9+).  \n2. Clone the repo: `git clone https://github.com/hugoramirez/AdInsight.git`  \n3. Set up virtual environments:  \n   ```bash  \n   cd backend && python -m venv venv && source venv/bin/activate  \n   cd frontend && npm install  \n   ```  \n4. Configure API keys in `.env` (see `config_example.env` for format).  \n5. Run services:  \n   ```bash  \n   # Backend  \n   cd backend && uvicorn main:app --host 0.0.0.0 --port 8000  \n\n   # Frontend  \n   cd frontend && npm run dev  \n   ```  \n\n## Usage / Examples  \n- Access the dashboard at `http://localhost:3000`.  \n- Navigate to **Campaign Metrics** for real-time CTR, CPC, and conversion rates.  \n- Use the **A/B Test Analyzer** to compare variant performance with confidence intervals.  \n- Query raw data via `/api/v1/metrics` (POST with filters for ad IDs, time ranges, etc.).  \n\n## Architecture / Design  \nThe system decouples frontend (React) and backend (FastAPI) for scalability. Data pipelines use Celery for async processing, with PostgreSQL as the primary store. Redis caches aggregated metrics to reduce DB load. A/B testing logic is embedded in the backend, with results streamed to the frontend via WebSocket.  \n\n## Tech Stack / Built With  \n- **Frontend**: React, TypeScript, Plotly.js (for interactive visualizations)  \n- **Backend**: FastAPI, Python, Celery, PostgreSQL  \n- **Infrastructure**: Redis (caching), Docker (local dev)  \n- **Data**: SQL analytics for historical trends, real-time ingestion via Kafka (optional)  \n\n## Roadmap / Future Work  \n- Expand data pipeline to support third-party ad platforms (Meta, TikTok).  \n- Integrate machine learning models for predictive audience segmentation.  \n- Add drill-down capabilities for campaign-level hypothesis testing.  \n\n## Acknowledgments  \nThank the adtech community for insights on metric prioritization. Special thanks to the team for refining the A/B testing workflow.  \n\n## Contributing  \nOpen to feature requests and bug fixes. Prioritize issues labeled \"good-first-issue\" for onboarding. All contributions must include unit tests and adhere to PEP8/ESLint standards."
+  "text": "# SecureAuth: Zero-Trust Authentication Framework  \n\nSecureAuth is a zero-trust authentication framework designed to enforce strict access controls and continuous verification for internal startup workflows. By integrating multi-factor authentication (MFA), dynamic risk scoring, and adaptive policy enforcement, it reduces breach risk by 62% in simulated scenarios. Built for small teams, it prioritizes simplicity without sacrificing cryptographic rigor.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/verafilipovic/secureauth.git  \ncd secureauth  \npip install -r requirements.txt  \nexport SECUREAUTH_CONFIG=/path/to/config.yaml  \npython main.py  \n```  \nEnsure Python 3.9+ is installed. The config file defines trusted domains, token lifetimes, and policy thresholds.  \n\n## Usage / Examples  \n```python  \nfrom secureauth import Authenticator  \nauth = Authenticator()  \n# Verify user via OAuth 2.0 + FIDO2  \nif auth.multi_factor_verify(\"user123\", \"fido2\"):  \n    print(\"Access granted\")  \nelse:  \n    print(\"Access denied\")  \n```  \nExample metrics:  \n- 1.2ms average token validation latency  \n- 99.8% success rate for MFA enrollment  \n- 30% reduction in unauthorized access attempts  \n\n## Badges  \n[![Build Status](https://github.com/verafilipovic/secureauth/actions/workflows/build.yml/badge.svg)](https://github.com/verafilipovic/secureauth/actions/workflows/build.yml)  \n[![Test Coverage](https://img.shields.io/coveralls/verafilipovic/secureauth/main)](https://coveralls.io/github/verafilipovic/secureauth?branch=main)  \n[![Security](https://img.shields.io/github/vulnerabilities/verafilipovic/secureauth)](https://github.com/verafilipovic/secureauth/network/dependabot/security-updates)  \n\n## Tech Stack  \n- Python 3.9 with FastAPI for API endpoints  \n- OAuth 2.0 + OpenID Connect for identity federation  \n- PyJWT for token signing (HS256, RS256)  \n- PostgreSQL with row-level security  \n- LibreSSL for TLS 1.3 compliance  \n\n## Architecture / Design  \nSecureAuth employs a layered architecture:  \n1. **Policy Engine**: Evaluates user context (IP, device, location) against predefined rules  \n2. **Token Validator**: Verifies JWTs with cryptographic signing keys and claims  \n3. **Risk Scoring**: Dynamically adjusts access levels based on threat intelligence feeds  \n4. **Audit Trail**: Logs all authentication events with GDPR-compliant retention policies  \n\nKey design choices include modular plugins for authentication methods and a separation of concerns between policy enforcement and cryptographic operations.  \n\n## Contributing  \nPull requests are welcome! For major changes, please open an issue to discuss the approach.  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
 }

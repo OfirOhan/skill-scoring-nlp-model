@@ -1,51 +1,75 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Chioma Eze's 5 years of QA/Test Engineering experience in e-commerce.",
-    "title": "Chioma Eze - QA/Test Engineer",
+    "topic_summary": "A professional CV highlighting Kenji Mori's 8 years of experience as a Senior Security Engineer in healthtech",
+    "title": "Kenji Mori - Senior Security Engineer",
     "doc_id": "d_p_129_00",
     "persona_id": "p_129",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
-      "geographic_convention": "US",
-      "company_type": "startup",
+      "cv_format": "minimal",
+      "geographic_convention": "Europe",
+      "company_type": "academic",
       "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A GitHub README for an automated testing framework for e-commerce checkout processes.",
-    "title": "Automated Checkout Testing Framework",
+    "topic_summary": "A secure telemedicine platform designed to protect patient data with HIPAA compliance",
+    "title": "HIPAA-Compliant Telemedicine Security Platform",
     "doc_id": "d_p_129_01",
     "persona_id": "p_129",
     "hyperparams": {
+      "project_scale": "team-internal",
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A security framework for IoT-enabled medical devices using zero trust architecture",
+    "title": "IoT Security for Smart Hospital Devices",
+    "doc_id": "d_p_129_02",
+    "persona_id": "p_129",
+    "hyperparams": {
       "project_scale": "production",
-      "project_team_size": "small (2-4)",
+      "project_team_size": "solo",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A health data anonymization system using differential privacy for research compliance",
+    "title": "Health Data Anonymization with Differential Privacy",
+    "doc_id": "d_p_129_03",
+    "persona_id": "p_129",
+    "hyperparams": {
+      "project_scale": "team-internal",
+      "project_team_size": "large (15+)",
       "jargon_density": "moderate"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from her manager praising her technical expertise and leadership in QA.",
-    "title": "Recommendation for Chioma Eze",
-    "doc_id": "d_p_129_02",
+    "topic_summary": "A recommendation from a manager praising Kenji's leadership in security initiatives",
+    "title": "Recommendation from HealthGuard Analytics CTO",
+    "doc_id": "d_p_129_04",
     "persona_id": "p_129",
     "hyperparams": {
       "recommender_role": "peer",
-      "recommender_closeness": "worked-daily",
-      "company_type": "startup",
+      "recommender_closeness": "occasional",
+      "company_type": "FAANG",
       "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "blog",
-    "topic_summary": "A technical blog post on best practices for regression testing in high-traffic e-commerce systems.",
-    "title": "Regression Testing Strategies for E-Commerce Platforms",
-    "doc_id": "d_p_129_03",
+    "topic_summary": "A technical discussion on securing health data amid AI-driven threats in healthcare",
+    "title": "Securing Health Data in the Age of AI: Challenges and Solutions",
+    "doc_id": "d_p_129_05",
     "persona_id": "p_129",
     "hyperparams": {
       "blog_depth": "opinion-piece",
-      "jargon_density": "plain"
+      "jargon_density": "moderate"
     }
   }
 ]

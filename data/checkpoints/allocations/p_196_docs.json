@@ -1,27 +1,50 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "CV for Lucas Martin, a Machine Learning Engineer at HealthAI Innovations in healthtech.",
-    "title": "Lucas Martin - Machine Learning Engineer CV",
+    "topic_summary": "A professional CV highlighting Rabia Yilmaz's experience as a Platform Engineer in consulting, with a focus on cloud infrastructure and automation.",
+    "title": "Rabia Yilmaz - Platform Engineer",
     "doc_id": "d_p_196_00",
     "persona_id": "p_196",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
-      "geographic_convention": "US",
-      "company_type": "FAANG",
+      "cv_format": "hybrid",
+      "geographic_convention": "Europe",
+      "company_type": "enterprise",
       "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A machine learning project focused on predictive analytics for patient readmissions in healthcare.",
-    "title": "HealthPredict: Predictive Analytics for Patient Readmissions",
+    "topic_summary": "A GitHub project README for a cloud infrastructure automation tool using Terraform and Ansible.",
+    "title": "CloudInfraAuto",
     "doc_id": "d_p_196_01",
     "persona_id": "p_196",
     "hyperparams": {
-      "project_scale": "academic",
-      "project_team_size": "small (2-4)",
-      "jargon_density": "heavy"
+      "project_scale": "hobby",
+      "project_team_size": "large (15+)",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A professional recommendation letter from Rabia's manager at CloudNova Solutions, highlighting her technical expertise and leadership in platform engineering.",
+    "title": "Recommendation from Manager",
+    "doc_id": "d_p_196_02",
+    "persona_id": "p_196",
+    "hyperparams": {
+      "recommender_role": "skip-level",
+      "recommender_closeness": "brief",
+      "company_type": "academic",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "linkedin",
+    "topic_summary": "A professional LinkedIn summary highlighting Rabia's experience in platform engineering, cloud solutions, and consulting projects.",
+    "title": "Rabia Yilmaz - Platform Engineer",
+    "doc_id": "d_p_196_03",
+    "persona_id": "p_196",
+    "hyperparams": {
+      "linkedin_completeness": "minimal"
     }
   }
 ]

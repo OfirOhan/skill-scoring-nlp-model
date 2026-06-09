@@ -1,50 +1,64 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Full-Stack Developer with cybersecurity expertise",
-    "title": "Daria Ionescu - Full-Stack Developer",
+    "topic_summary": "A comprehensive CV highlighting Gaurav Saxena's 11 years of experience as a Staff Backend Engineer in fintech, with expertise in scalable backend systems and payment solutions.",
+    "title": "Gaurav Saxena - Staff Backend Engineer",
     "doc_id": "d_p_074_00",
     "persona_id": "p_074",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
-      "geographic_convention": "Europe",
-      "company_type": "startup",
-      "company_size": "mid (50-500)"
+      "cv_format": "paragraph",
+      "geographic_convention": "India",
+      "company_type": "FAANG",
+      "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A full-stack application for secure user authentication with React and Node.js",
-    "title": "Secure Authentication System",
+    "topic_summary": "A README for a secure payment gateway project implementing PCI-DSS compliance and real-time transaction processing.",
+    "title": "SecurePay: End-to-End Payment Gateway",
     "doc_id": "d_p_074_01",
     "persona_id": "p_074",
     "hyperparams": {
       "project_scale": "team-internal",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A README for a real-time fraud detection system using machine learning models to analyze financial transactions.",
+    "title": "RealTimeFraudDetect",
+    "doc_id": "d_p_074_02",
+    "persona_id": "p_074",
+    "hyperparams": {
+      "project_scale": "production",
       "project_team_size": "large (15+)",
       "jargon_density": "moderate"
     }
   },
   {
-    "doc_type": "recommendation",
-    "topic_summary": "Endorsement from her manager at SecuraTech Solutions",
-    "title": "Recommendation for Daria Ionescu",
-    "doc_id": "d_p_074_02",
-    "persona_id": "p_074",
-    "hyperparams": {
-      "recommender_role": "skip-level",
-      "recommender_closeness": "brief",
-      "company_type": "academic",
-      "company_size": "large (500+)"
-    }
-  },
-  {
-    "doc_type": "linkedin",
-    "topic_summary": "Full-Stack Developer specializing in cybersecurity solutions",
-    "title": "About Daria Ionescu",
+    "doc_type": "project_readme",
+    "topic_summary": "A README for a scalable data lake architecture designed to aggregate and process large volumes of financial transaction data.",
+    "title": "FintechDataLake",
     "doc_id": "d_p_074_03",
     "persona_id": "p_074",
     "hyperparams": {
-      "linkedin_completeness": "detailed"
+      "project_scale": "academic",
+      "project_team_size": "large (15+)",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation letter from Gaurav's team lead at FinTech Solutions Inc., highlighting his leadership in backend infrastructure projects.",
+    "title": "Recommendation for Gaurav Saxena",
+    "doc_id": "d_p_074_04",
+    "persona_id": "p_074",
+    "hyperparams": {
+      "recommender_role": "professor",
+      "recommender_closeness": "worked-daily",
+      "company_type": "FAANG",
+      "company_size": "large (500+)"
     }
   }
 ]

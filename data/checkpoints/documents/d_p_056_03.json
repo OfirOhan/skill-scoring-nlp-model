@@ -1,23 +1,21 @@
 {
   "doc_id": "d_p_056_03",
-  "type": "recommendation",
+  "type": "linkedin",
   "persona_id": "p_056",
   "hyperparams": {
-    "recommender_role": "skip-level",
-    "recommender_closeness": "brief",
-    "company_type": "FAANG",
-    "company_size": "mid (50-500)"
+    "linkedin_completeness": "minimal"
   },
   "skill_evidence": {
-    "Application security (OWASP)": 3,
-    "Compliance (SOC2/GDPR)": 5,
-    "Encryption & PKI": 2,
-    "IAM/Access control": 4,
-    "Network security": 3,
-    "Penetration testing": 3,
-    "SIEM tools": 2,
-    "Threat modeling": 2,
-    "Vulnerability management": 2
+    "Apache Airflow": 3,
+    "Apache Kafka": 3,
+    "Apache Spark": 3,
+    "Data Warehousing": 1,
+    "Docker": 3,
+    "Kubernetes": 3,
+    "Python": 1,
+    "Snowflake": 3,
+    "Terraform": 3,
+    "dbt": 3
   },
-  "text": "Grace Mwangi’s work at SecureTech Solutions consistently reflects a pragmatic approach to security challenges. As a Senior Security Engineer, she collaborates closely with cross-functional teams to integrate security into project workflows. Her ability to balance technical rigor with stakeholder priorities makes her a reliable partner in high-stakes environments.  \n\nDaily, Grace focuses on refining application security practices, often identifying subtle vulnerabilities in third-party integrations. She recently redesigned a legacy authentication system, reducing unauthorized access incidents by 40% without disrupting user workflows. Her network security expertise shines in troubleshooting complex outages, often resolving issues within hours through methodical root-cause analysis.  \n\nA standout moment involved rearchitecting an IAM framework to align with SOC2 requirements. Her solution streamlined compliance checks while cutting manual audits by half. She also mentored junior engineers on access control best practices, which became a team standard. Beyond technical skills, Grace’s diligence in documenting processes and anticipating edge cases has minimized security debt across projects.  \n\nGrace’s strength lies in her ability to translate abstract security principles into tangible, scalable solutions. Her work ethic—marked by attention to detail and a knack for simplifying complex systems—makes her a valuable asset to any team. I’d welcome the opportunity to collaborate again."
+  "text": "George Adamu is a data engineer consultant at Strategic Data Solutions, bringing a year of experience to complex data integration projects. His work focuses on designing scalable pipelines and optimizing data workflows for clients across diverse industries. With a strong emphasis on cloud-native solutions, he leverages tools like Apache Kafka to manage real-time data streams, ensuring reliable ingestion for analytics platforms. Apache Spark underpins many of his batch processing tasks, enabling efficient transformation of large datasets. He frequently integrates Apache Airflow to orchestrate multi-step workflows, balancing reliability with operational flexibility.  \n\nAdept at deploying containerized solutions, George uses Docker and Kubernetes to streamline deployment and scaling of data services. His expertise in Snowflake’s cloud data platform supports teams in building secure, high-performance data ecosystems. He also relies on Terraform to automate infrastructure setups, reducing manual effort and improving consistency across environments. For data transformation, dbt plays a key role in enabling clean, versioned pipelines that align with business needs.  \n\nGeorge approaches challenges with a focus on practical outcomes, prioritizing solutions that balance technical excellence with business impact. His goal is to empower teams through reliable, maintainable data systems that adapt to evolving requirements."
 }

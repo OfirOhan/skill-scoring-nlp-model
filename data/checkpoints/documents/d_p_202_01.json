@@ -3,21 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_202",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "plain"
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 5,
-    "CI/CD pipelines": 4,
-    "Cloud cost optimization": 3,
-    "Cloud networking (VPC/subnets)": 4,
+    "Computer vision": 2,
     "Docker": 3,
-    "GCP": 1,
-    "Kubernetes": 5,
-    "Monitoring & alerting": 4,
-    "Serverless (Lambda/Cloud Functions)": 3,
-    "Terraform": 4
+    "GCP": 3,
+    "Kubernetes": 1,
+    "MLOps (MLflow/W&B)": 4,
+    "Model deployment": 3,
+    "NLP": 4,
+    "PyTorch": 4,
+    "REST API design": 3,
+    "TensorFlow": 3
   },
-  "text": "# NexaCloud Microservices Platform  \nA scalable, cloud-native SaaS solution built on Kubernetes and AWS, designed for high-availability microservices with automated cost controls and resilient infrastructure.  \n\n## Testing  \nAutomated testing is baked into every deployment cycle. Unit tests for core services run in parallel using GitHub Actions, while integration tests validate cross-service communication. Cost-optimized test environments use spot instances for non-critical workloads, reducing runtime by 30% compared to standard EC2. All tests are tagged for environment-specific execution, ensuring compliance with AWS pricing models.  \n\n## Getting Started / Installation  \nClone the repo and navigate to the root directory.  \n```bash  \ngit clone https://github.com/your-username/nexacloud.git  \ncd nexacloud  \n```  \nInstall Docker and AWS CLI. Configure Kubernetes with `kubectl` and set up Terraform for infrastructure provisioning. Run `make deploy` to spin up the platform with default configurations. For local development, use `docker-compose up` to simulate service interactions.  \n\n## Usage / Examples  \nDeploy a sample microservice by running:  \n```bash  \nmake deploy SERVICE=auth-service  \n```  \nMonitor metrics via Prometheus and Grafana dashboards. Use AWS X-Ray to trace service calls and identify latency bottlenecks. Adjust auto-scaling rules in the Terraform config to match peak load patterns.  \n\n## Tech Stack  \n- **Orchestration**: Kubernetes (with HPA and vertical scaling)  \n- **Cloud**: AWS (Lambda, EC2, RDS, VPC)  \n- **Infrastructure**: Terraform (with state locking)  \n- **Containers**: Docker (multi-stage builds)  \n- **Observability**: Prometheus, Grafana, AWS CloudWatch  \n\n## Architecture / Design  \nThe platform uses a service mesh pattern with Istio for traffic management. AWS VPCs isolate microservices, while NAT gateways enable private-to-public communication. Terraform provisions infrastructure as code, ensuring reproducibility across environments. CI/CD pipelines automate testing, deployment, and rollback, with rollback triggers based on error rates.  \n\n## License  \nMIT License  \n[View License](LICENSE)  \n\n## Contributing  \nSubmit PRs with clear documentation. Focus on improving test coverage for edge cases or optimizing resource allocation. All contributions undergo code reviews and are integrated into the main branch weekly."
+  "text": "# GameFlow: AI-Driven Player Engagement Platform  \n\nGameFlow is a lightweight, hobby-scale platform that leverages collaborative filtering and reinforcement learning to deliver personalized game recommendations. By analyzing player behavior and feedback, it dynamically adjusts suggestions to maximize engagement. The system is designed for indie developers and studios aiming to retain players without heavy infrastructure.  \n\n---\n\n## API Reference  \n\n### Endpoints  \n- **POST /api/recommend**  \n  *Description:* Fetch game recommendations for a user.  \n  *Request Body:*  \n  ```json  \n  {  \n    \"user_id\": \"string\",  \n    \"preferred_genres\": [\"action\", \"rpg\"],  \n    \"last_played\": \"string (ISO 8601)\"  \n  }  \n  ```  \n  *Response:*  \n  ```json  \n  {  \n    \"recommendations\": [  \n      {\"game_id\": \"123\", \"title\": \"Shadow Knight\", \"score\": 0.92},  \n      {\"game_id\": \"456\", \"title\": \"Elden Quest\", \"score\": 0.85}  \n    ]  \n  }  \n  ```  \n\n- **POST /api/feedback**  \n  *Description:* Update user preferences with explicit feedback.  \n  *Request Body:*  \n  ```json  \n  {  \n    \"user_id\": \"string\",  \n    \"game_id\": \"string\",  \n    \"rating\": 4.5  \n  }  \n  ```  \n\n- **GET /api/metrics**  \n  *Description:* Retrieve system performance metrics (e.g., recommendation accuracy, response latency).  \n\n---\n\n## Usage / Examples  \n\nTo test the API locally:  \n```bash  \ncurl -X POST https://api.gameflow.dev/recommend \\  \n  -H \"Authorization: Bearer YOUR_API_KEY\" \\  \n  -d '{\"user_id\": \"u123\", \"preferred_genres\": [\"action\"], \"last_played\": \"2023-10-01T12:00:00Z\"}'  \n```  \n\nThe response includes a ranked list of games, with scores derived from collaborative filtering and reinforcement learning models.  \n\n---\n\n## Getting Started / Installation  \n\n```bash  \npip install gameflow  \n```  \n\nFor development:  \n```bash  \ngit clone https://github.com/qasim-malik/gameflow.git  \ncd gameflow  \npip install -r requirements.txt  \npython setup.py develop  \n```  \n\n---\n\n## Tech Stack  \n\n- **ML Frameworks:** TensorFlow (collaborative filtering), PyTorch (reinforcement learning)  \n- **API:** FastAPI (asynchronous, scalable)  \n- **Data:** PostgreSQL (user feedback storage)  \n- **Monitoring:** MLflow (experiment tracking), W&B (model versioning)  \n- **NLP:** spaCy (game description analysis)  \n\n---\n\n## Architecture / Design  \n\nGameFlow operates as a microservices architecture with three layers:  \n1. **Inference Layer:** Hosts pre-trained models (TensorFlow/PyTorch) for real-time recommendations.  \n2. **Feedback Loop:** Aggregates user ratings and session data to retrain models weekly.  \n3. **API Gateway:** Manages authentication and rate limiting using OAuth2.  \n\nThe system prioritizes low-latency responses, with caching for frequently accessed recommendations.  \n\n---\n\n## License  \n\nMIT License  \n[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)  \n\n---\n\n## Badges  \n\n[![GitHub](https://img.shields.io/github/license/qasim-malik/gameflow)](https://github.com/qasim-malik/gameflow)  \n[![CI](https://img.shields.io/endpoint?url=https://actions-badge-cache-production.up.railway.app/api/v1/badge?job=ci%2Fci)](https://github.com/qasim-malik/gameflow/actions)  \n[![PyPI](https://img.shields.io/pypi/v/gameflow)](https://pypi.org/project/gameflow/)"
 }

@@ -1,27 +1,50 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Kiran Thapa's experience as a mobile developer at a startup, focusing on iOS/Android development and agile methodologies.",
-    "title": "Kiran Thapa - Mobile Developer",
+    "topic_summary": "A professional CV highlighting Hawa Diop's experience as a Backend Engineer at NebulaTech, with a focus on SaaS development.",
+    "title": "Hawa Diop - Backend Engineer CV",
     "doc_id": "d_p_004_00",
     "persona_id": "p_004",
     "hyperparams": {
-      "cv_format": "hybrid",
-      "geographic_convention": "Europe",
-      "company_type": "enterprise",
+      "cv_format": "minimal",
+      "geographic_convention": "India",
+      "company_type": "FAANG",
       "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A README for a cross-platform task management app developed by Kiran Thapa, showcasing React Native expertise and startup-driven problem-solving.",
-    "title": "TaskEase - Cross-Platform Task Management App",
+    "topic_summary": "A README for a secure authentication microservice built with Node.js and JWT, designed for SaaS platforms.",
+    "title": "NebulaAuth: Secure Authentication Microservice",
     "doc_id": "d_p_004_01",
     "persona_id": "p_004",
     "hyperparams": {
-      "project_scale": "hobby",
-      "project_team_size": "medium (5-15)",
-      "jargon_density": "moderate"
+      "project_scale": "production",
+      "project_team_size": "large (15+)",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation letter from Hawa's manager at NebulaTech, praising her technical skills and collaboration.",
+    "title": "Recommendation for Hawa Diop - Backend Engineer",
+    "doc_id": "d_p_004_02",
+    "persona_id": "p_004",
+    "hyperparams": {
+      "recommender_role": "peer",
+      "recommender_closeness": "occasional",
+      "company_type": "agency",
+      "company_size": "small (<50)"
+    }
+  },
+  {
+    "doc_type": "linkedin",
+    "topic_summary": "A LinkedIn summary showcasing Hawa's passion for backend development, SaaS innovation, and professional growth.",
+    "title": "Hawa Diop - Backend Engineer | SaaS Innovator",
+    "doc_id": "d_p_004_03",
+    "persona_id": "p_004",
+    "hyperparams": {
+      "linkedin_completeness": "minimal"
     }
   }
 ]

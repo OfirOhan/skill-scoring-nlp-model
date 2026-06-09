@@ -1,23 +1,24 @@
 {
   "doc_id": "d_p_126_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_126",
   "hyperparams": {
-    "recommender_role": "professor",
-    "recommender_closeness": "occasional",
-    "company_type": "FAANG",
-    "company_size": "mid (50-500)"
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Cloud networking (VPC/subnets)": 2,
-    "GitLab CI": 2,
-    "Kubernetes": 3,
-    "Load balancing": 2,
+    "C/C++ (embedded)": 4,
+    "CI/CD pipelines": 1,
+    "Embedded Linux": 3,
+    "Firmware development": 4,
+    "Hardware-software integration": 4,
+    "IoT protocols (MQTT/CoAP)": 3,
     "Network automation": 1,
-    "Prometheus/Grafana": 2,
-    "Python": 2,
-    "Terraform": 2
+    "Python": 3,
+    "REST API design": 3,
+    "RTOS": 4,
+    "Shell scripting (Bash)": 2
   },
-  "text": "Erik Bergstrom, a Platform Engineer at ScaleTech Solutions, embodies a rare combination of technical precision and systems thinking. As a professor who’s collaborated with him on distributed systems research, I’ve observed his ability to translate abstract architectures into scalable, production-ready solutions.  \n\nErik’s AWS expertise shines in his design of a multi-region data pipeline that cut cold storage costs by 32% while improving query latency by 40%. He also built a Kubernetes-based CI/CD framework that reduced deployment friction across 12 microservices, slashing rollback times from hours to minutes. His Python scripts for infrastructure monitoring slashed manual overhead by 60%, enabling real-time anomaly detection.  \n\nWhat stands out is Erik’s relentless focus on reliability. During a critical outage, he diagnosed a cascading failure in ScaleTech’s API gateway within 15 minutes, deploying a hotfix that restored 99.95% service availability. His work ethic is unmatched—he’ll spend 12+ hours refining a Terraform module to ensure zero downtime, even if it means reworking the entire deployment pipeline.  \n\nErik’s blend of analytical rigor and pragmatic problem-solving makes him a standout. He doesn’t just build systems—he builds systems that outperform expectations. I wholeheartedly recommend him for any role requiring both technical depth and operational excellence."
+  "text": "# SecurePay-Gateway  \nReal-time payment processing with embedded fraud detection for e-commerce platforms. Designed for low-latency transaction validation, leveraging secure embedded algorithms and cross-layer optimization.  \n\n## Badges  \n[![GitHub](https://img.shields.io/badge/Project-Active-green)](https://github.com/securepay-gateway)  \n[![License](https://img.shields.io/badge/License-MIT-blue)](https://github.com/securepay-gateway/LICENSE)  \n[![Security](https://img.shields.io/badge/Security-Verified-yellow)](https://github.com/securepay-gateway/security)  \n\n## License  \nMIT License. See [LICENSE](https://github.com/securepay-gateway/LICENSE) for full terms.  \n\n## Tech Stack  \n- **Core**: C++ (embedded), ARM Cortex-M RTOS, FreeRTOS  \n- **Communication**: MQTT (TLS 1.3), REST/GraphQL APIs  \n- **Analytics**: Python (scikit-learn), JSON-RPC  \n- **Security**: AES-256, HMAC-SHA256, embedded PKI  \n- **Hardware**: STM32F4 Discovery, ESP32-C3 (edge nodes)  \n\n## Architecture / Design  \nThe gateway operates as a distributed system with three layers:  \n1. **Edge Layer**: STM32F4 microcontroller hosts real-time fraud detection (rule-based + ML model inference). MQTT brokers handle device-to-cloud communication.  \n2. **Cloud Layer**: Python-based microservices process transactions via REST APIs, integrating with third-party payment processors.  \n3. **Security Layer**: All data paths use TLS 1.3; firmware updates signed with RSA-2048.  \n\nThe embedded fraud detection module runs on a dual-core Cortex-M7, balancing CPU usage with 99.98% detection accuracy.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/securepay-gateway.git`  \n2. Install dependencies:  \n   - STM32CubeMX for peripheral configuration  \n   - Python 3.9+ with pip  \n   - MQTT broker (e.g., Mosquitto)  \n3. Build firmware: `make firmware` (requires ARM-GCC 10.3)  \n\n## Usage / Examples  \n```cpp\n// Embedded fraud detection trigger\nvoid checkTransaction(uint32_t amount, uint8_t deviceID) {\n    if (amount > 10000 && deviceID == 0x1A) {\n        triggerAlert(\"High-value transaction from untrusted device\");\n    }\n}\n```\n\n```python\n# Cloud-side transaction validation\ndef validate_payment(payload):\n    if not verify_signature(payload, \"securepay-key-2023\"):\n        raise ValueError(\"Invalid signature\")\n    return process_transaction(payload)\n```  \n\n## Contributing  \nWe welcome improvements to firmware efficiency, security protocols, or cloud integration. Submit PRs with unit tests and ensure compliance with the embedded code style guide. All contributions must include documentation updates and security audits."
 }

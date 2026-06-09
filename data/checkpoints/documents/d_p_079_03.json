@@ -1,0 +1,21 @@
+{
+  "doc_id": "d_p_079_03",
+  "type": "project_readme",
+  "persona_id": "p_079",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Flutter": 1,
+    "JavaScript": 1,
+    "Kotlin": 1,
+    "Mobile CI/CD": 4,
+    "REST API design": 1,
+    "Swift": 1,
+    "TypeScript": 3,
+    "Web accessibility (WCAG)": 2
+  },
+  "text": "# CommunityHub - React Native Social Platform  \nA decentralized social platform for niche communities, built with React Native and GraphQL to empower startup growth through targeted engagement.  \n\n## Deployment  \nLive at [https://communityhub.app](https://communityhub.app)  \nDeployed via Vercel (GraphQL API) and Expo (mobile app). CI/CD pipeline on CircleCI ensures 99.9% uptime with automated testing and rollbacks.  \n\n## Getting Started / Installation  \n```bash  \nnpm install  \nexpo install react-native-graphql  \n```  \nSet `GRAPHQL_ENDPOINT` in `.env.local` and run `npm start`. Expo DevClient required for real-time updates.  \n\n## Usage / Examples  \nCreate a community with `useCreateCommunityMutation` and subscribe to `communityCreated` via GraphQL subscriptions.  \nExample:  \n```typescript  \nconst { data } = useQuery(QUERY_COMMUNITIES, { variables: { limit: 5 } });  \n```  \nSwipe-to-navigate UI with accessibility labels for screen readers.  \n\n## Tech Stack  \n- **React Native** (TypeScript)  \n- **GraphQL** (Apollo Client)  \n- **Expo** (CLI, SDK 47)  \n- **Web Accessibility** (WCAG 2.1 AA compliance)  \n\n## Architecture / Design  \nMonorepo structure with separate GraphQL schema and React Native app. TypeScript enforces type safety across API and UI layers. CI/CD pipeline automates unit tests, linters, and deployment to staging. Real-time updates via Apollo Subscriptions reduce latency by 40% compared to polling.  \n\n## License  \nMIT License — [See LICENSE](LICENSE)  \n\n## Badges  \n[![GitHub](https://img.shields.io/badge/github-communityhub-ff69b4?style=flat)](https://github.com/communityhub)  \n[![npm](https://img.shields.io/npm/v/@communityhub/react-native?style=flat)](https://www.npmjs.com/package/@communityhub/react-native)  \n[![CI/CD](https://img.shields.io/circleci/build/gh:communityhub/app/main?style=flat)](https://app.circleci.com/pipelines/github/communityhub/app)"
+}

@@ -3,27 +3,29 @@
   "type": "cv",
   "persona_id": "p_038",
   "hyperparams": {
-    "cv_format": "hybrid",
+    "cv_format": "paragraph",
     "geographic_convention": "India",
-    "company_type": "academic",
-    "company_size": "large (500+)"
+    "company_type": "enterprise",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
     "AWS": 3,
-    "CI/CD pipelines": 3,
+    "Apache Kafka": 1,
+    "Apache Spark": 2,
+    "Data warehousing": 1,
     "Docker": 3,
-    "GitLab CI": 3,
-    "JavaScript": 3,
+    "ETL pipeline design": 2,
+    "Hugging Face Transformers": 4,
     "Kubernetes": 3,
-    "MongoDB": 3,
-    "Node.js": 3,
-    "PostgreSQL": 3,
-    "Python": 4,
+    "LLMs/Prompt engineering": 3,
+    "MLOps (MLflow/W&B)": 3,
+    "Model deployment": 3,
+    "NLP": 4,
+    "PyTorch": 4,
     "REST API design": 3,
-    "React": 3,
-    "Serverless": 2,
-    "TypeScript": 3,
-    "gRPC": 3
+    "TensorFlow": 4,
+    "dbt": 1,
+    "scikit-learn": 3
   },
-  "text": "Ricardo Almeida  \n📧 ricardo.almeida@example.com | 📍 Bengaluru, India | 🌐 linkedin.com/in/ricardoalmeida | 🧠 github.com/ricardoalmeida  \n\nA seasoned full-stack developer with 5 years of experience in designing and scaling SaaS platforms. Specialized in building resilient, cloud-native applications with a focus on automation, performance optimization, and developer productivity. Proven ability to bridge technical execution with business outcomes through scalable architectures and robust tooling.  \n\n**Senior Full-Stack Developer**  \n*NexaCloud Solutions* (2022–Present)  \nLed the development of a serverless-based data analytics platform for enterprise clients, reducing infrastructure costs by 30% through optimized AWS Lambda usage. Spearheaded the migration of monolithic backend systems to microservices, improving deployment frequency by 50% using GitLab CI/CD pipelines. Designed a Python-based data ingestion tool that streamlined client onboarding, cutting setup time by 40%. Collaborated with DevOps teams to implement Dockerized containerization for all microservices, ensuring consistent environments across staging and production.  \n\n**Lead Developer**  \n*ApexSoft Ltd.* (2020–2022)  \nArchitected a real-time collaboration SaaS product using Node.js and React, supporting thousands of concurrent users with low-latency WebSocket integration. Engineered a custom CI/CD pipeline for frontend components, reducing manual testing cycles by 60%. Pioneered the use of Kubernetes for orchestrating backend services, achieving 99.95% SLA compliance. Developed REST APIs with MongoDB for a client management system, enabling seamless integration with third-party tools.  \n\n**Junior Full-Stack Developer**  \n*InnovaTech Startup* (2018–2020)  \nContributed to the core development of a SaaS project management tool, focusing on Python-based backend logic and React frontend components. Implemented PostgreSQL-based reporting features that improved data accessibility for end-users. Automated deployment workflows using GitLab CI, reducing release cycles from weeks to hours.  \n\n**Bachelor of Science in Computer Science**  \n*University of Lisbon* (2018)  \n\n**Technical Skills**  \n- **Python**: Built a scalable data pipeline for client analytics, reducing manual reporting overhead by 70%. Developed internal tools for code quality monitoring, improving team productivity.  \n- **AWS**: Deployed serverless architectures for analytics platforms, leveraging S3 and DynamoDB for scalable storage. Managed EC2 clusters for high-availability backend services.  \n- **CI/CD pipelines**: Automated deployment workflows for React and Node.js applications, ensuring zero-downtime updates. Integrated testing frameworks for regression validation.  \n- **Docker**: Containerized microservices for NexaCloud’s platform, standardizing build processes across development teams.  \n- **GitLab CI**: Streamlined frontend builds and backend testing, enabling parallel execution of tasks.  \n- **JavaScript**: Developed reusable React components for cross-platform SaaS applications, improving maintainability.  \n- **Kubernetes**: Orchestration of containerized services at scale, ensuring dynamic resource allocation.  \n- **MongoDB**: Designed NoSQL schemas for real-time collaboration tools, supporting high write-throughput operations.  \n- **Node.js**: Built scalable backend services for SaaS products, integrating with REST APIs and gRPC services.  \n- **PostgreSQL**: Optimized query performance for client databases, reducing response times by 50% through indexing and caching.  \n- **REST API design**: Created scalable endpoints for data synchronization between frontend and backend systems.  \n- **React**: Developed responsive UIs for enterprise SaaS applications, focusing on performance and accessibility.  \n- **TypeScript**: Enforced type safety in large-scale frontend codebases, reducing runtime errors.  \n- **gRPC**: Implemented high-performance service-to-service communication for internal microservices.  \n\n**Languages**  \n- English (near-native)  \n- Portuguese (fluent)  \n- Spanish (basic)"
+  "text": "Jasmine Kaur  \n📍 Mumbai, India | 📞 +91 9876543210 | 📧 jasmin.kaur@nexgentech.com | 🌐 linkedin.com/in/jasminekaurml  \n\nA results-oriented machine learning engineer with a passion for building scalable solutions that drive operational efficiency. Over the past two years, I’ve focused on developing production-grade models, refining feature pipelines, and collaborating with cross-functional teams to deliver impactful outcomes. My work has centered on leveraging cutting-edge NLP techniques and cloud-native tools to solve complex enterprise challenges, with a particular emphasis on deploying models that balance accuracy and real-world applicability.  \n\nTechnical Skills  \nProficient in Python, with hands-on experience in PyTorch, TensorFlow, and Hugging Face Transformers. Specialized in building and deploying NLP models for tasks such as sentiment analysis, text classification, and intent recognition. Experienced in designing scalable inference pipelines using MLflow and integrating models into REST APIs. Familiar with cloud platforms like AWS, where I’ve contributed to deploying machine learning workflows and optimizing cloud resource utilization. Skilled in containerization with Docker and orchestration with Kubernetes, enabling seamless model deployment across dev and production environments. Comfortable working with lightweight ETL processes and leveraging Spark for distributed data processing.  \n\nProfessional Experience  \nAt NexGen Technologies, I’ve focused on delivering end-to-end machine learning solutions that align with business objectives. My work includes developing a real-time fraud detection system using PyTorch, which reduced false positives by 18% through iterative model refinement. I also designed a feature store infrastructure that streamlined data access for multiple teams, cutting down preprocessing time by 30%. Collaborating with DevOps, I ensured smooth model deployment on AWS, achieving a 25% improvement in inference latency.  \n\nDuring my internship at InnovateAI Corp, I contributed to a prototype NLP model for customer support automation. Using Hugging Face Transformers, I fine-tuned a BERT-based model to handle multilingual queries, improving response accuracy by 22%. The model was later deployed via MLflow, allowing for version control and reproducible experiments. I also optimized inference pipelines to reduce latency, which was critical for handling high-volume user interactions.  \n\nEarlier, as a Data Analyst Intern at GlobalTech Solutions, I supported data cleaning efforts and created visualizations that informed key decisions. This role introduced me to the nuances of working with unstructured data, which later shaped my approach to NLP projects.  \n\nEducation  \nMaster of Science in Data Science, University of Toronto (2022). Thesis focused on improving model interpretability in high-stakes NLP applications, with a particular emphasis on ethical considerations in automated decision-making.  \n\nProjects  \nDeveloped a sentiment analysis model for social media monitoring, achieving 91% F1 score on a custom dataset. The model was integrated into a REST API, enabling real-time analysis of user feedback.  \nBuilt a multilingual chatbot using Hugging Face Transformers, which handled 15+ languages and reduced customer support response time by 20%.  \nOptimized a PyTorch-based recommendation system for a retail client, improving click-through rates by 12% through hyperparameter tuning and feature engineering.  \n\nLanguages  \nEnglish (fluent), Punjabi (native)  \n\nAwards & Achievements  \nRecognized as Top Performer at InnovateAI Corp for contributions to NLP model deployment. Received a merit-based scholarship for my master’s thesis on ethical AI."
 }

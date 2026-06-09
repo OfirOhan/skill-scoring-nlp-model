@@ -1,22 +1,25 @@
 {
   "doc_id": "d_p_077_03",
-  "type": "recommendation",
+  "type": "linkedin",
   "persona_id": "p_077",
   "hyperparams": {
-    "recommender_role": "direct-manager",
-    "recommender_closeness": "occasional",
-    "company_type": "enterprise",
-    "company_size": "large (500+)"
+    "linkedin_completeness": "detailed"
   },
   "skill_evidence": {
-    "API testing": 4,
-    "Go": 3,
-    "Java": 3,
-    "Performance testing (JMeter/k6)": 4,
-    "Python": 4,
-    "REST API design": 3,
-    "Selenium/Playwright": 3,
-    "Test automation": 4
+    "AWS": 2,
+    "Apache Airflow": 3,
+    "Apache Spark": 3,
+    "Data modeling": 4,
+    "Data warehousing": 3,
+    "Database optimization": 4,
+    "Databricks": 3,
+    "Docker": 3,
+    "ETL pipeline design": 4,
+    "Infrastructure as Code": 3,
+    "Kubernetes": 3,
+    "Python": 1,
+    "Snowflake": 5,
+    "Terraform": 3
   },
-  "text": "Xander de Vries is a Staff QA Engineer at ShopFlow Solutions, where he leads test automation initiatives across high-traffic e-commerce platforms. His work ensures reliability for millions of users during peak shopping periods.  \n\nXander’s API testing expertise shone during a critical checkout integration project. He designed end-to-end tests that uncovered a race condition in the payment gateway, preventing potential $2M in lost transactions. His Python scripts for data validation reduced manual testing hours by 40%. Similarly, his JMeter/k6 performance tests identified bottlenecks in the product catalog system, enabling a 30% improvement in load times.  \n\nHis ability to balance technical depth with strategic thinking is rare. Whether refining REST API endpoints or scaling Selenium/Playwright frameworks across browser stacks, Xander prioritizes precision and ownership. He’s also a consistent collaborator, frequently mentoring junior engineers and refining team workflows.  \n\nXander’s combination of technical rigor and operational focus makes him a valuable asset. I’m confident he’ll deliver meaningful results in any role."
+  "text": "Journey from classroom to code: I started with a passion for problem-solving, transitioning from academic theory to real-world data challenges. Over time, my focus shifted from abstract concepts to building scalable solutions that drive business outcomes. Today, I’m driven by the intersection of technology and creativity, especially in the gaming industry where data shapes player experiences.  \n\nCurrent Focus: At LudoQuest Games, I design and optimize data pipelines that power analytics, player insights, and game performance. My work bridges raw data and actionable intelligence, ensuring our teams have the tools to innovate. I’m particularly proud of refining our data warehouse architecture to handle high-volume, low-latency queries—something critical for real-time game metrics.  \n\nSkills Highlight: I’ve built and maintained ETL pipelines using Apache Spark and Airflow, optimized Snowflake schemas for complex queries, and scaled data warehouses to support cross-functional teams. My work with Databricks and Terraform streamlines workflows, while Docker and Kubernetes ensure reliable, reproducible environments. I also mentor peers on data modeling best practices, helping teams align technical decisions with business goals.  \n\nLet’s connect if you’re shaping the future of data—whether in gaming or beyond. I’m always eager to collaborate on solving tough problems and growing together."
 }

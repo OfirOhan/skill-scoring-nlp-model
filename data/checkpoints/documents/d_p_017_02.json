@@ -1,26 +1,21 @@
 {
   "doc_id": "d_p_017_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_017",
   "hyperparams": {
-    "recommender_role": "skip-level",
-    "recommender_closeness": "worked-daily",
-    "company_type": "agency",
-    "company_size": "mid (50-500)"
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "Docker": 4,
-    "GCP": 2,
-    "Hugging Face Transformers": 2,
-    "Kubernetes": 2,
-    "MLOps (MLflow/W&B)": 3,
-    "Model deployment": 3,
-    "NLP": 3,
-    "PyTorch": 3,
-    "Recommendation systems": 1,
-    "TensorFlow": 3,
-    "scikit-learn": 2
+    "3D graphics (OpenGL/Vulkan)": 4,
+    "Game physics": 4,
+    "Go": 1,
+    "Java": 2,
+    "Python": 3,
+    "REST API design": 3,
+    "Unity": 5,
+    "Unreal Engine": 5
   },
-  "text": "Aaron Baptiste is a Machine Learning Engineer whose work at FinNexus Solutions has consistently delivered measurable value through scalable solutions and rigorous analysis.  \n\nAs a Machine Learning Engineer at FinNexus Solutions, Aaron has focused on developing AI-driven solutions for fintech challenges, including fraud detection and risk modeling. His expertise in AWS and Docker has been critical to our operations. He led the migration of FinNexus’s fraud detection models to AWS, reducing latency by 40% and improving scalability. His Docker containerization efforts streamlined deployment, cutting time-to-production by 30%.  \n\nAaron’s technical depth is evident in his work with TensorFlow and NLP. Using TensorFlow, he developed an NLP pipeline that enhanced customer sentiment analysis, boosting model accuracy by 15%. He also designed an MLOps workflow integrating MLflow, ensuring reproducible experiments and seamless model deployment across environments. These systems now handle 95% of our production workloads.  \n\nBeyond technical skills, Aaron’s attention to detail and proactive problem-solving are standout traits. He consistently volunteers to mentor junior engineers and refine processes, which has elevated team performance. His ability to balance technical rigor with business impact makes him a valuable asset.  \n\nI am confident Aaron will bring the same level of expertise and dedication to any new opportunity. His contributions have already strengthened FinNexus’s capabilities, and I expect continued success in his next role."
+  "text": "# Cross-Platform Game Architecture Framework  \nA modular system for building scalable enterprise-grade games across Unity and Unreal, with configurable pipelines for rendering, physics, and networked multiplayer. Designed for teams needing consistent tooling without vendor lock-in.  \n\n---\n\n## Configuration  \nSet environment variables for API endpoints and asset paths. Unity projects require a `projectSettings.json` file to map engine-specific plugins. Unreal projects use a `TargetSettings.ini` override for renderer backends (OpenGL/Vulkan). Python scripts for automation are stored in `scripts/` and depend on `pyproject.toml` for dependency management.  \n\n---\n\n## Getting Started / Installation  \nClone the repo and install Python 3.9+. Run `pip install -r requirements.txt` to fetch dependencies. For Unity, import the `CrossPlatformFramework.unitypackage` into your project and enable the `Core Services` module. Unreal users must compile the `GameServices` plugin with Vulkan support enabled in `Settings/Rendering`.  \n\n---\n\n## Usage / Examples  \n- **Multiplayer Setup**: Use the REST API wrapper (`scripts/multiplayer.py`) to sync player states across platforms. Example:  \n  ```python  \n  from services import NetworkService  \n  NetworkService.sync_player_state(\"player_123\", {\"position\": [10, 5, 0]})  \n  ```  \n- **Physics Integration**: Replace default physics solvers with a custom engine via the `PhysicsPlugin` interface. Example:  \n  ```cpp  \n  #include \"VulkanPhysicsPlugin.h\"  \n  void InitializePhysics() { VulkanPhysicsPlugin::Register(); }  \n  ```  \n- **Asset Pipeline**: Configure the `AssetManager` to handle cross-platform material conversions via a YAML config.  \n\n---\n\n## Tech Stack  \n- **Engines**: Unity (core), Unreal Engine (core)  \n- **Scripting**: Python (automation), TypeScript (tooling)  \n- **Graphics**: OpenGL, Vulkan (configurable per engine)  \n- **Networking**: REST API services, WebSockets  \n- **Physics**: Custom solvers with physics engine abstraction  \n\n---\n\n## Architecture / Design  \nThe framework decouples core services (networking, physics) from engine-specific plugins. Unity uses a singleton `GameServices` class, while Unreal leverages a `GameServiceSubsystem` for modularity. Asset pipelines are defined via a config-driven system that translates between engine-specific formats. Python scripts orchestrate build steps for cross-platform deployments.  \n\n---\n\n## License  \nMIT License  \n\n---\n\n## Badges  \n[![GitHub](https://badgen.net/badge/github/AdamKowalczyk/gray)](https://github.com/AdamKowalczyk)  \n[![Build](https://badgen.net/badge/build/passing/green)](https://github.com/AdamKowalczyk/actions)  \n[![License](https://badgen.net/badge/license/MIT/blue)](https://github.com/AdamKowalczyk/blob/main/LICENSE)"
 }

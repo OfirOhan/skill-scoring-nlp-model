@@ -1,24 +1,26 @@
 {
   "doc_id": "d_p_130_02",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_130",
   "hyperparams": {
-    "blog_depth": "opinion-piece",
-    "jargon_density": "moderate"
+    "project_scale": "team-internal",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "BDD/TDD": 2,
-    "GraphQL": 2,
-    "JavaScript": 3,
-    "Next.js": 3,
-    "REST API design": 2,
-    "React": 3,
-    "Responsive design": 3,
-    "State management (Redux/Zustand)": 2,
-    "Test automation": 2,
-    "TypeScript": 3,
-    "Unit testing": 2,
-    "Web accessibility (WCAG)": 2
+    "CI/CD pipelines": 3,
+    "DNS/DHCP": 1,
+    "GitHub Actions": 3,
+    "Kubernetes": 4,
+    "Linux administration": 3,
+    "Monitoring & alerting": 4,
+    "Network troubleshooting": 1,
+    "PostgreSQL": 1,
+    "Prometheus/Grafana": 4,
+    "Python": 1,
+    "REST API design": 1,
+    "TCP/IP": 1,
+    "Terraform": 3
   },
-  "text": "**Optimizing Game UI Performance with WebAssembly**  \n\n**Overview**  \nA few months ago, I faced a recurring issue in a multiplayer shooter: UI elements would lag during intense combat, causing input delays and frustration. Traditional JS-based UI frameworks struggled to keep up with the game’s high frame rate. The solution? Rewriting critical UI components in WebAssembly. This case study explores how leveraging WebAssembly’s low-level efficiency transformed performance without sacrificing developer productivity.  \n\n**Context**  \nOur game’s UI was built with React and TypeScript, handling everything from HUDs to inventory systems. While React worked well for most scenarios, the UI thread began competing with the game loop during heavy interactions—like rapid weapon swaps or map panning. Profiling revealed that JS’s garbage collection and virtual machine overhead were the culprits. WebAssembly, with its near-native execution speed, offered a path to offload computationally heavy tasks while maintaining compatibility with existing toolchains.  \n\n**Challenge**  \nThe primary hurdle was integrating WebAssembly with the existing React app without rewriting the entire UI. We couldn’t just swap out React components; the game’s state management and event system were tightly coupled. Additionally, WebAssembly’s memory model required careful handling to avoid leaks, and debugging asynchronous interactions between JS and WASM modules felt like navigating a maze.  \n\n**Solution**  \nWe identified three key areas to optimize: rendering, state updates, and animation loops. For rendering, we compiled a custom UI library in Rust to WASM using Emscripten, focusing on minimal DOM manipulation. This handled static elements like health bars and ammo counters. For dynamic interactions, we used WebAssembly to process input events and update React state via a shared memory buffer, bypassing the need for frequent JS callbacks. TypeScript bindings simplified the integration, and we leveraged Next.js for server-side rendering to ensure consistency across platforms.  \n\n**Results**  \nThe changes yielded measurable improvements. UI rendering latency dropped by 40%, and the game’s average FPS increased by 30% during high-load scenarios. Players reported smoother transitions between menus and reduced input lag, which directly impacted retention rates. The WebAssembly module also scaled efficiently across devices, maintaining performance on lower-end hardware.  \n\n**Lessons Learned**  \nThis project taught me the value of profiling before optimizing—without concrete metrics, it’s easy to over-engineer. WebAssembly isn’t a silver bullet; it shines best when paired with JS for context-switching tasks. Also, tooling like Emscripten and TypeScript’s type inference made the transition smoother than I anticipated. Finally, balancing performance gains with maintainability requires careful planning. In the end, the result was a UI that felt as responsive as the game itself."
+  "text": "# KubeWatch: Observability Platform  \nKubeWatch is a Kubernetes-native observability tool designed to scale with startup infrastructure. It centralizes metrics, logs, and traces across clusters, enabling proactive anomaly detection and capacity planning. Built for teams managing 15+ microservices, it reduces alert fatigue by 40% and improves mean time to resolution (MTTR) by 30% in production environments.  \n\n## Configuration  \nConfiguration is declarative via `Helm charts` and `Terraform modules`. Prometheus is configured with dynamic service discovery for all pods, while Grafana dashboards are version-controlled in Git. GitHub Actions automate cluster-wide configuration syncs every 15 minutes. Linux admin tasks include persistent volume claims for metrics storage and SELinux policies for secure kubelet communication.  \n\n## Getting Started / Installation  \n1. Deploy Prometheus and Grafana via `Helm` with `--set grafana.enabled=true`  \n2. Apply Terraform modules to provision Prometheus Remote Write endpoints  \n3. Configure `kube-state-metrics` as a service monitor in Prometheus  \n4. Set up GitHub Actions workflow for alert rule validation  \n5. Enable `kube-api-server` metrics via `/metrics` endpoint  \n\n## Usage / Examples  \n```bash  \n# Query pod CPU usage  \nkubectl -n monitoring get --raw /apis/metrics.k8s.io/v1beta1/nodes  \n\n# Trigger alert rule test  \ncurl -X POST http://localhost:9090/api/v1/alerts --data '{\"value\":100}'  \n\n# Slack integration example  \nkubectl apply -f alertmanager-slack-config.yaml  \n```  \nUse `kubectl top` for real-time resource utilization and `kubectl get --raw /metrics` for custom metric exports.  \n\n## Tech Stack  \n- **Kubernetes**: 1.24+ with RBAC enforcement  \n- **Prometheus**: Remote Write to object storage  \n- **Grafana**: Dashboard templating for multi-cluster views  \n- **Terraform**: Infrastructure-as-code for monitoring stacks  \n- **GitHub Actions**: CI/CD pipeline for alert rule testing  \n\n## Architecture / Design  \nKubeWatch leverages Prometheus for time-series metrics, Grafana for visualization, and Kubernetes for orchestration. Alert rules are stored in a ConfigMap with dynamic reloading. The architecture supports horizontal scaling of Prometheus nodes and integrates with existing CI/CD pipelines for zero-downtime updates.  \n\n## License  \nMIT License  \n\n## Badges  \n[![GitHub](https://badgen.net/badge/repo/github/green)](https://github.com)  \n[![GitHub Actions](https://badgen.net/badge/builds/actions/green)](https://github.com)  \n[![Terraform](https://badgen.net/badge/terraform/green)](https://www.terraform.io)"
 }

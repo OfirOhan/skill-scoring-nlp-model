@@ -3,28 +3,24 @@
   "type": "cv",
   "persona_id": "p_303",
   "hyperparams": {
-    "cv_format": "minimal",
+    "cv_format": "paragraph",
     "geographic_convention": "Israel",
     "company_type": "enterprise",
     "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "Browser DevTools": 5,
-    "Design systems": 4,
-    "GraphQL": 4,
-    "JavaScript": 5,
-    "Next.js": 5,
-    "Node.js": 3,
-    "REST API design": 5,
-    "React": 5,
-    "Responsive design": 5,
-    "Selenium/Playwright": 1,
-    "State management (Redux/Zustand)": 4,
-    "Test automation": 3,
-    "TypeScript": 5,
-    "Web accessibility (WCAG)": 5,
-    "Web performance optimization": 5,
-    "Webpack/Vite": 3
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 3,
+    "Database optimization": 2,
+    "Incident management": 2,
+    "Kubernetes": 4,
+    "Monitoring & alerting": 3,
+    "Network automation": 2,
+    "PostgreSQL": 2,
+    "Prometheus/Grafana": 3,
+    "Python": 2,
+    "Redis": 1,
+    "Terraform": 3
   },
-  "text": "Erik Bergstrom  \n📧 erik.bergstrom@email.com | 📞 +972-54-123-4567 | 📍 Tel Aviv, Israel  \n\n**Professional Experience**  \nSenior Frontend Engineer | NexGen Solutions (2023–Present)  \nArchitected a progressive web app framework using Next.js 13, enabling offline-first capabilities and 2x faster initial load times for enterprise clients. Spearheaded migration of 12+ legacy React apps to TypeScript, reducing runtime errors by 65% and improving maintainability across 50+ microfrontends.  \n\nLead Frontend Engineer | CloudForge Ltd. (2017–2020)  \nDesigned and maintained a monorepo structure with Nx, standardizing build pipelines across 15+ products. Engineered a GraphQL API layer for real-time data synchronization, cutting backend round trips by 40% and improving dashboard responsiveness by 35%.  \n\nFrontend Developer | TechNova Inc. (2015–2017)  \nDeveloped reusable React components for SaaS platforms, achieving 30% faster load times via code-splitting and lazy loading. Collaborated with backend teams to define REST API contracts, ensuring 95%+ endpoint consistency across 8+ integrations.  \n\n**Technical Skills**  \n- **Node.js**: Integrated with backend services for real-time data fetching, optimized server-side rendering pipelines for 5+ high-traffic apps.  \n- **Test automation**: Built end-to-end test suites with Cypress, reducing regression bugs by 50% across 10+ critical features.  \n- **Webpack/Vite**: Transitioned projects from Webpack to Vite, cutting build times by 70% and enabling faster dev-server reloads.  \n- **Design systems**: Owned a shared UI library with 20+ components, achieving 90% reuse across 12+ products and reducing duplication by 60%.  \n- **GraphQL**: Led API schema design for 5+ internal tools, improving query efficiency by 55% through pagination and caching strategies.  \n- **State management**: Implemented Redux for complex state flows in 3+ enterprise apps, reducing prop drilling overhead by 80%.  \n- **Browser DevTools**: Instrumented performance metrics for 15+ apps, guiding optimization decisions that improved Lighthouse scores by 25%.  \n- **JavaScript**: Core to all frontend architecture decisions, mentoring 5+ engineers on advanced patterns and best practices.  \n- **Next.js**: Pioneered SSR and SSG strategies for 10+ marketing sites, boosting SEO rankings by 40% for 6+ clients.  \n- **REST API design**: Defined RESTful endpoints for 8+ integrations, ensuring 95%+ adherence to OpenAPI standards.  \n- **React**: Architected component libraries for 12+ SaaS products, standardizing patterns that reduced technical debt by 35%.  \n- **Responsive design**: Engineered adaptive layouts for 15+ apps, achieving 98%+ compatibility across 50+ devices.  \n- **TypeScript**: Enforced type safety across 10+ projects, eliminating 70% of runtime type errors in legacy codebases.  \n- **Web accessibility (WCAG)**: Conducted audits for 8+ products, improving compliance from 75% to 92% and boosting user retention by 18%.  \n- **Web performance optimization**: Implemented lazy loading, code splitting, and caching strategies, reducing average page load times by 45%.  \n\n**Education**  \nBachelor of Science in Computer Science | Royal Institute of Technology (KTH), Stockholm | 2012  \n\n**Projects**  \n- **Accessibility Audit Tool**: Developed a React-based tool for automated WCAG compliance checks, reducing manual audit time by 60% for 5+ clients.  \n- **Performance Optimization Dashboard**: Built a dashboard using Chart.js and TypeScript to visualize load times, identifying bottlenecks that cut average render times by 35%.  \n\n**Languages**  \nEnglish (fluent), Swedish (native)  \n\n**Awards & Achievements**  \n- 30% faster load times achieved at TechNova through performance optimizations.  \n- 40% reduction in technical debt at CloudForge via monorepo architecture.  \n- 18% increase in user retention at AeroMetrics through inclusive design practices.  \n- 65% decrease in runtime errors after migrating to TypeScript at NexGen Solutions.  \n- 25% improvement in Lighthouse scores via browser DevTools instrumentation."
+  "text": "Amara Diallo 106  \nTel Aviv, Israel | +972 54 123 4567 | amara.diallo@lumina.games | linkedin.com/in/amara-diallo  \n\nAt Lumina Games, I’ve focused on streamlining infrastructure workflows to support scalable game development. My role involves designing systems that balance performance and cost, ensuring reliable deployments for high-traffic multiplayer games. I’ve led efforts to automate repetitive tasks, reduce manual intervention, and improve team collaboration across development, operations, and security teams. A key priority has been maintaining uptime during peak hours, which requires proactive monitoring and rapid response protocols.  \n\nPrior to joining Lumina, I worked as a DevOps Engineer at PixelPulse Studios, where I contributed to migrating legacy systems to cloud-native architectures. This involved rearchitecting monolithic applications into microservices, implementing CI/CD pipelines for faster iteration cycles, and optimizing resource allocation to handle seasonal traffic spikes. I also collaborated with cross-functional teams to establish best practices for infrastructure as code, which reduced deployment errors by 30% over 18 months.  \n\nMy technical expertise centers on cloud-native tools and orchestration platforms. I’ve designed Kubernetes clusters that support dynamic scaling for live game servers, ensuring minimal latency during peak usage. I’ve also implemented Terraform to standardize environment provisioning, which cut setup time for new projects by half. Monitoring and alerting frameworks like Prometheus and Grafana are integral to my workflow, enabling real-time visibility into system health and performance trends.  \n\nBachelor of Science in Computer Science, University of Technology Sydney, 2015. Graduated with a focus on distributed systems and network protocols, which laid the foundation for my career in scalable infrastructure solutions.  \n\nKey projects include:  \n- **Global Server Cluster Optimization**: Redesigned regional server deployments to reduce latency for international players, improving user retention by 15% through strategic placement of game servers.  \n- **Cost Efficiency Initiative**: Developed a cloud cost management framework that automated resource scaling and identified underutilized instances, resulting in a 22% reduction in monthly operational expenses.  \n- **CI/CD Pipeline Overhaul**: Refactored existing workflows to integrate automated testing and rollback mechanisms, decreasing deployment-related downtime by 40% across multiple titles.  \n\nFluent in English and Hebrew.  \n\nRecognized for contributions to team efficiency and system reliability, including a 2021 internal award for reducing incident resolution time by 25% through improved monitoring practices. Also, led a cross-team effort to document operational procedures, which streamlined onboarding for new engineers and reduced knowledge-sharing bottlenecks."
 }

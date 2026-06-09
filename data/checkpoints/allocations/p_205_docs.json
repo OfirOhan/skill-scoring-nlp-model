@@ -1,49 +1,85 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional resume highlighting Priya Sharma's experience as a Security Engineer in cybersecurity",
-    "title": "Priya Sharma - Security Engineer",
+    "topic_summary": "A professional CV highlighting Adam Kowalczyk's 15 years of experience as a Staff Tech Lead/Architect in healthtech.",
+    "title": "Adam Kowalczyk - Staff Tech Lead / Architect",
     "doc_id": "d_p_205_00",
     "persona_id": "p_205",
     "hyperparams": {
-      "cv_format": "paragraph",
-      "geographic_convention": "US",
+      "cv_format": "minimal",
+      "geographic_convention": "Israel",
       "company_type": "startup",
-      "company_size": "small (<50)"
+      "company_size": "large (500+)"
     }
   },
   {
-    "doc_type": "linkedin",
-    "topic_summary": "Professional summary showcasing Priya Sharma's expertise in cybersecurity and career achievements",
-    "title": "About Priya Sharma",
+    "doc_type": "project_readme",
+    "topic_summary": "A scalable platform for aggregating and analyzing patient data to improve healthcare outcomes.",
+    "title": "HealthData Analytics Patient Data Platform",
     "doc_id": "d_p_205_01",
     "persona_id": "p_205",
     "hyperparams": {
-      "linkedin_completeness": "detailed"
-    }
-  },
-  {
-    "doc_type": "blog",
-    "topic_summary": "Discussion on implementing zero-trust architecture in modern enterprise security frameworks",
-    "title": "Securing Cloud Infrastructure with Zero Trust Architecture",
-    "doc_id": "d_p_205_02",
-    "persona_id": "p_205",
-    "hyperparams": {
-      "blog_depth": "opinion-piece",
+      "project_scale": "hobby",
+      "project_team_size": "medium (5-15)",
       "jargon_density": "plain"
     }
   },
   {
-    "doc_type": "recommendation",
-    "topic_summary": "Endorsement from a former manager praising Priya Sharma's technical skills and leadership",
-    "title": "Recommendation for Priya Sharma",
+    "doc_type": "project_readme",
+    "topic_summary": "Integrates telemedicine services with existing health data systems for seamless patient care.",
+    "title": "Telemedicine Integration System",
+    "doc_id": "d_p_205_02",
+    "persona_id": "p_205",
+    "hyperparams": {
+      "project_scale": "hobby",
+      "project_team_size": "solo",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A framework for securing sensitive health data across distributed systems.",
+    "title": "Health Data Security Framework",
     "doc_id": "d_p_205_03",
     "persona_id": "p_205",
     "hyperparams": {
-      "recommender_role": "skip-level",
-      "recommender_closeness": "brief",
-      "company_type": "academic",
+      "project_scale": "team-internal",
+      "project_team_size": "large (15+)",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation letter from Adam's current manager praising his technical leadership and strategic vision.",
+    "title": "Recommendation from HealthData Analytics CTO",
+    "doc_id": "d_p_205_04",
+    "persona_id": "p_205",
+    "hyperparams": {
+      "recommender_role": "direct-manager",
+      "recommender_closeness": "worked-daily",
+      "company_type": "startup",
       "company_size": "large (500+)"
+    }
+  },
+  {
+    "doc_type": "linkedin",
+    "topic_summary": "A LinkedIn summary showcasing Adam's expertise in healthtech architecture and leadership experience.",
+    "title": "Adam Kowalczyk - Tech Lead / Architect",
+    "doc_id": "d_p_205_05",
+    "persona_id": "p_205",
+    "hyperparams": {
+      "linkedin_completeness": "standard"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post on designing resilient health data infrastructure for modern healthcare systems.",
+    "title": "Building Resilient Health Data Infrastructure",
+    "doc_id": "d_p_205_06",
+    "persona_id": "p_205",
+    "hyperparams": {
+      "blog_depth": "opinion-piece",
+      "jargon_density": "moderate"
     }
   }
 ]

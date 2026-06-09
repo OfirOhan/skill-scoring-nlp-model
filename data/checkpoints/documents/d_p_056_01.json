@@ -3,20 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_056",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "large (15+)",
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
     "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Application security (OWASP)": 4,
-    "Compliance (SOC2/GDPR)": 3,
-    "Encryption & PKI": 3,
-    "IAM/Access control": 4,
-    "Network security": 4,
-    "Penetration testing": 2,
-    "SIEM tools": 2,
-    "Threat modeling": 2,
-    "Vulnerability management": 2
+    "Apache Airflow": 3,
+    "Apache Kafka": 2,
+    "Apache Spark": 4,
+    "Data Warehousing": 1,
+    "Docker": 1,
+    "Kubernetes": 1,
+    "Python": 2,
+    "Snowflake": 1,
+    "Terraform": 1,
+    "dbt": 4
   },
-  "text": "# SecureDevOps  \nA toolkit for embedding security into DevOps workflows to reduce vulnerabilities and improve compliance. Built for teams needing scalable, repeatable security practices without compromising delivery speed.  \n\n## Getting Started / Installation  \nClone the repo and install dependencies:  \n```bash  \ngit clone https://github.com/your-username/securedevops.git  \ncd securedevops  \nnpm install  \n```  \nConfigure your CI/CD pipeline to trigger security checks on every commit. Adjust the `config/security-profiles.json` file to match your team’s compliance requirements.  \n\n## Tech Stack  \n- **CI/CD**: GitHub Actions, GitLab CI  \n- **Security Tools**: SonarQube, OWASP ZAP, Dependency-Check  \n- **Infrastructure**: Terraform, AWS IAM  \n- **Monitoring**: Prometheus, Grafana  \n- **Encryption**: AWS KMS, TLS 1.3  \n\n## Usage / Examples  \n1. **Automated Scanning**: Integrate SonarQube scans into your build pipeline to catch code vulnerabilities early.  \n2. **Secrets Management**: Use AWS Secrets Manager with IAM roles to securely handle API keys and database credentials.  \n3. **Compliance Checks**: Run SOC2-aligned checks via Terraform modules to validate infrastructure configurations.  \n\n## Badges  \n[![Security Score](https://example.com/security-badge)](https://example.com)  \n[![Compliance Status](https://example.com/compliance-badge)](https://example.com)  \n\n## Architecture / Design  \nThe system is modular, with security checks decoupled from core workflows. Key components include:  \n- **Policy Engine**: Dynamically enforces access controls and compliance rules.  \n- **Scan Orchestration**: Parallelizes vulnerability checks without blocking deployments.  \n- **Audit Trail**: Logs all security events to a centralized SIEM system for forensic analysis.  \nNetwork segmentation and microservices architecture ensure minimal attack surface.  \n\n## Contributing  \nWe welcome improvements to security policies, tool integrations, and compliance templates. Submit pull requests with clear, actionable changes.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# Retail Data Pipeline with Apache Airflow and BigQuery  \n\nA scalable solution for transforming and analyzing retail transaction data, built with Apache Airflow for orchestration, BigQuery for storage, and Spark for heavy lifting. Designed for teams needing reliable, repeatable pipelines without overcomplicating infrastructure.  \n\n## Roadmap / Future Work  \nFocus is on stabilizing the core pipeline and expanding its scope. Next steps include:  \n- Integrating Kafka for real-time sales event ingestion (currently batch-only)  \n- Refactoring DAGs to use dynamic task generation for flexibility  \n- Adding a dashboard layer with BigQuery + Looker for ad-hoc analysis  \n- Exploring cost-optimization strategies for large-scale data loading  \n\n## Getting Started / Installation  \nInstall dependencies via pip:  \n```bash  \npip install apache-airflow apache-airflow-providers-google pandas pyarrow  \n```  \nSet up Airflow with a local SQLite database (or PostgreSQL for production). Configure BigQuery credentials in `airflow.cfg` and ensure Spark is installed system-wide.  \n\n## Usage / Examples  \nRun the pipeline by starting Airflow in local mode:  \n```bash  \nairflow db init  \nairflow users create --username admin --password admin --role admin --email admin@example.com  \nairflow serve > airflow.log 2>&1 &  \n```  \nExample DAGs:  \n- `daily_sales_load.py`: Loads CSV files into BigQuery tables  \n- `customer_segmentation.py`: Uses Spark to compute RFM scores  \n- `dbt_models`: Runs dbt transformations for inventory forecasting  \n\n## Tech Stack  \n- **Orchestration**: Apache Airflow (v2.2+)  \n- **Processing**: Apache Spark (v3.3) for ETL  \n- **Storage**: BigQuery for structured analytics  \n- **Transformation**: dbt (v1.0+) for repeatable models  \n- **Language**: Python (v3.9+) for custom scripts  \n\n## Architecture / Design  \nData flows from raw CSVs to BigQuery via Airflow-triggered Spark jobs. dbt models layer on top for business metrics. Airflow DAGs handle scheduling, retries, and alerts. All components are decoupled, with clear separation between data ingestion, processing, and transformation.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details."
 }

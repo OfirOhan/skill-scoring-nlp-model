@@ -5,23 +5,25 @@
   "hyperparams": {
     "project_scale": "hobby",
     "project_team_size": "small (2-4)",
-    "jargon_density": "heavy"
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "Apache Spark": 1,
-    "Apache Kafka": 1,
-    "Apache Airflow": 1,
-    "dbt": 1,
-    "Snowflake": 1,
-    "Data Modeling": 1,
-    "ETL pipeline design": 1,
-    "Data Warehousing": 1,
-    "Python": 1,
+    "AWS": 3,
+    "CI/CD pipelines": 2,
+    "Cloud cost optimization": 3,
+    "Database optimization": 3,
+    "Go": 1,
+    "Infrastructure as Code": 3,
+    "Jenkins": 1,
+    "Kubernetes": 1,
+    "Load balancing": 3,
+    "Message queues": 3,
+    "Microservices architecture": 1,
+    "PostgreSQL": 1,
+    "Prometheus/Grafana": 2,
+    "Python": 4,
     "REST API design": 1,
-    "Prometheus/Grafana": 1,
-    "GitHub Actions": 1,
-    "Linux administration": 1,
-    "Shell scripting": 1
+    "Test automation": 2
   },
-  "text": "# Real-Time Fraud Detection System  \nA low-latency, scalable solution for detecting suspicious financial transactions in real time, reducing false positives by 32% and latency to <50ms in production environments.  \n\n## Getting Started  \nEnsure your environment meets the following:  \n- A cloud-based compute cluster with ≥4 vCPU and 16GB RAM  \n- Pre-trained anomaly detection models (see `models/` directory)  \n- A REST API endpoint for transaction ingestion (see `api/` for integration specs)  \n- Network access to external data sources (e.g., credit bureau APIs)  \n\nRun the system with:  \n```bash  \nmake build && make serve  \n```  \nThis initializes the core processing pipeline, loads models, and starts the alerting interface.  \n\n## Usage / Examples  \nProcess a batch of 10M transactions in 2.3 seconds (1.2x faster than legacy systems). Example:  \n```bash  \n./process.sh --input transactions_2023.csv --output alerts.json  \n```  \nMetrics:  \n- 99.98% accuracy in detecting known fraud patterns  \n- 12.4ms average latency per transaction  \n- 95% reduction in false positives vs. rule-based systems  \n\n## Badges  \n[![High-Performance](https://img.shields.io/badge/Performance-<50ms-green)]  \n[![Accuracy](https://img.shields.io/badge/Accuracy-99.98%25-blue)]  \n[![Scalability](https://img.shields.io/badge/Scalability-Linear-yellow)]  \n\n## Tech Stack  \n- Distributed computing framework (proprietary, optimized for financial workloads)  \n- Real-time analytics engine (custom, with 98% CPU utilization at scale)  \n- Machine learning models (XGBoost, LSTM, and ensemble methods)  \n- Monitoring: Prometheus-integrated metrics dashboard (custom UI)  \n\n## Architecture / Design  \nThe system operates in three stages:  \n1. **Ingestion**: High-throughput API gateway with rate limiting and schema validation  \n2. **Processing**: Parallelized anomaly detection using memory-mapped data structures  \n3. **Alerting**: Rule-based and model-driven triggers with priority-based escalation  \n\nKey optimizations:  \n- Zero-copy data transfer between stages  \n- Model inference pipelining with 85% throughput  \n- Adaptive thresholding for dynamic fraud pattern recognition  \n\n## Contributing  \nSubmit issues for edge cases (e.g., rare transaction types) or performance bottlenecks. Pull requests should include:  \n- Unit tests for critical logic paths  \n- Benchmarking results comparing baseline vs. proposed changes  \n- Documentation updates for new features  \n\n## License  \n[![License](https://img.shields.io/badge/License-MIT-yellow)]  \nThis project is licensed under the MIT License. See `LICENSE` for details."
+  "text": "# Real-Time Bidding Platform  \n\nA low-latency ad auction system built for adtech workflows, optimized for sub-100ms response times and scalable to 10k+ concurrent bids. Designed to process real-time bidding events with Kafka as the core event bus, leveraging Python’s async capabilities for high-throughput processing.  \n\n## Tech Stack  \n- **Python 3.10+**: Core language for auction logic and data pipelines  \n- **Apache Kafka**: Distributed event streaming for bid ingestion and result dissemination  \n- **AWS Lambda**: Serverless execution for bid validation and latency-sensitive computations  \n- **Docker**: Containerization for local testing and CI/CD  \n- **Prometheus**: Metrics collection for latency tracking and throughput analysis  \n\n## Architecture / Design  \nThe system decouples bid ingestion, processing, and result delivery via Kafka topics. A dedicated auction engine handles bid validation, pricing, and winner selection using a priority queue optimized for Python’s `heapq`. AWS Lambda functions act as lightweight workers for bid validation, reducing cold start overhead. Kafka producers batch events to 100ms intervals, balancing throughput and latency. All components are monitored with Prometheus for 99.95% SLA compliance.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/isaaccohen/real-time-bidding.git  \ncd real-time-bidding  \ndocker-compose up -d  \n# Follow Kafka setup instructions in README.md for local development  \n```  \nEnsure AWS CLI is configured for Lambda deployment and cost tracking.  \n\n## Usage / Examples  \n```bash  \n# Ingest bids  \npython3 producer.py --topic bids --batch-size 500  \n\n# Monitor latency  \ncurl http://localhost:9090/metrics | grep bid_latency  \n```  \nExpect ~85% of bids to be processed within 50ms under 10k TPS.  \n\n## Badges  \n[![GitHub](https://badgen.net/badge/github/isaaccohen/real-time-bidding?icon=github)](https://github.com/isaaccohen/real-time-bidding)  \n[![AWS Cost](https://badgen.net/badge/aws/cost-optimized/green)](https://console.aws.amazon.com/)  \n[![Build](https://badgen.net/badge/build/passing/green)](https://github.com/isaaccohen/real-time-bidding/actions)  \n\n## Contributing  \nThis hobby project is maintained by a small team (2-4 engineers). Contributions are welcome for Kafka pipeline optimization, latency reduction, or adding analytics layers. Focus on improving throughput while maintaining <100ms P99 latency.  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
 }

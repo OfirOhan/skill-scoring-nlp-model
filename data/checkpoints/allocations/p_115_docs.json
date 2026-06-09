@@ -1,8 +1,8 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Omar Farooq's 4 years of experience as a Platform Engineer in consulting, specializing in cloud infrastructure and DevOps.",
-    "title": "Omar Farooq - Platform Engineer",
+    "topic_summary": "A professional CV highlighting Riya Desai's experience as a Senior Data Engineer at a startup, with expertise in data pipeline development and cloud infrastructure.",
+    "title": "Riya Desai - Senior Data Engineer",
     "doc_id": "d_p_115_00",
     "persona_id": "p_115",
     "hyperparams": {
@@ -13,28 +13,15 @@
     }
   },
   {
-    "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from Omar's manager at CloudNexus Solutions, praising his expertise in cloud platform architecture and team collaboration.",
-    "title": "Recommendation for Omar Farooq",
+    "doc_type": "project_readme",
+    "topic_summary": "A GitHub project README for a real-time analytics pipeline built using Apache Kafka and AWS Lambda to process streaming data for a SaaS startup.",
+    "title": "Real-Time Analytics Pipeline for Scalable Data Processing",
     "doc_id": "d_p_115_01",
     "persona_id": "p_115",
     "hyperparams": {
-      "recommender_role": "skip-level",
-      "recommender_closeness": "brief",
-      "company_type": "academic",
-      "company_size": "mid (50-500)"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "A GitHub README for a cloud-native CI/CD automation tool developed by Omar to streamline deployment pipelines for enterprise clients.",
-    "title": "CloudNexus DevOps Automation Framework",
-    "doc_id": "d_p_115_02",
-    "persona_id": "p_115",
-    "hyperparams": {
-      "project_scale": "academic",
+      "project_scale": "team-internal",
       "project_team_size": "solo",
-      "jargon_density": "heavy"
+      "jargon_density": "moderate"
     }
   }
 ]

@@ -1,25 +1,25 @@
 {
   "doc_id": "d_p_299_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_299",
   "hyperparams": {
-    "recommender_role": "skip-level",
-    "recommender_closeness": "brief",
-    "company_type": "FAANG",
-    "company_size": "large (500+)"
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Application security (OWASP)": 2,
-    "Compliance (SOC2/GDPR)": 4,
-    "Encryption & PKI": 4,
-    "IAM/Access control": 4,
-    "Incident response": 3,
-    "Network security": 4,
-    "Penetration testing": 3,
-    "SIEM tools": 2,
-    "Security auditing": 2,
-    "Threat modeling": 2,
-    "Vulnerability management": 2
+    "Apache Spark": 1,
+    "Bayesian statistics": 1,
+    "Data warehousing": 1,
+    "Exploratory data analysis": 5,
+    "Feature engineering": 5,
+    "Java": 1,
+    "MLOps": 1,
+    "NumPy": 5,
+    "Pandas": 5,
+    "Python": 3,
+    "REST API design": 1,
+    "Statistical modeling": 5
   },
-  "text": "Dina Soliman, a Security Engineer at AdvertiseSphere Inc., is a rare blend of technical precision and operational discipline. Her work in adtech requires balancing innovation with robust security, a challenge she meets with consistent rigor.  \n\nDina’s technical expertise is defined by her ownership of compliance frameworks. She redesigned AdvertiseSphere’s SOC2 audit process, cutting review cycles by 35% while resolving 12 critical gaps. Her encryption architecture, which secures 80% of customer data pipelines, has withstood three third-party penetration tests. She also spearheaded IAM overhauls, reducing unauthorized access incidents by 40% through zero-trust policies. Network security is her specialty—she architected a zero-day mitigation strategy that blocked 17,000+ malicious requests monthly.  \n\nBeyond technical mastery, Dina thrives in collaborative environments. She mentors junior engineers, often leading informal “security deep dives” to share threat modeling insights. Her ability to distill complex compliance requirements into actionable steps has streamlined cross-functional workflows.  \n\nDina’s impact is felt across teams. Her incident response protocols, refined after a high-profile breach, reduced downtime by 22% and minimized reputational risk. She approaches challenges with calm persistence, whether debugging a compromised system or negotiating with auditors.  \n\nDina Soliman is a Security Engineer who consistently elevates security as a strategic asset. Her work at AdvertiseSphere has set industry benchmarks, and I strongly recommend her for any role requiring technical excellence and operational accountability."
+  "text": "# A/B Testing Framework for Product Optimization in Startups  \n\nThis framework helps startups test product features using lightweight, interpretable methods. Built with Python, it prioritizes simplicity and integration with existing data pipelines. Ideal for teams without dedicated A/B testing infrastructure, it focuses on rapid iteration and clear insights.  \n\n## API Reference  \nThe core functions are designed for ease of use:  \n- `run_experiment(variants, metric, data)`  \n  - **Input**: Dictionary of feature variations, target metric, and pandas DataFrame  \n  - **Output**: Summary statistics and hypothesis test results  \n- `analyze_results(experiment_id)`  \n  - **Input**: Unique identifier for a completed experiment  \n  - **Output**: Visualization of variant performance and confidence intervals  \n\n## Usage / Examples  \n```python  \nimport pandas as pd  \nfrom ab_toolkit import run_experiment  \n\n# Sample data with user interactions  \ndata = pd.DataFrame({  \n    'user_id': [1, 2, 3],  \n    'variant': ['control', 'treatment'],  \n    'clicks': [2, 5]  \n})  \n\n# Run a t-test to compare variants  \nresults = run_experiment({'control': 'variant_a', 'treatment': 'variant_b'}, 'clicks', data)  \nprint(results['p_value'])  # Output: 0.012  \n```  \n\n## Getting Started / Installation  \nInstall via pip:  \n```bash  \npip install ab-toolkit  \n```  \nEnsure pandas and numpy are installed. The framework assumes familiarity with basic data manipulation workflows.  \n\n## Tech Stack  \n- Python 3.9+  \n- Pandas (for data handling)  \n- NumPy (for numerical computations)  \n- Matplotlib (for visualizations)  \n\n## Architecture / Design  \nThe framework uses pandas DataFrames as the primary data structure, leveraging NumPy for efficient calculations. Statistical models are kept minimal to prioritize speed and transparency. Feature engineering and exploratory data analysis (EDA) are baked into the workflow, enabling teams to refine hypotheses before formal testing.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![GitHub](https://github.com/yourusername/ab-toolkit.svg)](https://github.com/yourusername/ab-toolkit)  \n[![Python Version](https://img.shields.io/badge/python-3.9+-blue)](https://www.python.org/downloads/)"
 }

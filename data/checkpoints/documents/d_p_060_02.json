@@ -1,21 +1,23 @@
 {
   "doc_id": "d_p_060_02",
-  "type": "linkedin",
+  "type": "recommendation",
   "persona_id": "p_060",
   "hyperparams": {
-    "linkedin_completeness": "standard"
+    "recommender_role": "peer",
+    "recommender_closeness": "worked-daily",
+    "company_type": "enterprise",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "C/C++ (embedded)": 3,
-    "Embedded Linux": 3,
-    "Firmware development": 3,
-    "GitLab CI": 1,
-    "Hardware-software integration": 3,
-    "IoT protocols (MQTT/CoAP)": 3,
+    "Design systems": 4,
+    "Next.js": 4,
     "Python": 1,
-    "REST API design": 1,
-    "RTOS": 3,
-    "Shell scripting (Bash)": 1
+    "REST API design": 2,
+    "React": 5,
+    "Test automation": 2,
+    "TypeScript": 5,
+    "Web performance optimization": 4,
+    "Webpack/Vite": 3
   },
-  "text": "Rohan Kulkarni is an embedded engineer at SmartCart Technologies, specializing in the development and optimization of hardware-software systems for e-commerce applications. His work focuses on creating reliable, efficient firmware solutions that integrate seamlessly with IoT-enabled devices. At SmartCart, he collaborates closely with cross-functional teams to design embedded systems that enhance product performance while maintaining scalability. A key aspect of his role involves leveraging Embedded Linux to build robust platforms that support real-time operations, ensuring stability in high-volume environments. He also plays a critical part in implementing IoT protocols like MQTT and CoAP, enabling secure and low-latency communication between devices and cloud services. With a strong foundation in RTOS development, Rohan contributes to projects requiring precise timing and resource management, such as sensor data processing and actuator control. His approach balances technical rigor with practical problem-solving, aiming to deliver solutions that align with the demands of modern e-commerce logistics. Beyond his current role, he is keen to deepen his expertise in embedded systems and explore innovations at the intersection of hardware and software in dynamic, scalable environments."
+  "text": "Working Relationship  \nPriscilla and I overlap daily on the frontend team, collaborating on feature implementations and design system updates. Her calm problem-solving during tight deadlines has made her a reliable anchor. She’s always open to brainstorming, often sharing insights that simplify complex workflows.  \n\nDay-to-Day Observations  \nPriscilla’s workflow revolves around React and TypeScript, where she balances architectural clarity with rapid iteration. She recently led a refactor of our design system, aligning components across 12+ internal tools. Her attention to TypeScript type safety reduced runtime errors by 40% in our core apps. She also owns our Next.js setup, optimizing server-rendered pages to load 30% faster without sacrificing interactivity.  \n\nStandout Moments  \nLast quarter, Priscilla spearheaded a performance audit that identified critical bottlenecks in our Webpack builds. By switching to Vite for incremental builds, we cut deployment times by 2.5 hours weekly. She also mentored junior engineers on React patterns, which improved team consistency. Her proactive approach to web performance—like lazy-loading assets and optimizing critical render paths—has become a standard in our code reviews.  \n\nRecommendation  \nPriscilla is a dependable, thoughtful engineer whose technical rigor and mentorship elevate the team. She thrives in collaborative environments, balancing deep technical expertise with a knack for simplifying complex systems. Her work on design systems and performance optimization has had tangible, measurable impacts. I’d welcome the chance to collaborate again."
 }

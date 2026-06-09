@@ -1,25 +1,25 @@
 {
   "doc_id": "d_p_066_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_066",
   "hyperparams": {
-    "recommender_role": "direct-manager",
-    "recommender_closeness": "brief",
-    "company_type": "startup",
-    "company_size": "small (<50)"
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "C/C++ (embedded)": 4,
-    "Embedded Linux": 3,
-    "Firmware development": 4,
-    "Go": 2,
-    "Hardware-software integration": 4,
-    "IoT protocols (MQTT/CoAP)": 3,
-    "Network automation": 2,
-    "Problem-solving": 5,
-    "Python": 2,
-    "REST API design": 3,
-    "RTOS": 4
+    "Agile/Scrum": 3,
+    "CI/CD pipelines": 3,
+    "Cross-team collaboration": 3,
+    "Database migration": 1,
+    "GitHub Actions": 4,
+    "Linux administration": 1,
+    "Mentoring": 1,
+    "Prometheus/Grafana": 3,
+    "Stakeholder communication": 1,
+    "Strategic planning": 1,
+    "System design": 4,
+    "Team leadership": 1
   },
-  "text": "Wenjun Li has been a key contributor to VitalTech’s product development since joining as a senior embedded engineer. His work on medical device firmware and IoT integration has directly supported our growth in the healthtech space.  \n\nWenjun’s technical expertise shines in embedded systems. He led the development of a real-time patient monitoring device using Embedded Linux, reducing boot time by 22% compared to prior iterations. His C/C++ firmware updates for critical sensors improved reliability by 18%, with zero critical failures in 14 months of field use. He also architected a cross-platform RTOS solution that streamlined hardware-software integration, cutting development cycles by 15% for two concurrent projects.  \n\nBeyond technical skills, Wenjun excels at solving ambiguous problems. He debugged a persistent communication failure in our IoT devices by reverse-engineering proprietary protocols, ensuring seamless MQTT/CoAP connectivity. His ability to balance precision with adaptability has made him a go-to collaborator across teams.  \n\nWenjun’s impact extends beyond code. He mentored junior engineers on firmware best practices, and his structured approach to debugging has reduced team resolution time for complex issues by 25%. His reliability and attention to detail are unparalleled in our small, fast-paced startup.  \n\nWenjun’s combination of technical mastery and collaborative mindset makes him a rare asset. I wholeheartedly recommend him for any role requiring both innovation and operational excellence."
+  "text": "# Ad FraudGuard  \nA real-time ad fraud detection platform built on big data analytics to identify and mitigate fraudulent activity in ad networks. Combines scalable data pipelines, machine learning models, and monitoring tools to provide actionable insights for ad tech teams.  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/your-username/ad-fraudguard.git  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n3. Configure environment variables for Kafka and Spark clusters.  \n4. Run the pipeline:  \n   ```bash  \n   python main.py --config config.yaml  \n   ```  \nEnsure Kafka and Spark clusters are running before execution.  \n\n## Tech Stack  \n- **Language**: Scala (Spark), Python (data processing)  \n- **Big Data**: Apache Spark, Apache Kafka  \n- **Monitoring**: Prometheus, Grafana  \n- **CI/CD**: GitHub Actions (automated testing, deployment pipelines)  \n- **Storage**: Apache Parquet, cloud-native object storage  \n- **ML**: Scikit-learn, TensorFlow (fraud pattern detection)  \n\n## Usage / Examples  \n```bash  \n# Sample command to trigger real-time fraud analysis  \npython fraud_analyzer.py --input /path/to/logfile --output /output/directory  \n```  \nOutput includes:  \n- Detected fraud patterns (IP spoofing, click farms)  \n- Anomalies flagged with confidence scores  \n- Integration with ad network APIs for immediate mitigation  \n\n## Badges  \n[![GitHub Actions Status](https://github.com/your-username/ad-fraudguard/workflows/CI%20Pipeline/badge.svg)](https://github.com/your-username/ad-fraudguard/actions)  \n[![Coverage Status](https://coveragemetrics.com/badge/your-username/ad-fraudguard/branch/main)](https://coveragemetrics.com/your-username/ad-fraudguard)  \n[![PyPI](https://img.shields.io/pypi/v/ad-fraudguard)](https://pypi.org/project/ad-fraudguard/)  \n\n## Architecture / Design  \nThe system ingests raw ad logs via Kafka, processes them in Spark clusters for real-time analysis, and streams results to Grafana for visualization. Machine learning models are trained on historical fraud datasets to detect anomalies. The architecture supports horizontal scaling and integrates with ad network APIs for automated mitigation.  \n\n## Contributing  \nContributions are welcome! Focus on improving detection accuracy, optimizing pipeline performance, or enhancing monitoring dashboards. Cross-team collaboration is key to aligning with ad network requirements.  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
 }

@@ -3,23 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_040",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "plain"
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "C/C++ (embedded)": 3,
-    "Embedded Linux": 3,
-    "Firmware development": 3,
-    "GitLab CI": 2,
-    "Hardware-software integration": 3,
-    "IoT protocols (MQTT/CoAP)": 3,
-    "Network automation": 2,
-    "Python": 2,
-    "REST API design": 2,
-    "RTOS": 3,
-    "Sensor integration": 2,
-    "Shell scripting (Bash)": 2
+    "API testing": 1,
+    "BDD/TDD": 1,
+    "CI/CD pipelines": 1,
+    "Go": 1,
+    "Integration testing": 1,
+    "Java": 2,
+    "Performance testing (JMeter/k6)": 1,
+    "Python": 3,
+    "Selenium/Playwright": 1,
+    "Test automation": 1,
+    "Test strategy design": 5,
+    "Web performance optimization": 1
   },
-  "text": "# Real-Time Fraud Detection Module  \nA lightweight edge analytics solution for fintech transaction monitoring, leveraging embedded systems for sub-10ms latency and 99.8% detection accuracy.  \n\n## Badges  \n[![Build Status](https://example.com/build-badge)](https://example.com) [![License](https://example.com/license-badge)](https://example.com)  \n\n## Getting Started / Installation  \nClone this repo and install dependencies:  \n```bash  \ngit clone https://github.com/yourusername/real-time-fraud-detection.git  \ncd real-time-fraud-detection  \nmkdir build && cd build  \ncmake ..  \nmake  \n```  \nEnsure your embedded device supports ARM Cortex-M7 or x86 with Linux kernel 5.10+. Flash firmware via JTAG or UART.  \n\n## Usage / Examples  \nRun the module with:  \n```bash  \nsudo ./fraud_detection --config config.yaml  \n```  \nExample input:  \n```json  \n{  \n  \"transaction\": {  \n    \"amount\": 1500,  \n    \"location\": \"US-NY\",  \n    \"device_id\": \"XYZ123\"  \n  }  \n}  \n```  \nOutput includes risk score (0–100) and flagged anomalies.  \n\n## Configuration  \nModify `config.yaml` to adjust:  \n- Anomaly detection thresholds  \n- MQTT broker credentials  \n- Model update intervals (default: 60s)  \n- Edge node resource limits  \n\n## Deployment  \nDeploy on edge gateways with ≥1GB RAM and dual-core Cortex-A53. Use OTA updates for firmware. Connect via MQTT to central analytics hub for post-processing.  \n\n## Architecture / Design  \nThe module runs on a dual-core embedded Linux system, with:  \n- Core 0: Real-time inference engine (C++/TensorRT)  \n- Core 1: MQTT proxy and data logging  \nRTOS ensures 99.99% deterministic latency. All data processed locally to minimize cloud dependency.  \n\n## Tech Stack / Built With  \n- C++17 (Embedded Linux)  \n- FreeRTOS (Real-Time Scheduling)  \n- MQTT (IoT Communication)  \n- TensorRT (Inference Optimization)  \n- GitLab CI (CI/CD Pipeline)  \n\n## Contributing  \nSubmit pull requests with unit tests covering edge cases. Follow the code style guide: 4-space tabs, no trailing spaces. All contributions must include benchmark results."
+  "text": "# GameDev Bug Tracking System  \nA centralized tool for managing bug reports across game development pipelines, designed to integrate seamlessly with asset pipelines, version control, and QA workflows. Built for solo use but scalable for small teams, this system prioritizes structured triage, contextual metadata, and cross-team visibility for complex game systems.  \n\n## Tech Stack  \n- **Language**: Python (3.10+) for scripting and backend logic  \n- **Database**: PostgreSQL for relational data storage (bugs, users, project metadata)  \n- **Frontend**: Streamlit for lightweight, embeddable dashboards  \n- **Utilities**: PyYAML for config parsing, requests for API integrations  \n\n## Architecture / Design  \nThe system leverages Python’s flexibility to model bug states as finite state machines, ensuring consistency across QA, dev, and art teams. A layered architecture separates data ingestion (via CSV/JSON imports), triage workflows (priority/impact scoring), and reporting (customizable dashboards). PostgreSQL is used to enforce referential integrity between bug reports and linked assets, while Streamlit provides real-time visibility into active issues.  \n\n## Getting Started / Installation  \n1. Clone the repository  \n2. Install Python 3.10+ and pip  \n3. Create a virtual environment: `python -m venv venv && source venv/bin/activate`  \n4. Install dependencies: `pip install -r requirements.txt`  \n5. Configure `config.yaml` with PostgreSQL credentials and project-specific settings  \n\n## Usage / Examples  \n```python  \n# Example: Create a new bug report  \nfrom bug_tracker import BugReport  \nreport = BugReport(  \n    title=\"Physics collision glitch in level 3\",  \n    priority=\"High\",  \n    impact=\"Critical\",  \n    assigned_to=\"dev-team@studio.com\",  \n    metadata={\"asset_id\": \"level_3_terrain\", \"system\": \"Physics\"}  \n)  \nreport.save()  \n```  \nThe system supports bulk import of CSV reports, automated triage rules (e.g., auto-assign based on asset tags), and export to Jira/Slack for cross-team sync.  \n\n## Badges  \n[![Build Status](https://img.shields.io/badge/build-passing-green)](https://github.com/emreyalcin/gamedev-bug-tracker/actions)  \n[![Version](https://img.shields.io/badge/version-1.2.0-blue)](https://github.com/emreyalcin/gamedev-bug-tracker/releases)  \n[![Solo Project](https://img.shields.io/badge/solo-yes-yellow)](https://github.com/emreyalcin/gamedev-bug-tracker)  \n\n## Contributing  \nPull requests are welcome! For bug fixes, ensure tests cover edge cases in asset linkage. For features, align with the project’s focus on structured metadata and cross-team traceability.  \n\n## License  \nMIT License — see the [LICENSE](https://github.com/emreyalcin/gamedev-bug-tracker/blob/main/LICENSE) file for details."
 }

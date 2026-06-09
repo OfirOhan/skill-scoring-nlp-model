@@ -3,26 +3,28 @@
   "type": "recommendation",
   "persona_id": "p_140",
   "hyperparams": {
-    "recommender_role": "skip-level",
+    "recommender_role": "peer",
     "recommender_closeness": "worked-daily",
-    "company_type": "academic",
-    "company_size": "large (500+)"
+    "company_type": "startup",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "Apache Spark": 1,
-    "Apache Kafka": 1,
-    "Apache Airflow": 1,
-    "dbt": 1,
-    "Snowflake": 1,
-    "Data Modeling": 1,
-    "ETL pipeline design": 1,
-    "Data Warehousing": 1,
+    "AWS": 1,
+    "CI/CD pipelines": 1,
+    "Cloud cost optimization": 1,
+    "Database optimization": 1,
+    "Go": 1,
+    "Infrastructure as Code": 1,
+    "Jenkins": 1,
+    "Kubernetes": 1,
+    "Load balancing": 1,
+    "Message queues": 1,
+    "Microservices architecture": 1,
+    "PostgreSQL": 1,
+    "Prometheus/Grafana": 1,
     "Python": 1,
     "REST API design": 1,
-    "Prometheus/Grafana": 1,
-    "GitHub Actions": 1,
-    "Linux administration": 1,
-    "Shell scripting": 1
+    "Test automation": 1
   },
-  "text": "**Academic Context**  \nAlexei Morozov, a former graduate research assistant in my department’s fintech analytics lab, brought a rare blend of methodological rigor and practical insight to academic collaboration. His work on optimizing real-time risk assessment models for financial transactions demonstrated a deep understanding of both theoretical frameworks and industry constraints.  \n\n**Working Relationship**  \nWe collaborated daily on projects integrating machine learning with operational data systems at CapitalFlow Inc. Alexei’s ability to translate abstract research questions into actionable solutions was evident in his work on improving fraud detection latency by 22% through iterative model refinement. His collaborative spirit and attention to detail ensured seamless integration of academic insights into production workflows.  \n\n**Research Ability**  \nAlexei’s research acumen shone in his independent study on algorithmic bias in credit scoring. By designing a controlled experiment with 15,000+ transaction samples, he identified systemic disparities in model predictions and proposed calibration techniques that improved fairness metrics by 18%. This work was later cited in a peer-reviewed journal, underscoring his capacity to contribute meaningfully to both academic and industry discourse.  \n\n**Broader Strengths**  \nBeyond technical prowess, Alexei’s work ethic and intellectual curiosity are exceptional. He consistently prioritizes transparency and reproducibility, whether debugging complex datasets or mentoring junior researchers. His ability to balance analytical depth with pragmatic problem-solving makes him an invaluable collaborator.  \n\n**Recommendation**  \nI wholeheartedly endorse Alexei Morozov for any role requiring technical expertise, analytical precision, and collaborative leadership. His contributions have left a measurable impact on both research and operational outcomes, and I am confident he will excel in any professional environment."
+  "text": "Isaac Cohen’s ability to distill complex ad-tech workflows into efficient, scalable systems stands out. Last quarter, he spearheaded a rewrite of our campaign management API, reducing average response times by 40% while handling a 3x traffic spike. When a major client’s data pipeline failed mid-bid, he spent 18 hours debugging and rerouting requests through a temporary webhook solution, minimizing revenue loss by over $200K. His knack for anticipating edge cases—like handling third-party cookie deprecation ahead of industry deadlines—keeps our engineering team ahead of regulatory shifts.  \n\nIsaac and I collaborated daily at AdVerve, where we navigated the chaos of scaling a mid-stage adtech startup. His calm under pressure and willingness to pair-program with juniors made him a linchpin during our pivot to programmatic ads. He’s the first to volunteer for high-impact tasks, whether refining real-time bidding logic or optimizing our internal monitoring dashboards for clarity.  \n\nWhat sets Isaac apart is his relentless focus on system reliability without sacrificing developer experience. He’ll refactor legacy code to improve maintainability even if it means delaying a feature release. His curiosity drives deep dives into root causes, like tracing a 15% latency spike to a misconfigured rate-limiting strategy.  \n\nIsaac is a dependable, high-impact engineer who balances technical rigor with business pragmatism. His work consistently aligns with our goals without needing constant oversight.  \n\n—Alex Rivera, Senior Engineer, AdVerve Technologies  \nalex@adverve.com"
 }

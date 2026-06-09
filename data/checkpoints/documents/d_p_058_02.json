@@ -3,27 +3,22 @@
   "type": "recommendation",
   "persona_id": "p_058",
   "hyperparams": {
-    "recommender_role": "skip-level",
-    "recommender_closeness": "brief",
-    "company_type": "startup",
-    "company_size": "large (500+)"
+    "recommender_role": "peer",
+    "recommender_closeness": "occasional",
+    "company_type": "enterprise",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "Agile/Scrum": 4,
-    "CI/CD pipelines": 1,
-    "Cloud cost optimization": 4,
-    "Cross-team collaboration": 4,
-    "Database optimization": 1,
-    "Kubernetes": 4,
-    "Linux administration": 1,
-    "Mentoring": 3,
+    "AWS": 5,
+    "CI/CD pipelines": 3,
+    "Docker": 3,
+    "Go": 5,
+    "Linux administration": 2,
+    "Microservices architecture": 5,
     "Monitoring & alerting": 1,
-    "Project management": 4,
-    "Stakeholder communication": 4,
-    "System design": 4,
-    "Team leadership": 4,
-    "Terraform": 4
+    "PostgreSQL": 5,
+    "Python": 4,
+    "REST API design": 5
   },
-  "text": "Hannah Fischer, Senior Tech Lead at AdvertiseNow Media, is a driven adtech professional whose work has significantly shaped our cloud infrastructure and team dynamics.  \n\nShe spearheaded AWS migration for ad campaign platforms, reducing costs by 22% through optimized resource allocation and Terraform automation. Her Terraform modules now standardize infrastructure across 12+ services, cutting deployment time by 40%. She also rearchitected our cloud cost model, identifying $1.2M in annual overspending and implementing dynamic scaling policies that cut peak usage by 35%.  \n\nHer Agile frameworks streamlined cross-functional campaigns, aligning engineering, data science, and marketing teams to launch features 30% faster. She designed scalable architectures for real-time ad analytics, handling 50M+ data points daily while maintaining sub-100ms latency. Stakeholders consistently praise her clarity in translating technical constraints into business priorities.  \n\nHannah’s leadership blends technical rigor with empathy, fostering a culture where innovation and accountability thrive. She’s a strategic thinker and hands-on executor—someone who will elevate any team."
+  "text": "Dear [Hiring Manager],  \n\nI’ve collaborated with Hugo Ramirez on a few projects at NexaCorp, mostly as a peer in our SaaS engineering team. We’ve worked closely on backend systems and occasionally cross-departmental initiatives, but our interactions are generally focused on shared technical goals.  \n\nHugo’s strongest attributes are his deep Python expertise and ability to architect scalable systems. He owns a critical Python service that processes user data, which he optimized to reduce latency by 40% through smarter caching and async workflows. His AWS infrastructure work is equally notable—he designed a multi-region architecture for a product launch, ensuring seamless scaling during a 3x traffic spike.  \n\nOne standout moment was when Hugo led a microservices refactor. He restructured a monolith into modular services using Go, which improved deployment speed and fault isolation. His REST API design for that system became a template for other teams, blending clarity with robust error handling. I’ve also seen him mentor junior engineers on PostgreSQL best practices, like indexing strategies and query optimization, which directly boosted database performance in several projects.  \n\nHugo is reliable, detail-oriented, and brings a pragmatic approach to complex problems. His work ethic is consistently high, and he’s never shied away from tackling technical debt.  \n\nIf you’d like further details, feel free to reach out.  \n\nSincerely,  \n[Your Name]"
 }

@@ -3,21 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_121",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "plain"
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "Apache Airflow": 4,
-    "Apache Kafka": 5,
-    "Apache Spark": 5,
-    "Data warehousing": 5,
-    "Docker": 4,
-    "ETL pipeline design": 5,
-    "Python": 5,
-    "Snowflake": 5,
-    "Terraform": 4
+    "Agile/Scrum": 3,
+    "CI/CD pipelines": 3,
+    "Cloud infrastructure": 1,
+    "Code review": 1,
+    "GitHub Actions": 3,
+    "Linux administration": 2,
+    "Microservices architecture": 4,
+    "PostgreSQL": 3,
+    "Shell scripting": 2,
+    "Stakeholder communication": 1,
+    "System design": 4,
+    "Team leadership": 1
   },
-  "text": "# Player Behavior Analytics Platform  \nReal-time player behavior analysis for NeonPixel Games, built to scale with production-grade data pipelines and actionable insights for game optimization.  \n\n## Tech Stack  \n- **AWS**: Lambda for serverless processing, S3 for raw data storage, RDS for metadata.  \n- **Apache Airflow**: Orchestration of ETL workflows with dynamic DAGs for real-time and batch tasks.  \n- **Docker**: Containerized local development environment with Kafka and Spark pre-configured.  \n- **Terraform**: Infrastructure-as-code for AWS resource provisioning, including VPCs and security groups.  \n- **Apache Kafka**: Real-time data ingestion from game servers, partitioned by player ID for parallel processing.  \n- **Apache Spark**: Stream processing for session duration metrics, user interaction patterns, and anomaly detection.  \n- **Snowflake**: Unified data warehouse for historical and real-time analytics, with auto-scaling for peak loads.  \n- **Python**: Core scripting for data transformation, schema validation, and ad-hoc analysis.  \n\n## Architecture / Design  \nThe pipeline ingests raw event streams via Kafka, processed in Spark for real-time metrics, and stored in Snowflake for querying. Airflow manages dependencies between batch ETL jobs and real-time pipelines. Terraform ensures reproducible AWS infrastructure, while Docker simplifies local development. Key decisions include Kafka’s partitioning strategy for low-latency ingestion and Snowflake’s schema design for cross-game analytics.  \n\n## Getting Started / Installation  \n1. Clone the repo and build Docker containers: `docker-compose up -d`  \n2. Initialize AWS resources with Terraform: `terraform apply`  \n3. Configure Kafka and Spark clusters via environment variables in `.env.local`  \n4. Deploy Airflow DAGs for scheduled ETL tasks  \n\n## Usage / Examples  \n- Monitor live player session durations via Spark streaming queries.  \n- Generate daily player behavior reports using Snowflake’s SQL API.  \n- Debug data quality issues with Airflow’s dynamic task retries.  \n\n## Badges  \n[![Production Status](https://example.com/badge)](https://example.com)  \n[![Team Size](https://example.com/badge)](https://example.com)  \n\n## Contributing  \nThis project is a collaborative effort—help refine Kafka partitioning strategies or optimize Snowflake query performance. Small teams thrive on shared ownership; your input shapes how we scale.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details."
+  "text": "# NexaCloud Infrastructure Orchestrator  \nA SaaS platform that automates cloud infrastructure deployment with Terraform, AWS, and scalable microservices. Streamlines provisioning, compliance, and monitoring across 300+ environments with 98% uptime and 15% faster deployment cycles compared to legacy systems.  \n\n## Roadmap / Future Work  \nQ3 2024: Integrate multi-cloud support (Azure, GCP) with cross-platform Terraform modules.  \nQ4 2024: Launch real-time compliance dashboard with AWS Config and custom policy enforcement.  \n2025: Implement Kubernetes-native orchestration for hybrid cloud workloads.  \nLong-term: Add AI-driven cost optimization via machine learning models trained on 10TB+ of historical billing data.  \n\n## Getting Started / Installation  \n1. Clone repository: `git clone https://github.com/nexacloud/orchestrator.git`  \n2. Install Terraform 1.5+ and AWS CLI v2 (configured with IAM credentials).  \n3. Set up Node.js 18+ and npm for dependency management.  \n4. Run `npm install` to fetch package dependencies.  \n5. Configure GitHub Actions workflows via `.github/workflows/` for CI/CD pipeline automation.  \n\n## Usage / Examples  \n```hcl\nresource \"aws_instance\" \"example\" {\n  ami           = \"ami-0c55b159cbfafe1f0\"\n  instance_type = \"t3.micro\"\n  tags = {\n    Environment = \"Production\"\n    Team        = \"DevOps\"\n  }\n}\n```  \nDeploy with `terraform apply --auto-approve` for 15% faster provisioning. Integrate with PostgreSQL 14 for audit logging: `npm install pg` and configure `config/database.js`.  \n\n## Tech Stack  \n- Infrastructure as Code: Terraform 1.5+ (modularized with 200+ reusable modules)  \n- Cloud Providers: AWS (EC2, VPC, S3) with custom SDK wrappers  \n- Runtime: Node.js 18 LTS, Express.js for API gateways  \n- Database: PostgreSQL 14 (read replicas for audit logs)  \n- CI/CD: GitHub Actions (scheduled pipelines for nightly testing)  \n- Monitoring: Prometheus + Grafana for real-time resource tracking  \n\n## Architecture / Design  \nMicroservices architecture with three core components:  \n1. **Orchestration Engine**: Synchronous Terraform execution with circuit breakers (99.99% system uptime)  \n2. **Policy Enforcement**: Rule-based validation layer with 500+ compliance checks  \n3. **Observability**: Distributed tracing via OpenTelemetry and centralized logging  \n\nSystem design prioritizes horizontal scaling:  \n- Terraform modules are stateless and decoupled  \n- PostgreSQL uses sharding for 10k+ concurrent writes  \n- GitHub Actions pipelines scale to 50+ parallel jobs during deployments  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

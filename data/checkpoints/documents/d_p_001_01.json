@@ -4,18 +4,24 @@
   "persona_id": "p_001",
   "hyperparams": {
     "project_scale": "production",
-    "project_team_size": "solo",
-    "jargon_density": "heavy"
+    "project_team_size": "small (2-4)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "A/B testing": 3,
-    "Competitive analysis": 3,
-    "Data visualization": 3,
-    "Hypothesis testing": 3,
-    "Product management": 4,
-    "Roadmap planning": 3,
-    "SQL analytics": 3,
-    "Stakeholder management": 1
+    "AWS": 3,
+    "CI/CD pipelines": 2,
+    "Docker": 3,
+    "GCP": 1,
+    "Kubernetes": 1,
+    "Microservices architecture": 4,
+    "MongoDB": 4,
+    "Node.js": 4,
+    "PostgreSQL": 1,
+    "Python": 4,
+    "REST API design": 4,
+    "React": 4,
+    "TypeScript": 4,
+    "Web performance optimization": 3
   },
-  "text": "# Financial Compliance Automation Tool  \n\nA production-grade solution for automating regulatory reporting, audit trails, and real-time compliance checks in financial institutions. Reduces manual workflows by 72% in early adopter pilots, with modular architecture for rapid integration with legacy systems.  \n\n## Badges  \n[![Build Status](https://github.com/.../actions/workflows/ci.yml/badge.svg)](https://github.com/.../actions/workflows/ci.yml)  \n[![Coverage](https://img.shields.io/coveralls/.../main)](https://coveralls.io/github/.../main)  \n[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/.../financial-compliance-tool.git  \ncd financial-compliance-tool  \npip install -r requirements.txt  \nexport API_KEY='your_token_here'  \npython setup.py install  \n```  \nEnsure Python 3.9+ and PostgreSQL 13+ are installed. Configure `config.yaml` for environment-specific endpoints.  \n\n## Usage / Examples  \n```bash  \npython compliance_check.py --mode dry-run --reporting-period Q4_2023  \n```  \nOutputs a JSON audit trail with flagged anomalies. For full audit, use `--mode full` to trigger Kafka-based event streaming for real-time validation.  \n\n## Architecture / Design  \nA layered microservices architecture with Kafka as the event bus, Redis for caching regulatory rules, and PostgreSQL for storing audit logs. Core logic is decoupled into rule engines and data processors, enabling parallelized compliance checks across 10+ data sources.  \n\n## Tech Stack / Built With  \n- **Backend**: Python (FastAPI), PostgreSQL (with TimescaleDB for time-series analytics)  \n- **Frontend**: Node.js (Vue.js), WebSockets for live reporting  \n- **Data Processing**: Apache Beam for batch pipelines, Apache Spark for ad-hoc queries  \n- **Infrastructure**: Docker, Kubernetes (Helm charts), GitHub Actions for CI/CD  \n- **Monitoring**: Prometheus + Grafana for latency metrics, Datadog for error tracking  \n\n## Roadmap / Future Work  \n- Integrate real-time market data feeds for dynamic rule updates  \n- Launch A/B testing for compliance workflow optimization  \n- Expand competitive analysis to prioritize niche regulatory domains  \n- Implement data visualization dashboards for risk heatmaps  \n\n## Acknowledgments  \nThanks to the Apache Software Foundation for open-source tools, and the fintech community for insights on regulatory pain points.  \n\n## Contributing  \nSubmit issues for edge-case scenarios or feature requests. Pull requests with unit tests and benchmarking data are prioritized."
+  "text": "# TeleMedConnect: Secure Telehealth Platform for Remote Patient Care  \nTeleMedConnect is a production-ready telehealth platform designed to enable secure, real-time virtual consultations between patients and healthcare providers. Built with a focus on privacy, scalability, and interoperability, this project demonstrates advanced full-stack development practices in healthtech. The system supports asynchronous messaging, live video consultations, and centralized patient data management, with a clear separation of concerns between frontend, backend, and data storage layers.  \n\n## API Reference  \nThe REST API is built with Node.js and TypeScript, leveraging Express for routing and Swagger for documentation. Key endpoints include:  \n- `POST /api/patients` (MongoDB integration for patient data validation and storage)  \n- `GET /api/consultations/:id` (real-time consultation status tracking with JWT authentication)  \n- `POST /api/messages` (secure message encryption using AES-256 and HMAC)  \nSwagger UI is hosted at `/api/docs` for interactive endpoint testing.  \n\n## Usage / Examples  \nTo demonstrate real-time video consultations:  \n```bash  \ncurl -X POST https://api.telemedconnect.dev/consultations \\\n  -H \"Authorization: Bearer <JWT>\" \\\n  -d '{\"patientId\": \"123\", \"providerId\": \"456\", \"startTime\": \"2023-10-05T14:00:00Z\"}'\n```  \nFor frontend usage, the React app (TypeScript) includes a `VideoCallContainer` component that integrates WebRTC for peer-to-peer streaming, optimized with dynamic bitrate adjustment.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/telemedconnect/telemedconnect.git`  \n2. Install dependencies:  \n   ```bash  \n   cd backend && npm install  \n   cd frontend && npm install  \n   ```  \n3. Start the Dockerized environment: `docker-compose up -d` (includes MongoDB and Redis for session management)  \n4. Run tests: `npm run test` (CI/CD pipeline integrated with GitHub Actions)  \n\n## Tech Stack  \n- **Backend**: Node.js (TypeScript), MongoDB (with Atlas for global data replication)  \n- **Frontend**: React (TypeScript), WebRTC, and Webpack for performance-optimized bundles  \n- **Infrastructure**: AWS Lambda for async task processing, S3 for media storage  \n- **Security**: OAuth2.0, TLS 1.3, and end-to-end encryption for sensitive data  \n\n## Architecture / Design  \nThe system follows a microservices architecture, with dedicated services for patient management, consultation routing, and message queuing. MongoDB handles schema-less patient records, while Node.js services manage business logic. React components are decoupled using Redux for state management, with lazy loading to optimize load times.  \n\n## License  \nMIT License  \n\n## Badges  \n[![GitHub](https://badgen.net/badge/repo/telemedconnect/green)](https://github.com/telemedconnect/telemedconnect)  \n[![npm version](https://badgen.net/npm/v/telemedconnect)](https://www.npmjs.com/package/telemedconnect)  \n[![CI/CD](https://badgen.net/badge/build/pass/green)](https://github.com/telemedconnect/telemedconnect/actions)"
 }

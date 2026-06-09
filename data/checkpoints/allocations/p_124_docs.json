@@ -1,27 +1,63 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Hawa Diop's backend engineering experience at a startup, focusing on full-stack development and system architecture.",
-    "title": "Hawa Diop - Backend Engineer CV",
+    "topic_summary": "A professional CV highlighting Daniel Nakamura's 8 years of experience as a Senior Platform Engineer in e-commerce.",
+    "title": "Daniel Nakamura - Senior Platform Engineer",
     "doc_id": "d_p_124_00",
     "persona_id": "p_124",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
-      "geographic_convention": "Europe",
+      "cv_format": "minimal",
+      "geographic_convention": "Israel",
       "company_type": "startup",
       "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A README for a real-time data processing system built using Python and AWS Lambda to optimize backend workflows for a startup.",
-    "title": "Real-Time Data Processor",
+    "topic_summary": "A GitHub README for a real-time inventory management system built for an e-commerce platform.",
+    "title": "Real-Time Inventory Sync for E-Commerce",
     "doc_id": "d_p_124_01",
     "persona_id": "p_124",
     "hyperparams": {
       "project_scale": "academic",
+      "project_team_size": "solo",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A README for a payment gateway optimization project that reduced transaction latency by 40%.",
+    "title": "E-Commerce Payment Gateway Optimization",
+    "doc_id": "d_p_124_02",
+    "persona_id": "p_124",
+    "hyperparams": {
+      "project_scale": "academic",
       "project_team_size": "large (15+)",
-      "jargon_density": "plain"
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post on designing scalable microservices for high-traffic e-commerce platforms.",
+    "title": "Building Scalable E-Commerce Microservices",
+    "doc_id": "d_p_124_03",
+    "persona_id": "p_124",
+    "hyperparams": {
+      "blog_depth": "tutorial",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation letter from Daniel's team lead praising his leadership in platform architecture.",
+    "title": "Recommendation from Tech Lead",
+    "doc_id": "d_p_124_04",
+    "persona_id": "p_124",
+    "hyperparams": {
+      "recommender_role": "professor",
+      "recommender_closeness": "worked-daily",
+      "company_type": "startup",
+      "company_size": "mid (50-500)"
     }
   }
 ]

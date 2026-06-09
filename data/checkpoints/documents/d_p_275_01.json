@@ -3,22 +3,20 @@
   "type": "project_readme",
   "persona_id": "p_275",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "medium (5-15)",
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "C/C++ (embedded)": 5,
-    "Embedded Linux": 3,
-    "Firmware development": 5,
-    "Hardware-software integration": 5,
-    "IoT protocols (MQTT/CoAP)": 4,
-    "Message queues": 3,
-    "Network automation": 4,
-    "Python": 1,
-    "REST API design": 4,
-    "RTOS": 4,
-    "Sensor integration": 4
+    "A/B testing": 2,
+    "Analytics-driven product decisions": 4,
+    "Competitive analysis": 4,
+    "Data visualization (Plotly)": 2,
+    "Hypothesis testing": 1,
+    "Product management": 4,
+    "Roadmap planning": 4,
+    "SQL analytics": 3,
+    "Stakeholder management": 4
   },
-  "text": "# IoT-enabled Health Monitoring System  \nA real-time patient data collection platform for hospital IoT environments, leveraging embedded firmware and secure communication protocols for critical healthcare applications.  \n\n## Badges  \n[![Project Status](https://img.shields.io/badge/status-beta-blue)](https://example.com)  \n[![License](https://img.shields.io/badge/license-MIT-green)](https://example.com)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for full details.  \n\n## Tech Stack  \n- **Embedded Linux**: Real-time device management with kernel-level resource isolation  \n- **MQTT/CoAP**: Dual-protocol edge-to-cloud data transmission with QoS 1/2 guarantees  \n- **RTOS**: FreeRTOS-based task scheduling for sub-10ms latency critical paths  \n- **Sensor Integration**: TI CC2652R BLE + ADuCM3029 hybrid telemetry nodes  \n- **Message Queues**: RabbitMQ + Kafka hybrid for batch/real-time data routing  \n- **REST APIs**: OpenAPI v3-compliant endpoints for clinical data access  \n- **Network Automation**: Ansible-driven device provisioning with ZeroTouch enrollment  \n- **C/C++**: Kernel-space drivers + user-space middleware for deterministic I/O  \n\n## Architecture / Design  \nThe system operates as a three-tiered edge-cloud hybrid:  \n1. **Edge Layer**: ARM Cortex-M7 microcontroller hosts sensor fusion logic, filtering noisy biometric signals from ECG and SpO₂ sensors. MQTT over TLS ensures encrypted device-to-gateway communication.  \n2. **Gateway Layer**: Ubuntu-based edge node runs a custom CoAP proxy, translating between MQTT and REST APIs for cloud ingestion.  \n3. **Cloud Layer**: AWS IoT Core with Rule Engine routes data to Elasticsearch for analytics. Firmware includes self-diagnostic routines for battery calibration and signal integrity checks.  \n\n## Getting Started / Installation  \n1. Clone repository: `git clone https://github.com/yourusername/health-monitor.git`  \n2. Install dependencies: `sudo apt install build-essential cmake libssl-dev`  \n3. Flash firmware: `make flash` (requires Segger J-Link or STM32 ST-Link)  \n4. Configure MQTT broker credentials in `config/mqtt.yaml`  \n\n## Usage / Examples  \n```c\n// Firmware snippet for BLE data aggregation  \nvoid data_aggregation_task(void *arg) {  \n    while (1) {  \n        uint16_t ecg = read_ecg_sensor();  \n        uint8_t spo2 = read_spo2_sensor();  \n        publish_mqtt(\"health/data\", serialize_json(ecg, spo2), QOS_1);  \n        vTaskDelay(pdMS_TO_TICKS(500));  \n    }  \n}  \n```  \nExample workflow: Sensor data is filtered in the edge node, encrypted via AES-256, and routed to the cloud for anomaly detection.  \n\n## Contributing  \nPull requests welcome! Ensure code adheres to MISRA C:2016 standards. Add unit tests for new sensor drivers and document API changes in the changelog."
+  "text": "# SmartPay Gateway  \nA scalable, API-first payment processing solution for cross-border transactions, engineered to handle 1.2M+ daily transactions with <150ms latency. Built for fintech teams prioritizing compliance, real-time settlement, and multi-currency support.  \n\n## Getting Started  \nInstall dependencies via `npm install` or `pip install -r requirements.txt` depending on your environment. For local testing, set up a PostgreSQL instance with the provided `docker-compose.yml` and populate the `.env` file with sandbox credentials from Stripe or PayPal.  \n\n## Tech Stack  \n- **Backend**: Node.js (v18) with Express.js for RESTful APIs  \n- **Database**: PostgreSQL (v14) with pgBouncer for connection pooling  \n- **Caching**: Redis (v7) for rate limiting and session storage  \n- **Security**: OAuth2.0 with JWT tokens, PCI-DSS compliance layer  \n- **Monitoring**: Prometheus + Grafana for latency tracking  \n\n## Usage / Examples  \n```typescript\n// Example: Initiate a cross-border transfer  \nconst response = await fetch('/api/v1/transactions', {  \n  method: 'POST',  \n  body: JSON.stringify({  \n    amount: 500,  \n    currency: 'EUR',  \n    destination: 'USD',  \n    beneficiary: 'beneficiary123'  \n  })  \n});  \nconsole.log(await response.json()); // { status: 'queued', txId: 'tx_123' }  \n```  \nAverage throughput: 2,500 TPS with 99.99% success rate.  \n\n## Badges  \n[![Build Status](https://build.example.com/status.svg)](https://build.example.com)  \n[![Coverage](https://coverage.example.com/coverage.svg)](https://coverage.example.com)  \n[![Team Velocity](https://velocity.example.com/velocity.svg)](https://velocity.example.com)  \n\n## Architecture / Design  \nMicroservices architecture with API gateway for routing. Core components:  \n- **Currency Converter**: Real-time exchange rates via OpenExchangeRates API  \n- **Compliance Layer**: KYC checks integrated with third-party providers  \n- **Event Sourcing**: Kafka for transaction logs and audit trails  \nDesigned for horizontal scaling, with auto-scaling groups for payment processors.  \n\n## Contributing  \nSubmit PRs with unit tests covering edge cases (e.g., failed settlements, rate limits). Prioritize documentation for new APIs—our team uses Swagger for auto-generating specs.  \n\n## License  \nMIT License (see [LICENSE](LICENSE) for details). Internal use only; not for public distribution."
 }

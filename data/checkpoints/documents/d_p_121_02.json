@@ -5,20 +5,22 @@
   "hyperparams": {
     "recommender_role": "peer",
     "recommender_closeness": "worked-daily",
-    "company_type": "enterprise",
-    "company_size": "small (<50)"
+    "company_type": "FAANG",
+    "company_size": "large (500+)"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "Apache Airflow": 4,
-    "Apache Kafka": 4,
-    "Apache Spark": 4,
-    "Data warehousing": 4,
-    "Docker": 2,
-    "ETL pipeline design": 4,
-    "Python": 5,
-    "Snowflake": 4,
-    "Terraform": 4
+    "Agile/Scrum": 4,
+    "CI/CD pipelines": 3,
+    "Cloud infrastructure": 1,
+    "Code review": 4,
+    "GitHub Actions": 1,
+    "Linux administration": 1,
+    "Microservices architecture": 5,
+    "PostgreSQL": 3,
+    "Shell scripting": 1,
+    "Stakeholder communication": 4,
+    "System design": 5,
+    "Team leadership": 4
   },
-  "text": "Sebastian Muller is a rock-solid data engineer who consistently delivers under pressure. As a daily collaborator, I’ve watched him own critical systems without micromanagement.  \n\nSebastian’s AWS expertise shines in scaling game analytics pipelines. He rearchitected our data lakes to handle 10x traffic spikes without downtime, and his cost-optimization tweaks saved the team $20k/month. He also built a Kafka-based real-time dashboard that cut query latency by 40% for live player metrics. His Airflow workflows are bulletproof—once he debugged a legacy ETL job, it ran flawlessly for 90+ days with zero manual intervention.  \n\nWhat sets him apart is his Python craftsmanship. He refactored our data warehouse schema to support new game features, and his mentorship helped junior engineers write cleaner, more scalable code. He’s the go-to for Snowflake quirks, and his Terraform modules have made our infrastructure deployments 50% faster.  \n\nSebastian’s work ethic is unmatched. He’ll stay late to fix a broken pipeline or iterate on a tool until it’s perfect. If you need someone who’ll own a problem and make it go away, look no further."
+  "text": "Tatiana Orlova has been a consistent force in our SaaS initiatives, blending deep technical rigor with an unshakable commitment to collaboration. As a Senior Tech Lead at NexaCorp, she’s driven outcomes that ripple across our product stack. Her work on optimizing PostgreSQL query performance for our analytics dashboard cut latency by 40%, while her CI/CD pipeline refinements slashed deployment cycles from 90 minutes to 22. These aren’t just numbers—they reflect her ability to diagnose systemic bottlenecks and engineer pragmatic solutions.  \n\nHer Agile/Scrum expertise shines in how she restructured our sprint workflow to prioritize technical debt, reducing critical bug escalations by 35% over six months. She’s equally adept at translating complex technical hurdles into stakeholder-friendly roadmaps, ensuring alignment without sacrificing engineering clarity. Code reviews under her guidance are precise, often catching edge-case vulnerabilities before they reach production—a practice that’s lowered our regression rate by 25%.  \n\nTatiana’s leadership extends beyond code. She mentored a cross-functional team through a microservices refactor, aligning 12 engineers on architecture decisions that improved system scalability by 50%. Her system design choices—like implementing a centralized config management layer—have become de facto standards, streamlining integration across three product lines.  \n\nShe’s the kind of teammate who arrives early to troubleshoot edge cases and stays late to ensure deployments are rock-solid. Her work ethic is unyielding, and her technical acumen is matched only by her knack for fostering ownership in others. I’d wholeheartedly recommend her for any role demanding both architectural vision and operational precision."
 }

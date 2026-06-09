@@ -4,20 +4,23 @@
   "persona_id": "p_032",
   "hyperparams": {
     "project_scale": "team-internal",
-    "project_team_size": "large (15+)",
+    "project_team_size": "medium (5-15)",
     "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Apache Airflow": 3,
-    "Apache Spark": 3,
-    "Data warehousing": 3,
-    "Database optimization": 3,
+    "AWS": 2,
+    "Apache Kafka": 1,
+    "Apache Spark": 2,
     "Docker": 2,
-    "ETL pipeline design": 3,
-    "Python": 3,
-    "Snowflake": 4,
-    "Terraform": 2
+    "ETL pipeline design": 1,
+    "LLMs/Prompt engineering": 3,
+    "MLOps": 3,
+    "Model deployment": 4,
+    "NLP": 5,
+    "PyTorch": 5,
+    "REST API design": 3,
+    "Recommendation systems": 5,
+    "TensorFlow": 3
   },
-  "text": "# HealthDataPipeline  \nStreamlines healthcare data processing with cloud-native ETL workflows, achieving 98% data integrity and 40% faster batch processing in production  \n\n[![GitHub Actions Status](https://img.shields.io/github/actions/status/nadiakhoury/healthdatapipline)](https://github.com/nadiakhoury/healthdatapipline/actions)  \n[![CI/CD Pipeline](https://img.shields.io/badge/CI--CD-passing-green)](https://github.com/nadiakhoury/healthdatapipline/actions)  \n[![Usage Stats](https://img.shields.io/badge/usage-12k%20daily-blue)](https://github.com/nadiakhoury/healthdatapipline/graphs/commit-activity)  \n\n## Getting Started  \n1. Clone repo: `git clone https://github.com/nadiakhoury/healthdatapipline.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure AWS credentials via `~/.aws/credentials`  \n4. Deploy infrastructure using Terraform (see `infrastructure/README.md`)  \n\n## Usage / Examples  \n```bash  \npython etl/orchestration.py --source s3://healthdata-raw --target snowflake://healthdata-dwh  \n```  \nProcesses 500M+ records daily with 99.99% SLA. Example use case:  \n- Ingest EHR data from S3 → Transform with Spark → Load to Snowflake for analytics  \n- Real-time patient monitoring data processed in 12ms/record via Airflow DAGs  \n\n## Architecture / Design  \nCentralized data lake on AWS S3 with:  \n- Apache Airflow for workflow orchestration (15+ DAGs)  \n- Apache Spark clusters for batch processing (500GB+ daily)  \n- Snowflake as unified data warehouse (10TB+ storage)  \n- Automated schema evolution via Delta Lake  \n\n## Tech Stack / Built With  \n- **Cloud**: AWS (S3, EC2, RDS) + Snowflake (data warehouse)  \n- **ETL**: Apache Spark (PySpark), Airflow, Delta Lake  \n- **Infrastructure**: Terraform, Docker (for local dev)  \n- **Monitoring**: Prometheus + Grafana for pipeline health  \n\n## Contributing  \nWe welcome improvements to:  \n- Pipeline efficiency (target 30% reduction in processing time)  \n- Snowflake schema optimization (current query latency: 120ms)  \n- Error handling for 20+ data source formats  \n\n## Testing  \n- Unit tests: 95% coverage (pytest + mocking)  \n- Integration tests: Validate 100+ data transformations  \n- Chaos testing: Simulate 50% node failure in Spark clusters  \n\n## Roadmap / Future Work  \nQ4 2023:  \n- Expand Snowflake data sharing for 5+ partner hospitals  \n- Implement serverless ETL for 20% cost reduction  \n- Add GDPR-compliant data masking for 1M+ patient records  \n- Explore AWS Glue for hybrid cloud migrations"
+  "text": "# EcomTech Product Recommendation System  \nA production-grade machine learning solution for hyper-personalized product recommendations, leveraging deep learning and NLP to drive user engagement and conversion. This system powers real-time suggestions across e-commerce platforms, integrating seamlessly with existing infrastructure to deliver actionable insights. Built with a focus on scalability, maintainability, and measurable impact, it has boosted conversion rates by 25% in internal pilot deployments.  \n\n## Deployment  \nThe system is hosted on AWS using Docker containers for consistent environment management. Model versions are tracked via MLflow, and production models are served through a REST API endpoint. A CI/CD pipeline ensures automated testing and deployment, with model retraining scheduled nightly. Monitoring is integrated via Prometheus and Grafana for latency and accuracy tracking.  \n\n## Getting Started / Installation  \nClone the repository using Git and install dependencies via `pip install -r requirements.txt`. Ensure Python 3.9+ is installed. For local development, run `docker-compose up` to spin up the service with a PostgreSQL database and Redis cache. The API requires a valid API key for authentication, which can be generated through the admin dashboard.  \n\n## Usage / Examples  \nTo fetch recommendations for a user, send a POST request to `/api/v1/recommendations` with user ID and session metadata. For example:  \n```bash\ncurl -X POST https://api.ecomtech.io/recommendations \\\n  -H \"Authorization: Bearer YOUR_API_KEY\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"user_id\": \"12345\", \"session_id\": \"sess_67890\"}'\n```  \nThe response includes a ranked list of products, prioritized by predicted relevance. The system also supports batch inference for historical data, enabling A/B testing of recommendation strategies.  \n\n## Tech Stack  \n- **ML Frameworks**: PyTorch (for deep learning models), TensorFlow (for legacy model compatibility)  \n- **NLP**: BERT-based embeddings for product descriptions, TF-IDF for keyword extraction  \n- **API**: FastAPI for REST endpoints, gRPC for internal service communication  \n- **Deployment**: Docker, AWS Lambda, Kubernetes for orchestration  \n- **Monitoring**: Prometheus, Grafana, MLflow for model tracking  \n\n## Architecture / Design  \nThe system employs a hybrid approach, combining collaborative filtering with content-based recommendations. User behavior data is processed through PyTorch-based neural networks, while product metadata is analyzed using NLP pipelines. A Redis cache ensures sub-second response times for real-time queries. The architecture is modular, allowing teams to iterate on specific components without disrupting the core recommendation engine.  \n\n## License  \nMIT License  \n\n## Badges  \n[![Build Status](https://github.com/ecomtech/recommendations/actions/workflows/build.yml/badge.svg)](https://github.com/ecomtech/recommendations/actions)  \n[![Test Coverage](https://codecov.io/gh/ecomtech/recommendations/branch/main/graph/badge.svg)](https://codecov.io/gh/ecomtech/recommendations)  \n[![GitHub contributors](https://img.shields.io/github/contributors/ecomtech/recommendations)](https://github.com/ecomtech/recommendations)"
 }

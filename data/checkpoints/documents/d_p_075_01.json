@@ -3,23 +3,20 @@
   "type": "project_readme",
   "persona_id": "p_075",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "heavy"
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 1,
-    "CI/CD pipelines": 3,
-    "Docker": 4,
-    "GitHub Actions": 3,
-    "Go": 1,
-    "Linux administration": 3,
-    "MongoDB": 1,
-    "Monitoring & alerting": 1,
-    "PostgreSQL": 3,
-    "Python": 1,
-    "REST API design": 3,
-    "Shell scripting (Bash)": 2
+    "API testing": 4,
+    "GitLab CI": 2,
+    "Performance testing (JMeter/k6)": 4,
+    "Python": 3,
+    "React": 1,
+    "Selenium/Playwright": 5,
+    "Test automation": 4,
+    "Test strategy design": 1,
+    "Web performance optimization": 1
   },
-  "text": "# E-Commerce Inventory Management System  \n\nA real-time inventory tracking solution built with Node.js and PostgreSQL, designed to handle concurrent updates and maintain 99.9% uptime under 10k+ requests/sec.  \n\n## Testing  \nAutomated test suite covers 95% of core logic with unit and integration tests. Test coverage is enforced via GitHub Actions, which runs tests on every PR and merge request. Mocha and Chai are used for assertions, while PostgreSQL transactions ensure data consistency during concurrent writes.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/marcusj/e-commerce-inventory.git`  \n2. Install dependencies: `npm install`  \n3. Initialize PostgreSQL via Docker (included in `docker-compose.yml`). Run `docker-compose up -d` to start the database.  \n4. Set environment variables for database credentials and API keys.  \n\n## Usage / Examples  \n- **Create an item**: `POST /api/items` with body `{ name: \"Laptop\", stock: 150 }`  \n- **Update stock**: `PATCH /api/items/:id` with body `{ stock: 50 }`  \n- **Query inventory**: `GET /api/inventory` returns real-time stock levels via WebSocket.  \n\n## Tech Stack  \n- Backend: Node.js 18, Express.js, REST API design  \n- Database: PostgreSQL 15 with JSONB for nested inventory data  \n- Containerization: Docker (reduced deployment friction by 40%)  \n- CI/CD: GitHub Actions (automates testing and linting)  \n- Scripting: Bash for database migrations and setup scripts  \n\n## Architecture / Design  \nThe system uses a microservices architecture with Node.js handling API logic and PostgreSQL for ACID compliance. Docker ensures consistent environments across dev, staging, and production. REST endpoints are designed for idempotency, with WebSocket subscriptions for real-time updates. Linux system commands are used for log rotation and resource monitoring.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Contributing  \nSubmit PRs with automated tests and code formatting. All contributions undergo code review and are integrated via GitHub Actions. Prefer pull requests over direct pushes to main."
+  "text": "# AutoTestPro: Test Automation Framework for InnovateTech Solutions  \nA scalable, maintainable framework built to reduce regression time by 40% and improve test coverage across InnovateTech’s SaaS product suite.  \n\n[![GitHub](https://badges.gitter.im/Join%20chat.svg)](https://gitter.im/innovatetech/autotestpro?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)  \n[![GitLab CI](https://badges.gitlab.com/innovatetech/autotestpro/pipeline.svg)](https://gitlab.com/innovatetech/autotestpro/pipelines)  \n[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/innovatetech/autotestpro/blob/main/LICENSE)  \n\n## License  \nMIT License. Use freely, but attribute the original work.  \n\n## Tech Stack  \n- **Python** (core scripting, test data generation)  \n- **Selenium/Playwright** (browser automation, cross-browser parity)  \n- **JMeter/k6** (load testing, stress scenarios)  \n- **GitLab CI** (CI/CD pipeline, parallel test execution)  \n- **Swagger/Postman** (API testing, mock endpoints)  \n\n## Architecture / Design  \nThe framework is built as a modular monolith with reusable components for test setup, teardown, and data pipelines. Browser tests use Playwright for headless execution, while API tests leverage Swagger-generated stubs for isolation. Performance tests are orchestrated via JMeter scripts, integrated with GitLab CI for nightly runs. All test suites are versioned alongside the product codebase.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://gitlab.com/innovatetech/autotestpro.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure environment variables in `.env.local` for API endpoints and credentials  \n4. Run tests: `python -m pytest --parallel` (for browser tests) or `jmeter -n -t performance.jmx` (for load scenarios)  \n\n## Usage / Examples  \n**API Test Example**:  \n```bash\npython -m pytest tests/api/test_user_registration.py -v\n```  \n**Performance Test Example**:  \n```bash\njmeter -n -t performance.jmx -Jusers=1000 -Jduration=300\n```  \n**Browser Test Example**:  \n```bash\npython -m pytest tests/browser/test_login_flow.py --browser=chrome\n```  \n\n## Contributing  \nPull requests are welcome! Ensure new tests align with the framework’s modular structure and include documentation for non-technical stakeholders. All test cases must pass in headless mode and include assertions for business-critical workflows."
 }

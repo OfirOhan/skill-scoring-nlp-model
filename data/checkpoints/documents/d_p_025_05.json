@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_025_05",
+  "type": "blog",
+  "persona_id": "p_025",
+  "hyperparams": {
+    "blog_depth": "opinion-piece",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Agile/Scrum": 2,
+    "CI/CD pipelines": 3,
+    "Cloud infrastructure": 1,
+    "GitHub Actions": 3,
+    "Linux administration": 2,
+    "Mentoring": 1,
+    "Monitoring & alerting": 3,
+    "Shell scripting (Bash)": 2,
+    "System design": 5,
+    "Team leadership": 1,
+    "Technical writing": 4
+  },
+  "text": "Problem Statement  \nE-commerce platforms face relentless pressure to scale during peak traffic—Black Friday, holiday sales, or viral product drops. Traditional monolithic architectures struggle with unpredictable load, leading to latency spikes, downtime, and poor user experiences. Our last major sale saw a 300% surge in traffic, and our legacy infrastructure couldn’t keep up. The challenge wasn’t just scaling compute; it was rethinking how to decouple workloads, reduce latency, and maintain reliability without manual intervention.  \n\nFailed Approaches  \nWe tried auto-scaling EC2 clusters, but it introduced latency due to cold starts and overprovisioning costs. A single Lambda function handling all requests led to bottlenecks—checkout latency hit 200ms during peaks, and cold starts caused 15% of requests to fail. We also experimented with a single DynamoDB table for all data, but write throughput became a bottleneck, requiring expensive provisioned capacity upgrades. These approaches masked the problem rather than solving it.  \n\nWorking Solution  \nWe adopted a multi-layered serverless architecture: API Gateway routed traffic to specialized Lambda functions for product catalog, checkout, and user auth. Each function was isolated, with DynamoDB tables partitioned by domain (e.g., `products`, `orders`). For async tasks like inventory updates, we used SNS/SQS to offload work, while AWS Lambda handled real-time operations. GitHub Actions automated CI/CD pipelines, ensuring rapid deployments without downtime. Monitoring via CloudWatch and custom dashboards tracked latency, error rates, and throughput in real time.  \n\nWhy It Works  \nIsolating workloads into microservices allowed each layer to scale independently. DynamoDB’s partitioning reduced contention, and with proper indexing, query latency dropped to 40ms. The event-driven architecture for async tasks freed up Lambda execution time, cutting checkout latency by 70%. CI/CD pipelines with GitHub Actions enabled zero-downtime deployments, and automated alerts let us preemptively scale resources. The key was treating serverless as a pattern, not a one-size-fits-all solution—this approach balanced cost, performance, and reliability.  \n\nFuture Work  \nWe’re exploring provisioned concurrency for critical Lambda functions to mitigate cold starts. Also, we’re integrating AWS Step Functions for complex workflows like fraud detection, which currently rely on ad-hoc scripts. Long-term, we want to experiment with hybrid architectures for high-priority workloads, while keeping the core platform fully serverless. The goal is to make scalability a byproduct of design, not a reactive fix."
+}

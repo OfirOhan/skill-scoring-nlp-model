@@ -3,23 +3,25 @@
   "type": "cv",
   "persona_id": "p_206",
   "hyperparams": {
-    "cv_format": "hybrid",
-    "geographic_convention": "India",
-    "company_type": "academic",
+    "cv_format": "paragraph",
+    "geographic_convention": "Israel",
+    "company_type": "agency",
     "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "GraphQL": 1,
-    "Next.js": 1,
-    "Node.js": 1,
-    "REST API design": 1,
-    "React": 1,
-    "Responsive design": 1,
-    "State management (Redux/Zustand)": 1,
-    "Test automation": 1,
-    "TypeScript": 1,
-    "Web performance optimization": 1,
-    "Webpack/Vite": 1
+    "Apache Airflow": 2,
+    "Apache Kafka": 1,
+    "Apache Spark": 2,
+    "Computer vision": 3,
+    "Data modeling": 1,
+    "ETL pipeline design": 2,
+    "Hugging Face Transformers": 4,
+    "MLOps (MLflow/W&B)": 4,
+    "NLP": 5,
+    "PyTorch": 4,
+    "TensorFlow": 3,
+    "dbt": 1,
+    "scikit-learn": 4
   },
-  "text": "Aisha Oduya  \nSenior Frontend Engineer | NovaTech SaaS  \nEmail: aisha.oduya@novatech.com | Phone: +91 9876543210 | LinkedIn: linkedin.com/in/aishaoduya  \n\nTechnical Skills  \nMentor junior developers in cross-functional teams, refining codebases through systematic refactoring. Spearheaded the adoption of CI/CD pipelines, reducing deployment cycles by 40% across three projects. Collaborated with product managers to translate business requirements into technical specifications, ensuring alignment with user-centric design principles. Implemented scalable solutions for high-traffic platforms, maintaining sub-200ms response times under peak loads.  \n\nProfessional Experience  \nNovaTech SaaS | Senior Frontend Engineer (2023–Present)  \nLed the development of a modular dashboard interface for enterprise clients, integrating legacy systems with modern UI frameworks. Orchestrated a 15-person team to deliver a 30% improvement in load times through optimized asset management. Introduced automated testing suites that increased code stability by 25% while reducing manual QA hours.  \n\nDataFlow Inc. | Frontend Tech Lead (2019–2023)  \nDirected the migration of a monolithic application to a microservices architecture, enabling independent scaling of frontend components. Streamlined collaboration between designers and engineers using centralized style guides and component libraries. Reduced technical debt by 35% through iterative code audits and refactoring sprints.  \n\nCloudGen Solutions | Senior Frontend Engineer (2017–2019)  \nArchitected a dynamic reporting tool for financial analytics, handling complex data visualizations with minimal latency. Coordinated with backend teams to establish consistent API integration patterns, improving data synchronization accuracy by 90%.  \n\nEducation  \nBSc in Computer Science | University of Lagos | 2016  \n\nCertifications  \nAWS Certified Cloud Practitioner | 2021  \nGoogle Professional Cloud Developer | 2022  \n\nLanguages  \nEnglish (near-native), Hindi (fluent), Yoruba (proficient)"
+  "text": "Elise Dubois  \nTel Aviv, Israel | +972 54 888 8888 | elise.dubois@example.com | linkedin.com/in/elise-dubois | github.com/elisedubois  \n\nProfessional Experience  \nAt NeuraCorp, I transitioned from an ML Engineering Intern to a full-time Machine Learning Engineer, contributing to scalable NLP systems and fostering cross-team collaboration. My role centered on refining transformer-based models for customer sentiment analysis, where I optimized inference latency by 22% through model quantization and pruning, directly improving real-time response accuracy. I also spearheaded the integration of MLflow into our CI/CD pipelines, reducing deployment errors by 35% and streamlining model versioning across 12+ teams. During my internship at TechCo, I developed a computer vision pipeline for industrial defect detection using PyTorch, achieving 92% precision on a dataset of 150,000 labeled images. This work was later adapted into a production system, reducing manual inspection time by 40% for manufacturing clients. At ABC Inc, I transitioned from data analysis to ML engineering by building a recommendation system leveraging collaborative filtering and embedding techniques, which increased user engagement metrics by 18% within three months. My early internship at XYZ Corp introduced me to data science workflows, where I conducted exploratory analysis on 2 million customer records to identify latent patterns influencing churn, a project later expanded into a predictive model used by 30+ business units.  \n\nEducation  \nMaster of Science in Data Science, University of Toronto, 2023. Thesis: “Optimizing NLP Architectures for Low-Resource Languages: A Case Study in Arabic Text Classification.” Coursework included advanced topics in deep learning, distributed systems, and ethical AI, with a focus on deploying models in production environments. My research involved fine-tuning BERT variants on limited datasets, achieving 87% F1 score on a benchmark task, and exploring strategies for model compression without sacrificing accuracy.  \n\nTechnical Skills  \nI specialize in building end-to-end NLP systems, with particular expertise in deploying transformer models using Hugging Face Transformers. At NeuraCorp, I architected a pipeline for multilingual text classification, where I integrated DistilBERT and RoBERTa models to handle 50+ languages, reducing annotation costs by 60% through transfer learning. My work with PyTorch included designing modular architectures for computer vision tasks, such as object detection in low-light environments, which improved mean average precision (mAP) by 12% compared to baseline models. For MLOps, I implemented W&B for experiment tracking, which enabled teams to reproduce results 90% faster, and designed MLflow pipelines that automated hyperparameter tuning for 15+ models. I also contribute to open-source projects, maintaining a GitHub repository with benchmarks for NLP model efficiency. While less central to my current role, I have experience with Apache Spark for batch processing and Airflow for orchestrating data pipelines, though these tools are used sparingly in my workflow.  \n\nProjects  \nAt NeuraCorp, I led the development of a real-time sentiment analysis API using Hugging Face’s pipeline API, which processed 10 million queries monthly and supported 15 languages. This project required integrating models with Kafka (though I avoid mentioning it here) and ensuring low-latency responses via GPU acceleration. Another project involved creating a custom NLP framework for customer support chatbots, where I implemented intent recognition using scikit-learn and BERT, achieving 91% accuracy on a 100,000-sample dataset. I also contributed to a research initiative on multilingual embedding models, where I evaluated 20+ pre-trained models and published a white paper on their performance across 12 languages.  \n\nPublications  \nCo-authored a technical report titled “Benchmarking Transformer Models for Low-Resource Language Tasks” with University of Toronto faculty, which was presented at the 2023 International Conference on Neural Information Processing. The study compared the efficiency of distillation techniques across 15 models, with findings later incorporated into NeuraCorp’s model selection guidelines.  \n\nAwards & Achievements  \nRecognized as “Top Performer in NLP Innovation” at NeuraCorp in Q4 2024, due to contributions to cross-functional projects. Won first place in the 2023 Toronto AI Hackathon for a project on real-time translation using transformer models, with a panel of industry experts. Received the University of Toronto’s Excellence in Research Award for my thesis work on multilingual NLP, which was cited in two academic papers."
 }

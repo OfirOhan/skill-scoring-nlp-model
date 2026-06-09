@@ -1,27 +1,27 @@
 {
   "doc_id": "d_p_005_03",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_005",
   "hyperparams": {
-    "recommender_role": "direct-manager",
-    "recommender_closeness": "occasional",
-    "company_type": "enterprise",
-    "company_size": "small (<50)"
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "ArgoCD": 3,
-    "CI/CD pipelines": 4,
-    "GitHub Actions": 3,
-    "GitLab CI": 3,
-    "Jenkins": 3,
-    "Kubernetes": 4,
-    "Linux administration": 4,
-    "Monitoring & alerting": 4,
-    "Prometheus/Grafana": 4,
-    "Python": 4,
-    "Shell scripting": 4,
-    "Terraform": 4
+    "Design systems": 5,
+    "JavaScript": 5,
+    "Next.js": 4,
+    "Node.js": 1,
+    "Product management": 1,
+    "REST API design": 1,
+    "React": 5,
+    "Responsive design": 4,
+    "Selenium/Playwright": 1,
+    "State management (Redux/Zustand)": 5,
+    "Test automation": 1,
+    "TypeScript": 5,
+    "Unit testing": 1,
+    "Web performance optimization": 4
   },
-  "text": "Umar Bello’s academic context at FinTech Innovators Ltd. reflects a deep engagement with scalable systems and automation. As Staff DevOps/SRE Lead, he designed CI/CD pipelines that reduced deployment latency by 40% across microservices, leveraging ArgoCD for declarative rollouts and Jenkins for batch job orchestration. His AWS infrastructure optimizations, including spot instance utilization and auto-scaling policies, cut cloud costs by 25% while maintaining 99.95% SLA compliance. These contributions align with the enterprise’s need for resilience and agility in fintech operations.  \n\nHis research ability shines in problem-solving under constraint. When legacy systems faced frequent outages, Umar rebuilt monitoring with Prometheus and Grafana, reducing mean time to resolution by 60%. He also pioneered GitLab CI integrations that automated 80% of regression testing, enabling faster release cycles. His Python scripts for log aggregation and anomaly detection became foundational tools, demonstrating a knack for translating operational challenges into technical innovation.  \n\nUmar’s character is defined by reliability and intellectual curiosity. He consistently prioritizes system stability, often working late to resolve critical issues. His mentorship of junior engineers has strengthened team cohesion, and his proactive approach to security audits has preempted vulnerabilities in production.  \n\nHis potential lies in his ability to balance tactical execution with strategic vision. Recent work on Terraform-driven infrastructure-as-code has streamlined environment provisioning, and his exploration of Kubernetes observability tools signals a commitment to evolving practices. Umar’s blend of technical rigor and adaptability positions him to drive further innovation in complex, mission-critical environments."
+  "text": "# Startup Tools PWA  \nA production-ready Progressive Web App built with Next.js and React, designed to streamline startup workflows through offline-first capabilities, adaptive layouts, and performance-optimized state management. Prioritizes accessibility, cross-device reliability, and a cohesive design system for enterprise-grade tooling.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/commit-activity/m/yukitanaka/startup-tools-pwa)](https://github.com/yukitanaka/startup-tools-pwa)  \n[![npm](https://img.shields.io/npm/v/startup-tools-pwa)](https://www.npmjs.com/package/startup-tools-pwa)  \n[![PWA](https://img.shields.io/badge/PWA-Optimized-green)](https://web.dev/progressive-web-apps/)  \n\n## Getting Started / Installation  \nInstall dependencies via `npm install` or `yarn install`. Configure environment variables for API endpoints and analytics tracking. Run `yarn build` for production-ready static exports. Development mode uses `yarn dev` with hot-reloading enabled for real-time state updates.  \n\n## Tech Stack  \n- **Next.js 13+**: Full-stack rendering with server components for SEO and performance, while client-side hydration ensures interactive tooling.  \n- **React 18**: Concurrent Mode and Suspense for seamless state transitions in complex workflows.  \n- **TypeScript**: Type-safe state management and API integrations, reducing runtime errors in enterprise environments.  \n- **Redux Toolkit + Zustand**: Hybrid state architecture for global tool configurations, with Zustand handling UI-specific state for faster updates.  \n- **Tailwind CSS**: Custom design tokens and responsive breakpoints for adaptive layouts across mobile, tablet, and desktop.  \n- **Design System**: Shared UI components and color palettes, with strict style guidelines enforced via TypeScript type definitions.  \n\n## Architecture / Design  \nThe app follows a micro-frontends pattern, with isolated tool modules communicating via Redux. Core PWA features like offline caching and service workers are abstracted into a shared utility library. Responsive design prioritizes mobile-first interactions, with CSS variables for theme switching and accessibility enhancements.  \n\n## Usage / Examples  \n- **Offline Mode**: Users can draft reports or manage tasks without internet, with auto-sync on reconnect.  \n- **Theme Switching**: Dark/light mode toggles via localStorage, persisted across sessions.  \n- **Performance Metrics**: Real-time load time tracking and Lighthouse score visualization in the dashboard.  \n\n## Testing  \nEnd-to-end tests validate PWA service worker behavior and offline functionality using Cypress. Integration tests ensure state consistency across Redux and Zustand. Accessibility checks are automated with axe-core, enforcing WCAG 2.1 compliance.  \n\n## License  \nMIT License — see [LICENSE](https://github.com/yukitanaka/startup-tools-pwa/blob/main/LICENSE) for details."
 }

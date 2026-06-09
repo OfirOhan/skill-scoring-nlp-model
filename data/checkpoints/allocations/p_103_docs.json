@@ -1,46 +1,22 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Senior Site Reliability Engineer with 8 years of experience in fintech, specializing in system reliability, automation, and compliance.",
-    "title": "Hugo Ramirez - Senior Site Reliability Engineer",
+    "topic_summary": "Professional resume highlighting Simone's experience as a Senior Data Engineer in healthtech.",
+    "title": "Simone de Luca - Senior Data Engineer",
     "doc_id": "d_p_103_00",
     "persona_id": "p_103",
     "hyperparams": {
-      "cv_format": "hybrid",
-      "geographic_convention": "Israel",
-      "company_type": "enterprise",
-      "company_size": "small (<50)"
+      "cv_format": "minimal",
+      "geographic_convention": "Europe",
+      "company_type": "startup",
+      "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A real-time monitoring system for financial transactions using Prometheus and Grafana to ensure uptime and compliance.",
-    "title": "Financial Transaction Monitoring Dashboard",
+    "topic_summary": "A project leveraging machine learning to predict patient health outcomes using electronic health records.",
+    "title": "HealthPredict: Predictive Analytics for Patient Outcomes",
     "doc_id": "d_p_103_01",
-    "persona_id": "p_103",
-    "hyperparams": {
-      "project_scale": "hobby",
-      "project_team_size": "medium (5-15)",
-      "jargon_density": "heavy"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "A tool for automating compliance checks across financial regulations, reducing manual audits and ensuring regulatory adherence.",
-    "title": "Automated Compliance Check Suite",
-    "doc_id": "d_p_103_02",
-    "persona_id": "p_103",
-    "hyperparams": {
-      "project_scale": "academic",
-      "project_team_size": "medium (5-15)",
-      "jargon_density": "moderate"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "Deployment of a high-availability Kubernetes cluster to support a payment gateway, ensuring 99.99% SLA and rapid failover.",
-    "title": "High Availability Kubernetes Cluster for Payment Gateway",
-    "doc_id": "d_p_103_03",
     "persona_id": "p_103",
     "hyperparams": {
       "project_scale": "team-internal",
@@ -49,14 +25,38 @@
     }
   },
   {
+    "doc_type": "project_readme",
+    "topic_summary": "A project focused on optimizing data pipelines for real-time health monitoring systems.",
+    "title": "VitalFlow: Real-Time Health Data Pipeline Optimization",
+    "doc_id": "d_p_103_02",
+    "persona_id": "p_103",
+    "hyperparams": {
+      "project_scale": "hobby",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A project using anomaly detection algorithms to identify irregular patterns in health data streams.",
+    "title": "AnomalyDetect: Machine Learning for Health Data Anomalies",
+    "doc_id": "d_p_103_03",
+    "persona_id": "p_103",
+    "hyperparams": {
+      "project_scale": "academic",
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "moderate"
+    }
+  },
+  {
     "doc_type": "blog",
-    "topic_summary": "A guide on creating and implementing incident response playbooks tailored for financial systems to minimize downtime during critical outages.",
-    "title": "Incident Response Playbooks for Financial Systems: Lessons from High-Stakes Outages",
+    "topic_summary": "A technical blog post discussing strategies for building efficient data pipelines in healthtech applications.",
+    "title": "Optimizing Data Pipelines for Real-Time Health Analytics",
     "doc_id": "d_p_103_04",
     "persona_id": "p_103",
     "hyperparams": {
       "blog_depth": "opinion-piece",
-      "jargon_density": "moderate"
+      "jargon_density": "heavy"
     }
   }
 ]

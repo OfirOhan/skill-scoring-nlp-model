@@ -1,26 +1,62 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Ian Szabo's 4 years of experience as a backend engineer in healthtech, focusing on scalable systems and API development.",
-    "title": "Ian Szabo - Backend Engineer",
+    "topic_summary": "A professional CV highlighting Yoko Fujita's 12 years of experience as a Staff Site Reliability Engineer at NexaTech Solutions",
+    "title": "Yoko Fujita - Staff Site Reliability Engineer",
     "doc_id": "d_p_026_00",
     "persona_id": "p_026",
     "hyperparams": {
       "cv_format": "bullet-heavy",
-      "geographic_convention": "Europe",
-      "company_type": "enterprise",
+      "geographic_convention": "US",
+      "company_type": "academic",
       "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A GitHub README for a backend service that securely syncs patient data across healthcare systems using Python and PostgreSQL.",
-    "title": "HealthDataSync",
+    "topic_summary": "A GitHub project README for an automated Kubernetes auto-scaling solution",
+    "title": "AutoScale Guardian: Dynamic Kubernetes Auto-Scaling for Startups",
     "doc_id": "d_p_026_01",
     "persona_id": "p_026",
     "hyperparams": {
+      "project_scale": "academic",
+      "project_team_size": "solo",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A GitHub project README for a CI/CD pipeline optimization tool",
+    "title": "CI/CD Pipeline Optimizer: Streamlining Deployment Workflows",
+    "doc_id": "d_p_026_02",
+    "persona_id": "p_026",
+    "hyperparams": {
       "project_scale": "production",
-      "project_team_size": "medium (5-15)",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation letter from Yoko's manager praising her leadership in SRE initiatives",
+    "title": "Recommendation from NexaTech Solutions CTO",
+    "doc_id": "d_p_026_03",
+    "persona_id": "p_026",
+    "hyperparams": {
+      "recommender_role": "skip-level",
+      "recommender_closeness": "occasional",
+      "company_type": "FAANG",
+      "company_size": "large (500+)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post on best practices for scaling distributed systems in startups",
+    "title": "Scaling Distributed Systems: Lessons from a Staff SRE at a Startup",
+    "doc_id": "d_p_026_04",
+    "persona_id": "p_026",
+    "hyperparams": {
+      "blog_depth": "deep-dive",
       "jargon_density": "heavy"
     }
   }

@@ -1,60 +1,54 @@
 {
   "persona_id": "p_049",
   "hyperparams": {
-    "archetype": "data_engineer",
-    "years_experience": 2,
-    "seniority": "junior",
-    "industry": "startup",
-    "writing_style": "confident",
-    "language_fluency": "near-native",
-    "self_promotion_level": "boastful",
+    "archetype": "frontend_engineer",
+    "years_experience": 4,
+    "seniority": "mid",
+    "industry": "enterprise",
+    "writing_style": "neutral",
+    "language_fluency": "ESL",
+    "self_promotion_level": "humble",
     "quantification_tendency": "mixed"
   },
-  "name": "Pavel Dvorak",
-  "current_role": "Data Engineer",
-  "company": "NexaData Solutions",
+  "name": "Valentina Marchetti",
+  "current_role": "Frontend Engineer",
+  "company": "NexaCorp",
   "education": {
-    "degree": "Bachelor of Science in Computer Science",
-    "university": "University of Toronto",
-    "year": 2021
+    "degree": "Bachelor of Computer Science",
+    "university": "University of Technology Sydney",
+    "year": 2020
   },
   "career_trajectory": [
     {
-      "title": "Data Analyst Intern",
-      "company": "TechNova Analytics",
-      "duration": "6 months",
-      "responsibilities": "Processed raw data using Python and SQL, created visualizations for stakeholder reports."
+      "year": 2019,
+      "position": "Junior Frontend Developer",
+      "company": "StartUpCo"
     },
     {
-      "title": "Data Engineering Intern",
-      "company": "DataVerve Inc.",
-      "duration": "6 months",
-      "responsibilities": "Built ETL pipelines with Apache Airflow and optimized PostgreSQL queries for real-time analytics."
+      "year": 2021,
+      "position": "Frontend Developer",
+      "company": "MidTech Solutions"
     },
     {
-      "title": "Junior Data Engineer",
-      "company": "NexaData Solutions",
-      "duration": "2 years",
-      "responsibilities": "Architected cloud-native data pipelines on AWS, integrated Kafka with Snowflake, and automated DBT models."
+      "year": 2023,
+      "position": "Frontend Engineer",
+      "company": "NexaCorp"
     }
   ],
   "skills": {
-    "Apache Spark": 3,
-    "Apache Kafka": 3,
-    "Apache Airflow": 3,
-    "dbt": 3,
-    "ETL pipeline design": 3,
-    "Data warehousing": 3,
-    "Snowflake": 3,
-    "PostgreSQL": 3,
-    "Python": 4,
+    "JavaScript": 4,
+    "TypeScript": 5,
+    "React": 4,
+    "Next.js": 4,
+    "Web performance optimization": 4,
+    "Python": 1,
     "REST API design": 3,
-    "Docker": 3,
-    "Kubernetes": 2,
-    "Infrastructure as Code": 3,
-    "Cloud cost optimization": 2
+    "Webpack/Vite": 3,
+    "Web accessibility (WCAG)": 3
   },
   "document_ids": [
-    "d_p_049_00"
+    "d_p_049_00",
+    "d_p_049_01",
+    "d_p_049_02"
   ]
 }

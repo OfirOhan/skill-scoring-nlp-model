@@ -3,27 +3,20 @@
   "type": "project_readme",
   "persona_id": "p_283",
   "hyperparams": {
-    "project_scale": "academic",
+    "project_scale": "team-internal",
     "project_team_size": "medium (5-15)",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "CI/CD pipelines": 4,
-    "Docker": 4,
-    "Go": 4,
-    "GraphQL": 4,
-    "Java": 1,
-    "Kubernetes": 4,
-    "Microservices architecture": 4,
-    "MongoDB": 1,
-    "Monitoring & alerting": 4,
-    "Node.js": 1,
-    "PostgreSQL": 4,
-    "Python": 1,
-    "REST API": 4,
-    "Terraform": 4,
-    "REST API design": 1
+    "Apache Airflow": 1,
+    "Data modeling": 1,
+    "NumPy": 3,
+    "Pandas": 3,
+    "Python": 3,
+    "REST API design": 1,
+    "SQL analytics": 4,
+    "Time series analysis": 4,
+    "scikit-learn": 4
   },
-  "text": "# AdBud: Real-Time Ad Bidding Optimization System  \nAdBud is a full-stack ad-tech platform engineered to optimize real-time ad bidding through machine learning integration. Designed for high-throughput environments, it balances latency-sensitive decision-making with data-driven strategy refinement. The system decouples bidding logic from analytics, enabling parallel processing of bid adjustments and performance metrics. Built with a focus on scalability and observability, it leverages cloud-native patterns to adapt to fluctuating campaign demands.  \n\n## Deployment  \nAdBud operates on AWS, where EC2 clusters are dynamically scaled using Auto Scaling groups to handle peak bid request volumes. Terraform provisions infrastructure as code, ensuring consistency across staging and production environments. Kubernetes orchestrates microservices, with Docker containers deployed via Helm charts to isolate bidding, analytics, and ML inference layers. Prometheus and Grafana are integrated for real-time monitoring, while CloudWatch Alarms trigger alerts for latency spikes or model drift.  \n\n## Getting Started / Installation  \nInitialize the repo with `git init`, then configure environment variables for AWS credentials and PostgreSQL endpoints. Deploy infrastructure using Terraform: `terraform init && terraform apply` to spin up VPCs, RDS instances, and Kubernetes clusters. Build and push Docker images to ECR with `docker build -t adbud-bidding && docker push`. Finally, deploy microservices via `kubectl apply -f k8s/deployment.yaml`.  \n\n## Usage / Examples  \nAdBud processes bid requests via a REST API endpoint `/api/v1/bid`, which routes to a GraphQL resolver for query flexibility. Example: A campaign with a $0.50 CPM target triggers a bid adjustment workflow. The system calculates real-time bid values using a trained gradient-boosted model, then logs performance metrics to PostgreSQL. Analytics microservices aggregate data hourly, refining the model’s hyperparameters for the next bidding cycle.  \n\n## Tech Stack  \n- **AWS**: EC2, RDS, CloudWatch, S3, and VPC for compute, storage, and network segmentation  \n- **Go**: High-performance bid calculation engine with concurrency primitives  \n- **PostgreSQL**: Time-series storage for bid logs and campaign metadata  \n- **GraphQL**: Schema-driven API for bid adjustment queries and analytics exports  \n- **Docker/Kubernetes**: Containerization and orchestration for microservices isolation  \n- **Terraform**: Infrastructure-as-code for reproducible cloud environments  \n\n## Architecture / Design  \nAdBud’s microservices architecture decouples bidding logic, analytics, and ML inference into distinct pods. The bidding service, written in Go, uses a REST API to receive bid requests and a GraphQL API to expose campaign metrics. PostgreSQL stores bid logs for historical analysis, while Prometheus scrapes metrics from Kubernetes pods. CI/CD pipelines, managed via GitHub Actions, automate testing and deployment to ensure zero-downtime updates.  \n\n## License  \nMIT License  \n\n## Badges  \n[![Production Status](https://example.com/production-badge)](https://example.com)  \n[![Code Coverage](https://example.com/coverage-badge)](https://example.com)  \n[![Deployment Frequency](https://example.com/deploy-badge)](https://example.com)"
+  "text": "# FraudGuard: Real-Time Fraud Detection System  \nA production-grade anomaly detection framework for financial transactions, leveraging time series analysis and scalable SQL pipelines to minimize false positives while maintaining sub-100ms latency for real-time scoring.  \n\n## Badges  \n[![Build Status](https://example.com/build)](https://example.com/build) [![Code Coverage](https://example.com/coverage)](https://example.com/coverage) [![Tech Stack](https://example.com/stack)](https://example.com/stack)  \n\n## Getting Started / Installation  \n```bash  \npython -m venv fraudguard  \nsource fraudguard/bin/activate  \npip install -r requirements.txt  \n```  \nNote: This project is designed for internal deployment only. Ensure all dependencies are aligned with your organization’s security policies before execution.  \n\n## Tech Stack  \n- **Python 3.9+**: Core language for model orchestration and script automation  \n- **NumPy/Pandas**: High-performance array operations for feature engineering  \n- **SQL (PostgreSQL/Redshift)**: Time-series window functions for historical pattern analysis  \n- **scikit-learn (Isolation Forest)**: Anomaly detection engine with 98.2% precision in production  \n- **Kafka Streams**: Real-time data ingestion pipeline with 99.95% message durability  \n- **Dask**: Parallel processing for batch retraining workflows  \n\n## Architecture / Design  \nThe system decouples raw transaction streams from model inference to ensure low-latency scoring. Kafka partitions handle volume spikes, while SQL window functions capture temporal dependencies. The Isolation Forest model is periodically retrained on aggregated SQL tables, with drift detection implemented via Kolmogorov-Smirnov tests. Feature engineering pipelines use Pandas’ rolling windows to capture transactional context.  \n\n## Usage / Examples  \n```python  \nfrom fraudguard import FraudDetector  \ndetector = FraudDetector(threshold=0.05)  \ntransaction = {\"amount\": 1500, \"time\": \"2023-10-01T14:32:17Z\", \"location\": \"US-NY\"}  \nscore = detector.predict(transaction)  \nprint(f\"Fraud probability: {score:.2%}\")  \n```  \nThis example processes a single transaction through the pipeline, applying both real-time and historical context checks.  \n\n## Testing  \nUnit tests validate model thresholds and feature transformations using pytest. Integration tests simulate Kafka stream failures and SQL query latency. Code coverage exceeds 85% across core modules, with critical paths (e.g., anomaly scoring) tested against 10,000+ synthetic transactions.  \n\n## License  \nMIT License (see LICENSE file). For internal use only — redistribution prohibited."
 }

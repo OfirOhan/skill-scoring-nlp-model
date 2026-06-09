@@ -1,50 +1,26 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Maya Johal's 8 years of experience as a Senior DevOps Consultant specializing in cloud infrastructure and automation.",
-    "title": "Maya Johal - Senior DevOps Consultant",
+    "topic_summary": "Professional profile of Beatriz Lopes as a Data Engineer with 4 years of experience in SaaS industry solutions",
+    "title": "Beatriz Lopes - Data Engineer CV",
     "doc_id": "d_p_028_00",
     "persona_id": "p_028",
     "hyperparams": {
-      "cv_format": "paragraph",
-      "geographic_convention": "Europe",
-      "company_type": "startup",
-      "company_size": "mid (50-500)"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "A GitHub README for a project automating CI/CD pipelines for cloud-native applications using Kubernetes and Terraform.",
-    "title": "Cloud-Native CI/CD Pipeline Automation",
-    "doc_id": "d_p_028_01",
-    "persona_id": "p_028",
-    "hyperparams": {
-      "project_scale": "academic",
-      "project_team_size": "solo",
-      "jargon_density": "moderate"
-    }
-  },
-  {
-    "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from Maya's former manager praising her leadership in DevOps transformation projects.",
-    "title": "Recommendation for Maya Johal - CloudOptima Solutions",
-    "doc_id": "d_p_028_02",
-    "persona_id": "p_028",
-    "hyperparams": {
-      "recommender_role": "skip-level",
-      "recommender_closeness": "worked-daily",
+      "cv_format": "bullet-heavy",
+      "geographic_convention": "Israel",
       "company_type": "FAANG",
       "company_size": "large (500+)"
     }
   },
   {
-    "doc_type": "blog",
-    "topic_summary": "A technical blog post discussing observability strategies for microservices architectures in DevOps workflows.",
-    "title": "Observability in Microservices: Bridging DevOps and SRE Practices",
-    "doc_id": "d_p_028_03",
+    "doc_type": "project_readme",
+    "topic_summary": "Data pipeline optimization project for SaaS platform using Apache Airflow and AWS services",
+    "title": "NexaCloud Data Pipeline Optimization",
+    "doc_id": "d_p_028_01",
     "persona_id": "p_028",
     "hyperparams": {
-      "blog_depth": "opinion-piece",
+      "project_scale": "academic",
+      "project_team_size": "solo",
       "jargon_density": "heavy"
     }
   }

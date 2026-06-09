@@ -1,55 +1,55 @@
 {
   "persona_id": "p_185",
   "hyperparams": {
-    "archetype": "security_engineer",
+    "archetype": "data_engineer",
     "years_experience": 2,
     "seniority": "junior",
-    "industry": "adtech",
-    "writing_style": "concise",
-    "language_fluency": "native",
+    "industry": "e-commerce",
+    "writing_style": "confident",
+    "language_fluency": "near-native",
     "self_promotion_level": "humble",
-    "quantification_tendency": "metrics-heavy"
+    "quantification_tendency": "qualitative"
   },
-  "name": "Eliott Marchand",
-  "current_role": "Security Engineer",
-  "company": "AdVerve Technologies",
+  "name": "Thomas Eriksen",
+  "current_role": "Data Engineer",
+  "company": "NexCart Solutions",
   "education": {
-    "degree": "Bachelor of Science in Cybersecurity",
-    "university": "University of Technology Sydney",
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "University of Oslo",
     "year": 2022
   },
   "career_trajectory": [
     {
-      "role": "Security Analyst Intern",
-      "company": "MediaTrack Inc.",
+      "role": "Data Analyst Intern",
+      "company": "VividTech",
       "duration": "6 months",
-      "key_achievements": [
-        "Supported SOC team with incident triage",
-        "Conducted basic vulnerability scans"
-      ]
+      "responsibilities": "Assisted in cleaning and visualizing sales data for product optimization."
     },
     {
-      "role": "Junior Security Engineer",
-      "company": "AdVerve Technologies",
-      "duration": "1.5 years",
-      "key_achievements": [
-        "Implemented IAM policies reducing unauthorized access by 40%",
-        "Led security audits for 3 ad-tech platforms"
-      ]
+      "role": "Data Engineering Intern",
+      "company": "Ecometrics Group",
+      "duration": "6 months",
+      "responsibilities": "Supported ETL pipeline development for customer behavior analytics."
+    },
+    {
+      "role": "Junior Data Engineer",
+      "company": "NexCart Solutions",
+      "duration": "2 years",
+      "responsibilities": "Designing scalable data pipelines and maintaining cloud infrastructure for e-commerce analytics."
     }
   ],
   "skills": {
-    "Network security": 3,
-    "Application security (OWASP)": 3,
-    "Penetration testing": 3,
-    "IAM/Access control": 3,
-    "Security auditing": 3,
-    "Vulnerability management": 3,
-    "SIEM tools": 3,
-    "Compliance (SOC2/GDPR)": 2,
-    "Threat modeling": 2,
-    "Incident response": 3,
-    "Network automation": 2
+    "Apache Spark": 4,
+    "Apache Airflow": 3,
+    "ETL pipeline design": 4,
+    "Data warehousing": 4,
+    "Snowflake": 5,
+    "Data modeling": 3,
+    "Python": 1,
+    "Docker": 3,
+    "Terraform": 3,
+    "REST API design": 2,
+    "PostgreSQL": 3
   },
   "document_ids": [
     "d_p_185_00",

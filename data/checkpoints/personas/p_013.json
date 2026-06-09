@@ -1,57 +1,55 @@
 {
   "persona_id": "p_013",
   "hyperparams": {
-    "archetype": "mobile_developer",
-    "years_experience": 3,
-    "seniority": "mid",
-    "industry": "cybersecurity",
-    "writing_style": "modest",
+    "archetype": "ml_engineer",
+    "years_experience": 2,
+    "seniority": "junior",
+    "industry": "fintech",
+    "writing_style": "confident",
     "language_fluency": "near-native",
     "self_promotion_level": "humble",
-    "quantification_tendency": "qualitative"
+    "quantification_tendency": "mixed"
   },
-  "name": "Hana Kim",
-  "current_role": "Mobile Developer (Cybersecurity Focus)",
-  "company": "SecureNet Technologies",
+  "name": "Nadia Khoury",
+  "current_role": "Machine Learning Engineer",
+  "company": "FinTech Solutions Inc.",
   "education": {
-    "degree": "Bachelor of Science in Computer Science",
-    "university": "University of California, Berkeley",
-    "year": 2020
+    "degree": "Master of Science in Data Science",
+    "university": "University of Toronto",
+    "year": 2022
   },
   "career_trajectory": [
     {
-      "year": 2020,
-      "role": "Junior Mobile Developer",
-      "company": "TechStart Innovations"
+      "role": "Data Analyst Intern",
+      "company": "FinTech Co.",
+      "duration": "6 months",
+      "year": 2021
     },
     {
-      "year": 2022,
-      "role": "Mobile Developer",
-      "company": "CyberGuard Solutions"
-    },
-    {
-      "year": 2023,
-      "role": "Mobile Developer",
-      "company": "SecureNet Technologies"
+      "role": "Junior ML Engineer",
+      "company": "FinTech Co.",
+      "duration": "1 year",
+      "year": 2022
     }
   ],
   "skills": {
-    "Swift": 4,
-    "Kotlin": 3,
-    "React Native": 3,
-    "Flutter": 3,
-    "iOS development": 3,
-    "Android development": 3,
-    "TypeScript": 3,
-    "React": 3,
-    "REST API design": 3,
-    "Security testing": 3
+    "PyTorch": 4,
+    "TensorFlow": 4,
+    "scikit-learn": 4,
+    "NLP": 4,
+    "MLOps (MLflow/W&B)": 4,
+    "Model deployment": 4,
+    "Recommendation systems": 3,
+    "Apache Spark": 1,
+    "Apache Airflow": 2,
+    "ETL pipeline design": 2,
+    "Data modeling": 2,
+    "CI/CD pipelines": 2,
+    "Prometheus/Grafana": 2
   },
   "document_ids": [
     "d_p_013_00",
     "d_p_013_01",
-    "d_p_013_02",
-    "d_p_013_03",
-    "d_p_013_04"
+    "d_p_013_02"
   ]
 }

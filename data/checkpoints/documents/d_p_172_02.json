@@ -1,25 +1,23 @@
 {
   "doc_id": "d_p_172_02",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_172",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "solo",
-    "jargon_density": "plain"
+    "recommender_role": "professor",
+    "recommender_closeness": "occasional",
+    "company_type": "agency",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "Design systems": 2,
-    "Next.js": 1,
-    "REST API design": 3,
-    "React": 1,
-    "Responsive design": 4,
-    "State management": 1,
-    "TypeScript": 1,
-    "UX research": 1,
-    "Web accessibility": 4,
-    "Web performance optimization": 3,
-    "Web accessibility (WCAG)": 1,
-    "State management (Redux/Zustand)": 1
+    "Application security (OWASP)": 4,
+    "Cloud networking (VPC/subnets)": 1,
+    "DNS/DHCP": 1,
+    "Firewall configuration": 2,
+    "IAM/Access control": 5,
+    "Incident response": 3,
+    "Network security": 3,
+    "Penetration testing": 3,
+    "TCP/IP": 1
   },
-  "text": "# TeleMedVue  \nA telemedicine platform enabling secure, real-time video consultations and encrypted patient data handling. Built with Vue.js and Firebase, this project prioritizes privacy and usability for healthcare providers and patients.  \n\n## Contributing  \nCollaboration is welcome! Whether you're refining UI/UX flows, enhancing backend security, or testing edge cases, your input shapes this tool’s impact. Propose changes via pull request or discuss ideas in the issues.  \n\n## Getting Started / Installation  \n1. Clone the repo using `git clone https://github.com/yourusername/TeleMedVue.git`  \n2. Install dependencies with `npm install`  \n3. Configure Firebase credentials in `firebaseConfig.js`  \n4. Run the dev server: `npm run serve`  \nEnsure Firebase real-time database and storage are enabled for full functionality.  \n\n## Usage / Examples  \n- **Dashboard**: View patient lists and initiate video calls with one click  \n- **Secure Chat**: Encrypted text messaging between providers and patients  \n- **Data Sync**: Real-time updates across devices using Firebase’s snapshot listeners  \n- **Call Management**: Start, pause, or end video sessions with minimal latency  \n\n## Tech Stack  \n- **Frontend**: Vue.js 3, Tailwind CSS  \n- **Backend**: Firebase Realtime Database, Firebase Storage  \n- **Video**: WebRTC for low-latency streaming  \n- **Security**: AES-256 encryption for stored patient data  \n\n## Architecture / Design  \nThe app follows a **component-driven** structure, separating video logic from data management. Firebase acts as the central hub for state synchronization, while Vue’s reactivity ensures smooth UI updates. Responsive design adapts to mobile and desktop, with focus on touch-friendly controls for clinical settings.  \n\n## License  \nMIT License — see `LICENSE.md` for full details  \n\n## Badges  \nVue.js • Firebase • WebRTC • Tailwind CSS"
+  "text": "Binta Traore is a Staff Security Engineer at MedTech Solutions, where she balances technical rigor with a pragmatic approach to solving complex healthtech challenges.  \n\nHer application security work at MedTech has directly shaped patient data protections. She led an initiative to align internal tools with OWASP guidelines, reducing critical vulnerabilities in a flagship EHR platform by 40% over 18 months. Her ownership of this project included designing automated checks and training cross-functional teams on secure coding practices.  \n\nBinta’s IAM architecture at MedTech is both innovative and scalable. She designed a role-based access system that streamlined compliance while cutting administrative overhead by 30%. Her mentorship in this area has influenced how new engineers approach identity management across the organization.  \n\nShe approaches security as a proactive discipline, not just a compliance checkbox. During a recent ransomware incident, her rapid response and coordination with IT minimized downtime. She also integrates penetration testing into routine workflows, ensuring defenses evolve with emerging threats.  \n\nBinta’s curiosity and attention to detail make her a reliable collaborator. She consistently prioritizes clarity and long-term stability, whether refining access controls or debugging security protocols. Her work at MedTech reflects a rare ability to merge technical precision with real-world impact."
 }

@@ -3,20 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_112",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "large (15+)",
-    "jargon_density": "moderate"
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 1,
-    "CI/CD pipelines": 3,
-    "Go": 5,
-    "Kubernetes": 5,
-    "Monitoring & alerting": 3,
-    "PostgreSQL": 5,
+    "3D graphics (OpenGL/Vulkan)": 4,
+    "Game networking": 4,
+    "Game physics": 4,
+    "JavaScript": 2,
     "Python": 1,
-    "REST API design": 5,
-    "Terraform": 4
+    "REST API design": 3,
+    "React": 3,
+    "TypeScript": 2,
+    "Unity": 3,
+    "Unreal Engine": 4
   },
-  "text": "# NexaCorp Microservices Framework  \nA production-grade, domain-driven architecture for scalable SaaS platforms built with Go, PostgreSQL, and Kubernetes. Designed for enterprise-grade reliability, with automated deployment pipelines and observability baked into every service.  \n\n## API Reference  \n**Endpoints**  \n- `POST /api/v1/users` - Create a new user (returns 201 on success, 409 if duplicate)  \n- `GET /api/v1/datastreams` - List active data pipelines (filtered by namespace)  \n- `PUT /api/v1/services/{serviceID}/scale` - Adjust replica count (requires admin token)  \n\n**Authentication**  \nOAuth2 Bearer tokens via `Authorization: Bearer <token>` header. All endpoints require valid JWT with `user` scope.  \n\n## Usage / Examples  \n```bash  \n# Initialize a new service with Terraform  \nterraform apply -var=\"namespace=finance\" -var=\"db_password=securepass\"  \n\n# Example: Create a user via API  \ncurl -X POST https://api.nexacorp.io/v1/users \\\n  -H \"Authorization: Bearer <token>\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"email\": \"john@example.com\", \"role\": \"analyst\"}'  \n```  \n\n## Getting Started / Installation  \n1. Install Go 1.21+ and Docker  \n2. Clone repo: `git clone https://github.com/nexacorp/microservices.git`  \n3. Build services: `go mod tidy && go build -mod=mod`  \n4. Configure PostgreSQL credentials in `config/env.yaml`  \n5. Deploy with `make deploy` (requires kubectl and helm 3.8+)  \n\n## Tech Stack  \n- **Language**: Go (1.21+)  \n- **Database**: PostgreSQL (16.x, with pgx driver)  \n- **Orchestration**: Kubernetes (with HPA and vertical scaling)  \n- **Infrastructure**: Terraform (stateful modules for DB and services)  \n- **Monitoring**: Prometheus + Grafana (custom dashboards for latency and errors)  \n- **CI/CD**: GitHub Actions (with parallel test matrix)  \n\n## Architecture / Design  \nServices are organized into bounded contexts (e.g., `user`, `billing`, `analytics`). Each service runs in its own Kubernetes namespace with dedicated PostgreSQL pods. Inter-service communication uses gRPC with TLS encryption and Envoy as a service mesh. Terraform manages infrastructure as code, including auto-scaling rules and security policies.  \n\n## License  \nMIT License (see [LICENSE](LICENSE))  \n\n## Badges  \n[![GitHub](https://img.shields.io/badge/github-nexacorp/microservices-blue?logo=github)](https://github.com/nexacorp/microservices)  \n[![Build](https://img.shields.io/badge/build-passing-green)](https://github.com/nexacorp/microservices/actions)  \n[![Test](https://img.shields.io/badge/test-100%25-green)](https://github.com/nexacorp/microservices/actions)  \n[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)"
+  "text": "# OptiGame Engine  \nA cross-platform optimization toolkit for real-time rendering pipelines, focused on CPU/GPU utilization analysis, memory bandwidth reduction, and latency-sensitive synchronization. Built for AAA game studios and indie dev teams prioritizing performance profiling at scale.  \n\n## Getting Started / Installation  \nInitialize the repository with `git init` and fetch submodules for asset pipelines. Install CMake 3.22+, NVIDIA Nsight Visual Studio Edition, and a Vulkan SDK. Run `./build.sh` to compile the core profiler and integrate with your engine's debug build.  \n\n## Tech Stack  \n- **Core**: C++20 (ABI-compliant), Vulkan, OpenGL 4.6  \n- **UI**: WebAssembly + React 18 (minimal DOM diffing)  \n- **Networking**: Custom UDP/TCPIP stack with QUIC fallback (15% latency reduction in MP game benchmarks)  \n- **Physics**: Bullet 3 integration for collision-aware memory preallocation  \n- **Tools**: GPUView, RenderDoc, and custom shader disassemblers  \n\n## Usage / Examples  \n```cpp\n// Profile a scene with dynamic occlusion culling\nauto stats = Profiler::Track(\"RenderPass\", Scene::GetInstance()->GetActiveCamera());\nstats->AddMetric(\"GPUUtilization\", 0.89f); // 89% utilization on RTX 4090\nstats->ExportToCSV(\"benchmark_20231015.csv\");\n```\nUse `./opti.sh --benchmark` to compare frame rates across engine versions.  \n\n## Badges  \n[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)  \n[![Build Status](https://img.shields.io/endpoint?url=https%3A%2F%2Factions-badge.geniemetrics.dev%2Fprojects%2Foptigame%2Fmain)](https://github.com/andrewilliams/optigame/actions)  \n[![Code Quality](https://img.shields.io/endpoint?url=https%3A%2F%2Factions-badge.geniemetrics.dev%2Fprojects%2Foptigame%2Fcode-quality)](https://github.com/andrewilliams/optigame/actions)  \n\n## Architecture / Design  \nModular pipeline with decoupled profiling modules. Core engine agnostic, but optimized for Unreal 5.3+ and Unity 2022.3+. Vulkan-based GPU tracing and OpenGL interop for hybrid rendering.  \n\n## Contributing  \nSubmit PRs with benchmark data. Prioritize fixes for memory leaks in multi-threaded rendering. Code must pass CI and include micro-benchmarks.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details."
 }

@@ -1,85 +1,26 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Yoko Fujita's 9 years of experience as a Senior Data Scientist in consulting.",
-    "title": "Yoko Fujita - Senior Data Scientist",
+    "topic_summary": "Professional resume highlighting Ingrid Johansson's experience as a Backend Engineer at NexaTech Solutions",
+    "title": "Ingrid Johansson - Backend Engineer",
     "doc_id": "d_p_251_00",
     "persona_id": "p_251",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
+      "cv_format": "minimal",
       "geographic_convention": "India",
-      "company_type": "academic",
+      "company_type": "agency",
       "company_size": "small (<50)"
     }
   },
   {
-    "doc_type": "project_readme",
-    "topic_summary": "A GitHub README for a predictive analytics project optimizing customer retention strategies for a retail client.",
-    "title": "Customer Churn Prediction & Retention Optimization",
+    "doc_type": "blog",
+    "topic_summary": "Discussion on best practices for building scalable backend systems in startup environments",
+    "title": "Building Scalable Backend Systems for Startups: Lessons from NexaTech",
     "doc_id": "d_p_251_01",
     "persona_id": "p_251",
     "hyperparams": {
-      "project_scale": "team-internal",
-      "project_team_size": "small (2-4)",
-      "jargon_density": "heavy"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "A README describing a supply chain demand forecasting model using time-series analysis and machine learning.",
-    "title": "Demand Forecasting with Time-Series ML",
-    "doc_id": "d_p_251_02",
-    "persona_id": "p_251",
-    "hyperparams": {
-      "project_scale": "production",
-      "project_team_size": "small (2-4)",
-      "jargon_density": "heavy"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "A project README detailing an NLP-based sentiment analysis tool for analyzing client feedback in consulting projects.",
-    "title": "Sentiment Analysis for Client Feedback Insights",
-    "doc_id": "d_p_251_03",
-    "persona_id": "p_251",
-    "hyperparams": {
-      "project_scale": "hobby",
-      "project_team_size": "small (2-4)",
-      "jargon_density": "heavy"
-    }
-  },
-  {
-    "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from Yoko's manager praising her leadership in cross-functional data science initiatives.",
-    "title": "Recommendation for Yoko Fujita - Senior Data Scientist",
-    "doc_id": "d_p_251_04",
-    "persona_id": "p_251",
-    "hyperparams": {
-      "recommender_role": "professor",
-      "recommender_closeness": "worked-daily",
-      "company_type": "FAANG",
-      "company_size": "large (500+)"
-    }
-  },
-  {
-    "doc_type": "linkedin",
-    "topic_summary": "A LinkedIn summary showcasing Yoko's expertise in data-driven consulting and her career achievements.",
-    "title": "Yoko Fujita | Senior Data Scientist",
-    "doc_id": "d_p_251_05",
-    "persona_id": "p_251",
-    "hyperparams": {
-      "linkedin_completeness": "minimal"
-    }
-  },
-  {
-    "doc_type": "blog",
-    "topic_summary": "A technical blog post on applying reinforcement learning to dynamic pricing strategies in consulting.",
-    "title": "Reinforcement Learning for Dynamic Pricing in Consulting",
-    "doc_id": "d_p_251_06",
-    "persona_id": "p_251",
-    "hyperparams": {
-      "blog_depth": "deep-dive",
-      "jargon_density": "moderate"
+      "blog_depth": "tutorial",
+      "jargon_density": "plain"
     }
   }
 ]

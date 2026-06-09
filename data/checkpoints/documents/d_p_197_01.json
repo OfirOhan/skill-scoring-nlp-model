@@ -3,22 +3,24 @@
   "type": "project_readme",
   "persona_id": "p_197",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "large (15+)",
-    "jargon_density": "heavy"
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Android development": 3,
-    "Flutter": 3,
-    "Kotlin (Android)": 3,
-    "React": 1,
-    "React Native": 3,
-    "Responsive design": 3,
-    "Swift": 3,
-    "TypeScript": 3,
-    "Web performance optimization": 2,
-    "Webpack/Vite": 3,
-    "iOS development": 4
+    "ArgoCD": 1,
+    "CI/CD pipelines": 3,
+    "GitHub Actions": 3,
+    "Go": 5,
+    "Jenkins": 1,
+    "Linux administration": 1,
+    "Microservices architecture": 5,
+    "PostgreSQL": 5,
+    "Prometheus/Grafana": 3,
+    "Python": 4,
+    "REST API design": 5,
+    "Redis": 4,
+    "gRPC": 4
   },
-  "text": "# SmartHealth Tracker - Mobile Health Monitoring App  \nA cross-platform health analytics platform designed to aggregate real-time biometric data from wearables, track longitudinal health trends, and provide actionable insights via machine learning models. Built as a consulting project for a healthcare startup, this app processes over 2M daily data points across 15+ development teams.  \n\n## Tech Stack  \n- **Frontend**: Flutter (2.12.0) for cross-platform UI, Kotlin (1.8.20) for Android-specific logic, Swift (5.9) for iOS  \n- **Backend**: Firebase Realtime Database (for real-time sync), SQLite (for local caching), REST API gateway (Node.js 18)  \n- **Analytics**: ML models in Python (scikit-learn 1.3) for anomaly detection, Google Cloud Healthcare API for HIPAA-compliant storage  \n- **Tools**: Gradle (Android), Swift Package Manager (iOS), Vite (frontend builds)  \n- **Performance**: 30% faster cold start times via lazy loading, 15% smaller APKs through code splitting  \n\n## Architecture / Design  \nThe app follows a **layered microservices architecture** with a central API gateway handling 10K+ concurrent requests. Flutter's widget tree is decoupled into reusable components, with Kotlin coroutines managing async workflows. iOS uses Combine for reactive state management, while Android leverages MVVM with LiveData. Real-time updates are powered by Firebase, with fallback to WebSocket for low-latency sync.  \n\n## Getting Started / Installation  \n1. Install Flutter SDK (v3.10.5) and Android Studio (Bumblebee)  \n2. Clone the repository using your preferred method  \n3. Run `flutter pub get` and `pod install` for iOS  \n4. Configure Firebase credentials in `android/app/src/main/assets/firebase.json`  \n5. Build and deploy with `flutter run --release`  \n\n## Usage / Examples  \n- **Dashboard**: View aggregated heart rate, sleep quality, and activity metrics  \n- **Data Sync**: Automatically syncs with Apple HealthKit (iOS) or Google Fit (Android)  \n- **Alerts**: Configure thresholds for blood pressure or glucose levels  \n- **Export**: Generate PDF reports with 7-day trend analysis  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/commit-activity/m/oleg-shevchenko/smarthealth-tracker)](https://github.com/oleg-shevchenko/smarthealth-tracker/commits/main)  \n[![Build Status](https://img.shields.io/github/actions/workflow/oleg-shevchenko/smarthealth-tracker/main.yml)](https://github.com/oleg-shevchenko/smarthealth-tracker/actions)  \n[![Test Coverage](https://img.shields.io/codecov/c/gh/oleg-shevchenko/smarthealth-tracker)](https://codecov.io/gh/oleg-shevchenko/smarthealth-tracker)  \n\n## Contributing  \nPull requests are welcome! Ensure all commits follow the [Conventional Commits](https://www.conventionalcommits.org/) spec and include unit tests for new features.  \n\n## License  \nMIT License — see [LICENSE](https://github.com/oleg-shevchenko/smarthealth-tracker/blob/main/LICENSE) for details"
+  "text": "# NexGen Microservices Platform  \n\nA modular, scalable foundation for building distributed systems with Go, gRPC, and PostgreSQL. Designed to decouple business logic, enable horizontal scaling, and simplify observability via Prometheus and Grafana. Built for teams prioritizing reliability, maintainability, and gradual feature iteration.  \n\n## Deployment  \nDeployed using Docker containers orchestrated by Kubernetes for production environments. Local development leverages Docker Compose with PostgreSQL and Redis preconfigured. Monitoring is integrated via Prometheus for metrics and Grafana for visualization. GitHub Actions handles CI/CD pipelines, ensuring automated testing and artifact packaging for cloud deployment.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/your-username/nexgen-platform.git`  \n2. Install dependencies: `go mod tidy` and `docker-compose pull`  \n3. Start services: `docker-compose up --build`  \n4. Configure environment variables in `.env` for database credentials and API secrets  \n5. Run migrations: `go run cmd/migrate/main.go`  \n\n## Usage / Examples  \nTo interact with the user service:  \n```bash  \ncurl -X POST http://localhost:8080/users -H \"Content-Type: application/json\" -d '{\"name\": \"Alice\", \"email\": \"alice@example.com\"}'  \n```  \nFor internal service communication, use gRPC clients to call the `UserService/GetUser` method. Example:  \n```go  \nclient := newUserServiceClient(conn)  \nresponse, _ := client.GetUser(context.Background(), &UserRequest{Id: \"123\"})  \n```  \nEach microservice exposes REST endpoints for external access and gRPC for inter-service calls.  \n\n## Tech Stack  \n- **Language**: Go (core), Python (data processing scripts)  \n- **Networking**: gRPC (internal), REST (external)  \n- **Database**: PostgreSQL (relational), Redis (caching)  \n- **Monitoring**: Prometheus, Grafana  \n- **CI/CD**: GitHub Actions (unit tests, linting, Docker builds)  \n\n## Architecture / Design  \nThe platform follows a hexagonal architecture, decoupling domain logic from infrastructure. Services communicate via gRPC for low-latency, high-throughput interactions and REST for external clients. PostgreSQL handles ACID transactions, while Redis caches frequent queries to reduce database load. Each service has its own database and API, enabling independent scaling and deployment.  \n\n## License  \nMIT License  \n© 2023 NexGen Solutions  \n\n## Badges  \n[![GitHub](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/your-username/nexgen-platform?utm_source=badge)  \n[![CI/CD](https://img.shields.io/github/actions/workflow.com/your-username/nexgen-platform/main.yml?branch=main)](https://github.com/your-username/nexgen-platform/actions)  \n[![Docker](https://img.shields.io/docker/pulls/your-username/nexgen-platform)](https://hub.docker.com/r/your-username/nexgen-platform)  \n[![License](https://badges.apache.org/badges/v2.0-blue.svg)](https://opensource.org/licenses/MIT)"
 }

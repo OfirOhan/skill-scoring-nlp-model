@@ -1,63 +1,59 @@
 {
   "persona_id": "p_085",
   "hyperparams": {
-    "archetype": "devops_sre",
-    "years_experience": 13,
-    "seniority": "staff",
+    "archetype": "ml_engineer",
+    "years_experience": 9,
+    "seniority": "senior",
     "industry": "gaming",
-    "writing_style": "concise",
+    "writing_style": "neutral",
     "language_fluency": "native",
-    "self_promotion_level": "balanced",
+    "self_promotion_level": "humble",
     "quantification_tendency": "metrics-heavy"
   },
-  "name": "Qasim Malik",
-  "current_role": "Staff DevOps Engineer",
+  "name": "Takeshi Hayashi",
+  "current_role": "Senior ML Engineer - AI Game Analytics",
   "company": "NexaGame Studios",
   "education": {
     "degree": "Master of Science in Computer Science",
-    "university": "University of Toronto",
+    "university": "Tokyo Institute of Technology",
     "year": 2015
   },
   "career_trajectory": [
     {
-      "year": 2010,
-      "position": "Systems Administrator",
-      "company": "Eclipse Interactive"
-    },
-    {
-      "year": 2014,
-      "position": "DevOps Engineer",
-      "company": "Vortex Games"
+      "year": 2015,
+      "role": "Software Engineer",
+      "company": "Kazan Interactive",
+      "summary": "Built backend systems for real-time multiplayer games using Go and AWS"
     },
     {
       "year": 2018,
-      "position": "Senior SRE",
-      "company": "PixelForge Studios"
+      "role": "Machine Learning Engineer",
+      "company": "Lumina Games",
+      "summary": "Developed recommendation systems for in-game purchases using PyTorch and Spark"
     },
     {
-      "year": 2023,
-      "position": "Staff DevOps Engineer",
-      "company": "NexaGame Studios"
+      "year": 2021,
+      "role": "Senior ML Engineer",
+      "company": "NexaGame Studios",
+      "summary": "Architected MLOps pipelines for NLP-based player behavior analysis"
     }
   ],
   "skills": {
-    "CI/CD pipelines": 4,
-    "Jenkins": 4,
-    "ArgoCD": 4,
-    "Prometheus/Grafana": 4,
-    "Monitoring & alerting": 4,
-    "Kubernetes": 5,
-    "Terraform": 5,
-    "Python": 4,
-    "Go": 4,
-    "PostgreSQL": 4,
-    "Cloud networking (VPC/subnets)": 4,
-    "Chaos engineering": 4
+    "PyTorch": 4,
+    "Hugging Face Transformers": 5,
+    "NLP": 5,
+    "Computer vision": 4,
+    "Recommendation systems": 5,
+    "MLOps (MLflow/W&B)": 5,
+    "Apache Airflow": 1,
+    "Data warehousing": 2,
+    "Cloud cost optimization": 3,
+    "Docker": 3,
+    "REST API design": 3
   },
   "document_ids": [
     "d_p_085_00",
     "d_p_085_01",
-    "d_p_085_02",
-    "d_p_085_03"
+    "d_p_085_02"
   ]
 }

@@ -3,26 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_088",
   "hyperparams": {
-    "project_scale": "production",
+    "project_scale": "academic",
     "project_team_size": "medium (5-15)",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 2,
-    "CI/CD pipelines": 2,
-    "Docker": 2,
-    "GitHub Actions": 2,
-    "Kubernetes": 3,
-    "Microservices architecture": 3,
-    "Monitoring & alerting": 3,
-    "Next.js": 3,
-    "PostgreSQL": 3,
-    "Python": 4,
-    "REST API design": 4,
-    "React": 3,
-    "Redis": 3,
-    "Responsive design": 2,
-    "TypeScript": 2
+    "Apache Airflow": 1,
+    "Apache Kafka": 1,
+    "CI/CD pipelines": 1,
+    "ETL pipeline design": 2,
+    "Hugging Face Transformers": 4,
+    "MLOps (MLflow/W&B)": 4,
+    "Model deployment": 3,
+    "NLP": 4,
+    "PyTorch": 3,
+    "TensorFlow": 3,
+    "dbt": 1,
+    "scikit-learn": 3
   },
-  "text": "# Real-Time Ad Bidding System  \nA distributed system for dynamic ad auctions with sub-100ms latency, handling 100k+ bids/sec via optimized consensus algorithms and edge-aware routing. Built for adtech platforms requiring strict SLAs and real-time revenue optimization.  \n\n## Badges  \n[![CI/CD Status](https://example.com)](https://example.com) [![Test Coverage](https://example.com)](https://example.com) [![Performance](https://example.com)](https://example.com)  \n\n## Getting Started  \n```bash  \ngit clone https://github.com/yourusername/real-time-ad-bidding-system.git  \ncd real-time-ad-bidding-system  \ndocker compose up -d  \n```  \nEnsure Redis 7.0+, PostgreSQL 14+, and Python 3.10+ are installed. Configure `config/env.yaml` with AWS credentials and Kafka bootstrap servers.  \n\n## Tech Stack  \n- **Core Logic**: Python (PyTorch for RL-based bid optimization)  \n- **Message Bus**: Apache Kafka (partitioned by ad slot ID)  \n- **State Store**: PostgreSQL (with TimescaleDB for time-series analytics)  \n- **Caching**: Redis (Lua scripts for atomic bid validation)  \n- **API Gateway**: Node.js (with rate-limiting and JWT)  \n- **Monitoring**: Prometheus + Grafana (custom metrics for bid win rates)  \n- **Deployment**: Kubernetes (HPA for bid processor pods)  \n\n## Architecture / Design  \nThe system decouples auction logic into three microservices:  \n1. **Bid Router** (Go): Distributes bids to regional clusters using geographic hashing  \n2. **Consensus Engine** (Python): Implements dynamic Vickrey-Clarke-Groves algorithm with fault tolerance  \n3. **Analytics Hub** (Scala): Aggregates win rates and latency metrics for real-time reporting  \n\nRedis handles in-memory bid validation with 99.999% consistency. Kafka ensures exactly-once processing for 100k+ bids/sec.  \n\n## Usage / Examples  \n```bash  \ncurl -X POST https://api.adplatform.com/bid \\\n  -H \"Authorization: Bearer <token>\" \\\n  -d '{\"ad_id\": \"123\", \"bid_price\": 0.45, \"user_id\": \"abc\"}'  \n```  \nMonitor bid win rates via `/metrics` endpoint or Grafana dashboards.  \n\n## Testing  \n- **Unit Tests**: 95% coverage (pytest + mock for external services)  \n- **Integration Tests**: Kafka and Redis mocks for end-to-end validation  \n- **Load Tests**: Locust scripts simulating 50k concurrent bids  \n- **Security Tests**: OWASP ZAP scans for injection vulnerabilities  \n\n## License  \nMIT License © 2023 Kiran Thapa"
+  "text": "# Smart Customer Segmentation for SaaS Growth  \nA scalable ML pipeline leveraging NLP, clustering, and MLOps tools to optimize SaaS customer cohorts with 30%+ retention uplift in pilot datasets.  \n\n## Configuration  \n```bash  \nPYTHON_VERSION=3.10  \nDEPENDENCIES=\"scikit-learn>=1.3, transformers>=4.36, mlflow>=2.9, wandb>=0.13, tensorflow>=2.12, pytorch>=1.13\"  \nENV_VARS=\"SAAS_DATA_PATH=/data, MODEL_REGISTRY=mlflow, LOGGING_LEVEL=INFO\"  \n```  \n\n## Getting Started / Installation  \n1. Clone repo: `git clone https://github.com/vivianosei/saas-segmentation.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Set environment variables via `.env` or export:  \n   ```bash  \n   export SAAS_DATA_PATH=/path/to/synthetic_dataset.parquet  \n   export MODEL_REGISTRY=mlflow  \n   ```  \n4. Validate dataset: `python scripts/validate_data.py`  \n\n## Usage / Examples  \n1. **Data Ingestion**: Load parquet dataset with customer metrics, product usage, and NLP-derived behavior tags.  \n2. **Preprocessing**: Apply TF-IDF vectorization and BERT embeddings for text features using Hugging Face pipelines.  \n3. **Model Training**: Train KMeans (n_clusters=5) and DBSCAN (eps=0.5, min_samples=3) on scaled features. Log metrics via MLflow.  \n4. **Evaluation**: Compute silhouette score (0.82) and business impact metrics (avg. cohort LTV increase: $12.4k).  \n\n## Tech Stack  \n- **Languages**: Python 3.10  \n- **ML Libraries**: scikit-learn, Hugging Face Transformers, TensorFlow/PyTorch (for custom NLP layers)  \n- **MLOps**: MLflow (tracking), Weights & Biases (experimentation)  \n- **Data**: Parquet, JSONL, CSV (synthetic SaaS customer logs)  \n\n## Architecture / Design  \n**Data Flow**:  \n1. Raw logs → Feature engineering (TF-IDF + BERT) → Clustering (KMeans/DBSCAN) → Cohort tagging  \n2. Model artifacts stored in MLflow registry; production deployments use Dockerized inference APIs.  \n\n**Key Design Choices**:  \n- Hybrid NLP/numerical features for robust segmentation  \n- Automated hyperparameter tuning via Optuna (integration with MLflow)  \n- Model retraining scheduled on daily basis via cron (not Airflow)  \n\n## License  \nMIT License  \n[![MIT License](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/licenses/MIT)  \n\n## Badges  \n[![GitHub](https://badgen.net/badge/platform/github/blue)](https://github.com/vivianosei/saas-segmentation)  \n[![License](https://badgen.net/badge/license/MIT/blue)](https://opensource.org/licenses/MIT)  \n[![Stars](https://badgen.net/badge/stars/426/purple)](https://github.com/vivianosei/saas-segmentation/stargazers)"
 }

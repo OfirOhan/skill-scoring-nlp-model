@@ -1,21 +1,26 @@
 {
   "doc_id": "d_p_235_01",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_235",
   "hyperparams": {
-    "blog_depth": "deep-dive",
-    "jargon_density": "heavy"
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Agile/Scrum": 3,
-    "Analytics-driven product decisions": 3,
-    "Competitive analysis": 3,
-    "Cross-team collaboration": 3,
-    "Data visualization (Tableau/Power BI)": 3,
-    "Product management": 4,
-    "Roadmap planning": 3,
-    "Stakeholder management": 3,
-    "UX research": 4
+    "AWS": 4,
+    "CI/CD pipelines": 2,
+    "Configuration management (Ansible)": 1,
+    "Docker": 3,
+    "Go": 4,
+    "Jenkins": 2,
+    "Linux administration": 3,
+    "Monitoring & alerting": 3,
+    "PostgreSQL": 4,
+    "Python": 4,
+    "REST API design": 4,
+    "Shell scripting (Bash)": 2,
+    "Microservices architecture": 1
   },
-  "text": "The challenge of transforming raw customer feedback into meaningful product innovation is both a technical and cultural hurdle in SaaS. Teams often drown in unstructured data—emails, support tickets, and feature requests—without a clear pathway to prioritize what matters. The problem isn’t just volume; it’s the gap between customer intent and actionable insight. Without a system to extract signal from noise, even the most enthusiastic feedback can lead to feature fatigue or misaligned roadmaps.  \n\nEarly attempts to address this relied on siloed tools and manual analysis. We once used spreadsheets to aggregate feedback, but this led to inconsistent categorization and delayed prioritization. Another approach involved setting up a feedback portal, but without integration with analytics or customer success data, it became a static repository. These methods failed to create a闭环 between customer needs and product decisions, resulting in reactive updates rather than strategic innovation.  \n\nOur working solution centers on a structured feedback loop powered by analytics and cross-team collaboration. We deployed a centralized platform to collect and categorize feedback, integrating it with behavioral data from our analytics stack. This allowed us to correlate feature requests with usage patterns, identifying pain points that analytics alone might miss. We also established a biweekly workshop with engineering, design, and data teams to validate hypotheses and align priorities. A key pivot was adopting a product-led growth mindset, where feedback directly influenced roadmap planning. For example, a recurring request for real-time collaboration features was validated against usage metrics, leading to a prioritized sprint.  \n\nThis approach works because it bridges the gap between qualitative insights and quantitative validation. By treating feedback as a data source—not just a request—we reduce subjective bias and ensure decisions are grounded in both customer intent and product impact. The integration with analytics enables us to measure the ROI of feedback-driven features, while cross-functional collaboration ensures alignment across stakeholders. Metrics like NPS and retention rates now reflect the tangible outcomes of this process.  \n\nLooking ahead, we’re exploring predictive analytics to anticipate customer needs before they’re voiced. Expanding feedback channels—like in-app surveys and sentiment analysis—will further enrich our data. However, we’re mindful not to over-automate; human oversight remains critical to contextualize data. The goal is to scale this framework while maintaining the agility that defines SaaS innovation."
+  "text": "# Real-Time Bidding System for AdvertiseNow  \n\nA high-performance backend system for real-time ad bidding, engineered to handle 10k+ requests per second with sub-50ms latency. Built for the adtech industry, this project delivers deterministic bid outcomes in milliseconds, leveraging optimized data structures and asynchronous workflows to ensure zero downtime during peak traffic.  \n\n## Deployment  \nThe system is hosted on AWS, utilizing EC2 instances for the core bid processing service, RDS PostgreSQL clusters for persistent storage, and CloudFront for caching. Docker containers are orchestrated via AWS ECS for scalable deployment, with automated health checks and auto-scaling rules tied to CPU utilization and queue depth. Monitoring is handled through CloudWatch, with alerts triggered for latency spikes above 50ms or error rates exceeding 0.1%.  \n\n## Getting Started / Installation  \nClone the repository and navigate to the root directory:  \n```bash  \ngit clone https://github.com/carmendez/advertiseNow-bidding.git  \ncd advertiseNow-bidding  \n```  \nBuild the Go service and Python utilities:  \n```bash  \ngo mod tidy  \ngo build -o bid-service  \npython3 -m venv .venv  \nsource .venv/bin/activate  \npip install -r requirements.txt  \n```  \nSet environment variables for PostgreSQL credentials and AWS credentials, then run the containers via Docker Compose:  \n```bash  \ndocker-compose up -d  \n```  \nThe system will be accessible at `http://localhost:8080` for local testing.  \n\n## Usage / Examples  \nTo trigger a bid request, send a POST to `/api/v1/bid` with a JSON payload containing ad inventory details and bidder profiles. Example:  \n```bash  \ncurl -X POST http://localhost:8080/api/v1/bid \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"inventory_id\": \"inv-123\",\n    \"bidders\": [{\"id\": \"bidder-A\", \"max_cpm\": 15.99}]\n  }'\n```  \nThe response includes the winning bidder, bid price, and latency metrics. The system processes 99.9% of requests within 25ms, with a 0.05% error rate due to network retries.  \n\n## Tech Stack  \n- **Language**: Go (core service), Python (utilities)  \n- **Database**: PostgreSQL (read/write optimized for ad data)  \n- **Cloud**: AWS (EC2, RDS, CloudFront)  \n- **Containerization**: Docker (production and dev workflows)  \n- **Networking**: gRPC (internal bid coordination), REST (external API)  \n\n## Architecture / Design  \nThe bid processor uses a pub/sub model with Redis for event-driven bidding, ensuring low-latency coordination between ad inventory and bidder services. PostgreSQL is configured with partitioned tables for ad campaign data, reducing query latency by 40%. The system scales horizontally via Kubernetes-like container orchestration, with each bid request processed in a separate goroutine.  \n\n## License  \nMIT License  \n\n## Badges  \n[![GitHub stars](https://img.shields.io/github/stars/carmendez/advertiseNow-bidding?style=social)](https://github.com/carmendez/advertiseNow-bidding)  \n[![Build status](https://img.shields.io/github/actions/workflow/carmendez/advertiseNow-bidding/main.yml?branch=main)](https://github.com/carmendez/advertiseNow-bidding/actions)  \n[![Coverage](https://img.shields.io/coveralls/carmendez/advertiseNow-bidding)](https://coveralls.io/github/carmendez/advertiseNow-bidding)  \n[![License](https://img.shields.io/github/license/carmendez/advertiseNow-bidding)](https://github.com/carmendez/advertiseNow-bidding/blob/main/LICENSE)"
 }

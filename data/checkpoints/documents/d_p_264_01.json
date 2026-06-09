@@ -4,20 +4,20 @@
   "persona_id": "p_264",
   "hyperparams": {
     "project_scale": "production",
-    "project_team_size": "small (2-4)",
+    "project_team_size": "solo",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Design systems": 3,
-    "JavaScript": 4,
-    "Next.js": 3,
-    "React": 5,
-    "Responsive design": 5,
-    "State management": 3,
-    "TypeScript": 5,
-    "UI design": 3,
-    "Web accessibility": 3,
-    "Web performance optimization": 3
+    "A/B testing": 2,
+    "Apache Spark": 1,
+    "Data visualization": 3,
+    "Java": 1,
+    "NumPy": 5,
+    "Pandas": 5,
+    "Python": 3,
+    "REST API design": 1,
+    "SQL analytics": 5,
+    "scikit-learn": 4
   },
-  "text": "# Ecomify Product Catalog UI  \n\nA production-ready React/TypeScript interface for e-commerce product catalogs, optimized for scalability, accessibility, and performance. Built with a focus on reusable components, state management, and responsive design to meet modern e-commerce demands.  \n\n## Deployment  \nDeploy via Vercel with environment variables for API keys and static assets.  \n```bash  \nvercel deploy --prod  \n```  \nEnsure `NEXT_PUBLIC_API_URL` is set for backend connectivity.  \n\n## Getting Started / Installation  \n```bash  \nnpm install  \n```  \nInstall dependencies and configure `.env.local` with required secrets.  \n```bash  \nnpm run dev  \n```  \nStart the dev server with hot-reloading and TypeScript type-checking.  \n\n## Usage / Examples  \n**Basic catalog view**:  \n```tsx  \n<ProductGrid products={catalogData} />  \n```  \n**Advanced filtering**:  \n```tsx  \n<FilterSidebar  \n  onFilter={handleFilter}  \n  categories={categories}  \n/>  \n```  \nAccessible keyboard navigation and screen reader support are baked into all interactive elements.  \n\n## Tech Stack  \n- **React**: Core framework with hooks and context for state management  \n- **TypeScript**: Type-safe props and utility types for maintainability  \n- **Tailwind CSS**: Utility-first styling with custom theme overrides  \n- **Next.js**: Server-side rendering and static export for SEO  \n- **Redux Toolkit**: Global state management for product data  \n- **Lodash**: Utility functions for data transformation  \n\n## Architecture / Design  \nThe UI follows a **component-driven architecture** with a shared design system. Key decisions:  \n- **State partitioning**: Redux slices for product data, filters, and UI state  \n- **Lazy loading**: Code-splitting via React.lazy for faster initial load  \n- **Accessibility**: ARIA labels, semantic HTML, and keyboard focus traps  \n- **Performance**: Image optimization with Next.js image component and lazy loading  \n\n## License  \nMIT License  \n© 2023 Rahul Iyer  \n\n## Badges  \n[![Version](https://img.badgesize.io/https://unpkg.com/@rahuliyer/ecomify@latest/README.md?w=100)](https://npmjs.com/package/@rahuliyer/ecomify)  \n[![GitHub](https://img.badgesize.io/https://github.com/rahuliyer/ecomify/commits/main.svg?w=100)](https://github.com/rahuliyer/ecomify)  \n[![Size](https://img.badgesize.io/https://unpkg.com/@rahuliyer/ecomify@latest/dist/ecomify.min.js?w=100)](https://unpkg.com/@rahuliyer/ecomify)"
+  "text": "# ECommerceChurnPrediction  \nPredict customer churn in e-commerce using collaborative filtering and segmentation. Achieved 89.2% recall in production, reducing attrition costs by 14.3% via targeted retention strategies.  \n\n## Configuration  \n```bash  \nPYTHON_VERSION=3.9  \nDEPENDENCIES=\"pandas>=1.5, numpy>=1.23, scikit-learn>=1.2, matplotlib>=3.6\"  \nDATA_SOURCES=\"postgres://user:pass@localhost:5432/churn_db, s3://ecom-data/segmentation.csv\"  \n```  \nEnvironment variables for DB credentials must be set in `.env`. Use `pip install -r requirements.txt` for dependencies.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/nbrooks/ECommerceChurnPrediction.git  \ncd ECommerceChurnPrediction  \nexport DB_USER=\"your_user\" DB_PASS=\"your_pass\"  \npip install -r requirements.txt  \npython setup.py install  \n```  \nVerify installation with `python test_churn_model.py` to validate data pipeline and metric outputs.  \n\n## Usage / Examples  \n```bash  \npython predict_churn.py --segmentation kmeans --model collaborative  \n# Output: churn_probabilities.csv (0-1 scale), segment_clusters.csv  \n```  \nRun A/B tests on retention strategies using `evaluate_ab_test.py` with flagged clusters. Visualize cohort trends via `plot_churn_trends.py` (Matplotlib).  \n\n## Tech Stack  \n- **Python**: Core language for all workflows (NumPy, Pandas, scikit-learn)  \n- **SQL**: PostgreSQL for real-time data ingestion and historical analysis  \n- **Data Visualization**: Matplotlib for cohort analysis, Seaborn for segment distribution  \n- **Scikit-learn**: Production-grade model training (RandomizedSearchCV for hyperparameter tuning)  \n- **NumPy/Pandas**: Central to feature engineering and matrix operations (e.g., cosine similarity for collaborative filtering)  \n\n## Architecture / Design  \nData flows from PostgreSQL to Pandas DataFrames, processed via NumPy for numerical stability. Collaborative filtering uses implicit feedback matrices with ALS. Segmentation leverages KMeans with silhouette analysis for optimal cluster count. Metrics exported to Prometheus for real-time monitoring.  \n\n## License  \nMIT License  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/license/nbrooks/ECommerceChurnPrediction)](https://github.com/nbrooks/ECommerceChurnPrediction/blob/main/LICENSE)  \n[![CI/CD](https://img.shields.io/github/actions/workflow/status/nbrooks/ECommerceChurnPrediction/main.yml?branch=main)](https://github.com/nbrooks/ECommerceChurnPrediction/actions)  \n[![PyPI](https://img.shields.io/pypi/v/churn-prediction)](https://pypi.org/project/churn-prediction/)"
 }

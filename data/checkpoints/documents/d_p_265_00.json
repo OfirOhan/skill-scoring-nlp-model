@@ -3,24 +3,24 @@
   "type": "cv",
   "persona_id": "p_265",
   "hyperparams": {
-    "cv_format": "minimal",
-    "geographic_convention": "India",
-    "company_type": "academic",
+    "cv_format": "hybrid",
+    "geographic_convention": "Europe",
+    "company_type": "enterprise",
     "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "CI/CD pipelines": 3,
-    "GitHub Actions": 3,
-    "Go": 4,
-    "Load balancing": 3,
-    "Microservices architecture": 4,
-    "MongoDB": 3,
-    "Prometheus/Grafana": 3,
-    "PostgreSQL": 4,
-    "REST API design": 4,
-    "Terraform": 4,
-    "Python": 4
+    "Apache Airflow": 3,
+    "Computer vision": 3,
+    "Data warehousing": 1,
+    "ETL pipeline design": 3,
+    "GitHub Actions": 2,
+    "MLOps (MLflow/W&B)": 5,
+    "Model deployment": 5,
+    "NLP": 5,
+    "PyTorch": 5,
+    "Recommendation systems": 4,
+    "Snowflake": 2,
+    "TensorFlow": 5
   },
-  "text": "Femi Akinlade  \n📍 Mumbai, India | 📧 femi.ak@ecommerce.com | 📞 +91 98765 43210  \n\nA seasoned backend engineer with 5 years of experience in building scalable, high-performance systems for e-commerce platforms. Specialized in microservices architecture, cloud infrastructure, and database optimization. Proven track record of improving system reliability, reducing latency, and supporting growth in production environments.  \n\n**Professional Experience**  \n*Senior Backend Engineer*  \n**E-Commerce Solutions Inc.** | 2021–2023  \n- Spearheaded the migration of monolithic architecture to microservices, reducing deployment time by 60% and enabling 500k+ daily requests with 99.95% SLA.  \n- Designed and maintained CI/CD pipelines using GitHub Actions, ensuring zero-downtime deployments for critical systems.  \n- Optimized PostgreSQL queries and indexed databases, cutting read latency by 40% and improving transaction throughput by 35%.  \n- Implemented AWS auto-scaling and load balancers, achieving 30% cost reduction while handling peak traffic during sales events.  \n- Built REST APIs for inventory management, integrating with third-party logistics providers and reducing order fulfillment time by 25%.  \n\n*Mid-Level Backend Engineer*  \n**Shopify Africa** | 2019–2021  \n- Developed scalable backend services using Go, handling 200k+ concurrent users during peak hours.  \n- Instrumented systems with Prometheus and Grafana, enabling real-time monitoring and proactive issue resolution.  \n- Collaborated on MongoDB sharding strategy, improving data retrieval speed by 50% for user analytics modules.  \n- Automated infrastructure provisioning with Terraform, reducing provisioning time by 70% and minimizing manual errors.  \n\n*Junior Backend Developer*  \n**TechStartups Ltd.** | 2018–2019  \n- Built foundational backend systems using Python, supporting 10k+ active users with Django and PostgreSQL.  \n- Introduced basic load balancing techniques, improving server uptime to 99.8% during traffic spikes.  \n\n**Projects**  \n*Real-Time Analytics Dashboard*  \n- Developed a dashboard using Prometheus and Grafana to monitor system health, reducing incident resolution time by 20%.  \n- Integrated with MongoDB for real-time data aggregation, enabling faster decision-making for business teams.  \n\n*Serverless Order Processing System*  \n- Designed a serverless architecture using AWS Lambda and DynamoDB, reducing infrastructure costs by 45% for seasonal workloads.  \n- Implemented retry mechanisms and dead-letter queues, improving error handling for 98% of failed transactions.  \n\n**Education**  \n**Bachelor of Science in Computer Science**  \nUniversity of Lagos | 2018  \n\n**Languages**  \nEnglish (native), Hindi (fluent)  \n\n**Certifications**  \nAWS Certified Solutions Architect – Associate  \nGoogle Cloud Professional Cloud DevOps Engineer  \nPostgreSQL Certification (CPA)"
+  "text": "Harini Subramanian  \n📧 harini.subramanian@example.com | 📞 +31 612 345 678 | 📍 Amsterdam, Netherlands  \n\n**Professional Experience**  \n*Staff ML Engineer* | AdVeris Technologies (2020–present)  \nLed the design of scalable MLOps pipelines integrating PyTorch and TensorFlow, enabling real-time ad targeting models to process 100M+ daily interactions. Spearheaded the transition from monolithic to microservices architecture, reducing deployment latency by 40%. Mentored 5+ engineers on model versioning and monitoring, with MLflow central to production workflows.  \n\n*Senior ML Engineer* | MediaSphere (2018–2020)  \nArchitected a recommendation system for programmatic advertising, achieving a 15% increase in campaign ROI through collaborative filtering and deep learning models. Optimized NLP pipelines for ad copy analysis, reducing manual curation time by 30% while improving relevance scores. Deployed models via Kubernetes, ensuring 99.95% uptime during peak traffic.  \n\n*ML Engineer* | AdNebula (2016–2018)  \nDeveloped ETL pipelines for real-time bid data, leveraging Apache Airflow to handle 50+ data sources. Built computer vision models for ad creative analysis, flagging low-quality assets with 92% accuracy. Collaborated with data engineers to standardize feature pipelines, cutting preprocessing time by 25%.  \n\n*Data Scientist* | ClickIQ Analytics (2014–2016)  \nEngineered predictive models for user engagement, driving a 20% improvement in conversion rates. Automated A/B testing workflows using Python and SQL, reducing manual analysis effort.  \n\n**Projects**  \n*AdVeris AI Targeting Platform* | 2022–present  \nDesigned end-to-end ML systems for real-time ad personalization, integrating PyTorch and TensorFlow models with Apache Airflow orchestration. Achieved 35% higher click-through rates compared to legacy systems.  \n\n*MediaSphere Creative Quality Assessment* | 2019  \nBuilt computer vision models to evaluate ad creative quality, reducing human review costs by 40% while maintaining 88% accuracy.  \n\n*AdNebula Bid Optimization Suite* | 2017  \nDeveloped ETL pipelines for bid data, enabling dynamic pricing strategies that increased revenue by 18% during Q4 2017.  \n\n**Education**  \nMaster of Science in Data Science | Stanford University | 2018  \n\n**Technical Skills**  \n- **MLOps**: Architectural decisions on MLflow and W&B integration, cross-team standardization of model monitoring  \n- **Model Deployment**: Kubernetes-based CI/CD pipelines, production-grade serving with TensorFlow Serving  \n- **NLP**: BERT-based intent recognition systems, custom embeddings for ad copy analysis  \n- **PyTorch/TensorFlow**: Core frameworks for recommendation systems and computer vision pipelines  \n- **Apache Airflow**: Central to ETL orchestration, automated data pipeline maintenance  \n- **Computer Vision**: CNN-based asset evaluation, real-time image classification for ad validation  \n- **ETL Pipeline Design**: Schema design for bid data lakes, data quality checks for ad targeting systems  \n- **Recommendation Systems**: Hybrid models combining collaborative filtering and deep learning, ownership of production systems  \n- **GitHub Actions**: CI/CD integration for model training jobs  \n\n**Certifications**  \nAWS Certified Machine Learning – Specialty (2021)  \n\n**Languages**  \nEnglish (native), Python, SQL, Bash  \n\n**Awards & Achievements**  \n- 2022 AdVeris Staff Engineer of the Year  \n- Open-source contributor to MLflow extensions for adtech use cases  \n- Keynote speaker at 2021 European ML Conference on scalable MLOps practices"
 }

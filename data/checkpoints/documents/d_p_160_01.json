@@ -3,19 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_160",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "solo",
-    "jargon_density": "plain"
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 1,
-    "Database optimization": 3,
-    "Docker": 3,
-    "Go": 1,
-    "Kubernetes": 1,
-    "Microservices architecture": 1,
-    "Python": 1,
-    "REST API design": 4
+    "A/B testing": 2,
+    "MLOps (MLflow/W&B)": 4,
+    "NumPy": 4,
+    "Pandas": 4,
+    "REST API design": 1,
+    "SQL analytics": 3,
+    "Tableau/Power BI": 2,
+    "TensorFlow": 3,
+    "Time series analysis": 5,
+    "scikit-learn": 4
   },
-  "text": "# HealthDataSync  \nReal-time patient data synchronization between IoT devices and backend systems using Node.js and PostgreSQL. Designed for healthtech applications requiring low-latency, secure data flow with minimal infrastructure overhead.  \n\n---\n\n## Getting Started / Installation  \n1. Install [Node.js](https://nodejs.org) (v18+) and [PostgreSQL](https://www.postgresql.org)  \n2. Clone the repository:  \n   ```bash  \n   git clone https://github.com/your-username/healthdatasync.git  \n   cd healthdatasync  \n   ```  \n3. Set up PostgreSQL:  \n   - Create a database named `healthdatasync_db`  \n   - Update `config/db.js` with your credentials  \n4. Install dependencies:  \n   ```bash  \n   npm install  \n   ```  \n5. Start the server:  \n   ```bash  \n   npm run start  \n   ```  \n\n---\n\n## Usage / Examples  \n- **Sync patient vitals**:  \n  ```bash  \n  curl -X POST http://localhost:3000/api/v1/sync \\\n    -H \"Content-Type: application/json\" \\\n    -d '{\n      \"patient_id\": \"P12345\",\n      \"data\": {\n        \"heart_rate\": 72,\n        \"temperature\": 36.8\n      }\n    }'  \n  ```  \n- **Fetch real-time stats**:  \n  ```bash  \n  curl http://localhost:3000/api/v1/patients/P12345/stats  \n  ```  \n- **WebSocket integration**:  \n  Connect to `ws://localhost:3001` for live updates.  \n\n---\n\n## Badges  \n[![Build Status](https://your-ci-cd.com/status)](https://your-ci-cd.com)  \n[![Coverage](https://your-coverage.com/healthdatasync)](https://your-coverage.com/healthdatasync)  \n\n---\n\n## Tech Stack  \n- **Backend**: Node.js (v18), REST API, WebSocket  \n- **Database**: PostgreSQL (with query indexing and connection pooling)  \n- **Security**: TLS encryption, JWT authentication  \n- **Containerization**: Docker (for local development)  \n\n---\n\n## Architecture / Design  \n- **IoT Layer**: Devices push data via MQTT to a message broker (e.g., Mosquitto).  \n- **Sync Layer**: Node.js server validates data, stores it in PostgreSQL, and triggers WebSocket updates.  \n- **Analytics Layer**: REST API provides aggregated stats for dashboards.  \n- **Optimization**: Query performance improved by 40% via index optimization and batch processing.  \n\n---\n\n## Contributing  \nPull requests are welcome! Ensure code adheres to Prettier formatting and includes unit tests. For critical changes, open an issue to discuss implementation details.  \n\n---\n\n## License  \nMIT License © 2023 Beatriz Lopes"
+  "text": "# CreditRiskPredictor: Advanced Credit Scoring with Ensemble Models  \nA production-grade machine learning system for predictive credit risk assessment in fintech, leveraging ensemble methods, time series analysis, and MLOps best practices to deliver sub-1% false positive rates in high-stakes lending scenarios.  \n\n## Getting Started / Installation  \n```bash  \npip install -r requirements.txt  \npython setup.py install  \n```  \nEnsure your environment includes Python 3.8+ and GPU acceleration for TensorFlow components. Preprocess data using SQL queries (see `data/processing_queries.sql`) and load into Pandas DataFrames for model ingestion.  \n\n## Usage / Examples  \n```python  \nfrom creditriskpredictor import RiskEvaluator  \nevaluator = RiskEvaluator(model_path=\"models/ensemble_v3.pkl\")  \nscore = evaluator.predict(customer_data)  \nprint(f\"Credit Score: {score['score']}, Risk Tier: {score['tier']}\")  \n```  \nThis example integrates time-series feature engineering (rolling window statistics, lagged variables) and ensemble model stacking (XGBoost + LightGBM + CatBoost) to produce risk tiers with 92.4% F1-score on validation data.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/repo-size/aditi-kochar/creditriskpredictor)](https://github.com/aditi-kochar/creditriskpredictor)  \n[![CI/CD](https://img.shields.io/github/actions/status/aditi-kochar/creditriskpredictor)](https://github.com/aditi-kochar/creditriskpredictor/actions)  \n[![Coverage](https://img.shields.io/codecov/c/github/aditi-kochar/creditriskpredictor)](https://codecov.io/gh/aditi-kochar/creditriskpredictor)  \n\n## Tech Stack  \n- **ML Frameworks**: scikit-learn (pipeline orchestration), TensorFlow (custom loss functions), PyTorch (time-series embedding layers)  \n- **Data Tools**: Pandas (data wrangling), NumPy (numerical operations), SQL (schema design for transactional data)  \n- **MLOps**: MLflow (tracking, registry), Weights & Biases (experiment logging), Kubernetes (model serving)  \n- **Monitoring**: Prometheus (latency metrics), Grafana (feature drift dashboards)  \n\n## Architecture / Design  \nThe system employs a layered architecture:  \n1. **Feature Store**: Time-series features derived from 5+ year transactional data via SQL and Pandas  \n2. **Model Serving**: Ensemble model stack with A/B testing for drift detection (see `experiments/a_b_test_v2.py`)  \n3. **Monitoring**: Real-time anomaly detection for input distribution shifts using Kolmogorov-Smirnov tests  \n4. **Feedback Loop**: Closed-loop system for retraining with new data, validated via cross-validation splits  \n\n## Contributing  \nJoin our 15+ engineer team to refine temporal feature engineering pipelines or optimize ensemble calibration curves. Pull requests must include:  \n- Unit tests for SQL data transforms  \n- MLflow tracking for model versions  \n- Documentation for time-series hyperparameter tuning  \n\n## License  \nMIT License (see `LICENSE` file)"
 }

@@ -1,51 +1,63 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Aiden O'Sullivan's 7 years of experience as a Lead Backend Engineer in enterprise software development.",
-    "title": "Aiden O'Sullivan - Lead Backend Engineer",
+    "topic_summary": "A professional CV highlighting Callum Reid's 8 years of experience as a Senior Platform Engineer in cybersecurity, with expertise in secure platform development and infrastructure.",
+    "title": "Callum Reid - Senior Platform Engineer",
     "doc_id": "d_p_091_00",
     "persona_id": "p_091",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
-      "geographic_convention": "Europe",
-      "company_type": "agency",
+      "cv_format": "paragraph",
+      "geographic_convention": "India",
+      "company_type": "FAANG",
       "company_size": "small (<50)"
     }
   },
   {
-    "doc_type": "blog",
-    "topic_summary": "A technical blog post on optimizing database performance in enterprise-scale backend systems.",
-    "title": "Optimizing Database Performance for Enterprise Backend Systems",
+    "doc_type": "project_readme",
+    "topic_summary": "A README for a secure platform project implementing threat detection and response mechanisms for enterprise cybersecurity.",
+    "title": "CyberShield Secure Platform",
     "doc_id": "d_p_091_01",
     "persona_id": "p_091",
     "hyperparams": {
-      "blog_depth": "deep-dive",
-      "jargon_density": "plain"
+      "project_scale": "production",
+      "project_team_size": "large (15+)",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A README for an API project focused on real-time vulnerability scanning and integration with SIEM systems.",
+    "title": "Threat Detection API",
+    "doc_id": "d_p_091_02",
+    "persona_id": "p_091",
+    "hyperparams": {
+      "project_scale": "production",
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "moderate"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from Aiden's former manager at Virtuoso Systems, praising his leadership and technical expertise.",
-    "title": "Recommendation for Aiden O'Sullivan - Lead Backend Engineer",
-    "doc_id": "d_p_091_02",
+    "topic_summary": "A recommendation from Callum's manager praising his leadership in developing scalable cybersecurity platforms.",
+    "title": "Recommendation from CyberShield CTO",
+    "doc_id": "d_p_091_03",
     "persona_id": "p_091",
     "hyperparams": {
-      "recommender_role": "direct-manager",
-      "recommender_closeness": "worked-daily",
+      "recommender_role": "skip-level",
+      "recommender_closeness": "occasional",
       "company_type": "agency",
       "company_size": "large (500+)"
     }
   },
   {
-    "doc_type": "project_readme",
-    "topic_summary": "A GitHub README for a microservices-based platform designed to handle high-throughput enterprise workloads.",
-    "title": "Enterprise Microservices Platform",
-    "doc_id": "d_p_091_03",
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post on designing zero-trust architectures for modern cybersecurity platforms.",
+    "title": "Zero Trust by Design: Securing Cybersecurity Platforms",
+    "doc_id": "d_p_091_04",
     "persona_id": "p_091",
     "hyperparams": {
-      "project_scale": "production",
-      "project_team_size": "solo",
-      "jargon_density": "heavy"
+      "blog_depth": "tutorial",
+      "jargon_density": "plain"
     }
   }
 ]

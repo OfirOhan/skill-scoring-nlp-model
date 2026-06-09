@@ -1,62 +1,61 @@
 {
   "persona_id": "p_011",
   "hyperparams": {
-    "archetype": "ml_engineer",
-    "years_experience": 13,
-    "seniority": "staff",
-    "industry": "consulting",
+    "archetype": "backend_engineer",
+    "years_experience": 6,
+    "seniority": "senior",
+    "industry": "SaaS",
     "writing_style": "concise",
-    "language_fluency": "ESL",
-    "self_promotion_level": "boastful",
-    "quantification_tendency": "mixed"
+    "language_fluency": "near-native",
+    "self_promotion_level": "humble",
+    "quantification_tendency": "qualitative"
   },
-  "name": "Cedric Blanc",
-  "current_role": "Staff ML Engineer - AI Solutions Architect",
-  "company": "NeuraLogic Consulting",
+  "name": "Yara Haddad",
+  "current_role": "Senior Backend Engineer",
+  "company": "NexaTech Solutions",
   "education": {
-    "degree": "Master of Science in Machine Learning",
-    "university": "ETH Zurich",
-    "year": 2017
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "University of Toronto",
+    "year": 2018
   },
   "career_trajectory": [
     {
-      "year": 2011,
-      "role": "Junior ML Engineer",
-      "company": "NexaTech Startup"
+      "year": 2017,
+      "role": "Junior Backend Developer",
+      "company": "StarterKit Inc."
     },
     {
-      "year": 2015,
-      "role": "Senior ML Engineer",
-      "company": "Quantify Systems"
-    },
-    {
-      "year": 2018,
-      "role": "Team Lead, AI Solutions",
-      "company": "DataVerve Inc."
+      "year": 2019,
+      "role": "Mid-Level Backend Engineer",
+      "company": "ScaleFlow SaaS"
     },
     {
       "year": 2021,
-      "role": "Staff ML Engineer",
-      "company": "NeuraLogic Consulting"
+      "role": "Senior Backend Engineer",
+      "company": "Aurora Systems"
+    },
+    {
+      "year": 2023,
+      "role": "Senior Backend Engineer",
+      "company": "NexaTech Solutions"
     }
   ],
   "skills": {
-    "PyTorch": 5,
-    "TensorFlow": 5,
-    "MLOps": 5,
-    "Model deployment": 5,
-    "LLMs/Prompt engineering": 5,
-    "NLP": 5,
-    "AWS": 5,
-    "GCP": 5,
-    "Kubernetes": 4,
-    "Terraform": 4
+    "Python": 5,
+    "Go": 4,
+    "REST API design": 5,
+    "Microservices architecture": 5,
+    "PostgreSQL": 5,
+    "AWS": 4,
+    "CI/CD pipelines": 3,
+    "Jenkins": 2,
+    "Monitoring & alerting": 3,
+    "Linux administration": 3,
+    "Chaos engineering": 1
   },
   "document_ids": [
     "d_p_011_00",
     "d_p_011_01",
-    "d_p_011_02",
-    "d_p_011_03",
-    "d_p_011_04"
+    "d_p_011_02"
   ]
 }

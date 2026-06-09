@@ -1,58 +1,57 @@
 {
   "persona_id": "p_113",
   "hyperparams": {
-    "archetype": "embedded_engineer",
-    "years_experience": 15,
-    "seniority": "staff",
+    "archetype": "ml_engineer",
+    "years_experience": 4,
+    "seniority": "mid",
     "industry": "fintech",
     "writing_style": "concise",
     "language_fluency": "ESL",
-    "self_promotion_level": "balanced",
+    "self_promotion_level": "humble",
     "quantification_tendency": "mixed"
   },
-  "name": "Santiago Vega",
-  "current_role": "Senior Embedded Systems Engineer",
-  "company": "FinTech Innovators Inc.",
+  "name": "Youssef Mansour",
+  "current_role": "Machine Learning Engineer",
+  "company": "FinTechNova",
   "education": {
-    "degree": "Master of Science in Embedded Systems Engineering",
-    "university": "Technical University of Munich",
-    "year": 2012
+    "degree": "Master of Science in Computer Science",
+    "university": "École Polytechnique Fédérale de Lausanne",
+    "year": 2019
   },
   "career_trajectory": [
     {
-      "position": "Firmware Developer",
-      "company": "IoT Solutions Ltd.",
-      "year": 2010
+      "role": "Data Analyst",
+      "company": "StartupLabs",
+      "duration": "2019–2021",
+      "responsibilities": "Built predictive models for customer churn using scikit-learn and SQL."
     },
     {
-      "position": "Embedded Systems Architect",
-      "company": "SecureNet Technologies",
-      "year": 2013
+      "role": "Junior ML Engineer",
+      "company": "QuantifyAI",
+      "duration": "2021–2023",
+      "responsibilities": "Developed NLP pipelines for fraud detection with PyTorch and deployed models on AWS."
     },
     {
-      "position": "Staff Embedded Engineer",
-      "company": "PayNet Solutions",
-      "year": 2016
+      "role": "Machine Learning Engineer",
+      "company": "FinTechNova",
+      "duration": "2023–present",
+      "responsibilities": "Architected MLOps workflows with MLflow and optimized models for real-time trading."
     }
   ],
   "skills": {
-    "C/C++ (embedded)": 5,
-    "RTOS": 5,
-    "Firmware development": 5,
-    "IoT protocols (MQTT/CoAP)": 5,
-    "Hardware-software integration": 5,
-    "Embedded Linux": 4,
-    "Python": 4,
-    "REST API design": 4,
-    "TCP/IP": 3,
-    "Network troubleshooting": 3
+    "PyTorch": 4,
+    "TensorFlow": 4,
+    "scikit-learn": 3,
+    "NLP": 4,
+    "MLOps (MLflow/W&B)": 5,
+    "Model deployment": 4,
+    "REST API design": 3,
+    "Docker": 3,
+    "AWS": 3,
+    "Apache Spark": 1
   },
   "document_ids": [
     "d_p_113_00",
-    "d_p_113_01",
-    "d_p_113_02",
-    "d_p_113_03",
-    "d_p_113_04",
-    "d_p_113_05"
+    "d_p_113_01"
   ]
 }

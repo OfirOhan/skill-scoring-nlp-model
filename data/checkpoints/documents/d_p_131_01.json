@@ -3,19 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_131",
   "hyperparams": {
-    "project_scale": "team-internal",
+    "project_scale": "production",
     "project_team_size": "medium (5-15)",
     "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "Browser DevTools": 1,
+    "Apache Airflow": 4,
+    "Apache Kafka": 4,
+    "Apache Spark": 4,
+    "Data Modeling": 1,
+    "Docker": 3,
+    "ETL pipeline design": 5,
+    "Kubernetes": 3,
+    "Python": 2,
     "REST API design": 3,
-    "React": 3,
-    "Responsive design": 3,
-    "State management (Zustand)": 3,
-    "TypeScript": 3,
-    "Web performance optimization": 3,
-    "Webpack/Vite": 3
+    "Snowflake": 5,
+    "Terraform": 3
   },
-  "text": "# AdTrack Dashboard  \nA real-time ad performance analytics platform for AdVantage Media, aggregating 300+ ad networks and delivering 95%+ query latency reduction through optimized data pipelines. Built with React, TypeScript, and Zustand to enable rapid state synchronization across 15+ concurrent dashboards.  \n\n## Deployment  \nHosted on Vercel with AWS Lambda for backend processing, this dashboard scales to 10k+ concurrent connections using WebSockets and Redis caching. Auto-scaling ensures 99.9% uptime during peak traffic, with CI/CD pipelines enabling 2-minute deployment cycles for feature updates.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/your-username/adtrack-dashboard.git  \ncd adtrack-dashboard  \nnpm install  \nnpm run dev  \n```  \nEnsure environment variables (`./.env.local`) include API keys for ad networks and Redis connection strings. Vite's built-in type-checking and hot-reload capabilities accelerate development cycles.  \n\n## Usage / Examples  \n- **Real-time metrics**: Monitor CTR, CPC, and conversion rates with 100ms latency updates  \n- **Customizable widgets**: Drag-and-drop layout for campaign-specific KPIs  \n- **Export capabilities**: Generate CSV/JSON exports of 1M+ data points with 15% compression  \n- **Responsive design**: Mobile-first layout with 300ms transition animations for dynamic filtering  \n\n## Tech Stack  \n- **Frontend**: React 18 + TypeScript 4.9, Zustand for global state management  \n- **Performance**: Vite for 2x faster builds, code splitting for 40% smaller bundles  \n- **APIs**: REST endpoints for ad network integration, WebSockets for real-time updates  \n- **Styling**: Tailwind CSS with custom theme for brand alignment  \n\n## Architecture / Design  \nMicrofrontend architecture separates UI components from data fetching layers, enabling independent scaling. Zustand's derived state capabilities reduce redundant computations by 60%. WebSockets are optimized with backpressure handling and binary payload compression for 50% bandwidth savings.  \n\n## License  \nMIT License (see [LICENSE](LICENSE))  \n\n## Badges  \n[![Build Status](https://github.com/your-username/adtrack-dashboard/actions/workflows/main.yml/badge.svg)](https://github.com/your-username/adtrack-dashboard/actions)  \n[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)"
+  "text": "# Healthcare Vitals Analytics Pipeline  \nReal-time processing and analysis of patient vitals for clinical decision support in healthcare environments  \n\n[![GitHub]](https://github.com/rafaelcosta/vitals-pipeline) [![Travis CI]](https://travis-ci.com/rafaelcosta/vitals-pipeline) [![Docker]](https://hub.docker.com/r/rafaelcosta/vitals-pipeline) [![License]](LICENSE)  \n\n## License  \nApache 2.0  \n\n## Tech Stack  \n- **Data Ingestion**: Apache Kafka (partitioned topic for critical vitals, 10k+ msgs/sec)  \n- **Processing**: Apache Spark (Structured Streaming, 3-node cluster, 200+ concurrent queries)  \n- **Orchestration**: Apache Airflow (DAGs for batch/real-time workflows, 95%+ uptime)  \n- **Storage**: Snowflake (multi-cloud, 5TB+ historical data, 50+ warehouses)  \n- **Deployment**: Docker (microservices, 15+ containers), Kubernetes (HA clusters, 90%+ pod density)  \n- **APIs**: REST endpoints (FastAPI, 500+ endpoints, 10k+ reqs/sec)  \n- **Infrastructure**: Terraform (CI/CD pipelines, 20+ environments)  \n\n## Architecture / Design  \nThe pipeline ingests vitals from IoT devices via Kafka, processes them in Spark for anomaly detection and aggregation, then loads results to Snowflake. Airflow manages scheduling for batch reports and real-time alerts. REST APIs expose dashboards for clinical teams. Docker ensures consistent environments, while Kubernetes scales clusters based on workload.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/rafaelcosta/vitals-pipeline  \ncd vitals-pipeline  \ndocker-compose build  \ndocker-compose up -d  \n```  \nFor production deployment, use Terraform to provision Kubernetes clusters and Kafka brokers.  \n\n## Usage / Examples  \n1. **Trigger real-time processing**:  \n   ```bash  \n   curl -X POST http://api.vitals.com/trigger --data '{\"patient_id\": \"12345\"}'  \n   ```  \n2. **Query aggregated vitals**:  \n   ```bash  \n   curl -X GET http://api.vitals.com/vitals/summary?timeframe=24h  \n   ```  \n3. **Monitor Airflow DAGs**:  \n   Access the UI at http://airflow.vitals.com to view task logs and failure metrics.  \n\n## Contributing  \nSubmit issues for edge cases in vitals normalization. Pull requests with unit tests for Spark transformations are prioritized. Review code for REST API rate-limiting and Kafka consumer rebalancing."
 }

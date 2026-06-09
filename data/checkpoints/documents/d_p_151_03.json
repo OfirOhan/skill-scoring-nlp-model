@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_151_03",
+  "type": "project_readme",
+  "persona_id": "p_151",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
+  },
+  "skill_evidence": {
+    "CI/CD pipelines": 1,
+    "GitHub Actions": 1,
+    "Jenkins": 1,
+    "ArgoCD": 1,
+    "Prometheus/Grafana": 1,
+    "Monitoring & alerting": 1,
+    "Linux administration": 1,
+    "Terraform": 1,
+    "Python": 1,
+    "Java": 1,
+    "Go": 1,
+    "Node.js": 1,
+    "REST API design": 1,
+    "PostgreSQL": 1
+  },
+  "text": "# Real-Time Monitoring for Ad Serving Systems  \nA scalable solution for tracking ad delivery metrics, latency, and campaign performance across distributed ad tech infrastructure. Designed for high-throughput environments with strict SLA requirements, this system provides actionable insights into real-time ad serving behavior without introducing significant overhead.  \n\n## Badges  \n[![Build Status](https://example.com/status)](https://example.com)  \n[![Code Coverage](https://example.com/coverage)](https://example.com)  \n[![Project Status](https://example.com/status)](https://example.com)  \n\n## Tech Stack  \n- **Data Aggregation**: Apache Kafka for event streaming  \n- **Processing**: Apache Flink for low-latency windowed computations  \n- **Storage**: Amazon S3 for historical data retention  \n- **Visualization**: Grafana (custom dashboards)  \n- **Instrumentation**: OpenTelemetry for distributed tracing  \n- **Security**: mTLS for internal service communication  \n\n## Configuration  \nAll environment-specific settings are managed via `config.yaml`, which defines:  \n- Kafka cluster endpoints and topic partitions  \n- S3 bucket policies and retention rules  \n- Flink job parameters (e.g., window size, parallelism)  \n- Grafana dashboard URLs and authentication tokens  \nEnsure TLS 1.3 is enforced for all internal services.  \n\n## Getting Started / Installation  \n1. Clone the repository to a directory with sufficient disk space for intermediate data  \n2. Install Kafka, Flink, and OpenTelemetry Collector on separate nodes  \n3. Configure `config.yaml` with your cloud provider credentials and network topology  \n4. Launch the pipeline using the provided `run.sh` script  \n5. Verify service health via the embedded metrics endpoint `/healthz`  \n\n## Usage / Examples  \n- Monitor ad impression rates per campaign using the \"Campaign Performance\" dashboard  \n- Track latency spikes in ad request pipelines via the \"Latency Trends\" panel  \n- Use the \"Error Classification\" board to identify failed ad deliveries by error code  \n- Export raw metrics to S3 for post-hoc analysis with AWS Athena  \n\n## Testing  \nValidation is performed through:  \n- Unit tests for core data processing logic  \n- Integration tests simulating high-traffic ad request scenarios  \n- End-to-end tests verifying dashboard accuracy against raw metrics  \n- Stress tests measuring system stability under 10x normal load  \n\n## License  \nMIT License — see the [LICENSE](LICENSE) file for details."
+}

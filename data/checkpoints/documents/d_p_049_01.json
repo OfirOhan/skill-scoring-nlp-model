@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_049_01",
+  "type": "project_readme",
+  "persona_id": "p_049",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "JavaScript": 4,
+    "Next.js": 4,
+    "Python": 1,
+    "REST API design": 3,
+    "React": 4,
+    "TypeScript": 4,
+    "Web accessibility (WCAG)": 3,
+    "Web performance optimization": 4,
+    "Webpack/Vite": 3
+  },
+  "text": "# NexaCorp Enterprise Analytics Dashboard  \nA real-time data visualization tool for enterprise analytics, built with React and TypeScript. Designed for seamless integration with internal REST APIs, this dashboard enables users to monitor KPIs, drill into datasets, and customize widgets with minimal configuration.  \n\n## Configuration  \n- **Environment**: Configure API endpoints and theme settings via `.env.local` file  \n- **Build Tools**: Vite 4.0 with TypeScript 4.9 for fast dev-server and optimized bundling  \n- **Accessibility**: Keyboard navigation and screen reader support enabled via ARIA attributes and semantic HTML  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/your-username/nexacorp-dashboard.git`  \n2. Install dependencies: `npm install`  \n3. Start dev server: `npm run dev`  \n4. API setup: Replace placeholder endpoints in `src/api/config.ts` with your backend URLs  \n\n## Usage / Examples  \n- **Dashboard Widgets**: Drag-and-drop prebuilt widgets (e.g., chart cards, trend graphs) into the layout  \n- **Custom Data Sources**: Define API routes in `src/api/` for real-time data fetching  \n- **Theme Switching**: Toggle light/dark mode via `src/config/theme.ts`  \n- **Accessibility**: Use `Alt+Tab` to navigate widgets, with focus states visible via `:focus-visible`  \n\n## Tech Stack  \n- **Frontend**: React 18, TypeScript 4.9, Vite 4.0  \n- **State Management**: React Context API with custom hooks for shared state  \n- **Performance**: Code splitting via dynamic imports, lazy loading for widgets  \n- **APIs**: REST endpoints for data retrieval, with TypeScript typings for request/response objects  \n\n## Architecture / Design  \nThe dashboard follows a modular component structure:  \n1. **Core UI**: Layout and theme management via React Context  \n2. **Widgets**: Reusable components with props for data binding and styling  \n3. **Data Layer**: Separated API calls from UI logic, with error handling and loading states  \n4. **Optimization**: Vite's built-in tree-shaking and split chunks for production builds  \n\n## License  \nMIT License  \nhttps://opensource.org/licenses/MIT  \n\n## Badges  \n[![MIT License](https://badgen.net/badge/license/MIT/green)](https://opensource.org/licenses/MIT)  \n[![Build Status](https://badgen.net/badge/build/status/passing/green)](https://github.com/your-username/nexacorp-dashboard/actions)  \n[![Contributions Welcome](https://badgen.net/badge/contributions/welcomed/blue)](https://github.com/your-username/nexacorp-dashboard/labels/contributions)"
+}

@@ -4,23 +4,20 @@
   "persona_id": "p_093",
   "hyperparams": {
     "project_scale": "team-internal",
-    "project_team_size": "solo",
-    "jargon_density": "moderate"
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Apache Airflow": 3,
-    "Apache Kafka": 1,
-    "Apache Spark": 3,
-    "Data warehousing": 3,
-    "ETL pipeline design": 3,
-    "Hugging Face Transformers": 3,
-    "MLOps": 3,
-    "Model deployment": 3,
-    "NLP": 4,
-    "PyTorch": 4,
-    "TensorFlow": 3,
-    "dbt": 3,
-    "scikit-learn": 3
+    "A/B testing": 4,
+    "Apache Spark": 1,
+    "Data visualization": 3,
+    "Feature engineering": 4,
+    "Java": 1,
+    "NumPy": 4,
+    "Pandas": 4,
+    "Python": 3,
+    "REST API design": 1,
+    "Statistical modeling": 4
   },
-  "text": "# CyberSentinel: Anomaly Detection in Network Traffic Using Deep Learning  \n\nCyberSentinel leverages deep learning to identify subtle patterns in network traffic, enabling proactive threat detection in enterprise environments. Built for scalability and real-time inference, this project achieves **92.4% F1-score** on a custom dataset of 1.2M+ packet flows, with latency under 200ms for streaming inference. The model is optimized for edge deployment, balancing precision and computational efficiency.  \n\n## Tech Stack  \n- **Deep Learning**: PyTorch (main model), TensorFlow (prototyping)  \n- **Data Processing**: Apache Spark (batch feature extraction), scikit-learn (normalization)  \n- **Orchestration**: Airflow (ETL pipeline scheduling)  \n- **Model Serving**: MLOps pipelines (DVC + FastAPI)  \n- **NLP Integration**: Hugging Face Transformers (embedding layers for protocol metadata)  \n- **Data Warehousing**: dbt (schema management for traffic logs)  \n\n## Architecture / Design  \nCyberSentinel employs a hybrid architecture combining **Convolutional Neural Networks (CNNs)** for spatial pattern recognition and **LSTMs** for temporal sequence analysis. Raw packet data is first aggregated into flow-based features using Spark, then normalized via scikit-learn. The model trains on a mix of labeled attack vectors (e.g., SQLi, DDoS) and baseline traffic, with adversarial examples injected during training to improve robustness. Deployment leverages FastAPI for REST endpoints, with model versions managed via DVC.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/yourusername/CyberSentinel.git  \ncd CyberSentinel  \npip install -r requirements.txt  \npython setup.py install  \n```  \nEnsure you have Docker installed for containerized inference.  \n\n## Usage / Examples  \nTo evaluate the model:  \n```bash  \npython evaluate.py --dataset ./data/flow_features.csv --output ./results/  \n```  \nFor real-time detection:  \n```bash  \npython stream_infer.py --model ./models/cyber_sentinel_v1.pt --input ./data/live_traffic.pcap  \n```  \nExample metrics: **True Positive Rate (TPR) = 94.2%**, **False Positive Rate (FPR) = 3.1%**.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/license/yourusername/CyberSentinel)](https://github.com/yourusername/CyberSentinel)  \n[![CI/CD](https://img.shields.io/github/actions/workflow/yourusername/CyberSentinel/main.yml)](https://github.com/yourusername/CyberSentinel/actions)  \n[![Version](https://img.shields.io/github/package-json/version/yourusername/CyberSentinel/package.json)](https://github.com/yourusername/CyberSentinel)  \n\n## Contributing  \nCyberSentinel is a solo project, but I welcome contributions to documentation or model optimization. Review the [contributing guidelines](CONTRIBUTING.md) for details.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# Player Behavior Analysis for Game Retention  \n\nThis project leverages player behavior data to identify retention patterns and optimize in-game strategies. By combining feature engineering, statistical modeling, and A/B testing, we quantify churn risk factors and validate interventions that reduced 30-day attrition by 12% in Q3 2024. The pipeline processes 50M+ session logs monthly, with real-time dashboards tracking engagement metrics like DAU/MAU ratios and monetization conversion rates.  \n\n## Acknowledgments  \nCollaboration with the analytics, product, and engineering teams was instrumental. Special thanks to Maria Chen (data engineering) for schema design, Raj Patel (product analytics) for defining business KPIs, and the QA team for validating model outputs. The A/B testing framework (built on Python and Snowflake) enabled 15 concurrent experiments, while Matplotlib/Seaborn visualizations clarified complex behavioral trends.  \n\n## Getting Started / Installation  \n```bash  \npip install -r requirements.txt  \n```  \nEnsure Python 3.9+ is installed. The environment uses Pandas 2.0 for data handling, scikit-learn 1.3 for modeling, and Statsmodels for hypothesis testing. Data is stored in Parquet format, with schema details in `schema/` directory.  \n\n## Usage / Examples  \nRun the core analysis with:  \n```bash  \npython analyze_retention.py --config prod  \n```  \nThis executes feature engineering (including time-based aggregations and session-length normalization), trains a Gradient Boosted model on 80% of the dataset, and evaluates A/B test results from the latest sprint. Output includes confusion matrices, feature importance plots, and a summary of cohort-specific retention curves.  \n\n## Tech Stack  \n- **Python**: Core language for data processing, modeling, and visualization  \n- **Pandas/NumPy**: For efficient data manipulation and numerical computations  \n- **Scikit-learn**: Ensemble models for churn prediction and hyperparameter tuning  \n- **Matplotlib/Seaborn**: Interactive dashboards for cohort analysis  \n- **A/B Testing Framework**: Custom Python module with statistical significance checks  \n- **Statistical Modeling**: Survival analysis and logistic regression for behavioral insights  \n\n## License  \nMIT License  \n\n## Badges  \n[![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat)](https://github.com/)  \n[![CI/CD](https://img.shields.io/badge/CI%2FCD-passing?style=flat)](https://github.com/)  \n[![License](https://img.shields.io/badge/license-MIT-blue?style=flat)](https://github.com/)  \n\n## Contributing  \nContributions are welcome! Focus on improving feature extraction pipelines or expanding the A/B testing module. All pull requests must include unit tests and documentation updates. Domain expertise in gaming analytics is preferred for meaningful impact."
 }

@@ -1,0 +1,26 @@
+{
+  "doc_id": "d_p_147_03",
+  "type": "project_readme",
+  "persona_id": "p_147",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Network security": 1,
+    "Application security (OWASP)": 1,
+    "Penetration testing": 1,
+    "IAM/Access control": 1,
+    "Encryption & PKI": 1,
+    "Security auditing": 1,
+    "SIEM tools": 1,
+    "TCP/IP": 1,
+    "DNS/DHCP": 1,
+    "VPN technologies": 1,
+    "Firewall configuration": 1,
+    "Network automation": 1,
+    "SDN": 1
+  },
+  "text": "# ThreatIntel Dashboard  \nA real-time threat intelligence visualization tool that aggregates and correlates cyber threat indicators (CTIs) from diverse sources, enabling analysts to prioritize and respond to emerging risks with precision. Built to handle 10k+ IoC entries per minute, this dashboard provides actionable insights through dynamic filtering, trend analysis, and cross-referencing of malware hashes, IP addresses, and domain names.  \n\n## Badges  \n[![GitHub stars](https://img.shields.io/github/stars/tomaszlewandowski/threatintel-dashboard?style=flat)](https://github.com/tomaszlewandowski/threatintel-dashboard)  \n[![Build status](https://img.shields.io/github/actions/workflow/ci.yml?branch=main)](https://github.com/tomaszlewandowski/threatintel-dashboard/actions)  \n[![Test coverage](https://img.shields.io/coveralls/github/tomaszlewandowski/threatintel-dashboard/main)](https://coveralls.io/github/tomaszlewandowski/threatintel-dashboard)  \n\n## Getting Started / Installation  \nInstall dependencies via `npm install` and configure environment variables for API keys and data sources. Set `THREATINTEL_API_KEY` and `DATA_SOURCE_URLS` in `.env` to enable real-time ingestion from VirusTotal, AlienVault OTX, and Mandiant. Run `npm start` to launch the dashboard on port 3000, which supports 10 concurrent users with <50ms latency for query responses.  \n\n## Tech Stack  \nFrontend: React (TypeScript) with Chart.js for dynamic visualizations  \nBackend: Python (FastAPI) with Redis for caching  \nDatabase: PostgreSQL (vector search extension for similarity queries)  \nData Pipelines: Apache Kafka for real-time event streaming  \nDeployment: Docker (multi-stage build for production)  \n\n## Architecture / Design  \nThe system follows a three-tier architecture:  \n1. **Ingestion Layer**: Kafka consumers parse CTIs from 15+ open-source feeds, normalizing timestamps and geolocation data.  \n2. **Processing Layer**: Python workers batch-process incoming data, applying ML-based anomaly detection to flag suspicious activity (98.7% accuracy on historical datasets).  \n3. **Visualization Layer**: React components render interactive heatmaps and timelines, with WebSocket connections maintaining 120ms sync between front and backends.  \n\n## Usage / Examples  \n- Query \"malware.hash: 55d5a3e96c8a4f2b\" to retrieve associated IP clusters and geolocation maps.  \n- Use the \"Trend Analysis\" panel to compare daily IoC volume against baseline thresholds (±25% deviation triggers alerts).  \n- Export filtered datasets to CSV for SIEM correlation, with 95% compression ratio via gzip.  \n\n## Testing  \nUnit tests (Jest) cover 85% of core logic, with 100% branch coverage. Integration tests validate Kafka message throughput (5k messages/sec) and Redis caching efficiency (92% hit rate). Performance tests simulate 5k concurrent users, maintaining <500ms latency for 99.9% of requests.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details."
+}

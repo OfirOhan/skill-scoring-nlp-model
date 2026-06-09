@@ -1,28 +1,23 @@
 {
   "doc_id": "d_p_257_03",
-  "type": "project_readme",
+  "type": "linkedin",
   "persona_id": "p_257",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "solo",
-    "jargon_density": "plain"
+    "linkedin_completeness": "detailed"
   },
   "skill_evidence": {
-    "Agile/Scrum": 2,
-    "CI/CD pipelines": 3,
-    "Cloud cost optimization": 2,
-    "Cross-team collaboration": 2,
-    "Database optimization": 3,
-    "GitHub Actions": 3,
-    "Linux administration": 3,
-    "Mentoring": 1,
-    "Monitoring & alerting": 3,
-    "Project management": 2,
-    "Shell scripting": 3,
-    "Stakeholder communication": 2,
-    "Team leadership": 2,
-    "Technical debt management": 3,
-    "System design": 2
+    "Apache Airflow": 1,
+    "Data visualization (Matplotlib/Plotly)": 3,
+    "Exploratory data analysis": 3,
+    "Feature engineering": 3,
+    "NumPy": 4,
+    "Pandas": 4,
+    "Python": 3,
+    "REST API design": 2,
+    "SQL analytics": 3,
+    "Statistical modeling": 4,
+    "Tableau/Power BI": 3,
+    "scikit-learn": 4
   },
-  "text": "# NexaPay Fraud Detection v2.1  \nA real-time fraud detection system built for NexaPay’s payment infrastructure, leveraging machine learning to flag suspicious transactions with sub-100ms latency.  \n\n## Contributing  \nThis project is a solo effort, but I welcome feedback and pull requests. If you spot a bug or have ideas for improving the model’s adaptability, feel free to open an issue. Collaboration is always better than isolation.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/ilyafedorov10/nexapay-fraud-detection.git`  \n2. Install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n3. Configure environment variables for Kafka and Redis endpoints.  \n4. Run the pipeline: `python3 main.py`  \n\n## Usage / Examples  \nThe system processes transaction streams via Kafka, applies a hybrid model (XGBoost + anomaly detection), and routes alerts to NexaPay’s risk dashboard. Example use case:  \n- A $5,000 international purchase from a new device triggers a score of 89/100, prompting manual review.  \n\n## Tech Stack  \n- **ML**: XGBoost, Isolation Forest, TensorFlow Lite (for edge inference)  \n- **Data**: Apache Kafka, Redis, PostgreSQL  \n- **Cloud**: AWS Lambda for async processing, CloudWatch for metrics  \n- **Tools**: Docker, Terraform, Grafana  \n\n## Architecture / Design  \nThe system is a microservices layer over NexaPay’s monolith. Key components:  \n- **Ingestion Layer**: Kafka consumers parse raw transactions into JSON events.  \n- **Scoring Engine**: A distributed XGBoost model evaluates risk scores in parallel.  \n- **Alerting**: Redis pub/sub triggers notifications to risk analysts.  \n- **Feedback Loop**: Manual decisions are logged to retrain the model hourly.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![CI/CD Status](https://github.com/ilyafedorov10/nexapay-fraud-detection/actions/workflows/ci.yml/badge.svg)](https://github.com/ilyafedorov10/nexapay-fraud-detection/actions/workflows/ci.yml)  \n[![Model Accuracy](https://img.shields.io/badge/accuracy-92.3%25-green)](https://github.com/ilyafedorov10/nexapay-fraud-detection/blob/main/reports/accuracy_report.md)  \n[![Deployment Frequency](https://img.shields.io/badge/deployments-3x%20weekly-blue)](https://github.com/ilyafedorov10/nexapay-fraud-detection/releases)"
+  "text": "Zoe Papadakis | Data Scientist, HealthInsight Analytics  \nDriven by curiosity and collaboration, I bridge complex health data with actionable insights. With a focus on improving patient outcomes through analytics, I leverage Python, SQL, and statistical modeling to solve real-world challenges.  \n\nMy work centers on transforming raw data into strategies that support clinical decision-making. Using Pandas and NumPy, I’ve streamlined data pipelines, reducing processing time by 30% in a recent project tracking chronic disease trends. Feature engineering and exploratory analysis have been key in refining predictive models—most notably, a scikit-learn-based system that improved early diagnosis accuracy by 15%.  \n\nI thrive in environments where data meets impact. Whether crafting visualizations in Tableau to communicate findings or designing REST APIs to integrate health records, I prioritize clarity and scalability. My goal? To ensure every insight contributes to better care.  \n\nCollaboration is central to my approach. I work closely with clinicians and engineers to align technical solutions with operational needs. While the path isn’t always straightforward, the reward of turning data into meaningful change keeps me motivated.  \n\nLooking ahead, I’m excited to explore how emerging technologies can further enhance healthcare analytics. Let’s connect if you’re navigating similar challenges—there’s always value in sharing perspectives."
 }

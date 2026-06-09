@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_308_02",
+  "type": "project_readme",
+  "persona_id": "p_308",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "AWS": 1,
+    "Apache Airflow": 1,
+    "Apache Kafka": 5,
+    "Apache Spark": 4,
+    "Data modeling": 3,
+    "Data warehousing": 3,
+    "Docker": 1,
+    "ETL pipeline design": 4,
+    "PostgreSQL": 1,
+    "Python": 1,
+    "Redis": 1,
+    "Snowflake": 1,
+    "Terraform": 1,
+    "dbt": 1
+  },
+  "text": "# Real-Time Ad Campaign Analytics Pipeline  \n\nThis pipeline ingests, processes, and visualizes real-time ad campaign data at scale, enabling immediate actionable insights for campaign optimization. Built for adtech workflows, it leverages Apache Kafka for stream ingestion and Apache Spark for distributed processing, delivering sub-second latency for critical metrics like click-through rates and conversion funnels. Designed for team-internal use, it’s a single-point solution for monitoring ad spend efficiency and audience engagement across multiple channels.  \n\n## Getting Started / Installation  \nEnsure your environment has Java 8+, Scala 2.12, and Spark 3.3+ installed. Download Kafka binaries from the official site and extract them to a directory of your choice. Set environment variables for Kafka and Spark paths. Clone this repository and navigate to the project root. Run `sbt compile` to build the project. Start Zookeeper and Kafka servers separately, then execute the Spark job using `spark-submit` with the provided configuration file.  \n\n## Usage / Examples  \nTo process campaign data, start the Kafka producer to stream click and impression events into the `campaign_events` topic. The Spark job will consume these events, aggregate metrics like CPC and CTR, and write results to a data warehouse. For example, after 10 seconds of ingestion, the pipeline outputs a dashboard-ready JSON file containing real-time KPIs. Use the included Scala script to simulate test data or integrate with your existing ad platform’s event source.  \n\n## Badges  \n[Real-Time Analytics Pipeline]  \n[Kafka Stream Processing]  \n[Spark Batch Aggregation]  \n\n## Tech Stack  \n- **Apache Kafka**: Scalable, fault-tolerant message broker for real-time data ingestion.  \n- **Apache Spark**: Distributed engine for low-latency aggregation and transformation.  \n- **Data Modeling**: Star schema design for campaign dimensions and facts, optimized for querying.  \n- **Data Warehousing**: Pre-aggregated tables in a data lake for ad-hoc analysis.  \n\n## Architecture / Design  \nThe pipeline follows a decoupled architecture: Kafka acts as the event bus, ingesting raw campaign data from ad platforms. Spark Streaming processes this data into structured formats, applying windowed aggregations to calculate metrics like daily spend and audience retention. Results are written to a data warehouse for downstream visualization. Kafka’s partitioning ensures horizontal scalability, while Spark’s checkpointing guarantees fault tolerance.  \n\n## Contributing  \nAs a solo project, this pipeline is actively maintained but open to collaboration. Contributions are welcome for improving Kafka topic partitioning strategies or optimizing Spark job performance. Share feedback on data modeling decisions or propose new metrics for real-time calculation.  \n\n## License  \nMIT License — see the LICENSE file for details."
+}

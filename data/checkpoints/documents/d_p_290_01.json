@@ -5,18 +5,19 @@
   "hyperparams": {
     "project_scale": "hobby",
     "project_team_size": "small (2-4)",
-    "jargon_density": "heavy"
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "Apache Spark": 3,
-    "Data modeling": 3,
-    "Data visualization (Matplotlib/Plotly)": 3,
-    "MLOps (MLflow/W&B)": 3,
-    "NumPy": 3,
-    "Pandas": 3,
-    "Python": 3,
-    "REST API design": 1,
-    "scikit-learn": 4
+    "3D graphics (OpenGL/Vulkan)": 4,
+    "C#/.NET": 3,
+    "Game networking": 3,
+    "Game physics": 3,
+    "HTML/CSS": 1,
+    "JavaScript": 1,
+    "Python": 1,
+    "REST API design": 2,
+    "Unity": 5,
+    "Unreal Engine": 1
   },
-  "text": "# Enterprise Demand Forecasting with Machine Learning  \nA production-grade model predicting enterprise product demand using historical sales, market trends, and time-series analysis. Achieved 89% accuracy in 3-month horizon forecasts, reducing inventory error by 17% in pilot tests.  \n\n## Getting Started / Installation  \nInstall dependencies via pip:  \n```bash  \npip install pandas numpy scikit-learn mlflow plotly  \n```  \nEnsure Python 3.8+ is installed. Clone the repository using your preferred method.  \n\n## Usage / Examples  \nRun the forecasting pipeline with:  \n```bash  \npython forecast.py --data_path 'data/sales.csv' --output 'results/forecast.pkl'  \n```  \nThe script loads time-series data, applies feature engineering (lagged metrics, seasonality decomposition), trains an XGBoost model, and exports predictions. Visualize results using `plot_forecast.py` for interactive trend analysis.  \n\n## Badges  \n[![Model Accuracy](https://img.shields.io/badge/Accuracy-89%25-green)]  \n[![Pipeline Efficiency](https://img.shields.io/badge/Efficiency-92%25-yellow)]  \n\n## Tech Stack  \n- **Data Processing**: Apache Spark (batch aggregation), Pandas (data wrangling)  \n- **Modeling**: scikit-learn (XGBoost, Prophet), NumPy (numerical operations)  \n- **Visualization**: Plotly (interactive dashboards)  \n- **MLOps**: MLflow (experiment tracking, model registry)  \n\n## Architecture / Design  \nThe system decouples data preprocessing, model training, and inference. Historical sales data is aggregated in Spark, then transformed into time-series features using Pandas. A hybrid model (XGBoost + Prophet) captures both linear and non-linear patterns. MLflow logs hyperparameters and tracks performance metrics (MAE, RMSE) across 12 validation splits.  \n\n## Contributing  \nContributions are welcome! Focus on improving feature engineering pipelines or expanding support for external market trend datasets. All changes require unit tests and documentation updates.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details."
+  "text": "# E-Commerce Loyalty Game  \nA Unity-based loyalty system boosting user retention with gamified rewards, designed for e-commerce platforms. The project tracks purchase behaviors, unlocks tiered benefits, and integrates real-time analytics to drive engagement. Early metrics show a 22% increase in repeat visits during internal testing.  \n\n## Getting Started / Installation  \nInstall [Unity 2021.3 LTS](https://unity.com/download) and import the project via `Assets > Import Package > Custom Package`. The scriptable objects for reward tiers and user progression are pre-configured. For backend integration, ensure your API endpoint matches the `LoyaltyManager.cs` configuration.  \n\n## Tech Stack  \n- **Unity 2021.3 LTS**: Core engine for 3D UI/UX and physics simulations  \n- **C#**: Scripting for reward logic, user state management, and analytics tracking  \n- **Unity UI System**: Customizable reward cards and progress visualizations  \n- **REST API**: Lightweight integration for user data sync (see `LoyaltyManager.cs` for endpoint setup)  \n- **3D Graphics**: Optimized particle effects for reward animations (12% performance gain vs. default shaders)  \n\n## Usage / Examples  \n```csharp  \n// Example: Unlock a tiered reward  \npublic void AwardPoints(int points) {  \n    if (points >= 500) {  \n        UnlockTier(\"Silver\", \"Access exclusive deals\");  \n    }  \n}  \n```  \nThis system boosts engagement by 15% in A/B tests. Deploy the `LoyaltyManager` as a singleton to centralize state tracking.  \n\n## Badges  \n[![Active Development](https://img.shields.io/badge/active%20development-yes-green)](https://github.com/lorenzo-ricci/loyalty-game/commits/main)  \n[![CI/CD](https://img.shields.io/badge/ci--cd-passing-blue)](https://github.com/lorenzo-ricci/loyalty-game/actions)  \n[![Code Quality](https://img.shields.io/badge/code%20quality-high-yellow)](https://github.com/lorenzo-ricci/loyalty-game/actions/workflows/unit-tests.yml)  \n\n## Architecture / Design  \nThe system uses a modular ECS pattern for scalability, separating user data, reward logic, and analytics. The `RewardSystem` handles 10k+ concurrent users with 60+ FPS stability. Key optimizations include:  \n- **Pooling**: Recycles UI elements to reduce GC overhead (30% memory savings)  \n- **Event Bus**: Decouples reward triggers from UI updates  \n- **Analytics**: Tracks user behavior via Unity's Profiler for real-time adjustments  \n\n## Contributing  \nThis project thrives on collaboration. Ideal for developers with experience in Unity systems, C# scripting, and 3D UI design. Contributions to the reward calculation logic or particle effects are especially impactful.  \n\n## License  \nMIT License – see [LICENSE](https://github.com/lorenzo-ricci/loyalty-game/blob/main/LICENSE) for details."
 }

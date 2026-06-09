@@ -1,63 +1,55 @@
 {
   "persona_id": "p_033",
   "hyperparams": {
-    "archetype": "tech_lead_architect",
-    "years_experience": 8,
-    "seniority": "senior",
-    "industry": "consulting",
-    "writing_style": "verbose",
-    "language_fluency": "native",
+    "archetype": "data_engineer",
+    "years_experience": 2,
+    "seniority": "junior",
+    "industry": "startup",
+    "writing_style": "neutral",
+    "language_fluency": "ESL",
     "self_promotion_level": "boastful",
-    "quantification_tendency": "mixed"
+    "quantification_tendency": "metrics-heavy"
   },
-  "name": "Kenji Mori",
-  "current_role": "Principal Tech Lead / Cloud Architecture Strategist",
-  "company": "NexaTek Solutions",
+  "name": "Theo van den Berg",
+  "current_role": "Junior Data Engineer",
+  "company": "NexaData Solutions",
   "education": {
-    "degree": "Computer Science",
-    "university": "University of Tokyo",
-    "year": 2015
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "University of Amsterdam",
+    "year": 2021
   },
   "career_trajectory": [
     {
-      "role": "Junior Developer",
-      "company": "InnovateX",
-      "year": 2013
+      "role": "Data Analyst Intern",
+      "company": "TechNova Analytics",
+      "duration": "2021-2022"
     },
     {
-      "role": "Senior Developer",
-      "company": "NexaTech",
-      "year": 2015
+      "role": "Data Engineering Intern",
+      "company": "DataFlow Inc.",
+      "duration": "2022-2023"
     },
     {
-      "role": "Tech Lead",
-      "company": "NexaTek",
-      "year": 2017
-    },
-    {
-      "role": "Principal Tech Lead / Architect",
-      "company": "NexaTek Solutions",
-      "year": 2019
+      "role": "Junior Data Engineer",
+      "company": "NexaData Solutions",
+      "duration": "2023-present"
     }
   ],
   "skills": {
-    "System design": 5,
-    "Team leadership": 4,
-    "Agile/Scrum": 4,
-    "Cross-team collaboration": 4,
-    "Stakeholder communication": 4,
-    "Project management": 4,
-    "Technical writing": 3,
-    "CI/CD pipelines": 4,
-    "GitHub Actions": 4,
-    "Prometheus/Grafana": 4,
-    "Monitoring & alerting": 4,
-    "Linux administration": 3,
-    "Database optimization": 4
+    "Apache Spark": 4,
+    "ETL pipeline design": 4,
+    "Data warehousing": 3,
+    "Snowflake": 4,
+    "Apache Airflow": 3,
+    "Database optimization": 3,
+    "Data modeling": 3,
+    "Python": 1,
+    "REST API design": 2,
+    "Docker": 3,
+    "Kubernetes": 3,
+    "Terraform": 3
   },
   "document_ids": [
-    "d_p_033_00",
-    "d_p_033_01",
-    "d_p_033_02"
+    "d_p_033_00"
   ]
 }

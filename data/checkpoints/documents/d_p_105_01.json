@@ -3,21 +3,19 @@
   "type": "project_readme",
   "persona_id": "p_105",
   "hyperparams": {
-    "project_scale": "team-internal",
+    "project_scale": "hobby",
     "project_team_size": "small (2-4)",
-    "jargon_density": "moderate"
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "API testing": 3,
-    "BDD/TDD": 2,
-    "GitLab CI": 2,
-    "Integration testing": 2,
+    "CI/CD pipelines": 2,
+    "GraphQL": 1,
     "Java": 1,
+    "Performance testing (JMeter/k6)": 1,
     "Python": 3,
-    "REST API design": 2,
-    "Selenium/Playwright": 3,
-    "Test automation": 3,
-    "Unit testing": 2
+    "Selenium/Playwright": 5,
+    "Test automation": 5,
+    "Test strategy design": 1
   },
-  "text": "# AdGuard: Ad Campaign Validation Framework  \nAutomate ad campaign validation with precision. This framework streamlines QA workflows by simulating real-time ad delivery, detecting discrepancies in creative assets, and ensuring compliance with platform-specific rules. Built for adtech teams, it reduces manual validation cycles while maintaining traceability for audit purposes.  \n\n---\n\n## Roadmap / Future Work  \n- **Real-time validation** integration with ad serving platforms (Q3 2024)  \n- **CI/CD pipeline automation** for test suite execution via GitLab CI (Q4 2024)  \n- **Support for emerging ad formats** (e.g., native ads, dynamic creative optimization)  \n- **Enhanced reporting** with anomaly detection for performance metrics  \n\n---\n\n## Getting Started / Installation  \nInstall via pip:  \n```bash  \npip install adguard-framework  \n```  \nEnsure dependencies are met:  \n- Python 3.10+  \n- Playwright (for browser automation)  \n- pytest (for test execution)  \n\n---\n\n## Usage / Examples  \nValidate ad creatives:  \n```python  \nfrom adguard import CampaignValidator  \nvalidator = CampaignValidator(\"campaign_id_123\")  \nresult = validator.check_creative_compliance()  \nprint(result.status)  # \"PASSED\" or \"FAILED\"  \n```  \nTest campaign metrics:  \n```python  \nvalidator.run_performance_checks(  \n    expected_click_through_rate=0.05,  \n    max_load_time=2000  # in milliseconds  \n)  \n```  \n\n---\n\n## Tech Stack  \n- **Language**: Python (for core logic and API testing)  \n- **Automation**: Playwright (browser interactions), pytest (test harness)  \n- **CI/CD**: GitLab CI (for scheduled test runs)  \n- **Data**: In-memory storage for test artifacts  \n\n---\n\n## Architecture / Design  \nThe framework uses a modular architecture with three layers:  \n1. **Adapter Layer**: Interfaces with ad platforms via REST APIs  \n2. **Validation Engine**: Rules engine for creative compliance checks  \n3. **Reporting Layer**: Generates structured logs for audit trails  \n\nTests are organized into fixtures for session setup, with parallel execution enabled for large campaigns.  \n\n---\n\n## License  \nMIT License (see [LICENSE](LICENSE) for details)"
+  "text": "# GameAssetValidator  \nAutomated validation framework for game assets, ensuring consistency across platforms and pipelines. Combines Playwright-driven UI checks with asset metadata verification, reducing manual QA overhead by 40% in early trials.  \n\n## Testing  \nDesigned for deterministic asset validation, this framework executes test suites against localized build artifacts. Uses Playwright to simulate user interactions and validate rendering fidelity, while custom parsers verify metadata compliance. Supports parallel execution across platforms, with test results aggregated in JSON format for downstream analysis. CI/CD integration is optional but recommended for automated pre-release checks.  \n\n## Getting Started / Installation  \n```bash\ngit clone https://github.com/nbrooks/GameAssetValidator.git  \npip install -r requirements.txt  \nexport PLAYWRIGHT_CACHE_DIR=/path/to/cache  \n```  \nEnsure Python 3.9+ is installed. Configure environment variables for browser binaries and cache directories.  \n\n## Usage / Examples  \nValidate a texture atlas:  \n```python  \nfrom validator import AssetTestSuite  \nsuite = AssetTestSuite(\"textures/atlas.json\")  \nsuite.add_test(\"texture_resolution\", lambda: assert_image_size(\"atlas.png\", 2048, 2048))  \nsuite.run()  \n```  \nTest results are saved as `test_results.json` in the working directory.  \n\n## Tech Stack  \n- Python (3.9+)  \n- Playwright (for UI/interaction testing)  \n- JSON (test data and output format)  \n- Custom asset parser libraries  \n\n## Architecture / Design  \nModular architecture separates asset loading, test execution, and result reporting. Playwright sessions are scoped per test case to isolate failures. Metadata validation leverages type hints and schema enforcement. Designed for extensibility—add new asset types via plugin modules.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details.  \n\n## Contributing  \nPull requests and issue reports are welcome. Focus on improving edge-case coverage or adding support for new asset formats. All contributions must include unit tests and documentation updates."
 }

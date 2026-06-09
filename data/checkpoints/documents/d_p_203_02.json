@@ -3,21 +3,25 @@
   "type": "project_readme",
   "persona_id": "p_203",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "solo",
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "CI/CD pipelines": 3,
-    "Go": 5,
-    "Kubernetes": 4,
-    "Microservices architecture": 5,
-    "PostgreSQL": 5,
-    "Python": 4,
-    "REST API design": 5,
-    "Redis": 4,
-    "Terraform": 4
+    "Python": 1,
+    "Go": 1,
+    "REST API design": 1,
+    "Microservices architecture": 1,
+    "PostgreSQL": 1,
+    "MongoDB": 1,
+    "AWS": 1,
+    "Terraform": 1,
+    "CI/CD pipelines": 1,
+    "GitHub Actions": 1,
+    "Jenkins": 1,
+    "Prometheus/Grafana": 1,
+    "Monitoring & alerting": 1,
+    "Linux administration": 1
   },
-  "text": "# End-to-End Encryption Tool for Sensitive Data  \nA production-grade solution for securing cross-node data transfers in distributed cybersecurity systems. Built with Go and Python, this tool handles key rotation, asynchronous processing, and compliance-ready logging.  \n\n---\n\n## Badges  \n🚀 Production-Grade | 🔐 E2EE Core | 🐍 CLI Tool | 🧠 Microservices-Driven  \n\n---\n\n## Tech Stack  \n- **Go**: Core encryption engine with zero-copy memory mapping for performance  \n- **Python**: CLI tool with asyncio-based async I/O for batch processing  \n- **Redis**: Distributed caching layer with TTL-based key expiration  \n- **PostgreSQL**: Audit log storage with row-level security  \n- **AWS**: Multi-region deployment with S3-backed key vaults  \n- **Kubernetes**: Self-healing deployment with readiness probes  \n- **Terraform**: Infrastructure-as-code for VPC isolation and security groups  \n- **REST API**: Type-safe endpoints for integration with SIEM systems  \n\n---\n\n## Architecture / Design  \nThe system operates as a microservices cluster with three primary components:  \n1. **Encryption Core**: Written in Go, handles AES-256-GCM and hybrid key exchange  \n2. **CLI Interface**: Python-based wrapper for batch file encryption/decryption  \n3. **Control Plane**: REST API for dynamic key rotation and policy enforcement  \n\nData flows through Redis as a pub/sub layer for real-time sync across nodes. PostgreSQL stores audit logs with automatic anonymization. Kubernetes ensures fault tolerance with pod anti-affinity rules.  \n\n---\n\n## Getting Started / Installation  \n```bash\ngit clone https://github.com/danielnakamura/e2ee-tool.git  \ncd e2ee-tool  \nmake deps  \nexport AWS_ACCESS_KEY_ID=...  \nexport AWS_SECRET_ACCESS_KEY=...  \ndocker-compose up -d  \n```  \nEnsure Redis and PostgreSQL are running before executing `make build`.  \n\n---\n\n## Usage / Examples  \nEncrypt a file:  \n```bash  \npython cli.py --encrypt --input data.json --output encrypted.bin  \n```  \nDecrypt with:  \n```bash  \npython cli.py --decrypt --input encrypted.bin --output data.json  \n```  \nREST API endpoint:  \n```bash  \ncurl -X POST https://api.example.com/rotate-keys  \n```  \n\n---\n\n## Contributing  \nThis project requires deep expertise in Go, Python, and cloud infrastructure. Submit pull requests with unit tests and CI/CD pipeline updates.  \n\n---\n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# CloudNexa: Serverless Architecture for SaaS Scalability  \nCloudNexa is a framework designed to abstract the complexity of serverless infrastructure, enabling seamless deployment of SaaS applications with auto-scaling capabilities. By leveraging event-driven architectures and distributed state management, it reduces operational overhead while maintaining high availability and low-latency performance for mission-critical workloads.  \n\n---\n\n## Badges  \n[![Serverless Architecture](https://img.shields.io/badge/Architecture-Serverless-blue)](https://example.com)  \n[![SaaS Scalability](https://img.shields.io/badge/Scalability-SaaS-green)](https://example.com)  \n[![Event-Driven](https://img.shields.io/badge/Model-Event-橙色)](https://example.com)  \n\n---\n\n## Tech Stack  \n- **Function-as-a-Service (FaaS)**: Stateless, ephemeral execution environments with dynamic resource allocation  \n- **Distributed State Stores**: Eventually consistent key-value stores with cross-region replication  \n- **Event Sourcing**: Async message queues for decoupled service interactions  \n- **Custom CLI**: Tooling for deployment orchestration and service mesh configuration  \n- **Observability Framework**: Lightweight metrics and tracing without third-party dependencies  \n\n---\n\n## Architecture / Design  \nCloudNexa operates on a layered model where compute units are decoupled from persistent storage. Core components include:  \n1. **Service Mesh Layer**: Manages service discovery and inter-process communication via typed event streams  \n2. **State Management Layer**: Ensures data consistency across asynchronous operations using versioned snapshots  \n3. **Auto-Scaling Engine**: Dynamically adjusts compute resources based on real-time throughput metrics  \n4. **Security Layer**: Implements fine-grained access control through policy-based routing and token validation  \n\nThe architecture prioritizes fault tolerance by isolating stateful operations and using idempotent request patterns. Performance benchmarks show 99.95% availability with sub-100ms latency under 10,000 concurrent requests.  \n\n---\n\n## Getting Started / Installation  \nClone the repository using Git and navigate to the project directory:  \n```bash  \ngit clone https://github.com/your-username/cloudnexa.git  \ncd cloudnexa  \n```  \nInstall dependencies via the provided installation script:  \n```bash  \n./install.sh  \n```  \nThis sets up the local development environment with pre-configured service endpoints.  \n\n---\n\n## Usage / Examples  \nDeploy a sample service using the CLI:  \n```bash  \ncloudnexa deploy --config examples/sample.yaml  \n```  \nThis triggers a chain of events that provisions compute resources, initializes state stores, and establishes service endpoints. Monitor progress via the built-in status dashboard.  \n\n---\n\n## Contributing  \nWe welcome contributions to expand CloudNexa's capabilities. Submit pull requests with unit tests and integration benchmarks. Follow the coding standards outlined in the `CONTRIBUTING.md` file.  \n\n---\n\n## License  \nMIT License — see the `LICENSE` file for details."
 }

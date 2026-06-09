@@ -1,286 +1,332 @@
 {
   "banned_phrases": {
-    "total_documents": 1192,
-    "documents_with_issues": 5,
-    "total_issues": 6,
+    "total_documents": 1172,
+    "documents_with_issues": 3,
+    "total_issues": 3,
     "issues": [
       {
-        "doc_id": "d_p_044_00",
+        "doc_id": "d_p_038_00",
         "pattern": "\\bproficient\\s+in\\b",
         "matches": [
           "Proficient in"
         ]
       },
       {
-        "doc_id": "d_p_161_02",
-        "pattern": "\\bmastery\\s+of\\b",
-        "matches": [
-          "mastery of"
-        ]
-      },
-      {
-        "doc_id": "d_p_218_00",
+        "doc_id": "d_p_089_00",
         "pattern": "\\bproficient\\s+in\\b",
         "matches": [
           "Proficient in"
         ]
       },
       {
-        "doc_id": "d_p_218_00",
-        "pattern": "\\bbasic\\s+understanding\\b",
+        "doc_id": "d_p_160_01",
+        "pattern": "\\b\\w+\\s*:\\s*(?:expert|advanced|intermediate|beginner|basic|novice)\\b",
         "matches": [
-          "Basic understanding"
-        ]
-      },
-      {
-        "doc_id": "d_p_220_00",
-        "pattern": "\\bproficient\\s+in\\b",
-        "matches": [
-          "Proficient in"
-        ]
-      },
-      {
-        "doc_id": "d_p_227_00",
-        "pattern": "\\bproficient\\s+in\\b",
-        "matches": [
-          "Proficient in"
+          "CreditRiskPredictor: Advanced"
         ]
       }
     ]
   },
   "level1_absence": {
-    "total_checked": 4,
-    "violations": 0,
-    "issues": []
+    "total_checked": 1383,
+    "violations": 11,
+    "issues": [
+      {
+        "persona_id": "p_023",
+        "doc_id": "d_p_023_00",
+        "skill": "Python",
+        "found_text": "python"
+      },
+      {
+        "persona_id": "p_068",
+        "doc_id": "d_p_068_00",
+        "skill": "Python",
+        "found_text": "python"
+      },
+      {
+        "persona_id": "p_095",
+        "doc_id": "d_p_095_03",
+        "skill": "Rust",
+        "found_text": "rust"
+      },
+      {
+        "persona_id": "p_119",
+        "doc_id": "d_p_119_01",
+        "skill": "React",
+        "found_text": "react"
+      },
+      {
+        "persona_id": "p_121",
+        "doc_id": "d_p_121_01",
+        "skill": "Cloud infrastructure",
+        "found_text": "cloud infrastructure"
+      },
+      {
+        "persona_id": "p_173",
+        "doc_id": "d_p_173_00",
+        "skill": "React",
+        "found_text": "react"
+      },
+      {
+        "persona_id": "p_183",
+        "doc_id": "d_p_183_00",
+        "skill": "AWS",
+        "found_text": "aws"
+      },
+      {
+        "persona_id": "p_188",
+        "doc_id": "d_p_188_00",
+        "skill": "React",
+        "found_text": "react"
+      },
+      {
+        "persona_id": "p_209",
+        "doc_id": "d_p_209_01",
+        "skill": "Python",
+        "found_text": "python"
+      },
+      {
+        "persona_id": "p_210",
+        "doc_id": "d_p_210_00",
+        "skill": "Python",
+        "found_text": "python"
+      },
+      {
+        "persona_id": "p_223",
+        "doc_id": "d_p_223_01",
+        "skill": "Python",
+        "found_text": "python"
+      }
+    ]
   },
   "bow_baseline": {
-    "mean_cv_accuracy": 0.3950315164998146,
+    "mean_cv_accuracy": 0.3247320083127119,
     "cv_scores": [
-      0.3796811271783463,
-      0.41898405635891733,
-      0.42602892102335926,
-      0.350018539117538,
-      0.40044493882091214
+      0.33587786259541985,
+      0.29847328244274807,
+      0.3035509736540664,
+      0.31882397861779305,
+      0.3669339442535319
     ],
     "threshold": 0.45,
     "passed": true,
-    "total_examples": 13485,
+    "total_examples": 13097,
     "label_distribution": {
-      "3": 4962,
-      "2": 1478,
-      "1": 2795,
-      "4": 3154,
-      "5": 1096
+      "3": 3472,
+      "2": 1719,
+      "4": 2622,
+      "1": 4008,
+      "5": 1276
     },
     "top_features_per_class": {
       "1": [
         {
-          "feature": "modular",
-          "weight": 2.201937756536518
+          "feature": "java",
+          "weight": 4.8654504197392745
         },
         {
-          "feature": "functional",
-          "weight": 2.0491515189393588
+          "feature": "dhcp",
+          "weight": 3.227819116061743
         },
         {
-          "feature": "ecocart",
-          "weight": 1.7917777796409093
+          "feature": "dns",
+          "weight": 2.9225609035218802
         },
         {
-          "feature": "joined",
-          "weight": 1.6338007533463264
+          "feature": "administration",
+          "weight": 2.491648179408007
         },
         {
-          "feature": "manual",
-          "weight": 1.614323799390934
+          "feature": "scripting",
+          "weight": 2.3949213835117256
         },
         {
-          "feature": "streamlined",
-          "weight": 1.613707147721765
+          "feature": "shell",
+          "weight": 2.379776929862096
         },
         {
-          "feature": "system",
-          "weight": 1.549597185426038
+          "feature": "graphql",
+          "weight": 2.095048449627412
         },
         {
-          "feature": "fujita",
-          "weight": 1.5427889820651761
+          "feature": "network",
+          "weight": 2.032689066033721
         },
         {
-          "feature": "platforms",
-          "weight": 1.5369966112282103
+          "feature": "javascript",
+          "weight": 1.8277255898602336
         },
         {
-          "feature": "juliana",
-          "weight": 1.4680037837462525
+          "feature": "farahnazari",
+          "weight": 1.8229739853101237
         }
       ],
       "2": [
         {
-          "feature": "intern",
-          "weight": 1.9435185608655017
+          "feature": "administration",
+          "weight": 2.4385001108870905
         },
         {
-          "feature": "yuki",
-          "weight": 1.67995936579867
+          "feature": "rest",
+          "weight": 1.9317659445805166
         },
         {
-          "feature": "2024",
-          "weight": 1.6765871949926068
+          "feature": "shell",
+          "weight": 1.676124254978427
         },
         {
-          "feature": "developed",
-          "weight": 1.6536837885384341
+          "feature": "design",
+          "weight": 1.5552115121769023
         },
         {
-          "feature": "structured",
-          "weight": 1.62382260120105
+          "feature": "linux",
+          "weight": 1.4263410433739172
         },
         {
-          "feature": "rahul",
-          "weight": 1.529559166601271
+          "feature": "node",
+          "weight": 1.2671992676226198
         },
         {
-          "feature": "rahuliyer",
-          "weight": 1.446904662761266
+          "feature": "ip",
+          "weight": 1.2576450249370013
         },
         {
-          "feature": "collaborated",
-          "weight": 1.4319285536298294
+          "feature": "actions",
+          "weight": 1.2218657530375445
         },
         {
-          "feature": "streamline",
-          "weight": 1.4218717252433573
+          "feature": "commerce",
+          "weight": 1.2214771046421622
         },
         {
-          "feature": "two",
-          "weight": 1.3949669962423359
+          "feature": "nadiakhoury",
+          "weight": 1.188413156638514
         }
       ],
       "3": [
         {
-          "feature": "2022",
-          "weight": 1.9045226266504043
-        },
-        {
           "feature": "docker",
-          "weight": 1.8999013914002723
+          "weight": 3.129791637014916
         },
         {
-          "feature": "using",
-          "weight": 1.6597613106815494
+          "feature": "sql",
+          "weight": 1.8344938871911078
         },
         {
-          "feature": "pipelines",
-          "weight": 1.622165382193673
+          "feature": "balancing",
+          "weight": 1.6637523307078232
         },
         {
-          "feature": "integrated",
-          "weight": 1.6113998899848574
+          "feature": "threatintelhub",
+          "weight": 1.6507790699540552
         },
         {
-          "feature": "my",
-          "weight": 1.5544015402665035
+          "feature": "python",
+          "weight": 1.400286253566378
         },
         {
-          "feature": "gdpr",
-          "weight": 1.5533278068092353
+          "feature": "workflows",
+          "weight": 1.3878656270776104
         },
         {
-          "feature": "nexapay",
-          "weight": 1.5500959728763903
+          "feature": "virtuemart",
+          "weight": 1.3824958256393012
         },
         {
-          "feature": "ricardoalmeida",
-          "weight": 1.4614888187757362
+          "feature": "optimization",
+          "weight": 1.2643578839708887
         },
         {
-          "feature": "ethan",
-          "weight": 1.4185800556684076
+          "feature": "query",
+          "weight": 1.1875681545617796
+        },
+        {
+          "feature": "gaurav",
+          "weight": 1.1330335875895161
         }
       ],
       "4": [
         {
-          "feature": "next",
-          "weight": 1.7933536781068538
+          "feature": "pandas",
+          "weight": 1.8773043490228198
         },
         {
-          "feature": "2021",
-          "weight": 1.591602509963294
+          "feature": "numpy",
+          "weight": 1.7221020230853243
         },
         {
-          "feature": "deliver",
-          "weight": 1.5854695451445247
+          "feature": "learn",
+          "weight": 1.4226957331339303
         },
         {
-          "feature": "cd",
-          "weight": 1.5172007225037605
+          "feature": "pki",
+          "weight": 1.3719578794224434
         },
         {
-          "feature": "statistical",
-          "weight": 1.515041688682195
+          "feature": "scikit",
+          "weight": 1.3574357316897772
         },
         {
-          "feature": "senior",
-          "weight": 1.4930680033859123
+          "feature": "vulkan",
+          "weight": 1.3344665442060935
         },
         {
-          "feature": "2020",
-          "weight": 1.4841889058807978
+          "feature": "firmware",
+          "weight": 1.3101187602459259
         },
         {
-          "feature": "repo",
-          "weight": 1.3764364772926438
+          "feature": "microservices",
+          "weight": 1.2600717036198512
         },
         {
-          "feature": "led",
-          "weight": 1.3581677565018255
+          "feature": "stakeholder",
+          "weight": 1.2183648542407672
         },
         {
-          "feature": "react",
-          "weight": 1.3420303904617594
+          "feature": "ownership",
+          "weight": 1.1945667273421694
         }
       ],
       "5": [
         {
-          "feature": "staff",
-          "weight": 2.7822172378584376
-        },
-        {
-          "feature": "kubernetes",
-          "weight": 2.6626246946492342
-        },
-        {
-          "feature": "typescript",
-          "weight": 2.407214790578921
-        },
-        {
-          "feature": "react",
-          "weight": 2.3601166412110537
-        },
-        {
-          "feature": "mentored",
-          "weight": 2.1528853924546225
-        },
-        {
-          "feature": "securescan",
-          "weight": 1.8411303584269785
+          "feature": "go",
+          "weight": 2.009088808770538
         },
         {
           "feature": "engineers",
-          "weight": 1.8296125860342463
+          "weight": 1.69402724533278
         },
         {
-          "feature": "neuralogic",
-          "weight": 1.7621559008261751
+          "feature": "architecture",
+          "weight": 1.5699220614644274
         },
         {
-          "feature": "cedricblanc",
-          "weight": 1.6562118354417608
+          "feature": "microservices",
+          "weight": 1.5221687843235876
         },
         {
-          "feature": "we",
-          "weight": 1.6036091471930807
+          "feature": "financial",
+          "weight": 1.5081622799229797
+        },
+        {
+          "feature": "snowflake",
+          "weight": 1.4408203927613175
+        },
+        {
+          "feature": "leadership",
+          "weight": 1.4406860510071897
+        },
+        {
+          "feature": "kubernetes",
+          "weight": 1.4368524268419196
+        },
+        {
+          "feature": "mentored",
+          "weight": 1.4260230096513566
+        },
+        {
+          "feature": "debt",
+          "weight": 1.3788941224653186
         }
       ]
     }

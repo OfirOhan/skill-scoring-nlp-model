@@ -1,50 +1,38 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Kofi Asante's experience as a Tech Lead/Architect in adtech",
-    "title": "Kofi Asante - Tech Lead/Architect",
+    "topic_summary": "Professional resume highlighting Lucia Fernandez's experience as a Senior Data Engineer in adtech",
+    "title": "Lucia Fernandez - Senior Data Engineer CV",
     "doc_id": "d_p_295_00",
     "persona_id": "p_295",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
-      "geographic_convention": "US",
-      "company_type": "academic",
-      "company_size": "mid (50-500)"
+      "cv_format": "paragraph",
+      "geographic_convention": "Europe",
+      "company_type": "FAANG",
+      "company_size": "large (500+)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "Exploring real-time data processing techniques in adtech with Apache Flink and Kafka",
+    "title": "Optimizing Real-Time Ad Campaigns with Apache Flink and Kafka in AdTech",
+    "doc_id": "d_p_295_01",
+    "persona_id": "p_295",
+    "hyperparams": {
+      "blog_depth": "opinion-piece",
+      "jargon_density": "heavy"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A README for an adtech platform enabling real-time campaign optimization",
-    "title": "AdOptima - Real-Time Campaign Optimization Platform",
-    "doc_id": "d_p_295_01",
-    "persona_id": "p_295",
-    "hyperparams": {
-      "project_scale": "team-internal",
-      "project_team_size": "small (2-4)",
-      "jargon_density": "moderate"
-    }
-  },
-  {
-    "doc_type": "recommendation",
-    "topic_summary": "A recommendation from a former manager praising Kofi's leadership in adtech architecture",
-    "title": "Recommendation from AdTechCo CTO",
+    "topic_summary": "Real-time ad campaign optimization system using Spark and Kafka for AdVantage Media",
+    "title": "AdCampaignOptimizer",
     "doc_id": "d_p_295_02",
     "persona_id": "p_295",
     "hyperparams": {
-      "recommender_role": "skip-level",
-      "recommender_closeness": "brief",
-      "company_type": "startup",
-      "company_size": "mid (50-500)"
-    }
-  },
-  {
-    "doc_type": "linkedin",
-    "topic_summary": "A LinkedIn summary showcasing Kofi's expertise in adtech systems design and leadership",
-    "title": "Kofi Asante - Tech Lead/Architect",
-    "doc_id": "d_p_295_03",
-    "persona_id": "p_295",
-    "hyperparams": {
-      "linkedin_completeness": "minimal"
+      "project_scale": "hobby",
+      "project_team_size": "large (15+)",
+      "jargon_density": "moderate"
     }
   }
 ]

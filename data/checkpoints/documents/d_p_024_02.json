@@ -1,30 +1,23 @@
 {
   "doc_id": "d_p_024_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_024",
   "hyperparams": {
-    "recommender_role": "direct-manager",
-    "recommender_closeness": "worked-daily",
-    "company_type": "agency",
-    "company_size": "large (500+)"
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 2,
-    "CI/CD pipelines": 2,
-    "Database optimization": 2,
-    "Docker": 3,
-    "GitHub Actions": 2,
-    "JavaScript": 3,
-    "Kubernetes": 2,
-    "MongoDB": 3,
-    "Node.js": 3,
-    "PostgreSQL": 3,
-    "Prometheus/Grafana": 2,
-    "Python": 3,
-    "REST API design": 3,
-    "React": 3,
-    "Responsive design": 2,
-    "Web performance optimization": 2
+    "A/B testing": 1,
+    "Analytics-driven product decisions": 3,
+    "Competitive analysis": 4,
+    "Product management": 3,
+    "Roadmap planning": 3,
+    "SQL analytics": 1,
+    "Stakeholder management": 3,
+    "Tableau/Power BI": 1,
+    "UX research": 4,
+    "Web accessibility (WCAG)": 1
   },
-  "text": "Farhana Chowdhury’s academic foundation in computer science has translated seamlessly into her technical practice. At NexGen, she bridges theoretical concepts with practical problem-solving, particularly in optimizing database interactions and system scalability. Her ability to dissect complex architectures and propose incremental improvements has strengthened our product’s reliability.  \n\nHer research ability shines in how she independently investigates tools and frameworks to address specific challenges. For example, she restructured our PostgreSQL queries to handle high-traffic scenarios, reducing latency by 30% in a critical module. She also spearheaded a migration to Docker, streamlining deployment workflows and improving team collaboration. These actions reflect her curiosity and willingness to experiment beyond standard practices.  \n\nFarhana’s character is defined by her reliability and collaborative spirit. She consistently prioritizes team goals, often mentoring junior developers on best practices for REST API design. Her attention to detail ensures codebases remain maintainable, and her proactive communication prevents roadblocks. She balances technical rigor with empathy, making her a trusted teammate.  \n\nHer potential lies in her capacity to grow with complex systems. While she already excels in full-stack workflows—particularly with React and Node.js—her strategic thinking suggests she could lead architecture decisions in scaled environments. Her blend of technical depth and adaptability positions her to contribute meaningfully to any high-performing team."
+  "text": "# Cross-Platform User Engagement Tool: Unifying Gaming Experiences Across Platforms  \nA unified framework for synchronizing user metrics, behavior patterns, and contextual data across gaming ecosystems. Designed for internal use to streamline cross-platform analytics and engagement workflows.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/commit-activity-y/username/repo)](https://github.com/username/repo)  \n[![CI/CD](https://img.shields.io/github/actions/workflow/status/username/repo/main.yml)](https://github.com/username/repo/actions)  \n[![Tech Stack](https://img.shields.io/badge/Stack-React%20%7C%20Node.js%20%7C%20PostgreSQL-blue)](https://github.com/username/repo)  \n\n## Tech Stack  \n- **Frontend**: React (TypeScript) with Redux for state management  \n- **Backend**: Node.js (Express) with RESTful API endpoints  \n- **Data Layer**: PostgreSQL with TypeORM for schema-driven modeling  \n- **Platform Integration**: REST/GraphQL APIs for Steam, PlayStation, and Xbox  \n- **Infrastructure**: AWS Lambda for serverless orchestration  \n- **Monitoring**: Prometheus + Grafana for real-time metric visualization  \n\n## Configuration  \nSet environment variables via `.env` file:  \n```env  \nAPI_KEYS=steam:xbox:playstation  \nDB_URL=postgres://user:pass@localhost:5432/dbname  \n```  \nInitialize dependencies with `npm install` and configure platform-specific credentials in `config/platforms.js`.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/username/repo.git  \nnpm install  \nnpm run build  \nnpm start  \n```  \nEnsure all platform SDKs are registered and authenticated via OAuth 2.0.  \n\n## Usage / Examples  \n```bash  \n# Sync user profiles across platforms  \nnpm run sync -- --platforms steam,xbox  \n\n# Analyze cross-session behavior  \nnpm run analyze -- --metric retention --timeframe 7d  \n```  \nLeverage the `/api/v1/user/{id}/cross-session` endpoint to retrieve aggregated interaction data.  \n\n## Testing  \nRun unit tests:  \n```bash  \nnpm test  \n```  \nEnd-to-end tests require authenticated platform sessions. Coverage reports generated via Istanbul are stored in `/coverage/`.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n*Contributors: @dev1, @dev2, @dev3*"
 }

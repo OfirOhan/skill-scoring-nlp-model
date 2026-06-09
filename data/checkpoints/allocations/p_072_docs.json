@@ -1,77 +1,38 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional summary of Elise Dubois' 14-year career as a Staff Platform Engineer in SaaS",
-    "title": "Elise Dubois - Staff Platform Engineer",
+    "topic_summary": "A professional CV highlighting Olga Petrov's experience as a Senior Game Developer in healthtech",
+    "title": "Olga Petrov - Senior Game Developer CV",
     "doc_id": "d_p_072_00",
     "persona_id": "p_072",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
-      "geographic_convention": "India",
-      "company_type": "enterprise",
-      "company_size": "large (500+)"
+      "cv_format": "minimal",
+      "geographic_convention": "Europe",
+      "company_type": "academic",
+      "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "Microservices architecture for scalable SaaS platform with Kubernetes and Docker",
-    "title": "NexaCloud Scalable Microservices Platform",
+    "topic_summary": "A GitHub README for a healthtech game project focusing on rehabilitation through interactive gameplay",
+    "title": "VitalPlay Rehab Game: Gamified Physical Therapy Platform",
     "doc_id": "d_p_072_01",
     "persona_id": "p_072",
     "hyperparams": {
-      "project_scale": "production",
-      "project_team_size": "large (15+)",
-      "jargon_density": "heavy"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "Automated CI/CD pipeline for SaaS deployment using GitLab and Terraform",
-    "title": "NexaCloud CI/CD Pipeline",
-    "doc_id": "d_p_072_02",
-    "persona_id": "p_072",
-    "hyperparams": {
-      "project_scale": "hobby",
-      "project_team_size": "medium (5-15)",
+      "project_scale": "academic",
+      "project_team_size": "small (2-4)",
       "jargon_density": "plain"
     }
   },
   {
-    "doc_type": "project_readme",
-    "topic_summary": "Serverless architecture for real-time data processing with AWS Lambda and DynamoDB",
-    "title": "NexaCloud Serverless Data Pipeline",
-    "doc_id": "d_p_072_03",
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post exploring innovative game design approaches for healthtech applications",
+    "title": "Designing Engaging Healthtech Games: Balancing Fun and Therapeutic Outcomes",
+    "doc_id": "d_p_072_02",
     "persona_id": "p_072",
     "hyperparams": {
-      "project_scale": "hobby",
-      "project_team_size": "solo",
+      "blog_depth": "opinion-piece",
       "jargon_density": "heavy"
-    }
-  },
-  {
-    "doc_type": "recommendation",
-    "topic_summary": "Manager's endorsement of Elise's leadership in SaaS platform development",
-    "title": "Recommendation from NexaCloud CTO",
-    "doc_id": "d_p_072_04",
-    "persona_id": "p_072",
-    "hyperparams": {
-      "recommender_role": "professor",
-      "recommender_closeness": "worked-daily",
-      "company_type": "startup",
-      "company_size": "mid (50-500)"
-    }
-  },
-  {
-    "doc_type": "recommendation",
-    "topic_summary": "Peer testimonial on Elise's expertise in cloud infrastructure optimization",
-    "title": "Recommendation from Senior SRE Engineer",
-    "doc_id": "d_p_072_05",
-    "persona_id": "p_072",
-    "hyperparams": {
-      "recommender_role": "direct-manager",
-      "recommender_closeness": "worked-daily",
-      "company_type": "agency",
-      "company_size": "mid (50-500)"
     }
   }
 ]

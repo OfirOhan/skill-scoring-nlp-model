@@ -1,27 +1,22 @@
 {
   "doc_id": "d_p_065_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_065",
   "hyperparams": {
-    "recommender_role": "skip-level",
-    "recommender_closeness": "worked-daily",
-    "company_type": "academic",
-    "company_size": "small (<50)"
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "Bash": 3,
-    "Cloud networking": 3,
-    "GCP": 4,
-    "GitHub Actions": 3,
-    "Infrastructure as Code": 4,
-    "Kubernetes": 4,
-    "Load balancing": 3,
-    "Network automation": 3,
-    "Prometheus/Grafana": 3,
+    "Apache Airflow": 1,
+    "Apache Kafka": 1,
+    "Apache Spark": 1,
+    "Data warehousing": 4,
+    "Go": 1,
+    "Java": 2,
+    "Message queues": 2,
     "Python": 3,
-    "Terraform": 4,
-    "Cloud networking (VPC/subnets)": 1
+    "Snowflake": 5
   },
-  "text": "Hiroshi Sato is a rare blend of technical rigor and collaborative spirit, whose work at NexaCorp has consistently elevated the platform’s reliability and scalability. As a peer in our shared academic network, I’ve observed his hands-on contributions to critical projects, particularly in cloud infrastructure. His AWS cost optimization initiatives reduced operational expenses by 18% across three major services, while his GCP-based data processing pipeline increased throughput by 35% during peak loads. These efforts were driven by his deep understanding of Infrastructure as Code, which he refined through Terraform modules that cut deployment time by two hours per environment.  \n\nHiroshi’s soft skills are equally noteworthy. He thrives in cross-functional teams, translating complex technical challenges into actionable plans for non-technical stakeholders. During a recent outages crisis, his ability to prioritize tasks and communicate clearly under pressure prevented a potential service disruption. His GitHub Actions workflows, which automate 80% of the CI/CD pipeline, reflect both his attention to detail and his knack for simplifying repetitive processes.  \n\nHis impact on team dynamics is profound. Hiroshi mentors junior engineers with patience, fostering a culture of knowledge-sharing. His Kubernetes expertise, which stabilized a critical microservices architecture, became a cornerstone of the team’s resilience. Beyond technical excellence, he approaches problems with curiosity and humility, always seeking feedback to refine solutions.  \n\nHiroshi’s combination of technical mastery and collaborative ethos makes him an exceptional candidate. His work not only advances technical goals but also strengthens the team’s capacity to innovate. I wholeheartedly recommend him for any opportunity where precision, leadership, and adaptability are priorities."
+  "text": "# Financial Data Pipeline Optimization  \n\nThis project focuses on refining financial data processing workflows to improve efficiency and reliability. By streamlining data ingestion, transformation, and storage, we’ve reduced latency by 30% and minimized manual intervention in production environments. The solution is tailored for fintech use cases requiring high accuracy and compliance with regulatory standards.  \n\n## Roadmap / Future Work  \nShort-term goals include expanding the pipeline to handle real-time transaction feeds and integrating with additional data sources. Long-term, we aim to automate schema evolution and enhance observability with centralized logging. A priority is to reduce dependency on legacy systems while maintaining backward compatibility with existing reporting tools.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies via pip:  \n```bash  \npip install -r requirements.txt  \n```  \nConfigure Snowflake credentials in `config.yaml` and ensure Python 3.8+ is installed. No external message queues or distributed computing frameworks are required for basic operation.  \n\n## Usage / Examples  \nA typical workflow loads CSV files, applies currency conversion rules, and loads results into Snowflake. Example:  \n```python  \nfrom pipeline import DataTransformer  \ntransformer = DataTransformer(config_path=\"config.yaml\")  \ntransformer.process_files(\"raw_data/*.csv\", \"transformed_data/\")  \n```  \nThis approach ensures data consistency while allowing for custom validation rules.  \n\n## Tech Stack  \n- **Python**: Core for ETL logic and scripting  \n- **Snowflake**: Primary data warehouse for storage and analytics  \n- **Java**: Minimal use for legacy system integrations  \n\n## Architecture / Design  \nThe pipeline is structured into modular stages: ingestion, transformation, and loading. Snowflake’s serverless architecture enables scalable storage, while Python scripts handle complex logic with minimal resource overhead. Error handling and logging are centralized to simplify troubleshooting.  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
 }

@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_019_01",
+  "type": "project_readme",
+  "persona_id": "p_019",
+  "hyperparams": {
+    "project_scale": "hobby",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Apache Airflow": 1,
+    "Apache Kafka": 3,
+    "Apache Spark": 4,
+    "Data warehousing": 2,
+    "Databricks": 2,
+    "Docker": 3,
+    "ETL pipeline design": 3,
+    "Go": 1,
+    "Java": 1,
+    "Node.js": 1,
+    "Python": 3,
+    "REST API design": 3,
+    "Snowflake": 1,
+    "dbt": 1
+  },
+  "text": "# Real-Time Analytics Dashboard with Apache Kafka and Spark  \n\nThis project delivers a scalable real-time analytics dashboard for monitoring user behavior, system metrics, and operational logs. Built using Apache Kafka for event streaming, Apache Spark for distributed processing, and cloud storage for data persistence, the dashboard processes over 300 data sources with <15ms latency and supports 10+ concurrent data streams. The system reduces end-to-end data pipeline latency by 95% compared to batch processing workflows, enabling near-instantaneous insights for decision-making.  \n\n## Acknowledgments  \nThis project would not have been possible without the contributions of my team at [Startup Name], particularly [Collaborator Names] for their work on Kafka cluster optimization and Spark job scheduling. Special thanks to [Cloud Provider] for their scalable storage solutions and [Visualization Library] for the intuitive dashboard UI.  \n\n## Getting Started / Installation  \nClone the repository:  \n```bash  \ngit clone https://github.com/your-username/real-time-analytics-dashboard.git  \ncd real-time-analytics-dashboard  \n```  \nSet up Docker containers for Kafka and Spark:  \n```bash  \ndocker-compose up -d  \n```  \nInstall Python dependencies:  \n```bash  \npip install -r requirements.txt  \n```  \nConfigure Kafka and Spark clusters via `config.yaml` (see `docs/setup.md` for cloud storage integration). Start the pipeline:  \n```bash  \npython main.py --start  \n```  \nNote: Ensure your cloud storage credentials are set in `env_vars.sh` before running.  \n\n## Usage / Examples  \nTo ingest data:  \n```bash  \npython producer.py --topic user_activity  \n```  \nTo trigger real-time analytics:  \n```bash  \nspark-submit --master local[*] spark_pipeline.py  \n```  \nAccess the dashboard at `http://localhost:8080` (metrics dashboard available at `/metrics`). Example use case: Monitor 500K+ daily log entries with 99.9% uptime and 95%+ query latency reduction.  \n\n## Tech Stack  \n- **Apache Kafka**: Real-time event streaming with 300+ data source ingestion  \n- **Apache Spark**: Distributed processing for aggregating 10+ data streams  \n- **Cloud Storage**: S3-compatible object storage for raw and processed data  \n- **Docker**: Containerization for consistent development and deployment  \n- **Python**: Custom data processing scripts and REST API integrations  \n- **REST API**: Lightweight endpoint for external data ingestion  \n- **Data Visualization**: Interactive charts via [Library Name] for real-time metrics  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/last-commit/your-username/real-time-analytics-dashboard)](https://github.com/your-username/real-time-analytics-dashboard/commits/main)  \n[![Docker](https://img.shields.io/docker/registry/v2/your-registry/real-time-analytics-dashboard)](https://hub.docker.com/r/your-registry/real-time-analytics-dashboard)  \n[![Build Status](https://img.shields.io/github/actions/workflow/your-username/real-time-analytics-dashboard/main.yml)](https://github.com/your-username/real-time-analytics-dashboard/actions)  \n\n## Contributing  \nContributions are welcome! Open an issue for feature requests or bug reports. For code changes, fork the repository, create a pull request, and include tests for any new functionality. All contributions will be reviewed and credited in the acknowledgments section."
+}

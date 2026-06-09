@@ -1,24 +1,23 @@
 {
   "doc_id": "d_p_268_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_268",
   "hyperparams": {
-    "recommender_role": "professor",
-    "recommender_closeness": "brief",
-    "company_type": "agency",
-    "company_size": "mid (50-500)"
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "C/C++ (embedded)": 4,
-    "Embedded Linux": 4,
-    "Firmware development": 4,
-    "GitLab CI": 2,
-    "Hardware-software integration": 4,
-    "IoT protocols (MQTT/CoAP)": 2,
-    "Network troubleshooting": 1,
-    "Python": 1,
-    "REST API design": 1,
-    "RTOS": 4
+    "A/B testing": 1,
+    "Agile/Scrum": 3,
+    "Data visualization (Tableau/Power BI)": 2,
+    "Hypothesis testing": 2,
+    "Product management": 4,
+    "Roadmap planning": 2,
+    "SQL analytics": 2,
+    "Stakeholder management": 2,
+    "UX research": 3,
+    "User journey mapping": 3
   },
-  "text": "Zoe Papadakis’s academic trajectory reflects a focused engagement with embedded systems, marked by a senior project optimizing real-time data sampling in industrial sensors. Her coursework in signal processing and low-power design laid a foundation for her consulting work, where she applied these principles to reduce latency by 22% in a smart grid deployment.  \n\nHer research ability shines in her hands-on approach to complex systems. At InnovateTech, Zoe led firmware updates for 12 embedded devices, achieving a 15% improvement in power efficiency through custom C++ optimizations. She also integrated RTOS scheduling with hardware peripherals, resolving timing conflicts that had previously caused 18% packet loss in sensor networks. Her ability to bridge theoretical concepts with practical constraints is evident in her design of a modular Linux kernel for edge devices, which supported 3x more concurrent connections than prior implementations.  \n\nZoe’s character is defined by meticulousness and collaboration. During a critical project, she identified a race condition in a multi-threaded system, proactively proposing a lock-free architecture that avoided downtime. Her peers consistently note her ability to distill complex problems into actionable steps.  \n\nHer potential lies in her capacity to innovate within constraints. Zoe’s work on hardware-software co-design for IoT protocols demonstrates an understanding of system-wide trade-offs, positioning her to tackle challenges at the intersection of performance and scalability. She is a reliable, thoughtful contributor with a clear technical vision."
+  "text": "# NexaFlow Product Dashboard  \nA lightweight tool for tracking startup metrics and KPIs with a focus on simplicity and actionable insights. Built to help teams stay aligned on progress without overwhelming with data.  \n\n## Tech Stack  \n- **Frontend**: React.js (for dynamic UI)  \n- **Backend**: Node.js with Express (for API routing)  \n- **Database**: PostgreSQL (for structured metric storage)  \n- **Data Visualization**: Chart.js (for intuitive KPI graphs)  \n- **CI/CD**: GitHub Actions (for automated testing)  \n- **Styling**: Tailwind CSS (for responsive, clean design)  \n\n## Architecture / Design  \nThe system is built as a monorepo with modular components to balance simplicity and scalability. The frontend communicates with the backend via RESTful APIs, with PostgreSQL handling metric storage. Key decisions include:  \n- Prioritizing **user journey mapping** to ensure metrics align with team workflows.  \n- Using **Agile/Scrum** to iterate on dashboards based on stakeholder feedback.  \n- Keeping data visualization minimal to avoid cognitive overload.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/username/nexaflow.git`  \n2. Install dependencies:  \n   ```bash  \n   cd nexaflow  \n   npm install  \n   ```  \n3. Set up environment variables for PostgreSQL credentials.  \n4. Run the dev server: `npm start`  \n\n## Usage / Examples  \n- **Track KPIs**: Add custom metrics (e.g., \"User Growth Rate\") via the admin panel.  \n- **View Trends**: Use the dashboard to compare weekly/monthly performance.  \n- **Export Data**: Generate CSV reports for deeper analysis.  \n- **UX Focus**: The interface was designed after user testing to reduce friction in data interpretation.  \n\n## Badges  \n[![GitHub](https://badgen.net/badge/repo/github/green)](https://github.com/username/nexaflow)  \n[![License](https://badgen.net/badge/license/MIT/green)](https://opensource.org/licenses/MIT)  \n\n## Contributing  \nContributions are welcome! Focus on improving clarity, adding metrics, or refining the UI. For issues, tag them with `ux` or `data-visualization` to align with priority areas.  \n\n## License  \nMIT License — see [LICENSE](https://github.com/username/nexaflow/blob/main/LICENSE) for details."
 }

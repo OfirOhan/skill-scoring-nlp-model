@@ -1,52 +1,63 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A CV for a Product Manager at NexGen Solutions with 0 years of experience in the startup industry",
-    "title": "Urvashi Gill - Product Manager",
+    "topic_summary": "Professional resume highlighting 9 years of experience as a Senior Game Development Architect in enterprise game development.",
+    "title": "Dimitri Papadopoulos - Senior Game Development Architect",
     "doc_id": "d_p_086_00",
     "persona_id": "p_086",
     "hyperparams": {
-      "cv_format": "hybrid",
-      "geographic_convention": "India",
-      "company_type": "startup",
-      "company_size": "mid (50-500)"
+      "cv_format": "paragraph",
+      "geographic_convention": "US",
+      "company_type": "FAANG",
+      "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A README for a startup project focused on building a SaaS platform for remote teams",
-    "title": "RemoteTeam SaaS Platform",
+    "topic_summary": "A GitHub README for an enterprise game engine optimization framework focusing on performance tuning for large-scale games.",
+    "title": "Enterprise Game Engine Optimization Framework",
     "doc_id": "d_p_086_01",
     "persona_id": "p_086",
     "hyperparams": {
       "project_scale": "production",
-      "project_team_size": "solo",
-      "jargon_density": "moderate"
+      "project_team_size": "large (15+)",
+      "jargon_density": "plain"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A README for a startup project developing an AI-powered customer feedback analysis tool",
-    "title": "FeedbackFlow AI Analyzer",
+    "topic_summary": "A GitHub README for immersive enterprise training simulations using Unreal Engine for interactive learning environments.",
+    "title": "Immersive Enterprise Training Simulations",
     "doc_id": "d_p_086_02",
     "persona_id": "p_086",
     "hyperparams": {
       "project_scale": "hobby",
-      "project_team_size": "small (2-4)",
-      "jargon_density": "moderate"
+      "project_team_size": "solo",
+      "jargon_density": "plain"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from a startup co-founder highlighting Urvashi's product management skills",
-    "title": "Recommendation from Co-Founder",
+    "topic_summary": "A professional recommendation from a manager praising Dimitri's leadership and technical expertise in enterprise game development.",
+    "title": "Recommendation from Alex Thompson, Senior Engineering Manager",
     "doc_id": "d_p_086_03",
     "persona_id": "p_086",
     "hyperparams": {
-      "recommender_role": "direct-manager",
-      "recommender_closeness": "worked-daily",
-      "company_type": "FAANG",
-      "company_size": "small (<50)"
+      "recommender_role": "professor",
+      "recommender_closeness": "brief",
+      "company_type": "academic",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post discussing scalable game architecture design for enterprise solutions, focusing on modular systems and integration.",
+    "title": "Designing Scalable Game Architectures for Enterprise Solutions",
+    "doc_id": "d_p_086_04",
+    "persona_id": "p_086",
+    "hyperparams": {
+      "blog_depth": "opinion-piece",
+      "jargon_density": "heavy"
     }
   }
 ]

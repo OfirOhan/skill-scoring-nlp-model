@@ -3,24 +3,25 @@
   "type": "cv",
   "persona_id": "p_002",
   "hyperparams": {
-    "cv_format": "hybrid",
-    "geographic_convention": "India",
-    "company_type": "FAANG",
-    "company_size": "mid (50-500)"
+    "cv_format": "paragraph",
+    "geographic_convention": "US",
+    "company_type": "academic",
+    "company_size": "large (500+)"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "GCP": 3,
-    "Terraform": 3,
+    "ArgoCD": 3,
+    "Bash": 3,
+    "CI/CD pipelines": 4,
+    "GitHub Actions": 3,
+    "Jenkins": 3,
     "Kubernetes": 4,
-    "Docker": 3,
-    "Load balancing": 3,
-    "CDN management": 3,
-    "Python": 3,
-    "PostgreSQL": 3,
-    "REST API design": 3,
-    "Microservices architecture": 3,
-    "Network troubleshooting": 3
+    "Message queues": 2,
+    "Monitoring & alerting": 4,
+    "Network automation": 2,
+    "PostgreSQL": 2,
+    "Prometheus/Grafana": 4,
+    "Python": 1,
+    "Redis": 2
   },
-  "text": "Binta Traore  \nEmail: binta.traore@email.com | Phone: +91 9876543210 | LinkedIn: linkedin.com/in/binta-traore | Location: Bengaluru, India  \n\nA seasoned platform engineer with a proven track record in designing scalable cloud architectures and optimizing infrastructure for high-traffic adtech platforms. Specializes in hybrid cloud solutions, Kubernetes orchestration, and cost-efficient resource management. Proven ability to drive operational excellence through automation and strategic technical leadership.  \n\n**Technical Skills**  \n- **GCP**: Architectured multi-cloud environments integrating Google Cloud and AWS, reducing infrastructure costs by 30% through optimized resource allocation.  \n- **Terraform**: Streamlined infrastructure provisioning across 12+ environments, ensuring consistent deployment practices across global teams.  \n- **Docker**: Automated containerization workflows, reducing deployment cycles by 40% in microservices-based ad platforms.  \n- **Load balancing**: Implemented AWS ELB and GCP Cloud Load Balancing to manage 5M+ concurrent requests during peak ad campaigns.  \n- **CDN management**: Integrated Cloudflare and AWS CloudFront to reduce latency by 25%, improving ad delivery speed for 100K+ endpoints.  \n- **Python**: Developed custom scripts for log aggregation and anomaly detection, enhancing system observability by 35%.  \n- **PostgreSQL**: Optimized database performance for real-time ad bidding systems, achieving 99.99% uptime during high-volume events.  \n- **REST API design**: Built scalable APIs for ad targeting platforms, supporting 500K+ concurrent API calls with sub-200ms response times.  \n- **Microservices architecture**: Led the migration of monolithic ad-serving systems to Kubernetes-based microservices, improving fault isolation and scalability.  \n- **Network troubleshooting**: Resolved critical outages in distributed ad networks, reducing mean time to resolution (MTTR) by 50% through proactive monitoring.  \n- **AWS**: Spearheaded EC2 cluster management for ad campaign orchestration, achieving 99.95% SLA with automated scaling.  \n- **Kubernetes**: Orchestrated production-grade deployments for 20+ microservices, ensuring zero-downtime updates and efficient resource utilization.  \n\n**Professional Experience**  \n*Platform Engineer*  \nAdvertiseSphere Inc. | Bengaluru, India | 2022–Present  \n- Spearheaded infrastructure as code initiatives using Terraform, standardizing deployments across 5+ regions and reducing configuration drift by 70%.  \n- Designed and deployed Kubernetes-based microservices for ad-serving platforms, achieving 99.99% reliability during peak traffic periods.  \n- Optimized GCP and AWS hybrid environments, reducing cloud spend by 22% while improving resource utilization by 45%.  \n- Integrated load balancers and CDNs to ensure seamless ad delivery, supporting 10M+ daily impressions with sub-100ms latency.  \n- Collaborated with DevOps teams to automate CI/CD pipelines, cutting deployment times from hours to minutes.  \n\n*Cloud Solutions Engineer*  \nAdvertiseSphere Inc. | Bengaluru, India | 2021–2022  \n- Architectured a GCP multi-cloud strategy, reducing dependency on single-cloud providers and improving disaster recovery capabilities.  \n- Implemented PostgreSQL clusters for ad campaign analytics, enabling real-time data processing for 500+ clients.  \n- Developed REST APIs for ad targeting systems, supporting dynamic ad placement with 99.9% API availability.  \n- Monitored network performance and resolved critical bottlenecks, improving overall system throughput by 30%.  \n\n*DevOps Engineer*  \nClickMedia Solutions | New York, USA | 2020–2021  \n- Automated CI/CD pipelines for ad-tech tools, reducing deployment errors by 60% and accelerating release cycles.  \n- Managed AWS EC2 clusters for ad campaign orchestration, ensuring 99.95% SLA during high-traffic events.  \n- Debugged complex network issues in distributed ad systems, minimizing downtime during critical campaigns.  \n\n**Education**  \nBachelor of Science in Computer Science | University of Montreal | 2019  \n\n**Projects**  \n- **AdTech Platform Modernization**: Redesigned legacy ad-serving systems using Kubernetes and GCP, achieving 30% cost reduction and 50% faster deployment.  \n- **Global CDN Optimization**: Integrated Cloudflare and AWS CloudFront to reduce latency by 25%, enhancing user experience for 100K+ ad endpoints.  \n- **Microservices Migration**: Led the transition of monolithic ad platforms to microservices, improving fault tolerance and scalability for 500K+ concurrent users.  \n\n**Certifications**  \n- Google Cloud Professional Cloud Architect  \n- AWS Certified Solutions Architect – Associate  \n- Kubernetes Administrator (CKA)  \n- Certified Python Developer (PCD)"
+  "text": "Sunita Rao  \nSan Francisco, CA | (555) 123-4567 | sunita.rao@email.com | linkedin.com/in/sunitarao  \n\nProfessional Experience  \nAs a junior DevOps engineer at NexaTech Solutions, I focused on streamlining deployment processes and enhancing system reliability. My work on Kubernetes clusters reduced deployment latency by 30% across microservices, while implementing Prometheus-based monitoring improved incident resolution time by 40%. At InnoDev Labs, I supported the migration of monolithic applications to containerized architectures, contributing to a 25% reduction in infrastructure costs. I also automated repetitive tasks using Bash scripts, which freed up 15 hours monthly for the team.  \n\nTechnical Skills  \nCI/CD pipelines: Designed and maintained workflows for 12+ projects, integrating with GitHub Actions and Jenkins to ensure 99.9% deployment success rates. Optimized pipeline stages to cut build times by 20% for critical applications.  \nKubernetes: Managed deployments for 8+ services, ensuring high availability and auto-scaling. Resolved pod scheduling issues that caused 15% downtime reduction.  \nMonitoring & alerting: Built dashboards with Grafana to track system metrics, enabling proactive troubleshooting and reducing unplanned outages by 35%.  \nPrometheus/Grafana: Integrated metrics collection across 50+ nodes, providing real-time insights that improved resource utilization by 22%.  \nArgoCD: Automated continuous delivery for 6+ applications, ensuring zero-downtime updates during peak traffic periods.  \nBash: Developed scripts to automate configuration management, reducing manual effort for 10+ recurring tasks.  \nGitHub Actions: Streamlined CI workflows for 15+ repositories, ensuring 100% test coverage and faster feedback loops.  \nJenkins: Maintained legacy CI systems, resolving 12+ integration issues that improved build stability.  \n\nProjects  \nLed the migration of a legacy monorepo to a modular architecture, resulting in 30% faster deployments and easier maintenance. Automated environment provisioning using Terraform, cutting setup time by 50% for new developers.  \n\nEducation  \nBachelor of Science in Computer Science, University of California, Berkeley (2021)  \n\nLanguages  \nEnglish (fluent), Hindi (native)  \n\nCertifications  \nNone"
 }

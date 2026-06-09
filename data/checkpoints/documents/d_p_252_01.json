@@ -3,24 +3,25 @@
   "type": "project_readme",
   "persona_id": "p_252",
   "hyperparams": {
-    "project_scale": "academic",
+    "project_scale": "production",
     "project_team_size": "medium (5-15)",
     "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "Cloud cost optimization": 3,
-    "Cloud networking": 3,
-    "Docker": 3,
-    "GCP": 3,
-    "GitLab CI": 3,
-    "Infrastructure as Code": 3,
-    "Kubernetes": 4,
-    "Linux administration": 3,
-    "Monitoring & alerting": 3,
-    "Serverless": 3,
-    "Shell scripting": 3,
-    "Terraform": 4
+    "Agile/Scrum": 4,
+    "CI/CD pipelines": 1,
+    "Cloud cost optimization": 4,
+    "Code review": 3,
+    "Cross-team collaboration": 3,
+    "GitHub Actions": 3,
+    "GitLab CI": 2,
+    "Jenkins": 2,
+    "Mentoring": 3,
+    "Prometheus/Grafana": 3,
+    "Stakeholder communication": 3,
+    "System design": 4,
+    "Team leadership": 3,
+    "Technical writing": 3
   },
-  "text": "# Real-Time Payment Processing Platform  \nA scalable, cloud-native solution for real-time payment orchestration, built with microservices and fintech compliance in mind. Designed to handle high-throughput transactions with low latency, this platform balances speed, security, and regulatory adherence for modern financial workflows.  \n\n---\n\n## Deployment  \nDeployed across AWS and GCP regions to ensure redundancy and compliance with global financial regulations. Kubernetes orchestrates stateless payment routers and compliance checks, while Terraform manages infrastructure as code for consistent environments. Cloud cost optimization is achieved through spot instance usage and auto-scaling, reducing operational spend by 25% during off-peak hours. Network security is enforced via VPC peering and service mesh policies, ensuring encrypted data flows between microservices.  \n\n---\n\n## Badges  \n[![Build Status](https://example.com/build-badge)](https://example.com)  \n[![Test Coverage](https://example.com/coverage-badge)](https://example.com)  \n[![Deployment Pipeline](https://example.com/pipeline-badge)](https://example.com)  \n\n---\n\n## Tech Stack  \n- **Containerization**: Docker for portable, isolated service environments  \n- **Orchestration**: Kubernetes for dynamic scaling and fault tolerance  \n- **Infrastructure**: Terraform for declarative IaC across AWS and GCP  \n- **CI/CD**: GitLab CI for automated testing and deployment pipelines  \n- **Monitoring**: Prometheus + Grafana for real-time metrics and alerting  \n- **Security**: Mutual TLS, IAM roles, and audit logging for compliance  \n- **Serverless**: AWS Lambda for async reconciliation tasks  \n- **Linux**: Custom shell scripts for system-level automation and diagnostics  \n\n---\n\n## Architecture / Design  \nThe platform decouples transaction processing into modular services: a message bus for async communication, a compliance engine for real-time rule checks, and a payment gateway facade for external integrations. Linux admin practices ensure system-level observability, with custom scripts for log aggregation and resource tuning. Serverless functions handle post-processing tasks, while Kubernetes ensures resilience during traffic spikes.  \n\n---\n\n## Getting Started / Installation  \n1. Install Docker and kubectl  \n2. Clone the repository: `git clone https://github.com/yourusername/realtime-payment-platform.git`  \n3. Initialize Terraform: `terraform init`  \n4. Apply infrastructure: `terraform apply --auto-approve`  \n5. Deploy services via GitLab CI pipelines  \n\n---\n\n## Usage / Examples  \n```bash  \n# Process a payment  \ncurl -X POST https://api.payment-platform.com/v1/transactions \\\n  -H \"Authorization: Bearer <token>\" \\\n  -d '{\"amount\": 150.00, \"currency\": \"USD\", \"recipient\": \"123456789\"}'  \n```  \nMonitor metrics in Grafana or via `/metrics` endpoint for real-time insights.  \n\n---\n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# E-Commerce Microservices Platform  \n\nA scalable, resilient platform handling 2M+ daily transactions with 99.95% uptime. Built for e-commerce teams requiring modular, decoupled services with clear ownership and operational visibility.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/oleg-shevchenko/ecommerce-microservices.git  \ncd ecommerce-microservices  \ndocker-compose up -d  \n```  \nRequires Docker 20.10+, PostgreSQL 13+, and Redis 6.0+.  \nPost-install: Run `./scripts/bootstrap.sh` to seed test data and configure service discovery.  \n\n## Tech Stack  \n- **Backend**: Go (1.18+), Python (3.9+)  \n- **Databases**: PostgreSQL (read replicas), Redis (cache)  \n- **Message Queue**: Kafka (partitioned topics)  \n- **Monitoring**: Prometheus + Grafana (custom dashboards)  \n- **Deployment**: Kubernetes (Helm charts)  \n- **CI/CD**: GitLab CI (daily builds)  \n\n## Usage / Examples  \n```bash  \ncurl -X GET \"http://api.product-service/v1/items?category=electronics\"  \n# Response: 200 OK, 150ms latency, 99.98% success rate  \n```  \nUse `docker-compose exec` to debug individual services. Monitor via `/metrics` endpoints exposed on port 9090.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/license/oleg-shevchenko/ecommerce-microservices)](https://github.com/oleg-shevchenko/ecommerce-microservices/blob/main/LICENSE)  \n[![Docker](https://img.shields.io/docker/pulls/oleg-shevchenko/ecommerce-microservices)](https://hub.docker.com/r/oleg-shevchenko/ecommerce-microservices)  \n[![Grafana](https://img.shields.io/badge/monitoring-grafana-blue)](https://grafana.oleg-shevchenko.com)  \n\n## Architecture / Design  \nServices are decoupled via Kafka (100+ partitions) and gRPC for internal communication.  \n- **Order Service**: 3-node Kubernetes pod with horizontal scaling  \n- **Inventory Service**: Redis cache + PostgreSQL fallback  \n- **Payment Gateway**: Async processing with 99.9% SLA  \nMonitoring: 300+ metrics tracked via Prometheus, with alerts for >2s latency or 0.1% error rates.  \n\n## Contributing  \n- Code reviews: Mandatory for all PRs (avg. 2.5 revisions per change)  \n- Cross-team: Collaborated with logistics team to integrate real-time stock updates  \n- Mentoring: Weekly 1:1s with junior devs on service boundaries and error handling  \n\n## License  \nApache 2.0 (see [LICENSE](https://github.com/oleg-shevchenko/ecommerce-microservices/blob/main/LICENSE))"
 }

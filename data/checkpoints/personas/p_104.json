@@ -2,56 +2,58 @@
   "persona_id": "p_104",
   "hyperparams": {
     "archetype": "backend_engineer",
-    "years_experience": 2,
+    "years_experience": 1,
     "seniority": "junior",
-    "industry": "e-commerce",
-    "writing_style": "concise",
-    "language_fluency": "native",
+    "industry": "consulting",
+    "writing_style": "modest",
+    "language_fluency": "near-native",
     "self_promotion_level": "boastful",
     "quantification_tendency": "mixed"
   },
-  "name": "Amara Diallo",
+  "name": "Lara Bakker",
   "current_role": "Backend Engineer",
-  "company": "NexCart Technologies",
+  "company": "NexGen Consulting",
   "education": {
     "degree": "Bachelor of Science in Computer Science",
-    "university": "University of Technology",
-    "year": 2022
+    "university": "University of Amsterdam",
+    "year": 2023
   },
   "career_trajectory": [
     {
-      "role": "Software Developer Intern",
+      "role": "Junior Developer",
       "company": "TechNova Solutions",
-      "year": 2021
+      "duration": "6 months",
+      "responsibilities": "Assisted in building RESTful APIs using Python and PostgreSQL, learned CI/CD basics"
     },
     {
-      "role": "Junior Backend Engineer",
-      "company": "NexCart Technologies",
-      "year": 2022
+      "role": "Backend Developer",
+      "company": "CloudScale LLC",
+      "duration": "9 months",
+      "responsibilities": "Designed microservices architecture, implemented database sharding, managed AWS EC2 instances"
     },
     {
-      "role": "Backend Engineer",
-      "company": "NexCart Technologies",
-      "year": 2024
+      "role": "Consulting Engineer",
+      "company": "NexGen Consulting",
+      "duration": "6 months",
+      "responsibilities": "Advised clients on cloud infrastructure optimization, migrated monolithic apps to containerized deployments"
     }
   ],
   "skills": {
-    "Python": 3,
-    "REST API design": 3,
-    "Go": 3,
-    "PostgreSQL": 3,
-    "AWS": 3,
+    "Python": 4,
+    "Go": 4,
+    "REST API design": 4,
+    "PostgreSQL": 5,
+    "MongoDB": 4,
+    "AWS": 4,
     "Docker": 3,
-    "CI/CD pipelines": 3,
+    "CI/CD pipelines": 2,
     "GitHub Actions": 3,
-    "Terraform": 3,
-    "Monitoring & alerting": 3,
+    "Jenkins": 1,
+    "Prometheus/Grafana": 2,
     "Linux administration": 2
   },
   "document_ids": [
     "d_p_104_00",
-    "d_p_104_01",
-    "d_p_104_02",
-    "d_p_104_03"
+    "d_p_104_01"
   ]
 }

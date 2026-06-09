@@ -3,25 +3,19 @@
   "type": "project_readme",
   "persona_id": "p_098",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "small (2-4)",
+    "project_scale": "academic",
+    "project_team_size": "solo",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Agile/Scrum": 2,
-    "CI/CD pipelines": 2,
-    "Cross-team collaboration": 2,
-    "GitHub Actions": 2,
-    "Kubernetes": 2,
-    "Linux administration": 2,
-    "PostgreSQL": 2,
-    "Prometheus/Grafana": 2,
+    "A/B testing": 2,
+    "Apache Airflow": 2,
+    "Data warehousing": 1,
+    "MLOps (MLflow/W&B)": 5,
     "Python": 3,
-    "REST API design": 3,
-    "Stakeholder communication": 2,
-    "System design": 2,
-    "Technical writing": 2
+    "REST API design": 2,
+    "TensorFlow": 4,
+    "scikit-learn": 4
   },
-  "text": "# Fintech Payment Gateway  \nA secure, high-throughput API layer for cross-border transactions, built with PCI DSS compliance and real-time fraud detection in mind. Designed for internal use within fintech workflows, this gateway abstracts complex integration logic while maintaining cryptographic rigor.  \n\n## Getting Started / Installation  \nClone the repo via `git clone https://github.com/your-organization/fintech-gateway.git`.  \nInstall dependencies using `pip install -r requirements.txt`.  \nSet environment variables for AWS credentials, database connections, and API keys.  \nRun `docker-compose up` to spin up the local development environment. Note: This is an internal tool—do not expose to external endpoints without additional TLS/SSL hardening.  \n\n## Tech Stack  \n- **Backend**: Python (FastAPI) with async request handling for high concurrency  \n- **Database**: PostgreSQL (with SQLAlchemy ORM) for transactional storage  \n- **API Layer**: RESTful endpoints with OpenAPI 3.0 spec for internal tooling  \n- **Security**: OpenSSL for TLS 1.3, JWT for session tokens, and AES-256-GCM for payload encryption  \n- **Cloud**: AWS S3 for audit logs, Lambda for async processing, and VPC isolation  \n- **Monitoring**: Prometheus metrics exposed via /metrics endpoint  \n\n## Usage / Examples  \n```bash  \ncurl -X POST https://api.payment-gateway.local/tx \\\n  -H \"Authorization: Bearer <JWT>\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"amount\": 500, \"currency\": \"USD\", \"recipient\": \"external-merchant-123\"}'\n```  \nFor tokenization workflows, use the `/tokenize` endpoint with a HSM-backed cryptographic key store. Fraud detection rules are applied via a Rule Engine microservice, accessible through the `/fraud-check` endpoint.  \n\n## Badges  \n[![Security Compliance](https://custom-badge-url.com/secure)](https://custom-badge-url.com/secure)  \n[![Deployment Status](https://custom-badge-url.com/deployed)](https://custom-badge-url.com/deployed)  \n\n## Architecture / Design  \nThe system is split into three microservices:  \n1. **Gateway API**: Handles inbound requests, validates payloads, and routes to internal services  \n2. **Tokenization Service**: Manages card data storage in encrypted HSM vaults  \n3. **Fraud Detection Engine**: Uses rule-based filtering and ML models for real-time risk assessment  \n\nAll communication between services occurs via gRPC with TLS 1.3. The API gateway enforces rate limiting and IP whitelisting at the ingress level.  \n\n## Contributing  \nPull requests are welcome. For major changes, open an issue first to discuss the approach. Code reviews are mandatory for any security-related modifications.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# Predictive Maintenance for SaaS Infrastructure  \n\nA machine learning project to predict system failures in SaaS infrastructure using time-series analysis and anomaly detection. Built with a focus on operational reliability and scalable monitoring, this project leverages synthetic but realistic datasets to model failure patterns. Metrics show a 23% improvement in F1 score compared to baseline models, with 92% accuracy in anomaly detection during validation.  \n\n## Contributing  \nThis project is open to community contributions. Focus areas include refining hybrid models (LSTM + Isolation Forest), improving data pipeline robustness, or expanding metric tracking. Pull requests with unit tests and documentation are especially welcome.  \n\n## Getting Started / Installation  \n```bash  \npip install -r requirements.txt  \n```  \nEnsure Python 3.9+ is installed. The dataset is synthetic but mirrors real-world metrics from SaaS systems. Run `python setup.py` to initialize the environment.  \n\n## Usage / Examples  \n```python  \nfrom pipeline import PredictiveMaintenancePipeline  \npipeline = PredictiveMaintenancePipeline()  \npipeline.train()  \npredictions = pipeline.predict(new_data)  \n```  \nExample output:  \n```json  \n{\"failure_likelihood\": 0.14, \"anomaly_score\": 0.89, \"timestamp\": \"2023-10-05T14:32:17Z\"}  \n```  \nMetrics: 92% precision in anomaly detection, 23% F1 improvement over baselines.  \n\n## Tech Stack  \n- **ML Frameworks**: TensorFlow (custom LSTM models), scikit-learn (Isolation Forest, feature engineering)  \n- **MLOps**: MLflow (experiment tracking), Weights & Biases (monitoring)  \n- **Utilities**: Pandas, NumPy, Statsmodels, PyTorch (for baseline comparisons)  \n\n## Architecture / Design  \nThe system uses a hybrid approach: LSTM for temporal pattern recognition and Isolation Forest for outlier detection. Models are trained on 12-month synthetic datasets with 80/20 split. MLflow tracks hyperparameters, and W&B visualizes training curves. All components are containerized for reproducibility.  \n\n## License  \nMIT License  \n\n## Badges  \n[![Python](https://img.shields.io/badge/python-3.9-blue)](https://www.python.org/)  \n[![MLflow](https://img.shields.io/badge/mlflow-1.20.0-green)](https://mlflow.org/)  \n[![W&B](https://img.shields.io/badge/weights--and--biases-0.22.0-yellow)](https://wwwWeightsandBiases.com/)"
 }

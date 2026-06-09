@@ -3,23 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_054",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "solo",
+    "project_scale": "hobby",
+    "project_team_size": "medium (5-15)",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "Apache Airflow": 2,
-    "Apache Kafka": 3,
-    "Apache Spark": 4,
-    "Data warehousing": 2,
-    "Docker": 3,
-    "ETL pipeline design": 3,
-    "Kubernetes": 2,
-    "Python": 4,
-    "Snowflake": 4,
-    "Terraform": 3,
-    "dbt": 3
+    "AWS": 5,
+    "CDN management": 3,
+    "Cloud cost optimization": 4,
+    "Cloud networking (VPC/subnets)": 4,
+    "GCP": 5,
+    "Kubernetes": 4,
+    "Load balancing": 3,
+    "Monitoring & alerting": 3,
+    "Python": 3,
+    "Serverless": 1,
+    "Terraform": 4
   },
-  "text": "# Real-Time Fraud Detection System  \nA production-grade pipeline for detecting anomalous financial transactions using Kafka, Spark, and cloud-native tools. Monitors 2M+ transactions/sec with <100ms latency, reducing false positives by 32% in live environments.  \n\n## Deployment  \nDeployed on AWS using Terraform-managed EC2 instances with Dockerized Kafka/Spark clusters. Production metrics available via Prometheus/Grafana dashboards.  \n\n## Badges  \n[![Production Status](https://img.shields.io/badge/production-ready-green)](https://example.com)  \n[![Tech Stack](https://img.shields.io/badge/kafka%20+%20spark%20+%20aws-blue)](https://example.com)  \n[![License](https://img.shields.io/badge/license-MIT-yellow)](https://example.com)  \n\n## Tech Stack  \n- **Kafka**: Real-time ingestion with 3-node cluster for fault tolerance  \n- **Spark Structured Streaming**: Windowed aggregations for behavioral analysis  \n- **Snowflake**: Delta Lake integration for historical pattern matching  \n- **Python**: Custom ML models for anomaly scoring (scikit-learn, PyTorch)  \n- **AWS**: EC2, S3, and CloudWatch for storage/metrics  \n- **Docker**: Containerized microservices with multi-stage builds  \n- **Terraform**: IaC for Kafka/ZooKeeper cluster provisioning  \n\n## Architecture / Design  \nData flows from Kafka brokers to Spark clusters via Kafka Streams. Spark processes transactions in 100ms windows, cross-referencing with Snowflake's historical dataset. Results are written to a Kafka topic for downstream alerting. Metrics are exported to Prometheus for real-time monitoring.  \n\n## Getting Started / Installation  \n```bash\ngit clone https://github.com/connormurphy/fraud-detection.git  \ncd fraud-detection  \ndocker compose up -d  \n# Deploy to AWS using terraform apply after configuring variables  \n```  \n\n## Usage / Examples  \nExample Kafka message:  \n```json  \n{\"transaction_id\": \"TX123456\", \"amount\": 1500.99, \"ip\": \"192.0.2.1\", \"user_agent\": \"Mozilla/5.0\"}  \n```  \nSpark processes this into a fraud score (0-1) using a trained model. Output is sent to a Kafka topic for integration with alerting systems.  \n\n## License  \nMIT License – see [LICENSE](https://example.com) for details."
+  "text": "# SecureShield Infrastructure Automation  \nAutomate secure, cost-optimized cloud infrastructure deployment across AWS and GCP with IaC, Kubernetes orchestration, and real-time monitoring.  \n\n## Contributing  \nOpen contributions welcome. Focus on infrastructure templates, security policy enforcement, and monitoring integrations. All pull requests undergo review and are merged with explicit security checks.  \n\n## Getting Started / Installation  \n1. Install [Terraform](https://terraform.io) and configure AWS/GCP credentials via `~/.aws/credentials` and `~/.gcloud/config.json`.  \n2. Clone the repo: `git clone https://github.com/secureshield/infrastructure.git`  \n3. Navigate to the project root and run `terraform init` to bootstrap providers.  \n\n## Usage / Examples  \nDeploy a secure web app with:  \n```bash  \nterraform apply -var region=us-east-1 -var cloud_provider=aws  \n```  \nOptimize costs using:  \n```bash  \npython scripts/cost_optimizer.py --tagging-strategy=auto  \n```  \nMonitor with:  \n```bash  \n./scripts/monitoring.sh --provider=gcp --alert-threshold=95  \n```  \n\n## Tech Stack  \n- **IaC**: Terraform (AWS, GCP)  \n- **Orchestration**: Kubernetes (with HPA, autoscaling)  \n- **Networking**: AWS VPCs, GCP subnets, load balancers (ALB, GCP LB)  \n- **Monitoring**: Prometheus + Grafana, AWS CloudWatch, GCP Monitoring  \n- **CDNs**: AWS CloudFront, GCP Cloud CDN  \n- **Cost Tools**: AWS Cost Explorer, GCP Billing Reports  \n- **Languages**: Python (scripts), Terraform (configs)  \n\n## Architecture / Design  \nThe system leverages Terraform for infrastructure-as-code, with AWS VPCs and GCP subnets segmented by team. Load balancers (ALB, GCP LB) handle traffic distribution, while CloudFront and Cloud CDN cache static assets. Kubernetes manages workloads with HPA and autoscaling. Monitoring pipelines aggregate metrics from CloudWatch and GCP Monitoring, triggering alerts via Prometheus. Cost optimization is achieved through tagging strategies and reserved instance allocations, reducing monthly spend by 22% in production.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![Terraform](https://img.shields.io/terraform/secureshield/infrastructure)](https://app.terraform.io/app/secureshield/infrastructure)  \n[![Kubernetes](https://img.shields.io/kubernetes/secureshield/cluster)](https://kubernetes.io)  \n[![AWS](https://img.shields.io/badge/AWS-Active-blue)](https://aws.amazon.com)  \n[![GCP](https://img.shields.io/badge/GCP-Active-blue)](https://cloud.google.com)"
 }

@@ -3,22 +3,19 @@
   "type": "project_readme",
   "persona_id": "p_070",
   "hyperparams": {
-    "project_scale": "hobby",
+    "project_scale": "team-internal",
     "project_team_size": "small (2-4)",
     "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "CI/CD pipelines": 3,
-    "Cloud cost optimization": 2,
-    "Docker": 3,
-    "Kubernetes": 3,
-    "Linux administration": 3,
-    "PostgreSQL": 3,
-    "Prometheus/Grafana": 3,
-    "Python": 3,
-    "REST API design": 3,
-    "Terraform": 3
+    "Embedded Linux": 3,
+    "Firmware development": 4,
+    "Hardware-software integration": 4,
+    "IoT protocols (MQTT/CoAP)": 4,
+    "Network troubleshooting": 2,
+    "Python": 2,
+    "REST API design": 2,
+    "TCP/IP": 1
   },
-  "text": "# NexaAPI Gateway  \nA scalable API gateway for SaaS platform integration, designed to handle 10k+ RPS with 99.9% uptime. Built for flexibility, with dynamic routing and extensible middleware.  \n\n## Configuration  \nConfigure via `config.yaml` and environment variables.  \n- `API_PORT`: Default `8080`  \n- `LOG_LEVEL`: `INFO` or `DEBUG`  \n- `METRICS_EXPORTER`: Enable Prometheus via `http://localhost:9090`  \n- `DATABASE_URL`: PostgreSQL connection string (e.g., `postgres://user:pass@localhost:5432/db`)  \n\nSet up monitoring with Grafana by linking Prometheus data sources.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/your-username/nexaapi-gateway.git  \ncd nexaapi-gateway  \ndocker-compose up -d  \n```  \nInstall dependencies: Python 3.9+, Docker, and Terraform. Run `./setup.sh` to configure AWS credentials and PostgreSQL.  \n\n## Usage / Examples  \nRoute requests with dynamic path matching:  \n```bash  \ncurl -X GET http://localhost:8080/api/v1/users/123  \n```  \nEnable rate limiting via middleware:  \n```python  \n# config.yaml  \nrate_limit:  \n  max_requests: 100  \n  window_seconds: 60  \n```  \nUse AWS Lambda for async processing via S3 triggers.  \n\n## Tech Stack  \n- **Python**: Core logic with async I/O  \n- **Docker**: Containerization for local testing  \n- **Kubernetes**: Orchestration for production  \n- **PostgreSQL**: Persistent storage for config  \n- **AWS**: Lambda, S3, and CloudWatch for async tasks  \n- **Terraform**: Infrastructure-as-code for VPC and EC2  \n\n## Architecture / Design  \nNexaAPI uses a microservices pattern with a central router. Key components:  \n- **Load balancer**: Nginx with TLS termination  \n- **Caching layer**: Redis for frequent endpoints  \n- **Autoscaling**: Kubernetes HPA based on CPU metrics  \n- **Cost optimization**: Spot instances for non-critical workers  \n\nMonitor with Prometheus/Grafana for latency and error rates.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![CI/CD Status](https://github.com/your-username/nexaapi-gateway/actions/workflows/ci.yml/badge.svg)](https://github.com/your-username/nexaapi-gateway/actions/workflows/ci.yml)  \n[![Docker Image](https://img.shields.io/docker/registry/image?repo=your-registry/nexaapi&server=https://your-registry)](https://your-registry/nexaapi)"
+  "text": "# SmartAdBillboard: IoT-Enabled Advertising System  \nA modular IoT platform for real-time ad content delivery, leveraging embedded systems and adtech integrations to optimize billboard performance and audience engagement.  \n\n## Badges  \n[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Tech Stack  \n- **Microcontroller**: STM32 (ARM Cortex-M4) for low-power, high-performance control  \n- **Communication**: MQTT for lightweight, bidirectional device-cloud interaction  \n- **Adtech**: REST API integration with third-party ad platforms for dynamic content updates  \n- **Power Management**: Custom firmware for sleep/wake cycles to extend battery life  \n- **Sensors**: Ambient light and motion detection for adaptive brightness and scheduling  \n\n## Architecture / Design  \nThe system operates as a state machine, with the STM32 microcontroller acting as the central hub. Firmware handles hardware peripherals, while MQTT ensures reliable message delivery between the billboard and the adtech cloud. Real-time analytics from the cloud trigger updates to the display, balancing ad rotation with environmental conditions. The design prioritizes modularity, allowing firmware and sensor logic to be updated independently.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/ritika-malhotra/SmartAdBillboard.git`  \n2. Install dependencies:  \n   ```bash  \n   cd SmartAdBillboard  \n   pip install -r requirements.txt  \n   ```  \n3. Connect the hardware:  \n   - STM32 dev board with GPIO pins mapped to display drivers  \n   - MQTT broker running on a local server (e.g., Mosquitto)  \n   - Adtech API credentials configured in `.env`  \n\n## Usage / Examples  \n- **Dynamic Content Update**:  \n  ```bash  \n  python update_ad.py --campaign \"summer_promo\"  \n  ```  \n- **Status Check**:  \n  ```bash  \n  python status.py  \n  ```  \nMonitor MQTT topics like `billboard/adc/01` for live sensor data.  \n\n## Contributing  \nPull requests are welcome! Ensure code adheres to PEP8 standards and includes unit tests. For hardware contributions, focus on optimizing power consumption or improving sensor accuracy. All changes must include a brief rationale for architectural decisions."
 }

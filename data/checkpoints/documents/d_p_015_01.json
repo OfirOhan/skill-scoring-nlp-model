@@ -3,21 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_015",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "large (15+)",
-    "jargon_density": "heavy"
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 5,
-    "Cloud cost optimization": 4,
-    "GCP": 5,
-    "Infrastructure as Code": 4,
-    "Kubernetes": 4,
-    "Network troubleshooting": 3,
-    "PostgreSQL": 4,
-    "Python": 4,
-    "REST API design": 3,
-    "Terraform": 4
+    "A/B testing": 1,
+    "Agile/Scrum": 3,
+    "Analytics-driven product decisions": 4,
+    "Competitive analysis": 3,
+    "Data visualization (Matplotlib/Plotly)": 1,
+    "Hypothesis testing": 1,
+    "Product management": 4,
+    "Roadmap planning": 3,
+    "SQL analytics": 3,
+    "Stakeholder management": 3,
+    "Tableau/Power BI": 1,
+    "User journey mapping": 3
   },
-  "text": "# NexusPay Microservices Platform  \nA high-throughput, low-latency financial data pipeline engineered for fintech's most demanding use cases. Built to handle millions of transactions per second with zero-tolerance for latency, this platform serves as the backbone for real-time analytics, fraud detection, and cross-border settlement systems.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/actions/workflow/status/username/nexuspay/main.yml?branch=main)](https://github.com/username/nexuspay/actions)  \n[![Coverage](https://img.shields.io/coverity/coverage/username/nexuspay)](https://coverity.com/projects/username/nexuspay)  \n[![Docs](https://img.shields.io/badge/docs-latest-blue)](https://nexuspay.readthedocs.io)  \n\n## Getting Started / Installation  \n```bash\ngit clone https://github.com/username/nexuspay.git  \ncd nexuspay  \nmake dependencies  \nmake deploy-local  \n```  \nEnsure you have Docker 20.10+, kubectl 1.22+, and Terraform 1.5+ installed. For production, use AWS/GCP terraform modules and configure IAM roles.  \n\n## Usage / Examples  \n```python  \nfrom nexuspay import Pipeline  \npipeline = Pipeline(\"fraud-detection\")  \npipeline.process(  \n    data={\"transaction_id\": \"TX12345\", \"amount\": 1500.00},  \n    callback=\"https://api.example.com/webhook\"  \n)  \n```  \nUse the REST API for batch reconciliation:  \n```bash  \ncurl -X POST https://api.nexuspay.com/v1/reconcile \\\n  -H \"Authorization: Bearer <token>\" \\\n  -d '{\"batch_id\": \"BATCH67890\"}'  \n```  \n\n## Architecture / Design  \nThe platform is a distributed event-driven system with Kafka as the central message bus. Key components include:  \n- **Rate-Limited API Gateway** (NGINX+Lua) for 10k+ RPS  \n- **Kafka Streams** for real-time data transformation  \n- **Multi-Region PostgreSQL Clusters** with synchronous replication  \n- **Kubernetes Operator** for dynamic service scaling  \n- **Network Policy Enforcement** via Cilium for zero-trust model  \n\n## Tech Stack / Built With  \n- **Cloud**: AWS (EC2, S3, Lambda) + GCP (BigQuery, Dataflow)  \n- **Orchestration**: Kubernetes (Helm charts, Operator)  \n- **Data**: PostgreSQL (sharded), Kafka, Redis (cache)  \n- **Lang**: Python (data pipelines), Go (services), Rust (security modules)  \n- **IaC**: Terraform (modules), AWS CloudFormation, Pulumi  \n\n## Roadmap / Future Work  \nQ4 2023: Integrate AI-powered anomaly detection with TensorFlow Serving.  \nQ1 2024: Expand to Azure with hybrid cloud support.  \n2024: Implement end-to-end encryption for all data in transit.  \n\n## Acknowledgments  \nThanks to AWS and GCP teams for collaborative architecture reviews. Special mention to the PostgreSQL team for shard-aware replication strategies.  \n\n## Contributing  \nPRs welcome! Follow the [contributing guide](https://nexuspay.readthedocs.io/en/latest/contributing.html) for code style and testing requirements."
+  "text": "# NexaCloud Migration Assistant  \nAutomate cloud migration with AI-driven insights to reduce friction, lower risks, and accelerate time-to-value for enterprise workloads.  \n\n## Tech Stack  \nBuilt with Python (fast API), React (frontend), and Node.js (backend), with PostgreSQL for data storage. Integrates with AWS, Azure, and GCP APIs. Leverages TensorFlow for predictive resource allocation models.  \n\n## Architecture / Design  \nA microservices layer with a central orchestrator handles migration workflows. The AI engine runs as a separate service, analyzing dependencies and suggesting optimal migration paths. All components are containerized with Docker and orchestrated via Kubernetes. RESTful APIs enable seamless integration with existing CI/CD pipelines.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/your-org/nexacloud-migration-assistant.git`  \n2. Install dependencies: `npm install` (frontend) & `pip install -r requirements.txt` (backend)  \n3. Set environment variables for cloud credentials and database connections  \n4. Run migrations: `python manage.py migrate`  \n5. Start services: `npm run dev` (frontend) & `python manage.py runserver` (backend)  \n\n## Usage / Examples  \n**Migrate a PostgreSQL database to AWS RDS**  \n- Upload schema dump via the CLI tool  \n- The AI engine auto-detects dependencies and recommends instance types  \n- Execute migration with one-click deployment, tracking progress in real-time  \n\n**Optimize resource allocation for a multi-cloud environment**  \n- Input current infrastructure metrics  \n- The model predicts cost savings and performance gains for hybrid setups  \n- Generate a prioritized migration roadmap with risk mitigation strategies  \n\n## Badges  \n[![GitHub](https://badgen.net/badge/github/nexacloud-migration-assistant/green)](https://github.com/your-org/nexacloud-migration-assistant)  \n[![Build Status](https://badgen.net/badge/build/status/green)](https://github.com/your-org/nexacloud-migration-assistant/actions)  \n[![Coverage](https://badgen.net/badge/coverage/85%/green)](https://github.com/your-org/nexacloud-migration-assistant/coverage)  \n[![Tech Stack](https://badgen.net/badge/tech/Python%2C%20React%2FNode.js%2FPostgreSQL/green)](https://github.com/your-org/nexacloud-migration-assistant)  \n\n## Contributing  \nWe use Scrum for sprint planning and daily standups. Join our Slack channel for real-time collaboration. Focus areas include expanding cloud provider support, refining AI models, and improving UX for non-technical users. Pull requests should include unit tests and documentation updates.  \n\n## License  \nMIT License © 2023 NexaCloud Team. See [LICENSE](https://github.com/your-org/nexacloud-migration-assistant/blob/main/LICENSE) for details."
 }

@@ -3,22 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_255",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "medium (5-15)",
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
     "jargon_density": "moderate"
   },
   "skill_evidence": {
+    "API testing": 1,
+    "BDD/TDD": 3,
+    "GitLab CI": 1,
+    "Java": 1,
+    "Performance testing": 1,
     "Python": 1,
-    "Go": 1,
-    "Node.js": 1,
-    "React": 1,
-    "PostgreSQL": 1,
     "REST API design": 1,
-    "AWS": 1,
-    "Docker": 1,
-    "CI/CD pipelines": 1,
-    "Monitoring & alerting": 1,
-    "Database optimization": 1
+    "Selenium/Playwright": 1,
+    "Test automation": 1,
+    "Test strategy design": 4,
+    "Performance testing (JMeter/k6)": 1
   },
-  "text": "# TeleMed Connect  \nA secure telemedicine platform enabling virtual consultations between patients and doctors, prioritizing privacy and seamless user experience. Built for academic research and small-scale deployment, this project balances scalability with strict compliance to healthcare regulations.  \n\n---\n\n## API Reference  \nThe API is designed for minimal surface area with focus on authentication and session management. Key endpoints:  \n\n- **POST /auth/login**  \n  *Request:* JSON with `email` and `password`  \n  *Response:* JWT token with refresh endpoint  \n\n- **POST /consultation/schedule**  \n  *Request:* JSON with `doctor_id`, `patient_id`, and `timestamp`  \n  *Response:* Confirmation ID and encrypted meeting link  \n\n- **GET /consultation/history/{user_id}**  \n  *Response:* Paginated list of past sessions with metadata  \n\nAll interactions use HTTPS and are rate-limited to 100 requests/minute per IP.  \n\n---\n\n## Usage / Examples  \n```bash\n# Login to obtain token  \ncurl -X POST https://api.telemedconnect.dev/auth/login \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"email\": \"doctor@example.com\", \"password\": \"securepass\"}'\n\n# Schedule a consultation  \ncurl -X POST https://api.telemedconnect.dev/consultation/schedule \\\n  -H \"Authorization: Bearer <token>\" \\\n  -d '{\"doctor_id\": \"D123\", \"patient_id\": \"P456\", \"timestamp\": \"2024-03-20T14:00:00Z\"}'\n```  \n\nThe platform encrypts all session data at rest and in transit, with optional HIPAA-compliant storage for institutional use.  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/telemedconnect/telemedconnect.git`  \n2. Set environment variables for API keys and database connections in `.env`  \n3. Run `mvn spring-boot:run` to start the service (requires Java 17)  \n4. Access the admin dashboard at `http://localhost:8080/admin`  \n\n---\n\n## Tech Stack  \n- **Backend:** Spring Boot (Java 17) with Kotlin for concise DSLs  \n- **Security:** OAuth2 + JWT for authentication; AES-256 for data encryption  \n- **Storage:** MongoDB for flexible schema handling of medical records  \n- **Networking:** gRPC for internal service communication  \n\n---\n\n## Architecture / Design  \nThe system uses a layered architecture with three planes:  \n1. **Presentation:** RESTful API with rate limiting and input validation  \n2. **Business Logic:** Domain-driven design for consultation scheduling and access control  \n3. **Data:** MongoDB sharded across regions for low-latency access  \n\nSensitive data is anonymized before storage, and all logs are encrypted with AES-256.  \n\n---\n\n## License  \nMIT License — see [LICENSE](LICENSE) for full terms  \n\n---\n\n## Badges  \n[![Secure By Design](https://img.shields.io/badge/secure-by%20design-blue)](https://telemedconnect.dev/security)  \n[![Healthcare Ready](https://img.shields.io/badge/healthcare-ready-green)](https://telemedconnect.dev/healthcare)  \n[![Academic Project](https://img.shields.io/badge/academic-project-yellow)](https://telemedconnect.dev/research)"
+  "text": "# Cross-Platform Game Test Suite  \nA robust framework to validate game mechanics, UI responsiveness, and backend sync across Windows, macOS, Linux, iOS, and Android. Designed for small teams to maintain consistent quality without platform-specific silos.  \n\n## Contributing  \nThis project thrives on collaboration. Whether you’re refining edge-case scenarios for mobile input lag or optimizing cross-OS resource loading, your insights shape its evolution. Propose platform-specific test matrices or share patterns for handling asynchronous state synchronization. All contributions must align with the test strategy’s emphasis on deterministic failure tracking and reproducibility.  \n\n## Getting Started / Installation  \nBegin by cloning the repository and installing dependencies via `npm install` or `yarn`. Ensure your system meets the minimum requirements: Node.js 18+, and a supported game engine version (see `docs/platform-matrix.md`). For macOS/Linux, install Xcode CLI tools and Android SDK tools. Windows users should enable developer mode and install the latest Unity CLI.  \n\n## Usage / Examples  \nRun the suite with `npm run test-all` to execute preconfigured scenarios. For example:  \n- Validate character movement latency on iOS vs. Android  \n- Test UI scaling on 4K vs. 1080p displays  \n- Verify cross-platform save/load consistency  \n\nCustomize test parameters in `config/platformOverrides.json` to address device-specific quirks. The BDD/TDD workflow ensures scenarios are both human-readable and machine-executable, with test results exported to JSON for integration with CI/CD pipelines.  \n\n## Tech Stack  \n- **Core Framework**: TypeScript with modular test runners  \n- **Platform Abstraction**: Custom wrapper for engine-specific APIs  \n- **Reporting**: Custom HTML5 dashboard with real-time metrics  \n- **Dependencies**: Node.js, WebAssembly for cross-compiler support  \n\n## Architecture / Design  \nThe suite is built on a layered architecture:  \n1. **Platform Layer**: Abstracts OS-specific APIs into unified interfaces  \n2. **Test Scenario Layer**: BDD/TDD scripts with dynamic parameterization  \n3. **Execution Layer**: Parallelized test orchestration with failure isolation  \n4. **Reporting Layer**: Aggregates metrics into platform-specific dashboards  \n\nKey design choices prioritize deterministic test isolation and minimal environmental coupling. For instance, resource loading is decoupled from the game engine to ensure tests run consistently across environments.  \n\n## License  \nMIT License — see `LICENSE` for full terms.  \n\n## Badges  \n[![Platform Coverage](https://example.com/badge-platforms)](https://example.com)  \n[![Test Pass Rate](https://example.com/badge-pass)](https://example.com)"
 }

@@ -3,21 +3,20 @@
   "type": "project_readme",
   "persona_id": "p_143",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "solo",
-    "jargon_density": "plain"
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "CI/CD pipelines": 3,
-    "Cloud cost optimization": 3,
-    "Cloud migration": 3,
-    "Docker": 4,
-    "Kubernetes": 4,
-    "Load balancing": 3,
-    "Monitoring & alerting": 4,
-    "Python": 3,
-    "Terraform": 1
+    "Application security (OWASP)": 3,
+    "Compliance (SOC2/GDPR)": 3,
+    "Encryption & PKI": 4,
+    "IAM/Access control": 3,
+    "Network security": 3,
+    "Penetration testing": 3,
+    "SIEM tools": 3,
+    "Secure coding practices": 3,
+    "Vulnerability management": 3
   },
-  "text": "# PatientVitals Monitoring Platform  \n\nA production-grade real-time patient data monitoring system designed for healthcare environments. This platform ingests, processes, and visualizes critical vitals such as heart rate, blood pressure, and oxygen saturation using Prometheus for metrics collection and Grafana for dashboarding. The system ensures 99.99% uptime through automated scaling and proactive alerting, reducing clinical response delays by 40% in pilot deployments.  \n\n## Acknowledgments  \nThis project would not exist without the robust ecosystems of Prometheus, Grafana, and AWS. Special thanks to the AWS Lambda team for enabling serverless data processing pipelines, and to the Kubernetes community for their role in orchestrating containerized workloads. The use of Python scripts for data normalization and Docker for consistent deployment environments were pivotal in achieving cross-environment reliability.  \n\n## Getting Started / Installation  \n1. Clone the repository using `git clone https://github.com/yourusername/patientvitals.git`  \n2. Navigate to the project directory and run `docker-compose up --build` to spin up a local development environment. This leverages Docker for isolation and ensures dependency consistency across platforms.  \n3. Deploy to production via Kubernetes with `kubectl apply -f k8s/deployment.yaml`, which scales pods based on CPU utilization and ensures high availability.  \n\n## Usage / Examples  \n- Query real-time metrics via Prometheus API: `http://localhost:9090/api/v1/query?query=heart_rate`  \n- Configure Grafana dashboards to visualize trends in patient vitals, with alerts triggered for deviations beyond ±15% of baseline values.  \n- Automate alert suppression during scheduled maintenance using AWS Lambda functions that interface with the alert manager.  \n\n## Tech Stack  \n- **Monitoring**: Prometheus (metrics), Grafana (visualization)  \n- **Cloud**: AWS Lambda (serverless processing), EC2 Auto Scaling (elastic compute)  \n- **Orchestration**: Kubernetes (pod management), NGINX (load balancing)  \n- **Data**: Python (normalization scripts), PostgreSQL (metadata storage)  \n- **Containers**: Docker (environment consistency), Docker Hub (image hosting)  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![Uptime](https://example.com/uptime-badge.png)](https://example.com/uptime) [![Throughput](https://example.com/throughput-badge.png)](https://example.com/throughput)  \n\n## Contributing  \nCollaboration is encouraged. Please open an issue or PR for feature ideas, bug fixes, or documentation improvements. All contributions are reviewed through a GitHub Actions pipeline that enforces code quality and security standards."
+  "text": "# ThreatIntelHub: Real-Time Threat Intelligence Platform  \nAutomated aggregation of threat data from diverse sources, enabling real-time security monitoring and integration with SIEM tools for proactive defense.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/commit-activity/m/ThreatIntelHub)](https://github.com/ThreatIntelHub)  \n[![Build Status](https://img.shields.io/github/actions/workflow/ci.yml)](https://github.com/ThreatIntelHub/actions)  \n[![Coverage](https://img.shields.io/codecov/c/github/ThreatIntelHub)](https://codecov.io/gh/ThreatIntelHub)  \n[![License](https://img.shields.io/github/license/ThreatIntelHub)](https://github.com/ThreatIntelHub/blob/main/LICENSE)  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/ThreatIntelHub.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure environment variables for API keys and storage credentials (see `.env.example`).  \n4. Run initial setup: `python setup.py`  \n5. Start the service: `docker-compose up -d`  \n\nEnsure all secrets are stored in encrypted vaults (e.g., HashiCorp Vault) and access is restricted via IAM policies.  \n\n## Tech Stack  \n- **Backend**: Python (FastAPI) for REST APIs and data processing  \n- **Data Storage**: Elasticsearch (for real-time analytics) + PostgreSQL (for metadata)  \n- **Communication**: TLS 1.3 encrypted gRPC channels for internal microservices  \n- **Monitoring**: Prometheus + Grafana for system health and anomaly detection  \n- **SIEM Integration**: Native connectors for Splunk, IBM QRadar, and ELK stack  \n\n## Architecture / Design  \nThe platform operates as a distributed system with three layers:  \n1. **Ingestion Layer**: Pulls data from open-source feeds, enterprise APIs, and internal logs via secure tunnels.  \n2. **Processing Layer**: Uses Kafka for message queuing and Apache Beam for batch/stream processing.  \n3. **Visualization Layer**: Exposes threat intelligence via GraphQL APIs and integrates with SIEM tools for alert correlation.  \n\nCompliance with SOC2 and GDPR is enforced through automated audit logs and data anonymization. Encryption at rest (AES-256) and in transit (TLS 1.3) are mandatory.  \n\n## Usage / Examples  \n```bash  \n# Query threat data for a specific IOC  \ncurl -X GET \"http://api.threatintelhub.com/v1/threats?ioc=556e636f646572\"  \n```  \nIntegrate with SIEM tools to trigger alerts on known malicious activity. Example:  \n```python  \n# Example SIEM alert rule (Splunk syntax)  \n| where event_type = \"malicious_ip\" and ip in [threat_intel_hub.get_malicious_ips()]  \n```  \n\n## Testing  \n- **Unit Tests**: 98% coverage for core logic (pytest + pytest-cov)  \n- **Integration Tests**: Validate end-to-end data flow (Kafka, Elasticsearch)  \n- **Security Tests**: OWASP ZAP scans and penetration testing (weekly)  \n- **Compliance Checks**: Automated SOC2/GDPR audits via policy engines  \n\n## License  \nMIT License (see [LICENSE](https://github.com/ThreatIntelHub/blob/main/LICENSE))"
 }

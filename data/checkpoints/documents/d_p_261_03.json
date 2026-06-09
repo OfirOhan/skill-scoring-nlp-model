@@ -1,0 +1,24 @@
+{
+  "doc_id": "d_p_261_03",
+  "type": "project_readme",
+  "persona_id": "p_261",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "API testing": 4,
+    "BDD/TDD": 3,
+    "Go": 1,
+    "Java": 1,
+    "Node.js": 1,
+    "Performance testing (JMeter/k6)": 4,
+    "Python": 3,
+    "REST API design": 3,
+    "Selenium/Playwright": 4,
+    "Test automation": 5,
+    "Test strategy design": 1
+  },
+  "text": "# Automated QA Framework for Consulting Client Projects  \n\nA modular, scalable regression testing framework designed to reduce manual effort and accelerate QA cycles in short-term consulting engagements. Built to integrate seamlessly with client CI/CD pipelines, it prioritizes rapid test setup, cross-browser compatibility, and actionable reporting.  \n\n## Badges  \n[![GitHub](https://badgen.net/badge/github/anyakowalski/gray)](https://github.com/anyakowalski)  \n[![CI/CD](https://badgen.net/badge/build/passing/green)](https://github.com/anyakowalski/actions)  \n[![Tests](https://badgen.net/badge/tests/98%/green)](https://github.com/anyakowalski/actions)  \n\n## Tech Stack  \n- **Python** (core scripting, test orchestration)  \n- **Playwright** (headless browser automation, cross-platform)  \n- **k6** (performance testing, distributed load generation)  \n- **REST API** (client-facing integration, mock server setup)  \n- **Docker** (containerized environments, CI/CD compatibility)  \n- **SQLAlchemy** (database validation, schema comparison)  \n\n## Architecture / Design  \nThe framework is organized into three tiers:  \n1. **Test Orchestration Layer**: Python scripts manage test suites, parameterization, and parallel execution.  \n2. **Execution Layer**: Playwright handles UI automation, while k6 manages API and performance testing.  \n3. **Reporting Layer**: Aggregates test results into client-facing dashboards with pass/fail metrics and latency trends.  \n\nKey design choices include decoupling test logic from environment setup, using YAML for configuration, and embedding custom validation rules for API response payloads.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/anyakowalski/automated-qa-framework.git  \ncd automated-qa-framework  \ndocker-compose up -d  \n```  \nEnsure environment variables for client credentials and test environments are set in `.env.local`.  \n\n## Usage / Examples  \nRun a full regression suite:  \n```bash  \npython run_tests.py --suite \"client-123\" --parallel 4  \n```  \nGenerate performance report:  \n```bash  \nk6 run --output report.json performance_script.js  \n```  \nThe framework auto-detects browser versions and injects mock data for staging environments.  \n\n## Contributing  \nPull requests are welcome! Focus on improving test coverage for edge cases, optimizing parallel execution, or enhancing reporting clarity. Ensure all changes include unit tests and documentation updates.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+}

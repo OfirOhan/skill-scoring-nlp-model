@@ -3,22 +3,20 @@
   "type": "project_readme",
   "persona_id": "p_078",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "plain"
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Agile/Scrum": 2,
-    "CI/CD pipelines": 3,
-    "Cloud cost optimization": 3,
-    "Cross-team collaboration": 2,
-    "GitHub Actions": 3,
-    "Stakeholder communication": 1,
-    "System design": 3,
-    "Team leadership": 2,
-    "Technical writing": 2,
-    "Terraform": 3
+    "Flutter": 3,
+    "JavaScript": 1,
+    "Kotlin": 3,
+    "Mobile UI/UX": 5,
+    "Mobile testing": 3,
+    "React Native": 1,
+    "Responsive design": 2,
+    "Swift": 1,
+    "Web accessibility": 1
   },
-  "text": "# Enterprise Microservices Architecture  \nA modular, scalable framework for enterprise systems, optimized for performance and observability. Designed to reduce latency by 40% in high-throughput scenarios while maintaining fault tolerance across distributed services.  \n\n## Configuration  \nInfrastructure is defined via Terraform with AWS EC2, RDS, and S3 integration. Environment variables (e.g., `AWS_REGION`, `DATABASE_URL`) are managed via `.env` files. CI/CD pipelines use GitHub Actions for automated testing and deployment. Cloud cost optimization is enforced through AWS Cost Explorer, with budget alerts configured for compute and storage resources.  \n\n## Getting Started / Installation  \nClone the repo:  \n```bash  \ngit clone https://github.com/inespereira/enterprise-microservices.git  \ncd enterprise-microservices  \n```  \nInstall dependencies:  \n```bash  \nnpm install  \n```  \nInitialize Terraform:  \n```bash  \nterraform init  \n```  \nRun local tests with Docker:  \n```bash  \ndocker-compose up --build  \n```  \n\n## Usage / Examples  \nInvoke the core API gateway via `curl`:  \n```bash  \ncurl -X POST https://api-gateway.example.com/data \\\n  -H \"Authorization: Bearer <token>\" \\\n  -d '{\"query\": \"SELECT * FROM users\"}'  \n```  \nMonitor service health with Prometheus and Grafana. For debugging, use the built-in logging proxy to trace requests across services.  \n\n## Tech Stack  \n- **Backend**: Java (Spring Boot), Go (gRPC), Python (Celery)  \n- **Database**: PostgreSQL (sharded), Redis (caching)  \n- **Orchestration**: Docker Swarm, Kubernetes (experimental)  \n- **Observability**: Prometheus, Grafana, Jaeger  \n\n## Architecture / Design  \nServices are decoupled via a service mesh (Istio) for dynamic routing and retries. API gateways handle rate limiting and authentication. Database sharding reduces query latency by 35%. All services are containerized, with health checks and auto-scaling configured for AWS Fargate.  \n\n## License  \nMIT License  \n[![License](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/MIT)  \n\n## Badges  \n[![Build Status](https://github.com/inespereira/enterprise-microservices/actions/workflows/build.yml/badge.svg)](https://github.com/inespereira/enterprise-microservices/actions/workflows/build.yml)  \n[![Test Coverage](https://img.shields.io/coveralls/inespereira/enterprise-microservices)](https://coveralls.io/github/inespereira/enterprise-microservices)  \n[![License](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/MIT)"
+  "text": "# NexaTask Mobile App - SaaS Task Management Solution  \nNexaTask is a cross-platform SaaS task management application designed for enterprise workflows, offering real-time synchronization across devices, granular access controls, and seamless integration with third-party tools. Built for teams requiring scalable, secure, and intuitive task orchestration, the app prioritizes performance, reliability, and extensibility. Its architecture supports high-traffic environments while maintaining low-latency interactions, making it ideal for distributed teams and complex project pipelines.  \n\n## Roadmap / Future Work  \nThe next 12–18 months will focus on expanding NexaTask’s capabilities beyond core task management. Key priorities include:  \n- **AI-Driven Insights**: Implement predictive task prioritization using machine learning models trained on user behavior (Q3 2024).  \n- **Enhanced Security**: Introduce end-to-end encryption for sensitive data and multi-factor authentication (Q1 2025).  \n- **Desktop Synchronization**: Extend cross-device support to desktop platforms while maintaining mobile-first UX principles (Q2 2025).  \n- **Custom Workflows**: Enable enterprise customers to define custom task pipelines via a low-code API (Q4 2024).  \nLong-term goals include integrating with blockchain for audit trails and expanding into IoT-enabled device management.  \n\n## Getting Started / Installation  \nTo deploy NexaTask, ensure your environment meets the following:  \n- **Flutter SDK** (3.10+ with Dart 3.1)  \n- **Kotlin JVM** (1.8.0)  \n- **Firebase CLI** (11.0.0)  \n- **Android Studio** (2023.1.1) or **IntelliJ IDEA** (2023.2)  \nRun `flutter pub get` to fetch dependencies, then execute `flutter run` on a physical device. For CI/CD, configure GitHub Actions with environment variables for Firebase credentials and API keys.  \n\n## Usage / Examples  \nNexaTask’s UI is structured around a persistent sidebar for navigation, with a task list and timeline view as the primary workspace. Example workflows:  \n1. **Task Creation**: Use the floating action button to add tasks, specifying deadlines, dependencies, and assignees.  \n2. **Cross-Device Sync**: Tasks created on a mobile device auto-sync to desktop clients within 2 seconds.  \n3. **Third-Party Integration**: Connect to Slack via OAuth to receive notifications and update task statuses.  \n\n## Tech Stack  \n- **Frontend**: Flutter (for cross-platform rendering) + Kotlin (for Android-specific features)  \n- **Backend**: Firebase Functions (serverless architecture) + Firestore (real-time database)  \n- **Testing**: Espresso (Android) + WidgetTester (Flutter) for UI validation  \n- **CI/CD**: GitHub Actions with Firebase CLI for automated deployments  \n\n## Architecture / Design  \nNexaTask employs a microservices architecture, decoupling the frontend from backend logic. The Flutter frontend communicates via REST/GraphQL APIs with Firebase Functions, which handle business logic and data validation. UI components are stateless, with all state management centralized in a Redux-like store. Accessibility and responsiveness are prioritized through platform-specific adaptors, ensuring consistent behavior across devices.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

@@ -1,51 +1,50 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Ilya Fedorov's experience as a Senior Tech Lead in fintech, with a focus on system architecture and team leadership.",
-    "title": "Ilya Fedorov - Senior Tech Lead CV",
+    "topic_summary": "A data scientist with 2 years of experience in healthtech, specializing in predictive analytics and health data modeling",
+    "title": "Zoe Papadakis - Data Scientist CV",
     "doc_id": "d_p_257_00",
     "persona_id": "p_257",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
+      "cv_format": "paragraph",
       "geographic_convention": "Europe",
       "company_type": "agency",
-      "company_size": "large (500+)"
-    }
-  },
-  {
-    "doc_type": "blog",
-    "topic_summary": "A technical blog post discussing scalable microservices architecture for real-time payment processing in fintech.",
-    "title": "Building Scalable Payment Systems with Microservices",
-    "doc_id": "d_p_257_01",
-    "persona_id": "p_257",
-    "hyperparams": {
-      "blog_depth": "tutorial",
-      "jargon_density": "heavy"
-    }
-  },
-  {
-    "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from Ilya's manager at NexaPay Solutions, praising his leadership in architecting high-throughput financial platforms.",
-    "title": "Recommendation for Ilya Fedorov - Senior Tech Lead",
-    "doc_id": "d_p_257_02",
-    "persona_id": "p_257",
-    "hyperparams": {
-      "recommender_role": "direct-manager",
-      "recommender_closeness": "worked-daily",
-      "company_type": "startup",
-      "company_size": "large (500+)"
+      "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A GitHub README for a real-time fraud detection system using machine learning, integrated with NexaPay's payment infrastructure.",
-    "title": "NexaPay Fraud Detection v2.1",
-    "doc_id": "d_p_257_03",
+    "topic_summary": "A machine learning project predicting patient readmission risks using electronic health records",
+    "title": "Predictive Analytics for Patient Readmission Risk",
+    "doc_id": "d_p_257_01",
     "persona_id": "p_257",
     "hyperparams": {
       "project_scale": "academic",
-      "project_team_size": "solo",
-      "jargon_density": "plain"
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A manager's endorsement of Zoe's expertise in health data analysis and team leadership",
+    "title": "Recommendation from HealthInsight Analytics Manager",
+    "doc_id": "d_p_257_02",
+    "persona_id": "p_257",
+    "hyperparams": {
+      "recommender_role": "professor",
+      "recommender_closeness": "worked-daily",
+      "company_type": "academic",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "linkedin",
+    "topic_summary": "A professional summary highlighting Zoe's work in healthtech data science and her career goals",
+    "title": "Zoe Papadakis - Data Scientist | HealthTech Innovator",
+    "doc_id": "d_p_257_03",
+    "persona_id": "p_257",
+    "hyperparams": {
+      "linkedin_completeness": "detailed"
     }
   }
 ]

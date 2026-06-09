@@ -1,45 +1,65 @@
 {
   "persona_id": "p_030",
   "hyperparams": {
-    "archetype": "qa_test_engineer",
-    "years_experience": 0,
-    "seniority": "junior",
-    "industry": "SaaS",
-    "writing_style": "modest",
-    "language_fluency": "near-native",
+    "archetype": "tech_lead_architect",
+    "years_experience": 8,
+    "seniority": "senior",
+    "industry": "fintech",
+    "writing_style": "concise",
+    "language_fluency": "native",
     "self_promotion_level": "humble",
     "quantification_tendency": "mixed"
   },
-  "name": "Aiden O'Sullivan",
-  "current_role": "QA Engineer",
-  "company": "NexaLogic Solutions",
+  "name": "Farah Nazari",
+  "current_role": "Tech Lead / Architect",
+  "company": "NexaFin Solutions",
   "education": {
-    "degree": "Bachelor of Software Engineering",
-    "university": "University of Technology Sydney",
-    "year": 2023
+    "degree": "BSc in Computer Science",
+    "university": "University of Toronto",
+    "year": 2016
   },
   "career_trajectory": [
-    "Completed Software Engineering degree (2023)",
-    "Internship at TechNova Inc. (2023)",
-    "Junior QA Engineer at NexaLogic Solutions (2024)"
+    {
+      "position": "Backend Developer",
+      "company": "FinTech Startup Inc.",
+      "year": 2015
+    },
+    {
+      "position": "Senior Backend Developer",
+      "company": "FinTech Solutions Ltd.",
+      "year": 2018
+    },
+    {
+      "position": "Tech Lead",
+      "company": "NexaFin Solutions",
+      "year": 2020
+    },
+    {
+      "position": "Tech Lead / Architect",
+      "company": "NexaFin Solutions",
+      "year": 2023
+    }
   ],
   "skills": {
-    "Test automation": 3,
-    "Selenium/Playwright": 3,
-    "Unit testing": 2,
-    "Integration testing": 2,
-    "API testing": 3,
-    "Test strategy design": 2,
-    "BDD/TDD": 2,
-    "Python": 3,
+    "Team leadership": 5,
+    "Mentoring": 5,
+    "System design": 5,
+    "Agile/Scrum": 5,
+    "Cross-team collaboration": 5,
+    "Stakeholder communication": 5,
+    "Technical writing": 5,
     "CI/CD pipelines": 3,
     "GitHub Actions": 3,
-    "REST API design": 2,
-    "Web accessibility (WCAG)": 2
+    "Prometheus/Grafana": 3,
+    "Linux administration": 1,
+    "Shell scripting (Bash)": 2
   },
   "document_ids": [
     "d_p_030_00",
     "d_p_030_01",
-    "d_p_030_02"
+    "d_p_030_02",
+    "d_p_030_03",
+    "d_p_030_04",
+    "d_p_030_05"
   ]
 }

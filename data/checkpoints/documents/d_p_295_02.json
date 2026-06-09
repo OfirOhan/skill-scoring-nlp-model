@@ -1,24 +1,23 @@
 {
   "doc_id": "d_p_295_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_295",
   "hyperparams": {
-    "recommender_role": "skip-level",
-    "recommender_closeness": "brief",
-    "company_type": "startup",
-    "company_size": "mid (50-500)"
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "Agile/Scrum": 3,
-    "CI/CD pipelines": 2,
-    "Cloud cost optimization": 2,
-    "Cross-team collaboration": 3,
-    "Kubernetes": 2,
-    "REST API design": 2,
-    "System design": 3,
-    "Team leadership": 3,
-    "Technical writing": 2,
-    "Terraform": 2
+    "Apache Airflow": 3,
+    "Apache Kafka": 5,
+    "Apache Spark": 4,
+    "CI/CD pipelines": 1,
+    "Data warehousing": 4,
+    "ETL pipeline design": 5,
+    "Java": 1,
+    "Python": 3,
+    "REST API design": 1,
+    "Snowflake": 5
   },
-  "text": "Kofi and I collaborated briefly during a cross-team integration project last year. As AdTechCo’s Tech Lead, he oversaw a critical initiative to streamline ad-serving workflows, aligning engineering priorities with product goals. His structured approach to problem-solving and ability to translate technical complexity into actionable plans made him a reliable partner.  \n\nDaily, Kofi balanced hands-on architecture decisions with mentoring junior engineers. He reduced deployment times by 30% through optimized CI/CD practices, while ensuring compliance with agile sprints. His cross-team collaboration during a billing system overhaul minimized downtime, earning trust across departments.  \n\nA standout moment came when he rearchitected a legacy API, improving response times by 40% and reducing error rates. During a server outage, he led a 12-hour troubleshooting session, coordinating developers and operations to restore service without data loss. His calm under pressure and technical depth were pivotal.  \n\nKofi’s blend of strategic thinking and operational rigor makes him a strong fit for any high-stakes tech role. He consistently delivers measurable results while fostering a collaborative environment. I’d recommend him without hesitation for his reliability, technical acumen, and ability to drive innovation within constraints."
+  "text": "# AdCampaignOptimizer  \nReal-time ad campaign optimization system for AdVantage Media, processing 10M+ events/sec via Kafka, Spark, and Snowflake. Achieved 40% improvement in ROI through dynamic bid adjustments and real-time analytics.  \n\n## Badges  \n[![Kafka](https://badgen.net/badge2/kafka/production?color=blue)](https://kafka.apache.org)  \n[![Spark](https://badgen.net/badge2/spark/production?color=blue)](https://spark.apache.org)  \n[![Snowflake](https://badgen.net/badge2/snowflake/production?color=blue)](https://snowflake.com)  \n[![Airflow](https://badgen.net/badge2/airflow/production?color=blue)](https://airflow.apache.org)  \n\n## Tech Stack  \n- **Kafka**: Central to ingestion pipeline, handling 10M+ events/sec with 99.99% uptime.  \n- **Spark**: Core processing engine for real-time bid optimization and ML model inference.  \n- **Snowflake**: Data warehouse for campaign analytics, supporting 50+ concurrent queries.  \n- **Airflow**: Orchestration for ETL workflows, scheduling 15+ pipelines with 95%+ reliability.  \n- **Python**: 80%+ of core logic, including custom Kafka consumers and Spark UDFs.  \n\n## Configuration  \n```bash  \nexport KAFKA_BOOTSTRAP_SERVERS=\"broker1:9092,broker2:9092\"  \nexport SPARK_MASTER=\"local[*]\"  \nexport SNOWFLAKE_ACCOUNT=\"prod.account.eu-west1\"  \nexport AIRFLOW_HOME=\"/opt/airflow\"  \n```  \nEnsure Kafka and Spark clusters are pre-provisioned. Snowflake roles and Airflow DAGs require admin access.  \n\n## Getting Started  \n1. Clone repo: `git clone https://github.com/AdVantageMedia/AdCampaignOptimizer.git`  \n2. Build Docker containers: `docker-compose up -d`  \n3. Initialize Snowflake schema: `./init_snowflake.sh`  \n4. Start Airflow: `airflow initdb && airflow scheduler`  \n\n## Usage / Examples  \n```python  \n# Kafka consumer for bid signals  \nfrom confluent_kafka import Consumer  \nconsumer = Consumer({'bootstrap.servers': 'broker1:9092', 'group.id': 'optimizer'})  \nconsumer.subscribe(['bid_signals'])  \nfor msg in consumer:  \n    bid = json.loads(msg.value())['bid']  \n    spark.sparkContext.parallelize([bid]).saveAsTextFile(\"s3a://output/bids\")  \n```  \nReal-time bid adjustments are applied via Spark SQL queries, with results ingested into Snowflake for analytics.  \n\n## Testing  \n- Unit tests: `pytest tests/unit/` (covers Kafka consumers, Spark UDFs)  \n- Integration tests: `pytest tests/integration/` (validates end-to-end pipeline latency < 200ms)  \n- Performance benchmarks: 150K+ records/sec throughput on 4-node Spark cluster.  \n\n## License  \nApache 2.0 — [LICENSE](LICENSE)"
 }

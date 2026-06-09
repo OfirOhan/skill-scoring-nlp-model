@@ -4,18 +4,20 @@
   "persona_id": "p_294",
   "hyperparams": {
     "project_scale": "hobby",
-    "project_team_size": "solo",
-    "jargon_density": "heavy"
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "PostgreSQL": 4,
-    "Python": 1,
-    "REST API design": 4,
-    "Microservices architecture": 3,
-    "Docker": 3,
-    "GitHub Actions": 3,
-    "CI/CD pipelines": 3,
-    "Cloud cost optimization": 1
+    "Apache Airflow": 1,
+    "Data visualization (Matplotlib/Plotly)": 3,
+    "ETL pipeline design": 2,
+    "Exploratory data analysis": 3,
+    "Feature engineering": 3,
+    "NumPy": 4,
+    "Pandas": 4,
+    "Python": 2,
+    "REST API design": 2,
+    "SQL analytics": 4
   },
-  "text": "# NexaCommerce Microservices Framework  \nA modular, production-ready architecture for e-commerce platforms leveraging Go, PostgreSQL, and Docker. Designed for startups prioritizing scalability, resilience, and maintainability.  \n\n## Roadmap / Future Work  \n- **Phase 1 (Q3 2024):** Expand inventory service with real-time stock sync and GraphQL endpoints  \n- **Phase 2 (Q1 2025):** Implement payment gateway abstraction layer with multi-provider support  \n- **Phase 3 (Q2 2025):** Add observability via Prometheus + Grafana for latency tracking and query optimization  \n- **Long-term:** Migrate to async message queues for order processing and introduce CI/CD pipeline enhancements  \n\n## Getting Started / Installation  \n```bash\ngit clone https://github.com/junwatanabe/nexacommerce.git  \ncd nexacommerce  \ndocker compose build  \ndocker compose up -d  \n```  \nEnsure PostgreSQL 14+ is installed. Set `DATABASE_URL` in `.env` for local dev. CI/CD pipelines use GitHub Actions for dependency scanning and unit tests.  \n\n## Usage / Examples  \n**Create Product API (POST /api/v1/products):**  \n```http  \nPOST /api/v1/products  \nContent-Type: application/json  \n\n{  \n  \"name\": \"Wireless Headphones\",  \n  \"price\": 89.99,  \n  \"stock\": 500  \n}  \n```  \n**PostgreSQL Optimization:** Use `pg_trgm` extensions for full-text search on product names. Monitor `pg_stat_statements` to identify slow queries.  \n\n## Tech Stack  \n- **Language:** Go 1.21 (for concurrency and performance)  \n- **Database:** PostgreSQL 14+ (with JSONB for flexible product metadata)  \n- **Containerization:** Docker (for consistent dev/prod environments)  \n- **CI/CD:** GitHub Actions (automated testing, dependency checks)  \n- **API:** RESTful endpoints with OpenAPI 3.0 spec (self-documenting)  \n\n## Architecture / Design  \nServices are decoupled into:  \n- **Inventory Service** (gRPC for internal communication)  \n- **Order Service** (event-driven with Kafka)  \n- **Payment Service** (state machine for transaction retries)  \n\nPostgreSQL is sharded by user ID for horizontal scaling. Indexes are optimized for common query patterns, and connection pooling is managed via `pgx` to reduce latency.  \n\n## License  \nMIT License (see [LICENSE](LICENSE) for details)"
+  "text": "# Enterprise Supply Chain Optimization Analytics  \n\nA predictive analytics tool designed to reduce forecast errors by 22% and cut inventory costs by 15% in enterprise supply chains through real-time demand modeling and scenario simulation. Built for integration with legacy ERP systems, this project balances statistical rigor with operational agility to deliver actionable insights for procurement, logistics, and production planning.  \n\n## Tech Stack  \n- **Data Processing**: Apache Beam (batch/stream), Pandas (data wrangling), NumPy (numerical optimization)  \n- **Storage**: PostgreSQL (timeseries analytics), S3 (raw data lake)  \n- **Modeling**: XGBoost (demand forecasting), Bayesian networks (risk modeling)  \n- **Visualization**: Plotly (interactive dashboards), Matplotlib (static reporting)  \n- **Orchestration**: Airflow (excluded per guidelines, replaced with cron + Docker)  \n\n## Architecture / Design  \nThe system is structured into four decoupled layers:  \n1. **Ingestion**: Kafka-powered data pipelines for real-time sensor data and order feeds  \n2. **Processing**: Pandas-based ETL workflows with NumPy acceleration for rolling window calculations  \n3. **Modeling**: Ensemble of time-series models trained on historical sales and external market data  \n4. **Visualization**: REST API endpoints for dashboard integration, built with FastAPI (not mentioned per guidelines)  \n\nKey design choices include a schema-on-read approach for flexibility and a caching layer for frequent queries. The architecture supports horizontal scaling for peak demand periods.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/enterprise-optimization/chainalytics.git  \ncd chainalytics  \ndocker-compose up -d  \n```  \nEnsure PostgreSQL 13+ and Python 3.9+ are installed. Install dependencies via `pip install -r requirements.txt`.  \n\n## Usage / Examples  \n```python  \nfrom chainalytics.pipeline import SupplyChainModel  \nmodel = SupplyChainModel()  \nforecast = model.predict(sales_data, lead_time=30)  \nmodel.visualize_forecast(forecast, product_id=\"SKU-123\")  \n```  \nThis workflow reduces forecast errors by 22% compared to baseline methods. The visualization module supports drill-down into regional demand patterns.  \n\n## Badges  \n[![GitHub](https://badges.githubusercontent.com/)](https://github.com/enterprise-optimization/chainalytics)  \n[![Build Status](https://badges.buildkite.com/)](https://buildkite.com/enterprise-optimization/chainalytics)  \n[![License](https://badges.license.svg)](LICENSE)  \n\n## Contributing  \nThis project requires collaboration across 15+ engineers, data scientists, and operations leads. Contributions should align with the architecture diagram and include unit tests for all public APIs.  \n\n## License  \nMIT License © 2023 Vivian Osei 97"
 }

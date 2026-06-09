@@ -1,75 +1,51 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Umar Bello's 9 years of experience as a Senior Data Engineer in enterprise data engineering.",
-    "title": "Umar Bello - Senior Data Engineer CV",
+    "topic_summary": "Professional CV for Johan Bakken 70, Senior Data Engineer at NexaTech Solutions",
+    "title": "Johan Bakken 70 - Senior Data Engineer",
     "doc_id": "d_p_267_00",
     "persona_id": "p_267",
     "hyperparams": {
-      "cv_format": "hybrid",
-      "geographic_convention": "US",
+      "cv_format": "bullet-heavy",
+      "geographic_convention": "Israel",
       "company_type": "startup",
-      "company_size": "large (500+)"
+      "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A GitHub README for a real-time data pipeline project using Apache Spark and Kafka in an enterprise environment.",
-    "title": "Real-Time Analytics Platform with Apache Spark",
+    "topic_summary": "A GitHub project README for a real-time analytics dashboard using Apache Flink and Kafka",
+    "title": "Real-Time Analytics Dashboard with Apache Flink",
     "doc_id": "d_p_267_01",
     "persona_id": "p_267",
     "hyperparams": {
-      "project_scale": "team-internal",
+      "project_scale": "production",
       "project_team_size": "large (15+)",
-      "jargon_density": "heavy"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "A README for a cloud migration project optimizing data workflows on AWS Glue and Redshift for enterprise scalability.",
-    "title": "Enterprise Data Warehouse Migration on AWS",
-    "doc_id": "d_p_267_02",
-    "persona_id": "p_267",
-    "hyperparams": {
-      "project_scale": "team-internal",
-      "project_team_size": "large (15+)",
-      "jargon_density": "heavy"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "A README detailing an ETL optimization project using Python and Snowflake to enhance enterprise data processing efficiency.",
-    "title": "Snowflake ETL Optimization Framework",
-    "doc_id": "d_p_267_03",
-    "persona_id": "p_267",
-    "hyperparams": {
-      "project_scale": "team-internal",
-      "project_team_size": "medium (5-15)",
-      "jargon_density": "heavy"
+      "jargon_density": "moderate"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from a team manager praising Umar's leadership in enterprise data engineering projects.",
-    "title": "Recommendation from NexaCorp Team Lead",
-    "doc_id": "d_p_267_04",
+    "topic_summary": "A recommendation letter from Johan's manager at NexaTech Solutions, highlighting his leadership and technical skills",
+    "title": "Recommendation from NexaTech Solutions Manager",
+    "doc_id": "d_p_267_02",
     "persona_id": "p_267",
     "hyperparams": {
-      "recommender_role": "direct-manager",
+      "recommender_role": "professor",
       "recommender_closeness": "occasional",
       "company_type": "FAANG",
-      "company_size": "large (500+)"
+      "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "blog",
-    "topic_summary": "A technical blog post on best practices for scaling data pipelines in enterprise environments using cloud technologies.",
-    "title": "Scaling Data Pipelines: Enterprise Strategies with Cloud Computing",
-    "doc_id": "d_p_267_05",
+    "topic_summary": "A technical blog post discussing the implementation of cloud-native data pipelines using AWS services",
+    "title": "Building Cloud-Native Data Pipelines with AWS",
+    "doc_id": "d_p_267_03",
     "persona_id": "p_267",
     "hyperparams": {
-      "blog_depth": "opinion-piece",
-      "jargon_density": "plain"
+      "blog_depth": "tutorial",
+      "jargon_density": "moderate"
     }
   }
 ]

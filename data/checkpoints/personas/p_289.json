@@ -1,57 +1,62 @@
 {
   "persona_id": "p_289",
   "hyperparams": {
-    "archetype": "security_engineer",
+    "archetype": "devops_sre",
     "years_experience": 7,
     "seniority": "senior",
-    "industry": "e-commerce",
-    "writing_style": "concise",
-    "language_fluency": "ESL",
-    "self_promotion_level": "humble",
-    "quantification_tendency": "mixed"
+    "industry": "consulting",
+    "writing_style": "verbose",
+    "language_fluency": "native",
+    "self_promotion_level": "balanced",
+    "quantification_tendency": "qualitative"
   },
-  "name": "Grace Mwangi 42",
-  "current_role": "Senior Security Engineer",
-  "company": "E-Commerce Innovations Inc.",
+  "name": "Gaurav Saxena 92",
+  "current_role": "Senior DevOps Consultant",
+  "company": "CloudNexus Solutions",
   "education": {
     "degree": "Bachelor of Science in Computer Science",
-    "university": "University of Nairobi",
+    "university": "Indian Institute of Technology, Kanpur",
     "year": 2016
   },
   "career_trajectory": [
     {
-      "role": "Junior Security Analyst",
-      "company": "TechSafe Solutions",
-      "year": 2016
+      "role": "Junior DevOps Engineer",
+      "company": "TechNova Startups",
+      "duration": "2016-2018",
+      "responsibilities": "Automated deployment pipelines, basic infrastructure provisioning, and monitoring setup."
     },
     {
-      "role": "Security Engineer",
-      "company": "GlobalShop Systems",
-      "year": 2018
+      "role": "Mid-Level SRE Engineer",
+      "company": "InnovateX Technologies",
+      "duration": "2018-2020",
+      "responsibilities": "Owned incident management processes, designed monitoring dashboards, and optimized cloud cost structures."
     },
     {
-      "role": "Senior Security Engineer",
-      "company": "E-Commerce Innovations Inc.",
-      "year": 2020
+      "role": "Senior DevOps Consultant",
+      "company": "CloudNexus Solutions",
+      "duration": "2020-2023",
+      "responsibilities": "Architected multi-cloud CI/CD platforms, mentored junior teams, and led chaos engineering initiatives."
     }
   ],
   "skills": {
-    "Network security": 4,
-    "Application security (OWASP)": 4,
-    "Penetration testing": 4,
-    "IAM/Access control": 4,
-    "Encryption & PKI": 4,
-    "Security auditing": 4,
-    "SIEM tools": 3,
-    "Vulnerability management": 3,
-    "Compliance (SOC2/GDPR)": 3,
-    "Threat modeling": 3,
-    "Incident response": 4
+    "CI/CD pipelines": 4,
+    "GitHub Actions": 4,
+    "ArgoCD": 4,
+    "Prometheus/Grafana": 5,
+    "Monitoring & alerting": 5,
+    "SLA/SLO management": 4,
+    "Kubernetes": 5,
+    "Terraform": 4,
+    "Python": 3,
+    "Linux administration": 3,
+    "Load balancing": 3,
+    "Cloud cost optimization": 3,
+    "Network automation": 1,
+    "PostgreSQL": 2
   },
   "document_ids": [
     "d_p_289_00",
     "d_p_289_01",
-    "d_p_289_02",
-    "d_p_289_03"
+    "d_p_289_02"
   ]
 }

@@ -3,25 +3,26 @@
   "type": "recommendation",
   "persona_id": "p_252",
   "hyperparams": {
-    "recommender_role": "peer",
+    "recommender_role": "skip-level",
     "recommender_closeness": "brief",
-    "company_type": "FAANG",
+    "company_type": "agency",
     "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Cloud cost optimization": 3,
-    "Cloud networking": 3,
-    "Docker": 3,
-    "GCP": 3,
-    "GitLab CI": 3,
-    "Infrastructure as Code": 3,
-    "Kubernetes": 3,
-    "Linux administration": 3,
-    "Monitoring & alerting": 3,
-    "Serverless": 3,
-    "Shell scripting": 3,
-    "Terraform": 3
+    "Agile/Scrum": 4,
+    "CI/CD pipelines": 1,
+    "Cloud cost optimization": 4,
+    "Code review": 4,
+    "Cross-team collaboration": 4,
+    "GitHub Actions": 3,
+    "GitLab CI": 2,
+    "Jenkins": 2,
+    "Mentoring": 4,
+    "Prometheus/Grafana": 3,
+    "Stakeholder communication": 4,
+    "System design": 5,
+    "Team leadership": 4,
+    "Technical writing": 4
   },
-  "text": "Eliott Marchand, a Platform Engineer at FinTech Innovators, is a solid collaborator with a knack for solving complex problems.  \n\nEliott’s AWS expertise shone when he redesigned our cloud architecture, streamlining costs without compromising performance. He’s mastered Docker and Kubernetes, ensuring seamless container orchestration across our microservices, which improved deployment efficiency. His Linux admin skills kept our systems stable, and his monitoring setup caught a critical issue before it affected users.  \n\nEliott’s GitLab CI pipelines automated testing, cutting manual checks. His Terraform scripts made infrastructure changes repeatable and safe. He’s also a quiet mentor, explaining tricky networking setups to new hires without ego.  \n\nEliott’s calm under pressure and willingness to help made him a go-to for troubleshooting. He balances technical rigor with approachability, which is rare in high-stakes environments."
+  "text": "Oleg’s system design for E-Commerce Innovators’ scaled microservices architecture was pivotal during their 2023 Black Friday surge. His decision to adopt a service mesh over traditional API gateways reduced latency by 40% and cut incident resolution time by 30%, directly enabling a 25% increase in peak traffic handling. This solution, built on Kubernetes and Prometheus/Grafana, became the team’s standard for observability.  \n\nAs a skip-level manager, I collaborated with Oleg on two cross-functional initiatives: first, optimizing cloud costs across three regions, which saved $1.2M annually through reserved instances and spot fleets; second, reengineering their CI/Flow pipeline using GitHub Actions, reducing deployment time by 50%. These projects required balancing technical rigor with stakeholder alignment.  \n\nOleg’s strength lies in translating complex technical challenges into actionable strategies. He mentored three junior architects, whose teams achieved 15% higher code review efficiency within six months. His leadership during a critical outage in Q3 2023—where he coordinated six teams to resolve a database bottleneck—prevented $500K in potential revenue loss. Beyond technical skills, Oleg’s relentless focus on clarity and accountability ensures even high-stakes decisions are grounded in data.  \n\nOleg is a rare combination of strategic vision and operational precision. His work consistently elevates both team performance and business outcomes.  \n\nContact: [Your Name], [Your Title], [Agency Name], [Email/Phone]"
 }

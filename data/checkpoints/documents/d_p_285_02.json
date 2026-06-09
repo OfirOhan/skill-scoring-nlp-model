@@ -4,20 +4,23 @@
   "persona_id": "p_285",
   "hyperparams": {
     "project_scale": "production",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "heavy"
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "A/B testing": 3,
-    "Apache Airflow": 3,
-    "Data modeling": 4,
-    "Feature engineering": 4,
-    "Hypothesis testing": 3,
-    "Python": 5,
-    "SQL analytics": 3,
-    "Statistical modeling": 4,
-    "Tableau/Power BI": 3,
-    "scikit-learn": 5
+    "scikit-learn": 1,
+    "TensorFlow": 1,
+    "PyTorch": 1,
+    "NLP": 1,
+    "Time series analysis": 1,
+    "MLOps": 1,
+    "Feature engineering": 1,
+    "Python": 1,
+    "SQL analytics": 1,
+    "Tableau/Power BI": 1,
+    "Data visualization (Matplotlib/Plotly)": 1,
+    "A/B testing": 1,
+    "Java": 1
   },
-  "text": "# FraudDetector  \nFraud detection in ad campaigns using hybrid anomaly detection and graph-based pattern analysis. Built for production environments with scalable data pipelines and real-time monitoring. Proven to reduce false positives by 32% in A/B tests during last campaign rollout.  \n\n## Getting Started  \nCheckout the repo and install dependencies via pip:  \n```bash  \npip install -r requirements.txt  \n```  \nSet up a PostgreSQL instance for metadata storage and run the ETL pipeline using Airflow DAGs. For local testing, use the `docker-compose` script to spin up a sandbox environment. Run unit tests with:  \n```bash  \npytest tests/  \n```  \nExample: Analyze a sample dataset with:  \n```python  \npython scripts/analyze_campaign.py --input data/sample.csv  \n```  \n\n## Tech Stack  \n- **Python 3.9** (core language, with custom type hints for model pipelines)  \n- **scikit-learn 1.2** (baseline anomaly detection, embedded in production workflows)  \n- **Apache Airflow 2.8** (orchestrates data ingestion, model retraining, and alerting)  \n- **Neo4j 4.4** (graph analysis for fraud network detection)  \n- **SQL (PostgreSQL)** (ETL, metadata storage, and ad-hoc analytics)  \n- **Tableau** (dashboard for real-time fraud metrics and model performance tracking)  \n\n## Usage / Examples  \nThe pipeline processes clickstream data, extracts temporal and spatial anomalies, then maps suspicious nodes in a graph. For example, a campaign with 15% click-through rate anomalies and 8% networked fraud clusters triggers a red flag. Use the `detect_fraud.py` script to validate custom datasets.  \n\n## Badges  \n[![License](https://img.shields.io/badge/license-Apache%202.0-blue)](https://opensource.org/licenses/Apache-2.0)  \n[![Tests](https://img.shields.io/badge/tests-100%25-green)](https://github.com/hawadiop/FraudDetector/actions)  \n[![Activity](https://img.shields.io/badge/last%20commit-2%20days-黄色)](https://github.com/hawadiop/FraudDetector/commits/main)  \n\n## Architecture / Design  \nThe system decouples data ingestion, feature engineering, and model inference. Core components:  \n- **Graph Analysis Layer**: Neo4j subgraphs detect coordinated fraud patterns.  \n- **Statistical Models**: Isolation Forest and Gaussian Mixture Models (GMM) for anomaly scoring.  \n- **Feedback Loop**: A/B tests validate model thresholds, with results stored in SQL for auditing.  \n\n## Contributing  \nEnhance model accuracy by refining feature engineering pipelines or expanding dataset sources. Propose new graph analysis rules for fraud detection. All contributions must include hypothesis testing and A/B validation.  \n\n## License  \nApache License 2.0"
+  "text": "# Customer Churn Prediction System  \nA production-grade solution for identifying at-risk customers using behavioral patterns in telecommunications. Built for scalability and real-time adaptability, this system integrates data pipelines, anomaly detection, and predictive modeling to deliver actionable insights for retention strategies.  \n\n## Tech Stack  \n- **Data Ingestion**: Apache Kafka for event streaming and Apache Flink for real-time processing  \n- **Storage**: Amazon S3 for raw data and PostgreSQL for structured metadata  \n- **Model Serving**: RESTful APIs with FastAPI for low-latency inference  \n- **Monitoring**: Prometheus + Grafana for system health and model drift tracking  \n- **Deployment**: Docker containers orchestrated via Kubernetes for scalable, resilient operations  \n\n## Architecture / Design  \nThe system operates as a microservices layer, decoupling data ingestion, feature processing, and model inference. Raw customer interactions are ingested via Kafka, processed into structured events by Flink, and stored in S3. A dedicated feature store in PostgreSQL powers the predictive engine, which leverages pre-trained models hosted in a secure API gateway. The architecture prioritizes horizontal scaling, with auto-scaling clusters for peak load scenarios and redundant model replicas for fault tolerance.  \n\n## Getting Started / Installation  \n1. Clone the repository using `git clone https://github.com/your-username/customer-churn-system.git`  \n2. Navigate to the project root and pull Docker images: `docker-compose pull`  \n3. Initialize the PostgreSQL database with `docker-compose run db init`  \n4. Deploy the system: `docker-compose up -d`  \n5. Verify service status via `docker ps` and access the API endpoint at `http://localhost:8000/docs`  \n\n## Usage / Examples  \nTo trigger a prediction for a new customer:  \n```bash  \ncurl -X POST http://localhost:8000/predict \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"features\": {\"usage_hours\": 120, \"support_tickets\": 3, \"plan_upgrade\": false}}'  \n```  \nThe response includes a churn probability score and recommended intervention tags.  \n\n## Badges  \n[![Build Status](https://your-ci-cd.com/builds/123)](https://your-ci-cd.com/builds/123)  \n[![Test Coverage](https://your-coverage.com/report/456)](https://your-coverage.com/report/456)  \n\n## Contributing  \nWe welcome improvements to model accuracy, system reliability, and documentation. Submit pull requests with unit tests and ensure compliance with the CI/CD pipeline. For critical changes, open an issue to discuss architecture adjustments.  \n\n## License  \nMIT License — see the [LICENSE](LICENSE) file for details."
 }

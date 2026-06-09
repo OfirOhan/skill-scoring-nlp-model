@@ -1,25 +1,23 @@
 {
   "doc_id": "d_p_153_03",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_153",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "heavy"
+    "recommender_role": "skip-level",
+    "recommender_closeness": "occasional",
+    "company_type": "agency",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "A/B testing": 3,
-    "Agile/Scrum": 3,
-    "Analytics-driven product decisions": 3,
-    "Competitive analysis": 1,
-    "Data visualization": 3,
-    "Hypothesis testing": 3,
-    "Product management": 3,
-    "Roadmap planning": 3,
-    "SQL analytics": 3,
-    "Stakeholder management": 2,
-    "Tableau/Power BI": 3,
-    "UX research": 1
+    "Apache Spark": 3,
+    "Data warehousing": 3,
+    "Docker": 3,
+    "ETL pipeline design": 3,
+    "Python": 2,
+    "REST API design": 1,
+    "Snowflake": 3,
+    "Terraform": 3,
+    "dbt": 3
   },
-  "text": "# NexaFlow Analytics Dashboard: Real-Time Data Visualization for SaaS Platforms  \n\nNexaFlow is a high-throughput analytics dashboard built for SaaS platforms, enabling real-time visualization of user behavior metrics with sub-50ms latency. Designed for scalability, it processes 10k+ data points/sec via WebSocket streams, with interactive dashboards built using React 18 and TypeScript. The project optimizes data pipeline efficiency through Kafka-based ingestion and Redis caching, reducing query latency by 40% in production.  \n\n## Getting Started / Installation  \nInstall dependencies with `npm install` and configure environment variables in `.env.local`. Run the backend server via `npm start` and frontend via `npm run dev`. Ensure Docker is installed for PostgreSQL and Grafana integration.  \n\n## Tech Stack  \n- **Frontend**: React 18, TypeScript 4.9, Chart.js 4.4  \n- **Backend**: Node.js 16, Express 4.18, PostgreSQL 15  \n- **Data Ingestion**: Kafka 3.3, Apache Flink 1.16  \n- **Monitoring**: Grafana 10.1, Prometheus 2.38  \n- **Infrastructure**: Docker 20.10, AWS Lambda (serverless deployment)  \n\n## Usage / Examples  \n```bash\n# Sample SQL query for user retention analysis  \nSELECT COUNT(*) AS retained_users  \nFROM user_activity  \nWHERE session_id IN (SELECT session_id FROM session_data WHERE event_date > CURRENT_DATE - INTERVAL '7 days')  \nAND event_type = 'login';  \n```  \nVisualize results in real-time via the dashboard’s drag-and-drop UI. Use the `@types/axios` module to fetch dynamic metrics, with caching enabled via Redis.  \n\n## Badges  \n[![Build Status](https://example.com/status)](https://example.com)  \n[![Coverage](https://example.com/coverage)](https://example.com)  \n[![Performance](https://example.com/perf)](https://example.com)  \n\n## Architecture / Design  \nThe system employs a microservices architecture with a central data pipeline. Kafka handles event streaming, while Flink processes data into Redis for low-latency access. Frontend components are decoupled via WebSockets, enabling real-time updates without full page reloads.  \n\n## Contributing  \nEnhance data pipeline efficiency or expand visualization modules. Prioritize issues labeled `perf` or `feature`. For roadmap planning, reference the `roadmap.md` document in the `docs` folder.  \n\n## License  \nMIT License. See [LICENSE](https://example.com/license) for details."
+  "text": "**Recommendation Letter for Johan Bakken**  \n\n**Academic Context**  \nJohan’s academic foundation in computational systems aligns closely with his role at NexaTech, where he leverages tools like Apache Spark to process terabytes of user data daily. His work on data warehousing solutions for real-time analytics has streamlined reporting workflows, reducing query latency by 40% in key dashboards. This mirrors his academic focus on scalable system design, which he applies with precision to both theoretical and practical challenges.  \n\n**Research Ability**  \nJohan approaches data engineering as a dynamic research problem, balancing technical rigor with business outcomes. He recently rearchitected NexaTech’s ETL pipelines using dbt, enabling modular transformations that cut deployment time by 30%. His ability to integrate Snowflake’s analytics capabilities with existing data lakes demonstrates a knack for solving complex interoperability issues. These efforts reflect a deep curiosity about optimizing data flow architectures.  \n\n**Character**  \nJohan’s reliability is evident in his consistent delivery of high-quality code, even under tight deadlines. He collaborates seamlessly with cross-functional teams, often mentoring junior engineers on best practices for Docker containerization. His work ethic is marked by attention to detail—once, he identified a subtle data type mismatch in a critical pipeline, preventing a potential $50K loss in client reporting.  \n\n**Potential**  \nJohan’s proficiency with Terraform has already automated 80% of NexaTech’s infrastructure provisioning, and his vision for scalable cloud-native solutions positions him to lead future innovations. His blend of technical acumen and pragmatic problem-solving suggests he’ll thrive in roles demanding both depth and adaptability. I’m confident he’ll continue elevating data engineering practices in any organization he joins."
 }

@@ -3,21 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_025",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "solo",
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
     "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "CI/CD pipelines": 4,
-    "Cloud cost optimization": 1,
-    "Docker": 3,
-    "Microservices architecture": 3,
-    "Node.js": 3,
-    "PostgreSQL": 4,
-    "Python": 2,
-    "REST API design": 4,
-    "React": 3
+    "Agile/Scrum": 3,
+    "CI/CD pipelines": 3,
+    "Cloud infrastructure": 1,
+    "GitHub Actions": 3,
+    "Linux administration": 2,
+    "Mentoring": 1,
+    "Monitoring & alerting": 3,
+    "Shell scripting (Bash)": 2,
+    "System design": 5,
+    "Team leadership": 1,
+    "Technical writing": 2
   },
-  "text": "# NexaCloud Analytics Dashboard  \nA real-time data visualization platform for SaaS businesses, built with React and Node.js. This project streamlines actionable insights from raw data, enabling teams to monitor KPIs, forecast trends, and optimize operational efficiency.  \n\n## Badges  \n[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github)](https://github.com/kamilaszymanska/nexacloud)  \n[![CI/CD](https://img.shields.io/badge/CI%2FCD-passing-success)](https://github.com/kamilaszymanska/nexacloud/actions)  \n[![Size](https://img.shields.io/badge/Size-120KB-lightgray)](https://github.com/kamilaszymanska/nexacloud)  \n\n## Tech Stack / Built With  \n- **Frontend**: React (TypeScript) for dynamic, responsive UIs  \n- **Backend**: Node.js (Express) for RESTful API endpoints  \n- **Database**: PostgreSQL for structured data storage and complex queries  \n- **Cloud**: AWS S3 for data backups and AWS ECS for microservice orchestration  \n- **Containerization**: Docker for consistent development and production environments  \n- **Microservices**: Modular backend services for scalability and independent deployment  \n\n## Architecture / Design  \nThe system follows a microservices architecture, with React handling the frontend and Node.js managing business logic. PostgreSQL serves as the central database, while AWS S3 ensures data durability. Docker containers isolate services, and REST APIs enable seamless communication between components.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/kamilaszymanska/nexacloud.git`  \n2. Install dependencies:  \n   ```bash  \n   cd nexacloud  \n   npm install  \n   ```  \n3. Set up environment variables in `.env` for PostgreSQL, AWS credentials, and API keys.  \n\n## Usage / Examples  \n- Fetch real-time metrics via `/api/v1/metrics` endpoint  \n- Visualize trends using React-based charts with dynamic filtering  \n- Export reports to AWS S3 via the `/api/v1/export` route  \n\n## Configuration  \n- PostgreSQL: Configure `DATABASE_URL` and connection pool settings  \n- AWS: Set `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for S3 integration  \n- API Keys: Store authentication tokens in `.env` for secure access  \n\n## Deployment  \nDeploy using Docker Compose for local testing or AWS ECS for production. CI/CD pipelines automate testing, linting, and deployment, reducing manual overhead by 40% in production environments.  \n\n## License  \nMIT License  \n[View License](https://github.com/kamilaszymanska/nexacloud/blob/main/LICENSE)"
+  "text": "# E-Commerce Scalable Platform  \nA microservices-based e-commerce platform with real-time inventory management, built to handle 10k+ concurrent users and 500k+ transactions daily. The system decouples order processing, payment gateways, and inventory tracking into modular services, ensuring horizontal scalability and fault tolerance. Designed for hobbyist-level maintenance but engineered for enterprise-grade resilience.  \n\n## Configuration  \n```bash  \n# Required environment variables  \nDATABASE_URL=postgres://user:pass@localhost:5432/ecommerce  \nREDIS_HOST=localhost  \nKAFKA_BROKERS=localhost:9092  \nEVENT_QUEUE_TOPIC=inventory_updates  \n```  \nSet `ENV=production` for staging environments. Use `docker-compose.yaml` for local development; production deployment requires Kubernetes manifests (not included).  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/your-username/ecommerce-platform.git`  \n2. Build Docker containers: `docker-compose up --build`  \n3. Run database migrations: `docker exec -it ecommerce_db psql -U user -d ecommerce -f /scripts/migrate.sql`  \n4. Seed initial data: `curl -X POST http://localhost:8080/api/v1/seed`  \n5. Verify service health: `curl http://localhost:8080/health`  \n\n## Usage / Examples  \n```bash  \n# Check inventory for product ID 123  \ncurl http://localhost:8081/api/v1/inventory/123  \n\n# Simulate real-time restock event  \ncurl -X POST http://localhost:8082/api/v1/events/restock -d '{\"product_id\": 456, \"quantity\": 1000}'  \n```  \nThe system broadcasts inventory changes via Kafka, triggering updates in the order and payment services within 500ms.  \n\n## Tech Stack  \n- **Languages**: Go (core services), Python (data processing)  \n- **Databases**: PostgreSQL (transactional), Redis (caching)  \n- **Message Queues**: Apache Kafka (event streaming)  \n- **Orchestration**: Docker Compose (local), Kubernetes (production)  \n- **Monitoring**: Prometheus + Grafana (service health)  \n\n## Architecture / Design  \nThe platform employs a **command-query separation** pattern for inventory updates, decoupling write operations from read queries. Key components:  \n- **Inventory Service**: Serves as the single source of truth, with Kafka-backed event logging.  \n- **Order Service**: Uses CQRS for handling complex order workflows.  \n- **Payment Gateway**: Integrates with third-party APIs via a facade pattern.  \n- **Circuit Breakers**: Implemented in the order service to prevent cascading failures.  \n- **Resilience**: Retries with exponential backoff for Kafka producers; dead-letter queues for failed events.  \n\n## License  \nMIT License  \n[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  \n\n## Badges  \n[![GitHub Actions Status](https://img.shields.io/github/actions/workflow/file?workflow=ci.yml)](https://github.com/your-username/ecommerce-platform/actions)  \n[![Test Coverage](https://img.shields.io/coveralls/your-username/ecommerce-platform)](https://coveralls.io/github/your-username/ecommerce-platform)  \n[![Lines of Code](https://img.shields.io/tokei/lines/your-username/ecommerce-platform)](https://github.com/your-username/ecommerce-platform)"
 }

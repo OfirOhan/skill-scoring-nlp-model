@@ -3,21 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_236",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "moderate"
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "API testing": 4,
-    "BDD/TDD": 4,
-    "Go": 1,
-    "Java": 1,
-    "Performance testing (JMeter/k6)": 1,
-    "Python": 4,
-    "REST API design": 4,
-    "Selenium/Playwright": 5,
-    "Test strategy design": 1,
-    "Test automation": 1
+    "Android development": 3,
+    "Flutter": 4,
+    "JavaScript": 1,
+    "Kotlin": 3,
+    "React": 1,
+    "React Native": 4,
+    "Swift": 4,
+    "TypeScript": 2,
+    "Webpack/Vite": 1,
+    "iOS development": 3
   },
-  "text": "# Automated Regression Testing Framework for SaaS Applications  \nA scalable, maintainable solution for regression testing in SaaS environments, leveraging Python, Selenium, Playwright, and REST API integration to reduce manual effort and ensure consistent quality across feature releases.  \n\n---\n\n## Badges  \n[![GitHub](https://badgen.net/badge/github/AditiKapoor/gray)](https://github.com/AditiKapoor)  \n[![Python](https://badgen.net/badge/python/3.9/gray)](https://python.org)  \n[![CI/CD](https://badgen.net/badge/ci/cd/gray)](https://github.com/AditiKapoor/actions)  \n\n---\n\n## Getting Started / Installation  \n1. **Prerequisites**: Python 3.9+ with `pip` installed.  \n2. **Install dependencies**:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n3. **Environment setup**:  \n   - Set `SELENIUM_BROWSER` and `PLAYWRIGHT_BROWSER` environment variables for cross-browser compatibility.  \n   - Configure API endpoints in `config.yaml` for dynamic test execution.  \n4. **Run tests**:  \n   ```bash  \n   pytest test_suite/  \n   ```  \n   Results are logged in `reports/` with detailed failure analysis.  \n\n---\n\n## Tech Stack  \n- **Language**: Python (3.9) for scriptability and integration.  \n- **UI Automation**: Selenium (for legacy browsers) + Playwright (for modern, headless execution).  \n- **API Testing**: Python `requests` library with BDD-style test cases.  \n- **REST API Design**: Custom middleware for mocking endpoints during CI/CD pipelines.  \n- **CI/CD**: GitHub Actions for parallel test execution and artifact archiving.  \n\n---\n\n## Architecture / Design  \nThe framework is modular, with separate modules for API, UI, and data validation. Selenium and Playwright are abstracted into a shared driver layer, enabling seamless switching between browsers. REST API tests are decoupled from UI workflows, allowing independent scaling. BDD-style test cases (using `pytest-bdd`) are stored in `features/`, ensuring alignment with business requirements.  \n\n---\n\n## Usage / Examples  \n**API Test Example**:  \n```python  \ndef test_user_creation():  \n    response = requests.post(\"https://api.example.com/users\", json={\"name\": \"TestUser\"})  \n    assert response.status_code == 201  \n    assert \"id\" in response.json()  \n```  \n**UI Test Example**:  \n```python  \n@when(\"the user navigates to the dashboard\")  \ndef navigate_to_dashboard(page):  \n    page.goto(\"https://app.example.com/dashboard\")  \n    assert page.title() == \"Dashboard\"  \n```  \n\n---\n\n## Testing  \n- **Unit Tests**: Validate core modules (e.g., API request handlers, browser initialization).  \n- **Integration Tests**: Ensure API/UI interactions align with production workflows.  \n- **Coverage**: Achieved 92%+ line coverage via `pytest-cov`, with critical paths prioritized.  \n- **Reliability**: 85% reduction in test flakiness after implementing Playwright's auto-waiting and retry logic.  \n\n---\n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# SecureFin - Fintech Mobile App for Secure Financial Management  \n\nSecureFin is a cross-platform fintech app designed to simplify personal finance while prioritizing security. It enables users to manage transactions, track budgets, and send money securely using biometric authentication. Built with a focus on privacy, the app encrypts data at rest and in transit, ensuring sensitive financial information remains protected.  \n\n## Getting Started / Installation  \nInstall the app from the Google Play Store or App Store for immediate use. For developers, clone the repository and open the project in Android Studio (Kotlin) or Xcode (Swift). Ensure your development environment includes Flutter 3.10+ and the necessary SDKs for Android/iOS. Run `flutter pub get` to fetch dependencies, then build for your target platform.  \n\n## Usage / Examples  \n1. **Biometric Login**: Unlock the app with fingerprint or facial recognition (Android/iOS).  \n2. **Transaction History**: View encrypted transaction logs with filters for date and category.  \n3. **Send Money**: Initiate transfers using a PIN or biometric verification, with real-time fraud detection.  \n4. **Budget Tracking**: Set financial goals and receive alerts for overspending.  \n\n## Badges  \n[security badge] [cross-platform badge] [open-source badge]  \n\n## Tech Stack  \n- **Flutter**: Cross-platform UI with native performance optimizations.  \n- **Kotlin**: Android backend logic and native module integrations.  \n- **Swift**: iOS-specific security protocols and UI refinements.  \n- **TypeScript**: Lightweight scripting for tooling automation.  \n- **Firebase**: Real-time database for sync and analytics.  \n- **Biometric SDKs**: Android Keystore, iOS Touch ID/faceID for secure authentication.  \n\n## Architecture / Design  \nThe app follows a layered architecture: a Flutter UI layer communicates with a Kotlin/Swift backend via REST APIs. Sensitive operations (e.g., encryption) are handled by native modules, ensuring compliance with platform-specific security standards. Data is encrypted using AES-256 and stored in secure enclaves on both Android and iOS.  \n\n## Contributing  \nSubmit bug reports, feature suggestions, or code improvements via GitHub Issues. For code contributions, fork the repo, create a feature branch, and submit a pull request with clear documentation. All changes must include unit tests and pass CI/CD checks.  \n\n## License  \nMIT License — see [license file] for details."
 }

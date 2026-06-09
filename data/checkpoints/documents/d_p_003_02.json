@@ -3,25 +3,20 @@
   "type": "recommendation",
   "persona_id": "p_003",
   "hyperparams": {
-    "recommender_role": "direct-manager",
-    "recommender_closeness": "worked-daily",
-    "company_type": "FAANG",
-    "company_size": "large (500+)"
+    "recommender_role": "professor",
+    "recommender_closeness": "brief",
+    "company_type": "startup",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Ansible": 3,
-    "CI/CD pipelines": 3,
-    "Chaos engineering": 2,
-    "Cloud cost optimization": 3,
-    "Docker": 3,
-    "Infrastructure as Code": 3,
-    "Kubernetes": 3,
-    "Linux administration": 3,
-    "Monitoring & alerting": 3,
-    "Python": 2,
-    "Shell scripting": 2,
-    "Terraform": 3
+    "C/C++ (embedded)": 4,
+    "Firmware development": 4,
+    "Go": 1,
+    "IoT protocols (MQTT/CoAP)": 4,
+    "Network automation": 1,
+    "Python": 1,
+    "REST API design": 3,
+    "RTOS": 5
   },
-  "text": "Carmen Delgado’s recent work on AWS cost optimization for NebulaTech’s core platform stands out. She identified a 25% overprovisioning leak in their EC2 clusters and rearchitected the infrastructure using Terraform, reducing monthly spend by $120K while improving deployment consistency. Her Ansible playbooks streamlined multi-environment syncs, cutting manual errors by 40% during a critical scaling event.  \n\nCarmen joined NebulaTech as a Linux admin but quickly transitioned into platform engineering, mastering CI/CD pipelines and Kubernetes orchestration. She built a unified deployment framework that integrated Docker and Prometheus, enabling automated scaling during their first major product launch. Her ability to balance operational reliability with rapid innovation made her a key driver of their cloud migration.  \n\nWhen NebulaTech faced a surge in traffic during a security audit, Carmen spearheaded a chaos engineering exercise. She simulated AWS region outages and API throttling, exposing bottlenecks in their monitoring stack. Her fixes—refining alert thresholds and adding redundant Kubernetes nodes—boosted system resilience without compromising SLA compliance.  \n\nBeyond technical contributions, Carmen mentors junior engineers in Terraform and cloud cost modeling. She’s also bridged gaps between dev and ops teams by standardizing infrastructure-as-code practices. Her calm under pressure and knack for turning ambiguity into actionable insights make her a dependable collaborator.  \n\nCarmen’s technical depth, problem-solving agility, and leadership in cross-functional teams align closely with the values of a high-performing platform engineer. I’d welcome the opportunity to discuss her potential further."
+  "text": "Lucas Martin, a Senior Embedded Engineer at FinTech Innovators Inc., is a pragmatic problem-solver with a track record of shipping reliable, scalable systems under tight deadlines.  \n\nHis work on firmware for secure payment gateways cut latency by 30% while maintaining compliance with PCI standards. He architected a modular RTOS framework that reduced integration time for new hardware partners by 40%, enabling the team to meet critical release milestones. Lucas also led the migration of IoT devices from MQTT to CoAP, improving battery efficiency by 15% across 20k+ endpoints.  \n\nBeyond technical skills, he’s a consistent collaborator who balances deep expertise with clear communication. When debugging a critical firmware bug, he spent 48 hours cross-referencing hardware logs and code traces to isolate a race condition, ensuring zero downtime during a major update. His reliability and attention to detail make him a trusted resource in high-stakes environments.  \n\nLucas’s ability to translate complex constraints into robust, maintainable solutions makes him a strong fit for any team prioritizing precision and long-term stability."
 }

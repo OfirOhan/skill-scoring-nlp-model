@@ -3,23 +3,19 @@
   "type": "project_readme",
   "persona_id": "p_167",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "solo",
-    "jargon_density": "plain"
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "CI/CD pipelines": 3,
-    "Docker": 3,
-    "GitHub Actions": 3,
-    "Go": 1,
-    "Kubernetes": 2,
-    "Microservices architecture": 3,
-    "Monitoring & alerting": 3,
-    "PostgreSQL": 3,
-    "Prometheus/Grafana": 3,
-    "Python": 1,
-    "REST API design": 4,
-    "Terraform": 1
+    "apache_airflow": 1,
+    "data_modeling": 1,
+    "feature_engineering": 3,
+    "python": 3,
+    "rest_api_design": 1,
+    "scikit-learn": 4,
+    "statistical_modeling": 3,
+    "time_series_analysis": 1
   },
-  "text": "# NexaGame Server Optimization  \n\nOptimized Node.js backend for real-time game servers, reducing latency by 30% and improving throughput by 40% through Redis caching and asynchronous architecture.  \n\n## Getting Started / Installation  \nClone the repository:  \n```bash  \ngit clone https://github.com/yourusername/nexagameserver.git  \ncd nexagameserver  \n```  \nBuild with Docker:  \n```bash  \ndocker compose build  \ndocker compose up  \n```  \nRun tests via GitHub Actions:  \n```bash  \ngithub-actions run ci  \n```  \nSet environment variables for Redis and PostgreSQL connections.  \n\n## Usage / Examples  \nInitialize the server:  \n```bash  \nnode server.js  \n```  \nHandle player connections via REST API:  \n```bash  \nPOST /api/players  \n```  \nRedis is used for session storage, reducing DB queries by 65%. Example benchmark:  \n```bash  \ncurl -X POST http://localhost:3000/api/benchmark  \n```  \nMetrics: 15,000 RPS with 99.9% latency under 150ms.  \n\n## Badges  \n[![Build Status](https://github.com/yourusername/nexagameserver/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/nexagameserver/actions/workflows/ci.yml)  \n[![Test Coverage](https://codecov.io/gh/yourusername/nexagameserver/branch/main/graph/badge.svg)](https://codecov.io/gh/yourusername/nexagameserver)  \n\n## Tech Stack  \n- Node.js 18  \n- Redis 7  \n- PostgreSQL 14  \n- Docker 24  \n- GitHub Actions 3  \n- Prometheus/Grafana for monitoring  \n\n## Architecture / Design  \nMicroservices architecture with Redis as the primary cache layer. REST API endpoints handle player authentication and game state updates. Docker containers isolate services, and Prometheus tracks latency metrics.  \n\n## Contributing  \nPull requests are welcome! For major changes, open an issue first. This project is team-internal, so ensure compliance with company standards before submitting.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# CyberThreatX: Zero-Day Threat Detection System  \nA production-grade machine learning framework for real-time zero-day threat detection via network traffic analysis. Built to process terabytes of pcap data with sub-second latency, achieving 99.8% detection accuracy on adversarial payloads while maintaining <0.1% false positives in live environments.  \n\n## Badges  \n[![Build Status](https://github.com/rohan-kulkarni/CyberThreatX/actions/workflows/build.yml/badge.svg)](https://github.com/rohan-kulkarni/CyberThreatX/actions/workflows/build.yml)  \n[![Code Coverage](https://img.shields.io/coverity/coverage/rohan-kulkarni_CyberThreatX?label=Coverage)](https://scan.coverity.com/projects/rohan-kulkarni-cyberthreatx)  \n[![Security](https://img.shields.io/sonarqube/security-rating/rohan-kulkarni_CyberThreatX?label=Security)](https://sonarqube.org/project_key/rohan-kulkarni_CyberThreatX)  \n\n## Getting Started / Installation  \n```bash  \n# Prerequisites: Python 3.9+ with venv, Docker 20.10+  \ngit clone https://github.com/rohan-kulkarni/CyberThreatX.git  \ncd CyberThreatX  \npython -m venv venv && source venv/bin/activate  \npip install -r requirements.txt  \n# For production deployment: docker-compose up -d  \n```  \nEnsure pcap files are formatted as PCAPNG with IPv4/IPv6 payloads. Preprocessing is handled via `data_prep.py` which extracts features from raw packets.  \n\n## Tech Stack  \n- **Core**: Python 3.9, scikit-learn 1.2, TensorFlow 2.10 (for anomaly detection)  \n- **Data**: Pandas 2.0, NumPy 1.23, PyShark 0.4.4 (packet parsing)  \n- **Infrastructure**: Kafka 3.1 (real-time ingestion), Redis 7.0 (cache layer)  \n- **Security**: PyCryptodome 3.10 (encryption), OWASP ZAP 2.12 (runtime)  \n\n## Architecture / Design  \nThe system operates as a pipeline: raw pcap data is ingested via Kafka, parsed into feature vectors using PyShark, then processed by a hybrid model (Isolation Forest + LSTM) trained on 120M+ labeled packets. Detection results are streamed to SIEM via syslog. Latency is capped at 450ms through parallelized feature extraction and model inference.  \n\n## Usage / Examples  \n```python  \nfrom threatx import ThreatDetector  \ndetector = ThreatDetector(model_path=\"models/zero_day_v2.h5\")  \n# Example: Analyze pcap file  \nresults = detector.analyze(\"malicious_traffic.pcapng\")  \nprint(results)  # Outputs: { \"threat_score\": 98.2, \"signature_match\": False, \"suspicious_patterns\": [...] }  \n```  \nFor real-time monitoring, integrate with Bro/Zeek to feed alerts into the pipeline.  \n\n## Testing  \n- **Unit Tests**: 100% coverage for core modules (pytest, pytest-cov)  \n- **Integration Tests**: Simulated 10Gbps traffic with 15% adversarial payload mix  \n- **Benchmarking**: Achieved 2.3x speedup over baseline models via quantized inference  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

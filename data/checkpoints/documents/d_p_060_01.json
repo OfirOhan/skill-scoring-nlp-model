@@ -3,21 +3,20 @@
   "type": "project_readme",
   "persona_id": "p_060",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "moderate"
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "C/C++ (embedded)": 3,
-    "Embedded Linux": 3,
-    "Firmware development": 3,
-    "GitLab CI": 2,
-    "Hardware-software integration": 3,
-    "IoT protocols (MQTT/CoAP)": 3,
-    "Python": 2,
+    "Design systems": 4,
+    "Next.js": 4,
+    "Python": 1,
     "REST API design": 2,
-    "RTOS": 3,
-    "Shell scripting (Bash)": 2
+    "React": 5,
+    "Test automation": 2,
+    "TypeScript": 5,
+    "Web performance optimization": 4,
+    "Webpack/Vite": 3
   },
-  "text": "# SmartInventory: IoT-Based Inventory Management System  \nReal-time, sensor-driven inventory tracking for e-commerce warehouses, reducing stockouts by 98% and manual audits by 30% through edge-computing and cloud integration.  \n\n## Contributing  \nWe welcome contributions to expand sensor support, refine cloud integration, or improve firmware robustness. Start by addressing open issues labeled *enhancement* or *bug*—prioritize edge device stability and protocol optimization. All pull requests must include unit tests and CI pipeline validation.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/your-username/SmartInventory.git`  \n2. Install dependencies: `docker compose build && docker compose up -d`  \n3. Configure MQTT broker (Mosquitto) with credentials in `.env`  \n4. Flash firmware to STM32Nucleo boards using STM32CubeIDE (see `firmware/README.md`)  \n\n## Usage / Examples  \n- **Warehouse tracking**: Deploy sensors on shelves to log stock levels every 15 seconds via MQTT.  \n- **Alerts**: Trigger SMS notifications via REST API when thresholds drop below 10% capacity.  \n- **Integration**: Sync with Shopify via Webhooks for real-time order fulfillment updates.  \n\n## Tech Stack  \n- **Embedded**: C11 (STM32 HAL), FreeRTOS, MQTT over TLS  \n- **Cloud**: AWS IoT Core (MQTT bridge), Python Flask API  \n- **Data**: InfluxDB (time-series), Grafana (dashboard)  \n- **Utils**: Bash scripts for CI/CD, Docker for containerization  \n\n## Architecture / Design  \nThe system operates in three layers:  \n1. **Edge**: STM32 microcontrollers run firmware to aggregate sensor data (humidity, motion, RFID) and batch MQTT publishes every 10 seconds.  \n2. **Cloud**: AWS IoT Core routes messages to Python-based analytics layer, which triggers alerts or syncs with e-commerce APIs.  \n3. **Persistence**: InfluxDB stores raw metrics, while PostgreSQL handles order-state correlations.  \n\n## License  \nMIT License — see `LICENSE` for details.  \n\n## Badges  \n![Accuracy](https://img.shields.io/badge/accuracy-98%25-green)  \n![Efficiency](https://img.shields.io/badge/efficiency-30%25-blue)  \n![RTOS](https://img.shields.io/badge/RTOS-FreeRTOS-yellow)  \n![Protocol](https://img.shields.io/badge/protocol-MQTT%20%26%20CoAP-orange)"
+  "text": "# React SaaS Dashboard for Real-Time Analytics  \n\nA React-based dashboard for SaaS analytics with live data visualization and interactive charting. Built for teams needing actionable insights without infrastructure overhead.  \n\n## Contributing  \nThis project is open for collaboration. If you're adding features, improving accessibility, or refining the design system, open a pull request. All contributions undergo code review and align with our performance and maintainability standards.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/your-username/react-saas-dashboard.git`  \n2. Install dependencies: `npm install`  \n3. Set up environment variables for API endpoints (see `.env.example`).  \n4. Start the dev server: `npm run dev`  \n\n## Usage / Examples  \nThe dashboard includes:  \n- Live metrics from WebSocket feeds  \n- Interactive charts (Chart.js) with drill-down capabilities  \n- Customizable widgets for KPIs and trend analysis  \n- Dark/light mode toggle via Tailwind CSS  \n\nExample: To add a new chart, extend the `ChartContainer` component and update the `dataSources` array in `src/config.js`.  \n\n## Tech Stack  \n- **Frontend**: React, TypeScript, Vite, Chart.js, Tailwind CSS  \n- **Design System**: Custom tokens and components shared across the SaaS product suite  \n- **Performance**: Code-splitting, lazy loading, and image optimization via Vite plugins  \n\n## Architecture / Design  \nThe app follows a modular monorepo structure, with shared components and utilities in a sibling package. Real-time data is handled via WebSocket in a dedicated service, decoupled from the UI layer. TypeScript enforces type safety across all data flows, and the design system ensures consistency across 3+ products.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![GitHub](https://badges.gitter.im/Join%20chat.svg)](https://gitter.im/your-username/react-saas-dashboard?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)  \n[![npm](https://img.shields.io/npm/v/react-saas-dashboard)](https://www.npmjs.com/package/react-saas-dashboard)  \n[![Build Status](https://github.com/your-username/react-saas-dashboard/workflows/CI%20Pipeline/badge.svg)](https://github.com/your-username/react-saas-dashboard/actions)"
 }

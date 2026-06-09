@@ -1,46 +1,22 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional curriculum vitae detailing Deepti Mishra's 8-year experience as a Senior Tech Lead in e-commerce",
-    "title": "Deepti Mishra CV",
+    "topic_summary": "Senior Site Reliability Engineer with 9 years of experience in fintech, specializing in DevOps and SRE practices.",
+    "title": "Rabia Yilmaz - Senior Site Reliability Engineer",
     "doc_id": "d_p_211_00",
     "persona_id": "p_211",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
+      "cv_format": "paragraph",
       "geographic_convention": "US",
-      "company_type": "agency",
+      "company_type": "enterprise",
       "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "Scalable microservices architecture for an e-commerce marketplace platform",
-    "title": "Ecomify Microservices Marketplace",
+    "topic_summary": "A scalable microservices architecture for a fintech payment gateway, optimized for high availability and low latency.",
+    "title": "Financial Microservices Architecture",
     "doc_id": "d_p_211_01",
-    "persona_id": "p_211",
-    "hyperparams": {
-      "project_scale": "production",
-      "project_team_size": "medium (5-15)",
-      "jargon_density": "heavy"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "AI-driven product recommendation system with real-time user behavior analysis",
-    "title": "SmartCart Recommender Engine",
-    "doc_id": "d_p_211_02",
-    "persona_id": "p_211",
-    "hyperparams": {
-      "project_scale": "production",
-      "project_team_size": "medium (5-15)",
-      "jargon_density": "heavy"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "Real-time analytics dashboard for tracking e-commerce KPIs and customer engagement",
-    "title": "Ecomify Insights Dashboard",
-    "doc_id": "d_p_211_03",
     "persona_id": "p_211",
     "hyperparams": {
       "project_scale": "production",
@@ -49,23 +25,35 @@
     }
   },
   {
-    "doc_type": "recommendation",
-    "topic_summary": "Endorsement from Deepti's manager highlighting her leadership in tech architecture",
-    "title": "Recommendation from Ecomify CTO",
-    "doc_id": "d_p_211_04",
+    "doc_type": "project_readme",
+    "topic_summary": "Real-time monitoring system for transaction processing with automated alerting and compliance reporting.",
+    "title": "Real-Time Transaction Monitoring System",
+    "doc_id": "d_p_211_02",
     "persona_id": "p_211",
     "hyperparams": {
-      "recommender_role": "peer",
-      "recommender_closeness": "occasional",
+      "project_scale": "team-internal",
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "Recommendation from Rabia's manager highlighting her expertise in incident response and system reliability.",
+    "title": "Recommendation from Tech Lead",
+    "doc_id": "d_p_211_03",
+    "persona_id": "p_211",
+    "hyperparams": {
+      "recommender_role": "professor",
+      "recommender_closeness": "worked-daily",
       "company_type": "startup",
       "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "blog",
-    "topic_summary": "Exploring AI integration strategies for next-gen e-commerce platforms",
-    "title": "AI-Driven E-Commerce: The Future of Customer Engagement",
-    "doc_id": "d_p_211_05",
+    "topic_summary": "Cloud-Native Security in Fintech: Best Practices for Protecting Financial Systems.",
+    "title": "Securing Cloud-Native Applications in Fintech",
+    "doc_id": "d_p_211_04",
     "persona_id": "p_211",
     "hyperparams": {
       "blog_depth": "opinion-piece",

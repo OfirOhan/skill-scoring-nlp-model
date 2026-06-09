@@ -3,26 +3,22 @@
   "type": "cv",
   "persona_id": "p_169",
   "hyperparams": {
-    "cv_format": "paragraph",
-    "geographic_convention": "Europe",
-    "company_type": "enterprise",
-    "company_size": "large (500+)"
+    "cv_format": "minimal",
+    "geographic_convention": "Israel",
+    "company_type": "academic",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Apache Airflow": 3,
-    "Apache Kafka": 3,
     "Apache Spark": 3,
-    "Cloud cost optimization": 3,
-    "Data modeling": 3,
-    "Data warehousing": 4,
-    "Docker": 3,
-    "ETL pipeline design": 3,
-    "Kubernetes": 3,
+    "Data modeling": 1,
+    "Feature engineering": 5,
+    "NumPy": 5,
+    "Pandas": 4,
     "Python": 3,
-    "Snowflake": 3,
-    "Terraform": 3,
-    "dbt": 3
+    "REST API design": 2,
+    "Statistical modeling": 4,
+    "Time series analysis": 4,
+    "scikit-learn": 5
   },
-  "text": "Lorenzo Ricci  \nEmail: l.ricci@healthinsightanalytics.com | LinkedIn: linkedin.com/in/lorenicci | GitHub: github.com/lorenicci | Location: Milan, Italy  \n\nA data engineering professional with three years of experience in building scalable data infrastructure for healthtech enterprises. Specialized in designing cloud-native data pipelines, optimizing data workflows, and ensuring robust data governance. Proven ability to translate complex business requirements into technical solutions that drive operational efficiency and support advanced analytics.  \n\nAt HealthInsight Analytics, I led the redesign of their data warehouse architecture, transitioning from a legacy system to a modern Snowflake-based solution. This involved creating a unified data model that integrated patient records, clinical data, and financial metrics, enabling real-time analytics for 12+ internal teams. I also spearheaded the implementation of a cloud cost optimization strategy, reducing infrastructure expenses by 18% through resource tagging and automated scaling policies. My work directly supported the development of predictive analytics models used in chronic disease management, which improved diagnostic accuracy by 12% in pilot programs.  \n\nIn my previous role at VitalCare Technologies, I focused on building and maintaining ETL pipelines that processed over 500 million records monthly. These pipelines, built with Apache Spark and Airflow, ensured timely data ingestion for reporting and machine learning workflows. I also managed the company’s AWS infrastructure, deploying Terraform to automate environment provisioning and implementing Kubernetes for container orchestration. A key project involved integrating Apache Kafka to handle real-time patient monitoring data, which reduced latency in alert systems by 25%.  \n\nDuring my internship at HealthTrack Innovations, I contributed to the development of a data visualization tool using Python and Tableau, which simplified reporting for non-technical stakeholders. This experience laid the foundation for my focus on data accessibility and automation in subsequent roles.  \n\n**Projects**  \n1. **HealthInsight Data Warehouse Overhaul**  \n   - Redesigned a star-schema data model in Snowflake to support cross-functional analytics, reducing query latency by 30%  \n   - Implemented dbt for data transformation, improving pipeline reliability and version control  \n   - Collaborated with data scientists to ensure schema alignment with machine learning workloads  \n\n2. **Real-Time Patient Monitoring System**  \n   - Built a Kafka-powered pipeline to ingest and process telemetry data from 50+ medical devices  \n   - Integrated Spark Streaming for anomaly detection, enabling sub-second alert generation  \n   - Deployed Docker containers on Kubernetes to ensure high availability during peak usage  \n\n3. **Cloud Cost Optimization Initiative**  \n   - Analyzed AWS spending patterns and identified 20+ cost-saving opportunities  \n   - Automated resource tagging and implemented Spot Instance strategies for batch jobs  \n   - Reduced monthly cloud expenses by 18% while maintaining 99.9% SLA  \n\n**Education**  \nMaster’s in Data Science, Massachusetts Institute of Technology (2021)  \n\n**Languages**  \nEnglish (native), Italian (fluent)  \n\n**Certifications**  \nAWS Certified Solutions Architect – Associate  \nGoogle Cloud Professional Data Engineer  \nSnowflake Certified Data Engineer"
+  "text": "Marcus Johnson  \nTel Aviv, Israel | +972-54-123-4567 | marcus.j@cybershield.com  \n\n**Professional Experience**  \nCyberShield Analytics | Cybersecurity Data Scientist (2021–Present)  \nDeveloped machine learning pipelines that reduced false positives by 32% in network intrusion detection systems. Designed feature engineering frameworks using NumPy and scikit-learn, which became foundational for cross-team anomaly detection models. Spearheaded time series analysis projects that improved threat prediction accuracy by 18% over baseline models. Collaborated with security teams to integrate real-time data streams into existing detection workflows.  \n\nSecureNet Systems | Data Analyst (2019–2021)  \nBuilt Python-based dashboards using Pandas and Tableau to visualize endpoint security metrics, enabling faster incident response. Created statistical models to identify patterns in user behavior, flagging 15% more suspicious activity than prior systems. Automated data processing pipelines that cut manual reporting time by 40%.  \n\n**Technical Skills / Technologies**  \nApache Spark: Engineered distributed data processing workflows for log analysis, handling 10TB+ datasets with 95%+ query latency reduction.  \nPython: Core to all data pipeline development, including custom scripts for threat intelligence aggregation.  \nPandas: Led the migration of legacy data processing systems to Pandas-based architectures, reducing data preparation time by 60%.  \nStatistical Modeling: Built predictive models using Bayesian inference and logistic regression to forecast breach probabilities.  \nTime Series Analysis: Developed LSTM-based models for detecting zero-day attacks, achieving 91% precision in live tests.  \nFeature Engineering: Architect for a feature store used across 12+ security models, reducing model drift by 25%.  \nNumPy: Core to low-level data manipulation in high-performance analytics systems, optimized for GPU acceleration.  \nscikit-learn: Designed ensemble models for malware classification, achieving 94% F1 score in production environments.  \nREST API Design: Integrated lightweight endpoints for real-time model scoring, enabling third-party threat intelligence sharing.  \n\n**Languages**  \nEnglish (fluent), Hebrew (professional working proficiency)  \n\n**Projects / Side Projects**  \n**Threat Detection Platform** (CyberShield Analytics)  \nArchitected a real-time system combining Spark, Pandas, and scikit-learn to process network traffic, resulting in 28% faster threat identification.  \n\n**Malware Classification Model** (Side Project)  \nBuilt a deep learning framework using NumPy and TensorFlow to classify malware types with 92% accuracy, open-sourced for community use.  \n\n**Security Analytics Toolkit** (SecureNet Systems)  \nDeveloped a Python library for automating log analysis, adopted internally by 8 teams and later contributed to an open-source security project.  \n\n**Certifications**  \nAWS Certified Machine Learning – Specialty (2022)  \nGoogle Cloud Professional Data Engineer (2021)  \n\n**Awards & Achievements**  \nCyberShield Analytics Innovation Award (2023) – Recognized for advancing predictive analytics in threat detection.  \nWinner, Israel Cybersecurity Hackathon (2022) – Developed a real-time attack detection system using Spark and scikit-learn.  \nPatent Pending: \"Automated Feature Selection for Cybersecurity Models\" (2023) – Filed with the Israeli Patent Office."
 }

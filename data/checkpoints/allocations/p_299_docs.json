@@ -1,40 +1,76 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional CV for Dina Soliman, Security Engineer at AdvertiseSphere Inc.",
-    "title": "Dina Soliman - Security Engineer CV",
+    "topic_summary": "Professional resume highlighting 15 years of data science experience in startups",
+    "title": "Elena Popescu - Staff Data Scientist CV",
     "doc_id": "d_p_299_00",
     "persona_id": "p_299",
     "hyperparams": {
       "cv_format": "paragraph",
-      "geographic_convention": "Israel",
+      "geographic_convention": "India",
       "company_type": "startup",
       "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "README for a real-time ad fraud detection system using machine learning and network security protocols",
-    "title": "AdGuard: Real-Time Ad Fraud Detection System",
+    "topic_summary": "A GitHub project README for a predictive analytics tool focused on customer churn in SaaS startups",
+    "title": "Predictive Analytics for Customer Churn in SaaS Startups",
     "doc_id": "d_p_299_01",
     "persona_id": "p_299",
     "hyperparams": {
-      "project_scale": "production",
-      "project_team_size": "large (15+)",
+      "project_scale": "team-internal",
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A GitHub project README for an A/B testing framework designed to optimize product features in early-stage startups",
+    "title": "A/B Testing Framework for Product Optimization in Startups",
+    "doc_id": "d_p_299_02",
+    "persona_id": "p_299",
+    "hyperparams": {
+      "project_scale": "academic",
+      "project_team_size": "solo",
       "jargon_density": "plain"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "Letter from Dina's manager praising her leadership in securing AdvertiseSphere's ad tech infrastructure",
-    "title": "Recommendation from AdvertiseSphere CTO",
-    "doc_id": "d_p_299_02",
+    "topic_summary": "A recommendation letter from a current manager at Nexa Insights highlighting Elena's leadership and technical expertise",
+    "title": "Recommendation from Nexa Insights Manager",
+    "doc_id": "d_p_299_03",
     "persona_id": "p_299",
     "hyperparams": {
-      "recommender_role": "skip-level",
-      "recommender_closeness": "brief",
-      "company_type": "FAANG",
-      "company_size": "large (500+)"
+      "recommender_role": "peer",
+      "recommender_closeness": "worked-daily",
+      "company_type": "academic",
+      "company_size": "small (<50)"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation letter from a peer data scientist at a previous startup, emphasizing collaboration and innovation",
+    "title": "Recommendation from Peer Data Scientist",
+    "doc_id": "d_p_299_04",
+    "persona_id": "p_299",
+    "hyperparams": {
+      "recommender_role": "peer",
+      "recommender_closeness": "worked-daily",
+      "company_type": "academic",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post exploring advanced techniques in time series forecasting tailored for startup environments",
+    "title": "Advanced Techniques in Time Series Forecasting for Startups",
+    "doc_id": "d_p_299_05",
+    "persona_id": "p_299",
+    "hyperparams": {
+      "blog_depth": "deep-dive",
+      "jargon_density": "heavy"
     }
   }
 ]

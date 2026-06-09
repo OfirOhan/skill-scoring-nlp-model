@@ -1,40 +1,51 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Priscilla Ferreira's 2 years of experience as a backend engineer in adtech, focusing on scalable systems and API development.",
-    "title": "Priscilla Ferreira - Backend Engineer",
+    "topic_summary": "Professional CV highlighting 11 years of experience as a mobile developer in the SaaS industry",
+    "title": "Bhavna Chandra - Staff Mobile Developer",
     "doc_id": "d_p_008_00",
     "persona_id": "p_008",
     "hyperparams": {
-      "cv_format": "hybrid",
-      "geographic_convention": "Europe",
+      "cv_format": "minimal",
+      "geographic_convention": "Israel",
       "company_type": "enterprise",
       "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A GitHub README for a real-time ad bidding system built using Python and PostgreSQL, optimized for adtech scalability.",
-    "title": "Real-Time Ad Bidding System",
+    "topic_summary": "README for a SaaS task management app built using Flutter and Firebase, focusing on team collaboration features",
+    "title": "TaskFlow: SaaS Task Management App for Teams",
     "doc_id": "d_p_008_01",
     "persona_id": "p_008",
     "hyperparams": {
       "project_scale": "production",
-      "project_team_size": "medium (5-15)",
-      "jargon_density": "plain"
+      "project_team_size": "solo",
+      "jargon_density": "moderate"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from her manager at AdVelox Technologies praising her expertise in backend systems and team collaboration.",
-    "title": "Recommendation for Priscilla Ferreira",
+    "topic_summary": "Professional recommendation letter from Bhavna's manager, highlighting her technical skills and leadership in mobile development projects",
+    "title": "Recommendation for Bhavna Chandra - Staff Mobile Developer",
     "doc_id": "d_p_008_02",
     "persona_id": "p_008",
     "hyperparams": {
-      "recommender_role": "peer",
-      "recommender_closeness": "worked-daily",
-      "company_type": "FAANG",
-      "company_size": "large (500+)"
+      "recommender_role": "direct-manager",
+      "recommender_closeness": "occasional",
+      "company_type": "academic",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "Technical blog post discussing emerging trends in mobile development for SaaS companies, including cross-platform frameworks and AI integration",
+    "title": "The Future of Mobile Development in SaaS: Trends and Best Practices",
+    "doc_id": "d_p_008_03",
+    "persona_id": "p_008",
+    "hyperparams": {
+      "blog_depth": "opinion-piece",
+      "jargon_density": "heavy"
     }
   }
 ]

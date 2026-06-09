@@ -3,24 +3,19 @@
   "type": "project_readme",
   "persona_id": "p_148",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "large (15+)",
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
     "jargon_density": "plain"
   },
   "skill_evidence": {
-    "A/B testing": 2,
-    "Analytics-driven product decisions": 3,
-    "Data visualization (Plotly)": 3,
-    "Design thinking": 1,
-    "Hypothesis testing": 1,
-    "Product management": 3,
-    "Roadmap planning": 3,
-    "SQL analytics": 3,
-    "Stakeholder management": 2,
-    "Tableau/Power BI": 3,
-    "UX research": 3,
-    "User journey mapping": 3,
-    "Wireframing/prototyping": 3
+    "DNS/DHCP": 1,
+    "Firewall configuration": 1,
+    "IAM/Access control": 3,
+    "Network automation": 1,
+    "Penetration testing": 3,
+    "Security auditing": 2,
+    "TCP/IP": 1,
+    "Threat modeling": 3
   },
-  "text": "# FinDash: Real-Time Financial Analytics Dashboard  \nA scalable, modular dashboard for small businesses to monitor cash flow, revenue trends, and expense patterns in real time. Built with a focus on performance, security, and usability, this project processes over 10 million transactions daily across 50+ active clients. The architecture balances microservices for data ingestion with a centralized analytics layer, enabling sub-second query responses for critical financial KPIs.  \n\n## Acknowledgments  \nThis project would not exist without the contributions of the 15+ cross-functional team members who dedicated 12 months to refining the system. Special thanks to the open-source community for libraries like **Plotly** (for dynamic visualizations), **PostgreSQL** (for scalable data storage), and **Kafka** (for real-time event streaming). The team also leveraged **Tableau** for initial UX prototyping and **Power BI** for stakeholder demos, ensuring alignment with business goals.  \n\n## Getting Started / Installation  \n1. Clone the repository using `git clone https://github.com/your-username/FinDash.git`  \n2. Install dependencies via `npm install` or `pip install -r requirements.txt`  \n3. Set up PostgreSQL with the provided `docker-compose.yml` for local development  \n4. Configure API keys for third-party services in `.env.local`  \n5. Run migrations with `python manage.py migrate` or `npx prisma migrate deploy`  \n\n## Usage / Examples  \nLaunch the dashboard by running `npm start` or `python manage.py runserver`. Navigate to the **Cash Flow Monitor** tab to view real-time revenue streams, or use the **Expense Analyzer** to drill into category-wise spending. For custom reports, use the SQL query interface to filter data by date ranges or account types. Export visualizations as PNGs or CSVs via the **Export Panel**.  \n\n## Tech Stack  \n- **Frontend**: React (with TypeScript) for dynamic UI components  \n- **Backend**: Python (FastAPI) for RESTful APIs and data processing  \n- **Database**: PostgreSQL with TimescaleDB for time-series analytics  \n- **Streaming**: Apache Kafka for real-time transaction ingestion  \n- **Visualizations**: Plotly Dash for interactive charts  \n- **Security**: OAuth2 for user authentication and TLS for data in transit  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details  \n\n## Badges  \n[![Build Status](https://img.shields.io/endpoint?url=https%3A%2F%2Factions-badge-cache-prod.herokuapp.com%2Fbadge%3Frepo%3Dyour-username%2FFinDash%26branch%3Dmain)](https://github.com/your-username/FinDash/actions)  \n[![Code Coverage](https://img.shields.io/endpoint?url=https%3A%2F%2Factions-badge-cache-prod.herokuapp.com%2Fbadge%3Frepo%3Dyour-username%2FFinDash%26branch%3Dmain%26query%3Dcoverage)](https://github.com/your-username/FinDash/actions)  \n\n## Contributing  \nWe welcome contributions that align with the project’s focus on scalability and user-centric design. Submit pull requests with tests, and reference Jira tickets for feature requests. All code must adhere to the Prettier formatter and pass CI/CD checks. For non-code contributions, reach out via the GitHub Discussions board to share feedback on UX workflows or data visualization improvements."
+  "text": "# SecureAPI Gateway  \nProtecting microservices with authentication, rate limiting, and real-time monitoring. Built for NovaTech's production environment to secure internal APIs while maintaining scalability.  \n\n---\n\n## Badges  \n[![GitHub](https://badges.debian.net/github)](https://github.com/yourusername/SecureAPI-Gateway)  \n[![CI/CD](https://badges.debian.net/ci)](https://github.com/yourusername/SecureAPI-Gateway/actions)  \n[![License](https://badges.debian.net/license)](https://github.com/yourusername/SecureAPI-Gateway/blob/main/LICENSE)  \n[![Production](https://badges.debian.net/production)](https://github.com/yourusername/SecureAPI-Gateway)  \n\n---\n\n## Tech Stack  \n- **Backend**: Node.js + Express for routing and middleware  \n- **Auth**: JWT for stateless session management  \n- **Rate Limiting**: Redis for distributed token bucket logic  \n- **Monitoring**: Prometheus + Grafana for real-time metrics  \n- **Deployment**: Docker + Kubernetes for containerized orchestration  \n- **Type Safety**: TypeScript for robust type validation  \n\n---\n\n## Architecture / Design  \nThe gateway acts as a single entry point for all microservices, enforcing security policies before routing requests. JWT validation occurs first, followed by rate-limiting checks based on user roles. Metrics are collected via Prometheus and visualized in Grafana for anomaly detection. TLS is enforced for all external communications, and sensitive data is encrypted at rest.  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/yourusername/SecureAPI-Gateway.git`  \n2. Install dependencies: `npm install`  \n3. Set environment variables for JWT secrets, Redis URLs, and Prometheus endpoints.  \n4. Run the server: `npm start`  \n5. Deploy with Docker: `docker-compose up -d`  \n\n---\n\n## Usage / Examples  \n```bash\ncurl -X GET https://api.example.com/secure-endpoint \\\n  -H \"Authorization: Bearer <JWT_TOKEN>\"\n```  \nRate limiting is configured per route via Redis keys. Monitoring dashboards are accessible at `http://localhost:3000/grafana`.  \n\n---\n\n## Contributing  \nPull requests are welcome! Focus on improving security audits, refining IAM policies, or expanding threat models. All contributions must include tests and documentation.  \n\n---\n\n## License  \nMIT License. See [LICENSE](https://github.com/yourusername/SecureAPI-Gateway/blob/main/LICENSE) for details."
 }

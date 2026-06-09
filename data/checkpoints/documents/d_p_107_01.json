@@ -3,24 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_107",
   "hyperparams": {
-    "project_scale": "hobby",
+    "project_scale": "production",
     "project_team_size": "solo",
     "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Apache Spark": 2,
-    "Computer vision": 1,
-    "Data warehousing": 2,
-    "ETL pipeline design": 3,
-    "GCP": 3,
-    "Hugging Face Transformers": 3,
-    "MLOps (MLflow/W&B)": 3,
-    "Model deployment": 2,
-    "NLP": 3,
-    "PyTorch": 3,
+    "AWS": 2,
+    "Docker": 2,
+    "GraphQL": 3,
+    "Linux administration": 1,
+    "Node.js": 3,
+    "PostgreSQL": 3,
+    "Python": 3,
     "REST API design": 3,
-    "TensorFlow": 3,
-    "scikit-learn": 3
+    "React": 3,
+    "TypeScript": 3,
+    "Web performance optimization": 2,
+    "Webpack": 2
   },
-  "text": "# Predictive Analytics for Hospital Readmissions  \nA machine learning model to identify high-risk patients and reduce preventable hospital readmissions through actionable insights. Built as a personal project to bridge clinical data with predictive modeling for healthcare improvement.  \n\n## Contributing  \nThis project is a work in progress, but your insights on data curation or model improvements would be invaluable. Propose features like risk stratification visualizations or integration with clinical workflows. Pull requests are welcome—start by discussing ideas in the issues.  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/your-username/predictive-analytics.git  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n3. Set up a virtual environment (recommended) and ensure Python 3.9+ is installed.  \n\n## Usage / Examples  \nRun the training pipeline:  \n```bash  \npython train.py --data_path ./data/clinical_records.csv  \n```  \nThe script loads synthetic clinical data (HIPAA-compliant), extracts features like admission length and comorbidities, and trains a gradient-boosted model. For inference, use the REST API endpoint `/predict` with a JSON payload containing patient metrics.  \n\n## Tech Stack  \n- **Python** (3.9+)  \n- **scikit-learn** (feature engineering, baseline models)  \n- **PyTorch** (custom neural network for advanced risk scoring)  \n- **GCP** (data storage, cloud compute for batch processing)  \n- **MLflow** (experiment tracking, model registry)  \n- **Flask** (lightweight API for deployment)  \n\n## Architecture / Design  \nThe pipeline ingests structured clinical data via pandas, transforms it with scikit-learn's `ColumnTransformer`, and trains models using both traditional ML and PyTorch-based approaches. GCP handles large-scale data storage, while MLflow logs hyperparameters and metrics. The API layer abstracts model inference for integration with hospital systems.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![MIT License](https://badges.frappr.com/license/mit/50/50.png)](LICENSE)  \n[![GitHub Actions](https://badges.frappr.com/job/your-username/predictive-analytics/50/50.png)](https://github.com/your-username/predictive-analytics/actions)  \n[![Tech Stack](https://badges.frappr.com/tech/python/50/50.png)](https://github.com/your-username/predictive-analytics)"
+  "text": "# HealthTrack: Chronic Disease Management Platform  \n\nHealthTrack is a full-stack application designed to streamline chronic disease management for healthcare providers. It securely stores patient data, enables real-time analytics, and offers intuitive tools for monitoring conditions like diabetes and hypertension. Built for healthcare professionals, it balances usability with compliance, ensuring sensitive data is protected while empowering clinical decision-making.  \n\n## Contributing  \nThis project is open for contributions, particularly in refining data models, expanding analytics modules, or improving user workflows. If you’re comfortable with healthcare data standards or have experience with clinical workflows, your input would align well with the project’s goals.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/xanderdevries/healthtrack.git`  \n2. Navigate to the project root and install dependencies:  \n   ```bash  \n   npm install  \n   ```  \n3. Set up PostgreSQL: Create a database named `healthtrack_db` and configure `config/db.js` with credentials.  \n4. Initialize the backend:  \n   ```bash  \n   cd backend  \n   npm install  \n   ```  \n5. Start the development server:  \n   ```bash  \n   npm run dev  \n   ```  \n6. Build the frontend:  \n   ```bash  \n   cd ../frontend  \n   npm install  \n   npm run build  \n   ```  \n\n## Usage / Examples  \nTo add a new patient, use the CLI command:  \n```bash  \nnpx healthtrack-cli add-patient --name \"Jane Doe\" --condition \"diabetes\"  \n```  \nFor real-time analytics, navigate to `http://localhost:3000/analytics` and filter by condition type. The platform also supports secure access via OAuth2 for institutional integrations.  \n\n## Tech Stack  \n- **Frontend**: React (TypeScript) for dynamic UI components  \n- **Backend**: Node.js (Express) with GraphQL for data fetching  \n- **Database**: PostgreSQL for structured patient records  \n- **Data Processing**: Python scripts for generating clinical reports  \n- **APIs**: REST endpoints for third-party system integrations  \n\n## Architecture / Design  \nThe monorepo structure separates frontend, backend, and data processing modules. GraphQL powers the frontend’s data layer, while REST APIs handle external integrations. PostgreSQL is optimized for read-heavy analytics queries, and Python scripts process raw data into actionable insights. Security is prioritized through end-to-end encryption and role-based access controls.  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/license/xanderdevries/healthtrack)](LICENSE)  \n[![ Travis CI](https://img.shields.io/travis/xanderdevries/healthtrack)](https://travis-ci.com/xanderdevries/healthtrack)  \n[![npm](https://img.shields.io/npm/v/healthtrack)](https://www.npmjs.com/package/healthtrack)"
 }

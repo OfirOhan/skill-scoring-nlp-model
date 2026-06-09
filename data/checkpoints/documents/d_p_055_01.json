@@ -3,22 +3,20 @@
   "type": "project_readme",
   "persona_id": "p_055",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "large (15+)",
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
     "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "Apache Airflow": 1,
-    "Data modeling": 2,
-    "Data visualization (Matplotlib/Plotly)": 3,
-    "ETL pipeline design": 1,
-    "Feature engineering": 2,
-    "Jupyter notebooks": 3,
-    "NumPy": 3,
-    "Pandas": 3,
+    "API testing": 4,
+    "CI/CD pipelines": 2,
+    "Go": 2,
+    "Performance testing (JMeter/k6)": 3,
     "Python": 3,
     "REST API design": 1,
-    "SQL analytics": 3
+    "Security testing": 5,
+    "Test automation": 4,
+    "Test strategy design": 3
   },
-  "text": "# Customer Churn Prediction Model  \nA machine learning project to forecast SaaS customer churn using historical user data, achieving 89% accuracy in production testing. Built for hobby-scale experimentation with a cross-functional team of 12+ collaborators.  \n\n## Getting Started / Installation  \nInstall dependencies via pip:  \n```bash  \npip install -r requirements.txt  \n```  \nDownload the dataset from [this link](https://example.com/data) and place it in the `data/` directory. Ensure Python 3.9+ is installed.  \n\n## Tech Stack  \n- **Language**: Python 3.10  \n- **Data Processing**: Pandas (for ETL), NumPy (for numerical operations)  \n- **Modeling**: XGBoost (optimized for imbalanced datasets)  \n- **Visualization**: Matplotlib (static reports), Plotly (interactive dashboards)  \n- **Storage**: S3-compatible object storage (for production deployment)  \n- **Data Modeling**: Lightweight schema design for relational queries (SQL)  \n- **Feature Engineering**: Manual selection of 12+ predictive features  \n\n## Usage / Examples  \nTrain the model with:  \n```bash  \npython train.py --data_path data/churn.csv  \n```  \nGenerate a visualization report:  \n```bash  \npython generate_report.py --output_dir reports/  \n```  \nExplore data in Jupyter notebooks: `notebooks/churn_analysis.ipynb`  \n\n## Badges  \n⭐ 1.2k stars · 📈 89% accuracy · 🧠 12+ contributors  \n\n## Architecture / Design  \nThe system follows a modular pipeline: SQL queries extract user behavior metrics, which are cleaned and transformed using Pandas. Features are engineered to capture usage patterns and support vector interactions. The XGBoost model is trained on a stratified sample, with validation metrics tracked in real-time. Visualizations are generated as HTML files for stakeholder review.  \n\n## Contributing  \nPull requests welcome! Focus on improving feature importance analysis or expanding SQL integration for real-time data.  \n\n## License  \nMIT License (see [LICENSE](LICENSE))"
+  "text": "# SecureTest: Automated Security Vulnerability Detection Tool  \n\nSecureTest is a lightweight framework designed to identify common security vulnerabilities in web applications through automated testing. Built with a focus on precision and adaptability, it integrates seamlessly into development workflows to catch issues early. The tool emphasizes structured testing strategies and prioritizes security at every stage of the testing lifecycle.  \n\n## Testing  \nSecureTest leverages Python-based test scripts to simulate real-world attack vectors, such as SQL injection and XSS, while adhering to strict security protocols. Testing workflows are modular, allowing teams to customize test scenarios based on application architecture. For example, during a recent project, the tool uncovered a misconfigured CORS policy in a microservices setup, which was later resolved before production deployment. Performance testing with k6 was used to validate how the tool handles high-throughput environments, ensuring it scales without compromising accuracy.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies using `pip install -r requirements.txt`. For local testing, run `python main.py --config config.yaml` to execute predefined test cases. The configuration file allows users to specify target endpoints, authentication credentials, and vulnerability types to scan.  \n\n## Usage / Examples  \nTo test a web application:  \n```bash  \npython main.py --config config.yaml --target https://example.com/api  \n```  \nThis command initiates a scan for injection flaws, insecure headers, and misconfigured security headers. Results are saved in JSON format, with severity ratings and remediation suggestions. For API-specific testing, use the `--api-only` flag to focus on endpoint-level vulnerabilities.  \n\n## Tech Stack  \n- Python 3.9+  \n- Requests & BeautifulSoup for HTTP interactions  \n- PyYAML for configuration parsing  \n- k6 for performance validation  \n- Markdown for documentation  \n\n## Architecture / Design  \nThe architecture prioritizes separation of concerns, with distinct modules for request handling, vulnerability detection, and result aggregation. Security testing decisions center on minimizing false positives while maximizing coverage. For instance, the tool uses context-aware validation to differentiate between benign and malicious payloads. Mentoring junior engineers on secure coding practices has been a key focus, ensuring test scripts align with industry standards like OWASP Top Ten.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details.  \n\n## Contributing  \nPull requests are welcome! Ensure your changes include updated tests and documentation. For security-related contributions, follow the [security guidelines](SECURITY.md) to report vulnerabilities responsibly."
 }

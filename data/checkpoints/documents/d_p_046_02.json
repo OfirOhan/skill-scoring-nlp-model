@@ -1,32 +1,23 @@
 {
   "doc_id": "d_p_046_02",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_046",
   "hyperparams": {
-    "blog_depth": "tutorial",
-    "jargon_density": "moderate"
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "ArgoCD": 3,
-    "CI/CD pipelines": 5,
-    "Chaos engineering": 3,
-    "Cloud cost optimization": 3,
-    "Cloud networking (VPC/subnets)": 3,
-    "Configuration management (Ansible)": 3,
-    "Docker": 4,
-    "GCP": 5,
-    "GitHub Actions": 3,
-    "GitLab CI": 5,
-    "Jenkins": 2,
-    "Kubernetes": 5,
-    "Linux administration": 5,
-    "Log management (ELK)": 2,
-    "Monitoring & alerting": 5,
-    "Prometheus/Grafana": 5,
-    "SLA/SLO management": 3,
-    "Shell scripting (Bash)": 3,
-    "Terraform": 5
+    "3D graphics (OpenGL/Vulkan)": 1,
+    "C#/.NET": 3,
+    "Game networking": 4,
+    "Game physics": 1,
+    "Go": 1,
+    "Java": 1,
+    "Python": 1,
+    "REST API design": 1,
+    "Unity": 3,
+    "Unreal Engine": 1
   },
-  "text": "Context  \nAt our enterprise, we migrated a monolithic application to a microservices architecture on Kubernetes, spanning AWS and GCP. The system’s complexity grew exponentially, with over 150 services, each exposing metrics via different endpoints. While Prometheus was already in use for some services, the lack of a unified observability layer led to fragmented visibility, making root cause analysis during outages a guessing game.  \n\nChallenge  \nThe primary hurdle was reconciling disparate metrics from services using Prometheus exporters, Kubernetes metrics, and custom dashboards. Our existing setup relied on ad-hoc Grafana panels, which were inconsistent and lacked correlation between service health, infrastructure metrics, and business KPIs. During a recent incident, a 45-minute outage was traced to a misconfigured autoscaler in AWS, but the lack of contextual data delayed resolution. We needed a holistic view of the system’s state, from container-level metrics to cloud costs, without manual intervention.  \n\nSolution  \nWe rearchitected observability around Prometheus as the central metric source, integrating Kubernetes metrics, custom exporters, and AWS/GCP cloud provider metrics via the CloudWatch and Stackdriver Prometheus exporters. Grafana became the unified visualization layer, with dashboards auto-generated using Prometheus’ remote write and Grafana’s templating capabilities. We leveraged Terraform to standardize Prometheus server configurations across clusters and used ArgoCD to sync Grafana dashboards across environments. Chaos engineering exercises were baked into the observability pipeline, simulating network partitions and resource exhaustion to validate alerting rules.  \n\nResults  \nPost-implementation, mean time to resolution (MTTR) for critical incidents dropped by 40%, and SLA compliance improved to 99.95%. The unified dashboard enabled correlation between service latency spikes and cloud cost anomalies, revealing a 12% overprovisioning in GCP compute instances. Automated alert suppression rules reduced noise by 65%, while Prometheus’ query language (PromQL) allowed teams to drill into root causes with custom queries.  \n\nLessons Learned  \nObservability isn’t just about metrics—it’s about context. We learned to prioritize tooling that reduces friction, like using Prometheus’ service discovery to auto-instrument services without manual configuration. Collaboration between SRE, DevOps, and business teams was critical to align dashboards with KPIs. Lastly, observability is a moving target: we’ve since added custom metrics for API request latencies and integrated with GitLab CI for automated dashboard updates. The journey taught us that true observability requires as much architecture as it does tooling."
+  "text": "# NexuNet: Multiplayer Networking Framework  \nNexuNet is a battle-tested, high-throughput networking framework for real-time multiplayer games, built on Photon and C#. Designed for large-scale projects with 15+ engineers, it reduces latency by 32% and maintains 99.95% connection stability in production environments.  \n\n## API Reference  \n- **`NexuNetClient`**: Manages Photon connections, auto-reconnects in 1.2s avg, supports 500+ concurrent sessions  \n- **`MessageRouter`**: Prioritizes critical sync updates (movement, health) over non-critical data, ensuring 98%+ delivery reliability  \n- **`ConnectionPool`**: Caches 10+ server endpoints, dynamically selects optimal routes based on regional latency (avg 25ms round-trip)  \n- **`LatencyProfiler`**: Exposes per-client jitter metrics (std dev <8ms) and packet loss stats (≤0.15%)  \n\n## Usage / Examples  \n```csharp  \n// Initialize with Photon server config  \nvar client = new NexuNetClient(new PhotonServerConfig(\"eu-west-1\", 5000));  \nclient.OnPlayerDisconnect += HandleDisconnection;  \n\n// Sync critical state updates  \nclient.Publish(\"movement\", new MovementPacket(playerId, position));  \nclient.Subscribe(\"health\", HandleHealthUpdate);  \n```  \n\n## Getting Started / Installation  \n1. Install via NuGet: `Install-Package NexuNet.Core`  \n2. Configure Photon server credentials in `appsettings.json`  \n3. Initialize framework in Unity's `Awake()` method with `NexuNetClient.Startup()`  \n4. Enable TLS 1.2+ for secure data streams  \n\n## Tech Stack  \n- **Language**: C# 9.0+ with .NET Standard 2.1  \n- **Networking**: Photon Cloud + custom UDP tunneling  \n- **Hosting**: AWS Lambda for edge routing, EC2 for core relays  \n- **Monitoring**: Prometheus metrics + Grafana dashboards  \n\n## Architecture / Design  \nNexuNet uses a layered architecture:  \n1. **Transport Layer**: Dual-stack TCP/UDP with congestion control  \n2. **Message Layer**: Protocol buffers for binary serialization  \n3. **Logic Layer**: Event-driven state sync with deterministic reconciliation  \n4. **Monitoring Layer**: Real-time analytics for 10k+ concurrent users  \n\nThe framework handles 500k+ packets/sec with 99.99% delivery reliability, optimized for 60fps sync in Unity.  \n\n## License  \nMIT License (see [LICENSE](LICENSE))  \n\n## Badges  \n[![Build Status](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/daria/123456/raw/status.json)](https://github.com/daria/NexuNet)  \n[![Version](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/daria/123456/raw/version.json)](https://github.com/daria/NexuNet)"
 }

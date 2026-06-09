@@ -1,26 +1,25 @@
 {
   "doc_id": "d_p_030_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_030",
   "hyperparams": {
-    "recommender_role": "peer",
-    "recommender_closeness": "worked-daily",
-    "company_type": "FAANG",
-    "company_size": "large (500+)"
+    "project_scale": "hobby",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "API testing": 1,
-    "BDD/TDD": 2,
+    "Team leadership": 1,
+    "Mentoring": 1,
+    "System design": 1,
+    "Agile/Scrum": 1,
+    "Cross-team collaboration": 1,
+    "Stakeholder communication": 1,
+    "Technical writing": 1,
     "CI/CD pipelines": 1,
     "GitHub Actions": 1,
-    "Integration testing": 1,
-    "Python": 3,
-    "REST API design": 1,
-    "Selenium/Playwright": 1,
-    "Test automation": 3,
-    "Test strategy design": 2,
-    "Unit testing": 2,
-    "Web accessibility (WCAG)": 2
+    "Prometheus/Grafana": 1,
+    "Linux administration": 1,
+    "Shell scripting (Bash)": 1
   },
-  "text": "Aiden and I first collided during a chaotic product launch at NexaLogic. The team was racing to fix a critical payment processing bug that was causing user frustration. While others scrambled to reproduce the issue, Aiden quietly dug into the logs, cross-referenced user feedback, and traced the problem to a subtle edge case in the checkout flow. His calm persistence led to a fix that avoided a potential PR disaster. That incident cemented his reputation as someone who doesn’t just find bugs but understands the human impact of them.  \n\nAiden’s role as a QA engineer is less about “testing” and more about being the team’s quality anchor. He’s the one who’ll ask, “What if a user with a screen reader encounters this?” or “How does this behave under low-bandwidth conditions?” His work ethic is unshakable—he’ll spend hours refining test scenarios or mentoring junior engineers, even when no one’s watching.  \n\nWhat stands out is his knack for turning ambiguity into clarity. When our team debated whether to prioritize a flaky UI test or a critical backend check, Aiden built a lightweight Python script to simulate real-world load, proving which issue demanded immediate action. He also quietly championed accessibility checks, ensuring our tools met WCAG standards without fanfare.  \n\nIf you’re looking for someone who blends technical rigor with empathy, Aiden is your person. He’s not just reliable—he’s the kind of teammate who makes everyone better without ever asking for credit."
+  "text": "# FraudGuard: AI-Powered Fraud Detection for Fintech  \nA real-time fraud detection system leveraging machine learning to analyze transaction patterns and flag suspicious activities. Built as a hobby project for fintech use cases, prioritizing speed, accuracy, and adaptability to evolving threats.  \n\n---\n\n## Badges  \n[![GitHub](https://img.shields.io/github/stars/FarahNazari/FraudGuard?style=social)](https://github.com/FarahNazari/FraudGuard)  \n[![Python](https://img.shields.io/badge/python-3.9-blue)](https://www.python.org/downloads/release/python-3912/)  \n[![License](https://img.shields.io/badge/license-MIT-yellow)](https://github.com/FarahNazari/FraudGuard/blob/main/LICENSE)  \n\n---\n\n## Tech Stack  \n- **Core**: Python 3.9, FastAPI for real-time API endpoints  \n- **ML**: Scikit-learn for anomaly detection, TensorFlow Lite for lightweight inference  \n- **Database**: PostgreSQL for storing transaction metadata and model metadata  \n- **Caching**: Redis to manage real-time alert queues  \n- **Utilities**: Pandas for data preprocessing, NumPy for numerical operations  \n\n---\n\n## Architecture / Design  \nFraudGuard processes transactions in two phases:  \n1. **Ingestion Layer**: Raw transaction data streams into a Kafka topic, parsed into structured JSON.  \n2. **Detection Layer**: A trained Isolation Forest model (optimized for low-latency inference) evaluates each transaction. Suspicious patterns trigger alerts via a webhook, logged in PostgreSQL.  \n\nThe system balances precision and recall by dynamically adjusting model thresholds based on historical fraud rates. Redis caches recent alerts to prevent duplicate notifications.  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/FarahNazari/FraudGuard.git  \n   cd FraudGuard  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n3. Set up PostgreSQL and Redis instances. Update `.env` with your credentials.  \n\n---\n\n## Usage / Examples  \n**Simulate a transaction check**:  \n```bash  \ncurl -X POST \"http://localhost:8000/analyze\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"amount\": 1500.00,\n    \"timestamp\": \"2023-10-05T14:32:00Z\",\n    \"user_id\": \"U123456\"\n  }'\n```  \n**Expected response**:  \n```json  \n{\"is_fraud\": false, \"confidence_score\": 0.12, \"alert_level\": \"info\"}  \n```  \n\n---\n\n## Contributing  \nPull requests are welcome! For major changes, open an issue to discuss the approach.  \n\n---\n\n## License  \nMIT License. See [LICENSE](https://github.com/FarahNazari/FraudGuard/blob/main/LICENSE) for details."
 }

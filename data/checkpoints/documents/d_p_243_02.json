@@ -1,25 +1,26 @@
 {
   "doc_id": "d_p_243_02",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_243",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "solo",
-    "jargon_density": "heavy"
+    "recommender_role": "peer",
+    "recommender_closeness": "worked-daily",
+    "company_type": "agency",
+    "company_size": "large (500+)"
   },
   "skill_evidence": {
-    "Application security (OWASP)": 2,
-    "Encryption & PKI": 3,
-    "Firewall configuration": 3,
-    "IAM/Access control": 3,
-    "Linux administration": 3,
-    "Monitoring & alerting": 3,
-    "Network automation": 2,
-    "Network security": 3,
-    "Penetration testing": 1,
-    "SIEM tools": 3,
-    "Security auditing": 1,
-    "TCP/IP": 2
+    "AWS": 3,
+    "Apache Airflow": 3,
+    "Apache Spark": 3,
+    "Cloud cost optimization": 3,
+    "Data modeling": 3,
+    "Data warehousing": 3,
+    "Docker": 3,
+    "ETL pipeline design": 3,
+    "Linux administration": 1,
+    "Python": 2,
+    "Snowflake": 4,
+    "Terraform": 3
   },
-  "text": "# Real-Time Threat Detection System  \nA production-grade machine learning pipeline for adversarial pattern recognition in adtech environments, leveraging distributed computing and cryptographic validation to mitigate real-time fraud and botnet activity  \n\n## Tech Stack  \n- **Core**: Python 3.9, TensorFlow 2.12, PyTorch 2.0, Apache Kafka 3.3  \n- **Infrastructure**: Docker 20.10, Kubernetes 1.25 (for autoscaling), Prometheus 2.34  \n- **Security**: AES-256-GCM encryption, TLS 1.3, IAM roles via AWS STS, Open Policy Agent for RBAC  \n- **Data**: Apache Arrow, Parquet, Kafka Streams, Redis for rate limiting  \n- **Monitoring**: Grafana 10.1, ELK stack (for audit logs), SIEM integration (Splunk/ELK)  \n\n## Architecture / Design  \nThe system operates as a layered stream processing pipeline:  \n1. **Ingestion Layer**: Kafka topics ingest raw ad impressions (schema validated via Avro)  \n2. **Preprocessing**: PySpark workers perform feature extraction (hashing, entropy analysis) and anomaly scoring  \n3. **Inference Engine**: TensorFlow Serving hosts ensemble models (XGBoost + LSTM) with model versioning and A/B testing  \n4. **Alerting**: Prometheus alerts trigger AWS Lambda functions for SIEM ingestion and firewall rule updates  \n5. **Security Layer**: All data paths enforce TLS 1.3, with dynamic IP whitelisting via iptables and ephemeral certificates for microservices  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/farhanachowdhury/rt-tds.git  \ncd rt-tds  \ndocker-compose build --no-cache  \ndocker-compose up -d  \n# Initialize Kafka topics and schema registry  \n./scripts/bootstrap_kafka.sh  \n```  \n\n## Usage / Examples  \n```bash  \n# Run inference pipeline  \npython3 inference.py --model_version v2.3 --threshold 0.85  \n\n# Example alert workflow  \ncurl -X POST http://localhost:8080/alerts \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"ip\": \"192.168.1.100\", \"score\": 0.92, \"timestamp\": \"2023-10-05T14:48:00Z\"}'  \n```  \n\n## Badges  \n[![Security Compliance](https://img.shields.io/badge/security-compliant-blue)](https://github.com/farhanachowdhury/rt-tds/security/dependabot)  \n[![Production Ready](https://img.shields.io/badge/production-ready-green)](https://github.com/farhanachowdhury/rt-tds/actions)  \n\n## Contributing  \nEnhance model accuracy via adversarial training or optimize Kafka partitioning strategies. Contributions to security hardening (e.g., certificate rotation workflows) are especially valued.  \n\n## License  \nMIT License (see [LICENSE](https://github.com/farhanachowdhury/rt-tds/blob/main/LICENSE))"
+  "text": "Peter Morrison has been a steady force in our data engineering team over the past three years. As a Data Engineer at E-Commerce Innovators Inc., he’s the go-to person for solving messy data problems. His work with AWS and Snowflake has been critical to our analytics stack. Last year, he rearchitected our data warehouse to run on Snowflake, which cut query latency by 40% and let our analysts scale their work during peak seasons. He’s also mastered Airflow for orchestrating ETL pipelines, ensuring our data flows reliably even during high-volume events.  \n\nPeter’s technical depth shows in how he approaches challenges. He’ll often refactor legacy Spark jobs to optimize performance, and his cost-saving tweaks on AWS have saved the team thousands annually. While he’s not a fan of flashy tech jargon, he’ll spend hours tuning a query or debugging a pipeline until it’s flawless.  \n\nBeyond code, Peter’s a calm presence. He’s the one who patiently explains complex systems to non-technical stakeholders, and he’ll stay late to fix a broken deployment if needed. His reliability and attention to detail make him a trusted partner.  \n\nOur team’s ability to pivot quickly during market shifts owes much to Peter’s adaptability. He’s not just a technician—he’s a problem-solver who balances technical rigor with a knack for collaboration. I’d wholeheartedly recommend him for any role requiring both depth and discretion."
 }

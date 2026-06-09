@@ -1,27 +1,50 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Varun Tiwari's experience as a Senior Mobile Developer at a startup",
-    "title": "Varun Tiwari - Senior Mobile Developer",
+    "topic_summary": "A CV highlighting Esther Obi 111's experience as a Data Engineer in adtech, focusing on data pipeline development and real-time analytics.",
+    "title": "Esther Obi 111 - Data Engineer",
     "doc_id": "d_p_308_00",
     "persona_id": "p_308",
     "hyperparams": {
-      "cv_format": "paragraph",
+      "cv_format": "bullet-heavy",
       "geographic_convention": "Israel",
       "company_type": "enterprise",
-      "company_size": "mid (50-500)"
+      "company_size": "large (500+)"
+    }
+  },
+  {
+    "doc_type": "linkedin",
+    "topic_summary": "A LinkedIn summary showcasing Esther's professional background, skills in data engineering, and career aspirations in adtech.",
+    "title": "LinkedIn Summary",
+    "doc_id": "d_p_308_01",
+    "persona_id": "p_308",
+    "hyperparams": {
+      "linkedin_completeness": "minimal"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A README for a cross-platform ride-hailing app developed using Flutter and Firebase",
-    "title": "NexGen RideShare - Cross-Platform Ride-Hailing App",
-    "doc_id": "d_p_308_01",
+    "topic_summary": "A GitHub README for a real-time ad campaign analytics pipeline using Apache Kafka and Spark.",
+    "title": "Real-Time Ad Campaign Analytics Pipeline",
+    "doc_id": "d_p_308_02",
     "persona_id": "p_308",
     "hyperparams": {
-      "project_scale": "academic",
-      "project_team_size": "medium (5-15)",
-      "jargon_density": "heavy"
+      "project_scale": "team-internal",
+      "project_team_size": "solo",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation letter from Esther's manager at ClickAd Network praising her technical skills and contributions to adtech projects.",
+    "title": "Recommendation from [Manager's Name], ClickAd Network",
+    "doc_id": "d_p_308_03",
+    "persona_id": "p_308",
+    "hyperparams": {
+      "recommender_role": "peer",
+      "recommender_closeness": "brief",
+      "company_type": "FAANG",
+      "company_size": "mid (50-500)"
     }
   }
 ]

@@ -1,60 +1,53 @@
 {
   "persona_id": "p_089",
   "hyperparams": {
-    "archetype": "game_developer",
-    "years_experience": 7,
-    "seniority": "senior",
-    "industry": "startup",
-    "writing_style": "verbose",
-    "language_fluency": "native",
-    "self_promotion_level": "boastful",
-    "quantification_tendency": "mixed"
+    "archetype": "mobile_developer",
+    "years_experience": 4,
+    "seniority": "mid",
+    "industry": "gaming",
+    "writing_style": "neutral",
+    "language_fluency": "near-native",
+    "self_promotion_level": "balanced",
+    "quantification_tendency": "qualitative"
   },
-  "name": "Monica Nyambura",
-  "current_role": "Senior Game Development Lead",
-  "company": "Vortex Interactive Studios",
+  "name": "Xiomara Vargas",
+  "current_role": "Mobile Developer",
+  "company": "PixelPulse Games",
   "education": {
-    "degree": "BSc in Computer Science",
-    "university": "University of Nairobi",
-    "year": 2016
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "University of California, Santa Cruz",
+    "year": 2018
   },
   "career_trajectory": [
     {
-      "role": "Junior Game Developer",
-      "company": "PixelPulse Games",
-      "duration": "2 years",
-      "achievements": "Pioneered Unity-based 2D platformer prototypes with physics-based level design"
+      "year": 2019,
+      "role": "Junior Mobile Developer",
+      "company": "NovaPlay Studios"
     },
     {
-      "role": "Senior Unity Developer",
-      "company": "Nova Studios",
-      "duration": "3 years",
-      "achievements": "Architected cross-platform multiplayer systems using GameNetworkingServices and Vulkan shaders"
+      "year": 2021,
+      "role": "Mobile Developer",
+      "company": "Vortex Games"
     },
     {
-      "role": "Lead Game Engineer",
-      "company": "Vortex Interactive Studios",
-      "duration": "2 years",
-      "achievements": "Mentored 5 engineers while optimizing 3D graphics pipelines for VR applications"
+      "year": 2023,
+      "role": "Mobile Developer",
+      "company": "PixelPulse Games"
     }
   ],
   "skills": {
-    "Unity": 5,
-    "Unreal Engine": 5,
-    "Game physics": 5,
-    "3D graphics (Vulkan)": 4,
-    "Game networking": 5,
-    "C#/.NET": 4,
-    "Python": 4,
-    "REST API design": 5,
-    "gRPC": 4,
-    "Microservices architecture": 3
+    "Swift": 5,
+    "Kotlin": 3,
+    "React Native": 3,
+    "Flutter": 3,
+    "iOS development": 4,
+    "Android development": 3,
+    "TypeScript": 2,
+    "React": 1,
+    "HTML/CSS": 2,
+    "Webpack/Vite": 2
   },
   "document_ids": [
-    "d_p_089_00",
-    "d_p_089_01",
-    "d_p_089_02",
-    "d_p_089_03",
-    "d_p_089_04"
+    "d_p_089_00"
   ]
 }

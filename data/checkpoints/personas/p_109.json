@@ -1,43 +1,56 @@
 {
   "persona_id": "p_109",
   "hyperparams": {
-    "archetype": "qa_test_engineer",
-    "years_experience": 12,
-    "seniority": "staff",
-    "industry": "cybersecurity",
-    "writing_style": "confident",
+    "archetype": "mobile_developer",
+    "years_experience": 2,
+    "seniority": "junior",
+    "industry": "healthtech",
+    "writing_style": "verbose",
     "language_fluency": "near-native",
-    "self_promotion_level": "boastful",
+    "self_promotion_level": "balanced",
     "quantification_tendency": "metrics-heavy"
   },
-  "name": "Quinn O'Brien",
-  "current_role": "Senior QA Engineer - Cybersecurity Test Lead",
-  "company": "SecureSphere Cybersecurity Solutions",
+  "name": "Isabella Rossi",
+  "current_role": "Mobile Developer",
+  "company": "HealthTrack Innovations",
   "education": {
-    "degree": "Master of Science in Cybersecurity",
-    "university": "Massachusetts Institute of Technology",
-    "year": 2012
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "University of Milan",
+    "year": 2021
   },
   "career_trajectory": [
-    "QA Tester (2010-2013) at CyberShield Labs (startup) - automated regression suites for intrusion detection systems",
-    "Senior QA Engineer (2013-2016) at NetGuard Inc. - led API security testing for 15+ enterprise clients",
-    "Test Lead (2016-2019) at Sentinel Secure - scaled chaos engineering for cloud-based threat detection platforms",
-    "Staff QA Engineer (2019-present) at SecureSphere - own all security testing strategy for SaaS SOC2 products"
+    {
+      "role": "Mobile Development Intern",
+      "company": "HealthTrack Innovations",
+      "year": 2021
+    },
+    {
+      "role": "Junior Mobile Developer",
+      "company": "HealthTrack Innovations",
+      "year": 2022
+    },
+    {
+      "role": "Mobile Developer",
+      "company": "HealthTrack Innovations",
+      "year": 2023
+    }
   ],
   "skills": {
-    "Test automation": 5,
-    "Security testing": 5,
-    "API testing": 5,
-    "Performance testing (JMeter/k6)": 5,
-    "Python": 5,
-    "Go": 5,
-    "REST API design": 4,
-    "CI/CD pipelines": 5
+    "Swift": 3,
+    "Kotlin": 3,
+    "React Native": 3,
+    "Flutter": 4,
+    "iOS development": 3,
+    "Android development": 4,
+    "JavaScript": 1,
+    "TypeScript": 2,
+    "React": 1,
+    "Responsive design": 3,
+    "Web accessibility": 2
   },
   "document_ids": [
     "d_p_109_00",
     "d_p_109_01",
-    "d_p_109_02",
-    "d_p_109_03"
+    "d_p_109_02"
   ]
 }

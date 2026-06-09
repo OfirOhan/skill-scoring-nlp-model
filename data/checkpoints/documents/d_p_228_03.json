@@ -1,23 +1,19 @@
 {
   "doc_id": "d_p_228_03",
-  "type": "blog",
+  "type": "linkedin",
   "persona_id": "p_228",
   "hyperparams": {
-    "blog_depth": "opinion-piece",
-    "jargon_density": "plain"
+    "linkedin_completeness": "minimal"
   },
   "skill_evidence": {
-    "JavaScript": 5,
-    "Next.js": 5,
-    "Node.js": 3,
-    "REST API design": 5,
-    "React": 5,
-    "Responsive design": 5,
-    "State management (Redux/Zustand)": 4,
-    "Test automation": 4,
-    "TypeScript": 5,
-    "Web accessibility (WCAG)": 4,
-    "Web performance optimization": 5
+    "Python": 1,
+    "REST API design": 1,
+    "React": 4,
+    "Responsive design": 3,
+    "Security testing": 2,
+    "Test automation": 1,
+    "TypeScript": 4,
+    "Web performance optimization": 4
   },
-  "text": "In a recent project for a global logistics firm, we slashed their frontend load time by 40%—and the client didn’t even notice. It’s the kind of result that makes consulting work feel like magic, but the truth is, it’s just smart engineering.  \n\nAs a frontend engineer in consulting, I’ve seen how quickly performance bottlenecks can derail client trust. Projects often come with tight deadlines, legacy codebases, and stakeholders focused on features over efficiency. My role isn’t just to build interfaces—it’s to ensure the tools we create are scalable, maintainable, and fast enough to meet real-world demands.  \n\nThe core challenge lies in balancing speed with flexibility. In one project, we refactored a monolithic React app into micro-frontends using Next.js. The shift allowed us to isolate critical paths, reducing initial load time by 35% while keeping the team’s workflow intact. We used Zustand for state management, which cut down on boilerplate compared to Redux, and paired it with lazy-loaded components to minimize bundle size. Another win came from optimizing image handling: replacing default Next.js image optimization with a custom solution that leveraged WebP and dynamic import, saving 15% in bandwidth.  \n\nBenchmarks tell the story. Before refactoring, the app’s Lighthouse score hovered around 72. After implementing server components and code splitting, it climbed to 89. We also ran load tests with Artillery, revealing that concurrent user requests dropped from 12 seconds to under 3 seconds post-optimization. These numbers weren’t just metrics—they translated to real user savings, like reduced bounce rates and faster report generation for the client’s analysts.  \n\nThe takeaway? Performance isn’t a checkbox; it’s a design decision. Prioritize lazy loading, minimize render trees, and treat accessibility as a baseline, not an afterthought. Tools like Lighthouse and Web Vitals are invaluable, but they’re only as useful as the intent behind them.  \n\nFor deeper dives, check out the Web Performance API docs and the React Optimization Guide. And if you’re curious about how we handled accessibility during that logistics project, I’ll share a case study next week."
+  "text": "Sergei Antonov | Frontend Engineer at CyberShield Technologies  \nBuilding secure, high-performance interfaces for next-gen cybersecurity platforms.  \n\nOver the past two years, I’ve focused on crafting React applications that balance speed and security, with a particular emphasis on TypeScript. Leading a full-stack React overhaul for our threat detection dashboard reduced load times by 40% while maintaining strict access controls. TypeScript’s type system has been instrumental in minimizing runtime errors, especially in complex state management scenarios.  \n\nI’ve also deepened my expertise in web performance optimization, implementing lazy loading and resource prioritization to ensure smooth user experiences even under high-latency conditions. Responsive design is a non-negotiable baseline—recent work on our admin panel required seamless transitions across devices, balancing aesthetics with functional accessibility.  \n\nSecurity testing remains a cornerstone of my workflow. Whether it’s validating encryption integrations or auditing UI components for vulnerabilities, I approach every task with a mindset of proactive defense. The intersection of design and security is where I thrive, turning technical challenges into opportunities for innovation.  \n\nLooking ahead, I’m excited to continue refining the edge between usability and protection in an ever-evolving digital landscape."
 }

@@ -1,0 +1,26 @@
+{
+  "doc_id": "d_p_220_04",
+  "type": "recommendation",
+  "persona_id": "p_220",
+  "hyperparams": {
+    "recommender_role": "peer",
+    "recommender_closeness": "brief",
+    "company_type": "startup",
+    "company_size": "mid (50-500)"
+  },
+  "skill_evidence": {
+    "Application security (OWASP)": 3,
+    "CI/CD pipelines": 1,
+    "DNS/DHCP": 1,
+    "Encryption & PKI": 2,
+    "Firewall configuration": 1,
+    "IAM/Access control": 4,
+    "Network automation": 1,
+    "Network security": 3,
+    "Penetration testing": 2,
+    "SIEM tools": 5,
+    "Security auditing": 3,
+    "TCP/IP": 2
+  },
+  "text": "Yuki Tanaka’s academic journey in cybersecurity laid a foundation for her pragmatic approach to security challenges. Her thesis on application-layer threat modeling reflected a nuanced understanding of OWASP principles, which later shaped her work at AdLift. While not a traditional academic path, her self-directed study of encryption protocols and PKI concepts—particularly in securing ad-tech APIs—demonstrated a habit of solving real-world problems through theory.  \n\nHer research ability shines in how she balances depth with practicality. During a recent audit of AdLift’s ad-serving infrastructure, Yuki identified a critical gap in network security controls that could have exposed user data. She spearheaded a redesign of access controls, integrating IAM policies that cut unauthorized access incidents by 40% within three months. Her SIEM architecture, built over two years, now centralizes log analysis across teams, and she’s mentored junior engineers to use it effectively—proof of her ability to scale impact beyond individual projects.  \n\nYuki’s character is defined by quiet reliability and a collaborative spirit. She’ll often stay late to debug a security alert or walk colleagues through IAM setup, insisting it’s “just part of the job.” Her work ethic is unshakable; she once rewrote a legacy security script during a holiday weekend to prevent a potential breach.  \n\nLooking ahead, Yuki’s curiosity about emerging threats and her knack for translating complex security concepts into actionable strategies position her to drive innovation. She’s not just a defender of systems—she’s a builder of resilient, forward-thinking solutions."
+}

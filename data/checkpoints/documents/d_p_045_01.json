@@ -3,23 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_045",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "small (2-4)",
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
     "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 1,
-    "CI/CD pipelines": 2,
-    "Docker": 3,
-    "GitLab CI": 2,
-    "JavaScript": 3,
-    "Kubernetes": 1,
-    "MongoDB": 3,
-    "Node.js": 3,
+    "C/C++ (embedded)": 4,
+    "Embedded Linux": 3,
+    "Firmware development": 4,
+    "Go": 1,
+    "Hardware-software integration": 4,
+    "IoT protocols (MQTT/CoAP)": 4,
+    "Java": 1,
     "Python": 1,
-    "REST API design": 3,
-    "React": 3,
-    "TypeScript": 3
+    "REST API design": 2,
+    "RTOS": 4
   },
-  "text": "# NexGen TaskFlow: SaaS Task Management Platform  \nA lightweight, scalable task management system designed for remote teams. Built to handle asynchronous workflows with real-time updates, role-based access, and customizable pipelines.  \n\n---\n\n## Badges  \n[![GitHub](https://badgen.net/badge/github/anyakowalski/nexgentaskflow)](https://github.com/anyakowalski/nexgentaskflow)  \n[![React](https://badgen.net/badge/react/17.0.2/blue)](https://react.dev)  \n[![Node.js](https://badgen.net/badge/node.js/18.15.0/green)](https://nodejs.org)  \n[![MongoDB](https://badgen.net/badge/mongodb/6.0.6/orange)](https://www.mongodb.com)  \n[![Tech Stack](https://badgen.net/badge/tech-stack/react%2C%20node.js%2C%20mongodb/gray)](https://github.com/anyakowalski/nexgentaskflow)  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/anyakowalski/nexgentaskflow.git`  \n2. Install dependencies:  \n   - Frontend: `npm install`  \n   - Backend: `npm install`  \n3. Set environment variables in `.env` (MongoDB URI, JWT secret)  \n4. Start the backend: `npm run dev`  \n5. Build frontend: `npm run build`  \n6. Run frontend: `npm start`  \n\n---\n\n## Usage / Examples  \n- **Create a task**: Use the `/api/tasks` endpoint with a POST request.  \n- **Assign a task**: Update the `assignedTo` field via the `/api/tasks/:id` endpoint.  \n- **View dashboards**: Navigate to `/dashboard` for role-specific views (manager, team lead, member).  \n- **Real-time updates**: WebSocket connections sync task status changes across all clients.  \n\n---\n\n## Architecture / Design  \nThe system uses a microservices architecture, separating frontend and backend. The backend handles authentication, task logic, and database interactions via REST APIs. Real-time updates are managed through WebSockets, ensuring low-latency state synchronization.  \n\n---\n\n## Tech Stack / Built With  \n- **Frontend**: React (TypeScript), Redux for state management  \n- **Backend**: Node.js (Express), RESTful API design, JWT for auth  \n- **Database**: MongoDB (Atlas) with Mongoose ODM  \n- **Docker**: Containerized deployment for local testing and staging environments  \n\n---\n\n## Contributing  \nPull requests are welcome! For major changes, open an issue to discuss the approach.  \n\n---\n\n## Testing  \n- **Backend**: Jest + Supertest for unit/integration tests  \n- **Frontend**: React Testing Library for component tests  \n- CI/CD: GitHub Actions runs tests on PRs  \n\n---\n\n## Roadmap / Future Work  \n- Add AI-driven task prioritization via third-party integrations  \n- Implement mobile app support (React Native)  \n- Expand role-based permissions with RBAC  \n- Integrate with Slack for notifications  \n\n---  \n*Built with precision. Designed for scale.*"
+  "text": "# Industrial IoT Sensor Network Firmware  \nA production-ready C++ firmware framework for deploying real-time sensor data collection in industrial environments using RTOS and MQTT/CoAP protocols.  \n\n[![GitHub](https://img.shields.io/github/last-commit/helenpark/industrial-iot-firmware)](https://github.com/helenpark/industrial-iot-firmware/commits/main)  \n[![CI/CD](https://img.shields.io/github/actions/workflow/status/helenpark/industrial-iot-firmware/ci.yml?branch=main)](https://github.com/helenpark/industrial-iot-firmware/actions/workflow?workflow=CI%2FCD)  \n[![License](https://img.shields.io/github/license/helenpark/industrial-iot-firmware)](https://github.com/helenpark/industrial-iot-firmware/blob/main/LICENSE)  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/helenpark/industrial-iot-firmware.git`  \n2. Install FreeRTOS and MQTT broker (e.g., EMQX) as prerequisites.  \n3. Configure `config.h` for your hardware platform (STM32 or ESP32).  \n4. Build with CMake: `cmake -S . -B build && cmake --build build`  \n5. Flash firmware to your device using PlatformIO or custom toolchain.  \n\n## Tech Stack  \n- **Language**: C++17 (embedded optimizations, memory safety)  \n- **RTOS**: FreeRTOS (task scheduling, interrupt handling)  \n- **Communication**: MQTT (for cloud integration) / CoAP (low-power edge devices)  \n- **Hardware**: STM32F4 series (real-time peripherals)  \n- **Tools**: PlatformIO, CTest, Wireshark (protocol analysis)  \n\n## Architecture / Design  \nThe firmware is structured into three core layers:  \n1. **Sensor Layer**: Direct peripheral drivers for temperature, vibration, and pressure sensors. Implements interrupt-driven sampling with 10ms resolution.  \n2. **Network Layer**: MQTT/CoAP stack with Quality of Service (QoS) 1 for critical data. Includes TLS handshake fallback for secure edge-to-cloud communication.  \n3. **RTOS Layer**: Task prioritization for real-time data processing (3ms latency target). Uses dynamic memory pools to prevent fragmentation.  \n\n## Usage / Examples  \nTo enable MQTT publishing:  \n```cpp  \n#include \"mqtt_client.h\"  \nvoid setup() {  \n    mqtt_init(\"broker.example.com\", 1883);  \n    mqtt_subscribe(\"sensor/data\");  \n}  \nvoid loop() {  \n    float temp = read_temperature();  \n    mqtt_publish(\"sensor/temperature\", temp, true);  \n}  \n```  \nCompile with `--enable-mqtt` flag for protocol-specific optimizations.  \n\n## Testing  \n- **Unit Tests**: 100% coverage for peripheral drivers using CTest.  \n- **Integration Tests**: Simulate 100-node network stress with 99.9% packet delivery rate.  \n- **RTOS Tests**: Validate task switching under 50% CPU load using tracealyzer.  \n- **Hardware Tests**: Emulate sensor faults to ensure watchdog resets within 500ms.  \n\n## License  \nMIT License (see [LICENSE](https://github.com/helenpark/industrial-iot-firmware/blob/main/LICENSE) for details)."
 }

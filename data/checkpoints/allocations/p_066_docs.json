@@ -1,50 +1,87 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Wenjun Li's 11 years of experience as a Senior Embedded Engineer in healthtech, specializing in embedded systems and IoT integration.",
-    "title": "Wenjun Li - Senior Embedded Engineer",
+    "topic_summary": "Professional resume highlighting Pooja's 7 years of experience as a Principal Tech Lead in adtech",
+    "title": "Pooja Nair - Principal Tech Lead",
     "doc_id": "d_p_066_00",
     "persona_id": "p_066",
     "hyperparams": {
-      "cv_format": "paragraph",
-      "geographic_convention": "India",
-      "company_type": "academic",
-      "company_size": "large (500+)"
+      "cv_format": "hybrid",
+      "geographic_convention": "US",
+      "company_type": "startup",
+      "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A GitHub README for a medical device IoT integration project, showcasing Wenjun's expertise in embedded systems and real-time health data processing.",
-    "title": "Smart Health Monitor System",
+    "topic_summary": "Real-time ad bidding optimization system using machine learning",
+    "title": "Real-Time Ad Bidding Optimizer",
     "doc_id": "d_p_066_01",
     "persona_id": "p_066",
     "hyperparams": {
       "project_scale": "team-internal",
-      "project_team_size": "small (2-4)",
-      "jargon_density": "heavy"
+      "project_team_size": "solo",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "Ad fraud detection platform leveraging big data analytics",
+    "title": "Ad FraudGuard",
+    "doc_id": "d_p_066_02",
+    "persona_id": "p_066",
+    "hyperparams": {
+      "project_scale": "academic",
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "AI-driven personalized ad campaign management tool",
+    "title": "CampaignIQ",
+    "doc_id": "d_p_066_03",
+    "persona_id": "p_066",
+    "hyperparams": {
+      "project_scale": "production",
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "plain"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from a team lead at VitalTech Innovations, praising Wenjun's leadership and technical contributions to critical healthtech projects.",
-    "title": "Recommendation for Wenjun Li",
-    "doc_id": "d_p_066_02",
+    "topic_summary": "Manager endorsement for Pooja's technical leadership and innovation in adtech",
+    "title": "Recommendation from AdVelox CTO",
+    "doc_id": "d_p_066_04",
     "persona_id": "p_066",
     "hyperparams": {
       "recommender_role": "direct-manager",
       "recommender_closeness": "brief",
+      "company_type": "enterprise",
+      "company_size": "large (500+)"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "Peer endorsement for Pooja's collaborative problem-solving in adtech projects",
+    "title": "Recommendation from Senior Engineer",
+    "doc_id": "d_p_066_05",
+    "persona_id": "p_066",
+    "hyperparams": {
+      "recommender_role": "professor",
+      "recommender_closeness": "occasional",
       "company_type": "startup",
-      "company_size": "small (<50)"
+      "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "blog",
-    "topic_summary": "A technical blog post on optimizing real-time data processing in embedded health systems, reflecting Wenjun's deep expertise in low-latency architectures.",
-    "title": "Optimizing Real-Time Data Processing in Embedded Health Systems",
-    "doc_id": "d_p_066_03",
+    "topic_summary": "Technical insights on machine learning applications in adtech bidding strategies",
+    "title": "Machine Learning for Real-Time Ad Bidding Optimization",
+    "doc_id": "d_p_066_06",
     "persona_id": "p_066",
     "hyperparams": {
-      "blog_depth": "opinion-piece",
+      "blog_depth": "tutorial",
       "jargon_density": "heavy"
     }
   }

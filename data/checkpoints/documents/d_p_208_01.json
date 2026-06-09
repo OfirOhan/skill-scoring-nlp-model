@@ -1,20 +1,23 @@
 {
   "doc_id": "d_p_208_01",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_208",
   "hyperparams": {
-    "blog_depth": "deep-dive",
-    "jargon_density": "moderate"
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Node.js": 2,
-    "REST API design": 4,
-    "React": 4,
-    "Responsive design": 4,
-    "Stakeholder management": 1,
-    "Test automation": 4,
-    "TypeScript": 4,
-    "Web performance optimization": 4
+    "3D graphics (OpenGL/Vulkan)": 3,
+    "Game networking": 2,
+    "Game physics": 3,
+    "Go": 2,
+    "GraphQL": 2,
+    "Java": 1,
+    "Python": 2,
+    "REST API design": 3,
+    "Unity": 2,
+    "Unreal Engine": 1
   },
-  "text": "In consulting, frontend performance isn’t just a technical hurdle—it’s a business imperative. Last quarter, a client’s dashboard load time averaged 5.2 seconds, pushing bounce rates past 40%. We needed a strategy that balanced speed with scalability, without overhauling their entire stack.  \n\nThe problem was twofold: legacy assets bloated the bundle size, and inefficient API calls compounded latency. Even with a React-based UI, the framework wasn’t the bottleneck—it was how we leveraged it. Without clear performance budgets or automated testing, we risked shipping subpar experiences under tight deadlines.  \n\nStart by auditing with Lighthouse and Chrome DevTools. Set a baseline: bundle size under 2MB, first contentful paint under 2.5s, and CLS below 0.1. Use a staging environment mirroring production traffic, and integrate Web Vitals tracking. For REST APIs, enforce 200ms response time thresholds using Apollo Client with error boundaries. TypeScript can catch type-related performance pitfalls early, so ensure your config enforces strict mode and minimizes runtime checks.  \n\nFirst, optimize assets. Use WebP for images and implement lazy loading with IntersectionObserver. Split React components into chunks using code splitting and dynamic imports. For APIs, cache frequent endpoints with Redis and paginate results to reduce payload size. In TypeScript, define utility types for API responses to enforce structure and avoid unnecessary data fetching.  \n\nAfter implementing these changes, the dashboard’s load time dropped to 1.8s, and CLS improved to 0.05. Lighthouse scores jumped from 68 to 92, while server response times stabilized at 150ms. Bounce rates fell to 18%, and the client’s internal tooling saw a 30% increase in feature adoption.  \n\nPerformance gains here weren’t accidental—they were the result of intentional architecture choices. Prioritize tooling that aligns with project constraints, and don’t shy away from rethinking how frameworks like React or REST APIs are used.  \n\nFor deeper dives, check out the Web Vitals specification, React’s performance hooks, and TypeScript’s advanced type inference techniques. Also, explore how REST APIs can be optimized with GraphQL where appropriate. The goal isn’t just speed—it’s sustainable, scalable speed that meets client needs without compromising developer efficiency."
+  "text": "# Fantasy Realm: Procedural World Generation for SaaS Game Development  \n\nFantasy Realm is a modular procedural generation framework designed to deliver scalable, high-fidelity terrain and biomes for SaaS game development. Built with academic rigor and production-ready architecture, it enables dynamic world creation through algorithmic noise, spatial partitioning, and physics-aware biome logic. The system prioritizes extensibility, allowing developers to integrate custom rulesets for terrain evolution, resource distribution, and player interaction.  \n\n## API Reference  \n\n### Core Modules  \n- **WorldGenerator**:  \n  - `generate_terrain(seed: int, size: Tuple[int, int]) -> np.ndarray`  \n  - `create_biomes(terrain: np.ndarray, threshold: float) -> List[Biome]`  \n  - `apply_dynamic_systems(biomes: List[Biome], time: float) -> Dict[str, float]`  \n\n- **BiomeEngine**:  \n  - `evaluate_biome_conditions(biome: Biome, player_position: Vec3) -> bool`  \n  - `modulate_biome_properties(biome: Biome, modifier: float) -> Biome`  \n\n- **DynamicSystem**:  \n  - `update_erosion(grid: np.ndarray, time_step: float) -> np.ndarray`  \n  - `simulate_river_flow(grid: np.ndarray) -> np.ndarray`  \n\n*Depends on numpy, scipy, and pyglet for rendering.*  \n\n## Usage / Examples  \n\n```python  \nfrom fantasy_realm import WorldGenerator, BiomeEngine  \n\nworld = WorldGenerator.generate_terrain(42, (1024, 1024))  \nbiomes = BiomeEngine.create_biomes(world, threshold=0.5)  \ndynamic_data = WorldGenerator.apply_dynamic_systems(biomes, time=1.5)  \n```  \n\nThis snippet produces a terrain grid, partitions it into biomes, and applies erosion/river dynamics. Output includes elevation maps, biome classifications, and dynamic modifiers for real-time simulation.  \n\n## Getting Started / Installation  \n\n```bash  \npip install fantasy-realm  \n```  \n\nRequires Python 3.8+. For advanced workflows, install dependencies:  \n```bash  \npip install numpy scipy pyglet  \n```  \n\n## Tech Stack  \n\n- **3D Graphics**: OpenGL/Vulkan for rendering terrain and biomes  \n- **Game Physics**: Box2D for terrain deformation and collision  \n- **REST API**: FastAPI for exposing generation rules as endpoints  \n- **Scripting**: Python for rapid prototyping and data processing  \n\n## Architecture / Design  \n\nThe system decouples procedural generation from simulation logic, using a layered architecture:  \n1. **Procedural Layer**: Perlin noise and Voronoi diagrams for terrain base  \n2. **Biome Layer**: Rule-based classification with spatial hashing  \n3. **Dynamic Layer**: Time-based modifiers for erosion, river flow, and climate shifts  \n\nEach layer operates independently, with explicit interfaces for modularity. Physics integration occurs via event-driven callbacks, ensuring performance without rigid coupling.  \n\n## License  \n\nMIT License  \n\n## Badges  \n\n[![Build Status](https://github.com/samira-mahmoud/fantasy-realm/actions/workflows/build.yml/badge.svg)](https://github.com/samira-mahmoud/fantasy-realm/actions/workflows/build.yml)  \n[![PyPI Version](https://img.shields.io/pypi/v/fantasy-realm.svg)](https://pypi.org/project/fantasy-realm/)"
 }

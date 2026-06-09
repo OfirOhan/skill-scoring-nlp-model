@@ -1,25 +1,24 @@
 {
   "doc_id": "d_p_309_03",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_309",
   "hyperparams": {
-    "recommender_role": "peer",
-    "recommender_closeness": "worked-daily",
-    "company_type": "enterprise",
-    "company_size": "large (500+)"
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Application security (OWASP)": 4,
-    "Cloud networking (VPC/subnets)": 4,
-    "Compliance (SOC2/GDPR)": 5,
-    "Encryption & PKI": 4,
-    "Firewall configuration": 3,
-    "IAM/Access control": 5,
-    "Incident response": 5,
-    "Network security": 5,
-    "Penetration testing": 3,
-    "SIEM tools": 5,
-    "Security auditing": 3
+    "Apache Kafka": 3,
+    "Apache Spark": 3,
+    "Data modeling": 3,
+    "Data warehousing": 3,
+    "Docker": 3,
+    "ETL pipeline design": 3,
+    "Monitoring & alerting": 1,
+    "Python": 3,
+    "REST API design": 2,
+    "Snowflake": 4,
+    "Terraform": 3
   },
-  "text": "Valentina once spent three nights debugging a zero-day exploit in our customer portal. She reverse-engineered a malicious payload that bypassed our WAF, then rearchitected the authentication flow to isolate sensitive data. Her solution not only patched the vulnerability but also streamlined our OAuth2 integration, cutting login latency by 40% without compromising security.  \n\nValentina is the quiet force behind NexaCorp’s security infrastructure. She designs firewalls that feel like invisible shields, balancing strict access controls with operational efficiency. Her VPC layouts are legendary—once, she rerouted traffic across three subnets to mitigate a DDoS risk, preventing a potential $2M outage. She’s also the go-to person for compliance, turning SOC2 audits into opportunities to refine our GDPR protocols.  \n\nBeyond technical skills, Valentina’s strength lies in her relentless attention to detail and ability to simplify complex systems. She once trained a cross-functional team on IAM best practices, turning skeptics into advocates. Her incident response playbook is a living document, updated weekly with real-world threats.  \n\nIf you’re looking for someone who treats security as both a science and a craft, Valentina is your person. She doesn’t just solve problems—she anticipates them."
+  "text": "# Real-Time Ad Campaign Analytics Dashboard  \nA lightweight dashboard for monitoring ad campaign performance, built with Kafka for real-time data ingestion and Spark for processing. Tracks metrics like click-through rates, conversion funnels, and budget allocation across ad platforms. Designed for internal teams to spot trends and optimize spend without overcomplicating the flow.  \n\n## Getting Started / Installation  \nClone the repo using Git. Ensure Docker is installed to spin up Kafka and Spark locally. Run `docker-compose up` to start the stack. The dashboard requires Python 3.8+ and Snowflake credentials configured in `secrets.yaml`. No external dependencies beyond the listed tools.  \n\n## Tech Stack  \n- **Kafka**: Real-time data ingestion from ad platforms.  \n- **Spark**: Batch and streaming processing of campaign metrics.  \n- **Snowflake**: Centralized storage for historical and aggregated data.  \n- **Docker**: Local development environment for Kafka/Spark.  \n- **Terraform**: Infrastructure-as-code for production deployment.  \n- **Python**: Scripts for data modeling and ETL pipelines.  \n\n## Usage / Examples  \nStart Kafka and Spark containers with `docker-compose up`. The dashboard loads data from Kafka topics, processes it via Spark, and writes results to Snowflake. Refresh the UI to see real-time updates on campaign performance. Example: Monitor a 24-hour ad spend by region, filtered by campaign ID.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/commit-activity-wk/username/repo)](https://github.com/username/repo)  \n[![Docker](https://img.shields.io/docker/pulls/username/repo)](https://hub.docker.com/r/username/repo)  \n[![Snowflake](https://img.shields.io/badge/Snowflake-00205B?style=flat&logo=snowflake)](https://snowflake.com)  \n\n## Architecture / Design  \nThe system ingests raw ad event data via Kafka, processes it in Spark for aggregation, and stores results in Snowflake. The dashboard queries Snowflake for real-time metrics, avoiding direct Spark UI dependency. Kafka ensures low-latency data flow, while Spark handles windowed aggregations for conversion tracking.  \n\n## Contributing  \nThis project is for internal use, but contributions are welcome. Focus on improving data freshness or adding filters for specific ad platforms. Open issues for feature requests or bugs.  \n\n## License  \nMIT License. See the [LICENSE](LICENSE) file for details."
 }

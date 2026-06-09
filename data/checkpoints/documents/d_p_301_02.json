@@ -1,27 +1,26 @@
 {
   "doc_id": "d_p_301_02",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_301",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "large (15+)",
-    "jargon_density": "heavy"
+    "recommender_role": "peer",
+    "recommender_closeness": "brief",
+    "company_type": "academic",
+    "company_size": "large (500+)"
   },
   "skill_evidence": {
-    "Apache Spark": 2,
-    "Data modeling": 3,
-    "Data visualization (Matplotlib/Plotly)": 3,
-    "ETL pipeline design": 2,
-    "Feature engineering": 3,
-    "Jupyter notebooks": 2,
-    "Microservices architecture": 3,
-    "NumPy": 2,
-    "Pandas": 2,
-    "Python": 4,
-    "REST API design": 2,
-    "SQL analytics": 3,
-    "Statistical modeling": 3,
-    "scikit-learn": 2
+    "Agile/Scrum": 4,
+    "CI/CD pipelines": 1,
+    "Cloud infrastructure": 1,
+    "Cross-team collaboration": 4,
+    "GitHub Actions": 1,
+    "Linux administration": 1,
+    "Microservices architecture": 5,
+    "Monitoring & alerting": 1,
+    "Shell scripting": 1,
+    "Stakeholder communication": 5,
+    "System design": 5,
+    "Team leadership": 4
   },
-  "text": "# LogSentinel: Automated Security Incident Response Platform  \nA production-grade system leveraging NLP and distributed computing to automate threat detection, vulnerability analysis, and incident triage across enterprise security logs. Built for scalability, with active deployment across 15+ global teams.  \n\n## Badges  \n[![GitHub](https://badges.example.com/github)](https://github.com/) [![Build Status](https://badges.example.com/build)](https://github.com/) [![License](https://badges.example.com/license)](https://github.com/) [![Tech Stack](https://badges.example.com/tech)](https://github.com/)  \n\n## License  \nMIT License — see [LICENSE](https://github.com/) for details.  \n\n## Tech Stack  \n- **Core**: Python 3.10, Apache Spark 3.3, Kafka 3.0, PostgreSQL 14  \n- **Analytics**: scikit-learn 1.2, NumPy 1.23, Pandas 1.5  \n- **Visualization**: Plotly 5.12, Matplotlib 3.7  \n- **APIs**: RESTful endpoints with FastAPI 0.68  \n- **ETL**: Airflow 2.3 for pipeline orchestration  \n- **Notebooks**: Jupyter integration for exploratory analysis  \n\n## Architecture / Design  \nA microservices-driven architecture with three core tiers:  \n1. **Ingestion Layer**: Kafka-powered log ingestion with dynamic schema detection via Apache Avro  \n2. **Analysis Layer**: Spark-based NLP pipeline using BERT embeddings for anomaly detection, coupled with SQL analytics for temporal pattern identification  \n3. **Response Layer**: REST API for real-time alert triage, integrated with SIEM systems via GraphQL subscriptions  \n\nThe system employs a hybrid data modeling approach: relational storage for structured logs and graph databases for entity-relationship mapping. Feature engineering prioritizes temporal and spatial context, with statistical models trained on historical breach patterns to refine false positive thresholds.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/  \npip install -r requirements.txt  \nexport LOG_SINK=postgresql://user:pass@localhost:5432/logs  \npython init_pipeline.py  \n```  \n\n## Usage / Examples  \n```python  \nfrom logsentinel import LogAnalyzer  \nanalyzer = LogAnalyzer(\"syslog-2023-10\")  \nalerts = analyzer.detect_anomalies(threshold=0.95)  \nanalyzer.visualize_trends(output=\"trend_report.html\")  \n```  \nExample use case: Automate detection of SQL injection attempts in Apache access logs using regex-based feature extraction and contextual scoring.  \n\n## Contributing  \nSubmit PRs with unit tests covering new features. Prioritize contributions to the NLP pipeline or ETL optimization. All code must adhere to PEP8 and include type hints. Report security-related issues via the dedicated vulnerability channel."
+  "text": "Ethan Price 104 is a Senior Tech Lead at EcomVista Ltd., where I collaborated with him on several cross-functional projects. His ability to balance technical rigor with team dynamics makes him a standout colleague.  \n\nEthan’s expertise in microservices architecture is evident in the scalable platform he designed for EcomVista’s inventory management system. Over three years, he refactored monolithic components into modular services, reducing deployment times by 40% and improving system resilience. He also mentored junior engineers, ensuring best practices were embedded in the team’s workflow.  \n\nSoft skills are equally strong. Ethan excels at translating technical decisions into business value, which was critical during a recent stakeholder meeting. When disagreements arose about prioritizing features, he facilitated a data-driven discussion that aligned engineering and product goals. His clarity and patience prevented delays.  \n\nHis Agile leadership reshaped our team’s approach to sprint planning. By introducing lightweight, outcome-focused ceremonies, he cut cycle times by 25% without sacrificing quality. Beyond his own work, Ethan consistently advocates for cross-team collaboration, often bridging gaps between dev and ops to resolve bottlenecks.  \n\nEthan’s combination of technical depth, communication clarity, and collaborative mindset has been a consistent asset. He’s a reliable, self-motivated professional who thrives in dynamic environments. I’d recommend him without hesitation for any role requiring both technical precision and team-oriented problem-solving."
 }

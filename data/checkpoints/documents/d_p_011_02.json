@@ -1,23 +1,23 @@
 {
   "doc_id": "d_p_011_02",
-  "type": "project_readme",
+  "type": "blog",
   "persona_id": "p_011",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "solo",
-    "jargon_density": "heavy"
+    "blog_depth": "deep-dive",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
     "AWS": 3,
-    "GCP": 3,
-    "Kubernetes": 3,
-    "LLMs/Prompt engineering": 5,
-    "MLOps": 5,
-    "Model deployment": 5,
-    "NLP": 5,
-    "PyTorch": 4,
-    "TensorFlow": 4,
-    "Terraform": 3
+    "CI/CD pipelines": 2,
+    "Chaos engineering": 1,
+    "Go": 3,
+    "Jenkins": 1,
+    "Linux administration": 2,
+    "Microservices architecture": 5,
+    "Monitoring & alerting": 2,
+    "PostgreSQL": 5,
+    "Python": 5,
+    "REST API design": 5
   },
-  "text": "# Cedric Blanc - NLP Support Automation  \nNLP-driven customer support automation system for enterprise clients, optimized for scalability and precision. Built as a team-internal tool with solo development, leveraging cutting-edge ML frameworks and cloud infrastructure.  \n\n## Badges  \n[![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github)](https://github.com/cedricblanc/nlp-support-automation)  \n[![Build Status](https://img.shields.io/badge/Build-Status-764BA2?logo=github)](https://github.com/cedricblanc/nlp-support-automation/actions)  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/cedricblanc/nlp-support-automation.git  \ncd nlp-support-automation  \npip install -r requirements.txt  \nexport AWS_DEFAULT_REGION=us-east-1  \nexport GCP_PROJECT=cedric-blanc-ml  \npython setup.py install  \n```  \nEnsure AWS and GCP credentials are configured via environment variables. Requires Docker for local testing.  \n\n## Usage / Examples  \n```bash  \npython run.py --model=bert-base-uncased --endpoint=https://api.support.entreprise.com  \n```  \nExample interaction:  \n**User**: \"How do I reset my password?\"  \n**System**: \"Visit [support.link/reset](https://support.link/reset) or contact support@entreprise.com within 24 hours.\"  \nResponse latency: <500ms (99.9% of queries).  \n\n## Architecture / Design  \nA microservices pipeline with:  \n- Intent classification (BERT + fine-tuned for 12+ domains)  \n- Dialogue state tracking (Rasa NLU + custom rules)  \n- Model serving (TensorFlow Serving + Kubernetes)  \n- A/B testing for response accuracy (A/B: 82% → 89% F1 score)  \nDesigned for horizontal scaling via Terraform-managed AWS/GCP clusters.  \n\n## Tech Stack / Built With  \n- **Cloud**: AWS Lambda + GCP Vertex AI (hybrid deployment)  \n- **ML**: PyTorch (custom NLP pipelines) + TensorFlow (model serving)  \n- **LLMs**: HuggingFace Transformers (fine-tuned LLMs for multi-turn dialogue)  \n- **MLOps**: MLflow + Prometheus (production monitoring)  \n- **Infrastructure**: Terraform (IaC) + Kubernetes (orchestration)  \n\n## Roadmap / Future Work  \n1. Multi-language support (French/English/German) via prompt engineering  \n2. Model quantization for edge deployment (10x smaller footprint)  \n3. Integration with Zendesk/ServiceNow via API gateways  \n\n## Acknowledgments  \nTools that enabled this work: PyTorch, TensorFlow, HuggingFace, Terraform, and AWS/GCP. Special thanks to the open-source community for foundational NLP research.  \n\n## Contributing  \nThis is a personal project, but contributions are welcome for documentation or infrastructure improvements. Open an issue or PR for feedback."
+  "text": "**Optimizing API Performance in High-Throughput SaaS Applications**  \n\nThesis:  \nIn high-throughput SaaS applications, API latency and scalability are critical. Our approach combines Go’s concurrency model with Redis caching to achieve sub-100ms response times while maintaining horizontal scalability. The key lies in balancing proactive caching, efficient serialization, and asynchronous task offloading.  \n\nSupporting Arguments:  \nRedis caching reduces direct database hits by 70% in our user data endpoints. By storing serialized JSON payloads in Redis with TTL-based expiration, we mitigate PostgreSQL contention during peak hours. Go’s goroutines and channels enable handling 10,000+ concurrent requests without significant overhead, as demonstrated in our recent load test on AWS EC2 clusters. For write-heavy operations, we offload background processing via Kafka queues, ensuring real-time APIs remain lightweight. This hybrid model also allows us to scale compute and cache layers independently, aligning with microservices architecture principles.  \n\nCounter-Arguments:  \nCritics argue that Redis’s in-memory nature limits scalability for terabyte-scale datasets. However, our use of Redis Cluster with sharding distributes data across nodes, avoiding single points of failure. Others claim Go’s garbage collector introduces latency, but our profiling shows that most requests complete before GC cycles, and we’ve optimized memory allocation for short-lived objects. Finally, some question the trade-offs of asynchronous processing, but we’ve quantified that 80% of non-critical tasks—like analytics aggregation—can be deferred without impacting user-facing SLAs.  \n\nConclusion:  \nOptimizing APIs in SaaS requires more than just faster queries; it demands a holistic strategy that integrates caching, concurrency, and asynchronous workflows. By aligning Go’s strengths with Redis’s speed, we’ve built a resilient foundation for growth. The real win isn’t just performance metrics—it’s the ability to scale predictably while maintaining developer productivity. As microservices evolve, this approach ensures our APIs remain both efficient and adaptable to future demands."
 }

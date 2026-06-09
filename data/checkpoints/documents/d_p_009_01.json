@@ -3,24 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_009",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "moderate"
+    "project_scale": "academic",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "JavaScript": 3,
-    "Next.js": 1,
-    "Node.js": 1,
-    "Python": 1,
+    "C/C++ (embedded)": 4,
+    "Embedded Linux": 4,
+    "Firmware development": 3,
+    "Go": 1,
+    "Hardware-software integration": 3,
+    "IoT protocols (MQTT/CoAP)": 4,
+    "Java": 1,
+    "Network troubleshooting": 1,
+    "Python": 2,
     "REST API design": 2,
-    "React": 3,
-    "Responsive design": 3,
-    "Selenium/Playwright": 1,
-    "Test automation": 1,
-    "TypeScript": 3,
-    "Unit testing": 1,
-    "Web accessibility (WCAG)": 3,
-    "Webpack/Vite": 3
+    "RTOS": 3
   },
-  "text": "# TaskFlow - Collaborative Task Management App  \nA real-time task management tool built with React and Firebase, designed for seamless team collaboration. Prioritizes intuitive workflows and responsive design to adapt to diverse work environments.  \n\n---\n\n## Getting Started / Installation  \nClone the repository:  \n```bash  \ngit clone https://github.com/your-username/taskflow.git  \ncd taskflow  \nnpm install  \n```  \nInitialize Firebase by replacing the `firebaseConfig.js` placeholder with your project's credentials. Ensure Firebase Realtime Database is enabled in your Firebase console.  \n\n---\n\n## Usage / Examples  \n**Core Workflow**  \n- Create tasks with priority tags and due dates.  \n- Assign tasks to team members via role-based filtering.  \n- Collaborate in real time: updates sync across all devices without manual refresh.  \n\n**Responsive Design**  \nThe interface adapts to mobile, tablet, and desktop views. Sidebar navigation collapses on smaller screens, while task lists auto-adjust column widths for readability.  \n\n**Accessibility**  \nKeyboard shortcuts enable navigation without mouse interaction. ARIA labels and semantic HTML ensure compatibility with screen readers.  \n\n**Firebase Integration**  \nData is stored in Firebase Realtime Database, enabling low-latency updates. Security rules are configured to restrict write access to authenticated users.  \n\n---\n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n---  \n*Built with React, TypeScript, and Firebase. Designed for teams that prioritize speed and clarity.*"
+  "text": "# Industrial Sensor Network with ARM Cortex-M  \n\nThis project builds a lightweight, modular IoT network for industrial environments using ARM Cortex-M microcontrollers. It focuses on real-time data collection from sensors like temperature, pressure, and vibration, with MQTT-based communication for edge-to-cloud transmission. The design balances reliability and simplicity, suitable for small-to-medium scale deployments.  \n\n## Contributing  \nOpen to collaboration! Whether you're refining firmware, improving hardware integration, or expanding documentation, your input matters. Start by reviewing open issues or proposing new features. For hardware contributions, ensure your changes include schematics updates. Software changes should include unit tests and CI/CD pipeline validation.  \n\n## Getting Started / Installation  \n1. **Hardware Setup**: Connect sensors to the Cortex-M4 development board (STM32F4 or similar). Ensure power supply stability and signal integrity.  \n2. **Dependencies**: Install ARM GCC toolchain and Python 3.8+. Use `pip install` for MQTT libraries.  \n3. **Clone Repo**: `git clone https://github.com/your-username/industrial-sensor-network.git`  \n4. **Build Firmware**: Run `make flash` to compile and deploy to your board. Verify via serial monitor or MQTT broker logs.  \n\n## Usage / Examples  \nDeploy a temperature sensor by modifying `sensor_config.h` to include your device’s GPIO pins. Run `python3 example_temp_sensor.py` to stream data to a local MQTT broker. The script includes sleep intervals to prevent network congestion. For production, replace the broker with a cloud service like AWS IoT Core.  \n\n## Tech Stack  \n- **Hardware**: ARM Cortex-M4F, STM32F4 Discovery Board  \n- **Software**: C (bare-metal), Python (scripts), MQTT (broker + client)  \n- **OS**: FreeRTOS (for task scheduling)  \n- **Protocols**: MQTT (QoS 1), SPI (sensor communication)  \n\n## Architecture / Design  \nThe system splits into sensor nodes and a gateway. Nodes run a real-time task to sample data and enqueue messages. The gateway aggregates data, applies basic filtering, and forwards it to the MQTT broker. Firmware uses interrupts for sensor triggers, ensuring low-latency responses. Python scripts handle data visualization and alert generation.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/actions/workflow.com/username/repo/main?branch=main)](https://github.com/username/repo/actions)  \n[![Build Status](https://img.shields.io/github/actions/workflow.com/username/repo/main?branch=main)](https://github.com/username/repo/actions)  \n[![License](https://img.shields.io/github/license/username/repo)](https://github.com/username/repo/blob/main/LICENSE)"
 }

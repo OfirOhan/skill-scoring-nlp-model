@@ -3,23 +3,19 @@
   "type": "project_readme",
   "persona_id": "p_079",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "heavy"
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Android development": 1,
-    "Flutter": 1,
+    "Flutter": 4,
+    "JavaScript": 1,
     "Kotlin": 1,
-    "Mobile CI/CD": 1,
-    "React Native": 3,
-    "Responsive design": 3,
+    "Mobile CI/CD": 4,
+    "REST API design": 2,
     "Swift": 1,
-    "TypeScript": 3,
-    "Unit testing": 3,
-    "Web accessibility": 3,
-    "Webpack/Vite": 1,
-    "iOS development": 1
+    "TypeScript": 1,
+    "Web accessibility (WCAG)": 2
   },
-  "text": "# TaskFlow: SaaS Task Management App for Teams  \nA cross-platform task orchestration tool designed for SaaS teams, enabling real-time collaboration, role-based access, and seamless integration with Firebase backend services.  \n\n---\n\n## Deployment  \nLive demo: [taskflow.app](https://taskflow.app)  \nProduction deployment leverages Firebase Hosting with Cloud Functions for serverless automation. Canary releases are managed via Firebase CLI and monitored through custom dashboards.  \n\n---\n\n## Badges  \n[![Build Status](https://github.com/rajivmehta/taskflow/actions/workflows/main.yml/badge.svg)](https://github.com/rajivmehta/taskflow/actions)  \n[![Code Coverage](https://img.shields.io/codecov/c/rajivmehta/taskflow)](https://codecov.io/gh/rajivmehta/taskflow)  \n[![Accessibility](https://img.shields.io/badge/accessibility-A11Y-green)](https://github.com/rajivmehta/taskflow/wiki/Accessibility-Guidelines)  \n\n---\n\n## Tech Stack  \n- **Frontend**: React Native (TypeScript) with Tailwind for adaptive UI  \n- **Backend**: Firebase Realtime Database (with security rules) + Firebase Authentication  \n- **Testing**: Jest + React Native Testing Library (unit + integration)  \n- **Accessibility**: ARIA labels, semantic HTML, and focus management baked into core components  \n\n---\n\n## Architecture / Design  \nThe app follows a **separation of concerns** pattern:  \n1. **Presentation Layer**: React Native components handle UI state and rendering  \n2. **Business Logic**: TypeScript services abstract Firebase interactions (e.g., task creation, permission checks)  \n3. **Data Layer**: Firebase Realtime Database with typed queries and snapshot listeners  \nResponsive design ensures 100% compatibility across device orientations and screen sizes, with dynamic layout adjustments based on platform-specific constraints.  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/rajivmehta/taskflow.git`  \n2. Install dependencies: `npm install`  \n3. Configure Firebase: Copy `firebase.json` and `service-account.json` from the `.env` directory  \n4. Build assets: `npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/assets`  \n\n---\n\n## Usage / Examples  \n- **Task Creation**: Use the `TaskService.createTask()` method with `firebase.firestore()` to persist data  \n- **Role-Based Access**: Implement `PermissionService.checkAccess()` to enforce team member restrictions  \n- **Real-Time Updates**: Subscribe to `database.ref('tasks')` with `onChildAdded()` for live sync  \n\n---\n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# TaskFlow - Flutter-based Task Management App  \nA cross-platform task management tool built with Flutter to streamline productivity for startups. Designed for seamless user workflows, with a focus on reliability and scalability in fast-paced environments.  \n\n## Deployment  \nTaskFlow is deployed to App Store and Play Store via Firebase CI/CD pipelines. Automated versioning and release notes are managed through GitHub Actions, ensuring consistent updates across platforms.  \n\n## Badges  \n[![Flutter Version](https://img.shields.io/badge/flutter-3.10-blue)](https://flutter.dev)  \n[![CI/CD Status](https://img.shields.io/badge/status-passing-green)](https://github.com/yourusername/taskflow/actions)  \n[![App Store](https://img.shields.io/badge/app-store-download-red)](https://apps.apple.com/app/taskflow/id123456789)  \n\n## Tech Stack  \n- **Flutter** (cross-platform UI, state management with Riverpod)  \n- **Firebase** (real-time database, authentication, push notifications)  \n- **Git** (version control, pull requests, CI/CD integration)  \n- **Android Studio** (Flutter development, hot reload)  \n- **Flutter CLI** (build tools, pubspec.yaml dependencies)  \n\n## Architecture / Design  \nThe app follows a layered architecture with separate UI, logic, and data modules. Flutter’s widget tree ensures consistent UX across platforms, while Firebase provides backend scalability. State management is handled via Riverpod to decouple UI from business logic. Push notifications and real-time updates are powered by Firebase Cloud Messaging and Firestore.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/yourusername/taskflow.git`  \n2. Navigate to the project root: `cd taskflow`  \n3. Fetch dependencies: `flutter pub get`  \n4. Set up Android/iOS SDKs via Flutter config  \n5. Run the app: `flutter run`  \n\n## Usage / Examples  \n- **Task Creation**: Tap the \"+\" button to add tasks with priority tags and due dates.  \n- **Notification Sync**: Enable push notifications in settings for real-time updates.  \n- **Dashboard Filters**: Use the sidebar to sort tasks by project, status, or deadline.  \n\n## License  \nMIT License — see [LICENSE](https://github.com/yourusername/taskflow/blob/main/LICENSE) for details."
 }

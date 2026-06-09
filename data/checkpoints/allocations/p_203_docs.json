@@ -1,63 +1,76 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional CV for Daniel Nakamura, Staff Full-Stack Developer at CyberShield Technologies with 13 years of experience in cybersecurity.",
-    "title": "Daniel Nakamura - Full-Stack Developer",
+    "topic_summary": "A professional CV highlighting Kwame Mensah's 10 years of backend engineering experience in SaaS",
+    "title": "Kwame Mensah - Staff Backend Engineer",
     "doc_id": "d_p_203_00",
     "persona_id": "p_203",
     "hyperparams": {
-      "cv_format": "paragraph",
-      "geographic_convention": "India",
-      "company_type": "enterprise",
-      "company_size": "mid (50-500)"
+      "cv_format": "hybrid",
+      "geographic_convention": "Israel",
+      "company_type": "startup",
+      "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "README for a secure API gateway with role-based access control, ensuring data integrity in cybersecurity applications.",
-    "title": "Secure API Gateway with Role-Based Access Control",
+    "topic_summary": "A microservices architecture for real-time data synchronization in SaaS platforms",
+    "title": "NexaSync: Real-time Data Synchronization Microservices",
     "doc_id": "d_p_203_01",
     "persona_id": "p_203",
     "hyperparams": {
-      "project_scale": "production",
-      "project_team_size": "large (15+)",
-      "jargon_density": "plain"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "README for an end-to-end encryption tool designed to protect sensitive data across distributed systems in cybersecurity environments.",
-    "title": "End-to-End Encryption Tool for Sensitive Data",
-    "doc_id": "d_p_203_02",
-    "persona_id": "p_203",
-    "hyperparams": {
-      "project_scale": "production",
+      "project_scale": "hobby",
       "project_team_size": "solo",
       "jargon_density": "heavy"
     }
   },
   {
+    "doc_type": "project_readme",
+    "topic_summary": "Serverless infrastructure implementation for scalable SaaS application deployment",
+    "title": "CloudNexa: Serverless Architecture for SaaS Scalability",
+    "doc_id": "d_p_203_02",
+    "persona_id": "p_203",
+    "hyperparams": {
+      "project_scale": "team-internal",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "heavy"
+    }
+  },
+  {
     "doc_type": "recommendation",
-    "topic_summary": "Recommendation letter from Daniel's manager at CyberShield Technologies highlighting his leadership and technical expertise in full-stack cybersecurity development.",
-    "title": "Recommendation from CyberShield Technologies Manager",
+    "topic_summary": "A recommendation from NexaCorp's CTO praising Kwame's leadership in backend architecture",
+    "title": "Recommendation from NexaCorp CTO",
     "doc_id": "d_p_203_03",
+    "persona_id": "p_203",
+    "hyperparams": {
+      "recommender_role": "direct-manager",
+      "recommender_closeness": "worked-daily",
+      "company_type": "startup",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A peer endorsement from a previous SaaS company highlighting Kwame's collaborative problem-solving skills",
+    "title": "Recommendation from Former Colleague at ScaleTech",
+    "doc_id": "d_p_203_04",
     "persona_id": "p_203",
     "hyperparams": {
       "recommender_role": "professor",
       "recommender_closeness": "brief",
-      "company_type": "startup",
-      "company_size": "large (500+)"
+      "company_type": "enterprise",
+      "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "blog",
-    "topic_summary": "Technical blog post on securing full-stack applications with best practices for encryption, authentication, and secure API design in cybersecurity.",
-    "title": "Securing Full-Stack Applications in Cybersecurity",
-    "doc_id": "d_p_203_04",
+    "topic_summary": "An in-depth analysis of best practices for designing scalable backend systems in SaaS environments",
+    "title": "Designing Scalable Backend Architectures for SaaS Platforms: Best Practices and Patterns",
+    "doc_id": "d_p_203_05",
     "persona_id": "p_203",
     "hyperparams": {
-      "blog_depth": "opinion-piece",
-      "jargon_density": "plain"
+      "blog_depth": "deep-dive",
+      "jargon_density": "moderate"
     }
   }
 ]

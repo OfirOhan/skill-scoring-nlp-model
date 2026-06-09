@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_277_02",
+  "type": "project_readme",
+  "persona_id": "p_277",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Android development": 4,
+    "Flutter": 3,
+    "JavaScript": 1,
+    "Kotlin (Android)": 4,
+    "Mobile CI/CD": 4,
+    "REST API design": 3,
+    "React": 1,
+    "React Native": 4,
+    "Web performance optimization": 1
+  },
+  "text": "# Cross-Platform Ad SDK  \nA high-performance, cross-platform ad integration framework designed to streamline ad monetization in mobile applications across iOS and Android. Built to abstract platform-specific complexities while maintaining granular control over ad lifecycle events, this SDK enables developers to deploy ads with minimal overhead. The project was incubated within a 15-person adtech team focused on optimizing ad revenue metrics and reducing integration friction.  \n\n## Roadmap / Future Work  \nWe are prioritizing three strategic pillars:  \n1. **Dynamic ad loading** with real-time bidding protocol support (Q3 2024)  \n2. **A/B testing framework** for ad creative variants (Q1 2025)  \n3. **Web extension** for desktop browser monetization (Q2 2025)  \n\nLong-term goals include expanding ad network compatibility and integrating machine learning models for audience segmentation. The team is also evaluating a hybrid approach to unify native ad rendering across platforms.  \n\n## Getting Started / Installation  \n**Android**  \n```bash  \n./gradlew :app:assembleDebug  \n```  \nEnsure `com.adtech.sdk` is added to `build.gradle` with the latest version.  \n**iOS**  \n```bash  \npod install --repo-update  \n```  \nSet environment variables for ad network credentials in `.env` files.  \n\n## Usage / Examples  \nInitialize the SDK with:  \n```kotlin  \nAdManager.initialize(context, \"YOUR_AD_UNIT_ID\")  \n```  \nLoad a rewarded ad:  \n```kotlin  \nAdManager.loadRewardedAd(\"REWARD_TYPE_1\", object : AdCallback {  \n    override fun onAdLoaded() { /* handle success */ }  \n})  \n```  \niOS Swift example:  \n```swift  \nAdManager.shared.loadInterstitial(\"INTERSTITIAL_1\") { result in  \n    switch result {  \n    case .success: /* handle load */  \n    case .failure: /* log error */  \n    }  \n}  \n```  \n\n## Tech Stack  \n- **Flutter** (shared logic layer with native module integration)  \n- **Kotlin Multiplatform** (core SDK with Android-specific extensions)  \n- **Swift** (iOS-specific rendering engine)  \n- REST APIs for ad network communication  \n- GitHub Actions for CI/CD pipeline with XCTest and Flutter test suites  \n\n## Architecture / Design  \nThe SDK employs a layered architecture:  \n1. **Core SDK** (Kotlin Multiplatform) handles ad lifecycle, metrics, and cross-platform abstractions  \n2. **Platform Modules** (Android: Kotlin, iOS: Swift) manage native ad rendering and lifecycle events  \n3. **Ad Network Integrations** (REST APIs) for real-time bid requests and impression tracking  \n\nThe design emphasizes minimal runtime overhead through precompiled native modules and asynchronous event queues. All ad-related metrics are aggregated via a centralized analytics pipeline.  \n\n## License  \nMIT License — commercial use permitted with attribution."
+}

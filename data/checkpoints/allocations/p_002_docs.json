@@ -1,50 +1,63 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional resume highlighting Binta Traore's experience as a platform engineer in adtech",
-    "title": "Binta Traore - Platform Engineer CV",
+    "topic_summary": "A professional CV highlighting Sunita Rao's experience as a Junior DevOps Engineer at NexaTech Solutions, focusing on infrastructure automation and cloud operations.",
+    "title": "Sunita Rao - Junior DevOps Engineer",
     "doc_id": "d_p_002_00",
     "persona_id": "p_002",
     "hyperparams": {
-      "cv_format": "hybrid",
-      "geographic_convention": "India",
-      "company_type": "FAANG",
-      "company_size": "mid (50-500)"
+      "cv_format": "paragraph",
+      "geographic_convention": "US",
+      "company_type": "academic",
+      "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "README for a real-time ad targeting platform built using Python and Kafka",
-    "title": "Real-Time Ad Targeting Platform",
+    "topic_summary": "A project implementing a scalable CI/CD pipeline using Jenkins, GitLab, and Docker to streamline application deployments across multiple environments.",
+    "title": "Automated CI/CD Pipeline for NexaTech Solutions",
     "doc_id": "d_p_002_01",
     "persona_id": "p_002",
     "hyperparams": {
-      "project_scale": "hobby",
-      "project_team_size": "large (15+)",
-      "jargon_density": "heavy"
+      "project_scale": "academic",
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "moderate"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "Recommendation from her manager at AdvertiseSphere Inc. praising her technical leadership",
-    "title": "Recommendation from AdvertiseSphere Inc. Manager",
+    "topic_summary": "A recommendation letter from Sunita's manager at NexaTech Solutions, highlighting her contributions to infrastructure automation and teamwork.",
+    "title": "Recommendation from NexaTech Solutions Manager",
     "doc_id": "d_p_002_02",
     "persona_id": "p_002",
     "hyperparams": {
+      "recommender_role": "skip-level",
+      "recommender_closeness": "worked-daily",
+      "company_type": "startup",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation letter from a peer developer, emphasizing Sunita's collaboration skills and technical expertise in DevOps practices.",
+    "title": "Recommendation from Peer Developer",
+    "doc_id": "d_p_002_03",
+    "persona_id": "p_002",
+    "hyperparams": {
       "recommender_role": "peer",
-      "recommender_closeness": "brief",
-      "company_type": "agency",
-      "company_size": "small (<50)"
+      "recommender_closeness": "worked-daily",
+      "company_type": "startup",
+      "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "linkedin",
-    "topic_summary": "LinkedIn summary showcasing Binta's expertise in building scalable adtech platforms",
-    "title": "Binta Traore - Platform Engineer",
-    "doc_id": "d_p_002_03",
+    "topic_summary": "A professional LinkedIn summary showcasing Sunita Rao's passion for DevOps and her journey as a Junior DevOps Engineer at NexaTech Solutions, focusing on cloud infrastructure and automation.",
+    "title": "LinkedIn Summary",
+    "doc_id": "d_p_002_04",
     "persona_id": "p_002",
     "hyperparams": {
-      "linkedin_completeness": "detailed"
+      "linkedin_completeness": "minimal"
     }
   }
 ]

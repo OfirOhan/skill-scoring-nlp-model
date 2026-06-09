@@ -4,20 +4,23 @@
   "persona_id": "p_162",
   "hyperparams": {
     "project_scale": "academic",
-    "project_team_size": "solo",
-    "jargon_density": "plain"
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "A/B testing": 3,
-    "Data visualization (Matplotlib/Plotly)": 4,
-    "Feature engineering": 3,
-    "MLOps (MLflow/W&B)": 3,
-    "NumPy": 4,
-    "Pandas": 4,
-    "Python": 4,
-    "SQL analytics": 4,
-    "Statistical modeling": 4,
-    "Tableau/Power BI": 2
+    "Apache Airflow": 4,
+    "Apache Kafka": 3,
+    "Apache Spark": 4,
+    "Data Modeling": 3,
+    "Data Quality frameworks": 3,
+    "Docker": 3,
+    "Java": 1,
+    "Linux administration": 1,
+    "Python": 3,
+    "REST API design": 2,
+    "Snowflake": 4,
+    "Terraform": 3,
+    "dbt": 4
   },
-  "text": "# Predictive Analytics for Client Retention  \n\nA data-driven approach to forecasting client churn in consulting engagements, leveraging historical client data to inform retention strategies. This project integrates statistical modeling, feature engineering, and visualization to deliver actionable insights for client retention optimization.  \n\n## Badges  \n🚀 Production-Ready  \n📊 Data-Driven Insights  \n🔧 MLOps-Integrated  \n💡 Consulting-Industry Focus  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details.  \n\n## Tech Stack  \n- **Python** (core language)  \n- **Pandas** (data wrangling, time-series alignment)  \n- **NumPy** (numerical operations, feature scaling)  \n- **SQL** (database querying, data aggregation)  \n- **MLflow** (model tracking, deployment pipelines)  \n- **Weights & Biases** (experiment logging, hyperparameter tuning)  \n- **Tableau** (interactive dashboards for stakeholder reviews)  \n- **Plotly** (dynamic visualizations of retention trends)  \n\n## Architecture / Design  \nThe system follows a pipeline-first design, prioritizing reproducibility and scalability. Raw client data is ingested via SQL queries, preprocessed using Pandas for missing value imputation and temporal alignment. Feature engineering focuses on deriving metrics like engagement frequency and contract renewal cycles. Models are trained using logistic regression and survival analysis techniques, with MLflow managing version control. Final outputs are visualized in Tableau, enabling consultants to prioritize high-risk clients.  \n\n## Getting Started / Installation  \n1. Clone the repository.  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure database credentials in `config.py`  \n4. Run `etl_pipeline.py` to generate processed datasets  \n5. Execute notebooks in `analysis/` for model training and evaluation  \n\n## Usage / Examples  \n```python  \n# Example: Train a retention model  \nfrom mlflow.pyfunc import PythonModel  \nclass RetentionPredictor(PythonModel):  \n    def __init__(self, model):  \n        self.model = model  \n    def predict(self, context, df):  \n        return self.model.predict_proba(df)[:, 1]  \n```  \nUse `evaluate_model.py` to compare baseline metrics (e.g., 22% churn rate vs. 15% predicted). Visualize results via Tableau dashboards hosted on the company’s internal platform.  \n\n## Contributing  \nPull requests are welcome! For major changes, open an issue to discuss the approach. Focus on improving model interpretability or expanding dataset sources."
+  "text": "# Game Session Insights Pipeline  \n\nThis project delivers a real-time analytics pipeline tailored for multiplayer game environments, aggregating session metrics such as player engagement, latency, and in-game behavior. Built for academic exploration, it balances scalability and maintainability while addressing the unique challenges of streaming player data in distributed systems. The pipeline ingests raw event streams, transforms them into actionable insights, and loads results into a structured data warehouse. Designed for teams of 5–15 engineers, it emphasizes robustness, with a focus on data quality and operational reliability.  \n\n## Testing  \nQuality is baked into every layer. Unit tests validate Spark transformations and Kafka producer/consumer logic, while integration tests simulate end-to-end data flows under load. Data quality checks are enforced via Great Expectations, ensuring schema compliance and anomaly detection. Airflow DAGs include test workflows to verify pipeline resilience during schema drift or data volume spikes. All tests are containerized using Docker for consistent, reproducible execution.  \n\n## Getting Started / Installation  \nClone the repository and navigate to the root directory. Ensure Docker is installed, then run `docker-compose up` to spin up Kafka, Spark, and Snowflake containers. Install Python dependencies via `pip install -r requirements.txt`. Configure environment variables for Snowflake credentials and Kafka brokers. Finally, run `python setup.py` to initialize data models and Airflow DAGs.  \n\n## Usage / Examples  \nTo process session data:  \n```bash  \nairflow trigger_dag \"session_insights_pipeline\"  \n```  \nThis initiates a workflow that reads Kafka topics, processes events with Spark Streaming, and loads results into Snowflake via dbt. Example transformations include calculating average session duration and detecting abrupt latency spikes. The pipeline supports dynamic schema evolution, adapting to new metrics without downtime.  \n\n## Tech Stack  \n- **Streaming**: Apache Kafka (real-time event ingestion)  \n- **Processing**: Apache Spark (distributed computation)  \n- **Orchestration**: Apache Airflow (scheduling and monitoring)  \n- **Storage**: Snowflake (scalable data warehouse)  \n- **Transformation**: dbt (SQL-based ETL)  \n- **Containerization**: Docker (environment isolation)  \n- **Infrastructure**: Terraform (cloud resource provisioning)  \n- **Language**: Python (scripting and data modeling)  \n\n## Architecture / Design  \nThe pipeline follows a lambda architecture, with Kafka acting as the event source. Spark Streaming handles real-time aggregation, while batch jobs using dbt reconcile historical data in Snowflake. Data modeling leverages Snowflake’s multi-cluster architecture for parallel querying. Airflow orchestrates dependencies, ensuring fault tolerance and idempotency.  \n\n## License  \nApache License 2.0  \n\n## Contributing  \nEnhance the pipeline by adding new metrics, optimizing Spark job performance, or expanding data quality checks. Pull requests should include unit tests and documentation updates. Collaborate via GitHub Issues to align on feature priorities and architectural improvements."
 }

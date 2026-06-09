@@ -1,39 +1,77 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional curriculum vitae highlighting Priscilla Ferreira's 10 years of experience as a Staff Site Reliability Engineer in enterprise devops_sre roles",
-    "title": "Priscilla Ferreira - Staff Site Reliability Engineer",
+    "topic_summary": "Senior Embedded Systems Engineer with 8 years of experience in healthtech, specializing in embedded systems for medical devices.",
+    "title": "Ritika Malhotra 91 - Senior Embedded Systems Engineer",
     "doc_id": "d_p_288_00",
     "persona_id": "p_288",
     "hyperparams": {
-      "cv_format": "minimal",
+      "cv_format": "hybrid",
       "geographic_convention": "US",
       "company_type": "academic",
-      "company_size": "mid (50-500)"
+      "company_size": "small (<50)"
     }
   },
   {
-    "doc_type": "blog",
-    "topic_summary": "Technical deep dive on designing resilient microservices architectures for enterprise-scale applications",
-    "title": "Building Resilient Microservices: Patterns for Enterprise SRE",
+    "doc_type": "project_readme",
+    "topic_summary": "A smart glucose monitoring system using embedded sensors for real-time data collection and analysis in diabetic patients.",
+    "title": "Smart Glucose Monitoring System for Diabetic Patients",
     "doc_id": "d_p_288_01",
     "persona_id": "p_288",
     "hyperparams": {
-      "blog_depth": "deep-dive",
-      "jargon_density": "heavy"
+      "project_scale": "hobby",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A wireless ECG wearable device with low-power sensors and secure data transmission for remote cardiac monitoring.",
+    "title": "Wireless ECG Wearable Device for Remote Cardiac Monitoring",
+    "doc_id": "d_p_288_02",
+    "persona_id": "p_288",
+    "hyperparams": {
+      "project_scale": "hobby",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "An IoT-based platform for remote patient monitoring, integrating multiple sensors and cloud connectivity for chronic disease management.",
+    "title": "IoT-Based Remote Patient Monitoring Platform for Chronic Disease Management",
+    "doc_id": "d_p_288_03",
+    "persona_id": "p_288",
+    "hyperparams": {
+      "project_scale": "production",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "plain"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "Endorsement from a former manager attesting to Priscilla's leadership in cloud infrastructure reliability initiatives",
-    "title": "Recommendation for Priscilla Ferreira - NexaTech Solutions",
-    "doc_id": "d_p_288_02",
+    "topic_summary": "A recommendation from her manager highlighting her leadership in developing embedded systems for medical devices.",
+    "title": "Recommendation from HealthSense Devices Manager",
+    "doc_id": "d_p_288_04",
     "persona_id": "p_288",
     "hyperparams": {
-      "recommender_role": "peer",
+      "recommender_role": "professor",
       "recommender_closeness": "occasional",
       "company_type": "academic",
-      "company_size": "mid (50-500)"
+      "company_size": "large (500+)"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A peer recommendation emphasizing her collaboration in firmware development for wearable health tech.",
+    "title": "Peer Recommendation for Embedded Systems Expertise",
+    "doc_id": "d_p_288_05",
+    "persona_id": "p_288",
+    "hyperparams": {
+      "recommender_role": "professor",
+      "recommender_closeness": "brief",
+      "company_type": "agency",
+      "company_size": "small (<50)"
     }
   }
 ]

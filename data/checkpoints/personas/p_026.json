@@ -1,55 +1,62 @@
 {
   "persona_id": "p_026",
   "hyperparams": {
-    "archetype": "backend_engineer",
-    "years_experience": 4,
-    "seniority": "mid",
-    "industry": "healthtech",
-    "writing_style": "neutral",
-    "language_fluency": "ESL",
-    "self_promotion_level": "boastful",
+    "archetype": "devops_sre",
+    "years_experience": 12,
+    "seniority": "staff",
+    "industry": "startup",
+    "writing_style": "confident",
+    "language_fluency": "native",
+    "self_promotion_level": "humble",
     "quantification_tendency": "mixed"
   },
-  "name": "Ian Szabo",
-  "current_role": "Backend Engineer",
-  "company": "VitalPath Health",
+  "name": "Yoko Fujita",
+  "current_role": "Staff Site Reliability Engineer",
+  "company": "NexaTech Solutions",
   "education": {
     "degree": "Bachelor of Science in Computer Science",
-    "university": "University of Toronto",
-    "year": 2020
+    "university": "University of Tokyo",
+    "year": 2010
   },
   "career_trajectory": [
     {
-      "position": "Software Developer Intern",
-      "company": "HealthTech Solutions",
-      "duration": "2019-2020"
+      "title": "DevOps Engineer",
+      "company": "CloudNova Inc.",
+      "year": 2012
     },
     {
-      "position": "Junior Backend Engineer",
-      "company": "MedCare Systems",
-      "duration": "2020-2022"
+      "title": "SRE Team Lead",
+      "company": "Aurora Systems",
+      "year": 2015
     },
     {
-      "position": "Senior Backend Engineer",
-      "company": "VitalPath Health",
-      "duration": "2022-present"
+      "title": "Staff SRE",
+      "company": "NexaTech Solutions",
+      "year": 2018
     }
   ],
   "skills": {
-    "Python": 4,
-    "Go": 4,
-    "REST API design": 4,
-    "Microservices architecture": 4,
-    "PostgreSQL": 4,
-    "AWS": 4,
-    "CI/CD pipelines": 3,
-    "Docker": 3,
-    "Kubernetes": 3,
-    "Terraform": 3,
-    "Prometheus/Grafana": 3
+    "CI/CD pipelines": 4,
+    "GitHub Actions": 4,
+    "Jenkins": 3,
+    "ArgoCD": 4,
+    "GitLab CI": 3,
+    "Prometheus/Grafana": 5,
+    "Monitoring & alerting": 4,
+    "Incident management": 4,
+    "SLA/SLO management": 4,
+    "Python": 3,
+    "Linux administration": 3,
+    "Shell scripting (Bash)": 3,
+    "PostgreSQL": 2,
+    "Redis": 2,
+    "TCP/IP": 1
   },
   "document_ids": [
     "d_p_026_00",
-    "d_p_026_01"
+    "d_p_026_01",
+    "d_p_026_02",
+    "d_p_026_03",
+    "d_p_026_04"
   ]
 }

@@ -1,23 +1,26 @@
 {
   "doc_id": "d_p_214_03",
-  "type": "recommendation",
+  "type": "blog",
   "persona_id": "p_214",
   "hyperparams": {
-    "recommender_role": "professor",
-    "recommender_closeness": "worked-daily",
-    "company_type": "startup",
-    "company_size": "small (<50)"
+    "blog_depth": "deep-dive",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 2,
-    "Application security (OWASP)": 2,
-    "Encryption & PKI": 2,
-    "IAM/Access control": 2,
-    "Linux administration": 2,
-    "Network security": 3,
-    "SIEM tools": 1,
-    "Shell scripting (Bash)": 2,
-    "Vulnerability management": 1
+    "AWS": 3,
+    "CDN management": 1,
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 3,
+    "Cloud networking": 1,
+    "GCP": 2,
+    "GitLab CI": 1,
+    "Infrastructure as Code": 2,
+    "Kubernetes": 3,
+    "Load balancing": 1,
+    "Monitoring & alerting": 3,
+    "Python": 3,
+    "Serverless": 1,
+    "Terraform": 2
   },
-  "text": "**Recommendation for Pooja Nair**  \n\n**Academic Context**  \nPooja’s academic foundation in computer science, particularly her thesis on secure protocol optimization, provided a rigorous framework for her technical approach. Her work at AdVerve leveraged this background to design systems that balance security with scalability, a challenge she addressed with methodical precision.  \n\n**Research Ability**  \nHer ability to dissect complex problems was evident in a project where she reconfigured network security architectures to mitigate DDoS risks. By analyzing traffic patterns and implementing rate-limiting strategies, she reduced incident response times by 32% without compromising service availability. This reflects her capacity to translate theoretical knowledge into pragmatic, data-driven solutions.  \n\n**Character**  \nPooja’s reliability and collaborative spirit were constants in our shared workflow. During a critical audit, she voluntarily led a cross-functional review of access controls, ensuring compliance while streamlining workflows for developers. Her curiosity and willingness to debug edge cases extended beyond her role, fostering a culture of proactive problem-solving.  \n\n**Potential**  \nHer analytical rigor and technical adaptability position her to tackle advanced challenges in adtech security. Whether refining encryption practices or designing resilient infrastructure, she approaches tasks with a focus on measurable outcomes. Her blend of intellectual depth and pragmatic execution suggests she will excel in roles requiring both innovation and operational precision."
+  "text": "**Real-Time Fraud Detection in Fintech Systems**  \n\nTransactions happen in milliseconds. In fintech, a single second can mean the difference between a secure transaction and a fraudulent one. Traditional rule-based systems are no longer enough to keep up with the volume and complexity of modern payment flows. At my team, we’ve built a real-time fraud detection system that balances speed and accuracy—here’s how we did it.  \n\n**Problem Statement**  \nFraud detection in fintech requires analyzing thousands of transactions per second, often with limited contextual data. Legacy systems struggle with dynamic fraud patterns, leading to high false positive rates or missed threats. Our goal was to create a system that could process transactions in under 100ms while adapting to new fraud tactics.  \n\n**Setup**  \nWe started by provisioning an AWS EC2 cluster for data processing and an S3 bucket for storing raw transaction logs. For real-time inference, we deployed AWS Lambda functions to handle incoming requests. All models were built using Python and TensorFlow, with features like user behavior patterns and geolocation pulled from our database. We integrated Prometheus for monitoring latency and model performance.  \n\n**Step-by-Step Guide**  \n1. **Data Collection**: Aggregated transaction data from Kafka streams into S3, ensuring timestamps and user metadata were preserved.  \n2. **Feature Engineering**: Used Python to extract features like transaction amount variance and device fingerprint hashes.  \n3. **Model Training**: Trained a Random Forest classifier on historical data, tuning hyperparameters to minimize false positives.  \n4. **Deployment**: Packaged the model into a Lambda function, using AWS API Gateway to route transactions to the detector.  \n5. **Monitoring**: Set up alerts for latency spikes or model drift using CloudWatch and Prometheus.  \n\n**Results**  \nAfter a month of testing, the system reduced false positives by 32% while catching 98.5% of known fraud patterns. Latency averaged 65ms, well under our 100ms target. Scaling was seamless—during a spike in transaction volume, Lambda auto-scaled to handle the load without downtime.  \n\n**Conclusion**  \nThis project proved that real-time fraud detection isn’t just about speed—it’s about balancing precision with adaptability. By leveraging AWS services and Python-based machine learning, we created a system that’s both scalable and maintainable. The key takeaway? Always pair your models with robust monitoring to catch issues before they escalate.  \n\n**Further Reading**  \n- AWS Machine Learning Blog: “Building Real-Time Fraud Detection Pipelines”  \n- TensorFlow tutorials on model serving with Flask  \n- Research paper: “Adaptive Machine Learning for Financial Fraud” (arXiv.org)  \n- Open-source tools: Apache Flink for stream processing, ELK Stack for log analysis  \n\nThis approach isn’t perfect, but it’s a solid starting point for teams looking to modernize their fraud detection workflows."
 }

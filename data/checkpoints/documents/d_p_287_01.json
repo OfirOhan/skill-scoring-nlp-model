@@ -1,24 +1,24 @@
 {
   "doc_id": "d_p_287_01",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_287",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "large (15+)",
-    "jargon_density": "moderate"
+    "recommender_role": "direct-manager",
+    "recommender_closeness": "brief",
+    "company_type": "FAANG",
+    "company_size": "large (500+)"
   },
   "skill_evidence": {
-    "AWS": 2,
-    "CI/CD pipelines": 2,
-    "Docker": 4,
-    "Go": 5,
-    "Kubernetes": 5,
-    "Microservices architecture": 4,
-    "PostgreSQL": 2,
-    "Python": 3,
-    "REST API design": 5,
-    "Redis": 2,
-    "Terraform": 3
+    "AWS": 4,
+    "GCP": 3,
+    "Infrastructure as Code": 4,
+    "Kubernetes": 3,
+    "Network automation": 2,
+    "PostgreSQL": 1,
+    "Python": 1,
+    "REST API design": 2,
+    "Serverless": 3,
+    "Terraform": 4
   },
-  "text": "# SecureAPI Gateway  \nA team-internal API gateway built to enforce TLS 1.3, OAuth 2.0, and JWT-based authentication across microservices. Designed to handle 10k+ requests/sec with zero-downtime deployments.  \n\n## Contributing  \nThis project is a collaborative effort for our 15+ engineer team. Contributions are welcome via GitHub PRs, especially for refining TLS cipher suites, optimizing rate-limiting rules, or improving audit logging. Focus on security hardening and performance benchmarks.  \n\n## Getting Started  \n1. Clone the repository using `git clone https://github.com/your-org/secureapi-gateway.git`  \n2. Install dependencies: `go mod tidy`  \n3. Configure AWS credentials for S3 logging (see `config/defaults.yaml`)  \n4. Run `docker-compose up --build` to spin up Redis, PostgreSQL, and local dev environment  \n\n## Usage / Examples  \n- **Authentication**: Use `/auth/token` endpoint with client credentials flow  \n- **Encryption**: All endpoints enforce TLS 1.3 with AES-256-GCM  \n- **Rate Limiting**: Apply `X-RateLimit-Remaining` headers via middleware  \n- **Audit Logs**: View encrypted logs in AWS S3 bucket `secureapi-logs`  \n\n## Tech Stack  \n- **Language**: Go (1.21+) for core logic, Python scripts for CI/CD pipeline automation  \n- **Orchestration**: Kubernetes (Helm charts for deployment)  \n- **Storage**: PostgreSQL (PostGIS extension for geospatial queries), Redis (rate limiting)  \n- **Networking**: AWS VPC with private subnets, Terraform for infrastructure as code  \n\n## Architecture / Design  \nThe gateway operates as a stateless API layer, decoupled from backend microservices. Key decisions:  \n- **Go**: Chosen for high-performance concurrency and native crypto support  \n- **Kubernetes**: Deployed as a StatefulSet with persistent volume claims for config storage  \n- **Docker**: Custom images built with multi-stage builds to reduce attack surface  \n- **Security**: TLS termination at ingress, JWT validation via custom middleware, and circuit breakers for failed authentication flows  \n\n## License  \nMIT License (see `LICENSE` file)  \n\n## Badges  \n[![Build Status](https://img.shields.io/endpoint?url=https://your-ci-url.com/badge.json)](https://your-ci-url.com)  \n[![Code Coverage](https://img.shields.io/endpoint?url=https://your-coverage-url.com/badge.json)](https://your-coverage-url.com)"
+  "text": "Tanya Kuznetsova 90 joined NexaScale Innovations as a Platform Engineer during a cross-team collaboration on cloud infrastructure modernization. Her role required aligning their startup’s agile practices with the scalability demands of our enterprise systems. Over six months, she consistently bridged operational rigor and innovation, adapting her expertise to their fast-paced environment.  \n\nDaily, Tanya focused on optimizing cloud resource utilization and ensuring seamless integration between services. She spearheaded the migration of critical workloads to AWS, reducing compute costs by 18% through targeted instance type optimization. Her Terraform-driven infrastructure as code practices streamlined deployment pipelines, cutting environment setup time by two-thirds. She also maintained GCP-based data processing workflows, ensuring compatibility with NexaScale’s hybrid architecture. Her ability to balance automation with manual oversight made her a reliable resource during scaling phases.  \n\nA standout moment came when she redesigned a serverless architecture to handle a sudden 300% traffic surge. By leveraging AWS Lambda and API Gateway, she minimized latency while maintaining service reliability. Another key contribution was her proactive approach to Kubernetes cluster management, which reduced downtime by 40% during a critical rollout. Tanya’s problem-solving mindset and attention to operational hygiene consistently elevated team efficiency.  \n\nTanya’s technical acumen, combined with her collaborative approach and reliability, makes her a strong candidate for roles requiring both strategic insight and hands-on execution. She’s a thoughtful partner who thrives in dynamic environments and brings measurable value to any team."
 }

@@ -1,25 +1,22 @@
 {
   "doc_id": "d_p_275_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_275",
   "hyperparams": {
-    "recommender_role": "professor",
-    "recommender_closeness": "occasional",
-    "company_type": "FAANG",
-    "company_size": "small (<50)"
+    "project_scale": "hobby",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "C/C++ (embedded)": 1,
-    "Embedded Linux": 1,
-    "Firmware development": 1,
-    "Hardware-software integration": 1,
-    "IoT protocols (MQTT/CoAP)": 1,
-    "Message queues": 1,
-    "Network automation": 1,
-    "Python": 1,
-    "REST API design": 1,
-    "RTOS": 1,
-    "Sensor integration": 1
+    "A/B testing": 2,
+    "Analytics-driven product decisions": 5,
+    "Competitive analysis": 4,
+    "Data visualization (Plotly)": 2,
+    "Hypothesis testing": 1,
+    "Product management": 5,
+    "Roadmap planning": 4,
+    "SQL analytics": 3,
+    "Stakeholder management": 4
   },
-  "text": "Rosa Gutierrez stood out during her time in my class on healthcare systems design. Last spring, she spearheaded a project integrating real-time analytics into a rural clinic’s workflow, reducing diagnostic delays by 18% through process reengineering. Her ability to balance technical rigor with clinical empathy made the solution both innovative and practical.  \n\nAs a professor, I’ve interacted with Rosa occasionally over the past two years, primarily through her capstone work and a collaborative grant proposal. She joined HealthTech Innovations shortly after graduating, and her approach to problem-solving has consistently aligned with her academic foundation.  \n\nRosa’s strength lies in her capacity to simplify complex systems without losing sight of human-centered outcomes. During a critical product launch, she identified a bottleneck in user onboarding that others overlooked, redesigning the workflow to cut training time by 25%. Her curiosity drives her to ask “why” beyond the surface, which has led to several patent-pending ideas in patient data security. Colleagues often remark on her calm under pressure—she once coordinated a cross-functional team during a server outage, ensuring minimal disruption to patient care.  \n\nIn summary, Rosa’s blend of technical insight and ethical consideration makes her a rare asset. She thrives in ambiguity, approaches challenges with intellectual honesty, and consistently prioritizes long-term impact over short-term gains.  \n\nSincerely,  \n[Professor’s Name]  \n[University Affiliation]"
+  "text": "# FraudGuard AI  \nFraudGuard AI is a real-time fraud detection system leveraging machine learning models to analyze transaction patterns, flag risky behavior, and provide actionable risk scores. Built for fintech teams needing scalable, low-latency fraud prevention, it processes over 100,000 transactions per second with a 98% detection accuracy rate in production.  \n\n## Configuration  \nSet environment variables for API keys and database credentials:  \n```bash  \nexport FRAUDGUARD_API_KEY=\"your_token_here\"  \nexport DB_URL=\"postgres://user:pass@localhost:5432/fraud_db\"  \n```  \nConfigure model weights and threshold values via `config.yaml` for environment-specific tuning. Example:  \n```yaml  \nproduction:  \n  threshold: 0.92  \n  batch_size: 512  \n```  \n\n## Getting Started  \nInstall dependencies using Docker:  \n```bash  \ndocker-compose up --build  \n```  \nEnsure Python 3.9+ is installed. Run migrations and seed test data:  \n```bash  \npython manage.py migrate  \npython manage.py seed_data  \n```  \n\n## Usage / Examples  \nStart the fraud detection service:  \n```bash  \npython fraud_service.py --mode real-time  \n```  \nTest with sample transaction data:  \n```bash  \ncurl -X POST http://localhost:8080/analyze -d '{\"amount\": 1500, \"location\": \"US\"}'  \n```  \nExpected output:  \n```json  \n{\"risk_score\": 0.95, \"flagged\": true, \"reason\": \"unusual_location_pattern\"}  \n```  \n\n## Tech Stack  \n- **Backend**: Python (FastAPI), TensorFlow (models), PostgreSQL (timeseries storage)  \n- **Monitoring**: Prometheus + Grafana for latency metrics  \n- **Deployment**: Docker, Kubernetes (for scaling)  \n- **Data Ingestion**: Apache Kafka for real-time streaming  \n\n## Architecture / Design  \nFraudGuard uses a microservices architecture:  \n1. **Data Pipeline**: Kafka streams ingest raw transactions, filtered by geographic and temporal rules.  \n2. **Model Serving**: TensorFlow Serving handles batch inference with distributed GPU acceleration.  \n3. **Risk Scoring**: A lightweight API layer aggregates model outputs and applies business rules (e.g., \"3+ failed logins in 10 mins\").  \n4. **Feedback Loop**: Post-incident data is ingested back into the system to retrain models quarterly.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/repo-size/kamila-szymanska/fraudguard-ai)](https://github.com/kamila-szymanska/fraudguard-ai)  \n[![Build Status](https://img.shields.io/github/actions/workflow/username/repo/main.yml?branch=main)](https://github.com/kamila-szymanska/fraudguard-ai/actions)  \n[![Coverage Status](https://img.shields.io/coveralls/kamila-szymanska/fraudguard-ai)](https://coveralls.io/r/kamila-szymanska/fraudguard-ai)"
 }

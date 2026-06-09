@@ -1,27 +1,40 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional resume highlighting 6 years of experience as a Senior SRE in adtech",
-    "title": "Theo van den Berg - Senior Site Reliability Engineer",
+    "topic_summary": "A professional CV highlighting Esther Obi's full-stack development experience in e-commerce at NexCart Technologies.",
+    "title": "Esther Obi - Full-Stack Developer",
     "doc_id": "d_p_233_00",
     "persona_id": "p_233",
     "hyperparams": {
-      "cv_format": "paragraph",
-      "geographic_convention": "Israel",
+      "cv_format": "minimal",
+      "geographic_convention": "Europe",
       "company_type": "enterprise",
       "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "README for a project implementing real-time monitoring for ad tech infrastructure",
-    "title": "AdGuard: Real-Time Ad Tech Infrastructure Monitoring",
+    "topic_summary": "A GitHub README for an e-commerce platform built by Esther Obi, featuring product management and payment integration.",
+    "title": "NexCart E-Commerce Platform",
     "doc_id": "d_p_233_01",
     "persona_id": "p_233",
     "hyperparams": {
-      "project_scale": "team-internal",
+      "project_scale": "production",
       "project_team_size": "medium (5-15)",
-      "jargon_density": "plain"
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation letter from Esther's manager at NexCart Technologies, praising her technical skills and teamwork.",
+    "title": "Recommendation for Esther Obi",
+    "doc_id": "d_p_233_02",
+    "persona_id": "p_233",
+    "hyperparams": {
+      "recommender_role": "skip-level",
+      "recommender_closeness": "occasional",
+      "company_type": "startup",
+      "company_size": "large (500+)"
     }
   }
 ]

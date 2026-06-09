@@ -4,24 +4,24 @@
   "persona_id": "p_120",
   "hyperparams": {
     "project_scale": "production",
-    "project_team_size": "large (15+)",
-    "jargon_density": "moderate"
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Android development": 1,
-    "Flutter": 1,
-    "Kotlin": 1,
+    "Android development": 2,
+    "App Store deployment": 2,
+    "Flutter": 2,
+    "JavaScript": 1,
+    "Kotlin (Android)": 1,
     "Mobile CI/CD": 1,
-    "Mobile testing": 1,
-    "REST API design": 3,
-    "React": 1,
+    "Push notifications": 1,
+    "REST API design": 2,
+    "React": 2,
     "React Native": 4,
-    "State management": 3,
     "Swift": 1,
-    "Web accessibility": 3,
-    "iOS development": 1,
-    "Web accessibility (WCAG)": 1,
-    "State management (Redux/Zustand)": 1
+    "TypeScript": 3,
+    "Webpack/Vite": 1,
+    "iOS development": 1
   },
-  "text": "# User Engagement Boost  \nA scalable solution for driving user interaction through tailored notifications and actionable analytics, designed for e-commerce platforms with high user retention goals.  \n\n## Badges  \n[![Active Users](https://example.com/active-users)](https://example.com/active-users)  \n[![Retention Rate](https://example.com/retention-rate)](https://example.com/retention-rate)  \n[![React Native](https://example.com/react-native)](https://example.com/react-native)  \n\n## Tech Stack  \n- **Frontend**: React Native (production-ready, cross-platform)  \n- **Backend**: Node.js with Express, MongoDB for real-time data storage  \n- **Analytics**: Segment + Google Analytics 4 (custom event tracking)  \n- **Notifications**: Firebase Cloud Messaging (FCM) with dynamic payload routing  \n- **CI/CD**: GitHub Actions (automated testing, deployment pipelines)  \n\n## Configuration  \n1. Set up environment variables in `.env` for API keys and FCM credentials  \n2. Link Firebase project to the app via `google-services.json` (Android) or `GoogleService-Info.plist` (iOS)  \n3. Configure Segment write keys for event tracking in `analytics.js`  \n4. Define notification templates in `notifications.json` with conditional logic for user segments  \n\n## Getting Started  \n1. Clone the repository: `git clone https://github.com/your-username/user-engagement-boost.git`  \n2. Install dependencies: `npm install`  \n3. Set up Firebase and Segment project keys in `.env`  \n4. Run migrations: `npm run db:migrate`  \n5. Start the development server: `npm run dev`  \n\n## Usage / Examples  \n- **Personalized Push**: Trigger notifications based on user behavior (e.g., \"Your cart item is back in stock!\").  \n- **Retention Analytics**: View daily active user trends in the dashboard with drill-down to individual segments.  \n- **A/B Testing**: Compare notification click-through rates using Segment's experiment framework.  \n- **Onboarding Flow**: Auto-generate welcome emails with product recommendations via REST API integration.  \n\n## Testing  \n- **Unit Tests**: Jest for core logic (e.g., notification payload validation)  \n- **Integration Tests**: Supertest for API endpoints (e.g., user segment classification)  \n- **End-to-End Tests**: Detox for mobile UI interactions (e.g., notification click tracking)  \n- **Performance**: Lighthouse for baseline accessibility checks (WCAG 2.1 AA compliance)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# Cross-Platform Game Engine  \nA high-fidelity mobile game development framework enabling rapid prototyping and scalable deployment across Unity and Unreal Engine ecosystems. This engine abstracts platform-specific intricacies while maintaining low-level control over rendering pipelines, physics simulations, and asset management. Designed for teams requiring cross-platform parity without compromising performance or creative flexibility.  \n\n## Badges  \n[![Platform Support](https://img.shields.io/badge/Unity%20%26%20Unreal-Enabled-blue)](https://github.com/connormurphy/cross-platform-engine)  \n[![Active Maintenance](https://img.shields.io/badge/Maintenance-Active-yellow)](https://github.com/connormurphy/cross-platform-engine)  \n[![Contribution Welcome](https://img.shields.io/badge/Contributions-Welcome-green)](https://github.com/connormurphy/cross-platform-engine)  \n\n## License  \nThis project is licensed under the [MIT License](LICENSE). Commercial use requires explicit attribution and compliance with the terms outlined in the LICENSE file.  \n\n## Tech Stack  \n- **Core Engines**: Unity (C#) and Unreal Engine (C++)  \n- **Cross-Platform Abstraction**: Custom middleware for shared logic, assets, and input handling  \n- **Runtime Optimization**: Memory-efficient garbage collection, multi-threaded asset loading  \n- **Tools**: Git, GitHub Actions (CI), Visual Studio, Xcode (iOS), Android Studio (Android)  \n- **Dependencies**: .NET SDK 8.0, GLFW, SDL2, OpenAL  \n\n## Architecture / Design  \nThe engine employs a **component-driven architecture** with decoupled subsystems for rendering, physics, and input. Unity and Unreal modules communicate via a **shared API layer** using Protocol Buffers for serialized data exchange. Key design principles include:  \n- **Platform Agnosticism**: Abstracts OS-specific APIs into pluggable modules  \n- **Performance Prioritization**: Direct GPU access for Unity, Vulkan-based rendering for Unreal  \n- **Scalable Asset Management**: Hierarchical asset bundling with dynamic loading  \n- **Cross-Engine Synchronization**: Time-step alignment for physics and animation systems  \n\n## Getting Started / Installation  \n1. Clone the repository using Git:  \n   ```bash  \n   git clone https://github.com/connormurphy/cross-platform-engine.git  \n   ```  \n2. Navigate to the Unity project directory and import the Unity package  \n3. For Unreal, build the plugin DLL using Visual Studio 2022 and link to your project  \n4. Ensure .NET 8.0 SDK and Vulkan SDK are installed for full compatibility  \n\n## Usage / Examples  \n```csharp  \n// Unity-specific asset loading  \nvar texture = AssetDatabase.LoadAssetAtPath<Texture2D>(\"Assets/Textures/skybox.png\");  \nrenderer.material.mainTexture = texture;  \n```  \n```cpp  \n// Unreal plugin initialization  \nUE_LOG(LogTemp, Warning, TEXT(\"Cross-platform engine initialized\"));  \n```  \nExample projects demonstrate cross-platform scene synchronization, physics collision detection, and real-time rendering optimizations.  \n\n## Contributing  \nProposals for new features must include:  \n1. Technical feasibility analysis  \n2. Cross-engine compatibility proofs  \n3. Performance benchmarks  \nAll contributions require unit tests, CI/CD validation, and adherence to the [Code Style Guide](CODE_STYLE.md). Submit pull requests against the `main` branch with detailed commit histories."
 }

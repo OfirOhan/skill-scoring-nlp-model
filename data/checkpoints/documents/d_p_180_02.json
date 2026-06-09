@@ -4,25 +4,22 @@
   "persona_id": "p_180",
   "hyperparams": {
     "project_scale": "hobby",
-    "project_team_size": "solo",
-    "jargon_density": "plain"
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "Python": 1,
+    "API testing": 1,
+    "BDD/TDD": 1,
     "Go": 1,
+    "Integration testing": 1,
+    "Java": 1,
     "Node.js": 1,
-    "React": 1,
-    "Next.js": 1,
-    "TypeScript": 1,
+    "Performance testing (JMeter/k6)": 1,
+    "Python": 1,
     "REST API design": 1,
-    "PostgreSQL": 1,
-    "MongoDB": 1,
-    "AWS": 1,
-    "Docker": 1,
-    "Kubernetes": 1,
-    "GitHub Actions": 1,
-    "Prometheus/Grafana": 1,
-    "Load balancing": 1
+    "Selenium/Playwright": 1,
+    "Test automation": 1,
+    "Test strategy design": 1
   },
-  "text": "# Secure Payments for EcoCart  \nA scalable solution for global transaction processing, built with Stripe's API to ensure secure, real-time payment handling for e-commerce platforms. This project prioritizes PCI compliance, fraud prevention, and cross-border currency support, designed to integrate seamlessly into existing systems while maintaining a focus on operational simplicity and reliability.  \n\n## Roadmap / Future Work  \nThe immediate focus is refining the webhook handling logic to support asynchronous transaction validation, which will reduce latency during high-volume processing. In the next 6–12 months, plans include expanding support for additional gateways (e.g., PayPal, Apple Pay) and integrating a dynamic fraud scorecard system. Long-term goals involve adding multi-currency conversion at the API layer and building a dashboard for real-time transaction analytics, though these are currently scoped as proof-of-concept milestones.  \n\n## Getting Started / Installation  \nTo begin, ensure you have a Stripe API key (publishable and secret) and a backend environment capable of handling HTTP requests. Initialize the project by copying the `.env.example` file to `.env` and populating it with your credentials. Install dependencies via the provided script, which automates the setup of required libraries and environment variables. Once configured, run the local server to test basic payment flow endpoints.  \n\n## Usage / Examples  \nThe core functionality revolves around three primary endpoints:  \n1. **Payment Intent Creation** – Sends customer details and amount to Stripe, returning a client-secret for frontend use.  \n2. **Webhook Listener** – Processes Stripe's asynchronous events (e.g., payment success/failure) and updates internal records.  \n3. **Transaction Audit** – Exposes a read-only endpoint for retrieving encrypted transaction logs, compliant with GDPR and PCI standards.  \nExample: A POST request to `/api/create-payment-intent` with JSON body `{ \"amount\": 1000, \"currency\": \"USD\" }` will generate a secure token for frontend integration.  \n\n## Tech Stack  \n- Stripe API (v3)  \n- RESTful API design (custom framework)  \n- Encryption libraries for data at rest  \n- Environment-specific configuration management  \n\n## Architecture / Design  \nThe system is structured as a layered microservice, with a dedicated worker pool for handling asynchronous Stripe webhooks. Synchronous requests are processed through a stateless API gateway, while sensitive operations (e.g., decryption, audit logging) are offloaded to dedicated service modules. All communication with Stripe occurs over HTTPS with TLS 1.3, and sensitive data is stored in encrypted formats using AES-256.  \n\n## License  \nMIT License – see [LICENSE.md](LICENSE.md) for details."
+  "text": "# EnterpriseSecScan: Automated Security Posture Validation for Critical Infrastructure  \n\nEnterpriseSecScan is a modular framework designed to identify misconfigurations, injection flaws, and authentication bypass vectors in enterprise systems. Built for red teams and DevOps pipelines, it combines passive monitoring with active probing to deliver actionable insights into application security postures. The tool prioritizes stealthy reconnaissance and real-time threat modeling for environments with strict compliance requirements.  \n\n## Getting Started / Installation  \nInstall via npm:  \n```bash  \nnpm install -g enterprise-sec-scan  \n```  \nFor custom deployments, clone the repository and run:  \n```bash  \nnpm install && node setup.js  \n```  \nEnsure dependencies like [OWASP ZAP](https://owasp.org/zap/) and [Nikto](https://cirt.net/Nikto2) are pre-installed. Configure scan profiles in `config/scanners.json` before execution.  \n\n## Usage / Examples  \n```bash  \nenterprise-sec-scan --target \"https://internal-api.example.com\" --profile \"pci-dss\"  \n```  \nThis command audits payment card systems for common vulnerabilities, including insecure direct object references and weak session management. The output includes a prioritized remediation plan with CVSS scores.  \n\n## Badges  \n[![Test Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/yourusername/enterprise-sec-scan/main/coverage.json)](https://yourusername.github.io/enterprise-sec-scan/coverage/)  \n[![Build Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/yourusername/enterprise-sec-scan/main/status.json)](https://yourusername.github.io/enterprise-sec-scan/)  \n\n## Tech Stack  \n- **Scanners**: OWASP ZAP, Nikto, DirBuster  \n- **Analysis**: Python-based heuristic engine with YAML rule sets  \n- **Deployment**: Docker containers for isolated execution  \n- **Output**: JSON/HTML reports with MITRE ATT&CK mappings  \n\n## Architecture / Design  \nThe system operates in three layers:  \n1. **Probing Layer**: Asynchronous request handlers with rate-limiting and spoofed user agents  \n2. **Analysis Layer**: Rule-based correlation engine that cross-references scan results against CWE and NIST guidelines  \n3. **Reporting Layer**: Dynamic HTML generation with embedded threat intelligence feeds  \n\nThe architecture ensures minimal false positives by validating findings against multiple data sources, including public vulnerability databases and internal compliance frameworks.  \n\n## Contributing  \nSubmit issues for specific false positives or suggest new scanner integrations. Pull requests should include unit tests for new rules and updates to the configuration schema.  \n\n## License  \nMIT License — see [LICENSE](https://github.com/yourusername/enterprise-sec-scan/blob/main/LICENSE) for details."
 }

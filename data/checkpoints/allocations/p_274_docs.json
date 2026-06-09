@@ -1,50 +1,40 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Connor Murphy's backend engineering experience in healthtech, focusing on scalable systems and API development.",
-    "title": "Connor Murphy - Backend Engineer",
+    "topic_summary": "A concise overview of Thomas Eriksen's backend engineering experience in e-commerce, focusing on his role at EcoCart Technologies.",
+    "title": "Thomas Eriksen - Backend Engineer CV",
     "doc_id": "d_p_274_00",
     "persona_id": "p_274",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
-      "geographic_convention": "Israel",
-      "company_type": "agency",
-      "company_size": "large (500+)"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "A backend system for securely aggregating and managing patient health data across multiple providers.",
-    "title": "HealthDataSync: Secure Patient Data Aggregation Platform",
-    "doc_id": "d_p_274_01",
-    "persona_id": "p_274",
-    "hyperparams": {
-      "project_scale": "hobby",
-      "project_team_size": "solo",
-      "jargon_density": "heavy"
-    }
-  },
-  {
-    "doc_type": "recommendation",
-    "topic_summary": "Endorsing Connor's technical expertise in building scalable backend systems for healthtech applications.",
-    "title": "Recommendation from Senior Backend Team Lead",
-    "doc_id": "d_p_274_02",
-    "persona_id": "p_274",
-    "hyperparams": {
-      "recommender_role": "professor",
-      "recommender_closeness": "worked-daily",
+      "cv_format": "minimal",
+      "geographic_convention": "India",
       "company_type": "agency",
       "company_size": "small (<50)"
     }
   },
   {
-    "doc_type": "linkedin",
-    "topic_summary": "Backend Engineer passionate about developing innovative solutions in healthtech, with a focus on secure and scalable backend systems.",
-    "title": "Connor Murphy | Backend Engineer | VitalHealth Solutions",
-    "doc_id": "d_p_274_03",
+    "doc_type": "project_readme",
+    "topic_summary": "A backend system for real-time inventory synchronization across EcoCart's multi-channel e-commerce platform.",
+    "title": "EcoCart Inventory Sync API",
+    "doc_id": "d_p_274_01",
     "persona_id": "p_274",
     "hyperparams": {
-      "linkedin_completeness": "detailed"
+      "project_scale": "academic",
+      "project_team_size": "solo",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A manager's endorsement of Thomas's technical expertise and collaboration skills in developing scalable backend solutions.",
+    "title": "Recommendation for Thomas Eriksen",
+    "doc_id": "d_p_274_02",
+    "persona_id": "p_274",
+    "hyperparams": {
+      "recommender_role": "skip-level",
+      "recommender_closeness": "brief",
+      "company_type": "FAANG",
+      "company_size": "mid (50-500)"
     }
   }
 ]

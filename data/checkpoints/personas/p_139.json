@@ -1,63 +1,58 @@
 {
   "persona_id": "p_139",
   "hyperparams": {
-    "archetype": "fullstack_developer",
-    "years_experience": 0,
-    "seniority": "junior",
-    "industry": "enterprise",
-    "writing_style": "neutral",
-    "language_fluency": "native",
+    "archetype": "backend_engineer",
+    "years_experience": 5,
+    "seniority": "mid",
+    "industry": "SaaS",
+    "writing_style": "verbose",
+    "language_fluency": "near-native",
     "self_promotion_level": "balanced",
-    "quantification_tendency": "metrics-heavy"
+    "quantification_tendency": "qualitative"
   },
-  "name": "Yuki Tanaka",
-  "current_role": "Full-Stack Developer",
+  "name": "Ursula Klein",
+  "current_role": "Backend Engineer",
   "company": "NexaCorp",
   "education": {
     "degree": "Bachelor of Science in Computer Science",
-    "university": "University of Tokyo",
-    "year": 2023
+    "university": "University of California, Berkeley",
+    "year": 2018
   },
   "career_trajectory": [
     {
-      "year": 2022,
-      "position": "Software Intern",
+      "role": "Software Engineer",
       "company": "TechNova Solutions",
-      "description": "Assisted in full-stack development for enterprise SaaS products, focusing on Python/React and PostgreSQL."
+      "year": "2018-2020"
     },
     {
-      "year": 2023,
-      "position": "Junior Full-Stack Developer",
-      "company": "DataFlow Inc.",
-      "description": "Built scalable microservices using Node.js and gRPC, integrated with MongoDB and Redis."
+      "role": "Senior Backend Engineer",
+      "company": "CloudForge Solutions",
+      "year": "2020-2022"
     },
     {
-      "year": 2024,
-      "position": "Full-Stack Developer",
+      "role": "Backend Engineer",
       "company": "NexaCorp",
-      "description": "Led frontend components with Vue.js and optimized backend APIs using REST design patterns."
+      "year": "2022-present"
     }
   ],
   "skills": {
-    "Python": 3,
-    "JavaScript": 3,
-    "React": 3,
-    "REST API design": 3,
-    "PostgreSQL": 3,
-    "Node.js": 3,
-    "HTML/CSS": 3,
-    "Webpack/Vite": 2,
-    "Database optimization": 2,
-    "Docker": 3,
-    "AWS": 3,
-    "GitLab CI": 3,
-    "Web performance optimization": 3,
+    "Python": 4,
+    "Go": 4,
+    "REST API design": 4,
+    "Microservices architecture": 4,
+    "PostgreSQL": 4,
+    "AWS": 4,
+    "Kubernetes": 4,
+    "CI/CD pipelines": 3,
+    "GitHub Actions": 2,
+    "Jenkins": 1,
     "Linux administration": 2,
-    "Shell scripting": 2
+    "Monitoring & alerting": 3
   },
   "document_ids": [
     "d_p_139_00",
     "d_p_139_01",
-    "d_p_139_02"
+    "d_p_139_02",
+    "d_p_139_03"
   ]
 }

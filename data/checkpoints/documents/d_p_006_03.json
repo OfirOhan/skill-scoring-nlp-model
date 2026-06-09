@@ -1,0 +1,27 @@
+{
+  "doc_id": "d_p_006_03",
+  "type": "project_readme",
+  "persona_id": "p_006",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 4,
+    "CI/CD pipelines": 4,
+    "Cloud cost optimization": 3,
+    "Docker": 3,
+    "GCP": 3,
+    "Infrastructure as Code": 4,
+    "Kubernetes": 3,
+    "Linux administration": 2,
+    "Monitoring & alerting": 4,
+    "Network automation": 1,
+    "PostgreSQL": 1,
+    "Python": 1,
+    "REST API design": 1,
+    "Terraform": 4
+  },
+  "text": "# CI/CD Pipeline Enhancements for Platform Deployments  \nModernize deployment workflows with parallelized CI/CD pipelines, reducing mean time to deploy (MTTD) by 40% while improving rollback reliability  \n\n[![GitHub Actions Status](https://img.shields.io/badge/CI%20Pipeline-passing-green)](https://github.com/yourusername/yourrepo/actions)  \n[![Terraform](https://img.shields.io/badge/Terraform-locked-blue)](https://github.com/yourusername/yourrepo/tree/main/infrastructure)  \n[![AWS](https://img.shields.io/badge/AWS-Production-blue)](https://console.aws.amazon.com/)  \n[![GCP](https://img.shields.io/badge/GCP-Dev--Test-blue)](https://console.cloud.google.com/)  \n\n**Tech Stack**  \n- AWS CodePipeline + CodeBuild (production)  \n- GCP Cloud Build (dev/test)  \n- Terraform 1.5+ (infrastructure as code)  \n- Kubernetes (K8s) for container orchestration  \n- Docker 20.10+ (artifact packaging)  \n- Prometheus + Grafana (monitoring)  \n- Cloud cost optimization via AWS Cost Explorer  \n\n**Architecture / Design**  \nThe pipeline integrates parallelized stages for frontend, backend, and database migrations. Key design choices:  \n- **Artifact caching** reduced build times by 30% through Docker layer reuse  \n- **K8s rolling updates** with canary deployment strategy for zero-downtime rollouts  \n- **Terraform moduleization** enables environment-specific configuration isolation  \n- **CloudWatch + Stackdriver** alerts trigger automated rollback on deployment failure  \n\n**Getting Started / Installation**  \n1. Clone the repository using Git  \n2. Set up AWS credentials via `aws configure` and GCP credentials via `gcloud auth`  \n3. Deploy infrastructure with `terraform apply -var-file=prod.tfvars`  \n4. Validate pipeline via `yarn test:ci` (ensure Node.js 18+ installed)  \n\n**Usage / Examples**  \n```bash  \n# Trigger full deployment pipeline  \n./scripts/deploy.sh --env=production  \n\n# Monitor deployment health  \n./scripts/monitor.sh --metric=deployment_success_rate  \n```  \nPipeline improvements enabled 99.95% deployment reliability and 50% faster rollback times during recent peak traffic events  \n\n**Contributing**  \nEnhance pipeline efficiency by refining parallelization strategies or optimizing cost metrics. Prioritize:  \n- Infrastructure-as-code improvements  \n- CI/CD pipeline performance tuning  \n- Monitoring rule refinement  \n\n**License**  \nMIT License — see [LICENSE](https://github.com/yourusername/yourrepo/blob/main/LICENSE) for details"
+}

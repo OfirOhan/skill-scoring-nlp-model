@@ -3,22 +3,26 @@
   "type": "recommendation",
   "persona_id": "p_203",
   "hyperparams": {
-    "recommender_role": "professor",
-    "recommender_closeness": "brief",
+    "recommender_role": "direct-manager",
+    "recommender_closeness": "worked-daily",
     "company_type": "startup",
-    "company_size": "large (500+)"
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "CI/CD pipelines": 4,
-    "Go": 5,
-    "Kubernetes": 4,
-    "Microservices architecture": 5,
-    "PostgreSQL": 5,
-    "Python": 3,
-    "REST API design": 5,
-    "Redis": 3,
-    "Terraform": 3
+    "Python": 1,
+    "Go": 1,
+    "REST API design": 1,
+    "Microservices architecture": 1,
+    "PostgreSQL": 1,
+    "MongoDB": 1,
+    "AWS": 1,
+    "Terraform": 1,
+    "CI/CD pipelines": 1,
+    "GitHub Actions": 1,
+    "Jenkins": 1,
+    "Prometheus/Grafana": 1,
+    "Monitoring & alerting": 1,
+    "Linux administration": 1
   },
-  "text": "Dear Hiring Manager,  \n\nI taught Daniel Nakamura in a cybersecurity capstone project at our university, where he collaborated with peers to design a secure cloud infrastructure for a simulated enterprise. His work stood out for its technical rigor and pragmatic approach to solving complex challenges.  \n\nDaniel’s strengths lie in systems architecture and operational reliability. At CyberShield, he led the migration of their microservices infrastructure to Kubernetes, reducing deployment latency by 40% and improving fault tolerance. His Go-based services handle critical authentication workflows, and he’s mentored junior engineers on best practices for concurrent processing. Beyond code, he prioritizes security hygiene—recently implementing Redis-based rate limiting that cut brute-force attack attempts by 75% without compromising user experience.  \n\nA notable example: when a third-party API integration caused widespread outages, Daniel swiftly rearchitected the pipeline using AWS Lambda and CI/CD pipelines, restoring service within hours. His ability to balance innovation with stability is rare.  \n\nDaniel is a meticulous problem-solver who thrives in high-pressure environments. He approaches challenges with intellectual curiosity and a commitment to collaborative solutions.  \n\nSincerely,  \n[Professor’s Name]  \n[University Affiliation]"
+  "text": "Kwame Mensah has been a cornerstone of our engineering team at NexaCorp since joining two years ago. As a Staff Backend Engineer, he’s consistently bridged technical complexity with user-centric outcomes, ensuring our SaaS platform remains reliable and scalable. His ability to translate abstract requirements into concrete solutions has streamlined workflows across product and operations teams. We’ve collaborated daily on architecture decisions, system integrations, and troubleshooting, which has solidified his role as a trusted advisor. His curiosity and willingness to iterate on imperfect solutions have fostered a culture of continuous improvement.  \n\nDaily, Kwame balances deep technical dives with cross-functional collaboration. He’s often the first to volunteer for high-impact tasks, whether debugging production issues or refining internal tools to boost team efficiency. His attention to detail ensures edge cases are addressed preemptively, reducing downstream risks. He’s also adept at distilling complex systems into actionable insights, making him a go-to resource for both junior and senior engineers. His communication style—calm, precise, and approachable—has eased tensions during tight deadlines and fostered knowledge sharing.  \n\nOne standout moment was his leadership during a critical data migration. When a third-party API change disrupted our pipeline, he spearheaded a 48-hour fix, coordinating with QA, DevOps, and client success to minimize downtime. His proactive approach and ability to stay composed under pressure prevented a potential revenue loss. Similarly, his mentorship of new hires has accelerated onboarding and elevated team cohesion.  \n\nKwame’s blend of technical rigor, empathy, and strategic thinking makes him a rare asset. I wholeheartedly recommend him for opportunities where his problem-solving acumen and collaborative spirit can drive meaningful impact. His work ethic and adaptability ensure he thrives in dynamic, fast-paced environments."
 }

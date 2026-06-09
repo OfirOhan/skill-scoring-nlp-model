@@ -1,28 +1,24 @@
 {
   "doc_id": "d_p_155_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_155",
   "hyperparams": {
-    "recommender_role": "peer",
-    "recommender_closeness": "brief",
-    "company_type": "agency",
-    "company_size": "large (500+)"
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Design systems": 3,
-    "GraphQL": 3,
-    "JavaScript": 3,
-    "Next.js": 3,
-    "Node.js": 3,
-    "REST API design": 3,
-    "React": 3,
-    "Responsive design": 3,
-    "Selenium/Playwright": 3,
-    "Test automation": 3,
-    "TypeScript": 3,
-    "UI design": 3,
-    "Web performance optimization": 3,
-    "UI design (Figma/Sketch)": 1
+    "API testing": 4,
+    "BDD/TDD": 3,
+    "GitLab CI": 1,
+    "Microservices architecture": 2,
+    "Node.js": 2,
+    "Performance testing": 3,
+    "Python": 3,
+    "REST API design": 1,
+    "Selenium/Playwright": 5,
+    "Test automation": 4,
+    "Test strategy design": 4
   },
-  "text": "Valentina Marchetti has been a steady presence on our team, contributing reliably to projects that bridge adtech’s complex data needs with user-friendly interfaces. Her work on the campaign analytics dashboard stands out—she refactored legacy React components into a modular Next.js structure, which cut load times by 40% without sacrificing functionality. That attention to performance is consistent; she often flags opportunities to optimize resource usage, whether trimming unused Node.js processes or streamlining REST API calls.  \n\nHer technical approach is methodical. When we needed to integrate real-time bid data, Valentina designed a GraphQL layer that simplified data fetching across frontend tools. She also spearheaded test automation with Playwright, reducing manual QA hours by roughly half. These solutions aren’t just functional—they’re maintained with clarity, making them easy to adapt as requirements evolve.  \n\nBeyond code, Valentina’s collaborative spirit is a plus. She’s patient with junior engineers, explaining complex TypeScript type definitions or debugging tricky Selenium scripts without frustration. Her ability to distill technical jargon into actionable steps has helped align cross-functional teams around shared goals.  \n\nValentina’s reliability and curiosity make her a trusted teammate. She’s the kind of engineer who’ll quietly improve a workflow until it’s nearly invisible—yet deeply impactful. I’d welcome the chance to collaborate again."
+  "text": "# Automated Regression Testing Framework for SaaS Applications  \n\nA lightweight, modular framework designed to automate regression testing in SaaS environments. Built to integrate seamlessly with CI/CD pipelines, it reduces manual testing overhead while maintaining alignment with evolving feature sets.  \n\n## Deployment  \nDeploy this framework as a standalone CLI tool or containerized service. It’s designed to run in cloud environments or on-premise servers, with minimal dependencies. Pre-built Docker images are available for quick setup, and integration with GitHub Actions is supported out of the box.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/cedricblanc/automated-regression-testing-framework.git`  \n2. Install Python 3.9+ and Node.js 18+  \n3. Run `npm install` to install dependencies  \n4. Configure test suites via `config/test_profiles.json`  \n\n## Usage / Examples  \n```bash\nnpx run test --profile=core-features --parallel=4\n```  \nThis command executes a parallelized regression suite for core application features. The framework dynamically loads test scripts from `tests/` and generates detailed HTML reports post-execution.  \n\n## Tech Stack  \n- **Language**: Python (for script logic) + Node.js (for CLI interface)  \n- **Automation**: Playwright (browser interactions) + Selenium (legacy system support)  \n- **Reporting**: Allure (visual traceability)  \n- **CI/CD**: GitHub Actions (default)  \n\n## Architecture / Design  \nThe framework is organized into three layers:  \n1. **Execution Layer**: Manages test script orchestration and parallelization  \n2. **Adapter Layer**: Abstracts browser automation (Playwright/Selenium) and API calls  \n3. **Reporting Layer**: Aggregates results into actionable dashboards  \n\nKey decisions include using Playwright for its modern API and cross-browser support, while retaining Selenium for legacy system compatibility. Test scripts are written in a BDD-style syntax, enabling collaboration between QA and dev teams.  \n\n## License  \nMIT License  \n\n## Badges  \n[![GitHub](https://badges.productionready.io/github)](https://github.com/cedricblanc/automated-regression-testing-framework)  \n[![Version](https://badges.productionready.io/version)](https://github.com/cedricblanc/automated-regression-testing-framework)  \n[![Build](https://badges.productionready.io/build)](https://github.com/cedricblanc/automated-regression-testing-framework/actions)"
 }

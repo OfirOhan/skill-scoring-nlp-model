@@ -3,25 +3,22 @@
   "type": "recommendation",
   "persona_id": "p_093",
   "hyperparams": {
-    "recommender_role": "professor",
-    "recommender_closeness": "worked-daily",
-    "company_type": "FAANG",
-    "company_size": "large (500+)"
+    "recommender_role": "peer",
+    "recommender_closeness": "occasional",
+    "company_type": "startup",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "Apache Airflow": 4,
-    "Apache Kafka": 3,
-    "Apache Spark": 3,
-    "Data warehousing": 3,
-    "ETL pipeline design": 3,
-    "Hugging Face Transformers": 3,
-    "MLOps": 3,
-    "Model deployment": 4,
-    "NLP": 4,
-    "PyTorch": 4,
-    "TensorFlow": 4,
-    "dbt": 3,
-    "scikit-learn": 3
+    "A/B testing": 1,
+    "Apache Spark": 1,
+    "Data visualization": 1,
+    "Feature engineering": 1,
+    "Java": 1,
+    "NumPy": 1,
+    "Pandas": 1,
+    "Python": 1,
+    "REST API design": 1,
+    "Statistical modeling": 2
   },
-  "text": "Nadia Khoury is a sharp, driven machine learning engineer who consistently delivers high-impact solutions in cybersecurity threat detection.  \n\nNadia designed Kafka-based ingestion pipelines that scaled to 10M+ events/day, reducing false positives by 22% through custom anomaly detection logic. She built Spark-based ETL workflows that integrated with Snowflake, enabling real-time threat scoring for 500+ enterprise clients. Her dbt models transformed raw logs into actionable insights, streamlining incident response by 30%.  \n\nNadia’s NLP work on threat intelligence parsing—using Hugging Face Transformers and PyTorch—cut malware classification latency by 40%. She owns Airflow pipelines that automate model retraining, ensuring detection models stay ahead of evolving threats. Her MLOps expertise, including TensorFlow model deployment and scikit-learn-based baselines, ensures systems are robust, scalable, and maintainable.  \n\nNadia’s curiosity and rigor are unmatched. She’ll ask “why” until systems are optimized, and she’ll take ownership of problems others avoid. A pleasure to work with."
+  "text": "**To Whom It May Concern,**  \n\nI’ve collaborated with Deepak Verma on several projects at NextGen Interactive, where he served as a Senior Data Scientist. As a peer in a mid-sized startup, I’ve observed his work through occasional cross-functional initiatives, particularly in optimizing player engagement metrics for our gaming platforms.  \n\nDeepak’s strength lies in his ability to distill complex data into actionable insights, often without overtly technical jargon. During a recent project to refine user onboarding flows, he identified subtle correlations between player behavior and retention rates using statistical models. His analysis led to a 15% increase in session duration for a flagship title, driven by adjustments to tutorial pacing and reward structures. Beyond numbers, he’s exceptionally collaborative, frequently bridging gaps between data teams and game designers to align technical outputs with creative goals.  \n\nWhat stands out is his relentless curiosity and attention to detail. During a sprint to debug a spike in user drop-offs, he spent 12 hours poring over telemetry logs, eventually uncovering a latency issue in the game’s matchmaking system. His proactive approach not only resolved the problem but also prompted a broader review of infrastructure bottlenecks.  \n\nIn summary, Deepak is a reliable, results-oriented teammate who consistently elevates team performance through rigorous analysis and clear communication. His ability to balance technical precision with cross-team collaboration makes him a valuable asset.  \n\nSincerely,  \n[Your Full Name]  \n[Your Role]  \n[Contact Information]"
 }

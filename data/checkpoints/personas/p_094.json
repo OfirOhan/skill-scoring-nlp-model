@@ -1,45 +1,63 @@
 {
   "persona_id": "p_094",
   "hyperparams": {
-    "archetype": "qa_test_engineer",
-    "years_experience": 0,
-    "seniority": "junior",
-    "industry": "consulting",
-    "writing_style": "verbose",
+    "archetype": "tech_lead_architect",
+    "years_experience": 3,
+    "seniority": "mid",
+    "industry": "fintech",
+    "writing_style": "concise",
     "language_fluency": "native",
-    "self_promotion_level": "humble",
-    "quantification_tendency": "metrics-heavy"
+    "self_promotion_level": "balanced",
+    "quantification_tendency": "mixed"
   },
-  "name": "Femi Akinlade",
-  "current_role": "QA/Test Engineer",
-  "company": "InnovateTech Consulting",
+  "name": "Juliana Navarro",
+  "current_role": "Tech Lead",
+  "company": "FinTech Innovators Inc.",
   "education": {
-    "degree": "Bachelor of Science in Computer Science",
-    "university": "University of Lagos",
-    "year": 2023
+    "degree": "Master of Science in Computer Science",
+    "university": "University of Technology",
+    "year": 2020
   },
   "career_trajectory": [
-    "Completed Bachelor's in Computer Science (2023)",
-    "Internship at TechNova Solutions (QA Intern, 2023)",
-    "Part-time QA Engineer at DevWorks Limited (2023-2024)",
-    "Current role as QA/Test Engineer at InnovateTech Consulting (2024)"
+    {
+      "role": "Software Engineer",
+      "company": "Digital Payments Co.",
+      "duration": "2 years",
+      "responsibilities": "Backend development using Python, REST API design, and AWS infrastructure setup"
+    },
+    {
+      "role": "Senior Developer",
+      "company": "Fintech Solutions Ltd.",
+      "duration": "1.5 years",
+      "responsibilities": "Led microservices architecture, Kubernetes deployments, and cross-team collaboration"
+    },
+    {
+      "role": "Tech Lead",
+      "company": "FinTech Innovators Inc.",
+      "duration": "3 years",
+      "responsibilities": "System design, Agile/Scrum leadership, and cloud cost optimization strategies"
+    }
   ],
   "skills": {
-    "Test automation": 3,
-    "Selenium/Playwright": 3,
-    "Unit testing": 3,
-    "Integration testing": 3,
-    "API testing": 3,
-    "Test strategy design": 2,
-    "Python": 2,
-    "CI/CD pipelines": 2,
-    "REST API design": 2,
-    "JavaScript": 2
+    "Team leadership": 4,
+    "Mentoring": 4,
+    "System design": 5,
+    "Agile/Scrum": 5,
+    "Cross-team collaboration": 5,
+    "Stakeholder communication": 5,
+    "Project management": 4,
+    "Technical writing": 4,
+    "Strategic planning": 4,
+    "CI/CD pipelines": 3,
+    "GitHub Actions": 3,
+    "Database optimization": 3,
+    "Shell scripting": 1,
+    "Linux administration": 2,
+    "Chaos engineering": 2
   },
   "document_ids": [
     "d_p_094_00",
     "d_p_094_01",
-    "d_p_094_02",
-    "d_p_094_03"
+    "d_p_094_02"
   ]
 }

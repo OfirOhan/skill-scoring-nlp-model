@@ -1,22 +1,24 @@
 {
   "doc_id": "d_p_216_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_216",
   "hyperparams": {
-    "recommender_role": "professor",
-    "recommender_closeness": "occasional",
-    "company_type": "FAANG",
-    "company_size": "small (<50)"
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Game networking": 3,
-    "Game physics": 3,
-    "Microservices architecture": 3,
-    "Python": 3,
-    "REST API design": 3,
-    "Rust": 3,
-    "Unity": 3,
-    "Unreal Engine": 3
+    "Swift": 1,
+    "Kotlin": 1,
+    "React Native": 1,
+    "Flutter": 1,
+    "iOS development": 1,
+    "Mobile CI/CD": 1,
+    "JavaScript": 1,
+    "React": 1,
+    "Web accessibility": 1,
+    "Webpack/Vite": 1,
+    "Responsive design": 1
   },
-  "text": "When I first encountered Farah’s work on SecurePlay’s *CipherQuest* project, I was struck by how she transformed a standard cybersecurity simulation into a dynamic, immersive experience. During a late-night demo, she debugged a critical networking flaw in real-time, using Unity to reroute traffic through a custom proxy. Her ability to merge game physics with secure communication protocols—like balancing collision detection with encrypted data packets—made the gameplay both intuitive and robust. This wasn’t just technical mastery; it was a creative act of problem-solving.  \n\nFarah is a Cybersecurity Game Developer at SecurePlay, where she designs interactive systems that teach users to defend against virtual threats. Her work often straddles the line between art and engineering, blending Python scripts for behavioral modeling with Rust for low-level security hooks. She once rewrote a monolithic API in microservices, slashing latency by 40% while maintaining real-time sync across 50+ players.  \n\nWhat stands out is her relentless curiosity and ethical rigor. She’ll spend hours dissecting open-source security tools, then refactor them into educational modules. Her REST APIs for player data are so clean, they’ve become internal templates. While Unreal Engine is her go-to for visuals, she’ll switch to Unity for rapid prototyping—always prioritizing clarity over complexity.  \n\nFarah’s not just a developer; she’s a bridge between abstract theory and tangible impact. I wholeheartedly recommend her for any role requiring both technical depth and a vision for how technology can educate and inspire."
+  "text": "# FintechPay Gateway  \nA production-ready, cross-platform payment gateway solution for fintech startups leveraging Stripe API and modular architecture to achieve 30% faster checkout times compared to legacy systems.  \n\n## Acknowledgments  \nThis project was built by a 15+ engineer team at Fintech Innovators Lab. Core contributions from:  \n- Stripe API for secure payment processing  \n- Internal security team for PCI DSS compliance  \n- DevOps engineers for CI/CD pipeline optimization (98% test coverage)  \n- UX designers for frictionless payment flow (95% success rate in A/B tests)  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/fintech-innovators/fintechpay-gateway.git`  \n2. Navigate to the project root: `cd fintechpay-gateway`  \n3. Set up environment variables with Stripe API keys and sandbox credentials  \n4. Run `flutter pub get` to fetch dependencies  \n5. Execute `flutter test` to validate integration with Stripe's webhooks and tokenization layer  \n\n## Usage / Examples  \n```dart\n// Sample payment initiation flow with 3D Secure compliance  \nfinal paymentIntent = await StripeService.createPaymentIntent(\n  amount: 1999, \n  currency: 'USD', \n  description: 'Subscription renewal for user 12345'\n);  \n\n// Handle card tokenization with fraud detection  \nfinal token = await StripeService.tokenizeCard(\n  cardNumber: '4242424242424242', \n  expiryMonth: 12, \n  expiryYear: 2025\n);  \n```  \nThis implementation supports 20+ payment methods, including SEPA transfers and Apple Pay, with 99.9% uptime in production environments.  \n\n## Tech Stack  \n- **Payment Processing**: Stripe API v2 (beta) with Webhooks v3  \n- **Core Framework**: Dart 3.2.1 (no Flutter references)  \n- **Security**: AES-256 encryption for sensitive data at rest  \n- **Monitoring**: Prometheus + Grafana for real-time transaction analytics  \n- **CI/CD**: GitHub Actions with 100% test coverage for edge cases  \n\n## License  \nMIT License — see [LICENSE](https://github.com/fintech-innovators/fintechpay-gateway/blob/main/LICENSE) for details  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/license/fintech-innovators/fintechpay-gateway)](https://github.com/fintech-innovators/fintechpay-gateway/blob/main/LICENSE)  \n[![CI/CD](https://img.shields.io/github/actions/workflow/status/fintech-innovators/fintechpay-gateway/ci.yml?branch=main)](https://github.com/fintech-innovators/fintechpay-gateway/actions)  \n[![Test Coverage](https://img.shields.io/coveralls/fintech-innovators/fintechpay-gateway/main)](https://coveralls.io/github/fintech-innovators/fintechpay-gateway)  \n\n## Contributing  \nSubmit PRs with unit tests for new payment methods. All contributions must include:  \n1. Integration with Stripe's latest API updates  \n2. Compliance with PSD2 and PCI DSS standards  \n3. Performance benchmarks for concurrent transactions  \n4. Documentation for edge case handling (e.g., 3D Secure failures)"
 }

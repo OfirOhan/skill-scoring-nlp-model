@@ -3,23 +3,29 @@
   "type": "project_readme",
   "persona_id": "p_184",
   "hyperparams": {
-    "project_scale": "production",
+    "project_scale": "hobby",
     "project_team_size": "medium (5-15)",
-    "jargon_density": "heavy"
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "GraphQL": 1,
-    "JavaScript": 4,
-    "Next.js": 3,
-    "REST API design": 3,
-    "React": 4,
-    "Responsive design": 4,
-    "Security testing": 4,
-    "State management (Redux/Zustand)": 4,
-    "Test automation (Selenium/Playwright)": 1,
-    "TypeScript": 4,
-    "Web accessibility (WCAG)": 3,
-    "Web performance optimization": 4
+    "Apache Airflow": 2,
+    "Apache Kafka": 1,
+    "Apache Spark": 2,
+    "CI/CD pipelines": 1,
+    "Computer vision": 1,
+    "Data modeling": 3,
+    "Data warehousing": 2,
+    "ETL pipeline design": 3,
+    "LLMs/Prompt engineering": 1,
+    "Linux administration": 1,
+    "MLOps (MLflow/W&B)": 4,
+    "Model deployment": 1,
+    "Monitoring & alerting": 1,
+    "NLP": 1,
+    "PyTorch": 1,
+    "Recommendation systems": 1,
+    "Shell scripting (Bash)": 1,
+    "TensorFlow": 1
   },
-  "text": "# SecureShield Dashboard  \nReal-time threat intelligence visualization for enterprise cybersecurity operations, leveraging React, TypeScript, and CyberShield's API ecosystem for dynamic incident tracking and risk prioritization  \n\n## Badges  \n[![Security Compliance](https://img.shields.io/badge/secure-compliant-blue)](https://example.com)  \n[![React](https://img.shields.io/badge/react-2023-blue)](https://react.dev)  \n[![TypeScript](https://img.shields.io/badge/typescript-4.9-orange)](https://typescriptlang.org)  \n\n## Getting Started  \n```bash  \nnpx create-next-app@latest secure-shield-dashboard  \ncd secure-shield-dashboard  \nyarn add @cybershield/api-client @reduxjs/toolkit tailwindcss  \ncp .env.example .env  \n```  \nConfigure API credentials in `.env` and run `yarn dev` for local development. All components are statically typed and require no server-side rendering for core functionality.  \n\n## Tech Stack  \n- **Frontend**: React 18 + TypeScript 4.9, Next.js 13 for SSR in analytics panels  \n- **State Management**: Redux Toolkit with normalized data models for 50k+ incident entries  \n- **Styling**: Tailwind CSS with dark mode support for 24/7 monitoring  \n- **Performance**: Webpack 5 chunk splitting for 30% faster load times  \n- **Security**: OWASP ZAP integration for runtime injection detection, Snyk for dependency vuln scanning  \n\n## Architecture / Design  \nThe dashboard employs a microfrontend architecture with Webpack 5 modules for isolated threat visualization components. Redux Toolkit manages global state for incident timelines, risk scores, and asset graphs. Tailwind's JIT compiler ensures responsive layouts for multi-monitor workstations. All API calls use CyberShield's REST endpoints with OAuth2 token refresh middleware.  \n\n## Usage / Examples  \nNavigate to `/incidents` for real-time event streams filtered by severity (critical/urgent). Use the timeline component to drill into specific threat vectors, with automatic data fetching via CyberShield's `/api/v2/incidents` endpoint. The asset graph component renders 3D topology with WebGL for large-scale network visualization.  \n\n## Testing  \nUnit tests for React components use Jest + React Testing Library, covering 92% of UI logic. Integration tests verify API call accuracy with mocked CyberShield endpoints. Security testing includes OWASP ZAP scans for XSS/CSRF vulnerabilities and Snyk audits for package dependencies. Accessibility checks ensure WCAG 2.1 compliance for screen reader users.  \n\n## License  \nMIT License © 2023 Johan Bakken  \nFor internal enterprise use only. Not for public distribution."
+  "text": "# Enterprise Fraud Detection System  \nA scalable, production-ready machine learning pipeline designed to identify fraudulent transactions in enterprise environments. This system integrates real-time data processing, robust feature engineering, and iterative model training to minimize false positives while maintaining high detection accuracy. Built with a focus on enterprise-grade reliability, it supports seamless integration with legacy systems and provides actionable insights for risk mitigation.  \n\n## Getting Started / Installation  \nEnsure your environment meets the following requirements:  \n- Python 3.8+  \n- PostgreSQL 12+  \n- Docker (optional for local testing)  \n\n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/your-username/enterprise-fraud-detection.git  \n   cd enterprise-fraud-detection  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n3. Set up the database:  \n   ```bash  \n   python setup.py db init  \n   ```  \n4. Run the initial data pipeline:  \n   ```bash  \n   python run_pipeline.py --mode batch  \n   ```  \n\n## Tech Stack  \n- **Data Ingestion**: Kafka (excluded per guidelines)  \n- **ETL Processing**: Apache Spark for batch transformations  \n- **Model Training**: MLflow for experiment tracking  \n- **Monitoring**: Custom dashboards for model performance  \n- **Storage**: PostgreSQL for structured data and metadata  \n- **Orchestration**: Apache Airflow for workflow scheduling  \n\n## Usage / Examples  \nTo process a new dataset:  \n```bash  \npython run_pipeline.py --input /path/to/data --output /path/to/results  \n```  \nExample input schema:  \n```json  \n{  \n  \"transaction_id\": \"string\",  \n  \"amount\": \"float\",  \n  \"timestamp\": \"datetime\",  \n  \"user_id\": \"string\",  \n  \"location\": \"string\"  \n}  \n```  \nThe pipeline outputs a scored CSV with fraud probability and risk labels.  \n\n## Badges  \n[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat)](https://github.com/your-username/enterprise-fraud-detection)  \n[![Build Status](https://img.shields.io/badge/Build-Passed-green)](https://github.com/your-username/enterprise-fraud-detection/actions)  \n[![Coverage](https://img.shields.io/badge/Coverage-75%25-yellow)](https://github.com/your-username/enterprise-fraud-detection/actions)  \n\n## Architecture / Design  \nThe system employs a layered architecture:  \n1. **Ingestion Layer**: Raw transaction data is ingested via REST APIs and stored in a staging area.  \n2. **ETL Layer**: Spark processes data, applying transformations and feature engineering for model training.  \n3. **Model Layer**: Trained models (saved in MLflow) are deployed as microservices, with version control and A/B testing.  \n4. **Detection Layer**: Real-time inference is handled by a lightweight service, with results sent to alerting systems.  \nData modeling prioritizes schema normalization and historical consistency, ensuring compatibility with downstream analytics.  \n\n## Contributing  \nContributions are welcome! Please open a pull request with tests and documentation updates. For enterprise deployments, ensure compatibility with your organization’s security and compliance frameworks.  \n\n## License  \nMIT License — see [LICENSE](https://github.com/your-username/enterprise-fraud-detection/blob/main/LICENSE) for details."
 }

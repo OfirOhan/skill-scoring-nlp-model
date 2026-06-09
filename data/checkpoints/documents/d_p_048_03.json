@@ -1,24 +1,27 @@
 {
   "doc_id": "d_p_048_03",
-  "type": "linkedin",
+  "type": "recommendation",
   "persona_id": "p_048",
   "hyperparams": {
-    "linkedin_completeness": "minimal"
+    "recommender_role": "skip-level",
+    "recommender_closeness": "occasional",
+    "company_type": "FAANG",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "PyTorch": 1,
-    "TensorFlow": 1,
-    "scikit-learn": 1,
-    "NLP": 1,
-    "Recommendation systems": 1,
-    "MLOps (MLflow/W&B)": 1,
-    "Model deployment": 1,
-    "AWS": 1,
-    "Docker": 1,
-    "REST API design": 1,
-    "Apache Airflow": 1,
-    "ETL pipeline design": 1,
-    "Data modeling": 1
+    "Agile/Scrum": 5,
+    "CI/CD pipelines": 1,
+    "Cloud cost optimization": 3,
+    "Cross-team collaboration": 5,
+    "GitHub Actions": 2,
+    "Kubernetes": 3,
+    "Monitoring & alerting": 2,
+    "Stakeholder communication": 5,
+    "Strategic planning": 5,
+    "System design": 3,
+    "Team leadership": 5,
+    "Technical writing": 3,
+    "Terraform": 3
   },
-  "text": "Building smarter ad-tech solutions that make a real impact is where I thrive. I’m driven by the challenge of turning complex data into actionable insights that drive business growth. My goal is to bridge the gap between technical innovation and practical outcomes, ensuring every project aligns with both user needs and business objectives.  \n\nAt AdLift Technologies, I focus on refining machine learning models that enhance ad performance and user engagement. The opportunity to work on dynamic, fast-paced ad-tech challenges keeps me motivated. I enjoy collaborating with cross-functional teams to translate abstract problems into concrete solutions that scale.  \n\nIn my short time here, I’ve contributed to streamlining data pipelines and improving model interpretability, which has helped our team make faster, more informed decisions. I’m also learning to approach problems with a balance of curiosity and pragmatism—something I’m still mastering.  \n\nLooking ahead, I’m eager to deepen my understanding of real-world applications for machine learning, particularly in optimizing ad delivery while maintaining ethical standards. I’m also excited about opportunities to mentor junior engineers and grow alongside a team that values both innovation and integrity. Let’s build better tech, together."
+  "text": "Clara Persson is a rare blend of technical rigor and collaborative vision. As a Staff Tech Lead at NexaTech, she consistently bridges abstract system design with tangible business outcomes. Her Kubernetes implementations at scale reduced deployment friction by 40% without compromising reliability, a feat achieved through meticulous architecture reviews and proactive scaling strategies. She once reimagined their cloud cost model, cutting monthly expenses by 25% while maintaining performance, a solution that became a team-wide best practice.  \n\nHer soft skills are equally distinctive. Clara thrives in Agile environments, balancing sprint velocity with long-term technical debt management. She collaborates seamlessly across teams, translating stakeholder needs into architecture decisions that align with both business goals and engineering constraints. Her technical writing—clear, precise, and accessible—has streamlined onboarding for new engineers and clarified complex processes for non-technical leaders.  \n\nClara’s leadership extends beyond code. She mentors junior engineers with patience, fostering a culture of ownership and curiosity. Her strategic planning for NexaTech’s product roadmap integrated technical feasibility with market demands, driving a 30% increase in feature adoption.  \n\nI recommend Clara without hesitation. Her ability to innovate within constraints, communicate complex ideas, and lead with empathy makes her an exceptional fit for any high-stakes technical role."
 }

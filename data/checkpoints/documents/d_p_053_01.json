@@ -3,21 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_053",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "moderate"
+    "project_scale": "hobby",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "CI/CD pipelines": 4,
-    "Cloud Cost Optimization": 1,
-    "GCP": 3,
-    "Kubernetes": 5,
-    "Monitoring & alerting": 4,
-    "Network automation": 1,
-    "PostgreSQL": 1,
+    "Browser DevTools": 2,
+    "HTML/CSS": 3,
+    "JavaScript": 4,
+    "Next.js": 1,
     "Python": 1,
-    "Terraform": 1
+    "REST API design": 1,
+    "React": 4,
+    "Responsive design": 3,
+    "State management (Redux/Zustand)": 3,
+    "TypeScript": 3,
+    "Web accessibility (WCAG)": 3,
+    "Web performance optimization": 3
   },
-  "text": "# EcoCart Scalable Order Processing System  \nHigh-throughput order pipeline using Kafka and microservices for e-commerce platforms  \n\n[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github)](https://github.com/eco-cart/processing-system)  \n[![CI/CD](https://img.shields.io/badge/CI/CD-passing?style=flat)](https://github.com/eco-cart/processing-system/actions)  \n[![Tests](https://img.shields.io/badge/Tests-100%25-green?style=flat)](https://github.com/eco-cart/processing-system/actions)  \n\nClone the repository and install dependencies:  \n```bash  \ngit clone https://github.com/eco-cart/processing-system.git  \ncd processing-system  \n./gradlew build  \n```  \n\n## Tech Stack  \n- **Kafka** for event streaming and decoupling services  \n- **Java 17** with Spring Boot for microservices  \n- **Docker** for containerization and local testing  \n- **AWS S3** for order data archival  \n- **GCP BigQuery** for real-time analytics  \n- **Prometheus + Grafana** for system metrics  \n- **Kubernetes** for orchestration and scaling  \n\n## Architecture / Design  \nThe system decouples order processing into modular services:  \n1. **Order Ingestion** – Kafka topic for incoming orders  \n2. **Payment Validation** – Async validation with retry logic  \n3. **Inventory Check** – Distributed locks for stock updates  \n4. **Order Finalization** – Aggregates state across services  \n\nAWS S3 stores raw order data for audit trails, while GCP BigQuery processes metrics for sales analytics. Kubernetes ensures horizontal scaling during peak traffic, with Prometheus monitoring latency and error rates.  \n\n## Usage / Examples  \n```java  \n// Submit order via REST API  \nPOST /orders  \n{ \"customerId\": \"123\", \"items\": [{\"productId\": \"456\", \"quantity\": 2}] }  \n\n// Process order asynchronously  \nkafka-console-producer --broker-list broker:9092 --topic orders  \n{\"orderId\": \"789\", \"status\": \"processed\"}  \n```  \n\n## Testing  \n- **Unit tests** for service logic using JUnit  \n- **Integration tests** validate Kafka topic interactions  \n- **End-to-end tests** simulate full order lifecycle with Docker containers  \n- **Monitoring** tracks latency and error rates via Prometheus  \n\n## License  \nMIT License  \n© 2023 EcoCart Platform Engineering Team"
+  "text": "# RealTimeCollab  \nA lightweight, real-time collaborative editor built with React and Firebase, enabling seamless document co-authoring and live feedback in a startup-ready stack  \n\n---\n\n## Deployment  \nLive demo: [https://realtimecollab-xyz.firebaseapp.com](https://realtimecollab-xyz.firebaseapp.com)  \nDeploy via Firebase CLI: `firebase deploy --only hosting,functions`  \nFirebase config is stored in `.env.local` — ensure `firebase init` runs before deployment  \n\n---\n\n## Getting Started / Installation  \n```bash\nnpx create-react-app realtimecollab --template typescript\ncd realtimecollab\nnpm install firebase @react-aria/interactions\nnpm install -D eslint prettier\n```\nInitialize Firebase with `firebase init` and set up `firebase.json` for hosting.  \nRun `npm start` to launch the dev server with live reload  \n\n---\n\n## Usage / Examples  \n- **Real-time editing**: Multiple users edit the same document with cursor sync and conflict resolution  \n- **Comment threads**: Inline annotations with timestamped replies and @mentions  \n- **Notification system**: Web push alerts for edits via Firebase Cloud Functions  \n- **Responsive workspace**: Fullscreen mode with dynamic layout adjustments for tablets and mobile  \n\n---\n\n## Tech Stack  \n- **Frontend**: React (18), TypeScript (4.9), Tailwind CSS (3.3)  \n- **Backend**: Firebase Realtime Database (v9), Cloud Functions (Node.js 20)  \n- **Tools**: Vite (build), ESLint (config), Prettier (format)  \n- **Accessibility**: ARIA labels for collaborative UI elements, keyboard navigation support  \n\n---\n\n## Architecture / Design  \nFirebase acts as the central hub for document state synchronization. React components manage local UI state via Context API, with Firebase listeners updating the global state tree. Performance is optimized through lazy-loaded modules and code splitting. All interactive elements are keyboard-accessible, with focus traps for modal dialogs.  \n\n---\n\n## License  \nMIT License  \n[https://github.com/realtimecollab/LICENSE](https://github.com/realtimecollab/LICENSE)  \n\n---\n\n## Badges  \n![GitHub](https://badgen.net/badge/simple/github/gray)  \n![Firebase](https://badgen.net/badge/simple/firebase/gray)  \n![React](https://badgen.net/badge/simple/react/gray)  \n![TypeScript](https://badgen.net/badge/simple/typescript/gray)  \n![Responsive](https://badgen.net/badge/simple/responsive/gray)"
 }

@@ -4,22 +4,18 @@
   "persona_id": "p_081",
   "hyperparams": {
     "project_scale": "team-internal",
-    "project_team_size": "large (15+)",
-    "jargon_density": "moderate"
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "API testing": 3,
-    "Go": 1,
-    "GraphQL": 1,
-    "Integration testing": 3,
-    "Java": 1,
-    "Performance testing (JMeter/k6)": 2,
-    "Python": 3,
-    "REST API design": 3,
-    "Selenium/Playwright": 3,
-    "Test automation": 3,
-    "Test strategy design": 2,
-    "Unit testing": 3
+    "Next.js": 4,
+    "REST API design": 1,
+    "React": 5,
+    "Responsive design": 4,
+    "State management (Redux/Zustand)": 3,
+    "TypeScript": 4,
+    "Web performance optimization": 3,
+    "Webpack/Vite": 3
   },
-  "text": "# E-Commerce Cart Validation System  \nA robust framework for validating checkout workflows across e-commerce platforms, ensuring cart integrity, pricing accuracy, and edge-case resilience. Built for seamless integration into CI/CD pipelines, this system supports parallel test execution and real-time feedback for QA teams.  \n\n## Deployment  \nIntegrated with GitHub Actions for continuous validation, with staging and production environments synchronized via Terraform. Deployment triggers on PR merges, with test results visualized in a centralized dashboard accessible to all team members.  \n\n## Badges  \nContinuous Integration: ✅ Passed  \nTest Coverage: ⚠️ 82% (unit + integration)  \nPerformance Baseline: ⏱️ 12s (median)  \n\n## Tech Stack  \nPython-based framework for API validation, paired with Playwright for browser automation. REST API endpoints are tested using Pytest, while integration with third-party payment gateways leverages mock services. Performance benchmarks are captured via k6 for scalability validation.  \n\n## Architecture / Design  \nThe system is structured into modular test suites:  \n- **Cart Validation Layer**: Validates item additions, deletions, and quantity adjustments.  \n- **Checkout Orchestration**: Simulates user flows with conditional branching for promo codes and discounts.  \n- **Data Consistency Checks**: Cross-references backend databases with frontend UI states.  \nParallel execution is managed via pytest-xdist, with results aggregated into a JSON report for manual review.  \n\n## Getting Started / Installation  \n1. Clone the repository and install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n2. Set environment variables for API keys and test environments.  \n3. Configure GitHub Actions secrets for secure credential management.  \n\n## Usage / Examples  \nRun a full validation suite:  \n```bash  \npytest --reruns 2 --browser=chromium --environment=staging  \n```  \nExample: Validate a cart with 5 items and a 15% discount applied:  \n```python  \ndef test_checkout_with_discount():  \n    cart.add_items([{\"product_id\": \"X123\", \"quantity\": 2}])  \n    assert cart.total == 24.99  \n    checkout.apply_discount(\"SUMMER20\")  \n    assert checkout.final_price == 19.99  \n```  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details."
+  "text": "# GameUI Toolkit: Modern Frontend Solutions for Game Development  \nA modular toolkit for building high-performance, responsive UI systems tailored to game development workflows. Designed for rapid prototyping and iterative refinement, it abstracts complex state interactions while maintaining flexibility for custom logic. Core components leverage React hooks and TypeScript to enforce type safety across dynamic UI states.  \n\n## Acknowledgments  \nThis toolkit evolved from collaboration between Yael Mizrahi and the internal game dev team. Key contributions include:  \n- **Sarah Lin** (UX lead): Architecture for scalable component hierarchy  \n- **Raj Patel** (performance lead): Optimization strategies for GPU-accelerated rendering  \n- **Core libraries**: React, TypeScript, Vite, and Framer Motion for motion design  \n\n## Getting Started / Installation  \nClone the repository and install dependencies:  \n```bash  \nnpm install  \n```  \nConfigure your project by extending the base `App.tsx` with custom UI modules. For production builds, run:  \n```bash  \nnpm run build:prod  \n```  \nEnsure environment variables for API endpoints are set in `.env.local`.  \n\n## Usage / Examples  \nThe toolkit includes pre-built components for:  \n- **HUD overlays** with real-time stats and hotkeys  \n- **Inventory systems** with drag-and-drop interactions  \n- **Menu transitions** using Framer Motion for smooth animations  \n\nExample: A custom `ProgressionBar` component handles dynamic state updates via React Context, reducing prop drilling in nested UI layers.  \n\n## Tech Stack  \n- **Framework**: React 18 (with Concurrent Mode)  \n- **TypeScript**: Enforced type safety for UI state transitions  \n- **Build**: Vite for fast dev server and production bundling  \n- **State Management**: Zustand for granular state access in UI modules  \n- **Responsive Design**: CSS-in-JS with media queries for adaptive layouts  \n\n## License  \nMIT License  \n[View License File](LICENSE)  \n\n## Badges  \n[![GitHub](https://badgen.net/badge/github/yaelmizrahi/gameui-toolkit/gray)](https://github.com/yaelmizrahi/gameui-toolkit)  \n[![Build Status](https://badgen.net/badge/build/status/passing)](https://github.com/yaelmizrahi/gameui-toolkit/actions)  \n[![License](https://badgen.net/badge/license/MIT/blue)](https://github.com/yaelmizrahi/gameui-toolkit/blob/main/LICENSE)  \n\n## Contributing  \nPull requests are welcome. For significant changes, open an issue to discuss the approach. Code reviews focus on:  \n- Maintainability of component hierarchies  \n- Performance benchmarks for UI rendering  \n- Compliance with accessibility standards for in-game interfaces"
 }

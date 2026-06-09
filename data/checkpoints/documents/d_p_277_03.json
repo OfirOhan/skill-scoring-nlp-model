@@ -1,0 +1,22 @@
+{
+  "doc_id": "d_p_277_03",
+  "type": "project_readme",
+  "persona_id": "p_277",
+  "hyperparams": {
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "Android development": 4,
+    "Flutter": 1,
+    "JavaScript": 1,
+    "Kotlin (Android)": 4,
+    "Mobile CI/CD": 4,
+    "REST API design": 3,
+    "React": 1,
+    "React Native": 4,
+    "Web performance optimization": 2
+  },
+  "text": "# Ad Analytics Dashboard  \nA mobile-first solution for real-time ad performance analytics, built with Android and Kotlin to deliver actionable insights in adtech environments.  \n\n## Tech Stack  \n- **Android (Kotlin)**: Core platform with custom UI components for ad metrics visualization  \n- **REST APIs**: Synchronized with ad server endpoints for real-time data ingestion  \n- **Data Visualization Libraries**: Charting frameworks for dynamic metric rendering  \n- **Mobile CI/CD**: Automated testing pipelines for binary validation and deployment  \n\n## Architecture / Design  \nThe app leverages Kotlin coroutines for asynchronous data fetching, with a modular architecture separating data models from UI logic. A dedicated service layer handles REST API interactions, ensuring decoupled updates to the dashboard. Real-time metrics are processed via background work managers, reducing UI latency by 30% in stress tests. The design prioritizes adaptive UI for varying screen sizes while maintaining sub-500ms load times for critical metrics.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/zaneokoro/ad-analytics-dashboard.git`  \n2. Import the project into Android Studio with Gradle 7.4+  \n3. Configure API keys in `app/src/main/AndroidManifest.xml`  \n4. Run `./gradlew assembleDebug` for local builds  \n\n## Usage / Examples  \n- **Real-time metric updates**: Pull live CTR and RPM data from ad servers every 15 seconds  \n- **Custom filtering**: Apply date ranges and ad campaign tags to drill into performance reports  \n- **Export capabilities**: Generate CSV exports of aggregated metrics for deeper analysis  \n\n## Badges  \n[![Android](https://img.shields.io/badge/Android-7.4+-blue)](https://developer.android.com/studio)  \n[![Kotlin](https://img.shields.io/badge/Kotlin-1.8+-orange)](https://kotlinlang.org)  \n[![REST API](https://img.shields.io/badge/REST-API-2000+-green)](https://httpd.apache.org)  \n[![CI/CD](https://img.shields.io/badge/CI%2FCD-Automated--purple)](https://github.com/actions/virtual-environments)  \n\n## Contributing  \nOpen to feature suggestions and bug fixes. Please open an issue for discussions before submitting pull requests.  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details"
+}

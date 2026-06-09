@@ -1,27 +1,50 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional resume highlighting Lara Bakker's frontend engineering experience in e-commerce, focusing on her role at VividSales.",
-    "title": "Lara Bakker - Frontend Engineer",
+    "topic_summary": "A professional CV highlighting Gaurav Saxena's QA Engineer experience at NexaCorp, with a focus on enterprise testing and automation.",
+    "title": "Gaurav Saxena - QA Engineer CV",
     "doc_id": "d_p_207_00",
     "persona_id": "p_207",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
-      "geographic_convention": "Israel",
-      "company_type": "academic",
-      "company_size": "small (<50)"
+      "cv_format": "hybrid",
+      "geographic_convention": "Europe",
+      "company_type": "agency",
+      "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "README for a frontend project improving e-commerce checkout performance using React and TypeScript.",
-    "title": "VividCart - E-commerce Checkout Optimization",
+    "topic_summary": "A GitHub project README for an automated regression testing framework developed for enterprise-scale applications.",
+    "title": "Enterprise Regression Test Automation Framework",
     "doc_id": "d_p_207_01",
     "persona_id": "p_207",
     "hyperparams": {
       "project_scale": "hobby",
-      "project_team_size": "large (15+)",
-      "jargon_density": "plain"
+      "project_team_size": "solo",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation letter from Gaurav's manager at NexaCorp, praising his technical skills and contributions to QA processes.",
+    "title": "Recommendation for Gaurav Saxena - QA Engineer",
+    "doc_id": "d_p_207_02",
+    "persona_id": "p_207",
+    "hyperparams": {
+      "recommender_role": "direct-manager",
+      "recommender_closeness": "worked-daily",
+      "company_type": "agency",
+      "company_size": "large (500+)"
+    }
+  },
+  {
+    "doc_type": "linkedin",
+    "topic_summary": "A LinkedIn summary showcasing Gaurav's career as a QA Engineer, expertise in enterprise testing, and passion for quality assurance.",
+    "title": "Gaurav Saxena - QA Engineer | Enterprise Testing Specialist",
+    "doc_id": "d_p_207_03",
+    "persona_id": "p_207",
+    "hyperparams": {
+      "linkedin_completeness": "minimal"
     }
   }
 ]

@@ -1,62 +1,60 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional CV for Olga Petrov, Senior Backend Engineer in adtech",
-    "title": "Olga Petrov - Senior Backend Engineer",
+    "topic_summary": "A comprehensive CV highlighting Ricardo Almeida's 9 years of experience as a Principal DevOps Engineer in adtech, with expertise in SRE and cloud-native infrastructure.",
+    "title": "Ricardo Almeida - Principal DevOps Engineer",
     "doc_id": "d_p_158_00",
     "persona_id": "p_158",
     "hyperparams": {
-      "cv_format": "paragraph",
-      "geographic_convention": "India",
-      "company_type": "enterprise",
+      "cv_format": "bullet-heavy",
+      "geographic_convention": "US",
+      "company_type": "FAANG",
       "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A real-time ad targeting API built with Python and Flask for dynamic campaign optimization",
-    "title": "Real-Time Ad Targeting API",
+    "topic_summary": "A GitHub project README for a scalable CI/CD pipeline optimized for adtech campaign deployment.",
+    "title": "AdTech Pipeline Orchestration",
     "doc_id": "d_p_158_01",
     "persona_id": "p_158",
     "hyperparams": {
-      "project_scale": "team-internal",
+      "project_scale": "production",
+      "project_team_size": "solo",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A README for a real-time analytics dashboard built using cloud-native tools for ad performance tracking.",
+    "title": "Real-Time Ad Analytics Dashboard",
+    "doc_id": "d_p_158_02",
+    "persona_id": "p_158",
+    "hyperparams": {
+      "project_scale": "production",
       "project_team_size": "small (2-4)",
       "jargon_density": "plain"
     }
   },
   {
-    "doc_type": "project_readme",
-    "topic_summary": "Scalable campaign analytics dashboard using Node.js and PostgreSQL for ad performance tracking",
-    "title": "Campaign Analytics Dashboard",
-    "doc_id": "d_p_158_02",
-    "persona_id": "p_158",
-    "hyperparams": {
-      "project_scale": "hobby",
-      "project_team_size": "large (15+)",
-      "jargon_density": "moderate"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "Distributed ad server architecture with Kafka and Redis for high-throughput ad delivery",
-    "title": "Distributed Ad Server",
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post on implementing zero-downtime deployments for adtech microservices using Kubernetes and Terraform.",
+    "title": "Zero-Downtime Deployments for AdTech Microservices",
     "doc_id": "d_p_158_03",
     "persona_id": "p_158",
     "hyperparams": {
-      "project_scale": "hobby",
-      "project_team_size": "small (2-4)",
+      "blog_depth": "deep-dive",
       "jargon_density": "heavy"
     }
   },
   {
-    "doc_type": "blog",
-    "topic_summary": "Optimizing backend systems for real-time ad campaign scalability and low-latency processing",
-    "title": "Building Scalable Backend Infrastructure for AdTech",
+    "doc_type": "linkedin",
+    "topic_summary": "A LinkedIn summary showcasing Ricardo's leadership in DevOps and SRE practices within the adtech industry.",
+    "title": "Ricardo Almeida - Principal DevOps Engineer",
     "doc_id": "d_p_158_04",
     "persona_id": "p_158",
     "hyperparams": {
-      "blog_depth": "tutorial",
-      "jargon_density": "moderate"
+      "linkedin_completeness": "detailed"
     }
   }
 ]

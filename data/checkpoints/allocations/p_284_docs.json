@@ -1,63 +1,75 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional resume highlighting 9 years of experience in adtech DevOps and SRE roles",
-    "title": "Harini Subramanian - Senior SRE/DevOps Engineer",
+    "topic_summary": "Senior Data Science Consultant with 9 years of experience in consulting, specializing in predictive analytics and machine learning solutions for enterprise clients",
+    "title": "Xander de Vries 87 - Senior Data Science Consultant",
     "doc_id": "d_p_284_00",
     "persona_id": "p_284",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
+      "cv_format": "paragraph",
       "geographic_convention": "US",
-      "company_type": "startup",
-      "company_size": "mid (50-500)"
+      "company_type": "FAANG",
+      "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "Automated CI/CD pipeline for ad tech applications using Jenkins and Docker",
-    "title": "AdTech CI/CD Pipeline Automation",
+    "topic_summary": "Developed a machine learning model to predict client churn using historical transaction data and customer behavior patterns",
+    "title": "Predictive Analytics for Client Retention",
     "doc_id": "d_p_284_01",
     "persona_id": "p_284",
     "hyperparams": {
-      "project_scale": "production",
-      "project_team_size": "medium (5-15)",
-      "jargon_density": "plain"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "Real-time monitoring system for ad server performance with Prometheus and Grafana",
-    "title": "Real-Time Ad Server Monitoring System",
-    "doc_id": "d_p_284_02",
-    "persona_id": "p_284",
-    "hyperparams": {
       "project_scale": "academic",
-      "project_team_size": "medium (5-15)",
+      "project_team_size": "solo",
       "jargon_density": "heavy"
     }
   },
   {
+    "doc_type": "project_readme",
+    "topic_summary": "Optimized supply chain operations through time series forecasting and demand planning for a Fortune 500 manufacturing client",
+    "title": "Supply Chain Optimization with Time Series Forecasting",
+    "doc_id": "d_p_284_02",
+    "persona_id": "p_284",
+    "hyperparams": {
+      "project_scale": "team-internal",
+      "project_team_size": "solo",
+      "jargon_density": "moderate"
+    }
+  },
+  {
     "doc_type": "recommendation",
-    "topic_summary": "Endorsement from a Team Lead highlighting Harini's leadership in DevOps initiatives",
-    "title": "Recommendation from AdVue Technologies Team Lead",
+    "topic_summary": "Endorsed by a former manager for leadership in deploying AI-driven analytics solutions across multiple consulting projects",
+    "title": "Recommendation from Senior Partner, Strata Consulting Group",
     "doc_id": "d_p_284_03",
+    "persona_id": "p_284",
+    "hyperparams": {
+      "recommender_role": "peer",
+      "recommender_closeness": "worked-daily",
+      "company_type": "startup",
+      "company_size": "small (<50)"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "Testified by a peer data scientist for collaborative problem-solving in complex data integration challenges",
+    "title": "Recommendation from Data Science Lead, Strata Consulting Group",
+    "doc_id": "d_p_284_04",
     "persona_id": "p_284",
     "hyperparams": {
       "recommender_role": "professor",
       "recommender_closeness": "worked-daily",
-      "company_type": "enterprise",
+      "company_type": "academic",
       "company_size": "mid (50-500)"
     }
   },
   {
-    "doc_type": "blog",
-    "topic_summary": "Best practices for optimizing ad tech pipelines with DevOps strategies",
-    "title": "Optimizing Ad Tech Pipelines with DevOps Practices",
-    "doc_id": "d_p_284_04",
+    "doc_type": "linkedin",
+    "topic_summary": "Data science consultant specializing in AI-driven consulting solutions for enterprise clients",
+    "title": "LinkedIn Summary: Xander de Vries 87",
+    "doc_id": "d_p_284_05",
     "persona_id": "p_284",
     "hyperparams": {
-      "blog_depth": "opinion-piece",
-      "jargon_density": "plain"
+      "linkedin_completeness": "detailed"
     }
   }
 ]

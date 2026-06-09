@@ -3,31 +3,21 @@
   "type": "cv",
   "persona_id": "p_193",
   "hyperparams": {
-    "cv_format": "paragraph",
+    "cv_format": "hybrid",
     "geographic_convention": "US",
-    "company_type": "academic",
-    "company_size": "large (500+)"
+    "company_type": "FAANG",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "CI/CD pipelines": 3,
-    "Cloud cost optimization": 3,
-    "Cloud networking (VPC/subnets)": 2,
-    "Database optimization": 3,
-    "Docker": 3,
-    "GitHub Actions": 3,
-    "Go": 3,
-    "Infrastructure as Code": 3,
-    "Kubernetes": 3,
-    "Linux administration": 2,
-    "Load balancing": 2,
-    "Microservices architecture": 3,
-    "Monitoring & alerting": 3,
-    "PostgreSQL": 3,
-    "Python": 3,
-    "REST API design": 3,
-    "Redis": 3,
-    "Serverless (Lambda/Cloud Functions)": 3,
-    "Shell scripting (Bash)": 2
+    "CI/CD pipelines": 1,
+    "GitHub Actions": 2,
+    "Go": 5,
+    "Jenkins": 2,
+    "Microservices architecture": 5,
+    "PostgreSQL": 5,
+    "Python": 5,
+    "REST API design": 5,
+    "Terraform": 3
   },
-  "text": "Yasmin El-Amin  \nBackend Engineer | VerveCorp  \nEmail: yasmin.elamin@email.com | Phone: (555) 123-4567 | LinkedIn: linkedin.com/in/yasminelamin | GitHub: github.com/yasminelamin  \n\nProfessional Experience  \nAt VerveCorp, I focused on scalable backend systems, contributing to microservices architecture and automation workflows. As a Junior Backend Engineer, I developed REST APIs for enterprise SaaS platforms, reducing average query latency by 30% through PostgreSQL optimization. My work on CI/CD pipelines for Dockerized applications improved deployment reliability by 25%, enabling faster iteration cycles. As a Backend Engineer, I architected serverless functions on AWS, integrating Redis caching layers that reduced database load by 40% during peak traffic. These efforts supported high-availability applications with sub-100ms response times.  \n\nDuring my internship at NexGen Technologies, I collaborated on building REST APIs for a SaaS platform, refining query performance by 22% through index optimization and query restructuring. This experience solidified my understanding of database indexing strategies and their impact on system scalability.  \n\nEducation  \nBachelor of Science in Computer Science, University of Toronto (2022). Graduated with a focus on distributed systems and cloud computing, leveraging academic resources to deepen expertise in backend development and infrastructure automation.  \n\nTechnical Skills  \nDocker and Kubernetes were central to deploying microservices at VerveCorp, where I managed container orchestration for applications handling over 10,000 requests per second. GitHub Actions automated testing and deployment workflows, ensuring 99.9% uptime for critical services. PostgreSQL optimization, including query indexing and connection pooling, reduced latency in high-traffic scenarios. Redis caching layers, implemented for session management, cut database load by 40%. Serverless functions on AWS enabled cost-effective scaling, with cloud cost optimization practices reducing monthly expenses by 15%. CI/CD pipelines, built using GitLab and Jenkins, streamlined release processes, cutting deployment time from hours to minutes. Infrastructure as Code tools like Terraform managed cloud resources, ensuring consistent environments across development and production. Monitoring tools such as Prometheus and Grafana provided real-time visibility into system performance, with alerts configured for critical thresholds.  \n\nProjects  \nDesigned a serverless architecture for a real-time analytics dashboard, using AWS Lambda and API Gateway to process and visualize data from multiple sources. This project reduced infrastructure costs by 20% while maintaining low-latency response times.  \n\nPublications  \nCo-authored a technical blog post on optimizing PostgreSQL for microservices, published on VerveCorp’s engineering portal, which received over 5,000 views and sparked discussions on indexing strategies.  \n\nAwards & Achievements  \nRecognized as VerveCorp’s “Rising Star” in 2023 for contributions to cloud cost optimization and infrastructure automation. Achieved 100% success rate in deploying production-ready microservices within scheduled sprints."
+  "text": "Aaron Baptiste  \nSenior Backend Engineer | Sentinel Security Group  \nEmail: aaron.baptiste@email.com | LinkedIn: linkedin.com/in/aaronbaptiste | GitHub: github.com/aaronbaptiste  \n\n**Professional Experience**  \n*Senior Backend Engineer*  \nSentinel Security Group (2023–Present)  \n- Spearheaded the migration of legacy monolithic systems to microservices, reducing deployment latency by 40% and improving system resilience during DDoS attacks.  \n- Designed and scaled PostgreSQL clusters to handle 10M+ concurrent queries per second, ensuring sub-100ms response times for real-time threat detection.  \n- Led the implementation of REST API gateways with rate-limiting and authentication, reducing unauthorized access attempts by 75% across customer-facing endpoints.  \n- Mentored 3 junior engineers, resulting in a 30% reduction in critical bug resolution time and improved code quality in production systems.  \n\n*Lead Backend Architect*  \nSecureNet Technologies (2020–2023)  \n- Architectured a Python-based microservices framework that enabled 20+ teams to deploy features 50% faster, with 99.95% SLA adherence.  \n- Engineered Terraform modules for infrastructure automation, cutting manual configuration time by 60% and reducing deployment errors by 80%.  \n- Optimized database performance using PostgreSQL indexing and query optimization, achieving 3x faster query execution for security analytics modules.  \n- Collaborated with DevOps to integrate Go-based services into CI/CD pipelines, though this was not part of my direct responsibilities.  \n\n*Senior Backend Engineer*  \nCyberShield Solutions (2018–2020)  \n- Developed a Python-driven API for threat intelligence sharing, enabling real-time data exchange between 15+ security platforms.  \n- Pioneered the use of Go for high-performance modules, reducing CPU usage by 25% in critical security monitoring tools.  \n- Refactored legacy systems to adopt microservices, improving scalability and reducing downtime during peak traffic by 50%.  \n\n*Junior Backend Developer*  \nCyberShield Solutions (2015–2018)  \n- Built foundational infrastructure for internal tools using Python and PostgreSQL, supporting 500+ active users across the team.  \n- Assisted in deploying early-stage Terraform configurations for cloud infrastructure, laying groundwork for later automation efforts.  \n\n**Technical Skills**  \n- **Go**: Core to system architecture, used for building high-throughput security tools and mentoring teams on concurrency patterns.  \n- **Microservices**: Designed and maintained distributed systems for threat detection, emphasizing fault tolerance and observability.  \n- **PostgreSQL**: Engineered scalable database solutions for real-time analytics, including advanced indexing and replication strategies.  \n- **Python**: Developed REST APIs and automation scripts for security workflows, integrating with third-party tools like SIEM platforms.  \n- **REST API design**: Created standards-compliant endpoints for secure data exchange, with emphasis on rate limiting and authentication.  \n- **Terraform**: Automated cloud infrastructure provisioning for multiple environments, ensuring consistent deployment across regions.  \n- **GitHub Actions**: Used for CI/CD workflows in several projects, though not my primary focus.  \n- **Jenkins**: Occasionally leveraged for legacy pipeline configurations before transitioning to modern tools.  \n\n**Education**  \nBachelor of Science in Computer Science | Massachusetts Institute of Technology (2016)  \n\n**Projects**  \n- **Threat Intelligence API**: Built a Python-based REST service for real-time data sharing, integrated with 15+ security platforms.  \n- **PostgreSQL Optimization Suite**: Developed a tool for query analysis and index recommendation, improving performance by 3x in production.  \n- **Microservices Governance Framework**: Created guidelines and tooling for consistent service design across 20+ teams.  \n\n**Languages**  \nEnglish (fluent), French (professional proficiency)  \n\n**Volunteer / Open Source**  \n- Contributed to open-source security tools on GitHub, including bug fixes and performance enhancements.  \n- Mentored developers at local tech meetups, focusing on Go and microservices best practices.  \n- Presented at cybersecurity conferences on secure API design and database optimization strategies."
 }

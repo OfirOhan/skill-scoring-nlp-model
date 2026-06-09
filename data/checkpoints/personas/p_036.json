@@ -1,45 +1,65 @@
 {
   "persona_id": "p_036",
   "hyperparams": {
-    "archetype": "backend_engineer",
-    "years_experience": 11,
+    "archetype": "platform_engineer",
+    "years_experience": 13,
     "seniority": "staff",
-    "industry": "adtech",
-    "writing_style": "modest",
-    "language_fluency": "native",
-    "self_promotion_level": "boastful",
+    "industry": "healthtech",
+    "writing_style": "verbose",
+    "language_fluency": "near-native",
+    "self_promotion_level": "balanced",
     "quantification_tendency": "mixed"
   },
-  "name": "Sana Patel",
-  "current_role": "Staff Backend Engineer",
-  "company": "AdvertiseFlow",
+  "name": "Ines Pereira",
+  "current_role": "Staff Platform Engineer",
+  "company": "HealthCloud Solutions",
   "education": {
-    "degree": "Bachelor of Science in Computer Science",
-    "university": "University of Toronto",
-    "year": 2012
+    "degree": "Master of Science in Computer Engineering",
+    "university": "University of Porto",
+    "year": 2010
   },
   "career_trajectory": [
-    "Junior Backend Developer at AdvertiseFlow (2012-2015)",
-    "Senior Backend Developer at AdvertiseFlow (2015-2018)",
-    "Lead Backend Engineer at AdvertiseFlow (2018-2021)",
-    "Staff Backend Engineer at AdvertiseFlow (2021-present)"
+    {
+      "role": "Systems Administrator",
+      "company": "HealthTech Solutions",
+      "year": "2009-2012"
+    },
+    {
+      "role": "DevOps Engineer",
+      "company": "MedCare Systems",
+      "year": "2012-2015"
+    },
+    {
+      "role": "Cloud Infrastructure Architect",
+      "company": "VitalHealth Inc.",
+      "year": "2015-2018"
+    },
+    {
+      "role": "Senior Platform Engineer",
+      "company": "HealthCloud Solutions",
+      "year": "2018-2021"
+    }
   ],
   "skills": {
-    "Python": 4,
-    "Go": 5,
-    "PostgreSQL": 5,
     "AWS": 5,
-    "Microservices architecture": 5,
-    "Kubernetes": 4,
-    "Terraform": 4,
-    "Load balancing": 4,
-    "Monitoring & alerting": 4
+    "GCP": 4,
+    "Kubernetes": 5,
+    "Terraform": 5,
+    "Infrastructure as Code": 4,
+    "Cloud cost optimization": 5,
+    "Python": 2,
+    "REST API design": 1,
+    "PostgreSQL": 3,
+    "MongoDB": 2,
+    "Network automation": 1
   },
   "document_ids": [
     "d_p_036_00",
     "d_p_036_01",
     "d_p_036_02",
     "d_p_036_03",
-    "d_p_036_04"
+    "d_p_036_04",
+    "d_p_036_05",
+    "d_p_036_06"
   ]
 }

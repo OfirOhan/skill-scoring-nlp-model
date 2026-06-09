@@ -1,50 +1,63 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A Machine Learning Engineer CV highlighting adtech experience and technical skills",
-    "title": "Nina Rodriguez - Machine Learning Engineer",
+    "topic_summary": "A professional CV highlighting Clara Persson's 15 years of experience as a tech lead/architect in the startup industry",
+    "title": "Clara Persson - Staff Tech Lead / Architect",
     "doc_id": "d_p_048_00",
     "persona_id": "p_048",
     "hyperparams": {
-      "cv_format": "minimal",
-      "geographic_convention": "US",
-      "company_type": "academic",
-      "company_size": "large (500+)"
+      "cv_format": "hybrid",
+      "geographic_convention": "Europe",
+      "company_type": "agency",
+      "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A real-time ad click fraud detection system using anomaly detection algorithms",
-    "title": "AdGuard: Real-Time Click Fraud Detection",
+    "topic_summary": "README for a microservices architecture project designed to scale NexaTech's SaaS platform",
+    "title": "Microservices Architecture for NexaTech SaaS Platform",
     "doc_id": "d_p_048_01",
     "persona_id": "p_048",
     "hyperparams": {
-      "project_scale": "academic",
-      "project_team_size": "small (2-4)",
+      "project_scale": "team-internal",
+      "project_team_size": "large (15+)",
       "jargon_density": "heavy"
     }
   },
   {
-    "doc_type": "recommendation",
-    "topic_summary": "Endorsement from a professor for Nina's academic ML research in adtech",
-    "title": "Recommendation for Nina Rodriguez",
+    "doc_type": "project_readme",
+    "topic_summary": "README for a serverless backend system built to support a startup's real-time analytics dashboard",
+    "title": "Serverless Backend for Startup Analytics Dashboard",
     "doc_id": "d_p_048_02",
     "persona_id": "p_048",
     "hyperparams": {
-      "recommender_role": "professor",
-      "recommender_closeness": "brief",
-      "company_type": "enterprise",
-      "company_size": "mid (50-500)"
+      "project_scale": "production",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "plain"
     }
   },
   {
-    "doc_type": "linkedin",
-    "topic_summary": "Professional summary showcasing Nina's passion for ML in adtech and career goals",
-    "title": "Nina Rodriguez | Machine Learning Engineer",
+    "doc_type": "recommendation",
+    "topic_summary": "Recommendation from Clara's former manager praising her leadership and technical expertise",
+    "title": "Recommendation from NexaTech CTO",
     "doc_id": "d_p_048_03",
     "persona_id": "p_048",
     "hyperparams": {
-      "linkedin_completeness": "minimal"
+      "recommender_role": "skip-level",
+      "recommender_closeness": "occasional",
+      "company_type": "FAANG",
+      "company_size": "small (<50)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "Blog post discussing architectural trade-offs in startup tech stacks",
+    "title": "Architectural Trade-offs in Startup Tech Stacks",
+    "doc_id": "d_p_048_04",
+    "persona_id": "p_048",
+    "hyperparams": {
+      "blog_depth": "tutorial",
+      "jargon_density": "heavy"
     }
   }
 ]

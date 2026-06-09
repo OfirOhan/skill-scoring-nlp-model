@@ -4,20 +4,23 @@
   "persona_id": "p_013",
   "hyperparams": {
     "project_scale": "hobby",
-    "project_team_size": "medium (5-15)",
+    "project_team_size": "small (2-4)",
     "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Swift": 1,
-    "Kotlin": 1,
-    "React Native": 1,
-    "Flutter": 1,
-    "iOS development": 1,
-    "Android development": 1,
-    "TypeScript": 1,
-    "React": 1,
-    "REST API design": 1,
-    "Security testing": 1
+    "Apache Airflow": 2,
+    "Apache Spark": 1,
+    "CI/CD pipelines": 2,
+    "Data modeling": 2,
+    "ETL pipeline design": 2,
+    "MLOps (MLflow/W&B)": 4,
+    "Model deployment": 4,
+    "NLP": 4,
+    "Prometheus/Grafana": 2,
+    "PyTorch": 4,
+    "Recommendation systems": 1,
+    "TensorFlow": 4,
+    "scikit-learn": 4
   },
-  "text": "# SecureAuth Mobile SDK  \nA modular framework for biometric authentication with end-to-end encryption, designed for seamless integration into mobile applications. Focuses on zero-knowledge proofs and multi-factor verification to safeguard user credentials without storing sensitive data.  \n\n---\n\n## Badges  \n[![Project Status](https://img.shields.io/badge/status-active-green)](https://github.com/secureauth-sdk)  \n[![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/secureauth-sdk/blob/main/LICENSE)  \n\n---\n\n## Getting Started  \n1. Clone the repository using `git clone https://github.com/secureauth-sdk.git`  \n2. Install dependencies via `npm install` or `yarn`  \n3. Configure environment variables for encryption keys and biometric provider endpoints  \n4. Run `npm start` to initialize the development server  \n\nEnsure your system meets the minimum requirements: modern CPU, TLS 1.3 support, and access to hardware-backed cryptographic modules.  \n\n---\n\n## Usage / Examples  \nTo authenticate a user:  \n```javascript  \nconst auth = new SecureAuth();  \nconst result = await auth.verifyBiometric({  \n  userId: 'user_123',  \n  challenge: 'random_salt_value'  \n});  \nconsole.log(result); // { success: true, encryptedToken: '...' }  \n```  \nFor multi-factor setup:  \n```javascript  \nawait auth.enrollFactors({  \n  factors: ['fingerprint', 'face'],  \n  encryptionMode: 'AES-256-GCM'  \n});  \n```  \nThe SDK abstracts key exchange protocols, ensuring credentials are never transmitted in plaintext.  \n\n---\n\n## API Reference  \n- `SecureAuth()` constructor: Initializes with encryption policies and biometric backend URL  \n- `verifyBiometric(data: AuthRequest)`: Returns encrypted token or error  \n- `enrollFactors(config: EnrollmentConfig)`: Registers authentication methods  \n- `generateKeyPair()`: Creates ephemeral keys for session encryption  \n\n---\n\n## Testing  \nAutomated tests validate encryption strength and biometric fallback logic. Run `npm test` to execute unit and integration suites. Coverage reports are generated in `./coverage/`.  \n\n---\n\n## Contributing  \nFork the repo, create a feature branch, and submit a pull request. Prioritize documentation updates and edge-case handling. All contributions require a signed CLA.  \n\n---\n\n## Deployment  \nBuild production artifacts using `npm run build`. Package as a standalone library or integrate via npm. For enterprise use, request a custom encryption policy configuration.  \n\n---\n\n## License  \nMIT License – see [LICENSE](https://github.com/secureauth-sdk/blob/main/LICENSE) for details."
+  "text": "# Fraud Detection System Using Machine Learning  \nA real-time fraud detection solution leveraging ensemble models and production-grade MLOps practices to flag anomalous financial transactions with 98.2% precision in live environments.  \n\n## Deployment  \nThe system runs as a scalable microservice on AWS Lambda, with model inference handled via a Dockerized Flask API. Production metrics are monitored via Prometheus and Grafana, and all experiments are logged in MLflow for auditability.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/commit-activity/m/nadiakhoury/fraud-detection)](https://github.com/nadiakhoury/fraud-detection)  \n[![CI/CD](https://img.shields.io/github/actions/workflow/1178211324/badge.svg)](https://github.com/nadiakhoury/fraud-detection/actions)  \n[![Docker](https://img.shields.io/docker/pulls/nadiakhoury/fraud-detection)](https://hub.docker.com/r/nadiakhoury/fraud-detection)  \n[![License](https://img.shields.io/github/license/nadiakhoury/fraud-detection)](https://github.com/nadiakhoury/fraud-detection/blob/main/LICENSE)  \n\n## Tech Stack  \n- **Python 3.9** with **scikit-learn** for baseline anomaly detection  \n- **PyTorch** and **TensorFlow** for building hybrid deep learning models  \n- **MLflow** for experiment tracking and model registry  \n- **Docker** and **Kubernetes** for containerized deployment  \n- **Prometheus/Grafana** for real-time performance dashboards  \n- **Airflow** (once) for historical data pipeline orchestration  \n\n## Architecture / Design  \nThe system processes transactions through three layers:  \n1. **Ingestion**: Raw data is streamed into a Kafka topic, filtered for relevance.  \n2. **Preprocessing**: Features are normalized using scikit-learn's `StandardScaler`, with outlier detection via Isolation Forest.  \n3. **Model Serving**: A Flask API routes requests to either a PyTorch-based neural network or a TensorFlow serving endpoint, selected based on transaction volume.  \n\nAll models are versioned in MLflow, and the production model has been validated against 12 million transactions with a 98.2% detection rate and 3.1% false positive rate.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/nadiakhoury/fraud-detection.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure AWS credentials and MLflow tracking URI in `.env`  \n4. Build Docker image: `docker build -t fraud-detection .`  \n\n## Usage / Examples  \nRun a sample inference:  \n```bash  \npython inference.py --transaction_id 123456789  \n```  \nThis will output a fraud score (0–1) and trigger an alert if above 0.95.  \n\n## License  \nMIT License — see [LICENSE](https://github.com/nadiakhoury/fraud-detection/blob/main/LICENSE) for details."
 }

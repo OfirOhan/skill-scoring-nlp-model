@@ -1,30 +1,25 @@
 {
   "doc_id": "d_p_303_01",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_303",
   "hyperparams": {
-    "recommender_role": "skip-level",
-    "recommender_closeness": "occasional",
-    "company_type": "FAANG",
-    "company_size": "large (500+)"
+    "project_scale": "production",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Browser DevTools": 3,
-    "Design systems": 4,
-    "GraphQL": 3,
-    "JavaScript": 5,
-    "Next.js": 4,
-    "Node.js": 4,
-    "REST API design": 5,
-    "React": 5,
-    "Responsive design": 5,
-    "Selenium/Playwright": 3,
-    "State management (Redux/Zustand)": 4,
-    "Test automation": 4,
-    "TypeScript": 5,
-    "Web accessibility (WCAG)": 5,
-    "Web performance optimization": 5,
-    "Webpack/Vite": 3
+    "CI/CD pipelines": 4,
+    "Cloud cost optimization": 1,
+    "Database optimization": 1,
+    "Incident management": 1,
+    "Kubernetes": 1,
+    "Monitoring & alerting": 4,
+    "Network automation": 1,
+    "PostgreSQL": 1,
+    "Prometheus/Grafana": 4,
+    "Python": 1,
+    "Redis": 1,
+    "Terraform": 3
   },
-  "text": "Erik Bergstrom’s technical foundation in computer science and software engineering principles has consistently aligned with the rigorous standards of high-performance systems. His work at NexGen Solutions demonstrates a clear grasp of scalable architecture, particularly in designing REST APIs that handle 2M+ requests monthly while maintaining sub-100ms latency.  \n\nOur interactions, though infrequent, centered on cross-team initiatives like migrating legacy SaaS products to a microservices architecture. Erik’s ability to distill complex requirements into actionable frontend deliverables—such as refactoring a monolithic React app into a modular Next.js framework—was pivotal in reducing deployment friction by 40%. His approach to state management, balancing Redux and Zustand, optimized load times for critical dashboards by 30% without compromising maintainability.  \n\nErik’s research ability shines in his methodical troubleshooting of browser DevTools bottlenecks, which he systematically resolved by integrating Webpack 5 optimizations and Vite’s hot-reload features. This led to a 25% improvement in developer productivity during a critical release cycle. His mentorship of junior engineers in TypeScript best practices and Web accessibility standards (WCAG 2.1) further elevated team output.  \n\nBeyond technical rigor, Erik’s reliability and collaborative mindset are standout traits. He consistently prioritizes performance optimization, whether refining Webpack build pipelines or ensuring responsive design adapts to 95% of global device profiles. His leadership in designing a reusable design system reduced redundant code by 60% and streamlined UI updates across 12 products.  \n\nErik’s blend of analytical precision and pragmatic problem-solving makes him a strong candidate for roles requiring both technical depth and cross-functional impact."
+  "text": "# GameDevCI  \nA CI/CD pipeline for automated game build deployments with real-time monitoring integration.  \n\n---\n\n## Configuration  \nPipeline workflows are defined via `ci.yaml` and `monitoring.yaml` in the root directory. Terraform is used to provision cloud resources, ensuring infrastructure aligns with project needs. Prometheus and Grafana are configured to aggregate build metrics and alert on anomalies. All configurations are version-controlled to ensure reproducibility.  \n\n---\n\n## Getting Started / Installation  \nEnsure Docker and Node.js are installed. Clone the repository and run:  \n```bash  \nnpm install  \ndocker-compose up -d  \n```  \nThis initializes the CI/CD environment with Jenkins, Prometheus, and Grafana. Terraform provisions AWS EC2 instances for build workers.  \n\n---\n\n## Usage / Examples  \nTrigger a pipeline by pushing code to the `main` branch. The system automatically:  \n1. Pulls source code  \n2. Builds Unity/Unreal projects  \n3. Runs automated tests  \n4. Deploys to staging  \n5. Streams metrics to Grafana dashboards  \n\nExample: A Unity project with 120+ unit tests completes deployment in 15 minutes, with CPU usage tracked via Prometheus.  \n\n---\n\n## Tech Stack  \n- Git  \n- Docker  \n- Jenkins  \n- Terraform  \n- Prometheus  \n- Grafana  \n\n---\n\n## Architecture / Design  \nThe pipeline is modular, separating build, test, and deployment stages. Terraform ensures consistent infrastructure across environments. Monitoring is embedded into each stage, with alerts sent to Slack on failures. Real-time metrics are visualized in Grafana, enabling proactive issue resolution.  \n\n---\n\n## License  \nMIT License  \n[MIT](https://github.com/amara-diallo/GameDevCI/blob/main/LICENSE)  \n\n---\n\n## Badges  \n[![GitHub](https://img.shields.io/badge/GitHub-106-blue?logo=github)](https://github.com/amara-diallo/GameDevCI)  \n[![CI/CD](https://img.shields.io/badge/CI--CD-passing-green)](https://github.com/amara-diallo/GameDevCI/actions)  \n[![Coverage](https://img.shields.io/badge/coverage-85%25-yellow)](https://github.com/amara-diallo/GameDevCI/actions)"
 }

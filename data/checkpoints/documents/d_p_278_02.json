@@ -1,0 +1,28 @@
+{
+  "doc_id": "d_p_278_02",
+  "type": "project_readme",
+  "persona_id": "p_278",
+  "hyperparams": {
+    "project_scale": "team-internal",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "AWS": 1,
+    "CI/CD pipelines": 1,
+    "Docker": 1,
+    "GCP": 1,
+    "Go": 1,
+    "Java": 1,
+    "Kubernetes": 1,
+    "Microservices architecture": 1,
+    "MongoDB": 4,
+    "PostgreSQL": 4,
+    "Python": 1,
+    "REST API design": 4,
+    "React": 4,
+    "Terraform": 1,
+    "TypeScript": 1
+  },
+  "text": "# CampaignOptimize  \nA high-throughput ad campaign optimization platform leveraging real-time analytics and scalable data pipelines to maximize ROI for enterprise adtech clients. Built to handle millions of impressions per second with zero-downtime updates and sub-50ms latency for campaign adjustments.  \n\n## Getting Started / Installation  \nEnsure your environment includes Node.js (18+), MongoDB (v6.0+), and PostgreSQL (v13+). Set environment variables for database credentials and API keys. Run `npm install` to bootstrap dependencies, then start the backend with `npm run dev` and the frontend with `npm start`. The system auto-scales based on concurrent request volume, with fallback to cached metrics during peak load.  \n\n## Tech Stack  \n- **MongoDB**: Primary storage for campaign metadata and user behavior logs, optimized with sharding for global ad network scalability.  \n- **PostgreSQL**: Centralized analytics database for aggregated performance metrics, supporting complex joins for real-time reporting.  \n- **REST API**: GraphQL-first interface with rate-limiting and authentication, enabling third-party tools to inject bid adjustments.  \n- **React**: Single-page application for campaign dashboards, featuring interactive heatmaps and drill-down analytics.  \n\n## Usage / Examples  \n```javascript  \n// Example: Fetch optimized bid suggestions  \nfetch('/api/campaigns/12345/optimization')  \n  .then(res => res.json())  \n  .then(data => console.log('Bid adjustments:', data.suggestions));  \n```  \n```jsx  \n// Example: React component for real-time performance tracking  \nconst PerformanceCard = ({ campaignId }) => (  \n  <div>  \n    <h3>Campaign {campaignId} Metrics</h3>  \n    <p>CTR: {performanceData.ctr}% | CPM: ${performanceData.cpm}</p>  \n  </div>  \n);  \n```  \nThe system reduced ad spend waste by 30% in production, with 99.95% availability during peak traffic.  \n\n## Badges  \n[![Code Coverage](https://example.com/coverage.svg)](https://example.com/coverage)  \n[![Test Status](https://example.com/tests.svg)](https://example.com/tests)  \n[![Performance Score](https://example.com/perf.svg)](https://example.com/perf)  \n\n## Architecture / Design  \nThe backend employs a layered architecture: a GraphQL API layer for request routing, a microservices layer for campaign-specific logic, and a data layer splitting read/write operations between MongoDB and PostgreSQL. React components are decoupled from the backend via WebSockets for live updates, with fallback to HTTP polling for offline scenarios.  \n\n## Contributing  \nWe welcome enhancements to the optimization algorithms, frontend UX refinements, or integration with new ad platforms. Focus on measurable impact—submit PRs with benchmark comparisons or performance metrics.  \n\n## License  \nOpen-source under MIT License."
+}

@@ -3,19 +3,26 @@
   "type": "project_readme",
   "persona_id": "p_034",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "small (2-4)",
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Next.js": 3,
-    "REST API design": 4,
-    "React": 4,
-    "Test automation": 4,
-    "TypeScript": 4,
-    "Unit testing": 4,
-    "Web performance optimization": 3,
-    "Webpack/Vite": 3
+    "A/B testing": 4,
+    "Apache Airflow": 2,
+    "Data visualization": 4,
+    "ETL pipeline design": 2,
+    "Feature engineering": 4,
+    "GraphQL": 1,
+    "Java": 1,
+    "NumPy": 4,
+    "Pandas": 4,
+    "Python": 3,
+    "REST API design": 2,
+    "Statistical modeling": 4,
+    "XGBoost/LightGBM": 4,
+    "scikit-learn": 4,
+    "Data visualization (Matplotlib/Plotly)": 1
   },
-  "text": "# NexaDash: Real-Time Analytics Dashboard  \nA React-based platform for dynamic data visualization in consulting projects, combining modular UI components with real-time data pipelines. Built to scale with minimal latency, this dashboard emphasizes extensibility and performance in high-stakes analytical workflows.  \n\n## Badges  \n[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat)](https://github.com/zainab-osman/nexadash)  \n[![React](https://img.shields.io/badge/React-282c34?style=flat)](https://reactjs.org/)  \n[![TypeScript](https://img.shields.io/badge/TypeScript-0078d7?style=flat)](https://www.typescriptlang.org/)  \n[![Performance](https://img.shields.io/badge/Performance-optimized-4285F4?style=flat)](https://github.com/zainab-osman/nexadash)  \n\n## Tech Stack / Built With  \n- **Frontend**: React (18), Next.js (13), TypeScript, Tailwind CSS, WebSocket  \n- **Backend**: Node.js (16), REST API (GraphQL/REST hybrid), Webpack/Vite (for build optimization)  \n- **Data**: WebSocket for real-time updates, REST API for historical data  \n- **Testing**: Jest, React Testing Library, Cypress for end-to-end scenarios  \n- **Deployment**: Docker, CI/CD pipelines, cloud-agnostic infrastructure  \n\n## Architecture / Design  \nThe dashboard is split into a client-side React app (Next.js) and a server-side API layer. Real-time data flows via WebSocket, while historical queries use REST endpoints. The UI is modular, with drag-and-drop widgets powered by a stateless component architecture. Code splitting and lazy loading ensure sub-2s load times for core components.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/zainab-osman/nexadash.git  \ncd nexadash  \nnpm install  \ncp .env.example .env  \n# Configure API endpoints and WebSocket URLs  \nnpm run dev  \n```  \nFor production, use Docker to containerize both frontend and backend services.  \n\n## Usage / Examples  \n1. Connect to a data source via the REST API endpoint in `.env`  \n2. Customize widgets by editing `components/visualizers/`  \n3. Trigger real-time updates with WebSocket publish/subscribe  \n4. Use the CLI tool `npx generate-widget` to scaffold new visualizations  \n\n## Configuration  \n- `REACT_APP_API_URL`: Base URL for REST endpoints  \n- `WEBSOCKET_ENDPOINT`: WebSocket server address  \n- `ENVIRONMENT`: `development`/`production` for feature flags  \n- `MAX_CACHE_SIZE`: Controls in-memory data retention for performance  \n\n## Deployment  \nDeploy using Docker Compose for local staging or cloud platforms like AWS ECS. CI/CD pipelines auto-deploy to staging/production with rollbacks enabled. For scale, use Kubernetes to manage WebSocket connections and API load balancing.  \n\n## License  \nMIT License  \n© 2023 Zainab Osman | [GitHub](https://github.com/zainab-osman) | [LinkedIn](https://linkedin.com/in/zainab-osman)"
+  "text": "# Predictive Analytics for Chronic Disease Management  \nA scalable framework for real-time risk stratification and intervention optimization using multimodal health data  \n\n[![Python](https://img.shields.io/badge/python-3.9+-blue)](https://python.org)  \n[![Jupyter](https://img.shields.io/badge/jupyter-notebook-yellow)](https://jupyter.org)  \n[![Pandas](https://img.shields.io/badge/pandas-1.5+-green)](https://pandas.pydata.org)  \n[![XGBoost](https://img.shields.io/badge/xgboost-1.3+-orange)](https://xgboost.org)  \n\n## Tech Stack  \n- **Core**: Python 3.9, Pandas, NumPy, scikit-learn, XGBoost  \n- **ETL**: PySpark (batch), Airflow (scheduling)  \n- **Monitoring**: Prometheus + Grafana for model drift detection  \n- **Deployment**: Docker (CI/CD pipeline via GitHub Actions)  \n\n## Architecture / Design  \nThe system ingests EHR data via REST API endpoints, leveraging PySpark for distributed feature engineering. Key stages include:  \n1. **Data Preprocessing**: Imputation with KNN, temporal alignment of lab results  \n2. **Feature Engineering**: Domain-specific transformations (e.g., A1C trends, medication adherence scores)  \n3. **Modeling**: Ensemble of XGBoost and LightGBM for risk scoring, validated with A/B testing against legacy models  \n4. **Feedback Loop**: Real-time model updates triggered by anomaly detection in prediction drift  \n\n## Getting Started / Installation  \n```bash\ngit clone https://github.com/your-username/chronic-disease-prediction.git  \ncd chronic-disease-prediction  \npip install -r requirements.txt  \ndocker-compose up --build  \n```  \nEnsure AWS credentials are configured for S3 access via environment variables  \n\n## Usage / Examples  \nRun risk score analysis:  \n```bash  \npython analyze_risk.py --input_path s3://health-data-bucket/patients_2023.csv  \n```  \nDeploy model to production:  \n```bash  \npython deploy_model.py --model_version v2.1 --endpoint prod  \n```  \n\n## Contributing  \nWe prioritize contributions to:  \n- ETL pipelines for new data sources (e.g., wearable device integration)  \n- Model retraining workflows with A/B testing frameworks  \n- Visualization dashboards for clinical stakeholders  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

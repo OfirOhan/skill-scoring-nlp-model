@@ -1,24 +1,26 @@
 {
   "doc_id": "d_p_080_03",
-  "type": "recommendation",
+  "type": "linkedin",
   "persona_id": "p_080",
   "hyperparams": {
-    "recommender_role": "professor",
-    "recommender_closeness": "worked-daily",
-    "company_type": "startup",
-    "company_size": "small (<50)"
+    "linkedin_completeness": "standard"
   },
   "skill_evidence": {
-    "API testing": 2,
-    "Integration testing": 2,
-    "Java": 3,
-    "JavaScript": 1,
-    "Python": 3,
-    "REST API design": 3,
-    "Selenium/Playwright": 3,
-    "Test automation": 3,
-    "Test strategy design": 2,
-    "Unit testing": 3
+    "ArgoCD": 3,
+    "CI/CD pipelines": 4,
+    "GitLab CI": 4,
+    "Incident management": 3,
+    "Jenkins": 5,
+    "Kubernetes": 3,
+    "Linux administration": 3,
+    "Monitoring & alerting": 5,
+    "PostgreSQL": 1,
+    "Prometheus/Grafana": 5,
+    "Python": 1,
+    "REST API design": 1,
+    "Redis": 1,
+    "SLA/SLO management": 3,
+    "Shell scripting (Bash)": 3
   },
-  "text": "Divya Sundaram, a QA/Test Engineer at FinTech Innovators Pvt. Ltd., has consistently demonstrated a rare blend of analytical rigor and pragmatic problem-solving in a fast-paced startup environment. Her work involves designing test frameworks that align with regulatory requirements, balancing speed and precision in a high-stakes fintech context.  \n\nTechnical Abilities: Divya’s proficiency with Java underpins her ability to debug complex backend systems, such as resolving a critical race condition in a payment gateway module that reduced manual testing hours by 30%. She leverages Python for data-driven test scripts, automating regression suites that cover 85% of core workflows. Her REST API testing expertise shone during a recent compliance audit, where she identified edge-case vulnerabilities in transaction validation logic. Selenium and Playwright tools are integral to her workflow, enabling cross-browser compatibility checks that maintain a 99.8% pass rate in CI/CD pipelines.  \n\nSoft Skills: Divya’s communication style is both precise and approachable. She translates technical debt into actionable priorities for non-technical stakeholders, as seen during a project where she streamlined documentation for a new API, reducing onboarding time for developers by 20%. Her adaptability is evident in her rapid adoption of cloud-based testing tools during a recent infrastructure shift.  \n\nTeam Impact: Divya’s test automation frameworks have cut regression cycles from 48 to 24 hours, directly contributing to a 25% improvement in time-to-market. She collaborates closely with developers, often catching bugs early through proactive unit testing.  \n\nRecommendation: Divya’s technical depth, combined with her collaborative mindset, makes her a strong candidate for roles requiring precision and cross-functional coordination. Her ability to balance meticulousness with agility is a distinct asset."
+  "text": "Building resilient systems that scale with our vision—where reliability isn’t a goal, but a foundation.  \nAt NexaTech Solutions, I lead Site Reliability Engineering efforts across high-traffic platforms, ensuring uptime meets expectations and innovation doesn’t compromise stability. My work bridges chaos and clarity, turning complex infrastructure into predictable performance.  \nDefined end-to-end CI/CD pipelines that cut deployment risks by 40%, architected monitoring stacks with Prometheus/Grafana that slashed incident resolution times by 30%, and scaled Jenkins-based workflows to handle thousands of builds daily. Championed incident management practices that turned reactive troubleshooting into proactive foresight, aligning SLA/SLOs with business priorities.  \nSeeking challenges where my expertise in Kubernetes orchestration, ArgoCD-driven CI/CD, and incident response frameworks can drive the next chapter of scalable, reliable systems. Let’s build what’s next—where precision meets purpose."
 }

@@ -3,23 +3,20 @@
   "type": "project_readme",
   "persona_id": "p_166",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "solo",
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
     "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "CI/CD pipelines": 3,
-    "Docker": 3,
+    "API testing": 4,
+    "CI/CD pipelines": 2,
     "Go": 1,
     "Java": 1,
-    "Kubernetes": 1,
-    "Node.js": 3,
-    "Python": 1,
-    "REST API design": 5,
-    "React": 5,
-    "Terraform": 3,
-    "TypeScript": 5
+    "Performance testing (JMeter/k6)": 4,
+    "Python": 3,
+    "Selenium/Playwright": 4,
+    "Test automation": 5,
+    "Test strategy design": 5
   },
-  "text": "# Enterprise Scalable Web App  \n\nA production-grade platform designed for real-time collaboration, built with React for the frontend and Node.js for backend services. Focuses on modular architecture, type safety, and seamless integration with cloud infrastructure.  \n\n## Badges  \n[![AWS Integration](https://github.com/yourusername/yourrepo/actions/workflows/aws.yml/badge.svg)](https://github.com/yourusername/yourrepo/actions/workflows/aws.yml)  \n[![CI/CD Pipeline](https://github.com/yourusername/yourrepo/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/yourrepo/actions/workflows/ci.yml)  \n[![Docker Ready](https://github.com/yourusername/yourrepo/actions/workflows/docker.yml/badge.svg)](https://github.com/yourusername/yourrepo/actions/workflows/docker.yml)  \n[![Node.js](https://github.com/yourusername/yourrepo/actions/workflows/node.yml/badge.svg)](https://github.com/yourusername/yourrepo/actions/workflows/node.yml)  \n[![Terraform](https://github.com/yourusername/yourrepo/actions/workflows/terraform.yml/badge.svg)](https://github.com/yourusername/yourrepo/actions/workflows/terraform.yml)  \n\n## Tech Stack  \n- **Frontend**: React (TypeScript) with hooks for state management and component-based architecture  \n- **Backend**: Node.js (Express) with REST API design principles for scalable, secure endpoints  \n- **Database**: PostgreSQL (managed via AWS RDS) with type-safe ORM integration  \n- **Infrastructure**: Terraform for cloud provisioning, AWS Lambda for serverless functions  \n- **Deployment**: Dockerized microservices with CI/CD pipeline for automated testing and releases  \n\n## Configuration  \nEnvironment variables are managed via `.env` files, with AWS credentials stored in IAM roles for production. Docker-compose is used for local development, ensuring parity with staging environments. REST API endpoints are documented via OpenAPI specs, accessible at `/api/docs`.  \n\n## Getting Started  \nDownload the repository via the provided link. Navigate to the project root and run `npm install` to fetch dependencies. Configure AWS credentials using the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables. Launch the development server with `npm start` and access the app at `http://localhost:3000`.  \n\n## Usage / Examples  \nThe platform supports real-time data synchronization via WebSocket integrations. For example, users can collaboratively edit documents with live updates reflected across all connected clients. REST API endpoints for user authentication and data retrieval are accessible at `/api/auth` and `/api/data`, respectively.  \n\n## Testing  \nUnit tests for React components are written with Jest, while backend logic is tested using Mocha and Chai. End-to-end tests leverage Cypress for browser automation. CI/CD pipelines enforce test coverage thresholds and block deployments below 85% code quality.  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
+  "text": "# Automated Regression Testing Framework for NexGen Interactive  \n\nA scalable, cross-platform framework for ensuring consistent quality in NexGen Interactive’s mobile games through automated regression testing. Designed to integrate seamlessly with CI/CD pipelines, this tool prioritizes reliability, maintainability, and cross-team collaboration.  \n\n## Getting Started / Installation  \nEnsure Python 3.9+ is installed. Clone the repository and install dependencies via `pip install -r requirements.txt`. For API testing, configure environment variables for your game’s backend endpoints. Docker containers are pre-built for rapid local testing.  \n\n## Tech Stack  \n- **Language**: Python (core logic, scriptability)  \n- **UI Automation**: Playwright (headless browser support), Appium (mobile compatibility)  \n- **API Testing**: Postman (mock endpoints), Python `requests` library (integration)  \n- **Performance**: JMeter (load testing), k6 (distributed stress scenarios)  \n- **CI/CD**: GitHub Actions (automated test triggers)  \n- **Infrastructure**: Docker (containerized test environments)  \n\n## Usage / Examples  \nRun a full regression suite with:  \n```bash  \npython run_tests.py --config=mobile_regression.yaml  \n```  \nFor API-only checks:  \n```bash  \npython api_tester.py --endpoint=/user/login --method=POST  \n```  \nPerformance benchmarks are generated via JMeter scripts in the `perf_tests/` directory.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/commit-activity/d/username/repo)](https://github.com/username/repo/commits/main)  \n[![CI/CD](https://img.shields.io/github/actions/workflow/status/username/repo/ci.yml?branch=main)](https://github.com/username/repo/actions)  \n[![Coverage](https://img.shields.io/coveralls/username/repo)](https://coveralls.io/github/username/repo)  \n\n## Architecture / Design  \nThe framework is modular, with separate modules for UI, API, and performance testing. Playwright handles dynamic UI elements via locators, while JMeter scripts are abstracted into reusable templates. Test results are aggregated into a centralized dashboard using Grafana, with alerts for critical failures.  \n\n## Contributing  \nPull requests are welcome! Start with API test cases or performance scenarios. Ensure all changes include unit tests and documentation updates. For complex features, open an issue to discuss design before implementation.  \n\n## License  \nMIT License – see [LICENSE](https://github.com/username/repo/blob/main/LICENSE) for details."
 }

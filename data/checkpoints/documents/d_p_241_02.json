@@ -1,26 +1,21 @@
 {
   "doc_id": "d_p_241_02",
-  "type": "project_readme",
+  "type": "blog",
   "persona_id": "p_241",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "solo",
+    "blog_depth": "tutorial",
     "jargon_density": "plain"
   },
   "skill_evidence": {
-    "GraphQL": 1,
-    "JavaScript": 4,
-    "Next.js": 1,
-    "Node.js": 1,
+    "Apache Airflow": 4,
+    "Apache Kafka": 3,
+    "Apache Spark": 4,
+    "Cloud cost optimization": 3,
+    "Databricks": 4,
+    "Python": 3,
     "REST API design": 1,
-    "React": 5,
-    "TypeScript": 1,
-    "State management": 1,
-    "Test automation": 1,
-    "Stakeholder management": 1,
-    "Web performance optimization": 1,
-    "Webpack/Vite": 1,
-    "State management (Redux/Zustand)": 1
+    "Snowflake": 5,
+    "Terraform": 3
   },
-  "text": "# Progressive Web App for E-Commerce Platform  \n\nA production-ready PWA built to deliver seamless shopping experiences with offline capabilities, ensuring users can browse and purchase products even without internet connectivity.  \n\n---\n\n## Badges  \n[![PWA](https://img.shields.io/badge/PWA-Enabled-blue)](https://web.dev/progressive-web-apps/)  \n[![React](https://img.shields.io/badge/React-18.2-blue)](https://reactjs.org/)  \n[![Offline Support](https://img.shields.io/badge/Offline-First-green)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Offline_support)  \n\n---\n\n## Tech Stack  \n- **React** (18.2) – Core framework for component-driven UI  \n- **HTML5** – Semantic structure for accessibility and performance  \n- **CSS3** – Responsive design with modern layout techniques  \n- **Service Workers** – Background sync and caching strategy  \n- **Web App Manifest** – Enable installable PWA behavior  \n- **Axios** – HTTP client for API interactions  \n\n---\n\n## Architecture / Design  \nThe app follows a component-based architecture, with a focus on modularity and maintainability. Key decisions include:  \n- **Offline-first approach**: Critical paths (product listings, cart) are cached via service workers, ensuring functionality during network outages.  \n- **Manifest integration**: The web app manifest enables installation prompts, enhancing user engagement.  \n- **Progressive enhancement**: Core features are available without JavaScript, with enhanced interactivity added dynamically.  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/your-username/pwa-ecommerce.git  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   npm install  \n   ```  \n3. Start the development server:  \n   ```bash  \n   npm start  \n   ```  \n4. Open `http://localhost:3000` in your browser.  \n\n---\n\n## Usage / Examples  \n- **Offline browsing**: Navigate to product pages or add items to the cart without an internet connection.  \n- **Service worker caching**: Assets are preloaded and cached, ensuring fast load times even after initial installation.  \n- **Installable PWA**: The manifest triggers an installation prompt, allowing users to save the app to their home screen.  \n\n---\n\n## Contributing  \nThis project is a solo endeavor, but contributions are welcome! If you have ideas for improving offline workflows or UI/UX enhancements, open an issue or submit a pull request.  \n\n---\n\n## License  \nMIT License – See the [LICENSE](LICENSE) file for details."
+  "text": "Problem Statement  \nHandling millions of financial transactions per second demands pipelines that balance speed, compliance, and cost. Last year, our system faced a critical bottleneck: latency spikes during peak hours caused delayed reporting, risking regulatory non-compliance. Traditional ETL tools couldn’t scale, and batch processing introduced unacceptable lag. The challenge was to process, store, and analyze data in real time without compromising accuracy or budget.  \n\nFailed Approaches  \nWe first tried extending our existing batch workflows with incremental loads, but the overhead of manual monitoring and ad-hoc scripts led to errors. Then, we experimented with a monolithic Spark cluster, which scaled horizontally but incurred high cloud costs. The root issue was siloed systems—data ingestion, processing, and storage weren’t aligned, creating bottlenecks and redundant computations.  \n\nWorking Solution  \nWe rebuilt the pipeline using Apache Kafka for real-time ingestion, partitioning streams by transaction type to balance load. Spark clusters processed Kafka data into structured formats, with Databricks managing job orchestration and resource scaling. Snowflake became the central warehouse, optimized for ACID compliance and fast querying. Terraform automated infrastructure provisioning, ensuring consistent environments across dev, test, and prod.  \n\nWhy It Works  \nKafka’s high-throughput streams handled peak loads without backpressure, while Spark’s parallel processing reduced batch latency by 60%. Databricks’ unified analytics platform eliminated data duplication, and Snowflake’s multi-cluster architecture scaled storage costs linearly with data growth. Terraform ensured reproducible setups, cutting deployment time by half. The integration eliminated single points of failure, and automated monitoring replaced manual checks, reducing error rates by 85%.  \n\nFuture Work  \nWe’re exploring machine learning models in Snowflake for anomaly detection, leveraging Apache Airflow to schedule predictive analytics jobs. Long-term, we’ll expand Kafka’s role to ingest unstructured data like chat logs, enriching transaction contexts. The goal is to create a self-optimizing pipeline that adapts to volume shifts without manual intervention. The key takeaway? Aligning ingestion, processing, and storage isn’t just about tools—it’s about designing systems that evolve with the data they handle."
 }

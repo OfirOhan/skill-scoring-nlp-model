@@ -3,21 +3,25 @@
   "type": "cv",
   "persona_id": "p_229",
   "hyperparams": {
-    "cv_format": "hybrid",
+    "cv_format": "bullet-heavy",
     "geographic_convention": "Europe",
-    "company_type": "startup",
-    "company_size": "large (500+)"
+    "company_type": "agency",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
     "AWS": 3,
-    "Apache Airflow": 3,
-    "Apache Kafka": 3,
-    "Apache Spark": 3,
-    "Docker": 2,
-    "ETL pipeline design": 3,
+    "CI/CD pipelines": 1,
+    "Docker": 3,
+    "GitHub Actions": 3,
+    "Go": 3,
+    "Linux administration": 2,
+    "Microservices architecture": 3,
+    "PostgreSQL": 3,
+    "Prometheus/Grafana": 2,
     "Python": 3,
-    "Terraform": 3,
-    "dbt": 3
+    "REST API design": 3,
+    "Shell scripting (Bash)": 2,
+    "Terraform": 3
   },
-  "text": "Felix Schmidt  \n📍 Berlin, Germany | 📧 felix.schmidt@datavantage.com | 🌐 linkedin.com/in/felixschmidt | 🧠 github.com/felixschmidt  \n\n**Professional Experience**  \n*Data Engineering Associate* | DataVantage Consulting (2023–Present)  \nArchitected scalable data pipelines for Fortune 500 clients, integrating Kafka for real-time stream processing and Airflow for orchestration. Streamlined data ingestion workflows, reducing query latency by 30% across three enterprise projects. Collaborated with cloud architects to deploy AWS-based data lakes, optimizing storage costs through partitioning strategies.  \n\n*Data Intern* | TechNova Analytics (2022–2023)  \nAssisted in ETL pipeline development using Spark and PostgreSQL, focusing on batch processing for customer analytics reports. Automated data quality checks with Python scripts, improving report accuracy by 25%. Designed lightweight microservices to interface with legacy systems, enabling seamless data integration.  \n\n**Technical Skills**  \n- **Cloud Infrastructure**: AWS (S3, EC2, Lambda), Terraform for IaC  \n- **Data Pipelines**: Apache Airflow (DAGs), Apache Kafka (stream processing), Apache Spark (batch transformations)  \n- **ETL Design**: PostgreSQL, dbt for data modeling, Python (Pandas, NumPy) for scripting  \n- **Tools**: Docker (minimal deployment), Git (branching strategies), Jira (ticket tracking)  \n\n**Education**  \nBachelor of Science in Computer Science | University of Berlin | Graduated 2022  \nRelevant coursework: Distributed Systems, Database Management, Machine Learning Fundamentals  \n\n**Projects**  \n*Global Retail Analytics Platform* | DataVantage Consulting (2023–Present)  \nDeveloped a Kafka-powered pipeline to process terabytes of transaction data daily, enabling real-time inventory forecasting. Integrated Airflow for cross-system orchestration, reducing deployment friction by 40%. Collaborated with data scientists to structure datasets for ML model training.  \n\n*Cloud-Native Data Warehouse* | TechNova Analytics (2022–2023)  \nBuilt a Terraform-driven AWS infrastructure for a financial client, deploying S3 buckets and Redshift clusters. Optimized ETL workflows with Spark, cutting data processing time from 4 hours to 15 minutes. Implemented dbt for metadata management, improving schema versioning.  \n\n**Languages**  \nEnglish (fluent), German (native)  \n\n**Certifications**  \nAWS Certified Solutions Architect – Associate (2023)  \nGoogle Cloud Professional Data Engineer (2024)"
+  "text": "Emilia Korhonen  \nHelsinki, Finland | +358 50 123 4567 | emilia.korhonen@nexacloud.fi  \n\nProfessional Summary  \nA junior backend engineer with hands-on experience in building scalable APIs and database infrastructure. Focused on delivering reliable, maintainable systems through Python, PostgreSQL, and cloud-native tools. Collaborates closely with cross-functional teams to streamline workflows and improve operational efficiency.  \n\nTechnical Skills  \n- **Python**: Developed CRUD endpoints for internal tools, optimized query performance by 25% through indexing adjustments  \n- **PostgreSQL**: Configured staging environments for 3+ applications, implemented connection pooling to reduce latency  \n- **AWS**: Deployed microservices on EC2 instances, integrated S3 buckets for static asset storage  \n- **Docker**: Containerized Flask applications, reduced deployment time by 30% through optimized build scripts  \n- **GitHub Actions**: Automated CI/CD pipelines for Python projects, ensuring 100% test coverage for core modules  \n- **REST API design**: Built internal tools with Swagger documentation, improving team onboarding efficiency  \n- **Terraform**: Provisioned PostgreSQL clusters for staging environments, enabling rapid environment duplication  \n- **Linux**: Maintained Ubuntu servers for development environments, resolved 80% of service downtime through log analysis  \n- **Microservices architecture**: Supported deployment of 15+ services, focused on inter-service communication reliability  \n- **Shell scripting**: Automated repetitive tasks in deployment workflows, saving 5 hours weekly on manual configuration  \n\nProfessional Experience  \n**Junior Backend Developer** | NexaCloud Solutions (Jan 2024 – present)  \n- Developed CRUD endpoints using Python/Flask for customer management system, handling 500+ daily requests  \n- Configured PostgreSQL databases for staging environments, ensuring data consistency across 3+ applications  \n- Collaborated with DevOps to containerize Flask apps, reducing deployment friction for 5+ microservices  \n\n**Software Intern** | LumenTech (Jul 2023 – Dec 2023)  \n- Assisted in deploying microservices on AWS, contributing to 30% reduction in manual configuration tasks  \n- Implemented REST APIs for internal tools, enabling seamless integration between front-end and backend systems  \n- Supported database schema migrations for PostgreSQL, resolving 15+ query performance bottlenecks  \n\nEducation  \n**Bachelor of Science in Computer Science** | University of Helsinki (2023)  \n- Thesis: \"Optimizing Query Performance in Distributed Databases\"  \n- Relevant coursework: Cloud Computing, Database Systems, Software Engineering  \n\nProjects  \n- **Microservices Deployment Framework**: Designed AWS-based deployment workflow for 5+ services, reducing environment setup time by 40%  \n- **Internal API Toolkit**: Built Python library for common backend tasks, reused across 3+ projects to avoid redundant code  \n- **PostgreSQL Monitoring Dashboard**: Created Grafana panel for real-time query performance tracking, flagged 10+ underperforming queries  \n\nLanguages  \n- English (fluent)  \n- Finnish (native)  \n\nAwards & Achievements  \n- Recognized as top contributor in LumenTech internship program for automation improvements  \n- Won \"Best Hackathon Project\" at Helsinki Tech Fest 2023 for a PostgreSQL optimization tool"
 }

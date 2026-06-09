@@ -3,22 +3,22 @@
   "type": "recommendation",
   "persona_id": "p_063",
   "hyperparams": {
-    "recommender_role": "peer",
-    "recommender_closeness": "brief",
-    "company_type": "FAANG",
+    "recommender_role": "direct-manager",
+    "recommender_closeness": "occasional",
+    "company_type": "agency",
     "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "Apache Airflow": 2,
-    "Docker": 4,
-    "Kubernetes": 4,
-    "LLMs/Prompt engineering": 4,
-    "MLOps": 4,
-    "Model deployment": 4,
-    "NLP": 4,
-    "PyTorch": 4,
-    "TensorFlow": 4
+    "3D graphics (OpenGL/Vulkan)": 4,
+    "C#/.NET": 3,
+    "Game networking": 3,
+    "Game physics": 4,
+    "Go": 1,
+    "Java": 1,
+    "Python": 1,
+    "REST API design": 3,
+    "Unity": 4,
+    "Unreal Engine": 5
   },
-  "text": "Zainab and I collaborated on two projects at FinTech Innovators, where she handled model deployment and infrastructure scaling. She’s the kind of engineer who asks, “What’s the next bottleneck?” and then builds a pipeline to solve it.  \n\nDaily, she manages AWS EC2 clusters for training, trimming costs by 18% through spot instance optimizations. Her Dockerized models cut deployment time by 40%, and she’s the go-to person for Kubernetes issues—once she fixed a scaling outage that had the team stuck for 12 hours. She’ll often say, “Let’s just try PyTorch for this,” then methodically debugs TensorFlow issues others overlook. Her NLP work on customer sentiment analysis boosted classifier accuracy to 92%, which directly impacted churn metrics.  \n\nA standout was her LLM-based fraud detection system. She iterated prompts for 3 weeks, fine-tuning a model to flag 23% more suspicious transactions without false positives. She also spearheaded MLOps upgrades, replacing legacy scripts with Airflow workflows that reduced manual intervention by 70%.  \n\nZainab’s strength lies in her quiet reliability—she’ll stay late to troubleshoot a pipeline or refactor code others avoid. Her technical depth and obsession with measurable outcomes make her a rare asset. I’d trust her to ship complex systems under pressure, and she’d do it with minimal fanfare."
+  "text": "When the studio’s multiplayer framework crashed during a live demo, Benjamin didn’t just troubleshoot—he rewrote the networking layer from scratch. He spent 48 hours dissecting packet loss patterns, then built a dynamic latency compensator that slashed disconnect rates by 70%. That incident cemented his reputation as someone who turns chaos into clarity.  \n\nBenjamin is the kind of engineer who thrives at the intersection of code and creativity. At Vortex, he led the migration of our Unreal Engine 4 project to 5, architecting a modular pipeline that cut deployment time by two weeks. His knack for 3D graphics shines in the way he balances visual fidelity with performance, like the time he optimized a particle system to run smoothly on low-end hardware without sacrificing aesthetic polish.  \n\nBeyond technical prowess, Benjamin’s curiosity drives him to mentor juniors and refactor legacy code with surgical precision. He’ll spend hours dissecting physics simulations to tweak realism, even if it means delaying a deadline. His work ethic is unshakable—once, he stayed late to debug a rendering bug that had stumped the team for days, muttering about “getting the math right.”  \n\nIf you’re looking for someone who blends technical rigor with a relentless focus on player experience, Benjamin is your person. He doesn’t just meet expectations—he redefines them."
 }

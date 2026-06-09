@@ -1,25 +1,24 @@
 {
   "doc_id": "d_p_190_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_190",
   "hyperparams": {
-    "recommender_role": "skip-level",
-    "recommender_closeness": "occasional",
-    "company_type": "agency",
-    "company_size": "mid (50-500)"
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "API testing": 3,
-    "GitLab CI": 3,
-    "Integration testing": 3,
-    "JavaScript": 1,
-    "Python": 3,
-    "REST API design": 3,
-    "Selenium/Playwright": 3,
-    "Test automation": 3,
-    "Test strategy design": 2,
-    "Unit testing": 3,
-    "Web accessibility (WCAG)": 2
+    "A/B testing": 2,
+    "Agile/Scrum": 4,
+    "Competitive analysis": 3,
+    "Data visualization (Matplotlib/Plotly)": 1,
+    "Pandas": 1,
+    "Product management": 3,
+    "Roadmap planning": 4,
+    "SQL analytics": 2,
+    "Stakeholder management": 4,
+    "Tableau/Power BI": 2,
+    "UX research": 4
   },
-  "text": "Vivian Osei’s role at NexGen Solutions reflects a nuanced understanding of how testing frameworks intersect with product development. Her work on API testing for their cloud-based platform revealed a methodical approach to identifying edge cases, particularly in RESTful integrations. She consistently prioritized scenarios that exposed latent bugs in third-party services, which strengthened the platform’s reliability. Her ability to translate ambiguous requirements into structured test cases demonstrated an intellectual rigor that aligns with academic problem-solving.  \n\nHer research ability extends beyond technical execution. When tasked with improving GitLab CI pipelines, she reimagined the workflow to parallelize regression tests, reducing deployment bottlenecks by nearly 40%. This required not only technical expertise but also a strategic mindset to balance speed with thoroughness. Her Python scripts for automating unit tests became a foundation for the team’s continuous integration practices, showing an aptitude for creating scalable solutions.  \n\nVivian’s character is defined by her collaborative spirit and attention to detail. She often volunteers to mentor junior engineers, explaining complex test scenarios with patience. Her insistence on documenting test environments ensured transparency, which minimized friction during cross-team collaborations.  \n\nHer potential lies in her ability to bridge operational efficiency with innovation. Already, she’s prototyping a framework to streamline integration testing, combining Selenium with custom Python logic. This blend of pragmatism and creativity suggests she’ll thrive in roles requiring both technical depth and strategic vision."
+  "text": "# NexuLauncher  \nA cross-platform game launcher designed to streamline distribution across PC, consoles, and mobile devices. NexuLauncher automates updates, manages platform-specific configurations, and provides a unified interface for developers to deploy games to multiple ecosystems. Built with a focus on scalability, reliability, and user-centric design, this project serves as a foundational tool for indie and AAA studios aiming to reduce friction in multi-platform releases.  \n\n## Acknowledgments  \nThis project is the culmination of collaborative efforts by a team of engineers, designers, and product strategists. Special thanks to [Name], whose architecture decisions enabled seamless cross-platform synchronization, and [Name], whose UX research insights shaped the launcher’s intuitive interface. Gratitude also extends to [Name] for spearheading stakeholder alignment during the roadmap planning phase, ensuring technical execution matched business priorities.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/your-username/NexuLauncher.git`  \n2. Install dependencies via `npm install` (Node.js 18+ required)  \n3. Configure platform-specific credentials in `config/env.json`  \n4. Run `npm start` to launch the local development server  \n*Note: Console and mobile builds require additional toolchains (see Tech Stack for details)*  \n\n## Usage / Examples  \n- **PC Deployment**: Use the CLI to package games for Windows with automated DLL injection  \n- **Console Sync**: Leverage the cloud API to sync save data across PlayStation and Xbox accounts  \n- **Mobile Optimization**: Enable adaptive resolution scaling via the mobile-specific config module  \nExample command: `nexu deploy --platform=android --config=mobile_optimized`  \n\n## Tech Stack  \n- **Frontend**: React (TypeScript), WebAssembly for cross-platform rendering  \n- **Backend**: Node.js with Express, MongoDB for user data  \n- **Mobile**: Flutter for cross-platform UI, Firebase for real-time updates  \n- **Console Integration**: Xbox Live SDK, PlayStation Network API  \n- **CI/CD**: GitHub Actions with Dockerized build pipelines  \n\n## License  \nMIT License  \n© 2023 NexuLauncher Contributors  \n\n## Badges  \n[![Build Status](https://github.com/your-username/NexuLauncher/actions/workflows/build.yml/badge.svg)](https://github.com/your-username/NexuLauncher/actions/workflows/build.yml)  \n[![Platform Support](https://img.shields.io/badge/platforms-PC%2C%20Console%2C%20Mobile-blue)](https://github.com/your-username/NexuLauncher)  \n[![Contributors](https://contributor-stats.vercel.app/api/github/your-username/NexuLauncher)](https://github.com/your-username/NexuLauncher)  \n\n## Contributing  \nTo contribute, submit a pull request with clear documentation of your changes. Prioritize issues labeled \"good-first-issue\" for foundational improvements. All contributions will be credited in the acknowledgments section upon merge."
 }

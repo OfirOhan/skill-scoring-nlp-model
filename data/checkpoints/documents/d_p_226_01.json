@@ -3,23 +3,19 @@
   "type": "project_readme",
   "persona_id": "p_226",
   "hyperparams": {
-    "project_scale": "team-internal",
+    "project_scale": "hobby",
     "project_team_size": "solo",
-    "jargon_density": "plain"
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "PyTorch": 1,
-    "TensorFlow": 1,
-    "NLP": 1,
-    "Computer vision": 1,
-    "MLOps (MLflow/W&B)": 1,
-    "Model deployment": 1,
-    "LLMs/Prompt engineering": 1,
-    "AWS": 1,
-    "Docker": 1,
-    "Kubernetes": 1,
-    "Terraform": 1,
-    "Apache Airflow": 1
+    "API testing": 4,
+    "CI/CD pipelines": 2,
+    "Go": 1,
+    "Java": 2,
+    "Performance testing (JMeter/k6)": 4,
+    "Python": 3,
+    "Selenium/Playwright": 5,
+    "Test automation": 4
   },
-  "text": "# NeuraPredictor: ML Framework for Startup Analytics  \nA lightweight, modular toolkit for building predictive models tailored to startup growth metrics. Designed to balance simplicity with precision, NeuraPredictor achieves 92% accuracy in customer churn prediction and 89% mean absolute error in revenue forecasting across 12 datasets.  \n\n## Deployment  \nIntegrated as a Python package, NeuraPredictor runs natively on local machines or cloud servers without external dependencies. The framework is optimized for low-latency inference, with model loading times under 0.3 seconds.  \n\n## Badges  \n[![CI/CD Pipeline Status](https://img.shields.io/badge/CI%20CD%20Pipeline-Active-green)](https://github.com/tenzin-dorji/neura-predictor/actions)  \n[![Test Coverage](https://img.shields.io/badge/Test%20Coverage-95%25-blue)](https://github.com/tenzin-dorji/neura-predictor/actions)  \n[![Code Quality](https://img.shields.io/badge/Code%20Quality-EXCELLENT-yellow)](https://github.com/tenzin-dorji/neura-predictor/actions)  \n\n## Tech Stack  \n- Python 3.9+  \n- Pandas for data wrangling  \n- Scikit-learn for core ML workflows  \n- Statsmodels for statistical validation  \n- Matplotlib/Seaborn for visualization  \n- NumPy for numerical operations  \n\n## Architecture / Design  \nNeuraPredictor follows a pipeline-first approach, separating data preprocessing, model training, and evaluation into distinct, reusable components. The framework prioritizes transparency, with all hyperparameters explicitly defined in config files. Key design choices include:  \n- **Modular pipelines**: Users can mix-and-match preprocessing steps (e.g., imputation, normalization) without code duplication.  \n- **Statistical rigor**: Built-in hypothesis testing ensures model outputs align with domain-specific significance thresholds.  \n- **Scalable defaults**: Pretrained baselines for common startup metrics (e.g., churn, LTV) reduce time-to-insight by 70%.  \n\n## Getting Started / Installation  \n```bash  \npip install neura-predictor  \n```  \nEnsure Python 3.9+ is installed. The package includes preconfigured templates for customer segmentation and sales forecasting.  \n\n## Usage / Examples  \n```python  \nfrom neura_predictor.pipeline import ChurnPredictor  \ndata = pd.read_csv(\"customer_data.csv\")  \nmodel = ChurnPredictor(data, target=\"churn\")  \nmodel.train()  \npredictions = model.predict()  \nprint(f\"Churn rate: {model.evaluate()['churn_rate']:.2%}\")  \n```  \nThis example trains a model on 50k+ customer records, achieving 92% accuracy in 45 seconds.  \n\n## License  \nLicensed under the MIT License. See [LICENSE](https://github.com/tenzin-dorji/neura-predictor/blob/main/LICENSE) for details."
+  "text": "# AutoTestPro: Automated QA Framework for Consulting Projects  \nA modular, cross-platform testing suite for API, performance, and UI validation with production-grade metrics  \n\n[![GitHub](https://badgen.net/badge/github/AidenOSS/auto-test-pro/green)](https://github.com/AidenOSS/auto-test-pro)  \n[![CI/CD](https://badgen.net/badge/builds/merged/green)](https://github.com/AidenOSS/auto-test-pro/actions)  \n[![Python](https://badgen.net/badge/python/3.9+/blue)](https://www.python.org)  \n\n## Tech Stack  \n- **Language**: Python 3.9+ (core logic, API utilities)  \n- **UI Tools**: Selenium (legacy browsers) + Playwright (modern web)  \n- **Performance**: k6 for load scenarios  \n- **CI/CD**: GitHub Actions (integration pipeline)  \n- **Reporting**: Allure (HTML reports with metrics)  \n\n## Architecture / Design  \nA layered framework prioritizing test isolation and parallel execution. The core module handles request/response validation for APIs, while Playwright manages dynamic DOM interactions. Selenium is used for legacy systems with complex browser quirks. Test suites are organized by feature, with parallel execution enabled via pytest-xdist.  \n\n## Getting Started / Installation  \n```bash\ngit clone https://github.com/AidenOSS/auto-test-pro.git\ncd auto-test-pro\npip install -r requirements.txt\nexport TEST_ENV=prod\n```\nEnsure ChromeDriver (for Selenium) and Playwright browsers are installed.  \n\n## Usage / Examples  \n**API Test Example**:  \n```python\nfrom autotestpro import APITestCase\n\nclass LoginTest(APITestCase):\n    def test_success_login(self):\n        response = self.post(\"/api/login\", json={\"email\": \"user@example.com\", \"password\": \"secure123\"})\n        self.assertEqual(response.status_code, 200)\n        self.assertIn(\"token\", response.json())\n```\n**Performance Test Example**:  \n```javascript\nimport http from 'k6/http';\n\nexport default () => {\n  http.get('https://api.example.com/data');\n};\n```\n\n## Contributing  \nPull requests are welcome! Ensure new features include:  \n- Unit tests with pytest  \n- Metrics tracking (response times, error rates)  \n- Compatibility with Chrome 115+ and Firefox 120+  \n\n## License  \nMIT License – [View License File](LICENSE)"
 }

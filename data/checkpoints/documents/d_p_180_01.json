@@ -3,26 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_180",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "moderate"
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Python": 1,
+    "API testing": 4,
+    "BDD/TDD": 3,
     "Go": 1,
+    "Integration testing": 3,
+    "Java": 1,
     "Node.js": 1,
-    "React": 1,
-    "Next.js": 1,
-    "TypeScript": 1,
+    "Performance testing (JMeter/k6)": 1,
+    "Python": 3,
     "REST API design": 1,
-    "PostgreSQL": 1,
-    "MongoDB": 1,
-    "AWS": 1,
-    "Docker": 1,
-    "Kubernetes": 1,
-    "GitHub Actions": 1,
-    "Prometheus/Grafana": 1,
-    "Load balancing": 1
+    "Selenium/Playwright": 4,
+    "Test automation": 5,
+    "Test strategy design": 1
   },
-  "text": "# EcoCart Inventory Optimization  \nA scalable, real-time inventory synchronization solution for e-commerce platforms, designed to reduce stock discrepancies by 40% through automated demand forecasting and supplier integration. Built with modular architecture to support multi-channel inventory visibility across warehouses, marketplaces, and direct-to-consumer channels.  \n\n## Badges  \n[![CI/CD](https://img.shields.io/badge/CI%2FCD-passing-green)](https://example.com)  \n[![Code Coverage](https://img.shields.io/badge/coverage-85%25-yellow)](https://example.com)  \n[![License](https://img.shields.io/badge/license-MIT-blue)](https://example.com)  \n\n## Tech Stack  \n- **Server-side runtime**: Lightweight, event-driven runtime with built-in support for asynchronous workflows and distributed task queues  \n- **Client-side framework**: Declarative UI library with reactive state management and component-based architecture  \n- **Data layer**: Schema-less document store with real-time change streaming capabilities  \n- **Message bus**: Publish/subscribe system for cross-service communication and event-driven updates  \n- **Monitoring**: Centralized logging and metric aggregation for system health and performance tracking  \n\n## Configuration  \nSet environment variables in `.env` file:  \n```  \nAPI_ENDPOINT=https://api.ecocart.io/v1  \nSUPPLIER_WEBHOOK_SECRET=your-secure-token  \nINVENTORY_POLL_INTERVAL=60000  \nLOG_LEVEL=info  \n```  \nEnsure Redis instance is running on port 6379 and RabbitMQ is accessible on port 5672.  \n\n## Getting Started / Installation  \n1. Clone repository: `git clone https://github.com/your-username/ecocart-inventory.git`  \n2. Install dependencies: `npm install`  \n3. Configure environment variables as described above  \n4. Start development server: `npm run dev`  \n5. Verify service availability via `/health` endpoint  \n\n## Usage / Examples  \n**Inventory Sync Endpoint**  \n`POST /api/inventory/sync`  \nRequest body:  \n```json  \n{  \n  \"warehouse_id\": \"WH123\",  \n  \"item_updates\": [  \n    {\"product_id\": \"P456\", \"quantity\": 150},  \n    {\"product_id\": \"P789\", \"quantity\": -30}  \n  ]  \n}  \n```  \n**Real-time Subscription**  \n`GET /api/inventory/subscribe?channel=warehouse-WH123`  \nSubscribe to live inventory changes via WebSocket.  \n\n## Testing  \nRun unit tests: `npm test`  \nExecute integration tests: `npm run integration`  \nCoverage report generated in `./coverage` directory after test execution.  \n\n## License  \nMIT License — see [LICENSE](https://example.com) for full text."
+  "text": "# Enterprise Financial System Test Automation Framework  \nA robust, scalable framework for automating regression and integration tests in enterprise financial systems, built with Python and Selenium. Designed to handle complex UI workflows, data validation, and compliance-driven test scenarios across multiple browsers and environments.  \n\n## Badges  \n[![Tests Passing](https://img.shields.io/badge/tests-passing-green)](https://github.com/oliverbrennan/enterprise-financial-tests/actions)  \n[![CI/CD Status](https://img.shields.io/badge/ci--cd-success-blue)](https://github.com/oliverbrennan/enterprise-financial-tests/actions)  \n[![License](https://img.shields.io/badge/license-MIT-yellow)](https://github.com/oliverbrennan/enterprise-financial-tests/blob/main/LICENSE)  \n\n## License  \nMIT License. See [LICENSE](https://github.com/oliverbrennan/enterprise-financial-tests/blob/main/LICENSE) for full details.  \n\n## Tech Stack  \n- **Language**: Python 3.10+  \n- **Browser Automation**: Selenium WebDriver (Chrome/Firefox)  \n- **Test Management**: Pytest with fixtures and parametrization  \n- **Infrastructure**: Docker for environment isolation  \n- **Data Handling**: JSON/CSV-driven test data with dynamic value injection  \n- **CI/CD**: GitHub Actions for parallel test execution  \n\n## Architecture / Design  \nThe framework employs a **modular page object model (POM)** with reusable locators and actions, enabling rapid test case development. Core components include:  \n- **Test Orchestration Layer**: Manages parallel execution across 12+ browser instances using Selenium Grid  \n- **Data Pipeline**: Centralized data repository for 500+ test scenarios, supporting real-time value substitution  \n- **Compliance Layer**: Embedded rules engine for validating financial transaction accuracy (e.g., GL account balances, reconciliation logs)  \n- **Monitoring**: Integration with Prometheus for test execution metrics and failure correlation  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/oliverbrennan/enterprise-financial-tests.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Configure environment variables for database credentials and Selenium hub URLs  \n4. Build Docker containers: `docker-compose up --build`  \n5. Run tests: `pytest -n auto --reruns 3`  \n\n## Usage / Examples  \n```python  \ndef test_transaction_reconciliation():  \n    login(\"finance_user\")  \n    navigate_to(\"reconciliation_portal\")  \n    assert verify_balance(\"GL-12345\", 150000.00)  \n    submit_and_validate(\"reconciliation_form\")  \n```  \nFramework supports:  \n- Data-driven testing with dynamic value injection  \n- Parallel execution across 12+ browser instances  \n- Integration with financial system APIs for end-to-end validation  \n\n## Contributing  \nPull requests welcome! Ensure all changes include:  \n- Unit tests covering new functionality  \n- Updated documentation for non-technical stakeholders  \n- Compliance with team standards for test case naming and structure  \n- Performance benchmarks for critical paths  \n\nThis framework has reduced manual regression testing hours by 72% across 15+ financial systems, with 98.5% test suite stability over 18 months."
 }

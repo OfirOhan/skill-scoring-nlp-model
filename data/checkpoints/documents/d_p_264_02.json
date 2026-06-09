@@ -1,23 +1,24 @@
 {
   "doc_id": "d_p_264_02",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_264",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "heavy"
+    "recommender_role": "skip-level",
+    "recommender_closeness": "brief",
+    "company_type": "academic",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "Design systems": 2,
-    "JavaScript": 3,
-    "Next.js": 3,
-    "React": 5,
-    "Responsive design": 3,
-    "State management": 4,
-    "TypeScript": 5,
-    "UI design": 2,
-    "Web accessibility": 4,
-    "Web performance optimization": 4
+    "A/B testing": 4,
+    "Apache Spark": 2,
+    "Data visualization": 3,
+    "Java": 1,
+    "NumPy": 3,
+    "Pandas": 3,
+    "Python": 3,
+    "REST API design": 2,
+    "SQL analytics": 3,
+    "scikit-learn": 3
   },
-  "text": "# Ecomify Checkout Optimization  \nA project to refine checkout workflows via Redux-driven state management and performance profiling, reducing user friction and improving conversion rates by 25% in controlled testing environments.  \n\n## Badges  \n[![Build Status](https://example.com/build)](https://example.com/build) [![Coverage](https://example.com/coverage)](https://example.com/coverage)  \n\n## Getting Started / Installation  \nClone the repository using your preferred method. Navigate to the project root and run `npm install` to fetch dependencies. Start the development server with `npm run dev` to view the checkout flow in action.  \n\n## Tech Stack  \n- **React** (with hooks and context API for state hydration)  \n- **TypeScript** (with strict type checks and interface-driven architecture)  \n- **Redux Toolkit** (for normalized state management and async action handling)  \n- **Next.js** (for server-side rendering and API route integration)  \n- **Webpack** (customized for code splitting and asset optimization)  \n- **Lighthouse** (for performance audits and baseline metrics)  \n- **Web Vitals** (tracking CLS, FID, and LCP in production scenarios)  \n\n## Architecture / Design  \nThe checkout flow is modularized into step-specific components, with Redux slices managing cart state, user inputs, and payment validation. Key decisions include:  \n- Centralized state for real-time validation across form fields  \n- Lazy-loaded components to reduce initial bundle size by 40%  \n- ARIA attributes and semantic HTML for accessibility compliance  \n- Web Vitals integration to monitor performance during user interactions  \n\n## Usage / Examples  \n```tsx\n// Example: Dispatching a payment confirmation action  \ndispatch(paymentConfirmed({ paymentMethod: 'credit-card', amount: 129.99 }))\n```\nThe `CheckoutWizard` component orchestrates step transitions, while the `CartSummary` provides live updates to subtotal and tax.  \n\n## Testing  \n- **Unit Tests**: 95% coverage for Redux reducers and utility functions (Jest + TypeScript)  \n- **Integration Tests**: End-to-end validation of form state transitions (Cypress)  \n- **Performance Tests**: Baseline Lighthouse scores improved by 25% post-optimization  \n- **Accessibility Tests**: Automated checks for ARIA compliance and keyboard navigation  \n\n## License  \nMIT License © 2023 Rahul Iyer"
+  "text": "Academic Context  \nNathan Brooks collaborated with my team on a project analyzing customer behavior patterns using Python and SQL. His ability to translate complex retail datasets into actionable insights aligned with our academic focus on scalable analytics. His work demonstrated a strong grasp of statistical rigor and practical application.  \n\nWorking Relationship  \nWe interacted primarily through cross-departmental projects at RetailFlow, where Nathan led efforts to optimize inventory forecasting. His dashboards, built with Pandas and data visualization tools, reduced decision-making latency by 30% in two critical use cases. He consistently prioritized clarity and operational relevance, even under tight deadlines.  \n\nResearch Ability  \nNathan’s A/B testing framework, which integrated scikit-learn models with SQL pipelines, drove a 12% lift in conversion rates for a high-traffic product category. His iterative approach—refining hypotheses based on real-time feedback—minimized resource waste while maximizing impact. He also mentored junior data scientists, fostering a culture of precision in experimental design.  \n\nBroader Strengths  \nBeyond technical skills, Nathan’s work ethic is unparalleled. He routinely worked late nights and weekends to align models with business goals, often pivoting strategies based on stakeholder input. His leadership in cross-functional teams ensured seamless integration of data science outputs into retail operations, with measurable revenue impacts across multiple campaigns.  \n\nRecommendation  \nNathan Brooks is a rare combination of analytical depth and operational agility. His ability to balance technical execution with business outcomes, coupled with a relentless drive for precision, makes him an exceptional candidate. I strongly endorse his candidacy for roles requiring both innovation and measurable impact."
 }

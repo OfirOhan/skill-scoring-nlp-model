@@ -3,27 +3,22 @@
   "type": "recommendation",
   "persona_id": "p_084",
   "hyperparams": {
-    "recommender_role": "professor",
-    "recommender_closeness": "brief",
-    "company_type": "agency",
-    "company_size": "small (<50)"
+    "recommender_role": "peer",
+    "recommender_closeness": "occasional",
+    "company_type": "enterprise",
+    "company_size": "large (500+)"
   },
   "skill_evidence": {
-    "AWS": 2,
-    "ArgoCD": 3,
-    "CI/CD pipelines": 3,
-    "Cloud cost optimization": 2,
-    "Docker": 3,
-    "GitHub Actions": 3,
-    "GitLab CI": 1,
-    "Incident management": 2,
-    "Jenkins": 1,
-    "Kubernetes": 3,
-    "Monitoring & alerting": 3,
-    "Prometheus/Grafana": 3,
-    "Python": 3,
-    "SLA/SLO management": 2,
-    "Terraform": 3
+    "Apache Spark": 1,
+    "CI/CD pipelines": 1,
+    "Data warehousing": 1,
+    "ETL pipeline design": 1,
+    "LLMs/Prompt engineering": 4,
+    "MLOps": 2,
+    "NLP": 4,
+    "PyTorch": 3,
+    "Recommendation systems": 3,
+    "TensorFlow": 3
   },
-  "text": "Phoebe once stayed late to debug a production outage, methodically tracing a race condition in our Kubernetes cluster. She identified the bottleneck in our CI/CD pipeline, then rearchitected the deployment process using ArgoCD, cutting deployment latency by 40%. Her calm under pressure and knack for isolating complex issues made a huge difference.  \n\nPhoebe is a DevOps engineer at NexaCloud Solutions, where she balances infrastructure reliability with rapid feature delivery. She’s the go-to person for troubleshooting cloud-native systems, and her work with Terraform has standardized our infrastructure-as-code practices. Her Python scripts for automating monitoring checks have reduced manual overhead by 30%, and she’s mastered the art of turning vague system alerts into actionable insights using Prometheus and Grafana.  \n\nBeyond technical skills, Phoebe’s strength lies in her collaborative approach. She mentors junior engineers, fostering a culture of shared responsibility. Her focus on incremental improvements—like optimizing Docker image sizes or refining GitHub Actions workflows—has quietly elevated our team’s efficiency. She thrives in ambiguity, often volunteering to tackle edge cases others avoid.  \n\nPhoebe’s technical rigor and humility make her a standout. She’s not just capable—she’s relentlessly curious and deeply committed to solving problems others overlook. I’m confident she’ll excel in any role requiring both precision and adaptability."
+  "text": "Working Relationship  \nFarhana and I cross paths weekly during our adtech projects, mostly through collaborative debugging and brainstorming sessions. She’s a reliable teammate who consistently shows up with thoughtful insights, whether we’re refining model architectures or troubleshooting production issues. Her curiosity about emerging NLP techniques often sparks productive discussions that benefit the whole team.  \n\nDay-to-Day Observations  \nOn a typical day, Farhana balances deep dives into PyTorch-based recommendation systems with iterative improvements to TensorFlow pipelines. She recently spearheaded a project to enhance ad targeting by integrating contextual embeddings, which boosted click-through rates by 8% in a few weeks. Her attention to edge cases—like handling sparse user data—ensures models remain robust under real-world conditions.  \n\nStandout Moments  \nFarhana’s work with LLMs stands out. She designed a prompt engineering framework for generating ad copy that reduced manual input by 40%, and her fine-tuning approach for a customer segmentation model cut inference latency by 25%. During a critical outage, she quickly pivoted to a fallback NLP strategy, minimizing downtime and earning praise from stakeholders.  \n\nRecommendation  \nFarhana’s strength lies in her ability to translate complex problems into actionable solutions. She’s equally comfortable dissecting model behavior as she is collaborating across teams. Her work ethic is unwavering—she’ll stay late to debug a tricky inference issue or pivot strategies mid-project without complaint. I’d confidently recommend her for roles requiring both technical depth and adaptability in fast-paced environments."
 }

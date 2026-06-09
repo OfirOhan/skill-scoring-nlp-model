@@ -4,28 +4,18 @@
   "persona_id": "p_122",
   "hyperparams": {
     "project_scale": "production",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "plain"
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "CI/CD pipelines": 1,
-    "Jenkins": 1,
-    "GitLab CI": 1,
-    "ArgoCD": 1,
-    "Prometheus/Grafana": 1,
-    "Monitoring & alerting": 1,
-    "Linux administration": 1,
-    "Shell scripting (Bash)": 1,
-    "Kubernetes": 1,
-    "AWS": 1,
-    "GCP": 1,
-    "Terraform": 1,
-    "Python": 1,
-    "REST API design": 1,
-    "Message queues": 1,
-    "PostgreSQL": 1,
-    "Redis": 1,
-    "Network automation": 1
+    "A/B testing": 3,
+    "Apache Spark": 2,
+    "Feature engineering": 4,
+    "Java": 1,
+    "PyTorch": 4,
+    "Python": 3,
+    "REST API design": 2,
+    "scikit-learn": 4
   },
-  "text": "# FinTechPay - Payment Processing System  \nA high-throughput, low-latency payment gateway tailored for real-time financial transactions, built for scalability and operational resilience in fintech environments.  \n\n## Configuration  \nCore settings are managed via environment variables and `config/env.yaml`, which define API endpoints, timeouts, and rate-limiting thresholds.  \n- `PAYMENT_TIMEOUT_MS`: 500 ms (adjust for critical paths)  \n- `MAX_CONCURRENT_TRANSACTIONS`: 1000 (scale based on load testing results)  \n- `LOG_LEVEL`: \"info\" (switch to \"debug\" for troubleshooting)  \n- `SECURE_PAYMENT_PROTOCOL`: \"tls1.3\" (enforced for all outbound traffic)  \n\n## Getting Started / Installation  \n1. Ensure Go 1.21+ is installed.  \n2. Clone the repository: `git clone https://github.com/your-username/FinTechPay.git`  \n3. Navigate to the project root and run: `go mod tidy` to resolve dependencies.  \n4. Start the service: `go run main.go --config=config/env.yaml`  \n5. Verify health checks via `http://localhost:8080/health`  \n\n## Usage / Examples  \nProcess a payment with a sample payload:  \n```bash  \ncurl -X POST http://localhost:8080/api/v1/payments \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"amount\": 150.99, \"currency\": \"USD\", \"card_token\": \"abc123\"}'  \n```  \nExpected response: `{\"status\": \"success\", \"tx_id\": \"PAY-2023-10-05-123456\"}`  \n\n## Tech Stack  \n- Backend: Go (1.21+) for high-performance logic  \n- API Layer: RESTful endpoints with middleware for validation and rate limiting  \n- Data: In-memory caching for session tokens, persistent storage for audit logs  \n- Security: TLS 1.3, HMAC-signed payloads, and strict input sanitization  \n\n## Architecture / Design  \nThe system is split into three microservices:  \n1. **Gateway**: Handles incoming requests, validates data, and routes to payment processors.  \n2. **Processor**: Executes transaction logic, interacts with external financial APIs, and manages retries.  \n3. **Auditor**: Logs all transactions to a secure, immutable store for compliance.  \nEach component is decoupled, with circuit breakers and fallbacks to prevent cascading failures.  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for full terms.  \n\n## Badges  \n[![GitHub stars](https://img.shields.io/github/stars/your-username/FinTechPay?style=social)](https://github.com/your-username/FinTechPay)  \n[![Forks](https://img.shields.io/github/forks/your-username/FinTechPay?style=social)](https://github.com/your-username/FinTechPay)"
+  "text": "# Real-Time Ad Performance Optimization with Machine Learning  \nA production-grade system that dynamically adjusts ad bidding strategies and audience segmentation using real-time feature engineering, PyTorch models, and A/B testing frameworks to maximize ROI in ad campaigns.  \n\n## Badges  \n[![GitHub](https://badgen.net/badge/github/active/green)](https://github.com/username/project)  \n[![Build Status](https://badgen.net/badge/build/status/green)](https://github.com/username/project/actions)  \n[![License](https://badgen.net/badge/license/MIT/blue)](LICENSE)  \n\n## Getting Started / Installation  \nClone the repository:  \n```bash  \ngit clone https://github.com/username/real-time-ad-optimization.git  \ncd real-time-ad-optimization  \npip install -r requirements.txt  \n```  \nRun the local development environment:  \n```bash  \npython setup.py develop  \n```  \nFor production deployment, ensure Redis and Kafka are running to handle real-time data ingestion.  \n\n## Tech Stack  \n- **Python 3.9+** (core logic, feature engineering, and model serving)  \n- **PyTorch 2.0** (real-time inference pipelines and model training)  \n- **scikit-learn** (baseline model validation and hyperparameter tuning)  \n- **Apache Spark** (batch processing of historical campaign data)  \n- **REST API** (exposed via FastAPI for ad platform integrations)  \n- **A/B testing frameworks** (split traffic across model variants for performance validation)  \n\n## Architecture / Design  \nThe system operates as a microservices-based pipeline:  \n1. **Real-time ingestion layer** (Kafka) streams user interaction data to a Redis cache.  \n2. **Feature engineering module** (Python + PyTorch) extracts contextual features (e.g., device type, time of day) and normalizes them for model input.  \n3. **Model serving layer** (PyTorch Lightning) deploys trained models to predict optimal bid adjustments and audience targeting.  \n4. **Batch retraining pipeline** (Spark + scikit-learn) updates models nightly using historical campaign data.  \n5. **A/B testing interface** (FastAPI) routes traffic to different model variants and logs performance metrics.  \n\n## Usage / Examples  \n```python  \nfrom optimizer import AdOptimizer  \noptimizer = AdOptimizer(model_path=\"models/bid_model.pth\")  \nprediction = optimizer.predict(  \n    user_data={\"device\": \"mobile\", \"hour\": 15},  \n    campaign_id=\"campaign_123\"  \n)  \nprint(f\"Recommended bid adjustment: {prediction['bid_multiplier']:.2f}\")  \n```  \nThe system outputs bid multipliers, audience segment weights, and predicted CTR for real-time decision-making.  \n\n## Testing  \n- **Unit tests** (pytest) validate model inference accuracy and feature engineering pipelines.  \n- **Integration tests** (Docker) simulate Kafka/Redis interactions and API endpoint behavior.  \n- **A/B testing results** are logged in Prometheus and visualized in Grafana, showing 12% improvement in CTR over baseline models.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

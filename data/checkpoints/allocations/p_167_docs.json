@@ -1,53 +1,62 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Fatima's backend engineering experience in the gaming industry",
-    "title": "Fatima Al-Rashidi - Backend Engineer",
+    "topic_summary": "Professional profile of Rohan Kulkarni as a Cybersecurity Data Scientist with 3 years of experience in threat detection and data-driven security solutions",
+    "title": "Rohan Kulkarni - Cybersecurity Data Scientist",
     "doc_id": "d_p_167_00",
     "persona_id": "p_167",
     "hyperparams": {
-      "cv_format": "hybrid",
+      "cv_format": "minimal",
       "geographic_convention": "Israel",
-      "company_type": "academic",
-      "company_size": "mid (50-500)"
+      "company_type": "agency",
+      "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A README for a game server optimization project using Node.js and Redis",
-    "title": "NexaGame Server Optimization",
+    "topic_summary": "Machine learning framework for real-time detection of zero-day cyber threats using network traffic analysis",
+    "title": "CyberThreatX: Zero-Day Threat Detection System",
     "doc_id": "d_p_167_01",
+    "persona_id": "p_167",
+    "hyperparams": {
+      "project_scale": "production",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "Automated anomaly detection in cloud infrastructure logs with Python and statistical modeling",
+    "title": "CloudGuardian: Cloud Security Anomaly Detection",
+    "doc_id": "d_p_167_02",
     "persona_id": "p_167",
     "hyperparams": {
       "project_scale": "team-internal",
       "project_team_size": "solo",
-      "jargon_density": "plain"
+      "jargon_density": "moderate"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "A recommendation from her manager praising her technical skills and teamwork",
-    "title": "Recommendation from NexaGame Studios Manager",
-    "doc_id": "d_p_167_02",
-    "persona_id": "p_167",
-    "hyperparams": {
-      "recommender_role": "professor",
-      "recommender_closeness": "occasional",
-      "company_type": "FAANG",
-      "company_size": "large (500+)"
-    }
-  },
-  {
-    "doc_type": "recommendation",
-    "topic_summary": "A recommendation from a peer highlighting her problem-solving abilities in backend systems",
-    "title": "Peer Recommendation for Fatima Al-Rashidi",
+    "topic_summary": "Endorsement of Rohan's expertise in applying data science to cybersecurity threat intelligence",
+    "title": "Recommendation from Dr. Elena Martinez - Cybersecurity Research Lead",
     "doc_id": "d_p_167_03",
     "persona_id": "p_167",
     "hyperparams": {
-      "recommender_role": "skip-level",
+      "recommender_role": "direct-manager",
       "recommender_closeness": "brief",
-      "company_type": "startup",
+      "company_type": "enterprise",
       "company_size": "large (500+)"
+    }
+  },
+  {
+    "doc_type": "linkedin",
+    "topic_summary": "Data scientist specializing in cybersecurity analytics, threat detection, and machine learning-driven security solutions",
+    "title": "Rohan Kulkarni - Cybersecurity Data Scientist",
+    "doc_id": "d_p_167_04",
+    "persona_id": "p_167",
+    "hyperparams": {
+      "linkedin_completeness": "minimal"
     }
   }
 ]

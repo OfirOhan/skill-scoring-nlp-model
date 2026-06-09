@@ -1,40 +1,75 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A concise professional resume highlighting Rajiv Mehta's 2 years of experience as a mobile developer in the SaaS industry.",
-    "title": "Rajiv Mehta - Mobile Developer",
+    "topic_summary": "Professional resume highlighting 12 years of mobile development experience in a startup environment",
+    "title": "Neha Joshi - Staff Mobile Developer",
     "doc_id": "d_p_079_00",
     "persona_id": "p_079",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
-      "geographic_convention": "US",
+      "cv_format": "hybrid",
+      "geographic_convention": "Israel",
       "company_type": "FAANG",
-      "company_size": "small (<50)"
+      "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A README for a cross-platform task management app built for SaaS companies using React Native and Firebase.",
-    "title": "TaskFlow: SaaS Task Management App for Teams",
+    "topic_summary": "Cross-platform task management app built with Flutter for a startup's productivity tool",
+    "title": "TaskFlow - Flutter-based Task Management App",
     "doc_id": "d_p_079_01",
     "persona_id": "p_079",
     "hyperparams": {
+      "project_scale": "academic",
+      "project_team_size": "large (15+)",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "Health tracking application integrating Firebase for real-time data synchronization in a wellness startup",
+    "title": "HealthSync - Real-Time Health Data Tracker",
+    "doc_id": "d_p_079_02",
+    "persona_id": "p_079",
+    "hyperparams": {
+      "project_scale": "hobby",
+      "project_team_size": "large (15+)",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "Social media platform for niche communities using React Native and GraphQL for startup growth",
+    "title": "CommunityHub - React Native Social Platform",
+    "doc_id": "d_p_079_03",
+    "persona_id": "p_079",
+    "hyperparams": {
       "project_scale": "team-internal",
-      "project_team_size": "medium (5-15)",
-      "jargon_density": "heavy"
+      "project_team_size": "solo",
+      "jargon_density": "plain"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from Rajiv's manager at NexaTech Inc., praising his technical skills and contributions to SaaS mobile projects.",
-    "title": "Recommendation for Rajiv Mehta - Mobile Developer",
-    "doc_id": "d_p_079_02",
+    "topic_summary": "Letter from Neha's manager praising her leadership and technical expertise in product development",
+    "title": "Recommendation from InnovateTech Solutions Manager",
+    "doc_id": "d_p_079_04",
     "persona_id": "p_079",
     "hyperparams": {
       "recommender_role": "professor",
       "recommender_closeness": "occasional",
-      "company_type": "FAANG",
-      "company_size": "mid (50-500)"
+      "company_type": "enterprise",
+      "company_size": "small (<50)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "Discussion on optimizing mobile app performance for startup scalability and user retention",
+    "title": "Scaling Mobile Apps: Best Practices for Startups",
+    "doc_id": "d_p_079_05",
+    "persona_id": "p_079",
+    "hyperparams": {
+      "blog_depth": "deep-dive",
+      "jargon_density": "heavy"
     }
   }
 ]

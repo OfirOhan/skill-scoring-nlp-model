@@ -1,58 +1,57 @@
 {
   "persona_id": "p_014",
   "hyperparams": {
-    "archetype": "fullstack_developer",
-    "years_experience": 11,
-    "seniority": "staff",
-    "industry": "SaaS",
-    "writing_style": "confident",
-    "language_fluency": "native",
+    "archetype": "ml_engineer",
+    "years_experience": 1,
+    "seniority": "junior",
+    "industry": "gaming",
+    "writing_style": "concise",
+    "language_fluency": "ESL",
     "self_promotion_level": "humble",
-    "quantification_tendency": "mixed"
+    "quantification_tendency": "metrics-heavy"
   },
-  "name": "Dina Soliman",
-  "current_role": "Staff Full-Stack Developer",
-  "company": "NexaCloud Solutions",
+  "name": "Jun Watanabe",
+  "current_role": "Machine Learning Engineer",
+  "company": "NexaGame Studios",
   "education": {
-    "degree": "Bachelor of Science in Computer Science",
-    "university": "Massachusetts Institute of Technology",
-    "year": 2012
+    "degree": "Master of Science in Computer Science",
+    "university": "Tokyo Institute of Technology",
+    "year": 2023
   },
   "career_trajectory": [
     {
-      "role": "Junior Software Developer",
-      "company": "InnovateTech Inc.",
-      "year": 2013
+      "role": "Data Analysis Intern",
+      "company": "PixelForge Interactive",
+      "duration": "6 months",
+      "responsibilities": "Assisted in player behavior analytics using Python and SQL"
     },
     {
-      "role": "Lead Backend Developer",
-      "company": "StreamlineApps",
-      "year": 2016
+      "role": "Machine Learning Engineer Intern",
+      "company": "Hyperion Games",
+      "duration": "6 months",
+      "responsibilities": "Built recommendation systems for in-game item suggestions"
     },
     {
-      "role": "Principal Engineer",
-      "company": "CloudNest Ltd.",
-      "year": 2019
-    },
-    {
-      "role": "Staff Full-Stack Developer",
-      "company": "NexaCloud Solutions",
-      "year": 2023
+      "role": "Junior Machine Learning Engineer",
+      "company": "NexaGame Studios",
+      "duration": "1 year",
+      "responsibilities": "Developed NLP models for chatbot interactions and deployed ML pipelines"
     }
   ],
   "skills": {
-    "Python": 5,
-    "Node.js": 4,
-    "React": 4,
-    "PostgreSQL": 5,
-    "Redis": 4,
-    "REST API design": 5,
-    "Microservices architecture": 5,
-    "AWS": 5,
-    "Docker": 4,
-    "Kubernetes": 5,
-    "CI/CD pipelines": 4,
-    "Cloud cost optimization": 4
+    "PyTorch": 3,
+    "TensorFlow": 3,
+    "NLP": 4,
+    "Computer vision": 3,
+    "Recommendation systems": 3,
+    "MLOps (MLflow/W&B)": 4,
+    "Model deployment": 3,
+    "Apache Spark": 1,
+    "ETL pipeline design": 2,
+    "REST API design": 3,
+    "Docker": 3,
+    "Kubernetes": 3,
+    "Cloud cost optimization": 3
   },
   "document_ids": [
     "d_p_014_00",

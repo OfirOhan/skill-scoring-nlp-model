@@ -3,24 +3,23 @@
   "type": "recommendation",
   "persona_id": "p_274",
   "hyperparams": {
-    "recommender_role": "professor",
-    "recommender_closeness": "worked-daily",
-    "company_type": "agency",
-    "company_size": "small (<50)"
+    "recommender_role": "skip-level",
+    "recommender_closeness": "brief",
+    "company_type": "FAANG",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
     "AWS": 3,
-    "Docker": 2,
-    "GitHub Actions": 2,
+    "CI/CD pipelines": 2,
+    "Docker": 3,
     "Go": 3,
-    "Kubernetes": 2,
-    "Microservices architecture": 3,
-    "MongoDB": 3,
-    "PostgreSQL": 3,
+    "Kubernetes": 3,
+    "Microservices architecture": 4,
+    "PostgreSQL": 4,
     "Python": 4,
     "REST API design": 4,
-    "Redis": 2,
-    "Terraform": 2
+    "Shell scripting": 1,
+    "Terraform": 3
   },
-  "text": "Connor Murphy’s ability to merge technical rigor with patient-centric design stood out during his time at VitalHealth Solutions. I’ll never forget the evening he spearheaded a critical overhaul of their provider scheduling API. Faced with a 40% latency spike during peak hours, he rearchitected the system using Python’s asynchronous capabilities, cutting response times by 62% within two weeks. His REST API design—prioritizing rate limiting and caching—reduced backend load by 35%, directly improving user experience for 12,000+ healthcare providers. This wasn’t just code; it was a systemic shift that balanced scalability with real-world impact.  \n\nAs a professor, I collaborated daily with Connor on prototyping tools for remote patient monitoring. His work ethic was unshakable—whether debugging complex MongoDB queries late at night or refining PostgreSQL indexing strategies to meet strict compliance deadlines. He thrived in our small agency’s fast-paced environment, often stepping into mentor roles for junior developers. His curiosity extended beyond code: he’d dissect AWS cost structures to optimize our infrastructure, and his Go-based microservices framework became a standard for new projects.  \n\nConnor’s strength lies in his ability to translate abstract requirements into robust, scalable systems. His Python-driven analytics pipeline, which processed 500,000+ patient records daily, exemplifies this. He’s equally adept at navigating technical debt and rallying cross-functional teams.  \n\nIn short, Connor is a problem-solver who elevates both code and collaboration. I’m confident he’ll bring the same meticulousness and impact to any role.  \n\nProfessor Jane Doe, Ph.D.  \nDepartment of Computer Science  \nEmail: jane.doe@university.edu | Phone: (555) 123-4567"
+  "text": "Thomas Eriksen’s work on scaling EcoCart’s microservices architecture during the 2023 Black Friday surge stands out. When traffic spiked 300% overnight, he rearchitected the order fulfillment module using Go and Kubernetes, reducing latency by 40% and preventing a potential $2M revenue loss. His ability to balance system resilience with rapid iteration made the team’s engineering practices more robust.  \n\nAs a skip-level peer in a cross-functional project, I observed Thomas’s technical rigor firsthand. He designed a Python-based data pipeline that integrated with PostgreSQL, automating reporting tasks that previously required 20+ hours of manual effort weekly. His REST API work for the inventory microservice slashed integration errors by 25% through strict schema validation and automated testing.  \n\nThomas’s strength lies in his pragmatic approach to complexity. He owns PostgreSQL clusters with 150M+ rows, tuning queries to cut report generation time from 12 hours to 45 minutes. His Terraform modules for AWS infrastructure reduced deployment friction by 30%, and his Dockerized services slashed environment setup time for new developers.  \n\nIn a role demanding both depth and adaptability, Thomas consistently delivers. His reliability and attention to operational hygiene make him a trusted collaborator.  \n\nSincerely,  \n[Recommender’s Name]  \n[Title]  \n[FAANG Company]"
 }

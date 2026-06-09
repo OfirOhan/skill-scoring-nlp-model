@@ -1,23 +1,24 @@
 {
   "doc_id": "d_p_186_03",
-  "type": "project_readme",
+  "type": "blog",
   "persona_id": "p_186",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "large (15+)",
-    "jargon_density": "plain"
+    "blog_depth": "tutorial",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "CI/CD pipelines": 3,
-    "Cloud networking (VPC/subnets)": 3,
-    "Database optimization": 3,
-    "GCP": 3,
-    "Kubernetes": 3,
-    "Linux administration": 3,
-    "Network automation": 3,
-    "Python": 4,
-    "Terraform": 3
+    "A/B testing": 1,
+    "Data visualization (Matplotlib/Plotly)": 3,
+    "Feature engineering": 2,
+    "Hypothesis testing": 3,
+    "NumPy": 2,
+    "Pandas": 2,
+    "Python": 3,
+    "REST API design": 1,
+    "SQL analytics": 1,
+    "Statistical modeling": 5,
+    "Tableau/Power BI": 3,
+    "Time series analysis": 4
   },
-  "text": "# Real-Time Analytics Dashboard with Kafka & Spark  \nA scalable solution for processing 10k+ events/sec with low-latency insights, built for enterprise-grade observability.  \n\n---\n\n## Roadmap / Future Work  \n- **Scale to 100k+ events/sec** via Kafka partition optimization and Spark cluster autoscaling  \n- Integrate **GCP BigQuery** for historical trend analysis  \n- Add **machine learning models** for predictive anomaly detection (Q3 2024)  \n- Implement **CI/CD pipelines** with GitHub Actions and Terraform for infrastructure-as-code  \n\n---\n\n## Getting Started / Installation  \n1. Clone repo: `git clone https://github.com/riyadesai/realtime-dashboard.git`  \n2. Set up **Kafka** (Docker + Confluent) and **Spark** (Scala 2.12, Spark 3.3)  \n3. Install Python 3.9+ and dependencies: `pip install -r requirements.txt`  \n4. Configure AWS credentials for S3 logging and GCP integration  \n\n---\n\n## Usage / Examples  \nRun the dashboard:  \n```bash  \npython main.py --kafka-topic metrics --spark-master local[*]  \n```  \nMonitor latency: `<http://localhost:8080>`  \nExample metrics:  \n- Avg processing time: 12ms  \n- Throughput: 9.8k events/sec  \n- Uptime: 99.9% (last 30 days)  \n\n---\n\n## Tech Stack  \n- **Kafka** (0.11.0.3) for event streaming  \n- **Spark Structured Streaming** (3.3) for real-time processing  \n- **Python** (3.9) with Pandas/NumPy for data modeling  \n- **AWS** (EC2, S3) for storage and compute  \n- **GCP** (BigQuery, Cloud Monitoring) for analytics  \n- **Kubernetes** (1.25) for container orchestration  \n- **Terraform** (1.2) for infrastructure provisioning  \n\n---\n\n## Architecture / Design  \nData flows from IoT sensors to Kafka producers, processed via Spark’s micro-batch engine.  \n- **Kafka Producers**: 50+ partitions for horizontal scaling  \n- **Spark Structured Streaming**: Watermarking + sliding window for event time processing  \n- **Visualization**: Grafana dashboard with Prometheus metrics  \n- **Network**: VPC subnets with Terraform-managed security groups  \n- **Optimization**: Columnar storage (Parquet) + query caching reduced read latency by 40%  \n\n---\n\n## License  \nMIT License — see [LICENSE](LICENSE) for details"
+  "text": "**Explainable AI in Fintech Compliance**  \n\nThesis  \nRegulatory compliance in fintech demands transparency, yet black-box models often obscure decision logic. Explainable AI (XAI) bridges this gap by embedding interpretability into risk assessment workflows, reducing manual audits by 78% in our latest pilot.  \n\nSupporting Arguments  \nXAI aligns with evolving regulations like GDPR and Basel III, which mandate justifiable decision-making. For example, our credit scoring model integrated SHAP values to highlight feature contributions, enabling auditors to trace loan rejections to specific thresholds. This reduced compliance review time by 42% compared to legacy systems.  \n\nStatistical modeling frameworks like Bayesian networks further enhance traceability. By quantifying uncertainty in fraud detection, these models provide actionable insights rather than opaque predictions. In a recent AML use case, XAI reduced false positives by 29% while maintaining 94% detection accuracy—critical for balancing regulatory rigor with operational efficiency.  \n\nData visualization tools like Plotly streamline transparency for non-technical stakeholders. Interactive dashboards now map risk factors in real time, ensuring compliance teams can validate model behavior without diving into code.  \n\nCounter-Arguments  \nCritics argue XAI complicates model deployment, citing overhead in training interpretable variants. However, hybrid approaches—like using tree-based ensemble models for core logic and gradient-boosted trees for explainability—minimize this friction. Our experiments show such hybrids maintain 92% accuracy while satisfying 100% of regulatory transparency requirements.  \n\nAnother concern is the trade-off between model performance and explainability. Yet, recent advances in sparse representation techniques allow high-performing models to retain interpretability. For instance, our time-series fraud detection system achieved 91% F1-score while exposing key anomaly patterns via rule-based extraction.  \n\nConclusion  \nXAI isn’t a compliance checkbox—it’s a strategic enabler. By integrating explainability into model architecture, fintech firms can meet regulatory demands without sacrificing innovation. The result? A 34% improvement in audit efficiency and 22% faster incident resolution in our production systems. As regulations grow more stringent, XAI will define the next era of responsible AI in finance."
 }

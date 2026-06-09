@@ -1,30 +1,21 @@
 {
   "doc_id": "d_p_251_01",
-  "type": "project_readme",
+  "type": "blog",
   "persona_id": "p_251",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "heavy"
+    "blog_depth": "tutorial",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "A/B testing": 1,
-    "Apache Spark": 1,
-    "Data modeling": 4,
-    "Data visualization": 4,
-    "REST API": 1,
-    "Snowflake": 4,
-    "Feature engineering": 1,
-    "MLOps": 1,
-    "NumPy": 5,
-    "Pandas": 5,
-    "Python": 5,
-    "SQL": 5,
-    "Statistical modeling": 5,
-    "Data visualization (Matplotlib/Plotly)": 1,
-    "SQL analytics": 1,
-    "REST API design": 1,
-    "MLOps (MLflow/W&B)": 1
+    "AWS": 5,
+    "CI/CD pipelines": 2,
+    "GitHub Actions": 2,
+    "Go": 5,
+    "Linux administration": 1,
+    "Microservices architecture": 4,
+    "PostgreSQL": 5,
+    "Prometheus/Grafana": 3,
+    "Python": 4
   },
-  "text": "# Customer Churn Prediction & Retention Optimization  \nLeveraging advanced statistical modeling and scalable data processing to identify high-risk customers and optimize retention strategies, resulting in a 18% reduction in churn and 22% increase in retention for a retail client.  \n\n## Badges  \n![Python](https://img.shields.io/badge/python-3.9-blue?logo=python)  \n![Pandas](https://img.shields.io/badge/pandas-1.5.3-green)  \n![NumPy](https://img.shields.io/badge/numpy-1.23.5-yellow)  \n![SQL](https://img.shields.io/badge/sql-PostgreSQL-blueviolet)  \n![Snowflake](https://img.shields.io/badge/snowflake-3.60.0-orange)  \n\n## Tech Stack  \n- **Python**: Core language for data processing, model development, and automation  \n- **Pandas/NumPy**: Central to feature transformation, aggregation, and numerical operations  \n- **SQL**: Used for data extraction, schema design, and ad-hoc analysis  \n- **Snowflake**: Primary data warehouse for scalable storage and real-time querying  \n- **scikit-learn/statmodels**: For logistic regression, survival analysis, and hyperparameter tuning  \n- **DVC**: Pipeline orchestration for reproducible data workflows  \n\n## Architecture / Design  \nThe pipeline ingests customer transaction data from Snowflake, preprocesses it using Pandas and NumPy for missing value imputation and normalization. Statistical models (logistic regression, Cox proportional hazards) are trained to predict churn probability, with features engineered via domain-specific insights. Results are segmented into risk tiers, enabling targeted retention campaigns. Snowflake is leveraged for real-time scoring of new data, ensuring model outputs align with live business metrics.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/your-username/customer-churn-optimization.git`  \n2. Set up a Python 3.9 virtual environment: `python -m venv venv && source venv/bin/activate`  \n3. Install dependencies: `pip install -r requirements.txt`  \n4. Configure Snowflake credentials in `config/snowflake.ini`  \n\n## Usage / Examples  \nRun the full analysis:  \n```bash  \npython main.py --output-dir results/  \n```  \nExplore model performance:  \n```bash  \npython evaluate.py --model logistic_regression --plot True  \n```  \nGenerate retention strategy report:  \n```bash  \npython generate_report.py --segment high_risk --format pdf  \n```  \n\n## Contributing  \nCollaborate by enhancing feature importance analysis or refining segmentation criteria. Ensure all data transformations adhere to Snowflake's schema conventions and validate statistical assumptions before deployment.  \n\n## License  \nApache-2.0 (see [LICENSE](LICENSE))"
+  "text": "At NexaTech, we grew from a 3-person team to 50 in 18 months. Our backend systems scaled from 500 to 10,000 RPS without downtime. Here’s how we did it.  \n\n**Context**  \nNexaTech built a SaaS platform for real-time analytics. Early on, we used monoliths with Django and PostgreSQL. As user growth hit 200% YoY, our database became a bottleneck. The team lacked dedicated DevOps, and our codebase had no clear ownership.  \n\n**Challenge**  \nBy month 12, we were hitting 80% CPU on our single PostgreSQL instance. API response times averaged 1.2s during peaks. The monolith’s tight coupling meant changes in one module disrupted others. With no CI/CD pipeline in place, deployments were risky and slow.  \n\n**Solution**  \nWe refactored into microservices using Go for high-throughput services and Python for data processing. AWS EC2 Auto Scaling handled traffic spikes, while PostgreSQL was split into read replicas for analytics. Prometheus monitored metrics, and Grafana dashboards alerted on anomalies. We introduced GitHub Actions for CI/CD, ensuring 100% test coverage before deployments.  \n\n**Results**  \nPost-refactor, CPU usage dropped to 30%, and latency fell to 200ms. The system scaled to 10,000 RPS with zero downtime. Deployment frequency increased from once a week to twice daily. Our cost per user dropped 15% through optimized EC2 instance types.  \n\n**Lessons Learned**  \n1. **Plan for growth from day one**—even if you’re 3 people, design for 10x scale. Use AWS’s elasticity to avoid overprovisioning.  \n2. **Decouple slowly**—start with one microservice, but architect for gradual splitting. Our Python data pipeline was the first split, isolating analytics from core APIs.  \n3. **Monitor everything**—Prometheus isn’t just for metrics; it’s for proactive troubleshooting. We caught a disk I/O bottleneck before it caused outages.  \n4. **CI/CD isn’t optional**—even startups need automation. GitHub Actions cut deployment risk by 70% once we enforced 100% test coverage.  \n\nScaling isn’t about bigger machines; it’s about smarter architecture. At NexaTech, we turned constraints into opportunities by prioritizing observability, incremental design, and team ownership. The result? A system that grows with our users, not against them."
 }

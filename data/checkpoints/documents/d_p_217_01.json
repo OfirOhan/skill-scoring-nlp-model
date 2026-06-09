@@ -3,20 +3,20 @@
   "type": "project_readme",
   "persona_id": "p_217",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "medium (5-15)",
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "CI/CD pipelines": 3,
-    "Cloud cost optimization": 3,
-    "Kubernetes": 5,
-    "Linux administration": 4,
-    "PostgreSQL": 4,
-    "Prometheus/Grafana": 4,
-    "Python": 3,
-    "Terraform": 3
+    "Apache Spark": 1,
+    "CI/CD pipelines": 1,
+    "ETL pipeline design": 2,
+    "LLMs/Prompt engineering": 1,
+    "MLOps (MLflow/W&B)": 4,
+    "Model deployment": 4,
+    "NLP": 1,
+    "Prometheus/Grafana": 1,
+    "PyTorch": 5
   },
-  "text": "# NexaCart Microservices Architecture  \nA production-grade, scalable microservices framework for e-commerce platforms, engineered for real-time inventory synchronization and payment orchestration. Built to handle 50k+ concurrent requests/sec with 99.95% SLA compliance, leveraging Kubernetes for service mesh and AWS for cloud-native deployment.  \n\n## Badges  \n[![GitHub Actions CI](https://github.com/yourusername/nexacart/workflows/CI%20Pipeline/badge.svg)](https://github.com/yourusername/nexacart/actions)  \n[![Docker Image Size](https://img.shields.io/docker/image-size/yourusername/nexacart/latest)](https://hub.docker.com/r/yourusername/nexacart)  \n[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)  \n[![Test Coverage](https://img.shields.io/coveralls/yourusername/nexacart)](https://coveralls.io/r/yourusername/nexacart)  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/yourusername/nexacart.git  \ncd nexacart  \nmake build  \nexport AWS_ACCESS_KEY_ID=\"your-credentials\"  \nexport AWS_SECRET_ACCESS_KEY=\"your-credentials\"  \nmake deploy  \n```  \nInitialize the PostgreSQL cluster using Terraform, then spin up the Kubernetes cluster with HCL2 templates. The CI pipeline automates unit testing, integration testing, and security scans via GitHub Actions.  \n\n## Tech Stack  \n- **Language**: Python (data processing), Go (core services), Rust (critical-path performance)  \n- **Infrastructure**: AWS (EC2, EKS, RDS), Terraform (IaC), CloudFormation (backup templates)  \n- **Database**: PostgreSQL (read-replica sharding), Redis (cache), DynamoDB (event sourcing)  \n- **Monitoring**: Prometheus (metrics aggregation), Grafana (dashboarding), ELK (logs)  \n- **Networking**: Istio (service mesh), NGINX (reverse proxy), Linkerd (observability)  \n\n## Architecture / Design  \nThe architecture decouples inventory, payment, and order workflows into dedicated services. Inventory service uses Apache Kafka for event-driven updates, while payment orchestration leverages a state machine with CQRS patterns. Kubernetes HPA scales pods based on CPU metrics, reducing latency by 40% compared to monolithic deployments. Security is enforced via mTLS between services and AWS IAM policies.  \n\n## Usage / Examples  \n```bash  \ncurl -X POST https://api.nexacart.com/v1/inventory/update \\\n  -H \"Authorization: Bearer <token>\" \\\n  -d '{\"product_id\": \"123\", \"stock\": 500}'  \n```  \nThe payment service integrates with Stripe and PayPal via webhook listeners, ensuring 99.99% transaction success rates. Python scripts generate synthetic load for stress testing, simulating 10k concurrent users.  \n\n## Testing  \nUnit tests (pytest) cover 85% of core logic, while integration tests validate service-to-service communication. Chaos Monkey introduces failures to test resilience, and end-to-end tests use Docker Compose for local simulation. Code coverage exceeds 92%, with alerts for regressions in CI/CD pipelines.  \n\n## License  \nApache License 2.0 – see [LICENSE](https://github.com/yourusername/nexacart/blob/main/LICENSE) for details."
+  "text": "# Real-Time Anomaly Detection System for IoT Devices  \nA distributed system for sub-50ms latency anomaly detection in industrial IoT streams using PyTorch and Kafka. Benchmarked at 95.3% F1 score on 10k+ sensor datasets.  \n\n## Contributing  \nWe welcome contributions via GitHub Issues and Pull Requests. For production-grade changes, ensure tests pass in `./scripts/test_pipeline.sh` and update the MLflow tracking URI in `config/params.yaml`. All contributions are reviewed by the core team and integrated via GitFlow.  \n\n## Getting Started / Installation  \n```bash  \n# Prerequisites  \nconda create -n iot_monitor python=3.9  \nconda install pytorch=1.13 torchvision torchaudio cudatoolkit=11.6 -c pytorch  \npip install kafka-python==2.0.2 mlflow==1.25.0  \n\n# Kafka setup (local)  \ndocker run --name kafka -d -p 2181:2181 -p 9092:9092 -e KAFKA_CFG_LISTENERS=PLAINTEXT://:2181,PLAINTEXT_HOST://:9092 -e KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://localhost:2181,PLAINTEXT_HOST://localhost:9092 confluentinc/cp-kafka:6.2.1  \n```  \n\n## Usage / Examples  \n```python  \nfrom pipeline import AnomalyPipeline  \npipeline = AnomalyPipeline(model_version=\"v2.3\", batch_size=128)  \npipeline.run(input_topic=\"sensor_data\", output_topic=\"alerts\")  \n# Monitor metrics via MLflow UI (http://localhost:5000)  \n```  \nExample: Detected 322 anomalies in 10k+ sensor events with 50ms end-to-end latency.  \n\n## Tech Stack  \n- **Modeling**: PyTorch (Custom LSTM + Attention)  \n- **Streaming**: Apache Kafka (0.11+ compatibility)  \n- **MLOps**: MLflow (Model Registry), Weights & Biases (Experiment Tracking)  \n- **ETL**: Kafka Streams (Schema Registry integration)  \n\n## Architecture / Design  \nThe system decouples data ingestion (Kafka) from model inference (PyTorch), with MLflow managing model versioning. Kafka Streams handles windowed aggregations, while the PyTorch model runs in a distributed Ray cluster. Production deployments use Kubernetes for autoscaling based on incoming event rates.  \n\n## License  \nMIT License  \n\n## Badges  \n[![PyTorch](https://img.shields.io/badge/PyTorch-1.13-blue)](https://pytorch.org)  \n[![Kafka](https://img.shields.io/badge/Kafka-2.8-green)](https://kafka.apache.org)  \n[![License](https://img.shields.io/badge/license-MIT-yellow)](https://opensource.org/licenses/MIT)"
 }

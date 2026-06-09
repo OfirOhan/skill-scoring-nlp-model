@@ -1,37 +1,63 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A full-stack developer with 0 years of experience in e-commerce, specializing in sustainable tech solutions.",
-    "title": "Kemi Adeyemi - Full-Stack Developer",
+    "topic_summary": "Professional resume highlighting Yuki Tanaka's 7 years of experience in adtech security engineering",
+    "title": "Yuki Tanaka - Senior Security Engineer",
     "doc_id": "d_p_220_00",
     "persona_id": "p_220",
     "hyperparams": {
       "cv_format": "paragraph",
-      "geographic_convention": "India",
+      "geographic_convention": "US",
       "company_type": "enterprise",
-      "company_size": "mid (50-500)"
+      "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A full-stack e-commerce platform for eco-friendly products with features for carbon footprint tracking and sustainable logistics.",
-    "title": "GreenCart: Sustainable E-Commerce Platform",
+    "topic_summary": "Secure ad bidding system with zero-trust architecture to prevent fraud in adtech",
+    "title": "ZeroTrustAdBidding",
     "doc_id": "d_p_220_01",
     "persona_id": "p_220",
     "hyperparams": {
+      "project_scale": "academic",
+      "project_team_size": "solo",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "Real-time fraud detection system for ad networks using machine learning and anomaly detection",
+    "title": "AdFraudGuard",
+    "doc_id": "d_p_220_02",
+    "persona_id": "p_220",
+    "hyperparams": {
       "project_scale": "hobby",
-      "project_team_size": "large (15+)",
+      "project_team_size": "small (2-4)",
       "jargon_density": "plain"
     }
   },
   {
-    "doc_type": "linkedin",
-    "topic_summary": "A professional summary highlighting Kemi's passion for combining technology and sustainability in e-commerce.",
-    "title": "Kemi Adeyemi | Full-Stack Developer",
-    "doc_id": "d_p_220_02",
+    "doc_type": "blog",
+    "topic_summary": "Exploring secure adtech system design with case studies on data encryption and threat modeling",
+    "title": "Securing AdTech Systems: Best Practices for Senior Security Engineers",
+    "doc_id": "d_p_220_03",
     "persona_id": "p_220",
     "hyperparams": {
-      "linkedin_completeness": "standard"
+      "blog_depth": "opinion-piece",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "Letter from Yuki's manager praising her leadership in adtech security innovation",
+    "title": "Recommendation from AdLift Technologies CTO",
+    "doc_id": "d_p_220_04",
+    "persona_id": "p_220",
+    "hyperparams": {
+      "recommender_role": "peer",
+      "recommender_closeness": "brief",
+      "company_type": "startup",
+      "company_size": "mid (50-500)"
     }
   }
 ]

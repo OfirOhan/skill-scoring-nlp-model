@@ -1,25 +1,26 @@
 {
   "doc_id": "d_p_269_02",
-  "type": "project_readme",
+  "type": "recommendation",
   "persona_id": "p_269",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "heavy"
+    "recommender_role": "peer",
+    "recommender_closeness": "brief",
+    "company_type": "FAANG",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "A/B testing": 1,
-    "Agile/Scrum": 4,
-    "Competitive analysis": 1,
-    "Data visualization": 1,
-    "SQL analytics": 1,
-    "Hypothesis testing": 1,
-    "Roadmap planning": 4,
-    "Stakeholder management": 1,
-    "Team leadership": 1,
-    "Tableau/Power BI": 1,
-    "UX research": 3,
-    "Product management": 1
+    "C/C++ (embedded)": 4,
+    "Edge computing": 4,
+    "Firmware development": 4,
+    "Go": 1,
+    "Hardware-software integration": 4,
+    "IoT protocols (MQTT/CoAP)": 4,
+    "Java": 1,
+    "Network automation": 1,
+    "Python": 2,
+    "REST API design": 2,
+    "RTOS": 3,
+    "Sensor integration": 2
   },
-  "text": "# Player Analytics Dashboard for Lumina Games  \n\nA lightweight dashboard for tracking player engagement metrics in Lumina Games' titles. Built with Python and Streamlit, this tool enables team members to monitor session durations, retention rates, and in-game behavior patterns without requiring deep data science expertise. Designed for hobbyist use, it balances simplicity with actionable insights for small teams.  \n\n## Acknowledgments  \nThis project wouldn’t exist without the collaborative efforts of my team at Lumina Games. Special thanks to **Jaden Lee** for refining the UI workflow and **Rosa Kim** for structuring the data pipeline. The tool’s design was informed by user feedback from our internal playtests, ensuring it aligns with the needs of both analysts and designers.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/yourusername/player-analytics-dashboard.git`  \n2. Navigate to the project directory: `cd player-analytics-dashboard`  \n3. Create a virtual environment: `python -m venv venv && source venv/bin/activate` (Linux/Mac) or `venv\\Scripts\\activate` (Windows)  \n4. Install dependencies: `pip install -r requirements.txt`  \n5. Set up environment variables for API keys and database connections via a `.env` file.  \n\n## Usage / Examples  \nRun the app with `streamlit run app.py`. The interface provides filters for date ranges, game titles, and player segments. Key metrics are displayed in real-time, with export options for CSV and JSON. For example, you can compare retention rates across platforms or track peak play hours. The UX was iterated based on feedback from our sprint planning sessions, ensuring clarity for non-technical stakeholders.  \n\n## Tech Stack  \n- **Language**: Python 3.9  \n- **Framework**: Streamlit for rapid prototyping  \n- **Data Handling**: Pandas for structured data manipulation  \n- **Database**: SQLite for lightweight storage  \n- **Deployment**: Streamlit Cloud for hosting  \n\n## License  \nMIT License — see the [LICENSE](LICENSE) file for details.  \n\n## Badges  \n[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  \n[![Python](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/)  \n\n## Contributing  \nContributions are welcome! For small teams, this project thrives on iterative feedback loops. If you’re adding features, align with our sprint goals posted in the GitHub issues. Prioritization is driven by user stories from our roadmap planning sessions, ensuring each update addresses tangible pain points."
+  "text": "Opal once debugged a firmware bug in a live ad-hoc sensor network during a server outage. She rerouted data through a custom RTOS layer, keeping 98% of edge nodes operational for 4 hours until a permanent fix. Her calm under pressure and knack for reverse-engineering binary logs saved our campaign from a $20k revenue drop.  \n\nOpal is a self-taught firmware wizard who treats hardware as an extension of code. She built a Python-based tool to automate sensor calibration, cutting setup time by 40%. While her C/C++ expertise is legendary, what stands out is her obsession with aligning hardware constraints with software efficiency—like optimizing a legacy IoT protocol stack to meet 5ms latency targets.  \n\nHer strength lies in turning ambiguous specs into reliable systems. Once, she redesigned a fragmented edge computing architecture into a unified pipeline, reducing latency by 30% and boosting ad-serving accuracy. She thrives in ambiguity, often mentoring junior engineers with dry wit and a refusal to accept “good enough.”  \n\nOpal’s work ethic is a given. She’ll stay late to refactor legacy code or prototype a new sensor integration, always prioritizing reliability over speed. If you need someone who treats hardware as a puzzle to solve, not a barrier, she’s your person."
 }

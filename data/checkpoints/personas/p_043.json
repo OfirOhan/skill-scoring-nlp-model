@@ -1,46 +1,62 @@
 {
   "persona_id": "p_043",
   "hyperparams": {
-    "archetype": "frontend_engineer",
-    "years_experience": 5,
+    "archetype": "qa_test_engineer",
+    "years_experience": 3,
     "seniority": "mid",
     "industry": "e-commerce",
-    "writing_style": "modest",
-    "language_fluency": "near-native",
-    "self_promotion_level": "humble",
-    "quantification_tendency": "mixed"
+    "writing_style": "confident",
+    "language_fluency": "ESL",
+    "self_promotion_level": "balanced",
+    "quantification_tendency": "metrics-heavy"
   },
-  "name": "Olumide Afolabi",
-  "current_role": "Frontend Engineer",
-  "company": "EcomSphere Solutions",
+  "name": "Ekaterina Smirnova",
+  "current_role": "QA Engineer",
+  "company": "Ecomify Ltd.",
   "education": {
     "degree": "Bachelor of Science in Computer Science",
-    "university": "University of Ibadan",
-    "year": 2018
+    "university": "National University of Science and Technology",
+    "year": 2020
   },
   "career_trajectory": [
-    "Junior Frontend Developer at StartUpCo (2018-2020)",
-    "Senior Frontend Developer at TrendyMart (2020-2023)",
-    "Frontend Engineer at EcomSphere Solutions (2023-present)"
+    {
+      "role": "QA Tester",
+      "company": "ShopWave Inc.",
+      "duration": "2020-2021",
+      "responsibilities": "Manual test execution, bug tracking, and basic automation scripting for checkout flows."
+    },
+    {
+      "role": "Test Engineer",
+      "company": "VirtuaMart Solutions",
+      "duration": "2021-2022",
+      "responsibilities": "Designed API test suites, optimized CI/CD pipelines, and led cross-browser compatibility testing."
+    },
+    {
+      "role": "QA Engineer",
+      "company": "Ecomify Ltd.",
+      "duration": "2022-present",
+      "responsibilities": "Architecting end-to-end test frameworks, mentoring junior engineers, and ensuring SLA compliance for payment gateway integrations."
+    }
   ],
   "skills": {
-    "JavaScript": 4,
-    "TypeScript": 4,
-    "React": 4,
-    "Next.js": 3,
-    "Responsive design": 4,
-    "Web accessibility (WCAG)": 3,
-    "State management (Redux/Zustand)": 4,
+    "Test automation": 4,
+    "Selenium/Playwright": 5,
+    "API testing": 4,
+    "Integration testing": 4,
+    "Performance testing (JMeter/k6)": 4,
+    "Test strategy design": 4,
+    "BDD/TDD": 3,
+    "Python": 3,
+    "Java": 2,
+    "Go": 1,
     "Node.js": 3,
-    "REST API design": 3,
-    "Web performance optimization": 4,
-    "Webpack/Vite": 3,
-    "Test automation (Selenium/Playwright)": 3,
-    "GraphQL": 3
+    "GitHub Actions": 3,
+    "Jenkins": 2,
+    "JavaScript": 2,
+    "React": 2
   },
   "document_ids": [
     "d_p_043_00",
-    "d_p_043_01",
-    "d_p_043_02"
+    "d_p_043_01"
   ]
 }

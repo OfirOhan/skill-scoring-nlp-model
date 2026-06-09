@@ -1,24 +1,22 @@
 {
   "doc_id": "d_p_153_01",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_153",
   "hyperparams": {
-    "blog_depth": "tutorial",
-    "jargon_density": "plain"
+    "project_scale": "academic",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "A/B testing": 3,
-    "Agile/Scrum": 4,
-    "Analytics-driven product decisions": 4,
-    "Competitive analysis": 3,
-    "Data visualization": 3,
-    "Hypothesis testing": 3,
-    "Product management": 4,
-    "Roadmap planning": 4,
-    "SQL analytics": 3,
-    "Stakeholder management": 3,
-    "Tableau/Power BI": 3,
-    "UX research": 2
+    "Apache Spark": 1,
+    "Data warehousing": 3,
+    "Docker": 1,
+    "ETL pipeline design": 3,
+    "Python": 2,
+    "REST API design": 1,
+    "Snowflake": 3,
+    "Terraform": 1,
+    "dbt": 1
   },
-  "text": "Scaling SaaS Products: Lessons from NexaFlow's Growth Journey  \n\nWhen NexaFlow hit 300% YoY user growth, our infrastructure costs spiked 40%—a problem many SaaS teams face. Scaling isn’t just about adding servers; it’s about aligning engineering, ops, and product decisions to sustain growth without burning cash.  \n\n**Problem Statement**  \nAt 100k monthly active users, our system struggled with variable workloads. API latency rose 25% during peak hours, and onboarding churn hit 15%. Traditional scaling methods like vertical scaling hit walls quickly. We needed a smarter approach that balanced performance, cost, and user experience.  \n\n**Setup**  \nWe rearchitected around AWS with Kubernetes for autoscaling, replaced monolithic databases with sharded PostgreSQL, and integrated CI/CD pipelines for rapid deployment. For user onboarding, we split the flow into 5 micro-steps and tested variants via A/B testing. Competitive analysis tools like SimilarWeb helped identify gaps in our value proposition.  \n\n**Step-by-Step Guide**  \n1. **Infrastructure Optimization**: Migrate to Kubernetes with AWS Auto Scaling. Monitor CPU/memory usage with Prometheus and set thresholds for horizontal scaling.  \n2. **Onboarding Refinement**: Split the onboarding flow into 5 micro-steps. A/B test each variant using Google Optimize, measuring drop-off rates and time-to-value.  \n3. **Data Pipeline Overhaul**: Replace legacy ETL with Apache Airflow. Use SQL analytics to segment user behavior and identify friction points.  \n4. **Stakeholder Alignment**: Create a shared dashboard in Tableau with KPIs like CAC, LTV, and infrastructure costs. Use bi-weekly syncs to align engineering, sales, and product.  \n\n**Results**  \nWithin 6 months, infrastructure costs dropped 60% while API latency fell to 120ms. Onboarding churn reduced to 6%, and feature adoption increased 200% after refining the flow. SQL analytics revealed 30% of users abandoned onboarding at step 3, prompting a redesign that cut drop-offs by 50%.  \n\n**Conclusion**  \nScaling SaaS requires a blend of technical agility and data-driven decisions. At NexaFlow, we prioritized modular architecture, continuous experimentation, and cross-functional collaboration. The key wasn’t just building faster—it was building smarter.  \n\n**Further Reading**  \n- *Scaling SaaS: From 0 to 1M Users* by Sarah Johnson (focus on infrastructure trade-offs)  \n- “How Segment Built a $1B SaaS Product” (insights on data pipeline design)  \n- AWS Well-Architected Framework (guidance on scalable systems)  \n- “The Lean Product Playbook” for A/B testing strategies  \n- Tableau’s guide to real-time dashboards for stakeholder alignment"
+  "text": "# Real-Time Analytics Dashboard for Startup Metrics  \nA scalable, low-latency dashboard for NexaTech Solutions to monitor user engagement, revenue, and operational KPIs in real time. Built using a hybrid architecture that merges streaming analytics with structured data warehousing. The system ingests 10M+ events/day from Kafka, processes them via Apache Flink, and syncs to Snowflake for long-term storage. Dashboards provide sub-second updates for critical metrics like CAC, LTV, and churn rates.  \n\n## API Reference  \nThe system exposes a GraphQL endpoint at `https://api.nexatech.dev/analytics` for querying pre-aggregated metrics. Key operations include:  \n- `queryUserEngagement(user_id: UUID)`: Returns session duration, page views, and conversion events  \n- `getRevenueTrends(period: STRING)`: Aggregates revenue by product cohort and region  \n- `listOperationalMetrics()`: Fetches server uptime, API latency, and error rates  \n\nAll endpoints require authentication via Bearer token in the `Authorization` header. Response schemas are documented in the `/docs` directory using Swagger.  \n\n## Usage / Examples  \nTo monitor daily active users:  \n```graphql\nquery { \n  getRevenueTrends(period: \"7d\") { \n    totalRevenue \n    regionDistribution { \n      region \n      revenueShare \n    } \n  } \n}\n```\nThis returns a JSON object with aggregated revenue data, formatted for immediate dashboard visualization.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/nexatech/analytics-dashboard.git`  \n2. Install Python dependencies: `pip install -r requirements.txt`  \n3. Configure Snowflake credentials in `.env` file  \n4. Run the ingestion pipeline: `python3 pipeline.py --mode prod`  \n\n## Tech Stack  \n- **Python**: For data transformation scripts and API logic  \n- **Snowflake**: Primary data warehouse for structured analytics  \n- **Kafka**: Real-time event stream ingestion  \n- **Apache Flink**: Stateful stream processing for low-latency aggregations  \n\n## Architecture / Design  \nThe system processes 10M+ events/day via a Kafka stream, with Flink handling windowed aggregations. Snowflake serves as the central data warehouse for historical analysis. Dashboards use Grafana to visualize metrics from both real-time and batch sources. The architecture prioritizes fault tolerance with redundant Kafka brokers and automated schema migration in Snowflake.  \n\n## License  \nMIT License  \n[![License](https://badges.repo/illustration/MIT)](https://choosealicense.com/licenses/mit/)  \n\n## Badges  \n[![Build Status](https://ci.example.com/project/123)](https://ci.example.com/project/123)  \n[![Version](https://img.shields.io/badge/version-1.2.0-blue)](https://github.com/nexatech/analytics-dashboard/releases/tag/v1.2.0)  \n[![Dependencies](https://img.shields.io/badge/dependencies-up--to--date-green)](https://github.com/nexatech/analytics-dashboard/dependencies)"
 }

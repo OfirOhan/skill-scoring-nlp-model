@@ -1,43 +1,63 @@
 {
   "persona_id": "p_196",
   "hyperparams": {
-    "archetype": "ml_engineer",
-    "years_experience": 0,
-    "seniority": "junior",
-    "industry": "healthtech",
-    "writing_style": "modest",
+    "archetype": "platform_engineer",
+    "years_experience": 3,
+    "seniority": "mid",
+    "industry": "consulting",
+    "writing_style": "verbose",
     "language_fluency": "ESL",
-    "self_promotion_level": "balanced",
-    "quantification_tendency": "mixed"
+    "self_promotion_level": "boastful",
+    "quantification_tendency": "qualitative"
   },
-  "name": "Lucas Martin",
-  "current_role": "Machine Learning Engineer",
-  "company": "HealthAI Innovations",
+  "name": "Rabia Yilmaz",
+  "current_role": "Platform Engineer",
+  "company": "CloudNova Solutions",
   "education": {
-    "degree": "Bachelor of Science in Computer Science",
-    "university": "University of Toronto",
-    "year": 2023
+    "degree": "B.S. in Computer Science",
+    "university": "University of Istanbul",
+    "year": 2020
   },
   "career_trajectory": [
-    "Data Analyst Intern at MedTech Corp (2022)",
-    "Machine Learning Intern at HealthData Solutions (2023)",
-    "Junior ML Engineer at HealthAI Innovations (2024)"
+    {
+      "position": "DevOps Engineer",
+      "company": "TechForge Solutions",
+      "duration": "2021-2022",
+      "responsibilities": "Automated CI/CD pipelines, managed AWS infrastructure, and optimized cloud costs for SaaS platforms."
+    },
+    {
+      "position": "Cloud Solutions Architect",
+      "company": "CloudNova Solutions",
+      "duration": "2022-2023",
+      "responsibilities": "Designed multi-cloud architectures, led Kubernetes migrations, and implemented Terraform for IaC across GCP and Azure."
+    },
+    {
+      "position": "Platform Engineer",
+      "company": "CloudNova Solutions",
+      "duration": "2023-present",
+      "responsibilities": "Architected scalable serverless solutions, optimized CI/CD pipelines with ArgoCD, and managed incident response for SRE teams."
+    }
   ],
   "skills": {
-    "PyTorch": 3,
-    "TensorFlow": 3,
-    "scikit-learn": 3,
-    "Hugging Face Transformers": 3,
-    "NLP": 3,
-    "Model deployment": 3,
-    "AWS": 3,
-    "Apache Airflow": 2,
-    "ETL pipeline design": 2,
-    "Data warehousing": 2,
-    "REST API design": 3
+    "AWS": 4,
+    "GCP": 4,
+    "Kubernetes": 5,
+    "Terraform": 5,
+    "Infrastructure as Code": 4,
+    "Serverless": 3,
+    "Load balancing": 3,
+    "Cloud cost optimization": 4,
+    "Python": 2,
+    "REST API design": 3,
+    "PostgreSQL": 2,
+    "Redis": 1,
+    "Network automation": 2,
+    "DNS/DHCP": 1
   },
   "document_ids": [
     "d_p_196_00",
-    "d_p_196_01"
+    "d_p_196_01",
+    "d_p_196_02",
+    "d_p_196_03"
   ]
 }

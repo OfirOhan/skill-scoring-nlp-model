@@ -3,23 +3,23 @@
   "type": "project_readme",
   "persona_id": "p_156",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "large (15+)",
-    "jargon_density": "plain"
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "CI/CD pipelines": 3,
-    "Configuration management (Ansible)": 3,
-    "Docker": 3,
-    "GitLab CI": 3,
-    "Kubernetes": 1,
-    "Linux administration": 3,
-    "Microservices architecture": 4,
-    "Monitoring & alerting": 3,
-    "PostgreSQL": 4,
-    "Python": 4,
-    "REST API design": 4
+    "3D graphics (OpenGL/Vulkan)": 3,
+    "Game networking": 3,
+    "Game physics": 3,
+    "HTML/CSS": 2,
+    "JavaScript": 2,
+    "Node.js": 2,
+    "Python": 1,
+    "REST API design": 2,
+    "React": 2,
+    "TypeScript": 2,
+    "Unity": 3,
+    "Unreal Engine": 3
   },
-  "text": "# SecurePay API Gateway  \nA high-throughput payment processing platform handling 2M+ transactions/month with 99.95% uptime. Built to scale with minimal latency, this system processes card payments, refunds, and fraud checks while maintaining PCI-DSS compliance across 15+ microservices.  \n\n## Deployment  \nThe gateway runs on AWS EC2 clusters with auto-scaling groups, backed by RDS PostgreSQL clusters (read replicas + logical replication). GitLab CI pipelines deploy updates every 15 mins, with blue-green deployments for zero-downtime rollouts. Monitoring via Prometheus and Grafana tracks 150+ metrics, including API latency (avg 85ms) and error rates (<0.02%).  \n\n## Badges  \n[![Build Status](https://example.com/build-badge)](https://example.com/build)  \n[![Coverage](https://example.com/coverage-badge)](https://example.com/coverage)  \n[![Uptime](https://example.com/uptime-badge)](https://example.com/uptime)  \n\n## Tech Stack  \n- **Backend**: Python 3.9 with FastAPI (150K+ endpoints/sec)  \n- **Database**: PostgreSQL 14 with replication (100GB+ writes/day)  \n- **Networking**: REST APIs with OpenAPI specs (95% spec compliance)  \n- **Containers**: Dockerized services (80% image reuse)  \n- **Ops**: Ansible playbooks for config management (500+ hosts)  \n- **CI/CD**: GitLab pipelines with parallel jobs (30% faster than Jenkins)  \n- **Monitoring**: Prometheus + Alertmanager (98% SLA adherence)  \n\n## Architecture / Design  \nThe system is split into three layers:  \n1. **Gateway Layer**: Load-balanced ingress with rate limiting (10K reqs/sec)  \n2. **Service Layer**: Microservices for payment routing, fraud detection, and audit logging  \n3. **Data Layer**: PostgreSQL with partitioned tables (10TB+ data) and CDC for async replication  \n\nKey decisions include using PostgreSQL's JSONB for flexible payment metadata and implementing circuit breakers for resilient service calls.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/fin-tech-innovators/securepay.git  \ncd securepay  \ndocker-compose up -d  \nansible-playbook -i inventory.ini setup.yml  \n```  \nEnsure AWS credentials are configured via environment variables.  \n\n## Usage / Examples  \n```python  \nimport requests  \nresponse = requests.post('https://api.securepay.com/v1/payments', json={  \n    \"amount\": 199.99,  \n    \"card_number\": \"4242424242424242\",  \n    \"exp_month\": 12,  \n    \"exp_year\": 2025  \n})  \nprint(response.json())  \n```  \nExpect a 200 OK with transaction ID and authorization code.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# Virtual Shopping Assistant Game  \nA playful interface for e-commerce engagement, blending 3D navigation with real-time product data to boost user interaction.  \n\n## Getting Started / Installation  \nInstall Unity (2021 LTS) and Unreal Engine 5.1 for core development. Download the project assets from the [asset store](https://www.assetstore.unity3d.com) and import them into your preferred engine. No external dependencies beyond standard game dev tools.  \n\n## Tech Stack  \n- **3D Graphics**: Vulkan for real-time rendering optimizations (20% faster frame rates)  \n- **Game Physics**: PhysX for realistic item interactions (collision accuracy: 98.7%)  \n- **Networking**: WebSocket for live inventory sync (latency: <50ms)  \n- **Engine**: Unity (UI/UX) + Unreal Engine (3D visuals)  \n- **Data Integration**: REST APIs for product catalog pulls (200+ endpoints)  \n\n## Usage / Examples  \n- **Scenario 1**: Players navigate a virtual store, using voice commands to filter products.  \n- **Scenario 2**: Dynamic pricing challenges where physics-based item drops trigger discounts.  \n- **Scenario 3**: Multiplayer mode with synchronized shopping carts (50+ concurrent users tested).  \n\n## Badges  \n[![Unity](https://img.shields.io/badge/Unity-2021LTS-blue)](https://unity.com)  \n[![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-5.1-green)](https://unrealengine.com)  \n[![License](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)  \n\n## Architecture / Design  \nModular system with:  \n- **Core Engine**: Unity for UI/UX, Unreal for 3D environments  \n- **Data Layer**: REST API wrappers for product data (500+ endpoints)  \n- **Physics Layer**: PhysX for item interactions (50+ physics simulations)  \n- **Networking**: WebSocket for real-time inventory updates (15% reduced latency)  \n\n## Contributing  \nThis is a solo project, but I welcome feedback on gameplay mechanics or data integration strategies. Submit issues for bugs or feature requests. Pull requests are encouraged for documentation improvements or minor code refactoring.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

@@ -3,27 +3,20 @@
   "type": "project_readme",
   "persona_id": "p_283",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "moderate"
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 1,
-    "CI/CD pipelines": 1,
-    "Docker": 3,
-    "Go": 1,
-    "GraphQL": 1,
-    "Java": 1,
-    "Kubernetes": 1,
-    "Microservices architecture": 1,
-    "MongoDB": 4,
-    "Monitoring & alerting": 1,
-    "Node.js": 1,
-    "PostgreSQL": 1,
+    "Apache Airflow": 1,
+    "Data modeling": 1,
+    "NumPy": 3,
+    "Pandas": 3,
     "Python": 3,
-    "REST API": 4,
-    "Terraform": 1,
-    "REST API design": 1
+    "REST API design": 1,
+    "SQL analytics": 4,
+    "Time series analysis": 4,
+    "scikit-learn": 4
   },
-  "text": "# AdInsight Dashboard  \nA real-time ad campaign performance analytics tool built with React for visualization and Python for backend processing. This project enables marketers to track key metrics like CTR, conversion rates, and ROI with interactive filters, customizable reports, and live data updates. The architecture balances scalability with simplicity, making it ideal for small to medium adtech teams needing actionable insights without complex infrastructure.  \n\n## Getting Started / Installation  \nClone the repository and navigate to the project directory:  \n```bash  \ngit clone https://github.com/laylaimb/AdInsight-Dashboard.git  \ncd AdInsight-Dashboard  \n```  \nInstall dependencies for both frontend and backend:  \n```bash  \nnpm install  \npip install -r requirements.txt  \n```  \nSet environment variables for the backend API endpoint and MongoDB connection string. Run the Docker containers to ensure consistent development environments:  \n```bash  \ndocker-compose up --build  \n```  \nThe dashboard will be accessible at `http://localhost:3000` after the services are fully initialized.  \n\n## Tech Stack  \n- **Frontend**: React with TypeScript for component-driven UI and state management  \n- **Backend**: Python (Flask) for REST API endpoints and data processing  \n- **Database**: MongoDB (with aggregation pipelines) for storing campaign metadata and performance logs  \n- **Containerization**: Docker for isolated development and deployment of frontend, backend, and database  \n- **Data Flow**: REST APIs handle real-time data synchronization between React components and MongoDB  \n\n## Usage / Examples  \nLaunch the dashboard and log in with a test account (credentials in `config/secrets.json`). Navigate to the \"Campaigns\" tab to filter by ad network, audience segment, or time frame. Use the \"Metrics\" panel to visualize CTR trends with interactive charts. Export filtered data as CSV or PDF via the \"Reports\" section. The dashboard auto-refreshes every 15 seconds to reflect live campaign updates.  \n\n## Badges  \n[![Build Status](https://github.com/laylaimb/AdInsight-Dashboard/actions/workflows/build.yml/badge.svg)](https://github.com/laylaimb/AdInsight-Dashboard/actions/workflows/build.yml)  \n[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/laylaimb/AdInsight-Dashboard/blob/main/LICENSE)  \n\n## Architecture / Design  \nThe frontend is a single-page application with modular React components, decoupled from the backend API. MongoDB stores campaign data in a normalized schema, with indexes optimized for range queries on timestamps and ad network IDs. REST endpoints expose CRUD operations for campaign metadata, while the frontend uses WebSocket subscriptions for real-time metric updates. The Docker setup ensures consistent environments across development, testing, and staging.  \n\n## Contributing  \nEnhance the dashboard by adding features like A/B testing visualization or predictive ROI models. Review open issues for bug fixes or documentation improvements. All contributions must include unit tests for React components and integration tests for API endpoints.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/laylaimb/AdInsight-Dashboard/blob/main/LICENSE) for details."
+  "text": "# QuantBot: Algorithmic Trading Framework  \nA modular system for building and testing reinforcement learning strategies in high-frequency trading environments. Combines historical market data with dynamic model adaptation to optimize trade execution.  \n\n## Badges  \n[![GitHub stars](https://img.shields.io/github/stars/ryan Gallagher/QuantBot?style=social)](https://github.com/ryan Gallagher/QuantBot)  \n[![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/ryan Gallagher/QuantBot/blob/main/LICENSE)  \n\n## Tech Stack  \n- **Python**: Core language for strategy development and execution  \n- **NumPy**: Efficient numerical operations for feature normalization and signal generation  \n- **Pandas**: Data wrangling for historical OHLCV data and position tracking  \n- **SQL**: Aggregation and schema design for tick-level market data pipelines  \n- **scikit-learn**: Baseline models for predictive feature engineering  \n- **Time Series Analysis**: Rolling window calculations and drift detection for strategy validation  \n\n## Configuration  \nSet environment variables for data sources (e.g., PostgreSQL endpoints) and model parameters (e.g., learning rate, reward scaling). Example config:  \n```bash  \nexport DATA_SOURCE=\"localhost:5432/trading_db\"  \nexport RL_MODEL=\"dqn\"  \nexport TRAINING_WINDOW=\"30D\"  \n```  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/ryan Gallagher/QuantBot.git`  \n2. Install dependencies:  \n```bash  \npip install -r requirements.txt  \n```  \n3. Initialize database connections via `config/database.py`  \n\n## Usage / Examples  \nRun a simple momentum strategy:  \n```python  \nfrom quantbot.strategies.momentum import MomentumStrategy  \nstrategy = MomentumStrategy(symbol=\"AAPL\", window=20)  \nstrategy.backtest(start_date=\"2022-01-01\", end_date=\"2023-01-01\")  \n```  \nFor reinforcement learning:  \n```python  \nfrom quantbot.rl.agent import DQNAgent  \nagent = DQNAgent(state_size=10, action_size=3)  \nagent.train(data_path=\"data/historical.csv\", episodes=100)  \n```  \n\n## Testing  \nUnit tests validate data pipelines and model outputs. Integration tests simulate live market conditions using mock data. Coverage metrics track code reliability.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/ryan Gallagher/QuantBot/blob/main/LICENSE) for details."
 }

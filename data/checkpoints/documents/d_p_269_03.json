@@ -1,25 +1,23 @@
 {
   "doc_id": "d_p_269_03",
-  "type": "project_readme",
+  "type": "linkedin",
   "persona_id": "p_269",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "solo",
-    "jargon_density": "moderate"
+    "linkedin_completeness": "detailed"
   },
   "skill_evidence": {
-    "A/B testing": 3,
-    "Agile/Scrum": 4,
-    "Competitive analysis": 1,
-    "Data visualization": 3,
-    "SQL analytics": 3,
-    "Hypothesis testing": 3,
-    "Roadmap planning": 3,
-    "Stakeholder management": 1,
-    "Team leadership": 1,
-    "Tableau/Power BI": 4,
-    "UX research": 2,
-    "Product management": 1
+    "C/C++ (embedded)": 4,
+    "Edge computing": 4,
+    "Firmware development": 4,
+    "Go": 1,
+    "Hardware-software integration": 4,
+    "IoT protocols (MQTT/CoAP)": 4,
+    "Java": 1,
+    "Network automation": 1,
+    "Python": 3,
+    "REST API design": 3,
+    "RTOS": 3,
+    "Sensor integration": 3
   },
-  "text": "# In-Game Purchase Optimization Strategy  \n\nA data-driven framework to refine monetization tactics in gaming environments through A/B testing, behavioral analysis, and iterative hypothesis validation.  \n\n## Badges  \n[![License](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/MIT)  \n[![Build Status](https://img.shields.io/badge/build-passing-green)](https://github.com/helenpark/igp-strat/actions)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for full text.  \n\n## Tech Stack  \n- **Data Analysis**: SQL, Python (Pandas), Tableau  \n- **Visualization**: Power BI, D3.js  \n- **Workflow**: Git, GitHub Actions, Jira (Scrum)  \n- **Tools**: Google Sheets (for quick prototyping), Figma (UI/UX mockups)  \n\n## Architecture / Design  \nThe strategy is structured as a layered framework:  \n1. **Data Layer**: Aggregates player behavior metrics (session duration, purchase frequency) via SQL queries.  \n2. **Analysis Layer**: Uses Python for statistical modeling and hypothesis testing (e.g., chi-square tests for conversion rate trends).  \n3. **Visualization Layer**: Tableau dashboards track A/B test performance, with drill-down capabilities for cohort analysis.  \n4. **Decision Layer**: Iterative roadmap planning aligns with quarterly KPIs, prioritizing high-impact features like limited-time offers.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/helenpark/igp-strat.git`  \n2. Install dependencies: Python 3.9+, Tableau Desktop, and PostgreSQL for SQL analytics.  \n3. Import sample datasets from the `data` folder to replicate analysis workflows.  \n\n## Usage / Examples  \n- **A/B Testing**: Compare conversion rates between free-to-play and premium models using SQL pivots and Python hypothesis testing.  \n- **Data Visualization**: Use Power BI to map purchase funnel drop-off points, highlighting UI/UX bottlenecks.  \n- **Roadmap Planning**: Jira boards track sprint goals, such as optimizing microtransaction placement based on heatmaps.  \n\n## Contributing  \nThis project is a personal initiative; contributions are welcome for documentation improvements or tooling enhancements. For feature requests, open an issue with specific use cases."
+  "text": "Opal Nguyễn 72 is an embedded systems engineer at AdvertiseTech Innovations, specializing in edge computing solutions for real-time ad delivery. With two years of experience in adtech, she focuses on optimizing hardware-software integration to enhance system reliability and performance. Her work on firmware development for edge devices reduced latency by 20% in high-throughput environments, directly improving campaign responsiveness. She leads cross-functional efforts to align hardware capabilities with software requirements, ensuring scalable architectures for next-gen ad platforms.  \n\nA key contributor to IoT protocol implementation, Opal has optimized MQTT/CoAP frameworks to prioritize low-latency data transmission in distributed ad networks. Her expertise in C/C++ underpins critical components of AdvertiseTech’s core systems, enabling robustness in resource-constrained environments. She also designs REST APIs that streamline communication between edge devices and cloud-based analytics tools, facilitating faster decision-making for ad targeting.  \n\nOpal’s Python-based automation scripts have streamlined testing workflows, reducing manual effort in firmware validation. She collaborates closely with hardware teams to refine sensor integration, ensuring precise data capture for ad performance metrics. Her technical depth and focus on measurable outcomes drive innovation in AdvertiseTech’s embedded solutions, supporting scalable, real-time ad delivery across diverse platforms."
 }

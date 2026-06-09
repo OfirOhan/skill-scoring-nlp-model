@@ -1,23 +1,27 @@
 {
   "doc_id": "d_p_002_03",
-  "type": "linkedin",
+  "type": "recommendation",
   "persona_id": "p_002",
   "hyperparams": {
-    "linkedin_completeness": "detailed"
+    "recommender_role": "peer",
+    "recommender_closeness": "worked-daily",
+    "company_type": "startup",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "AWS": 1,
-    "GCP": 1,
-    "Terraform": 1,
-    "Kubernetes": 1,
-    "Docker": 1,
-    "Load balancing": 1,
-    "CDN management": 1,
-    "Python": 1,
+    "ArgoCD": 3,
+    "Bash": 3,
+    "CI/CD pipelines": 4,
+    "GitHub Actions": 3,
+    "Jenkins": 3,
+    "Kubernetes": 4,
+    "Message queues": 1,
+    "Monitoring & alerting": 4,
+    "Network automation": 1,
     "PostgreSQL": 1,
-    "REST API design": 1,
-    "Microservices architecture": 1,
-    "Network troubleshooting": 1
+    "Prometheus/Grafana": 4,
+    "Python": 1,
+    "Redis": 1
   },
-  "text": "Binta Traore is a Platform Engineer at AdvertiseSphere Inc., specializing in building scalable systems for real-time ad delivery. With a focus on optimizing infrastructure for high-volume traffic, she drives performance improvements and ensures seamless integration across platforms.  \n\nA results-oriented professional with 3 years of experience in adtech, Binta excels at aligning technical solutions with business goals. Her work has directly contributed to enhancing campaign efficiency and reducing latency in ad-serving processes. She thrives in dynamic environments, leveraging cross-functional collaboration to deliver robust, scalable systems.  \n\nBinta holds a Bachelor’s Degree in Computer Science from the University of Bamako, complemented by certifications in cloud computing and data management.  \n\nPlatform Engineer | AdvertiseSphere Inc. (2021–Present)  \nDesigned and deployed high-availability systems supporting millions of daily ad requests. Streamlined workflows to improve deployment cycles by 40%, reducing manual intervention. Partnered with data teams to refine targeting algorithms, boosting campaign ROI by 25%.  \n\nTechnical Lead | AdTech Solutions (2018–2021)  \nLed infrastructure upgrades for a real-time bidding platform, achieving 99.9% uptime during peak traffic. Introduced automated monitoring tools to proactively address bottlenecks, cutting resolution times by 30%. Collaborated with product teams to integrate new features, accelerating time-to-market."
+  "text": "Working Relationship  \nSunita and I have collaborated daily on NexaTech’s DevOps initiatives since she joined as a junior engineer. Our synergy stems from shared goals: stabilizing infrastructure, accelerating deployments, and minimizing downtime. She’s a reliable teammate who asks sharp questions and owns tasks without micromanagement.  \n\nDay-to-Day Observations  \nSunita’s routine involves refining CI/CD pipelines with ArgoCD, which she optimized to cut deployment latency by 30% across our microservices. She writes Bash scripts for repetitive tasks, like automating environment syncs, which saved the team 5+ hours weekly. Her Jenkins setups are robust, with clear error-handling that prevents 80% of staging environment hiccups. She’s also mastered Kubernetes, troubleshooting pod crashes and scaling clusters during traffic spikes.  \n\nStandout Moments  \nDuring a critical outage last month, Sunita diagnosed a Prometheus alerting misconfiguration within 15 minutes, restoring visibility across our monitoring dashboards. She also spearheaded a Prometheus-Grafana dashboard overhaul, reducing MTTR for server bottlenecks by 40%. Her proactive approach to refining GitHub Actions workflows slashed redundant steps in our CI/CD process, improving overall reliability.  \n\nRecommendation  \nSunita’s technical rigor and problem-solving mindset are evident in her work. She balances deep dives into complex systems with a knack for simplifying processes. Her reliability and willingness to mentor junior peers make her a standout asset. I’d confidently recommend her for roles demanding both technical precision and collaborative leadership."
 }

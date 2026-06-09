@@ -5,21 +5,25 @@
   "hyperparams": {
     "project_scale": "production",
     "project_team_size": "small (2-4)",
-    "jargon_density": "plain"
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "Design systems": 2,
+    "GraphQL": 2,
+    "Integration testing": 1,
     "JavaScript": 3,
-    "Next.js": 3,
-    "Node.js": 2,
+    "Next.js": 4,
+    "Node.js": 1,
+    "Python": 1,
     "REST API design": 3,
-    "React": 4,
-    "Responsive design": 4,
+    "React": 5,
+    "Responsive design": 5,
     "State management (Redux/Zustand)": 4,
     "Test automation": 2,
-    "TypeScript": 4,
-    "Web accessibility (WCAG)": 2,
-    "Web performance optimization": 2
+    "TypeScript": 5,
+    "Unit testing": 1,
+    "Web accessibility (WCAG)": 4,
+    "Web performance optimization": 5,
+    "Webpack/Vite": 3
   },
-  "text": "# VerveLabs Analytics Dashboard  \nA lightweight, real-time analytics interface for VerveLabs’ internal data workflows. Built to streamline team insights, this dashboard aggregates user behavior, conversion metrics, and system performance across product lines. Designed for rapid iteration and minimal cognitive load, it balances visual clarity with granular data access. The tool is deployed across VerveLabs’ global teams, enabling data-driven decisions without infrastructure overhead.  \n\n## Deployment  \nThe dashboard is hosted on AWS Lambda with API Gateway for serverless scalability, ensuring sub-100ms response times for 99.9% of requests. A Vercel continuous deployment pipeline automates builds and rollbacks, with canary releases for new features. Monitoring is handled via Datadog, tracking error rates and user engagement metrics. The system is architected for zero-downtime updates, with load balancing across three regions.  \n\n## Getting Started / Installation  \n1. Clone the repository using `git clone https://github.com/vervelabs/analytics-dashboard.git`  \n2. Install dependencies with `npm install`  \n3. Set up environment variables for API keys and database credentials  \n4. Run `npm start` to launch the development server locally  \n5. For production, use `npm run build && npm run deploy` to trigger the CI/CD pipeline  \n\n## Usage / Examples  \nThe dashboard’s core functionality revolves around three primary workflows:  \n- **Real-time dashboards**: Users filter data by time range, product module, or user role to view live metrics.  \n- **Export tools**: Raw datasets can be exported to CSV or JSON for external analysis.  \n- **Custom widgets**: Drag-and-drop UI allows teams to create tailored views for their KPIs.  \nFor example, the marketing team uses it to track campaign ROI, while engineering leverages it for system health monitoring.  \n\n## Tech Stack  \n- **Frontend**: React 18 with TypeScript, Zustand for state management, and Chart.js for visualizations  \n- **Backend**: REST APIs built with Node.js and Express, leveraging PostgreSQL for structured data storage  \n- **Design**: Custom CSS modules with media queries for responsive layouts, ensuring compatibility across desktop and mobile interfaces  \n\n## Architecture / Design  \nThe system follows a unidirectional data flow, with React components decoupled from business logic. Zustand is used for global state management, while local state is handled via React Context. The UI is structured into modular components, each responsible for a distinct data visualization or interaction pattern. Performance is optimized through lazy loading and code splitting, with critical paths prioritized for faster initial renders.  \n\n## License  \nMIT License – see [LICENSE](https://github.com/vervelabs/analytics-dashboard/blob/main/LICENSE) for details  \n\n## Badges  \n![Build Status](https://github.com/vervelabs/analytics-dashboard/workflows/CI%20CD%20Pipeline/badge.svg)  \n![Test Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/vervelabs/1234567890abcdef1234567890abcdef/raw/coverage.json)  \n![Bundle Size](https://img.shields.io/bundlephobia/minzip/vervelabs/analytics-dashboard)"
+  "text": "# Secure Payment Gateway UI  \nA production-ready frontend solution for fintech payment processing, engineered to meet PCI-DSS standards while delivering sub-200ms load times and 99.95% uptime in live environments.  \n\n## Deployment  \nDeployed via Vercel with zero-downtime rollouts, leveraging Next.js 13's App Router for server components and static exports. Monitoring integrates Datadog for real-time error tracking (0.3% error rate) and New Relic for latency analysis (avg 145ms).  \n\n## Getting Started / Installation  \n1. `npm install` to fetch dependencies  \n2. Configure `.env.local` with environment variables for API endpoints and security tokens  \n3. Run `npm run build && npm start` for production-ready distribution  \n\n## Usage / Examples  \n- **Payment Form**: Rendered as a server component with client-side hydration, supporting 3D Secure 2.0 integration  \n- **Card Input**: Utilizes React hooks for real-time validation, with 100% WCAG AA compliance  \n- **Transaction Summary**: State managed via Zustand, with 50ms+ response time improvements through memoization  \n\n## Tech Stack  \n- **Framework**: Next.js 13 (App Router, Server Components)  \n- **TypeScript**: Enforced type safety across 85%+ of components  \n- **State Management**: Zustand for global state with 30% faster reconciliation than Redux  \n- **Styling**: Tailwind CSS with custom config for financial UI tokens  \n- **Build Tools**: Webpack 5 for code splitting, reducing bundle size by 28%  \n\n## Architecture / Design  \n- **Component Architecture**: Modular, 12-factor compliant, with 95%+ test coverage (excluding integration tests)  \n- **Responsive Design**: CSS Grid/ Flexbox for 100% viewport compatibility, validated via Lighthouse  \n- **Security**: PCI-DSS-compliant input sanitization, 256-bit AES encryption for sensitive data  \n- **Performance**: Lazy-loaded components, 70% faster initial load times via code splitting  \n\n## License  \nMIT License — see [LICENSE](LICENSE) for details  \n\n## Badges  \n![Version](https://img.shields.io/npm/v/@secure-gateway/ui)  \n![Build Status](https://img.shields.io/github/actions/workflow/secure-gateway-ui/main.yml)  \n![Coverage](https://img.shields.io/coveralls/secure-gateway-ui)"
 }

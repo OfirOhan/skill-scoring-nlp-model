@@ -1,0 +1,23 @@
+{
+  "doc_id": "d_p_160_03",
+  "type": "project_readme",
+  "persona_id": "p_160",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "A/B testing": 1,
+    "MLOps (MLflow/W&B)": 2,
+    "NumPy": 4,
+    "Pandas": 4,
+    "REST API design": 1,
+    "SQL analytics": 2,
+    "Tableau/Power BI": 1,
+    "TensorFlow": 4,
+    "Time series analysis": 5,
+    "scikit-learn": 3
+  },
+  "text": "# QuantStrat: High-Frequency Trading Strategy Backtesting  \n\nQuantStrat is a production-grade framework for optimizing algorithmic trading strategies using historical market data. Built with a focus on time series analysis, it enables robust backtesting, parameter tuning, and performance evaluation of high-frequency trading (HFT) strategies. The system leverages NumPy for numerical stability, Pandas for efficient data manipulation, and TensorFlow for scalable model training. Designed for fintech applications, it balances speed, accuracy, and flexibility in complex market environments.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/commit-activity/y/aditi-kapoor/quantstrat)](https://github.com/aditi-kapoor/quantstrat/commits/main)  \n[![Build Status](https://img.shields.io/github/actions/workflow/ci/quantstrat/main.yml)](https://github.com/aditi-kapoor/quantstrat/actions/workflow)  \n[![Coverage](https://img.shields.io/coveralls/aditi-kapoor/quantstrat)](https://coveralls.io/github/aditi-kapoor/quantstrat)  \n[![License](https://img.shields.io/github/license/aditi-kapoor/quantstrat)](https://github.com/aditi-kapoor/quantstrat/blob/main/LICENSE)  \n\n## Getting Started / Installation  \nInstall via pip:  \n```bash  \npip install -e git+https://github.com/aditi-kapoor/quantstrat.git#egg=quantstrat  \n```  \nEnsure Python 3.9+ is installed. For production use, set up a virtual environment and install dependencies listed in `requirements.txt`. Historical data ingestion requires access to a supported dataset (e.g., Yahoo Finance, Alpha Vantage) or a custom CSV format.  \n\n## Tech Stack  \n- **Core Libraries**: NumPy (numerical operations), Pandas (data pipeline), TensorFlow (strategy optimization)  \n- **MLOps**: MLflow (experiment tracking), Weights & Biases (monitoring)  \n- **Data**: SQL analytics (schema design), scikit-learn (feature engineering)  \n- **Infrastructure**: Docker (containerization), CI/CD (GitHub Actions)  \n\n## Architecture / Design  \nQuantStrat adopts a modular architecture with three primary layers:  \n1. **Data Ingestion**: Processes raw market data into time-series-ready arrays using Pandas and NumPy.  \n2. **Strategy Logic**: Implements custom HFT rules (e.g., moving average crossovers) via TensorFlow for parallelizable computations.  \n3. **Backtesting Engine**: Evaluates strategy performance using Monte Carlo simulations and statistical risk metrics.  \n\nThe design prioritizes low-latency execution and scalability, with caching layers for frequently accessed data. Time-series alignment and drift correction are handled via custom Pandas UDFs.  \n\n## Usage / Examples  \n```python  \nfrom quantstrat.strategy import Strategy  \ndata = pd.read_csv(\"historical_data.csv\", parse_dates=[\"timestamp\"])  \nstrategy = Strategy(\"hma_crossover\", data, lookback=50)  \nresults = strategy.backtest()  \nprint(results.metrics)  \n```  \nThis example demonstrates a simple HMA (Hurst-Markov Adaptive) crossover strategy. For production, integrate with MLflow to log hyperparameters and track performance across iterations.  \n\n## Testing  \nUnit tests for core components (e.g., data loaders, strategy evaluators) are written in pytest. Integration tests validate end-to-end backtesting pipelines, ensuring alignment with historical data. Test coverage exceeds 90%, with continuous integration enforced via GitHub Actions.  \n\n## License  \nMIT License – see [LICENSE](https://github.com/aditi-kapoor/quantstrat/blob/main/LICENSE) for details."
+}

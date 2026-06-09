@@ -1,25 +1,23 @@
 {
   "doc_id": "d_p_287_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_287",
   "hyperparams": {
-    "recommender_role": "direct-manager",
-    "recommender_closeness": "worked-daily",
-    "company_type": "enterprise",
-    "company_size": "mid (50-500)"
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
     "AWS": 3,
-    "CI/CD pipelines": 3,
-    "Docker": 2,
-    "Go": 4,
-    "Kubernetes": 4,
-    "Microservices architecture": 5,
-    "PostgreSQL": 3,
-    "Python": 3,
-    "REST API design": 4,
-    "Redis": 3,
+    "GCP": 1,
+    "Infrastructure as Code": 4,
+    "Kubernetes": 3,
+    "Network automation": 1,
+    "PostgreSQL": 1,
+    "Python": 1,
+    "REST API design": 2,
+    "Serverless": 3,
     "Terraform": 4
   },
-  "text": "Academic Context  \nAndre’s work at CyberShield Technologies aligns with rigorous technical standards, blending theoretical cybersecurity principles with practical enterprise solutions. His role as a Staff Backend Engineer demands a deep understanding of system architecture, and he consistently applies this knowledge to design resilient, secure infrastructures. His contributions to microservices architecture have streamlined our platform’s scalability, reducing deployment latency by 25% across critical modules.  \n\nResearch Ability  \nAndre’s ability to dissect complex problems is evident in his ownership of a Kubernetes migration project. By rearchitecting our monolithic systems into containerized microservices, he improved fault tolerance and resource utilization, directly supporting our compliance with SOC2 standards. His Python-based automation scripts for CI/CD pipelines have cut deployment errors by 40%, reflecting a knack for turning abstract challenges into measurable outcomes.  \n\nCharacter  \nAndre’s work ethic is defined by reliability and curiosity. He mentors junior engineers on Go best practices, fostering a culture of precision in code reviews. His dedication to security protocols—such as implementing Redis-based caching layers to protect sensitive data—demonstrates a commitment to both technical excellence and ethical responsibility.  \n\nPotential  \nAndre’s strategic mindset and technical breadth position him to lead high-impact projects. His Terraform expertise in provisioning AWS environments has saved weeks of manual configuration, and his REST API designs underpin our core security tools. With a focus on continuous improvement, he is poised to drive innovation in next-gen cybersecurity solutions."
+  "text": "# NexaFlow - Microservices Orchestration Platform  \nNexaFlow simplifies microservices deployment pipelines by abstracting infrastructure provisioning, service discovery, and dynamic scaling. Built for internal use at NexaScale, it enables teams to iterate on distributed systems without friction.  \n\n## Getting Started / Installation  \nClone the repository via SSH:  \n```bash  \ngit clone git@github.com:NexaScale/nexaflow.git  \n```  \nInstall dependencies: Docker (20.10+), Helm (3.8+), and AWS CLI.  \nRun `./setup.sh` to initialize Terraform modules for VPC and EKS cluster.  \nFor local testing, use `docker compose up` to spin up a mock control plane.  \n\n## Tech Stack  \n- **Cloud**: AWS EC2, S3, and Lambda for serverless task execution  \n- **Orchestration**: Kubernetes (1.25) with Helm for service manifests  \n- **IaC**: Terraform (1.5) with state locking for production infrastructure  \n- **API**: REST endpoints for deployment triggers (see `/api/v1/docs`)  \n- **Networking**: AWS VPC with NAT gateways for hybrid workloads  \n\n## Usage / Examples  \nDeploy a service:  \n```bash  \ncurl -X POST https://api.nexaflow.dev/v1/deploy \\\n  -H \"Authorization: Bearer <token>\" \\\n  -d '{\"service\": \"user-service\", \"replicas\": 3}'  \n```  \nMonitor progress via the `/api/v1/jobs` endpoint.  \nFor infrastructure changes, apply Terraform modules in `terraform/production`.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/last-commit/NexaScale/nexaflow)](https://github.com/NexaScale/nexaflow/commits/main)  \n[![CI/CD](https://img.shields.io/github/actions/workflow/status/NexaScale/nexaflow/ci.yml)](https://github.com/NexaScale/nexaflow/actions/workflow)  \n[![Size](https://img.shields.io/github/repo-size/NexaScale/nexaflow)](https://github.com/NexaScale/nexaflow)  \n\n## Architecture / Design  \nNexaFlow operates as a control plane with worker nodes managed by Kubernetes. The core components include:  \n- **Deployment Manager**: REST API for service provisioning  \n- **State Store**: DynamoDB-backed for job tracking  \n- **Worker Orchestrator**: AWS Lambda functions for async task execution  \n- **Network Policy**: Terraform-managed security groups for microservice isolation  \n\n## Contributing  \nPull requests are welcome. For significant changes, open an issue first.  \nCode reviews are required for Terraform modules and API endpoints.  \nDocumentation updates are prioritized for internal tooling guides.  \n\n## License  \nMIT License (see [LICENSE](LICENSE) for details)"
 }

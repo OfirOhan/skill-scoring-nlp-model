@@ -1,59 +1,60 @@
 {
   "persona_id": "p_098",
   "hyperparams": {
-    "archetype": "tech_lead_architect",
-    "years_experience": 0,
-    "seniority": "junior",
-    "industry": "fintech",
-    "writing_style": "neutral",
-    "language_fluency": "native",
+    "archetype": "data_scientist",
+    "years_experience": 14,
+    "seniority": "staff",
+    "industry": "SaaS",
+    "writing_style": "modest",
+    "language_fluency": "near-native",
     "self_promotion_level": "boastful",
-    "quantification_tendency": "mixed"
+    "quantification_tendency": "metrics-heavy"
   },
-  "name": "Franco Moretti",
-  "current_role": "Tech Lead / Architect",
-  "company": "NexaPay Solutions",
+  "name": "Tara Singh",
+  "current_role": "Staff Data Scientist",
+  "company": "NexaCorp",
   "education": {
-    "degree": "Computer Science",
-    "university": "Politecnico di Milano",
-    "year": 2023
+    "degree": "Master of Science in Data Science",
+    "university": "University of California, Berkeley",
+    "year": 2015
   },
   "career_trajectory": [
     {
-      "year": 2022,
-      "position": "Software Engineer Intern",
-      "company": "FinTech Innovations Inc."
+      "year": 2010,
+      "role": "Data Analyst",
+      "company": "TechNova Solutions"
     },
     {
-      "year": 2023,
-      "position": "Junior Developer",
-      "company": "NexaPay Solutions"
+      "year": 2013,
+      "role": "Data Scientist",
+      "company": "CloudMetrics Inc."
     },
     {
-      "year": 2024,
-      "position": "Tech Lead / Architect",
-      "company": "NexaPay Solutions"
+      "year": 2016,
+      "role": "Senior Data Scientist",
+      "company": "AnalyticsEdge Ltd."
+    },
+    {
+      "year": 2020,
+      "role": "Staff Data Scientist",
+      "company": "NexaCorp"
     }
   ],
   "skills": {
-    "System design": 3,
-    "Agile/Scrum": 3,
-    "Cross-team collaboration": 3,
-    "Stakeholder communication": 3,
-    "Technical writing": 3,
-    "REST API design": 3,
+    "scikit-learn": 4,
+    "TensorFlow": 4,
+    "MLOps (MLflow/W&B)": 5,
+    "A/B testing": 4,
     "Python": 3,
-    "AWS": 3,
-    "Kubernetes": 2,
-    "CI/CD pipelines": 2,
-    "GitHub Actions": 2,
-    "Prometheus/Grafana": 2,
-    "Linux administration": 2,
-    "PostgreSQL": 2
+    "REST API design": 2,
+    "Apache Airflow": 2,
+    "Data warehousing": 1
   },
   "document_ids": [
     "d_p_098_00",
     "d_p_098_01",
-    "d_p_098_02"
+    "d_p_098_02",
+    "d_p_098_03",
+    "d_p_098_04"
   ]
 }

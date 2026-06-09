@@ -1,39 +1,63 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Senior Security Engineer with 5 years of experience in fintech, specializing in secure financial systems and threat mitigation.",
-    "title": "Kamila Szymanska - Senior Security Engineer",
+    "topic_summary": "A professional CV highlighting 10 years of experience as a Senior ML Engineer in cybersecurity, specializing in threat intelligence automation.",
+    "title": "Mateo Garcia - Senior ML Engineer - Threat Intelligence Automation",
     "doc_id": "d_p_125_00",
     "persona_id": "p_125",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
+      "cv_format": "paragraph",
       "geographic_convention": "Israel",
       "company_type": "startup",
-      "company_size": "small (<50)"
+      "company_size": "large (500+)"
     }
   },
   {
-    "doc_type": "blog",
-    "topic_summary": "Exploring advanced encryption techniques for protecting customer data in fintech platforms.",
-    "title": "Securing Customer Data in Fintech: Modern Encryption Strategies",
+    "doc_type": "project_readme",
+    "topic_summary": "A GitHub README for an automated threat intelligence pipeline using ML models to detect and prioritize cyber threats.",
+    "title": "ThreatIntelAuto: Automated Threat Intelligence Pipeline",
     "doc_id": "d_p_125_01",
     "persona_id": "p_125",
     "hyperparams": {
-      "blog_depth": "opinion-piece",
+      "project_scale": "production",
+      "project_team_size": "medium (5-15)",
       "jargon_density": "heavy"
     }
   },
   {
-    "doc_type": "recommendation",
-    "topic_summary": "Endorsement of Kamila's leadership in designing secure payment gateways and her expertise in regulatory compliance.",
-    "title": "Recommendation for Kamila Szymanska \u2013 Senior Security Engineer",
+    "doc_type": "project_readme",
+    "topic_summary": "A README for a real-time network anomaly detection system leveraging PyTorch and cybersecurity datasets.",
+    "title": "AnomalyDetector: Real-Time Network Anomaly Detection",
     "doc_id": "d_p_125_02",
     "persona_id": "p_125",
     "hyperparams": {
+      "project_scale": "academic",
+      "project_team_size": "solo",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation from a manager praising Mateo's leadership in building scalable ML solutions for threat detection.",
+    "title": "Recommendation from Director of Engineering, Sentinel Cybersecurity Solutions",
+    "doc_id": "d_p_125_03",
+    "persona_id": "p_125",
+    "hyperparams": {
       "recommender_role": "peer",
-      "recommender_closeness": "worked-daily",
-      "company_type": "FAANG",
+      "recommender_closeness": "brief",
+      "company_type": "startup",
       "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post discussing the integration of ML in real-time threat detection systems for cybersecurity.",
+    "title": "Advancing Cybersecurity with Machine Learning: Strategies and Tools",
+    "doc_id": "d_p_125_04",
+    "persona_id": "p_125",
+    "hyperparams": {
+      "blog_depth": "tutorial",
+      "jargon_density": "plain"
     }
   }
 ]

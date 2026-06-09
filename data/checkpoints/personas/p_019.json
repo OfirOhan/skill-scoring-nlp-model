@@ -1,57 +1,61 @@
 {
   "persona_id": "p_019",
   "hyperparams": {
-    "archetype": "qa_test_engineer",
-    "years_experience": 5,
-    "seniority": "mid",
-    "industry": "gaming",
-    "writing_style": "neutral",
+    "archetype": "data_engineer",
+    "years_experience": 2,
+    "seniority": "junior",
+    "industry": "startup",
+    "writing_style": "verbose",
     "language_fluency": "near-native",
-    "self_promotion_level": "boastful",
-    "quantification_tendency": "mixed"
+    "self_promotion_level": "balanced",
+    "quantification_tendency": "metrics-heavy"
   },
-  "name": "Marcus Johnson",
-  "current_role": "Senior QA Test Engineer",
-  "company": "Lumina Games",
+  "name": "Wenjun Li",
+  "current_role": "Data Engineer",
+  "company": "NexaTech Solutions",
   "education": {
-    "degree": "Bachelor of Science in Software Engineering",
-    "university": "University of Southern California",
-    "year": 2019
+    "degree": "BSc in Computer Science",
+    "university": "University of California, Irvine",
+    "year": 2021
   },
   "career_trajectory": [
     {
-      "role": "QA Tester",
-      "company": "Nova Interactive",
-      "duration": "2 years",
-      "responsibilities": "Manual testing of mobile games, bug tracking, and basic automation scripting"
+      "role": "Data Intern",
+      "company": "StellarAI Startups",
+      "duration": "6 months",
+      "responsibilities": "Assisted in ETL pipeline development using Apache Spark and PostgreSQL, performed basic data quality checks"
     },
     {
-      "role": "QA Engineer",
-      "company": "Vortex Studios",
-      "duration": "2 years",
-      "responsibilities": "Developed Selenium test suites for web-based game tools, collaborated on test strategy design"
+      "role": "Data Engineering Intern",
+      "company": "NexaTech Solutions",
+      "duration": "6 months",
+      "responsibilities": "Supported cloud infrastructure setup on AWS, contributed to Snowflake data warehousing architecture"
     },
     {
-      "role": "QA Lead",
-      "company": "Lumina Games",
-      "duration": "1 year",
-      "responsibilities": "Oversaw API testing for multiplayer game servers, integrated JMeter for performance validation"
+      "role": "Junior Data Engineer",
+      "company": "NexaTech Solutions",
+      "duration": "12 months",
+      "responsibilities": "Designed and deployed ETL pipelines, optimized PostgreSQL queries, managed Kafka stream processing"
     }
   ],
   "skills": {
-    "Test automation": 3,
-    "Selenium/Playwright": 3,
-    "Unit testing": 3,
-    "Integration testing": 3,
-    "Performance testing (JMeter/k6)": 3,
-    "API testing": 3,
-    "Python": 4,
+    "Apache Spark": 4,
+    "Apache Kafka": 3,
+    "Apache Airflow": 3,
+    "dbt": 4,
+    "ETL pipeline design": 3,
+    "Data warehousing": 3,
+    "Snowflake": 4,
+    "Databricks": 3,
+    "Python": 3,
     "Java": 2,
-    "Go": 3,
+    "Go": 1,
+    "Node.js": 2,
     "REST API design": 3,
-    "CI/CD pipelines": 3
+    "Docker": 3
   },
   "document_ids": [
-    "d_p_019_00"
+    "d_p_019_00",
+    "d_p_019_01"
   ]
 }

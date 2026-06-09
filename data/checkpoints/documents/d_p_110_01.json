@@ -3,22 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_110",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "plain"
+    "project_scale": "team-internal",
+    "project_team_size": "large (15+)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "3D graphics (OpenGL/Vulkan)": 3,
-    "C#/.NET": 1,
-    "Game networking": 4,
-    "Game physics": 3,
-    "GraphQL": 1,
-    "Microservices architecture": 1,
+    "3D graphics (OpenGL/Vulkan)": 2,
+    "C#/.NET": 3,
+    "Game networking": 3,
+    "Game physics": 4,
     "Python": 1,
-    "REST API design": 1,
-    "Team Collaboration": 1,
-    "Unity": 1,
-    "Unreal Engine": 4
+    "REST API design": 3,
+    "React": 1,
+    "TypeScript": 1,
+    "Unity": 4,
+    "Unreal Engine": 1
   },
-  "text": "# NexGen Optimizer Framework  \nA cross-platform game optimization toolkit built for Unreal Engine, designed to reduce latency, improve resource utilization, and scale performance across diverse hardware configurations. This framework enables developers to quantify and isolate bottlenecks in rendering pipelines, physics simulations, and networked multiplayer sessions. Real-world applications have demonstrated up to 37% reduction in CPU overhead and 22% improvement in frame pacing under stress scenarios.  \n\n## Configuration  \nThe framework operates through a hierarchical configuration model, with environment variables (`NEXGEN_RENDER_TIER`, `NEXGEN_NETWORK_LATENCY_TOLERANCE`) and a `Config/Profile.ini` file defining platform-specific tuning. Key parameters include:  \n- **Rendering Tier**: 0–3 (controls draw call batching, texture streaming, and shader complexity)  \n- **Physics Thread Count**: 1–8 (optimized for multi-core CPUs with 16+ threads)  \n- **Network Latency Tolerance**: 10–100ms (dynamic adjustment of prediction intervals)  \n- **Vulkan/Swapchain Sync**: Enabled by default for 120+ FPS targets; disable for legacy DX11 fallbacks  \n\n## Getting Started / Installation  \n1. Clone the repository using `git clone https://github.com/your-username/nexgen-optimizer.git`  \n2. Ensure Unreal Engine 5.2+ is installed with the latest LTS C++ toolchain  \n3. Navigate to `Plugins/NexGenOptimizer` and enable the plugin in Project Settings  \n4. Rebuild the engine with `./GenerateProjectFiles.sh` and `UE5Editor.sh`  \n5. Deploy configuration profiles to `Config/Profile.ini` for target platforms  \n\n## Usage / Examples  \nTo optimize a multiplayer session:  \n```cpp  \n// Enable predictive networking with 50ms tolerance  \nNexGenNetwork::SetLatencyTolerance(50);  \nNexGenPhysics::SetThreadCount(FPlatformMisc::NumPhysicalCores());  \n```  \nFor Vulkan rendering optimization:  \n```cpp  \n// Enable swapchain synchronization for 120Hz displays  \nNexGenRender::SetVulkanSync(true);  \nNexGenRender::SetTextureStreamingTier(2);  \n```  \nExample metrics: 48% reduction in GPU stalls on RTX 3090 with Vulkan tier 3.  \n\n## Tech Stack  \n- **Primary Language**: C++ (17+) with Unreal Engine Blueprints integration  \n- **Rendering**: Vulkan (DX12 fallback), OpenGL 4.6, and Unreal's RHI abstraction  \n- **Physics**: Chaos Physics Engine with custom collision pruning algorithms  \n- **Networking**: Custom UDP-based prediction with server-side reconciliation  \n\n## Architecture / Design  \nThe framework is modular, with decoupled systems for rendering, physics, and networking. Core components include:  \n- **Optimization Manager**: Central hub for resource allocation and bottleneck detection  \n- **Latency Profiler**: Real-time tracking of network, CPU, and GPU metrics  \n- **Cross-Platform Abstraction Layer**: Unified API for Vulkan, OpenGL, and DX12  \n- **Dynamic Tiering System**: Auto-selects hardware-optimized settings at runtime  \n\n## License  \nMIT License (see `LICENSE` for details)  \n\n## Badges  \n[![Unreal Engine 5.2](https://img.shields.io/badge/UE5.2-0078D7?style=flat)](https://www.unrealengine.com) [![C++ 17](https://img.shields.io/badge/C++17-0078D7?style=flat)](https://en.cppreference.com)"
+  "text": "# QuestCraft: SaaS-Integrated Game Development Toolkit  \n\nQuestCraft is a modular toolkit designed to streamline game development by embedding scalable SaaS infrastructure into core workflows. Built for indie developers and small studios, it abstracts backend complexity while maintaining full control over gameplay logic and asset pipelines. The tool emphasizes asynchronous multiplayer synchronization, physics-driven interactions, and RESTful service integration, enabling rapid iteration without compromising system stability.  \n\n## Badges  \n[![GitHub Actions](https://img.shields.io/github/actions/workflow.com/username/repo/main?branch=main)](https://github.com/username/repo/actions)  \n[![Code Coverage](https://img.shields.io/coveralls/username/repo/main)](https://coveralls.io/github/username/repo)  \n[![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/username/repo/blob/main/LICENSE)  \n\n## Getting Started / Installation  \nClone the repository and initialize the backend services using `docker-compose up -d`. The frontend components require a local Unity project with the provided SDK module imported. Ensure all game objects are tagged with `NetworkedEntity` and physics colliders are configured for server-authoritative updates.  \n\n## Tech Stack  \n- **Backend**: C#/.NET 6, REST APIs with OpenAPI spec, Redis for session state  \n- **Game Engine**: Unity 2021.3 (with ECS optimizations)  \n- **Networking**: Custom UDP-based sync layer with interpolation  \n- **Physics**: PhysX 4.1 (with custom constraint solvers for ragdoll stability)  \n- **3D Graphics**: Vulkan-based rendering via Unity's High Definition Render Pipeline (HDRP)  \n\n## Architecture / Design  \nThe toolkit employs a layered architecture: a core service layer handles SaaS integration, while a game logic layer manages local and remote state. All physics calculations are offloaded to deterministic simulations running on the server, with client predictions validated via delta compression. REST endpoints expose analytics and player progression data for third-party tools.  \n\n## Usage / Examples  \nTo enable multiplayer, attach the `NetworkedEntity` script to a GameObject and define `OnServerUpdate` logic. For physics, use the `PhysicsConstraint` component to link rigidbodies with custom solver parameters. Example:  \n```csharp  \npublic class PlayerMovement : NetworkedEntity  \n{  \n    void Update() {  \n        if (IsServer) {  \n            transform.position += InputManager.GetAxis() * Time.deltaTime * 5f;  \n        }  \n    }  \n}  \n```  \n\n## Testing  \nUnit tests for core systems (e.g., delta compression, constraint resolution) are written in MSTest. Integration tests validate network latency tolerance and physics consistency across 10+ client sessions. All tests run via GitHub Actions with coverage reporting enabled.  \n\n## License  \nMIT License — see [LICENSE](https://github.com/username/repo/blob/main/LICENSE) for details."
 }

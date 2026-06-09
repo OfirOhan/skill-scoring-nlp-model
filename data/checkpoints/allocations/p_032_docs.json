@@ -1,27 +1,63 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A concise CV highlighting Nadia Khoury's experience as a Data Engineer in healthtech, focusing on data pipeline development and healthcare analytics.",
-    "title": "Nadia Khoury - Data Engineer CV",
+    "topic_summary": "A professional CV highlighting Kunal Bhatt's 9 years of experience as a Senior Machine Learning Engineer in e-commerce.",
+    "title": "Kunal Bhatt - Senior Machine Learning Engineer",
     "doc_id": "d_p_032_00",
     "persona_id": "p_032",
     "hyperparams": {
-      "cv_format": "minimal",
-      "geographic_convention": "India",
-      "company_type": "enterprise",
+      "cv_format": "bullet-heavy",
+      "geographic_convention": "Israel",
+      "company_type": "startup",
       "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A GitHub README for a project streamlining healthcare data processing pipelines using Python and cloud infrastructure.",
-    "title": "HealthDataPipeline",
+    "topic_summary": "A machine learning project to build a recommendation system for personalized product suggestions in e-commerce.",
+    "title": "EcomTech Product Recommendation System",
     "doc_id": "d_p_032_01",
     "persona_id": "p_032",
     "hyperparams": {
       "project_scale": "team-internal",
-      "project_team_size": "large (15+)",
+      "project_team_size": "medium (5-15)",
       "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A project focusing on predicting inventory demand using time series analysis and deep learning techniques.",
+    "title": "Inventory Demand Forecasting with Time Series Models",
+    "doc_id": "d_p_032_02",
+    "persona_id": "p_032",
+    "hyperparams": {
+      "project_scale": "production",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation from a manager praising Kunal's leadership in developing ML solutions that increased customer engagement by 30%.",
+    "title": "Recommendation from EcomTech Solutions Manager",
+    "doc_id": "d_p_032_03",
+    "persona_id": "p_032",
+    "hyperparams": {
+      "recommender_role": "direct-manager",
+      "recommender_closeness": "occasional",
+      "company_type": "startup",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post discussing strategies for scaling ML models to handle high-volume e-commerce data efficiently.",
+    "title": "Optimizing Large-Scale ML Pipelines for E-commerce",
+    "doc_id": "d_p_032_04",
+    "persona_id": "p_032",
+    "hyperparams": {
+      "blog_depth": "opinion-piece",
+      "jargon_density": "moderate"
     }
   }
 ]

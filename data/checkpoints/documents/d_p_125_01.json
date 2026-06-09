@@ -1,24 +1,27 @@
 {
   "doc_id": "d_p_125_01",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_125",
   "hyperparams": {
-    "blog_depth": "opinion-piece",
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
     "AWS": 2,
-    "Application security (OWASP)": 3,
-    "Compliance (SOC2/GDPR)": 3,
-    "Encryption & PKI": 3,
-    "Firewall configuration": 1,
-    "IAM/Access control": 2,
-    "Monitoring & alerting": 1,
-    "Network automation": 1,
-    "Network security": 1,
-    "Penetration testing": 1,
-    "Security auditing": 1,
-    "Terraform": 1
+    "Apache Kafka": 2,
+    "Apache Spark": 1,
+    "Docker": 3,
+    "Hugging Face Transformers": 4,
+    "Kubernetes": 1,
+    "LLMs/Prompt engineering": 3,
+    "MLOps (MLflow/W&B)": 4,
+    "Model deployment": 3,
+    "NLP": 4,
+    "PyTorch": 3,
+    "REST API design": 1,
+    "TensorFlow": 1,
+    "scikit-learn": 4
   },
-  "text": "**Securing Customer Data in Fintech: Modern Encryption Strategies**  \n\nFintech platforms handle sensitive financial data, from biometric identifiers to transaction histories. A single breach isn’t just a technical failure—it’s a reputational and regulatory catastrophe. In 2023, 68% of fintech breaches involved unencrypted data at rest, per the Ponemon Institute. Legacy encryption methods, while once sufficient, now face quantum computing threats and evolving attack vectors.  \n\n**Problem Statement**  \nTraditional symmetric encryption (e.g., AES-256) remains foundational, but its static keys are vulnerable to side-channel attacks. Asymmetric schemes like RSA-2048 face increasing decryption feasibility with GPU-powered attacks. Fintech systems must now balance real-time performance with forward secrecy, while complying with SOC2 and GDPR mandates that demand encryption at rest, in transit, and for archival data.  \n\n**Setup**  \nDeploy a hybrid encryption framework combining AES-256-GCM for data at rest and RSA-OAEP for key exchange. Use AWS KMS for key management, leveraging its hardware security modules (HSMs) to enforce access controls via IAM policies. Ensure all data in transit uses TLS 1.3 with perfect forward secrecy (PFS). Pre-validate compliance with GDPR’s Article 30 and SOC2’s security objectives.  \n\n**Step-by-Step Guide**  \n1. **Key Generation**: Generate ephemeral RSA-2048 keys via AWS KMS, storing private keys in HSMs and exporting public keys for client-side encryption.  \n2. **Data Encryption**: Encrypt sensitive fields (e.g., PAN, CVV) using AES-256-GCM, deriving keys via KDFs (PBKDF2 with 100,000 iterations).  \n3. **Secure Transmission**: Wrap AES keys with RSA-OAEP and transmit over TLS 1.3, ensuring session keys are discarded post-connection.  \n4. **Key Rotation**: Automate key rotation every 90 days via KMS, logging all access attempts to audit trails.  \n5. **Compliance Checks**: Validate encryption metadata against SOC2’s “Security” trust service criterion and GDPR’s data minimization principle.  \n\n**Results**  \nPost-implementation, breach risk dropped by 98% compared to legacy systems. TLS 1.3 reduced handshake latency by 35%, while AES-256-GCM maintained <1ms encryption overhead per 1KB payload. SOC2 audits confirmed compliance with encryption controls, and GDPR data protection impact assessments flagged zero non-compliance.  \n\n**Conclusion**  \nModern fintech security demands encryption that’s both resilient and scalable. By integrating hybrid schemes with cloud-native key management, we mitigate quantum threats without sacrificing performance. Prioritize compliance as a design constraint, not an afterthought.  \n\n**Further Reading**  \n- NIST SP 800-133: “Applications Using Password-Based Cryptography”  \n- OWASP ASVS v4.0: “Encryption Requirements for Application Security”  \n- AWS KMS Best Practices: https://docs.aws.amazon.com/kms/latest/developerguide/ (mention once in passing)"
+  "text": "# ThreatIntelAuto: Automated Threat Intelligence Pipeline  \nA production-grade system leveraging ML to detect, prioritize, and contextualize cyber threats with minimal human intervention. Built for medium-sized teams, this pipeline integrates NLP, LLMs, and model serving frameworks to reduce false positives by 30% in early testing.  \n\n## Configuration  \nConfigure via `config.yaml` and environment variables. Key settings include:  \n- `MODEL_PROVIDER`: Hugging Face model hub or local PyTorch model path  \n- `AWS_S3_BUCKET`: For storing threat intelligence feeds and model artifacts  \n- `PROMPT_ENGINEERING`: Enable/disable custom LLM-based threat contextualization  \n- `MLFLOW_TRACKING_URI`: Enable experiment logging for model versioning  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/your-username/ThreatIntelAuto.git  \ncd ThreatIntelAuto  \npip install -r requirements.txt  \ndocker-compose up -d  # Or run directly with Python dependencies  \n```  \nEnsure AWS credentials are set via `aws configure` or environment variables.  \n\n## Usage / Examples  \n```bash  \npython pipeline.py --input feeds.json --output prioritized_threats.csv  \n# Example: Run with Hugging Face's distilbert-base-uncased model  \npython pipeline.py --model huggingface/distilbert-base-uncased  \n```  \nFor LLM-driven contextualization:  \n```bash  \npython pipeline.py --llm_prompt \"Analyze this IP: 192.168.1.1\"  \n```  \nOutput includes threat scores, IOC categorization, and MLflow experiment logs.  \n\n## Tech Stack  \n- **Model Serving**: Hugging Face Transformers (production-grade)  \n- **ML Frameworks**: PyTorch, scikit-learn, Hugging Face Pipelines  \n- **Tracking**: MLflow (experiment logging), Weights & Biases (visualization)  \n- **Storage**: AWS S3 for artifact storage  \n- **Deployment**: Docker (containerized inference)  \n\n## Architecture / Design  \nThe pipeline operates in three stages:  \n1. **Data Ingestion**: Parses structured feeds (CSV, JSON) and unstructured text (threat intel reports)  \n2. **Model Inference**: Uses Hugging Face Transformers for NLP-based IOC classification and PyTorch models for behavioral analysis  \n3. **Prioritization**: Scores threats via a custom ensemble of LLM-generated context and rule-based thresholds  \n\nAll components are versioned via MLflow, with Docker containers ensuring reproducibility across environments.  \n\n## License  \nMIT License (see [LICENSE](LICENSE))  \n\n## Badges  \n[![MIT License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)  \n[![GitHub](https://img.shields.io/github/repo-size/your-username/ThreatIntelAuto)](https://github.com/your-username/ThreatIntelAuto)  \n[![PyPI](https://img.shields.io/pypi/v/threatintelauto)](https://pypi.org/project/threatintelauto/)"
 }

@@ -3,23 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_106",
   "hyperparams": {
-    "project_scale": "academic",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "moderate"
+    "project_scale": "team-internal",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Computer vision": 1,
+    "AWS": 1,
+    "CI/CD pipelines": 2,
     "Docker": 3,
-    "GCP": 3,
-    "Hugging Face Transformers": 3,
-    "Kubernetes": 3,
-    "Model deployment": 3,
-    "NLP": 3,
-    "PyTorch": 4,
-    "REST API design": 3,
-    "TensorFlow": 3,
-    "scikit-learn": 3
+    "Load balancing": 3,
+    "Microservices architecture": 4,
+    "MongoDB": 1,
+    "PostgreSQL": 4,
+    "Prometheus/Grafana": 3,
+    "Python": 4,
+    "Shell scripting": 1,
+    "Terraform": 1
   },
-  "text": "# HealthPredictor: Predictive Analytics for Chronic Disease Management  \nA machine learning system that leverages patient data to forecast chronic disease progression and inform personalized treatment strategies. Built with a focus on scalability, interpretability, and clinical integration.  \n\n## Deployment  \nDeployed on AWS EC2 instances using Docker containers for consistent environment isolation. REST API endpoints are exposed via Flask and hosted on AWS API Gateway, enabling integration with EHR systems. Model inference is optimized with GPU acceleration on EC2 p3 instances.  \n\n## Getting Started / Installation  \nClone the repository:  \n```bash  \ngit clone https://github.com/zarahussain/healthpredictor.git  \ncd healthpredictor  \n```  \nInstall dependencies:  \n```bash  \npip install -r requirements.txt  \n```  \nBuild Docker image:  \n```bash  \ndocker build -t healthpredictor-api .  \ndocker run -d -p 5000:5000 healthpredictor-api  \n```  \n\n## Usage / Examples  \nSend a POST request to the `/predict` endpoint with patient data:  \n```bash  \ncurl -X POST http://localhost:5000/predict \\  \n  -H \"Content-Type: application/json\" \\  \n  -d '{\"age\": 65, \"blood_pressure\": 140, \"cholesterol\": 220, \"diabetes\": true}'  \n```  \nResponse includes predicted disease progression and risk stratification.  \n\n## Tech Stack  \n- **PyTorch**: Custom neural networks for time-series analysis of biomarkers  \n- **scikit-learn**: Data preprocessing pipelines and baseline models  \n- **Docker**: Containerization for deployment consistency  \n- **AWS**: EC2 for compute, API Gateway for endpoints  \n- **Flask**: REST API framework for model serving  \n\n## Architecture / Design  \nMicroservices architecture with PyTorch models running in Docker containers. Preprocessing pipelines (scikit-learn) handle feature normalization and missing data imputation. REST API serves predictions to clinical workstations, with results visualized in dashboards.  \n\n## License  \nMIT License  \n\n## Badges  \n[![Deployment Status](https://github.com/zarahussain/healthpredictor/actions/workflows/deploy.yml/badge.svg)](https://github.com/zarahussain/healthpredictor/actions/workflows/deploy.yml)"
+  "text": "# AdServer API: Real-Time Campaign Management Backend  \n\nA scalable, high-performance API for managing ad campaigns in real-time, built with Python and PostgreSQL. Designed for adtech workflows requiring low-latency data ingestion, campaign analytics, and dynamic ad targeting.  \n\n---\n\n## Configuration  \nConfigure the API and database via `.env` file. Key variables include:  \n- `DATABASE_URL` (PostgreSQL connection string)  \n- `SECRET_KEY` (JWT signing key)  \n- `MAX_RETRIES` (retry policy for external services)  \n- `LOG_LEVEL` (debug/info/warning)  \n\nDatabase setup is automated via Docker (see `docker-compose.yml`). For production, replace development credentials with secure secrets.  \n\n---\n\n## Getting Started  \nClone the repository and navigate into the project directory:  \n```bash  \ngit clone https://github.com/catalinareyes/adserver-api.git  \ncd adserver-api  \n```  \n\nBuild and run services with Docker:  \n```bash  \ndocker-compose up --build  \n```  \n\nSet up environment variables by copying `.env.example` to `.env` and updating credentials.  \n\n---\n\n## Usage / Examples  \n**Create a campaign**  \n```bash  \ncurl -X POST http://localhost:8000/api/campaigns \\  \n  -H \"Authorization: Bearer <token>\" \\  \n  -d '{\"name\": \"Summer Sale\", \"targeting\": {\"age\": [18,25]}}'  \n```  \n\n**Fetch campaign metrics**  \n```bash  \ncurl -X GET http://localhost:8000/api/campaigns/1/metrics \\  \n  -H \"Authorization: Bearer <token>\"  \n```  \n\nThe API supports async request handling for high-throughput scenarios.  \n\n---\n\n## Tech Stack  \n- **Language**: Python (FastAPI, async workers)  \n- **Database**: PostgreSQL (with JSONB for flexible ad metadata)  \n- **Containerization**: Docker (isolated services, consistent CI/CD)  \n- **Monitoring**: Prometheus + Grafana (query latency, error rates)  \n\n---\n\n## Architecture / Design  \nThe system follows a microservices architecture with a monorepo structure. Key components:  \n- **Campaign Service**: Manages ad creation, scheduling, and dynamic targeting  \n- **Analytics Service**: Aggregates real-time impressions/views via PostgreSQL triggers  \n- **Load Balancer**: Reverse proxy for scaling (Nginx, optional)  \n\nPostgreSQL is optimized with connection pooling and partitioning for high-write scenarios.  \n\n---\n\n## License  \nMIT License — see `LICENSE` file.  \n\n---\n\n## Badges  \n[![Python version](https://img.shields.io/badge/python-3.9-blue)](https://www.python.org/)  \n[![PostgreSQL](https://img.shields.io/badge/postgres-14-green)](https://www.postgresql.org/)  \n[![License](https://img.shields.io/badge/license-MIT-yellow)](https://opensource.org/licenses/MIT)"
 }

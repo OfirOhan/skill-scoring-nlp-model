@@ -3,23 +3,25 @@
   "type": "project_readme",
   "persona_id": "p_020",
   "hyperparams": {
-    "project_scale": "academic",
+    "project_scale": "team-internal",
     "project_team_size": "large (15+)",
     "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 1,
-    "Apache Airflow": 1,
-    "Computer vision": 4,
-    "Docker": 4,
+    "AWS": 4,
+    "CI/CD pipelines": 4,
+    "Cloud networking (VPC/subnets)": 3,
+    "Database optimization": 1,
+    "Docker": 3,
     "GCP": 1,
-    "Hugging Face Transformers": 1,
-    "Kubernetes": 1,
-    "MLOps (MLflow/W&B)": 3,
-    "Model deployment": 4,
-    "NLP": 1,
-    "PyTorch": 4,
-    "TensorFlow": 1
+    "GitLab CI": 1,
+    "Kubernetes": 4,
+    "Linux administration": 1,
+    "Load balancing": 3,
+    "Prometheus/Grafana": 3,
+    "Python": 2,
+    "Serverless (Lambda/Cloud Functions)": 3,
+    "Terraform": 4
   },
-  "text": "# DiabeticEye: Medical Imaging Analysis with CNNs  \nAutomated diabetic retinopathy detection from retinal fundus images using PyTorch-based CNNs, achieving 94.2% accuracy and 89.5% F1 score on a 12k+ dataset.  \n\n## Badges  \n[![Model Accuracy](https://img.shields.io/badge/Accuracy-94.2%25-blue)](https://example.com)  \n[![License](https://img.shields.io/badge/LICENSE-MIT-yellow)](https://github.com/NehaJoshi/DiabeticEye/blob/main/LICENSE)  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/NehaJoshi/DiabeticEye.git  \ncd DiabeticEye  \npip install -r requirements.txt  \n```  \nEnsure Python 3.8+ is installed. Docker is optional but recommended for consistent environments.  \n\n## Usage / Examples  \nRun inference on a single image:  \n```bash  \npython infer.py --input ./test_images/eye1.jpg --model_path models/best.pt  \n```  \nTrain a new model:  \n```bash  \npython train.py --config configs/train.yaml  \n```  \nMetrics: 94.2% accuracy, 89.5% F1 score on 12k+ retinal images.  \n\n## Configuration  \nModify `configs/train.yaml` for hyperparameters. Track experiments with MLflow for logging metrics, artifacts, and model versions.  \n\n## Deployment  \nPackage the model as a REST API using FastAPI. Deploy with Docker to ensure cross-platform consistency. Latency: <500ms for inference.  \n\n## Architecture / Design  \nThe CNN uses 5 convolutional layers with ReLU activation, followed by global average pooling and a softmax classifier. The model was optimized for low false negatives, critical in healthcare applications.  \n\n## Tech Stack / Built With  \n- **PyTorch**: Core framework for model development  \n- **Docker**: Containerization for deployment  \n- **MLflow**: Experiment tracking and artifact management  \n- **FastAPI**: Production-ready inference API  \n\n## Contributing  \nThis project is maintained by a 15+ member team. Contributions are welcome—submit PRs for model optimizations, documentation improvements, or new feature integrations."
+  "text": "# NexaCart Inventory Sync System  \nReal-time inventory synchronization for e-commerce platforms using AWS and Kafka.  \nReduced stockouts by 40% and improved sync latency to under 500ms across 12+ regional warehouses.  \n\n## Acknowledgments  \nThis project wouldn’t exist without the collaborative efforts of the Platform Engineering team. Special thanks to Yuki Tanaka for architectural guidance, Akihiro Nakamura for Kafka integration, and the DevOps squad for CI/CD pipeline reliability.  \n\n## Getting Started / Installation  \n1. **Prerequisites**: Docker 20.10+, AWS CLI v2, Kafka 3.0.0  \n2. **Clone repo**: `git clone https://github.com/your-username/nexacart-sync`  \n3. **Build container**: `docker-compose up --build`  \n4. **Configure AWS**: Set `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` in `.env`  \n5. **Start sync service**: Run `./start.sh` to initialize Kafka producers and S3 listeners  \n\n## Usage / Examples  \n```bash\n# Simulate inventory updates  \n./produce.sh --topic inventory-changes --messages 1000  \n\n# Monitor sync health  \n./monitor.sh --interval 10s  \n```  \nThe system processes 50,000+ inventory events/hour with 99.99% uptime. Use `curl http://localhost:8080/health` to check service status.  \n\n## Tech Stack  \n- **AWS**: EC2 clusters, S3, and CloudFront for global distribution  \n- **Kafka**: 3-node cluster with 40+ partitions for high-throughput event streaming  \n- **Docker**: Microservices containerization with 95% resource utilization  \n- **Kubernetes**: Auto-scaling deployments handling 200k+ concurrent connections  \n- **Terraform**: Infrastructure-as-code for VPCs, subnets, and security groups  \n- **Prometheus/Grafana**: Real-time dashboards tracking latency and error rates  \n\n## License  \nApache 2.0 (https://github.com/your-username/nexacart-sync/blob/main/LICENSE)  \n\n## Badges  \n[![GitHub](https://badges.githubusercontent.com/your-username/nexacart-sync)](https://github.com/your-username/nexacart-sync)  \n[![CI/CD](https://badges.ci/your-username/nexacart-sync)](https://ci/your-username/nexacart-sync)  \n[![AWS](https://badges.aws/your-username/nexacart-sync)](https://aws/your-username/nexacart-sync)  \n\n## Contributing  \nWe welcome improvements to Kafka partitioning strategies, CI/CD pipeline optimizations, and Serverless function integrations. Submit PRs with benchmarked performance gains or security enhancements."
 }

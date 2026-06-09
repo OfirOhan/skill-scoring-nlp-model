@@ -1,27 +1,75 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Beatriz Lopes' 5 years of experience as a Backend Engineer in healthtech, focusing on scalable systems and API development.",
-    "title": "Beatriz Lopes - Backend Engineer",
+    "topic_summary": "Professional resume highlighting 14 years of experience in fintech data science",
+    "title": "Aditi Kapoor - Staff Data Scientist",
     "doc_id": "d_p_160_00",
     "persona_id": "p_160",
     "hyperparams": {
-      "cv_format": "minimal",
-      "geographic_convention": "Europe",
+      "cv_format": "bullet-heavy",
+      "geographic_convention": "US",
       "company_type": "FAANG",
-      "company_size": "small (<50)"
+      "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A README for a healthtech project implementing real-time patient data synchronization between IoT devices and backend systems using Node.js and PostgreSQL.",
-    "title": "HealthDataSync",
+    "topic_summary": "Machine learning model for predictive credit risk assessment in fintech",
+    "title": "CreditRiskPredictor: Advanced Credit Scoring with Ensemble Models",
     "doc_id": "d_p_160_01",
     "persona_id": "p_160",
     "hyperparams": {
-      "project_scale": "academic",
-      "project_team_size": "solo",
-      "jargon_density": "plain"
+      "project_scale": "production",
+      "project_team_size": "large (15+)",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "Real-time fraud detection system using anomaly detection in transaction data",
+    "title": "FraudGuard: Real-Time Transaction Anomaly Detection",
+    "doc_id": "d_p_160_02",
+    "persona_id": "p_160",
+    "hyperparams": {
+      "project_scale": "team-internal",
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "Algorithmic trading strategy optimization using historical market data",
+    "title": "QuantStrat: High-Frequency Trading Strategy Backtesting",
+    "doc_id": "d_p_160_03",
+    "persona_id": "p_160",
+    "hyperparams": {
+      "project_scale": "production",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "Endorsement from a former team lead at FinTech Innovators Inc.",
+    "title": "Recommendation from Raj Patel, Former Team Lead",
+    "doc_id": "d_p_160_04",
+    "persona_id": "p_160",
+    "hyperparams": {
+      "recommender_role": "peer",
+      "recommender_closeness": "brief",
+      "company_type": "FAANG",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "Exploring LSTMs for time-series forecasting in financial markets",
+    "title": "LSTM Models for Accurate Financial Time-Series Forecasting",
+    "doc_id": "d_p_160_05",
+    "persona_id": "p_160",
+    "hyperparams": {
+      "blog_depth": "deep-dive",
+      "jargon_density": "moderate"
     }
   }
 ]

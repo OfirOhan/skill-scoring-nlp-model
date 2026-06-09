@@ -1,21 +1,25 @@
 {
   "doc_id": "d_p_297_02",
-  "type": "linkedin",
+  "type": "recommendation",
   "persona_id": "p_297",
   "hyperparams": {
-    "linkedin_completeness": "detailed"
+    "recommender_role": "peer",
+    "recommender_closeness": "worked-daily",
+    "company_type": "agency",
+    "company_size": "large (500+)"
   },
   "skill_evidence": {
-    "CI/CD pipelines": 4,
-    "Cloud cost optimization": 4,
-    "Database optimization": 3,
-    "GitHub Actions": 4,
+    "CI/CD pipelines": 1,
     "Go": 4,
-    "Kubernetes": 5,
-    "Network automation": 4,
-    "Prometheus/Grafana": 5,
-    "Python": 4,
-    "Terraform": 5
+    "Jenkins": 1,
+    "Linux administration": 1,
+    "Microservices architecture": 5,
+    "MongoDB": 1,
+    "PostgreSQL": 1,
+    "Prometheus/Grafana": 1,
+    "Python": 3,
+    "REST API design": 1,
+    "Shell scripting": 1
   },
-  "text": "**Headline**  \nDelivered 300% ROI on Cloud Cost Optimization for Fortune 500 Clients  \n\n**Context**  \nAs a Senior SRE Consultant at CloudNexus Solutions, I’ve spent 8 years building scalable, resilient systems for global enterprises. My focus? Turning chaos into clarity through automation, cost discipline, and engineering rigor. I’ve scaled infrastructure for 50+ clients, slashed cloud bills by 30%+ while improving reliability, and built CI/CD pipelines that cut deployment times by 40%.  \n\n**Broader Expertise**  \nI specialize in Kubernetes architectures, Prometheus/Grafana monitoring, and Terraform-driven infrastructure as code. My work spans automating network stacks, optimizing Go-based microservices, and deploying Python scripts to streamline operations. I’ve led teams to refactor legacy databases, cut cloud costs via right-sizing, and implement GitHub Actions workflows that eliminated manual toil. Mentorship is part of my DNA—guiding SREs and DevOps engineers to master tools like Terraform and Prometheus while aligning technical decisions with business goals.  \n\n**Invitation to Connect**  \nLet’s connect and discuss how we can tackle your next big challenge—whether it’s refining your cloud strategy, automating workflows, or scaling systems without breaking the bank."
+  "text": "To the Admissions Committee,  \n\nJames Okafor 100 and I collaborate daily at a large agency, where we’ve navigated complex tech challenges for clients. As peers, we’ve co-led projects under tight deadlines, balancing innovation with operational rigor.  \n\nJames’s strengths lie in his Python proficiency and Go expertise, both integral to his role. He automated critical data pipelines using Python, cutting manual processing time by 40% for a client’s analytics platform. His Go-based microservices, however, define his impact. He architected a scalable API gateway that reduced latency by 35% and scaled to 10k requests per second, directly boosting client retention. Beyond code, he’s a mentor—guiding junior engineers on microservices best practices, which streamlined our team’s deployment cycles by 25%.  \n\nA standout trait is his relentless focus on reliability. During a critical system outage, he debugged a race condition in a Go service within 2 hours, restoring uptime without data loss. His ability to distill complex problems into actionable solutions is rare.  \n\nJames’s work ethic is equally notable. He consistently volunteers to tackle high-impact tasks, even when they stretch beyond his immediate responsibilities. His curiosity and adaptability have kept our team ahead of evolving client needs.  \n\nFor someone seeking a leader who balances technical depth with pragmatic execution, James is an exceptional fit.  \n\n— [Your Name]  \n[Your Contact Information]"
 }

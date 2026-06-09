@@ -1,45 +1,58 @@
 {
   "persona_id": "p_266",
   "hyperparams": {
-    "archetype": "fullstack_developer",
+    "archetype": "data_scientist",
     "years_experience": 3,
     "seniority": "mid",
-    "industry": "enterprise",
-    "writing_style": "neutral",
-    "language_fluency": "ESL",
-    "self_promotion_level": "boastful",
-    "quantification_tendency": "qualitative"
+    "industry": "SaaS",
+    "writing_style": "modest",
+    "language_fluency": "native",
+    "self_promotion_level": "balanced",
+    "quantification_tendency": "mixed"
   },
-  "name": "Urvashi Gill 19",
-  "current_role": "Full-Stack Developer",
+  "name": "Ian Szabo 69",
+  "current_role": "Senior Data Scientist",
   "company": "NexaCorp",
   "education": {
-    "degree": "Bachelor of Science in Computer Science",
-    "university": "University of Toronto",
+    "degree": "Master of Science in Data Science",
+    "university": "University of California, Berkeley",
     "year": 2021
   },
   "career_trajectory": [
-    "Junior Software Developer at TechNova Solutions (2021-2022)",
-    "Full-Stack Developer at InnovateTech Solutions (2022-2023)",
-    "Senior Full-Stack Developer at NexaCorp (2023-present)"
+    {
+      "role": "Data Analyst Intern",
+      "company": "CloudFlow Solutions",
+      "duration": "6 months",
+      "responsibilities": "Supported SQL-based reporting, conducted basic exploratory analysis"
+    },
+    {
+      "role": "Junior Data Scientist",
+      "company": "DataVolve Inc.",
+      "duration": "1 year",
+      "responsibilities": "Built predictive models using scikit-learn, optimized feature engineering pipelines"
+    },
+    {
+      "role": "Data Scientist",
+      "company": "NexaCorp",
+      "duration": "1.5 years",
+      "responsibilities": "Led A/B testing frameworks, designed recommendation systems with TensorFlow"
+    }
   ],
   "skills": {
-    "Python": 4,
-    "Node.js": 3,
-    "React": 3,
-    "PostgreSQL": 3,
-    "REST API design": 4,
-    "Microservices architecture": 4,
-    "TypeScript": 3,
-    "AWS": 3,
-    "Docker": 3,
-    "Kubernetes": 3,
-    "CI/CD pipelines": 3,
-    "Web performance optimization": 3,
-    "Database optimization": 3
+    "scikit-learn": 4,
+    "TensorFlow": 4,
+    "Data visualization (Matplotlib/Plotly)": 4,
+    "SQL analytics": 4,
+    "Python": 3,
+    "Jupyter notebooks": 3,
+    "Hypothesis testing": 3,
+    "ETL pipeline design": 1
   },
   "document_ids": [
     "d_p_266_00",
-    "d_p_266_01"
+    "d_p_266_01",
+    "d_p_266_02",
+    "d_p_266_03",
+    "d_p_266_04"
   ]
 }

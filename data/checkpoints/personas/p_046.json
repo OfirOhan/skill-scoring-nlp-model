@@ -1,69 +1,64 @@
 {
   "persona_id": "p_046",
   "hyperparams": {
-    "archetype": "devops_sre",
-    "years_experience": 7,
+    "archetype": "game_developer",
+    "years_experience": 8,
     "seniority": "senior",
-    "industry": "enterprise",
-    "writing_style": "verbose",
-    "language_fluency": "native",
-    "self_promotion_level": "boastful",
+    "industry": "gaming",
+    "writing_style": "confident",
+    "language_fluency": "near-native",
+    "self_promotion_level": "balanced",
     "quantification_tendency": "metrics-heavy"
   },
-  "name": "Linda Gustafsson",
-  "current_role": "Senior Site Reliability Engineer / DevOps Architect",
-  "company": "NordicTech Solutions AB",
+  "name": "Daria Ionescu",
+  "current_role": "Senior Game Systems Architect",
+  "company": "Nexu Interactive",
   "education": {
-    "degree": "Master's in Computer Science",
-    "university": "KTH Royal Institute of Technology",
-    "year": 2016
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "Technical University of Cluj-Napoca",
+    "year": 2015
   },
   "career_trajectory": [
     {
-      "role": "DevOps Engineer",
-      "company": "ScandiCloud",
-      "duration": "2015-2017",
-      "achievements": "Automated 80% of deployment pipelines using Jenkins and GitLab CI, reduced incident resolution time by 40% through proactive monitoring"
+      "role": "Game Development Intern",
+      "company": "Lumina Studios",
+      "duration": "2015-2016"
     },
     {
-      "role": "SRE Lead",
-      "company": "NordicCloud",
-      "duration": "2017-2019",
-      "achievements": "Designed multi-cloud strategy for GCP/AWS, achieved 99.95% SLA with Terraform-managed infrastructure, mentored 5 junior SREs"
+      "role": "Junior Unity Developer",
+      "company": "Vortex Games",
+      "duration": "2016-2018"
     },
     {
-      "role": "DevOps Architect",
-      "company": "NordicTech Solutions AB",
-      "duration": "2019-2022",
-      "achievements": "Implemented Kubernetes-based microservices architecture, reduced cloud costs by 30% through optimization, led chaos engineering framework for 12+ services"
+      "role": "Senior Unreal Engine Developer",
+      "company": "Stellar Interactive",
+      "duration": "2018-2021"
+    },
+    {
+      "role": "Senior Game Systems Architect",
+      "company": "Nexu Interactive",
+      "duration": "2021-present"
     }
   ],
   "skills": {
-    "CI/CD pipelines": 5,
-    "GitHub Actions": 4,
-    "Jenkins": 3,
-    "ArgoCD": 4,
-    "GitLab CI": 5,
-    "Prometheus/Grafana": 5,
-    "Monitoring & alerting": 5,
-    "SLA/SLO management": 4,
-    "Linux administration": 5,
-    "Shell scripting (Bash)": 4,
-    "Configuration management (Ansible)": 4,
-    "Log management (ELK)": 3,
-    "Chaos engineering": 4,
-    "AWS": 5,
-    "GCP": 5,
-    "Docker": 4,
-    "Kubernetes": 5,
-    "Terraform": 5,
-    "Cloud networking (VPC/subnets)": 4,
-    "Cloud cost optimization": 4
+    "Unity": 5,
+    "Unreal Engine": 5,
+    "Game physics": 4,
+    "3D graphics (OpenGL/Vulkan)": 4,
+    "Game networking": 4,
+    "C#/.NET": 3,
+    "REST API design": 2,
+    "Python": 3,
+    "Java": 1,
+    "Go": 2
   },
   "document_ids": [
     "d_p_046_00",
     "d_p_046_01",
     "d_p_046_02",
-    "d_p_046_03"
+    "d_p_046_03",
+    "d_p_046_04",
+    "d_p_046_05",
+    "d_p_046_06"
   ]
 }

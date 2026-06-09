@@ -3,21 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_044",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "large (15+)",
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
     "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Docker": 3,
-    "GitLab CI": 3,
-    "JavaScript": 3,
-    "Kubernetes": 3,
-    "Node.js": 3,
-    "PostgreSQL": 3,
-    "Python": 2,
-    "REST API design": 3,
-    "React": 3,
-    "Terraform": 3
+    "BDD/TDD": 1,
+    "GraphQL": 1,
+    "Next.js": 4,
+    "Python": 1,
+    "REST API design": 2,
+    "React": 4,
+    "Responsive design": 4,
+    "State management (Redux/Zustand)": 3,
+    "Test automation": 2,
+    "TypeScript": 4,
+    "Web accessibility (WCAG)": 4
   },
-  "text": "# Enterprise TaskFlow  \nA task management platform built with React and Node.js, designed for large-scale enterprise workflows. Prioritizes scalability, security, and seamless integration with existing systems.  \n\n---\n\n## Badges  \n[![GitHub](https://badgen.net/badge/github/OmarFarooq/Enterprise-TaskFlow/green)](https://github.com/OmarFarooq/Enterprise-TaskFlow)  \n[![npm](https://badgen.net/badge/npm/1.0.0/green)](https://npmjs.com/package/enterprise-taskflow)  \n[![Docker](https://badgen.net/badge/docker/2.5/green)](https://hub.docker.com/r/enterprise-taskflow)  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/OmarFarooq/Enterprise-TaskFlow.git`  \n2. Navigate to the project root: `cd Enterprise-TaskFlow`  \n3. Install dependencies: `npm install`  \n4. Set up environment variables: Copy `.env.example` to `.env` and update PostgreSQL credentials.  \n5. Start the app: `docker-compose up -d`  \n\n---\n\n## Usage / Examples  \nTo create a task:  \n**API Call**:  \n```bash\nPOST /api/tasks  \n{ \"title\": \"Review Q3 report\", \"assignee\": \"john.doe@company.com\" }\n```  \n**React Component**:  \n```jsx\n<CreateTaskForm onSubmit={handleCreateTask} />  \n```  \nTasks are filtered by priority and assigned to users via role-based access.  \n\n---\n\n## API Reference  \n- `GET /api/tasks` – Fetch all tasks (paginated)  \n- `POST /api/tasks` – Create a new task  \n- `PUT /api/tasks/:id` – Update task status  \n- `DELETE /api/tasks/:id` – Archive task  \nAuthentication: Bearer token via `Authorization` header.  \n\n---\n\n## Testing  \nRun unit tests: `npm test`  \nEnd-to-end tests use Cypress. Coverage report generated in `coverage/` directory.  \nGitLab CI pipelines automate testing on PRs.  \n\n---\n\n## Deployment  \nDeploy with Docker and Kubernetes. Terraform provisions cloud resources.  \nProduction setup includes PostgreSQL 14, Redis for caching, and NGINX reverse proxy.  \n\n---\n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# VitalCare Patient Portal Dashboard  \nA responsive web application for visualizing patient health data with real-time updates and secure access. Built for healthcare professionals to monitor vitals, track medications, and ensure data privacy with end-to-end encryption.  \n\n## Badges  \n[![React](https://badgen.net/badge/React/100%25/green)](https://react.dev)  \n[![TypeScript](https://badgen.net/badge/TypeScript/100%25/blue)](https://typescriptlang.org)  \n[![Responsive](https://badgen.net/badge/Responsive/100%25/yellow)](https://developer.mozilla.org/en-US/docs/Web/CSS/Responsive_design)  \n[![Secure](https://badgen.net/badge/Secure/100%25/orange)](https://owasp.org/www-project-cheat-sheets/)  \n[![Real-Time](https://badgen.net/badge/Real-Time/100%25/purple)](https://www.w3.org/TR/realtime-apis/)  \n\n## Tech Stack  \n- **Frontend**: React (with hooks), TypeScript, Next.js (SSR for dashboards), Tailwind CSS (utility-first)  \n- **State Management**: Zustand (custom hooks for patient data)  \n- **Security**: JWT tokens, HTTPS, AES-256 encryption for sensitive fields  \n- **Backend**: Node.js (for API proxy)  \n- **Accessibility**: WCAG 2.1 AA compliance (keyboard navigation, ARIA labels)  \n\n## Configuration  \nSet environment variables in `.env.local` for:  \n- `REACT_APP_API_URL` (backend endpoint)  \n- `REACT_APP_API_KEY` (for real-time data polling)  \n- `REACT_APP_SECRET_KEY` (AES encryption key)  \n\nRun `npm install` to fetch dependencies. Start dev server with `npm run dev` for hot-reloading.  \n\n## Getting Started  \n1. Clone repo: `git clone https://github.com/your-username/vitalcare-dashboard.git`  \n2. Install dependencies: `npm install`  \n3. Configure `.env.local` with API keys and secrets  \n4. Start dev server: `npm run dev`  \n5. Access dashboard at `http://localhost:3000`  \n\n## Usage  \n- **Real-Time Vitals**: Use WebSocket to refresh heart rate, blood pressure, and glucose levels every 5 seconds.  \n- **Secure Login**: Implement OAuth2 with custom JWT refresh tokens.  \n- **Accessible UI**: Ensure screen readers can navigate charts and modals via semantic HTML.  \n- **Responsive Layout**: Collapse sidebar on mobile, prioritize patient overview first.  \n\n## Testing  \n- **Unit Tests**: 95% coverage with Jest for components (e.g., `VitalsChart`, `MedicationTracker`)  \n- **Integration Tests**: Verify real-time data flow between frontend and backend  \n- **Accessibility Checks**: Run `npm run test:a11y` with axe-core to validate WCAG compliance  \n- **CI/CD**: Automated tests trigger on PRs; deploy to staging via GitHub Actions  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

@@ -3,24 +3,23 @@
   "type": "cv",
   "persona_id": "p_106",
   "hyperparams": {
-    "cv_format": "minimal",
-    "geographic_convention": "Europe",
-    "company_type": "startup",
-    "company_size": "large (500+)"
+    "cv_format": "hybrid",
+    "geographic_convention": "Israel",
+    "company_type": "enterprise",
+    "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "Computer vision": 3,
-    "Docker": 4,
-    "GCP": 2,
-    "Hugging Face Transformers": 2,
-    "Kubernetes": 4,
-    "Model deployment": 4,
-    "NLP": 4,
-    "PyTorch": 4,
-    "REST API design": 2,
-    "TensorFlow": 4,
-    "scikit-learn": 2
+    "AWS": 5,
+    "CI/CD pipelines": 1,
+    "Docker": 3,
+    "Load balancing": 3,
+    "Microservices architecture": 4,
+    "MongoDB": 4,
+    "PostgreSQL": 4,
+    "Prometheus/Grafana": 3,
+    "Python": 4,
+    "Shell scripting": 1,
+    "Terraform": 5
   },
-  "text": "Zara Hussain  \nLondon, UK | +44 7700 123456 | zara.hussain@email.com | linkedin.com/in/zarahussain | github.com/zarahussain  \n\nProfessional Experience  \n**HealthInsight Analytics** | Machine Learning Engineer (2023–present)  \nLed development of predictive analytics models for chronic disease management, integrating longitudinal patient data with real-time IoT sensor inputs. Deployed scalable solutions on AWS, reducing model inference latency by 35% through optimized batch processing pipelines. Spearheaded containerization of ML workflows using Docker and Kubernetes, achieving 99.95% uptime for production services. Designed NLP pipelines to extract structured insights from unstructured clinical notes, improving diagnostic accuracy by 18% in pilot studies.  \n\n**VitalCare Systems** | Junior ML Engineer (2021–2023)  \nBuilt and deployed computer vision models to automate anomaly detection in medical imaging, achieving 92% precision in identifying lung opacities. Collaborated with cross-functional teams to design REST APIs for seamless integration of ML outputs into hospital EHR systems. Pioneered use of PyTorch for developing custom architectures in radiology analysis, reducing manual review time by 22% for radiologists.  \n\n**MedTech Innovations** | ML Intern (2020)  \nContributed to development of a diabetes risk prediction model using scikit-learn, achieving 89% F1 score on validation data. Assisted in deploying models to GCP for initial scalability testing, though subsequent production work shifted to AWS.  \n\nProjects  \n**AI-Driven Anomaly Detection in Medical Imaging** | HealthInsight Analytics (2023)  \nDeveloped computer vision models using TensorFlow to analyze X-ray scans, flagging potential fractures with 94% recall. Integrated models into existing diagnostic workflows, reducing false negatives by 15% in pilot hospitals.  \n\n**Clinical Notes Summarization Tool** | Personal Project (2022)  \nBuilt NLP pipeline with Hugging Face Transformers to generate concise summaries of patient records, improving data accessibility for clinicians. Exposed API endpoints via REST for integration with hospital systems.  \n\n**Real-Time Health Monitoring Dashboard** | VitalCare Systems (2022)  \nDesigned end-to-end solution combining PyTorch models with AWS IoT Core for continuous patient vitals analysis, enabling early intervention in 12% of critical cases.  \n\nTechnical Skills / Technologies  \nAWS (EC2, S3, Lambda, CloudFormation), Docker, Kubernetes, TensorFlow, PyTorch, REST APIs, NLP, Computer Vision, scikit-learn, GCP (limited deployment experience), Hugging Face Transformers  \n\nEducation  \n**Master of Science in Data Science** | University of Manchester (2020)  \n\nCertifications  \nAWS Certified Machine Learning – Specialty (2023), Docker Certified Professional (2022), Google Cloud Professional Data Engineer (2021)  \n\nAwards & Achievements  \nHealthInsight Analytics Innovation Award (2023) for predictive analytics platform, VitalCare Systems Excellence in ML Engineering (2022), University of Manchester Outstanding Thesis (2020)"
+  "text": "Catalina Reyes  \nTel Aviv, Israel | +972 54 321 6789 | catalina.reyes@email.com  \n\n**Professional Experience / Work History**  \n*Backend Engineer* | AdVerve Technologies (2021–Present)  \nLed the design of scalable microservices for audience targeting, reducing API latency by 35% through optimized data partitioning. Spearheaded migration of legacy systems to AWS, achieving 15% reduction in infrastructure costs. Architected serverless ad analytics modules using DynamoDB and Lambda, improving cloud cost efficiency by 22%. Collaborated cross-functionally to integrate real-time analytics dashboards, enhancing campaign performance tracking by 28%.  \n\n*Backend Developer* | AdVerve Technologies (2020–2021)  \nDeveloped core components of ad-serving APIs using Python and PostgreSQL, supporting 1.2M+ daily requests. Engineered automated monitoring tools with Prometheus and Grafana, enabling proactive system health checks. Migrated monolithic services to microservices architecture, improving deployment agility by 40%.  \n\n*Junior Backend Developer* | BrightAds Solutions (2019–2020)  \nImplemented ad-serving APIs using Python and PostgreSQL, optimizing database queries to reduce average response time by 25%. Designed and deployed RESTful endpoints for campaign management, handling peak traffic of 500K requests per second.  \n\n**Education**  \n*Bachelor of Science in Computer Science* | University of California, Berkeley (2018)  \n\n**Technical Skills / Technologies**  \n- **AWS**: Architectural decisions for global ad distribution, mentoring junior engineers on best practices for EC2 and S3.  \n- **Terraform**: Streamlined infrastructure provisioning for 12+ environments, reducing deployment errors by 30%.  \n- **Python**: Core language for ad analytics pipelines, leveraging Pandas and NumPy for data processing.  \n- **Microservices Architecture**: Owned end-to-end development of audience targeting services, ensuring horizontal scalability.  \n- **PostgreSQL**: Optimized complex queries for real-time campaign data, supporting 10M+ records in production.  \n- **MongoDB**: Designed document-based schemas for user behavior tracking, improving data ingestion throughput by 40%.  \n- **Docker**: Containerized critical services for consistent deployment, reducing environment mismatches.  \n- **Load Balancing**: Implemented NGINX-based solutions to distribute traffic across regional clusters, enhancing fault tolerance.  \n- **AWS**: Central to infrastructure strategy, leading cost optimization initiatives across 50+ active services.  \n\n**Projects / Side Projects**  \n- *Ad Analytics Dashboard* (Open Source): Built a real-time dashboard using Dash and Flask to visualize campaign performance metrics, adopted by 3 internal teams.  \n- *Serverless Data Pipeline* (Side Project): Developed a Lambda-powered ETL process to aggregate and anonymize user data, reducing processing time by 50%.  \n- *Collaborative API Gateway* (Open Source): Co-designed a modular API gateway with a colleague, supporting dynamic route configuration for multi-tenant applications.  \n\n**Languages**  \n- **English**: Near-native (professional fluency)  \n- **Hebrew**: Fluent (professional fluency)  \n- **Spanish**: Basic conversational  \n\n**Awards & Achievements**  \n- Recognized as \"Top Contributor\" at AdVerve for 2022, driving 25% improvement in ad delivery reliability.  \n- Featured in Tech Israel Summit 2023 panel on cloud-native architecture for adtech platforms.  \n- Published technical blog post on optimizing PostgreSQL for ad-serving workloads, cited in 15+ industry resources."
 }

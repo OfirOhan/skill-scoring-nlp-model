@@ -3,22 +3,25 @@
   "type": "recommendation",
   "persona_id": "p_162",
   "hyperparams": {
-    "recommender_role": "peer",
-    "recommender_closeness": "worked-daily",
-    "company_type": "academic",
+    "recommender_role": "professor",
+    "recommender_closeness": "occasional",
+    "company_type": "agency",
     "company_size": "mid (50-500)"
   },
   "skill_evidence": {
-    "A/B testing": 3,
-    "Data visualization (Matplotlib/Plotly)": 3,
-    "Feature engineering": 3,
-    "MLOps (MLflow/W&B)": 3,
-    "NumPy": 3,
-    "Pandas": 3,
-    "Python": 4,
-    "SQL analytics": 3,
-    "Statistical modeling": 3,
-    "Tableau/Power BI": 3
+    "Apache Airflow": 3,
+    "Apache Kafka": 3,
+    "Apache Spark": 3,
+    "Data Modeling": 3,
+    "Data Quality frameworks": 3,
+    "Docker": 3,
+    "Java": 1,
+    "Linux administration": 1,
+    "Python": 3,
+    "REST API design": 1,
+    "Snowflake": 4,
+    "Terraform": 3,
+    "dbt": 4
   },
-  "text": "Julia once spent three weeks refactoring a client’s chaotic SQL database into a clean, modular system. She didn’t just fix errors—she restructured queries to let analysts slice data intuitively, which turned a 20-hour data retrieval process into 20 minutes. When I asked why she’d take on such a deep dive, she shrugged and said, “If the data’s a mess, the insights won’t matter.” That mindset defines her.  \n\nJulia’s role at Nexa is less about “data science” and more about solving problems through code. She’s the person you call when a client’s analytics pipeline is failing, or when a model’s output needs to feel human. Her Python scripts automate repetitive tasks, but she’s equally comfortable writing SQL queries or crafting dashboards in Tableau. She’ll debate the merits of Plotly vs. Matplotlib over coffee, then pivot to explain why a particular feature engineering approach outperformed others in an A/B test.  \n\nWhat stands out is her ability to balance technical rigor with clarity. She once built an MLOps workflow with MLflow and W&B that let a client track model drift in real time—something their previous setup couldn’t handle. Her code is clean, her explanations patient, and her sense of humor a welcome relief during late-night debugging sessions.  \n\nIf you’re looking for someone who treats data as both a tool and a conversation, Julia’s your person. She’s not just skilled—she’s relentlessly curious and quietly indispensable."
+  "text": "To Whom It May Concern,  \n\nI had the pleasure of collaborating with Olumide Afolabi during a project focused on optimizing data pipelines for a game analytics platform. As a professor, I observed his work through a series of academic partnerships with NexaGame Studios, where he contributed to their data infrastructure as a senior engineer. His role required balancing technical rigor with cross-functional collaboration, a dynamic in which he thrived.  \n\nOlumide’s strength lies in his ability to translate complex data challenges into scalable solutions. At NexaGame, he spearheaded the migration of their analytics workflows to Snowflake, reducing query latency by 40% and enabling real-time player behavior tracking. His ownership of dbt pipelines ensured data consistency across teams, eliminating manual reconciliation steps. These efforts directly supported the studio’s ability to refine game monetization strategies.  \n\nA standout moment occurred when a Kafka stream bottleneck threatened to delay a major release. Olumide rearchitected the pipeline using Apache Spark, distributing the load across multiple clusters. His iterative approach—testing micro-batches and tuning parallelism—restored reliability without sacrificing performance. This problem-solving mindset was consistent: whether debugging a data quality framework or deploying Terraform templates for cloud infrastructure, he approached tasks with methodical precision.  \n\nBeyond technical expertise, Olumide’s collaborative spirit and intellectual curiosity made him a trusted peer. He mentored junior engineers on best practices for data modeling and Docker containerization, fostering a culture of shared growth. His work ethic is defined by patience and attention to detail, traits that align seamlessly with both academic and industry demands.  \n\nSincerely,  \n[Professor’s Full Name]  \n[University/Institution]  \n[Contact Information]"
 }

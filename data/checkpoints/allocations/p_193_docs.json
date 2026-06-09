@@ -1,27 +1,39 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Yasmin El-Amin's backend engineering experience in enterprise environments",
-    "title": "Yasmin El-Amin - Backend Engineer",
+    "topic_summary": "A professional CV highlighting Aaron Baptiste's 8 years of experience as a Senior Backend Engineer in cybersecurity, with expertise in secure API development and threat detection systems.",
+    "title": "Aaron Baptiste - Senior Backend Engineer",
     "doc_id": "d_p_193_00",
     "persona_id": "p_193",
     "hyperparams": {
-      "cv_format": "paragraph",
+      "cv_format": "hybrid",
       "geographic_convention": "US",
-      "company_type": "academic",
-      "company_size": "large (500+)"
+      "company_type": "FAANG",
+      "company_size": "small (<50)"
     }
   },
   {
-    "doc_type": "project_readme",
-    "topic_summary": "A README for an enterprise-grade API gateway implementation using Go and Kubernetes",
-    "title": "Enterprise API Gateway - Microservices Traffic Management",
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post exploring secure microservices architecture using OAuth2 and JWT for cybersecurity applications, with real-world implementation insights.",
+    "title": "Securing Microservices with OAuth2 and JWT in Cybersecurity Applications",
     "doc_id": "d_p_193_01",
     "persona_id": "p_193",
     "hyperparams": {
-      "project_scale": "academic",
-      "project_team_size": "solo",
-      "jargon_density": "heavy"
+      "blog_depth": "tutorial",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A professional recommendation from a tech lead at Sentinel Security Group praising Aaron's leadership in developing scalable backend systems for threat detection.",
+    "title": "Recommendation by Tech Lead at Sentinel Security Group",
+    "doc_id": "d_p_193_02",
+    "persona_id": "p_193",
+    "hyperparams": {
+      "recommender_role": "peer",
+      "recommender_closeness": "occasional",
+      "company_type": "agency",
+      "company_size": "large (500+)"
     }
   }
 ]

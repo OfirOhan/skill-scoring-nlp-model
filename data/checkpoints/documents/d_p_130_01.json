@@ -4,22 +4,23 @@
   "persona_id": "p_130",
   "hyperparams": {
     "project_scale": "hobby",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "moderate"
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "BDD/TDD": 3,
-    "GraphQL": 3,
-    "JavaScript": 4,
-    "Next.js": 4,
-    "REST API design": 3,
-    "React": 4,
-    "Responsive design": 4,
-    "State management (Redux/Zustand)": 3,
-    "Test automation": 3,
-    "TypeScript": 4,
-    "Unit testing": 3,
-    "Web accessibility (WCAG)": 3
+    "CI/CD pipelines": 4,
+    "DNS/DHCP": 1,
+    "GitHub Actions": 4,
+    "Kubernetes": 3,
+    "Linux administration": 3,
+    "Monitoring & alerting": 3,
+    "Network troubleshooting": 1,
+    "PostgreSQL": 1,
+    "Prometheus/Grafana": 3,
+    "Python": 1,
+    "REST API design": 1,
+    "TCP/IP": 1,
+    "Terraform": 3
   },
-  "text": "# NovaUI Framework: Game UI Component Library  \nA modular, accessible, and responsive UI toolkit for game development, built with React and TypeScript. Designed for rapid prototyping and scalable integration into game engines, with a focus on cross-platform compatibility and developer ergonomics.  \n\n## Acknowledgments  \nThis project wouldn’t exist without the collective expertise of my collaborators:  \n- **Alex Voss** (UI/UX design) for refining accessibility patterns  \n- **Samira Khoury** (backend integration) for REST/GraphQL API alignment  \n- **The Figma community** for component-driven design principles  \n- **Storybook** for component documentation and testing  \nInspired by frameworks like Unity’s UI Toolkit and Unreal’s Slate, but tailored for web-first game development.  \n\n## Getting Started / Installation  \nInstall via npm:  \n```bash  \nnpm install @novaui/framework  \n```  \nOr yarn:  \n```bash  \nyarn add @novaui/framework  \n```  \nRun the development server:  \n```bash  \nnpm run dev  \n```  \nBuild for production:  \n```bash  \nnpm run build  \n```  \nNote: This is a hobby project—expect evolving APIs and limited enterprise-grade features.  \n\n## Usage / Examples  \n```tsx  \nimport { Button, Tooltip } from '@novaui/framework';  \n\nexport default function GameMenu() {  \n  return (  \n    <div className=\"game-ui\">  \n      <Button variant=\"primary\" aria-label=\"Start Game\">  \n        Start  \n      </Button>  \n      <Tooltip content=\"Resume gameplay\">  \n        <Button variant=\"secondary\">Resume</Button>  \n      </Tooltip>  \n    </div>  \n  );  \n}  \n```  \nComponents are designed for responsive layouts, with built-in support for touch gestures and keyboard navigation. TypeScript types enforce consistent styling across platforms.  \n\n## Tech Stack  \n- **React** (with hooks for state management)  \n- **TypeScript** (for type-safe component props)  \n- **Next.js** (for server-side rendering in hybrid games)  \n- **Storybook** (for component documentation)  \n- **Jest + Cypress** (for unit and end-to-end testing)  \n- **GraphQL** (for dynamic UI configuration)  \n- **Redux/Zustand** (for shared state between UI layers)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)  \n\n## Contributing  \nContributions are welcome! Focus on:  \n- Testing edge cases for accessibility (WCAG 2.1 AA compliance)  \n- Expanding component libraries for mobile-first games  \n- Improving TypeScript type inference for custom themes  \nFollow BDD practices—submit feature requests with use cases, not just code. All PRs require unit tests and documentation updates."
+  "text": "# NexaCD: Automated Deployment Pipeline  \nNexaCD is a CI/CD pipeline tailored for NexaTech’s microservices ecosystem, enabling zero-downtime deployments via GitOps workflows. It integrates Kubernetes manifests, Terraform infrastructure-as-code, and Prometheus-based observability to ensure deterministic, repeatable releases across hybrid cloud environments.  \n\n## Testing  \nAutomated testing is baked into every deployment stage. Unit tests for service manifests are run via GitHub Actions, with coverage metrics tracked in Grafana. Integration tests validate Kubernetes resource reconciliation using `kubectl` and `kubetest`, while canary deployments are monitored via Prometheus alerts for latency thresholds. All test suites execute in parallel, reducing deployment window by 40% compared to manual processes.  \n\n## Getting Started / Installation  \nClone the repo and install dependencies:  \n```bash  \ngit clone https://github.com/yourusername/nexacd.git  \ncd nexacd  \nmake deps  \n```  \nConfigure your cloud provider’s API keys in `.env` and set up a Kubernetes cluster with Terraform. Verify infrastructure-as-code compliance using `terraform validate` before proceeding.  \n\n## Usage / Examples  \nDeploy a service:  \n```bash  \nmake deploy SERVICE=auth-service  \n```  \nRollback to a previous version:  \n```bash  \nmake rollback VERSION=1.2.3  \n```  \nMonitor deployment health:  \n```bash  \nmake metrics  \n```  \nPipeline stages include artifact signing, cluster validation, and automated rollback triggers based on Prometheus metrics.  \n\n## Tech Stack  \n- **CI/CD**: GitHub Actions (self-hosted runners, encrypted secrets)  \n- **Infrastructure**: Terraform (AWS/GCP provider modules)  \n- **Orchestration**: Kubernetes (Helm charts, kube-batch for batch jobs)  \n- **Observability**: Prometheus/Grafana (exporter metrics, alert rules)  \n- **OS**: Linux (systemd units, systemd-journald for logs)  \n\n## Architecture / Design  \nThe pipeline operates as a state machine: Git commits trigger GitHub Actions workflows that validate Terraform plans, apply Kubernetes manifests via `kubectl apply`, and push metrics to Prometheus. Terraform ensures infrastructure drift detection, while Grafana dashboards provide real-time deployment telemetry. All steps are idempotent, with rollback logic implemented via Kubernetes’ `DeploymentConfig` and Terraform state locking.  \n\n## License  \nMIT License  \n\n## Contributing  \nContributions require alignment with the pipeline’s idempotency guarantees. Submit pull requests with test coverage >85% and documentation updates. Familiarity with Kubernetes manifests, Terraform modules, and Prometheus metric exporters is required."
 }

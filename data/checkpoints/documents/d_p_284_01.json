@@ -3,20 +3,22 @@
   "type": "project_readme",
   "persona_id": "p_284",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "plain"
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "ArgoCD": 3,
-    "GitLab CI": 4,
-    "Kubernetes": 3,
-    "Linux administration": 1,
-    "Network automation": 1,
-    "PostgreSQL": 1,
-    "Prometheus/Grafana": 1,
-    "Python": 1,
-    "Redis": 1
+    "A/B testing": 3,
+    "Apache Spark": 1,
+    "Data visualization (Matplotlib/Plotly)": 4,
+    "Feature engineering": 4,
+    "Go": 1,
+    "Java": 1,
+    "NumPy": 4,
+    "Pandas": 4,
+    "Python": 3,
+    "REST API design": 1,
+    "Statistical modeling": 4
   },
-  "text": "# AdTech CI/CD Pipeline Automation  \nA streamlined CI/CD framework for ad tech applications, leveraging Jenkins and Docker to ensure consistent, scalable deployments across development and production environments. Designed for teams prioritizing reliability and speed in ad campaign infrastructure.  \n\n## Contributing  \nThis project thrives on collaboration. If you're comfortable with Jenkins pipeline scripting or Docker optimization, your input can improve stability and reduce deployment friction. Focus on refining existing workflows or proposing new stages for testing/ad validation. All contributions should align with the goal of minimizing manual intervention while maintaining auditability.  \n\n## Getting Started / Installation  \n1. Clone the repository to your local machine.  \n2. Install Jenkins and Docker on your system. Ensure Docker is running and accessible via the command line.  \n3. Navigate to the project directory and review the `pipeline/` folder for pre-configured Jenkinsfile templates.  \n4. For production environments, integrate with GitLab CI by updating the `.gitlab-ci.yml` file to trigger Jenkins jobs automatically.  \n\n## Usage / Examples  \nTo deploy an ad campaign service:  \n1. Commit code changes to the `main` branch.  \n2. GitLab CI triggers a Jenkins pipeline, which builds Docker images and runs unit tests.  \n3. Approved builds push containers to a registry, then deploy to Kubernetes clusters via ArgoCD.  \n4. Monitor deployment status through Jenkins dashboards and ArgoCD’s UI.  \n\nThis workflow ensures ad tech applications are tested, validated, and scaled without manual oversight.  \n\n## Tech Stack  \n- Jenkins (CI/CD orchestration)  \n- Docker (containerization)  \n- GitLab CI (integration with version control)  \n- ArgoCD (Kubernetes deployment management)  \n- Kubernetes (container orchestration)  \n\n## Architecture / Design  \nThe pipeline operates in three phases:  \n1. **Source Control**: GitLab CI detects commits and initiates Jenkins jobs.  \n2. **Build & Test**: Jenkins compiles Docker images, runs automated tests, and logs results.  \n3. **Deploy**: ArgoCD syncs Kubernetes manifests, ensuring environments mirror production standards.  \n\nEach stage is decoupled for flexibility, with logging and metrics embedded for traceability.  \n\n## License  \nMIT License  \n\n## Badges  \n[![GitHub](https://some-unique-badge.com)](https://github.com) [![CI/CD](https://some-unique-badge.com)](https://ci-cd.com) [![Docker](https://some-unique-badge.com)](https://docker.com)"
+  "text": "# Predictive Analytics for Client Retention  \n\nA machine learning pipeline to forecast client churn by analyzing transactional patterns and behavioral metrics. Built using Python-centric tools, this project leverages historical data to generate actionable insights for retention strategies. The model achieves 82% F1 score on a stratified validation set, with feature importance ranking confirming the predictive power of transaction frequency and engagement decay rates.  \n\n## API Reference  \nThe core module exports a `ChurnPredictor` class with three methods:  \n- `fit(X, y)`: Trains a gradient-boosted ensemble on preprocessed data  \n- `transform(df)`: Applies feature engineering and normalization  \n- `predict_proba(df)`: Returns churn probability scores (0-1)  \n\nAll methods require pandas DataFrames as input. The model includes SMOTE oversampling for class imbalance, with hyperparameters tuned via Bayesian optimization.  \n\n## Usage / Examples  \n```python  \nfrom churn_predictor import ChurnPredictor  \nimport pandas as pd  \n\n# Load and preprocess data  \ndata = pd.read_csv(\"client_history.csv\")  \nfeatures = data[[\"transaction_freq\", \"engagement_decay\", \"session_duration\"]]  \nlabels = data[\"churn_label\"]  \n\n# Train and predict  \nmodel = ChurnPredictor()  \nmodel.fit(features, labels)  \nprobabilities = model.predict_proba(features)  \n```  \n\n## Getting Started / Installation  \n1. Clone repository  \n2. Install dependencies:  \n   ```bash  \n   pip install pandas scikit-learn matplotlib numpy  \n   ```  \n3. Run `setup.py` to generate a standalone package for deployment  \n\n## Tech Stack  \n- Python 3.9+  \n- Scikit-learn (ensemble methods)  \n- Pandas (data wrangling)  \n- NumPy (numerical operations)  \n- Matplotlib (visualization)  \n\n## Architecture / Design  \nThe pipeline follows a modular design:  \n1. **Feature Engineering**: Combines transactional metrics with time-series decay coefficients  \n2. **Model Training**: Uses XGBoost with cross-validated hyperparameters  \n3. **Evaluation**: Includes AUC-ROC, precision-recall curves, and stratified sampling  \n4. **Visualization**: Generates cohort analysis dashboards for stakeholder review  \n\nAll statistical modeling decisions are documented in the `analysis_report.ipynb` notebook.  \n\n## License  \nMIT License  \n\n## Badges  \n[![Build Status](https://github.com/xanderdv/churn-predictor/actions/workflows/build.yml/badge.svg)](https://github.com/xanderdv/churn-predictor/actions/workflows/build.yml)  \n[![PyPI](https://img.shields.io/pypi/v/churn-predictor)](https://pypi.org/project/churn-predictor/)"
 }

@@ -4,23 +4,24 @@
   "persona_id": "p_005",
   "hyperparams": {
     "project_scale": "production",
-    "project_team_size": "large (15+)",
+    "project_team_size": "medium (5-15)",
     "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "ArgoCD": 3,
-    "CI/CD pipelines": 4,
-    "GitHub Actions": 4,
-    "GitLab CI": 3,
-    "Jenkins": 3,
-    "Kubernetes": 3,
-    "Linux administration": 3,
-    "Monitoring & alerting": 4,
-    "Prometheus/Grafana": 4,
-    "Python": 4,
-    "Shell scripting": 4,
-    "Terraform": 3
+    "Design systems": 3,
+    "JavaScript": 5,
+    "Next.js": 2,
+    "Node.js": 1,
+    "Product management": 1,
+    "REST API design": 3,
+    "React": 5,
+    "Responsive design": 4,
+    "Selenium/Playwright": 2,
+    "State management (Redux/Zustand)": 5,
+    "Test automation": 3,
+    "TypeScript": 5,
+    "Unit testing": 2,
+    "Web performance optimization": 4
   },
-  "text": "# Automated CI/CD Pipeline with Security Integration  \nA production-grade solution for deploying fintech applications with automated security scanning, reducing deployment time by 40% and achieving 99.99% uptime through rigorous compliance checks and real-time monitoring.  \n\n## Badges  \n[![CI/CD Status](https://img.shields.io/badge/CI%20CD%20Pipeline-passing-green)](https://github.com/umarbello/ci-cd-pipeline/actions)  \n[![Security Scans](https://img.shields.io/badge/Security%20Scans-passed-blue)](https://github.com/umarbello/ci-cd-pipeline/actions?query=workflow%3Asecurity-scans)  \n[![Code Coverage](https://img.shields.io/badge/Code%20Coverage-95%25-yellow)](https://github.com/umarbello/ci-cd-pipeline/actions?query=workflow%3Aunit-tests)  \n\n## Tech Stack / Built With  \n- **AWS**: CodePipeline, EC2, S3 for artifact storage  \n- **CI/CD**: GitLab CI, Jenkins, GitHub Actions for parallelized builds  \n- **Orchestration**: ArgoCD for declarative Kubernetes deployments  \n- **Containers**: Kubernetes with Helm for scalable microservices  \n- **Security**: Trivy for container image scanning, OWASP ZAP for runtime checks  \n- **Monitoring**: Prometheus + Grafana for real-time pipeline metrics  \n- **Scripting**: Python for custom validation, Bash for infrastructure automation  \n\n## Architecture / Design  \nThe pipeline integrates GitLab CI for source control triggers, Jenkins for initial builds, and AWS CodePipeline for orchestration. Kubernetes clusters manage deployments via ArgoCD, while Trivy and OWASP ZAP enforce security compliance. Prometheus monitors pipeline latency, reducing mean time to resolve issues by 35%.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/umarbello/ci-cd-pipeline.git`  \n2. Configure AWS credentials via `~/.aws/credentials`  \n3. Initialize Terraform for infrastructure: `terraform apply -var-file=env.tfvars`  \n4. Set up GitLab CI runners and Jenkins agents for parallel execution  \n\n## Usage / Examples  \n```bash\n# Trigger security scan on push  \ngit push origin main  \n# Deploy to staging via ArgoCD  \nkubectl apply -f k8s/argo.yaml  \n# View real-time metrics  \ncurl http://localhost:9090/api/v1/query?query=ci_pipeline_latency  \n```  \n\n## Configuration  \n- `config/terraform.tfvars`: AWS region and security policies  \n- `ci/.gitlab-ci.yml`: Job definitions for linting, building, and scanning  \n- `security/policies.yaml`: OWASP ZAP rule sets for API validation  \n\n## Deployment  \nDeploy to production using Terraform, with automated rollback on failed scans. Prometheus alerts for pipeline stalls > 500ms, reducing downtime by 25%.  \n\n## License  \nMIT License (see [LICENSE](LICENSE) for details)"
+  "text": "# CollaborateLive: Real-Time Editing for Remote Teams  \n\nA lightweight, production-ready tool for real-time document collaboration, built with React and WebSockets. Enables seamless teamwork across time zones with live sync, version history, and granular permissions. Ideal for startups needing rapid iteration without compromising performance.  \n\n## Getting Started  \n1. Clone the repo: `git clone https://github.com/yourusername/collaborate.live.git`  \n2. Install dependencies: `npm install`  \n3. Run the dev server: `npm start`  \n4. Open [http://localhost:3000](http://localhost:3000) in your browser  \n\n## Usage  \n- **Live Editing**: Multiple users edit the same document simultaneously with cursor indicators and conflict resolution.  \n- **Chat & @ Mentions**: Inline messaging for real-time communication.  \n- **Version History**: Revert to any previous state with a single click.  \n- **Permissions**: Granular access controls via role-based UI components.  \n\nExample:  \n```tsx  \nimport { useDocument } from 'collaborate.live'  \nconst Editor = () => {  \n  const { document, save } = useDocument('doc-123')  \n  return (  \n    <div>  \n      <textarea value={document.content} onChange={save} />  \n    </div>  \n  )  \n}  \n```  \n\n## Badges  \n[![Build Status](https://github.com/yourusername/collaborate.live/workflows/CI%20CD/badge.svg)](https://github.com/yourusername/collaborate.live/actions)  \n[![Collaborators](https://img.shields.io/badge/collaborators-45-blue)](https://github.com/yourusername/collaborate.live/graphs/contributors)  \n[![Performance](https://img.shields.io/badge/performance-92%25-green)](https://github.com/yourusername/collaborate.live/blob/main/README.md#performance)  \n\n## Tech Stack  \n- **Frontend**: React, TypeScript, WebSockets, Zustand (state management)  \n- **Design**: Tailwind CSS, CSS Grid, accessibility-first UI  \n- **APIs**: REST endpoints for user auth and document metadata  \n- **Tools**: ESLint, Prettier, Storybook for component demos  \n\n## Architecture  \nThe core is a WebSocket-driven sync layer that diffs changes and merges them in real time. React components use Zustand for efficient state sharing across collaborators. The UI is built with a design system that scales across desktop, tablet, and mobile, with lazy-loaded modules for fast initial load.  \n\n## Contributing  \nWe welcome contributions! Focus on:  \n- Improving UI/UX for complex document structures  \n- Optimizing WebSocket payload size  \n- Adding support for markdown formatting  \n\n## License  \nOpen source under MIT License. See [LICENSE](https://github.com/yourusername/collaborate.live/blob/main/LICENSE) for details."
 }

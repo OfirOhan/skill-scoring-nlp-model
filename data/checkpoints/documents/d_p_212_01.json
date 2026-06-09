@@ -1,23 +1,22 @@
 {
   "doc_id": "d_p_212_01",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_212",
   "hyperparams": {
-    "blog_depth": "opinion-piece",
-    "jargon_density": "heavy"
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Application security (OWASP)": 4,
-    "Compliance (SOC2/GDPR)": 2,
-    "Encryption & PKI": 5,
-    "IAM/Access control": 5,
-    "Incident response": 4,
-    "Network security": 4,
-    "Penetration testing": 4,
-    "SIEM tools": 4,
-    "Security auditing": 1,
-    "Threat modeling": 3,
-    "Vulnerability management": 4
+    "CI/CD pipelines": 3,
+    "Cloud cost optimization": 2,
+    "Docker": 3,
+    "Go": 5,
+    "Kubernetes": 4,
+    "Linux administration": 1,
+    "Microservices architecture": 4,
+    "Python": 3,
+    "REST API design": 5
   },
-  "text": "**Enhancing Threat Detection with Machine Learning in Cybersecurity**  \n\nThe night of the breach, our SIEM tools flagged 120+ anomalies, but none were malicious. Traditional signature-based detection failed to catch a sophisticated supply-chain attack. This is the reality we face: legacy systems struggle to keep pace with evolving threats. As a Senior Security Engineer, I’ve seen firsthand how manual analysis is both slow and error-prone. Enter machine learning—our new ally in the fight against cyber adversaries.  \n\n**Problem Statement**  \nModern threats leverage zero-day exploits, polymorphic malware, and insider risks, rendering static signatures obsolete. Our team’s incident response workflows were drowning in false positives, and our network security stack couldn’t differentiate between benign behavior and covert data exfiltration. The stakes are high: a single undetected breach could cost millions in regulatory fines and reputational damage. We needed a scalable solution that could adapt to new attack vectors in real time.  \n\n**Setup**  \nTo build a robust ML model, we started with a curated dataset of 500,000+ network flow logs, enriched with threat intelligence feeds and historical incident reports. We integrated our SIEM (Splunk) with a Python-based pipeline using TensorFlow and Scikit-learn. Key features included user behavior analytics (UBA), DNS query patterns, and TLS handshake anomalies. For model training, we split data into 70% training, 15% validation, and 15% testing sets, ensuring coverage of both normal and malicious activity.  \n\n**Step-by-Step Guide**  \n1. **Data Preprocessing**: Normalized timestamps, encoded categorical fields (e.g., IP geolocation), and aggregated flow metrics to reduce noise.  \n2. **Feature Engineering**: Extracted temporal patterns (e.g., frequency of DNS requests) and used Isolation Forest to detect outliers.  \n3. **Model Selection**: Deployed a hybrid approach—XGBoost for anomaly scoring and a bidirectional LSTM for sequence-based threat detection (e.g., exfiltration over time).  \n4. **Integration**: Fed model outputs into our SOC’s ticketing system, prioritizing alerts based on confidence scores.  \n5. **Feedback Loop**: Incorporated SOC team feedback to retrain models weekly, refining thresholds for false positives.  \n\n**Results**  \nAfter a 90-day deployment, our ML model achieved a 92% detection rate for zero-day attacks, down from 68% with traditional methods. False positives dropped by 40%, allowing analysts to focus on high-priority threats. Notably, the model identified a lateral movement attempt via a compromised admin account, which had evaded our WAF and IDS. This success underscores the value of blending ML with human expertise in incident response.  \n\n**Conclusion**  \nMachine learning isn’t a silver bullet, but it’s a critical tool in our arsenal. By aligning models with real-world attack patterns and continuously refining them with operational feedback, we’ve transformed our threat detection capabilities. The future of cybersecurity lies in adaptive systems that learn alongside us.  \n\n**Further Reading**  \n- *\"Adversarial Machine Learning in Cybersecurity\"* (IEEE 2023)  \n- OWASP’s API Security Project for integrating ML into application defenses  \n- Splunk’s Machine Learning Toolkit for real-time anomaly detection  \n- Research on federated learning for decentralized threat intelligence sharing"
+  "text": "# NexGen API Gateway: Scalable Backend Solution  \nA production-ready API gateway built for microservices architectures, handling 10k+ requests/sec with dynamic routing, rate limiting, and service mesh integration.  \n\n## Deployment  \nDeploy via Kubernetes using Helm charts optimized for cost efficiency (30% reduction in cloud spend). Pre-configured for AWS EKS with auto-scaling. Docker containers ensure consistent environments across staging and production.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/rohan-kulkarni/nexgen-api-gateway.git  \ncd nexgen-api-gateway  \nmake deps  \nmake build  \n```  \nRequires Go 1.21+ and Docker Desktop. Use `docker-compose up` for local development with mock services.  \n\n## Usage / Examples  \n```bash  \ncurl -X GET http://localhost:8080/api/v1/data?limit=100  \n# Response: {\"status\": \"success\", \"data\": [...] }  \n```  \nKey features:  \n- JWT authentication with token refresh  \n- Rate limiting (500 RPS per user)  \n- Circuit breakers for downstream service failures  \n\n## Tech Stack  \n- **Language**: Go (1.21) for performance-critical components  \n- **Orchestration**: Kubernetes (Helm 3.8+)  \n- **Networking**: Envoy Proxy for service mesh  \n- **Monitoring**: Prometheus + Grafana for latency tracking  \n\n## Architecture / Design  \nMicroservices architecture with API gateway as the central routing layer. Implemented circuit breakers and retries using Go's `sync.Pool` for memory efficiency. Observability via distributed tracing (Jaeger) reduces debugging time by 40%. Horizontal scaling achieved through Kubernetes HPA, with 80% of endpoints serving >1k concurrent requests.  \n\n## License  \nMIT License (see LICENSE)  \n\n## Badges  \n[![GitHub](https://img.shields.io/badge/github-1.21-blue?style=flat)](https://github.com/rohan-kulkarni/nexgen-api-gateway)  \n[![Docker](https://img.shields.io/badge/docker-2.5-green?style=flat)](https://hub.docker.com/_u/rohan-kulkarni/nexgen)  \n[![Kubernetes](https://img.shields.io/badge/kubernetes-1.28-purple?style=flat)](https://kubernetes.io)"
 }

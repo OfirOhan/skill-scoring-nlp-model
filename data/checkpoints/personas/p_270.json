@@ -1,58 +1,71 @@
 {
   "persona_id": "p_270",
   "hyperparams": {
-    "archetype": "product_manager",
-    "years_experience": 1,
-    "seniority": "junior",
-    "industry": "cybersecurity",
-    "writing_style": "confident",
-    "language_fluency": "near-native",
-    "self_promotion_level": "humble",
-    "quantification_tendency": "qualitative"
+    "archetype": "devops_sre",
+    "years_experience": 15,
+    "seniority": "staff",
+    "industry": "enterprise",
+    "writing_style": "neutral",
+    "language_fluency": "native",
+    "self_promotion_level": "boastful",
+    "quantification_tendency": "mixed"
   },
-  "name": "Wendy Acheson 23",
-  "current_role": "Product Manager",
-  "company": "SecureNet Cybersecurity Solutions",
+  "name": "Michael Tran 73",
+  "current_role": "Staff Site Reliability Engineer",
+  "company": "GlobalTech Solutions Inc.",
   "education": {
-    "degree": "Bachelor of Science in Business Administration (Technology Focus)",
-    "university": "State University of Technology",
-    "year": 2023
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "University of Southern California",
+    "year": 2009
   },
   "career_trajectory": [
     {
-      "role": "Product Intern",
-      "company": "SecureNet Cybersecurity Solutions",
-      "duration": "6 months",
-      "responsibilities": "Assisted in aligning product features with cybersecurity threats, conducted stakeholder interviews"
+      "year": 2009,
+      "role": "Systems Administrator",
+      "company": "TechCorp Inc.",
+      "responsibilities": "Linux server management, network automation, and basic CI/CD setup"
     },
     {
-      "role": "Junior Product Coordinator",
-      "company": "SecureNet Cybersecurity Solutions",
-      "duration": "8 months",
-      "responsibilities": "Collaborated on roadmap planning, managed cross-team sprints, analyzed competitor products"
+      "year": 2012,
+      "role": "DevOps Engineer",
+      "company": "CloudScale Ltd.",
+      "responsibilities": "AWS infrastructure automation, Jenkins pipeline development, and monitoring tool integration"
     },
     {
-      "role": "Product Manager",
-      "company": "SecureNet Cybersecurity Solutions",
-      "duration": "1 year",
-      "responsibilities": "Owned end-to-end product lifecycle, led user journey mapping, prioritized feature roadmaps"
+      "year": 2016,
+      "role": "SRE Lead",
+      "company": "DataFlow Systems",
+      "responsibilities": "Global incident management, SLA/SLO governance, and multi-cloud architecture design"
+    },
+    {
+      "year": 2021,
+      "role": "Staff SRE",
+      "company": "GlobalTech Solutions Inc.",
+      "responsibilities": "End-to-end system reliability engineering, team mentoring, and cloud cost optimization strategies"
     }
   ],
   "skills": {
-    "Product management": 3,
-    "UX research": 2,
-    "User journey mapping": 2,
-    "Stakeholder management": 3,
-    "Roadmap planning": 3,
-    "SQL analytics": 3,
-    "Data visualization": 2,
-    "A/B testing": 2,
-    "Cross-team collaboration": 3
+    "CI/CD pipelines": 5,
+    "Kubernetes": 5,
+    "Terraform": 5,
+    "AWS": 4,
+    "GCP": 4,
+    "Prometheus/Grafana": 5,
+    "Monitoring & alerting": 5,
+    "SLA/SLO management": 5,
+    "Infrastructure as Code": 5,
+    "Python": 1,
+    "Docker": 3,
+    "Load balancing": 3,
+    "Cloud cost optimization": 3,
+    "ELK": 2,
+    "Chaos engineering": 3
   },
   "document_ids": [
     "d_p_270_00",
     "d_p_270_01",
     "d_p_270_02",
-    "d_p_270_03"
+    "d_p_270_03",
+    "d_p_270_04"
   ]
 }

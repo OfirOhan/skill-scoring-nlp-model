@@ -1,21 +1,24 @@
 {
   "doc_id": "d_p_300_03",
-  "type": "linkedin",
+  "type": "project_readme",
   "persona_id": "p_300",
   "hyperparams": {
-    "linkedin_completeness": "standard"
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "CI/CD pipelines": 2,
+    "Apache Airflow": 4,
+    "Apache Spark": 4,
+    "Data warehousing": 4,
+    "Database optimization": 4,
     "Docker": 3,
-    "GitHub Actions": 2,
-    "Linux administration": 2,
-    "Microservices architecture": 3,
-    "Monitoring & alerting": 2,
-    "PostgreSQL": 3,
+    "ETL pipeline design": 4,
+    "Linux administration": 1,
     "Python": 3,
-    "REST API design": 3
+    "Redis": 3,
+    "Snowflake": 5,
+    "Terraform": 3
   },
-  "text": "Backend Engineer | RetailFlow Technologies  \nScaling e-commerce platforms with scalable, resilient systems.  \n\nDriven by solving complex problems, I design and deploy backend solutions that power high-traffic retail experiences. Over the past two years, I’ve architected microservices architectures on AWS, optimizing performance for millions of transactions daily. My work with Docker ensures seamless containerization, while PostgreSQL handles critical data operations with precision.  \n\nAdept at crafting REST APIs that balance security and efficiency, I’ve streamlined integrations across distributed systems. Linux administration skills keep infrastructure running smoothly, and monitoring tools ensure real-time visibility into system health.  \n\nCollaborating with cross-functional teams, I turn business needs into technical roadmaps. Whether refining database queries or automating CI/CD pipelines, I focus on reliability and scalability.  \n\nLooking ahead, I’m excited to leverage my expertise in Python and cloud-native tools to drive innovation in retail tech. Let’s connect and explore how we can build smarter, faster systems together."
+  "text": "# Real-Time Customer Analytics Pipeline  \nA scalable, low-latency solution for processing and analyzing customer data streams in real time, optimized for startup growth and operational agility.  \n\n## Deployment  \nDeployed via Terraform-managed infrastructure with Docker containers for consistent environments. Production-ready with automated scaling and monitoring.  \n\n## Badges  \n[![Pipeline Status](https://example.com/status)](https://example.com/status)  \n[![Deployment](https://example.com/deploy)](https://example.com/deploy)  \n[![Tech Stack](https://example.com/tech)](https://example.com/tech)  \n\n## Tech Stack  \n- **Orchestration**: Apache Airflow (production-grade workflow scheduling)  \n- **Processing**: Apache Spark (batch/real-time ETL with 99.9% uptime)  \n- **Storage**: Snowflake (centralized data warehouse with ACID compliance)  \n- **Caching**: Redis (low-latency query caching for 50k+ concurrent users)  \n- **Containerization**: Docker (CI/CD integration for rapid deployment)  \n- **Infrastructure**: Terraform (IaC for cloud-agnostic scalability)  \n\n## Architecture / Design  \nData flows from Kafka topics into Spark streaming clusters, processed into structured formats, and ingested into Snowflake for analytics. Redis caches frequent query results to reduce database load. Airflow manages triggers for batch reprocessing and anomaly detection. Designed for sub-second latency with horizontal scaling.  \n\n## Getting Started / Installation  \n1. Clone repo: `git clone https://github.com/anya-kowalski/real-time-analytics.git`  \n2. Set environment variables for cloud credentials and Kafka endpoints.  \n3. Run `./setup.sh` to initialize Docker containers and Terraform infrastructure.  \n4. Verify deployment via `docker ps` and `terraform output`.  \n\n## Usage / Examples  \n- Trigger real-time processing: `airflow trigger_dag 'customer_pipeline'`  \n- Monitor job status: `airflow tasks state -u customer_pipeline`  \n- Query cached results: `redis-cli GET customer:session:12345`  \n- Analyze warehouse data: `snowsql -u admin -d analytics_db -f query.sql`  \n\n## License  \nMIT License. See [LICENSE](https://github.com/anya-kowalski/real-time-analytics/blob/main/LICENSE) for details."
 }

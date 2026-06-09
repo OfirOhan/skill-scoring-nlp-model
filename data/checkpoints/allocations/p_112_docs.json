@@ -1,34 +1,22 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional resume highlighting Xavier Girard's 13 years of experience as a Staff Backend Engineer in SaaS",
-    "title": "Xavier Girard - Staff Backend Engineer",
+    "topic_summary": "A professional CV highlighting 5 years of experience as a Senior Game Developer at Lumina Interactive.",
+    "title": "Andre Williams - Senior Game Developer CV",
     "doc_id": "d_p_112_00",
     "persona_id": "p_112",
     "hyperparams": {
-      "cv_format": "hybrid",
-      "geographic_convention": "Israel",
-      "company_type": "FAANG",
-      "company_size": "large (500+)"
+      "cv_format": "bullet-heavy",
+      "geographic_convention": "US",
+      "company_type": "agency",
+      "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A microservices architecture for scalable SaaS platforms using Go and PostgreSQL",
-    "title": "NexaCorp Microservices Framework",
+    "topic_summary": "A README for a game engine optimization tool developed by Andre Williams.",
+    "title": "OptiGame Engine",
     "doc_id": "d_p_112_01",
-    "persona_id": "p_112",
-    "hyperparams": {
-      "project_scale": "production",
-      "project_team_size": "large (15+)",
-      "jargon_density": "moderate"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "Real-time analytics dashboard with GraphQL API and React frontend integration",
-    "title": "Real-Time Analytics Dashboard",
-    "doc_id": "d_p_112_02",
     "persona_id": "p_112",
     "hyperparams": {
       "project_scale": "academic",
@@ -38,37 +26,37 @@
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "Serverless API gateway implementation with AWS Lambda and API Gateway for SaaS scalability",
-    "title": "Serverless API Gateway",
-    "doc_id": "d_p_112_03",
+    "topic_summary": "A README for a procedural content generation library used in game development.",
+    "title": "ProceduralGenLib",
+    "doc_id": "d_p_112_02",
     "persona_id": "p_112",
     "hyperparams": {
-      "project_scale": "hobby",
-      "project_team_size": "large (15+)",
-      "jargon_density": "plain"
+      "project_scale": "team-internal",
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "moderate"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "Letter from Xavier's manager praising his leadership in architecture design and team mentorship",
-    "title": "Recommendation from NexaCorp CTO",
-    "doc_id": "d_p_112_04",
+    "topic_summary": "A recommendation letter from Andre's manager at Lumina Interactive praising his leadership and technical skills.",
+    "title": "Recommendation from Lumina Interactive Manager",
+    "doc_id": "d_p_112_03",
     "persona_id": "p_112",
     "hyperparams": {
-      "recommender_role": "direct-manager",
+      "recommender_role": "peer",
       "recommender_closeness": "worked-daily",
       "company_type": "FAANG",
-      "company_size": "mid (50-500)"
+      "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "linkedin",
-    "topic_summary": "Professional summary showcasing Xavier's expertise in backend systems and SaaS scalability",
-    "title": "Xavier Girard - Staff Backend Engineer",
-    "doc_id": "d_p_112_05",
+    "topic_summary": "A LinkedIn summary showcasing Andre's career in game development and industry contributions.",
+    "title": "Andre Williams - Game Developer Profile",
+    "doc_id": "d_p_112_04",
     "persona_id": "p_112",
     "hyperparams": {
-      "linkedin_completeness": "minimal"
+      "linkedin_completeness": "detailed"
     }
   }
 ]

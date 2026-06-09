@@ -1,0 +1,26 @@
+{
+  "doc_id": "d_p_127_03",
+  "type": "project_readme",
+  "persona_id": "p_127",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
+  },
+  "skill_evidence": {
+    "GraphQL": 1,
+    "JavaScript": 5,
+    "Next.js": 1,
+    "Node.js": 2,
+    "Python": 1,
+    "REST API design": 2,
+    "React": 1,
+    "Responsive design": 4,
+    "State management (Redux/Zustand)": 1,
+    "TypeScript": 5,
+    "Web accessibility (WCAG)": 3,
+    "Web performance optimization": 4,
+    "Webpack/Vite": 3
+  },
+  "text": "# Business Insights Dashboard  \nA real-time D3.js visualization toolkit for drilling into client KPIs, with focus on interactive drill-downs, anomaly detection, and cross-platform accessibility  \n\n[![GitHub](https://img.shields.io/github/last-commit/winstonlee/business-insights-dashboard)](https://github.com/winstonlee/business-insights-dashboard)  \n[![npm](https://img.shields.io/npm/v/business-insights-dashboard)](https://www.npmjs.com/package/business-insights-dashboard)  \n[![Production](https://img.shields.io/badge/production-ready-green)](https://businessinsightsdashboard.com)  \n\n## Getting Started / Installation  \n```bash  \nnpm install business-insights-dashboard  \n```  \nClone the repo, install dependencies with `npm install`, and run `npm start` to launch the local dev server. Data sources are configured via environment variables; ensure your analytics pipeline streams JSON to the `/api/data` endpoint.  \n\n## Tech Stack  \n- **D3.js 7.8.5**: Core visualization engine with custom force-directed graph layouts  \n- **TypeScript 4.9**: Full type safety for data pipelines and UI components  \n- **Webpack 5**: Bundling with code splitting for 35% faster load times  \n- **Node.js 18**: Server-side processing for real-time data aggregation  \n- **Accessibility**: WCAG 2.1 AA compliance for screen readers and keyboard navigation  \n- **Performance**: Lighthouse score of 92+ via lazy loading and image optimization  \n\n## Architecture / Design  \nThe dashboard uses a layered architecture:  \n1. **Data Layer**: Streams raw metrics to D3 via WebSocket  \n2. **Visualization Layer**: Custom D3 modules for heatmaps, line charts, and treemaps  \n3. **UI Layer**: TypeScript-driven components with ARIA labels for accessibility  \n\nKey decisions:  \n- D3 modules are decoupled into single-responsibility components  \n- Webpack config prioritizes tree-shaking for 20% smaller bundle size  \n- Responsive design uses CSS media queries with breakpoints at 768px, 1024px, and 1440px  \n\n## Usage / Examples  \n```javascript  \nimport { initDashboard } from 'business-insights-dashboard'  \ninitDashboard({  \n  dataUrl: 'https://api.client.metrics/endpoint',  \n  theme: 'dark'  \n})  \n```  \nExample features:  \n- Drill-down from global KPIs to granular daily metrics  \n- Anomaly detection highlights in red with tooltip explanations  \n- Cross-filtering between line charts and bar graphs  \n\n## Testing  \n- **Unit Tests**: 95% coverage via Jest for D3 modules and utility functions  \n- **Integration Tests**: Cypress end-to-end tests for drill-down workflows  \n- **Accessibility**: axe-core checks for 100% compliance with WCAG 2.1 AA  \n- **Performance**: Lighthouse audits and Web Vitals tracking in production  \n\n## License  \nMIT License  \n© 2023 Winston Lee – Consulting Solutions, Inc."
+}

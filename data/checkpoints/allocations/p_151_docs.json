@@ -1,40 +1,88 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional resume highlighting backend engineering experience in cybersecurity",
-    "title": "Layla Ibrahim",
+    "topic_summary": "Professional resume highlighting DevOps/SRE experience in adtech with 9 years of expertise.",
+    "title": "Deepti Mishra - Senior DevOps/SRE Engineer",
     "doc_id": "d_p_151_00",
     "persona_id": "p_151",
     "hyperparams": {
-      "cv_format": "bullet-heavy",
-      "geographic_convention": "US",
-      "company_type": "enterprise",
-      "company_size": "large (500+)"
+      "cv_format": "paragraph",
+      "geographic_convention": "Israel",
+      "company_type": "FAANG",
+      "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "Implementation of a secure API gateway with rate limiting and encryption protocols",
-    "title": "SecureAPI Gateway",
+    "topic_summary": "Automated CI/CD pipeline for ad campaign deployment with Docker and Kubernetes.",
+    "title": "AdOps Pipeline for Campaign Automation",
     "doc_id": "d_p_151_01",
     "persona_id": "p_151",
     "hyperparams": {
-      "project_scale": "team-internal",
-      "project_team_size": "small (2-4)",
-      "jargon_density": "heavy"
+      "project_scale": "academic",
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "Infrastructure as Code implementation for scalable adtech platforms using Terraform.",
+    "title": "Infrastructure as Code for AdTech Platforms",
+    "doc_id": "d_p_151_02",
+    "persona_id": "p_151",
+    "hyperparams": {
+      "project_scale": "academic",
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "Real-time monitoring solution for ad serving systems using Prometheus and Grafana.",
+    "title": "Real-Time Monitoring for Ad Serving Systems",
+    "doc_id": "d_p_151_03",
+    "persona_id": "p_151",
+    "hyperparams": {
+      "project_scale": "academic",
+      "project_team_size": "large (15+)",
+      "jargon_density": "moderate"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "Endorsement from a tech lead highlighting backend development and security expertise",
-    "title": "Recommendation from Tech Lead",
-    "doc_id": "d_p_151_02",
+    "topic_summary": "Recommendation from a team lead praising Deepti's leadership in DevOps initiatives.",
+    "title": "Recommendation from AdTech Innovations Team Lead",
+    "doc_id": "d_p_151_04",
     "persona_id": "p_151",
     "hyperparams": {
       "recommender_role": "professor",
+      "recommender_closeness": "brief",
+      "company_type": "startup",
+      "company_size": "large (500+)"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "Peer recommendation highlighting Deepti's collaboration skills in cross-functional projects.",
+    "title": "Peer Recommendation for Deepti Mishra",
+    "doc_id": "d_p_151_05",
+    "persona_id": "p_151",
+    "hyperparams": {
+      "recommender_role": "skip-level",
       "recommender_closeness": "worked-daily",
-      "company_type": "academic",
-      "company_size": "mid (50-500)"
+      "company_type": "startup",
+      "company_size": "large (500+)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "Best practices for securing DevOps pipelines in adtech environments.",
+    "title": "Securing DevOps Pipelines in AdTech: A Practical Guide",
+    "doc_id": "d_p_151_06",
+    "persona_id": "p_151",
+    "hyperparams": {
+      "blog_depth": "deep-dive",
+      "jargon_density": "heavy"
     }
   }
 ]

@@ -1,26 +1,21 @@
 {
   "doc_id": "d_p_079_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_079",
   "hyperparams": {
-    "recommender_role": "professor",
-    "recommender_closeness": "occasional",
-    "company_type": "FAANG",
-    "company_size": "mid (50-500)"
+    "project_scale": "hobby",
+    "project_team_size": "large (15+)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "Android development": 3,
     "Flutter": 1,
-    "Kotlin": 3,
-    "Mobile CI/CD": 3,
-    "React Native": 3,
-    "Responsive design": 3,
-    "Swift": 3,
-    "TypeScript": 3,
-    "Unit testing": 3,
-    "Web accessibility": 3,
-    "Webpack/Vite": 1,
-    "iOS development": 3
+    "JavaScript": 1,
+    "Kotlin": 1,
+    "Mobile CI/CD": 4,
+    "REST API design": 3,
+    "Swift": 1,
+    "TypeScript": 1,
+    "Web accessibility (WCAG)": 2
   },
-  "text": "Rajiv Mehta’s academic journey reflects a consistent pursuit of technical depth and intellectual curiosity. As a student, he engaged thoughtfully with coursework in software architecture and distributed systems, often applying theoretical concepts to practical challenges. His projects, such as optimizing a mobile app’s backend integration, demonstrated an ability to balance creativity with rigorous problem-solving.  \n\nHis research ability shines in his approach to complex systems. At NexaTech, Rajiv designed a CI/CD pipeline that streamlined mobile builds, reducing deployment delays by approximately 25%. He also led a team to refactor legacy Kotlin code, improving maintainability without compromising performance. His work on responsive design for cross-platform apps highlighted a nuanced understanding of user experience, particularly in handling varying screen densities.  \n\nRajiv’s character is defined by reliability and intellectual humility. He collaborates seamlessly, often mentoring junior developers while remaining open to feedback. His commitment to web accessibility standards, such as ARIA compliance, reflects a broader ethical awareness of technology’s societal role.  \n\nLooking ahead, Rajiv’s adaptability and analytical mindset position him to excel in evolving tech landscapes. His ability to distill complex problems into actionable solutions suggests strong potential for leadership in both technical and strategic initiatives."
+  "text": "# HealthSync - Real-Time Health Data Tracker  \nHealthSync is a wellness platform that syncs biometric data across devices using Firebase’s Realtime Database. Built for a startup with 15+ engineers, it balances scalability and developer ergonomics while prioritizing data privacy and real-time updates for users.  \n\n## API Reference  \n- **Firebase Realtime Database**: REST endpoints for syncing heart rate, sleep patterns, and activity logs (e.g., `https://healthsync.firebaseio.com/users/{userId}/metrics`).  \n- **Authentication**: OAuth 2.0 endpoints with JWT refresh tokens for secure user access.  \n- **Cloud Functions**: Serverless endpoints for data validation (e.g., `POST /validate-activity`) and anomaly detection.  \n- **Metrics**: Aggregated stats via Firebase Analytics for UX optimization.  \n\n## Usage / Examples  \n```bash  \n# Sync user vitals every 5 minutes  \ncurl -X POST https://healthsync.firebaseio.com/users/123/metrics \\\n  -H \"Authorization: Bearer <token>\" \\\n  -d '{\"heartRate\": 72, \"timestamp\": \"2023-10-05T14:30:00Z\"}'  \n```  \n- Real-time updates trigger notifications via Firebase Cloud Messaging.  \n- Admin dashboard uses Firebase Admin SDK for user management and data audits.  \n\n## Getting Started / Installation  \n1. Clone the repo and set up Firebase credentials via `firebase.json`.  \n2. Deploy Cloud Functions with `firebase deploy --only functions`.  \n3. Configure CI/CD pipelines for automated testing and staging deployments.  \n4. Integrate with third-party health APIs (Apple HealthKit, Google Fit) via Firebase Cloud Functions.  \n\n## Tech Stack  \n- Firebase (Realtime Database, Cloud Functions, Authentication)  \n- Node.js (v16+)  \n- GitHub Actions (CI/CD)  \n- Web accessibility: WCAG 2.1 AA compliance for admin dashboard  \n\n## Architecture / Design  \nFirebase acts as the central nervous system, handling real-time sync and security rules. Cloud Functions abstracts business logic, while Firebase Analytics provides insights for product iteration. Security rules enforce granular access control, and data is normalized to reduce redundancy.  \n\n## License  \nMIT License  \n\n## Badges  \n[![GitHub Actions](https://github.com/healthsync/workflow/actions/workflows/ci.yml/badge.svg)](https://github.com/healthsync/workflow/actions/workflows/ci.yml)  \n[![Firebase Deploy](https://img.shields.io/badge/firebase-deploy-green)](https://console.firebase.google.com/project/healthsync)  \n[![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/healthsync/LICENSE)"
 }

@@ -3,21 +3,24 @@
   "type": "project_readme",
   "persona_id": "p_082",
   "hyperparams": {
-    "project_scale": "production",
+    "project_scale": "hobby",
     "project_team_size": "solo",
-    "jargon_density": "heavy"
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
     "AWS": 3,
-    "CI/CD pipelines": 3,
     "Docker": 3,
-    "JavaScript": 4,
-    "Microservices architecture": 4,
-    "PostgreSQL": 4,
-    "Python": 4,
-    "REST API design": 4,
-    "React": 4,
-    "Web performance optimization": 3
+    "GCP": 2,
+    "Infrastructure as Code": 2,
+    "Kubernetes": 2,
+    "Linux administration": 2,
+    "Load balancing": 2,
+    "Monitoring & alerting": 2,
+    "PostgreSQL": 1,
+    "Python": 1,
+    "REST API design": 1,
+    "Shell scripting (Bash)": 2,
+    "Terraform": 2
   },
-  "text": "# MedTrack - Patient Vital Monitoring Web App  \nA full-stack healthtech solution for real-time patient data aggregation, visualization, and compliance-driven analytics. Built to meet HIPAA standards, this app enables secure, scalable monitoring of vitals across distributed healthcare environments. The system decouples frontend visualization from backend processing, leveraging microservices for fault isolation and performance optimization.  \n\n## Badges  \n[![Deployment Status](https://custom-badge-url)](https://app.deploy.status)  \n[![Test Coverage](https://custom-badge-url)](https://test-coverage.link)  \n[![Tech Stack](https://custom-badge-url)](https://tech-stack.link)  \n\n## Tech Stack  \n**Frontend**: React 18 + TypeScript, with Tailwind CSS for utility-first styling. Real-time updates via WebSocket with Socket.io, optimized for low-latency heart rate telemetry.  \n**Backend**: FastAPI (Python 3.10) for RESTful API endpoints, exposing CRUD operations for patient records and vitals.  \n**Data Layer**: PostgreSQL 15 with Citus for sharding, ensuring sub-second query latency across 10k+ concurrent users.  \n**Cloud**: AWS EKS cluster with NGINX ingress for horizontal scaling, backed by S3 for encrypted audit logs.  \n**CI/CD**: GitHub Actions pipeline for automated testing, Docker image builds, and Canary deployments to CloudFront.  \n**Security**: OAuth2.0 with JWT tokens, end-to-end encryption for data in transit, and role-based access controls (RBAC).  \n\n## Configuration  \nEnvironment variables are managed via `.env` files, with AWS credentials stored in AWS Secrets Manager. Docker Compose is used for local development, while production uses Kubernetes manifests. PostgreSQL is configured with connection pooling and connection limits tuned for high-throughput scenarios.  \n\n## Getting Started / Installation  \nClone the repository using `git clone https://github.com/tomasz-levandowski/medtrack.git`. Navigate to the project root and run `docker compose up --build` to spin up the stack. Ensure Docker Desktop is configured with AWS credentials via `aws configure` and `AWS_ACCESS_KEY_ID`/`AWS_SECRET_ACCESS_KEY` set in environment variables.  \n\n## Usage / Examples  \nThe dashboard provides real-time vitals visualization, with alerts triggered via Prometheus metrics and Grafana integration. Use `/api/patients` to fetch paginated patient lists, and `/api/vitals` for time-series data. For compliance, the audit log endpoint `/api/audit` returns tamper-proof records with AWS CloudTrail integration.  \n\n## Testing  \nUnit tests (Jest) cover React components and FastAPI endpoints. Integration tests verify PostgreSQL transactions and WebSocket connectivity. End-to-end tests (Cypress) simulate user flows, including secure login and data export. Test coverage exceeds 92%, with performance benchmarks ensuring <200ms response times under 10k RPS.  \n\n## License  \nMIT License. Commercial use requires attribution and compliance with HIPAA regulations."
+  "text": "# FinTech Payment Gateway Platform  \n\nA modular, scalable framework for fintech startups to deploy payment solutions with minimal infrastructure overhead. Built for flexibility, this platform abstracts core payment logic into decoupled services, enabling rapid iteration without compromising security or compliance.  \n\n## Configuration  \nEnvironment variables define service behavior. Key settings include:  \n- `AWS_REGION`: Default `us-east-1`  \n- `DOCKER_REGISTRY`: Custom registry for private container storage  \n- `SECURITY_PROTOCOL`: TLS version (1.2 or 1.3)  \n- `LOG_LEVEL`: Debug/Info/Warn (for local dev vs production)  \n\nConfiguration files (YAML/JSON) are version-controlled. AWS credentials are managed via IAM roles for EC2 instances. Docker Compose is used for local development, with environment-specific overrides.  \n\n## Getting Started / Installation  \n1. Clone the repo and `docker-compose up --build` to spin up core services (auth, transaction, webhook).  \n2. Configure AWS credentials using `aws configure` or IAM role attachment.  \n3. Deploy to AWS using CloudFormation templates (included in `infra/`).  \n4. Verify service endpoints via `curl` against the load balancer.  \n\n## Usage / Examples  \nTo process a payment:  \n1. Send a POST request to `/api/v1/payments` with card details and amount.  \n2. The transaction service routes the request to a fraud detection microservice.  \n3. Upon approval, a webhook triggers a ledger update and notifies the merchant.  \n\n## Tech Stack  \n- **Containerization**: Docker (build-time security scans)  \n- **Cloud**: AWS Lambda for async tasks, S3 for audit logs  \n- **Security**: TLS 1.3, HMAC-signed payloads, rate limiting via API Gateway  \n- **Monitoring**: CloudWatch metrics for error rates and latency  \n\n## Architecture / Design  \nThe system uses an event-driven architecture with Kafka for asynchronous communication between services. Critical components:  \n- **Auth Service**: JWT-based, with rate limiting and IP reputation checks  \n- **Transaction Router**: Directs requests to region-specific processing units  \n- **Ledger Service**: Writes to immutable S3 buckets with versioned backups  \n\nEach service is stateless, with Redis used for temporary session storage. Security is enforced via mutual TLS between services and end-to-end encryption for sensitive data.  \n\n## License  \nMIT License — see `LICENSE` for full terms.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/commit-activity/m/paveldvorak/fin-gateway)](https://github.com/paveldvorak/fin-gateway/commits/main)  \n[![Build Status](https://github.com/paveldvorak/fin-gateway/actions/workflows/build.yml/badge.svg)](https://github.com/paveldvorak/fin-gateway/actions/workflows/build.yml)"
 }

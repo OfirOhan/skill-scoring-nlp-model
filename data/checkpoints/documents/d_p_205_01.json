@@ -1,22 +1,28 @@
 {
   "doc_id": "d_p_205_01",
-  "type": "linkedin",
+  "type": "project_readme",
   "persona_id": "p_205",
   "hyperparams": {
-    "linkedin_completeness": "detailed"
+    "project_scale": "hobby",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Application security (OWASP)": 3,
-    "Compliance (SOC2/GDPR)": 3,
-    "Encryption & PKI": 3,
-    "IAM/Access control": 3,
-    "Incident response": 3,
-    "Network security": 3,
-    "Penetration testing": 2,
-    "SIEM tools": 2,
-    "Security auditing": 2,
-    "Threat modeling": 2,
-    "Vulnerability management": 2
+    "Agile/Scrum": 4,
+    "CI/CD pipelines": 3,
+    "Cross-team collaboration": 5,
+    "GitHub Actions": 4,
+    "GitLab CI": 1,
+    "Jenkins": 1,
+    "Linux administration": 1,
+    "Project management": 5,
+    "Prometheus/Grafana": 3,
+    "Risk assessment": 4,
+    "Stakeholder communication": 1,
+    "Strategic planning": 5,
+    "System design": 5,
+    "Team leadership": 5,
+    "Technical debt management": 5
   },
-  "text": "#Cybersecurity #SecurityEngineering #CyberShieldSolutions  \nPriya Sharma | Security Engineer at CyberShield Solutions | 5 years shaping safer digital worlds  \n\nI’m a Security Engineer at CyberShield Solutions, where I spend my days building defenses against evolving threats. My work blends technical rigor with a focus on practical impact—whether it’s designing secure APIs that align with OWASP guidelines or ensuring systems meet SOC2 and GDPR standards.  \n\nA big part of my role involves balancing protection with usability. For example, I recently led a project to streamline IAM processes for a client, cutting access friction by 40% without compromising security. I also dive deep into incident response, turning post-breach analysis into proactive safeguards.  \n\nOutside of code, I’m passionate about making cybersecurity accessible. I’ve contributed to open-source tools that help teams audit encryption practices, and I regularly collaborate with cross-functional teams to embed security into product development from the start.  \n\nLooking ahead, I’m excited about the potential of AI in threat detection and how zero-trust frameworks will reshape how we protect data. Let’s build a safer internet—one line of code at a time.  \n\n*Skills: Application Security, Compliance, Encryption, IAM, Incident Response, Network Security, Penetration Testing, SIEM, Security Auditing, Threat Modeling, Vulnerability Management*"
+  "text": "# HealthData Analytics Patient Data Platform  \nA scalable platform for aggregating and analyzing patient data to improve healthcare outcomes. Built to handle 10k+ concurrent data streams with 99.9% uptime, supporting 50+ data sources including EHRs, wearables, and lab systems.  \n\n## Contributing  \nWe welcome contributions! Focus areas include:  \n- Enhancing data models for 30+ clinical data types  \n- Improving visualization for 15+ use cases (e.g., sepsis detection, readmission risk)  \n- Expanding compliance frameworks (HIPAA, GDPR)  \nAll contributions undergo peer review and are merged into the main branch with automated testing.  \n\n## Getting Started / Installation  \n```bash\n# Prerequisites: Python 3.9+, Docker 20.10+  \ngit clone https://github.com/healthdata-analytics/platform.git  \ncd platform  \ndocker compose up -d  \n# Access dashboard at http://localhost:8080 after 2 minutes  \n```  \nThe setup includes pre-configured PostgreSQL, Kafka, and Grafana instances. Initial data ingestion takes ~15 seconds for 100k records.  \n\n## Usage / Examples  \n1. **Query Analysis**:  \n   ```python  \n   from analytics import PatientQuery  \n   query = PatientQuery(\"age > 65 AND condition = 'diabetes'\")  \n   results = query.execute()  \n   print(f\"{len(results)} patients identified\")  \n   ```  \n2. **Alerts**:  \n   Configure Prometheus metrics for real-time anomaly detection (e.g., 20% spike in sepsis alerts).  \n3. **Export**:  \n   Use the `/api/export` endpoint to generate CSV/JSON reports for 50+ data types.  \n\n## Tech Stack  \n- **Language**: Python 3.9 (with Pydantic for data validation)  \n- **Database**: PostgreSQL 14 (with TimescaleDB for time-series)  \n- **Orchestration**: Docker Compose (12 services, 50+ containers)  \n- **Monitoring**: Prometheus + Grafana (15+ dashboards)  \n- **CI/CD**: GitHub Actions (100+ workflows, 95% test coverage)  \n\n## Architecture / Design  \nThe system uses a microservices architecture with:  \n- **Data Ingestion**: Kafka-based pipelines (20+ topics) for real-time processing  \n- **Analytics Engine**: Python-based batch processing with Dask (handles 1TB+ datasets)  \n- **Compliance Layer**: Automated audit trails and data masking (15+ encryption standards)  \n- **Scalability**: Horizontal scaling for 500+ concurrent users (tested with Locust)  \n\n## License  \nMIT License (https://opensource.org/licenses/MIT)  \n\n## Badges  \n[![Version](https://img.shields.io/github/package-json/version/healthdata-analytics/platform?label=version)](https://github.com/healthdata-analytics/platform)  \n[![Build](https://img.shields.io/github/actions/workflow/healthdata-analytics/platform/build.yml?branch=main)](https://github.com/healthdata-analytics/platform/actions)  \n[![Compliance](https://img.shields.io/badge/compliance-HIPAA%20%26%20GDPR-blue)](https://github.com/healthdata-analytics/platform)"
 }

@@ -3,20 +3,19 @@
   "type": "project_readme",
   "persona_id": "p_129",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "small (2-4)",
+    "project_scale": "team-internal",
+    "project_team_size": "medium (5-15)",
     "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "API testing": 3,
-    "CI/CD pipelines": 3,
-    "Integration testing": 3,
-    "Java": 2,
-    "Python": 3,
-    "REST API design": 3,
-    "Selenium/Playwright": 4,
-    "Test automation": 4,
-    "Unit testing": 3
+    "Application security (OWASP)": 5,
+    "DNS/DHCP": 1,
+    "Firewall configuration": 2,
+    "IAM/Access control": 4,
+    "Network security": 5,
+    "Penetration testing": 5,
+    "SIEM tools": 3,
+    "TCP/IP": 2
   },
-  "text": "# Automated Checkout Testing Framework  \nA scalable, production-ready framework for validating e-commerce checkout workflows through API and UI integration. Built to ensure end-to-end reliability across platforms, this tool streamlines regression testing and CI/CD pipeline integration.  \n\n## Badges  \n[![GitHub](https://github.com/username/repo/actions/workflows/ci.yml/badge.svg)](https://github.com/username/repo/actions/workflows/ci.yml)  \n[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)  \n[![CI/CD](https://img.shields.io/badge/CI%20%26%20CD-passing-green)](https://github.com/username/repo/actions)  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for full details.  \n\n## Tech Stack  \n- **Language**: Python (pytest), Java (backend scripts)  \n- **UI Tools**: Playwright (cross-browser support), Selenium (legacy compatibility)  \n- **API Testing**: Python `requests` library for REST endpoint validation  \n- **CI/CD**: GitHub Actions, Jenkins (optional)  \n- **Data Handling**: JSON/CSV test data files, SQLite for mock DB  \n- **Reporting**: Allure for detailed test result visualization  \n\n## Architecture / Design  \nThe framework is modular, separating UI and API test suites into distinct packages. Core components include:  \n- **Test Data Manager**: Centralized data loading for dynamic inputs  \n- **Pipeline Integration**: Pre- and post-test hooks for CI/CD triggers  \n- **Error Logging**: Structured logs with stack traces for failed scenarios  \n- **Parallel Execution**: Playwright’s built-in parallelism for faster test runs  \n- **Mock Services**: Stubbed payment gateways for isolated checkout validation  \n\n## Getting Started / Installation  \n1. Clone the repository using Git.  \n2. Install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   ```  \n3. Set environment variables for API keys and browser configurations.  \n4. Run tests via command line:  \n   ```bash  \n   pytest test_ui.py --headless  \n   ```  \n\n## Usage / Examples  \n```python  \n# Example: Validate checkout flow with promo code  \ndef test_checkout_with_discount():  \n    api_client.create_order(items=[{\"product_id\": 123, \"quantity\": 2}])  \n    assert api_client.apply_discount(\"SAVE10\") == \"10% off\"  \n```  \nRun `pytest --help` for options like parallel execution or test filtering.  \n\n## Contributing  \nPull requests are welcome! Ensure tests cover edge cases (e.g., partial payments, inventory sync). Follow the [code of conduct](CODE_OF_CONDUCT.md) and open issues for feature requests."
+  "text": "# HIPAA-Compliant Telemedicine Security Platform  \n\nA secure telemedicine platform built to safeguard patient data through end-to-end encryption, role-based access controls, and audit trails aligned with HIPAA standards. Designed for virtual consultations, data sharing, and secure provider-patient communication while maintaining regulatory compliance.  \n\n## Badges  \n[![HIPAA Compliance](https://img.shields.io/badge/HIPAA-Compliant-blue)](https://example.com)  \n[![Security Audit Passed](https://img.shields.io/badge/Security-Audit_Passed-green)](https://example.com)  \n[![Tech Stack](https://img.shields.io/badge/Tech-Python%2CDjango%2CPostgreSQL-yellow)](https://example.com)  \n\n## Getting Started / Installation  \nClone the repository and install dependencies:  \n```bash  \ngit clone https://github.com/your-username/hipaa-platform.git  \ncd hipaa-platform  \npip install -r requirements.txt  \n```  \nSet environment variables for encryption keys and SIEM integration:  \n```bash  \nexport ENCRYPTION_KEY=\"your-secure-key-here\"  \nexport SIEM_ENDPOINT=\"https://your-siem-service.com/api\"  \n```  \nRun migrations and start the server:  \n```bash  \npython manage.py migrate  \npython manage.py runserver  \n```  \nEnsure all data transfers use TLS 1.3 and audit logs are enabled in the settings file.  \n\n## Tech Stack  \n- **Backend**: Python (Django) with REST framework for API endpoints  \n- **Database**: PostgreSQL with row-level security policies  \n- **Encryption**: AES-256 for data at rest, TLS 1.3 for transit  \n- **SIEM Integration**: Real-time log aggregation for threat detection  \n- **Authentication**: OAuth2 with JWT for provider access, OAuth2 for patient portals  \n\n## Architecture / Design  \nThe platform employs a microservices architecture with a centralized security layer. Patient data is encrypted at rest using AWS KMS-managed keys, and all communications use mTLS. SIEM tools ingest logs from API gateways and database activity monitors to detect anomalies. IAM policies enforce least-privilege access, with audit trails for every data access event. Penetration testing is integrated into the CI/CD pipeline to validate security controls.  \n\n## Usage / Examples  \nTo schedule a virtual consultation:  \n```python  \nPOST /api/schedule-consultation  \n{  \n  \"patient_id\": \"P12345\",  \n  \"provider_id\": \"PROV6789\",  \n  \"session_token\": \"encrypted-session-key\"  \n}  \n```  \nAll endpoints require valid OAuth2 tokens, and patient data is automatically redacted in logs.  \n\n## Testing  \nAutomated tests validate encryption, IAM policies, and SIEM integrations. Unit tests for cryptographic operations are run with pytest, while integration tests simulate attacker scenarios using OWASP ZAP. Penetration testing is conducted quarterly, with findings prioritized based on risk exposure.  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details."
 }

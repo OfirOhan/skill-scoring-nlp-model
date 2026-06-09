@@ -1,46 +1,22 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional resume for Rosa Gutierrez, Staff Security Engineer with 10 years of experience in cybersecurity.",
-    "title": "Rosa Gutierrez - Staff Security Engineer",
+    "topic_summary": "Professional resume highlighting 7 years of experience as a Senior Product Manager in the gaming industry",
+    "title": "Kwame Mensah - Senior Product Manager",
     "doc_id": "d_p_225_00",
     "persona_id": "p_225",
     "hyperparams": {
-      "cv_format": "paragraph",
-      "geographic_convention": "Europe",
-      "company_type": "startup",
+      "cv_format": "minimal",
+      "geographic_convention": "India",
+      "company_type": "enterprise",
       "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "Implementation of a secure authentication system using OAuth 2.0 and multi-factor authentication for CyberShield Solutions.",
-    "title": "Secure Authentication System for CyberShield Solutions",
+    "topic_summary": "README for a game analytics dashboard that tracks player behavior and monetization metrics",
+    "title": "GameInsight Analytics Dashboard",
     "doc_id": "d_p_225_01",
-    "persona_id": "p_225",
-    "hyperparams": {
-      "project_scale": "academic",
-      "project_team_size": "large (15+)",
-      "jargon_density": "moderate"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "Development of a real-time threat detection framework leveraging machine learning and SIEM integration.",
-    "title": "Real-Time Threat Detection Framework",
-    "doc_id": "d_p_225_02",
-    "persona_id": "p_225",
-    "hyperparams": {
-      "project_scale": "team-internal",
-      "project_team_size": "medium (5-15)",
-      "jargon_density": "moderate"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "Research and implementation of quantum-resistant encryption protocols for future-proofing CyberShield's infrastructure.",
-    "title": "Quantum-Resistant Encryption Protocol Implementation",
-    "doc_id": "d_p_225_03",
     "persona_id": "p_225",
     "hyperparams": {
       "project_scale": "production",
@@ -50,15 +26,36 @@
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "Recommendation letter from Rosa's manager at CyberShield Solutions highlighting her leadership and technical expertise in security engineering.",
-    "title": "Recommendation from Senior Security Manager, CyberShield Solutions",
-    "doc_id": "d_p_225_04",
+    "topic_summary": "Letter from a former manager praising Kwame's leadership in launching successful gaming products",
+    "title": "Recommendation from Senior Director, Lumina Interactive",
+    "doc_id": "d_p_225_02",
     "persona_id": "p_225",
     "hyperparams": {
       "recommender_role": "professor",
       "recommender_closeness": "worked-daily",
       "company_type": "academic",
-      "company_size": "mid (50-500)"
+      "company_size": "small (<50)"
+    }
+  },
+  {
+    "doc_type": "linkedin",
+    "topic_summary": "Summary showcasing Kwame's expertise in product strategy and innovation within gaming",
+    "title": "Kwame Mensah - Product Manager",
+    "doc_id": "d_p_225_03",
+    "persona_id": "p_225",
+    "hyperparams": {
+      "linkedin_completeness": "standard"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "Discussion on balancing player experience with business goals in free-to-play game design",
+    "title": "Designing Win-Win Monetization Strategies for Gamers",
+    "doc_id": "d_p_225_04",
+    "persona_id": "p_225",
+    "hyperparams": {
+      "blog_depth": "deep-dive",
+      "jargon_density": "moderate"
     }
   }
 ]

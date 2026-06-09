@@ -4,19 +4,19 @@
   "persona_id": "p_008",
   "hyperparams": {
     "project_scale": "production",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "plain"
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 1,
-    "CI/CD pipelines": 3,
-    "Docker": 3,
-    "Go": 1,
-    "Kubernetes": 1,
-    "PostgreSQL": 3,
-    "Python": 4,
-    "REST API design": 3,
-    "Terraform": 1
+    "Flutter": 4,
+    "Kotlin": 2,
+    "Mobile CI/CD": 3,
+    "React": 1,
+    "React Native": 1,
+    "Swift": 1,
+    "TypeScript": 1,
+    "Web performance optimization": 1,
+    "Webpack/Vite": 1
   },
-  "text": "# Real-Time Ad Bidding System  \nA scalable backend solution for real-time ad auctioning, optimized for high-throughput and low-latency adtech workflows. Built with Python and PostgreSQL, this system processes 10k+ bids per second with 99.99% uptime in production.  \n\n## Badges  \n[![Python](https://img.shields.io/badge/python-3.9-blue)](https://www.python.org/)  \n[![PostgreSQL](https://img.shields.io/badge/postgresql-14-green)](https://www.postgresql.org/)  \n[![CI/CD](https://img.shields.io/badge/ci--cd-azure-blue)](https://azure.microsoft.com/)  \n[![Docker](https://img.shields.io/badge/docker-23.0-blue)](https://www.docker.com/)  \n\n## Getting Started  \n1. Clone the repo: `git clone https://github.com/yourusername/real-time-ad-bidding.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Set up PostgreSQL (or use Docker container):  \n   ```bash  \n   docker run --name ad-bidding-db -e POSTGRES_PASSWORD=securepass -d postgres:14  \n   ```  \n4. Run migrations: `python manage.py migrate`  \n5. Start the server: `python manage.py runserver`  \n6. Run tests: `pytest --cov=ad_bidding`  \n\n## Usage  \nThe system exposes a REST API for bid submission and auction results:  \n```bash  \nPOST /bids  \n{  \n  \"advertiser_id\": \"advertiser_123\",  \n  \"bid_amount\": 2.50,  \n  \"ad_network\": \"network_x\"  \n}  \n```  \nResponse:  \n```json  \n{  \n  \"auction_id\": \"auction_456\",  \n  \"winning_bid\": 2.50,  \n  \"timestamp\": \"2023-10-05T14:30:00Z\"  \n}  \n```  \nDesigned for sub-100ms latency with 99.99% request success rate.  \n\n## Architecture  \nA microservices architecture with:  \n- **Message queue**: RabbitMQ for async bid processing  \n- **Database**: PostgreSQL with partitioned tables for 10k+ writes/sec  \n- **Caching**: Redis for bid metadata (50ms response time)  \n- **Load balancing**: Nginx with sticky sessions for ad network routing  \n\n## Tech Stack  \n- **Language**: Python (owning core auction logic, 30% performance uplift via async optimizations)  \n- **Database**: PostgreSQL (90% read/write ratio, 500ms P99 latency)  \n- **Containerization**: Docker (CI/CD integration, 20% deployment time reduction)  \n- **API**: RESTful design (OpenAPI specs, 100% schema validation)  \n- **CI/CD**: Azure Pipelines (automated testing, 95% test coverage)  \n\n## Contributing  \nSubmit PRs with:  \n- Unit tests (pytest) for all new features  \n- Type hints for Python modules  \n- Dockerized environment for reproducibility  \n- Benchmarking results for performance improvements  \n\n## Testing  \n- **Unit tests**: 95% coverage (pytest, 400+ assertions)  \n- **Integration tests**: Simulate 5k concurrent bids (500ms P99)  \n- **CI/CD**: Automated test suite runs on every push (98% pass rate)  \n\n## Roadmap  \n- Q4 2023: Add ML-driven bid optimization (Pilot with TensorFlow)  \n- Q1 2024: Expand to support 10+ ad networks via plugin architecture  \n- Q2 2024: Implement fault-tolerant state replication (Raft consensus)"
+  "text": "# TaskFlow: SaaS Task Management App for Teams  \n\nTaskFlow is a lightweight, production-ready task management tool built with Flutter and Firebase, designed to streamline team workflows. It supports real-time collaboration, role-based access, and custom task prioritization—ideal for remote teams and agile environments.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/yourusername/taskflow.git`  \n2. Fetch Firebase config: Replace `firebase_options.dart` with your project’s credentials  \n3. Run: `flutter pub get` followed by `flutter run`  \n\n## Usage / Examples  \n- **Team Collaboration**: Assign tasks, set deadlines, and track progress via shared dashboards  \n- **Real-Time Sync**: Firebase Firestore ensures updates reflect across all devices instantly  \n- **Custom Workflows**: Drag-and-drop task reordering, comment threads, and subtask nesting  \n\n## Badges  \n[![Flutter](https://img.shields.io/badge/flutter-2.8-blue)](https://flutter.dev)  \n[![Firebase](https://img.shields.io/badge/firebase-9.22.2-green)](https://firebase.google.com)  \n[![Production-Ready](https://img.shields.io/badge/production-ready-4285f4)](https://github.com/yourusername/taskflow)  \n\n## Tech Stack  \n- **Frontend**: Flutter (desktop/mobile)  \n- **Backend**: Firebase Firestore, Firebase Auth, Firebase Cloud Functions  \n- **Additional**: Kotlin (for Android-specific modules), Dart (core logic)  \n\n## Architecture / Design  \nThe app uses Flutter’s widget tree for a responsive UI, with Firebase as the central data hub. State management is handled via Riverpod for scalability. Firebase Cloud Functions manage background sync tasks, reducing client-side overhead. Modular design ensures easy feature expansion without compromising performance.  \n\n## Contributing  \nOpen to contributions for bug fixes or feature enhancements. For solo maintenance, pull requests are reviewed periodically. Note: The app is actively used in production, so changes require rigorous testing.  \n\n## License  \nMIT License  \n© 2023 Bhavna Chandra — [View License](LICENSE)"
 }

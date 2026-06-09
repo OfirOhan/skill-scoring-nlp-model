@@ -1,65 +1,58 @@
 {
   "persona_id": "p_037",
   "hyperparams": {
-    "archetype": "data_scientist",
-    "years_experience": 12,
-    "seniority": "staff",
-    "industry": "consulting",
-    "writing_style": "verbose",
+    "archetype": "devops_sre",
+    "years_experience": 2,
+    "seniority": "junior",
+    "industry": "startup",
+    "writing_style": "concise",
     "language_fluency": "native",
-    "self_promotion_level": "balanced",
-    "quantification_tendency": "mixed"
+    "self_promotion_level": "boastful",
+    "quantification_tendency": "qualitative"
   },
-  "name": "Mateo Garcia",
-  "current_role": "Senior Data Scientist",
-  "company": "Strategic Analytics Group",
+  "name": "Layla Ibrahim",
+  "current_role": "Junior DevOps/SRE Engineer",
+  "company": "NexGen Solutions",
   "education": {
-    "degree": "Master's in Data Science",
-    "university": "Stanford University",
-    "year": 2015
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "University of California, Berkeley",
+    "year": 2022
   },
   "career_trajectory": [
     {
-      "role": "Data Analyst",
-      "company": "Global Insights LLC",
-      "years": "2010–2012"
+      "role": "DevOps Intern",
+      "company": "InnovateTech Startup",
+      "duration": "6 months",
+      "responsibilities": "Assisted with CI/CD pipeline setup and basic infrastructure automation."
     },
     {
-      "role": "Data Scientist",
-      "company": "Quantum Analytics",
-      "years": "2012–2015"
-    },
-    {
-      "role": "Senior Data Scientist",
-      "company": "Vertex Consulting",
-      "years": "2015–2017"
-    },
-    {
-      "role": "Staff Data Scientist",
-      "company": "Strategic Analytics Group",
-      "years": "2017–present"
+      "role": "Junior DevOps Engineer",
+      "company": "NexGen Solutions",
+      "duration": "18 months",
+      "responsibilities": "Maintained Kubernetes clusters, implemented monitoring tools, and optimized cloud costs."
     }
   ],
   "skills": {
-    "Pandas": 4,
-    "NumPy": 4,
-    "Statistical modeling": 5,
-    "A/B testing": 4,
-    "Data visualization (Matplotlib/Plotly)": 4,
-    "Jupyter notebooks": 4,
-    "Feature engineering": 4,
-    "Python": 5,
-    "REST API design": 4,
-    "Microservices architecture": 4,
-    "Apache Spark": 4,
-    "Apache Airflow": 4
+    "CI/CD pipelines": 4,
+    "GitHub Actions": 5,
+    "Jenkins": 4,
+    "ArgoCD": 3,
+    "Prometheus/Grafana": 4,
+    "Monitoring & alerting": 4,
+    "Incident management": 3,
+    "Linux administration": 4,
+    "Terraform": 4,
+    "Python": 2,
+    "Docker": 3,
+    "Load balancing": 3,
+    "Cloud cost optimization": 3,
+    "Message queues": 1,
+    "PostgreSQL": 2
   },
   "document_ids": [
     "d_p_037_00",
     "d_p_037_01",
     "d_p_037_02",
-    "d_p_037_03",
-    "d_p_037_04",
-    "d_p_037_05"
+    "d_p_037_03"
   ]
 }

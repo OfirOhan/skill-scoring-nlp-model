@@ -1,56 +1,62 @@
 {
   "persona_id": "p_146",
   "hyperparams": {
-    "archetype": "embedded_engineer",
-    "years_experience": 7,
+    "archetype": "ml_engineer",
+    "years_experience": 8,
     "seniority": "senior",
-    "industry": "startup",
+    "industry": "enterprise",
     "writing_style": "concise",
-    "language_fluency": "ESL",
+    "language_fluency": "native",
     "self_promotion_level": "humble",
     "quantification_tendency": "metrics-heavy"
   },
-  "name": "Sunita Rao",
-  "current_role": "Embedded Engineer",
-  "company": "NexaTech Solutions",
+  "name": "Opal Nguyễn",
+  "current_role": "Senior ML Engineer - Enterprise AI Solutions",
+  "company": "NexaCorp",
   "education": {
-    "degree": "Bachelor of Technology",
-    "university": "Indian Institute of Technology Bombay",
+    "degree": "Master of Science in Data Science",
+    "university": "Stanford University",
     "year": 2016
   },
   "career_trajectory": [
     {
-      "year": 2016,
-      "role": "Junior Embedded Engineer",
-      "company": "TechNova Systems"
+      "role": "Data Scientist",
+      "company": "Synthia Analytics",
+      "year": "2015-2017"
     },
     {
-      "year": 2019,
-      "role": "Senior Embedded Engineer",
-      "company": "IoT Logic Pvt. Ltd."
+      "role": "ML Engineer",
+      "company": "Vortex Dynamics",
+      "year": "2017-2019"
     },
     {
-      "year": 2021,
-      "role": "Lead Embedded Engineer",
-      "company": "NexaTech Solutions"
+      "role": "Senior ML Engineer",
+      "company": "Aether Systems",
+      "year": "2019-2021"
+    },
+    {
+      "role": "Senior ML Team Lead",
+      "company": "NexaCorp",
+      "year": "2021-present"
     }
   ],
   "skills": {
-    "C/C++ (embedded)": 5,
-    "RTOS": 4,
-    "Firmware development": 4,
-    "IoT protocols (MQTT/CoAP)": 4,
-    "Hardware-software integration": 4,
-    "Embedded Linux": 4,
-    "Python": 3,
+    "PyTorch": 5,
+    "TensorFlow": 5,
+    "MLOps": 1,
+    "Model deployment": 5,
+    "LLMs/Prompt engineering": 4,
+    "NLP": 5,
+    "Apache Spark": 3,
     "REST API design": 3,
-    "CI/CD pipelines": 3,
-    "Network automation": 3
+    "Docker": 3,
+    "Cloud cost optimization": 3
   },
   "document_ids": [
     "d_p_146_00",
     "d_p_146_01",
     "d_p_146_02",
-    "d_p_146_03"
+    "d_p_146_03",
+    "d_p_146_04"
   ]
 }

@@ -1,75 +1,38 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Ethan Price's 9 years of experience as a Senior Machine Learning Engineer in consulting.",
-    "title": "Ethan Price - Senior Machine Learning Engineer",
+    "topic_summary": "Professional resume highlighting Monica Nyambura's experience as a Senior Cybersecurity Tech Lead & Architect",
+    "title": "Monica Nyambura - Senior Cybersecurity Tech Lead & Architect",
     "doc_id": "d_p_057_00",
     "persona_id": "p_057",
     "hyperparams": {
-      "cv_format": "minimal",
+      "cv_format": "paragraph",
       "geographic_convention": "India",
-      "company_type": "FAANG",
-      "company_size": "mid (50-500)"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "A GitHub README for an NLP project optimizing customer sentiment analysis for a Fortune 500 client.",
-    "title": "SentimentGuard: Enterprise NLP for Customer Feedback Analysis",
-    "doc_id": "d_p_057_01",
-    "persona_id": "p_057",
-    "hyperparams": {
-      "project_scale": "academic",
-      "project_team_size": "medium (5-15)",
-      "jargon_density": "heavy"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "A README detailing a time series forecasting system for energy demand prediction in smart grid consulting.",
-    "title": "GridForecast: AI-Driven Energy Demand Prediction",
-    "doc_id": "d_p_057_02",
-    "persona_id": "p_057",
-    "hyperparams": {
-      "project_scale": "production",
-      "project_team_size": "medium (5-15)",
-      "jargon_density": "heavy"
-    }
-  },
-  {
-    "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from a former manager praising Ethan's leadership in deploying ML solutions for healthcare clients.",
-    "title": "Recommendation from Dr. Clara Bennett, Chief Data Officer",
-    "doc_id": "d_p_057_03",
-    "persona_id": "p_057",
-    "hyperparams": {
-      "recommender_role": "peer",
-      "recommender_closeness": "occasional",
       "company_type": "agency",
       "company_size": "mid (50-500)"
     }
   },
   {
-    "doc_type": "recommendation",
-    "topic_summary": "A peer recommendation highlighting Ethan's collaborative approach to building scalable ML pipelines for fintech projects.",
-    "title": "Recommendation from Marcus Lee, Senior Data Scientist",
-    "doc_id": "d_p_057_04",
+    "doc_type": "project_readme",
+    "topic_summary": "Overview of a real-time threat detection platform developed by Monica Nyambura",
+    "title": "SecureSphere Threat Detection Platform",
+    "doc_id": "d_p_057_01",
     "persona_id": "p_057",
     "hyperparams": {
-      "recommender_role": "skip-level",
-      "recommender_closeness": "brief",
-      "company_type": "startup",
-      "company_size": "mid (50-500)"
+      "project_scale": "hobby",
+      "project_team_size": "solo",
+      "jargon_density": "moderate"
     }
   },
   {
-    "doc_type": "linkedin",
-    "topic_summary": "A LinkedIn summary showcasing Ethan's consulting expertise in ML model optimization and cross-industry client partnerships.",
-    "title": "Ethan Price - Senior Machine Learning Engineer | Consultant",
-    "doc_id": "d_p_057_05",
+    "doc_type": "blog",
+    "topic_summary": "Discussion on zero-day exploit mitigation strategies for modern cybersecurity architectures",
+    "title": "Zero-Day Exploit Mitigation: Strategies for Modern Cybersecurity Architects",
+    "doc_id": "d_p_057_02",
     "persona_id": "p_057",
     "hyperparams": {
-      "linkedin_completeness": "minimal"
+      "blog_depth": "opinion-piece",
+      "jargon_density": "plain"
     }
   }
 ]

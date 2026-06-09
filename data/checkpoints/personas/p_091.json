@@ -1,48 +1,57 @@
 {
   "persona_id": "p_091",
   "hyperparams": {
-    "archetype": "backend_engineer",
-    "years_experience": 7,
+    "archetype": "platform_engineer",
+    "years_experience": 8,
     "seniority": "senior",
-    "industry": "enterprise",
-    "writing_style": "verbose",
+    "industry": "cybersecurity",
+    "writing_style": "confident",
     "language_fluency": "native",
     "self_promotion_level": "boastful",
     "quantification_tendency": "mixed"
   },
-  "name": "Aiden O'Sullivan",
-  "current_role": "Lead Backend Engineer",
-  "company": "Virtuoso Systems",
+  "name": "Callum Reid",
+  "current_role": "Senior Platform Engineer",
+  "company": "CyberShield Technologies",
   "education": {
-    "degree": "Master of Science in Computer Science",
-    "university": "Massachusetts Institute of Technology",
-    "year": 2017
+    "degree": "Master of Science in Cybersecurity",
+    "university": "University of Edinburgh",
+    "year": 2016
   },
   "career_trajectory": [
-    "Software Developer at SynthraTech (2016-2018) — architected RESTful APIs for real-time analytics platforms",
-    "Senior Backend Developer at NebulaCorp (2018-2021) — scaled microservices architectures across 12 regions",
-    "Principal Backend Engineer at Aether Dynamics (2021-2023) — led cloud-native migrations to AWS/GCP hybrid environments"
+    {
+      "role": "Junior DevOps Engineer",
+      "company": "SecureNet Solutions",
+      "duration": "2015-2017"
+    },
+    {
+      "role": "Senior SRE Engineer",
+      "company": "NetDefend",
+      "duration": "2017-2019"
+    },
+    {
+      "role": "Cloud Platform Architect",
+      "company": "CloudSafe",
+      "duration": "2019-2021"
+    }
   ],
   "skills": {
-    "Python": 4,
-    "Java": 3,
-    "Go": 4,
-    "REST API design": 4,
-    "Microservices architecture": 5,
-    "PostgreSQL": 4,
-    "MongoDB": 3,
-    "Redis": 4,
-    "CI/CD pipelines": 4,
-    "GitHub Actions": 4,
     "AWS": 5,
-    "Docker": 4,
     "Kubernetes": 5,
-    "Terraform": 4
+    "Terraform": 5,
+    "Cloud Cost Optimization": 3,
+    "Infrastructure as Code": 4,
+    "Load balancing": 3,
+    "Serverless": 3,
+    "Prometheus/Grafana": 3,
+    "Network automation": 2,
+    "DNS/DHCP": 1
   },
   "document_ids": [
     "d_p_091_00",
     "d_p_091_01",
     "d_p_091_02",
-    "d_p_091_03"
+    "d_p_091_03",
+    "d_p_091_04"
   ]
 }

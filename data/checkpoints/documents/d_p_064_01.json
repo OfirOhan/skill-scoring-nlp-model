@@ -3,25 +3,20 @@
   "type": "project_readme",
   "persona_id": "p_064",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "solo",
-    "jargon_density": "plain"
+    "project_scale": "academic",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "CI/CD pipelines": 4,
-    "Chaos engineering": 4,
-    "GitHub Actions": 4,
-    "Go": 4,
-    "Linux administration": 3,
-    "Monitoring & alerting": 4,
-    "Prometheus/Grafana": 4,
-    "Microservices architecture": 4,
-    "PostgreSQL": 4,
-    "REST API design": 4,
-    "Redis": 4,
-    "Python": 1,
-    "Message queues": 1
+    "HTML/CSS": 3,
+    "JavaScript": 4,
+    "REST API design": 1,
+    "React": 4,
+    "Responsive design": 3,
+    "State management (Redux/Zustand)": 3,
+    "TypeScript": 3,
+    "Web performance optimization": 3,
+    "Webpack/Vite": 3
   },
-  "text": "# Inventory Management Microservices  \nA scalable, production-ready system for tracking stock levels, handling fulfillment workflows, and providing real-time inventory analytics for e-commerce platforms. Built to manage millions of SKUs with low-latency updates and high availability.  \n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/your-username/inventory-mgmt.git`  \n2. Set up environment variables for AWS RDS, Redis, and Prometheus endpoints.  \n3. Run `docker-compose up --build` to initialize PostgreSQL, Redis, and sidecar services.  \n4. Deploy to AWS via Terraform for production readiness.  \n\n## Tech Stack  \n- **Language**: Go (100% server-side)  \n- **Database**: PostgreSQL (read/write) + Redis (caching)  \n- **Cloud**: AWS (RDS, EC2, CloudWatch)  \n- **Monitoring**: Prometheus + Grafana (custom dashboards for latency, error rates)  \n- **CI/CD**: GitHub Actions (automated testing, deployment pipelines)  \n- **Architecture**: Microservices (inventory, stock, analytics) with API Gateway  \n\n## Usage / Examples  \n```bash\n# Create a product with initial stock  \ncurl -X POST http://localhost:8080/products \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"sku\": \"ABC123\", \"name\": \"Wireless Earbuds\", \"stock\": 1500}'\n\n# Check real-time inventory  \ncurl http://localhost:8080/products/ABC123/inventory\n```\nDesigned for RESTful interactions with rate limiting and caching layers.  \n\n## Badges  \n[![GitHub Actions Status](https://img.shields.io/endpoint?url=https://actions-badge-cache-prod.githubusercontent.com/v4/badges/15857027429216446858/6535741084458609378)](https://github.com/your-username/inventory-mgmt/actions)  \n[![AWS Production Deployment](https://img.shields.io/endpoint?url=https://aws-badge.example.com/your-username/inventory-mgmt)](https://console.aws.amazon.com/cloudwatch/home?)  \n[![Prometheus Metrics](https://img.shields.io/endpoint?url=https://prometheus-badge.example.com/your-username/inventory-mgmt)](https://grafana.example.com/dashboards)  \n\n## Architecture / Design  \nDecentralized services with API Gateway for routing. PostgreSQL handles ACID transactions for stock adjustments, while Redis caches frequent reads. Chaos engineering tools stress-test failover mechanisms, ensuring 99.99% uptime during peak seasons.  \n\n## Contributing  \nPull requests welcome! Focus on improving test coverage for edge cases (e.g., concurrent stock updates) or optimizing query performance.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# Enterprise Analytics Dashboard  \nA React-based SaaS analytics platform with real-time data visualization, built with TypeScript and Material UI for enterprise-scale deployment.  \n\n[![GitHub](https://img.shields.io/github/v/release/priya-sharma/enterprise-dashboard)](https://github.com/priya-sharma/enterprise-dashboard)  \n[![npm](https://img.shields.io/npm/v/enterprise-dashboard)](https://www.npmjs.com/package/enterprise-dashboard)  \n[![TypeScript](https://img.shields.io/badge/TypeScript-36B37E?style=flat)](https://www.typescriptlang.org/)  \n\n## Getting Started / Installation  \n```bash  \nnpm install enterprise-dashboard  \ncd enterprise-dashboard  \nnpm run dev  \n```  \nEnsure environment variables (`.env.local`) include API keys for real-time data streams. Optimize load times with Webpack 5 bundle splitting, achieving 95%+ first-contentful-paint performance.  \n\n## Tech Stack  \n- **Framework**: React 18 (concurrent mode, suspense)  \n- **TypeScript**: 4.9+ (strict mode, type-safe hooks)  \n- **UI**: Material UI v5 (custom theme, dark mode toggle)  \n- **State**: Redux Toolkit (normalizr normalization, 20+ reducers)  \n- **Charts**: Chart.js (animated, responsive, 30+ dashboard widgets)  \n- **Build**: Vite (TypeScript/JSX support, 30% faster than Webpack)  \n- **Networking**: WebSockets (bidirectional real-time updates, 500ms latency)  \n\n## Architecture / Design  \nModular monorepo structure with 12+ micro-frontends for scalable updates. State management leverages Redux Toolkit’s immer for immutable updates, reducing boilerplate by 40%. Responsive design uses Material UI’s breakpoints, with 30+ custom CSS variables for theme consistency. Real-time data is processed via WebSocket listeners, with 99.9% uptime SLA.  \n\n## Usage / Examples  \n```tsx  \nimport { useDashboard } from 'enterprise-dashboard';  \nconst { metrics, isLoading } = useDashboard('sales-overview');  \nreturn (  \n  <Card>  \n    <Typography>{metrics?.revenue.toLocaleString()}</Typography>  \n    <Chart type=\"line\" data={metrics?.graph} />  \n  </Card>  \n);  \n```  \nCustomize widgets via props; prebuilt templates include KPI cards, heatmaps, and trend analytics. Real-time updates trigger re-renders with 100ms latency.  \n\n## Testing  \n- **Unit**: Jest + React Testing Library (90% coverage, 300+ tests)  \n- **E2E**: Cypress (85% coverage, 50+ scenarios)  \n- **UI**: Storybook (120+ component stories, accessibility checks)  \n- **Performance**: Lighthouse (98/100, 1.2s FCP)  \n\n## License  \nMIT License  \n© 2024 Priya Sharma – Enterprise Analytics Dashboard"
 }

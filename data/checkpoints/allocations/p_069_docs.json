@@ -1,37 +1,51 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A comprehensive CV highlighting Zubair Ahmed's Machine Learning Engineer role at InnovateTech Solutions with focus on enterprise solutions",
-    "title": "Zubair Ahmed - Machine Learning Engineer",
+    "topic_summary": "Professional CV highlighting 5 years of QA engineering experience in e-commerce",
+    "title": "Pallavi Agarwal - QA Engineer",
     "doc_id": "d_p_069_00",
     "persona_id": "p_069",
     "hyperparams": {
-      "cv_format": "hybrid",
-      "geographic_convention": "US",
-      "company_type": "enterprise",
+      "cv_format": "minimal",
+      "geographic_convention": "Europe",
+      "company_type": "FAANG",
       "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A README for a machine learning project focused on enterprise fraud detection using anomaly detection algorithms",
-    "title": "Enterprise Fraud Detection System",
+    "topic_summary": "A project focused on developing an automated testing framework to enhance test coverage and reduce manual efforts in the checkout process of an e-commerce platform",
+    "title": "Automated Testing Framework for E-Commerce Checkout Process",
     "doc_id": "d_p_069_01",
     "persona_id": "p_069",
     "hyperparams": {
       "project_scale": "academic",
-      "project_team_size": "small (2-4)",
+      "project_team_size": "large (15+)",
       "jargon_density": "plain"
     }
   },
   {
-    "doc_type": "linkedin",
-    "topic_summary": "A LinkedIn summary showcasing Zubair's passion for machine learning and commitment to enterprise innovation",
-    "title": "Zubair Ahmed - Machine Learning Engineer",
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation letter from a manager highlighting Pallavi's technical expertise and leadership in QA automation projects",
+    "title": "Recommendation for Pallavi Agarwal",
     "doc_id": "d_p_069_02",
     "persona_id": "p_069",
     "hyperparams": {
-      "linkedin_completeness": "detailed"
+      "recommender_role": "skip-level",
+      "recommender_closeness": "brief",
+      "company_type": "enterprise",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post discussing best practices for QA in e-commerce platforms, focusing on automation and user experience validation",
+    "title": "Best Practices for QA in E-Commerce Platforms",
+    "doc_id": "d_p_069_03",
+    "persona_id": "p_069",
+    "hyperparams": {
+      "blog_depth": "opinion-piece",
+      "jargon_density": "plain"
     }
   }
 ]

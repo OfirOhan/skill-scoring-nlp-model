@@ -4,20 +4,24 @@
   "persona_id": "p_248",
   "hyperparams": {
     "project_scale": "team-internal",
-    "project_team_size": "solo",
-    "jargon_density": "plain"
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "Android development": 4,
-    "Flutter": 4,
-    "GraphQL": 4,
-    "Kotlin": 4,
+    "AWS": 3,
+    "CI/CD pipelines": 2,
+    "GitHub Actions": 3,
+    "Go": 5,
+    "Kubernetes": 4,
+    "Linux administration": 2,
+    "Microservices architecture": 5,
+    "PostgreSQL": 5,
+    "Prometheus/Grafana": 3,
+    "Python": 5,
     "REST API design": 4,
-    "React": 1,
-    "React Native": 4,
-    "Swift": 4,
-    "TypeScript": 1,
-    "iOS development": 1
+    "Shell scripting": 1,
+    "Terraform": 4,
+    "Test automation": 2
   },
-  "text": "# Enterprise Inventory Management App  \nA cross-platform mobile solution for real-time inventory tracking, built to streamline supply chain operations with Android and Flutter.  \n\n---\n\n## API Reference  \nThe app leverages a GraphQL backend for inventory data synchronization and REST APIs for legacy system integration. Key endpoints:  \n- `GET /inventory/status` – Fetch real-time stock levels with filters for location and product category.  \n- `POST /inventory/update` – Batch update stock quantities with audit trail logging.  \n- `GET /supply-chain/forecast` – Predictive analytics for stock replenishment, powered by server-side GraphQL subscriptions.  \n\nAndroid-specific GraphQL layer ensures offline support via local SQLite caching, with delta sync on reconnection. REST APIs use Retrofit for type-safe requests, with response validation for critical operations.  \n\n---\n\n## Usage / Examples  \n### Real-time Stock Check  \n```kotlin  \n// Android: Fetch inventory status  \nval query = \"query { inventoryStatus(productCode: \\\"P123\\\") { quantity location } }\"  \nGraphQLClient.query(query).enqueue { result ->  \n    updateUI(result.data?.inventoryStatus)  \n}  \n```  \n\n### Offline Stock Update  \n```dart  \n// Flutter: Save changes with local persistence  \nfinal db = InventoryDatabase.instance;  \nawait db.updateStock(\"P123\", 50);  \n// Sync with server on network restore  \n```  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/your-username/enterprise-inventory.git`  \n2. Android setup: Ensure JDK 17 and Android SDK are installed. Run `./gradlew assembleDebug`  \n3. Flutter setup: `flutter pub get` and `flutter run` for desktop/mobile testing.  \n4. Dependencies: Retrofit, GraphQL Kotlin, and SQLite Flutter plugins are pre-configured.  \n\n---\n\n## Tech Stack  \n- **Android**: Kotlin, Retrofit, GraphQL Kotlin, SQLite  \n- **Flutter**: Dart, Riverpod, HTTP, SQLite Flutter plugin  \n- **Backend**: GraphQL (Apollo), REST API (Spring Boot)  \n- **Tools**: Dagger for DI, Firebase for crash reporting  \n\n---\n\n## Architecture / Design  \nThe app follows a layered architecture:  \n1. **Data Layer**: GraphQL for real-time inventory, REST for legacy systems.  \n2. **UI Layer**: Flutter for cross-platform rendering, with Android-specific UI tweaks.  \n3. **Offline Support**: SQLite caching for Android, with delta sync logic to prevent data loss.  \n4. **Security**: JWT tokens for API access, with Android-specific TLS enforcement.  \n\n---\n\n## License  \nMIT License – see [LICENSE](LICENSE) for full terms.  \n\n---\n\n## Badges  \n[![GitHub](https://badges.alexa.com/badge.svg)](https://github.com/your-username/enterprise-inventory)  \n[![Documentation](https://badges.alexa.com/badge.svg)](https://your-username.github.io/enterprise-inventory-docs)  \n[![License](https://badges.alexa.com/badge.svg)](https://choosealicense.com/licenses/mit/)"
+  "text": "# FinancialDataProcessor  \nA microservices-based financial data processing system for GlobalTech Solutions' enterprise clients, designed to handle 12M+ transactions/day with 99.95% SLA compliance. Built with a focus on scalability, observability, and regulatory compliance for multi-jurisdictional operations.  \n\n## Badges  \n[![GitHub Actions](https://img.shields.io/github/actions/workflow/owner/repo/main?branch=main)](https://github.com/owner/repo/actions)  \n[![Terraform](https://img.shields.io/terraform/registry?name=hashicorp/terraform&version=1.5.7)](https://registry.terraform.io/providers/hashicorp/terraform/1.5.7)  \n[![Kubernetes](https://img.shields.io/kubernetes/registry?name=nginx&version=1.21.6)](https://kubernetes.io/docs/home/)  \n[![Prometheus](https://img.shields.io/badge/monitoring-prometheus-blue)](https://prometheus.io/)  \n[![Go](https://img.shields.io/badge/go-1.21.4-blue)](https://go.dev/)  \n\n## Tech Stack  \n- **Core**: Go (1.21.4), PostgreSQL (15.2), Python (3.11)  \n- **API**: RESTful endpoints with OpenAPI v3 spec, gRPC for internal service communication  \n- **Orchestration**: Kubernetes (1.28) with HPA (scale 3-12 pods)  \n- **Infrastructure**: Terraform (1.5.7) for AWS EKS and RDS provisioning  \n- **Monitoring**: Prometheus/Grafana for latency (<120ms P99) and error rate (<0.01%) tracking  \n- **Security**: TLS 1.3, OAuth2, and SOC2-compliant logging  \n\n## Configuration  \nEnvironment variables define service behavior:  \n```bash  \nDB_URL=postgres://user:pass@localhost:5432/financialdb  \nAPI_PORT=8080  \nKAFKA_BROKERS=kafka-broker1:9092,kafka-broker2:9092  \n```  \nTerraform modules manage AWS VPCs and IAM roles. Config files use `envsubst` for dynamic substitution.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/owner/repo.git  \ncd FinancialDataProcessor  \nmake init  # Installs Go modules, Python dependencies, and Terraform  \nmake docker-build  # Builds local Docker images for dev  \nmake up  # Starts local Kubernetes cluster with Docker Compose  \n```  \nFor production: `terraform apply -var-file=prod.tfvars` to deploy on AWS.  \n\n## Usage / Examples  \nProcess real-time trades:  \n```bash  \ncurl -X POST http://localhost:8080/api/v1/process --data '{\"symbol\":\"AAPL\",\"amount\":1500}'  \n```  \nBatch reconciliation:  \n```python  \nfrom processor import ReconcileJob  \njob = ReconcileJob(\"2023-10-01\")  \njob.run()  \n```  \nMonitor latency:  \n```bash  \ncurl http://localhost:9090/metrics | grep latency_seconds  \n```  \n\n## Testing  \nUnit tests (Go): `go test -cover` (82% coverage)  \nIntegration tests (Python): `pytest -v` (95% coverage)  \nLoad testing: `locust -f locustfile.py` (simulates 5k concurrent users)  \nGitHub Actions runs full test suite on PRs, with alerts for >1% regression.  \n\n## License  \nMIT License © 2023 GlobalTech Solutions. See [LICENSE](LICENSE) for details."
 }

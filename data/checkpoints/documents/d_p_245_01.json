@@ -1,22 +1,23 @@
 {
   "doc_id": "d_p_245_01",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_245",
   "hyperparams": {
-    "blog_depth": "opinion-piece",
+    "project_scale": "production",
+    "project_team_size": "solo",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "Agile/Scrum": 2,
-    "Cross-team collaboration": 2,
-    "Kubernetes": 4,
-    "PostgreSQL": 3,
-    "REST API design": 4,
-    "Stakeholder communication": 2,
-    "System design": 4,
-    "Team leadership": 4,
-    "Technical writing": 3
+    "Python": 1,
+    "C#/.NET": 1,
+    "Node.js": 1,
+    "React": 1,
+    "PostgreSQL": 1,
+    "MongoDB": 1,
+    "AWS": 1,
+    "Docker": 1,
+    "Kubernetes": 1,
+    "Cloud cost optimization": 1
   },
-  "text": "**Optimizing Scalability in E-Commerce Microservices**  \n\n**Hook**  \nHandling a 10x traffic spike without dropping latency requires more than just scaling nodes—it demands a rethinking of how microservices interact. Last Black Friday, our system processed 2.1M transactions/sec, but the real test was maintaining sub-100ms P50 latency across a distributed architecture.  \n\n**Background**  \nE-commerce platforms rely on microservices to decouple functionality, but scalability becomes a labyrinth when services don’t align with traffic patterns. Our architecture splits order processing, inventory, and payment into three distinct services, each with its own database and API gateway. The challenge lies in ensuring horizontal scaling doesn’t create latency bottlenecks or data inconsistency.  \n\n**Core Analysis**  \nWe prioritized three pillars: **decentralized orchestration**, **asynchronous decoupling**, and **database sharding**. Kubernetes managed service scaling via HPA, but we added custom metrics to throttle CPU-bound tasks during peak hours. For example, the inventory service’s Redis cache warmed up 95% of queries using pre-signed S3 URLs, reducing cold start latency by 40%. REST APIs were refactored to use gRPC for internal calls, cutting RPC latency by 65% compared to HTTP/1.1. PostgreSQL was sharded across regions, with read replicas handling 70% of read-heavy queries, while write operations used CockroachDB for global consistency.  \n\n**Benchmarks**  \nPost-optimization, the system handled 3.2M TPS with 85% lower CPU utilization. Key metrics:  \n- **Latency**: P50 dropped from 120ms to 82ms (23% improvement).  \n- **Cost**: AWS bill reduced by 30% via DynamoDB for session storage and Spot Instances for batch jobs.  \n- **Error rates**: 0.02% increase in retries due to async decoupling, but 99.95% SLA maintained.  \n\n**Takeaways**  \nScalability isn’t a one-size-fits-all solution—it’s a balance of infrastructure, protocol, and data strategies. Prioritize tools that align with your traffic patterns: use Kubernetes for orchestration, gRPC for internal comms, and sharded databases for write-heavy workloads. Don’t forget to instrument your metrics; without them, scaling becomes guesswork.  \n\n**Further Reading**  \n- [AWS Well-Architected: Database Design](https://aws.amazon.com/architecture/database/)  \n- “Scalability Patterns for Microservices” (2023, IEEE Cloud Conference)  \n- [Kubernetes HPA Tuning Guide](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscaler/)"
+  "text": "# Game Lobby System  \nA production-ready full-stack solution for orchestrating multiplayer game sessions with low-latency state synchronization and scalable session management. Built as a solo project to address latency challenges in real-time gaming, this system prioritizes deterministic state reconciliation and distributed coordination across heterogeneous client platforms.  \n\n## Tech Stack  \n- **JVM Ecosystem**: Kotlin (backend), Java (core utilities)  \n- **Real-Time Communication**: WebSocket (bidirectional streaming), STOMP (message framing)  \n- **State Management**: Redis (pub/sub for event broadcasting)  \n- **Persistence**: LevelDB (embedded key-value store for session snapshots)  \n- **Networking**: Netty (asynchronous TCP/UDP handler)  \n- **Security**: TLS 1.3 (encrypted session streams), JWT (auth token validation)  \n\n## Architecture / Design  \nThe system decouples session logic into three layers:  \n1. **Lobby Manager**: Handles matchmaking, queueing, and session lifecycle (using Redis Streams for event logging)  \n2. **GameState Engine**: Maintains deterministic state via a delta-sync protocol (binary diff encoding over WebSocket)  \n3. **Client Sync Module**: Implements client-side reconciliation with rollback capabilities (based on versioned state hashes)  \n\nKey design choices include:  \n- **Event-Driven Architecture**: All session updates propagate through Redis pub/sub for decentralized synchronization  \n- **Stateless Design**: Session data persists in LevelDB, reducing memory overhead during scaling  \n- **Latency Optimization**: UDP-based prediction with TCP fallback for critical state updates  \n\n## Getting Started / Installation  \n1. Clone this repository  \n2. Build the project using Gradle: `./gradlew shadowJar`  \n3. Configure Redis and LevelDB in `application.yaml`  \n4. Run the embedded server: `java -jar build/libs/globesystem.jar`  \n\n## Usage / Examples  \n```bash\n# Create a lobby with 8-player capacity  \nPOST /lobbies HTTP/1.1  \nContent-Type: application/json  \n{ \"capacity\": 8, \"gameType\": \"co-op\" }\n\n# Join an existing lobby  \nPOST /lobbies/{lobbyId}/join HTTP/1.1  \nAuthorization: Bearer <JWT_TOKEN>  \n```\nThe system emits WebSocket events for session state changes, including:  \n- `session:joined` (with player ID and lobby metadata)  \n- `state:updated` (delta-encoded game state)  \n- `session:terminated` (with exit code and reconciliation hints)  \n\n## Badges  \n[![Build Status](https://img.shields.io/endpoint?url=https://api.buymeacoffee.com/endpoint?token=abc123)](https://buymeacoffee.com)  \n[![Coverage](https://img.shields.io/endpoint?url=https://api.buymeacoffee.com/endpoint?token=def456)](https://buymeacoffee.com)  \n\n## Contributing  \nAs a solo project, this system is designed to be extendable. Contributions focused on optimizing state reconciliation algorithms or improving cross-platform compatibility are particularly valuable.  \n\n## License  \nMIT License — see the [LICENSE](LICENSE) file for details."
 }

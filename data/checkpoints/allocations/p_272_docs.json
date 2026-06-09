@@ -1,26 +1,62 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Ricardo Almeida's experience as a Senior Frontend Engineer in healthtech",
-    "title": "Ricardo Almeida - Senior Frontend Engineer",
+    "topic_summary": "Professional resume highlighting 15 years of DevOps and SRE experience in the gaming industry.",
+    "title": "Aaron Baptiste CV",
     "doc_id": "d_p_272_00",
     "persona_id": "p_272",
     "hyperparams": {
-      "cv_format": "hybrid",
-      "geographic_convention": "India",
-      "company_type": "FAANG",
-      "company_size": "large (500+)"
+      "cv_format": "bullet-heavy",
+      "geographic_convention": "Europe",
+      "company_type": "enterprise",
+      "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A GitHub project README for a healthtech patient portal built with React and Firebase",
-    "title": "HealthLoop Patient Portal - Modern Frontend for Secure Health Record Access",
+    "topic_summary": "A GitHub README for a CI/CD pipeline that automates game build and deployment processes.",
+    "title": "GameCraft CI/CD Pipeline",
     "doc_id": "d_p_272_01",
     "persona_id": "p_272",
     "hyperparams": {
-      "project_scale": "team-internal",
+      "project_scale": "hobby",
+      "project_team_size": "solo",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A GitHub README detailing a real-time monitoring system for game server infrastructure.",
+    "title": "GameServer Monitoring System",
+    "doc_id": "d_p_272_02",
+    "persona_id": "p_272",
+    "hyperparams": {
+      "project_scale": "hobby",
       "project_team_size": "small (2-4)",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation from a team manager praising Aaron's leadership and technical expertise in DevOps.",
+    "title": "Recommendation from GameCraft Manager",
+    "doc_id": "d_p_272_03",
+    "persona_id": "p_272",
+    "hyperparams": {
+      "recommender_role": "peer",
+      "recommender_closeness": "brief",
+      "company_type": "FAANG",
+      "company_size": "small (<50)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post discussing DevOps best practices for scalable game development.",
+    "title": "DevOps Best Practices for Game Development at Scale",
+    "doc_id": "d_p_272_04",
+    "persona_id": "p_272",
+    "hyperparams": {
+      "blog_depth": "deep-dive",
       "jargon_density": "heavy"
     }
   }

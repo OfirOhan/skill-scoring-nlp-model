@@ -1,23 +1,22 @@
 {
   "doc_id": "d_p_047_01",
-  "type": "project_readme",
+  "type": "linkedin",
   "persona_id": "p_047",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "moderate"
+    "linkedin_completeness": "detailed"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Docker": 3,
-    "GCP": 3,
-    "Hugging Face Transformers": 3,
-    "NLP": 3,
-    "PyTorch": 3,
-    "Python": 3,
-    "REST API design": 3,
-    "Recommendation systems": 3,
-    "TensorFlow": 2
+    "AWS": 5,
+    "CI/CD pipelines": 3,
+    "Configuration management": 2,
+    "Go": 5,
+    "Jenkins": 2,
+    "Kubernetes": 4,
+    "Log management": 1,
+    "MongoDB": 3,
+    "PostgreSQL": 5,
+    "Python": 5,
+    "Shell scripting": 1
   },
-  "text": "# AdTargetAI: Real-Time Ad Personalization System  \nA scalable solution for dynamic ad content delivery using user behavior analytics to boost engagement metrics  \n\n## Badges  \n[![Active](https://img.shields.io/badge/status-active-green)](https://github.com/eliottmarchand/AdTargetAI)  \n[![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/eliottmarchand/AdTargetAI/blob/main/LICENSE)  \n\n## Tech Stack / Built With  \n- **Core**: Python, PyTorch, TensorFlow (for model prototyping)  \n- **Cloud**: AWS Lambda for serverless inference, GCP BigQuery for user analytics  \n- **Deployment**: Docker containers for consistent environments  \n- **NLP**: Hugging Face Transformers for intent detection in user queries  \n- **Architecture**: REST API for real-time ad targeting, Redis for caching  \n\n## Architecture / Design  \nThe system processes user interactions via a pipeline:  \n1. **Data Ingestion**: AWS Kinesis streams capture clickstream data.  \n2. **Model Serving**: PyTorch models (trained on historical engagement data) predict ad relevance scores.  \n3. **Recommendation Layer**: A hybrid system combines collaborative filtering with contextual embeddings from Hugging Face.  \n4. **API Gateway**: REST endpoints expose ad suggestions to ad servers, prioritizing low-latency responses.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/eliottmarchand/AdTargetAI.git  \ncd AdTargetAI  \ndocker-compose up --build  \n```  \nEnsure Docker and Python 3.9+ are installed. Configure AWS/GCP credentials via environment variables.  \n\n## Usage / Examples  \n**Real-time ad suggestion**:  \n```bash  \ncurl -X POST https://api.adtargetai.com/v1/suggest \\\n  -H \"Authorization: Bearer YOUR_API_KEY\" \\\n  -d '{\"user_id\": \"12345\", \"context\": \"product_search\"}'  \n```  \nResponse includes a ranked list of ad IDs with predicted CTR scores.  \n\n## API Reference  \n**Endpoints**:  \n- `POST /v1/suggest`: Request ad recommendations  \n  - Body: `user_id` (string), `context` (string)  \n  - Response: JSON array of ad IDs with confidence scores  \n\n## License  \nMIT License. See [LICENSE](https://github.com/eliottmarchand/AdTargetAI/blob/main/LICENSE) for details."
+  "text": "Phoebe Lancaster is a Staff Backend Engineer at VirtuosoTech Solutions, bringing 10 years of expertise in enterprise software development. Her work centers on scalable systems, with a focus on building resilient architectures and optimizing performance for global-scale applications. At VirtuosoTech, she leads Kubernetes deployments that handle millions of requests daily, driving reliability and reducing downtime by 30% across critical services. Her AWS infrastructure designs underpin the company’s cloud strategy, balancing cost efficiency with security and scalability. A strong advocate for open-source tools, she mentors teams on Go, PostgreSQL, and Python, shaping best practices for microservices and data pipelines. Her CI/CD pipelines, built on AWS and integrated with Kubernetes, streamline deployment cycles and enhance team productivity. MongoDB remains a cornerstone for data aggregation, supporting real-time analytics in high-traffic environments. With a knack for solving complex problems, Phoebe collaborates cross-functionally to align technical solutions with business goals, ensuring systems evolve alongside the company’s growth. Her approach blends deep technical knowledge with a commitment to fostering growth in her team and beyond."
 }

@@ -1,46 +1,52 @@
 {
   "persona_id": "p_009",
   "hyperparams": {
-    "archetype": "frontend_engineer",
+    "archetype": "embedded_engineer",
     "years_experience": 1,
     "seniority": "junior",
-    "industry": "SaaS",
-    "writing_style": "confident",
+    "industry": "enterprise",
+    "writing_style": "modest",
     "language_fluency": "ESL",
     "self_promotion_level": "boastful",
-    "quantification_tendency": "qualitative"
+    "quantification_tendency": "mixed"
   },
-  "name": "Jasmine Kaur",
-  "current_role": "Frontend Engineer",
-  "company": "NexaSphere Technologies",
+  "name": "James Okafor",
+  "current_role": "Junior Embedded Engineer",
+  "company": "NexGen Systems Inc.",
   "education": {
-    "degree": "Bachelor of Science in Computer Science",
-    "university": "University of Toronto",
+    "degree": "Bachelor of Science in Electrical Engineering",
+    "university": "University of Texas at Austin",
     "year": 2023
   },
   "career_trajectory": [
-    "Internship at CloudGen SaaS startup (2022)",
-    "Junior Frontend Developer at DataLoom Inc. (2023)",
-    "Frontend Engineer at NexaSphere Technologies (2024)"
+    {
+      "role": "Embedded Systems Intern",
+      "company": "TechNova Innovations",
+      "duration": "6 months",
+      "description": "Assisted in developing firmware for IoT devices, gained hands-on experience with C/C++ and RTOS."
+    },
+    {
+      "role": "Junior Embedded Engineer",
+      "company": "NexGen Systems Inc.",
+      "duration": "1 year",
+      "description": "Focused on firmware development and hardware-software integration for enterprise IoT solutions."
+    }
   ],
   "skills": {
-    "JavaScript": 3,
-    "TypeScript": 3,
-    "React": 3,
-    "Next.js": 3,
-    "Responsive design": 3,
-    "Web accessibility (WCAG)": 3,
-    "Webpack/Vite": 3,
-    "Node.js": 2,
+    "C/C++ (embedded)": 4,
+    "RTOS": 3,
+    "Firmware development": 3,
+    "IoT protocols (MQTT/CoAP)": 4,
+    "Hardware-software integration": 3,
+    "Embedded Linux": 4,
+    "Python": 2,
+    "Java": 1,
+    "Go": 2,
     "REST API design": 2,
-    "Test automation": 2,
-    "Selenium/Playwright": 2,
-    "Unit testing": 2,
-    "Python": 2
+    "Network troubleshooting": 1
   },
   "document_ids": [
     "d_p_009_00",
-    "d_p_009_01",
-    "d_p_009_02"
+    "d_p_009_01"
   ]
 }

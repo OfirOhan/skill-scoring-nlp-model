@@ -1,0 +1,31 @@
+{
+  "doc_id": "d_p_059_01",
+  "type": "project_readme",
+  "persona_id": "p_059",
+  "hyperparams": {
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
+  },
+  "skill_evidence": {
+    "Apache Airflow": 1,
+    "Apache Kafka": 4,
+    "Apache Spark": 4,
+    "Cloud cost optimization": 1,
+    "Data modeling": 1,
+    "Data warehousing": 4,
+    "Database optimization": 1,
+    "Databricks": 4,
+    "Docker": 1,
+    "ETL pipeline design": 5,
+    "MongoDB": 1,
+    "PostgreSQL": 1,
+    "Python": 1,
+    "REST API design": 1,
+    "Snowflake": 5,
+    "Stream processing": 4,
+    "Terraform": 1,
+    "dbt": 4
+  },
+  "text": "# HealthDataPipeline  \nA scalable, real-time data integration solution for healthtech analytics, combining Kafka for ingestion, Spark for processing, and Snowflake as the central data warehouse. Built for reliability in high-stakes clinical environments with strict compliance requirements.  \n\n## Testing  \nUnit tests cover 92% of core transformation logic, validated against 120+ synthetic datasets simulating EHR and wearable device streams. Integration tests ensure Kafka-Spark-Snowflake alignment, with 0% data loss in 100+ end-to-end runs. Compliance checks for HIPAA and GDPR are automated via dbt models.  \n\n## Getting Started / Installation  \n1. Deploy Kafka cluster (min 3 brokers) with Avro schema registry  \n2. Set up Spark cluster (min 4 executors) with 12GB memory per worker  \n3. Configure Snowflake warehouse (min 2x large) and 10+ roles for access control  \n4. Run `setup.sh` to initialize dbt models and metastore  \n5. Verify dependencies: Java 17, Python 3.9+ (for dbt CLI)  \n\n## Usage / Examples  \n```bash\n# Ingest real-time patient vitals  \nkafka-console-producer --broker-list localhost:9092 --topic vitals_stream  \n\n# Trigger batch ETL job  \nspark-submit --conf spark.sql.shuffle.partitions=500 etl_pipeline.py  \n```  \nMonitor progress via Databricks SQL with prebuilt dashboards showing latency metrics and error rates.  \n\n## Tech Stack  \n- **Ingestion**: Apache Kafka (0.11+) with Avro schemas  \n- **Processing**: Apache Spark (3.3+) with structured streaming  \n- **Transformation**: dbt (v12+) for Snowflake-specific SQL  \n- **Storage**: Snowflake (Standard + Serverless)  \n- **Monitoring**: Prometheus + Grafana for latency and error tracking  \n\n## Architecture / Design  \nData flows from IoT devices and EHR systems into Kafka topics. Spark processes streams into structured datasets, which are then loaded into Snowflake via dbt models. The architecture supports 100k+ events/sec with 99.99% availability, using Kafka's replication factor 3 and Spark's checkpointing for fault tolerance.  \n\n## License  \nMIT License (see [LICENSE](LICENSE))  \n\n## Contributing  \nSubmit bug fixes or feature proposals via pull requests. All contributions must include unit tests and compliance validation. Reviewers will check for adherence to Snowflake's best practices and Kafka's idempotence guarantees."
+}

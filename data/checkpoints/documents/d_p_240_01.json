@@ -4,21 +4,20 @@
   "persona_id": "p_240",
   "hyperparams": {
     "project_scale": "hobby",
-    "project_team_size": "large (15+)",
-    "jargon_density": "heavy"
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "A/B testing": 2,
     "Agile/Scrum": 3,
-    "Competitive analysis": 3,
-    "Cross-team collaboration": 2,
-    "Data visualization (Matplotlib/Plotly)": 2,
-    "Jupyter notebooks": 2,
-    "Product management": 3,
-    "Roadmap planning": 3,
-    "SQL analytics": 2,
-    "Stakeholder management": 2,
-    "UX research": 2
+    "CI/CD pipelines": 1,
+    "Cloud infrastructure": 4,
+    "Database optimization": 2,
+    "Linux administration": 2,
+    "Microservices architecture": 4,
+    "REST API design": 4,
+    "Stakeholder communication": 1,
+    "System design": 4,
+    "Team leadership": 3
   },
-  "text": "# Startup AgileFlow  \n\nA product management tool for startups, engineered to optimize agile workflows with real-time data synchronization, automated task prioritization, and cross-functional collaboration. Benchmarked to reduce sprint planning time by 30% and improve sprint velocity by 25% in early-stage startups.  \n\n## API Reference  \nEndpoints are versioned under `/api/v1/` with rate limiting at 100 requests/min.  \n- **`GET /sprints/{id}`**: Retrieve sprint details (status code 200 for active sprints, 404 for archived)  \n- **`POST /tasks`**: Create tasks with payload `{projectId, priority, deadline}` (returns task ID 201)  \n- **`PATCH /metrics`**: Update sprint metrics (e.g., `{\"velocity\": 25, \"burnRate\": 0.8}`)  \nAuthentication: Bearer token in `Authorization` header.  \n\n## Usage / Examples  \n```bash\ncurl -X POST https://api.agileflow.dev/v1/tasks \\\n  -H \"Authorization: Bearer <token>\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"projectId\": \"proj_123\", \"priority\": \"high\", \"deadline\": \"2024-03-15\"}'\n```  \n```python\n# Fetch sprint metrics  \nresponse = requests.get(\"https://api.agileflow.dev/v1/sprints/456\")  \nprint(response.json()[\"velocity\"])  # Output: 25.5\n```  \n\n## Getting Started / Installation  \n1. Clone repo: `git clone https://github.com/startup-agileflow/agileflow.git`  \n2. Install dependencies: `pip install -r requirements.txt`  \n3. Set environment variables:  \n   ```  \n   export DB_URL=postgres://user:pass@localhost:5432/agileflow  \n   export API_KEY=your-secure-token  \n   ```  \n4. Run migrations: `alembic upgrade head`  \n5. Start dev server: `uvicorn main:app --reload`  \n\n## Tech Stack  \n- Backend: FastAPI (Python 3.9+) with PostgreSQL ORM  \n- Frontend: React with TypeScript and Tailwind CSS  \n- CI/CD: GitHub Actions with Dockerized tests  \n- Monitoring: Prometheus + Grafana for API latency tracking  \n\n## Architecture / Design  \nMicroservices architecture with central API gateway. Task processing uses Kafka for asynchronous updates. Data model includes:  \n- `sprints` (id, start_date, velocity, burn_rate)  \n- `tasks` (id, project_id, priority, deadline, status)  \n- `analytics` (sprint_id, user_id, interaction_type, timestamp)  \nCaching layer (Redis) for frequent metric queries. CI/CD pipeline enforces 100% test coverage for all endpoints.  \n\n## License  \nMIT License (see [LICENSE](LICENSE))  \n\n## Badges  \n[![Project Status](https://agileflow.dev/badges/status.svg)](https://agileflow.dev)  \n[![Tech Stack](https://agileflow.dev/badges/tech.svg)](https://agileflow.dev)  \n[![License](https://agileflow.dev/badges/license.svg)](https://agileflow.dev)"
+  "text": "# SmartCart: AI-Powered Personalized Shopping Assistant  \nA modular system that blends recommendation engines with real-time inventory sync to boost conversion rates in e-commerce  \n\n---\n\n## Deployment  \nLive at [smartcart-demo.net](https://smartcart-demo.net) (EU-West-1, AWS). Scales to 50k+ users via auto-scaling groups and load balancers.  \n\n---\n\n## Badges  \n[![GitHub](https://badgen.net/badge/github/ursulaklein/gray)](https://github.com/ursulaklein)  \n[![License](https://badgen.net/badge/license/MIT/blue)](https://github.com/ursulaklein/SmartCart/blob/main/LICENSE)  \n\n---\n\n## Tech Stack  \n- **AI/ML**: TensorFlow Lite (on-device recommendations), HuggingFace Transformers (product embeddings)  \n- **Backend**: Python (FastAPI), Rust (for high-performance inventory sync)  \n- **Database**: PostgreSQL (with partitioning for historical data), Redis (caching)  \n- **Cloud**: AWS (Lambda for async tasks, DynamoDB for session storage)  \n\n---\n\n## Architecture / Design  \nA hybrid monorepo with three core services:  \n1. **Recommendation Engine** (microservice) - Uses collaborative filtering + product embeddings  \n2. **User Context Service** - Tracks browsing behavior via Redis pub/sub  \n3. **Inventory Sync API** - RESTful endpoint for real-time stock updates  \n\nKey decisions:  \n- Exposed a GraphQL API for frontend flexibility  \n- Designed for horizontal scaling with circuit breakers  \n- Monitored via Prometheus + Grafana for latency tracking  \n\n---\n\n## Getting Started / Installation  \n```bash\ngit clone https://github.com/ursulaklein/SmartCart.git  \ncd SmartCart  \npython -m venv venv  \nsource venv/bin/activate  \npip install -r requirements.txt  \n```\n\n---\n\n## Usage / Examples  \n```python\n# Fetch personalized recommendations  \nresponse = requests.get(\"https://api.smartcart-demo.net/recommendations\", headers={\"user-id\": \"12345\"})  \nprint(response.json())  \n# Output: {\"products\": [{\"id\": \"A1B2C3\", \"score\": 0.92}, ...]}  \n```  \n\n---\n\n## License  \nMIT License — see [LICENSE](https://github.com/ursulaklein/SmartCart/blob/main/LICENSE) for details"
 }

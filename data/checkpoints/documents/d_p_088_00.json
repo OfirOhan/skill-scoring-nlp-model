@@ -4,26 +4,23 @@
   "persona_id": "p_088",
   "hyperparams": {
     "cv_format": "hybrid",
-    "geographic_convention": "Europe",
-    "company_type": "startup",
-    "company_size": "large (500+)"
+    "geographic_convention": "Israel",
+    "company_type": "academic",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "CI/CD pipelines": 3,
-    "Docker": 3,
-    "GitHub Actions": 3,
-    "Kubernetes": 3,
-    "Microservices architecture": 3,
-    "Monitoring & alerting": 3,
-    "Next.js": 4,
-    "PostgreSQL": 4,
-    "Python": 4,
-    "REST API design": 4,
-    "React": 4,
-    "Redis": 3,
-    "Responsive design": 4,
-    "TypeScript": 3
+    "Apache Airflow": 2,
+    "Apache Kafka": 1,
+    "CI/CD pipelines": 2,
+    "ETL pipeline design": 2,
+    "Hugging Face Transformers": 4,
+    "MLOps (MLflow/W&B)": 4,
+    "Model deployment": 3,
+    "NLP": 4,
+    "PyTorch": 3,
+    "TensorFlow": 3,
+    "dbt": 2,
+    "scikit-learn": 3
   },
-  "text": "Kiran Thapa  \nEmail: kiran.thapa@advelox.tech | Location: Berlin, Germany | LinkedIn: linkedin.com/in/kiran-thapa  \nPhone: +49 123 456 7890 | GitHub: github.com/kiran-thapa  \n\n**Professional Experience / Work History**  \n*AdVelox Technologies* | Full-Stack Developer (2022–present)  \nLed a team of 4 developers to rebuild the ad-management dashboard, reducing dashboard load times by 40% through optimized PostgreSQL queries and React component restructuring. Spearheaded integration of Dockerized microservices with Kubernetes, enabling 30% faster deployment cycles. Implemented Redis caching for session data, improving user login response times by 55%.  \n\n*MediaTrack Inc.* | Backend Developer (2020–2022)  \nArchitected a real-time bidding microservice using Python and gRPC, handling 10,000+ requests per second with 99.95% uptime. Designed CI/CD pipelines with GitHub Actions, cutting production deployment time from 4 hours to 15 minutes. Collaborated with DevOps to migrate PostgreSQL databases to AWS RDS, achieving 30% cost reduction through automated scaling.  \n\n*ClickAd Solutions* | Junior Software Developer (2019–2020)  \nDeveloped ad-serving APIs in Python, processing 5M+ ad impressions monthly with PostgreSQL. Integrated Prometheus for monitoring, reducing incident response time by 25%. Contributed to a Kubernetes cluster for containerized ad-hoc campaigns, improving resource utilization by 20%.  \n\n**Education**  \nBachelor of Science in Computer Science | Institute of Technology, Delhi | 2018  \n\n**Projects / Side Projects**  \n*AdInsight Dashboard* (AdVelox) | Full-Stack (Next.js, TypeScript, PostgreSQL)  \nBuilt a real-time analytics tool with interactive charts, increasing user engagement by 35% through responsive design and optimized data loading. Implemented REST APIs for seamless integration with third-party ad platforms.  \n\n*MediaTrack Microservices* | Python, Docker, Kubernetes  \nRedesigned monolithic ad-serving architecture into 6 microservices, improving system scalability and reducing downtime by 60%. Deployed with Docker and managed via Kubernetes, achieving 99.9% availability.  \n\n*Personal Portfolio* | React, GitHub Actions, AWS S3  \nCreated a static site with dynamic content loading, hosted on AWS S3 with CloudFront. Automated CI/CD pipelines for continuous updates, ensuring 100% deployment reliability.  \n\n**Technical Skills / Technologies**  \n- **PostgreSQL**: Optimized query performance for ad-serving systems, reducing average query latency by 35%.  \n- **Next.js**: Developed production-grade dashboards with server-side rendering, boosting initial load speeds by 40%.  \n- **Python**: Built core ad-bidding logic with async capabilities, handling 10M+ requests monthly.  \n- **React**: Redesigned UI components for ad-management tools, improving user interaction metrics by 25%.  \n- **Redis**: Implemented caching layers for session data, reducing database load by 50%.  \n- **Kubernetes**: Managed container orchestration for microservices, ensuring 99.95% service availability.  \n- **Docker**: Containerized applications for consistent deployment, reducing environment mismatches by 70%.  \n- **GitHub Actions**: Automated CI/CD workflows, ensuring 100% test coverage for all deployments.  \n- **AWS**: Migrated databases and APIs to AWS, achieving 30% cost savings through auto-scaling.  \n- **REST API Design**: Built scalable endpoints for ad platforms, supporting 5M+ daily API calls.  \n- **Monitoring & Alerting**: Integrated Prometheus and Grafana for real-time system health checks.  \n\n**Certifications**  \n- AWS Certified Solutions Architect – Associate (2023)  \n- Google Cloud Professional Cloud DevOps Engineer (2022)  \n\n**Awards & Achievements**  \n- Recognized as “Top Contributor” at MediaTrack for 2021 technical innovation in microservices architecture.  \n- AdVelox Innovation Award (2023) for optimizing PostgreSQL performance in ad-management systems.  \n- 30% reduction in deployment time at MediaTrack through GitHub Actions automation."
+  "text": "Vivian Osei  \n📍 Tel Aviv, Israel | 📧 vivian.osei@email.com | 📞 +972-52-345-6789  \n\n**Professional Experience**  \n*Junior ML Engineer* | CloudSolutions Ltd (2023–present)  \n- Spearheaded deployment of PyTorch-based anomaly detection models, reducing false positives by 22% in real-time sensor data pipelines.  \n- Collaborated with cross-functional teams to integrate MLOps workflows (MLflow, Weights & Biases) into CI/CD pipelines, cutting model retraining latency by 15%.  \n- Optimized NLP pipelines using Hugging Face Transformers, achieving 91% F1-score in customer sentiment analysis for a SaaS platform.  \n\n*Intern ML Engineer* | TechSaaS Inc (2022–2023)  \n- Designed scalable scikit-learn workflows for user segmentation, improving classification accuracy by 18% and reducing compute costs by 27%.  \n- Pioneered lightweight TensorFlow models for edge devices, enabling 30% faster inference times without sacrificing precision.  \n- Automated ETL processes with minimal reliance on Airflow, streamlining data preprocessing for 12+ ML use cases.  \n\n**Technical Skills**  \n- **Hugging Face Transformers**: Led production rollout of BERT-based models for intent recognition, driving 25% higher engagement in chatbots.  \n- **MLOps (MLflow/W&B)**: Built end-to-end tracking systems for 5+ ML models, enabling teams to monitor performance metrics across 3 environments.  \n- **NLP**: Engineered multilingual text classification systems with 89% accuracy, supporting 6 languages for a global SaaS client.  \n- **Model Deployment**: Deployed PyTorch/TensorFlow models via Dockerized containers, achieving 99.9% uptime in production.  \n- **PyTorch/TensorFlow/scikit-learn**: Core tools for building, training, and validating ML models across diverse datasets.  \n- **ETL/CI/CD**: Automated data pipelines with lightweight orchestration tools, reducing manual intervention by 40%.  \n- **dbt**: Integrated with Snowflake for data warehousing, accelerating analytics readiness by 35%.  \n\n**Education**  \nBachelor of Science in Computer Science | University of Washington | 2023  \n\n**Projects**  \n- **Multilingual Sentiment Analysis System**: Developed a transformer-based model for 6 languages, achieving 89% accuracy and deployed via Docker.  \n- **Edge AI Inference Optimization**: Reduced TensorFlow model size by 40% while maintaining 95% accuracy for IoT device deployment.  \n- **Automated Customer Churn Prediction**: Built a scikit-learn pipeline with 82% AUC-ROC, integrated into CloudSolutions’ SaaS platform.  \n- **MLOps Dashboard**: Created a custom tracking system with MLflow and W&B, enabling real-time monitoring of 10+ models.  \n\n**Languages**  \n- English (native)  \n- Hebrew (fluent)  \n\n**Certifications**  \n- Google Cloud Certified – Machine Learning (2023)  \n- AWS Certified Machine Learning – Specialty (2022)"
 }

@@ -4,21 +4,23 @@
   "persona_id": "p_147",
   "hyperparams": {
     "project_scale": "team-internal",
-    "project_team_size": "large (15+)",
-    "jargon_density": "moderate"
+    "project_team_size": "solo",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "AWS": 2,
-    "Apache Airflow": 3,
-    "Apache Kafka": 2,
-    "Apache Spark": 3,
-    "Data modeling": 3,
-    "Data warehousing": 3,
-    "Docker": 3,
-    "ETL pipeline design": 3,
-    "Python": 3,
-    "Snowflake": 2,
-    "Terraform": 2
+    "Network security": 1,
+    "Application security (OWASP)": 1,
+    "Penetration testing": 1,
+    "IAM/Access control": 1,
+    "Encryption & PKI": 1,
+    "Security auditing": 1,
+    "SIEM tools": 1,
+    "TCP/IP": 1,
+    "DNS/DHCP": 1,
+    "VPN technologies": 1,
+    "Firewall configuration": 1,
+    "Network automation": 1,
+    "SDN": 1
   },
-  "text": "# Inventory Optimization Pipeline  \n\nStreamline real-time inventory management for e-commerce platforms using Apache Airflow and BigQuery. This project automates demand forecasting, stock rebalancing, and supplier coordination, reducing overstock by 18% in our last deployment. Integrates with legacy systems via REST APIs and leverages machine learning models for predictive analytics.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies:  \n```bash  \npip install -r requirements.txt  \nairflow db init  \nairflow users create --username admin --password admin --role admin --email admin@example.com  \n```  \nSet environment variables for BigQuery credentials and Kafka endpoints. Use Docker for local Airflow development to ensure consistent runtime environments.  \n\n## Tech Stack  \n- **Orchestration**: Apache Airflow (DAGs for real-time data pipelines)  \n- **Data Warehousing**: BigQuery (scalable analytics layer)  \n- **Processing**: Apache Spark (batch & stream processing)  \n- **Storage**: Cloud Storage (raw data lake)  \n- **Tools**: Docker (containerization), Terraform (infrastructure as code)  \n- **Integration**: REST APIs (legacy systems), Kafka (event streaming)  \n- **Analytics**: Python (custom models for demand prediction)  \n\n## Usage / Examples  \nTrigger a pipeline to update inventory metrics:  \n```bash  \nairflow trigger dag 'inventory_optimization_daily'  \n```  \nObserve real-time stock adjustments in BigQuery tables `inventory_snapshots` and `demand_forecasts`. The pipeline processes 500k+ transactions hourly, with latency under 2 minutes.  \n\n## Badges  \n[![GitHub](https://img.shields.io/github/commit-activity-y/username/repo)](https://github.com/username/repo)  \n[![Build Status](https://img.shields.io/github/actions/workflow/username/repo/main.yml)](https://github.com/username/repo/actions)  \n[![License](https://img.shields.io/github/license/username/repo)](https://github.com/username/repo/blob/main/LICENSE)  \n\n## Architecture / Design  \nThe pipeline uses Airflow to orchestrate data ingestion from Kafka, processed by Spark for anomaly detection and aggregation. Results are stored in BigQuery, where data models (star schema) enable fast querying. Docker ensures consistent environments across development and production. ETL workflows prioritize fault tolerance, with retries and dead-letter queues for failed records.  \n\n## Contributing  \nEnhance the pipeline's predictive accuracy by refining the machine learning models. Submit PRs with unit tests and documentation updates. For critical changes, discuss with the team via Slack channels #data-engineering and #inventory-ops.  \n\n## License  \nMIT License — see [LICENSE](https://github.com/username/repo/blob/main/LICENSE) for details."
+  "text": "# SecureDevOps Pipeline  \nA lightweight, modular DevOps automation framework tailored for startup environments, prioritizing operational efficiency and scalable infrastructure management. Built to streamline CI/CD workflows, infrastructure as code, and compliance-driven deployment processes without compromising on tooling flexibility. Designed for solo teams or small squads, this project reduces manual intervention by 40% while maintaining audit-ready logs and version-controlled infrastructure states.  \n\n## Tech Stack  \n- **Infrastructure**: Terraform (HCL), Ansible (YAML)  \n- **CI/CD**: GitHub Actions, GitLab CI (configurable)  \n- **Containerization**: Docker (engineered for minimal base images)  \n- **Monitoring**: Prometheus + Grafana (pre-configured dashboards)  \n- **Language**: Python 3.10 (scripting layer for custom logic)  \n- **Storage**: Git-based version control (all configurations stored in `.terraform` and `ansible` directories)  \n\n## Architecture / Design  \nThe pipeline operates as a **stateless, composable toolkit** with three core layers:  \n1. **Infrastructure Layer**: Terraform modules for AWS/GCP resource provisioning (e.g., VPCs, EC2, RDS)  \n2. **Deployment Layer**: Ansible playbooks for application packaging, service orchestration, and rollback strategies  \n3. **Observability Layer**: Prometheus metrics exporters and Grafana dashboards for real-time resource utilization tracking  \n\nEach component is decoupled via REST API endpoints (exposed via a lightweight Flask server), enabling external integrations. The architecture supports **parallelized deployment workflows** with dynamic dependency resolution, reducing deployment latency by 30% compared to monolithic tools.  \n\n## Getting Started / Installation  \n1. Clone the repository: `git clone https://github.com/tomaszlewandowski/securedevops-pipeline.git`  \n2. Install dependencies:  \n   ```bash  \n   pip install -r requirements.txt  \n   terraform init  \n   ansible-galaxy install -r requirements.yml  \n   ```  \n3. Configure environment variables in `.env.local` (e.g., cloud provider credentials, monitoring endpoints)  \n4. Validate setup: `make preflight-check`  \n\n## Usage / Examples  \n- **Deploy a web app**:  \n  ```bash  \n  terraform apply -var-file=dev.tfvars  \n  ansible-playbook deploy-app.yml --extra-vars \"@env_vars.json\"  \n  ```  \n- **Monitor resource usage**:  \n  ```bash  \n  grafana-cli admin provision datasources prometheus.json  \n  ```  \nThis workflow reduces manual steps by 40% while maintaining audit-ready logs and version-controlled infrastructure states.  \n\n## Badges  \n[![Build Status](https://github.com/tomaszlewandowski/securedevops-pipeline/actions/workflows/build.yml/badge.svg)](https://github.com/tomaszlewandowski/securedevops-pipeline/actions/workflows/build.yml)  \n[![Test Coverage](https://img.shields.io/coveralls/github/tomaszlewandowski/securedevops-pipeline/main)](https://coveralls.io/github/tomaszlewandowski/securedevops-pipeline)  \n[![Version](https://img.shields.io/github/package-json/version/tomaszlewandowski/securedevops-pipeline/package.json)](https://github.com/tomaszlewandowski/securedevops-pipeline)  \n\n## Contributing  \nPull requests are welcome! For major changes, open an issue to discuss the approach.  \n\n## License  \nMIT License (see [LICENSE](LICENSE) file or `SPDX-License-Identifier: MIT`)."
 }

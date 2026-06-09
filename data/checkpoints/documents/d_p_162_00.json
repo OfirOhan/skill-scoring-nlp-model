@@ -3,22 +3,25 @@
   "type": "cv",
   "persona_id": "p_162",
   "hyperparams": {
-    "cv_format": "paragraph",
-    "geographic_convention": "India",
-    "company_type": "enterprise",
-    "company_size": "large (500+)"
+    "cv_format": "minimal",
+    "geographic_convention": "Israel",
+    "company_type": "agency",
+    "company_size": "small (<50)"
   },
   "skill_evidence": {
-    "A/B testing": 3,
-    "Data visualization (Matplotlib/Plotly)": 4,
-    "Feature engineering": 3,
-    "MLOps (MLflow/W&B)": 3,
-    "NumPy": 4,
-    "Pandas": 4,
-    "Python": 5,
-    "SQL analytics": 4,
-    "Statistical modeling": 4,
-    "Tableau/Power BI": 3
+    "Apache Airflow": 4,
+    "Apache Kafka": 3,
+    "Apache Spark": 4,
+    "Data Modeling": 3,
+    "Data Quality frameworks": 3,
+    "Docker": 3,
+    "Java": 2,
+    "Linux administration": 1,
+    "Python": 3,
+    "REST API design": 2,
+    "Snowflake": 4,
+    "Terraform": 3,
+    "dbt": 4
   },
-  "text": "Julia Andersen  \nEmail: julia.andersen@nexaanalytics.com | Phone: +91 9876543210 | Location: Bengaluru, India  \n\nA results-oriented data scientist with five years of experience bridging complex analytics and business strategy. Specializing in Python-based solutions, I’ve delivered scalable insights across industries, from optimizing supply chains to refining customer engagement. My work balances rigorous statistical modeling with intuitive data visualization, ensuring stakeholders grasp both the numbers and their implications. Transitioned from in-house roles to consulting, where I design custom pipelines and translate data into actionable strategies for enterprise clients.  \n\nAt Nexa Analytics, I lead consulting projects for Fortune 500 clients, focusing on predictive analytics and operational efficiency. Recently, I spearheaded a demand forecasting model for a logistics firm, integrating real-time SQL databases with Python-based feature engineering. The solution reduced inventory costs by 12% through dynamic pricing adjustments. I also collaborate with cross-functional teams to deploy MLOps workflows using MLflow, streamlining model versioning and production pipelines. My work often involves A/B testing frameworks to validate hypothesis-driven interventions, such as a campaign optimization project that increased conversion rates by 15% for a retail client.  \n\nPrior to consulting, I spent three years at InsightLabs, where I developed scalable data pipelines for a healthcare analytics platform. A key project involved building a survival analysis model using Cox proportional hazards, which improved patient risk stratification accuracy by 22%. I also led feature engineering efforts for a predictive maintenance system, leveraging Pandas and NumPy to process terabytes of sensor data. This work reduced unplanned downtime by 18% for a manufacturing client. My role expanded to include Tableau dashboards that visualized complex datasets, enabling stakeholders to track KPIs in real time.  \n\nIn my early career at TechCorp, I focused on data cleaning and exploratory analysis, refining SQL queries to extract actionable insights from disparate datasets. One project involved creating a dashboard for sales performance, where I used Plotly to highlight regional trends, leading to a 10% increase in targeted marketing ROI. I also contributed to a statistical modeling initiative that identified key drivers of customer churn, informing retention strategies that boosted annual revenue by $2.3M.  \n\nEducation: Master of Science in Data Science, University of Washington, 2020.  \n\nLanguages: English (fluent), Hindi (conversational).  \n\nCertifications: AWS Certified Machine Learning, Google Cloud Professional Data Engineer."
+  "text": "Olumide Afolabi  \n📍 Tel Aviv, Israel | 📧 olumide.afolabi@nexagame.studio | 📞 +972-54-123-4567 | [linkedin.com/in/olumideafolabi](https://linkedin.com/in/olumideafolabi)  \n\n**Professional Experience / Work History**  \n*Senior Data Engineer* — NexaGame Studios (2021–Present)  \nArchitected scalable data pipelines for cross-game analytics, leveraging Snowflake to unify 15+ game datasets. Engineered Kafka-based streaming architectures handling 10M+ events/day, reducing latency by 40% through optimized partitioning strategies. Spearheaded cloud migration from on-prem to AWS, eliminating 70% of infrastructure costs while improving query performance by 3x.  \n\n*Data Engineering Specialist* — NexaGame Studios (2019–2021)  \nDesigned ETL pipelines for player engagement metrics, integrating Python scripts with SQL for real-time dashboard updates. Pioneered dbt for data transformation, standardizing 80% of reporting workflows. Optimized Spark jobs to reduce batch processing time from 4 hours to 15 minutes, enabling daily analytics updates.  \n\n*Data Analyst Intern* — EpicQuest Interactive (2018–2019)  \nDeveloped SQL queries to analyze player behavior, identifying key engagement drivers for 3 game titles. Collaborated with cross-functional teams to visualize metrics using Tableau, driving a 25% increase in user retention for a mobile title.  \n\n**Education**  \nBachelor of Science in Computer Science — University of Lagos (2019)  \nFocused on distributed systems and database optimization, with capstone projects involving Hadoop and real-time data processing.  \n\n**Technical Skills / Technologies**  \n- **Apache Spark**: Engineered ETL workflows for 10M+ daily events, achieving 99.95% data reliability through dynamic partitioning and fault tolerance.  \n- **Apache Kafka**: Built scalable streaming pipelines for real-time analytics, ensuring 99.99% uptime with automated rebalancing and monitoring.  \n- **Snowflake**: Redesigned data warehouses to support cross-game analytics, enabling 50% faster query execution via materialized views and clustering.  \n- **dbt**: Automated 90% of data transformation tasks, reducing manual errors and improving data consistency across 12+ reporting tools.  \n- **Apache Airflow**: Orchestrated complex DAGs for batch and streaming pipelines, achieving 95% on-time execution with error logging and alerting.  \n- **Python**: Developed custom scripts for data validation and pipeline monitoring, integrating with Slack for real-time alerts.  \n- **Terraform**: Streamlined cloud infrastructure provisioning, reducing deployment time by 60% through reusable modules.  \n- **Docker**: Containerized data processing jobs, improving deployment consistency and reducing environment-related bugs.  \n- **Data Modeling**: Designed dimensional schemas for analytics warehouses, optimizing query performance by 40% through proper indexing.  \n- **Data Quality Frameworks**: Implemented Great Expectations for data validation, ensuring 99.9% accuracy in downstream reports.  \n- **REST API Design**: Integrated data pipelines with internal tools via lightweight REST endpoints, enabling seamless data flow between systems.  \n- **Java**: Used for custom utility tools to automate metadata tagging in data lakes, improving data lineage tracking.  \n\n**Projects / Side Projects**  \n- **Cross-Game Analytics Platform**: Built a unified data warehouse using Snowflake and dbt, aggregating 15+ game datasets to identify global player trends.  \n- **Kafka Streaming Optimization**: Reduced message serialization latency by 30% through custom Avro schema tuning and partition rebalancing.  \n- **Spark Job Optimization**: Introduced broadcast joins and caching strategies, cutting batch processing time from 4 hours to 15 minutes.  \n\n**Languages**  \n- English (fluent)  \n- Hebrew (basic)  \n\n**Awards & Achievements**  \n- Recognized as \"Top Performer\" at NexaGame Studios for 2022, driving 3x performance gains in data pipeline efficiency.  \n- Led migration to AWS, resulting in 70% reduction in infrastructure costs and 50% faster query execution.  \n- Published internal technical documentation on Kafka best practices, adopted by 80% of engineering teams."
 }

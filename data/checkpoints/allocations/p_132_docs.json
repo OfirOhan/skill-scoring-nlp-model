@@ -1,37 +1,85 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Ingrid Johansson's 5 years of experience as a Data Engineer in enterprise data pipeline development and cloud infrastructure.",
-    "title": "Ingrid Johansson - Data Engineer CV",
+    "topic_summary": "A professional CV highlighting Fumiko Ishida's 7 years of experience as a Senior Mobile Developer in the SaaS industry",
+    "title": "Fumiko Ishida - Senior Mobile Developer",
     "doc_id": "d_p_132_00",
     "persona_id": "p_132",
     "hyperparams": {
       "cv_format": "minimal",
-      "geographic_convention": "Israel",
-      "company_type": "agency",
+      "geographic_convention": "Europe",
+      "company_type": "academic",
       "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A GitHub README for a real-time data analytics platform built using Apache Kafka and AWS Redshift.",
-    "title": "Real-Time Analytics Platform with Kafka & Redshift",
+    "topic_summary": "A README for a SaaS task management app built using Flutter and Firebase",
+    "title": "CloudFlow TaskManager",
     "doc_id": "d_p_132_01",
     "persona_id": "p_132",
     "hyperparams": {
-      "project_scale": "hobby",
-      "project_team_size": "large (15+)",
+      "project_scale": "team-internal",
+      "project_team_size": "medium (5-15)",
       "jargon_density": "moderate"
     }
   },
   {
-    "doc_type": "blog",
-    "topic_summary": "A technical blog post exploring best practices for optimizing ETL pipelines in cloud-native data architectures.",
-    "title": "Mastering Cloud-Native ETL Optimization Patterns",
+    "doc_type": "project_readme",
+    "topic_summary": "A README for a mobile-first SaaS CRM platform with real-time data sync",
+    "title": "SaaS CRM Mobile App",
     "doc_id": "d_p_132_02",
     "persona_id": "p_132",
     "hyperparams": {
-      "blog_depth": "deep-dive",
+      "project_scale": "team-internal",
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation from Fumiko's manager at CloudFlow Solutions praising her leadership in mobile architecture",
+    "title": "Recommendation from CloudFlow Solutions Manager",
+    "doc_id": "d_p_132_03",
+    "persona_id": "p_132",
+    "hyperparams": {
+      "recommender_role": "professor",
+      "recommender_closeness": "brief",
+      "company_type": "academic",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A peer recommendation highlighting Fumiko's collaborative approach to cross-platform development",
+    "title": "Recommendation from Mobile Team Lead",
+    "doc_id": "d_p_132_04",
+    "persona_id": "p_132",
+    "hyperparams": {
+      "recommender_role": "professor",
+      "recommender_closeness": "occasional",
+      "company_type": "academic",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
+    "doc_type": "linkedin",
+    "topic_summary": "A LinkedIn summary showcasing Fumiko's expertise in mobile SaaS development and leadership experience",
+    "title": "Fumiko Ishida - Senior Mobile Developer",
+    "doc_id": "d_p_132_05",
+    "persona_id": "p_132",
+    "hyperparams": {
+      "linkedin_completeness": "detailed"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "A technical blog post discussing best practices for mobile performance optimization in SaaS applications",
+    "title": "Optimizing Mobile Performance in SaaS Applications",
+    "doc_id": "d_p_132_06",
+    "persona_id": "p_132",
+    "hyperparams": {
+      "blog_depth": "opinion-piece",
       "jargon_density": "plain"
     }
   }

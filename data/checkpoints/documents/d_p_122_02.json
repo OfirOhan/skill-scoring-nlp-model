@@ -3,29 +3,19 @@
   "type": "project_readme",
   "persona_id": "p_122",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "medium (5-15)",
+    "project_scale": "team-internal",
+    "project_team_size": "small (2-4)",
     "jargon_density": "plain"
   },
   "skill_evidence": {
-    "CI/CD pipelines": 1,
-    "Jenkins": 1,
-    "GitLab CI": 1,
-    "ArgoCD": 1,
-    "Prometheus/Grafana": 1,
-    "Monitoring & alerting": 1,
-    "Linux administration": 1,
-    "Shell scripting (Bash)": 1,
-    "Kubernetes": 1,
-    "AWS": 1,
-    "GCP": 1,
-    "Terraform": 1,
-    "Python": 1,
-    "REST API design": 1,
-    "Message queues": 1,
-    "PostgreSQL": 1,
-    "Redis": 1,
-    "Network automation": 1
+    "A/B testing": 3,
+    "Apache Spark": 2,
+    "Feature engineering": 5,
+    "Java": 1,
+    "PyTorch": 4,
+    "Python": 3,
+    "REST API design": 2,
+    "scikit-learn": 4
   },
-  "text": "# FraudGuard - Real-Time Fraud Detection Platform  \nFraudGuard processes 10K+ transactions per second using distributed stream processing and machine learning models trained on historical fraud patterns. The system identifies suspicious activity within 50ms of ingestion, reducing false positives by 35% compared to legacy rules-based systems.  \n\n## Testing  \nUnit tests validate core logic for anomaly scoring and rule matching, while integration tests simulate 100K+ concurrent transactions to ensure latency remains below 50ms. Performance benchmarks confirm 98% accuracy on production data, with 99.999% availability during stress tests.  \n\n## Getting Started  \nClone the repo and build the project:  \n```bash  \ngit clone https://github.com/sergei-antonov/fraudguard.git  \ncd fraudguard  \n./gradle build  \n```  \nEnsure Java 17 and Kafka 3.4 are installed. Run `docker-compose up` to start the local development environment.  \n\n## Usage / Examples  \nProcess a transaction stream:  \n```bash  \njava -jar fraudguard.jar --input /path/to/transactions.json --output /path/to/alerts  \n```  \nExample input:  \n```json  \n{\"transaction_id\": \"TX123\", \"amount\": 1500, \"location\": \"US-NY\", \"user_id\": \"U456\"}  \n```  \nOutput includes fraud score (0-1) and alert severity (low/medium/high).  \n\n## Tech Stack  \n- Java 17 for stream processing  \n- Apache Flink for stateful event processing  \n- Kafka for real-time data ingestion  \n- TensorFlow Lite for lightweight model inference  \n- Protobuf for schema-serializable data  \n\n## Architecture / Design  \nThe system decouples data ingestion, model inference, and alert routing. Kafka partitions handle 10K+ messages/sec, while Flink stateful processing ensures windowed anomaly detection. Models are served via gRPC endpoints to minimize latency.  \n\n## License  \nMIT License (see [LICENSE](LICENSE))  \n\n## Contributing  \nSubmit issues for edge cases or performance bottlenecks. Pull requests should include unit tests and benchmark updates. Prioritize documentation for model training pipelines and alert threshold tuning."
+  "text": "# Predictive User Engagement Modeling for Ad Campaigns  \n\nThis project focuses on building scalable models to predict user engagement with ad campaigns, enabling data-driven decisions to optimize campaign performance. By combining feature engineering, machine learning, and A/B testing, we aim to quantify engagement patterns and reduce manual analysis efforts. The model leverages historical campaign data to forecast user behavior, allowing teams to prioritize high-impact strategies.  \n\n## Roadmap / Future Work  \nThe immediate goal is to refine the feature engineering pipeline to capture contextual signals like user demographics, ad placement, and time-of-day interactions. Next, we’ll integrate real-time data streams to update predictions dynamically. Long-term, we plan to expand the model’s scope to include cross-device behavior and test variations in ad creative formats. A/B testing will remain central to validating model outputs against live campaigns, ensuring alignment with business KPIs.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies:  \n```bash  \npip install -r requirements.txt  \n```  \nEnsure Python 3.8+ is installed. For PyTorch, use the version specified in the environment file. Note that Apache Spark is optional for batch processing but not required for core model training.  \n\n## Usage / Examples  \nRun the pipeline with:  \n```bash  \npython train.py --config config.yaml  \n```  \nThis trains a PyTorch model on preprocessed data, then exports predictions to a CSV. For A/B testing, use the `ab_test.py` script to compare model-driven campaign splits against control groups. Example output includes engagement metrics like click-through rates and conversion windows.  \n\n## Tech Stack  \n- **Python** (core language)  \n- **PyTorch** (deep learning framework)  \n- **scikit-learn** (baseline models, hyperparameter tuning)  \n- **Apache Spark** (optional, for large-scale data processing)  \n- **pandas** / **NumPy** (data manipulation)  \n- **REST API** (internal tooling for model deployment)  \n\n## Architecture / Design  \nThe system is built as a modular pipeline: data ingestion → feature engineering → model training → prediction. Feature engineering prioritizes temporal and contextual signals, with custom transformations to handle sparse user interactions. PyTorch handles sequential behavior prediction, while scikit-learn manages baseline classification tasks. A/B testing is integrated into the deployment phase, using model outputs to stratify user segments.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

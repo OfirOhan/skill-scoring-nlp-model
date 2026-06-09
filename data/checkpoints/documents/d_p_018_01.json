@@ -4,19 +4,20 @@
   "persona_id": "p_018",
   "hyperparams": {
     "project_scale": "academic",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "heavy"
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "JavaScript": 2,
-    "Next.js": 2,
-    "React": 4,
-    "Responsive design": 4,
-    "State management (Redux/Zustand)": 2,
-    "TypeScript": 2,
-    "Web accessibility (WCAG)": 3,
-    "Web performance optimization": 3,
-    "Webpack/Vite": 2
+    "Apache Airflow": 2,
+    "Apache Spark": 4,
+    "CI/CD pipelines": 1,
+    "Data modeling": 4,
+    "Data warehousing": 4,
+    "ETL pipeline design": 5,
+    "Python": 2,
+    "REST API design": 2,
+    "Shell scripting (Bash)": 1,
+    "Snowflake": 5
   },
-  "text": "# Financial Dashboard UI for CapitalFlow Solutions  \nA real-time financial data visualization platform with secure user authentication, built for fintech compliance and high-availability requirements.  \n\n---\n\n## License  \nMIT License  \n[View License File](LICENSE)  \n\n---\n\n## Badges  \n[![GitHub](https://img.shields.io/github/commit-activity/y/rahuliyer/financial-dashboard)](https://github.com/rahuliyer/financial-dashboard/commits/main)  \n[![Build Status](https://github.com/rahuliyer/financial-dashboard/actions/workflows/build.yml/badge.svg)](https://github.com/rahuliyer/financial-dashboard/actions)  \n[![Security](https://img.shields.io/github/vulnerabilities/rahuliyer/financial-dashboard)](https://github.com/rahuliyer/financial-dashboard/network/dependents)  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/rahuliyer/financial-dashboard.git  \n   ```  \n2. Install dependencies:  \n   ```bash  \n   npm install  \n   ```  \n3. Set up environment variables for API endpoints and authentication keys.  \n\n---\n\n## Usage / Examples  \nLaunch the dashboard with:  \n```bash  \nnpm run dev  \n```  \nAccess the admin panel via `/admin` with OAuth2.0 flow.  \nExample: Monitor real-time trading volumes using the `TradeAnalytics` component.  \n\n---\n\n## Architecture / Design  \nThe UI follows a microfrontend pattern, with isolated state containers for financial data and user sessions. Authentication is handled via a centralized `AuthContext` with JWT refresh tokens. Accessibility is enforced through semantic HTML and ARIA roles, ensuring compliance with WCAG 2.1 Level AA.  \n\n---\n\n## Tech Stack / Built With  \n- **Frontend**: React 18, TypeScript 4.9, Webpack 5  \n- **State Management**: Redux Toolkit for global state, local state managed via React Context  \n- **Security**: OAuth2.0, JWT,Helmet for CSP  \n- **Performance**: Lazy loading, code splitting, and Lighthouse score optimization  \n\n---\n\n## Contributing  \nPull requests are welcome! Ensure all changes include:  \n- Unit tests (Jest)  \n- Accessibility audits (axe-core)  \n- Performance benchmarks (Lighthouse)  \n\n---\n\n## Testing  \n- **Unit Tests**: 92% coverage (Jest)  \n- **Integration Tests**: API mocking with MSW  \n- **Security Tests**: OWASP ZAP scans  \n- **Performance**: Lighthouse score ≥95 for core metrics"
+  "text": "# Real-Time Fraud Detection System  \nA scalable, low-latency fraud detection pipeline leveraging Apache Kafka for event streaming, Apache Spark for real-time analytics, and Snowflake for structured data warehousing. Designed to process over 1.2M transactions per second with 99.95% detection accuracy in production environments.  \n\n## Badges  \n[![GitHub](https://badgen.net/badge/github/ryan-gallagher/steelblue)](https://github.com/ryan-gallagher)  \n[![Apache Kafka](https://badgen.net/badge/kafka/3.3/00bfff)](https://kafka.apache.org)  \n[![Apache Spark](https://badgen.net/badge/spark/3.5/ff4d4d)](https://spark.apache.org)  \n[![License](https://badgen.net/badge/license/MIT/blue)](LICENSE)  \n\n## Tech Stack  \n- **Streaming Layer**: Apache Kafka (0.11+) for high-throughput, fault-tolerant transaction ingestion  \n- **Analytics Layer**: Apache Spark (3.5) with structured streaming for real-time anomaly detection  \n- **Data Warehousing**: Snowflake (v2.8) for historical pattern analysis and model training  \n- **Data Modeling**: Star schema design with 12+ denormalized fact tables for sub-second query performance  \n- **ETL Pipelines**: Airflow (v2.2) orchestrated ETL workflows with 98%+ uptime in multi-region deployments  \n\n## Configuration  \nSet environment variables for Kafka broker addresses, Spark cluster specs, and Snowflake credentials. Example:  \n```bash  \nKAFKA_BOOTSTRAP_SERVERS=\"broker1:9092,broker2:9092\"  \nSPARK_MASTER=\"local[*]\"  \nSNOWFLAKE_ACCOUNT=\"prod.us-east-1\"  \n```  \nEnsure Kafka topics are pre-created with partition counts matching expected ingestion rates.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies:  \n```bash  \ngit clone https://github.com/ryan-gallagher/real-time-fraud-detection.git  \ncd real-time-fraud-detection  \n./setup.sh  \n```  \nThis initializes Zookeeper, Kafka, and Spark clusters using Docker Compose.  \n\n## Usage / Examples  \nRun the fraud detection pipeline:  \n```bash  \n./run.sh --mode production  \n```  \nMonitor real-time metrics via Spark UI (http://localhost:4040) and Kafka consumer lag alerts. Example output:  \n```\n[INFO] Processed 2,345 transactions in 1.2s | 98.7% anomaly score threshold met  \n```  \n\n## Testing  \nUnit tests validate Spark streaming logic with mock Kafka producers. Integration tests ensure Snowflake schema compliance and query performance. Test coverage: 89% (Spark) | 94% (Kafka).  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

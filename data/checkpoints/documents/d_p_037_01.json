@@ -3,23 +3,26 @@
   "type": "project_readme",
   "persona_id": "p_037",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "large (15+)",
-    "jargon_density": "plain"
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "Pandas": 1,
-    "NumPy": 1,
-    "Statistical modeling": 1,
-    "A/B testing": 1,
-    "Data visualization (Matplotlib/Plotly)": 1,
-    "Jupyter notebooks": 1,
-    "Feature engineering": 1,
+    "ArgoCD": 3,
+    "CI/CD pipelines": 4,
+    "Cloud cost optimization": 3,
+    "Docker": 3,
+    "GitHub Actions": 5,
+    "Incident management": 1,
+    "Jenkins": 1,
+    "Linux administration": 2,
+    "Load balancing": 3,
+    "Message queues": 1,
+    "Monitoring & alerting": 4,
+    "PostgreSQL": 2,
+    "Prometheus/Grafana": 4,
     "Python": 1,
-    "REST API design": 1,
-    "Microservices architecture": 1,
-    "Apache Spark": 1,
-    "Apache Airflow": 1
+    "Terraform": 4
   },
-  "text": "# Predictive Maintenance Analytics  \n\nA scalable solution for monitoring industrial equipment health, integrating real-time telemetry with historical maintenance logs to optimize operational efficiency. Designed for enterprise environments where downtime costs exceed $500K annually, this system enables proactive maintenance scheduling via predictive models and alerting workflows.  \n\n## Badges  \n<!-- No standard badges applied due to branding constraints -->  \n\n## Getting Started / Installation  \nTo deploy, provision a Kubernetes cluster with PostgreSQL 13+ and Redis 6. Configure the environment via `env.yaml` and ensure all dependencies are installed via `npm install` or equivalent package managers. The system requires access to IoT device telemetry streams and legacy maintenance records stored in SQL-compatible databases.  \n\n## Usage / Examples  \n1. **Data Ingestion**: Stream sensor data from MQTT brokers into the event store using the provided ingestion pipeline.  \n2. **Model Inference**: Trigger batch predictions against historical logs to identify high-risk equipment.  \n3. **Alerting**: Integrate with Slack or PagerDuty to receive notifications when predicted failure thresholds are exceeded.  \n4. **Reporting**: Query the analytics dashboard to view maintenance cost savings and downtime reduction metrics.  \n\n## Configuration  \nModify `config.yaml` to define database connection strings, alert thresholds, and integration endpoints. For production, enable TLS encryption and configure rate limiting via the API gateway. All settings are version-controlled in the `config/` directory.  \n\n## Deployment  \nDeploy using Helm charts for Kubernetes orchestration. The system is designed for horizontal scaling, with separate pods for data processing, model serving, and alerting. Monitor health via Prometheus and Grafana dashboards. Blue-green deployment is recommended for zero-downtime updates.  \n\n## Architecture / Design  \nThe system follows a layered architecture:  \n- **Ingestion Layer**: Processes raw telemetry data from IoT devices.  \n- **Processing Layer**: Aggregates and transforms data into structured formats.  \n- **Model Layer**: Runs inference against pre-trained models hosted in a secure API gateway.  \n- **Alerting Layer**: Distributes notifications via configured channels.  \nEach layer is decoupled to allow independent scaling and maintenance.  \n\n## Tech Stack / Built With  \n- Cloud-native frameworks (Kubernetes, Helm, Prometheus)  \n- SQL databases (PostgreSQL, MySQL)  \n- Message brokers (MQTT, Kafka)  \n- Containerization tools (Docker, Podman)  \n- CI/CD pipelines (GitHub Actions, Jenkins)  \n\n## Contributing  \nTo contribute, fork the repository and submit a pull request with detailed documentation. All changes must include unit tests and adhere to the team’s coding standards. Collaboration is encouraged via Slack channels dedicated to specific subsystems."
+  "text": "# AutoScale-Deploy: Microservices Deployment & Scaling Automation  \nAutomates deployment and scaling of microservices using Kubernetes and AWS, ensuring high availability and reliability for startups.  \n\n## Deployment  \nProduction-ready workflows powered by GitHub Actions for CI/CD, with Terraform managing AWS infrastructure. Deployments trigger based on Git events, leveraging Kubernetes autoscaling rules tied to Prometheus metrics. Load balancers and Docker containers are orchestrated via AWS ELB and K8s Ingress, with cost optimization enforced through spot instances and resource tagging.  \n\n## Badges  \n[![GitHub Actions Status](https://github.com/laylaibrahim/autoscale-deploy/workflows/CI%20Pipeline/badge.svg)](https://github.com/laylaibrahim/autoscale-deploy/actions)  \n[![Terraform](https://github.com/laylaibrahim/autoscale-deploy/actions/workflows/terraform.yml/badge.svg)](https://github.com/laylaibrahim/autoscale-deploy/actions)  \n[![Production Ready](https://img.shields.io/badge/Production%20Ready-green)](https://github.com/laylaibrahim/autoscale-deploy)  \n\n## Tech Stack  \n- Kubernetes (orchestration)  \n- AWS (EC2, ELB, S3)  \n- GitHub Actions (CI/CD)  \n- Terraform (infrastructure as code)  \n- Prometheus + Grafana (monitoring)  \n- Docker (containerization)  \n- Load balancing (AWS ALB)  \n- Cloud cost optimization (spot fleets, tagging)  \n\n## Architecture / Design  \nA layered system where GitHub Actions triggers Terraform to provision AWS resources, then deploys Dockerized microservices to Kubernetes. Autoscaling rules in K8s scale pods based on CPU/memory metrics from Prometheus, visualized in Grafana. ArgoCD synchronizes deployments with Git, ensuring drift detection.  \n\n## Getting Started / Installation  \n1. Clone the repository:  \n   ```bash  \n   git clone https://github.com/laylaibrahim/autoscale-deploy.git  \n   ```  \n2. Configure AWS credentials via `~/.aws/credentials` and set environment variables for GitHub Actions.  \n3. Run Terraform to provision infrastructure:  \n   ```bash  \n   terraform init && terraform apply  \n   ```  \n4. Deploy microservices using the provided `deploy.sh` script.  \n\n## Usage / Examples  \n```bash  \n# Deploy a service with auto-scaling  \n./deploy.sh --service user-service --min-replicas 2 --max-replicas 10  \n```  \nMonitors CPU usage via Prometheus and scales pods dynamically. Grafana dashboards track deployment health and cost metrics.  \n\n## License  \nMIT License  \n[View License](https://github.com/laylaibrahim/autoscale-deploy/blob/main/LICENSE)"
 }

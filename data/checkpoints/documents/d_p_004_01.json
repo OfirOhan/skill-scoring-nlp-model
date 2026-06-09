@@ -3,21 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_004",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "medium (5-15)",
-    "jargon_density": "moderate"
+    "project_scale": "production",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "Flutter": 1,
-    "Kotlin": 1,
-    "Mobile CI/CD": 3,
-    "REST API design": 3,
-    "React": 3,
-    "React Native": 3,
-    "Swift": 2,
-    "TypeScript": 3,
-    "Web accessibility (WCAG)": 3,
-    "iOS development": 3
+    "AWS": 1,
+    "CI/CD pipelines": 1,
+    "Docker": 3,
+    "Go": 1,
+    "Kubernetes": 3,
+    "Microservices architecture": 4,
+    "PostgreSQL": 4,
+    "Python": 1,
+    "REST API design": 5,
+    "Terraform": 1
   },
-  "text": "# TaskEase - Cross-Platform Task Management App  \nA lightweight, scalable solution for managing personal and team workflows with React Native and TypeScript. Built for startups needing rapid iteration without platform fragmentation.  \n\n## Badges  \n[![React Native](https://img.shields.io/badge/react_native-26?style=flat)](https://reactnative.dev)  \n[![TypeScript](https://img.shields.io/badge/typescript-34?style=flat)](https://www.typescriptlang.org)  \n[![GitHub](https://img.shields.io/badge/github-14?style=flat)](https://github.com)  \n\n## Getting Started / Installation  \n```bash  \nnpm install  \nnpx react-native run-android  \nnpx react-native run-ios  \n```  \nEnsure Android SDK 34 and Xcode 15+ are installed. Set `REACT_NATIVE_APP_ID` in `.env.local` for iOS provisioning.  \n\n## Usage / Examples  \n- **Task creation**: Tap \"+\" to add tasks with due dates, priority toggles, and subtask nesting.  \n- **Syncing**: Tasks auto-save to local storage and sync with the Firebase backend every 5 minutes.  \n- **Calendar integration**: Export tasks as iCal events via the \"Share\" menu.  \n\n## Configuration  \n- **Environment**: Set `API_ENDPOINT` and `FIREBASE_CONFIG` in `.env.local` for production.  \n- **Accessibility**: Enable `WCAG_LEVEL_2` in `app.config.js` for screen reader support.  \n- **Analytics**: Opt-in to Firebase Crashlytics by toggling `ENABLE_CRASHLYTICS` in `constants.ts`.  \n\n## Deployment  \n- **CI/CD**: GitHub Actions automate testing and Android/iOS builds on PRs.  \n- **Hosting**: Firebase Hosting for static assets; Cloud Functions for backend logic.  \n- **Metrics**: Track user retention via Firebase Analytics (7-day retention rate: 62%).  \n\n## Architecture / Design  \n- **Modular**: Split logic into `features/` and `utils/` for reuse.  \n- **State management**: Context API with TypeScript interfaces for task data.  \n- **Performance**: Lazy-load screens and use `React.memo` for list components.  \n\n## Tech Stack / Built With  \n- **Mobile**: React Native (0.72), TypeScript (4.9), Firebase (9.22)  \n- **Tools**: Expo (SDK 48), GitHub Actions, Lint-staged for CI  \n- **Design**: Material UI (v5), custom hooks for form validation  \n\n## Contributing  \nOpen issues for bug fixes or feature proposals. Pull requests must include unit tests (95%+ coverage) and adhere to the `eslint-config-airbnb` baseline. For iOS-specific changes, ensure compatibility with Swift 5.9."
+  "text": "# NebulaAuth: Secure Authentication Microservice  \nA modular, production-ready authentication service built with Node.js and JWT, designed to scale across SaaS platforms. Prioritizes zero-trust security, token refresh pipelines, and RESTful API reliability for distributed systems.  \n\n---\n\n## Testing  \nAutomated test coverage exceeds 95% across core logic, token validation, and edge cases. Unit tests validate JWT signing/verification workflows, while integration tests simulate distributed system failures. All test suites run in parallel using Mocha and Chai, with coverage reports generated for critical security paths.  \n\n---\n\n## Getting Started / Installation  \n1. Clone the repo: `git clone https://github.com/yourusername/nebulaauth.git`  \n2. Install dependencies: `npm install`  \n3. Set environment variables in `.env` (see `.env.example` for structure)  \n4. Initialize PostgreSQL database with schema defined in `db/migrations`  \n5. Run the service: `npm start`  \n\n---\n\n## Usage / Examples  \n**Login endpoint**  \n```bash  \nPOST /auth/login  \nBody: { email: \"user@example.com\", password: \"securepass\" }  \nResponse: { token: \"JWT_STRING\", refresh_token: \"REFRESH_TOKEN\" }  \n```  \n\n**Token refresh pipeline**  \n```bash  \nPOST /auth/refresh  \nHeaders: Authorization: Bearer <REFRESH_TOKEN>  \nResponse: New JWT with updated expiration  \n```  \n\n**User validation middleware**  \n```javascript  \n// Middleware to extract and verify user from JWT  \nconst verifyUser = (req, res, next) => {  \n  const token = req.headers.authorization?.split(\" \")[1];  \n  if (!token) return res.status(401).send(\"No token provided\");  \n  // Validate and attach user data to request  \n};  \n```  \n\n---\n\n## Tech Stack  \n- **Runtime**: Node.js 18+  \n- **Authentication**: JSON Web Tokens (JWT) with refresh pipelines  \n- **Database**: PostgreSQL (with connection pooling for high-throughput)  \n- **Containerization**: Docker for local dev and staging environments  \n- **Orchestration**: Kubernetes for production deployment and scaling  \n\n---\n\n## Architecture / Design  \nThe service is split into three core modules:  \n1. **Token Engine**: Manages signing, verification, and refresh logic with configurable expiration windows  \n2. **User Interface**: REST API endpoints for login, logout, and token validation  \n3. **Database Adapter**: PostgreSQL layer with query caching for frequent lookup patterns  \n\nREST API follows OpenAPI 3.0 standards with auto-generated documentation. All endpoints enforce rate limiting and input sanitization to prevent brute-force attacks.  \n\n---\n\n## License  \nMIT License. See `LICENSE` for details.  \n\n---\n\n## Contributing  \nSubmit issues for security vulnerabilities or feature gaps. Pull requests should include unit tests and adhere to ESLint rules. For production-grade changes, ensure PostgreSQL queries use parameterized statements and avoid raw SQL."
 }

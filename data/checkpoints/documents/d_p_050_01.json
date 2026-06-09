@@ -3,21 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_050",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "medium (5-15)",
+    "project_scale": "production",
+    "project_team_size": "small (2-4)",
     "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "CI/CD pipelines": 3,
-    "GitHub Actions": 3,
-    "GitLab CI": 2,
-    "Linux administration": 3,
-    "Network troubleshooting": 1,
-    "PostgreSQL": 1,
-    "Prometheus/Grafana": 2,
-    "Python": 2,
-    "Redis": 2,
-    "Terraform": 3
+    "A/B testing": 2,
+    "Analytics-driven product decisions": 3,
+    "Competitive analysis": 2,
+    "Data visualization (Tableau/Power BI)": 3,
+    "Pandas": 3,
+    "Product management": 3,
+    "Roadmap planning": 2,
+    "SQL analytics": 1,
+    "Stakeholder management": 1,
+    "UX research": 2
   },
-  "text": "# HealthDataGuardian  \nSecure, HIPAA-compliant DevOps pipeline for healthcare data processing, designed for seamless integration with cloud-native workflows and strict access controls  \n\n---\n\n## Contributing  \nWe welcome contributions that enhance security posture or streamline compliance workflows. Propose changes via pull requests, and ensure all modifications undergo security review before merging. For critical infrastructure updates, coordinate with the infrastructure team to validate compatibility with existing encryption protocols.  \n\n---\n\n## Getting Started / Installation  \nCheckout the repository via command line. Set up environment variables for cloud credentials and encryption keys using `export` or a secrets manager. Initialize the pipeline by running `./bootstrap.sh`, which configures role-based access controls and deploys foundational security policies to the target environment.  \n\n---\n\n## Usage / Examples  \nProcess patient data with end-to-end encryption by triggering the `process-patients` job in the GitHub Actions workflow. Deploy updates to AWS/GCP using Terraform modules that enforce IAM policies. Monitor pipeline health with Prometheus metrics exported via Grafana dashboards, ensuring all data transfers meet HIPAA audit log requirements.  \n\n---\n\n## Tech Stack  \nPowered by GitHub Actions for CI/CD, Terraform for infrastructure as code, and Linux-based agents for runtime execution. Integrates with cloud providers via managed services, with custom scripts for data masking and access logging.  \n\n---\n\n## Architecture / Design  \nThe pipeline enforces encryption at rest and in transit, with data partitioning by patient ID and role-based access controls enforced at the API gateway. Infrastructure is deployed via Terraform modules that validate compliance with HIPAA regulations, and all logs are aggregated to a centralized security information management system.  \n\n---\n\n## License  \nMIT License  \n\n---\n\n## Badges  \n[![Security Compliance](https://example.com/security-badge)](https://example.com/security)  \n[![HIPAA Ready](https://example.com/hipaa-badge)](https://example.com/hipaa)"
+  "text": "# FinWise Budget Tracker  \nAI-powered budgeting platform with real-time analytics, predictive modeling, and multi-user support for individuals and SMEs. Processes 10k+ transactions/sec with 99.8% uptime.  \n\n## Badges  \n[![CI/CD](https://github.com/finwise-budget/actions/workflows/main.yml/badge.svg)](https://github.com/finwise-budget/actions/workflows/main.yml)  \n[![Code Coverage](https://codecov.io/gh/finwise-budget/coverage.svg)](https://codecov.io/gh/finwise-budget)  \n[![Model Version](https://img.shields.io/badge/model-v2.4.1-blue)](https://github.com/finwise-budget/models)  \n[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/finwise-budget/LICENSE)  \n\n## Tech Stack  \n**Backend**: FastAPI + SQLAlchemy (PostgreSQL) + Redis (caching)  \n**Frontend**: React + TypeScript + Chart.js (custom dashboards)  \n**AI**: PyTorch Lightning (LSTM-based forecasting) + HuggingFace Transformers (NLP for categorization)  \n**Cloud**: AWS Lambda (serverless triggers) + S3 (backup storage)  \n**Monitoring**: Prometheus + Grafana (latency <15ms, 99.99% SLA)  \n\n## Configuration  \nSet `ENVIRONMENT=production` in `.env` for staging/production.  \nConfigure PostgreSQL credentials in `config/db.py` and AWS credentials in `config/aws.json`.  \nEnable Redis caching via `redis_url` in `settings.py`.  \nDeploy with Docker Compose for local dev: `docker-compose up --build`.  \n\n## Getting Started / Installation  \n```bash\ngit clone https://github.com/finwise-budget/finwise.git  \ncd finwise  \npip install -r requirements.txt  \ncp .env.example .env  \n# Configure secrets in .env  \ndocker-compose build  \ndocker-compose up  \n```  \nRun migrations: `alembic upgrade head`  \nSeed test data: `python scripts/seed.py`  \n\n## Usage / Examples  \n**Individual User**:  \n`POST /api/v1/transactions` with JSON payload for expense/income tracking.  \n`GET /api/v1/reports/weekly` returns categorized spending trends with 95% confidence intervals.  \n\n**Business User**:  \n`POST /api/v1/budgets` creates custom allocation rules (e.g., \"20% of revenue to R&D\").  \n`GET /api/v1/predictions` generates 30-day forecast with MAE < $150.  \n\n## Testing  \nRun unit tests: `pytest tests/` (coverage: 92%)  \nIntegration tests validate payment gateway hooks and Redis sync.  \nUse `pytest --parallel` for CI/CD pipeline (reduces runtime by 40%).  \nMock AWS S3 interactions with moto for local testing.  \n\n## License  \nMIT License. See [LICENSE](https://github.com/finwise-budget/LICENSE) for details. Contributions welcome with signed CLAs."
 }

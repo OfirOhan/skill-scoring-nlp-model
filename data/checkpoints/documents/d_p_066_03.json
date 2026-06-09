@@ -1,23 +1,25 @@
 {
   "doc_id": "d_p_066_03",
-  "type": "blog",
+  "type": "project_readme",
   "persona_id": "p_066",
   "hyperparams": {
-    "blog_depth": "opinion-piece",
-    "jargon_density": "heavy"
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "C/C++ (embedded)": 5,
-    "Embedded Linux": 4,
-    "Firmware development": 5,
-    "Go": 3,
-    "Hardware-software integration": 5,
-    "IoT protocols (MQTT/CoAP)": 4,
-    "Network automation": 3,
-    "Problem-solving": 4,
-    "Python": 4,
-    "REST API design": 4,
-    "RTOS": 5
+    "Agile/Scrum": 3,
+    "CI/CD pipelines": 3,
+    "Cross-team collaboration": 3,
+    "Database migration": 1,
+    "GitHub Actions": 4,
+    "Linux administration": 1,
+    "Mentoring": 1,
+    "Prometheus/Grafana": 1,
+    "Stakeholder communication": 1,
+    "Strategic planning": 1,
+    "System design": 4,
+    "Team leadership": 1
   },
-  "text": "Real-time data processing in embedded health systems demands a relentless focus on latency reduction and deterministic behavior. My recent work on a wearable ECG monitor revealed that even 10ms delays in signal processing could compromise arrhythmia detection. This experience solidified my belief that optimizing real-time pipelines requires a combination of architectural rigor and granular control over both hardware and software layers.  \n\nSupporting this stance, I’ve implemented RTOS-based scheduling with fixed-priority threads to isolate critical tasks like heartbeat analysis from non-critical functions such as telemetry. In one project, this reduced worst-case execution time by 30% while maintaining 99.999% uptime. Leveraging hardware acceleration via DSP co-processors further cut signal processing latency to below 2ms, enabling real-time anomaly detection. For IoT communication, I’ve prioritized MQTT over CoAP in low-latency scenarios, achieving 95% packet delivery reliability with 15ms round-trip times. These choices directly address the 300ms+ latency gaps we previously saw in legacy systems.  \n\nCritics might argue that such complexity increases development overhead and reduces system simplicity. However, in safety-critical applications, deterministic behavior is non-negotiable. For example, when we replaced a polling-based sensor read loop with an interrupt-driven architecture, we reduced power consumption by 25% while improving fault tolerance. Another counterpoint is the resource constraints of embedded platforms. My team mitigated this by implementing dynamic frequency scaling in the firmware, allowing the system to throttle CPU usage during idle periods without compromising real-time guarantees.  \n\nIn conclusion, optimizing real-time data processing isn’t just about selecting faster hardware—it’s about crafting a holistic architecture that balances performance, reliability, and resource efficiency. My work with Embedded Linux and C/C++ has shown that careful integration of hardware-software layers can yield measurable improvements in system responsiveness. For healthtech, where milliseconds matter, this approach isn’t optional—it’s essential. The challenge lies in maintaining this balance while scaling across diverse devices, a problem I’ve tackled through rigorous testing and iterative refinement. The end result? Systems that meet medical-grade standards while delivering the low-latency performance critical to patient safety."
+  "text": "# CampaignIQ: AI-Powered Ad Campaign Management for Real-Time Personalization  \n\nCampaignIQ is a production-ready tool that leverages machine learning to optimize ad campaigns. By analyzing user behavior and market trends, it delivers hyper-personalized ad content, boosting ROI while reducing manual effort. Built for adtech teams, it balances speed, scalability, and precision.  \n\n## Getting Started  \n1. Clone the repo: `git clone https://github.com/your-username/campaigniq.git`  \n2. Install dependencies: `npm install` (or `pip install -r requirements.txt` for Python services)  \n3. Run the app: `npm start` or `python app.py`  \n   - Ensure Docker is installed for local testing  \n   - GitHub Actions handles CI/CD pipelines for automated testing and deployments  \n\n## Tech Stack  \n- **Backend**: Python (FastAPI), Node.js (GraphQL API)  \n- **Frontend**: React (TypeScript)  \n- **Database**: PostgreSQL (with TypeORM)  \n- **AI/ML**: TensorFlow Lite (on-device inference), Scikit-learn (feature engineering)  \n- **Infrastructure**: Docker, Kubernetes (for production scaling)  \n- **CI/CD**: GitHub Actions (automated testing, linting, and deployment)  \n\n## Usage / Examples  \n```bash\n# Create a campaign with AI-driven targeting  \ncurl -X POST https://api.campaigniq.dev/campaigns \\\n  -H \"Authorization: Bearer YOUR_TOKEN\" \\\n  -d '{\"target_audience\": \"age_25-34\", \"budget\": 50000}'  \n```  \nThe API returns optimized ad content and real-time performance metrics. The AI model dynamically adjusts creatives based on user engagement data.  \n\n## Badges  \n[![CI/CD Status](https://github.com/your-username/campaigniq/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/your-username/campaigniq/actions/workflows/ci-cd.yml)  \n[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  \n\n## Architecture / Design  \nCampaignIQ uses a microservices architecture:  \n1. **Data Ingestion**: Collects user interactions via webhooks  \n2. **AI Engine**: Processes data with TensorFlow Lite for real-time predictions  \n3. **Campaign Manager**: Schedules and optimizes ad delivery  \n4. **Dashboard**: Visualizes metrics with React components  \n\nServices communicate via REST/GraphQL, with Docker containers ensuring consistent environments. The design prioritizes low-latency responses for ad-serving workflows.  \n\n## Contributing  \nWe welcome contributions via GitHub Issues and Pull Requests.  \n- Use GitHub Actions for automated testing  \n- Follow Agile/Scrum practices with biweekly sprints  \n- Collaborate across teams for feature integration (e.g., analytics + AI modules)  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details"
 }

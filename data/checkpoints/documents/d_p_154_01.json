@@ -3,22 +3,21 @@
   "type": "project_readme",
   "persona_id": "p_154",
   "hyperparams": {
-    "project_scale": "production",
-    "project_team_size": "small (2-4)",
-    "jargon_density": "moderate"
+    "project_scale": "academic",
+    "project_team_size": "solo",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
-    "AWS": 3,
-    "Apache Airflow": 3,
-    "Apache Kafka": 4,
-    "Apache Spark": 4,
-    "Data Modeling": 3,
-    "Docker": 3,
-    "ETL pipeline design": 4,
-    "Kubernetes": 1,
-    "Python": 4,
-    "Snowflake": 1,
-    "Terraform": 1
+    "AWS": 1,
+    "Docker": 1,
+    "GitLab CI": 1,
+    "JavaScript": 3,
+    "PostgreSQL": 1,
+    "Python": 1,
+    "REST API design": 3,
+    "React": 3,
+    "TypeScript": 1,
+    "Webpack/Vite": 1
   },
-  "text": "# Real-Time Ad Campaign Analytics Pipeline  \nA scalable, low-latency pipeline for processing clickstream data and delivering real-time campaign metrics to ad ops teams. Built to handle 10M+ events/day with <50ms end-to-end latency.  \n\n## Deployment  \nHosted on AWS EC2 clusters with Kafka brokers and Spark clusters managed via EMR. Airflow orchestrates batch reconciliation jobs and data quality checks. Configuration via environment variables for production/development parity.  \n\n## Badges  \n[![Pipeline Uptime](https://example.com/uptime-badge)](https://example.com/uptime)  \n[![Data Throughput](https://example.com/throughput)](https://example.com/throughput)  \n[![Schema Compliance](https://example.com/schema)](https://example.com/schema)  \n\n## Tech Stack  \n- **Data Ingestion**: Apache Kafka (partitioned by campaign ID, 3 replicas)  \n- **Processing**: Apache Spark Structured Streaming (batch window: 500ms)  \n- **Storage**: S3 for raw logs, Parquet for analytics tables  \n- **Orchestration**: Apache Airflow (DAGs for hourly reconciliation)  \n- **Language**: Python (PySpark, Kafka Producers/Consumers)  \n- **Infrastructure**: AWS EC2, EMR, S3 (no Docker in production)  \n\n## Architecture / Design  \nData flows from Kafka topics (e.g., `clickstream_events`) into Spark streaming jobs that apply pre-registered data models for ad campaign metrics. Aggregates are written to S3 in Parquet format for downstream BI tools. Schema evolution handled via Avro schema registry with backward compatibility.  \n\n## Getting Started / Installation  \n```bash  \n# Local dev (Docker not used in prod)  \npip install -r requirements.txt  \npython setup.py install  \nexport KAFKA_BOOTSTRAP_SERVERS=localhost:9092  \npython pipeline.py  \n```  \nFor AWS deployment, use AWS CLI to spin up EMR clusters and S3 buckets. Airflow DAGs are stored in S3 for version control.  \n\n## Usage / Examples  \n```python  \n# Sample Spark SQL query for real-time CPC calculation  \nspark.sql(\"\"\"\n    SELECT campaign_id, SUM(cost) / COUNT(*) AS cpc\n    FROM raw_clickstream\n    GROUP BY campaign_id\n    WINDOW w AS (ROWS BETWEEN 1 PRECEDING AND 1 PRECEDING)\n\"\"\").write.mode(\"append\").save(\"s3://analytics/realtime/cpc\")  \n```  \nOutput is available in S3 for ad ops dashboards.  \n\n## License  \nApache 2.0 (see [LICENSE](LICENSE) for details)"
+  "text": "# EcoCart Clone: Sustainable E-Commerce Platform  \nA full-stack e-commerce solution for eco-friendly products, built with React, Node.js, and MongoDB. Designed to replicate core functionality of a scalable sustainable retail platform, with a focus on carbon footprint tracking and green logistics integration.  \n\n---\n\n## Deployment  \n[Live Demo](https://ecocart-clone.vercel.app) | [GitHub Repo](https://github.com/sidmenon/ecocart-clone)  \nServes 10,000+ requests/day with 99.8% uptime via a managed cloud provider. REST API endpoints are rate-limited to 500 RPS for production-grade scalability.  \n\n---\n\n## Badges  \n[![React](https://badgen.net/badge/react/16.14.0/blue)](https://react.dev)  \n[![Node.js](https://badgen.net/badge/node.js/20.10.0/green)](https://nodejs.org)  \n[![MongoDB](https://badgen.net/badge/mongodb/6.0.4/orange)](https://mongodb.com)  \n[![Sustainability Focus](https://badgen.net/badge/sustainability/eco-friendly/yellow)](https://github.com/sidmenon/ecocart-clone)  \n\n---\n\n## Tech Stack  \n- **Frontend**: React 16.14.0 with hooks and context API for state management  \n- **Backend**: Node.js 20.10.0 with Express.js for RESTful API endpoints  \n- **Database**: MongoDB 6.0.4 with Mongoose ODM for schema validation  \n- **Utilities**: Winston for logging, JWT for authentication, and dotenv for env vars  \n\n---\n\n## Architecture / Design  \nThe system follows a layered architecture:  \n1. **Frontend**: React app with lazy-loaded components for 30% faster load times  \n2. **Backend**: Node.js server handling 15+ REST endpoints for product management, user auth, and order processing  \n3. **Database**: MongoDB replica set with sharding enabled for horizontal scaling  \n4. **API Design**: CRUD operations with HATEOAS links for hypermedia-driven interactions  \n\nKey design decisions:  \n- Product metadata includes carbon footprint metrics in JSON format  \n- Caching layer using Redis for frequently accessed product data  \n- Asynchronous order processing with RabbitMQ for queue management  \n\n---\n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/sidmenon/ecocart-clone.git  \ncd ecocart-clone  \nnpm install  \nnpm run dev  \n```  \nEnsure MongoDB is running locally (or use a cloud instance) and set `MONGODB_URI` in `.env`.  \n\n---\n\n## Usage / Examples  \n1. Fetch products with `GET /api/products?filter=eco-friendly`  \n2. Authenticate users via `POST /api/auth/login` with JWT token refresh  \n3. Track order emissions via `POST /api/orders` with carbon calculation logic  \n\n---\n\n## License  \nMIT License  \n[View License File](https://github.com/sidmenon/ecocart-clone/blob/main/LICENSE)"
 }

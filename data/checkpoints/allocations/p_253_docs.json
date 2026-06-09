@@ -1,37 +1,51 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Junior Data Scientist specializing in cybersecurity with a focus on data-driven threat detection and analysis.",
-    "title": "Zoe Papadakis - Junior Data Scientist",
+    "topic_summary": "Professional resume highlighting 14 years of full-stack development experience in SaaS",
+    "title": "Patrick Doyle - Staff Full-Stack Developer",
     "doc_id": "d_p_253_00",
     "persona_id": "p_253",
     "hyperparams": {
-      "cv_format": "hybrid",
-      "geographic_convention": "US",
-      "company_type": "FAANG",
-      "company_size": "small (<50)"
+      "cv_format": "minimal",
+      "geographic_convention": "Israel",
+      "company_type": "academic",
+      "company_size": "large (500+)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A machine learning project aimed at detecting cyber threats in real-time network traffic using anomaly detection techniques.",
-    "title": "CyberThreatHunter: Threat Detection with Machine Learning",
+    "topic_summary": "SaaS project management platform with real-time collaboration features",
+    "title": "NexaTask: SaaS Project Management Platform",
     "doc_id": "d_p_253_01",
     "persona_id": "p_253",
     "hyperparams": {
-      "project_scale": "academic",
-      "project_team_size": "small (2-4)",
-      "jargon_density": "heavy"
+      "project_scale": "team-internal",
+      "project_team_size": "solo",
+      "jargon_density": "moderate"
     }
   },
   {
-    "doc_type": "linkedin",
-    "topic_summary": "Junior Data Scientist passionate about leveraging data science to enhance cybersecurity solutions.",
-    "title": "Zoe Papadakis | Data Scientist | Cybersecurity Enthusiast",
+    "doc_type": "recommendation",
+    "topic_summary": "Letter from Patrick's manager praising his leadership and technical expertise",
+    "title": "Recommendation from NexaCorp CTO",
     "doc_id": "d_p_253_02",
     "persona_id": "p_253",
     "hyperparams": {
-      "linkedin_completeness": "detailed"
+      "recommender_role": "skip-level",
+      "recommender_closeness": "brief",
+      "company_type": "agency",
+      "company_size": "large (500+)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "Discussion on architecting scalable full-stack applications for SaaS startups",
+    "title": "Building Scalable Full-Stack Applications in the SaaS Industry",
+    "doc_id": "d_p_253_03",
+    "persona_id": "p_253",
+    "hyperparams": {
+      "blog_depth": "opinion-piece",
+      "jargon_density": "moderate"
     }
   }
 ]

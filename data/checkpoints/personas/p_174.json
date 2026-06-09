@@ -1,61 +1,67 @@
 {
   "persona_id": "p_174",
   "hyperparams": {
-    "archetype": "security_engineer",
-    "years_experience": 5,
-    "seniority": "mid",
-    "industry": "healthtech",
-    "writing_style": "confident",
-    "language_fluency": "native",
-    "self_promotion_level": "balanced",
-    "quantification_tendency": "metrics-heavy"
+    "archetype": "devops_sre",
+    "years_experience": 7,
+    "seniority": "senior",
+    "industry": "gaming",
+    "writing_style": "neutral",
+    "language_fluency": "near-native",
+    "self_promotion_level": "boastful",
+    "quantification_tendency": "mixed"
   },
-  "name": "Liam Fitzgerald",
-  "current_role": "Senior Security Engineer",
-  "company": "VitalHealth Systems",
+  "name": "Mikhail Petrov",
+  "current_role": "Senior SRE/DevOps Engineer",
+  "company": "NexaGame Studios",
   "education": {
-    "degree": "Bachelor of Science in Cybersecurity",
-    "university": "Georgia Tech",
-    "year": 2018
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "Moscow State University",
+    "year": 2016
   },
   "career_trajectory": [
     {
-      "year": 2018,
-      "position": "Security Analyst",
-      "company": "HealthGuard Analytics",
-      "summary": "Focused on network security and compliance frameworks for HIPAA-regulated systems"
+      "role": "Systems Administrator",
+      "company": "Riot Games (2015-2017)",
+      "responsibilities": "Managed Linux servers for multiplayer game infrastructure, automated deployment scripts"
     },
     {
-      "year": 2020,
-      "position": "Security Engineer",
-      "company": "MedTech Innovations",
-      "summary": "Led IAM implementation and application security audits for EHR platforms"
+      "role": "DevOps Engineer",
+      "company": "Blizzard Entertainment (2017-2019)",
+      "responsibilities": "Built CI/CD pipelines for game patches, optimized AWS cost structures for global server clusters"
     },
     {
-      "year": 2022,
-      "position": "Senior Security Engineer",
-      "company": "VitalHealth Systems",
-      "summary": "Architected cloud security strategies and managed SOC2 compliance programs"
+      "role": "SRE Lead",
+      "company": "Valve Corporation (2019-2021)",
+      "responsibilities": "Designed global Kubernetes clusters for cross-platform game services, implemented SLOs for 99.95% uptime"
+    },
+    {
+      "role": "Senior SRE/DevOps Engineer",
+      "company": "NexaGame Studios (2021-present)",
+      "responsibilities": "Architected multi-cloud gaming infrastructure, lead incident response for global player outages"
     }
   ],
   "skills": {
-    "Network security": 4,
-    "Application security (OWASP)": 3,
-    "Penetration testing": 3,
-    "IAM/Access control": 4,
-    "Encryption & PKI": 3,
-    "Security auditing": 3,
-    "SIEM tools": 4,
-    "Vulnerability management": 3,
-    "Compliance (SOC2/GDPR)": 3,
-    "Firewall configuration": 3,
-    "Network automation": 3,
-    "AWS": 4,
-    "Azure": 3
+    "CI/CD pipelines": 5,
+    "Kubernetes": 5,
+    "Terraform": 5,
+    "Prometheus/Grafana": 5,
+    "AWS": 5,
+    "GCP": 4,
+    "Load balancing": 4,
+    "Python": 3,
+    "Docker": 3,
+    "ELK": 2,
+    "Chaos engineering": 3,
+    "PostgreSQL": 2,
+    "Redis": 1
   },
   "document_ids": [
     "d_p_174_00",
     "d_p_174_01",
-    "d_p_174_02"
+    "d_p_174_02",
+    "d_p_174_03",
+    "d_p_174_04",
+    "d_p_174_05",
+    "d_p_174_06"
   ]
 }

@@ -1,51 +1,40 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A comprehensive CV highlighting Julia Andersen's 5 years of experience as a data scientist in consulting.",
-    "title": "Julia Andersen - Data Scientist CV",
+    "topic_summary": "Professional resume highlighting experience as a Senior Data Engineer in the gaming industry.",
+    "title": "Olumide Afolabi - Senior Data Engineer",
     "doc_id": "d_p_162_00",
     "persona_id": "p_162",
     "hyperparams": {
-      "cv_format": "paragraph",
-      "geographic_convention": "India",
-      "company_type": "enterprise",
-      "company_size": "large (500+)"
+      "cv_format": "minimal",
+      "geographic_convention": "Israel",
+      "company_type": "agency",
+      "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A GitHub README for a predictive analytics project focused on client retention in the consulting industry.",
-    "title": "Predictive Analytics for Client Retention",
+    "topic_summary": "A data pipeline project for processing real-time player analytics in a multiplayer game environment.",
+    "title": "Game Session Insights Pipeline",
     "doc_id": "d_p_162_01",
     "persona_id": "p_162",
     "hyperparams": {
       "project_scale": "academic",
-      "project_team_size": "solo",
-      "jargon_density": "plain"
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "moderate"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "A recommendation letter from Julia's manager at Nexa Analytics, emphasizing her technical and consulting skills.",
-    "title": "Recommendation from Nexa Analytics Manager",
+    "topic_summary": "Letter from a Team Lead endorsing Olumide's expertise in building scalable data solutions for gaming platforms.",
+    "title": "Recommendation for Olumide Afolabi",
     "doc_id": "d_p_162_02",
     "persona_id": "p_162",
     "hyperparams": {
-      "recommender_role": "peer",
-      "recommender_closeness": "worked-daily",
-      "company_type": "academic",
+      "recommender_role": "professor",
+      "recommender_closeness": "occasional",
+      "company_type": "agency",
       "company_size": "mid (50-500)"
-    }
-  },
-  {
-    "doc_type": "blog",
-    "topic_summary": "A technical blog post exploring advanced techniques for fairness in machine learning models used in business consulting.",
-    "title": "Advancing Fairness in Business-Driven Machine Learning",
-    "doc_id": "d_p_162_03",
-    "persona_id": "p_162",
-    "hyperparams": {
-      "blog_depth": "tutorial",
-      "jargon_density": "moderate"
     }
   }
 ]

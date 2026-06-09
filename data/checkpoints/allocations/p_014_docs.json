@@ -1,61 +1,62 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional resume highlighting Dina Soliman's 11 years of full-stack development experience in SaaS.",
-    "title": "Dina Soliman - Staff Full-Stack Developer",
+    "topic_summary": "A concise CV highlighting Jun Watanabe's Machine Learning Engineering skills and experience in game development.",
+    "title": "Jun Watanabe - Machine Learning Engineer",
     "doc_id": "d_p_014_00",
     "persona_id": "p_014",
     "hyperparams": {
-      "cv_format": "minimal",
-      "geographic_convention": "Israel",
-      "company_type": "FAANG",
-      "company_size": "large (500+)"
-    }
-  },
-  {
-    "doc_type": "project_readme",
-    "topic_summary": "A full-stack application enabling real-time collaboration in a cloud-native SaaS environment.",
-    "title": "Cloud-Native SaaS Platform for Real-Time Collaboration",
-    "doc_id": "d_p_014_01",
-    "persona_id": "p_014",
-    "hyperparams": {
-      "project_scale": "hobby",
-      "project_team_size": "solo",
-      "jargon_density": "heavy"
-    }
-  },
-  {
-    "doc_type": "recommendation",
-    "topic_summary": "Recommends Dina for her leadership in full-stack development and SaaS architecture.",
-    "title": "Recommendation from Tech Lead at NexaCloud Solutions",
-    "doc_id": "d_p_014_02",
-    "persona_id": "p_014",
-    "hyperparams": {
-      "recommender_role": "peer",
-      "recommender_closeness": "brief",
-      "company_type": "agency",
+      "cv_format": "bullet-heavy",
+      "geographic_convention": "Europe",
+      "company_type": "academic",
       "company_size": "mid (50-500)"
     }
   },
   {
-    "doc_type": "linkedin",
-    "topic_summary": "Professional summary highlighting Dina's 11 years of experience in full-stack development for SaaS, with a focus on scalable and secure solutions.",
-    "title": "Dina Soliman - Staff Full-Stack Developer",
-    "doc_id": "d_p_014_03",
+    "doc_type": "project_readme",
+    "topic_summary": "A project exploring reinforcement learning for dynamic game difficulty adjustment in real-time.",
+    "title": "Adaptive Game Difficulty with Reinforcement Learning",
+    "doc_id": "d_p_014_01",
     "persona_id": "p_014",
     "hyperparams": {
-      "linkedin_completeness": "standard"
+      "project_scale": "production",
+      "project_team_size": "medium (5-15)",
+      "jargon_density": "moderate"
     }
   },
   {
-    "doc_type": "blog",
-    "topic_summary": "Discusses strategies for modernizing legacy SaaS applications using full-stack microservices.",
-    "title": "Modernizing Legacy SaaS Applications with Full-Stack Microservices",
+    "doc_type": "project_readme",
+    "topic_summary": "A GitHub repository demonstrating neural network-based player behavior prediction for gaming analytics.",
+    "title": "Player Behavior Analytics with Deep Learning",
+    "doc_id": "d_p_014_02",
+    "persona_id": "p_014",
+    "hyperparams": {
+      "project_scale": "production",
+      "project_team_size": "solo",
+      "jargon_density": "moderate"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A recommendation from a team manager praising Jun's contributions to AI-driven game features.",
+    "title": "Recommendation from NexaGame Studios Team Lead",
+    "doc_id": "d_p_014_03",
+    "persona_id": "p_014",
+    "hyperparams": {
+      "recommender_role": "peer",
+      "recommender_closeness": "brief",
+      "company_type": "enterprise",
+      "company_size": "small (<50)"
+    }
+  },
+  {
+    "doc_type": "linkedin",
+    "topic_summary": "A professional LinkedIn summary showcasing Jun's expertise in ML for gaming and career goals.",
+    "title": "Jun Watanabe - Machine Learning Engineer | Gaming Innovator",
     "doc_id": "d_p_014_04",
     "persona_id": "p_014",
     "hyperparams": {
-      "blog_depth": "opinion-piece",
-      "jargon_density": "moderate"
+      "linkedin_completeness": "detailed"
     }
   }
 ]

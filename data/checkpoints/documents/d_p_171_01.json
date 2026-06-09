@@ -4,21 +4,25 @@
   "persona_id": "p_171",
   "hyperparams": {
     "project_scale": "academic",
-    "project_team_size": "solo",
-    "jargon_density": "moderate"
+    "project_team_size": "small (2-4)",
+    "jargon_density": "heavy"
   },
   "skill_evidence": {
+    "AWS": 2,
     "Cloud cost optimization": 1,
     "Docker": 3,
-    "GitLab CI": 3,
-    "JavaScript": 3,
-    "PostgreSQL": 1,
-    "Python": 1,
-    "REST API design": 3,
-    "React": 3,
-    "TypeScript": 3,
-    "Web performance optimization": 2,
-    "Webpack/Vite": 3
+    "Go": 3,
+    "Kubernetes": 2,
+    "Load balancing": 1,
+    "Microservices architecture": 4,
+    "Node.js": 3,
+    "PostgreSQL": 4,
+    "Python": 4,
+    "REST API design": 4,
+    "React": 4,
+    "Redis": 3,
+    "Terraform": 2,
+    "TypeScript": 4
   },
-  "text": "# Enterprise Project Management Tool  \nA real-time collaboration platform for distributed teams, built with React and Node.js. Streamlines task tracking, resource allocation, and cross-functional workflow synchronization. Designed for scalability, with a focus on intuitive UX and granular permissions.  \n\n## Configuration  \nSet environment variables in `.env.local` for API endpoints and authentication. Use `docker-compose` to spin up a local development environment with Redis for session storage. Configure `gitlab-ci.yml` to automate testing and static asset optimization via Vite.  \n\n## Getting Started / Installation  \nClone the repository and install dependencies:  \n```bash  \nnpm install  \nnpm run build  \n```  \nRun the development server with `npm start` for hot-reloading. For production, use Docker to containerize the backend and frontend separately.  \n\n## Usage / Examples  \n- **Task Creation**: Use the REST API to POST to `/api/tasks` with JSON payloads, including priority and deadline fields.  \n- **Dashboard Interaction**: Filter tasks by status via URL parameters, leveraging React hooks for state management.  \n- **Authentication**: Implement OAuth2 flow with custom JWT tokens, validated via middleware in the Node.js backend.  \n\n## Tech Stack  \n- Frontend: React 18, TypeScript 4.9, Vite 3  \n- Backend: Node.js 18, Express, REST API  \n- Build Tools: Webpack 5 (for legacy compatibility), Vite (for modern frontend)  \n- CI/CD: GitLab CI with automated linting and unit tests  \n\n## Architecture / Design  \nMicroservices architecture with a central task manager API. Frontend and backend communicate via HTTP/2 endpoints. Docker containers isolate dependencies, while Redis caches frequent query results. TypeScript interfaces enforce strict type safety across modules.  \n\n## License  \nMIT License – see [LICENSE](LICENSE) for details.  \n\n## Badges  \n[![Build Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/simonelefevre/status-badge/main/status.json)](https://github.com/simonelefevre/status-badge)  \n[![Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/simonelefevre/coverage-badge/main/coverage.json)](https://github.com/simonelefevre/coverage-badge)"
+  "text": "# SentinelAuth: Cybersecurity-Enhanced Authentication Platform  \n\nA production-grade authentication system integrating OAuth2 and JWT for enterprise-scale applications, designed to mitigate common attack vectors while maintaining compliance with zero-trust principles. Built for teams requiring granular access control, audit trails, and cryptographic resilience.  \n\n## Badges  \n[![Build Status](https://github.com/your-username/sentinelauth/actions/workflows/build.yml/badge.svg)](https://github.com/your-username/sentinelauth/actions/workflows/build.yml)  \n[![Security](https://snyk.io/test/npm/sentinelauth/badge.svg)](https://snyk.io/test/npm/sentinelauth)  \n[![License](https://badgen.net/npm/license/sentinelauth)](https://github.com/your-username/sentinelauth/blob/main/LICENSE)  \n\n## License  \nMIT License. See [LICENSE](https://github.com/your-username/sentinelauth/blob/main/LICENSE) for details.  \n\n## Tech Stack  \n- **Backend**: Go (gRPC for service-to-service communication), Node.js (OAuth2 proxy), Python (security audit scripts)  \n- **Database**: PostgreSQL (user data with row-level encryption), Redis (session storage with TTL)  \n- **Frontend**: React (admin dashboard with role-based UI)  \n- **Security**: JWT with HS256, OAuth2 with PKCE, TLS 1.3, OpenID Connect compliance  \n- **Infrastructure**: AWS Lambda for async token validation, Docker for containerized microservices  \n\n## Architecture / Design  \nSentinelAuth employs a microservices architecture split into three core services:  \n1. **Authenticator** (Go): Manages OAuth2 flows, JWT signing, and cryptographic key rotation  \n2. **Policy Engine** (Node.js): Enforces RBAC and MFA requirements via policy-as-code  \n3. **Audit Logger** (Python): Streams logs to AWS CloudWatch with structured JSON formatting  \n\nThe system uses Redis for distributed session caching and PostgreSQL for persistent user metadata. All communications are secured with TLS 1.3, and token validation includes JWT payload verification and signature integrity checks.  \n\n## Getting Started / Installation  \n```bash  \ngit clone https://github.com/your-username/sentinelauth.git  \ncd sentinelauth  \ndocker-compose up -d  \n# Follow prompts to configure AWS credentials and PostgreSQL secrets  \n```  \n\n## Usage / Examples  \nAuthenticate a user:  \n```typescript  \nconst token = await authService.login({ username, password });  \n// Token contains JWT with claims: sub, exp, scope, and encrypted nonce  \n```  \n\nValidate token in downstream API:  \n```typescript  \nconst payload = await jwt.verify(token, process.env.SECRET_KEY);  \nif (payload.scope.includes('read:users')) {  \n  // Proceed with database query  \n}  \n```  \n\n## Contributing  \nFork the repo and submit PRs with unit tests and security audits. Prioritize fixes for CVEs in dependencies. All code must pass Snyk security scans and conform to TypeScript strict mode."
 }

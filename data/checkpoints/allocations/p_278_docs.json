@@ -1,27 +1,63 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "A professional CV highlighting Grace Mwangi's experience as a mobile developer at TechNova Solutions",
-    "title": "Grace Mwangi - Mobile Developer",
+    "topic_summary": "Ava Richardson's professional profile as a Full-Stack Developer in adtech with 15 years of experience",
+    "title": "Ava Richardson - Full-Stack Developer",
     "doc_id": "d_p_278_00",
     "persona_id": "p_278",
     "hyperparams": {
-      "cv_format": "minimal",
-      "geographic_convention": "India",
-      "company_type": "agency",
+      "cv_format": "hybrid",
+      "geographic_convention": "Israel",
+      "company_type": "startup",
       "company_size": "mid (50-500)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "A README for an enterprise mobile application project focusing on secure data handling and cross-platform solutions",
-    "title": "TechNova Enterprise Mobility Platform",
+    "topic_summary": "A real-time ad analytics dashboard built with React and Node.js for adtech clients",
+    "title": "AdInsight Dashboard",
     "doc_id": "d_p_278_01",
+    "persona_id": "p_278",
+    "hyperparams": {
+      "project_scale": "academic",
+      "project_team_size": "small (2-4)",
+      "jargon_density": "plain"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "A serverless ad campaign optimizer using AWS Lambda and DynamoDB for scalable performance",
+    "title": "CampaignOptimize",
+    "doc_id": "d_p_278_02",
     "persona_id": "p_278",
     "hyperparams": {
       "project_scale": "team-internal",
       "project_team_size": "large (15+)",
       "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "recommendation",
+    "topic_summary": "A manager's endorsement of Ava's leadership and technical expertise in adtech projects",
+    "title": "Recommendation from AdVerve Solutions Manager",
+    "doc_id": "d_p_278_03",
+    "persona_id": "p_278",
+    "hyperparams": {
+      "recommender_role": "skip-level",
+      "recommender_closeness": "brief",
+      "company_type": "academic",
+      "company_size": "small (<50)"
+    }
+  },
+  {
+    "doc_type": "blog",
+    "topic_summary": "Exploring real-time data processing techniques for ad campaign optimization",
+    "title": "Real-Time Ad Campaign Optimization: A Full-Stack Approach",
+    "doc_id": "d_p_278_04",
+    "persona_id": "p_278",
+    "hyperparams": {
+      "blog_depth": "opinion-piece",
+      "jargon_density": "plain"
     }
   }
 ]

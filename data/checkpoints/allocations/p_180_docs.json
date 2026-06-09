@@ -1,59 +1,84 @@
 [
   {
     "doc_type": "cv",
-    "topic_summary": "Professional curriculum vitae for a Senior Full-Stack Developer with 6 years of e-commerce experience",
-    "title": "Jakub Novak - Senior Full-Stack Developer",
+    "topic_summary": "Staff QA/Test Engineer with 11 years in enterprise QA, specializing in test automation and CI/CD integration",
+    "title": "Oliver Brennan - Staff QA/Test Engineer",
     "doc_id": "d_p_180_00",
     "persona_id": "p_180",
     "hyperparams": {
-      "cv_format": "paragraph",
+      "cv_format": "minimal",
       "geographic_convention": "India",
-      "company_type": "FAANG",
+      "company_type": "enterprise",
       "company_size": "small (<50)"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "Real-time inventory management system for e-commerce platforms using Node.js and React",
-    "title": "EcoCart Inventory Optimization",
+    "topic_summary": "Test automation framework for enterprise financial systems using Python and Selenium",
+    "title": "Enterprise Financial System Test Automation Framework",
     "doc_id": "d_p_180_01",
     "persona_id": "p_180",
     "hyperparams": {
-      "project_scale": "team-internal",
-      "project_team_size": "small (2-4)",
+      "project_scale": "hobby",
+      "project_team_size": "large (15+)",
+      "jargon_density": "heavy"
+    }
+  },
+  {
+    "doc_type": "project_readme",
+    "topic_summary": "Security testing tool for enterprise applications focusing on penetration testing and vulnerability assessment",
+    "title": "Security Testing Tool for Enterprise Applications",
+    "doc_id": "d_p_180_02",
+    "persona_id": "p_180",
+    "hyperparams": {
+      "project_scale": "hobby",
+      "project_team_size": "large (15+)",
       "jargon_density": "moderate"
     }
   },
   {
     "doc_type": "project_readme",
-    "topic_summary": "Payment gateway integration solution for global transactions with Stripe and Python",
-    "title": "Secure Payments for EcoCart",
-    "doc_id": "d_p_180_02",
+    "topic_summary": "CI/CD pipeline integration for QA environments to enable continuous testing and deployment",
+    "title": "CI/CD Pipeline Integration for QA Environments",
+    "doc_id": "d_p_180_03",
     "persona_id": "p_180",
     "hyperparams": {
-      "project_scale": "hobby",
-      "project_team_size": "solo",
+      "project_scale": "academic",
+      "project_team_size": "small (2-4)",
       "jargon_density": "plain"
     }
   },
   {
     "doc_type": "recommendation",
-    "topic_summary": "Letter from a team manager praising Jakub's leadership and technical expertise",
-    "title": "Recommendation from EcoCart Tech Lead",
-    "doc_id": "d_p_180_03",
+    "topic_summary": "QA Manager recommends Oliver for his leadership in test strategy and cross-functional collaboration",
+    "title": "Recommendation from QA Manager",
+    "doc_id": "d_p_180_04",
     "persona_id": "p_180",
     "hyperparams": {
-      "recommender_role": "skip-level",
+      "recommender_role": "peer",
       "recommender_closeness": "occasional",
       "company_type": "enterprise",
       "company_size": "large (500+)"
     }
   },
   {
+    "doc_type": "recommendation",
+    "topic_summary": "Senior Test Engineer praises Oliver's expertise in test automation and problem-solving skills",
+    "title": "Recommendation from Senior Test Engineer",
+    "doc_id": "d_p_180_05",
+    "persona_id": "p_180",
+    "hyperparams": {
+      "recommender_role": "skip-level",
+      "recommender_closeness": "brief",
+      "company_type": "startup",
+      "company_size": "mid (50-500)"
+    }
+  },
+  {
     "doc_type": "blog",
-    "topic_summary": "Technical deep dive into optimizing full-stack performance for high-traffic e-commerce sites",
-    "title": "Scaling Full-Stack E-Commerce: Best Practices and Tools",
-    "doc_id": "d_p_180_04",
+    "topic_summary": "Discusses optimizing CI/CD pipelines for QA efficiency in enterprise software development",
+    "title": "Optimizing CI/CD Pipelines for QA Efficiency",
+    "doc_id": "d_p_180_06",
     "persona_id": "p_180",
     "hyperparams": {
       "blog_depth": "tutorial",

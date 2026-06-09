@@ -3,21 +3,19 @@
   "type": "project_readme",
   "persona_id": "p_105",
   "hyperparams": {
-    "project_scale": "team-internal",
-    "project_team_size": "solo",
-    "jargon_density": "heavy"
+    "project_scale": "hobby",
+    "project_team_size": "small (2-4)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "API testing": 3,
-    "BDD/TDD": 2,
-    "GitLab CI": 2,
-    "Integration testing": 2,
+    "CI/CD pipelines": 2,
+    "GraphQL": 1,
     "Java": 1,
+    "Performance testing (JMeter/k6)": 5,
     "Python": 3,
-    "REST API design": 2,
-    "Selenium/Playwright": 3,
-    "Test automation": 3,
-    "Unit testing": 2
+    "Selenium/Playwright": 1,
+    "Test automation": 1,
+    "Test strategy design": 1
   },
-  "text": "# AdFlow: Ad Serving Performance Analyzer  \nAdFlow is a performance testing toolkit designed to dissect ad serving infrastructure latency, throughput, and real-time metric aggregation. Built for adtech workflows, it enables precise benchmarking of ad delivery pipelines, with a focus on identifying sub-50ms response bottlenecks and optimizing cache hit rates.  \n\n## Deployment  \nAdFlow is deployed as a self-contained CLI tool with Docker support for rapid scaling. For team-internal use, it integrates with existing CI/CD pipelines via a lightweight HTTP API, allowing automated stress tests during ad campaign rollouts. The service runs as a stateless microservice, with metrics exported to Prometheus for centralized monitoring.  \n\n## Getting Started / Installation  \nInstall via pip:  \n```bash  \npip install adflow --upgrade  \n```  \nEnsure Python 3.9+ is installed. For Docker users:  \n```bash  \ndocker build -t adflow:latest .  \ndocker run -p 8080:8080 adflow:latest  \n```  \nSet environment variables for target ad server endpoints and authentication tokens.  \n\n## Usage / Examples  \nRun a baseline latency test:  \n```bash  \nadflow test --target https://ad-server.example.com --duration 30s --concurrent 100  \n```  \nAnalyze cache hit rates with custom headers:  \n```bash  \nadflow analyze --headers \"X-Ad-ID: 12345\" --output cache_hit_report.json  \n```  \nIntegrate with existing workflows via the HTTP API:  \n```python  \nimport requests  \nrequests.post(\"http://localhost:8080/api/run\", json={\"config\": \"stress_test.json\"})  \n```  \n\n## Tech Stack  \n- **Python 3.9+** (core logic, API endpoints)  \n- **Playwright** (browser automation for ad rendering validation)  \n- **pytest** (test case management)  \n- **Docker** (containerization)  \n- **gRPC** (internal service communication)  \n\n## Architecture / Design  \nAdFlow employs a layered architecture: a **test orchestrator** manages parallel request dispatch, a **metric aggregator** collects and normalizes data from HTTP probes and browser sessions, and a **result parser** generates actionable insights. Plugins extend functionality for custom ad formats or third-party analytics tools.  \n\n## License  \nMIT License  \n\n## Badges  \n[![Build Status](https://github.com/yourusername/adflow/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/adflow/actions/workflows/ci.yml)  \n[![Code Coverage](https://img.shields.io/codecov/c/yourusername/adflow)](https://codecov.io/gh/yourusername/adflow)"
+  "text": "# MultiplayerLoadSimulator  \nA tool for stress-testing multiplayer game servers with realistic client behavior and network conditions. Built for small teams to validate scalability before deployment.  \n\n## Badges  \n[![Build Status](https://github.com/yourusername/multiplayerloadsimulator/actions/workflows/build.yml/badge.svg)](https://github.com/yourusername/multiplayerloadsimulator/actions/workflows/build.yml)  \n[![PyPI version](https://badge.fury.io/py/multiplayerloadsimulator.svg)](https://badge.fury.io/py/multiplayerloadsimulator)  \n\n## Getting Started / Installation  \nInstall via pip:  \n```bash  \npip install multiplayerloadsimulator  \n```  \nRequires Python 3.9+. Run `multiplayerloadsimulator --help` for command-line options.  \n\n## Tech Stack  \n- Python 3.9+ (core logic, scripting)  \n- asyncio (asynchronous I/O for concurrent client simulations)  \n- Prometheus (metrics collection for real-time monitoring)  \n- SQLite (local storage for test results)  \n\n## Architecture / Design  \nThe tool models a distributed client network with configurable parameters:  \n- Simultaneous users (100–10,000)  \n- Latency ranges (50ms–500ms)  \n- Packet loss rates (0%–20%)  \n- Randomized user behavior (movement, combat, chat)  \n\nEach simulation forks lightweight processes to mimic client-server interactions, avoiding resource contention. Metrics are streamed to Prometheus for real-time analysis.  \n\n## Usage / Examples  \n```bash  \nmultiplayerloadsimulator --user-count 2000 --latency 150 --packet-loss 5  \n```  \nThis runs a test with 2,000 simulated users, 150ms average latency, and 5% packet loss. Output includes throughput, error rates, and latency percentiles.  \n\n## Testing  \nUnit tests validate core logic using pytest. Integration tests simulate edge cases like sudden user spikes or network degradation. All tests run via GitHub Actions, ensuring CI/CD pipeline reliability.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

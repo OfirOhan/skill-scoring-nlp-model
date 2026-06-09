@@ -3,19 +3,25 @@
   "type": "project_readme",
   "persona_id": "p_077",
   "hyperparams": {
-    "project_scale": "hobby",
-    "project_team_size": "solo",
-    "jargon_density": "moderate"
+    "project_scale": "team-internal",
+    "project_team_size": "large (15+)",
+    "jargon_density": "plain"
   },
   "skill_evidence": {
-    "API testing": 5,
-    "Go": 4,
-    "Java": 2,
-    "Performance testing (JMeter/k6)": 5,
-    "Python": 5,
-    "REST API design": 4,
-    "Selenium/Playwright": 4,
-    "Test automation": 5
+    "AWS": 1,
+    "Apache Airflow": 1,
+    "Apache Spark": 4,
+    "Data modeling": 3,
+    "Data warehousing": 2,
+    "Database optimization": 3,
+    "Databricks": 3,
+    "Docker": 3,
+    "ETL pipeline design": 3,
+    "Infrastructure as Code": 3,
+    "Kubernetes": 1,
+    "Python": 1,
+    "Snowflake": 3,
+    "Terraform": 3
   },
-  "text": "# ShopFlow QA Automation Suite  \nA regression testing framework for e-commerce platforms, built to scale with modular test suites and cross-browser compatibility. Designed for teams needing reliable, maintainable automation without bloated tooling.  \n\n## Getting Started / Installation  \nEnsure Java 17+ is installed. Clone the repo and run:  \n```bash  \nnpm install  \nnpm run build  \n```  \nConfigure your e-commerce platform's API endpoints in `config/env.json`. For browser support, install Chrome/Edge drivers via [Selenium Manager](https://github.com/mozilla/selenium-manager).  \n\n## Usage / Examples  \nRun all tests with:  \n```bash  \nnpm test  \n```  \nExample: Validate checkout flow with dynamic pricing  \n```python  \n@allure.feature(\"Checkout\")  \ndef test_checkout_flow():  \n    api = RestAPI(\"https://api.example.com\")  \n    cart = api.create_cart()  \n    response = api.add_item(cart.id, product_id=\"123\", quantity=2)  \n    assert response.status_code == 201  \n    total = api.get_cart_total(cart.id)  \n    assert total == 29.99  \n```  \nPerformance tests use k6 to simulate 10k concurrent users:  \n```bash  \nk6 run -u 10000 script.js  \n```  \n\n## Badges  \n[![Build Status](https://github.com/xanderdevries/shopflow/actions/workflows/build.yml/badge.svg)](https://github.com/xanderdevries/shopflow/actions/workflows/build.yml)  \n[![Test Coverage](https://codecov.io/gh/xanderdevries/shopflow/branch/main/graph/badge.svg)](https://codecov.io/gh/xanderdevries/shopflow)  \n\n## Tech Stack  \n- **Go**: Backend logic for test orchestration and result aggregation  \n- **Python**: Core test scripts and API validation  \n- **Playwright**: Headless browser interactions for UI testing  \n- **REST API**: Custom framework for endpoint validation  \n- **JMeter/k6**: Distributed load testing for payment gateways  \n- **Docker**: Containerized test environments for CI/CD  \n\n## Architecture / Design  \nThe framework splits tests into three layers:  \n1. **API Layer**: REST endpoints for product catalog and cart management  \n2. **UI Layer**: Playwright scripts for checkout and search functionality  \n3. **Performance Layer**: k6 scripts with JMeter integration for stress testing  \n\nEach test suite is isolated with its own configuration, enabling parallel execution. Results are aggregated in a centralized dashboard built with Go and SQLite.  \n\n## Contributing  \nPull requests are welcome! For major changes, open an issue to discuss the approach. All contributions must include test coverage and performance benchmarks.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
+  "text": "# Game Analytics Dashboard  \nReal-time player behavior tracking for LudoQuest Games using Apache Spark and Kafka. This dashboard provides actionable insights into user engagement, session metrics, and in-game events, enabling data-driven decisions for game balance and monetization strategies.  \n\n## Badges  \n[![Real-Time Analytics](https://img.shields.io/badge/Real--Time-00ffcc?style=flat)](https://ludoquest.games/analytics)  \n[![Kafka Integration](https://img.shields.io/badge/Kafka-00ffcc?style=flat)](https://ludoquest.games/analytics)  \n[![Spark Processing](https://img.shields.io/badge/Spark-ff4081?style=flat)](https://ludoquest.games/analytics)  \n\n## Getting Started / Installation  \nClone the repository:  \n```bash  \ngit clone https://github.com/ludoquest/game-analytics-dashboard.git  \ncd game-analytics-dashboard  \n```  \nEnsure Kafka and Spark are installed. Configure `kafka.properties` with your cluster details. Run the dashboard:  \n```bash  \nsbt \"run\"  \n```  \nFor local testing, use Docker to spin up Kafka and Zookeeper.  \n\n## Tech Stack  \n- **Streaming**: Apache Kafka (avro serialization, topic partitioning)  \n- **Processing**: Apache Spark (structured streaming, micro-batch optimizations)  \n- **Visualization**: Grafana (custom dashboards for session duration, retention rates)  \n- **Storage**: PostgreSQL (schema design for user behavior tables)  \n- **Data Modeling**: Denormalized schema for real-time query performance  \n- **Optimization**: Indexing on session IDs, partitioning by date ranges  \n\n## Architecture / Design  \nThe system ingests raw event logs via Kafka, processed in Spark for aggregation and anomaly detection. Key decisions include:  \n- **Schema Evolution**: Using Avro for backward-compatible event tracking  \n- **Fault Tolerance**: Spark checkpointing for Kafka stream recovery  \n- **Latency Optimization**: Batch window sizes tuned for sub-second updates  \n- **Data Modeling**: Star schema design for PostgreSQL analytics tables  \n\n## Usage / Examples  \nQuery player session stats:  \n```sql  \nSELECT player_id, COUNT(*) AS sessions, AVG(duration)  \nFROM session_data  \nWHERE DATE(session_time) = CURRENT_DATE  \nGROUP BY player_id;  \n```  \nMonitor real-time metrics in Grafana’s dashboard under `metrics/retention_rate`.  \n\n## Testing  \n- **Unit Tests**: Spark pipelines validated with mock Kafka producers  \n- **Integration Tests**: End-to-end flow verified using test data in `test_events/`  \n- **Data Consistency**: Kafka consumer offsets aligned with Spark processing logs  \n- **Performance**: Stress tests with 10k+ concurrent users to validate latency thresholds  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }

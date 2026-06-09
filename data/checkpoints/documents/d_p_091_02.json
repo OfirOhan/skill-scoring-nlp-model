@@ -1,28 +1,23 @@
 {
   "doc_id": "d_p_091_02",
-  "type": "recommendation",
+  "type": "project_readme",
   "persona_id": "p_091",
   "hyperparams": {
-    "recommender_role": "direct-manager",
-    "recommender_closeness": "worked-daily",
-    "company_type": "agency",
-    "company_size": "large (500+)"
+    "project_scale": "production",
+    "project_team_size": "medium (5-15)",
+    "jargon_density": "moderate"
   },
   "skill_evidence": {
-    "AWS": 4,
-    "CI/CD pipelines": 3,
-    "Docker": 3,
-    "GitHub Actions": 3,
-    "Go": 3,
-    "Java": 1,
-    "Kubernetes": 4,
-    "Microservices architecture": 4,
-    "MongoDB": 1,
-    "PostgreSQL": 3,
-    "Python": 3,
-    "REST API design": 3,
-    "Redis": 3,
+    "AWS": 3,
+    "Cloud Cost Optimization": 3,
+    "DNS/DHCP": 1,
+    "Infrastructure as Code": 4,
+    "Kubernetes": 3,
+    "Load balancing": 2,
+    "Network automation": 1,
+    "Prometheus/Grafana": 3,
+    "Serverless": 3,
     "Terraform": 3
   },
-  "text": "Aiden O’Sullivan has consistently demonstrated a rare ability to merge technical rigor with strategic foresight, making him an indispensable asset to our team. As Lead Backend Engineer, he has driven critical infrastructure improvements across our enterprise platforms, balancing innovation with operational stability. His work on scalable microservices architectures has reduced deployment latency by 35% while maintaining high availability, a feat achieved through meticulous design and proactive monitoring.  \n\nAiden’s technical toolkit is both diverse and deeply applied. He pioneered the adoption of Kubernetes at scale, automating cluster management and reducing manual intervention by 40%. His AWS expertise has been pivotal in optimizing cost structures, achieving a 25% reduction in cloud expenditures without compromising performance. He thrives in complex environments, often resolving bottlenecks through creative integration of tools like Terraform and Redis, ensuring systems adapt to evolving demands.  \n\nBeyond technical excellence, Aiden’s collaborative spirit elevates team dynamics. He mentors junior engineers with patience, fostering a culture of shared ownership. His ability to communicate technical nuances to non-technical stakeholders has streamlined decision-making, particularly during high-stakes migrations.  \n\nAiden’s work ethic is defined by precision and perseverance. He approaches challenges as opportunities to refine processes, whether optimizing PostgreSQL queries or refining REST API workflows. His leadership in CI/CD pipeline enhancements has standardized practices across teams, accelerating release cycles.  \n\nAiden’s blend of technical mastery and leadership makes him a standout candidate. His contributions have not only strengthened our infrastructure but also set a benchmark for reliability and innovation. I wholeheartedly recommend him for any opportunity where his expertise can drive meaningful impact."
+  "text": "# Threat Detection API  \nReal-time vulnerability scanning and SIEM integration for enterprise threat intelligence  \n\n[![GitHub](https://badges.alexa.com/badge.svg)](https://github.com/callumreid/threat-detection-api)  \n[![CI/CD](https://badges.alexa.com/badge.svg)](https://github.com/callumreid/threat-detection-api/actions)  \n[![Security](https://badges.alexa.com/badge.svg)](https://securitytools.alexa.com/badge.svg)  \n\n## Tech Stack  \n**Backend**: Go (1.21), gRPC, Prometheus  \n**Database**: PostgreSQL (15), TimescaleDB  \n**Cloud**: AWS (EC2, S3, CloudFront)  \n**Orchestration**: Kubernetes (EKS) with Helm  \n**Monitoring**: Prometheus + Grafana (custom dashboards)  \n**Security**: TLS 1.3, mTLS, AWS WAF integration  \n\n## Architecture / Design  \nThe API operates as a distributed microservice suite, with core components:  \n- **Scanning Engine**: Parallelized Go routines for real-time asset fingerprinting  \n- **SIEM Adapter**: Webhook-based ingestion with AWS CloudFront for low-latency delivery  \n- **Rule Engine**: Trie-optimized vulnerability matching with 98% FP reduction  \n- **Metrics Exporter**: Prometheus metrics for 12+ telemetry dimensions  \n\nKubernetes autoscaling handles 10k+ concurrent scans, while Terraform-managed infrastructure reduces cloud costs by 35% through reserved instance optimization.  \n\n## Getting Started / Installation  \n```bash\ngit clone https://github.com/callumreid/threat-detection-api.git  \ncd threat-detection-api  \nmake deps  \nexport AWS_ACCESS_KEY_ID=your_key  \nexport AWS_SECRET_ACCESS_KEY=your_secret  \nmake build  \n```\n\n## Usage / Examples  \n**Scan Endpoint**:  \n```bash\ncurl -X POST https://api.threat-detect.com/v1/scan \\\n  -H \"Authorization: Bearer <token>\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"assets\": [\"192.168.1.1\", \"example.com\"], \"siem_url\": \"https://siem.example.com/webhook\"}'\n```  \n\n**SIEM Integration**:  \n```python\nimport requests  \nresponse = requests.post('https://api.threat-detect.com/v1/siem', json={  \n    'alerts': [  \n        {'id': 'VULN-001', 'severity': 'high', 'source': '192.168.1.1'}  \n    ]  \n})  \nprint(response.json())  \n```  \n\n## Contributing  \nSubmit PRs with automated tests (GoConvey) and infrastructure-as-code updates. Preference for Terraform modules over ad-hoc provisioning.  \n\n## License  \nMIT License. See [LICENSE](LICENSE) for details."
 }
