@@ -8,6 +8,8 @@ join model predictions back to per-row retrieval provenance in
 retrieval_meta.jsonl (both are keyed by that same CSV row position).
 """
 
+import re
+
 import pandas as pd
 import torch
 from torch.utils.data import Dataset, DataLoader
@@ -55,14 +57,23 @@ class ScoringDataset(Dataset):
 # ──────────────────────────────────────────────────────────────
 # Helpers
 # ──────────────────────────────────────────────────────────────
-def _build_input_text(row: pd.Series, sep: str) -> str:
-    """Concatenate skill + chunks with the tokenizer's separator token.
+_CHUNK_RE = re.compile(r"chunk\d+")
 
-    `sep` is the model's own separator (RoBERTa: '</s>', DeBERTa: '[SEP]'), so the
-    skill/evidence boundary is encoded correctly regardless of backbone.
+
+def _build_input_text(row: pd.Series, sep: str) -> str:
+    """Concatenate skill + all chunk columns with the tokenizer's separator token.
+
+    Reads however many chunk1..chunkN columns the CSV has (set by
+    config.RETRIEVE_TOP_K at build time), in numeric order — no hard-coded count.
+    `sep` is the model's own separator (DeBERTa: '[SEP]').
     """
+    chunk_cols = sorted(
+        (c for c in row.index if _CHUNK_RE.fullmatch(str(c))),
+        key=lambda c: int(str(c)[5:]),
+    )
     chunks = " ".join(
-        str(row[c]) for c in ("chunk1", "chunk2", "chunk3") if pd.notna(row[c])
+        str(row[c]) for c in chunk_cols
+        if pd.notna(row[c]) and str(row[c]).strip()
     )
     return f"{row['skill']} {sep} {chunks}"
 
@@ -93,7 +104,14 @@ def _make_loader(df: pd.DataFrame, tokenizer, shuffle: bool) -> DataLoader:
     texts = df.apply(lambda r: _build_input_text(r, sep), axis=1).tolist()
     labels = (df["label"] - 1).tolist()  # shift 1-5 → 0-4
     ds = ScoringDataset(texts, labels, tokenizer)
-    return DataLoader(ds, batch_size=config.BATCH_SIZE, shuffle=shuffle)
+    return DataLoader(
+        ds,
+        batch_size=config.BATCH_SIZE,
+        shuffle=shuffle,
+        num_workers=config.NUM_WORKERS,      # parallel tokenization
+        pin_memory=torch.cuda.is_available(),  # faster host->GPU copies
+        persistent_workers=config.NUM_WORKERS > 0,
+    )
 
 
 def _subsample(df: pd.DataFrame, subset: float) -> pd.DataFrame:

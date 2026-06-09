@@ -11,7 +11,10 @@ _DATA_DIR = _PROJECT_DIR / "data"
 
 # ── Transformer backbone ────────────────────────────────────
 MODEL_NAME = "microsoft/deberta-v3-base"
-MAX_LEN = 512
+# Sized to fit all RETRIEVE_TOP_K(=8) chunks: ~1000-char chunks ≈ ~250 tokens
+# each, so 8 chunks + skill ≈ ~2000 tokens. DeBERTa-v3 uses relative positions
+# (no absolute-position cap), so it runs past its 512 pretraining length.
+MAX_LEN = 2048
 
 # ── Experiment selection (THE switch) ───────────────────────
 # The 3 variants to compare. Each run saves to its own runs/<EXPERIMENT>/
@@ -51,6 +54,10 @@ HEAD_LR = 1e-3       # MLP head learning rate
 BACKBONE_LR = 2e-5   # transformer LR (used only when fine-tuning, i.e. unfrozen)
 DROPOUT = 0.3
 
+# ── GPU efficiency ──────────────────────────────────────────
+NUM_WORKERS = 4      # DataLoader workers — parallelise the (slow) DeBERTa tokenizer
+USE_AMP = True       # bf16 autocast on CUDA for forward passes (no-op on CPU)
+
 # ── Data ────────────────────────────────────────────────────
 # Built by scoring_model/build_dataset.py (RAG → training rows).
 DATA_PATH = str(_DATA_DIR / "training_data.csv")
@@ -68,7 +75,9 @@ TEST_RATIO = 0.15
 RANDOM_SEED = 42
 
 # ── Retrieval (dataset construction) ────────────────────────
-RETRIEVE_TOP_K = 3       # chunks fed to the scorer (chunk1, chunk2, chunk3)
+# Number of reranked chunks retrieved, saved (chunk1..chunkN) and fed to the
+# scorer. Single source of truth — build_dataset and dataset.py both follow it.
+RETRIEVE_TOP_K = 8
 EVIDENCE_THRESHOLD = 2   # min skill_evidence intensity for a doc to count
                          # as a *relevant* retrieval target (see build_dataset)
 

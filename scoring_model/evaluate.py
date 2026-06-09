@@ -153,8 +153,9 @@ def _report_joint(test_df, preds_orig, labels_orig, retrieval_meta, row_ids):
 def evaluate() -> dict:
     """Evaluate the active experiment's checkpoint; print + persist metrics.json."""
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    amp_enabled = config.USE_AMP and device.type == "cuda"
     print(f"[{config.EXPERIMENT}] {config.EXPERIMENTS[config.EXPERIMENT]['desc']}")
-    print(f"Using device: {device}  |  head={config.HEAD_TYPE}")
+    print(f"Using device: {device}  |  head={config.HEAD_TYPE}  |  amp={amp_enabled}")
 
     ckpt = config.checkpoint_path()
     if not os.path.exists(ckpt):
@@ -175,7 +176,8 @@ def evaluate() -> dict:
             attention_mask  = batch["attention_mask"].to(device)
             labels          = batch["label"].to(device)
 
-            logits = model(input_ids, attention_mask)
+            with torch.autocast(device_type=device.type, dtype=torch.bfloat16, enabled=amp_enabled):
+                logits = model(input_ids, attention_mask)
             preds = heads.decode(config.HEAD_TYPE, logits)  # 0-4
 
             all_preds.append(preds.cpu())

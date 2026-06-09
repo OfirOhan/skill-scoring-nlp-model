@@ -8,6 +8,7 @@ scikit-learn
 scipy
 torch
 transformers
+accelerate        # Qwen3-Reranker (CausalLM) device placement
 tiktoken          # DeBERTa-v3 tokenizer conversion (transformers 5.x)
 sentencepiece     # DeBERTa-v3 tokenizer (SentencePiece-based)
 protobuf          # needed when converting the DeBERTa-v3 tokenizer

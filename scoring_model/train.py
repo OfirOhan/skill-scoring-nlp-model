@@ -27,10 +27,11 @@ def train(subset: float | None = None, epochs: int | None = None):
     epochs = epochs or config.EPOCHS
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    amp_enabled = config.USE_AMP and device.type == "cuda"
     print(f"[{config.EXPERIMENT}] {config.EXPERIMENTS[config.EXPERIMENT]['desc']}")
     print(f"Using device: {device}  |  head={config.HEAD_TYPE}  |  "
-          f"unfreeze_last_n={config.UNFREEZE_LAST_N}  |  epochs={epochs}"
-          f"{f'  |  subset={subset}' if subset else ''}")
+          f"unfreeze_last_n={config.UNFREEZE_LAST_N}  |  epochs={epochs}  |  "
+          f"amp={amp_enabled}{f'  |  subset={subset}' if subset else ''}")
 
     # ── data ────────────────────────────────────────────────
     train_loader, val_loader, _ = load_data(subset=subset)
@@ -61,8 +62,9 @@ def train(subset: float | None = None, epochs: int | None = None):
             attention_mask  = batch["attention_mask"].to(device)
             labels          = batch["label"].to(device)
 
-            logits = model(input_ids, attention_mask)
-            loss = heads.compute_loss(config.HEAD_TYPE, logits, labels)
+            with torch.autocast(device_type=device.type, dtype=torch.bfloat16, enabled=amp_enabled):
+                logits = model(input_ids, attention_mask)
+                loss = heads.compute_loss(config.HEAD_TYPE, logits, labels)
 
             optimizer.zero_grad()
             loss.backward()
@@ -82,7 +84,8 @@ def train(subset: float | None = None, epochs: int | None = None):
                 attention_mask  = batch["attention_mask"].to(device)
                 labels          = batch["label"].to(device)
 
-                logits = model(input_ids, attention_mask)
+                with torch.autocast(device_type=device.type, dtype=torch.bfloat16, enabled=amp_enabled):
+                    logits = model(input_ids, attention_mask)
                 preds = heads.decode(config.HEAD_TYPE, logits)
 
                 all_preds.append(preds)

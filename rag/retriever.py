@@ -1,20 +1,17 @@
 import chromadb
 import ollama
 from rank_bm25 import BM25Okapi
-from sentence_transformers import CrossEncoder
 from rag.embedder import embedder
+from rag.reranker import reranker
 
 CHROMA_PATH = "./chroma_db"
-RERANK_MODEL = "cross-encoder/ms-marco-MiniLM-L-6-v2"
-EXPAND_LLM = "qwen3"
-FETCH_PER_QUERY = 10
+ROUTER_LLM = "qwen3"
 
-reranker = CrossEncoder(RERANK_MODEL)
 client = chromadb.PersistentClient(path=CHROMA_PATH)
 
 
 # ---------------------------------------------------------------------------
-# 1. Query Expansion (optional — LLM-backed, off by default for bulk builds)
+# 1. Query Expansion
 # ---------------------------------------------------------------------------
 
 def expand_query(original_query: str, n_variations: int = 3) -> list[str]:
@@ -34,7 +31,7 @@ def expand_query(original_query: str, n_variations: int = 3) -> list[str]:
     )
 
     response = ollama.chat(
-        model=EXPAND_LLM,
+        model=ROUTER_LLM,
         messages=[{"role": "user", "content": prompt}],
     )
     raw = response["message"]["content"].strip()
@@ -43,24 +40,16 @@ def expand_query(original_query: str, n_variations: int = 3) -> list[str]:
 
 
 # ---------------------------------------------------------------------------
-# 2. Fusion primitives — BM25 + Vector search merged with RRF, then re-ranked
+# 2. Fusion Retrieval — BM25 + Vector search merged with RRF
 # ---------------------------------------------------------------------------
 
 def bm25_search(query: str, chunks: list[str], top_k: int = 10) -> list[str]:
-    """Build a one-off BM25 index over `chunks` and return the top matches.
-
-    Convenience for ad-hoc single queries. Hot loops that issue many queries
-    against the same corpus should build the index once and use `_bm25_top`.
-    """
     if not chunks:
         return []
-    bm25 = BM25Okapi([chunk.lower().split() for chunk in chunks])
-    return _bm25_top(bm25, chunks, query, top_k)
-
-
-def _bm25_top(bm25: BM25Okapi, chunks: list[str], query: str, top_k: int) -> list[str]:
-    """Top-k chunks for `query` from a *pre-built* BM25 index."""
-    scores = bm25.get_scores(query.lower().split())
+    tokenized_corpus = [chunk.lower().split() for chunk in chunks]
+    bm25 = BM25Okapi(tokenized_corpus)
+    tokenized_query = query.lower().split()
+    scores = bm25.get_scores(tokenized_query)
     top_indices = scores.argsort()[-top_k:][::-1]
     return [chunks[i] for i in top_indices if scores[i] > 0]
 
@@ -78,128 +67,21 @@ def rrf_fusion(*ranked_lists: list[str], k: int = 60) -> list[str]:
     return sorted(scores, key=scores.get, reverse=True)
 
 
-def rerank(query: str, chunks: list[str], top_k: int = 5) -> list[str]:
-    if not chunks:
-        return []
-    pairs = [[query, chunk] for chunk in chunks]
-    scores = reranker.predict(pairs)
-    scored = sorted(zip(scores, chunks), key=lambda x: x[0], reverse=True)
-    return [chunk for _, chunk in scored[:top_k]]
+# ---------------------------------------------------------------------------
+# 3. Re-ranking
+# ---------------------------------------------------------------------------
+
+def rerank(query: str, chunks: list[str], top_k: int = 8) -> list[str]:
+    return reranker.rerank(query, chunks, top_k=top_k)
 
 
 # ---------------------------------------------------------------------------
-# 3. Per-collection state (shared across many queries to the same candidate)
+# 4. Main retrieve pipeline (fusion only — summary index / router removed)
 # ---------------------------------------------------------------------------
 
-class _CollectionState:
-    """Pre-computed per-candidate retrieval state.
-
-    The expensive-to-repeat work — pulling every chunk out of ChromaDB,
-    building the chunk -> doc_id provenance map, and tokenising the BM25 index —
-    is done once here and reused for every skill query against that candidate.
-    This is what makes per-(persona, skill) dataset construction fast: a persona
-    with 12 skills pays the corpus setup once instead of 12 times.
+def retrieve(query: str, candidate_id: str, top_k: int = 8) -> dict:
     """
-
-    def __init__(self, candidate_id: str):
-        self.collection = client.get_or_create_collection(
-            name=candidate_id,
-            metadata={"hnsw:space": "cosine"},
-        )
-        stored = self.collection.get(include=["documents", "metadatas"])
-        self.chunks = stored["documents"]
-        self.text_to_doc = {
-            doc: meta.get("doc_id")
-            for doc, meta in zip(self.chunks, stored["metadatas"])
-        }
-        self.bm25 = (
-            BM25Okapi([c.lower().split() for c in self.chunks])
-            if self.chunks else None
-        )
-
-
-def _fuse_one(state: _CollectionState, query: str, per_query_vectors: list[list[str]],
-              variations: list[str], top_k: int) -> dict:
-    """Run BM25 + RRF + rerank for a single query given pre-fetched vector hits."""
-    bm25_lists = []
-    if state.bm25 is not None:
-        bm25_lists = [_bm25_top(state.bm25, state.chunks, v, FETCH_PER_QUERY)
-                      for v in variations]
-
-    fused = rrf_fusion(*per_query_vectors, *bm25_lists)
-    top_chunks = rerank(query, fused, top_k=top_k)
-    return {
-        "chunks": top_chunks,
-        "doc_ids": [state.text_to_doc.get(c) for c in top_chunks],
-        "fused_pool": fused,
-    }
-
-
-# ---------------------------------------------------------------------------
-# 4. Training retrieval — fusion pipeline + chunk provenance
-# ---------------------------------------------------------------------------
-
-def retrieve_batch_for_training(
-    queries: list[str],
-    candidate_id: str,
-    top_k: int = 3,
-    expand: bool = False,
-) -> list[dict]:
-    """Retrieve for many skill queries against one candidate, efficiently.
-
-    Forces the fusion path (no routing — skill queries are always specific) and
-    returns chunk->doc_id provenance so retrieval can be graded against the
-    evidence ground truth.
-
-    Speed:
-      • per-candidate corpus + BM25 index are built once (see _CollectionState)
-      • with expand=False, all query embeddings are computed in a single batched
-        encode + a single ChromaDB call, then fused per query.
-      • expand=True adds an LLM call per query (much slower) but widens recall.
-
-    Returns one dict per input query: {chunks, doc_ids, fused_pool}.
-    """
-    state = _CollectionState(candidate_id)
-    if not queries:
-        return []
-
-    results: list[dict] = []
-
-    if not expand:
-        # One batched embed + one vector search for the whole skill set.
-        q_embeddings = embedder.encode_queries(queries)
-        vres = state.collection.query(
-            query_embeddings=q_embeddings, n_results=FETCH_PER_QUERY
-        )
-        for i, query in enumerate(queries):
-            per_query_vectors = [vres["documents"][i]]
-            results.append(_fuse_one(state, query, per_query_vectors, [query], top_k))
-        return results
-
-    # Expansion path: each query fans out to LLM variations.
-    for query in queries:
-        variations = expand_query(query)
-        q_embeddings = embedder.encode_queries(variations)
-        vres = state.collection.query(
-            query_embeddings=q_embeddings, n_results=FETCH_PER_QUERY
-        )
-        per_query_vectors = list(vres["documents"])
-        results.append(_fuse_one(state, query, per_query_vectors, variations, top_k))
-    return results
-
-
-def retrieve_for_training(query: str, candidate_id: str,
-                          top_k: int = 3, expand: bool = False) -> dict:
-    """Single-query convenience wrapper over retrieve_batch_for_training."""
-    return retrieve_batch_for_training([query], candidate_id, top_k=top_k, expand=expand)[0]
-
-
-# ---------------------------------------------------------------------------
-# 5. General retrieve — fusion pipeline for app/query use
-# ---------------------------------------------------------------------------
-
-def retrieve(query: str, candidate_id: str, top_k: int = 5, expand: bool = True) -> dict:
-    """Run the fusion retrieval pipeline for a free-form query.
+    Run the fusion retrieval pipeline for a query.
 
     Always BM25 + vector + RRF + rerank (the summary index and BROAD/SPECIFIC
     router were removed — every query goes through the same path).
@@ -209,16 +91,113 @@ def retrieve(query: str, candidate_id: str, top_k: int = 5, expand: bool = True)
         - expanded_queries: list[str] — query variations actually used
         - fused_pool: list[str] — the candidate pool before re-ranking
     """
-    state = _CollectionState(candidate_id)
-    queries = expand_query(query) if expand else [query]
+    collection = client.get_or_create_collection(
+        name=candidate_id,
+        metadata={"hnsw:space": "cosine"},
+    )
+
+    # --- Step 1: Query Expansion ---
+    queries = expand_query(query)
+
+    # --- Step 2: Vector search (per-query ranked lists) ---
+    # Each query's results are kept as a separate ranked list so RRF
+    # scores them independently — rank 0 in any list gets equal weight.
+    fetch_per_query = 10
+    per_query_results: list[list[str]] = []
 
     q_embeddings = embedder.encode_queries(queries)
-    vres = state.collection.query(query_embeddings=q_embeddings, n_results=FETCH_PER_QUERY)
-    per_query_vectors = list(vres["documents"])
+    results = collection.query(query_embeddings=q_embeddings, n_results=fetch_per_query)
 
-    out = _fuse_one(state, query, per_query_vectors, queries, top_k)
+    for chunk_list in results["documents"]:
+        per_query_results.append(chunk_list)
+
+    # --- Step 3: BM25 search (full collection) ---
+    all_chunks = collection.get(include=["documents"])["documents"]
+    bm25_lists = [bm25_search(q, all_chunks, top_k=fetch_per_query) for q in queries]
+
+    # --- Step 4: Fuse all ranked lists with RRF ---
+    fused = rrf_fusion(*per_query_results, *bm25_lists)
+
+    # --- Step 5: Re-rank and return the best ---
+    top_chunks = rerank(query, fused, top_k=top_k)
+
     return {
-        "chunks": out["chunks"],
+        "chunks": top_chunks,
         "expanded_queries": queries,
-        "fused_pool": out["fused_pool"],
+        # The fused candidate pool *before* re-ranking. Exposed so evaluation can
+        # tell whether a relevant chunk was lost at recall (never entered the pool)
+        # vs. at re-ranking (entered the pool but was cut from the top-k).
+        "fused_pool": fused,
     }
+
+
+# ---------------------------------------------------------------------------
+# 5. Training retrieval — fusion + chunk provenance (used by build_dataset.py)
+# ---------------------------------------------------------------------------
+
+FETCH_PER_QUERY = 10
+
+
+def _bm25_top(bm25: BM25Okapi, chunks: list[str], query: str, top_k: int) -> list[str]:
+    """Top-k chunks for `query` from a *pre-built* BM25 index (avoids rebuilding)."""
+    scores = bm25.get_scores(query.lower().split())
+    top_indices = scores.argsort()[-top_k:][::-1]
+    return [chunks[i] for i in top_indices if scores[i] > 0]
+
+
+def retrieve_batch_for_training(
+    queries: list[str],
+    candidate_id: str,
+    top_k: int = 3,
+    expand: bool = False,
+) -> list[dict]:
+    """Retrieve for many skill queries against one candidate, efficiently.
+
+    Forces the fusion path (skill queries are always specific) and returns
+    chunk -> doc_id provenance so retrieval can be graded against the evidence
+    ground truth. The per-candidate corpus + BM25 index are built once and reused
+    across all queries; with expand=False all query embeddings are computed in one
+    batched call. Returns one dict per query: {chunks, doc_ids, fused_pool}.
+    """
+    collection = client.get_or_create_collection(
+        name=candidate_id, metadata={"hnsw:space": "cosine"},
+    )
+    stored = collection.get(include=["documents", "metadatas"])
+    all_chunks = stored["documents"]
+    text_to_doc = {
+        doc: (meta or {}).get("doc_id")
+        for doc, meta in zip(all_chunks, stored["metadatas"])
+    }
+    bm25 = BM25Okapi([c.lower().split() for c in all_chunks]) if all_chunks else None
+
+    def _fuse(query, per_query_vectors, variations):
+        bm25_lists = ([_bm25_top(bm25, all_chunks, v, FETCH_PER_QUERY) for v in variations]
+                      if bm25 is not None else [])
+        fused = rrf_fusion(*per_query_vectors, *bm25_lists)
+        top = rerank(query, fused, top_k=top_k)
+        return {"chunks": top, "doc_ids": [text_to_doc.get(c) for c in top], "fused_pool": fused}
+
+    results: list[dict] = []
+    if not queries:
+        return results
+
+    if not expand:
+        # One batched embed + one vector search for the whole skill set.
+        q_embeddings = embedder.encode_queries(queries)
+        vres = collection.query(query_embeddings=q_embeddings, n_results=FETCH_PER_QUERY)
+        for i, query in enumerate(queries):
+            results.append(_fuse(query, [vres["documents"][i]], [query]))
+        return results
+
+    for query in queries:
+        variations = expand_query(query)
+        q_embeddings = embedder.encode_queries(variations)
+        vres = collection.query(query_embeddings=q_embeddings, n_results=FETCH_PER_QUERY)
+        results.append(_fuse(query, list(vres["documents"]), variations))
+    return results
+
+
+def retrieve_for_training(query: str, candidate_id: str,
+                          top_k: int = 3, expand: bool = False) -> dict:
+    """Single-query convenience wrapper over retrieve_batch_for_training."""
+    return retrieve_batch_for_training([query], candidate_id, top_k=top_k, expand=expand)[0]

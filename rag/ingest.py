@@ -97,18 +97,14 @@ def extract_sections(file_path: str) -> list[dict]:
 
 # -- In-memory ingestion (synthetic training data) ---------------------------
 
-def ingest_text(text: str, candidate_id: str, doc_id: str, doc_type: str = "cv"):
-    """Ingest a raw text document already in memory (no file, no summary).
+def ingest_text(text: str, candidate_id: str, doc_id: str, doc_type: str = "cv") -> int:
+    """Ingest a raw in-memory text document (no file, no summary).
 
-    Used to build training data from the synthetic corpus: the document text
-    comes straight from documents_db.json, so there is no file to partition and
-    no recruiter-summary to generate. Every chunk stores its `doc_id` in the
-    metadata so retrieval results can be traced back to their source document —
-    this is what makes retrieval evaluation against the evidence ground truth
-    possible.
-
-    Chunks are stored verbatim (no 'Section:' prefix) so the text the scorer
-    later sees is exactly the document text.
+    Used by scoring_model/build_dataset.py to ingest the synthetic corpus
+    straight from documents_db.json. Every chunk stores its `doc_id` in the
+    metadata so retrieval results can be traced back to their source document
+    (this is what makes retrieval evaluation against the evidence ground truth
+    possible). Chunks are stored verbatim so the scorer sees the exact text.
     """
     if not text or not text.strip():
         return 0
@@ -120,16 +116,9 @@ def ingest_text(text: str, candidate_id: str, doc_id: str, doc_type: str = "cv")
 
     ids = [f"{doc_id}_chunk_{i}" for i in range(len(chunks))]
     metas = [
-        {
-            "candidate_id": candidate_id,
-            "doc_id": doc_id,
-            "doc_type": doc_type,
-        }
+        {"candidate_id": candidate_id, "doc_id": doc_id, "doc_type": doc_type}
         for _ in chunks
     ]
-
-    # encode_documents applies the 'search_document:' prefix — aligned with
-    # encode_query() at retrieval time.
     embeddings = embedder.encode_documents(chunks)
     collection.add(documents=chunks, embeddings=embeddings, ids=ids, metadatas=metas)
     return len(chunks)
@@ -138,7 +127,7 @@ def ingest_text(text: str, candidate_id: str, doc_id: str, doc_type: str = "cv")
 # -- Ingestion pipeline -------------------------------------------------------
 
 def ingest_document(file_path: str, candidate_id: str, doc_type: str = "cv"):
-    """File pipeline: file -> sections -> chunks -> embeddings -> ChromaDB.
+    """Full pipeline: file -> sections -> chunks -> embeddings -> ChromaDB.
 
     Uses encode_documents() so all stored vectors have the 'search_document:'
     prefix baked in — aligned with encode_query() used at retrieval time.

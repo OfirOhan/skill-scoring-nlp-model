@@ -31,7 +31,10 @@ def uses_sigmoid(head_type: str) -> bool:
 def compute_loss(head_type: str, logits: torch.Tensor, labels: torch.Tensor) -> torch.Tensor:
     """Loss for a batch. `labels` are 0..K-1 integer levels."""
     if head_type == "coral":
-        # model applies sigmoid; invert to raw logits for coral_loss.
+        # model applies sigmoid; invert to raw logits for coral_loss. Upcast to
+        # fp32 first — under bf16 autocast the log((p)/(1-p)) inverse is unstable
+        # near saturated probabilities.
+        logits = logits.float()
         raw_logits = torch.log(logits / (1.0 - logits + 1e-8))
         levels = levels_from_labelbatch(labels, num_classes=config.NUM_CLASSES).to(logits.device)
         return coral_loss(raw_logits, levels)

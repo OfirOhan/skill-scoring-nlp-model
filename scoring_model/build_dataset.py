@@ -202,7 +202,7 @@ def build(limit: int | None = None, top_k: int | None = None, expand: bool = Fal
         for (skill, level), res in zip(skill_items, batch):
             chunks = res["chunks"]
             retrieved_doc_ids = res["doc_ids"]
-            padded = (chunks + ["", "", ""])[:3]
+            padded = (chunks + [""] * top_k)[:top_k]
 
             # --- Exclusion decision (rules 1 & 2) ---
             exclude_reason = None
@@ -214,14 +214,12 @@ def build(limit: int | None = None, top_k: int | None = None, expand: bool = Fal
             if exclude:
                 reason_counts[exclude_reason] += 1
 
-            csv_rows.append({
-                "skill": skill,
-                "chunk1": padded[0],
-                "chunk2": padded[1],
-                "chunk3": padded[2],
-                "label": int(level),
-                "exclude": int(exclude),
-            })
+            row = {"skill": skill}
+            for i in range(top_k):
+                row[f"chunk{i + 1}"] = padded[i]
+            row["label"] = int(level)
+            row["exclude"] = int(exclude)
+            csv_rows.append(row)
 
             relevant = _relevant_doc_ids(skill, level, persona_docs)
             grade = metrics.retrieval_row_metrics(retrieved_doc_ids, relevant)
@@ -249,7 +247,8 @@ def build(limit: int | None = None, top_k: int | None = None, expand: bool = Fal
 
     # --- Write CSV (training schema + exclude flag) ---
     Path(config.DATA_PATH).parent.mkdir(parents=True, exist_ok=True)
-    df = pd.DataFrame(csv_rows, columns=["skill", "chunk1", "chunk2", "chunk3", "label", "exclude"])
+    chunk_cols = [f"chunk{i + 1}" for i in range(top_k)]
+    df = pd.DataFrame(csv_rows, columns=["skill", *chunk_cols, "label", "exclude"])
     df.to_csv(config.DATA_PATH, index=False)
 
     # --- Write retrieval sidecar (row_id aligns with CSV row order) ---
