@@ -1,27 +1,21 @@
 """
-train.py – Training loop with CORAL loss, differential LR, and best-model
-checkpointing based on validation MAE.
+train.py – Training loop with per-experiment head/loss, differential LR, and
+best-model checkpointing (by validation MAE) into runs/<EXPERIMENT>/.
 """
 
 import argparse
 
 import torch
-from coral_pytorch.losses import coral_loss
-from coral_pytorch.dataset import levels_from_labelbatch
 
 import config
+import heads
 import metrics
 from dataset import load_data
 from model import ScoringModel
 
 
-def _predictions_from_coral(logits: torch.Tensor) -> torch.Tensor:
-    """Convert CORAL sigmoid outputs → predicted class (0-4)."""
-    return (logits > 0.5).sum(dim=1)
-
-
 def train(subset: float | None = None, epochs: int | None = None):
-    """Train the scoring model.
+    """Train the active experiment (config.EXPERIMENT).
 
     Parameters
     ----------
@@ -33,7 +27,9 @@ def train(subset: float | None = None, epochs: int | None = None):
     epochs = epochs or config.EPOCHS
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    print(f"Using device: {device}  |  epochs={epochs}"
+    print(f"[{config.EXPERIMENT}] {config.EXPERIMENTS[config.EXPERIMENT]['desc']}")
+    print(f"Using device: {device}  |  head={config.HEAD_TYPE}  |  "
+          f"unfreeze_last_n={config.UNFREEZE_LAST_N}  |  epochs={epochs}"
           f"{f'  |  subset={subset}' if subset else ''}")
 
     # ── data ────────────────────────────────────────────────
@@ -42,13 +38,18 @@ def train(subset: float | None = None, epochs: int | None = None):
     # ── model ───────────────────────────────────────────────
     model = ScoringModel().to(device)
 
-    # ── optimizer (two param-groups) ────────────────────────
-    optimizer = torch.optim.AdamW([
-        {"params": model.roberta_parameters(), "lr": config.ROBERTA_LR},
-        {"params": model.head_parameters(),    "lr": config.MLP_LR},
-    ])
+    # ── optimizer ───────────────────────────────────────────
+    # Head always trains; the unfrozen top backbone layers (if any) train at the
+    # lower BACKBONE_LR. Frozen params are excluded from the optimizer entirely.
+    param_groups = [{"params": model.head_parameters(), "lr": config.HEAD_LR}]
+    trainable_backbone = [p for p in model.backbone_parameters() if p.requires_grad]
+    if trainable_backbone:
+        param_groups.append({"params": trainable_backbone, "lr": config.BACKBONE_LR})
+        print(f"Fine-tuning top {model.n_unfrozen} backbone layer(s).")
+    optimizer = torch.optim.AdamW(param_groups)
 
     best_val_mae = float("inf")
+    ckpt = config.checkpoint_path()
 
     # ── training loop ───────────────────────────────────────
     for epoch in range(1, epochs + 1):
@@ -61,13 +62,7 @@ def train(subset: float | None = None, epochs: int | None = None):
             labels          = batch["label"].to(device)
 
             logits = model(input_ids, attention_mask)
-
-            # CORAL loss expects integer labels (0 … K-1) and logits
-            # before sigmoid – but our model already applies sigmoid,
-            # so we invert it to get raw logits for coral_loss.
-            raw_logits = torch.log(logits / (1.0 - logits + 1e-8))
-            levels = levels_from_labelbatch(labels, num_classes=config.NUM_CLASSES).to(device)
-            loss = coral_loss(raw_logits, levels)
+            loss = heads.compute_loss(config.HEAD_TYPE, logits, labels)
 
             optimizer.zero_grad()
             loss.backward()
@@ -88,7 +83,7 @@ def train(subset: float | None = None, epochs: int | None = None):
                 labels          = batch["label"].to(device)
 
                 logits = model(input_ids, attention_mask)
-                preds = _predictions_from_coral(logits)
+                preds = heads.decode(config.HEAD_TYPE, logits)
 
                 all_preds.append(preds)
                 all_labels.append(labels)
@@ -105,14 +100,19 @@ def train(subset: float | None = None, epochs: int | None = None):
 
         if val_mae < best_val_mae:
             best_val_mae = val_mae
-            torch.save(model.state_dict(), config.CHECKPOINT_PATH)
+            torch.save(model.state_dict(), ckpt)
             print(f"  -> Saved best model (val_MAE={val_mae:.4f})")
 
     print(f"\nTraining complete.  Best val MAE = {best_val_mae:.4f}")
+    print(f"Checkpoint: {ckpt}")
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Train the skill-scoring model")
+    parser = argparse.ArgumentParser(description="Train a skill-scoring experiment")
+    parser.add_argument(
+        "--experiment", choices=list(config.EXPERIMENTS), default=None,
+        help=f"Which variant to train (default: config.EXPERIMENT = {config.EXPERIMENT}).",
+    )
     parser.add_argument(
         "--subset", type=float, default=None,
         help="Train on a subset to sanity-check learning before a full run. "
@@ -123,4 +123,6 @@ if __name__ == "__main__":
         help="Override config.EPOCHS (useful for quick subset runs).",
     )
     args = parser.parse_args()
+    if args.experiment:
+        config.apply_experiment(args.experiment)
     train(subset=args.subset, epochs=args.epochs)

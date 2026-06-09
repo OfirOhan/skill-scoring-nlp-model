@@ -34,8 +34,9 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 
 import pandas as pd
@@ -70,6 +71,54 @@ def _evidence_intensity(doc: dict, skill: str) -> int:
         return int(evidence[skill])
     norm = skill.strip().lower().replace(" ", "_").replace("/", "_").replace("-", "_")
     return int(evidence.get(norm, 0))
+
+
+def _norm(s: str) -> str:
+    return s.strip().lower().replace(" ", "_").replace("/", "_").replace("-", "_")
+
+
+# ──────────────────────────────────────────────────────────────
+# Data-quality exclusion rules (1, 3, 4) — see config.* thresholds
+# ──────────────────────────────────────────────────────────────
+def _load_exclusion_inputs(documents_db: dict):
+    """Read the validation reports and precompute the flag sets for rules 1 & 3.
+
+    Returns (flagged_personas, flagged_skills) where:
+      flagged_personas : set[persona_id]            (rule 3 — allocation incoherent)
+      flagged_skills   : set[(persona_id, norm_skill)] (rule 1 — showcase mismatch)
+    """
+    doc_persona = {d["doc_id"]: d["persona_id"] for d in documents_db.values()}
+
+    # Rule 3: personas whose evidence allocation was judged incoherent.
+    flagged_personas: set[str] = set()
+    if os.path.exists(config.ALLOCATION_REPORT_PATH):
+        alloc = json.load(open(config.ALLOCATION_REPORT_PATH, encoding="utf-8"))
+        flagged_personas = {r["persona_id"] for r in alloc.get("results", []) if r.get("flagged")}
+
+    # Rule 1: (persona, skill) where max|delta|>=MAX or avg|delta|>=AVG across docs.
+    flagged_skills: set[tuple[str, str]] = set()
+    if os.path.exists(config.SHOWCASE_REPORT_PATH):
+        show = json.load(open(config.SHOWCASE_REPORT_PATH, encoding="utf-8"))
+        deltas: dict[tuple[str, str], list[int]] = defaultdict(list)
+        for r in show.get("results", []):
+            pid = doc_persona.get(r["doc_id"])
+            if pid is None:
+                continue
+            for c in r["comparisons"]:
+                deltas[(pid, _norm(c["skill"]))].append(abs(c["delta"]))
+        for key, ds in deltas.items():
+            if max(ds) >= config.SKILL_MISMATCH_MAX or (sum(ds) / len(ds)) >= config.SKILL_MISMATCH_AVG:
+                flagged_skills.add(key)
+
+    return flagged_personas, flagged_skills
+
+
+def _usable_doc(doc: dict) -> bool:
+    """Rule 4: skip failed or too-short documents at ingestion."""
+    text = doc.get("text", "")
+    if "GENERATION FAILED" in text:
+        return False
+    return len(text.split()) >= config.MIN_DOC_WORDS
 
 
 def _relevant_doc_ids(skill: str, level: int, persona_docs: list[dict]) -> set[str]:
@@ -114,18 +163,28 @@ def build(limit: int | None = None, top_k: int | None = None, expand: bool = Fal
     if limit is not None:
         personas = personas[:limit]
 
+    flagged_personas, flagged_skills = _load_exclusion_inputs(documents_db)
     print(f"Building training data from {len(personas)} personas "
           f"(top_k={top_k}, expand={expand})")
+    print(f"Exclusion inputs: {len(flagged_personas)} flagged personas (rule 3), "
+          f"{len(flagged_skills)} flagged (persona,skill) (rule 1)")
 
     csv_rows: list[dict] = []
     meta_rows: list[dict] = []
-    retrieval_grades: list[dict] = []
+    retrieval_grades: list[dict] = []   # only kept (non-excluded) rows
+    reason_counts: Counter = Counter()
     row_id = 0
 
     for p_idx, persona in enumerate(personas):
         pid = persona["persona_id"]
-        persona_docs = docs_by_persona.get(pid, [])
+        # Rule 4: drop failed / too-short docs from this persona's corpus.
+        persona_docs = [d for d in docs_by_persona.get(pid, []) if _usable_doc(d)]
         if not persona_docs:
+            continue
+
+        # Rule 3: skip personas with incoherent evidence allocation entirely.
+        if pid in flagged_personas:
+            reason_counts["alloc_flagged_persona"] += len(persona["skills"])
             continue
 
         # --- Ingest once (idempotent via persistent ChromaDB) ---
@@ -143,19 +202,31 @@ def build(limit: int | None = None, top_k: int | None = None, expand: bool = Fal
         for (skill, level), res in zip(skill_items, batch):
             chunks = res["chunks"]
             retrieved_doc_ids = res["doc_ids"]
-
             padded = (chunks + ["", "", ""])[:3]
+
+            # --- Exclusion decision (rules 1 & 2) ---
+            exclude_reason = None
+            if (pid, _norm(skill)) in flagged_skills:
+                exclude_reason = "skill_mismatch"          # rule 1
+            elif not padded[0]:
+                exclude_reason = "empty_retrieval"         # rule 2
+            exclude = exclude_reason is not None
+            if exclude:
+                reason_counts[exclude_reason] += 1
+
             csv_rows.append({
                 "skill": skill,
                 "chunk1": padded[0],
                 "chunk2": padded[1],
                 "chunk3": padded[2],
                 "label": int(level),
+                "exclude": int(exclude),
             })
 
             relevant = _relevant_doc_ids(skill, level, persona_docs)
             grade = metrics.retrieval_row_metrics(retrieved_doc_ids, relevant)
-            retrieval_grades.append(grade)
+            if not exclude:
+                retrieval_grades.append(grade)
 
             meta_rows.append({
                 "row_id": row_id,
@@ -168,15 +239,17 @@ def build(limit: int | None = None, top_k: int | None = None, expand: bool = Fal
                 "precision": grade["precision"],
                 "rr": grade["rr"],
                 "evaluable": grade["evaluable"],
+                "exclude": exclude,
+                "exclude_reason": exclude_reason,
             })
             row_id += 1
 
         if (p_idx + 1) % 10 == 0:
             print(f"  ...{p_idx + 1}/{len(personas)} personas -> {row_id} rows")
 
-    # --- Write CSV (column order matches the training schema) ---
+    # --- Write CSV (training schema + exclude flag) ---
     Path(config.DATA_PATH).parent.mkdir(parents=True, exist_ok=True)
-    df = pd.DataFrame(csv_rows, columns=["skill", "chunk1", "chunk2", "chunk3", "label"])
+    df = pd.DataFrame(csv_rows, columns=["skill", "chunk1", "chunk2", "chunk3", "label", "exclude"])
     df.to_csv(config.DATA_PATH, index=False)
 
     # --- Write retrieval sidecar (row_id aligns with CSV row order) ---
@@ -185,16 +258,22 @@ def build(limit: int | None = None, top_k: int | None = None, expand: bool = Fal
             f.write(json.dumps(m, ensure_ascii=False) + "\n")
 
     # --- Summary ---
+    kept = df[df["exclude"] == 0]
+    dropped = int(df["exclude"].sum()) + reason_counts["alloc_flagged_persona"]
+    total = len(df) + reason_counts["alloc_flagged_persona"]
     agg = metrics.aggregate_retrieval(retrieval_grades)
     print("\n" + "=" * 56)
     print("DATASET BUILD COMPLETE")
     print("=" * 56)
-    print(f"  Rows written      : {len(csv_rows)}")
+    print(f"  Rows emitted (CSV): {len(df)}   kept={len(kept)}  excluded={int(df['exclude'].sum())}")
+    print(f"  Dropped total     : {dropped}/{total} ({100*dropped/total:.1f}%) incl. flagged personas")
+    print("  Drop reasons:")
+    for reason, n in reason_counts.most_common():
+        print(f"    {reason:24s}: {n}")
     print(f"  CSV               : {config.DATA_PATH}")
     print(f"  Retrieval meta    : {config.RETRIEVAL_META_PATH}")
-    print(f"  Label distribution: "
-          f"{df['label'].value_counts().sort_index().to_dict()}")
-    print("\n  Retrieval quality (vs. evidence ground truth):")
+    print(f"  Kept label dist   : {kept['label'].value_counts().sort_index().to_dict()}")
+    print("\n  Retrieval quality (kept rows, vs. evidence ground truth):")
     print(f"    Hit@{top_k}        : {agg['hit_rate']:.3f}")
     print(f"    Precision@{top_k}  : {agg['precision']:.3f}")
     print(f"    MRR             : {agg['mrr']:.3f}")

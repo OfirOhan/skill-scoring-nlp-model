@@ -1,53 +1,85 @@
 """
-model.py – RoBERTa + MLP + CORAL head for ordinal regression (1-5 scoring).
+model.py – DeBERTa + MLP head for 1-5 skill scoring.
+
+Head type (CORAL vs classifier) and how many top backbone layers to fine-tune are
+selected by the active experiment (config.HEAD_TYPE / config.UNFREEZE_LAST_N).
 """
 
 import torch
 import torch.nn as nn
-from transformers import RobertaModel
+from transformers import AutoModel
 
 import config
+import heads
+
+
+def _set_trainable_layers(backbone, unfreeze_last_n: int) -> int:
+    """Freeze the whole backbone, then unfreeze its top `unfreeze_last_n` layers.
+
+    Embeddings and all lower transformer blocks stay frozen — the recommended
+    recipe for a small dataset. Returns the number of layers actually unfrozen.
+    """
+    for p in backbone.parameters():
+        p.requires_grad = False
+
+    if not unfreeze_last_n:
+        return 0
+
+    # DeBERTa-v2/v3 (and BERT/RoBERTa) expose the transformer blocks here.
+    encoder = getattr(backbone, "encoder", None)
+    layers = getattr(encoder, "layer", None)
+    if layers is None:
+        raise AttributeError(
+            f"Could not locate transformer layers on {type(backbone).__name__} "
+            f"(expected .encoder.layer) to unfreeze."
+        )
+
+    n = min(unfreeze_last_n, len(layers))
+    for layer in layers[-n:]:
+        for p in layer.parameters():
+            p.requires_grad = True
+    return n
 
 
 class ScoringModel(nn.Module):
     """
     Architecture
     ────────────
-    1. RoBERTa-base  →  [CLS] embedding  (768-d)
+    1. DeBERTa-v3-base  →  [CLS] embedding  (768-d)
     2. MLP head:
          Linear(768 → 256) + ReLU + Dropout
          Linear(256 →  64) + ReLU + Dropout
-         Linear( 64 →   4) + Sigmoid   ← CORAL cumulative probabilities
+         Linear( 64 →   out) [+ Sigmoid for CORAL]
+       out = 4 cumulative logits (coral) or 5 class logits (classifier).
     """
 
     def __init__(self):
         super().__init__()
 
         # ── Transformer backbone ────────────────────────────
-        self.roberta = RobertaModel.from_pretrained(config.MODEL_NAME)
+        self.backbone = AutoModel.from_pretrained(config.MODEL_NAME)
+        self.n_unfrozen = _set_trainable_layers(self.backbone, config.UNFREEZE_LAST_N)
 
-        if config.FREEZE_ROBERTA:
-            for param in self.roberta.parameters():
-                param.requires_grad = False
+        hidden_size = self.backbone.config.hidden_size  # 768
 
-        hidden_size = self.roberta.config.hidden_size  # 768
-
-        # ── MLP head ────────────────────────────────────────
-        self.head = nn.Sequential(
+        # ── MLP head (output shape depends on head type) ────
+        layers = [
             nn.Linear(hidden_size, 256),
             nn.ReLU(),
             nn.Dropout(config.DROPOUT),
             nn.Linear(256, 64),
             nn.ReLU(),
             nn.Dropout(config.DROPOUT),
-            nn.Linear(64, config.NUM_CORAL_OUTPUTS),  # 4 cumulative logits
-            nn.Sigmoid(),
-        )
+            nn.Linear(64, heads.output_dim(config.HEAD_TYPE)),
+        ]
+        if heads.uses_sigmoid(config.HEAD_TYPE):
+            layers.append(nn.Sigmoid())
+        self.head = nn.Sequential(*layers)
 
     # ── helpers for optimizer param-groups ───────────────────
-    def roberta_parameters(self):
-        """Parameters of the RoBERTa backbone."""
-        return self.roberta.parameters()
+    def backbone_parameters(self):
+        """Parameters of the transformer backbone."""
+        return self.backbone.parameters()
 
     def head_parameters(self):
         """Parameters of the MLP head."""
@@ -65,7 +97,7 @@ class ScoringModel(nn.Module):
         -------
         logits : (B, 4)  – 4 sigmoid outputs (cumulative probabilities)
         """
-        outputs = self.roberta(input_ids=input_ids, attention_mask=attention_mask)
+        outputs = self.backbone(input_ids=input_ids, attention_mask=attention_mask)
         cls_hidden = outputs.last_hidden_state[:, 0, :]   # [CLS] token
         logits = self.head(cls_hidden)
         return logits

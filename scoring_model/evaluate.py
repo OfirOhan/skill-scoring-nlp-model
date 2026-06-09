@@ -14,6 +14,7 @@ Sections
                evidence document — isolates retrieval-caused scoring errors.
 """
 
+import argparse
 import json
 import os
 
@@ -22,14 +23,10 @@ import torch
 from sklearn.metrics import confusion_matrix
 
 import config
+import heads
 import metrics
 from dataset import load_data_with_frames
 from model import ScoringModel
-
-
-def _predictions_from_coral(logits: torch.Tensor) -> torch.Tensor:
-    """Convert CORAL sigmoid outputs → predicted class (0-4)."""
-    return (logits > 0.5).sum(dim=1)
 
 
 def _load_retrieval_meta() -> dict:
@@ -71,6 +68,7 @@ def _report_scoring(labels_orig, preds_orig):
     print("  Labels:  1   2   3   4   5")
     for i, row in enumerate(cm):
         print(f"    {i + 1}: " + " ".join(f"{v:3d}" for v in row))
+    return m
 
 
 def _report_retrieval(test_df, retrieval_meta):
@@ -152,16 +150,22 @@ def _report_joint(test_df, preds_orig, labels_orig, retrieval_meta, row_ids):
           "scoring errors are intrinsic.)")
 
 
-def evaluate():
+def evaluate() -> dict:
+    """Evaluate the active experiment's checkpoint; print + persist metrics.json."""
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    print(f"Using device: {device}")
+    print(f"[{config.EXPERIMENT}] {config.EXPERIMENTS[config.EXPERIMENT]['desc']}")
+    print(f"Using device: {device}  |  head={config.HEAD_TYPE}")
+
+    ckpt = config.checkpoint_path()
+    if not os.path.exists(ckpt):
+        raise FileNotFoundError(f"No checkpoint for '{config.EXPERIMENT}' at {ckpt} — train it first.")
 
     # ── data (test set + test frame for retrieval join) ─────
     _, _, test_loader, test_df = load_data_with_frames()
 
     # ── load best model ─────────────────────────────────────
     model = ScoringModel().to(device)
-    model.load_state_dict(torch.load(config.CHECKPOINT_PATH, map_location=device))
+    model.load_state_dict(torch.load(ckpt, map_location=device))
     model.eval()
 
     all_preds, all_labels = [], []
@@ -172,7 +176,7 @@ def evaluate():
             labels          = batch["label"].to(device)
 
             logits = model(input_ids, attention_mask)
-            preds = _predictions_from_coral(logits)  # 0-4
+            preds = heads.decode(config.HEAD_TYPE, logits)  # 0-4
 
             all_preds.append(preds.cpu())
             all_labels.append(labels.cpu())
@@ -186,12 +190,36 @@ def evaluate():
 
     retrieval_meta = _load_retrieval_meta()
 
-    _report_scoring(labels_orig, preds_orig)
+    scoring = _report_scoring(labels_orig, preds_orig)
     row_ids = _report_retrieval(test_df, retrieval_meta)
     if row_ids is not None:
         _report_joint(test_df, preds_orig, labels_orig, retrieval_meta, row_ids)
     print("=" * 56)
 
+    # ── persist metrics for cross-experiment comparison ─────
+    result = {
+        "experiment": config.EXPERIMENT,
+        "desc": config.EXPERIMENTS[config.EXPERIMENT]["desc"],
+        "model_name": config.MODEL_NAME,
+        "head_type": config.HEAD_TYPE,
+        "unfreeze_last_n": config.UNFREEZE_LAST_N,
+        "n_test": int(len(labels_orig)),
+        "scoring": scoring,
+    }
+    out = config.metrics_path()
+    with open(out, "w", encoding="utf-8") as f:
+        json.dump(result, f, indent=2)
+    print(f"Saved metrics -> {out}")
+    return result
+
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Evaluate a skill-scoring experiment")
+    parser.add_argument(
+        "--experiment", choices=list(config.EXPERIMENTS), default=None,
+        help=f"Which variant to evaluate (default: config.EXPERIMENT = {config.EXPERIMENT}).",
+    )
+    args = parser.parse_args()
+    if args.experiment:
+        config.apply_experiment(args.experiment)
     evaluate()

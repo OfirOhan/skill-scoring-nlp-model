@@ -11,7 +11,7 @@ retrieval_meta.jsonl (both are keyed by that same CSV row position).
 import pandas as pd
 import torch
 from torch.utils.data import Dataset, DataLoader
-from transformers import RobertaTokenizer
+from transformers import AutoTokenizer
 from sklearn.model_selection import train_test_split
 
 import config
@@ -23,12 +23,13 @@ import config
 class ScoringDataset(Dataset):
     """
     Reads rows with columns:  skill, chunk1, chunk2, chunk3, label
-    • Concatenates input as:  "{skill} </s> {chunk1} {chunk2} {chunk3}"
-    • Tokenises with RoBERTa tokenizer (pad / truncate to MAX_LEN)
+    • Concatenates input as:  "{skill} {sep} {chunk1} {chunk2} {chunk3}"
+      where {sep} is the backbone's separator token (DeBERTa: '[SEP]')
+    • Tokenises with the model's AutoTokenizer (pad / truncate to MAX_LEN)
     • Shifts labels from 1-5 → 0-4 (zero-indexed for CORAL)
     """
 
-    def __init__(self, texts: list[str], labels: list[int], tokenizer: RobertaTokenizer):
+    def __init__(self, texts: list[str], labels: list[int], tokenizer):
         self.texts = texts
         self.labels = labels
         self.tokenizer = tokenizer
@@ -54,12 +55,16 @@ class ScoringDataset(Dataset):
 # ──────────────────────────────────────────────────────────────
 # Helpers
 # ──────────────────────────────────────────────────────────────
-def _build_input_text(row: pd.Series) -> str:
-    """Concatenate skill + chunks with RoBERTa separator token."""
+def _build_input_text(row: pd.Series, sep: str) -> str:
+    """Concatenate skill + chunks with the tokenizer's separator token.
+
+    `sep` is the model's own separator (RoBERTa: '</s>', DeBERTa: '[SEP]'), so the
+    skill/evidence boundary is encoded correctly regardless of backbone.
+    """
     chunks = " ".join(
         str(row[c]) for c in ("chunk1", "chunk2", "chunk3") if pd.notna(row[c])
     )
-    return f"{row['skill']} </s> {chunks}"
+    return f"{row['skill']} {sep} {chunks}"
 
 
 def _split_frames(df: pd.DataFrame):
@@ -84,7 +89,8 @@ def _split_frames(df: pd.DataFrame):
 
 
 def _make_loader(df: pd.DataFrame, tokenizer, shuffle: bool) -> DataLoader:
-    texts = df.apply(_build_input_text, axis=1).tolist()
+    sep = tokenizer.sep_token
+    texts = df.apply(lambda r: _build_input_text(r, sep), axis=1).tolist()
     labels = (df["label"] - 1).tolist()  # shift 1-5 → 0-4
     ds = ScoringDataset(texts, labels, tokenizer)
     return DataLoader(ds, batch_size=config.BATCH_SIZE, shuffle=shuffle)
@@ -137,11 +143,19 @@ def load_data_with_frames(subset: float | None = None):
     train_loader, val_loader, test_loader, test_df
     """
     df = pd.read_csv(config.DATA_PATH)
+
+    # Drop data-quality-flagged rows (build_dataset rules 1-4). Index is preserved
+    # so the retrieval-meta join in evaluate.py still works for the kept rows.
+    if config.EXCLUDE_FLAGGED and "exclude" in df.columns:
+        n_before = len(df)
+        df = df[df["exclude"] == 0]
+        print(f"[exclude] dropped {n_before - len(df)} flagged rows; {len(df)} remain")
+
     if subset is not None:
         df = _subsample(df, subset)
         print(f"[subset] Using {len(df)} rows "
               f"(label dist: {df['label'].value_counts().sort_index().to_dict()})")
-    tokenizer = RobertaTokenizer.from_pretrained(config.MODEL_NAME)
+    tokenizer = AutoTokenizer.from_pretrained(config.MODEL_NAME)
 
     train_df, val_df, test_df = _split_frames(df)
 
