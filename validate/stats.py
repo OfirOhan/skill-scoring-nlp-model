@@ -41,6 +41,40 @@ def check_proficiency_distribution(personas: list[dict], documents_db: dict) -> 
     }
 
 
+def check_global_level_distribution(personas: list[dict]) -> dict:
+    """Check the GLOBAL persona-skill level distribution — the scoring label.
+
+    This is distinct from check_proficiency_distribution, which measures the
+    per-document evidence *intensity* grain. That grain looked balanced even when
+    the global labels had collapsed (no level-1 skills), so it never caught the
+    degenerate distribution. This check reads persona['skills'] directly — the
+    exact (persona, skill) -> level pairs the scoring model trains on — and fails
+    if any level falls below an 8% floor.
+    """
+    level_counts = Counter()
+    for persona in personas:
+        for _skill, level in persona.get("skills", {}).items():
+            level_counts[int(level)] += 1
+
+    total = sum(level_counts.values())
+    distribution = {}
+    for level in range(1, 6):
+        count = level_counts.get(level, 0)
+        pct = (count / total * 100) if total > 0 else 0
+        distribution[level] = {
+            "count": count,
+            "percentage": round(pct, 1),
+            "passed": pct >= 8,
+        }
+
+    return {
+        "total_skills": total,
+        "distribution": distribution,
+        "all_passed": all(d["passed"] for d in distribution.values()),
+        "note": "Global persona-skill level = scoring-model label; floor is 8% per level.",
+    }
+
+
 def check_archetype_distribution(personas: list[dict]) -> dict:
     """Check that all archetypes have >= 4% representation."""
     archetype_counts = Counter(
@@ -177,6 +211,7 @@ def run_stats_checks(
 
     report = {
         "proficiency_distribution": check_proficiency_distribution(personas, documents_db),
+        "global_level_distribution": check_global_level_distribution(personas),
         "archetype_distribution": check_archetype_distribution(personas),
         "experience_distribution": check_experience_distribution(personas),
         "doc_type_distribution": check_doc_type_distribution(documents_db),

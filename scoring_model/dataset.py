@@ -1,6 +1,11 @@
 """
 dataset.py – Data loading, preprocessing, and train/val/test splitting
 for the CORAL ordinal-regression scoring model.
+
+The split is performed on the DataFrame (not on plain lists) so that each row's
+original CSV index is preserved. evaluate.py relies on the test frame's index to
+join model predictions back to per-row retrieval provenance in
+retrieval_meta.jsonl (both are keyed by that same CSV row position).
 """
 
 import pandas as pd
@@ -57,43 +62,91 @@ def _build_input_text(row: pd.Series) -> str:
     return f"{row['skill']} </s> {chunks}"
 
 
-def load_data():
-    """
-    Read CSV → build text inputs → split into train / val / test.
+def _split_frames(df: pd.DataFrame):
+    """Stratified train/val/test split that preserves original row indices."""
+    labels = df["label"]
 
-    Returns
-    -------
-    train_loader, val_loader, test_loader : DataLoader
-    """
-    df = pd.read_csv(config.DATA_PATH)
-
-    texts = df.apply(_build_input_text, axis=1).tolist()
-    labels = (df["label"] - 1).tolist()  # shift 1-5 → 0-4
-
-    tokenizer = RobertaTokenizer.from_pretrained(config.MODEL_NAME)
-
-    # ── stratified splits ───────────────────────────────────
-    X_train, X_temp, y_train, y_temp = train_test_split(
-        texts, labels,
+    train_df, temp_df = train_test_split(
+        df,
         test_size=config.VAL_RATIO + config.TEST_RATIO,
         random_state=config.RANDOM_SEED,
         stratify=labels,
     )
 
     relative_test = config.TEST_RATIO / (config.VAL_RATIO + config.TEST_RATIO)
-    X_val, X_test, y_val, y_test = train_test_split(
-        X_temp, y_temp,
+    val_df, test_df = train_test_split(
+        temp_df,
         test_size=relative_test,
         random_state=config.RANDOM_SEED,
-        stratify=y_temp,
+        stratify=temp_df["label"],
     )
+    return train_df, val_df, test_df
 
-    train_ds = ScoringDataset(X_train, y_train, tokenizer)
-    val_ds   = ScoringDataset(X_val,   y_val,   tokenizer)
-    test_ds  = ScoringDataset(X_test,  y_test,   tokenizer)
 
-    train_loader = DataLoader(train_ds, batch_size=config.BATCH_SIZE, shuffle=True)
-    val_loader   = DataLoader(val_ds, batch_size=config.BATCH_SIZE)
-    test_loader  = DataLoader(test_ds, batch_size=config.BATCH_SIZE)
+def _make_loader(df: pd.DataFrame, tokenizer, shuffle: bool) -> DataLoader:
+    texts = df.apply(_build_input_text, axis=1).tolist()
+    labels = (df["label"] - 1).tolist()  # shift 1-5 → 0-4
+    ds = ScoringDataset(texts, labels, tokenizer)
+    return DataLoader(ds, batch_size=config.BATCH_SIZE, shuffle=shuffle)
 
+
+def _subsample(df: pd.DataFrame, subset: float) -> pd.DataFrame:
+    """Stratified down-sample for quick smoke runs.
+
+    `subset` in (0, 1) is treated as a fraction; >= 1 as an absolute row count.
+    Sampling is per-label so every class is still represented (a stratified
+    split needs >= 2 rows per class). Original row indices are preserved so the
+    retrieval-meta join in evaluate.py still works on subset runs.
+    """
+    if subset >= 1:
+        frac = min(1.0, float(subset) / len(df))
+    else:
+        frac = float(subset)
+    sampled = df.groupby("label", group_keys=False).sample(
+        frac=frac, random_state=config.RANDOM_SEED
+    )
+    return sampled
+
+
+def load_data(subset: float | None = None):
+    """
+    Read CSV → build text inputs → split into train / val / test.
+
+    Parameters
+    ----------
+    subset : optional fraction (0-1) or row count (>=1) for a fast smoke run.
+
+    Returns
+    -------
+    train_loader, val_loader, test_loader : DataLoader
+    """
+    train_loader, val_loader, test_loader, _ = load_data_with_frames(subset=subset)
     return train_loader, val_loader, test_loader
+
+
+def load_data_with_frames(subset: float | None = None):
+    """Same as load_data() but also returns the test DataFrame.
+
+    The test frame's index gives each test row's original CSV position, which
+    evaluate.py uses to look up the row's retrieval provenance. The test loader
+    is built un-shuffled from that same frame, so prediction order matches
+    test_df row order exactly.
+
+    Returns
+    -------
+    train_loader, val_loader, test_loader, test_df
+    """
+    df = pd.read_csv(config.DATA_PATH)
+    if subset is not None:
+        df = _subsample(df, subset)
+        print(f"[subset] Using {len(df)} rows "
+              f"(label dist: {df['label'].value_counts().sort_index().to_dict()})")
+    tokenizer = RobertaTokenizer.from_pretrained(config.MODEL_NAME)
+
+    train_df, val_df, test_df = _split_frames(df)
+
+    train_loader = _make_loader(train_df, tokenizer, shuffle=True)
+    val_loader   = _make_loader(val_df,   tokenizer, shuffle=False)
+    test_loader  = _make_loader(test_df,  tokenizer, shuffle=False)
+
+    return train_loader, val_loader, test_loader, test_df

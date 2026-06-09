@@ -12,7 +12,8 @@ from pathlib import Path
 from generate.hyperparams import (
     sample_archetype,
     sample_persona_hyperparams,
-    seniority_constraints,
+    seniority_band_bias,
+    low_level_quota,
     get_archetypes,
     get_skills_by_category,
 )
@@ -85,6 +86,70 @@ async def llm_call(
             return result["message"]["content"].strip()
 
 
+def enforce_skill_levels(
+    skills: dict,
+    primary_pool: set[str],
+    secondary_pool: set[str],
+    primary_band: tuple[int, int],
+    secondary_band: tuple[int, int],
+    seniority: str,
+) -> tuple[dict, dict]:
+    """Deterministic guard: force the LLM's skill levels onto the tier scheme.
+
+    Two guarantees, applied after generation so the label distribution can never
+    silently collapse again:
+
+      1. **Band compliance** — primary skills are clamped into `primary_band`,
+         secondary skills into `secondary_band`. A primary skill rated 1 becomes
+         the band floor; a secondary rated 5 becomes the band ceiling.
+      2. **Low-level floor** — at least `low_level_quota()` secondary skills must
+         end up at level <= 2 (split across 1 and 2). If the LLM rated every
+         breadth skill at 3, the highest secondaries are demoted to fill the
+         quota. Only the *secondary* (peripheral) tier is ever demoted, so the
+         profile stays rational.
+
+    Returns (fixed_skills, tier_of_skill).
+    """
+    p_lo, p_hi = primary_band
+    s_lo, s_hi = secondary_band
+
+    fixed: dict = {}
+    tier: dict = {}
+    for sk, lv in skills.items():
+        lv = int(lv)
+        if sk in primary_pool:
+            tier[sk] = "primary"
+            fixed[sk] = max(p_lo, min(p_hi, lv))
+        else:
+            # secondary pool, soft-skills, or anything off-pool -> treat as breadth
+            tier[sk] = "secondary"
+            fixed[sk] = max(s_lo, min(s_hi, lv))
+
+    secondary = [sk for sk in fixed if tier[sk] == "secondary"]
+    if secondary:
+        target_low = low_level_quota(len(secondary), seniority)
+        target_one = max(1, target_low // 3)  # a few genuine level-1s
+        have_low = sum(1 for sk in secondary if fixed[sk] <= 2)
+
+        # Demote the highest-rated secondary skills first (least disruptive).
+        for sk in sorted(secondary, key=lambda s: fixed[s], reverse=True):
+            if have_low >= target_low:
+                break
+            if fixed[sk] > 2:
+                fixed[sk] = 2
+                have_low += 1
+        # Ensure some land at exactly 1 (Awareness), not just 2.
+        ones = sum(1 for sk in secondary if fixed[sk] == 1)
+        for sk in sorted(secondary, key=lambda s: fixed[s]):
+            if ones >= target_one:
+                break
+            if fixed[sk] == 2:
+                fixed[sk] = 1
+                ones += 1
+
+    return fixed, tier
+
+
 def _extract_json(text: str) -> dict:
     """Extract JSON from LLM response, handling markdown fences and thinking tags."""
     # Strip thinking tags if present
@@ -141,6 +206,13 @@ async def generate_persona(
     for cat in archetype["secondary_categories"]:
         secondary_skills.extend(get_skills_by_category(cat))
 
+    # Per-tier level bands (these archetype fields were previously unused — they
+    # are the rational level scheme that keeps low levels on breadth skills).
+    primary_band = tuple(archetype.get("primary_skill_levels", [3, 5]))
+    secondary_band = tuple(archetype.get("secondary_skill_levels", [1, 3]))
+    primary_pool = set(primary_skills)
+    secondary_pool = set(secondary_skills)
+
     # Determine skill counts
     import random
     total = random.randint(*archetype["skill_count_range"])
@@ -160,7 +232,9 @@ async def generate_persona(
         primary_count=primary_count,
         secondary_count=secondary_count,
         total_skill_count=total,
-        seniority_constraints=seniority_constraints(hyperparams["seniority"]),
+        primary_band=f"{primary_band[0]}-{primary_band[1]}",
+        secondary_band=f"{secondary_band[0]}-{secondary_band[1]}",
+        seniority_bias=seniority_band_bias(hyperparams["seniority"]),
         writing_style=hyperparams["writing_style"],
         language_fluency=hyperparams["language_fluency"],
         self_promotion_level=hyperparams["self_promotion_level"],
@@ -184,6 +258,19 @@ async def generate_persona(
             for skill, level in persona_data["skills"].items():
                 if not isinstance(level, int) or level < 1 or level > 5:
                     raise ValueError(f"Invalid level for {skill}: {level}")
+
+            # Deterministic guard: clamp to tier bands + enforce the low-level
+            # floor so the global label distribution cannot collapse.
+            original = dict(persona_data["skills"])
+            persona_data["skills"], _ = enforce_skill_levels(
+                persona_data["skills"], primary_pool, secondary_pool,
+                primary_band, secondary_band, hyperparams["seniority"],
+            )
+            n_adjusted = sum(1 for k in original
+                             if original[k] != persona_data["skills"].get(k))
+            if n_adjusted:
+                logger.info(f"{persona_id}: enforced tier bands on {n_adjusted}/"
+                            f"{len(original)} skill levels")
 
             break
         except (json.JSONDecodeError, ValueError, KeyError) as e:

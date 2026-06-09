@@ -1,13 +1,29 @@
 """
-evaluate.py – Load best checkpoint, run on the test set, and report
-MAE, Accuracy, and Confusion Matrix.
+evaluate.py – Load best checkpoint, run on the test set, and report a full
+diagnostic: ordinal scoring metrics, retrieval metrics, and — most usefully —
+how the two interact (does the scorer fail because the retriever fed it the
+wrong chunks, or in spite of good retrieval?).
+
+Sections
+────────
+1. Scoring   : MAE, exact accuracy, ±1 accuracy, Quadratic Weighted Kappa,
+               Spearman ρ, per-class accuracy, confusion matrix.
+2. Retrieval : Hit@k, Precision@k, MRR over the test rows, plus a breakdown by
+               true skill level (where does retrieval struggle?).
+3. Joint     : scoring error conditioned on whether retrieval actually hit an
+               evidence document — isolates retrieval-caused scoring errors.
 """
 
+import json
+import os
+
+import numpy as np
 import torch
-from sklearn.metrics import mean_absolute_error, accuracy_score, confusion_matrix
+from sklearn.metrics import confusion_matrix
 
 import config
-from dataset import load_data
+import metrics
+from dataset import load_data_with_frames
 from model import ScoringModel
 
 
@@ -16,12 +32,132 @@ def _predictions_from_coral(logits: torch.Tensor) -> torch.Tensor:
     return (logits > 0.5).sum(dim=1)
 
 
+def _load_retrieval_meta() -> dict:
+    """Load retrieval_meta.jsonl into {row_id: meta}. Empty if not built yet."""
+    path = config.RETRIEVAL_META_PATH
+    if not os.path.exists(path):
+        return {}
+    meta = {}
+    with open(path, encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if line:
+                obj = json.loads(line)
+                meta[obj["row_id"]] = obj
+    return meta
+
+
+def _report_scoring(labels_orig, preds_orig):
+    m = metrics.ordinal_metrics(labels_orig, preds_orig)
+
+    print("\n" + "=" * 56)
+    print("1. SCORING (ordinal, 1-5)")
+    print("=" * 56)
+    print(f"  MAE            : {m['mae']:.4f}")
+    print(f"  Exact accuracy : {m['accuracy']:.4f}")
+    print(f"  +/-1 accuracy  : {m['off_by_one']:.4f}")
+    print(f"  Quadratic Weighted Kappa : {m['qwk']:.4f}")
+    print(f"  Spearman rho   : {m['spearman']:.4f}")
+
+    cm = confusion_matrix(labels_orig, preds_orig, labels=[1, 2, 3, 4, 5])
+    print("\n  Per-class accuracy:")
+    for i, label in enumerate([1, 2, 3, 4, 5]):
+        support = cm[i].sum()
+        correct = cm[i][i]
+        acc = (correct / support) if support else 0.0
+        print(f"    {label}: {acc:.3f}  ({correct}/{support})")
+
+    print("\n  Confusion Matrix (rows=true, cols=pred):")
+    print("  Labels:  1   2   3   4   5")
+    for i, row in enumerate(cm):
+        print(f"    {i + 1}: " + " ".join(f"{v:3d}" for v in row))
+
+
+def _report_retrieval(test_df, retrieval_meta):
+    """Grade retrieval on exactly the test rows, overall and by skill level."""
+    row_ids = [int(idx) for idx in test_df.index]
+    grades = []
+    grades_by_level = {lvl: [] for lvl in range(1, 6)}
+
+    for rid in row_ids:
+        meta = retrieval_meta.get(rid)
+        if meta is None:
+            continue
+        grade = {
+            "hit": meta["hit"],
+            "precision": meta["precision"],
+            "rr": meta["rr"],
+            "evaluable": meta["evaluable"],
+        }
+        grades.append(grade)
+        grades_by_level[int(meta["label"])].append(grade)
+
+    print("\n" + "=" * 56)
+    print("2. RETRIEVAL (vs. evidence ground truth, test rows)")
+    print("=" * 56)
+    if not grades:
+        print("  No retrieval metadata found — run build_dataset.py first.")
+        return None
+
+    agg = metrics.aggregate_retrieval(grades)
+    print(f"  Hit@{config.RETRIEVE_TOP_K}       : {agg['hit_rate']:.4f}")
+    print(f"  Precision@{config.RETRIEVE_TOP_K} : {agg['precision']:.4f}")
+    print(f"  MRR            : {agg['mrr']:.4f}")
+    print(f"  Evaluated rows : {agg['n']}  (skipped {agg['n_skipped']} with no evidence)")
+
+    print("\n  By true skill level:")
+    print("    lvl   hit   prec    mrr     n")
+    for lvl in range(1, 6):
+        a = metrics.aggregate_retrieval(grades_by_level[lvl])
+        print(f"    {lvl}    {a['hit_rate']:.3f}  {a['precision']:.3f}  {a['mrr']:.3f}  {a['n']:4d}")
+    return row_ids
+
+
+def _report_joint(test_df, preds_orig, labels_orig, retrieval_meta, row_ids):
+    """Scoring error conditioned on retrieval success.
+
+    If 'retrieval hit' rows score much better than 'retrieval miss' rows, the
+    retriever is a bottleneck on the scorer — the single most actionable signal
+    this evaluation produces.
+    """
+    print("\n" + "=" * 56)
+    print("3. JOINT (scoring error vs. retrieval success)")
+    print("=" * 56)
+    if not retrieval_meta:
+        print("  No retrieval metadata found — run build_dataset.py first.")
+        return
+
+    preds_orig = np.asarray(preds_orig)
+    labels_orig = np.asarray(labels_orig)
+
+    hit_mask, miss_mask = [], []
+    for i, rid in enumerate(row_ids):
+        meta = retrieval_meta.get(rid)
+        if meta is None or not meta["evaluable"]:
+            continue
+        (hit_mask if meta["hit"] >= 1.0 else miss_mask).append(i)
+
+    def _summary(name, idxs):
+        if not idxs:
+            print(f"  {name:18s}: (no rows)")
+            return
+        idxs = np.array(idxs)
+        mae = np.abs(preds_orig[idxs] - labels_orig[idxs]).mean()
+        acc = (preds_orig[idxs] == labels_orig[idxs]).mean()
+        print(f"  {name:18s}: MAE={mae:.4f}  exact_acc={acc:.4f}  n={len(idxs)}")
+
+    _summary("retrieval HIT", hit_mask)
+    _summary("retrieval MISS", miss_mask)
+    print("\n  (Large gap => retrieval is limiting the scorer; close gap => "
+          "scoring errors are intrinsic.)")
+
+
 def evaluate():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using device: {device}")
 
-    # ── data (only test set needed) ─────────────────────────
-    _, _, test_loader = load_data()
+    # ── data (test set + test frame for retrieval join) ─────
+    _, _, test_loader, test_df = load_data_with_frames()
 
     # ── load best model ─────────────────────────────────────
     model = ScoringModel().to(device)
@@ -29,7 +165,6 @@ def evaluate():
     model.eval()
 
     all_preds, all_labels = [], []
-
     with torch.no_grad():
         for batch in test_loader:
             input_ids      = batch["input_ids"].to(device)
@@ -46,24 +181,16 @@ def evaluate():
     all_labels = torch.cat(all_labels).numpy()
 
     # ── shift back to original 1-5 scale ────────────────────
-    all_preds_orig  = all_preds + 1
-    all_labels_orig = all_labels + 1
+    preds_orig  = all_preds + 1
+    labels_orig = all_labels + 1
 
-    # ── metrics ─────────────────────────────────────────────
-    mae = mean_absolute_error(all_labels_orig, all_preds_orig)
-    acc = accuracy_score(all_labels_orig, all_preds_orig)
-    cm  = confusion_matrix(all_labels_orig, all_preds_orig, labels=[1, 2, 3, 4, 5])
+    retrieval_meta = _load_retrieval_meta()
 
-    print("\n" + "=" * 50)
-    print("TEST SET EVALUATION")
-    print("=" * 50)
-    print(f"  MAE      : {mae:.4f}")
-    print(f"  Accuracy : {acc:.4f}  ({int(acc * len(all_labels_orig))}/{len(all_labels_orig)})")
-    print(f"\n  Confusion Matrix (rows=true, cols=pred):")
-    print(f"  Labels: 1  2  3  4  5")
-    for i, row in enumerate(cm):
-        print(f"    {i + 1}: {row}")
-    print("=" * 50)
+    _report_scoring(labels_orig, preds_orig)
+    row_ids = _report_retrieval(test_df, retrieval_meta)
+    if row_ids is not None:
+        _report_joint(test_df, preds_orig, labels_orig, retrieval_meta, row_ids)
+    print("=" * 56)
 
 
 if __name__ == "__main__":

@@ -27,14 +27,21 @@ Secondary skills (pick {secondary_count} from these categories):
 {secondary_skills}
 
 == PROFICIENCY LEVEL RULES ==
-1 = Awareness — skill listed, no usage context
+1 = Awareness — skill listed, no real usage context
 2 = Beginner — basic/learning usage
 3 = Intermediate — regular use in real projects
 4 = Advanced — production/complex usage, ownership
 5 = Expert — architecture-level, mentoring, deep multi-year work
 
-Seniority constraints for skill levels:
-{seniority_constraints}
+Assign levels by skill TIER — this is what keeps the profile rational:
+- PRIMARY skills are this persona's specialty. Rate each within {primary_band}.
+- SECONDARY skills are supporting / breadth areas they have touched but do NOT
+  specialize in. Rate each within {secondary_band}. This tier is where genuine
+  Beginner (2) and Awareness (1) levels belong — SEVERAL secondary skills should
+  be 1 or 2. Do NOT rate every secondary skill at 3.
+
+Seniority adjustment, applied WITHIN the bands above (never outside them):
+{seniority_bias}
 
 == PERSONA STYLE ==
 Writing style: {writing_style}
@@ -54,9 +61,12 @@ Generate a JSON persona with the following fields:
 RULES:
 1. Assign {total_skill_count} skills total
 2. Skills MUST come from the provided skill pool
-3. Proficiency levels MUST respect the seniority constraints
+3. Primary skills MUST fall within {primary_band}; secondary skills MUST fall within {secondary_band}
 4. Make the skill combination internally consistent (a frontend engineer shouldn't have Expert Kubernetes)
 5. Include soft skills ONLY if natural for this archetype
+6. SELF-CHECK before returning: confirm every primary skill is within {primary_band},
+   every secondary skill is within {secondary_band}, and that several secondary skills
+   are rated 1 or 2. If any of these is not true, fix the levels before you output.
 
 Output ONLY valid JSON, no markdown fences, no explanation.\
 """

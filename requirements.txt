@@ -1,3 +1,4 @@
+# ── Scoring model + generation ──────────────────────────────
 aiohttp
 coral_pytorch
 numpy
@@ -6,3 +7,13 @@ scikit-learn
 scipy
 torch
 transformers
+
+# ── RAG (ingestion + retrieval) ─────────────────────────────
+# Required to run rag/ and scoring_model/build_dataset.py.
+chromadb
+sentence-transformers
+rank-bm25
+langchain-text-splitters
+unstructured
+ollama
+einops            # nomic-embed-text-v1.5 (trust_remote_code) needs this

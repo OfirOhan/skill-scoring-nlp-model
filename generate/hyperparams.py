@@ -93,7 +93,14 @@ def years_to_seniority(years: int) -> str:
 
 
 def seniority_constraints(seniority: str) -> str:
-    """Return human-readable constraints for the LLM prompt."""
+    """DEPRECATED — kept for backward compatibility.
+
+    These absolute floors collapsed the global skill-level distribution (no
+    level-1 skills, everything 3-5) because they applied one band to ALL skills
+    regardless of tier and never *required* low levels. Persona generation now
+    uses per-tier bands (archetype.primary_skill_levels / secondary_skill_levels)
+    plus seniority_band_bias() to modulate WITHIN those bands. Do not reintroduce.
+    """
     constraints = {
         "junior": "Mostly levels 1-3 (max 1-2 skills at level 4, no level 5)",
         "mid": "Mostly levels 2-4 (max 1 skill at level 5, some level 1s allowed)",
@@ -101,6 +108,38 @@ def seniority_constraints(seniority: str) -> str:
         "staff": "Levels 3-5 (multiple level 5 skills expected, few below level 3)",
     }
     return constraints.get(seniority, constraints["mid"])
+
+
+def seniority_band_bias(seniority: str) -> str:
+    """How seniority shifts skill levels *within* each tier's band.
+
+    Crucially this modulates inside the per-tier bands rather than overriding
+    them — so secondary (breadth) skills keep producing genuine level 1-2s for
+    every seniority, while seniority still moves the centre of mass.
+    """
+    biases = {
+        "junior": "Lean to the LOW end of each band: primary skills mostly at the "
+                  "band minimum, and most secondary skills at 1-2.",
+        "mid":    "Sit mid-band: primary skills around the middle of their band, "
+                  "secondary skills spread across their full band.",
+        "senior": "Lean to the HIGH end for primary skills (several at the band max); "
+                  "secondary skills still include several genuine 1-2s.",
+        "staff":  "Primary skills at the high end (multiple at the maximum); secondary "
+                  "skills are breadth areas, so keep several at 1-2.",
+    }
+    return biases.get(seniority, biases["mid"])
+
+
+def low_level_quota(n_secondary: int, seniority: str) -> int:
+    """Minimum number of secondary skills that must end up at level <= 2.
+
+    A deterministic floor enforced after generation (see personas.enforce_skill_levels)
+    so the low end of the label distribution can never collapse again, even if the
+    LLM rates every breadth skill at 3. Scaled by seniority — juniors have touched
+    more things shallowly than staff.
+    """
+    frac = {"junior": 0.6, "mid": 0.5, "senior": 0.4, "staff": 0.35}.get(seniority, 0.5)
+    return math.ceil(frac * n_secondary) if n_secondary else 0
 
 
 # ---------------------------------------------------------------------------
