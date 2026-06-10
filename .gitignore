@@ -21,5 +21,6 @@ __pycache__/
 # Project specific
 generation.log
 
-scoring_model/runs/**/*.pt
+scoring_model/runs/classifier_frozen/*.pt
+scoring_model/runs/coral_frozen/*.pt
 chroma_db/
