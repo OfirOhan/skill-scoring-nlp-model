@@ -20,6 +20,9 @@ __pycache__/
 
 # Project specific
 generation.log
+data/generation.log
+ollama.log
+.ipynb_checkpoints/
 
 scoring_model/runs/classifier_frozen/*.pt
 scoring_model/runs/coral_frozen/*.pt
