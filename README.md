@@ -45,26 +45,14 @@ Crucially, the documents themselves **never state a proficiency word** ("expert 
 
 ```mermaid
 graph TD
-    A[(archetypes + skills taxonomy)] --> B[LLM: Generate Persona\nskills with levels 1-5]
-    B --> C[LLM: Plan Documents\nCV + supporting docs]
-    C --> D[LLM: Allocate Evidence\nper-doc intensity per skill]
-    D --> E[LLM: Generate Document Text\nsanitizer · phrase tracker]
-    E --> F[(personas.json + documents_db.json)]
-    F --> G[validate/ → data/reports/]
+    A[Generate personas with skill levels 1-5] --> B[Generate documents per persona]
+    B --> C[Validate corpus quality]
 
-    F --> H[Ingest into ChromaDB\nper-persona collection]
-    H --> I[Vector Search\nnomic-embed-text-v1.5]
-    H --> J[BM25 Keyword Search]
-    I --> K((RRF Fusion))
-    J --> K
-    K --> L[Rerank\nQwen3-Reranker-0.6B]
-    L --> M[(training_data.csv + retrieval_meta.jsonl)]
+    C --> D[Retrieve top-8 evidence chunks per skill\nVector + BM25 + RRF + Rerank]
+    D --> E[Build training dataset]
 
-    M --> N["Input: skill [SEP] chunk1…chunk8"]
-    N --> O[DeBERTa-v3-base\nCLS embedding]
-    O --> P[MLP Head\nCORAL / classifier]
-    P --> Q[Predicted Score 1-5]
-    Q --> R[train → evaluate → report]
+    E --> F[Fine-tune DeBERTa scorer\nCORAL ordinal head]
+    F --> G[Predict skill level 1-5]
 ```
 
 ---
