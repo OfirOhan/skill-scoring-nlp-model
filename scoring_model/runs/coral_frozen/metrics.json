@@ -1,0 +1,15 @@
+{
+  "experiment": "coral_frozen",
+  "desc": "DeBERTa + CORAL head, head-only (current)",
+  "model_name": "microsoft/deberta-v3-base",
+  "head_type": "coral",
+  "unfreeze_last_n": 0,
+  "n_test": 469,
+  "scoring": {
+    "mae": 0.8507462686567164,
+    "accuracy": 0.3603411513859275,
+    "off_by_one": 0.7953091684434968,
+    "qwk": 0.2449157226121852,
+    "spearman": 0.3332737172203786
+  }
+}

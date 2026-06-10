@@ -1,0 +1,15 @@
+{
+  "experiment": "classifier_frozen",
+  "desc": "DeBERTa + softmax classifier head, head-only",
+  "model_name": "microsoft/deberta-v3-base",
+  "head_type": "classifier",
+  "unfreeze_last_n": 0,
+  "n_test": 469,
+  "scoring": {
+    "mae": 0.8400852878464818,
+    "accuracy": 0.36673773987206826,
+    "off_by_one": 0.8102345415778252,
+    "qwk": 0.2828128876758941,
+    "spearman": 0.34964514132238605
+  }
+}

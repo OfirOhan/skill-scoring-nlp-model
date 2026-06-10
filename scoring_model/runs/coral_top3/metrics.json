@@ -1,0 +1,15 @@
+{
+  "experiment": "coral_top3",
+  "desc": "DeBERTa + CORAL head, fine-tune top 3 layers",
+  "model_name": "microsoft/deberta-v3-base",
+  "head_type": "coral",
+  "unfreeze_last_n": 3,
+  "n_test": 469,
+  "scoring": {
+    "mae": 0.4690831556503198,
+    "accuracy": 0.5756929637526652,
+    "off_by_one": 0.9573560767590619,
+    "qwk": 0.8029919711304381,
+    "spearman": 0.791235869097323
+  }
+}
