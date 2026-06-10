@@ -68,6 +68,7 @@ def train(subset: float | None = None, epochs: int | None = None):
 
             optimizer.zero_grad()
             loss.backward()
+            torch.nn.utils.clip_grad_norm_(model.parameters(), config.GRAD_CLIP)
             optimizer.step()
 
             total_loss += loss.item() * labels.size(0)

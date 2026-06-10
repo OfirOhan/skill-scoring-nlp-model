@@ -56,6 +56,7 @@ EPOCHS = 15
 HEAD_LR = 1e-3       # MLP head learning rate
 BACKBONE_LR = 2e-5   # transformer LR (used only when fine-tuning, i.e. unfrozen)
 DROPOUT = 0.3
+GRAD_CLIP = 1.0      # max grad norm — prevents fine-tuning blow-ups (NaN loss)
 
 # ── GPU efficiency ──────────────────────────────────────────
 NUM_WORKERS = 4      # DataLoader workers — parallelise the (slow) DeBERTa tokenizer
