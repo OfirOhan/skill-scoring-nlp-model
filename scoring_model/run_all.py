@@ -32,8 +32,10 @@ def main():
     args = parser.parse_args()
 
     if args.smoke:
+        # Small subset, but enough epochs to SEE the trend: a correctly-wired model
+        # should overfit ~100 rows -> train_loss falls steadily and metrics climb.
         subset = args.subset if args.subset is not None else 0.05
-        epochs = args.epochs if args.epochs is not None else 2
+        epochs = args.epochs if args.epochs is not None else 10
     else:
         subset, epochs = args.subset, args.epochs
 

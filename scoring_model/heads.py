@@ -23,21 +23,17 @@ def output_dim(head_type: str) -> int:
     return config.NUM_CORAL_OUTPUTS if head_type == "coral" else config.NUM_CLASSES
 
 
-def uses_sigmoid(head_type: str) -> bool:
-    """CORAL needs a final sigmoid (cumulative probabilities); classifier emits raw logits."""
-    return head_type == "coral"
-
-
 def compute_loss(head_type: str, logits: torch.Tensor, labels: torch.Tensor) -> torch.Tensor:
-    """Loss for a batch. `labels` are 0..K-1 integer levels."""
+    """Loss for a batch. `labels` are 0..K-1 integer levels.
+
+    The head emits RAW logits for both types (no sigmoid). coral_loss applies its
+    own logsigmoid internally, so feeding it raw logits is both correct and stable
+    — the old sigmoid-then-invert round-trip produced NaNs once fine-tuning pushed
+    the logits to saturation.
+    """
     if head_type == "coral":
-        # model applies sigmoid; invert to raw logits for coral_loss. Upcast to
-        # fp32 first — under bf16 autocast the log((p)/(1-p)) inverse is unstable
-        # near saturated probabilities.
-        logits = logits.float()
-        raw_logits = torch.log(logits / (1.0 - logits + 1e-8))
         levels = levels_from_labelbatch(labels, num_classes=config.NUM_CLASSES).to(logits.device)
-        return coral_loss(raw_logits, levels)
+        return coral_loss(logits.float(), levels)
     # classifier: raw logits + cross-entropy
     return _ce(logits, labels)
 
@@ -45,5 +41,5 @@ def compute_loss(head_type: str, logits: torch.Tensor, labels: torch.Tensor) -> 
 def decode(head_type: str, logits: torch.Tensor) -> torch.Tensor:
     """Convert head outputs -> predicted class (0..K-1)."""
     if head_type == "coral":
-        return (logits > 0.5).sum(dim=1)
+        return (logits > 0).sum(dim=1)   # raw cumulative logit > 0  <=>  P > 0.5
     return logits.argmax(dim=1)

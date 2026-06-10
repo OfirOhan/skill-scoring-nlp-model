@@ -48,7 +48,10 @@ def apply_experiment(name: str) -> None:
 
 
 # ── Training ────────────────────────────────────────────────
-BATCH_SIZE = 16
+# 8 fits the coral_top3 fine-tune at MAX_LEN=2048 on a 24 GB card (DeBERTa's
+# disentangled attention at seq 2048 is memory-heavy). Frozen variants could go
+# higher, but a single global value keeps the comparison clean.
+BATCH_SIZE = 8
 EPOCHS = 15
 HEAD_LR = 1e-3       # MLP head learning rate
 BACKBONE_LR = 2e-5   # transformer LR (used only when fine-tuning, i.e. unfrozen)

@@ -62,8 +62,8 @@ class ScoringModel(nn.Module):
 
         hidden_size = self.backbone.config.hidden_size  # 768
 
-        # ── MLP head (output shape depends on head type) ────
-        layers = [
+        # ── MLP head (raw logits; coral_loss / cross-entropy handle the rest) ──
+        self.head = nn.Sequential(
             nn.Linear(hidden_size, 256),
             nn.ReLU(),
             nn.Dropout(config.DROPOUT),
@@ -71,10 +71,7 @@ class ScoringModel(nn.Module):
             nn.ReLU(),
             nn.Dropout(config.DROPOUT),
             nn.Linear(64, heads.output_dim(config.HEAD_TYPE)),
-        ]
-        if heads.uses_sigmoid(config.HEAD_TYPE):
-            layers.append(nn.Sigmoid())
-        self.head = nn.Sequential(*layers)
+        )
 
     # ── helpers for optimizer param-groups ───────────────────
     def backbone_parameters(self):
