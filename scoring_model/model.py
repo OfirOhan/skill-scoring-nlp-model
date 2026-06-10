@@ -57,7 +57,11 @@ class ScoringModel(nn.Module):
         super().__init__()
 
         # ── Transformer backbone ────────────────────────────
-        self.backbone = AutoModel.from_pretrained(config.MODEL_NAME)
+        # Force fp32 master weights. transformers 5.x keeps the checkpoint dtype
+        # by default (deberta-v3-base ships fp16), and DeBERTa fine-tuning in fp16
+        # overflows -> NaN. With fp32 params, bf16 autocast (USE_AMP) gives the
+        # speed safely.
+        self.backbone = AutoModel.from_pretrained(config.MODEL_NAME).float()
         self.n_unfrozen = _set_trainable_layers(self.backbone, config.UNFREEZE_LAST_N)
 
         hidden_size = self.backbone.config.hidden_size  # 768
