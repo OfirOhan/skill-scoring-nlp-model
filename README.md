@@ -43,61 +43,28 @@ Crucially, the documents themselves **never state a proficiency word** ("expert 
 
 ## The pipeline at a glance
 
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│ STAGE 1 — GENERATION  (generate/ + run_generation.py)                 │
-│                                                                       │
-│   archetypes + skills taxonomy                                        │
-│        │  sample persona hyperparams (seniority, industry, …)         │
-│        ▼                                                              │
-│   LLM → persona (skills with 1–5 levels)   ── tier-band guard ──┐     │
-│        │                                                        │     │
-│        ▼                                                        │     │
-│   LLM → document plan (CV + N supporting docs)                  │     │
-│        │                                                        │     │
-│        ▼                                                        │     │
-│   LLM → evidence allocation (per-doc intensity per skill)       │     │
-│        │   constraint: max(local intensity) == global level     │     │
-│        ▼                                                        │     │
-│   LLM → document text  ── sanitizer + phrase tracker ──         │     │
-│        │                                                        │     │
-│        ▼                                                        ▼     │
-│   personas.json   +   documents_db.json    (the labelled corpus)      │
-│        │                                                              │
-│        ▼  validate/  → reports/ (distribution, anti-shortcut, LLM)    │
-└─────────────────────────────────────────────────────────────────────┘
-                                  │
-                                  ▼
-┌─────────────────────────────────────────────────────────────────────┐
-│ STAGE 2 — RAG → DATASET  (rag/ + scoring_model/build_dataset.py)      │
-│                                                                       │
-│   for each (persona, skill):                                          │
-│     ingest persona docs → per-persona ChromaDB collection             │
-│     query = skill name                                                │
-│       ├─ vector search   (nomic-embed-text-v1.5, asymmetric)          │
-│       ├─ BM25            (rank-bm25)                                   │
-│       ├─ RRF fusion                                                   │
-│       └─ rerank          (Qwen3-Reranker-0.6B, yes/no logits)         │
-│     → top-8 chunks  +  doc-id provenance                              │
-│                                                                       │
-│   training_data.csv   (skill, chunk1..chunk8, label, exclude)         │
-│   retrieval_meta.jsonl (per-row hit / precision / rr vs. ground truth)│
-└─────────────────────────────────────────────────────────────────────┘
-                                  │
-                                  ▼
-┌─────────────────────────────────────────────────────────────────────┐
-│ STAGE 3 — SCORING MODEL  (scoring_model/)                             │
-│                                                                       │
-│   "{skill} [SEP] {chunk1 … chunk8}"                                   │
-│        ▼                                                              │
-│   DeBERTa-v3-base  →  [CLS]  →  MLP head                              │
-│        ▼                                                              │
-│   CORAL ordinal head  /  softmax classifier head                     │
-│        ▼                                                              │
-│   predicted level 1–5                                                 │
-│                                                                       │
-│   train.py → evaluate.py → report.py  (runs/<experiment>/)            │
-└─────────────────────────────────────────────────────────────────────┘
+```mermaid
+graph TD
+    A[(archetypes + skills taxonomy)] --> B[LLM: Generate Persona\nskills with levels 1-5]
+    B --> C[LLM: Plan Documents\nCV + supporting docs]
+    C --> D[LLM: Allocate Evidence\nper-doc intensity per skill]
+    D --> E[LLM: Generate Document Text\nsanitizer · phrase tracker]
+    E --> F[(personas.json + documents_db.json)]
+    F --> G[validate/ → data/reports/]
+
+    F --> H[Ingest into ChromaDB\nper-persona collection]
+    H --> I[Vector Search\nnomic-embed-text-v1.5]
+    H --> J[BM25 Keyword Search]
+    I --> K((RRF Fusion))
+    J --> K
+    K --> L[Rerank\nQwen3-Reranker-0.6B]
+    L --> M[(training_data.csv + retrieval_meta.jsonl)]
+
+    M --> N["Input: skill [SEP] chunk1…chunk8"]
+    N --> O[DeBERTa-v3-base\nCLS embedding]
+    O --> P[MLP Head\nCORAL / classifier]
+    P --> Q[Predicted Score 1-5]
+    Q --> R[train → evaluate → report]
 ```
 
 ---
