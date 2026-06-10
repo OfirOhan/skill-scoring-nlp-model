@@ -50,6 +50,8 @@ def train(subset: float | None = None, epochs: int | None = None):
     optimizer = torch.optim.AdamW(param_groups)
 
     best_val_mae = float("inf")
+    epochs_no_improve = 0
+    patience = config.EARLY_STOP_PATIENCE
     ckpt = config.checkpoint_path()
 
     # ── training loop ───────────────────────────────────────
@@ -102,10 +104,16 @@ def train(subset: float | None = None, epochs: int | None = None):
               f"val_MAE={val_mae:.4f}  |  val_QWK={val['qwk']:.4f}  |  "
               f"val_+-1={val['off_by_one']:.4f}")
 
-        if val_mae < best_val_mae:
+        if val_mae < best_val_mae - 1e-4:
             best_val_mae = val_mae
+            epochs_no_improve = 0
             torch.save(model.state_dict(), ckpt)
             print(f"  -> Saved best model (val_MAE={val_mae:.4f})")
+        else:
+            epochs_no_improve += 1
+            if epochs_no_improve >= patience:
+                print(f"  Early stop: no val_MAE improvement in {patience} epochs.")
+                break
 
     print(f"\nTraining complete.  Best val MAE = {best_val_mae:.4f}")
     print(f"Checkpoint: {ckpt}")

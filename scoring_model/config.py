@@ -52,7 +52,8 @@ def apply_experiment(name: str) -> None:
 # disentangled attention at seq 2048 is memory-heavy). Frozen variants could go
 # higher, but a single global value keeps the comparison clean.
 BATCH_SIZE = 8
-EPOCHS = 15
+EPOCHS = 25
+EARLY_STOP_PATIENCE = 10   # stop if val MAE hasn't improved for this many epochs
 HEAD_LR = 1e-3       # MLP head learning rate
 BACKBONE_LR = 2e-5   # transformer LR (used only when fine-tuning, i.e. unfrozen)
 DROPOUT = 0.3
