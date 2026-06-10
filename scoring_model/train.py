@@ -4,6 +4,8 @@ best-model checkpointing (by validation MAE) into runs/<EXPERIMENT>/.
 """
 
 import argparse
+import json
+import os
 
 import torch
 
@@ -53,6 +55,7 @@ def train(subset: float | None = None, epochs: int | None = None):
     epochs_no_improve = 0
     patience = config.EARLY_STOP_PATIENCE
     ckpt = config.checkpoint_path()
+    history = []   # per-epoch metrics for the learning-curve graph
 
     # ── training loop ───────────────────────────────────────
     for epoch in range(1, epochs + 1):
@@ -104,6 +107,14 @@ def train(subset: float | None = None, epochs: int | None = None):
               f"val_MAE={val_mae:.4f}  |  val_QWK={val['qwk']:.4f}  |  "
               f"val_+-1={val['off_by_one']:.4f}")
 
+        history.append({
+            "epoch": epoch,
+            "train_loss": float(avg_train_loss),
+            "val_mae": val["mae"],
+            "val_qwk": val["qwk"],
+            "val_off_by_one": val["off_by_one"],
+        })
+
         if val_mae < best_val_mae - 1e-4:
             best_val_mae = val_mae
             epochs_no_improve = 0
@@ -115,8 +126,13 @@ def train(subset: float | None = None, epochs: int | None = None):
                 print(f"  Early stop: no val_MAE improvement in {patience} epochs.")
                 break
 
+    hist_path = os.path.join(config.run_dir(), "history.json")
+    with open(hist_path, "w", encoding="utf-8") as f:
+        json.dump(history, f, indent=2)
+
     print(f"\nTraining complete.  Best val MAE = {best_val_mae:.4f}")
     print(f"Checkpoint: {ckpt}")
+    print(f"History:    {hist_path}")
 
 
 if __name__ == "__main__":

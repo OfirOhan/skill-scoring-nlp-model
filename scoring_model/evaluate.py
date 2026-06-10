@@ -95,7 +95,7 @@ def _report_retrieval(test_df, retrieval_meta):
     print("=" * 56)
     if not grades:
         print("  No retrieval metadata found — run build_dataset.py first.")
-        return None
+        return None, None
 
     agg = metrics.aggregate_retrieval(grades)
     print(f"  Hit@{config.RETRIEVE_TOP_K}       : {agg['hit_rate']:.4f}")
@@ -108,7 +108,7 @@ def _report_retrieval(test_df, retrieval_meta):
     for lvl in range(1, 6):
         a = metrics.aggregate_retrieval(grades_by_level[lvl])
         print(f"    {lvl}    {a['hit_rate']:.3f}  {a['precision']:.3f}  {a['mrr']:.3f}  {a['n']:4d}")
-    return row_ids
+    return row_ids, agg
 
 
 def _report_joint(test_df, preds_orig, labels_orig, retrieval_meta, row_ids):
@@ -193,12 +193,17 @@ def evaluate() -> dict:
     retrieval_meta = _load_retrieval_meta()
 
     scoring = _report_scoring(labels_orig, preds_orig)
-    row_ids = _report_retrieval(test_df, retrieval_meta)
+    row_ids, retr_agg = _report_retrieval(test_df, retrieval_meta)
     if row_ids is not None:
         _report_joint(test_df, preds_orig, labels_orig, retrieval_meta, row_ids)
     print("=" * 56)
 
     # ── persist metrics for cross-experiment comparison ─────
+    cm = confusion_matrix(labels_orig, preds_orig, labels=[1, 2, 3, 4, 5])
+    per_class = {
+        int(lbl): (float(cm[i][i] / cm[i].sum()) if cm[i].sum() else 0.0)
+        for i, lbl in enumerate([1, 2, 3, 4, 5])
+    }
     result = {
         "experiment": config.EXPERIMENT,
         "desc": config.EXPERIMENTS[config.EXPERIMENT]["desc"],
@@ -207,6 +212,9 @@ def evaluate() -> dict:
         "unfreeze_last_n": config.UNFREEZE_LAST_N,
         "n_test": int(len(labels_orig)),
         "scoring": scoring,
+        "per_class_accuracy": per_class,
+        "confusion_matrix": cm.tolist(),
+        "retrieval": retr_agg,
     }
     out = config.metrics_path()
     with open(out, "w", encoding="utf-8") as f:

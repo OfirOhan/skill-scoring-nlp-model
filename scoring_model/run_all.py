@@ -13,7 +13,7 @@ before committing GPU hours to full runs.
 import argparse
 
 import config
-import compare_runs
+import report as report_mod
 from train import train
 from evaluate import evaluate
 
@@ -47,10 +47,10 @@ def main():
         config.apply_experiment(exp)
         print(f"\n========================= {exp} =========================")
         train(subset=subset, epochs=epochs)
-        evaluate()
 
-    print("\n########## COMPARISON ##########")
-    compare_runs.main()
+    # Consolidated report: test-set eval + learning curves + saved report.md
+    print("\n########## REPORT ##########")
+    report_mod.build()
 
 
 if __name__ == "__main__":
